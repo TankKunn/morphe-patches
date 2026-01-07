@@ -1,3 +1,11 @@
+## [1.2.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.2.0...v1.2.1-dev.1) (2026-01-07)
+
+
+### Bug Fixes
+
+* **Spoof video streams:** Change default client to VR 1.47.48 ([#116](https://github.com/MorpheApp/morphe-patches/issues/116)) ([2bc5775](https://github.com/MorpheApp/morphe-patches/commit/2bc577554f54fd2ecfcd682b83844511461effe4))
+* **YouTube - Remove background playback restrictions:** Fix background playback not working with certain offline videos ([bb38f76](https://github.com/MorpheApp/morphe-patches/commit/bb38f763f271d14b80166d517a3e840578d1f5b9))
+
 # [1.2.0](https://github.com/MorpheApp/morphe-patches/compare/v1.1.0...v1.2.0) (2026-01-07)
 
 
