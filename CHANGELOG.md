@@ -1,3 +1,10 @@
+## [1.2.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.2.1-dev.1...v1.2.1-dev.2) (2026-01-07)
+
+
+### Bug Fixes
+
+* **YouTube:** Change "Hide mix playlist" to default off ([00f1240](https://github.com/MorpheApp/morphe-patches/commit/00f124004efd758092a5a8330aaea92f08064172))
+
 ## [1.2.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.2.0...v1.2.1-dev.1) (2026-01-07)
 
 
