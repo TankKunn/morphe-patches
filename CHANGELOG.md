@@ -1,3 +1,32 @@
+# [1.3.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.3.0-dev.1...v1.3.0-dev.2) (2026-01-09)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Fix certain description components not working ([#143](https://github.com/MorpheApp/morphe-patches/issues/143)) ([4efcb4d](https://github.com/MorpheApp/morphe-patches/commit/4efcb4d2c0f2085b6dbd0d203ef2979a041d512a))
+
+# [1.3.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.2.1-dev.2...v1.3.0-dev.1) (2026-01-09)
+
+
+### Features
+
+* **YouTube:** Add experimental support for `21.02.32` ([#138](https://github.com/MorpheApp/morphe-patches/issues/138)) ([660699d](https://github.com/MorpheApp/morphe-patches/commit/660699da7ee6b623d5010b42fe575e63947b450a))
+
+## [1.2.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.2.1-dev.1...v1.2.1-dev.2) (2026-01-07)
+
+
+### Bug Fixes
+
+* **YouTube:** Change "Hide mix playlist" to default off ([00f1240](https://github.com/MorpheApp/morphe-patches/commit/00f124004efd758092a5a8330aaea92f08064172))
+
+## [1.2.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.2.0...v1.2.1-dev.1) (2026-01-07)
+
+
+### Bug Fixes
+
+* **Spoof video streams:** Change default client to VR 1.47.48 ([#116](https://github.com/MorpheApp/morphe-patches/issues/116)) ([2bc5775](https://github.com/MorpheApp/morphe-patches/commit/2bc577554f54fd2ecfcd682b83844511461effe4))
+* **YouTube - Remove background playback restrictions:** Fix background playback not working with certain offline videos ([bb38f76](https://github.com/MorpheApp/morphe-patches/commit/bb38f763f271d14b80166d517a3e840578d1f5b9))
+
 # [1.2.0](https://github.com/MorpheApp/morphe-patches/compare/v1.1.0...v1.2.0) (2026-01-07)
 
 
