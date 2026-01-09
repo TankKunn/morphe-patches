@@ -1,3 +1,10 @@
+## [1.3.1-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.3.1-dev.3...v1.3.1-dev.4) (2026-01-09)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Fix "Hide ticket shelf" not working when "Hide horizontal shelves" is off ([#124](https://github.com/MorpheApp/morphe-patches/issues/124)) ([84eeb0d](https://github.com/MorpheApp/morphe-patches/commit/84eeb0d9f949657a7d468d9babfaca37d03b0d78))
+
 ## [1.3.1-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.3.1-dev.2...v1.3.1-dev.3) (2026-01-09)
 
 
