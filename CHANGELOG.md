@@ -1,3 +1,10 @@
+## [1.3.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.3.1-dev.1...v1.3.1-dev.2) (2026-01-09)
+
+
+### Bug Fixes
+
+* **YouTube - Hide end screen cards:** Resolve patching `20.31.42` ([3033432](https://github.com/MorpheApp/morphe-patches/commit/3033432644fc986930f4eec51d4fc233f6389c23))
+
 ## [1.3.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.3.0...v1.3.1-dev.1) (2026-01-09)
 
 
