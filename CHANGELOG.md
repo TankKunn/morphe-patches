@@ -1,3 +1,10 @@
+# [1.3.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.3.0-dev.1...v1.3.0-dev.2) (2026-01-09)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Fix certain description components not working ([#143](https://github.com/MorpheApp/morphe-patches/issues/143)) ([4efcb4d](https://github.com/MorpheApp/morphe-patches/commit/4efcb4d2c0f2085b6dbd0d203ef2979a041d512a))
+
 # [1.3.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.2.1-dev.2...v1.3.0-dev.1) (2026-01-09)
 
 
