@@ -1,3 +1,10 @@
+## [1.3.1-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.3.1-dev.2...v1.3.1-dev.3) (2026-01-09)
+
+
+### Bug Fixes
+
+* **YouTube - Auto captions:** Cannot disable auto captions with 20.21 app target ([#145](https://github.com/MorpheApp/morphe-patches/issues/145)) ([dc43944](https://github.com/MorpheApp/morphe-patches/commit/dc43944adbcef5aa4754ca3d1fecd07a502277f3))
+
 ## [1.3.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.3.1-dev.1...v1.3.1-dev.2) (2026-01-09)
 
 
