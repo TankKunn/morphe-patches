@@ -1,3 +1,10 @@
+## [1.3.2-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.3.1...v1.3.2-dev.1) (2026-01-10)
+
+
+### Bug Fixes
+
+* **Custom branding:** Resolve startup crash if custom branding is excluded in expert mode ([3f2d733](https://github.com/MorpheApp/morphe-patches/commit/3f2d7338f587ef8a4ff8331621d6e68dd160d746))
+
 ## [1.3.1](https://github.com/MorpheApp/morphe-patches/compare/v1.3.0...v1.3.1) (2026-01-10)
 
 
