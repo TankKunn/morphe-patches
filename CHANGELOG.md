@@ -1,3 +1,13 @@
+## [1.3.1](https://github.com/MorpheApp/morphe-patches/compare/v1.3.0...v1.3.1) (2026-01-10)
+
+
+### Bug Fixes
+
+* **Custom branding:** Default to user‑provided icon and name when provided ([eef8798](https://github.com/MorpheApp/morphe-patches/commit/eef8798602ebf805eb3cff08e010025a0a8e93ab))
+* **YouTube - Auto captions:** Cannot disable auto captions with 20.21 app target ([#145](https://github.com/MorpheApp/morphe-patches/issues/145)) ([dc43944](https://github.com/MorpheApp/morphe-patches/commit/dc43944adbcef5aa4754ca3d1fecd07a502277f3))
+* **YouTube - Hide end screen cards:** Resolve patching `20.31.42` ([3033432](https://github.com/MorpheApp/morphe-patches/commit/3033432644fc986930f4eec51d4fc233f6389c23))
+* **YouTube - Hide layout components:** Fix "Hide ticket shelf" not working when "Hide horizontal shelves" is off ([#124](https://github.com/MorpheApp/morphe-patches/issues/124)) ([84eeb0d](https://github.com/MorpheApp/morphe-patches/commit/84eeb0d9f949657a7d468d9babfaca37d03b0d78))
+
 ## [1.3.1-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.3.1-dev.3...v1.3.1-dev.4) (2026-01-09)
 
 
