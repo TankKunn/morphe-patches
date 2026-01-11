@@ -1,3 +1,10 @@
+# [1.4.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.4.0-dev.1...v1.4.0-dev.2) (2026-01-11)
+
+
+### Bug Fixes
+
+* **YouTube - Hide ads:** Hide new type of player ad ([#187](https://github.com/MorpheApp/morphe-patches/issues/187)) ([4702043](https://github.com/MorpheApp/morphe-patches/commit/4702043ea35fb3b1439ad30406b41179d019f2a1))
+
 # [1.4.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.3.2...v1.4.0-dev.1) (2026-01-11)
 
 
