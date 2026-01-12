@@ -1,3 +1,10 @@
+# [1.5.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.4.0...v1.5.0-dev.1) (2026-01-12)
+
+
+### Features
+
+* **YouTube - Navigation buttons:** Add setting to use narrow navigation bar buttons ([1074c6a](https://github.com/MorpheApp/morphe-patches/commit/1074c6a6f70199ef8173524246be23bddcbb46d2))
+
 # [1.4.0](https://github.com/MorpheApp/morphe-patches/compare/v1.3.2...v1.4.0) (2026-01-12)
 
 
