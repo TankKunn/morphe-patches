@@ -1,3 +1,24 @@
+# [1.4.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.4.0-dev.2...v1.4.0-dev.3) (2026-01-12)
+
+
+### Bug Fixes
+
+* Remove restrictions on AGP due to the use of hardcoded registers in LithoFilterPatch ([#41](https://github.com/MorpheApp/morphe-patches/issues/41)) ([223ed8f](https://github.com/MorpheApp/morphe-patches/commit/223ed8f78561d8cb046d371baed9646b4e8138f3))
+
+# [1.4.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.4.0-dev.1...v1.4.0-dev.2) (2026-01-11)
+
+
+### Bug Fixes
+
+* **YouTube - Hide ads:** Hide new type of player ad ([#187](https://github.com/MorpheApp/morphe-patches/issues/187)) ([4702043](https://github.com/MorpheApp/morphe-patches/commit/4702043ea35fb3b1439ad30406b41179d019f2a1))
+
+# [1.4.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.3.2...v1.4.0-dev.1) (2026-01-11)
+
+
+### Features
+
+* **YouTube:** Add `Double tap to seek` patch ([1a57a34](https://github.com/MorpheApp/morphe-patches/commit/1a57a34734d31b803820b0a530e0c57c50963f63))
+
 ## [1.3.2](https://github.com/MorpheApp/morphe-patches/compare/v1.3.1...v1.3.2) (2026-01-10)
 
 
