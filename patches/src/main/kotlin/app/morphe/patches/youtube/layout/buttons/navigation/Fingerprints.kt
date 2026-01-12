@@ -2,6 +2,7 @@ package app.morphe.patches.youtube.layout.buttons.navigation
 
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
+import app.morphe.patcher.OpcodesFilter
 import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.opcode
@@ -36,6 +37,31 @@ internal object AnimatedNavigationTabsFeatureFlagFingerprint : Fingerprint(
     filters = listOf(
         literal(45680008L)
     )
+)
+
+internal object PivotBarStyleFingerprint : Fingerprint(
+    returnType = "V",
+    parameters = listOf("L"),
+    filters = OpcodesFilter.opcodesToFilters(
+        Opcode.INVOKE_STATIC,
+        Opcode.MOVE_RESULT,
+        Opcode.XOR_INT_2ADDR
+    ),
+    custom = { method, _ ->
+        method.definingClass.endsWith("/PivotBar;")
+    }
+)
+
+internal object PivotBarChangedFingerprint : Fingerprint(
+    returnType = "V",
+    filters = OpcodesFilter.opcodesToFilters(
+        Opcode.INVOKE_STATIC,
+        Opcode.MOVE_RESULT
+    ),
+    custom = { method, _ ->
+        method.definingClass.endsWith("/PivotBar;")
+                && method.name == "onConfigurationChanged"
+    }
 )
 
 internal object TranslucentNavigationStatusBarFeatureFlagFingerprint : Fingerprint(

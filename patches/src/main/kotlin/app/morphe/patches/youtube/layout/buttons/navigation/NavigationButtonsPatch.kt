@@ -52,6 +52,7 @@ val navigationButtonsPatch = bytecodePatch(
             SwitchPreference("morphe_hide_notifications_button"),
             SwitchPreference("morphe_switch_create_with_notifications_button"),
             SwitchPreference("morphe_hide_navigation_button_labels"),
+            SwitchPreference("morphe_narrow_navigation_buttons"),
         )
 
         if (is_19_25_or_greater) {
@@ -61,12 +62,10 @@ val navigationButtonsPatch = bytecodePatch(
             PreferenceScreen.GENERAL_LAYOUT.addPreferences(
                 SwitchPreference("morphe_disable_translucent_status_bar")
             )
-        }
 
-        if (is_20_15_or_greater) {
-            PreferenceScreen.GENERAL_LAYOUT.addPreferences(
-                SwitchPreference("morphe_navigation_bar_animations")
-            )
+            if (is_20_15_or_greater) {
+                preferences += SwitchPreference("morphe_navigation_bar_animations")
+            }
         }
 
         PreferenceScreen.GENERAL_LAYOUT.addPreferences(
@@ -141,6 +140,26 @@ val navigationButtonsPatch = bytecodePatch(
                     it.instructionMatches.first().index,
                     "$EXTENSION_CLASS_DESCRIPTOR->useAnimatedNavigationButtons(Z)Z"
                 )
+            }
+        }
+
+        arrayOf(
+            PivotBarChangedFingerprint,
+            PivotBarStyleFingerprint
+        ).forEach { fingerprint ->
+            fingerprint.let {
+                it.method.apply {
+                    val targetIndex = it.instructionMatches[1].index
+                    val register = getInstruction<OneRegisterInstruction>(targetIndex).registerA
+
+                    addInstructions(
+                        targetIndex + 1,
+                        """
+                            invoke-static { v$register }, $EXTENSION_CLASS_DESCRIPTOR->enableNarrowNavigationButton(Z)Z
+                            move-result v$register
+                        """
+                    )
+                }
             }
         }
     }
