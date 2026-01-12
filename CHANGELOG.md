@@ -1,3 +1,10 @@
+# [1.4.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.4.0-dev.2...v1.4.0-dev.3) (2026-01-12)
+
+
+### Bug Fixes
+
+* Remove restrictions on AGP due to the use of hardcoded registers in LithoFilterPatch ([#41](https://github.com/MorpheApp/morphe-patches/issues/41)) ([223ed8f](https://github.com/MorpheApp/morphe-patches/commit/223ed8f78561d8cb046d371baed9646b4e8138f3))
+
 # [1.4.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.4.0-dev.1...v1.4.0-dev.2) (2026-01-11)
 
 
