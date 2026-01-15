@@ -101,6 +101,9 @@ However, enabling this will also log some user data such as your IP address."</s
     <string name="morphe_hide_playables_title">Hide Playables</string>
     <string name="morphe_hide_playables_summary_on">Playables are hidden</string>
     <string name="morphe_hide_playables_summary_off">Playables are shown</string>
+    <string name="morphe_hide_search_suggestions_title">Hide search suggestions</string>
+    <string name="morphe_hide_search_suggestions_summary_on">Search suggestions are hidden</string>
+    <string name="morphe_hide_search_suggestions_summary_off">Search suggestions are shown</string>
     <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
     <string name="morphe_hide_show_more_button_title">Hide \'Show more\' button</string>
@@ -605,6 +608,9 @@ If changing this setting does not take effect, try switching to Incognito mode."
     <string name="morphe_hide_navigation_button_labels_title">Hide navigation button labels</string>
     <string name="morphe_hide_navigation_button_labels_summary_on">Labels are hidden</string>
     <string name="morphe_hide_navigation_button_labels_summary_off">Labels are shown</string>
+    <string name="morphe_narrow_navigation_buttons_title">Enable narrow navigation buttons</string>
+    <string name="morphe_narrow_navigation_buttons_summary_on">Spacing between navigation buttons is narrow</string>
+    <string name="morphe_narrow_navigation_buttons_summary_off">Spacing between navigation buttons is normal</string>
     <string name="morphe_navigation_bar_animations_title">Enable navigation bar animations</string>
     <string name="morphe_navigation_bar_animations_summary_on">Navigation transitions are animated</string>
     <string name="morphe_navigation_bar_animations_summary_off">Navigation transitions are not animated</string>

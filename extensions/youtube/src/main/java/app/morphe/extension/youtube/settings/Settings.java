@@ -109,6 +109,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_SHOW_MORE_BUTTON = new BooleanSetting("morphe_hide_show_more_button", TRUE, true);
     public static final BooleanSetting HIDE_SURVEYS = new BooleanSetting("morphe_hide_surveys", TRUE);
     public static final BooleanSetting HIDE_TICKET_SHELF = new BooleanSetting("morphe_hide_ticket_shelf", FALSE);
+    public static final BooleanSetting HIDE_SEARCH_SUGGESTIONS = new BooleanSetting("morphe_hide_search_suggestions", FALSE);
     public static final BooleanSetting HIDE_UPLOAD_TIME = new BooleanSetting("morphe_hide_upload_time", FALSE, "morphe_hide_upload_time_user_dialog_message");
     public static final BooleanSetting HIDE_VIDEO_RECOMMENDATION_LABELS = new BooleanSetting("morphe_hide_video_recommendation_labels", TRUE);
     public static final BooleanSetting HIDE_VIEW_COUNT = new BooleanSetting("morphe_hide_view_count", FALSE, "morphe_hide_view_count_user_dialog_message");
@@ -285,6 +286,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_SHORTS_BUTTON = new BooleanSetting("morphe_hide_shorts_button", TRUE, true);
     public static final BooleanSetting HIDE_SUBSCRIPTIONS_BUTTON = new BooleanSetting("morphe_hide_subscriptions_button", FALSE, true);
     public static final BooleanSetting HIDE_NAVIGATION_BUTTON_LABELS = new BooleanSetting("morphe_hide_navigation_button_labels", FALSE, true);
+    public static final BooleanSetting NARROW_NAVIGATION_BUTTONS = new BooleanSetting("morphe_narrow_navigation_buttons", FALSE, true);
     public static final BooleanSetting HIDE_NOTIFICATIONS_BUTTON = new BooleanSetting("morphe_hide_notifications_button", FALSE, true);
     public static final BooleanSetting SWITCH_CREATE_WITH_NOTIFICATIONS_BUTTON = new BooleanSetting("morphe_switch_create_with_notifications_button", TRUE, true,
             "morphe_switch_create_with_notifications_button_user_dialog_message");
