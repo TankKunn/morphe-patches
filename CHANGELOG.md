@@ -1,3 +1,10 @@
+# [1.6.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.5.0...v1.6.0-dev.1) (2026-01-16)
+
+
+### Features
+
+* **YouTube Music:** Add experimental support for `9.02.50` ([977cb8b](https://github.com/MorpheApp/morphe-patches/commit/977cb8bfcdfb193b035b62ae2660d20eccdc6702))
+
 # [1.5.0](https://github.com/MorpheApp/morphe-patches/compare/v1.4.0...v1.5.0) (2026-01-15)
 
 
