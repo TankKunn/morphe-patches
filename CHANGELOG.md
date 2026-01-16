@@ -1,3 +1,10 @@
+# [1.6.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.6.0-dev.3...v1.6.0-dev.4) (2026-01-16)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide subscribed channels bar" setting ([#226](https://github.com/MorpheApp/morphe-patches/issues/226)) ([bbaad3a](https://github.com/MorpheApp/morphe-patches/commit/bbaad3af85b43a7addc0e984a5a13e12986f6263))
+
 # [1.6.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.6.0-dev.2...v1.6.0-dev.3) (2026-01-16)
 
 
