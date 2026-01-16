@@ -1,3 +1,10 @@
+# [1.6.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.6.0-dev.1...v1.6.0-dev.2) (2026-01-16)
+
+
+### Bug Fixes
+
+* **YouTube - Hide Shorts components:** Hide new type of sound metadata label ([35931e6](https://github.com/MorpheApp/morphe-patches/commit/35931e6ddf287790c6a405b58e7b7d46c718bb0a))
+
 # [1.6.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.5.0...v1.6.0-dev.1) (2026-01-16)
 
 
