@@ -666,6 +666,10 @@ Chugainn an menú an t-áite seo, athraigh 'Spoof video streams' go 'Android No 
   <string name="morphe_hide_autoplay_button_title">Folaigh an cnaipe Uath-imirt</string>
   <string name="morphe_hide_autoplay_button_summary_on">Tá an cnaipe uath-sheinm i bhfolach</string>
   <string name="morphe_hide_autoplay_button_summary_off">Taispeántar cnaipe Autoplay</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Folaigh an tseanmá</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Tá an tseanmá i bhfolach</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Taispeántar an tseanmá</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Folaigh cnaipe fotheidil</string>
   <string name="morphe_hide_captions_button_summary_on">Tá cnaipe fotheidil i bhfolach</string>

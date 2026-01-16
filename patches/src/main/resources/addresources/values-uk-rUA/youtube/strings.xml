@@ -669,6 +669,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">Приховати кнопку \"Автовідтворення\"</string>
   <string name="morphe_hide_autoplay_button_summary_on">Кнопку \"Автовідтворення\" у відеоплеєрі приховано</string>
   <string name="morphe_hide_autoplay_button_summary_off">Кнопка \"Автовідтворення\" у відеоплеєрі показується</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Приховати попередній перегляд</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Попередній перегляд приховано</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Попередній перегляд показано</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Приховати кнопку \"Субтитри\"</string>
   <string name="morphe_hide_captions_button_summary_on">Кнопку \"Субтитри\" у відеоплеєрі приховано</string>

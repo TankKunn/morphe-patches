@@ -668,6 +668,10 @@ Om het Audiobaantje-menu weer te tonen, verander 'Video's spoofen' naar 'Android
   <string name="morphe_hide_autoplay_button_title">Verberg knop voor automatisch afspelen</string>
   <string name="morphe_hide_autoplay_button_summary_on">Automatische afspeelknop is verborgen</string>
   <string name="morphe_hide_autoplay_button_summary_off">Automatische afspeelknop wordt weergegeven</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Verberg voorbeeld autoplay</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Autoplay voorbeeld is verborgen</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Autoplay voorbeeld wordt weergegeven</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Verberg ondertitelknop</string>
   <string name="morphe_hide_captions_button_summary_on">Ondertitelingknop is verborgen</string>

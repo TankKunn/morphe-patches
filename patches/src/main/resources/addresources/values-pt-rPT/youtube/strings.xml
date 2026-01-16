@@ -668,6 +668,10 @@ Para exibir o menu de faixas de áudio, altere 'Spoof video streams' para 'Andro
   <string name="morphe_hide_autoplay_button_title">Ocultar botão de reprodução automática</string>
   <string name="morphe_hide_autoplay_button_summary_on">O botão de reprodução automática está escondido</string>
   <string name="morphe_hide_autoplay_button_summary_off">Botão de reprodução automática é visível</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Ocultar prévia de reprodução automática</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">A prévia de reprodução automática está oculta</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">A prévia de reprodução automática está visível</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Ocultar botão de legendas</string>
   <string name="morphe_hide_captions_button_summary_on">O botão de legendas está escondido</string>

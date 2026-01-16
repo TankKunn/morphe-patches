@@ -668,6 +668,10 @@ Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de v
   <string name="morphe_hide_autoplay_button_title">Ocultar botón \"Reproducción automática\"</string>
   <string name="morphe_hide_autoplay_button_summary_on">El botón \"Reproducción automática\" está oculto</string>
   <string name="morphe_hide_autoplay_button_summary_off">El botón \"Reproducción automática\" está visible</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Ocultar vista previa automática</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">La vista previa automática está oculta</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">La vista previa automática está visible</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Ocultar botón \"Subtítulos\"</string>
   <string name="morphe_hide_captions_button_summary_on">El botón \"Subtítulos\" está oculto</string>

@@ -668,6 +668,10 @@ Aby menu od ścieżki dźwiękowej było widoczne, zmień 'Oszukuj strumienie fi
   <string name="morphe_hide_autoplay_button_title">Przycisk od automatycznego odtwarzania</string>
   <string name="morphe_hide_autoplay_button_summary_on">Ukryty</string>
   <string name="morphe_hide_autoplay_button_summary_off">Widoczny</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Podgląd autoodtwarzania</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Ukryty</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Widoczny</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Przycisk od napisów</string>
   <string name="morphe_hide_captions_button_summary_on">Ukryty</string>

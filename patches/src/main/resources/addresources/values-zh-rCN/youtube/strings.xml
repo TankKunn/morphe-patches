@@ -668,6 +668,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">隐藏「自动播放」按钮</string>
   <string name="morphe_hide_autoplay_button_summary_on">自动播放按钮已隐藏</string>
   <string name="morphe_hide_autoplay_button_summary_off">自动播放按钮已显示</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">隐藏自动播放预览</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">自动播放预览已隐藏</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">自动播放预览已显示</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">隐藏「字幕」按钮</string>
   <string name="morphe_hide_captions_button_summary_on">字幕按钮已隐藏</string>

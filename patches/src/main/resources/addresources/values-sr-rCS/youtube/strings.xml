@@ -668,6 +668,10 @@ Da bi prikazali meni sa audio trakom, promenite 'Imitirati video tokove' u 'Andr
   <string name="morphe_hide_autoplay_button_title">Sakrij dugme „Autoplej”</string>
   <string name="morphe_hide_autoplay_button_summary_on">Dugme „Autoplej” je skriveno</string>
   <string name="morphe_hide_autoplay_button_summary_off">Dugme „Autoplej” je prikazano</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Sakrij prikazu automatskog reproduciranja</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Prikaz automatskog reproduciranja je sakriven</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Prikaz automatskog reproduciranja je prikazan</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Sakrij dugme „Titl”</string>
   <string name="morphe_hide_captions_button_summary_on">Dugme „Titl” je skriveno</string>

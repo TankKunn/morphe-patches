@@ -668,6 +668,10 @@ A Hangos menü megjelenítéséhez állítsa át a 'Videó álstreamok' beállí
   <string name="morphe_hide_autoplay_button_title">Automatikus lejátszás gomb elrejtése</string>
   <string name="morphe_hide_autoplay_button_summary_on">Az automatikus lejátszás gomb el van rejtve</string>
   <string name="morphe_hide_autoplay_button_summary_off">Az automatikus lejátszás gomb látható</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Automatikus előnézet elrejtése</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Az automatikus előnézet el van rejtve</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Az automatikus előnézet látható</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Felirat gomb elrejtése</string>
   <string name="morphe_hide_captions_button_summary_on">A feliratok gomb el van rejtve</string>

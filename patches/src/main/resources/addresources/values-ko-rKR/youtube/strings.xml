@@ -668,6 +668,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">자동재생 버튼 숨기기</string>
   <string name="morphe_hide_autoplay_button_summary_on">자동재생 버튼이 숨겨집니다</string>
   <string name="morphe_hide_autoplay_button_summary_off">자동재생 버튼이 표시됩니다</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">자동재생 미리보기 숨기기</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">자동재생 미리보기가 숨겨집니다</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">자동재생 미리보기가 표시됩니다</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">자막 버튼 숨기기</string>
   <string name="morphe_hide_captions_button_summary_on">자막 버튼이 숨겨집니다</string>
