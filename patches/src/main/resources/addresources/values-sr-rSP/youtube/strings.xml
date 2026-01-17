@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Сакриј дугме „Прикажи још”</string>
   <string name="morphe_hide_show_more_button_summary_on">Дугме „Прикажи више” у резултатима претраге је скривено</string>
   <string name="morphe_hide_show_more_button_summary_off">Дугме „Прикажи више” у резултатима претраге је приказано</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Скријте траку претплаћених канала</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Трака претплаћених канала је скривена</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Трака претплаћених канала је приказана</string>
   <string name="morphe_hide_surveys_title">Сакриј анкете</string>
   <string name="morphe_hide_surveys_summary_on">Анкете су скривене</string>
   <string name="morphe_hide_surveys_summary_off">Анкете су приказане</string>

@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">إخفاء زر \'عرض المزيد\'</string>
   <string name="morphe_hide_show_more_button_summary_on">تم إخفاء زر عرض المزيد في نتائج البحث</string>
   <string name="morphe_hide_show_more_button_summary_off">يتم إظهار زر عرض المزيد في نتائج البحث</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">إخفاء شريط القنوات المشترك بها</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">تم إخفاء شريط القنوات المشترك بها</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">يتم عرض شريط القنوات المشترك بها</string>
   <string name="morphe_hide_surveys_title">إخفاء الاستبيانات</string>
   <string name="morphe_hide_surveys_summary_on">تم إخفاء الاستبيانات</string>
   <string name="morphe_hide_surveys_summary_off">يتم عرض الاستبيانات</string>

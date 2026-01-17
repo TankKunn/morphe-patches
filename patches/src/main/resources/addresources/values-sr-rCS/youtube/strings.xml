@@ -103,6 +103,9 @@ Međutim, omogućavanje ovoga će takođe evidentirati neke korisničke podatke,
   <string name="morphe_hide_show_more_button_title">Sakrij dugme „Prikaži još”</string>
   <string name="morphe_hide_show_more_button_summary_on">Dugme „Prikaži više” u rezultatima pretrage je skriveno</string>
   <string name="morphe_hide_show_more_button_summary_off">Dugme „Prikaži više” u rezultatima pretrage je prikazano</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Sakrij traku pretpljenih kanala</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Traka pretpljenih kanala je sakrivena</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Traka pretpljenih kanala je prikazana</string>
   <string name="morphe_hide_surveys_title">Sakrij ankete</string>
   <string name="morphe_hide_surveys_summary_on">Ankete su skrivene</string>
   <string name="morphe_hide_surveys_summary_off">Ankete su prikazane</string>

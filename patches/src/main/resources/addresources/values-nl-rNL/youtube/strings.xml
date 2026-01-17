@@ -103,6 +103,9 @@ Als u dit inschakelt, worden echter ook bepaalde gebruikersgegevens, zoals uw IP
   <string name="morphe_hide_show_more_button_title">Verberg knop \'Meer weergeven\'</string>
   <string name="morphe_hide_show_more_button_summary_on">Meer weergeven-knop in zoekresultaten is verborgen</string>
   <string name="morphe_hide_show_more_button_summary_off">Meer weergeven-knop in zoekresultaten wordt getoond</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Verberg abonneerde kanalen balk</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Abonneerde kanalen balk is verborgen</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Abonneerde kanalen balk is zichtbaar</string>
   <string name="morphe_hide_surveys_title">Enquêtes verbergen</string>
   <string name="morphe_hide_surveys_summary_on">Enquêtes zijn verborgen</string>
   <string name="morphe_hide_surveys_summary_off">Enquêtes worden getoond</string>

@@ -104,6 +104,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Приховати кнопку \"Показати більше\"</string>
   <string name="morphe_hide_show_more_button_summary_on">Кнопку \"Показати більше\" у результатах пошуку приховано</string>
   <string name="morphe_hide_show_more_button_summary_off">Кнопка \"Показати більше\" у результатах пошуку показується</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Приховати панель підписок</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Панель підписок прихована</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Панель підписок відображена</string>
   <string name="morphe_hide_surveys_title">Приховати опитування</string>
   <string name="morphe_hide_surveys_summary_on">Опитування приховано</string>
   <string name="morphe_hide_surveys_summary_off">Опитування показуються</string>

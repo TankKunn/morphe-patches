@@ -104,6 +104,9 @@ Povolením této možnosti se však budou zaznamenávat i některá uživatelsk�
   <string name="morphe_hide_show_more_button_title">Skrýt tlačítko „Zobrazit více“</string>
   <string name="morphe_hide_show_more_button_summary_on">Tlačítko „Zobrazit více“ ve výsledcích vyhledávání je skryté</string>
   <string name="morphe_hide_show_more_button_summary_off">Tlačítko \"Zobrazit více\" ve výsledcích vyhledávání je zobrazeno</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Skrýt panel předplatných kanálů</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Panel předplatných kanálů je skrytý</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Panel předplatných kanálů je zobrazen</string>
   <string name="morphe_hide_surveys_title">Skrýt průzkumy</string>
   <string name="morphe_hide_surveys_summary_on">Průzkumy jsou skryté</string>
   <string name="morphe_hide_surveys_summary_off">Průzkumy jsou zobrazené</string>

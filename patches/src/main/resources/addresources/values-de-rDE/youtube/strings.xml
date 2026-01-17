@@ -103,6 +103,9 @@ Dadurch werden jedoch auch einige Benutzerdaten wie deine IP-Adresse protokollie
   <string name="morphe_hide_show_more_button_title">Schaltfläche \'Mehr anzeigen\' ausblenden</string>
   <string name="morphe_hide_show_more_button_summary_on">\'Mehr anzeigen\' in den Suchergebnissen ist ausgeblendet</string>
   <string name="morphe_hide_show_more_button_summary_off">\'Mehr anzeigen\' in den Suchergebnissen wird angezeigt</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Versteckte Abonnementskanalleiste</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Abonnementskanalleiste ist versteckt</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Abonnementskanalleiste ist angezeigt</string>
   <string name="morphe_hide_surveys_title">Umfragen ausblenden</string>
   <string name="morphe_hide_surveys_summary_on">Umfragen werden ausgeblendet</string>
   <string name="morphe_hide_surveys_summary_off">Umfragen werden angezeigt</string>

@@ -103,6 +103,9 @@ No entanto, ativar isto também irá registar alguns dados do utilizador, como o
   <string name="morphe_hide_show_more_button_title">Ocultar botão \'Mostrar mais\'</string>
   <string name="morphe_hide_show_more_button_summary_on">O botão \"Mostrar mais\" nos resultados da pesquisa está oculto</string>
   <string name="morphe_hide_show_more_button_summary_off">O botão \"Mostrar mais\" nos resultados da pesquisa é exibido</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Esconder a barra de canais assinados</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">A barra de canais assinados está escondida</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">A barra de canais assinados está visível</string>
   <string name="morphe_hide_surveys_title">Ocultar pesquisas</string>
   <string name="morphe_hide_surveys_summary_on">Pesquisas estão ocultas</string>
   <string name="morphe_hide_surveys_summary_off">Pesquisas estão visíveis</string>

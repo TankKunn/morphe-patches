@@ -99,6 +99,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">\'আরও দেখান\' বোতাম লুকান</string>
   <string name="morphe_hide_show_more_button_summary_on">অনুসন্ধান ফলাফলে \"আরও দেখান\" বোতামটি লুকানো আছে</string>
   <string name="morphe_hide_show_more_button_summary_off">অনুসন্ধান ফলাফলে \"আরও দেখান\" বোতামটি দেখানো হয়েছে</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">লুকান সাবস্ক্রাইব চ্যানেল বার</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">সাবস্ক্রাইব চ্যানেল বার লুকিয়ে রয়েছে</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">সাবস্ক্রাইব চ্যানেল বার দেখানো হয়েছে</string>
   <string name="morphe_hide_surveys_title">সার্ভে লুকান</string>
   <string name="morphe_hide_surveys_summary_on">জরিপগুলি লুকানো হয়েছে</string>
   <string name="morphe_hide_surveys_summary_off">জরিপগুলি দেখানো হয়েছে</string>

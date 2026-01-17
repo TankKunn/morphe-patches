@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">隱藏「顯示更多」按鈕</string>
   <string name="morphe_hide_show_more_button_summary_on">搜尋結果中的「顯示更多」按鈕已隱藏</string>
   <string name="morphe_hide_show_more_button_summary_off">搜尋結果中的「顯示更多」按鈕已顯示</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">隱藏訂閱頻道列</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">已隱藏訂閱頻道列</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">已顯示訂閱頻道列</string>
   <string name="morphe_hide_surveys_title">隱藏問卷調查</string>
   <string name="morphe_hide_surveys_summary_on">問卷調查已隱藏</string>
   <string name="morphe_hide_surveys_summary_off">問卷調查已顯示</string>

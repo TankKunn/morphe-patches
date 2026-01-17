@@ -103,6 +103,9 @@ Tuttavia, l'abilitazione di questa opzione registrerà anche alcuni dati dell'ut
   <string name="morphe_hide_show_more_button_title">Nascondi il pulsante \'Mostra di più\'</string>
   <string name="morphe_hide_show_more_button_summary_on">Il pulsante Mostra altro nei risultati di ricerca è nascosto</string>
   <string name="morphe_hide_show_more_button_summary_off">Il pulsante Mostra altro nei risultati di ricerca è mostrato</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Nascondi la barra dei canali iscritti</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">La barra dei canali iscritti è nascosta</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">La barra dei canali iscritti è visibile</string>
   <string name="morphe_hide_surveys_title">Nascondi sondaggi</string>
   <string name="morphe_hide_surveys_summary_on">Sondaggi nascosti</string>
   <string name="morphe_hide_surveys_summary_off">Sondaggi mostrati</string>

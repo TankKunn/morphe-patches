@@ -103,6 +103,9 @@ Cependant, activer cette option entraînera également l’enregistrement de cer
   <string name="morphe_hide_show_more_button_title">Masquer le bouton \'Voir plus\'</string>
   <string name="morphe_hide_show_more_button_summary_on">Le bouton \'Voir plus\' dans les résultats de recherche est masqué</string>
   <string name="morphe_hide_show_more_button_summary_off">Le bouton \'Voir plus\' dans les résultats de recherche est affiché</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Masquer la liste des chaînes</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">La liste des chaînes dans \'Abonnements\' est masquée</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">La liste des chaînes dans \'Abonnements\' est affichée</string>
   <string name="morphe_hide_surveys_title">Masquer les sondages</string>
   <string name="morphe_hide_surveys_summary_on">Les sondages sont masqués</string>
   <string name="morphe_hide_surveys_summary_off">Les sondages sont affichés</string>

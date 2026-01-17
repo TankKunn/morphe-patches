@@ -103,6 +103,9 @@ Tämän käyttöönotto kirjaa myös joitakin käyttäjätietoja, kuten IP-osoit
   <string name="morphe_hide_show_more_button_title">Piilota \"Näytä lisää\" -painike</string>
   <string name="morphe_hide_show_more_button_summary_on">Näytä lisää -painike piilotetaan hakutuloksissa</string>
   <string name="morphe_hide_show_more_button_summary_off">Näytä lisää -painike näytetään hakutuloksissa</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Piilota tilaamattomat kanavat-rihma</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Tilaamattomat kanavat-rihma on piilotettu</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Tilaamattomat kanavat-rihma on näkyvissä</string>
   <string name="morphe_hide_surveys_title">Piilota kyselyt</string>
   <string name="morphe_hide_surveys_summary_on">Kyselyt piilotetaan</string>
   <string name="morphe_hide_surveys_summary_off">Kyselyt näytetään</string>

@@ -106,6 +106,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">\'자세히 보기\' 버튼 숨기기</string>
   <string name="morphe_hide_show_more_button_summary_on">검색 결과에서 \'자세히 보기\' 버튼이 숨겨집니다</string>
   <string name="morphe_hide_show_more_button_summary_off">검색 결과에서 \'자세히 보기\' 버튼이 표시됩니다</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">구독 채널바 숨기기</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">구독 피드에서 구독 채널바가 숨겨집니다</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">구독 피드에서 구독 채널바가 표시됩니다</string>
   <string name="morphe_hide_surveys_title">설문 조사 숨기기</string>
   <string name="morphe_hide_surveys_summary_on">설문 조사가 숨겨집니다</string>
   <string name="morphe_hide_surveys_summary_off">설문 조사가 표시됩니다</string>

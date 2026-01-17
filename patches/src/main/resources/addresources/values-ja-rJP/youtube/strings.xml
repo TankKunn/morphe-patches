@@ -104,6 +104,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">「もっと見る」ボタンを非表示</string>
   <string name="morphe_hide_show_more_button_summary_on">「もっと見る」ボタンは検索結果に表示されません</string>
   <string name="morphe_hide_show_more_button_summary_off">「もっと見る」ボタンは検索結果に表示されます</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">登録済みチャンネルの一覧を非表示</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">登録済みチャンネルの一覧は登録チャンネルタブのヘッダーに表示されません</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">登録済みチャンネルの一覧は登録チャンネルタブのヘッダーに表示されます</string>
   <string name="morphe_hide_surveys_title">アンケートを非表示</string>
   <string name="morphe_hide_surveys_summary_on">アンケートは表示されません</string>
   <string name="morphe_hide_surveys_summary_off">アンケートは表示されます</string>

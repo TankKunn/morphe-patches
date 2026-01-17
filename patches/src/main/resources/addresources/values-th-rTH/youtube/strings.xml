@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">ซ่อนปุ่ม \"แสดงเพิ่มเติม\"</string>
   <string name="morphe_hide_show_more_button_summary_on">ปุ่มแสดงเพิ่มเติมในผลการค้นหาถูกซ่อนไว้</string>
   <string name="morphe_hide_show_more_button_summary_off">ปุ่มแสดงเพิ่มเติมในผลการค้นหาแสดงอยู่</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">ซ่อนแถบช่องที่ติดตาม</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">ซ่อนแถบช่องที่ติดตามแล้ว</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">แสดงแถบช่องที่ติดตาม</string>
   <string name="morphe_hide_surveys_title">ซ่อนแบบสำรวจ</string>
   <string name="morphe_hide_surveys_summary_on">ซ่อนแบบสำรวจ</string>
   <string name="morphe_hide_surveys_summary_off">แสดงแบบสำรวจ</string>

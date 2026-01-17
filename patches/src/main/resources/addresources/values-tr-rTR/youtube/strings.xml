@@ -103,6 +103,9 @@ Ancak, bunun etkinleştirilmesi IP adresiniz gibi bazı kullanıcı verilerini d
   <string name="morphe_hide_show_more_button_title">\'Daha fazla göster\' düğmesini gizle</string>
   <string name="morphe_hide_show_more_button_summary_on">Arama sonuçlarındaki daha fazla göster düğmesi gizli</string>
   <string name="morphe_hide_show_more_button_summary_off">Arama sonuçlarındaki daha fazla göster düğmesi görünür</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Abone edilmiş kanallar çubuğunu gizle</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Abone edilmiş kanallar çubuğu gizlidir</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Abone edilmiş kanallar çubuğu gösterilmektedir</string>
   <string name="morphe_hide_surveys_title">Anketleri gizle</string>
   <string name="morphe_hide_surveys_summary_on">Anketler gizli</string>
   <string name="morphe_hide_surveys_summary_off">Anketler görünür</string>

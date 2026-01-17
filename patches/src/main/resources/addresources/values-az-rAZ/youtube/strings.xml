@@ -103,6 +103,9 @@ Hər halda, bunu aktivləşdirmə IP ünvanınız kimi bəzi istifadəçi məlum
   <string name="morphe_hide_show_more_button_title">\'Daha çox göstər\' düyməsini gizlət</string>
   <string name="morphe_hide_show_more_button_summary_on">Daha çox göstər düyməsi axtarış nəticələrində gizlidir</string>
   <string name="morphe_hide_show_more_button_summary_off">Daha çox göstər düyməsi axtarış nəticələrində görünür</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Abunə kanal çubuğunu gizlə</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Abunə kanal çubuğu gizlidir</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Abunə kanal çubuğu göstərilir</string>
   <string name="morphe_hide_surveys_title">Sorğuları gizlət</string>
   <string name="morphe_hide_surveys_summary_on">Sorğular gizlədilib</string>
   <string name="morphe_hide_surveys_summary_off">Sorğular görünür</string>
