@@ -103,6 +103,9 @@ Ancak, bunun etkinleştirilmesi IP adresiniz gibi bazı kullanıcı verilerini d
   <string name="morphe_hide_show_more_button_title">\'Daha fazla göster\' düğmesini gizle</string>
   <string name="morphe_hide_show_more_button_summary_on">Arama sonuçlarındaki daha fazla göster düğmesi gizli</string>
   <string name="morphe_hide_show_more_button_summary_off">Arama sonuçlarındaki daha fazla göster düğmesi görünür</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Abone edilmiş kanallar çubuğunu gizle</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Abone edilmiş kanallar çubuğu gizlidir</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Abone edilmiş kanallar çubuğu gösterilmektedir</string>
   <string name="morphe_hide_surveys_title">Anketleri gizle</string>
   <string name="morphe_hide_surveys_summary_on">Anketler gizli</string>
   <string name="morphe_hide_surveys_summary_off">Anketler görünür</string>
@@ -668,6 +671,10 @@ Ses izleme menüsünü görüntülemek için, 'Video akışları sahteleştir'yi
   <string name="morphe_hide_autoplay_button_title">Otomatik oynatma düğmesini gizle</string>
   <string name="morphe_hide_autoplay_button_summary_on">Otomatik oynatma düğmesi gizli</string>
   <string name="morphe_hide_autoplay_button_summary_off">Otomatik oynatma düğmesi görünür</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Otomatik önizlemeyi gizle</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Otomatik önizleme gizli</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Otomatik önizleme görünür</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Altyazı düğmesini gizle</string>
   <string name="morphe_hide_captions_button_summary_on">Altyazı düğmesi gizli</string>
@@ -828,7 +835,7 @@ Ses izleme menüsünü görüntülemek için, 'Video akışları sahteleştir'yi
   <string name="morphe_hide_shorts_navigation_bar_title">Gezinme çubuğunu gizle</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Gezinme çubuğu gizli</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Gezinme çubuğu görünür</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Bitiş ekranı önerilen videosunu gizle</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Otomatik oynatma kapatıldığında bitiş ekranı önerilen videosu gizlenir
 

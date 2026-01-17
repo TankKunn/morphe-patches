@@ -145,7 +145,8 @@ public final class ShortsFilter extends Filter {
 
         StringFilterGroup reelSoundMetadata = new StringFilterGroup(
                 Settings.HIDE_SHORTS_SOUND_METADATA_LABEL,
-                "reel_sound_metadata"
+                "reel_sound_metadata",
+                "reel_carousel.e"
         );
 
         StringFilterGroup soundButton = new StringFilterGroup(
@@ -270,8 +271,9 @@ public final class ShortsFilter extends Filter {
                 stickers, likeFountain, likeButton, dislikeButton
         );
 
-        // FIXME: The Shorts buffer is very different with 20.22+ and if any of these filters
-        //        are enabled then all Shorts player vertical buttons are hidden.
+        // Legacy hiding of Shorts action buttons. Because of 20.31+ buffer changes
+        // it's currently not possible to hide these using buffer filtering.
+        // See alternative hiding strategy in hideActionButtons().
         if (!VersionCheckPatch.IS_20_22_OR_GREATER) {
             addPathCallbacks(shortsActionBar);
 

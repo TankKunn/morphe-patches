@@ -103,6 +103,9 @@ Ez a funkció azonban néhány felhasználói adatot is naplóz, például az IP
   <string name="morphe_hide_show_more_button_title">\'Továbbiak megjelenítése\' gomb elrejtése</string>
   <string name="morphe_hide_show_more_button_summary_on">A „Több megjelenítése” gomb a keresési eredményekben elrejtve</string>
   <string name="morphe_hide_show_more_button_summary_off">A „Több megjelenítése” gomb a keresési eredményekben látható</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Elrejtett a feliratkozott csatornák sávja</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">A feliratkozott csatornák sávja elrejtve</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">A feliratkozott csatornák sávja látható</string>
   <string name="morphe_hide_surveys_title">Felmérések elrejtése</string>
   <string name="morphe_hide_surveys_summary_on">Felmérések elrejtve</string>
   <string name="morphe_hide_surveys_summary_off">Felmérések megjelenítve</string>
@@ -668,6 +671,10 @@ A Hangos menü megjelenítéséhez állítsa át a 'Videó álstreamok' beállí
   <string name="morphe_hide_autoplay_button_title">Automatikus lejátszás gomb elrejtése</string>
   <string name="morphe_hide_autoplay_button_summary_on">Az automatikus lejátszás gomb el van rejtve</string>
   <string name="morphe_hide_autoplay_button_summary_off">Az automatikus lejátszás gomb látható</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Automatikus előnézet elrejtése</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Az automatikus előnézet el van rejtve</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Az automatikus előnézet látható</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Felirat gomb elrejtése</string>
   <string name="morphe_hide_captions_button_summary_on">A feliratok gomb el van rejtve</string>
@@ -828,7 +835,7 @@ A Hangos menü megjelenítéséhez állítsa át a 'Videó álstreamok' beállí
   <string name="morphe_hide_shorts_navigation_bar_title">Navigációs sáv elrejtése</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">A navigációs sáv el van rejtve</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">A navigációs sáv megjelenik</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Javasolt videó elrejtése a befejező képernyőn</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"A befejező képernyőn lévő javasolt videó el van rejtve, ha az automatikus lejátszás ki van kapcsolva.
 

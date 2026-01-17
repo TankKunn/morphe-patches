@@ -103,6 +103,9 @@ Dadurch werden jedoch auch einige Benutzerdaten wie deine IP-Adresse protokollie
   <string name="morphe_hide_show_more_button_title">Schaltfläche \'Mehr anzeigen\' ausblenden</string>
   <string name="morphe_hide_show_more_button_summary_on">\'Mehr anzeigen\' in den Suchergebnissen ist ausgeblendet</string>
   <string name="morphe_hide_show_more_button_summary_off">\'Mehr anzeigen\' in den Suchergebnissen wird angezeigt</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Versteckte Abonnementskanalleiste</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Abonnementskanalleiste ist versteckt</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Abonnementskanalleiste ist angezeigt</string>
   <string name="morphe_hide_surveys_title">Umfragen ausblenden</string>
   <string name="morphe_hide_surveys_summary_on">Umfragen werden ausgeblendet</string>
   <string name="morphe_hide_surveys_summary_off">Umfragen werden angezeigt</string>
@@ -665,6 +668,10 @@ Um das Audio-Track-Menü anzuzeigen, ändern Sie 'Video-Streams fingieren' in 'A
   <string name="morphe_hide_autoplay_button_title">Autoplay-Button ausblenden</string>
   <string name="morphe_hide_autoplay_button_summary_on">Autoplay Button ist ausgeblendet</string>
   <string name="morphe_hide_autoplay_button_summary_off">Autoplay Button wird angezeigt</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Autoplay-Vorschau ausblenden</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Autoplay-Vorschau ist ausgeblendet</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Autoplay-Vorschau wird angezeigt</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Untertitel-Button ausblenden</string>
   <string name="morphe_hide_captions_button_summary_on">Beschriftungs-Button ist ausgeblendet</string>
@@ -825,7 +832,7 @@ Um das Audio-Track-Menü anzuzeigen, ändern Sie 'Video-Streams fingieren' in 'A
   <string name="morphe_hide_shorts_navigation_bar_title">Navigationsleiste ausblenden</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Navigationsleiste ist ausgeblendet</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Navigationsleiste wird angezeigt</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Vorgeschlagenes Video auf dem Endbildschirm ausblenden</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Das vorgeschlagene Video auf dem Endbildschirm wird ausgeblendet, wenn die automatische Wiedergabe deaktiviert ist.
 

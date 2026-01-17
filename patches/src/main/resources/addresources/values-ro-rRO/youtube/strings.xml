@@ -103,6 +103,9 @@ Cu toate acestea, activarea acestei opțiuni va înregistra și unele date ale u
   <string name="morphe_hide_show_more_button_title">Ascunderea butonului „Afișează mai multe”</string>
   <string name="morphe_hide_show_more_button_summary_on">Butonul \"Afișează mai mult\" din rezultatele căutării este ascuns.</string>
   <string name="morphe_hide_show_more_button_summary_off">Butonul \"Afișează mai mult\" din rezultatele căutării este afișat.</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Ascunde bara cu canale abonate</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Bara cu canale abonate este ascunsă</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Bara cu canale abonate este vizibilă</string>
   <string name="morphe_hide_surveys_title">Ascunde sondajele</string>
   <string name="morphe_hide_surveys_summary_on">Sondajele sunt ascunse</string>
   <string name="morphe_hide_surveys_summary_off">Sondajele sunt afișate</string>
@@ -666,6 +669,10 @@ Pentru a afişa meniul de traiectorie audio, schimbați 'Falsificarea streamuril
   <string name="morphe_hide_autoplay_button_title">Ascunde butonul Redare automată</string>
   <string name="morphe_hide_autoplay_button_summary_on">Butonul Autoplay este ascuns</string>
   <string name="morphe_hide_autoplay_button_summary_off">Butonul Auto-redare este afișat</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Ascunde previzualizarea autoplay</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Previzualizarea autoplay este ascunsă</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Previzualizarea autoplay este afișată</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Ascunderea butonului Subtitrări</string>
   <string name="morphe_hide_captions_button_summary_on">Butonul subtitrari este ascuns</string>
@@ -826,7 +833,7 @@ Pentru a afişa meniul de traiectorie audio, schimbați 'Falsificarea streamuril
   <string name="morphe_hide_shorts_navigation_bar_title">Ascunde bara de navigare</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Bara de navigare este ascunsă</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Bara de navigare este afișată</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Ascunde videoclipul sugerat de pe ecranul final</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Videoclipul sugerat de pe ecranul final este ascuns când redarea automată este oprită
 

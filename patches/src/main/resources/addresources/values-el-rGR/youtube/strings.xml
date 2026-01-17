@@ -105,6 +105,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Κουμπί «Εμφάνιση περισσότερων»</string>
   <string name="morphe_hide_show_more_button_summary_on">Κρυμμένο\n\nΑφορά το κουμπί «Εμφάνιση περισσότερων» στα αποτελέσματα αναζήτησης</string>
   <string name="morphe_hide_show_more_button_summary_off">Εμφανίζεται\n\nΑφορά το κουμπί «Εμφάνιση περισσότερων» στα αποτελέσματα αναζήτησης</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Απόκρυψη μπαρ συνδεδεμένων καναλιών</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Η μπαρ συνδεδεμένων καναλιών είναι κρυμμένη</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Η μπαρ συνδεδεμένων καναλιών είναι ορατή</string>
   <string name="morphe_hide_surveys_title">Έρευνες</string>
   <string name="morphe_hide_surveys_summary_on">Κρυμμένες</string>
   <string name="morphe_hide_surveys_summary_off">Εμφανίζονται</string>
@@ -670,6 +673,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">Κουμπί αυτόματης αναπαραγωγής</string>
   <string name="morphe_hide_autoplay_button_summary_on">Κρυμμένο</string>
   <string name="morphe_hide_autoplay_button_summary_off">Εμφανίζεται</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Απόκρυψη προεπισκόπισης αυτόματης αναπαραγωγής</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Η προεπισκόπιση αυτόματης αναπαραγωγής είναι απόκρυφη</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Η προεπισκόπιση αυτόματης αναπαραγωγής είναι ορατή</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Κουμπί υπότιτλων</string>
   <string name="morphe_hide_captions_button_summary_on">Κρυμμένο</string>
@@ -830,7 +837,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Γραμμή πλοήγησης</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Η γραμμή πλοήγησης θα είναι κρυμμένη κατά την αναπαραγωγή Shorts</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Η γραμμή πλοήγησης εμφανίζεται κατά την αναπαραγωγή Shorts</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Προτεινόμενο βίντεο τελικής οθόνης</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Κρυμμένο όταν η αυτόματη αναπαραγωγή είναι απενεργοποιημένη
 

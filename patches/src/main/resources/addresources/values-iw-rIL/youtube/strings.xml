@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">הסתר לחצן \'הצג עוד\'</string>
   <string name="morphe_hide_show_more_button_summary_on">הלחצן \'הצג עוד\' בתוצאות חיפוש מוסתר</string>
   <string name="morphe_hide_show_more_button_summary_off">הלחצן \'הצג עוד\' בתוצאות החיפוש מוצג</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">הסתר סרגל תעודות מנויים</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">סרגל תעודות מנויים מוסתר</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">סרגל תעודות מנויים מופיע</string>
   <string name="morphe_hide_surveys_title">הסתר סקרים</string>
   <string name="morphe_hide_surveys_summary_on">הסקרים מוסתרים</string>
   <string name="morphe_hide_surveys_summary_off">הסקרים מוצגים</string>
@@ -668,6 +671,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">הסתר לחצן הפעלה אוטומטית</string>
   <string name="morphe_hide_autoplay_button_summary_on">לחצן הפעלה אוטומטית מוסתר</string>
   <string name="morphe_hide_autoplay_button_summary_off">לחצן הפעלה אוטומטית מוצג</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">הסתר תצוגה מקדימה אוטומטית</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">תצוגה מקדימה אוטומטית מוסתרת</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">תצוגה מקדימה אוטומטית מוצגת</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">הסתר לחצן כתוביות</string>
   <string name="morphe_hide_captions_button_summary_on">לחצן כתוביות מוסתר</string>
@@ -828,7 +835,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">הסתר סרגל ניווט</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">סרגל ניווט מוסתר</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">סרגל ניווט מוצג</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">הסתר סרטון מוצע של מסך סיום</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"סרטון מוצע של מסך סיום מוסתר כאשר הפעלה אוטומטית כבויה
 

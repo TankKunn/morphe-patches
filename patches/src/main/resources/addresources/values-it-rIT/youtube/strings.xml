@@ -103,6 +103,9 @@ Tuttavia, l'abilitazione di questa opzione registrerà anche alcuni dati dell'ut
   <string name="morphe_hide_show_more_button_title">Nascondi il pulsante \'Mostra di più\'</string>
   <string name="morphe_hide_show_more_button_summary_on">Il pulsante Mostra altro nei risultati di ricerca è nascosto</string>
   <string name="morphe_hide_show_more_button_summary_off">Il pulsante Mostra altro nei risultati di ricerca è mostrato</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Nascondi la barra dei canali iscritti</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">La barra dei canali iscritti è nascosta</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">La barra dei canali iscritti è visibile</string>
   <string name="morphe_hide_surveys_title">Nascondi sondaggi</string>
   <string name="morphe_hide_surveys_summary_on">Sondaggi nascosti</string>
   <string name="morphe_hide_surveys_summary_off">Sondaggi mostrati</string>
@@ -668,6 +671,10 @@ Per visualizzare il menu delle tracce audio, impostare 'Spoof video streams' su 
   <string name="morphe_hide_autoplay_button_title">Nascondi il pulsante Riproduzione Automatica</string>
   <string name="morphe_hide_autoplay_button_summary_on">Il pulsante Riproduzione Automatica è nascosto</string>
   <string name="morphe_hide_autoplay_button_summary_off">Il pulsante Riproduzione Automatica è visibile</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Nascondi anteprima autoplay</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Anteprima autoplay nascosta</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Anteprima autoplay visibile</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Nascondi il pulsante Sottotitoli</string>
   <string name="morphe_hide_captions_button_summary_on">Il pulsante Sottotitoli è nascosto</string>
@@ -828,7 +835,7 @@ Per visualizzare il menu delle tracce audio, impostare 'Spoof video streams' su 
   <string name="morphe_hide_shorts_navigation_bar_title">Nascondi la barra di navigazione</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">La barra di navigazione è nascosta</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">La barra di navigazione è visibile</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Nascondi video suggerito nella schermata finale</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Il video suggerito nella schermata finale è nascosto quando l'autoplay è disattivato
 

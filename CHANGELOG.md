@@ -1,3 +1,31 @@
+# [1.6.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.6.0-dev.3...v1.6.0-dev.4) (2026-01-16)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide subscribed channels bar" setting ([#226](https://github.com/MorpheApp/morphe-patches/issues/226)) ([bbaad3a](https://github.com/MorpheApp/morphe-patches/commit/bbaad3af85b43a7addc0e984a5a13e12986f6263))
+
+# [1.6.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.6.0-dev.2...v1.6.0-dev.3) (2026-01-16)
+
+
+### Features
+
+* **YouTube:** Add `Hide autoplay preview` patch ([#218](https://github.com/MorpheApp/morphe-patches/issues/218)) ([4d105bd](https://github.com/MorpheApp/morphe-patches/commit/4d105bd3d1a54ad0c59520156b0d88c68ea007ae)), closes [/github.com/inotia00/revanced-patches/blob/revanced-extended/patches/src/main/kotlin/app/revanced/patches/youtube/player/fullscreen/FullscreenComponentsPatch.kt#L155-L170](https://github.com//github.com/inotia00/revanced-patches/blob/revanced-extended/patches/src/main/kotlin/app/revanced/patches/youtube/player/fullscreen/FullscreenComponentsPatch.kt/issues/L155-L170)
+
+# [1.6.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.6.0-dev.1...v1.6.0-dev.2) (2026-01-16)
+
+
+### Bug Fixes
+
+* **YouTube - Hide Shorts components:** Hide new type of sound metadata label ([35931e6](https://github.com/MorpheApp/morphe-patches/commit/35931e6ddf287790c6a405b58e7b7d46c718bb0a))
+
+# [1.6.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.5.0...v1.6.0-dev.1) (2026-01-16)
+
+
+### Features
+
+* **YouTube Music:** Add experimental support for `9.02.50` ([977cb8b](https://github.com/MorpheApp/morphe-patches/commit/977cb8bfcdfb193b035b62ae2660d20eccdc6702))
+
 # [1.5.0](https://github.com/MorpheApp/morphe-patches/compare/v1.4.0...v1.5.0) (2026-01-15)
 
 

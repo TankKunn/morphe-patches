@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Сакриј дугме „Прикажи још”</string>
   <string name="morphe_hide_show_more_button_summary_on">Дугме „Прикажи више” у резултатима претраге је скривено</string>
   <string name="morphe_hide_show_more_button_summary_off">Дугме „Прикажи више” у резултатима претраге је приказано</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Скријте траку претплаћених канала</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Трака претплаћених канала је скривена</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Трака претплаћених канала је приказана</string>
   <string name="morphe_hide_surveys_title">Сакриј анкете</string>
   <string name="morphe_hide_surveys_summary_on">Анкете су скривене</string>
   <string name="morphe_hide_surveys_summary_off">Анкете су приказане</string>
@@ -668,6 +671,10 @@ Da bi prikazali meni sa audio stazom, promenite 'Spoof video streams' u 'Android
   <string name="morphe_hide_autoplay_button_title">Сакриј дугме „Аутоплеј”</string>
   <string name="morphe_hide_autoplay_button_summary_on">Дугме „Аутоплеј” је скривено</string>
   <string name="morphe_hide_autoplay_button_summary_off">Дугме „Аутоплеј” је приказано</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Сакриј преглед аутоматског пуштања</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Преглед аутоматског пуштања је скривен</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Преглед аутоматског пуштања је приказан</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Сакриј дугме „Титл”</string>
   <string name="morphe_hide_captions_button_summary_on">Дугме „Титл” је скривено</string>
@@ -828,7 +835,7 @@ Da bi prikazali meni sa audio stazom, promenite 'Spoof video streams' u 'Android
   <string name="morphe_hide_shorts_navigation_bar_title">Сакриј траку за навигацију</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Трака за навигацију је скривена</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Трака за навигацију је приказана</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Сакриј предложени видео на завршном екрану</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Предложени видео на завршном екрану је скривен, када је аутоплеј искључен
 

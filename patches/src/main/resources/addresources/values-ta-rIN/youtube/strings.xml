@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <!-- layout.hide.endscreencards.hideEndScreenCardsResourcePatch -->
   <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
@@ -114,7 +115,7 @@ Second \"item\" text"</string>
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
   <!-- layout.hide.time.hideTimestampPatch -->
   <!-- layout.panels.popup.playerPopupPanelsPatch -->

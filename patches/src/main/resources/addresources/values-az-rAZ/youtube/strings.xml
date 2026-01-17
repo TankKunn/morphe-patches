@@ -103,6 +103,9 @@ Hər halda, bunu aktivləşdirmə IP ünvanınız kimi bəzi istifadəçi məlum
   <string name="morphe_hide_show_more_button_title">\'Daha çox göstər\' düyməsini gizlət</string>
   <string name="morphe_hide_show_more_button_summary_on">Daha çox göstər düyməsi axtarış nəticələrində gizlidir</string>
   <string name="morphe_hide_show_more_button_summary_off">Daha çox göstər düyməsi axtarış nəticələrində görünür</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Abunə kanal çubuğunu gizlə</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Abunə kanal çubuğu gizlidir</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Abunə kanal çubuğu göstərilir</string>
   <string name="morphe_hide_surveys_title">Sorğuları gizlət</string>
   <string name="morphe_hide_surveys_summary_on">Sorğular gizlədilib</string>
   <string name="morphe_hide_surveys_summary_off">Sorğular görünür</string>
@@ -668,6 +671,10 @@ Audio trek menüsünü göstərmək üçün, 'Video axınları təqlid edilməsi
   <string name="morphe_hide_autoplay_button_title">Avtomatik oynatma düyməsini gizlət</string>
   <string name="morphe_hide_autoplay_button_summary_on">Avtomatik oynatma düyməsi gizlidir</string>
   <string name="morphe_hide_autoplay_button_summary_off">Avtomatik oynatma düyməsi göstərilir</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Avtomatik önizləmə önizlənməsini gizlət</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Avtomatik önizləmə önizlənməsi gizlidir</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Avtomatik önizləmə önizlənməsi göstərilir</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Titrlər Düyməsin Gizlət</string>
   <string name="morphe_hide_captions_button_summary_on">Titrlər düyməsi gizlidir</string>
@@ -828,7 +835,7 @@ Audio trek menüsünü göstərmək üçün, 'Video axınları təqlid edilməsi
   <string name="morphe_hide_shorts_navigation_bar_title">Fəaliyyət çubuğunu gizlət</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Fəaliyyət çubuğu gizlidir</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Fəaliyyət çubuğu göstərilir</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Son ekran bildirilən videonu gizlət</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Avtomatik oynatma qapadılanda son ekran bildirilən video gizlədilir
 

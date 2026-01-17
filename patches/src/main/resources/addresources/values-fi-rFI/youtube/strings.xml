@@ -103,6 +103,9 @@ Tämän käyttöönotto kirjaa myös joitakin käyttäjätietoja, kuten IP-osoit
   <string name="morphe_hide_show_more_button_title">Piilota \"Näytä lisää\" -painike</string>
   <string name="morphe_hide_show_more_button_summary_on">Näytä lisää -painike piilotetaan hakutuloksissa</string>
   <string name="morphe_hide_show_more_button_summary_off">Näytä lisää -painike näytetään hakutuloksissa</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Piilota tilaamattomat kanavat-rihma</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Tilaamattomat kanavat-rihma on piilotettu</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Tilaamattomat kanavat-rihma on näkyvissä</string>
   <string name="morphe_hide_surveys_title">Piilota kyselyt</string>
   <string name="morphe_hide_surveys_summary_on">Kyselyt piilotetaan</string>
   <string name="morphe_hide_surveys_summary_off">Kyselyt näytetään</string>
@@ -668,6 +671,10 @@ Toistaa Audio track valikon, vaihda 'Spoof video streams' 'Android No SDK':ksi"<
   <string name="morphe_hide_autoplay_button_title">Piilota Automaattinen toisto -painike</string>
   <string name="morphe_hide_autoplay_button_summary_on">Automaattinen toisto -painike piilotetaan</string>
   <string name="morphe_hide_autoplay_button_summary_off">Automaattinen toisto -painike näytetään</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Piilota esikatselu-automaattinen</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Esikatselu-automaattinen on piilotettu</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Esikatselu-automaattinen on näkyvissä</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Piilota Tekstitykset -painike</string>
   <string name="morphe_hide_captions_button_summary_on">Tekstitykset-painike piilotetaan</string>
@@ -828,7 +835,7 @@ Toistaa Audio track valikon, vaihda 'Spoof video streams' 'Android No SDK':ksi"<
   <string name="morphe_hide_shorts_navigation_bar_title">Piilota navigointipalkki</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Navigointipalkki piilotetaan</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Navigointipalkki näytetään</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Piilota loppunäytön ehdotettu video</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Loppunäytön ehdotettu video on piilotettu, kun automaattinen toisto ei ole käytössä
 

@@ -104,6 +104,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Приховати кнопку \"Показати більше\"</string>
   <string name="morphe_hide_show_more_button_summary_on">Кнопку \"Показати більше\" у результатах пошуку приховано</string>
   <string name="morphe_hide_show_more_button_summary_off">Кнопка \"Показати більше\" у результатах пошуку показується</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Приховати панель підписок</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Панель підписок прихована</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Панель підписок відображена</string>
   <string name="morphe_hide_surveys_title">Приховати опитування</string>
   <string name="morphe_hide_surveys_summary_on">Опитування приховано</string>
   <string name="morphe_hide_surveys_summary_off">Опитування показуються</string>
@@ -669,6 +672,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">Приховати кнопку \"Автовідтворення\"</string>
   <string name="morphe_hide_autoplay_button_summary_on">Кнопку \"Автовідтворення\" у відеоплеєрі приховано</string>
   <string name="morphe_hide_autoplay_button_summary_off">Кнопка \"Автовідтворення\" у відеоплеєрі показується</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Приховати попередній перегляд</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Попередній перегляд приховано</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Попередній перегляд показано</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Приховати кнопку \"Субтитри\"</string>
   <string name="morphe_hide_captions_button_summary_on">Кнопку \"Субтитри\" у відеоплеєрі приховано</string>
@@ -829,7 +836,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Приховати панель навігації</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Панель навігації приховано</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Панель навігації показується</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Приховати пропоноване відео на кінцевому екрані</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Пропоноване відео на кінцевому екрані приховано, коли автоматичне відтворення вимкнено.
 

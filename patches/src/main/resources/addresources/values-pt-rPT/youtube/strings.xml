@@ -103,6 +103,9 @@ No entanto, ativar isto também irá registar alguns dados do utilizador, como o
   <string name="morphe_hide_show_more_button_title">Ocultar botão \'Mostrar mais\'</string>
   <string name="morphe_hide_show_more_button_summary_on">O botão \"Mostrar mais\" nos resultados da pesquisa está oculto</string>
   <string name="morphe_hide_show_more_button_summary_off">O botão \"Mostrar mais\" nos resultados da pesquisa é exibido</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Esconder a barra de canais assinados</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">A barra de canais assinados está escondida</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">A barra de canais assinados está visível</string>
   <string name="morphe_hide_surveys_title">Ocultar pesquisas</string>
   <string name="morphe_hide_surveys_summary_on">Pesquisas estão ocultas</string>
   <string name="morphe_hide_surveys_summary_off">Pesquisas estão visíveis</string>
@@ -668,6 +671,10 @@ Para exibir o menu de faixas de áudio, altere 'Spoof video streams' para 'Andro
   <string name="morphe_hide_autoplay_button_title">Ocultar botão de reprodução automática</string>
   <string name="morphe_hide_autoplay_button_summary_on">O botão de reprodução automática está escondido</string>
   <string name="morphe_hide_autoplay_button_summary_off">Botão de reprodução automática é visível</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Ocultar prévia de reprodução automática</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">A prévia de reprodução automática está oculta</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">A prévia de reprodução automática está visível</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Ocultar botão de legendas</string>
   <string name="morphe_hide_captions_button_summary_on">O botão de legendas está escondido</string>
@@ -828,7 +835,7 @@ Para exibir o menu de faixas de áudio, altere 'Spoof video streams' para 'Andro
   <string name="morphe_hide_shorts_navigation_bar_title">Esconder barra de navegação</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">A barra de navegação está escondida</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Barra de navegação exibida</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Ocultar o vídeo sugerido na tela final</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"O vídeo sugerido na tela final fica oculto quando a reprodução automática está desativada
 

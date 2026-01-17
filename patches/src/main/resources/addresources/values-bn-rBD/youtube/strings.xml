@@ -99,6 +99,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">\'আরও দেখান\' বোতাম লুকান</string>
   <string name="morphe_hide_show_more_button_summary_on">অনুসন্ধান ফলাফলে \"আরও দেখান\" বোতামটি লুকানো আছে</string>
   <string name="morphe_hide_show_more_button_summary_off">অনুসন্ধান ফলাফলে \"আরও দেখান\" বোতামটি দেখানো হয়েছে</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">লুকান সাবস্ক্রাইব চ্যানেল বার</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">সাবস্ক্রাইব চ্যানেল বার লুকিয়ে রয়েছে</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">সাবস্ক্রাইব চ্যানেল বার দেখানো হয়েছে</string>
   <string name="morphe_hide_surveys_title">সার্ভে লুকান</string>
   <string name="morphe_hide_surveys_summary_on">জরিপগুলি লুকানো হয়েছে</string>
   <string name="morphe_hide_surveys_summary_off">জরিপগুলি দেখানো হয়েছে</string>
@@ -664,6 +667,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">অটোপ্লে বোতামটি লুকান</string>
   <string name="morphe_hide_autoplay_button_summary_on">autoplay বোতাম লুকানো আছে</string>
   <string name="morphe_hide_autoplay_button_summary_off">autoplay বোতাম দেখানো হচ্ছে</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">অটোপ্লে প্রিভিউ লুকান</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">অটোপ্লে প্রিভিউ লুকানো আছে</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">অটোপ্লে প্রিভিউ দেখানো হচ্ছে</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">ক্যাপশন বোতামটি লুকান</string>
   <string name="morphe_hide_captions_button_summary_on">ক্যাপশন বোতাম লুকানো আছে</string>
@@ -824,7 +831,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">নেভিগেশন বার লুকান</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">নেভিগেশন বার লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">পনেভিগেশন বার প্রদর্শিত হয়েছে</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">শেষ স্ক্রীনে প্রস্তাবিত ভিডিও লুকানো হবে</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"অটো প্লে বন্ধ থাকলে শেষ স্ক্রীনে প্রস্তাবিত ভিডিও লুকানো থাকে
 

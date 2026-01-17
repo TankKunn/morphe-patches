@@ -103,6 +103,9 @@ Włączenie tej opcji spowoduje również rejestrowanie niektórych danych użyt
   <string name="morphe_hide_show_more_button_title">Przycisk \'Pokaż więcej\'</string>
   <string name="morphe_hide_show_more_button_summary_on">Ukryty w wynikach wyszukiwania</string>
   <string name="morphe_hide_show_more_button_summary_off">Widoczny w wynikach wyszukiwania</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Pasek z subskrybowanymi kanałami</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Ukryty</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Widoczny</string>
   <string name="morphe_hide_surveys_title">Ankiety</string>
   <string name="morphe_hide_surveys_summary_on">Ukryte</string>
   <string name="morphe_hide_surveys_summary_off">Widoczne</string>
@@ -668,6 +671,10 @@ Aby menu od ścieżki dźwiękowej było widoczne, zmień 'Oszukuj strumienie fi
   <string name="morphe_hide_autoplay_button_title">Przycisk od automatycznego odtwarzania</string>
   <string name="morphe_hide_autoplay_button_summary_on">Ukryty</string>
   <string name="morphe_hide_autoplay_button_summary_off">Widoczny</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Podgląd autoodtwarzania</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Ukryty</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Widoczny</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Przycisk od napisów</string>
   <string name="morphe_hide_captions_button_summary_on">Ukryty</string>
@@ -828,7 +835,7 @@ Aby menu od ścieżki dźwiękowej było widoczne, zmień 'Oszukuj strumienie fi
   <string name="morphe_hide_shorts_navigation_bar_title">Pasek nawigacji</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Ukryty</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Widoczny</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Sugerowane filmy na końcu filmu</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Ukryte, lecz wyłącznie, gdy autoodtwarzanie jest wyłączone.
 

@@ -39,11 +39,11 @@ Second \"item\" text"</string>
   <string name="morphe_debug_protobuffer_title">protocol buffer をログに保存</string>
   <string name="morphe_debug_protobuffer_summary_on">デバッグログには protocol buffer が含まれます</string>
   <string name="morphe_debug_protobuffer_summary_off">デバッグログには protocol buffer は含まれません</string>
-  <string name="morphe_debug_protobuffer_user_dialog_message">"この設定を有効にすると、一部の UI コンポーネントの画面上のテキストを含む、追加のレイアウトデータがログに記録されます。
+  <string name="morphe_debug_protobuffer_user_dialog_message">"この設定を有効にすると、一部の UI コンポーネントの画面上に表示されるテキストを含む追加のレイアウト データがログに記録されるようになります。
 
-これは、カスタムフィルターを作成する際にコンポーネントを識別するのに役立ちます。
+このデータは、カスタム フィルタを作成する際にコンポーネントを識別するのに役立ちます。
 
-ただし、これを有効にすると、IP アドレスなどの一部のユーザーデータもログに記録されます。"</string>
+ただし、有効にすると、IP アドレスなどの一部のユーザーデータもログに記録されるようになります。"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_album_cards_title">アルバムカードを非表示</string>
   <string name="morphe_hide_album_cards_summary_on">アルバムカードはアーティストの概要欄の下に表示されません</string>
@@ -104,6 +104,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">「もっと見る」ボタンを非表示</string>
   <string name="morphe_hide_show_more_button_summary_on">「もっと見る」ボタンは検索結果に表示されません</string>
   <string name="morphe_hide_show_more_button_summary_off">「もっと見る」ボタンは検索結果に表示されます</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">登録済みチャンネルの一覧を非表示</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">登録済みチャンネルの一覧は登録チャンネルタブのヘッダーに表示されません</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">登録済みチャンネルの一覧は登録チャンネルタブのヘッダーに表示されます</string>
   <string name="morphe_hide_surveys_title">アンケートを非表示</string>
   <string name="morphe_hide_surveys_summary_on">アンケートは表示されません</string>
   <string name="morphe_hide_surveys_summary_off">アンケートは表示されます</string>
@@ -669,6 +672,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">自動再生ボタンを非表示</string>
   <string name="morphe_hide_autoplay_button_summary_on">自動再生ボタンはプレーヤー オーバーレイに表示されません</string>
   <string name="morphe_hide_autoplay_button_summary_off">自動再生ボタンはプレーヤー オーバーレイに表示されます</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">自動再生プレビューを非表示</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">自動再生プレビューは表示されません</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">自動再生プレビューは表示されます</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">字幕ボタンを非表示</string>
   <string name="morphe_hide_captions_button_summary_on">字幕ボタンはプレーヤー オーバーレイに表示されません</string>
@@ -829,7 +836,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">ナビゲーション バーを非表示</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">ナビゲーション バーは表示されません</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">ナビゲーション バーは表示されます</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">終了画面の「関連動画」を非表示</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"終了画面の「関連動画」は表示されませんが、自動再生がオンの場合は次の動画が自動で再生されます
 
@@ -956,7 +963,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_enable_create_segment_sum_on">セグメント作成ボタンがプレーヤー オーバーレイに表示されます</string>
   <string name="morphe_sb_enable_create_segment_sum_off">セグメント作成ボタンはプレーヤー オーバーレイに表示されません</string>
   <string name="morphe_sb_general_adjusting">セグメントの位置調整幅</string>
-  <string name="morphe_sb_general_adjusting_sum">新しいセグメントを作成する際に、時間調整ボタンが移動するミリ秒数</string>
+  <string name="morphe_sb_general_adjusting_sum">セグメント作成メニュー内の早送り / 巻き戻しボタンで移動する時間 (ミリ秒)</string>
   <string name="morphe_sb_general_adjusting_invalid">値は正の整数でなければなりません</string>
   <string name="morphe_sb_guidelines_preference_title">ガイドラインを見る</string>
   <string name="morphe_sb_guidelines_preference_sum">ガイドラインには、新しいセグメントを作成するためのルールやヒントが記載されています</string>
@@ -973,10 +980,10 @@ Second \"item\" text"</string>
   <string name="morphe_sb_general_skipcount_sum_off">スキップデータの収集は無効です</string>
   <string name="morphe_sb_general_min_duration">セグメントの長さのしきい値</string>
   <string name="morphe_sb_general_min_duration_sum">この値 (秒) よりも短い時間のセグメントは、スキップもプレーヤーに表示もされません</string>
-  <string name="morphe_sb_general_min_duration_invalid">無効な時間間隔</string>
+  <string name="morphe_sb_general_min_duration_invalid">時間 (長さ) の値が無効です</string>
   <string name="morphe_sb_general_uuid">非公開ユーザー ID</string>
   <string name="morphe_sb_general_uuid_sum">この ID は公開すべきではありません。パスワードのようなものであり、誰とも共有すべきではありません。もし誰かがこの ID を手に入れた場合、あなたになりすますことができます</string>
-  <string name="morphe_sb_general_uuid_invalid">非公開ユーザー ID は 30 文字以上必要です</string>
+  <string name="morphe_sb_general_uuid_invalid">非公開ユーザー ID は最低 30 文字必要です</string>
   <string name="morphe_sb_general_api_url">API URL を変更</string>
   <string name="morphe_sb_general_api_url_sum">SponsorBlock がサーバーとの通信で使用するアドレス</string>
   <string name="morphe_sb_api_url_reset">API URL をリセットしました</string>
@@ -984,8 +991,8 @@ Second \"item\" text"</string>
   <string name="morphe_sb_api_url_changed">API URL を変更しました</string>
   <string name="morphe_sb_settings_ie">設定のインポート / エクスポート</string>
   <string name="morphe_sb_settings_copy">コピー</string>
-  <string name="morphe_sb_settings_ie_sum">SponsorBlock の設定を JSON 形式のテキストでインポート / エクスポートします。この JSON テキストは他のプラットフォームでも利用可能です</string>
-  <string name="morphe_sb_settings_ie_sum_warning">SponsorBlock の設定を他のプラットフォームでも利用可能な JSON 形式のテキストでインポート / エクスポートします。この JSON テキストには非公開ユーザー ID が含まれています。このテキストを共有する際は十分注意してください</string>
+  <string name="morphe_sb_settings_ie_sum">SponsorBlock の設定を JSON 形式のテキストでインポート / エクスポートします。この JSON テキストは Morphe およびその他のプラットフォームで利用可能です</string>
+  <string name="morphe_sb_settings_ie_sum_warning">SponsorBlock の設定を Morphe およびその他のプラットフォームで利用可能な JSON 形式のテキストでインポート / エクスポートします。この JSON テキストには非公開ユーザー ID が含まれています。このテキストを共有する際は十分注意してください</string>
   <string name="morphe_sb_settings_import_successful">設定のインポートに成功しました</string>
   <string name="morphe_sb_settings_import_failed">インポートに失敗しました: %s</string>
   <string name="morphe_sb_settings_export_failed">エクスポートに失敗しました: %s</string>
@@ -994,7 +1001,7 @@ Second \"item\" text"</string>
 このユーザー ID は、パスワードのようなものであり、決して共有すべきではありません。"</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">今後表示しない</string>
   <string name="morphe_sb_diff_segments">セグメントに対する動作を変更</string>
-  <string name="morphe_sb_segments_sponsor">スポンサー</string>
+  <string name="morphe_sb_segments_sponsor">スポンサー (広告)</string>
   <string name="morphe_sb_segments_sponsor_sum">有料の宣伝、有料の紹介、直接的な広告。自己宣伝や好意をもって行う、慈善活動、クリエーター、ウェブサイト、製品などの無償の紹介は、このカテゴリには含まれません</string>
   <string name="morphe_sb_segments_selfpromo">無報酬の宣伝 / 自己宣伝</string>
   <string name="morphe_sb_segments_selfpromo_sum">無報酬または自己宣伝である、という点以外は「スポンサー」と同様です。商品、寄付、コラボ相手に関する宣伝などを含みます</string>
@@ -1002,12 +1009,12 @@ Second \"item\" text"</string>
   <string name="morphe_sb_segments_interaction_sum">動画内に挿入される、高評価、チャンネル登録、フォローなどを視聴者にうながす短時間の催促。時間的に長い場合またはイベントなどの個別具体的なものに関する催促の場合は、このカテゴリではなく「自己宣伝」に分類すべきです</string>
   <string name="morphe_sb_segments_highlight">ハイライト</string>
   <string name="morphe_sb_segments_highlight_sum">動画の中で最も重要な場面</string>
-  <string name="morphe_sb_segments_intro">インターミッション / 紹介アニメーション</string>
-  <string name="morphe_sb_segments_intro_sum">実際のコンテンツのない間隔。一時停止、静止フレーム、または繰り返しアニメーションである可能性があります。情報を含むトランジションは含まれません</string>
-  <string name="morphe_sb_segments_outro">エンドカード / クレジット</string>
-  <string name="morphe_sb_segments_outro_sum">クレジットまたは YouTube の終了画面が表示される場面。情報を含む結論、まとめ部分は、このカテゴリには含まれません</string>
+  <string name="morphe_sb_segments_intro">幕間 / オープニング (OP)</string>
+  <string name="morphe_sb_segments_intro_sum">実際のコンテンツを含まない区間。一時停止、静止画、繰り返しアニメーションなど。情報を含むトランジッション (場面転換) は、このカテゴリには含まれません</string>
+  <string name="morphe_sb_segments_outro">終了画面 / クレジット (ED)</string>
+  <string name="morphe_sb_segments_outro_sum">クレジットまたは YouTube の終了画面が表示される場面。情報を含む、動画の結論、まとめ部分は、このカテゴリには含まれません</string>
   <string name="morphe_sb_segments_hook">フック / あいさつ</string>
-  <string name="morphe_sb_segments_hook_sum">今後の動画のナレーション付きの予告編、および開幕と別れのあいさつ。他の部分に存在しない内容や情報を追加する場面は、このカテゴリには含まれません</string>
+  <string name="morphe_sb_segments_hook_sum">今後の動画の、ナレーション付きの予告編、および開幕と別れのあいさつ。他の部分に存在しない内容や情報を追加する場面は、このカテゴリには含まれません</string>
   <string name="morphe_sb_segments_preview">予告編 / 総集編</string>
   <string name="morphe_sb_segments_preview_sum">その動画またはシリーズ内の他の動画で過去に起きたこと、または今後起こることを示すクリップのコレクション。このクリップ群に含まれるすべての情報は、同じ動画の他の部分やシリーズ内の他の動画で繰り返されます</string>
   <string name="morphe_sb_segments_filler">余談 / 冗談</string>
@@ -1031,14 +1038,14 @@ Second \"item\" text"</string>
   <string name="morphe_sb_skip_button_filler">余談をスキップ</string>
   <string name="morphe_sb_skip_button_nomusic">楽曲以外をスキップ</string>
   <string name="morphe_sb_skip_button_unsubmitted">セグメントをスキップ</string>
-  <string name="morphe_sb_skipped_sponsor">スポンサーをスキップ</string>
+  <string name="morphe_sb_skipped_sponsor">スポンサー (広告) をスキップしました</string>
   <string name="morphe_sb_skipped_selfpromo">自己宣伝をスキップしました</string>
-  <string name="morphe_sb_skipped_interaction">邪魔なリマインダーをスキップ</string>
+  <string name="morphe_sb_skipped_interaction">視聴者への催促 (登録) をスキップしました</string>
   <string name="morphe_sb_skipped_highlight">ハイライトまでスキップしました</string>
-  <string name="morphe_sb_skipped_intro_beginning">OPをスキップ</string>
+  <string name="morphe_sb_skipped_intro_beginning">オープニング (OP) をスキップしました</string>
   <string name="morphe_sb_skipped_intro_middle">幕間をスキップしました</string>
   <string name="morphe_sb_skipped_intro_end">幕間をスキップしました</string>
-  <string name="morphe_sb_skipped_outro">EDをスキップ</string>
+  <string name="morphe_sb_skipped_outro">エンディング (ED) をスキップしました</string>
   <string name="morphe_sb_skipped_hook">フックをスキップしました</string>
   <string name="morphe_sb_skipped_preview_beginning">予告編をスキップしました</string>
   <string name="morphe_sb_skipped_preview_middle">予告編をスキップしました</string>
@@ -1097,15 +1104,15 @@ Second \"item\" text"</string>
   <string name="morphe_sb_new_segment_preview_segment_first">セグメントをテストしてスムーズにスキップすることを確認してください</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">セグメントの範囲を手動で編集</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">セグメントの開始位置または終了位置を編集しますか？</string>
-  <string name="morphe_sb_new_segment_edit_by_hand_parse_error">無効な時刻が入力されました</string>
+  <string name="morphe_sb_new_segment_edit_by_hand_parse_error">時間 (位置) の値が無効です</string>
   <string name="morphe_sb_stats_title">統計</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">統計情報は一時的に利用できません (API がダウンしています)</string>
   <string name="morphe_sb_stats_loading">読み込み中…</string>
-  <string name="morphe_sb_stats_sb_disabled">SponsorBlock は無効です</string>
+  <string name="morphe_sb_stats_sb_disabled">SponsorBlock が無効です</string>
   <string name="morphe_sb_stats_username">ユーザー名: &lt;b&gt;%s&lt;/b&gt;</string>
   <string name="morphe_sb_stats_username_change">ユーザー名を変更するには、ここをタップしてください</string>
-  <string name="morphe_sb_stats_username_change_unknown_error">ユーザー名の変更に失敗しました: ステータス: %1$d %2$s</string>
+  <string name="morphe_sb_stats_username_change_unknown_error">ユーザー名の変更に失敗しました (status: %1$d %2$s)</string>
   <string name="morphe_sb_stats_username_changed">ユーザー名の変更に成功しました</string>
   <string name="morphe_sb_stats_reputation">あなたの評価は &lt;b&gt;%.2f&lt;/b&gt; です</string>
   <string name="morphe_sb_stats_submissions">合計で &lt;b&gt;%s&lt;/b&gt; 個のセグメントを作成しました</string>
@@ -1438,7 +1445,7 @@ Automotive レイアウト
   <string name="morphe_spoof_video_streams_av1_summary_off">ビデオ コーデックは AVC (H.264)、VP9 のいずれかになります</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"この設定を有効にすると、AV1 のソフトウェア デコードが使用される場合があります。
 
-AV1 での動画再生は、カクつくまたはコマ落ちが発生する場合があります。"</string>
+AV1 での動画再生は、カクつくまたはコマ落ちが発生する可能性があります。"</string>
   <string name="morphe_spoof_video_streams_about_title">偽装による副作用</string>
   <string name="morphe_spoof_video_streams_about_experimental">• 実験的なクライアントであり、いつでも動作しなくなる可能性がある</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• 動画が 01:00 で停止する、または一部の地域で利用できない可能性がある</string>

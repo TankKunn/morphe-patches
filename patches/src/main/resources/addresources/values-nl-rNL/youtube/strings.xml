@@ -103,6 +103,9 @@ Als u dit inschakelt, worden echter ook bepaalde gebruikersgegevens, zoals uw IP
   <string name="morphe_hide_show_more_button_title">Verberg knop \'Meer weergeven\'</string>
   <string name="morphe_hide_show_more_button_summary_on">Meer weergeven-knop in zoekresultaten is verborgen</string>
   <string name="morphe_hide_show_more_button_summary_off">Meer weergeven-knop in zoekresultaten wordt getoond</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Verberg abonneerde kanalen balk</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Abonneerde kanalen balk is verborgen</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Abonneerde kanalen balk is zichtbaar</string>
   <string name="morphe_hide_surveys_title">Enquêtes verbergen</string>
   <string name="morphe_hide_surveys_summary_on">Enquêtes zijn verborgen</string>
   <string name="morphe_hide_surveys_summary_off">Enquêtes worden getoond</string>
@@ -668,6 +671,10 @@ Om het Audiobaantje-menu weer te tonen, verander 'Video's spoofen' naar 'Android
   <string name="morphe_hide_autoplay_button_title">Verberg knop voor automatisch afspelen</string>
   <string name="morphe_hide_autoplay_button_summary_on">Automatische afspeelknop is verborgen</string>
   <string name="morphe_hide_autoplay_button_summary_off">Automatische afspeelknop wordt weergegeven</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Verberg voorbeeld autoplay</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Autoplay voorbeeld is verborgen</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Autoplay voorbeeld wordt weergegeven</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Verberg ondertitelknop</string>
   <string name="morphe_hide_captions_button_summary_on">Ondertitelingknop is verborgen</string>
@@ -828,7 +835,7 @@ Om het Audiobaantje-menu weer te tonen, verander 'Video's spoofen' naar 'Android
   <string name="morphe_hide_shorts_navigation_bar_title">Verberg de navigatiebalk</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">De navigatiebalk is verborgen</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">De navigatiebalk is zichtbaar</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Voorgestelde video op eindscherm verbergen</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"De voorgestelde video op het eindscherm is verborgen wanneer automatisch afspelen is uitgeschakeld.
 

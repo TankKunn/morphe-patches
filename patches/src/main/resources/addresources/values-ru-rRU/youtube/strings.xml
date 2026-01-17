@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Скрыть кнопку \"Показать еще\"</string>
   <string name="morphe_hide_show_more_button_summary_on">Кнопка \"Показать еще\" в результатах поиска скрыта</string>
   <string name="morphe_hide_show_more_button_summary_off">Кнопка \"Показать еще\" в результатах поиска показана</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Скрыть панель подписанных каналов</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Панель подписанных каналов скрыта</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Панель подписанных каналов показана</string>
   <string name="morphe_hide_surveys_title">Скрыть опросы</string>
   <string name="morphe_hide_surveys_summary_on">Опросы в ленте скрыты</string>
   <string name="morphe_hide_surveys_summary_off">Опросы в ленте показаны</string>
@@ -668,6 +671,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">Скрыть кнопку \"Автовоспроизведение\"</string>
   <string name="morphe_hide_autoplay_button_summary_on">Кнопка \"Автовоспроизведение\" в плеере скрыта</string>
   <string name="morphe_hide_autoplay_button_summary_off">Кнопка \"Автовоспроизведение\" в плеере показана</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Скрыть предварительный просмотр автовоспроизведения</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Предварительный просмотр автовоспроизведения скрыт</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Предварительный просмотр автовоспроизведения показан</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Скрыть кнопку \"Субтитры\"</string>
   <string name="morphe_hide_captions_button_summary_on">Кнопка \"Субтитры\" в плеере скрыта</string>
@@ -828,7 +835,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Скрыть панель навигации</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Панель навигации в Shorts скрыта</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Панель навигации в Shorts показана</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Скрыть предлагаемые видео в конце просмотра</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Предлагаемые видео в конце просмотра скрыты при выключенном автовоспроизведении
 

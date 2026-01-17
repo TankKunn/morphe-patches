@@ -104,6 +104,9 @@ Tuy nhiên, bật tính năng này cũng sẽ ghi lại một số dữ liệu n
   <string name="morphe_hide_show_more_button_title">Ẩn nút \'Hiện thêm\'</string>
   <string name="morphe_hide_show_more_button_summary_on">Nút hiện thêm đã bị ẩn trong kết quả tìm kiếm</string>
   <string name="morphe_hide_show_more_button_summary_off">Nút hiện thêm được hiển thị trong kết quả tìm kiếm</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Ẩn thanh kênh đã đăng ký</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Thanh kênh đã đăng ký ở đầu thẻ Kênh đăng ký đã bị ẩn</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Thanh kênh đã đăng ký ở đầu thẻ Kênh đăng ký được hiển thị</string>
   <string name="morphe_hide_surveys_title">Ẩn khảo sát</string>
   <string name="morphe_hide_surveys_summary_on">Khảo sát đã bị ẩn</string>
   <string name="morphe_hide_surveys_summary_off">Khảo sát được hiển thị</string>
@@ -237,9 +240,9 @@ Nếu cài đặt này đang bật và Doodle cũng được hiển thị tại 
   <string name="morphe_hide_join_button_title">Ẩn nút Tham gia</string>
   <string name="morphe_hide_join_button_summary_on">Nút tham gia đã bị ẩn</string>
   <string name="morphe_hide_join_button_summary_off">Nút tham gia được hiển thị</string>
-  <string name="morphe_hide_links_preview_title">Ẩn bản xem trước liên kết</string>
-  <string name="morphe_hide_links_preview_summary_on">Bản xem trước liên kết đã bị ẩn</string>
-  <string name="morphe_hide_links_preview_summary_off">Bản xem trước liên kết được hiển thị</string>
+  <string name="morphe_hide_links_preview_title">Ẩn xem trước liên kết</string>
+  <string name="morphe_hide_links_preview_summary_on">Xem trước liên kết đã bị ẩn</string>
+  <string name="morphe_hide_links_preview_summary_off">Xem trước liên kết được hiển thị</string>
   <string name="morphe_hide_members_shelf_title">Ẩn kệ thành viên</string>
   <string name="morphe_hide_members_shelf_summary_on">Kệ thành viên đã bị ẩn</string>
   <string name="morphe_hide_members_shelf_summary_off">Kệ thành viên được hiển thị</string>
@@ -583,9 +586,9 @@ Lưu ý: Bật tính năng này cũng ẩn video quảng cáo"</string>
   <string name="morphe_switch_create_with_notifications_button_user_dialog_message">"Tắt cài đặt này cũng sẽ tắt chặn quảng cáo trên Shorts.
 
 Nếu thay đổi cài đặt này không có hiệu lực, hãy thử chuyển sang chế độ Ẩn danh."</string>
-  <string name="morphe_hide_navigation_button_labels_title">Ẩn nhãn nút điều hướng</string>
-  <string name="morphe_hide_navigation_button_labels_summary_on">Các nhãn đã bị ẩn</string>
-  <string name="morphe_hide_navigation_button_labels_summary_off">Các nhãn được hiển thị</string>
+  <string name="morphe_hide_navigation_button_labels_title">Ẩn tên nút điều hướng</string>
+  <string name="morphe_hide_navigation_button_labels_summary_on">Các tên nút đã bị ẩn</string>
+  <string name="morphe_hide_navigation_button_labels_summary_off">Các tên nút được hiển thị</string>
   <string name="morphe_narrow_navigation_buttons_title">Thu hẹp nút điều hướng</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">Khoảng cách giữa các nút trên thanh điều hướng sẽ hẹp hơn</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">Khoảng cách giữa các nút trên thanh điều hướng như bình thường</string>
@@ -669,6 +672,10 @@ Nếu thay đổi cài đặt này không có hiệu lực, hãy thử chuyển 
   <string name="morphe_hide_autoplay_button_title">Ẩn nút Tự động phát</string>
   <string name="morphe_hide_autoplay_button_summary_on">Nút tự động phát đã bị ẩn</string>
   <string name="morphe_hide_autoplay_button_summary_off">Nút tự động phát được hiển thị</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Ẩn phần xem trước tự động phát</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Phần xem trước tự động phát xuất hiện ở cuối video (khung ở góc trên bên trái) đã bị ẩn.</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Phần xem trước tự động phát xuất hiện ở cuối video (khung ở góc trên bên trái) được hiển thị.</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Ẩn nút Chú thích</string>
   <string name="morphe_hide_captions_button_summary_on">Nút phụ đề đã bị ẩn</string>
@@ -745,9 +752,9 @@ Nếu thay đổi cài đặt này không có hiệu lực, hãy thử chuyển 
   <string name="morphe_hide_shorts_join_button_title">Ẩn nút Tham gia</string>
   <string name="morphe_hide_shorts_join_button_summary_on">Nút tham gia đã bị ẩn</string>
   <string name="morphe_hide_shorts_join_button_summary_off">Nút tham gia được hiển thị</string>
-  <string name="morphe_hide_shorts_live_preview_title">Ẩn bản xem trước trực tiếp</string>
-  <string name="morphe_hide_shorts_live_preview_summary_on">Bản xem trước trực tiếp đã bị ẩn</string>
-  <string name="morphe_hide_shorts_live_preview_summary_off">Bản xem trước trực tiếp được hiển thị</string>
+  <string name="morphe_hide_shorts_live_preview_title">Ẩn xem trước phát trực tiếp</string>
+  <string name="morphe_hide_shorts_live_preview_summary_on">Xem trước pháp trực tiếp đã bị ẩn</string>
+  <string name="morphe_hide_shorts_live_preview_summary_off">Xem trước pháp trực tiếp được hiển thị</string>
   <string name="morphe_hide_shorts_location_label_title">Ẩn nhãn vị trí</string>
   <string name="morphe_hide_shorts_location_label_summary_on">Nhãn vị trí đã bị ẩn</string>
   <string name="morphe_hide_shorts_location_label_summary_off">Nhãn vị trí được hiển thị</string>
@@ -829,7 +836,7 @@ Nếu thay đổi cài đặt này không có hiệu lực, hãy thử chuyển 
   <string name="morphe_hide_shorts_navigation_bar_title">Ẩn thanh điều hướng</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Thanh điều hướng đã bị ẩn</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Thanh điều hướng được hiển thị</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Ẩn video được đề xuất ở màn hình kết thúc</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Video được đề xuất ở màn hình kết thúc đã bị ẩn khi tắt tự động phát
 
@@ -1347,7 +1354,7 @@ Bật tính năng này có thể mở khóa chất lượng video cao hơn"</str
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Phản hồi xúc giác khi thu phóng đã tắt</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Phản hồi xúc giác khi thu phóng đã bật</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
-  <string name="microg_offline_account_login_error">Nếu gần đây bạn đã cập nhật thông tin đăng nhập tài khoản của mình, hãy gỡ và cài đặt lại MicroG.</string>
+  <string name="microg_offline_account_login_error">Nếu gần đây bạn đã cập nhật thông tin đăng nhập tài khoản của mình, hãy gỡ và cài đặt lại microG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->
   <string name="morphe_bypass_url_redirects_title">Bỏ qua chuyển hướng URL</string>
   <string name="morphe_bypass_url_redirects_summary_on">Chuyển hướng URL đã được bỏ qua</string>

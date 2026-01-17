@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Скриване на бутона \"Покажи още\"</string>
   <string name="morphe_hide_show_more_button_summary_on">Изображенията в резултатите от търсене са скрити</string>
   <string name="morphe_hide_show_more_button_summary_off">Изображенията в резултатите от търсене са показани</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Скриване на лентата на подписаните канали</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Лентата на подписаните канали е скрита</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Лентата на подписаните канали е показана</string>
   <string name="morphe_hide_surveys_title">Скриване на анкетите</string>
   <string name="morphe_hide_surveys_summary_on">Анкетите са скрити</string>
   <string name="morphe_hide_surveys_summary_off">Анкетите са показани</string>
@@ -654,6 +657,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">Дублирането на видеа се показва</string>
   <string name="morphe_hide_autoplay_button_summary_on">Скрий дублиране на видеа</string>
   <string name="morphe_hide_autoplay_button_summary_off">Дублирането на видеа е скрито</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Скриване на прегледът за автозапускване</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Прегледът за автозапускване е скрит</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Прегледът за автозапускване е показан</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Дублирането на видеа се показва</string>
   <string name="morphe_hide_captions_button_summary_on">Скрий дублиране на видеа</string>
@@ -814,7 +821,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Дублирането на видеа е скрито</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Дублирането на видеа се показва</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Скрий дублиране на видеа</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Дублирането на видеа е скрито</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Дублирането на видеа се показва"</string>
   <string name="morphe_end_screen_suggested_video_summary_off">Скрий дублиране на видеа</string>

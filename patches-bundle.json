@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-01-15T20:13:17",
-  "description": "# [1.5.0](https://github.com/MorpheApp/morphe-patches/compare/v1.4.0...v1.5.0) (2026-01-15)\n\n\n### Features\n\n* **YouTube - Navigation buttons:** Add setting to use narrow navigation bar buttons ([1074c6a](https://github.com/MorpheApp/morphe-patches/commit/1074c6a6f70199ef8173524246be23bddcbb46d2))\n* **YouTube:** Add \"Hide search box trending results\" setting ([#40](https://github.com/MorpheApp/morphe-patches/issues/40)) ([dc1a898](https://github.com/MorpheApp/morphe-patches/commit/dc1a898924f1cf4eaa94a29e967d7e966ae7a243))",
-  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.5.0/patches-1.5.0.mpp",
-  "signature_download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.5.0/patches-1.5.0.mpp.asc",
-  "version": "1.5.0"
+  "created_at": "2026-01-16T23:11:14",
+  "description": "# [1.6.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.6.0-dev.3...v1.6.0-dev.4) (2026-01-16)\n\n\n### Features\n\n* **YouTube - Hide layout components:** Add \"Hide subscribed channels bar\" setting ([#226](https://github.com/MorpheApp/morphe-patches/issues/226)) ([bbaad3a](https://github.com/MorpheApp/morphe-patches/commit/bbaad3af85b43a7addc0e984a5a13e12986f6263))",
+  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.6.0-dev.4/patches-1.6.0-dev.4.mpp",
+  "signature_download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.6.0-dev.4/patches-1.6.0-dev.4.mpp.asc",
+  "version": "1.6.0-dev.4"
 }

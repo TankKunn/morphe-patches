@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">隐藏「显示更多」按钮</string>
   <string name="morphe_hide_show_more_button_summary_on">搜索结果中的显示更多按钮已隐藏</string>
   <string name="morphe_hide_show_more_button_summary_off">搜索结果中的显示更多按钮已显示</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">隐藏订阅频道栏</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">订阅频道栏已隐藏</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">订阅频道栏已显示</string>
   <string name="morphe_hide_surveys_title">隐藏调查</string>
   <string name="morphe_hide_surveys_summary_on">问卷已隐藏</string>
   <string name="morphe_hide_surveys_summary_off">问卷已显示</string>
@@ -668,6 +671,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">隐藏「自动播放」按钮</string>
   <string name="morphe_hide_autoplay_button_summary_on">自动播放按钮已隐藏</string>
   <string name="morphe_hide_autoplay_button_summary_off">自动播放按钮已显示</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">隐藏自动播放预览</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">自动播放预览已隐藏</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">自动播放预览已显示</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">隐藏「字幕」按钮</string>
   <string name="morphe_hide_captions_button_summary_on">字幕按钮已隐藏</string>
@@ -828,7 +835,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">隐藏导航栏</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">导航栏已隐藏</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">导航栏已显示</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">隐藏片尾画面推荐视频</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"自动播放关闭时隐藏片尾画面推荐视频
 

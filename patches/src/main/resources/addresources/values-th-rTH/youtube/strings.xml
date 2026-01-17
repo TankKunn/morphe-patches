@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">ซ่อนปุ่ม \"แสดงเพิ่มเติม\"</string>
   <string name="morphe_hide_show_more_button_summary_on">ปุ่มแสดงเพิ่มเติมในผลการค้นหาถูกซ่อนไว้</string>
   <string name="morphe_hide_show_more_button_summary_off">ปุ่มแสดงเพิ่มเติมในผลการค้นหาแสดงอยู่</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">ซ่อนแถบช่องที่ติดตาม</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">ซ่อนแถบช่องที่ติดตามแล้ว</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">แสดงแถบช่องที่ติดตาม</string>
   <string name="morphe_hide_surveys_title">ซ่อนแบบสำรวจ</string>
   <string name="morphe_hide_surveys_summary_on">ซ่อนแบบสำรวจ</string>
   <string name="morphe_hide_surveys_summary_off">แสดงแบบสำรวจ</string>
@@ -666,6 +669,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">ซ่อนปุ่มเล่นอัตโนมัติ</string>
   <string name="morphe_hide_autoplay_button_summary_on">ปุ่มเล่นอัตโนมัติซ่อนอยู่</string>
   <string name="morphe_hide_autoplay_button_summary_off">ปุ่มเล่นอัตโนมัติแสดงอยู่</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">ซ่อนตัวอย่างเล่นอัตโนมัติ</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">ตัวอย่างเล่นอัตโนมัติถูกซ่อน</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">ตัวอย่างเล่นอัตโนมัติถูกแสดง</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">ซ่อนปุ่มคำบรรยาย</string>
   <string name="morphe_hide_captions_button_summary_on">ปุ่มคำบรรยายซ่อนอยู่</string>
@@ -826,7 +833,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">ซ่อนแถบนำทาง</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">ซ่อนแถบนำทางแล้ว</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">ไม่ซ่อนแถบนำทาง</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">ซ่อนวิดีโอแนะนำในหน้าจอสิ้นสุด</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"วิดีโอแนะนำในหน้าจอสิ้นสุดจะถูกซ่อนเมื่อปิดเล่นอัตโนมัติ
 

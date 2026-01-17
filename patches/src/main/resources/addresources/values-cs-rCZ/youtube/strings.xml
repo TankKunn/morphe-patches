@@ -104,6 +104,9 @@ Povolením této možnosti se však budou zaznamenávat i některá uživatelsk�
   <string name="morphe_hide_show_more_button_title">Skrýt tlačítko „Zobrazit více“</string>
   <string name="morphe_hide_show_more_button_summary_on">Tlačítko „Zobrazit více“ ve výsledcích vyhledávání je skryté</string>
   <string name="morphe_hide_show_more_button_summary_off">Tlačítko \"Zobrazit více\" ve výsledcích vyhledávání je zobrazeno</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Skrýt panel předplatných kanálů</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Panel předplatných kanálů je skrytý</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Panel předplatných kanálů je zobrazen</string>
   <string name="morphe_hide_surveys_title">Skrýt průzkumy</string>
   <string name="morphe_hide_surveys_summary_on">Průzkumy jsou skryté</string>
   <string name="morphe_hide_surveys_summary_off">Průzkumy jsou zobrazené</string>
@@ -669,6 +672,10 @@ Chcete zobrazit menu zvukové stopy, změňte 'Falešné video proudy' na 'Andro
   <string name="morphe_hide_autoplay_button_title">Skrýt tlačítko automatického přehrávání</string>
   <string name="morphe_hide_autoplay_button_summary_on">Tlačítko automatického přehrávání je skryté</string>
   <string name="morphe_hide_autoplay_button_summary_off">Tlačítko automatického přehrávání je zobrazeno</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Skrýt náhled automatického přehrávání</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Náhled automatického přehrávání je skryt</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Náhled automatického přehrávání je zobrazen</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Skrýt tlačítko Titulky</string>
   <string name="morphe_hide_captions_button_summary_on">Tlačítko titulků je skryto</string>
@@ -829,7 +836,7 @@ Chcete zobrazit menu zvukové stopy, změňte 'Falešné video proudy' na 'Andro
   <string name="morphe_hide_shorts_navigation_bar_title">Skrýt navigační panel</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Navigační panel je skrytý</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Navigační panel je zobrazen</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Skrýt navrhované video na konci obrazovky</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Navrhované video na konci obrazovky je skryté, když je automatické přehrávání vypnuté
 

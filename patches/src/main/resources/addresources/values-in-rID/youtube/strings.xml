@@ -103,6 +103,9 @@ Namun, mengaktifkan ini juga akan mencatat beberapa data pengguna seperti alamat
   <string name="morphe_hide_show_more_button_title">Sembunyikan tombol \'Tampilkan selengkapnya\'</string>
   <string name="morphe_hide_show_more_button_summary_on">Tombol tampilkan lebih banyak di hasil pencarian disembunyikan</string>
   <string name="morphe_hide_show_more_button_summary_off">Tombol tampilkan lebih banyak di hasil pencarian ditampilkan</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Sembunyikan bilah saluran yang telah berlangganan</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Bilah saluran yang telah berlangganan disembunyikan</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Bilah saluran yang telah berlangganan ditampilkan</string>
   <string name="morphe_hide_surveys_title">Sembunyikan survei</string>
   <string name="morphe_hide_surveys_summary_on">Survei disembunyikan</string>
   <string name="morphe_hide_surveys_summary_off">Survei ditampilkan</string>
@@ -668,6 +671,10 @@ Untuk menampilkan menu trek audio, ubah 'Palsukan aliran video' menjadi 'Android
   <string name="morphe_hide_autoplay_button_title">Sembunyikan tombol Putar Otomatis</string>
   <string name="morphe_hide_autoplay_button_summary_on">Tombol putar otomatis disembunyikan</string>
   <string name="morphe_hide_autoplay_button_summary_off">Tombol putar otomatis ditampilkan</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Sembunyikan pratinjau putar otomatis</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Pratinjau putar otomatis disembunyikan</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Pratinjau putar otomatis ditampilkan</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Sembunyikan tombol Teks</string>
   <string name="morphe_hide_captions_button_summary_on">Tombol teks disembunyikan</string>
@@ -828,7 +835,7 @@ Untuk menampilkan menu trek audio, ubah 'Palsukan aliran video' menjadi 'Android
   <string name="morphe_hide_shorts_navigation_bar_title">Sembunyikan bilah navigasi</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Bilah navigasi disembunyikan</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Bilah navigasi ditampilkan</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Sembunyikan video yang disarankan di layar akhir</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Video yang disarankan di layar akhir disembunyikan saat pemutaran otomatis dimatikan
 

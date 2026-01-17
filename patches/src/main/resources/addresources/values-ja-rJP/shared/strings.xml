@@ -18,13 +18,13 @@ Second \"item\" text"</string>
 <resources>
   <!-- misc.settings.settingsResourcePatch -->
   <string name="morphe_settings_submenu_title">設定</string>
-  <string name="morphe_settings_confirm_user_dialog_title">続行してもよろしいですか？</string>
+  <string name="morphe_settings_confirm_user_dialog_title">本当に続行してもよろしいですか？</string>
   <string name="morphe_settings_save">保存</string>
   <string name="morphe_settings_reset">リセット</string>
   <string name="morphe_settings_reset_color">色をリセット</string>
   <string name="morphe_settings_color_invalid">色の値が無効です</string>
   <string name="morphe_settings_restart_title">再起動が必要です</string>
-  <string name="morphe_settings_restart_dialog_message">この変更を適用するには、アプリを再起動してください。</string>
+  <string name="morphe_settings_restart_dialog_message">この変更を反映するには、アプリを再起動してください。</string>
   <string name="morphe_settings_restart">再起動</string>
   <string name="morphe_settings_import">インポート</string>
   <string name="morphe_settings_import_copy">コピー</string>
@@ -40,7 +40,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_search_clear_history_message">本当にすべての検索履歴を消去しますか？</string>
   <string name="morphe_settings_search_tips_title">検索のヒント</string>
   <string name="morphe_settings_search_tips_summary">"• カテゴリをタップするとそのカテゴリの設定メニューに移動する
-• 設定を長押しすると設定メニューに移動してその設定までスクロールする
+• 設定を長押しすると設定メニューに移動しその設定までスクロールする
 • Enter キーを押すと検索クエリが履歴に保存される
 • 検索では、大文字・小文字や句読点は無視される
 • 無効化されている下位設定の上には、その設定を無効化している上位設定が表示される"</string>
@@ -55,7 +55,7 @@ Second \"item\" text"</string>
   <string name="morphe_show_menu_icons_title">Morphe の設定にアイコンを表示</string>
   <string name="morphe_show_menu_icons_summary_on">Morphe の設定メニューにはアイコンが表示されます</string>
   <string name="morphe_show_menu_icons_summary_off">Morphe の設定メニューにはアイコンは表示されません</string>
-  <string name="morphe_language_title">Morphe 設定の言語</string>
+  <string name="morphe_language_title">Morphe の言語</string>
   <string name="morphe_language_user_dialog_message">"一部の言語では、翻訳が存在しない、または不完全である可能性があります。
 
 新しい言語を翻訳する、または既存の翻訳を改善するには、translate.morphe.software にアクセスしてください。"</string>
@@ -103,7 +103,7 @@ Second \"item\" text"</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">flag を保存しました</string>
   <string name="morphe_debug_feature_flags_manager_toast_reset">flag をリセットしました</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">flag をクリップボードにコピーしました</string>
-  <string name="morphe_debug_feature_flags_manager_toast_no_flags">この機能を使用するには再起動してください</string>
+  <string name="morphe_debug_feature_flags_manager_toast_no_flags">アプリを再起動してください</string>
   <!-- Could be it's own resource file, but for simplicity it's shared among all apps. -->
   <!-- misc.gms.gmsCoreSupportResourcePatch -->
   <string name="microg_settings_summary">MicroG の設定メニューを開く</string>

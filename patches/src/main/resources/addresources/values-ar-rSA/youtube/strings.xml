@@ -103,6 +103,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">إخفاء زر \'عرض المزيد\'</string>
   <string name="morphe_hide_show_more_button_summary_on">تم إخفاء زر عرض المزيد في نتائج البحث</string>
   <string name="morphe_hide_show_more_button_summary_off">يتم إظهار زر عرض المزيد في نتائج البحث</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">إخفاء شريط القنوات المشترك بها</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">تم إخفاء شريط القنوات المشترك بها</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">يتم عرض شريط القنوات المشترك بها</string>
   <string name="morphe_hide_surveys_title">إخفاء الاستبيانات</string>
   <string name="morphe_hide_surveys_summary_on">تم إخفاء الاستبيانات</string>
   <string name="morphe_hide_surveys_summary_off">يتم عرض الاستبيانات</string>
@@ -668,6 +671,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">إخفاء زر التشغيل التلقائي</string>
   <string name="morphe_hide_autoplay_button_summary_on">تم إخفاء زر التشغيل التلقائي</string>
   <string name="morphe_hide_autoplay_button_summary_off">يتم عرض زر التشغيل التلقائي</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">إخفاء معاينة التشغيل التلقائي</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">تم إخفاء معاينة التشغيل التلقائي</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">يتم عرض معاينة التشغيل التلقائي</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">إخفاء زر الترجمة</string>
   <string name="morphe_hide_captions_button_summary_on">تم إخفاء زر الترجمة</string>
@@ -828,7 +835,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">إخفاء شريط التنقل</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">تم إخفاء شريط التنقل</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">يتم عرض شريط التنقل</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">إخفاء الفيديو المقترح في شاشة النهاية</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"تم إخفاء الفيديو المقترح في شاشة النهاية عند إيقاف التشغيل التلقائي
 

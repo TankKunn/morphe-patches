@@ -106,6 +106,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">\'자세히 보기\' 버튼 숨기기</string>
   <string name="morphe_hide_show_more_button_summary_on">검색 결과에서 \'자세히 보기\' 버튼이 숨겨집니다</string>
   <string name="morphe_hide_show_more_button_summary_off">검색 결과에서 \'자세히 보기\' 버튼이 표시됩니다</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">구독 채널바 숨기기</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">구독 피드에서 구독 채널바가 숨겨집니다</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">구독 피드에서 구독 채널바가 표시됩니다</string>
   <string name="morphe_hide_surveys_title">설문 조사 숨기기</string>
   <string name="morphe_hide_surveys_summary_on">설문 조사가 숨겨집니다</string>
   <string name="morphe_hide_surveys_summary_off">설문 조사가 표시됩니다</string>
@@ -668,6 +671,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_button_title">자동재생 버튼 숨기기</string>
   <string name="morphe_hide_autoplay_button_summary_on">자동재생 버튼이 숨겨집니다</string>
   <string name="morphe_hide_autoplay_button_summary_off">자동재생 버튼이 표시됩니다</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">자동재생 미리보기 숨기기</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">자동재생 미리보기가 숨겨집니다</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">자동재생 미리보기가 표시됩니다</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">자막 버튼 숨기기</string>
   <string name="morphe_hide_captions_button_summary_on">자막 버튼이 숨겨집니다</string>
@@ -828,7 +835,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">하단바 숨기기</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">하단바가 숨겨집니다</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">하단바가 표시됩니다</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">최종 화면 추천 동영상 숨기기</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"자동재생이 비활성화되어 있는 경우에 최종 화면에서 추천 동영상이 숨겨집니다
 

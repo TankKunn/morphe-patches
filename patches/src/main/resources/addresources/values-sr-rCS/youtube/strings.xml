@@ -103,6 +103,9 @@ Međutim, omogućavanje ovoga će takođe evidentirati neke korisničke podatke,
   <string name="morphe_hide_show_more_button_title">Sakrij dugme „Prikaži još”</string>
   <string name="morphe_hide_show_more_button_summary_on">Dugme „Prikaži više” u rezultatima pretrage je skriveno</string>
   <string name="morphe_hide_show_more_button_summary_off">Dugme „Prikaži više” u rezultatima pretrage je prikazano</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Sakrij traku pretpljenih kanala</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">Traka pretpljenih kanala je sakrivena</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">Traka pretpljenih kanala je prikazana</string>
   <string name="morphe_hide_surveys_title">Sakrij ankete</string>
   <string name="morphe_hide_surveys_summary_on">Ankete su skrivene</string>
   <string name="morphe_hide_surveys_summary_off">Ankete su prikazane</string>
@@ -668,6 +671,10 @@ Da bi prikazali meni sa audio trakom, promenite 'Imitirati video tokove' u 'Andr
   <string name="morphe_hide_autoplay_button_title">Sakrij dugme „Autoplej”</string>
   <string name="morphe_hide_autoplay_button_summary_on">Dugme „Autoplej” je skriveno</string>
   <string name="morphe_hide_autoplay_button_summary_off">Dugme „Autoplej” je prikazano</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Sakrij prikazu automatskog reproduciranja</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">Prikaz automatskog reproduciranja je sakriven</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">Prikaz automatskog reproduciranja je prikazan</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Sakrij dugme „Titl”</string>
   <string name="morphe_hide_captions_button_summary_on">Dugme „Titl” je skriveno</string>
@@ -828,7 +835,7 @@ Da bi prikazali meni sa audio trakom, promenite 'Imitirati video tokove' u 'Andr
   <string name="morphe_hide_shorts_navigation_bar_title">Sakrij traku za navigaciju</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Traka za navigaciju je skrivena</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Traka za navigaciju je prikazana</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Sakrij predloženi video na završnom ekranu</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"Predloženi video na završnom ekranu je skriven, kada je autoplej isključen
 

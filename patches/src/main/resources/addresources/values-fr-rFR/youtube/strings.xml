@@ -103,6 +103,9 @@ Cependant, activer cette option entraînera également l’enregistrement de cer
   <string name="morphe_hide_show_more_button_title">Masquer le bouton \'Voir plus\'</string>
   <string name="morphe_hide_show_more_button_summary_on">Le bouton \'Voir plus\' dans les résultats de recherche est masqué</string>
   <string name="morphe_hide_show_more_button_summary_off">Le bouton \'Voir plus\' dans les résultats de recherche est affiché</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">Masquer la liste des chaînes</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">La liste des chaînes dans \'Abonnements\' est masquée</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">La liste des chaînes dans \'Abonnements\' est affichée</string>
   <string name="morphe_hide_surveys_title">Masquer les sondages</string>
   <string name="morphe_hide_surveys_summary_on">Les sondages sont masqués</string>
   <string name="morphe_hide_surveys_summary_off">Les sondages sont affichés</string>
@@ -672,6 +675,10 @@ Pour afficher le menu Piste audio, modifier 'Falsifier les flux vidéo' en 'Andr
   <string name="morphe_hide_autoplay_button_title">Masquer le bouton \'Lecture automatique\'</string>
   <string name="morphe_hide_autoplay_button_summary_on">Le bouton \'Lecture automatique\' est masqué</string>
   <string name="morphe_hide_autoplay_button_summary_off">Le bouton \'Lecture automatique\' est affiché</string>
+  <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">Masquer l\'aperçu de lecture automatique</string>
+  <string name="morphe_hide_autoplay_preview_summary_on">L\'aperçu de lecture automatique est masqué</string>
+  <string name="morphe_hide_autoplay_preview_summary_off">L\'aperçu de lecture automatique est affiché</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Masquer le bouton \'Sous-titres\'</string>
   <string name="morphe_hide_captions_button_summary_on">Le bouton \'Sous-titres\' est masqué</string>
@@ -832,7 +839,7 @@ Pour afficher le menu Piste audio, modifier 'Falsifier les flux vidéo' en 'Andr
   <string name="morphe_hide_shorts_navigation_bar_title">Masquer la barre de navigation</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">La barre de navigation est masquée</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">La barre de navigation est affichée</string>
-  <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+  <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Masquer l\'écran de fin suggérant une vidéo</string>
   <string name="morphe_end_screen_suggested_video_summary_on">"L'écran de fin suggérant une vidéo est masqué lorsque la lecture automatique est désactivée.
 

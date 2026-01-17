@@ -109,6 +109,9 @@ However, enabling this will also log some user data such as your IP address."</s
     <string name="morphe_hide_show_more_button_title">Hide \'Show more\' button</string>
     <string name="morphe_hide_show_more_button_summary_on">Show more button in search results is hidden</string>
     <string name="morphe_hide_show_more_button_summary_off">Show more button in search results is shown</string>
+    <string name="morphe_hide_subscribed_channels_bar_title">Hide subscribed channels bar</string>
+    <string name="morphe_hide_subscribed_channels_bar_summary_on">Subscribed channels bar is hidden</string>
+    <string name="morphe_hide_subscribed_channels_bar_summary_off">Subscribed channels bar is shown</string>
     <string name="morphe_hide_surveys_title">Hide surveys</string>
     <string name="morphe_hide_surveys_summary_on">Surveys are hidden</string>
     <string name="morphe_hide_surveys_summary_off">Surveys are shown</string>
@@ -693,6 +696,11 @@ To show the Audio track menu, change \'Spoof video streams\' to \'Android No SDK
     <string name="morphe_hide_autoplay_button_title">Hide Autoplay button</string>
     <string name="morphe_hide_autoplay_button_summary_on">Autoplay button is hidden</string>
     <string name="morphe_hide_autoplay_button_summary_off">Autoplay button is shown</string>
+
+    <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+    <string name="morphe_hide_autoplay_preview_title">Hide autoplay preview</string>
+    <string name="morphe_hide_autoplay_preview_summary_on">Autoplay preview is hidden</string>
+    <string name="morphe_hide_autoplay_preview_summary_off">Autoplay preview is shown</string>
     <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
     <string name="morphe_hide_captions_button_title">Hide Captions button</string>
     <string name="morphe_hide_captions_button_summary_on">Captions button is hidden</string>
@@ -860,7 +868,7 @@ To show the Audio track menu, change \'Spoof video streams\' to \'Android No SDK
     <string name="morphe_hide_shorts_navigation_bar_summary_on">Navigation bar is hidden</string>
     <string name="morphe_hide_shorts_navigation_bar_summary_off">Navigation bar is shown</string>
 
-    <!-- layout.hide.endscreensuggestion.hideEndScreenSuggestedVideoPatch -->
+    <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
     <string name="morphe_end_screen_suggested_video_title">Hide end screen suggested video</string>
     <string name="morphe_end_screen_suggested_video_summary_on">"End screen suggested video is hidden when autoplay is turned off
 
