@@ -1,3 +1,10 @@
+# [1.7.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.1...v1.7.0-dev.2) (2026-01-19)
+
+
+### Features
+
+* **YouTube - SponsorBlock:** Show skip button if player overlay controls are active ([#243](https://github.com/MorpheApp/morphe-patches/issues/243)) ([9f90d0e](https://github.com/MorpheApp/morphe-patches/commit/9f90d0e386d8518ebd027a469ad72b52808048ab))
+
 # [1.7.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.6.0...v1.7.0-dev.1) (2026-01-18)
 
 
