@@ -1159,8 +1159,9 @@ Svep för att expandera eller stänga"</string>
   <string name="morphe_gradient_loading_screen_summary_on">Inläsningsskärmen kommer att ha en tonad bakgrund</string>
   <string name="morphe_gradient_loading_screen_summary_off">Inläsningsskärmen kommer att ha en enfärgad bakgrund</string>
   <string name="morphe_splash_screen_animation_style_title">Välkomstskärmens stil</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Färg</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Svartvit</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Inaktiverad</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Färg</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Svartvit</string>
   <string name="morphe_seekbar_custom_color_title">Aktivera anpassad färg på sökreglaget</string>
   <string name="morphe_seekbar_custom_color_summary_on">Sökreglagets anpassade färg visas</string>
   <string name="morphe_seekbar_custom_color_summary_off">Sökreglagets ursprungliga färg visas</string>

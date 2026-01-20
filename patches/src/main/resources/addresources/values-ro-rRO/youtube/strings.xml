@@ -1258,8 +1258,9 @@ Glisați pentru a extinde sau închide"</string>
   <string name="morphe_gradient_loading_screen_summary_on">Încărcarea ecranului va avea un fundal pentru gradient</string>
   <string name="morphe_gradient_loading_screen_summary_off">Ecranul de încărcare va avea un fundal solid</string>
   <string name="morphe_splash_screen_animation_style_title">Stil ecran de pornire</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Culoare</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Alb-negru</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Dezactivat</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Culoare</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Alb-negru</string>
   <string name="morphe_seekbar_custom_color_title">Activează culoarea barei de căutare personalizate</string>
   <string name="morphe_seekbar_custom_color_summary_on">Culoarea personalizată a barei de căutare este afișată</string>
   <string name="morphe_seekbar_custom_color_summary_off">Culoarea bara de căutare originală este afișată</string>

@@ -1260,8 +1260,9 @@ Second \"item\" text"</string>
   <string name="morphe_gradient_loading_screen_summary_on">מסך הטעינה יהיה בעל רקע עם מעבר צבע</string>
   <string name="morphe_gradient_loading_screen_summary_off">מסך הטעינה יהיה בעל רקע מוצק</string>
   <string name="morphe_splash_screen_animation_style_title">סגנון מסך פתיחה</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">צבע</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">שחור ולבן</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">מושבת</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">צבע</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">שחור ולבן</string>
   <string name="morphe_seekbar_custom_color_title">הפעל צבע סרגל דילוג מותאם אישית</string>
   <string name="morphe_seekbar_custom_color_summary_on">צבע סרגל דילוג מותאם אישית מוצג</string>
   <string name="morphe_seekbar_custom_color_summary_off">צבע סרגל דילוג מקורי מוצג</string>

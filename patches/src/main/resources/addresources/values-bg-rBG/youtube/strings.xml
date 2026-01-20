@@ -1238,8 +1238,9 @@ Second \"item\" text"</string>
   <string name="morphe_gradient_loading_screen_summary_on">Цвят</string>
   <string name="morphe_gradient_loading_screen_summary_off">Черно и бяло</string>
   <string name="morphe_splash_screen_animation_style_title">Включете personnalized seekbar color</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Персонализиран цвет на seekbar е показан</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Оригинал цвет на seekbar е показан</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Изключен</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Персонализиран цвет на seekbar е показан</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Оригинал цвет на seekbar е показан</string>
   <string name="morphe_seekbar_custom_color_title">Персонализиран цвет на seekbar</string>
   <string name="morphe_seekbar_custom_color_summary_on">Цветът на seekbar</string>
   <string name="morphe_seekbar_custom_color_summary_off">Персонализиран цвет на акцент на seekbar</string>

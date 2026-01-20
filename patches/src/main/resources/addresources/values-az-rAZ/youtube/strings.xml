@@ -1260,8 +1260,9 @@ Genişləndirmək və ya bağlamaq üçün sürüşdürün"</string>
   <string name="morphe_gradient_loading_screen_summary_on">Yükləmə ekranı, dəyişkən arxa plana malik olacaq</string>
   <string name="morphe_gradient_loading_screen_summary_off">Yükləmə ekranı, vahid arxa plana malik olacaq</string>
   <string name="morphe_splash_screen_animation_style_title">Sıçrama ekran üslubu</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Rəng</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Qara və ağ</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Qapalıdı</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Rəng</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Qara və ağ</string>
   <string name="morphe_seekbar_custom_color_title">Fərdi irəliləmə cizgisi rəngini aktivləşdir</string>
   <string name="morphe_seekbar_custom_color_summary_on">Fərdi irəliləmə cizgisi rəngi göstərilir</string>
   <string name="morphe_seekbar_custom_color_summary_off">Orijinal irəliləmə cizgisi rəngi göstərilir</string>

@@ -1261,8 +1261,9 @@ Automotive レイアウト
   <string name="morphe_gradient_loading_screen_summary_on">画面読み込み時にはグラデーションの背景が表示されます</string>
   <string name="morphe_gradient_loading_screen_summary_off">画面読み込み時には通常の背景が表示されます</string>
   <string name="morphe_splash_screen_animation_style_title">スプラッシュ画面のスタイル</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">カラー</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">白黒</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">無効</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">カラー</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">白黒</string>
   <string name="morphe_seekbar_custom_color_title">編集したシークバーの色を有効化</string>
   <string name="morphe_seekbar_custom_color_summary_on">シークバーは編集した色で表示されます</string>
   <string name="morphe_seekbar_custom_color_summary_off">シークバーはデフォルトの色で表示されます</string>
