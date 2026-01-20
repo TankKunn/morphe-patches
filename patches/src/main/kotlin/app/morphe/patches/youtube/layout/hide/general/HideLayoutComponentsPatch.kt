@@ -23,6 +23,7 @@ import app.morphe.patches.shared.misc.settings.preference.TextPreference
 import app.morphe.patches.youtube.misc.litho.filter.addLithoFilter
 import app.morphe.patches.youtube.misc.litho.filter.lithoFilterPatch
 import app.morphe.patches.youtube.misc.navigation.navigationBarHookPatch
+import app.morphe.patches.youtube.misc.playservice.is_20_21_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_26_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
@@ -224,7 +225,6 @@ val hideLayoutComponentsPatch = bytecodePatch(
             SwitchPreference("morphe_hide_movies_section"),
             SwitchPreference("morphe_hide_notify_me_button"),
             SwitchPreference("morphe_hide_playables"),
-            SwitchPreference("morphe_hide_search_suggestions"),
             SwitchPreference("morphe_hide_show_more_button"),
             SwitchPreference("morphe_hide_subscribed_channels_bar"),
             SwitchPreference("morphe_hide_surveys"),
@@ -235,6 +235,12 @@ val hideLayoutComponentsPatch = bytecodePatch(
             SwitchPreference("morphe_hide_web_search_results"),
             SwitchPreference("morphe_hide_doodles"),
         )
+
+        if (is_20_21_or_greater) {
+            PreferenceScreen.FEED.addPreferences(
+                SwitchPreference("morphe_hide_search_suggestions")
+            )
+        }
 
         PreferenceScreen.GENERAL_LAYOUT.addPreferences(
             PreferenceScreenPreference(
@@ -467,27 +473,30 @@ val hideLayoutComponentsPatch = bytecodePatch(
 
         // Hide search suggestions
 
-        SearchBoxTypingStringFingerprint.match(
-            SearchBoxTypingMethodFingerprint.method,
-        ).let {
-            it.method.apply {
-                val stringRegisterIndex = it.instructionMatches.first().index
-                val typingStringRegister = getInstruction<TwoRegisterInstruction>(stringRegisterIndex).registerA
+        if (is_20_21_or_greater) {
+            SearchBoxTypingStringFingerprint.match(
+                SearchBoxTypingMethodFingerprint.method,
+            ).let {
+                it.method.apply {
+                    val stringRegisterIndex = it.instructionMatches.first().index
+                    val typingStringRegister =
+                        getInstruction<TwoRegisterInstruction>(stringRegisterIndex).registerA
 
-                val insertIndex = stringRegisterIndex + 1
-                val freeRegister = findFreeRegister(insertIndex, typingStringRegister)
+                    val insertIndex = stringRegisterIndex + 1
+                    val freeRegister = findFreeRegister(insertIndex, typingStringRegister)
 
-                addInstructionsWithLabels(
-                    insertIndex,
-                    """
-                        invoke-static { v$typingStringRegister }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR->hideSearchSuggestions(Ljava/lang/String;)Z
-                        move-result v$freeRegister
-                        if-eqz v$freeRegister, :show
-                        return-void
-                        :show
-                        nop
-                    """
-                )
+                    addInstructionsWithLabels(
+                        insertIndex,
+                        """
+                            invoke-static { v$typingStringRegister }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR->hideSearchSuggestions(Ljava/lang/String;)Z
+                            move-result v$freeRegister
+                            if-eqz v$freeRegister, :show
+                            return-void
+                            :show
+                            nop
+                        """
+                    )
+                }
             }
         }
     }
