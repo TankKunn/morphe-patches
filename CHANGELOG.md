@@ -1,3 +1,10 @@
+# [1.7.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.2...v1.7.0-dev.3) (2026-01-20)
+
+
+### Features
+
+* **YouTube - Theme:** Add "Hide splash screen" setting ([#245](https://github.com/MorpheApp/morphe-patches/issues/245)) ([d8ae327](https://github.com/MorpheApp/morphe-patches/commit/d8ae327bc74b23237ef877f352828c6c7c97ea53))
+
 # [1.7.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.1...v1.7.0-dev.2) (2026-01-19)
 
 
