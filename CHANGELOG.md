@@ -1,3 +1,10 @@
+# [1.7.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.4...v1.7.0-dev.5) (2026-01-21)
+
+
+### Bug Fixes
+
+* **YouTube - SponsorBlock:** Show correct nested skip segment in overlay controls when seeking to an earlier video time ([1e13236](https://github.com/MorpheApp/morphe-patches/commit/1e1323670c1265466532919424c52016cd661492))
+
 # [1.7.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.3...v1.7.0-dev.4) (2026-01-21)
 
 
