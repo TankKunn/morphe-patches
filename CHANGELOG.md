@@ -1,3 +1,52 @@
+# [1.7.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.6...v1.7.0-dev.7) (2026-01-22)
+
+
+### Bug Fixes
+
+* **YouTube - SponsorBlock:** Do not show context toast when auto skipping videos in the feed ([17d8bd0](https://github.com/MorpheApp/morphe-patches/commit/17d8bd0b90d11193c7a9f3411f119ddf1aa058bd))
+
+# [1.7.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.5...v1.7.0-dev.6) (2026-01-22)
+
+
+### Features
+
+* **Spoof video streams:** Default client maintenance ([#249](https://github.com/MorpheApp/morphe-patches/issues/249)) ([ea01bfc](https://github.com/MorpheApp/morphe-patches/commit/ea01bfca9afdf0592f0486795047ef5b0abcb5ff))
+
+# [1.7.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.4...v1.7.0-dev.5) (2026-01-21)
+
+
+### Bug Fixes
+
+* **YouTube - SponsorBlock:** Show correct nested skip segment in overlay controls when seeking to an earlier video time ([1e13236](https://github.com/MorpheApp/morphe-patches/commit/1e1323670c1265466532919424c52016cd661492))
+
+# [1.7.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.3...v1.7.0-dev.4) (2026-01-21)
+
+
+### Features
+
+* **YouTube Music:** Add experimental support for `9.03.52` ([80c0198](https://github.com/MorpheApp/morphe-patches/commit/80c019889f51a1cf44a1e4f73da008a6b513ed90))
+
+# [1.7.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.2...v1.7.0-dev.3) (2026-01-20)
+
+
+### Features
+
+* **YouTube - Theme:** Add "Hide splash screen" setting ([#245](https://github.com/MorpheApp/morphe-patches/issues/245)) ([d8ae327](https://github.com/MorpheApp/morphe-patches/commit/d8ae327bc74b23237ef877f352828c6c7c97ea53))
+
+# [1.7.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.1...v1.7.0-dev.2) (2026-01-19)
+
+
+### Features
+
+* **YouTube - SponsorBlock:** Show skip button if player overlay controls are active ([#243](https://github.com/MorpheApp/morphe-patches/issues/243)) ([9f90d0e](https://github.com/MorpheApp/morphe-patches/commit/9f90d0e386d8518ebd027a469ad72b52808048ab))
+
+# [1.7.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.6.0...v1.7.0-dev.1) (2026-01-18)
+
+
+### Features
+
+* **YouTube:** Add experimental support for `21.03.34` ([#233](https://github.com/MorpheApp/morphe-patches/issues/233)) ([4b9d7a6](https://github.com/MorpheApp/morphe-patches/commit/4b9d7a6c8769e87e80727aa64dbc7d761513a259))
+
 # [1.6.0](https://github.com/MorpheApp/morphe-patches/compare/v1.5.0...v1.6.0) (2026-01-17)
 
 

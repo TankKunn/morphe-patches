@@ -1260,8 +1260,9 @@ Da bi prikazali meni sa audio stazom, promenite 'Spoof video streams' u 'Android
   <string name="morphe_gradient_loading_screen_summary_on">Екран учитавања ће имати градијентну позадину</string>
   <string name="morphe_gradient_loading_screen_summary_off">Екран учитавања ће имати обичну позадину</string>
   <string name="morphe_splash_screen_animation_style_title">Стил екрана покретања</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Боја</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Црно-бело</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Онемогућен</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Боја</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Црно-бело</string>
   <string name="morphe_seekbar_custom_color_title">Омогући прилагођену боју траке за премотавање</string>
   <string name="morphe_seekbar_custom_color_summary_on">Прилагођена боја траке за премотавање је приказана</string>
   <string name="morphe_seekbar_custom_color_summary_off">Оригинална боја траке за премотавање је приказана</string>

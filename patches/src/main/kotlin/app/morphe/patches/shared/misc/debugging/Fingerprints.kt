@@ -1,13 +1,22 @@
 package app.morphe.patches.shared.misc.debugging
 
 import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.string
 import com.android.tools.smali.dexlib2.AccessFlags
 
 internal object ExperimentalFeatureFlagParentFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
     returnType = "L",
-    parameters = listOf("L", "J", "[B"),
-    strings = listOf("Unable to parse proto typed experiment flag: ")
+    filters = listOf(
+        string("Unable to parse proto typed experiment flag: ")
+    ),
+    custom = { method, _ ->
+        // Early targets is: "L", "J", "[B"
+        // Later targets is: "L", "J"
+        method.parameters.let {
+            (it.size == 2 || it.size == 3) && it[1].type == "J"
+        }
+    }
 )
 
 internal object ExperimentalBooleanFeatureFlagFingerprint : Fingerprint(

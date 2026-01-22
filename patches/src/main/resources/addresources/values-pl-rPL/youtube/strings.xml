@@ -1260,8 +1260,9 @@ Przesuń, by rozwinąć lub zamknąć"</string>
   <string name="morphe_gradient_loading_screen_summary_on">Włączony</string>
   <string name="morphe_gradient_loading_screen_summary_off">Wyłączony</string>
   <string name="morphe_splash_screen_animation_style_title">Styl ekranu powitalnego</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Kolor</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Czarno-biały</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Wyłączony</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Kolor</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Czarno-biały</string>
   <string name="morphe_seekbar_custom_color_title">Niestandardowy kolor paska postępu</string>
   <string name="morphe_seekbar_custom_color_summary_on">Niestandardowy</string>
   <string name="morphe_seekbar_custom_color_summary_off">Oryginalny</string>

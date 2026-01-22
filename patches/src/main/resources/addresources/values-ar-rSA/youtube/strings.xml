@@ -1261,8 +1261,9 @@ Second \"item\" text"</string>
   <string name="morphe_gradient_loading_screen_summary_on">ستحتوي شاشة التحميل على خلفية متدرجة</string>
   <string name="morphe_gradient_loading_screen_summary_off">ستحتوي شاشة التحميل على خلفية ثابتة</string>
   <string name="morphe_splash_screen_animation_style_title">نمط الشاشة الترحيبية</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">اللون</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">أبيض وأسود</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">معطّل</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">اللون</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">أبيض وأسود</string>
   <string name="morphe_seekbar_custom_color_title">تمكين لون شريط تقدم الفيديو المخصص</string>
   <string name="morphe_seekbar_custom_color_summary_on">يتم عرض لون شريط تقدم الفيديو المخصص</string>
   <string name="morphe_seekbar_custom_color_summary_off">يتم عرض لون شريط تقدم الفيديو الاصلي</string>

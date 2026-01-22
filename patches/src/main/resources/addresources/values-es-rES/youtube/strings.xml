@@ -1260,8 +1260,9 @@ Desliza para expandir o cerrar"</string>
   <string name="morphe_gradient_loading_screen_summary_on">La pantalla de carga tendrá un fondo degradado</string>
   <string name="morphe_gradient_loading_screen_summary_off">La pantalla de carga tendrá un fondo sólido</string>
   <string name="morphe_splash_screen_animation_style_title">Estilo de pantalla de bienvenida</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Color</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Blanco y negro</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Desactivado</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Color</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Blanco y negro</string>
   <string name="morphe_seekbar_custom_color_title">Activar color personalizado de la barra de progreso</string>
   <string name="morphe_seekbar_custom_color_summary_on">El color personalizado de la barra de progreso está visible</string>
   <string name="morphe_seekbar_custom_color_summary_off">El color original de la barra de progreso está visible</string>

@@ -1258,8 +1258,9 @@ Csúsztassa a kibontáshoz vagy bezáráshoz"</string>
   <string name="morphe_gradient_loading_screen_summary_on">A betöltési képernyő színátmenetes hatterű lesz</string>
   <string name="morphe_gradient_loading_screen_summary_off">A betöltési képernyő egyszínű hátterű lesz</string>
   <string name="morphe_splash_screen_animation_style_title">Üdvözlőképernyő stílusa</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Színes</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Fekete-fehér</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Kikapcsolva</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Színes</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Fekete-fehér</string>
   <string name="morphe_seekbar_custom_color_title">Egyéni keresősáv szín engedélyezése</string>
   <string name="morphe_seekbar_custom_color_summary_on">Az egyéni keresősáv szín megjelenik</string>
   <string name="morphe_seekbar_custom_color_summary_off">Az egyéni keresősáv szín nem jelenik meg</string>

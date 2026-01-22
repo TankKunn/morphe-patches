@@ -18,11 +18,34 @@ Second \"item\" text"</string>
 <resources>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
+  <string name="morphe_settings_screen_00_about_title">Quant a</string>
+  <string name="morphe_settings_screen_01_ads_title">Publicitat</string>
+  <string name="morphe_settings_screen_02_alt_thumbnails_title">Miniatures alternatives</string>
+  <string name="morphe_settings_screen_03_feed_title">Canal</string>
+  <string name="morphe_settings_screen_04_general_title">General</string>
+  <string name="morphe_settings_screen_05_player_title">Reproductor</string>
+  <string name="morphe_settings_screen_07_seekbar_title">Barra de cerca</string>
+  <string name="morphe_settings_screen_08_swipe_controls_title">Controls de lliscada</string>
+  <string name="morphe_settings_screen_11_misc_title">Miscel·lània</string>
+  <string name="morphe_settings_screen_12_video_title">Vídeo</string>
+  <string name="morphe_restore_old_settings_menus_title">Restaurar els menús de configuració antics</string>
+  <string name="morphe_restore_old_settings_menus_summary_on">Es mostren els menús de configuració antics</string>
+  <string name="morphe_restore_old_settings_menus_summary_off">No es mostren els menús de configuració antics</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_shorts_disable_background_playback_title">Desactivar la reproducció en segon pla de Shorts</string>
+  <string name="morphe_shorts_disable_background_playback_summary_on">La reproducció en segon pla de Shorts està desactivada</string>
+  <string name="morphe_shorts_disable_background_playback_summary_off">La reproducció en segon pla de Shorts està activada</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_mix_playlists_title">Amaga llistes de reproducció de Mix</string>
+  <string name="morphe_hide_mix_playlists_summary_on">Les llistes de reproducció de Mix estan amagades</string>
+  <string name="morphe_hide_mix_playlists_summary_off">Es mostren les llistes de reproducció de Mix</string>
+  <string name="morphe_hide_movies_section_title">Amagar secció de pel·lícules</string>
+  <string name="morphe_hide_movies_section_summary_on">La secció de pel·lícules està amagada</string>
+  <string name="morphe_hide_movies_section_summary_off">Es mostra la secció de pel·lícules</string>
   <!-- 'Notify me' should be translated using the same localized wording YouTube displays for the button.
           This item appear in the Subscriptions feed for future livestreams or unreleased videos. -->
+  <string name="morphe_hide_notify_me_button_title">Amaga el botó \"Notifica\'m\"</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->

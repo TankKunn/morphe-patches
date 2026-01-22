@@ -482,11 +482,11 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_change_video_summary_off">전체 화면 중앙에서 위로/아래로 스와이프하여 다음/이전 동영상으로 전환하지 않습니다</string>
   <!-- layout.autocaptions.autoCaptionsPatch -->
   <string name="morphe_auto_captions_style_title">자동 자막 표시 여부</string>
-  <string name="morphe_auto_captions_style_entry_1">음소거 및 음소거 해제 시 표시함</string>
+  <string name="morphe_auto_captions_style_entry_1">음소거 및 음소거 해제 시 표시</string>
   <string name="morphe_auto_captions_style_entry_2">표시 안 함</string>
-  <string name="morphe_auto_captions_style_entry_3">음소거 해제 시 표시함</string>
-  <string name="morphe_auto_captions_style_entry_4">음소거 시 표시함</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">자동 자막을 표시함</string>
+  <string name="morphe_auto_captions_style_entry_3">음소거 해제 시 표시</string>
+  <string name="morphe_auto_captions_style_entry_4">음소거 시 표시</string>
+  <string name="morphe_auto_captions_style_legacy_entry_1">자동 자막을 표시</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">자동 자막을 표시 안 함</string>
   <!-- layout.buttons.action.hideButtonsPatch -->
   <string name="morphe_hide_buttons_screen_title">동작 버튼</string>
@@ -1090,7 +1090,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_new_segment_time_start">구간의 시작</string>
   <string name="morphe_sb_new_segment_time_end">구간의 끝</string>
   <string name="morphe_sb_new_segment_confirm_title">설정된 구간이 정확합니까?</string>
-  <string name="morphe_sb_new_segment_confirm_content">"선택한 구간이
+  <string name="morphe_sb_new_segment_confirm_content">"선택된 구간이
 
 %1$s
 부터
@@ -1262,14 +1262,15 @@ Second \"item\" text"</string>
   <string name="morphe_gradient_loading_screen_summary_on">그라데이션 색상 로딩 화면을 활성화합니다</string>
   <string name="morphe_gradient_loading_screen_summary_off">기본 로딩 화면을 활성화합니다</string>
   <string name="morphe_splash_screen_animation_style_title">스플래시 애니메이션 스타일</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">컬러</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">흑백</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">사용 안 함</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">컬러</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">흑백</string>
   <string name="morphe_seekbar_custom_color_title">사용자 정의 재생바 색상 활성화하기</string>
   <string name="morphe_seekbar_custom_color_summary_on">사용자 정의 재생바 색상을 활성화합니다</string>
   <string name="morphe_seekbar_custom_color_summary_off">기본 재생바 색상을 활성화합니다</string>
   <string name="morphe_seekbar_custom_color_primary_title">사용자 정의 재생바 주요 색상</string>
   <string name="morphe_seekbar_custom_color_primary_summary">재생바 주요 색상을 지정할 수 있습니다</string>
-  <string name="morphe_seekbar_custom_color_accent_title">사용자 정의 재생바 보조 색상</string>
+  <string name="morphe_seekbar_custom_color_accent_title">사용자 정의 재생바 강조 색상</string>
   <string name="morphe_seekbar_custom_color_accent_summary">재생바 보조 색상을 지정할 수 있습니다</string>
   <string name="morphe_seekbar_custom_color_invalid">잘못된 재생바 색상입니다</string>
   <!-- layout.branding.customBrandingPatch -->

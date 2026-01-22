@@ -1260,8 +1260,9 @@ Vuốt để mở rộng hoặc đóng"</string>
   <string name="morphe_gradient_loading_screen_summary_on">Màn hình tải sẽ có nền màu gradient</string>
   <string name="morphe_gradient_loading_screen_summary_off">Màn hình tải sẽ có nền màu đơn sắc</string>
   <string name="morphe_splash_screen_animation_style_title">Kiểu màn hình chờ</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Màu</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Đen và trắng</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Tắt</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Màu</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Đen và trắng</string>
   <string name="morphe_seekbar_custom_color_title">Bật màu thanh tiến trình tùy chỉnh</string>
   <string name="morphe_seekbar_custom_color_summary_on">Màu tùy chỉnh của thanh tiến trình đã được hiển thị</string>
   <string name="morphe_seekbar_custom_color_summary_off">Màu gốc của thanh tiến trình được hiển thị</string>

@@ -1260,8 +1260,9 @@ Scorri per espandere o chiudere"</string>
   <string name="morphe_gradient_loading_screen_summary_on">La schermata di caricamento avrà uno sfondo col gradiente</string>
   <string name="morphe_gradient_loading_screen_summary_off">La schermata di caricamento avrà uno sfondo a tinta unita</string>
   <string name="morphe_splash_screen_animation_style_title">Stile schermata iniziale</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Colore</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Bianco e nero</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Disattivato</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Colore</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Bianco e nero</string>
   <string name="morphe_seekbar_custom_color_title">Abilita colore personalizzato della barra di avanzamento</string>
   <string name="morphe_seekbar_custom_color_summary_on">Il colore personalizzato della barra di avanzamento è visibile</string>
   <string name="morphe_seekbar_custom_color_summary_off">Il colore originale della barra di avanzamento è visibile</string>

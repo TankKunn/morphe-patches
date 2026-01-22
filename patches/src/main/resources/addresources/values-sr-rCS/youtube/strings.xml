@@ -1260,8 +1260,9 @@ Povucite za proširenje ili zatvaranje"</string>
   <string name="morphe_gradient_loading_screen_summary_on">Ekran učitavanja će imati gradijentnu pozadinu</string>
   <string name="morphe_gradient_loading_screen_summary_off">Ekran učitavanja će imati običnu pozadinu</string>
   <string name="morphe_splash_screen_animation_style_title">Stil ekrana pokretanja</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Boja</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Crno-belo</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Onemogućen</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Boja</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Crno-belo</string>
   <string name="morphe_seekbar_custom_color_title">Omogući prilagođenu boju trake za premotavanje</string>
   <string name="morphe_seekbar_custom_color_summary_on">Prilagođena boja trake za premotavanje je prikazana</string>
   <string name="morphe_seekbar_custom_color_summary_off">Originalna boja trake za premotavanje je prikazana</string>

@@ -1264,8 +1264,9 @@ Balayer le mini-lecteur pour agrandir ou fermer"</string>
   <string name="morphe_gradient_loading_screen_summary_on">Le fond de l\'écran de chargement sera un dégradé de couleurs</string>
   <string name="morphe_gradient_loading_screen_summary_off">Le fond de l\'écran de chargement sera une couleur unie</string>
   <string name="morphe_splash_screen_animation_style_title">Style de l\'écran de lancement</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Couleur </string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Noir et blanc</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Désactivé</string>
+  <string name="morphe_splash_screen_animation_style_entry_2">Couleur </string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Noir et blanc</string>
   <string name="morphe_seekbar_custom_color_title">Activer une couleur perso. pour la barre de progression</string>
   <string name="morphe_seekbar_custom_color_summary_on">La couleur personnalisée de la barre de progression est activée</string>
   <string name="morphe_seekbar_custom_color_summary_off">La couleur originale de la barre de progression est activée</string>
