@@ -1260,7 +1260,7 @@ Second \"item\" text"</string>
   <string name="morphe_gradient_loading_screen_summary_on">Градиентный фон экрана загрузки макета включен</string>
   <string name="morphe_gradient_loading_screen_summary_off">Сплошной фон экрана загрузки макета включен</string>
   <string name="morphe_splash_screen_animation_style_title">Стиль экрана заставки</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Отключено</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Выключено</string>
   <string name="morphe_splash_screen_animation_style_entry_2">Цветной</string>
   <string name="morphe_splash_screen_animation_style_entry_3">Черно-белый</string>
   <string name="morphe_seekbar_custom_color_title">Включить кастомный цвет полосы прогресса</string>

@@ -96,6 +96,9 @@ Men om du aktiverar detta kommer även vissa användardata, t.ex. din IP-adress,
   <string name="morphe_hide_playables_title">Dölj Spelhörna</string>
   <string name="morphe_hide_playables_summary_on">Spelhörna är dold</string>
   <string name="morphe_hide_playables_summary_off">Spelhörna visas</string>
+  <string name="morphe_hide_search_suggestions_title">Dölj sökförslag</string>
+  <string name="morphe_hide_search_suggestions_summary_on">Sökförslag är dolda</string>
+  <string name="morphe_hide_search_suggestions_summary_off">Sökförslag visas</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Dölj knappen Visa mer</string>
@@ -166,6 +169,9 @@ Om en doodle visas för närvarande i din region och den här döljningsinställ
   <string name="morphe_hide_chapters_section_title">Dölj Kapitel</string>
   <string name="morphe_hide_chapters_section_summary_on">Avsnittet Kapitel är dolt</string>
   <string name="morphe_hide_chapters_section_summary_off">Avsnittet Kapitel visas</string>
+  <string name="morphe_hide_explore_podcast_section_title">Dölj Utforska podden</string>
+  <string name="morphe_hide_explore_podcast_section_summary_on">Avsnittet Utforska podden är dolt</string>
+  <string name="morphe_hide_explore_podcast_section_summary_off">Avsnittet Utforska podden visas</string>
   <string name="morphe_hide_how_this_was_made_section_title">Dölj Hur det här innehållet skapades</string>
   <string name="morphe_hide_how_this_was_made_section_summary_on">Avsnittet Hur det här innehållet skapades är dolt</string>
   <string name="morphe_hide_how_this_was_made_section_summary_off">Avsnittet Hur det här innehållet skapades visas</string>
@@ -178,6 +184,9 @@ Om en doodle visas för närvarande i din region och den här döljningsinställ
   <string name="morphe_hide_key_concepts_section_title">Dölj \"Huvudkoncept\"</string>
   <string name="morphe_hide_key_concepts_section_summary_on">Avsnittet Huvudkoncept är dolt</string>
   <string name="morphe_hide_key_concepts_section_summary_off">Avsnittet Huvudkoncept visas</string>
+  <string name="morphe_hide_subscribe_button_title">Dölj knappen Prenumerera</string>
+  <string name="morphe_hide_subscribe_button_summary_on">Knappen Prenumerera är dold</string>
+  <string name="morphe_hide_subscribe_button_summary_off">Knappen Prenumerera visas</string>
   <string name="morphe_hide_transcript_section_title">Dölj Manuskript</string>
   <string name="morphe_hide_transcript_section_summary_on">Avsnittet Manuskript är dolt</string>
   <string name="morphe_hide_transcript_section_summary_off">Avsnittet Manuskript visas</string>
@@ -205,6 +214,9 @@ Om en doodle visas för närvarande i din region och den här döljningsinställ
   <string name="morphe_hide_for_you_shelf_summary_on">Hyllan För dig är dold</string>
   <string name="morphe_hide_for_you_shelf_summary_off">Hyllan För dig visas</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_join_button_title">Dölj knappen Bli medlem</string>
+  <string name="morphe_hide_join_button_summary_on">Knappen Bli medlem är dold</string>
+  <string name="morphe_hide_join_button_summary_off">Knappen Bli medlem visas</string>
   <string name="morphe_hide_links_preview_title">Dölj förhandsgranskning av länkar</string>
   <string name="morphe_hide_links_preview_summary_on">Förhandsgranskning av länkar är dold</string>
   <string name="morphe_hide_links_preview_summary_off">Förhandsgranskning av länkar visas</string>
@@ -213,6 +225,9 @@ Om en doodle visas för närvarande i din region och den här döljningsinställ
   <string name="morphe_hide_members_shelf_summary_off">Medlemshyllan visas</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Subscribe' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_subscribe_button_in_channel_page_title">Dölj knappen Prenumerera</string>
+  <string name="morphe_hide_subscribe_button_in_channel_page_summary_on">Knappen Prenumerera är dold</string>
+  <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Knappen Prenumerera visas</string>
   <string name="morphe_comments_screen_title">Kommentarer</string>
   <string name="morphe_comments_screen_summary">Dölj eller visa komponenter i kommentarsfältet</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Dölj AI-sammanfattning av chatt</string>
@@ -533,6 +548,7 @@ Om du ändrar den här inställningen utan att det träder i kraft kan du testa 
   <string name="morphe_disable_translucent_status_bar_title">Inaktivera genomskinligt statusfält</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statusfältet är ogenomskinligt</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statusfältet är ogenomskinligt eller genomskinligt</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">På vissa enheter kan aktivering av den här funktionen ändra systemets navigeringsfält till genomskinligt.</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Inaktivera ljust genomskinligt fält</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Navigeringsfältet i ljust läge är ogenomskinligt</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Navigeringsfältet i ljust läge är ogenomskinligt eller genomskinligt</string>

@@ -1090,7 +1090,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_new_segment_time_start">구간의 시작</string>
   <string name="morphe_sb_new_segment_time_end">구간의 끝</string>
   <string name="morphe_sb_new_segment_confirm_title">설정된 구간이 정확합니까?</string>
-  <string name="morphe_sb_new_segment_confirm_content">"선택한 구간이
+  <string name="morphe_sb_new_segment_confirm_content">"선택된 구간이
 
 %1$s
 부터
@@ -1262,7 +1262,7 @@ Second \"item\" text"</string>
   <string name="morphe_gradient_loading_screen_summary_on">그라데이션 색상 로딩 화면을 활성화합니다</string>
   <string name="morphe_gradient_loading_screen_summary_off">기본 로딩 화면을 활성화합니다</string>
   <string name="morphe_splash_screen_animation_style_title">스플래시 애니메이션 스타일</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">비활성화됨</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">사용 안 함</string>
   <string name="morphe_splash_screen_animation_style_entry_2">컬러</string>
   <string name="morphe_splash_screen_animation_style_entry_3">흑백</string>
   <string name="morphe_seekbar_custom_color_title">사용자 정의 재생바 색상 활성화하기</string>
