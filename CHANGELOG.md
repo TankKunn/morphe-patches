@@ -1,3 +1,10 @@
+# [1.7.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.6...v1.7.0-dev.7) (2026-01-22)
+
+
+### Bug Fixes
+
+* **YouTube - SponsorBlock:** Do not show context toast when auto skipping videos in the feed ([17d8bd0](https://github.com/MorpheApp/morphe-patches/commit/17d8bd0b90d11193c7a9f3411f119ddf1aa058bd))
+
 # [1.7.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0-dev.5...v1.7.0-dev.6) (2026-01-22)
 
 
