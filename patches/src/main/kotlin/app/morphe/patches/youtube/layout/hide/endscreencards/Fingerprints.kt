@@ -75,11 +75,7 @@ internal object ShowEndscreenCardsFingerprint : Fingerprint(
         ),
         literal(5),
         literal(8),
-        literal(9),
-        fieldAccess(
-            opcode = Opcode.IGET_OBJECT,
-            type = "Lcom/google/android/libraries/youtube/innertube/model/player/PlayerResponseModel;"
-        )
+        literal(9)
     ),
     custom = { method, classDef ->
         classDef.methods.count() == 5
