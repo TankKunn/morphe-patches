@@ -1,3 +1,10 @@
+# [1.8.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.2...v1.8.0-dev.3) (2026-01-23)
+
+
+### Bug Fixes
+
+* **Spoof video streams:** Disable client flag that breaks playback with experimental app targets ([8cace8b](https://github.com/MorpheApp/morphe-patches/commit/8cace8b442d32c07b2fcd4da3b596497608e626c))
+
 # [1.8.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.1...v1.8.0-dev.2) (2026-01-23)
 
 
