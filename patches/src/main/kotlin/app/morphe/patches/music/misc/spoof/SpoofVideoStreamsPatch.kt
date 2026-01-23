@@ -35,6 +35,7 @@ val spoofVideoStreamsPatch = spoofVideoStreamsPatch(
                 "7.29.52",
                 "8.10.52",
                 "8.37.56",
+                "8.40.54"
             )
         )
     },
