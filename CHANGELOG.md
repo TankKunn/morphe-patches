@@ -1,3 +1,11 @@
+# [1.8.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.7.0...v1.8.0-dev.1) (2026-01-23)
+
+
+### Features
+
+* **YouTube Music:** Support version `8.40.54` ([639819d](https://github.com/MorpheApp/morphe-patches/commit/639819de0bec5f06fee4ff11c33f149521117d2b))
+* **YouTube:** Support version `20.40.45` ([9514870](https://github.com/MorpheApp/morphe-patches/commit/9514870fba460f21627ebfd6f849510c01321d91))
+
 # [1.7.0](https://github.com/MorpheApp/morphe-patches/compare/v1.6.0...v1.7.0) (2026-01-22)
 
 
