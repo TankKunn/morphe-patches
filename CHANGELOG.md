@@ -1,3 +1,10 @@
+# [1.8.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.7...v1.8.0-dev.8) (2026-01-24)
+
+
+### Bug Fixes
+
+* **YouTube - Hide Shorts components:** Fix "Hide sound metadata label" hiding other components ([#277](https://github.com/MorpheApp/morphe-patches/issues/277)) ([b55ebe4](https://github.com/MorpheApp/morphe-patches/commit/b55ebe4f0fac71905ce8c02185a174c661627b70))
+
 # [1.8.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.6...v1.8.0-dev.7) (2026-01-24)
 
 
