@@ -1,3 +1,10 @@
+# [1.8.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.6...v1.8.0-dev.7) (2026-01-24)
+
+
+### Bug Fixes
+
+* **YouTube:** Replace themed like animation applied from wrong version due to server-side fault ([#261](https://github.com/MorpheApp/morphe-patches/issues/261)) ([556dbb6](https://github.com/MorpheApp/morphe-patches/commit/556dbb68839d5c73dea20e23079d91b20f02d109))
+
 # [1.8.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.5...v1.8.0-dev.6) (2026-01-24)
 
 
