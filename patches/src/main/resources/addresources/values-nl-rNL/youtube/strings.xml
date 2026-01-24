@@ -578,13 +578,9 @@ Pas het volume aan door verticaal over de rechterkant van het scherm te vegen"</
   <string name="morphe_hide_notifications_button_summary_off">Meldingsknop wordt weergegeven</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_switch_create_with_notifications_button_title">Maak wisselen met Meldingen</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">"Maken-knop wordt gewisseld met meldingen-knop
-
-Opmerking: Als u dit inschakelt, worden videoadvertenties ook geforceerd verborgen"</string>
+  <string name="morphe_switch_create_with_notifications_button_summary_on">Maak-knop en Meldingen-knop zijn verwisseld.</string>
   <string name="morphe_switch_create_with_notifications_button_summary_off">Maak-knop wordt niet gewisseld met Meldingen-knop</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">"Als u deze instelling uitschakelt, wordt ook het blokkeren van Shorts-advertenties uitgeschakeld.
-
-Als het wijzigen van deze instelling geen effect heeft, probeer dan over te schakelen naar de incognitomodus."</string>
+  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Als het veranderen van deze instelling geen effect heeft, probeer dan om te schakelen naar Incognito-modus.</string>
   <string name="morphe_hide_navigation_button_labels_title">Navigatieknoppenlabels verbergen</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Labels zijn verborgen</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Labels worden weergegeven</string>
