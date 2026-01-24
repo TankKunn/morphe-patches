@@ -1,3 +1,10 @@
+# [1.8.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.3...v1.8.0-dev.4) (2026-01-24)
+
+
+### Features
+
+* **Enable debugging:** Allow overriding String/long/double flags in debug flag manager ([11b61b5](https://github.com/MorpheApp/morphe-patches/commit/11b61b5a509a4d659e69e9cfd9c3cdcad70dd9cb))
+
 # [1.8.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.2...v1.8.0-dev.3) (2026-01-23)
 
 
