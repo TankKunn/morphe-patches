@@ -1,3 +1,10 @@
+# [1.8.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.4...v1.8.0-dev.5) (2026-01-24)
+
+
+### Features
+
+* Skip publishing to GitHub packages ([#275](https://github.com/MorpheApp/morphe-patches/issues/275)) ([71b7db4](https://github.com/MorpheApp/morphe-patches/commit/71b7db4d38ac44ce6d0b9de111599485e1de015a))
+
 # [1.8.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.3...v1.8.0-dev.4) (2026-01-24)
 
 
