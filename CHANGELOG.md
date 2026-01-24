@@ -1,3 +1,10 @@
+# [1.8.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.8...v1.8.0-dev.9) (2026-01-24)
+
+
+### Bug Fixes
+
+* **Custom branding:** Resolve background playback crash with custom branded root installation ([3039650](https://github.com/MorpheApp/morphe-patches/commit/3039650460fdd2731b9ac1622127aa04a2b8a322))
+
 # [1.8.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.7...v1.8.0-dev.8) (2026-01-24)
 
 
