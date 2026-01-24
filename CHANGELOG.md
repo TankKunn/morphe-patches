@@ -1,3 +1,10 @@
+# [1.8.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.5...v1.8.0-dev.6) (2026-01-24)
+
+
+### Bug Fixes
+
+* **YouTube - Hide ads:** `Hide video ads` does not hide Shorts ads ([#260](https://github.com/MorpheApp/morphe-patches/issues/260)) ([9078d92](https://github.com/MorpheApp/morphe-patches/commit/9078d92c444d1d6abe095a3a694a518e7fb078e9))
+
 # [1.8.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.8.0-dev.4...v1.8.0-dev.5) (2026-01-24)
 
 

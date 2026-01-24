@@ -1,5 +1,5 @@
 {
-  "version": "1.8.0-dev.5",
+  "version": "1.8.0-dev.6",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -1173,7 +1173,8 @@
         "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch",
-        "ResourcePatch"
+        "ResourcePatch",
+        "BytecodePatch"
       ],
       "compatiblePackages": {
         "com.google.android.youtube": [
@@ -1695,6 +1696,7 @@
       "description": "Adds an option to remove ads in the video player.",
       "use": true,
       "dependencies": [
+        "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch"
       ],
