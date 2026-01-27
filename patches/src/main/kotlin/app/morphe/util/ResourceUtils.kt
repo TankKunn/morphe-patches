@@ -107,6 +107,11 @@ fun ResourcePatchContext.copyResources(
 
     for (resourceGroup in resources) {
         resourceGroup.resources.forEach { resource ->
+            // Create the target directory if it doesn't exist.
+            Files.createDirectories(
+                targetResourceDirectory.resolve(resourceGroup.resourceDirectoryName).toPath()
+            )
+
             val resourceFile = "${resourceGroup.resourceDirectoryName}/$resource"
             val stream = inputStreamFromBundledResource(sourceResourceDirectory, resourceFile)
             if (stream == null) {
