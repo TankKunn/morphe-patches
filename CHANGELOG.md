@@ -1,3 +1,10 @@
+# [1.9.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.2...v1.9.0-dev.3) (2026-01-27)
+
+
+### Bug Fixes
+
+* **YouTube:** Show a more descriptive error message if attempting to patch a region specific APKM that does not contain languages for all regions ([0f2700d](https://github.com/MorpheApp/morphe-patches/commit/0f2700db110a2e8d041e1213e0d95ed50f6d54ac))
+
 # [1.9.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.1...v1.9.0-dev.2) (2026-01-27)
 
 
