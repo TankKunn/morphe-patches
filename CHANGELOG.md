@@ -1,3 +1,10 @@
+# [1.9.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.5...v1.9.0-dev.6) (2026-01-27)
+
+
+### Features
+
+* **Reddit:** Add support for Reddit `2026.04.0` ([#276](https://github.com/MorpheApp/morphe-patches/issues/276)) ([0203cf6](https://github.com/MorpheApp/morphe-patches/commit/0203cf62d7214fe79b42a804fc51111e805f2afd))
+
 # [1.9.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.4...v1.9.0-dev.5) (2026-01-27)
 
 
