@@ -1,3 +1,10 @@
+# [1.9.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.4...v1.9.0-dev.5) (2026-01-27)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide video title" setting ([#309](https://github.com/MorpheApp/morphe-patches/issues/309)) ([2c7a973](https://github.com/MorpheApp/morphe-patches/commit/2c7a973d73644d81da1dd4a82a3b10056863ac70))
+
 # [1.9.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.3...v1.9.0-dev.4) (2026-01-27)
 
 
