@@ -173,7 +173,6 @@ val navigationBarPatch = bytecodePatch(
         //
 
         val toolbarPreferences = mutableSetOf(
-            SwitchPreference("morphe_hide_toolbar_cast_button"),
             SwitchPreference("morphe_hide_toolbar_create_button"),
             SwitchPreference("morphe_hide_toolbar_notification_button"),
             SwitchPreference("morphe_hide_toolbar_search_button")
