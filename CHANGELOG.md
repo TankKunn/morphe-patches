@@ -1,3 +1,15 @@
+# [1.9.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.6...v1.9.0-dev.7) (2026-01-28)
+
+
+### Bug Fixes
+
+* **Reddit:** Fix Recently Visited Shelf patch not being usable ([#316](https://github.com/MorpheApp/morphe-patches/issues/316)) ([49bab2b](https://github.com/MorpheApp/morphe-patches/commit/49bab2becde7f1adf593266b88abba0b876925ba))
+
+
+### Features
+
+* **Reddit:** Add ability to hide Games button on nav bar ([#315](https://github.com/MorpheApp/morphe-patches/issues/315)) ([07b9fc2](https://github.com/MorpheApp/morphe-patches/commit/07b9fc250b24c0219e8f650883f3c22ea7dfa23f))
+
 # [1.9.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.5...v1.9.0-dev.6) (2026-01-27)
 
 
