@@ -25,7 +25,7 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
     @Override
     public boolean getSettingsStatus() {
         return ScreenshotPopupPatch.isPatchIncluded() ||
-                //NavigationButtonsPatch.isPatchIncluded() || // FIXME
+                NavigationButtonsPatch.isPatchIncluded() ||
                 SidebarComponentsPatch.isPatchIncluded() ||
                 RecommendedCommunitiesPatch.isPatchIncluded() ||
                 ToolBarButtonPatch.isPatchIncluded() ||
@@ -68,6 +68,12 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
                     Settings.HIDE_DISCOVER_BUTTON,
                     "Hide Discover or Communities button",
                     "Hides the Discover or Communities button in the navigation bar."
+            ));
+            addPreference(new BooleanSettingPreference(
+                    context,
+                    Settings.HIDE_GAMES_BUTTON,
+                    "Hide Games button",
+                    "Hides the Games button in the navigation bar."
             ));
         }
 
