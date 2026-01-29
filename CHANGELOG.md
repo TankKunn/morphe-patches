@@ -1,3 +1,10 @@
+# [1.9.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.7...v1.9.0-dev.8) (2026-01-29)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide Latest videos button" setting ([#305](https://github.com/MorpheApp/morphe-patches/issues/305)) ([aed3e34](https://github.com/MorpheApp/morphe-patches/commit/aed3e343885732bb86647ddf626efdc173ca2ed6))
+
 # [1.9.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.6...v1.9.0-dev.7) (2026-01-28)
 
 
