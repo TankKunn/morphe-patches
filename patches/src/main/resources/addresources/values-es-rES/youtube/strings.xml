@@ -147,10 +147,15 @@ Si un Doodle está actualmente mostrándose en tu región y este ajuste de ocult
   <string name="morphe_hide_info_panels_summary_on">Los paneles de información están ocultos</string>
   <string name="morphe_hide_info_panels_summary_off">Los paneles de información están visibles</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
-          This appears in the video player for certain videos. -->
+          This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Ocultar botón \"Unirme\"</string>
   <string name="morphe_hide_join_membership_button_summary_on">El botón \"Unirme\" está oculto</string>
   <string name="morphe_hide_join_membership_button_summary_off">El botón \"Unirme\" está visible</string>
+  <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
+          This button usually appears in the player overlay for live streamed videos after opening live chat. -->
+  <string name="morphe_hide_live_chat_replay_button_title">Ocultar el botón \"Reproducción en vivo\"</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_on">El botón de reproducción en vivo en la superposición del jugador está oculto</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_off">El botón de reproducción en vivo en la superposición del jugador está visible</string>
   <string name="morphe_hide_medical_panels_title">Ocultar paneles médicos</string>
   <string name="morphe_hide_medical_panels_summary_on">Los paneles médicos están ocultos</string>
   <string name="morphe_hide_medical_panels_summary_off">Los paneles médicos están visibles</string>
@@ -519,7 +524,7 @@ Ajusta el volumen deslizando verticalmente en el lado derecho de la pantalla"</s
   <string name="morphe_hide_comments_button_summary_on">El botón \"Comentarios\" está oculto</string>
   <string name="morphe_hide_comments_button_summary_off">El botón \"Comentarios\" está visible</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually only shows on live streams. -->
+          This button usually appears on live streamed videos. -->
   <string name="morphe_hide_report_button_title">Ocultar \"Denunciar\"</string>
   <string name="morphe_hide_report_button_summary_on">El botón \"Denunciar\" está oculto</string>
   <string name="morphe_hide_report_button_summary_off">El botón \"Denunciar\" está visible</string>
@@ -532,7 +537,7 @@ Ajusta el volumen deslizando verticalmente en el lado derecho de la pantalla"</s
   <string name="morphe_hide_download_button_summary_on">El botón \"Descargar\" está oculto</string>
   <string name="morphe_hide_download_button_summary_off">El botón \"Descargar\" está visible</string>
   <!-- 'Hype' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows on videos uploaded by the logged-in user. -->
+          This button usually appears on videos uploaded by the logged-in user. -->
   <string name="morphe_hide_hype_button_title">Ocultar \"Hypear\"</string>
   <string name="morphe_hide_hype_button_summary_on">El botón \"Hypear\" está oculto</string>
   <string name="morphe_hide_hype_button_summary_off">El botón \"Hypear\" está visible</string>
@@ -545,7 +550,7 @@ Ajusta el volumen deslizando verticalmente en el lado derecho de la pantalla"</s
   <string name="morphe_hide_thanks_button_summary_on">El botón \"Gracias\" está oculto</string>
   <string name="morphe_hide_thanks_button_summary_off">El botón \"Gracias\" está visible</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows if the user ip is from specific region such as the USA or EU. -->
+          This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Ocultar \"Preguntar\"</string>
   <string name="morphe_hide_ask_button_summary_on">El botón \"Preguntar\" está oculto</string>
   <string name="morphe_hide_ask_button_summary_off">El botón \"Preguntar\" está visible</string>

@@ -145,10 +145,12 @@ Om en doodle visas för närvarande i din region och den här döljningsinställ
   <string name="morphe_hide_info_panels_summary_on">Infopanelerna är dolda</string>
   <string name="morphe_hide_info_panels_summary_off">Infopanelerna visas</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
-          This appears in the video player for certain videos. -->
+          This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Dölj knappen Bli medlem</string>
   <string name="morphe_hide_join_membership_button_summary_on">Knappen Bli medlem är dold</string>
   <string name="morphe_hide_join_membership_button_summary_off">Knappen Bli medlem visas</string>
+  <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
+          This button usually appears in the player overlay for live streamed videos after opening live chat. -->
   <string name="morphe_hide_medical_panels_title">Dölj hälsoinformationspaneler</string>
   <string name="morphe_hide_medical_panels_summary_on">Hälsoinformationspanelerna är dolda</string>
   <string name="morphe_hide_medical_panels_summary_off">Hälsoinformationspanelerna visas</string>
@@ -517,7 +519,7 @@ Justera volymen genom att svepa vertikalt till höger på skärmen"</string>
   <string name="morphe_hide_comments_button_summary_on">Knappen Kommentarer är dold</string>
   <string name="morphe_hide_comments_button_summary_off">Knappen Kommentarer visas</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually only shows on live streams. -->
+          This button usually appears on live streamed videos. -->
   <string name="morphe_hide_report_button_title">Dölj Rapportera</string>
   <string name="morphe_hide_report_button_summary_on">Knappen Rapportera är dold</string>
   <string name="morphe_hide_report_button_summary_off">Knappen Rapportera visas</string>
@@ -530,7 +532,7 @@ Justera volymen genom att svepa vertikalt till höger på skärmen"</string>
   <string name="morphe_hide_download_button_summary_on">Knappen Ladda ned är dold</string>
   <string name="morphe_hide_download_button_summary_off">Knappen Ladda ned visas</string>
   <!-- 'Hype' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows on videos uploaded by the logged-in user. -->
+          This button usually appears on videos uploaded by the logged-in user. -->
   <string name="morphe_hide_hype_button_title">Dölj Hajp</string>
   <string name="morphe_hide_hype_button_summary_on">Knappen Hajp är dold</string>
   <string name="morphe_hide_hype_button_summary_off">Knappen Hajp visas</string>
@@ -543,7 +545,7 @@ Justera volymen genom att svepa vertikalt till höger på skärmen"</string>
   <string name="morphe_hide_thanks_button_summary_on">Knappen Thanks är dold</string>
   <string name="morphe_hide_thanks_button_summary_off">Knappen Thanks visas</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows if the user ip is from specific region such as the USA or EU. -->
+          This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Dölj Fråga</string>
   <string name="morphe_hide_ask_button_summary_on">Knappen Fråga är dold</string>
   <string name="morphe_hide_ask_button_summary_off">Knappen Fråga visas</string>
@@ -608,15 +610,15 @@ Justera volymen genom att svepa vertikalt till höger på skärmen"</string>
   <string name="morphe_disable_translucent_navigation_bar_dark_summary_off">Navigeringsfältet i mörkt läge är ogenomskinligt eller genomskinligt</string>
   <string name="morphe_toolbar_screen_title">Verktygsfält</string>
   <string name="morphe_toolbar_screen_summary">Dölj eller ändra komponenter i verktygsfältet</string>
-  <string name="morphe_hide_toolbar_create_button_title">Dölj skapa-knappen</string>
+  <string name="morphe_hide_toolbar_create_button_title">Dölj knappen Skapa</string>
   <string name="morphe_hide_toolbar_create_button_summary_on">Knappen Skapa är dold</string>
   <string name="morphe_hide_toolbar_create_button_summary_off">Knappen Skapa visas</string>
-  <string name="morphe_hide_toolbar_notification_button_title">Dölj aviseringar-knappen</string>
+  <string name="morphe_hide_toolbar_notification_button_title">Dölj knappen Aviseringar</string>
   <string name="morphe_hide_toolbar_notification_button_summary_on">Knappen Aviseringar är dold</string>
   <string name="morphe_hide_toolbar_notification_button_summary_off">Knappen Aviseringar visas</string>
-  <string name="morphe_hide_toolbar_search_button_title">Dölj sökknappen</string>
-  <string name="morphe_hide_toolbar_search_button_summary_on">Sökknappen är dold</string>
-  <string name="morphe_hide_toolbar_search_button_summary_off">Sökknappen visas</string>
+  <string name="morphe_hide_toolbar_search_button_title">Dölj knappen Sök</string>
+  <string name="morphe_hide_toolbar_search_button_summary_on">Knappen Sök är dold</string>
+  <string name="morphe_hide_toolbar_search_button_summary_off">Knappen Sök visas</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Flyout-meny</string>
   <string name="morphe_hide_player_flyout_summary">Dölj eller visa objekt i spelarens flyout-meny</string>

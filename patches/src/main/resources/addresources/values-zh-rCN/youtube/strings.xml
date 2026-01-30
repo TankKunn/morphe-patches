@@ -147,10 +147,15 @@ Second \"item\" text"</string>
   <string name="morphe_hide_info_panels_summary_on">信息面板已隐藏</string>
   <string name="morphe_hide_info_panels_summary_off">信息面板已显示</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
-          This appears in the video player for certain videos. -->
+          This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">隐藏“加入”按钮</string>
   <string name="morphe_hide_join_membership_button_summary_on">加入按钮已隐藏</string>
   <string name="morphe_hide_join_membership_button_summary_off">加入按钮已显示</string>
+  <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
+          This button usually appears in the player overlay for live streamed videos after opening live chat. -->
+  <string name="morphe_hide_live_chat_replay_button_title">隐藏“直播聊天回放”按钮</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_on">播放器重叠中隐藏“直播聊天回放”按钮</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_off">播放器重叠中显示“直播聊天回放”按钮</string>
   <string name="morphe_hide_medical_panels_title">隐藏医疗面板</string>
   <string name="morphe_hide_medical_panels_summary_on">医疗信息面板已隐藏</string>
   <string name="morphe_hide_medical_panels_summary_off">医疗信息面板已显示</string>
@@ -519,7 +524,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_button_summary_on">评论按钮已隐藏</string>
   <string name="morphe_hide_comments_button_summary_off">评论按钮已显示</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually only shows on live streams. -->
+          This button usually appears on live streamed videos. -->
   <string name="morphe_hide_report_button_title">隐藏「举报」</string>
   <string name="morphe_hide_report_button_summary_on">举报按钮已隐藏</string>
   <string name="morphe_hide_report_button_summary_off">举报按钮已显示</string>
@@ -532,7 +537,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_download_button_summary_on">下载按钮已隐藏</string>
   <string name="morphe_hide_download_button_summary_off">下载按钮已显示</string>
   <!-- 'Hype' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows on videos uploaded by the logged-in user. -->
+          This button usually appears on videos uploaded by the logged-in user. -->
   <string name="morphe_hide_hype_button_title">隐藏热度</string>
   <string name="morphe_hide_hype_button_summary_on">浮夸按钮已隐藏</string>
   <string name="morphe_hide_hype_button_summary_off">热度按钮已显示</string>
@@ -545,7 +550,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_thanks_button_summary_on">感谢按钮已隐藏</string>
   <string name="morphe_hide_thanks_button_summary_off">感谢按钮已显示</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows if the user ip is from specific region such as the USA or EU. -->
+          This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">隐藏“提问”</string>
   <string name="morphe_hide_ask_button_summary_on">“提问”按钮已隐藏</string>
   <string name="morphe_hide_ask_button_summary_off">“提问”按钮已显示</string>

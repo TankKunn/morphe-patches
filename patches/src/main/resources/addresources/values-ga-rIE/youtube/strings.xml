@@ -147,10 +147,15 @@ Má tá Doodle á thaispeáint faoi láthair i do réigiún agus má tá an tsu�
   <string name="morphe_hide_info_panels_summary_on">Tá painéil faisnéise i bhfolach</string>
   <string name="morphe_hide_info_panels_summary_off">Taispeántar painéil faisnéise</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
-          This appears in the video player for certain videos. -->
+          This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Folaigh cnaipe Ballraíochta</string>
   <string name="morphe_hide_join_membership_button_summary_on">Tá an cnaipe Glac páirt i bhfolach</string>
   <string name="morphe_hide_join_membership_button_summary_off">Taispeántar an cnaipe Glac páirt</string>
+  <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
+          This button usually appears in the player overlay for live streamed videos after opening live chat. -->
+  <string name="morphe_hide_live_chat_replay_button_title">Folaigh an cnaipe \'Reagáid chat beo\'</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_on">Tágann an cnaipe \'Reagáid chat beo\' sa réimse seo d\'athróg an phléadála</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_off">Tágann an cnaipe \'Reagáid chat beo\' sa réimse seo d\'athróg an phléadála</string>
   <string name="morphe_hide_medical_panels_title">Folaigh painéil leighis</string>
   <string name="morphe_hide_medical_panels_summary_on">Tá painéil leighis i bhfolach</string>
   <string name="morphe_hide_medical_panels_summary_off">Taispeántar painéil leighis</string>
@@ -517,7 +522,7 @@ Coigeartaigh an toirt trí swipeáil go hingearach ar thaobh na láimhe deise de
   <string name="morphe_hide_comments_button_summary_on">Tá an cnaipe tráchtanna i bhfolach</string>
   <string name="morphe_hide_comments_button_summary_off">Taispeántar an cnaipe tráchtanna</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually only shows on live streams. -->
+          This button usually appears on live streamed videos. -->
   <string name="morphe_hide_report_button_title">Folaigh Tuairisc</string>
   <string name="morphe_hide_report_button_summary_on">Tá an cnaipe tuairisce i bhfolach</string>
   <string name="morphe_hide_report_button_summary_off">Taispeántar an cnaipe tuairisce</string>
@@ -530,7 +535,7 @@ Coigeartaigh an toirt trí swipeáil go hingearach ar thaobh na láimhe deise de
   <string name="morphe_hide_download_button_summary_on">Tá an cnaipe íosluchtaithe i bhfolach</string>
   <string name="morphe_hide_download_button_summary_off">Taispeántar cnaipe íoslódáil</string>
   <!-- 'Hype' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows on videos uploaded by the logged-in user. -->
+          This button usually appears on videos uploaded by the logged-in user. -->
   <string name="morphe_hide_hype_button_title">Folaigh Hype</string>
   <string name="morphe_hide_hype_button_summary_on">Tá cnaipe an Hype i bhfolach</string>
   <string name="morphe_hide_hype_button_summary_off">Taispeántar cnaipe Hype</string>
@@ -543,7 +548,7 @@ Coigeartaigh an toirt trí swipeáil go hingearach ar thaobh na láimhe deise de
   <string name="morphe_hide_thanks_button_summary_on">Tá cnaipe buíochas i bhfolach</string>
   <string name="morphe_hide_thanks_button_summary_off">Taispeántar cnaipe buíochas</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows if the user ip is from specific region such as the USA or EU. -->
+          This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Folaigh Iarr</string>
   <string name="morphe_hide_ask_button_summary_on">Tá an cnaipe Iarr i bhfolach</string>
   <string name="morphe_hide_ask_button_summary_off">Taispeántar cnaipe Iarr</string>

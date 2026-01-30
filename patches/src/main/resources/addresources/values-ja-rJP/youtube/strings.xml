@@ -84,9 +84,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_latest_posts_summary_off">最新の投稿は表示されます</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
-  <string name="morphe_hide_latest_videos_button_title">「最新動画」ボタンを非表示</string>
-  <string name="morphe_hide_latest_videos_button_summary_on">「最新動画」ボタンは非表示です</string>
-  <string name="morphe_hide_latest_videos_button_summary_off">「最新動画」ボタンが表示されます</string>
+  <string name="morphe_hide_latest_videos_button_title">「新着動画」ボタンを非表示</string>
+  <string name="morphe_hide_latest_videos_button_summary_on">「新着動画」ボタンは表示されません</string>
+  <string name="morphe_hide_latest_videos_button_summary_off">「新着動画」ボタンは表示されます</string>
   <string name="morphe_hide_mix_playlists_title">ミックスリストを非表示</string>
   <string name="morphe_hide_mix_playlists_summary_on">ミックスリストは表示されません</string>
   <string name="morphe_hide_mix_playlists_summary_off">ミックスリストは表示されます</string>
@@ -148,10 +148,15 @@ Second \"item\" text"</string>
   <string name="morphe_hide_info_panels_summary_on">情報パネルは表示されません</string>
   <string name="morphe_hide_info_panels_summary_off">情報パネルは表示されます</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
-          This appears in the video player for certain videos. -->
+          This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">「メンバーになる」ボタンを非表示</string>
   <string name="morphe_hide_join_membership_button_summary_on">「メンバーになる」ボタンは表示されません</string>
   <string name="morphe_hide_join_membership_button_summary_off">「メンバーになる」ボタンは表示されます</string>
+  <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
+          This button usually appears in the player overlay for live streamed videos after opening live chat. -->
+  <string name="morphe_hide_live_chat_replay_button_title">「ライブチャット再生」ボタンを非表示にする</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_on">プレーヤー オーバーレイのライブチャット再生ボタンが非表示になりました</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_off">プレーヤー オーバーレイのライブチャット再生ボタンが表示されました</string>
   <string name="morphe_hide_medical_panels_title">医療情報パネルを非表示</string>
   <string name="morphe_hide_medical_panels_summary_on">医療情報パネルは表示されません</string>
   <string name="morphe_hide_medical_panels_summary_off">医療情報パネルは表示されます</string>
@@ -520,7 +525,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_button_summary_on">コメントボタンは表示されません</string>
   <string name="morphe_hide_comments_button_summary_off">コメントボタンは表示されます</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually only shows on live streams. -->
+          This button usually appears on live streamed videos. -->
   <string name="morphe_hide_report_button_title">報告ボタンを非表示</string>
   <string name="morphe_hide_report_button_summary_on">報告ボタンは表示されません</string>
   <string name="morphe_hide_report_button_summary_off">報告ボタンは表示されます</string>
@@ -533,7 +538,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_download_button_summary_on">オフライン ボタンは表示されません</string>
   <string name="morphe_hide_download_button_summary_off">オフライン ボタンは表示されます</string>
   <!-- 'Hype' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows on videos uploaded by the logged-in user. -->
+          This button usually appears on videos uploaded by the logged-in user. -->
   <string name="morphe_hide_hype_button_title">ハイプボタンを非表示</string>
   <string name="morphe_hide_hype_button_summary_on">ハイプボタンは表示されません</string>
   <string name="morphe_hide_hype_button_summary_off">ハイプボタンは表示されます</string>
@@ -546,7 +551,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_thanks_button_summary_on">Thanks ボタンは表示されません</string>
   <string name="morphe_hide_thanks_button_summary_off">Thanks ボタンは表示されます</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows if the user ip is from specific region such as the USA or EU. -->
+          This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">「質問する」ボタンを非表示</string>
   <string name="morphe_hide_ask_button_summary_on">「質問する」ボタンは表示されません</string>
   <string name="morphe_hide_ask_button_summary_off">「質問する」ボタンは表示されます</string>
