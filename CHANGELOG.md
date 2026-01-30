@@ -1,3 +1,10 @@
+# [1.9.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.10...v1.9.0-dev.11) (2026-01-30)
+
+
+### Bug Fixes
+
+* **Reddit:** Change recommended app target to `2026.03.0` ([7a5cda5](https://github.com/MorpheApp/morphe-patches/commit/7a5cda571d4ec5e6324cc2905d0c8dec3b0c8f52))
+
 # [1.9.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0-dev.9...v1.9.0-dev.10) (2026-01-30)
 
 
