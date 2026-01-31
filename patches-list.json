@@ -1,5 +1,5 @@
 {
-  "version": "1.9.0-dev.11",
+  "version": "1.9.0",
   "patches": [
     {
       "name": "Alternative thumbnails",
