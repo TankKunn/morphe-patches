@@ -162,11 +162,13 @@ val hideLayoutComponentsPatch = bytecodePatch(
             SwitchPreference("morphe_hide_emergency_box"),
             SwitchPreference("morphe_hide_info_panels"),
             SwitchPreference("morphe_hide_join_membership_button"),
+            SwitchPreference("morphe_hide_live_chat_replay_button"),
             SwitchPreference("morphe_hide_medical_panels"),
             SwitchPreference("morphe_hide_quick_actions"),
             SwitchPreference("morphe_hide_related_videos"),
             SwitchPreference("morphe_hide_subscribers_community_guidelines"),
             SwitchPreference("morphe_hide_timed_reactions"),
+            SwitchPreference("morphe_hide_video_title"),
         )
 
         PreferenceScreen.FEED.addPreferences(
@@ -222,6 +224,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
             ),
             SwitchPreference("morphe_hide_image_shelf"),
             SwitchPreference("morphe_hide_latest_posts"),
+            SwitchPreference("morphe_hide_latest_videos_button"),
             SwitchPreference("morphe_hide_mix_playlists"),
             SwitchPreference("morphe_hide_movies_section"),
             SwitchPreference("morphe_hide_notify_me_button"),
@@ -373,6 +376,26 @@ val hideLayoutComponentsPatch = bytecodePatch(
                         invoke-static { v$register }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR->hideFloatingMicrophoneButton(Z)Z
                         move-result v$register
                     """,
+                )
+            }
+        }
+
+        // endregion
+
+        // region hide latest videos button
+
+        listOf(
+            LatestVideosContentPillFingerprint,
+            LatestVideosBarFingerprint,
+        ).forEach { fingerprint ->
+            fingerprint.method.apply {
+                val moveIndex = fingerprint.instructionMatches.last().index
+                val viewRegister = getInstruction<OneRegisterInstruction>(moveIndex).registerA
+
+                addInstruction(
+                    moveIndex + 1,
+                    "invoke-static { v$viewRegister }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR" +
+                            "->hideLatestVideosButton(Landroid/view/View;)V"
                 )
             }
         }

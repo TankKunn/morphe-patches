@@ -82,6 +82,11 @@ Povolením této možnosti se však budou zaznamenávat i některá uživatelsk�
   <string name="morphe_hide_latest_posts_title">Skrýt nejnovější příspěvky</string>
   <string name="morphe_hide_latest_posts_summary_on">Nejnovější příspěvky jsou skryté</string>
   <string name="morphe_hide_latest_posts_summary_off">Nejnovější příspěvky jsou zobrazené</string>
+  <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
+          This button usually appears in the Home feed for refreshing the feed. -->
+  <string name="morphe_hide_latest_videos_button_title">Skrýt tlačítko \'Nejnovější videa\'</string>
+  <string name="morphe_hide_latest_videos_button_summary_on">Tlačítko \'Nejnovější videa\' je skryto</string>
+  <string name="morphe_hide_latest_videos_button_summary_off">Tlačítko \'Nejnovější videa\' je zobrazeno</string>
   <string name="morphe_hide_mix_playlists_title">Skrýt smíšené seznamy přehrávání</string>
   <string name="morphe_hide_mix_playlists_summary_on">Smíšené seznamy přehrávání jsou skryté</string>
   <string name="morphe_hide_mix_playlists_summary_off">Smíšené seznamy přehrávání jsou zobrazené</string>
@@ -89,7 +94,7 @@ Povolením této možnosti se však budou zaznamenávat i některá uživatelsk�
   <string name="morphe_hide_movies_section_summary_on">Sekce Filmy je skrytá</string>
   <string name="morphe_hide_movies_section_summary_off">Sekce Filmy je viditelná</string>
   <!-- 'Notify me' should be translated using the same localized wording YouTube displays for the button.
-          This item appear in the Subscriptions feed for future livestreams or unreleased videos. -->
+          This button usually appears in the Subscriptions feed for future livestreams or unreleased videos. -->
   <string name="morphe_hide_notify_me_button_title">Skrýt tlačítko „Upozornit mě“</string>
   <string name="morphe_hide_notify_me_button_summary_on">Tlačítko „Upozornit mě“ je skryté</string>
   <string name="morphe_hide_notify_me_button_summary_off">Tlačítko „Upozornit mě“ je zobrazené</string>
@@ -143,10 +148,15 @@ Pokud se Doodle v současné době zobrazuje ve vaší oblasti a toto nastavení
   <string name="morphe_hide_info_panels_summary_on">Informační panely jsou skryté</string>
   <string name="morphe_hide_info_panels_summary_off">Informační panely jsou zobrazeny</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
-          This appears in the video player for certain videos. -->
+          This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Skrýt tlačítko Připojit se</string>
   <string name="morphe_hide_join_membership_button_summary_on">Tlačítko Připojit se je skryto</string>
   <string name="morphe_hide_join_membership_button_summary_off">Tlačítko Připojit se je zobrazeno</string>
+  <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
+          This button usually appears in the player overlay for live streamed videos after opening live chat. -->
+  <string name="morphe_hide_live_chat_replay_button_title">Skrýt tlačítko \"Zobrazit záznam live chatu\"</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_on">Tlačítko \"Zobrazit záznam live chatu\" v přehrávači je skryto</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_off">Tlačítko \"Zobrazit záznam live chatu\" v přehrávači je zobrazeno</string>
   <string name="morphe_hide_medical_panels_title">Skrýt informační panely o zdravotnictví</string>
   <string name="morphe_hide_medical_panels_summary_on">Informační panely o zdravotnictví jsou skryty</string>
   <string name="morphe_hide_medical_panels_summary_off">Informační panely o zdravotnictví jsou zobrazeny</string>
@@ -162,6 +172,9 @@ Pokud se Doodle v současné době zobrazuje ve vaší oblasti a toto nastavení
   <string name="morphe_hide_timed_reactions_title">Skrýt reakce zobrazené po čase</string>
   <string name="morphe_hide_timed_reactions_summary_on">Reakce zobrazené po čase jsou skryty</string>
   <string name="morphe_hide_timed_reactions_summary_off">Reakce se zobrazují po čase</string>
+  <string name="morphe_hide_video_title_title">Skrýt název videa</string>
+  <string name="morphe_hide_video_title_summary_on">Nadpis videa v přehrávači je skryt</string>
+  <string name="morphe_hide_video_title_summary_off">Nadpis videa v přehrávači je zobrazen</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Skrýt „Souhrn videa generovaný pomocí AI“</string>
   <string name="morphe_hide_ai_generated_video_summary_section_summary_on">Sekce souhrnu videa generovaná AI je skrytá</string>
   <string name="morphe_hide_ai_generated_video_summary_section_summary_off">Sekce souhrnu videa generovaného AI je zobrazena</string>
@@ -512,7 +525,7 @@ Upravte hlasitost svislým přejetím po pravé straně obrazovky"</string>
   <string name="morphe_hide_comments_button_summary_on">Tlačítko komentářů je skryté</string>
   <string name="morphe_hide_comments_button_summary_off">Tlačítko komentářů je zobrazeno</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually only shows on live streams. -->
+          This button usually appears on live streamed videos. -->
   <string name="morphe_hide_report_button_title">Skrýt Nahlásit</string>
   <string name="morphe_hide_report_button_summary_on">Tlačítko Nahlásit je skryto</string>
   <string name="morphe_hide_report_button_summary_off">Tlačítko Nahlásit je zobrazeno</string>
@@ -525,7 +538,7 @@ Upravte hlasitost svislým přejetím po pravé straně obrazovky"</string>
   <string name="morphe_hide_download_button_summary_on">Tlačítko Stáhnout je skryto</string>
   <string name="morphe_hide_download_button_summary_off">Tlačítko Stáhnout je zobrazeno</string>
   <!-- 'Hype' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows on videos uploaded by the logged-in user. -->
+          This button usually appears on videos uploaded by the logged-in user. -->
   <string name="morphe_hide_hype_button_title">Skrýt Hype</string>
   <string name="morphe_hide_hype_button_summary_on">Tlačítko Hype je skryto</string>
   <string name="morphe_hide_hype_button_summary_off">Tlačítko Hype je zobrazeno</string>
@@ -538,7 +551,7 @@ Upravte hlasitost svislým přejetím po pravé straně obrazovky"</string>
   <string name="morphe_hide_thanks_button_summary_on">Tlačítko Poděkování je skryto</string>
   <string name="morphe_hide_thanks_button_summary_off">Tlačítko Poděkování je zobrazeno</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows if the user ip is from specific region such as the USA or EU. -->
+          This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Skrýt Zeptat se</string>
   <string name="morphe_hide_ask_button_summary_on">Tlačítko Zeptat se je skryté</string>
   <string name="morphe_hide_ask_button_summary_off">Tlačítko Zeptat se je zobrazeno</string>
@@ -555,7 +568,7 @@ Upravte hlasitost svislým přejetím po pravé straně obrazovky"</string>
   <string name="morphe_hide_save_button_title">Skrýt Uložit</string>
   <string name="morphe_hide_save_button_summary_on">Tlačítko Uložit je skryté</string>
   <string name="morphe_hide_save_button_summary_off">Tlačítko Uložit je zobrazeno</string>
-  <!-- layout.buttons.navigation.navigationButtonsPatch -->
+  <!-- layout.buttons.navigation.navigationBarPatch -->
   <string name="morphe_navigation_buttons_screen_title">Navigační tlačítka</string>
   <string name="morphe_navigation_buttons_screen_summary">Skrýt nebo změnit tlačítka na navigačním panelu</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -601,6 +614,17 @@ Upravte hlasitost svislým přejetím po pravé straně obrazovky"</string>
   <string name="morphe_disable_translucent_navigation_bar_dark_title">Deaktivovat tmavý průsvitný navigační panel</string>
   <string name="morphe_disable_translucent_navigation_bar_dark_summary_on">Navigační panel v tmavém režimu je neprůhledný</string>
   <string name="morphe_disable_translucent_navigation_bar_dark_summary_off">Navigační lišta v tmavém režimu je neprůhledná nebo průsvitná</string>
+  <string name="morphe_toolbar_screen_title">Nárazovka</string>
+  <string name="morphe_toolbar_screen_summary">Skrýt nebo změnit součástky nárazovky</string>
+  <string name="morphe_hide_toolbar_create_button_title">Skrýt tlačítko Vytvořit</string>
+  <string name="morphe_hide_toolbar_create_button_summary_on">Tlačítko Vytvořit je skryto</string>
+  <string name="morphe_hide_toolbar_create_button_summary_off">Tlačítko Vytvořit je zobrazeno</string>
+  <string name="morphe_hide_toolbar_notification_button_title">Skrýt tlačítko Notifikace</string>
+  <string name="morphe_hide_toolbar_notification_button_summary_on">Tlačítko oznámení je skryto</string>
+  <string name="morphe_hide_toolbar_notification_button_summary_off">Tlačítko oznámení je zobrazeno</string>
+  <string name="morphe_hide_toolbar_search_button_title">Skrýt tlačítko Hledat</string>
+  <string name="morphe_hide_toolbar_search_button_summary_on">Tlačítko vyhledávání je skryté</string>
+  <string name="morphe_hide_toolbar_search_button_summary_off">Tlačítko vyhledávání je zobrazené</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Vyskakovací menu</string>
   <string name="morphe_hide_player_flyout_summary">Skrýt nebo zobrazit položky vyskakovacího menu přehrávače</string>
@@ -917,6 +941,12 @@ Omezení: Nelíbí se mi se nemusí zobrazit v anonymním režimu"</string>
   <string name="morphe_wide_searchbar_title">Povolit široký vyhledávací panel</string>
   <string name="morphe_wide_searchbar_summary_on">Široký vyhledávací panel je povolen</string>
   <string name="morphe_wide_searchbar_summary_off">Široký vyhledávací panel je zakázán</string>
+  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
+  <string name="morphe_restore_old_search_filters_title">Obnovit staré filtry hledání</string>
+  <string name="morphe_restore_old_search_filters_summary_on">Řadit podle hodnocení a řadit podle data nahrání je dostupné v filtru hledání</string>
+  <string name="morphe_restore_old_search_filters_summary_off">Řadit podle hodnocení a řadit podle data nahrání není dostupné v filtru hledání</string>
+  <string name="morphe_old_search_filters_sort_by_rating">Hodnocení</string>
+  <string name="morphe_old_search_filters_sort_by_upload_date">Datum nahrání</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">Povolit SponsorBlock</string>
   <string name="morphe_sb_enable_sb_sum">SponsorBlock je systém s participací komunity pro přeskakování otravných částí videí na YouTube</string>

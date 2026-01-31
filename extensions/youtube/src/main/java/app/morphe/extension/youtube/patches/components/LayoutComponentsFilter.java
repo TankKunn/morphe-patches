@@ -69,8 +69,14 @@ public final class LayoutComponentsFilter extends Filter {
                 "chips_shelf"
         );
 
+        final var liveChatReplay = new StringFilterGroup(
+                Settings.HIDE_LIVE_CHAT_REPLAY_BUTTON,
+                "live_chat_ep_entrypoint.e"
+        );
+
         addIdentifierCallbacks(
-                chipsShelf
+                chipsShelf,
+                liveChatReplay
         );
 
         // Paths.
@@ -264,6 +270,11 @@ public final class LayoutComponentsFilter extends Filter {
                 "endorsement_header_footer.e"
         );
 
+        final var videoTitle = new StringFilterGroup(
+                Settings.HIDE_VIDEO_TITLE,
+                "player_overlay_video_heading.e"
+        );
+
         final var webLinkPanel = new StringFilterGroup(
                 Settings.HIDE_WEB_SEARCH_RESULTS,
                 "web_link_panel",
@@ -339,6 +350,7 @@ public final class LayoutComponentsFilter extends Filter {
                 subscriptionsChipBar,
                 surveys,
                 timedReactions,
+                videoTitle,
                 videoRecommendationLabels,
                 webLinkPanel
         );
@@ -466,6 +478,13 @@ public final class LayoutComponentsFilter extends Filter {
      */
     public static boolean hideFloatingMicrophoneButton(final boolean original) {
         return original || Settings.HIDE_FLOATING_MICROPHONE_BUTTON.get();
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void hideLatestVideosButton(View view) {
+        Utils.hideViewUnderCondition(Settings.HIDE_LATEST_VIDEOS_BUTTON.get(), view);
     }
 
     /**

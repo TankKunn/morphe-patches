@@ -81,6 +81,11 @@ Mar sin féin, logálfaidh sé seo roinnt sonraí úsáideora freisin, mar shamp
   <string name="morphe_hide_latest_posts_title">Folaigh na poist is déanaí</string>
   <string name="morphe_hide_latest_posts_summary_on">Tá na poist is déanaí i bhfolach</string>
   <string name="morphe_hide_latest_posts_summary_off">Taispeántar na poist is déanaí</string>
+  <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
+          This button usually appears in the Home feed for refreshing the feed. -->
+  <string name="morphe_hide_latest_videos_button_title">Folaigh cnaipe \'Videos Nuaí\'</string>
+  <string name="morphe_hide_latest_videos_button_summary_on">Tá cnaipe \'Videos Nuaí\' i bhfolach</string>
+  <string name="morphe_hide_latest_videos_button_summary_off">Taispeántar cnaipe \'Videos Nuaí\'</string>
   <string name="morphe_hide_mix_playlists_title">Folaigh seinmliostaí meascán</string>
   <string name="morphe_hide_mix_playlists_summary_on">Tá seinmliostaí measctha i bhfolach</string>
   <string name="morphe_hide_mix_playlists_summary_off">Taispeántar seinmliostaí measctha</string>
@@ -88,7 +93,7 @@ Mar sin féin, logálfaidh sé seo roinnt sonraí úsáideora freisin, mar shamp
   <string name="morphe_hide_movies_section_summary_on">Tá rannóg na scannán i bhfolach</string>
   <string name="morphe_hide_movies_section_summary_off">Taispeántar rannóg na scannán</string>
   <!-- 'Notify me' should be translated using the same localized wording YouTube displays for the button.
-          This item appear in the Subscriptions feed for future livestreams or unreleased videos. -->
+          This button usually appears in the Subscriptions feed for future livestreams or unreleased videos. -->
   <string name="morphe_hide_notify_me_button_title">Folaigh cnaipe \'Cuir in iúl dom\'</string>
   <string name="morphe_hide_notify_me_button_summary_on">Cnaipe \'Cuir in iúl dom\' i bhfolach</string>
   <string name="morphe_hide_notify_me_button_summary_off">Cnaipe \'Cuir in iúl dom\' taispeánta</string>
@@ -142,10 +147,15 @@ Má tá Doodle á thaispeáint faoi láthair i do réigiún agus má tá an tsu�
   <string name="morphe_hide_info_panels_summary_on">Tá painéil faisnéise i bhfolach</string>
   <string name="morphe_hide_info_panels_summary_off">Taispeántar painéil faisnéise</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
-          This appears in the video player for certain videos. -->
+          This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Folaigh cnaipe Ballraíochta</string>
   <string name="morphe_hide_join_membership_button_summary_on">Tá an cnaipe Glac páirt i bhfolach</string>
   <string name="morphe_hide_join_membership_button_summary_off">Taispeántar an cnaipe Glac páirt</string>
+  <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
+          This button usually appears in the player overlay for live streamed videos after opening live chat. -->
+  <string name="morphe_hide_live_chat_replay_button_title">Folaigh an cnaipe \'Reagáid chat beo\'</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_on">Tágann an cnaipe \'Reagáid chat beo\' sa réimse seo d\'athróg an phléadála</string>
+  <string name="morphe_hide_live_chat_replay_button_summary_off">Tágann an cnaipe \'Reagáid chat beo\' sa réimse seo d\'athróg an phléadála</string>
   <string name="morphe_hide_medical_panels_title">Folaigh painéil leighis</string>
   <string name="morphe_hide_medical_panels_summary_on">Tá painéil leighis i bhfolach</string>
   <string name="morphe_hide_medical_panels_summary_off">Taispeántar painéil leighis</string>
@@ -161,6 +171,9 @@ Má tá Doodle á thaispeáint faoi láthair i do réigiún agus má tá an tsu�
   <string name="morphe_hide_timed_reactions_title">Folaigh imoibrithe uainithe</string>
   <string name="morphe_hide_timed_reactions_summary_on">Tá imoibrithe uainithe i bhfolach</string>
   <string name="morphe_hide_timed_reactions_summary_off">Taispeántar imoibrithe uainithe</string>
+  <string name="morphe_hide_video_title_title">Folaigh teideal físeáin</string>
+  <string name="morphe_hide_video_title_summary_on">Tá teideal físe i bhfolach i dtreo na hoibre</string>
+  <string name="morphe_hide_video_title_summary_off">Taispeánfar teideal físe i dtreo na hoibre</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Folaigh \'Achoimre físeáin arna giniúint ag AI\'</string>
   <string name="morphe_hide_ai_generated_video_summary_section_summary_on">Tá an chuid achoimre físe IS-ghinte i bhfolach</string>
   <string name="morphe_hide_ai_generated_video_summary_section_summary_off">Taispeántar an chuid achoimre físe a ghintear ag AI</string>
@@ -509,7 +522,7 @@ Coigeartaigh an toirt trí swipeáil go hingearach ar thaobh na láimhe deise de
   <string name="morphe_hide_comments_button_summary_on">Tá an cnaipe tráchtanna i bhfolach</string>
   <string name="morphe_hide_comments_button_summary_off">Taispeántar an cnaipe tráchtanna</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually only shows on live streams. -->
+          This button usually appears on live streamed videos. -->
   <string name="morphe_hide_report_button_title">Folaigh Tuairisc</string>
   <string name="morphe_hide_report_button_summary_on">Tá an cnaipe tuairisce i bhfolach</string>
   <string name="morphe_hide_report_button_summary_off">Taispeántar an cnaipe tuairisce</string>
@@ -522,7 +535,7 @@ Coigeartaigh an toirt trí swipeáil go hingearach ar thaobh na láimhe deise de
   <string name="morphe_hide_download_button_summary_on">Tá an cnaipe íosluchtaithe i bhfolach</string>
   <string name="morphe_hide_download_button_summary_off">Taispeántar cnaipe íoslódáil</string>
   <!-- 'Hype' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows on videos uploaded by the logged-in user. -->
+          This button usually appears on videos uploaded by the logged-in user. -->
   <string name="morphe_hide_hype_button_title">Folaigh Hype</string>
   <string name="morphe_hide_hype_button_summary_on">Tá cnaipe an Hype i bhfolach</string>
   <string name="morphe_hide_hype_button_summary_off">Taispeántar cnaipe Hype</string>
@@ -535,7 +548,7 @@ Coigeartaigh an toirt trí swipeáil go hingearach ar thaobh na láimhe deise de
   <string name="morphe_hide_thanks_button_summary_on">Tá cnaipe buíochas i bhfolach</string>
   <string name="morphe_hide_thanks_button_summary_off">Taispeántar cnaipe buíochas</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
-          This button only shows if the user ip is from specific region such as the USA or EU. -->
+          This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Folaigh Iarr</string>
   <string name="morphe_hide_ask_button_summary_on">Tá an cnaipe Iarr i bhfolach</string>
   <string name="morphe_hide_ask_button_summary_off">Taispeántar cnaipe Iarr</string>
@@ -552,7 +565,7 @@ Coigeartaigh an toirt trí swipeáil go hingearach ar thaobh na láimhe deise de
   <string name="morphe_hide_save_button_title">Folaigh Sábháil</string>
   <string name="morphe_hide_save_button_summary_on">Tá cnaipe sábhála i bhfolach</string>
   <string name="morphe_hide_save_button_summary_off">Taispeántar an cnaipe Sábháil</string>
-  <!-- layout.buttons.navigation.navigationButtonsPatch -->
+  <!-- layout.buttons.navigation.navigationBarPatch -->
   <string name="morphe_navigation_buttons_screen_title">Cnaipí nascleanúna</string>
   <string name="morphe_navigation_buttons_screen_summary">Folaigh nó athraigh cnaipí sa bharra nascleanúna</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -598,6 +611,17 @@ Coigeartaigh an toirt trí swipeáil go hingearach ar thaobh na láimhe deise de
   <string name="morphe_disable_translucent_navigation_bar_dark_title">Díchumasaigh barra tréshoilseach dorcha</string>
   <string name="morphe_disable_translucent_navigation_bar_dark_summary_on">Tá an barra nascleanúna i mód dorcha teimhneach</string>
   <string name="morphe_disable_translucent_navigation_bar_dark_summary_off">Tá barra nascleanúna mód dorcha teimhneach nó tréshoilseach</string>
+  <string name="morphe_toolbar_screen_title">Barr</string>
+  <string name="morphe_toolbar_screen_summary">Folaigh nó athraigh comhpháirteanna barr</string>
+  <string name="morphe_hide_toolbar_create_button_title">Folaigh cnaipe Cruth</string>
+  <string name="morphe_hide_toolbar_create_button_summary_on">Tá cnaipe Cruthaigh i bhfolach</string>
+  <string name="morphe_hide_toolbar_create_button_summary_off">Taispeántar cnaipe Cruthaigh</string>
+  <string name="morphe_hide_toolbar_notification_button_title">Folaigh cnaipe Fógraí</string>
+  <string name="morphe_hide_toolbar_notification_button_summary_on">Tá cnaipe fógraí i bhfolach</string>
+  <string name="morphe_hide_toolbar_notification_button_summary_off">Taispeántar cnaipe fógraí</string>
+  <string name="morphe_hide_toolbar_search_button_title">Folaigh cnaipe Cuardaigh</string>
+  <string name="morphe_hide_toolbar_search_button_summary_on">Tá cnaipe cuardaigh i bhfolach</string>
+  <string name="morphe_hide_toolbar_search_button_summary_off">Taispeántar an cnaipe cuardaigh</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Roghchlár Flyout</string>
   <string name="morphe_hide_player_flyout_summary">Folaigh nó taispeáin míreanna roghchlár flyout an imreora</string>
@@ -914,6 +938,12 @@ Teorainn: B’fhéidir nach dtaispeánfar 'Ní thaitníonn' i mód incognito"</s
   <string name="morphe_wide_searchbar_title">Cumasaigh barra cuardaigh leathan</string>
   <string name="morphe_wide_searchbar_summary_on">Tá barra cuardaigh leathan cumasaithe</string>
   <string name="morphe_wide_searchbar_summary_off">Tá an barra cuardaigh leathan díchumasaithe</string>
+  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
+  <string name="morphe_restore_old_search_filters_title">Cuir sean-mionsamhlacha barra cuardaigh ar ais</string>
+  <string name="morphe_restore_old_search_filters_summary_on">Tá \'clóiríodh ag rá agus tá \'clóiríodh ag iarradh ar fáil sa mionsamhlach</string>
+  <string name="morphe_restore_old_search_filters_summary_off">Ní \'clóiríodh ag rá agus ní \'clóiríodh ag iarradh ar fáil sa mionsamhlach</string>
+  <string name="morphe_old_search_filters_sort_by_rating">Rátáiste</string>
+  <string name="morphe_old_search_filters_sort_by_upload_date">Dáta úsáide</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">Cumasaigh SponsorBlock</string>
   <string name="morphe_sb_enable_sb_sum">Is córas sruthaíodh ó lucht an phobail é SponsorBlock le haghaidh codanna do-áisiúla físeán YouTube a leag thar n-ais</string>
