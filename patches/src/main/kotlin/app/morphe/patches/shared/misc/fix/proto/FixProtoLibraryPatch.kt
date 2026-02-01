@@ -1,4 +1,4 @@
-package app.morphe.patches.youtube.misc.fix.proto
+package app.morphe.patches.shared.misc.fix.proto
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch

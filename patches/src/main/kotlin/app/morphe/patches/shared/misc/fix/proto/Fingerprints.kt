@@ -1,4 +1,4 @@
-package app.morphe.patches.youtube.misc.fix.proto
+package app.morphe.patches.shared.misc.fix.proto
 
 import app.morphe.patcher.Fingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
