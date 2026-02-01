@@ -1,3 +1,10 @@
+# [1.10.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.10.0-dev.2...v1.10.0-dev.3) (2026-02-01)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide course progress" setting ([#351](https://github.com/MorpheApp/morphe-patches/issues/351)) ([4a83b54](https://github.com/MorpheApp/morphe-patches/commit/4a83b54c292a66f5ca2825c0f4a45a5650c528d4))
+
 # [1.10.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.10.0-dev.1...v1.10.0-dev.2) (2026-02-01)
 
 
