@@ -1,3 +1,17 @@
+# [1.11.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.1...v1.11.0-dev.2) (2026-02-02)
+
+
+### Bug Fixes
+
+* **YouTube - Hide ads:** Empty space is left when ads are hidden on tablets ([#377](https://github.com/MorpheApp/morphe-patches/issues/377)) ([da12960](https://github.com/MorpheApp/morphe-patches/commit/da12960ceb4d93490b8d41f0ea616d686eb609eb))
+* **YouTube - Navigation bar:** Rename "Switch Create with Notifications" to "Swap Create with Notifications" ([#384](https://github.com/MorpheApp/morphe-patches/issues/384)) ([6472dee](https://github.com/MorpheApp/morphe-patches/commit/6472dee35dae7d3b0ba08dd2b4348b535ce48da7))
+
+
+### Features
+
+* **YouTube - Spoof app version:** Add target version `20.28.41` ([#375](https://github.com/MorpheApp/morphe-patches/issues/375)) ([3793689](https://github.com/MorpheApp/morphe-patches/commit/3793689be432ee1643e27670e2c845d4462a80b3))
+* **YouTube:** Add `Ambient mode` patch ([#367](https://github.com/MorpheApp/morphe-patches/issues/367)) ([91a68f5](https://github.com/MorpheApp/morphe-patches/commit/91a68f5200d1f4061821aaba9f955a0fc9ec2cf1))
+
 # [1.11.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.10.1-dev.2...v1.11.0-dev.1) (2026-02-02)
 
 

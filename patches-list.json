@@ -1,5 +1,5 @@
 {
-  "version": "1.11.0-dev.1",
+  "version": "1.11.0-dev.2",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -8,6 +8,26 @@
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
+        "BytecodePatch",
+        "BytecodePatch"
+      ],
+      "compatiblePackages": {
+        "com.google.android.youtube": [
+          "20.14.43",
+          "20.21.37",
+          "20.26.46",
+          "20.31.42",
+          "20.37.48",
+          "20.40.45"
+        ]
+      },
+      "options": []
+    },
+    {
+      "name": "Ambient mode",
+      "description": "Adds options to bypass power saving restrictions for Ambient mode and disable it entirely or in fullscreen.",
+      "use": true,
+      "dependencies": [
         "BytecodePatch",
         "BytecodePatch"
       ],
@@ -394,26 +414,6 @@
         "BytecodePatch",
         "BytecodePatch",
         "ResourcePatch"
-      ],
-      "compatiblePackages": {
-        "com.google.android.youtube": [
-          "20.14.43",
-          "20.21.37",
-          "20.26.46",
-          "20.31.42",
-          "20.37.48",
-          "20.40.45"
-        ]
-      },
-      "options": []
-    },
-    {
-      "name": "Disable fullscreen ambient mode",
-      "description": "Adds an option to disable the ambient mode when in fullscreen.",
-      "use": true,
-      "dependencies": [
-        "BytecodePatch",
-        "BytecodePatch"
       ],
       "compatiblePackages": {
         "com.google.android.youtube": [
