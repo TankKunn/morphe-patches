@@ -1,3 +1,10 @@
+# [1.11.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.2...v1.11.0-dev.3) (2026-02-02)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof app version:** Resolve experimental patching of `21.05.264` ([3d7c0e6](https://github.com/MorpheApp/morphe-patches/commit/3d7c0e6fc953775048c58a77004a4938e4df7ba8))
+
 # [1.11.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.1...v1.11.0-dev.2) (2026-02-02)
 
 
