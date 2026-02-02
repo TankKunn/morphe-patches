@@ -286,6 +286,9 @@ Jeśli Doodle jest obecnie wyświetlany w Twoim regionie, a to ustawienie jest w
   <string name="morphe_hide_comments_section_title">Sekcja komentarzy</string>
   <string name="morphe_hide_comments_section_summary_on">Ukryta</string>
   <string name="morphe_hide_comments_section_summary_off">Widoczna</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Komentarze na stronie głównej</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Ukryte</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Widoczne</string>
   <string name="morphe_hide_comments_community_guidelines_title">Wytyczne społeczności</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Ukryte</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Widoczne</string>
@@ -388,7 +391,7 @@ Ograniczenia:
   <string name="morphe_hide_view_products_banner_summary_on">Ukryte w odtwarzaczu</string>
   <string name="morphe_hide_view_products_banner_summary_off">Widoczne w odtwarzaczu</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Promocje YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">Promocje YouTube Premium są ukryte</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Ukryte</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">Widoczne</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Reklamy filmu</string>
@@ -609,14 +612,14 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_hide_subscriptions_button_title">Przycisk do strony subskrypcji</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Ukryty</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Widoczny</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Przycisk do powiadomień</string>
   <string name="morphe_hide_notifications_button_summary_on">Ukryty</string>
   <string name="morphe_hide_notifications_button_summary_off">Widoczny</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Zamień przyciski przesyłania i powiadomień</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Zamienione</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Niezamienione</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Jeśli zmiana tego ustawienia nie przyniesie efektu, spróbuj przełączyć się w tryb incognito.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Zamień przyciski \"Utwórz\" z \"Powiadomienia\"</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Przycisk \"Utwórz\" został zamieniony z przyciskiem \"Powiadomienia\"</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Przycisk \"Utwórz\" nie został zamieniony z przyciskiem \"Powiadomienia\"</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Jeśli zmiana tego ustawienia nie przyniesie efektu, spróbuj przełączyć się w tryb incognito.</string>
   <string name="morphe_hide_navigation_button_labels_title">Etykiety przycisków nawigacji</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Ukryte</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Widoczne</string>
@@ -735,10 +738,19 @@ Aby menu od ścieżki dźwiękowej było widoczne, zmień 'Oszukuj strumienie fi
   <string name="morphe_hide_endscreen_cards_title">Karty końcowe w filmach</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Ukryte</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Widoczne</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Tryb otoczenia</string>
+  <string name="morphe_ambient_mode_screen_summary">Pomiń ograniczenia oszczędności energii dla trybu otoczenia i wyłącz go całkowicie lub w trybie pełnoekranowym</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Pomiń ograniczenia trybu otoczenia</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Ograniczenia trybu otoczenia dla oszczędności energii są omijane.</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Ograniczenia trybu otoczenia dla oszczędności energii nie są omijane.</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Włączanie tego może spowodować gorsze żywotność baterii.</string>
+  <string name="morphe_disable_ambient_mode_title">Wyłącz tryb otoczenia</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Tryb otoczenia jest wyłączony</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Tryb otoczenia jest włączony</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Oświetlenie kinowe w trybie pełnoekranowym</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Wyłączone</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Włączone</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Tryb otoczenia w pełnym ekranie jest wyłączony</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Tryb otoczenia w pełnym ekranie jest włączony</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Karty z informacjami</string>
   <string name="morphe_hide_info_cards_summary_on">Ukryte</string>

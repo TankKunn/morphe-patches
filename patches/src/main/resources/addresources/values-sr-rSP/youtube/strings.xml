@@ -286,6 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">Сакриј одељак за коментаре</string>
   <string name="morphe_hide_comments_section_summary_on">Одељак за коментаре је скривен</string>
   <string name="morphe_hide_comments_section_summary_off">Одељак за коментаре је приказан</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Сакриј одељак за коментаре у Хом фуд</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Одељак за коментаре у Хом фуд је скривен</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Одељак за коментаре у Хом фуд је приказан</string>
   <string name="morphe_hide_comments_community_guidelines_title">Сакриј смернице заједнице</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Смернице заједнице су скривене</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Смернице заједнице су приказане</string>
@@ -609,14 +612,14 @@ Cookies će biti automatski sačuvani ako su ispravni"</string>
   <string name="morphe_hide_subscriptions_button_title">Сакриј дугме „Праћења”</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Дугме „Праћења” је скривено</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Дугме „Праћења” је приказано</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Сакриј обавештења</string>
   <string name="morphe_hide_notifications_button_summary_on">Дугме „Обавештења” је скривено</string>
   <string name="morphe_hide_notifications_button_summary_off">Дугме „Обавештења” је приказано</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Замени дугме „Направи” дугметом „Обавештења”</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Дугме „Направи” је замењено дугметом „Обавештења”</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Дугме „Направи” није замењено дугметом „Обавештења”</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Ако промена ове поставке не утиче, покушајте да пребаците у Инкогнито режим.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Замени дугме „Направи” дугметом „Обавештења”</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Дугме „Направи” је замењено дугметом „Обавештења”</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Дугме „Направи” није замењено дугметом „Обавештења”</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Ако промена ове поставке не утиче, покушајте да пребаците у Инкогнито режим.</string>
   <string name="morphe_hide_navigation_button_labels_title">Сакриј ознаке дугмади за навигацију</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Ознаке дугмади за навигацију су скривене</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Ознаке дугмади за навигацију су приказане</string>
@@ -735,10 +738,19 @@ Da bi prikazali meni sa audio stazom, promenite 'Spoof video streams' u 'Android
   <string name="morphe_hide_endscreen_cards_title">Сакриј картице завршног екрана</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Картице завршног екрана су скривене</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Картице завршног екрана су приказане</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Режим амбијента</string>
+  <string name="morphe_ambient_mode_screen_summary">Изабери да биш прескочио ограничења енергетске ефикасности за режим амбијента и искључи га у потпуности или у пуном екранском режиму</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Прескочи ограничења режима амбијента</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Ограничења режима амбијента за уштевање енергије су премоштена</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Ограничења режима амбијента за уштевање енергије нису премоштена</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Омогућавање тога може да доведе до горег трајања батерије.</string>
+  <string name="morphe_disable_ambient_mode_title">Искључи режим амбијента</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Режим амбијента је искључен</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Режим амбијента је укључен</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Онемогући „Амбијентални режим” у режиму преко целог екрана</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Амбијентални режим у режиму целог екрана је онемогућен</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Амбијентални режим у режиму целог екрана је омогућен</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Режим амбијента у режиму целог екрана је искључен</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Режим амбијента у режиму целог екрана је укључен</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Сакриј картице са информацијама</string>
   <string name="morphe_hide_info_cards_summary_on">Картице са информацијама су скривене</string>

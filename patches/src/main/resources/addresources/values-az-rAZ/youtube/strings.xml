@@ -586,14 +586,11 @@ Ekranın sağ tərəfində düzünə sürüşdürərək səs səviyyəsini tənz
   <string name="morphe_hide_subscriptions_button_title">\"Abunəliklər\"i gizlət</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Abunəliklər düyməsi gizlidir</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Abunəliklər düyməsi göstərilir</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Bildirişləri Gizlət</string>
   <string name="morphe_hide_notifications_button_summary_on">Bildirişlər düyməsi gizlidir</string>
   <string name="morphe_hide_notifications_button_summary_off">Bildirişlər düyməsi görünür</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">\"Yarat\"ı \"Bildirişlər\" ilə dəyişdir</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Yarat düyməsi, Bildirişlər düyməsi ilə əvəzlənir</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">\"Yarat\" düyməsi, \"Bildirişlər\" düyməsi ilə əvəzlənmir</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Əgər bu parametri dəyişdirmə effektiv deyil olsa, Gizli Modda sınamaq cəhd edin.</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Əgər bu parametri dəyişdirmə effektiv deyil olsa, Gizli Modda sınamaq cəhd edin.</string>
   <string name="morphe_hide_navigation_button_labels_title">Fəaliyyət düymə etiketlərini gizlət</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Etiketlər gizlidir</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Etiketlər göstərilir</string>
@@ -712,10 +709,8 @@ Audio trek menüsünü göstərmək üçün, 'Video axınları təqlid edilməsi
   <string name="morphe_hide_endscreen_cards_title">Son ekran kartlarını gizlət</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Son ekran kartları gizlidir</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Son ekran kartları göstərilir</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
   <string name="morphe_disable_fullscreen_ambient_mode_title">Tam ekranda Ambient rejimini qapat</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Ambient rejimi qeyri-aktiv edilib</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Ambient rejimi aktivləşdirildi</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Məlumat kartlarını gizlət</string>
   <string name="morphe_hide_info_cards_summary_on">Məlumat kartları gizlidir</string>

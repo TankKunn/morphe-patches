@@ -287,6 +287,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">छुपाएं टिप्पणियों का अनुभाग</string>
   <string name="morphe_hide_comments_section_summary_on">टिप्पणियों का विभाग छुपा हुआ है</string>
   <string name="morphe_hide_comments_section_summary_off">टिप्पणियों का अनुभाग दिखाया गया है</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">होम फ़ीड में टिप्पणियों का अनुभाग छुपाएं</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">होम फ़ीड में टिप्पणियों का विभाग छुपा हुआ है</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">होम फ़ीड में टिप्पणियों का विभाग दिखाया गया है</string>
   <string name="morphe_hide_comments_community_guidelines_title">छुपाएं समुदाय निदेशिका</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">कम्युनिटी गाइडलाइनें छुपाई गई हैं</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">कम्युनिटी गाइडलाइनें दिखाई जाती हैं</string>
@@ -580,9 +583,10 @@ Second \"item\" text"</string>
   <!-- 'Create' has no display name. Translate normally. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_summary_on">बटन क्रिएट स्विच्ड है नोटिफिकेशन बटन से</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Hide \'Key concepts\'</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">यदि इस सेटिंग को बदलने से कोई प्रभाव नहीं पड़ता है, तो इंकोग्नितो मोड में स्विच करने की कोशिश करें।</string>
+  <string name="morphe_swap_create_with_notifications_button_title">स्वाप करें क्रिएट के साथ नोटिफिकेशन</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">क्रिएट बटन नोटिफिकेशन बटन के साथ स्वाप किया गया है</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">क्रिएट बटन नोटिफिकेशन बटन के साथ स्वाप नहीं किया गया है</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">यदि इस सेटिंग को बदलने से कोई प्रभाव नहीं पड़ता है, तो इंकोग्नितो मोड में स्विच करने की कोशिश करें।</string>
   <string name="morphe_narrow_navigation_buttons_title">नarrow नैविगेशन बटनें सक्षम करें</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">नैविगेशन बटनें के बीच अंतर नarrow है</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">नैविगेशन बटन के बीच अंतर सामान्य है</string>
@@ -637,7 +641,18 @@ Second \"item\" text"</string>
   <string name="morphe_hide_autoplay_preview_summary_off">ऑटोप्ले प्रीव्यू दिखाया गया है</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <!-- layout.hide.endscreencards.hideEndScreenCardsResourcePatch -->
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">अंकित मोड</string>
+  <string name="morphe_ambient_mode_screen_summary">अंकित मोड के लिए शक्ति बचत प्रतिबंधों को उल्लंघन करें और उसे पूर्णतः या पूर्ण स्क्रीन में अक्षम करें</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">अंकित मोड के प्रतिबंधों को उल्लंघन करें</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">अंबरेंट मोड की शक्ति बचत के लिए प्रतिबंध बुलेटप्रूफ किए गए हैं</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">अंबरेंट मोड की शक्ति बचत के लिए प्रतिबंध बुलेटप्रूफ नहीं किए गए हैं</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">इसका एनब्ल करना बटरी की जीवनशक्ति को बिगाड़ सकता है।</string>
+  <string name="morphe_disable_ambient_mode_title">अंबरेंट मोड को डिसेबल करें</string>
+  <string name="morphe_disable_ambient_mode_summary_on">अंबरेंट मोड डिसेबल किया गया है</string>
+  <string name="morphe_disable_ambient_mode_summary_off">अंबरेंट मोड एनब्ल किया गया है</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">फुलस्क्रीन में अंबरेंट मोड डिसेबल किया गया है</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">फुलस्क्रीन में अंबरेंट मोड एनब्ल किया गया है</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">इन्फो कार्ड्स को छुपाएं</string>
   <!-- layout.hide.rollingnumber.disableRollingNumberAnimationPatch -->

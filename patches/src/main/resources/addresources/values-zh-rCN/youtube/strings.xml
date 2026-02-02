@@ -286,6 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">隐藏评论区</string>
   <string name="morphe_hide_comments_section_summary_on">评论区已隐藏</string>
   <string name="morphe_hide_comments_section_summary_off">评论区已显示</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">隐藏主页动态的评论区</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">主页动态的评论区已隐藏</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">主页动态的评论区已显示</string>
   <string name="morphe_hide_comments_community_guidelines_title">隐藏社区准则</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">社区准则已隐藏</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">社区准则已显示</string>
@@ -609,14 +612,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscriptions_button_title">隐藏「订阅」按钮</string>
   <string name="morphe_hide_subscriptions_button_summary_on">订阅按钮已隐藏</string>
   <string name="morphe_hide_subscriptions_button_summary_off">订阅按钮已显示</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">隐藏通知</string>
   <string name="morphe_hide_notifications_button_summary_on">通知按钮已隐藏</string>
   <string name="morphe_hide_notifications_button_summary_off">通知按钮已显示</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">将「创作」改成「通知」按钮</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">创建按钮已切换为通知按钮</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">创作按钮未切换成通知按钮</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">如果更改此设置无法生效，请尝试切换到无痕模式。</string>
+  <string name="morphe_swap_create_with_notifications_button_title">切换「创作」为「通知」按钮</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">「创作」按钮已切换为「通知」按钮</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">「创作」按钮未切换为「通知」按钮</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">如果更改此设置无法生效，请尝试切换到无痕模式。</string>
   <string name="morphe_hide_navigation_button_labels_title">隐藏导航栏按钮标签</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">标签已隐藏</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">标签已显示</string>
@@ -735,10 +738,19 @@ Second \"item\" text"</string>
   <string name="morphe_hide_endscreen_cards_title">隐藏片尾卡</string>
   <string name="morphe_hide_endscreen_cards_summary_on">片尾卡已隐藏</string>
   <string name="morphe_hide_endscreen_cards_summary_off">片尾卡已显示</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">氛围模式</string>
+  <string name="morphe_ambient_mode_screen_summary">绕过节能模式限制，完全或全屏禁用氛围模式</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">绕过氛围模式限制</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">已绕过电源节能的氛围模式限制</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">未绕过电源节能的氛围模式限制</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">启用此选项可能会导致电池寿命变差。</string>
+  <string name="morphe_disable_ambient_mode_title">禁用氛围模式</string>
+  <string name="morphe_disable_ambient_mode_summary_on">氛围模式已禁用</string>
+  <string name="morphe_disable_ambient_mode_summary_off">氛围模式已启用</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">在全屏时禁用氛围模式</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">氛围模式已禁用</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">氛围模式已启用</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">全屏氛围模式已禁用</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">全屏氛围模式已启用</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">隐藏信息卡片</string>
   <string name="morphe_hide_info_cards_summary_on">信息卡片已隐藏</string>

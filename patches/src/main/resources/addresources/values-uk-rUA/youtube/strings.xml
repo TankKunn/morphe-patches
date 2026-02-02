@@ -287,6 +287,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">Приховати секцію коментарів</string>
   <string name="morphe_hide_comments_section_summary_on">Секцію коментарів приховано</string>
   <string name="morphe_hide_comments_section_summary_off">Секція коментарів показується</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Приховати розділ коментарів у Ленті</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Розділ коментарів у Ленті приховано</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Розділ коментарів у Ленті показано</string>
   <string name="morphe_hide_comments_community_guidelines_title">Приховати правила спільноти</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Правила спільноти приховано</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Правила спільноти показуються</string>
@@ -610,14 +613,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscriptions_button_title">Приховати \"Підписки\"</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Кнопку \"Підписки\" приховано на панелі навігації</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Кнопка \"Підписки\" показується на панелі навігації</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Приховати \"Сповіщення\"</string>
   <string name="morphe_hide_notifications_button_summary_on">Кнопку \"Сповіщення\" приховано на панелі навігації</string>
   <string name="morphe_hide_notifications_button_summary_off">Кнопка \"Сповіщення\" показується на панелі навігації</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Замінити \"Створити\" на \"Сповіщення\"</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Кнопка \"Створити\" замінена на кнопку \"Сповіщення\"</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Кнопку \"Створити\" не замінено кнопкою \"Сповіщення\"</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Якщо зміна цього налаштування не набула ефекту, спробуйте перемкнути в режим Інкогніто.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Замінити \"Створити\" на \"Сповіщення\"</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Кнопка \"Створити\" замінена на кнопку \"Сповіщення\"</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Кнопку \"Створити\" не замінено кнопкою \"Сповіщення\"</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Якщо зміна цього налаштування не набула ефекту, спробуйте перемкнути в режим Інкогніто.</string>
   <string name="morphe_hide_navigation_button_labels_title">Приховати підписи кнопок навігації</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Підписи кнопок навігації приховано</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Підписи кнопок навігації показуються</string>
@@ -736,10 +739,19 @@ Second \"item\" text"</string>
   <string name="morphe_hide_endscreen_cards_title">Приховати картки на кінцевому екрані</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Картки на кінцевому екрані приховано</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Картки на кінцевому екрані показуються</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Режим оточення</string>
+  <string name="morphe_ambient_mode_screen_summary">Ігнорувати обмеження економії енергії для режиму оточення та вимкнути його повністю або в повноекранному режимі</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Ігнорувати обмеження режиму оточення</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Обмеження режиму \"Кінематографічне освітлення\" для економії енергії обходяться</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Обмеження режиму \"Кінематографічне освітлення\" для економії енергії не обходяться</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Увімкнення цієї функції може погіршити тривалість роботи батареї.</string>
+  <string name="morphe_disable_ambient_mode_title">Вимкнути режим \"Кінематографічне освітлення\"</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Режим \"Кінематографічне освітлення\" вимкнено</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Режим \"Кінематографічне освітлення\" увімкнено</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Вимкнути кінематографічне освітлення</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Кінематографічне освітлення в повноекранному режимі вимкнено</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Кінематографічне освітлення в повноекранному режимі ввімкнено</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Режим \"Кінематографічне освітлення\" в повноекранному режимі вимкнено</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Режим \"Кінематографічне освітлення\" в повноекранному режимі увімкнено</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Приховати підказки</string>
   <string name="morphe_hide_info_cards_summary_on">Підказки справа вгорі відеоплеєра приховано</string>

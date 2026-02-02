@@ -287,6 +287,9 @@ Pokud se Doodle v současné době zobrazuje ve vaší oblasti a toto nastavení
   <string name="morphe_hide_comments_section_title">Skrýt sekci komentářů</string>
   <string name="morphe_hide_comments_section_summary_on">Sekce komentářů je skrytá</string>
   <string name="morphe_hide_comments_section_summary_off">Sekce komentářů je zobrazena</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Skrýt sekci komentářů v Home feed</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Sekce komentářů v Home feed je skrytá</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Sekce komentářů v Home feed je zobrazena</string>
   <string name="morphe_hide_comments_community_guidelines_title">Skrýt pokyny pro komunitu</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Pravidla komunity jsou skryta</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Pravidla komunity jsou zobrazena</string>
@@ -610,14 +613,14 @@ Cookies budou automaticky uloženy, pokud jsou platné."</string>
   <string name="morphe_hide_subscriptions_button_title">Skrýt odběry</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Tlačítko Odběry je skryto</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Tlačítko Odběry je zobrazeno</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Skrýt oznámení</string>
   <string name="morphe_hide_notifications_button_summary_on">Tlačítko oznámení je skryto</string>
   <string name="morphe_hide_notifications_button_summary_off">Tlačítko oznámení je zobrazeno</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Zaměnit Vytvořit s Oznámeními</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Tlačítko Vytvořit je zaměněno s tlačítkem Oznámení</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Tlačítko Vytvořit není zaměněno s tlačítkem Oznámení</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Pokud se tato změna nastavení neprojeví, zkuste přepnout do soukromého prohlížeče.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Vyměňte Vytvořit s Oznámeními</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Tlačítko Vytvořit je vyměněno s tlačítkem Oznámení</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Tlačítko Vytvořit není vyměněno s tlačítkem Oznámení</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Pokud se tato změna nastavení neprojeví, zkuste přepnout do soukromého prohlížeče.</string>
   <string name="morphe_hide_navigation_button_labels_title">Skrýt štítky navigačních tlačítek</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Štítky jsou skryty</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Štítky jsou zobrazeny</string>
@@ -736,10 +739,19 @@ Chcete zobrazit menu zvukové stopy, změňte 'Falešné video proudy' na 'Andro
   <string name="morphe_hide_endscreen_cards_title">Skrýt karty s informacemi o videu</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Karty s informacemi o videu jsou skryty</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Karty s informacemi o videu jsou zobrazeny</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Režim ambientního módu</string>
+  <string name="morphe_ambient_mode_screen_summary">Přepsat omezení úspory energie pro režim ambientního módu a vypnout ho úplně nebo v plné obrazovce</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Přepsat omezení režimu ambientního módu</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Omezení režimu Ambient pro úsporu energie jsou přepnuta.</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Omezení režimu Ambient pro úsporu energie nejsou přepnuta.</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Aktivace této možnosti může zhoršit životnost baterie.</string>
+  <string name="morphe_disable_ambient_mode_title">Vypnout režim Ambient</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Režim Ambient je vypnut</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Režim Ambient je zapnut</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Deaktivovat okolní režim v celoobrazovkovém režimu</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Režim Ambient je zakázán</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Režim Ambient je povolen</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Režim Ambient ve plné obrazovce je vypnut</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Režim Ambient ve plné obrazovce je zapnut</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Skrýt informační karty</string>
   <string name="morphe_hide_info_cards_summary_on">Informační karty jsou skryty</string>

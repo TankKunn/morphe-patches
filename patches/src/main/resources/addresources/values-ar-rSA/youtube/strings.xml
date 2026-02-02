@@ -286,6 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">إخفاء قسم التعليقات</string>
   <string name="morphe_hide_comments_section_summary_on">تم إخفاء قسم التعليقات</string>
   <string name="morphe_hide_comments_section_summary_off">يتم عرض قسم التعليقات</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">إخفاء قسم التعليقات في تغذية المنزل</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">تم إخفاء قسم التعليقات في تغذية المنزل</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">يتم عرض قسم التعليقات في تغذية المنزل</string>
   <string name="morphe_hide_comments_community_guidelines_title">إخفاء إرشادات المجتمع</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">تم إخفاء إرشادات المجتمع</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">يتم عرض إرشادات المجتمع</string>
@@ -609,14 +612,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscriptions_button_title">إخفاء الاشتراكات</string>
   <string name="morphe_hide_subscriptions_button_summary_on">تم إخفاء زر الاشتراكات</string>
   <string name="morphe_hide_subscriptions_button_summary_off">يتم عرض زر الاشتراكات</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">إخفاء الإشعارات</string>
   <string name="morphe_hide_notifications_button_summary_on">تم إخفاء زر الإشعارات</string>
   <string name="morphe_hide_notifications_button_summary_off">يتم عرض زر الإشعارات</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">تبديل الإنشاء بالإشعارات</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">يتم تبديل زر الإنشاء بزر الإشعارات</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">لا يتم تبديل زر الإنشاء بزر الإشعارات</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">إذا لم يتغير هذا الإعداد، جرِّب التبديل إلى وضع التصفّح المتخفي.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">تبديل إنشاء مع الإشعارات</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">تم تبديل زر الإنشاء بزر الإشعارات</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">لا يتم تبديل زر الإنشاء بزر الإشعارات</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">إذا لم يتغير هذا الإعداد، جرِّب التبديل إلى وضع التصفّح المتخفي.</string>
   <string name="morphe_hide_navigation_button_labels_title">إخفاء تسميات زر التنقل</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">تم إخفاء التسميات</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">يتم عرض التسميات</string>
@@ -735,10 +738,19 @@ Second \"item\" text"</string>
   <string name="morphe_hide_endscreen_cards_title">إخفاء بطاقات شاشة النهاية</string>
   <string name="morphe_hide_endscreen_cards_summary_on">تم إخفاء بطاقات شاشة النهاية</string>
   <string name="morphe_hide_endscreen_cards_summary_off">يتم عرض بطاقات شاشة النهاية</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">وضع الإضاءة السينمائية</string>
+  <string name="morphe_ambient_mode_screen_summary">تجاوز قيود الإضاءة السينمائية</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">تجاوز قيود الإضاءة السينمائية</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">تم تجاوز قيود الوضع الإضاءة للاقتصاد على الطاقة</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">لم يتم تجاوز قيود الوضع الإضاءة للاقتصاد على الطاقة</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">تفعيل هذا يمكن أن يضر بحياة البطارية.</string>
+  <string name="morphe_disable_ambient_mode_title">إلغاء الوضع الإضاءة</string>
+  <string name="morphe_disable_ambient_mode_summary_on">تم إلغاء الوضع الإضاءة</string>
+  <string name="morphe_disable_ambient_mode_summary_off">تم تفعيل الوضع الإضاءة</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">تعطيل وضع الإضاءة السينمائية في ملء الشاشة</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">تم تعطيل وضع الإضاءة السينمائية</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">تم تمكين وضع الإضاءة السينمائية</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">تم إلغاء الوضع الإضاءة في الشاشة الكاملة</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">تم تفعيل الوضع الإضاءة في الشاشة الكاملة</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">إخفاء بطاقات المعلومات</string>
   <string name="morphe_hide_info_cards_summary_on">تم إخفاء بطاقات المعلومات</string>

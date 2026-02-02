@@ -286,6 +286,9 @@ Se al momento un Doodle è visibile nella tua regione e questa impostazione nasc
   <string name="morphe_hide_comments_section_title">Nascondi la sezione Commenti</string>
   <string name="morphe_hide_comments_section_summary_on">La sezione Commenti è nascosta</string>
   <string name="morphe_hide_comments_section_summary_off">La sezione Commenti è visibile</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Nascondi la sezione commenti nella home</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">La sezione commenti nella home è nascosta</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">La sezione commenti nella home è visibile</string>
   <string name="morphe_hide_comments_community_guidelines_title">Nascondi le linee guida della community</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Le linee guida della community sono nascoste</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Le linee guida della community sono mostrate</string>
@@ -609,14 +612,14 @@ I cookie verranno salvati automaticamente se sono validi"</string>
   <string name="morphe_hide_subscriptions_button_title">Nascondi Iscrizioni</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Il pulsante Iscrizioni è nascosto</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Il pulsante Iscrizioni è visibile</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Nascondi Notifiche</string>
   <string name="morphe_hide_notifications_button_summary_on">Il pulsante Notifiche è nascosto</string>
   <string name="morphe_hide_notifications_button_summary_off">Il pulsante Notifiche è visibile</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Cambia Crea con le notifiche</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Il pulsante Crea è stato scambiato con il pulsante Notifiche</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Il pulsante Crea non è cambiato con il pulsante Notifiche</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Se il cambiamento di questa impostazione non ha effetto, prova a passare alla modalità Incognito.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Scambia Crea con Notifiche</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Il pulsante Crea è stato scambiato con il pulsante Notifiche</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Il pulsante Crea non è stato scambiato con il pulsante Notifiche</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Se il cambiamento di questa impostazione non ha effetto, prova a passare alla modalità Incognito.</string>
   <string name="morphe_hide_navigation_button_labels_title">Nascondi etichette dei pulsanti di navigazione</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Le etichette sono nascoste</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Le etichette sono visibili</string>
@@ -735,10 +738,19 @@ Per visualizzare il menu delle tracce audio, impostare 'Spoof video streams' su 
   <string name="morphe_hide_endscreen_cards_title">Nascondi le schede della schermata finale</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Le schede della schermata finale sono nascoste</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Le schede della schermata finale sono visibili</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Modalità ambiente</string>
+  <string name="morphe_ambient_mode_screen_summary">Ignora le restrizioni di risparmio energetico per la modalità ambiente e disabilitala completamente o in modalità schermo intero</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Ignora le restrizioni della modalità ambiente</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Le restrizioni della modalità ambientale per il risparmio energetico sono bypassate</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Le restrizioni della modalità ambientale per il risparmio energetico non sono bypassate</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">L\'attivazione di questa funzione può peggiorare la durata della batteria.</string>
+  <string name="morphe_disable_ambient_mode_title">Disabilita la modalità ambientale</string>
+  <string name="morphe_disable_ambient_mode_summary_on">La modalità ambientale è disabilitata</string>
+  <string name="morphe_disable_ambient_mode_summary_off">La modalità ambientale è abilitata</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Disattiva la modalità Ambient a schermo intero</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Modalità Ambient disabilitata</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Modalità Ambient abilitata</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">La modalità ambientale a schermo intero è disabilitata</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">La modalità ambientale a schermo intero è abilitata</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Nascondi schede info</string>
   <string name="morphe_hide_info_cards_summary_on">Le schede informative verranno nascoste</string>

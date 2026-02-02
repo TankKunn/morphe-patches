@@ -286,6 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">Скрийте раздел за коментари</string>
   <string name="morphe_hide_comments_section_summary_on">Разделът за коментари е скрит</string>
   <string name="morphe_hide_comments_section_summary_off">Разделът за коментари е показан</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Скриване на коментарите в лентата</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Коментарите в лентата са скрити</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Коментарите в лентата са видими</string>
   <string name="morphe_hide_comments_community_guidelines_title">Скрийте общи указания</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Общите указания са скрити</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Общите указания са показани</string>
@@ -599,14 +602,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscriptions_button_title">Бутонът Subscriptions е скрит</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Бутонът Subscriptions се показва</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Скрий Notifications</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Бутонът Notifications е скрит</string>
   <string name="morphe_hide_notifications_button_summary_on">Бутонът Notifications се показва</string>
   <string name="morphe_hide_notifications_button_summary_off">Променяй Create с Notifications бутон</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Заменете бутона „Създаване“ с бутона „Известия“</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Бутоните \"Създаване\" и \"Известия\" са разменени</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Бутоните \"Създаване\" и \"Известия\" не са разменени</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Ако промяната на това настройка не заработи, опитайте да превключите в Инкогнито режим.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Размени бутона „Създаване“ с бутона „Известия“</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Бутона „Създаване“ е разменен с бутона „Известия“</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Бутона „Създаване“ не е разменен с бутона „Известия“</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Ако промяната на това настройка не заработи, опитайте да превключите в Инкогнито режим.</string>
   <string name="morphe_hide_navigation_button_labels_title">Етикетите са скрити</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Етикетите се показват</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Включи анимации на лентата за навигация</string>
@@ -725,10 +728,19 @@ Second \"item\" text"</string>
   <string name="morphe_hide_endscreen_cards_title">Дублирането на видеа се показва</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Скрий дублиране на видеа</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Дублирането на видеа е скрито</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Режим на окружение</string>
+  <string name="morphe_ambient_mode_screen_summary">Избягване на ограниченията за енергозбережение за режим на окружение и изключване му напълно или в пълноекранен режим</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Избягване на ограниченията за режим на окружение</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Ограниченията на режима Ambient за енергосparing са преодоляни</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Ограниченията на режима Ambient за енергосparing не са преодоляни</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Активирането на това може да причини по-лоша батарейка.</string>
+  <string name="morphe_disable_ambient_mode_title">Изключете режима Ambient</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Режима Ambient е изключен</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Режима Ambient е активиран</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Дублирането на видеа се показва</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Скрий дублиране на видеа</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Дублирането на видеа е скрито</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Режима Ambient в пълноекранен режим е изключен</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Режима Ambient в пълноекранен режим е активиран</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Дублирането на видеа се показва</string>
   <string name="morphe_hide_info_cards_summary_on">Скрий дублиране на видеа</string>

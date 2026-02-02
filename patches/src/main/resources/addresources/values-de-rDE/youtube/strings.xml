@@ -285,6 +285,9 @@ Wenn ein Doodle zurzeit in Ihrer Region angezeigt wird und diese Einstellung zum
   <string name="morphe_hide_comments_section_title">Kommentarbereich ausblenden</string>
   <string name="morphe_hide_comments_section_summary_on">Kommentarbereich ist ausgeblendet</string>
   <string name="morphe_hide_comments_section_summary_off">Kommentarbereich wird angezeigt</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Kommentare ausblenden</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Kommentarbereich ist ausgeblendet</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Kommentarbereich wird angezeigt</string>
   <string name="morphe_hide_comments_community_guidelines_title">Community-Richtlinien ausblenden</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Community-Richtlinien sind ausgeblendet</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Community-Richtlinien werden angezeigt</string>
@@ -606,14 +609,14 @@ Cookies werden automatisch gespeichert, wenn sie gültig sind"</string>
   <string name="morphe_hide_subscriptions_button_title">Abonnements ausblenden</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Abonnement-Button ist ausgeblendet</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Abonnement-Button wird angezeigt</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Benachrichtigungen ausblenden</string>
   <string name="morphe_hide_notifications_button_summary_on">Benachrichtigungs-Button ist ausgeblendet</string>
   <string name="morphe_hide_notifications_button_summary_off">Benachrichtigungs-Button wird angezeigt</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Tauscht Erstellen mit Benachrichtigungen</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Erstellen-Schaltfläche ist mit Benachrichtigungen-Schaltfläche vertauscht</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Erstellen-Button ist nicht mit Benachrichtigungs-Button getauscht</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Wenn Über die Änderung dieser Einstellung keine Wirkung erzielt wird, versuchen Sie, in Inkognito-Modus zu wechseln.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Tausche \"Erstellen\" mit \"Benachrichtigungen\"</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Erstellen-Button ist mit Benachrichtigungs-Button getauscht</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Erstellen-Button ist nicht mit Benachrichtigungs-Button getauscht</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Wenn Über die Änderung dieser Einstellung keine Wirkung erzielt wird, versuchen Sie, in Inkognito-Modus zu wechseln.</string>
   <string name="morphe_hide_navigation_button_labels_title">Navigationstastenbezeichnungen ausblenden</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Labels sind ausgeblendet</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Labels werden angezeigt</string>
@@ -732,10 +735,19 @@ Um das Menü anzuzeigen, ändern Sie „Video-Streams fingieren“ in „Android
   <string name="morphe_hide_endscreen_cards_title">Endkarte ausblenden</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Endbildschirmkarten sind ausgeblendet</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Endbildschirmkarten werden angezeigt</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Ambient-Modus</string>
+  <string name="morphe_ambient_mode_screen_summary">Einschränkungen des Energiesparmodus für den Ambient-Modus umgehen und ihn entirely oder im Vollbildmodus deaktivieren</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Einschränkungen des Ambient-Modus umgehen</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Einschränkungen des Modus \"Ambient\" für den Energiesparmodus werden umgangen</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Einschränkungen des Modus \"Ambient\" für den Energiesparmodus werden nicht umgangen</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Das Aktivieren kann die Akkulaufzeit verschlechtern.</string>
+  <string name="morphe_disable_ambient_mode_title">Modus \"Ambient\" deaktivieren</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Modus \"Ambient\" ist deaktiviert</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Modus \"Ambient\" ist aktiviert</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Ambient-Modus im Vollbildmodus deaktivieren</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Ambient-Modus deaktiviert</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Ambient-Modus aktiviert</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Modus \"Ambient\" im Vollbild ist deaktiviert</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Modus \"Ambient\" im Vollbild ist aktiviert</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Infokarten ausblenden</string>
   <string name="morphe_hide_info_cards_summary_on">Infokarten sind ausgeblendet</string>

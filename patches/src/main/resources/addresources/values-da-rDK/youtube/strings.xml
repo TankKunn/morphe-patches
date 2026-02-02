@@ -286,6 +286,9 @@ Hvis et Doodle vises i øjeblikket i din region, og denne skjuleindstilling er a
   <string name="morphe_hide_comments_section_title">Skjul kommentarsektion</string>
   <string name="morphe_hide_comments_section_summary_on">Kommentarer sektion er skjult</string>
   <string name="morphe_hide_comments_section_summary_off">Kommentarer sektion er vist</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Skjul kommentarer i Home-feed</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Kommentarer i Home-feed er skjult</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Kommentarer i Home-feed er vist</string>
   <string name="morphe_hide_comments_community_guidelines_title">Skjul fællesskabsretningslinjer</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Fællesskabsretningslinjer er skjult</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Fællesskabsretningslinjer er vist</string>
@@ -609,14 +612,14 @@ Tekstlinjer vil blive gemt automatisk, hvis de er gyldige"</string>
   <string name="morphe_hide_subscriptions_button_title">Skjul Abonnementer</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Abonnementer knappen er skjult</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Abonnementer knappen vises</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Skjul notifikationer</string>
   <string name="morphe_hide_notifications_button_summary_on">Notifikationsknappen er skjult</string>
   <string name="morphe_hide_notifications_button_summary_off">Notifikationsknappen vises</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Skift Opret med notifikationer</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Opret knappen er skiftet med Notifikationer knappen</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Opret knappen er ikke skiftet med Notifikationer knappen</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Hvis ændringen af denne indstilling ikke virker, prøv at skifte til Incognito-modus.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Skift Opret med notifikationer</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Opret knappen er skiftet med Notifikationer knappen</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Opret knappen er ikke skiftet med Notifikationer knappen</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Hvis ændringen af denne indstilling ikke virker, prøv at skifte til Incognito-modus.</string>
   <string name="morphe_hide_navigation_button_labels_title">Skjul navigationsknappens etiketter</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Etiketter er skjult</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Etiketter er vist</string>
@@ -735,10 +738,19 @@ For at vise Lydspor-menuen, ændr 'Spoof video streams' til 'Android No SDK'"</s
   <string name="morphe_hide_endscreen_cards_title">Skjul slutskærmkort</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Slutskærmskortene er skjult</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Kort til slutskærm vises</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Omgivende tilstand</string>
+  <string name="morphe_ambient_mode_screen_summary">Omgaa strenge for sparing af strøm for omgivende tilstand og slå den helt eller fuldskærmst af</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Omgaa omgivende tilstandens strenge</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Afstandsmodusbegrænsninger for energisparning er omgået</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Afstandsmodusbegrænsninger for energisparning er ikke omgået</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Aktivering af dette kan forværre batterilivstid.</string>
+  <string name="morphe_disable_ambient_mode_title">Deaktiver Afstandsmodus</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Afstandsmodus er deaktiveret</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Afstandsmodus er aktiveret</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Deaktiver Ambient-tilstand i fuldskærm</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Omgivelsestilstand deaktiveret</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Omgivelsestilstand aktiveret</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Afstandsmodus i fuldskærm er deaktiveret</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Afstandsmodus i fuldskærm er aktiveret</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Skjul informationskort</string>
   <string name="morphe_hide_info_cards_summary_on">Info kort er skjult</string>

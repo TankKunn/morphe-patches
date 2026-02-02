@@ -286,6 +286,9 @@ Si un Doodle está actualmente mostrándose en tu región y este ajuste de ocult
   <string name="morphe_hide_comments_section_title">Ocultar sección \"Comentarios\"</string>
   <string name="morphe_hide_comments_section_summary_on">La sección \"Comentarios\" está oculta</string>
   <string name="morphe_hide_comments_section_summary_off">La sección \"Comentarios\" está visible</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Ocultar sección \"Comentarios\" en el feed de inicio</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">La sección \"Comentarios\" está oculta en el feed de inicio</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">La sección \"Comentarios\" está visible en el feed de inicio</string>
   <string name="morphe_hide_comments_community_guidelines_title">Ocultar normas de la comunidad</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Las normas de la comunidad están ocultas</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Las normas de la comunidad están visibles</string>
@@ -609,14 +612,14 @@ Las cookies se guardarán automáticamente si son válidas"</string>
   <string name="morphe_hide_subscriptions_button_title">Ocultar \"Suscripciones\"</string>
   <string name="morphe_hide_subscriptions_button_summary_on">El botón \"Suscripciones\" está oculto</string>
   <string name="morphe_hide_subscriptions_button_summary_off">El botón \"Suscripciones\" está visible</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Ocultar \"Notificaciones\"</string>
   <string name="morphe_hide_notifications_button_summary_on">El botón \"Notificaciones\" está oculto</string>
   <string name="morphe_hide_notifications_button_summary_off">El botón \"Notificaciones\" está visible</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Cambiar \"Crear\" con \"Notificaciones\"</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">El botón \"Crear\" se cambia por el botón \"Notificaciones\"</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">El botón \"Crear\" no se cambia por el botón \"Notificaciones\"</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Si cambiar este ajuste no tiene efecto, intenta cambiar al modo incógnito.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Intercambiar \"Crear\" con \"Notificaciones\"</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">El botón \"Crear\" se ha intercambiado con el botón \"Notificaciones\"</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">El botón \"Crear\" no se ha intercambiado con el botón \"Notificaciones\"</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Si cambiar este ajuste no tiene efecto, intenta cambiar al modo incógnito.</string>
   <string name="morphe_hide_navigation_button_labels_title">Ocultar etiquetas de botones de navegación</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Las etiquetas están ocultas</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Las etiquetas están visibles</string>
@@ -735,10 +738,19 @@ Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de v
   <string name="morphe_hide_endscreen_cards_title">Ocultar tarjetas de pantalla final</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Las tarjetas de pantalla final están ocultas</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Las tarjetas de pantalla final están visibles</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Modo ambiente</string>
+  <string name="morphe_ambient_mode_screen_summary">Omitir restricciones de ahorro de energía para Modo ambiente y desactivarlo completamente o en pantalla completa</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Omitir restricciones de Modo ambiente</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Las restricciones de modo ambiente para ahorro de energía están bypass.</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Las restricciones de modo ambiente para ahorro de energía no están bypass.</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Habilitar esto puede causar una peor vida de la batería.</string>
+  <string name="morphe_disable_ambient_mode_title">Deshabilitar modo ambiente</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Modo ambiente está deshabilitado</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Modo ambiente está habilitado</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Desactivar modo ambiente en pantalla completa</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Modo ambiente desactivado</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Modo ambiente activado</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Modo ambiente en pantalla completa está deshabilitado</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Modo ambiente en pantalla completa está habilitado</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Ocultar tarjetas de información</string>
   <string name="morphe_hide_info_cards_summary_on">Las tarjetas de información están ocultas</string>

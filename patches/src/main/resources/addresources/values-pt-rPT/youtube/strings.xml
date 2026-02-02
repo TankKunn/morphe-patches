@@ -286,6 +286,9 @@ Se um Doodle estiver a ser exibido na sua região e esta definição de ocultaç
   <string name="morphe_hide_comments_section_title">Esconder seção de comentários</string>
   <string name="morphe_hide_comments_section_summary_on">Seção de comentários está oculta</string>
   <string name="morphe_hide_comments_section_summary_off">Seção de comentários exibida</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Esconder seção de comentários em Home feed</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Seção de comentários em Home feed está oculta</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Seção de comentários em Home feed está exibida</string>
   <string name="morphe_hide_comments_community_guidelines_title">Ocultar diretrizes da comunidade</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">As diretrizes da comunidade estão ocultas</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">As diretrizes da comunidade estão exibidas</string>
@@ -609,14 +612,14 @@ Os cookies serão salvos automaticamente se forem válidos"</string>
   <string name="morphe_hide_subscriptions_button_title">Esconder assinaturas</string>
   <string name="morphe_hide_subscriptions_button_summary_on">O botão de assinaturas está escondido</string>
   <string name="morphe_hide_subscriptions_button_summary_off">O botão Subscrições está visível</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Ocultar notificações</string>
   <string name="morphe_hide_notifications_button_summary_on">O botão de notificações está oculto</string>
   <string name="morphe_hide_notifications_button_summary_off">O botão de notificações está visível</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Mudar Criar com Notificações</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">O botão criar está alternado com o botão Notificações</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">O botão criar não está alternado com o botão Notificações</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Se alterar esta configuração não tiver efeito, tente alternar para o modo Incógnito.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Trocar Criar com Notificações</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">O botão criar está alternado com o botão Notificações</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">O botão criar não está alternado com o botão Notificações</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Se alterar esta configuração não tiver efeito, tente alternar para o modo Incógnito.</string>
   <string name="morphe_hide_navigation_button_labels_title">Ocultar rótulos dos botões de navegação</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Marcadores estão ocultos</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Marcadores são mostrados</string>
@@ -735,10 +738,19 @@ Para exibir o menu de faixas de áudio, altere 'Spoof video streams' para 'Andro
   <string name="morphe_hide_endscreen_cards_title">Esconder cartões de ecrã final</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Cartões de fim de ecrã estão escondidos</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Cartões de fim de ecrã são exibidos</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Modo ambiente</string>
+  <string name="morphe_ambient_mode_screen_summary">Ignorar restrições de economia de energia para o modo ambiente e desativá-lo completamente ou em tela cheia</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Ignorar restrições do modo ambiente</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Restrições de modo ambiente para economia de energia são ignoradas</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Restrições de modo ambiente para economia de energia não são ignoradas</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Habilitar isso pode causar pior vida útil da bateria.</string>
+  <string name="morphe_disable_ambient_mode_title">Desativar modo ambiente</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Modo ambiente desativado</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Modo ambiente ativado</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Desabilitar modo ambiente em tela cheia</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Modo ambiente desativado</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Modo ambiente ativado</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Modo ambiente em tela cheia desativado</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Modo ambiente em tela cheia ativado</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Esconder cartões de informação</string>
   <string name="morphe_hide_info_cards_summary_on">Cartões de informação estão escondidos</string>

@@ -286,6 +286,9 @@ Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini 
   <string name="morphe_hide_comments_section_title">Sembunyikan bagian komentar</string>
   <string name="morphe_hide_comments_section_summary_on">Bagian komentar disembunyikan</string>
   <string name="morphe_hide_comments_section_summary_off">Bagian komentar ditampilkan</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Sembunyikan bagian komentar di feed rumah</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Bagian komentar di feed rumah disembunyikan</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Bagian komentar di feed rumah ditampilkan</string>
   <string name="morphe_hide_comments_community_guidelines_title">Sembunyikan pedoman komunitas</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Pedoman komunitas disembunyikan</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Pedoman komunitas ditampilkan</string>
@@ -609,14 +612,14 @@ Kukis akan disimpan secara otomatis jika valid"</string>
   <string name="morphe_hide_subscriptions_button_title">Sembunyikan Langganan</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Tombol langganan disembunyikan</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Tombol langganan ditampilkan</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Sembunyikan Notifikasi</string>
   <string name="morphe_hide_notifications_button_summary_on">Tombol notifikasi disembunyikan</string>
   <string name="morphe_hide_notifications_button_summary_off">Tombol notifikasi ditampilkan</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Ganti Buat dengan Notifikasi</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Tombol buat diganti dengan tombol Pemberitahuan</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Tombol buat tidak diganti dengan tombol Notifikasi</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Jika mengubah pengaturan ini tidak berhasil, coba beralih ke mode Penyamaran.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Ganti Tombol Buat dengan Notifikasi</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Tombol buat diganti dengan tombol Pemberitahuan</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Tombol buat tidak diganti dengan tombol Notifikasi</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Jika mengubah pengaturan ini tidak berhasil, coba beralih ke mode Penyamaran.</string>
   <string name="morphe_hide_navigation_button_labels_title">Sembunyikan label tombol navigasi</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Label disembunyikan</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Label ditampilkan</string>
@@ -735,10 +738,19 @@ Untuk menampilkan menu trek audio, ubah 'Palsukan aliran video' menjadi 'Android
   <string name="morphe_hide_endscreen_cards_title">Sembunyikan kartu layar akhir</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Kartu layar akhir disembunyikan</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Kartu layar akhir ditampilkan</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Mode Sinematik</string>
+  <string name="morphe_ambient_mode_screen_summary">Lewati batasan penghematan daya untuk Mode Sinematik dan nonaktifkannya seluruh atau layar penuh</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Lewati batasan Mode Sinematik</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Batasan mode sinematik untuk menghemat daya listrik diabaikan</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Batasan mode sinematik untuk menghemat daya listrik tidak diabaikan</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Mengaktifkan ini dapat menyebabkan penggunaan baterai lebih buruk.</string>
+  <string name="morphe_disable_ambient_mode_title">Nonaktifkan mode sinematik</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Mode sinematik dinonaktifkan</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Mode sinematik diaktifkan</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Nonaktifkan mode Senematik dalam layar penuh</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Mode sinematik dinonaktifkan</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Mode sinematik diaktifkan</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Mode sinematik penuh dinonaktifkan</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Mode sinematik penuh diaktifkan</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Sembunyikan kartu info</string>
   <string name="morphe_hide_info_cards_summary_on">Kartu info disembunyikan</string>

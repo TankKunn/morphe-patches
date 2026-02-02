@@ -286,6 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">הסתר מדור תגובות</string>
   <string name="morphe_hide_comments_section_summary_on">מדור התגובות מוסתר</string>
   <string name="morphe_hide_comments_section_summary_off">מדור התגובות מוצג</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">הסתר את מדור התגובות בפיד</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">מדור התגובות בפיד מוסתר</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">מדור התגובות בפיד מוצג</string>
   <string name="morphe_hide_comments_community_guidelines_title">הסתר הנחיות קהילה</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">הנחיות הקהילה מוסתרות</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">הנחיות הקהילה מוצגות</string>
@@ -609,14 +612,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscriptions_button_title">הסתר מינויים</string>
   <string name="morphe_hide_subscriptions_button_summary_on">לחצן מינויים מוסתר</string>
   <string name="morphe_hide_subscriptions_button_summary_off">לחצן מינויים מוצג</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">הסתר עדכונים</string>
   <string name="morphe_hide_notifications_button_summary_on">לחצן עדכונים מוסתר</string>
   <string name="morphe_hide_notifications_button_summary_off">לחצן עדכונים מוצג</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">החלף יצירה עם עדכונים</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">לחצן יצירה מוחלף עם לחצן התראות</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">לחצן יצירה לא יוחלף עם לחצן עדכונים</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">אם שינוי הגדרון זה לא יפעל, נסה לשנות למוד אינקוגניטו.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">החלף יצירה עם עדכונים</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">לחצן יצירה יוחלף עם לחצן עדכונים</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">לחצן יצירה לא יוחלף עם לחצן עדכונים</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">אם שינוי הגדרון זה לא יפעל, נסה לשנות למוד אינקוגניטו.</string>
   <string name="morphe_hide_navigation_button_labels_title">הסתר תוויות לחצני ניווט</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">התוויות מוסתרות</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">התוויות מוצגות</string>
@@ -735,10 +738,19 @@ Second \"item\" text"</string>
   <string name="morphe_hide_endscreen_cards_title">הסתר כרטיסי מסך סיום</string>
   <string name="morphe_hide_endscreen_cards_summary_on">כרטיסי מסך מסיום מוסתרים</string>
   <string name="morphe_hide_endscreen_cards_summary_off">כרטיסי מסך מסיום מוצגים</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">מצב אטמוספירה</string>
+  <string name="morphe_ambient_mode_screen_summary">עקוף הגבלות חסכון אנרגיה עבור מצב אטמוספירה ומנע אותו לחלוטין או במלואו</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">עקוף מגבלות מצב אטמוספירה</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">הסרת הגבלות של תאורת אווירה לשמירה על כוח חשמלי</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">הסרת הגבלות של תאורת אווירה לשמירה על כוח חשמלי אינה פעילה</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">הפעלת תאורת אווירה תגרום לריצוי סוללה גרוע יותר.</string>
+  <string name="morphe_disable_ambient_mode_title">הסתר תאורת אווירה</string>
+  <string name="morphe_disable_ambient_mode_summary_on">תאורת אווירה מושבתת</string>
+  <string name="morphe_disable_ambient_mode_summary_off">תאורת אווירה מופעלת</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">השבת תאורת אווירה במסך מלא</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">תאורת אווירה מושבתת</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">תאורת אווירה מופעלת</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">תאורת אווירה מלאה- מסך מושבתת</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">תאורת אווירה מלאה- מסך מופעלת</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">הסתר כרטיסי מידע</string>
   <string name="morphe_hide_info_cards_summary_on">כרטיסי המידע מוסתרים</string>

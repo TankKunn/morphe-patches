@@ -286,6 +286,9 @@ Dacă un Doodle este afișat în prezent în regiunea dvs. și această setare d
   <string name="morphe_hide_comments_section_title">Ascunde secțiunea comentarii</string>
   <string name="morphe_hide_comments_section_summary_on">Secţiunea de comentarii este ascunsă</string>
   <string name="morphe_hide_comments_section_summary_off">Secțiunea comentariilor este afișată</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Ascunde secţiunea comentarii în fluxul principal</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Secţiunea de comentarii este ascunsă în fluxul principal</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Secţiunea de comentarii este afișată în fluxul principal</string>
   <string name="morphe_hide_comments_community_guidelines_title">Ascunde regulile comunității</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Ghidurile comunității sunt ascunse</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Ghidurile comunității sunt afișate</string>
@@ -607,14 +610,14 @@ Cookie-urile vor fi salvate automatik daca sunt valide"</string>
   <string name="morphe_hide_subscriptions_button_title">Ascunde abonamentele</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Butonul Abonamente este ascuns</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Butonul Abonamente este afișat</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Ascunde notificările</string>
   <string name="morphe_hide_notifications_button_summary_on">Butonul Notificări este ascuns</string>
   <string name="morphe_hide_notifications_button_summary_off">Butonul Notificări este afișat</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Comutare creare cu notificări</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Butonul Creare este comutat cu butonul Notificări</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Butonul Creare nu este comutat cu butonul Notificări</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Dacă schimbarea acestei setări nu are efect, încearcă să treci în modul Incognito.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Comuta Creare cu Notificări</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Butonul Creare a fost comutat cu butonul Notificări</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Butonul Creare nu este comutat cu butonul Notificări</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Dacă schimbarea acestei setări nu are efect, încearcă să treci în modul Incognito.</string>
   <string name="morphe_hide_navigation_button_labels_title">Ascunde etichetele butoanelor de navigare</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Etichetele sunt ascunse</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Etichetele sunt afișate</string>
@@ -733,10 +736,19 @@ Pentru a afişa meniul de traiectorie audio, schimbați 'Falsificarea streamuril
   <string name="morphe_hide_endscreen_cards_title">Ascunde cardurile ecranului final</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Cardurile de pe ecranul de închidere sunt ascunse</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Cardurile de închidere ecran sunt afișate</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Mod Ambient</string>
+  <string name="morphe_ambient_mode_screen_summary">Ignoră restricțiile economisirii energiei pentru Mod Ambient și dezactivează-l în totalitate sau în ecran complet</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Ignoră restricțiile Modului Ambient</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Restricţiile modului ambient pentru economisirea energiei sunt contournate</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Restricţiile modului ambient pentru economisirea energiei nu sunt contournate</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Activarea acestei opţiuni poate duce la o durată de baterie mai scăzută.</string>
+  <string name="morphe_disable_ambient_mode_title">Dezactivează modul ambient</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Modul ambient este dezactivat</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Modul ambient este activat</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Dezactivați modul Ambient în ecran complet</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Mod ambiental dezactivat</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Mod Ambient activat</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Modul ambient în ecran complet este dezactivat</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Modul ambient în ecran complet este activat</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Ascunde cardurile cu informații</string>
   <string name="morphe_hide_info_cards_summary_on">Cardurile de informații sunt ascunse</string>

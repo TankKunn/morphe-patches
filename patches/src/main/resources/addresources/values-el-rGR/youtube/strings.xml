@@ -288,6 +288,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">Ενότητα σχολίων</string>
   <string name="morphe_hide_comments_section_summary_on">Κρυμμένη</string>
   <string name="morphe_hide_comments_section_summary_off">Εμφανίζεται</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Απόκρυψη ενότητας σχολίων στο Home feed</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Η ενότητα σχολίων στο Home feed είναι κρυμμένη</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Η ενότητα σχολίων στο Home feed εμφανίζεται</string>
   <string name="morphe_hide_comments_community_guidelines_title">Οδηγίες κοινότητας</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Κρυμμένες</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Εμφανίζονται</string>
@@ -611,14 +614,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscriptions_button_title">Κουμπί «Εγγραφές»</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Κρυμμένο</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Εμφανίζεται</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Κουμπί «Ειδοποιήσεις»</string>
   <string name="morphe_hide_notifications_button_summary_on">Κρυμμένο</string>
   <string name="morphe_hide_notifications_button_summary_off">Εμφανίζεται</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Εναλλαγή κουμπιού «Δημιουργία» με κουμπί «Ειδοποιήσεις»</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Δε γίνεται εναλλαγή του κουμπιού δημιουργίας σε κουμπί ειδοποιήσεων</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Δε γίνεται εναλλαγή του κουμπιού δημιουργίας σε κουμπί ειδοποιήσεων</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Εάν η αλλαγή αυτής της ρύθμισης δεν εφαρμόζεται, δοκιμάστε να μεταβείτε σε λειτουργία Incognito.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Εναλλαγή κουμπιού «Δημιουργία» με κουμπί «Ειδοποιήσεις»</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Το κουμπί «Δημιουργία» έχει αλλάξει με το κουμπί «Ειδοποιήσεις»</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Το κουμπί «Δημιουργία» δεν έχει αλλάξει με το κουμπί «Ειδοποιήσεις»</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Εάν η αλλαγή αυτής της ρύθμισης δεν εφαρμόζεται, δοκιμάστε να μεταβείτε σε λειτουργία Incognito.</string>
   <string name="morphe_hide_navigation_button_labels_title">Ονομασίες κουμπιών γραμμής πλοήγησης</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Κρυμμένες</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Εμφανίζονται</string>
@@ -737,10 +740,19 @@ Second \"item\" text"</string>
   <string name="morphe_hide_endscreen_cards_title">Κάρτες τελικής οθόνης</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Κρυμμένες</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Εμφανίζονται</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Λειτουργία περιβάλλοντος</string>
+  <string name="morphe_ambient_mode_screen_summary">Παράκαμψη περιορισμώνкономиής ενέργειας για τη λειτουργία περιβάλλοντος και απενεργοποίηση της εντελώς ή σε πλήρη οθόνη</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Παράκαμψη περιορισμών λειτουργίας περιβάλλοντος</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Οι περιορισμοί λειτουργίας γιαкономиία ενέργειας παραβιάζονται</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Οι περιορισμοί λειτουργίας για οικονομία ενέργειας δεν παραβιάζονται</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Η ενεργοποίηση αυτού μπορεί να επιβάλει χειρότερη διάρκεια ζωής της μπαταρίας.</string>
+  <string name="morphe_disable_ambient_mode_title">Απενεργοποίηση λειτουργίας περιβάλλοντος</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Η λειτουργία περιβάλλοντος είναι απενεργοποιημένη</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Η λειτουργία περιβάλλοντος είναι ενεργοποιημένη</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Απενεργοποίηση λειτουργίας περιβάλλοντος σε πλήρη οθόνη</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Η λειτουργία περιβάλλοντος σε πλήρη οθόνη είναι απενεργοποιημένη</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Η λειτουργία περιβάλλοντος σε πλήρη οθόνη είναι ενεργοποιημένη</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Η λειτουργία περιβάλλοντος σε ολόφωνο είναι απενεργοποιημένη</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Η λειτουργία περιβάλλοντος σε ολόφωνο είναι ενεργοποιημένη</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Κάρτες πληροφοριών</string>
   <string name="morphe_hide_info_cards_summary_on">Κρυμμένες</string>

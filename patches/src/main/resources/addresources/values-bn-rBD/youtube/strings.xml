@@ -286,6 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">মন্তব্য বিভাগ লুকান</string>
   <string name="morphe_hide_comments_section_summary_on">মন্তব্য বিভাগ লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_comments_section_summary_off">মন্তব্য বিভাগ প্রদর্শিত হয়েছে</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">মন্তব্য বিভাগ লুকান</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">মন্তব্য বিভাগ লুকিয়ে রয়েছে</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">মন্তব্য বিভাগ প্রদর্শিত হয়েছে</string>
   <string name="morphe_hide_comments_community_guidelines_title">কমিউনিটি নির্দেশিকা লুকান</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">কমিউনিটি নির্দেশিকা লুকানো আছে</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">কমিউনিটি নির্দেশিকা দেখানো আছে</string>
@@ -609,14 +612,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscriptions_button_title">সদস্যতা লুকান</string>
   <string name="morphe_hide_subscriptions_button_summary_on">সদস্যতা নিন বোতাম লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_subscriptions_button_summary_off">সদস্যতা নিন বোতাম প্রদর্শিত হয়েছে</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">বিজ্ঞপ্তি লুকান</string>
   <string name="morphe_hide_notifications_button_summary_on">বিজ্ঞপ্তি বোতাম লুকানো আছে</string>
   <string name="morphe_hide_notifications_button_summary_off">বিজ্ঞপ্তি বোতাম দেখানো হয়েছে</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">তৈরি বোতামকে বিজ্ঞপ্তি বোতাম দ্বারা সুইচ করুন</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">তৈরি বোতামকে বিজ্ঞপ্তি বোতাম দ্বারা সুইচ করা হয়েছে</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">তৈরি বোতামকে বিজ্ঞপ্তি বোতাম দ্বারা সুইচ করা হয়নি</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">যদি এই সেটিং পরিবর্তন করলে কোনো প্রভাব পাওয়া যায় না, তাহলে ইনকগ্নিটো মোডে বদলিয়ে দেখুন।</string>
+  <string name="morphe_swap_create_with_notifications_button_title">ক্রিয়েট বোতামকে বিজ্ঞপ্তি বোতাম দ্বারা সুইচ করুন</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">ক্রিয়েট বোতামকে বিজ্ঞপ্তি বোতাম দ্বারা সুইচ করা হয়েছে</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">ক্রিয়েট বোতামকে বিজ্ঞপ্তি বোতাম দ্বারা সুইচ করা হয়নি</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">যদি এই সেটিং পরিবর্তন করলে কোনো প্রভাব পাওয়া যায় না, তাহলে ইনকগ্নিটো মোডে বদলিয়ে দেখুন।</string>
   <string name="morphe_hide_navigation_button_labels_title">নেভিগেশন বোতাম লেবেল লুকান</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">লেবেল লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">লেবেল প্রদর্শিত হয়েছে</string>
@@ -735,10 +738,19 @@ Second \"item\" text"</string>
   <string name="morphe_hide_endscreen_cards_title">শেষ স্ক্রীন কার্ড লুকান</string>
   <string name="morphe_hide_endscreen_cards_summary_on">শেষ স্ক্রীন কার্ড লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_endscreen_cards_summary_off">শেষ স্ক্রীন কার্ড প্রদর্শিত হয়েছে</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">অ্যাম্বিয়েন্ট মোড</string>
+  <string name="morphe_ambient_mode_screen_summary">অ্যাম্বিয়েন্ট মোড এবং সম্পূর্ণরূপে অথবা ফুলস্ক্রিনে ডিসেবল করতে পাওয়ার সেভিং সীমাবদ্ধতা বাইপাস করুন</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">অ্যাম্বিয়েন্ট মোড সীমাবদ্ধতা বাইপাস করুন</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">অ্যাম্বিয়েন্ট মোডের শক্তি সংরক্ষণের বিধিনিষেধগুলি অতিক্রম করা হয়েছে</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">অ্যাম্বিয়েন্ট মোডের শক্তি সংরক্ষণের বিধিনিষেধগুলি অতিক্রম করা হয়নি</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">এইটি সক্রিয় করলে ব্যাটারির জীবনকাল খারাপ হয়ে যেতে পারে।</string>
+  <string name="morphe_disable_ambient_mode_title">অ্যাম্বিয়েন্ট মোড বন্ধ করুন</string>
+  <string name="morphe_disable_ambient_mode_summary_on">অ্যাম্বিয়েন্ট মোড বন্ধ করা হয়েছে</string>
+  <string name="morphe_disable_ambient_mode_summary_off">অ্যাম্বিয়েন্ট মোড সক্রিয় করা হয়েছে</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">ফুলস্ক্রিনে অ্যাম্বিয়েন্ট মোডটি অক্ষম করুন</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">অ্যাম্বিয়েন্ট মোড নিষ্ক্রিয় করা হয়েছে</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">অ্যাম্বিয়েন্ট মোড সক্রিয় করা হয়েছে</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">ফুলস্ক্রিনে অ্যাম্বিয়েন্ট মোড বন্ধ করা হয়েছে</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">ফুলস্ক্রিনে অ্যাম্বিয়েন্ট মোড সক্রিয় করা হয়েছে</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">তথ্য কার্ড লুকান</string>
   <string name="morphe_hide_info_cards_summary_on">তথ্য কার্ড লুকিয়ে রয়েছে</string>

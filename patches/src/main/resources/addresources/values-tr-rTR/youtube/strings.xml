@@ -286,6 +286,9 @@ Bir Doodle şu anda bölgenizde gösteriliyorsa ve bu gizleme ayarı açıksa, a
   <string name="morphe_hide_comments_section_title">Yorumlar kısmını gizle</string>
   <string name="morphe_hide_comments_section_summary_on">Yorumlar kısmı gizli</string>
   <string name="morphe_hide_comments_section_summary_off">Yorumlar kısmı görünür</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Ana sayfadaki yorumlar bölümü gizle</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Ana sayfadaki yorumlar bölümü gizli</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Ana sayfadaki yorumlar bölümü görünür</string>
   <string name="morphe_hide_comments_community_guidelines_title">Topluluk kurallarını gizle</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Topluluk kuralları gizli</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Topluluk kuralları görünür</string>
@@ -609,14 +612,14 @@ Geçerli ise otomatik olarak kaydedilecek"</string>
   <string name="morphe_hide_subscriptions_button_title">Abonelikleri gizle</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Abonelikler düğmesi gizli</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Abonelikler düğmesi görünür</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Bildirimleri gizle</string>
   <string name="morphe_hide_notifications_button_summary_on">Bildirimler düğmesi gizli</string>
   <string name="morphe_hide_notifications_button_summary_off">Bildirimler düğmesi görünür</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Oluştur ve Bildirimleri yer değiştir</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Oluştur düğmesi ile Bildirimler düğmesinin yerleri değiştirilmez</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Oluştur düğmesi ile Bildirimler düğmesinin yerleri değiştirilmez</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Bu ayar değiştirilmezse, Incognito moduna geçiş yapın.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Oluştur ve Bildirimleri yer değiştir</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Oluştur düğmesi ile Bildirimler düğmesinin yerleri değiştirilmez</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Oluştur düğmesi ile Bildirimler düğmesinin yerleri değiştirilmez</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Bu ayar değiştirilmezse, Incognito moduna geçiş yapın.</string>
   <string name="morphe_hide_navigation_button_labels_title">Gezinme düğmeleri etiketlerini gizle</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Etiketler gizli</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Etiketler görünür</string>
@@ -735,10 +738,19 @@ Ses izleme menüsünü görüntülemek için, 'Video akışları sahteleştir'yi
   <string name="morphe_hide_endscreen_cards_title">Bitiş ekranı kartlarını gizle</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Bitiş ekranı kartları gizli</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Bitiş ekranı kartları görünür</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Ambiyans Modu</string>
+  <string name="morphe_ambient_mode_screen_summary">Ambiyans Modu için güç tasarruf kısıtlamalarını atla ve tamamen veya tam ekran olarak devre dışı bırak</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Ambiyans Modu kısıtlamalarını atla</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Akış modu kısıtlamaları güç tasarrufu için atlanıyor</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Akış modu kısıtlamaları güç tasarrufu için atlanmıyor</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Bu işlemi etkinleştirmek pil ömürünü azaltabilir.</string>
+  <string name="morphe_disable_ambient_mode_title">Akış modunu devre dışı bırak</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Akış modu devre dışı bırakıldı</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Akış modu etkinleştirildi</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Tam ekranda ambiyans modunu devre dışı bırak</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Ambiyans modu devre dışı</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Ambiyans modu etkin</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Tam ekran akış modu devre dışı bırakıldı</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Tam ekran akış modu etkinleştirildi</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Bilgi kartlarını gizle</string>
   <string name="morphe_hide_info_cards_summary_on">Bilgi kartları gizli</string>

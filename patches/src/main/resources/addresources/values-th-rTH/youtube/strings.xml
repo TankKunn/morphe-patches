@@ -286,6 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">ซ่อนส่วนความคิดเห็น</string>
   <string name="morphe_hide_comments_section_summary_on">ส่วนความคิดเห็นถูกซ่อนไว้</string>
   <string name="morphe_hide_comments_section_summary_off">ส่วนความคิดเห็นแสดงอยู่</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">ซ่อนส่วนความคิดเห็นในหน้าแชทหลัก</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">ส่วนความคิดเห็นถูกซ่อนไว้ในหน้าแชทหลัก</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">ส่วนความคิดเห็นแสดงอยู่ในหน้าแชทหลัก</string>
   <string name="morphe_hide_comments_community_guidelines_title">ซ่อนแนวทางชุมชน</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">แนวทางปฏิบัติของชุมชนถูกซ่อนไว้</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">แนวทางปฏิบัติของชุมชนแสดงอยู่</string>
@@ -607,14 +610,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscriptions_button_title">ซ่อนการสมัครสมาชิก</string>
   <string name="morphe_hide_subscriptions_button_summary_on">ปุ่มการสมัครสมาชิกถูกซ่อน</string>
   <string name="morphe_hide_subscriptions_button_summary_off">ปุ่มการสมัครสมาชิกถูกแสดง</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">ซ่อนการแจ้งเตือน</string>
   <string name="morphe_hide_notifications_button_summary_on">ปุ่มการแจ้งเตือนถูกซ่อนอยู่</string>
   <string name="morphe_hide_notifications_button_summary_off">ปุ่มการแจ้งเตือนแสดงอยู่</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">สลับสร้างด้วยการแจ้งเตือน</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">ปุ่มสร้างถูกสลับกับปุ่มการแจ้งเตือน</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">ปุ่มสร้างไม่ได้ถูกสลับกับปุ่มการแจ้งเตือน</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">ถ้าเปลี่ยนการตั้งค่านี้ยังไม่มีผล กรุณาลองสลับไปยังโหมดไม่แสดงตัวตน</string>
+  <string name="morphe_swap_create_with_notifications_button_title">สลับสร้างด้วยการแจ้งเตือน</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">ปุ่มสร้างถูกสลับกับปุ่มการแจ้งเตือนแล้ว</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">ปุ่มสร้างยังไม่ถูกสลับกับปุ่มการแจ้งเตือน</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">ถ้าเปลี่ยนการตั้งค่านี้ยังไม่มีผล กรุณาลองสลับไปยังโหมดไม่แสดงตัวตน</string>
   <string name="morphe_hide_navigation_button_labels_title">ซ่อนป้ายกำกับปุ่มนำทาง</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">ป้ายกำกับถูกซ่อน</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">ป้ายกำกับถูกแสดง</string>
@@ -733,10 +736,19 @@ Second \"item\" text"</string>
   <string name="morphe_hide_endscreen_cards_title">ซ่อนการ์ดหน้าจอสิ้นสุด</string>
   <string name="morphe_hide_endscreen_cards_summary_on">การ์ดหน้าจอสิ้นสุดซ่อนอยู่</string>
   <string name="morphe_hide_endscreen_cards_summary_off">การ์ดหน้าจอสิ้นสุดแสดงอยู่</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">โหมดแสงอาทิตย์</string>
+  <string name="morphe_ambient_mode_screen_summary">เลี่ยงข้อจำกัดการเซฟพลังงานสำหรับโหมดแสงอาทิตย์และปิดทั้งหมดหรือในหน้าจอเต็มจอ</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">เลี่ยงข้อจำกัดของโหมดแสงอาทิตย์</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">การจำกัดโหมดพักผ่อนสำหรับการประหยัดพลังงานถูกบายพาส</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">การจำกัดโหมดพักผ่อนสำหรับการประหยัดพลังงานไม่ถูกบายพาส</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">การเปิดใช้งานนี้อาจทำให้แบตเตอรี่เสียเร็วขึ้น</string>
+  <string name="morphe_disable_ambient_mode_title">ปิดการใช้งานโหมดพักผ่อน</string>
+  <string name="morphe_disable_ambient_mode_summary_on">โหมดพักผ่อนปิดใช้งาน</string>
+  <string name="morphe_disable_ambient_mode_summary_off">โหมดพักผ่อนเปิดใช้งาน</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">ปิดใช้งานโหมดแวดล้อมในโหมดเต็มหน้าจอ</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">โหมดพักผ่อนปิดใช้งาน</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">โหมดพักผ่อนเปิดใช้งาน</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">โหมดพักผ่อนเต็มจอปิดใช้งาน</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">โหมดพักผ่อนเต็มจอเปิดใช้งาน</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">ซ่อนการ์ดข้อมูล</string>
   <string name="morphe_hide_info_cards_summary_on">บัตรข้อมูลซ่อนอยู่</string>

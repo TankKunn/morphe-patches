@@ -287,6 +287,9 @@ Si un Doodle est actuellement visible dans votre région et que cette option de 
   <string name="morphe_hide_comments_section_title">Masquer la section \'Commentaires\'</string>
   <string name="morphe_hide_comments_section_summary_on">La section \'Commentaires\' est masquée</string>
   <string name="morphe_hide_comments_section_summary_off">La section \'Commentaires\' est affichée</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Cacher la section \"Commentaires\" dans le fil d\'actualit√©</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">La section \"Commentaires\" dans le fil d\'actualit√© est cach√©e</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">La section \"Commentaires\" dans le fil d\'actualit√© est affich√©e</string>
   <string name="morphe_hide_comments_community_guidelines_title">Masquer le règlement de la communauté</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Le règlement de la communauté est masqué</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Le règlement de la communauté est affiché</string>
@@ -391,7 +394,7 @@ Limitations :
   <string name="morphe_hide_view_products_banner_title">Masquer la bannière \'Afficher les produits\'</string>
   <string name="morphe_hide_view_products_banner_summary_on">La bannière \'Afficher les produits\' dans l\'overlay du lecteur est masquée</string>
   <string name="morphe_hide_view_products_banner_summary_off">La bannière \'Afficher les produits\' dans l\'overlay du lecteur est affichée</string>
-  <string name="morphe_hide_youtube_premium_promotions_title">Masquer la promotion YouTube Premium</string>
+  <string name="morphe_hide_youtube_premium_promotions_title">Masquer les promotions YouTube Premium</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_on">Les promotions YouTube Premium sont masquées</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">Les promotions YouTube Premium sont affichées</string>
   <!-- ad.video.videoAdsPatch -->
@@ -613,14 +616,14 @@ Les cookies seront enregistrés automatiquement s'ils sont valides"</string>
   <string name="morphe_hide_subscriptions_button_title">Masquer \'Abonnements\'</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Le bouton \'Abonnements\' est masqué</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Le bouton \'Abonnements\' est affiché</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Masquer \'Notifications\'</string>
   <string name="morphe_hide_notifications_button_summary_on">Le bouton \'Notifications\' est masqué</string>
   <string name="morphe_hide_notifications_button_summary_off">Le bouton \'Notifications\' est affiché</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Échanger \'Créer\' et \'Notifications\'</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Le bouton \'Créer\' est échangé avec le bouton \'Notifications\'</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Le bouton \'Créer\' n\'est pas échangé avec le bouton \'Notifications\'</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Si la modification de ce paramètre ne prend pas effet, essayez de passer en mode navigation privée.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Échanger Créer et Notifications</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Le bouton Créer est échangé avec le bouton Notifications</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Le bouton Créer n\'est pas échangé avec le bouton Notifications</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Si la modification de ce paramètre ne prend pas effet, essayez de passer en mode navigation privée.</string>
   <string name="morphe_hide_navigation_button_labels_title">Masquer le nom des boutons de navigation</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Les noms sont masqués</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Les noms sont affichés</string>
@@ -739,10 +742,19 @@ Pour afficher le menu Piste audio, modifier 'Falsifier les flux vidéo' en 'Andr
   <string name="morphe_hide_endscreen_cards_title">Masquer les cartes d\'écran de fin</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Les cartes d\'écran de fin sont masqués</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Les cartes d\'écran de fin sont affichés</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Mode ambiant</string>
+  <string name="morphe_ambient_mode_screen_summary">Contourner les restrictions d\'économie d\'énergie pour le Mode ambiant et le désactiver entirely ou en plein écran</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Contourner les restrictions du Mode ambiant</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Les restrictions de mode ambiant pour l\'économie d\'énergie sont contournées</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Les restrictions de mode ambiant pour l\'économie d\'énergie ne sont pas contournées</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">L\'activation de cette fonction peut réduire la durée de vie de la batterie.</string>
+  <string name="morphe_disable_ambient_mode_title">Désactiver le mode ambiant</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Le mode ambiant est désactivé</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Le mode ambiant est activé</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Désactiver le mode ambiant en plein écran</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Mode ambiant désactivé</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Mode ambiant activé</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Le mode ambiant en plein écran est désactivé</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Le mode ambiant en plein écran est activé</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Masquer les fiches info</string>
   <string name="morphe_hide_info_cards_summary_on">Les fiches info sont masquées</string>

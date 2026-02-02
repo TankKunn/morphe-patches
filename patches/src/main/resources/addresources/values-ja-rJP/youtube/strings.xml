@@ -287,6 +287,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">コメント セクションを非表示</string>
   <string name="morphe_hide_comments_section_summary_on">コメント セクションは表示されません</string>
   <string name="morphe_hide_comments_section_summary_off">コメント セクションは表示されます</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">ホーム フィードでコメント セクションを非表示にする</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">ホーム フィードのコメント セクションは表示されません</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">ホーム フィードのコメント セクションは表示されます</string>
   <string name="morphe_hide_comments_community_guidelines_title">コミュニティ ガイドラインを非表示</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">コミュニティ ガイドラインは表示されません</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">コミュニティ ガイドラインは表示されます</string>
@@ -610,14 +613,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscriptions_button_title">「登録チャンネル」を非表示</string>
   <string name="morphe_hide_subscriptions_button_summary_on">登録チャンネル ボタンは表示されません</string>
   <string name="morphe_hide_subscriptions_button_summary_off">登録チャンネル ボタンは表示されます</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">「通知」を非表示</string>
   <string name="morphe_hide_notifications_button_summary_on">通知ボタンは表示されません</string>
   <string name="morphe_hide_notifications_button_summary_off">通知ボタンは表示されます</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">「作成」と「通知」を入れ替え</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">作成ボタンと通知ボタンが入れ替わります</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">作成ボタンと通知ボタンは入れ替わりません</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">この設定を変更しても効果がない場合は、シークレット モードへの切り替えをお試しください。</string>
+  <string name="morphe_swap_create_with_notifications_button_title">「作成」と「通知」を入れ替え</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">作成ボタンと通知ボタンが入れ替わります</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">作成ボタンと通知ボタンは入れ替わりません</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">この設定を変更しても効果がない場合は、シークレット モードへの切り替えをお試しください。</string>
   <string name="morphe_hide_navigation_button_labels_title">ボタンをアイコンのみで表示</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">ナビゲーション ボタンはアイコンのみで表示されます</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">ナビゲーション ボタンはアイコンと文字で表示されます</string>
@@ -736,7 +739,16 @@ Second \"item\" text"</string>
   <string name="morphe_hide_endscreen_cards_title">終了画面カードを非表示</string>
   <string name="morphe_hide_endscreen_cards_summary_on">終了画面カードは表示されません</string>
   <string name="morphe_hide_endscreen_cards_summary_off">終了画面カードは表示されます</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">アンビエント モード</string>
+  <string name="morphe_ambient_mode_screen_summary">アンビエント モードの電源節約制限を回避し、完全に無効化またはフルスクリーンで無効化します</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">アンビエント モードの制限を回避します</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">電源節約のためのアンビエント モード制限はバイパスされます</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">電源節約のためのアンビエント モード制限はバイパスされません</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">この機能を有効にするとバッテリー寿命が短くなります。</string>
+  <string name="morphe_disable_ambient_mode_title">アンビエント モードを無効化</string>
+  <string name="morphe_disable_ambient_mode_summary_on">アンビエント モードは無効です</string>
+  <string name="morphe_disable_ambient_mode_summary_off">アンビエント モードは有効です</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">全画面表示中のアンビエント モードを無効化</string>
   <string name="morphe_disable_fullscreen_ambient_mode_summary_on">全画面表示中のアンビエント モードは無効です</string>
   <string name="morphe_disable_fullscreen_ambient_mode_summary_off">全画面表示中のアンビエント モードは有効です</string>

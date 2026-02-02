@@ -286,6 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">Скрыть раздел комментариев</string>
   <string name="morphe_hide_comments_section_summary_on">Раздел комментариев под плеером скрыт</string>
   <string name="morphe_hide_comments_section_summary_off">Раздел комментариев под плеером показан</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Скрыть раздел комментариев в ленте главной страницы</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Раздел комментариев в ленте скрыт</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Раздел комментариев в ленте показан</string>
   <string name="morphe_hide_comments_community_guidelines_title">Скрыть правила сообщества</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Правила сообщества в комментариях скрыты</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Правила сообщества в комментариях показаны</string>
@@ -609,14 +612,14 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_hide_subscriptions_button_title">Скрыть кнопку \"Подписки\"</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Кнопка \"Подписки\" в панели навигации скрыта</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Кнопка \"Подписки\" в панели навигации показана</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Скрыть кнопку \"Уведомления\"</string>
   <string name="morphe_hide_notifications_button_summary_on">Кнопка \"Уведомления\" в панели навигации скрыта</string>
   <string name="morphe_hide_notifications_button_summary_off">Кнопка \"Уведомления\" в панели навигации показана</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Поменять местами кнопки \"Создать\" и \"Уведомления\"</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Кнопка Создать заменена кнопкой Уведомления</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Кнопка \"Создать\" не поменяна местами с кнопкой \"Уведомления\"</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Если изменение этой настройки не получило эффекта, попробуйте переключиться в режим Инкогнито.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Переключить кнопки \"Создать\" и \"Уведомления\"</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Кнопка \"Создать\" заменена кнопкой \"Уведомления\"</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Кнопка \"Создать\" не поменяна местами с кнопкой \"Уведомления\"</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Если изменение этой настройки не получило эффекта, попробуйте переключиться в режим Инкогнито.</string>
   <string name="morphe_hide_navigation_button_labels_title">Скрыть подписи кнопок навигации</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Подписи кнопок навигации скрыты</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Подписи кнопок навигации показаны</string>
@@ -735,10 +738,19 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_hide_endscreen_cards_title">Скрыть заставки следующих видео</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Заставки следующих видео в конце просмотра скрыты</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Заставки следующих видео в конце просмотра показаны</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Режим подсветки</string>
+  <string name="morphe_ambient_mode_screen_summary">Обойти ограничения экономии энергии для режима подсветки и отключить его полностью или в полноэкранном режиме</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Обойти ограничения режима подсветки</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Ограничения режима \"Фоновая подсветка\" для экономии энергии обойдены</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Ограничения режима \"Фоновая подсветка\" для экономии энергии не обойдены</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Включение этой опции может ухудшить жизнь батареи.</string>
+  <string name="morphe_disable_ambient_mode_title">Отключить режим \"Фоновая подсветка\"</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Режим \"Фоновая подсветка\" отключен</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Режим \"Фоновая подсветка\" включен</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Отключить фоновую подсветку</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Фоновая подсветка в полноэкранном режиме отключена</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Фоновая подсветка в полноэкранном режиме включена</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Режим \"Фоновая подсветка\" в полноэкранном режиме отключен</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Режим \"Фоновая подсветка\" в полноэкранном режиме включен</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Скрыть всплывающие подсказки</string>
   <string name="morphe_hide_info_cards_summary_on">Всплывающие подсказки в плеере скрыты</string>

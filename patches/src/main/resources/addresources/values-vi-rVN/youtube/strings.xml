@@ -287,6 +287,9 @@ Nếu cài đặt này đang bật và Doodle cũng được hiển thị tại 
   <string name="morphe_hide_comments_section_title">Ẩn phần bình luận</string>
   <string name="morphe_hide_comments_section_summary_on">Phần bình luận đã bị ẩn</string>
   <string name="morphe_hide_comments_section_summary_off">Phần bình luận được hiển thị</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Ẩn phần bình luận trong Feed nhà</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Phần bình luận trong Feed nhà đã bị ẩn</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Phần bình luận trong Feed nhà đã được hiển thị</string>
   <string name="morphe_hide_comments_community_guidelines_title">Ẩn nguyên tắc cộng đồng</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Nguyên tắc cộng đồng đã bị ẩn</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Nguyên tắc cộng đồng được hiển thị</string>
@@ -610,14 +613,14 @@ Cookie sẽ được tự động lưu nếu hợp lệ"</string>
   <string name="morphe_hide_subscriptions_button_title">Ẩn Kênh đăng ký</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Nút kênh đăng ký đã bị ẩn</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Nút kênh đăng ký được hiển thị</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Ẩn Thông báo</string>
   <string name="morphe_hide_notifications_button_summary_on">Nút thông báo đã bị ẩn</string>
   <string name="morphe_hide_notifications_button_summary_off">Nút thông báo được hiển thị</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Đổi chỗ nút Tạo với nút Thông báo</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Nút Tạo đã được đổi chỗ với nút Thông báo</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Nút Tạo không đuợc đổi chỗ với nút Thông báo</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Nếu bật hoặc tắt cài đặt này cũng không có hiệu lực, bạn có thể thử chuyển sang chế độ Ẩn danh.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Đổi chỗ Tạo với Thông báo</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Nút Tạo đã được đổi chỗ với nút Thông báo</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Nút Tạo không được đổi chỗ với nút Thông báo</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Nếu bật hoặc tắt cài đặt này cũng không có hiệu lực, bạn có thể thử chuyển sang chế độ Ẩn danh.</string>
   <string name="morphe_hide_navigation_button_labels_title">Ẩn tên nút điều hướng</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Các tên nút đã bị ẩn</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Các tên nút được hiển thị</string>
@@ -736,10 +739,19 @@ Cookie sẽ được tự động lưu nếu hợp lệ"</string>
   <string name="morphe_hide_endscreen_cards_title">Ẩn thẻ màn hình kết thúc</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Thẻ màn hình kết thúc đã bị ẩn</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Thẻ màn hình kết thúc được hiển thị</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Chế độ môi trường xung quanh</string>
+  <string name="morphe_ambient_mode_screen_summary">Bỏ qua hạn chế tiết kiệm năng lượng cho Chế độ môi trường xung quanh và tắt nó hoàn toàn hoặc toàn màn hình</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Bỏ qua hạn chế Chế độ môi trường xung quanh</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Giới hạn chế độ môi trường cho tiết kiệm năng lượng đã bị bỏ qua</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Giới hạn chế độ môi trường cho tiết kiệm năng lượng chưa bị bỏ qua</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Cho phép điều này có thể làm giảm độ dài pin.</string>
+  <string name="morphe_disable_ambient_mode_title">Tắt chế độ môi trường xung quanh</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Chế độ môi trường đã tắt</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Chế độ môi trường đã bật</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Tắt Chế độ môi trường khi toàn màn hình</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Chế độ môi trường đã tắt</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Chế độ môi trường đã bật</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Chế độ môi trường toàn màn hình đã tắt</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Chế độ môi trường toàn màn hình đã bật</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Ẩn thẻ thông tin</string>
   <string name="morphe_hide_info_cards_summary_on">Thẻ thông tin đã bị ẩn</string>

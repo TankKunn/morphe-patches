@@ -584,14 +584,11 @@ Justera volymen genom att svepa vertikalt till höger på skärmen"</string>
   <string name="morphe_hide_subscriptions_button_title">Dölj Prenumerationer</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Knappen Prenumerationer är dold</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Knappen Prenumerationer visas</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Dölj Aviseringar</string>
   <string name="morphe_hide_notifications_button_summary_on">Knappen Aviseringar är dold</string>
   <string name="morphe_hide_notifications_button_summary_off">Knappen Aviseringar visas</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Byt ut Skapa mot Aviseringar</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Knappen Skapa byts ut mot knappen Aviseringar</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Knappen Skapa byts inte ut mot knappen Aviseringar</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Om den här inställningen inte träder i kraft kan du testa att byta till inkognitoläget.</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Om den här inställningen inte träder i kraft kan du testa att byta till inkognitoläget.</string>
   <string name="morphe_hide_navigation_button_labels_title">Dölj etiketter för navigeringsknappar</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Etiketter är dolda</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Etiketter visas</string>
@@ -710,10 +707,8 @@ Om du vill att menyn Ljudspår ska visas ändrar du \"Förfalska videoströmmar\
   <string name="morphe_hide_endscreen_cards_title">Dölj slutskärmskort</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Slutskärmskort är dolda</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Slutskärmskort visas</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
   <string name="morphe_disable_fullscreen_ambient_mode_title">Inaktivera Ambientljus i helskärm</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Ambientljus är inaktiverat</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Ambientljus är aktiverat</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Dölj infokort</string>
   <string name="morphe_hide_info_cards_summary_on">Infokort är dolda</string>

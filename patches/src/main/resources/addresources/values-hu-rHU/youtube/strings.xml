@@ -286,6 +286,9 @@ Ha a Doodle jelenleg a régiódában látható, és ez a rejtés beállítás be
   <string name="morphe_hide_comments_section_title">A megjegyzések szekció elrejtése</string>
   <string name="morphe_hide_comments_section_summary_on">A komment szekció el van rejtve</string>
   <string name="morphe_hide_comments_section_summary_off">A megjegyzések szekció megjelenik</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Elrejtjük a Home feedben a megjegyzések szakaszát</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">A Home feedben a megjegyzések szakusza el van rejtve</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">A Home feedben a megjegyzések szakusza látható</string>
   <string name="morphe_hide_comments_community_guidelines_title">Közösségi irányelvek elrejtése</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">A közösségi irányelvek el vannak rejtve</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">A közösségi irányelvek meg vannak jelenítve</string>
@@ -609,14 +612,14 @@ Automatikus megfordítási megjelenítés lehetségesen nem áll rendelkezésre"
   <string name="morphe_hide_subscriptions_button_title">Feliratkozások elrejtése</string>
   <string name="morphe_hide_subscriptions_button_summary_on">A feliratkozások gomb el van rejtve</string>
   <string name="morphe_hide_subscriptions_button_summary_off">A feliratkozások gomb megjelenítve</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Értesítések elrejtése</string>
   <string name="morphe_hide_notifications_button_summary_on">Az értesítések gomb rejtve van</string>
   <string name="morphe_hide_notifications_button_summary_off">Az értesítések gomb megjelenik</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Létrehozás felcserélése az értesítésekkel</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">A létrehozás gomb felcserélve van a értesítések gombbal</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">A létrehozás gomb nincs felcserélve az értesítések gombbal</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Ha ez a beállítás nem lép hatást, próbálj Incognito módba váltani.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Létrehozás és értesítések gombok cserélése</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">A létrehozás gombot cserélték az értesítések gombjával</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">A létrehozás gombot nem cserélték az értesítések gombjával</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Ha ez a beállítás nem lép hatást, próbálj Incognito módba váltani.</string>
   <string name="morphe_hide_navigation_button_labels_title">A navigációs gombok címkéinek elrejtése</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">A címke el vannak rejtve</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">A címke meg vannak jelenítve</string>
@@ -735,10 +738,19 @@ A Hangos menü megjelenítéséhez állítsa át a 'Videó álstreamok' beállí
   <string name="morphe_hide_endscreen_cards_title">Záróképernyő kártyák elrejtése</string>
   <string name="morphe_hide_endscreen_cards_summary_on">A záróképernyő kártyák el vannak rejtve</string>
   <string name="morphe_hide_endscreen_cards_summary_off">A záróképernyő kártyák megjelennek</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Mozifilmes mód</string>
+  <string name="morphe_ambient_mode_screen_summary">Mozifilmes mód korlátozásainak elkerülése és teljes mértékű letiltása vagy teljes képernyőn</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Mozifilmes mód korlátozásainak elkerülése</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Az áramfogyasztáshoz kapcsolódó mozgáskorlátozások a mozgáskorlátozások elkerülésére kerülnek mellőzésre.</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Az áramfogyasztáshoz kapcsolódó mozgáskorlátozások nem kerülnek elkerülésre.</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Ez a beállítás rosszabb akkumulátor élettartalmat okozhat.</string>
+  <string name="morphe_disable_ambient_mode_title">Mozifilmes világítás letiltása</string>
+  <string name="morphe_disable_ambient_mode_summary_on">A mozgáskorlátozás le van tiltva</string>
+  <string name="morphe_disable_ambient_mode_summary_off">A mozgáskorlátozás engedélyezve van</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Ambient mód letiltása teljes képernyős módban</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Mozifilmes világítás kikapcsolva</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Mozifilmes világítás engedélyezve</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Teljes képernyőn a mozgáskorlátozás le van tiltva</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Teljes képernyőn a mozgáskorlátozás engedélyezve van</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Infó kártyák elrejtése</string>
   <string name="morphe_hide_info_cards_summary_on">Az info kártyák el vannak rejtve</string>

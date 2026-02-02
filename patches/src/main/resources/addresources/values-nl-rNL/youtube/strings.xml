@@ -286,6 +286,9 @@ Als er momenteel een Doodle wordt getoond in je regio en deze instelling voor ve
   <string name="morphe_hide_comments_section_title">Reacties sectie verbergen</string>
   <string name="morphe_hide_comments_section_summary_on">Reacties sectie is verborgen</string>
   <string name="morphe_hide_comments_section_summary_off">Reacties sectie is getoond</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Verberg reactiessectie in Home-feed</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Reactiessectie in Home-feed is verborgen</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Reactiessectie in Home-feed is zichtbaar</string>
   <string name="morphe_hide_comments_community_guidelines_title">Communityrichtlijnen verbergen</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Communityrichtlijnen zijn verborgen</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Communityrichtlijnen zijn getoond</string>
@@ -609,14 +612,14 @@ Cookies worden automatisch opgeslagen als ze geldig zijn"</string>
   <string name="morphe_hide_subscriptions_button_title">Abonnementen verbergen</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Abonnementen-knop is verborgen</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Abonnementen-knop wordt weergegeven</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Meldingen verbergen</string>
   <string name="morphe_hide_notifications_button_summary_on">Meldingsknop is verborgen</string>
   <string name="morphe_hide_notifications_button_summary_off">Meldingsknop wordt weergegeven</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Maak wisselen met Meldingen</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Maak-knop en Meldingen-knop zijn verwisseld.</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Maak-knop wordt niet gewisseld met Meldingen-knop</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Als het veranderen van deze instelling geen effect heeft, probeer dan om te schakelen naar Incognito-modus.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Ruilen Maak met Meldingen</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Maak-knop is geruild met Meldingen-knop</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Maak-knop is niet geruild met Meldingen-knop</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Als het veranderen van deze instelling geen effect heeft, probeer dan om te schakelen naar Incognito-modus.</string>
   <string name="morphe_hide_navigation_button_labels_title">Navigatieknoppenlabels verbergen</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Labels zijn verborgen</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Labels worden weergegeven</string>
@@ -735,10 +738,19 @@ Om het Audiobaantje-menu weer te tonen, verander 'Video's spoofen' naar 'Android
   <string name="morphe_hide_endscreen_cards_title">Verberg eindschermkaarten</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Eindschermkaarten zijn verborgen</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Eindschermkaarten worden weergegeven</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Sfeervolle modus</string>
+  <string name="morphe_ambient_mode_screen_summary">Omzeil beperkingen voor de sfeervolle modus en uitschakelen geheel of in volscherm</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Omzeil beperkingen voor de sfeervolle modus</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Beperkingen voor energiebewaring in omgevingsmodus worden genegeerd</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Beperkingen voor energiebewaring in omgevingsmodus worden niet genegeerd</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Het inschakelen hiervan kan slechtere batterijleven veroorzaken.</string>
+  <string name="morphe_disable_ambient_mode_title">Omgevingsmodus uitschakelen</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Omgevingsmodus is uitgeschakeld</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Omgevingsmodus is ingeschakeld</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Schakel de ambientmodus in volledig scherm uit</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Omgevingsmodus uitgeschakeld</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Omgevingsmodus ingeschakeld</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Omgevingsmodus in voltisch scherm is uitgeschakeld</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Omgevingsmodus in voltisch scherm is ingeschakeld</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Verberg infokaarten</string>
   <string name="morphe_hide_info_cards_summary_on">Infokaarten zijn verborgen</string>
