@@ -1,3 +1,10 @@
+## [1.10.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.10.0...v1.10.1-dev.1) (2026-02-02)
+
+
+### Bug Fixes
+
+* **YouTube:** Resolve experimental `21.05.264` Shorts crash ([eda285a](https://github.com/MorpheApp/morphe-patches/commit/eda285a096024cc262eaf2233e6fbdc4ce77d275))
+
 # [1.10.0](https://github.com/MorpheApp/morphe-patches/compare/v1.9.0...v1.10.0) (2026-02-02)
 
 
