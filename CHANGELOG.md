@@ -1,3 +1,10 @@
+# [1.10.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.10.0-dev.4...v1.10.0-dev.5) (2026-02-02)
+
+
+### Bug Fixes
+
+* **Spoof video streams:** Spoofing does not work if the default client is not `TV` ([#373](https://github.com/MorpheApp/morphe-patches/issues/373)) ([8a40c96](https://github.com/MorpheApp/morphe-patches/commit/8a40c96bdcb13d20f2f2c2055735f9678fc92bce))
+
 # [1.10.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.10.0-dev.3...v1.10.0-dev.4) (2026-02-01)
 
 
