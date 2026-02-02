@@ -1,3 +1,10 @@
+# [1.11.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.10.1-dev.2...v1.11.0-dev.1) (2026-02-02)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide comments section in Home feed" setting ([#382](https://github.com/MorpheApp/morphe-patches/issues/382)) ([b20f629](https://github.com/MorpheApp/morphe-patches/commit/b20f6294236cad32b1be29b73e761659193e464b))
+
 ## [1.10.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.10.1-dev.1...v1.10.1-dev.2) (2026-02-02)
 
 
