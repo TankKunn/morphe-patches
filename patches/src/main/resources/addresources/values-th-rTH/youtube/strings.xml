@@ -388,9 +388,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">แบนเนอร์ดูผลิตภัณฑ์ในโอเวอร์เลย์วิดีโอถูกซ่อนไว้</string>
   <string name="morphe_hide_view_products_banner_summary_off">แบนเนอร์ดูผลิตภัณฑ์ในโอเวอร์เลย์วิดีโอแสดงอยู่</string>
   <string name="morphe_hide_youtube_premium_promotions_title">ซ่อนการโปรโมต YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"โฆษณา YouTube Premium ถูกซ่อน
-
-ข้อจํากัด: หน้า YouTube Doodles ไม่พร้อมใช้งาน"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">การโฆษณา YouTube Premium ถูกซ่อน</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">การแสดงการโปรโมต YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">ซ่อนโฆษณาวิดีโอ</string>
@@ -1502,7 +1500,6 @@ User id ของคุณเหมือนกับรหัสผ่าน �
   <string name="morphe_spoof_video_streams_about_no_av1">• ไม่มีตัวแปลงสัญญาณวิดีโอ AV1</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• ระดับเสียงคงที่ไม่พร้อมใช้งาน</string>
   <string name="morphe_spoof_video_streams_about_js">• วิดีโออาจเริ่มต้นช้า</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• วิดีโอเด็กอาจไม่เล่นเมื่อลงชื่อออกหรืออยู่ในโหมดไม่ระบุตัวตน</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• บังคับใช้เสียงต้นฉบับไม่พร้อมใช้งาน</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">แสดงในสถิติสำหรับพวกเนิร์ด</string>

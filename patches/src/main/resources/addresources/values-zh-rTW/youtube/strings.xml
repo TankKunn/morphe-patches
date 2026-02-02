@@ -388,9 +388,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">已隱藏播放器覆蓋層上的「查看商品」橫幅</string>
   <string name="morphe_hide_view_products_banner_summary_off">已顯示播放器覆蓋層上的「查看商品」橫幅</string>
   <string name="morphe_hide_youtube_premium_promotions_title">隱藏 YouTube Premium 促銷內容</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"YouTube Premium 促銷會被隱藏
-
-限制：YouTube Doodles 頁面無法使用"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube Premium 促銷已被隱藏</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">已顯示影片播放器下方 YouTube Premium 促銷內容</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">隱藏影片廣告</string>
@@ -1509,7 +1507,6 @@ AV1 視訊播放可能會卡頓或掉幀。"</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• 沒有 AV1 影片解碼器</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• 穩定音量無法使用</string>
   <string name="morphe_spoof_video_streams_about_js">• 視頻可能會延遲開始</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• 在登出或無痕模式下，兒童影片可能無法播放</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• 強制原始音訊不可用</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">顯示統計資料</string>

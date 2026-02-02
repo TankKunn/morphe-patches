@@ -384,9 +384,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">Показването на банера за продукти в надстройката на играча е скрито</string>
   <string name="morphe_hide_view_products_banner_summary_off">Показването на банера за продукти в надстройката на играча е показано</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Скриване на YouTube Premium предложения</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Промоциите на YouTube Premium са скрити
-
-Ограничение: страницата с YouTube Doodles не е достъпна"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Промоциите на YouTube Premium са скрити</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium предложения са показани</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Скрийте общни видеореклами</string>
@@ -1482,7 +1480,6 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Отсъства AV1 кодек на видео</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Не е налична стабилна звук</string>
   <string name="morphe_spoof_video_streams_about_js">• Видеото може да започне с закъснение</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Видеа за деца може да не се възпроизвеждат, когато е излязъл или в инкогнито режим</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Не е налично \"Принудително оригинално аудио\"</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Показване в \"Статисти за геки\"</string>

@@ -388,9 +388,7 @@ Keterbatasan
   <string name="morphe_hide_view_products_banner_summary_on">Spanduk lihat produk di hamparan pemutar disembunyikan</string>
   <string name="morphe_hide_view_products_banner_summary_off">Spanduk lihat produk di hamparan pemutar ditampilkan</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Sembunyikan promosi YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Promosi YouTube Premium disembunyikan
-
-Keterbatasan: Halaman YouTube Doodles tidak tersedia"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Promosi YouTube Premium disembunyikan</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">Promosi YouTube Premium ditampilkan</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Sembunyikan iklan video</string>
@@ -1504,7 +1502,6 @@ Pemutaran video dengan AV1 mungkin tersendat atau kehilangan bingkai."</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Tidak ada codec video AV1</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Volume stabil tidak tersedia</string>
   <string name="morphe_spoof_video_streams_about_js">• Video mungkin mulai terlambat</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Video anak-anak mungkin tidak dapat diputar saat keluar atau dalam mode penyamaran</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Paksa audio asli tidak tersedia</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Tampilkan di Statistik untuk nerds</string>

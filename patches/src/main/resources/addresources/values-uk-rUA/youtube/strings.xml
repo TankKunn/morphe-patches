@@ -187,9 +187,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_chapters_section_title">Приховати секцію \"Розділи\"</string>
   <string name="morphe_hide_chapters_section_summary_on">Секцію \"Розділи\" приховано</string>
   <string name="morphe_hide_chapters_section_summary_off">Секція \"Розділи\" показується</string>
-  <string name="morphe_hide_course_progress_section_title">Приховати \'Розвиток курсу\'</string>
-  <string name="morphe_hide_course_progress_section_summary_on">Розділ \"Розвитку курсу\" приховано</string>
-  <string name="morphe_hide_course_progress_section_summary_off">Розділ \"Розвитку курсу\" показується</string>
+  <string name="morphe_hide_course_progress_section_title">Приховати \'Прогрес курсу\'</string>
+  <string name="morphe_hide_course_progress_section_summary_on">Розділ прогрес курсу приховано</string>
+  <string name="morphe_hide_course_progress_section_summary_off">Розділ прогрес курсу показаний</string>
   <string name="morphe_hide_explore_podcast_section_title">Приховати секцію \"Послухайте подкаст\"</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Секцію \"Послухайте подкаст\" приховано</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Секція \"Послухайте подкаст\" показується</string>
@@ -389,9 +389,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">Банер \"Переглянути товари\" в плеєрі приховано</string>
   <string name="morphe_hide_view_products_banner_summary_off">Банер \"Переглянути товари\" в плеєрі показується</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Приховати рекламу YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Реклама YouTube Premium прихована
-
-Обмеження: сторінка YouTube Doodles недоступна"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Реклама YouTube Premium прихована</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">Показується реклама передплати YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Приховати відеорекламу</string>
@@ -1505,7 +1503,6 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Відеокодек AV1 відсутній</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Пункт меню \"Стабілізувати гучність\" недоступний</string>
   <string name="morphe_spoof_video_streams_about_js">• Відео може розпочатися із затримкою</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Відео для дітей можуть не відтворюватися, якщо вийти з облікового запису або перейти в анонімний режим</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Примусово оригінальна мова звукової доріжки\" недоступна</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Показувати у \"Статистиці для сисадмінів\"</string>

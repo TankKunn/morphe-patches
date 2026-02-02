@@ -388,9 +388,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">באנר צפייה במוצרים בשכבת-על של וידאו מוסתר</string>
   <string name="morphe_hide_view_products_banner_summary_off">באנר צפייה במוצרים בשכבת-על של וידאו מוצג</string>
   <string name="morphe_hide_youtube_premium_promotions_title">הסתר קידומי YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"הטענות של YouTube Premium מוסתרות
-
-מגבלה: הדף של YouTube Doodles אינו זמין"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">פרסומות YouTube Premium מוסתרות</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">קידומי YouTube Premium מוצגים</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">הסתר מודעות סרטון</string>
@@ -1503,7 +1501,6 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• אין קודק וידאו מסוג AV1</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• עוצמת קול יציבה אינה זמינה</string>
   <string name="morphe_spoof_video_streams_about_js">• הווידאו עשוי להתחיל מאוחר</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• ייתכן שסרטוני Kids לא יופעלו כשאתה מנותק או במצב פרטי</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• כפיית שמע מקורי אינה זמינה</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">הצג בנתונים לגיקים</string>

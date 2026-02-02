@@ -187,9 +187,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_chapters_section_title">チャプターを非表示</string>
   <string name="morphe_hide_chapters_section_summary_on">チャプター セクションは表示されません</string>
   <string name="morphe_hide_chapters_section_summary_off">チャプター セクションは表示されます</string>
-  <string name="morphe_hide_course_progress_section_title">隠す \'コース進行度\'</string>
-  <string name="morphe_hide_course_progress_section_summary_on">\'コース進行度\' セクションは隠されています</string>
-  <string name="morphe_hide_course_progress_section_summary_off">\'コース進行度\' セクションは表示されています</string>
+  <string name="morphe_hide_course_progress_section_title">「コースの進捗状況」を非表示</string>
+  <string name="morphe_hide_course_progress_section_summary_on">「コースの進捗状況」セクションは表示されません</string>
+  <string name="morphe_hide_course_progress_section_summary_off">「コースの進捗状況」セクションは表示されます</string>
   <string name="morphe_hide_explore_podcast_section_title">「ポッドキャストを検索」を非表示</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">「ポッドキャストを検索」セクションは表示されません</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">「ポッドキャストを検索」セクションは表示されます</string>
@@ -389,9 +389,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">「商品を表示」バナーはプレーヤー オーバーレイに表示されません</string>
   <string name="morphe_hide_view_products_banner_summary_off">「商品を表示」バナーはプレーヤー オーバーレイに表示されます</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium の広告を非表示</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"YouTube Premium の広告は表示されません
-
-制限事項: YouTube Doodle が利用できません"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube Premium の広告は表示されません</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium の広告は表示されます</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">動画広告を非表示</string>
@@ -565,7 +563,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_save_button_summary_off">保存ボタンは表示されます</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">字幕</string>
-  <string name="morphe_captions_screen_summary">自動的に字幕が有効になることを無効化するか、字幕クッキーを設定します</string>
+  <string name="morphe_captions_screen_summary">自動的に字幕が有効になることを無効化または字幕 Cookie を設定します</string>
   <!-- layout.captions.autoCaptionsPatch -->
   <string name="morphe_auto_captions_style_title">自動字幕表示</string>
   <string name="morphe_auto_captions_style_entry_1">ミュート時および非ミュート時に表示</string>
@@ -575,24 +573,24 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">自動字幕を表示</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">自動字幕を非表示</string>
   <!-- layout.captions.captionCookiesPatch -->
-  <string name="morphe_set_caption_cookies_title">字幕クッキーを設定する</string>
-  <string name="morphe_set_caption_cookies_summary_on">キャプションクッキーが提供された場合に設定されます</string>
-  <string name="morphe_set_caption_cookies_summary_off">"キャプションクッキーは設定されません
+  <string name="morphe_set_caption_cookies_title">字幕 Cookie を使用</string>
+  <string name="morphe_set_caption_cookies_summary_on">字幕 Cookie は取得済みの場合に使用されます</string>
+  <string name="morphe_set_caption_cookies_summary_off">"字幕 Cookie は使用されません
 
-自動翻訳キャプションが利用できない場合があります"</string>
-  <string name="morphe_caption_cookies_title">キャプションクッキー</string>
-  <string name="morphe_caption_cookies_summary">タイムドテキスト API リクエストで使用するクッキー</string>
-  <string name="morphe_get_caption_cookies_title">キャプションクッキーを取得する</string>
-  <string name="morphe_get_caption_cookies_summary">"クッキーを取得するには、クリックしてください
+字幕の自動翻訳が利用できない場合があります"</string>
+  <string name="morphe_caption_cookies_title">字幕 Cookie</string>
+  <string name="morphe_caption_cookies_summary">Timed Text API リクエストで使用する Cookie</string>
+  <string name="morphe_get_caption_cookies_title">字幕 Cookie を取得</string>
+  <string name="morphe_get_caption_cookies_summary">"Cookie を取得するには、ここをクリックしてください
 
-有効な場合、クッキーは自動的に保存されます"</string>
-  <string name="morphe_get_caption_cookies_failed">クッキーの取得に失敗しました</string>
-  <string name="morphe_get_caption_cookies_duplicate">クッキーが既に存在します</string>
-  <string name="morphe_get_caption_cookies_success">クッキーが正常に更新されました</string>
+取得した Cookie が有効な場合、自動的に保存されます"</string>
+  <string name="morphe_get_caption_cookies_failed">Cookie の取得に失敗しました</string>
+  <string name="morphe_get_caption_cookies_duplicate">Cookie が既に存在します</string>
+  <string name="morphe_get_caption_cookies_success">Cookie の更新に成功しました</string>
   <!-- layout.captions.transcriptPatch -->
-  <string name="morphe_fix_transcript_title">字幕を修正する</string>
-  <string name="morphe_fix_transcript_summary_on">字幕が利用可能です</string>
-  <string name="morphe_fix_transcript_summary_off">前提条件チェックの失敗により、字幕が利用できない場合があります</string>
+  <string name="morphe_fix_transcript_title">文字起こしを修正</string>
+  <string name="morphe_fix_transcript_summary_on">文字起こしは利用可能です</string>
+  <string name="morphe_fix_transcript_summary_off">Precondition check failure エラーによって文字起こしが利用できない場合があります</string>
   <!-- layout.buttons.navigation.navigationButtonsPatch -->
   <string name="morphe_navigation_buttons_screen_title">ナビゲーション ボタン</string>
   <string name="morphe_navigation_buttons_screen_summary">ナビゲーション バーのボタンを変更または非表示にします</string>
@@ -1503,7 +1501,6 @@ AV1 での動画再生は、カクつくまたはコマ落ちが発生する可�
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 コーデックが利用できない</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">•「一定音量」が利用できない</string>
   <string name="morphe_spoof_video_streams_about_js">• 動画の再生開始に時間がかかる可能性がある</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• ログアウト時またはシークレット モード時に、子ども向け動画が再生されない可能性がある</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">•「オリジナルの音声を強制的に使用」が利用できない</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">統計情報にクライアントを表示</string>

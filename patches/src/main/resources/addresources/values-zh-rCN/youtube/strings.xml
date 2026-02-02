@@ -388,9 +388,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">视频叠加层中的查看商品横幅已隐藏</string>
   <string name="morphe_hide_view_products_banner_summary_off">视频叠加层中的查看商品横幅已显示</string>
   <string name="morphe_hide_youtube_premium_promotions_title">隐藏 YouTube Premium 促销推广</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"YouTube Premium 促销已隐藏
-
-限制：YouTube 涂鸦页面不可用"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube Premium 促销已隐藏</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium推广已显示</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">隐藏视频广告</string>
@@ -1508,7 +1506,6 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• 不支持 AV1 视频编解码器</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• 稳定音量不可用</string>
   <string name="morphe_spoof_video_streams_about_js">视频可能会延迟开始</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• 注销或使用无痕模式时，儿童视频可能无法播放</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• 强制原始音频不可用</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">显示在 Stats for nerds 中</string>

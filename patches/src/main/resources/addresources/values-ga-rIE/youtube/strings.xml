@@ -388,9 +388,7 @@ Teorainneacha:
   <string name="morphe_hide_view_products_banner_summary_on">Tá an meirge féach táirgí i bhfolach sa fhorleagan físe</string>
   <string name="morphe_hide_view_products_banner_summary_off">Taispeántar meirge féach táirgí i bhforleagan físe</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Folaigh ardú céime YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Tá próimíúcháin YouTube Premium i gcló
-
-Teorainn: Ní fhéadfadh leathanaigh YouTube Doodles a fháil"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Tá cur chun cinn YouTube Premium faoi seinnteoir físe i bhfolach</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">Taispeántar ardú céime YouTube Premium faoin seinnteoir físe</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Folaigh fógraí físe</string>
@@ -1503,7 +1501,6 @@ D’fhéadfadh sé go mbeadh stad nó go gcaillfí frámaí ag athsheinm físe l
   <string name="morphe_spoof_video_streams_about_no_av1">• Níl aon cóideac físe AV1</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Níl toirt chobhsaí ar fáil</string>
   <string name="morphe_spoof_video_streams_about_js">• Tairgfí an video thar am</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Seans nach seinnfear físeáin do pháistí nuair a bhíonn siad logáilte amach nó i mód go hanaithnid</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Níl an fuaim bhunaidh iallach ar fáil</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Taispeáin i Staitisticí do nerds</string>

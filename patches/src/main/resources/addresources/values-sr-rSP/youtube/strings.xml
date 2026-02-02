@@ -388,9 +388,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">Банер \"Погледајте производе\" у видео плејеру је скривен</string>
   <string name="morphe_hide_view_products_banner_summary_off">Банер \"Погледајте производе\" у видео плејеру је приказан</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Сакриј промоције за YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Промоције YouTube Премијума су сакривене
-
-Ограничење: страница YouTube Дудлса није доступна"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Промоције за YouTube Premium су скривене испод видео плејера</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">Промоције за YouTube Premium су приказане</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Сакриј видео огласе</string>
@@ -1504,7 +1502,6 @@ Da bi prikazali meni sa audio stazom, promenite 'Spoof video streams' u 'Android
   <string name="morphe_spoof_video_streams_about_no_av1">• Нема видео кодека AV1</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Опција „Уједначена јачина звука” није доступна</string>
   <string name="morphe_spoof_video_streams_about_js">• Видео може да почне касно</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Видеи за децу се можда неће пуштати када сте одјављени или у режиму без архивирања</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Присиљавање оригиналног звука није доступно</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Прикажи у „Статистици за зналце”</string>

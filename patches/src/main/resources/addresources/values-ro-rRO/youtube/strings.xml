@@ -386,9 +386,7 @@ Limitări:
   <string name="morphe_hide_view_products_banner_summary_on">Bannerul \"Vezi produse\" din suprapunerea video este ascuns.</string>
   <string name="morphe_hide_view_products_banner_summary_off">Bannerul \"Vezi produse\" din suprapunerea video este afișat.</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Ascunde promoțiile YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Promovările YouTube Premium sunt ascunse
-
-Limitare: Pagină YouTube Doodles nu este disponibilă"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Promoțiile YouTube Premium sunt ascunse</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">Promoțiile YouTube Premium sunt afișate</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Ascunde reclamele video</string>
@@ -1502,7 +1500,6 @@ Redarea video cu AV1 poate sacada sau pierde cadre."</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Fara codec video AV1</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Volumul stabil nu este disponibil</string>
   <string name="morphe_spoof_video_streams_about_js">• Video poate fi retras</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Copiii nu pot urmări videoclipuri atunci când sunt deconectați sau în modul incognito</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Forțarea sunetului original nu este disponibilă</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Afișează în Statistici pentru pasionați</string>

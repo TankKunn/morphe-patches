@@ -388,9 +388,7 @@ Beperkingen:
   <string name="morphe_hide_view_products_banner_summary_on">View products banner in video overlay is hidden</string>
   <string name="morphe_hide_view_products_banner_summary_off">View products banner in video overlay is shown</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium promoties verbergen</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"YouTube Premium-promoties worden verborgen
-
-Beperking: YouTube Doodles-pagina is niet beschikbaar"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube Premium promoties zijn verborgen</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium-promoties worden getoond</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Video-advertenties verbergen</string>
@@ -1502,7 +1500,6 @@ Het afspelen van video met AV1 kan haperen of frames overslaan."</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Geen AV1-videocodec</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stabiel volume is niet beschikbaar</string>
   <string name="morphe_spoof_video_streams_about_js">• Het videobeeld kan vertraagd starten</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• \"Kinder\"​-Video’s worden mogelijk niet afgespeeld wanneer u bent uitgelogd of de incognitomodus gebruikt</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Oorspronkelijke audio forceren is niet beschikbaar</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Weergeven in Stats for nerds</string>

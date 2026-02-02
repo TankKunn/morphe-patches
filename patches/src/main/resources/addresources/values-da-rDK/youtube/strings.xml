@@ -388,9 +388,7 @@ Begrænsninger:
   <string name="morphe_hide_view_products_banner_summary_on">Produktbanner i spilleroverskrift er skjult</string>
   <string name="morphe_hide_view_products_banner_summary_off">Produktbanner i spilleroverskrift er vist</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Skjul YouTube Premium kampagner</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"YouTube Premium-tilbud skjules
-
-Begrænsning: YouTube Doodles-siden er ikke tilgængelig"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube Premium-kampagner er skjult under videoafspilleren</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium reklamer vises</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Skjul videoannoncer</string>
@@ -1504,7 +1502,6 @@ Videoafspilning med AV1 kan hakke eller tabe billeder."</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Intet AV1-videokodek</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stabil lydstyrke er ikke tilgængelig</string>
   <string name="morphe_spoof_video_streams_about_js">• Video kan starte sent</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Videoer til børn afspilles muligvis ikke, når du er logget ud eller i inkognitotilstand</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Tving original lyd er ikke tilgængelig</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Vis i Statistik for nørder</string>

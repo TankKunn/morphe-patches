@@ -389,9 +389,7 @@ Omezení:
   <string name="morphe_hide_view_products_banner_summary_on">Banner \"Zobrazit produkty\" v překrytí videa je skryt</string>
   <string name="morphe_hide_view_products_banner_summary_off">Banner \"Zobrazit produkty\" v překrytí videa je zobrazen</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Skrýt nabídky YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Připomínky YouTube Premium jsou skryty
-
-Omezení: Stránka YouTube Doodles není k dispozici"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Překlady YouTube Premium jsou skryty</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">Nabídky YouTube Premium jsou zobrazeny</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Skrýt reklamy ve videu</string>
@@ -1505,7 +1503,6 @@ Přehrávání videa s AV1 se může sekat nebo vypadávat snímky."</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Žádný video kodek AV1</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stabilní hlasitost není k dispozici</string>
   <string name="morphe_spoof_video_streams_about_js">Video může začít pozdě</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Dětská videa se nemusí přehrávat, když jste odhlášení nebo v anonymním režimu</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Vynutit původní zvuk není k dispozici</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Zobrazit ve statistikách pro nadšence</string>

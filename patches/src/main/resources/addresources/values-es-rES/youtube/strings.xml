@@ -388,9 +388,7 @@ Limitaciones:
   <string name="morphe_hide_view_products_banner_summary_on">El banner \"Ver productos\" en la superposición del reproductor está oculto</string>
   <string name="morphe_hide_view_products_banner_summary_off">El banner \"Ver productos\" en la superposición del reproductor está visible</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Ocultar promociones de YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Las promociones de YouTube Premium están ocultas
-
-Limitaciones: La página de Doodles de YouTube no está disponible"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Las promociones de YouTube Premium están ocultas</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">Las promociones de YouTube Premium están visibles</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Ocultar anuncios de vídeo</string>
@@ -1504,7 +1502,6 @@ La reproducción de vídeo con AV1 se puede atascar o perder fotogramas."</strin
   <string name="morphe_spoof_video_streams_about_no_av1">• Sin códec de vídeo AV1</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Volumen estable no disponible</string>
   <string name="morphe_spoof_video_streams_about_js">• El vídeo puede comenzar tarde</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Es posible que los vídeos infantiles no se reproduzcan cuando se cierra la sesión o se está en modo incógnito</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Forzar audio original no está disponible</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Mostrar en \"Estadísticas para nerds\"</string>

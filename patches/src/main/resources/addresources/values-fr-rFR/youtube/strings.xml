@@ -83,9 +83,9 @@ Cependant, activer cette option entraînera également l’enregistrement de cer
   <string name="morphe_hide_latest_posts_summary_off">Les posts récents sont affichés</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
-  <string name="morphe_hide_latest_videos_button_title">Masquer le bouton \'Vidéos récentes\'</string>
-  <string name="morphe_hide_latest_videos_button_summary_on">Le bouton \'Vidéos récentes\' est masqué</string>
-  <string name="morphe_hide_latest_videos_button_summary_off">Le bouton \'Vidéos récentes\' est affiché</string>
+  <string name="morphe_hide_latest_videos_button_title">Masquer le bouton \'Vidéos les plus récentes\'</string>
+  <string name="morphe_hide_latest_videos_button_summary_on">Le bouton \'Vidéos les plus récentes\' est masqué</string>
+  <string name="morphe_hide_latest_videos_button_summary_off">Le bouton \'Vidéos les plus récentes\' est affiché</string>
   <string name="morphe_hide_mix_playlists_title">Masquer les playlists mix</string>
   <string name="morphe_hide_mix_playlists_summary_on">Les playlists mix sont masquées</string>
   <string name="morphe_hide_mix_playlists_summary_off">Les playlists mix sont affichées</string>
@@ -187,9 +187,9 @@ Si un Doodle est actuellement visible dans votre région et que cette option de 
   <string name="morphe_hide_chapters_section_title">Masquer \'Chapitres\'</string>
   <string name="morphe_hide_chapters_section_summary_on">La section \'Chapitres\' est masquée</string>
   <string name="morphe_hide_chapters_section_summary_off">La section \'Chapitres\' est affichée</string>
-  <string name="morphe_hide_course_progress_section_title">Cacher \'Progression du cours\'</string>
-  <string name="morphe_hide_course_progress_section_summary_on">La section \'Progression du cours\' est cachée</string>
-  <string name="morphe_hide_course_progress_section_summary_off">La section \'Progression du cours\' est affichée</string>
+  <string name="morphe_hide_course_progress_section_title">Masquer \'Progression dans le cours\'</string>
+  <string name="morphe_hide_course_progress_section_summary_on">La section \'Progression dans le cours\' est masquée</string>
+  <string name="morphe_hide_course_progress_section_summary_off">La section \'Progression dans le cours\' est affichée</string>
   <string name="morphe_hide_explore_podcast_section_title">Masquer \'Découvrir le podcast\'</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">La section \'Découvrir le podcast\' est masquée</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">La section \'Découvrir le podcast\' est affichée</string>
@@ -392,10 +392,8 @@ Limitations :
   <string name="morphe_hide_view_products_banner_summary_on">La bannière \'Afficher les produits\' dans l\'overlay du lecteur est masquée</string>
   <string name="morphe_hide_view_products_banner_summary_off">La bannière \'Afficher les produits\' dans l\'overlay du lecteur est affichée</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Masquer la promotion YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Les promotions YouTube Premium sont masquées
-
-Limitations : Les Doodles YouTube ne sont pas disponibles"</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_off">La promotion YouTube Premium est affichée</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Les promotions YouTube Premium sont masquées</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_off">Les promotions YouTube Premium sont affichées</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Masquer les publicités vidéo</string>
   <string name="morphe_hide_video_ads_summary_on">Les publicités vidéo sont masquées</string>
@@ -1513,7 +1511,6 @@ La lecture de vidéos en AV1 peut présenter des saccades ou des pertes d’imag
   <string name="morphe_spoof_video_streams_about_no_av1">• Codec vidéo AV1 indisponible</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Le volume stable n\'est pas disponible</string>
   <string name="morphe_spoof_video_streams_about_js">• La vidéo peut démarrer en retard</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Les vidéos pour enfants peuvent ne pas se lire en mode déconnecté ou en navigation privée</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Forcer la langue audio d\'origine n\'est pas disponible</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Afficher dans les \'Statistiques avancées\'</string>

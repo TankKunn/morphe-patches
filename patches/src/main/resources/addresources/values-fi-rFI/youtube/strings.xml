@@ -388,9 +388,7 @@ Rajoitukset
   <string name="morphe_hide_view_products_banner_summary_on">Videon peittokuvan tuotebannerit piilotetaan</string>
   <string name="morphe_hide_view_products_banner_summary_off">Videon peittokuvan tuotebannerit näytetään</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Piilota YouTube Premium -mainokset</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"YouTube Premium mainokset piilotetaan
-
-Rajoitus: YouTube Doodles-sivu ei ole käytettävissä"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube Premium -mainokset piilotetaan videosoittimelta</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium -mainokset näytetään</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Piilota videomainokset</string>
@@ -1505,7 +1503,6 @@ AV1-videon toisto saattaa pätkiä."</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Ei AV1-videokoodekkia</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Tasainen äänenvoimakkuus ei ole käytettävissä</string>
   <string name="morphe_spoof_video_streams_about_js">• Video saattaa aloittaa myöhässä</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Lasten videot eivät ehkä toistu, kun olet kirjautunut ulos tai incognito-tilassa</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Pakota alkuperäinen ääni ei ole käytettävissä</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Näytä teknisissä tiedoissa</string>

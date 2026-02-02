@@ -388,9 +388,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">प्लेयर ओवरले में उत्पादों के बैनर को देखने के लिए छिपा हुआ है</string>
   <string name="morphe_hide_view_products_banner_summary_off">प्लेयर ओवरले में उत्पादों के बैनर को देखने के लिए दिखाई देता है</string>
   <string name="morphe_hide_youtube_premium_promotions_title">छुपाएं YouTube प्रीमियम प्रोमोशन</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"यूट्यूब प्रीमियम प्रोमोशन छुपा हुआ है
-
-मुसीबत: यूट्यूब डुडल्स पेज उपलब्ध नहीं है"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube प्रीमियम प्रचार छुपाए गए हैं</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube प्रीमियम प्रचार दिखाए जाते हैं</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">छुपाएं वीडियो विज्ञापन</string>

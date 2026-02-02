@@ -388,9 +388,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">ভিডিও ওভারলেতে \"পণ্য দেখুন\" ব্যানার লুকানো আছে</string>
   <string name="morphe_hide_view_products_banner_summary_off">ভিডিও ওভারলেতে \"পণ্য দেখুন\" ব্যানার দেখানো হয়েছে</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube প্রিমিয়াম প্রচারণা লুকান</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"YouTube প্রিমিয়ামের প্রোমোশন লুকানো হয়েছে
-
-সীমাবদ্ধতা: YouTube ডুডলস পেজ অ্যাক্সেসযোগ্য নয়"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube প্রিমিয়াম প্রচারণা লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium প্রচারণাগুলি প্রদর্শিত হয়</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">ভিডিও বিজ্ঞাপন লুকান</string>
@@ -1505,7 +1503,6 @@ AV1 সহ ভিডিও প্লেব্যাক আটকে যেতে
   <string name="morphe_spoof_video_streams_about_no_av1">• কোনো AV1 ভিডিও কোডেক নেই</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• স্থিতিশীল ভলিউম উপলব্ধ নেই</string>
   <string name="morphe_spoof_video_streams_about_js">• ভিডিও হতে পারে কিছুটা দেরি</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• লগআউট করা হলে বা ছদ্মবেশী মোডে বাচ্চাদের ভিডিও চলতে নাও পারে</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• মূল অডিও জোরপূর্বক উপলব্ধ নেই</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">স্ট্যাটস ফর নার্ডসে দেখান</string>

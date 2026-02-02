@@ -187,8 +187,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_chapters_section_summary_on">Раздел \"Эпизоды\" в описании видео скрыт</string>
   <string name="morphe_hide_chapters_section_summary_off">Раздел \"Эпизоды\" в описании видео показан</string>
   <string name="morphe_hide_course_progress_section_title">Скрыть \'Прогресс курса\'</string>
-  <string name="morphe_hide_course_progress_section_summary_on">Раздел \'Прогресс курса\' скрыт</string>
-  <string name="morphe_hide_course_progress_section_summary_off">Раздел \'Прогресс курса\' показан</string>
+  <string name="morphe_hide_course_progress_section_summary_on">Раздел прогресс курса скрыт</string>
+  <string name="morphe_hide_course_progress_section_summary_off">Раздел прогресс курса показан</string>
   <string name="morphe_hide_explore_podcast_section_title">Скрыть раздел \"Другие выпуски подкаста\"</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Раздел \"Другие выпуски подкаста\" в описании видео скрыт</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Раздел \"Другие выпуски подкаста\" в описании видео показан</string>
@@ -388,9 +388,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">Баннер \"Просмотр товаров\" в панели воспроизведения скрыт</string>
   <string name="morphe_hide_view_products_banner_summary_off">Баннер \"Просмотр товаров\" в панели воспроизведения показан</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Скрыть рекламу YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Промоакции YouTube Premium скрыты
-
-Ограничение: страница YouTube Doodles недоступна"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">Реклама YouTube Premium скрыта</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">Показываются промо YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Скрыть видеорекламу</string>
@@ -1504,7 +1502,6 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_spoof_video_streams_about_no_av1">• Отсутствует видеокодек AV1</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Постоянный уровень громкости недоступен </string>
   <string name="morphe_spoof_video_streams_about_js">• Видео может начаться с задержкой</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Видео для детей могут не воспроизводиться при выходе из системы или в режиме инкогнито</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Принудительная оригинальная звуковая дорожка недоступна</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Показать в \"Статистике для сисадминов\"</string>

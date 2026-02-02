@@ -186,9 +186,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_chapters_section_title">إخفاء الفصول</string>
   <string name="morphe_hide_chapters_section_summary_on">تم إخفاء قسم الفصول</string>
   <string name="morphe_hide_chapters_section_summary_off">يتم عرض قسم الفصول</string>
-  <string name="morphe_hide_course_progress_section_title">إخفاء \'تقدم الكورس\'</string>
-  <string name="morphe_hide_course_progress_section_summary_on">تم إخفاء قسم تقدم الكورس</string>
-  <string name="morphe_hide_course_progress_section_summary_off">يتم عرض قسم تقدم الكورس</string>
+  <string name="morphe_hide_course_progress_section_title">إخفاء \'تقدّم الدورة التدريبية\'</string>
+  <string name="morphe_hide_course_progress_section_summary_on">تم إخفاء قسم تقدّم الدورة التدريبية</string>
+  <string name="morphe_hide_course_progress_section_summary_off">يتم عرض قسم تقدّم الدورة التدريبية</string>
   <string name="morphe_hide_explore_podcast_section_title">إخفاء \'استكشاف البودكاست\'</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">تم إخفاء قسم استكشاف البودكاست</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">يتم عرض قسم استكشاف البودكاست</string>
@@ -388,9 +388,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">تم إخفاء لافتة عرض المنتجات في واجهة المشغل</string>
   <string name="morphe_hide_view_products_banner_summary_off">يتم عرض لافتة عرض المنتجات في واجهة المشغل</string>
   <string name="morphe_hide_youtube_premium_promotions_title">إخفاء ترقية YouTube Premium</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"تم إخفاء ترويج YouTube Premium
-
-القيود: صفحة رسومات YouTube غير متاحة"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">تم إخفاء عروض YouTube Premium الترويجية</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">يتم عرض عروض YouTube Premium الترويجية</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">إخفاء إعلانات الفيديو</string>
@@ -563,8 +561,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_save_button_summary_on">تم إخفاء زر حفظ</string>
   <string name="morphe_hide_save_button_summary_off">يتم عرض زر حفظ</string>
   <!-- layout.captions.captionsPatch -->
-  <string name="morphe_captions_screen_title">الترجمات</string>
-  <string name="morphe_captions_screen_summary">تفعيل الترجمة تلقائيًا أو تعيين ملفات الترجمة</string>
+  <string name="morphe_captions_screen_title">الترجمة</string>
+  <string name="morphe_captions_screen_summary">إيقاف تمكين الترجمة تلقائيًا أو تعيين ملفات تعريف ارتباط الترجمة</string>
   <!-- layout.captions.autoCaptionsPatch -->
   <string name="morphe_auto_captions_style_title">إمكانية رؤية الترجمة التلقائية</string>
   <string name="morphe_auto_captions_style_entry_1">عرضها عند كتم الصوت وعند عدم كتمه</string>
@@ -574,24 +572,24 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">عرض الترجمة التلقائية</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">إخفاء الترجمة التلقائية</string>
   <!-- layout.captions.captionCookiesPatch -->
-  <string name="morphe_set_caption_cookies_title">تعيين ملفات الترجمة</string>
-  <string name="morphe_set_caption_cookies_summary_on">Cookies للعلامة تم تعيينها إذا تم توفيرها</string>
-  <string name="morphe_set_caption_cookies_summary_off">"Cookies للعلامة لم يتم تعيينها
+  <string name="morphe_set_caption_cookies_title">تعيين ملفات تعريف ارتباط الترجمة</string>
+  <string name="morphe_set_caption_cookies_summary_on">يتم استخدام ملفات تعريف ارتباط الترجمة في حال توفرها.</string>
+  <string name="morphe_set_caption_cookies_summary_off">"لا يتم استخدام ملفات تعريف ارتباط الترجمة
 
-قد لا تكون الترجمة التلقائية للعلامات متاحة"</string>
-  <string name="morphe_caption_cookies_title">Cookies للعلامة</string>
-  <string name="morphe_caption_cookies_summary">Cookies لاستخدامها في طلبات API النص المحدد</string>
-  <string name="morphe_get_caption_cookies_title">احصل على cookies للعلامة</string>
-  <string name="morphe_get_caption_cookies_summary">"انقر للحصول على cookies
+قد لا تكون الترجمة التلقائية متوفرة"</string>
+  <string name="morphe_caption_cookies_title">ملفات تعريف ارتباط الترجمة</string>
+  <string name="morphe_caption_cookies_summary">ملفات تعريف الارتباط لاستخدامها في طلبات API للنصوص الموقوتة.</string>
+  <string name="morphe_get_caption_cookies_title">احصل على ملفات تعريف ارتباط الترجمة</string>
+  <string name="morphe_get_caption_cookies_summary">"انقر للحصول على ملفات تعريف الارتباط
 
-سيتم حفظها تلقائيًا إذا كانت صالحة"</string>
-  <string name="morphe_get_caption_cookies_failed">فشل في جلب cookies</string>
-  <string name="morphe_get_caption_cookies_duplicate">الcookies موجودة بالفعل</string>
-  <string name="morphe_get_caption_cookies_success">تم تحديث cookies للعلامة بنجاح</string>
+سيتم حفظ ملفات تعريف الارتباط تلقائيًا إذا كانت صالحة"</string>
+  <string name="morphe_get_caption_cookies_failed">فشل في جلب ملفات تعريف الارتباط</string>
+  <string name="morphe_get_caption_cookies_duplicate">ملفات تعريف الارتباط موجودة بالفعل</string>
+  <string name="morphe_get_caption_cookies_success">تم تحديث ملفات تعريف الارتباط بنجاح</string>
   <!-- layout.captions.transcriptPatch -->
-  <string name="morphe_fix_transcript_title">تعديل النص</string>
+  <string name="morphe_fix_transcript_title">إصلاح النصوص</string>
   <string name="morphe_fix_transcript_summary_on">النص متاح</string>
-  <string name="morphe_fix_transcript_summary_off">قد لا يكون النص متاحًا بسبب فشل التحقق من الشرط المسبق</string>
+  <string name="morphe_fix_transcript_summary_off">قد لا يتوفر النص بسبب فشل في التحقق من الشروط المسبقة</string>
   <!-- layout.buttons.navigation.navigationButtonsPatch -->
   <string name="morphe_navigation_buttons_screen_title">أزرار التنقل</string>
   <string name="morphe_navigation_buttons_screen_summary">إخفاء أو تغيير الأزرار في شريط التنقل</string>
@@ -1505,7 +1503,6 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• لا يوجد ترميز الفيديو AV1</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• مستوى الصوت الثابت غير متاح</string>
   <string name="morphe_spoof_video_streams_about_js">• الفيديو قد يبدأ متأخرًا</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• قد لا يتم تشغيل الفيديوهات المخصصة للأطفال عند تسجيل الخروج أو عند استخدام وضع التصفح المتخفي</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• فرض الصوت الأصلي غير متاح</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">عرض في إحصاءات تقنية</string>

@@ -383,9 +383,6 @@ Begränsningar:
   <string name="morphe_hide_view_products_banner_summary_on">Bannern Visa produkter i spelaröverlägget är dold</string>
   <string name="morphe_hide_view_products_banner_summary_off">Bannern Visa produkter i spelaröverlägget visas</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Dölj YouTube Premium-kampanjer</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"YouTube Premium-kampanjer är dolda
-
-Begränsning: YouTube Doodles-sidan är inte tillgänglig"</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium-kampanjer visas</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Dölj videoannonser</string>
@@ -1479,7 +1476,6 @@ Videouppspelning med AV1 kan hacka eller tappa bildrutor."</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Menyn Ljudspår saknas</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Ingen AV1-videokodek</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stabil volym är inte tillgängligt</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Videor för barn kanske inte spelas upp när du är utloggad eller i inkognitoläge</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Tvinga ursprungligt ljud är inte tillgängligt</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Visa i Statistik för nördar</string>

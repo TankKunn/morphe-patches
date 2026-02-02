@@ -189,12 +189,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_chapters_section_title">챕터 숨기기</string>
   <string name="morphe_hide_chapters_section_summary_on">챕터 섹션이 숨겨집니다</string>
   <string name="morphe_hide_chapters_section_summary_off">챕터 섹션이 표시됩니다</string>
-  <string name="morphe_hide_course_progress_section_title">숨기기 \'과정 진행도\'</string>
-  <string name="morphe_hide_course_progress_section_summary_on">과정 진행도 섹션이 숨겨졌습니다</string>
-  <string name="morphe_hide_course_progress_section_summary_off">과정 진행도 섹션이 표시됩니다</string>
+  <string name="morphe_hide_course_progress_section_title">과정 진행 상황 숨기기</string>
+  <string name="morphe_hide_course_progress_section_summary_on">과정 진행 상황 섹션이 숨겨집니다</string>
+  <string name="morphe_hide_course_progress_section_summary_off">과정 진행 상황 섹션이 표시됩니다</string>
   <string name="morphe_hide_explore_podcast_section_title">\'이 학습 프로그램 &amp; 팟캐스트 살펴보기\' 숨기기</string>
-  <string name="morphe_hide_explore_podcast_section_summary_on">\'이 학습 프로그램 살펴보기\'\n&amp;\'팟캐스트 살펴보기\' 섹션이 숨겨집니다</string>
-  <string name="morphe_hide_explore_podcast_section_summary_off">\'이 학습 프로그램 살펴보기\'\n&amp;\'팟캐스트 살펴보기\' 섹션이 표시됩니다</string>
+  <string name="morphe_hide_explore_podcast_section_summary_on">\'이 학습 프로그램 살펴보기\'\n&amp;\' 팟캐스트 살펴보기\' 섹션이 숨겨집니다</string>
+  <string name="morphe_hide_explore_podcast_section_summary_off">\'이 학습 프로그램 살펴보기\'\n&amp;\' 팟캐스트 살펴보기\' 섹션이 표시됩니다</string>
   <string name="morphe_hide_featured_links_section_title">추천 링크 숨기기</string>
   <string name="morphe_hide_featured_links_section_summary_on">추천 링크 섹션이 숨겨집니다</string>
   <string name="morphe_hide_featured_links_section_summary_off">추천 링크 섹션이 표시됩니다</string>
@@ -390,10 +390,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_products_banner_summary_on">플레이어 오버레이에서 \'제품 보기\' 배너가 숨겨집니다</string>
   <string name="morphe_hide_view_products_banner_summary_off">플레이어 오버레이에서 \'제품 보기\' 배너가 표시됩니다</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium 프로모션 숨기기</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"YouTube Premium 프로모션이 숨겨집니다
-
-제한 사항:
-• YouTube Doodles 페이지를 사용할 수 없습니다"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube Premium 프로모션이 숨겨집니다</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium 프로모션이 표시됩니다</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">동영상 광고 숨기기</string>
@@ -563,7 +560,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_save_button_summary_off">저장 버튼이 표시됩니다</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">자막</string>
-  <string name="morphe_captions_screen_summary">자동 자막 활성화를 비활성화하거나 자막 쿠키를 설정할 수 있습니다</string>
+  <string name="morphe_captions_screen_summary">자동 자막을 비활성화하거나 자막 쿠키를 설정할 수 있습니다</string>
   <!-- layout.captions.autoCaptionsPatch -->
   <string name="morphe_auto_captions_style_title">자동 자막 표시 여부</string>
   <string name="morphe_auto_captions_style_entry_1">음소거 및 음소거 해제 시 표시</string>
@@ -1505,7 +1502,6 @@ AV1이 사용된 동영상 재생이 끊기거나 프레임이 손실될 수 있
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 코덱이 지원되지 않습니다</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• 안정적인 볼륨을 사용할 수 없습니다</string>
   <string name="morphe_spoof_video_streams_about_js">• 동영상이 늦게 시작될 수 있습니다</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Kids 동영상은 로그인을 하지 않았거나 시크릿 모드에서는 재생되지 않을 수 있습니다</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• 원본 오디오를 강제로 활성화할 수 없습니다</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">전문 통계에서 표시하기</string>

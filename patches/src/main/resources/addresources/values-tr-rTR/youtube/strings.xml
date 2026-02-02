@@ -388,9 +388,7 @@ Sınırlamalar
   <string name="morphe_hide_view_products_banner_summary_on">Oynatıcıdaki ürünleri görüntüle afişi gizli</string>
   <string name="morphe_hide_view_products_banner_summary_off">Oynatıcıdaki ürünleri görüntüle afişi görünür</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium promosyonlarını gizle</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"YouTube Premium promosyonları gizlenir
-
-Sınırlama: YouTube Doodles sayfası kullanılabilir değil"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube Premium promosyonları video oynatıcısı altındaki gizli</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium promosyonları gösteriliyor</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Video reklamlarını gizle</string>
@@ -1504,7 +1502,6 @@ AV1 ile video oynatma takılabilir veya kare atlayabilir."</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 video kodeği yok</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Sabit ses mevcut değil</string>
   <string name="morphe_spoof_video_streams_about_js">• Video muhtemelen gecikmeyle başlayabilir</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Çocuk videoları oturum açılmadığında veya gizli modda oynatılamayabilir</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Orijinal sesi zorlama mevcut değil</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">Meraklısı için istatistiklerde göster</string>

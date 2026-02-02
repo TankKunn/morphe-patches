@@ -387,9 +387,7 @@ Einschränkungen:
   <string name="morphe_hide_view_products_banner_summary_on">Produkte anzeigen-Banner im Video-Overlay ist ausgeblendet</string>
   <string name="morphe_hide_view_products_banner_summary_off">Produkte anzeigen-Banner im Video-Overlay wird angezeigt</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium-Aktionen ausblenden</string>
-  <string name="morphe_hide_youtube_premium_promotions_summary_on">"Angebote von YouTube Premium sind ausgeblendet
-
-Einschränkung: YouTube Doodles-Seite ist nicht verfügbar"</string>
+  <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube Premium-Angebote sind ausgeblendet</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium Aktionen werden angezeigt</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Videowerbung ausblenden</string>
@@ -1501,7 +1499,6 @@ Die Videowiedergabe mit AV1 kann stottern oder Bilder überspringen."</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Kein AV1-Videocodec</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stabile Lautstärke ist nicht verfügbar</string>
   <string name="morphe_spoof_video_streams_about_js">• Video kann möglicherweise verzögert starten</string>
-  <string name="morphe_spoof_video_streams_about_kids_videos">• Kinder-Videos werden möglicherweise nicht abgespielt, wenn du abgemeldet bist oder den Inkognito-Modus verwendest.</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Originalton erzwingen ist nicht verfügbar</string>
   <string name="morphe_spoof_streaming_data_stats_for_nerds_title">In Statistiken für Nerds anzeigen</string>
