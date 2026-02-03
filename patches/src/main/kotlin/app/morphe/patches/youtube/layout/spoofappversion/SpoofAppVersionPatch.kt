@@ -14,6 +14,7 @@ import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playservice.is_19_43_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_14_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_20_40_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_05_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
@@ -58,8 +59,14 @@ val spoofAppVersionPatch = bytecodePatch(
                 tag = "app.morphe.extension.shared.settings.preference.NoTitlePreferenceCategory",
                 preferences = setOf(
                     SwitchPreference("morphe_spoof_app_version"),
-                    if (is_20_31_or_greater) {
+                    if (is_20_40_or_greater) {
                         ListPreference("morphe_spoof_app_version_target")
+                    } else if (is_20_31_or_greater) {
+                        ListPreference(
+                            key = "morphe_spoof_app_version_target",
+                            entriesKey = "morphe_spoof_app_version_target_legacy_20_31_entries",
+                            entryValuesKey = "morphe_spoof_app_version_target_legacy_20_31_entry_values"
+                        )
                     } else if (is_20_14_or_greater) {
                         ListPreference(
                             key = "morphe_spoof_app_version_target",
@@ -121,7 +128,6 @@ val spoofAppVersionPatch = bytecodePatch(
          * Fix: https://github.com/MorpheApp/morphe-patches/issues/183.
          *
          * 21.05+ these flags are no longer present.
-         *
          */
         if (is_20_31_or_greater && !is_21_05_or_greater) {
             listOf(
