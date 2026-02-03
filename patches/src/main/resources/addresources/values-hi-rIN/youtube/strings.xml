@@ -542,9 +542,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_promote_button_summary_off">प्रोमोट बटन दिखाई देता है</string>
   <!-- 'Thanks' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_thanks_button_title">छिपाएं धन्यवाद</string>
+  <string name="morphe_hide_thanks_button_summary_on">थैंक्यू बटन छुपा हुआ है</string>
+  <string name="morphe_hide_thanks_button_summary_off">थैंक्यू बटन दिखाया जाता है</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_clip_button_summary_on">क्लिप बटन छुपा हुआ है</string>
+  <string name="morphe_hide_clip_button_summary_off">क्लिप बटन दिखाया गया है</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- layout.captions.captionsPatch -->
@@ -715,6 +719,8 @@ Second \"item\" text"</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - पुराने सेव को प्लेलिस्ट में पुन: स्थापित करें</string>
+  <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - डिसेबल बॉल्ड आइकॉन</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <!-- layout.startupshortsreset.disableResumingShortsOnStartupPatch -->
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->

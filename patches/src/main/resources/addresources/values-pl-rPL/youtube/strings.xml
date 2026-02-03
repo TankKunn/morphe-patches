@@ -616,9 +616,9 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_hide_notifications_button_title">Przycisk do powiadomień</string>
   <string name="morphe_hide_notifications_button_summary_on">Ukryty</string>
   <string name="morphe_hide_notifications_button_summary_off">Widoczny</string>
-  <string name="morphe_swap_create_with_notifications_button_title">Zamień przyciski \"Utwórz\" z \"Powiadomienia\"</string>
-  <string name="morphe_swap_create_with_notifications_button_summary_on">Przycisk \"Utwórz\" został zamieniony z przyciskiem \"Powiadomienia\"</string>
-  <string name="morphe_swap_create_with_notifications_button_summary_off">Przycisk \"Utwórz\" nie został zamieniony z przyciskiem \"Powiadomienia\"</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Zamień przyciski przesyłania i powiadomień</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Zamienione</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Niezamienione</string>
   <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Jeśli zmiana tego ustawienia nie przyniesie efektu, spróbuj przełączyć się w tryb incognito.</string>
   <string name="morphe_hide_navigation_button_labels_title">Etykiety przycisków nawigacji</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Ukryte</string>
@@ -739,18 +739,18 @@ Aby menu od ścieżki dźwiękowej było widoczne, zmień 'Oszukuj strumienie fi
   <string name="morphe_hide_endscreen_cards_summary_on">Ukryte</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Widoczne</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
-  <string name="morphe_ambient_mode_screen_title">Tryb otoczenia</string>
-  <string name="morphe_ambient_mode_screen_summary">Pomiń ograniczenia oszczędności energii dla trybu otoczenia i wyłącz go całkowicie lub w trybie pełnoekranowym</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_title">Pomiń ograniczenia trybu otoczenia</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Ograniczenia trybu otoczenia dla oszczędności energii są omijane.</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Ograniczenia trybu otoczenia dla oszczędności energii nie są omijane.</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Włączanie tego może spowodować gorsze żywotność baterii.</string>
-  <string name="morphe_disable_ambient_mode_title">Wyłącz tryb otoczenia</string>
-  <string name="morphe_disable_ambient_mode_summary_on">Tryb otoczenia jest wyłączony</string>
-  <string name="morphe_disable_ambient_mode_summary_off">Tryb otoczenia jest włączony</string>
+  <string name="morphe_ambient_mode_screen_title">Oświetlenie kinowe</string>
+  <string name="morphe_ambient_mode_screen_summary">Pomiń ograniczenia oszczędzania energii dla oświetlenia kinowego i wyłącz je całkowicie lub w trybie pełnoekranowym</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Pomiń ograniczenia oświetlenia kinowego</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Ograniczenia oświetlenia kinowego dla oszczędności energii są omijane</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Ograniczenia oświetlenia kinowego dla oszczędności energii nie są omijane</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Włączenie tej opcji może skrócić czas pracy na baterii.</string>
+  <string name="morphe_disable_ambient_mode_title">Oświetlenie kinowe</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Wyłączone</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Wlączone</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Oświetlenie kinowe w trybie pełnoekranowym</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Tryb otoczenia w pełnym ekranie jest wyłączony</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Tryb otoczenia w pełnym ekranie jest włączony</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Wyłączone</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Włączone</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Karty z informacjami</string>
   <string name="morphe_hide_info_cards_summary_on">Ukryte</string>
@@ -1215,8 +1215,10 @@ Zmieni to wygląd i funkcje aplikacji, lecz mogą wystąpić nieznane efekty ubo
 
 Jeśli później zostanie to wyłączone, rekomendowane jest usunięcie danych aplikacji, aby zapobiec błędom w interfejsie użytkownika."</string>
   <string name="morphe_spoof_app_version_target_title">Oszukiwana wersja aplikacji</string>
-  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Przywraca stare ikony w odtwarzaczu Shortsów</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Przywróć stare ikony odtwarzacza Shortsów</string>
+  <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Wyłącz pogrubione ikony</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Przywraca nieskondensowany pasek akcji filmu</string>
+  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Przywraca stare ikony w odtwarzaczu Shortsów</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Zmień stronę startową</string>
   <string name="morphe_change_start_page_entry_default">Domyślna</string>

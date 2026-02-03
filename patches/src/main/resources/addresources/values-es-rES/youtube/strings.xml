@@ -740,17 +740,17 @@ Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de v
   <string name="morphe_hide_endscreen_cards_summary_off">Las tarjetas de pantalla final están visibles</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
   <string name="morphe_ambient_mode_screen_title">Modo ambiente</string>
-  <string name="morphe_ambient_mode_screen_summary">Omitir restricciones de ahorro de energía para Modo ambiente y desactivarlo completamente o en pantalla completa</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_title">Omitir restricciones de Modo ambiente</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Las restricciones de modo ambiente para ahorro de energía están bypass.</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Las restricciones de modo ambiente para ahorro de energía no están bypass.</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Habilitar esto puede causar una peor vida de la batería.</string>
-  <string name="morphe_disable_ambient_mode_title">Deshabilitar modo ambiente</string>
-  <string name="morphe_disable_ambient_mode_summary_on">Modo ambiente está deshabilitado</string>
-  <string name="morphe_disable_ambient_mode_summary_off">Modo ambiente está habilitado</string>
+  <string name="morphe_ambient_mode_screen_summary">Omite las restricciones de ahorro de energía para el modo ambiente y lo desactiva por completo o en pantalla completa</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Omitir restricciones del modo ambiente</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Las restricciones del modo ambiente para ahorro de energía están omitidas</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Las restricciones del modo ambiente para ahorro de energía no están omitidas</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Activar esto puede causar una peor vida de la batería.</string>
+  <string name="morphe_disable_ambient_mode_title">Desactivar modo ambiente</string>
+  <string name="morphe_disable_ambient_mode_summary_on">El modo ambiente está desactivado</string>
+  <string name="morphe_disable_ambient_mode_summary_off">El modo ambiente está activado</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Desactivar modo ambiente en pantalla completa</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Modo ambiente en pantalla completa está deshabilitado</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Modo ambiente en pantalla completa está habilitado</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">El modo ambiente en pantalla completa está desactivado</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">El modo ambiente en pantalla completa está activado</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Ocultar tarjetas de información</string>
   <string name="morphe_hide_info_cards_summary_on">Las tarjetas de información están ocultas</string>
@@ -1215,8 +1215,10 @@ Esto cambiará la apariencia y las características de la aplicación, pero pued
 
 Si se desactiva posteriormente, se recomienda borrar los datos de la aplicación para evitar errores en la interfaz de usuario."</string>
   <string name="morphe_spoof_app_version_target_title">Versión a falsificar de la app</string>
-  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Restaura los iconos antiguos del reproductor de Shorts</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Restaurar guardado antiguo de lista de reproducción</string>
+  <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Desactivar iconos en negrita</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Restaura la barra de acciones de vídeo no contraída</string>
+  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Restaura los iconos antiguos del reproductor de Shorts</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Cambiar página de inicio</string>
   <string name="morphe_change_start_page_entry_default">Predeterminado</string>

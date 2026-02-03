@@ -1215,8 +1215,10 @@ Questo cambierà l'aspetto e le funzionalità dell'app, ma potrebbero verificars
 
 Se in seguito verrà disattivato, si consiglia di cancellare i dati dell'app per evitare bug dell'interfaccia."</string>
   <string name="morphe_spoof_app_version_target_title">Target della versione dell\'app desiderata</string>
-  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Ripristinare le vecchie icone del player Shorts</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Ripristina le vecchie icone del player Shorts</string>
+  <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Disabilita icone in grassetto</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Ripristina la barra delle azioni video non compressa</string>
+  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Ripristinare le vecchie icone del player Shorts</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Cambia pagina iniziale</string>
   <string name="morphe_change_start_page_entry_default">Predefinito</string>

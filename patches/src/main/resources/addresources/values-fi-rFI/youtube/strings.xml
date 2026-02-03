@@ -1216,8 +1216,10 @@ Tämä muuttaa sovelluksen ulkoasua ja ominaisuuksia, mutta tuntemattomia sivuva
 
 Jos tämä poistetaan myöhemmin käytöstä, on suositeltavaa tyhjentää sovelluksen tiedot käyttöliittymävirheiden välttämiseksi."</string>
   <string name="morphe_spoof_app_version_target_title">Naamioitava kohdeversio</string>
-  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Palauta vanhat Shorts-soittimen kuvakkeet</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Palauta vanhat tallenteet soittimeen</string>
+  <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Poista liian suuri ikoni</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Palauta laajennettu videon toimintopalkki</string>
+  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Palauta vanhat Shorts-soittimen kuvakkeet</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Vaihda aloitussivua</string>
   <string name="morphe_change_start_page_entry_default">Oletus</string>
