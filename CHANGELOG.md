@@ -1,3 +1,10 @@
+# [1.11.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.3...v1.11.0-dev.4) (2026-02-03)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** `Hide subscribed channels bar` leaves empty space ([#404](https://github.com/MorpheApp/morphe-patches/issues/404)) ([6b68416](https://github.com/MorpheApp/morphe-patches/commit/6b6841626d76c9679b4b9bebfa98ccab9d617fd2))
+
 # [1.11.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.2...v1.11.0-dev.3) (2026-02-02)
 
 
