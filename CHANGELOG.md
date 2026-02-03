@@ -1,3 +1,10 @@
+# [1.11.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.5...v1.11.0-dev.6) (2026-02-03)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide explore this course" setting ([#410](https://github.com/MorpheApp/morphe-patches/issues/410)) ([42eaca0](https://github.com/MorpheApp/morphe-patches/commit/42eaca0d04c51ff5ae30b418ed8d2b9dd771ccc5))
+
 # [1.11.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.4...v1.11.0-dev.5) (2026-02-03)
 
 
