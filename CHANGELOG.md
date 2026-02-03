@@ -1,3 +1,10 @@
+# [1.11.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.4...v1.11.0-dev.5) (2026-02-03)
+
+
+### Features
+
+* **YouTube - Spoof app version:** Add target version `20.39.41` ([9ef0d22](https://github.com/MorpheApp/morphe-patches/commit/9ef0d2211aab5d5cb2d274678b2707ae0296499e))
+
 # [1.11.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.3...v1.11.0-dev.4) (2026-02-03)
 
 
