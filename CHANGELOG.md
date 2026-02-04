@@ -1,3 +1,11 @@
+# [1.11.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.7...v1.11.0-dev.8) (2026-02-04)
+
+
+### Bug Fixes
+
+* **YouTube - Ambient mode:** Resolve "Bypass Ambient mode restrictions" not bypassing ([#392](https://github.com/MorpheApp/morphe-patches/issues/392)) ([f5b71b2](https://github.com/MorpheApp/morphe-patches/commit/f5b71b2582f3919ee02cc58b40ce0a1a49c50b91))
+* **YouTube - Miniplayer:** Minimal miniplayer has wrong play icon ([2eddce0](https://github.com/MorpheApp/morphe-patches/commit/2eddce052761c6e7cd519ef3f57e098ca4044c3e))
+
 # [1.11.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.6...v1.11.0-dev.7) (2026-02-04)
 
 
