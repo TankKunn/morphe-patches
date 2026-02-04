@@ -129,9 +129,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_doodles_title">Приховати YouTube Doodles</string>
   <string name="morphe_hide_doodles_summary_on">Анімацію YouTube Doodles на логотипі приховано</string>
   <string name="morphe_hide_doodles_summary_off">Анімація YouTube Doodles на логотипі показується</string>
-  <string name="morphe_hide_doodles_user_dialog_message">"YouTube Doodles показуються кілька днів на рік.
-
-Якщо Doodle зараз показується у вашому регіоні, і це налаштування приховування ввімкнено, то панель фільтрів під рядком пошуку також буде приховано."</string>
   <string name="morphe_hide_channel_bar_title">Приховати панель каналу</string>
   <string name="morphe_hide_channel_bar_summary_on">Панель каналу під відеоплеєром приховано</string>
   <string name="morphe_hide_channel_bar_summary_off">Панель каналу під відеоплеєром показується</string>
@@ -190,6 +187,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_course_progress_section_title">Приховати \"Прогрес курсу\"</string>
   <string name="morphe_hide_course_progress_section_summary_on">Розділ \"Прогрес курсу\" приховано</string>
   <string name="morphe_hide_course_progress_section_summary_off">Розділ \"Прогрес курсу\" показується</string>
+  <string name="morphe_hide_explore_section_title">Приховати \"Навігація\"</string>
+  <string name="morphe_hide_explore_section_summary_on">Досліджуйте цей курс і Досліджуйте розділ подкастів приховані</string>
+  <string name="morphe_hide_explore_section_summary_off">Досліджуйте цей курс і Досліджуйте розділ подкастів показані</string>
+  <string name="morphe_hide_explore_course_section_title">Приховати \"Досліджуйте цей курс\"</string>
+  <string name="morphe_hide_explore_course_section_summary_on">Цей розділ курсу приховано</string>
+  <string name="morphe_hide_explore_course_section_summary_off">Цей розділ курсу показується</string>
   <string name="morphe_hide_explore_podcast_section_title">Приховати секцію \"Послухайте подкаст\"</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Секцію \"Послухайте подкаст\" приховано</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Секція \"Послухайте подкаст\" показується</string>
@@ -288,8 +291,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_summary_on">Секцію коментарів приховано</string>
   <string name="morphe_hide_comments_section_summary_off">Секція коментарів показується</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">Приховати розділ коментарів у стрічці</string>
-  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Розділ коментарів у стрічці приховано</string>
-  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Розділ коментарів у стрічці показується</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Розділ коментарів під відео у стрічці приховано</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Розділ коментарів під відео у стрічці показується</string>
   <string name="morphe_hide_comments_community_guidelines_title">Приховати правила спільноти</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Правила спільноти приховано</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Правила спільноти показуються</string>
@@ -320,14 +323,14 @@ Second \"item\" text"</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Обмеження:
 • Полиці Shorts, сторінки каналів та результати пошуку можуть досі показувати кількість переглядів
-• Ця функція не працює з автомобільним макетом інтерфейсу"</string>
+• Ця функція не працює з автомобільним макетом інтерфейсу."</string>
   <string name="morphe_hide_upload_time_title">Приховати час завантаження</string>
   <string name="morphe_hide_upload_time_summary_on">Час завантаження приховано у стрічці та результатах пошуку</string>
   <string name="morphe_hide_upload_time_summary_off">Час завантаження показується у стрічці та результатах пошуку</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Обмеження:
 • Полиці Shorts, сторінки каналів і результати пошуку можуть досі показувати час завантаження
-• Ця функція не працює з автомобільним макетом інтерфейсу"</string>
+• Ця функція не працює з автомобільним макетом інтерфейсу."</string>
   <string name="morphe_hide_keyword_content_screen_title">Приховати контент за ключовими словами</string>
   <string name="morphe_hide_keyword_content_screen_summary">Приховати відео із результатів пошуку та стрічки за допомогою фільтрів ключових слів</string>
   <string name="morphe_hide_keyword_content_home_title">Приховати відео на головній</string>
@@ -633,7 +636,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_title">Вимкнути напівпрозорість рядка стану</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Рядок стану непрозорий</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Рядок стану непрозорий або напівпрозорий</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">На деяких пристроях увімкнення цієї функції може змінити панель навігації системи на прозору.</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Обмеження:
+• Чорна смуга може з'явитися вгорі гравця відео.
+• На деяких пристроях, увімкнення цієї функції може змінити системну панель навігації на прозору."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Вимкнути напівпрозорість світлої панелі</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Панель навігації світлого режиму непрозора</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Панель навігації світлого режиму непрозора або напівпрозора</string>

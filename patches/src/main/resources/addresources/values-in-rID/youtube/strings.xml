@@ -128,9 +128,6 @@ Namun, mengaktifkan ini juga akan mencatat beberapa data pengguna seperti alamat
   <string name="morphe_hide_doodles_title">Sembunyikan YouTube Doodles</string>
   <string name="morphe_hide_doodles_summary_on">Animasi YouTube Doodles pada logo disembunyikan</string>
   <string name="morphe_hide_doodles_summary_off">Animasi YouTube Doodles pada logo ditampilkan</string>
-  <string name="morphe_hide_doodles_user_dialog_message">"YouTube Doodle muncul beberapa hari setiap tahun.
-
-Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini aktif, bilah filter di bawah bilah pencarian juga akan disembunyikan."</string>
   <string name="morphe_hide_channel_bar_title">Sembunyikan bilah saluran</string>
   <string name="morphe_hide_channel_bar_summary_on">Bilah saluran disembunyikan</string>
   <string name="morphe_hide_channel_bar_summary_off">Bilah saluran ditampilkan</string>
@@ -189,6 +186,12 @@ Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini 
   <string name="morphe_hide_course_progress_section_title">Sembunyikan \'Kemajuan kursus\'</string>
   <string name="morphe_hide_course_progress_section_summary_on">Bagian kemajuan kursus disembunyikan</string>
   <string name="morphe_hide_course_progress_section_summary_off">Bagian kemajuan kursus ditampilkan</string>
+  <string name="morphe_hide_explore_section_title">Sembunyikan Jelajahi</string>
+  <string name="morphe_hide_explore_section_summary_on">Bagian Jelajahi kursus ini dan Jelajahi podcast disembunyikan</string>
+  <string name="morphe_hide_explore_section_summary_off">Bagian Jelajahi kursus ini dan Jelajahi podcast ditampilkan</string>
+  <string name="morphe_hide_explore_course_section_title">Sembunyikan \'Jelajahi kursus ini\'</string>
+  <string name="morphe_hide_explore_course_section_summary_on">Bagian Jelajahi kursus ini disembunyikan</string>
+  <string name="morphe_hide_explore_course_section_summary_off">Bagian Jelajahi kursus ini ditampilkan</string>
   <string name="morphe_hide_explore_podcast_section_title">Sembunyikan \'Jelajahi podcast\'</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Bagian Jelajahi podcast disembunyikan</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Bagian Jelajahi podcast ditampilkan</string>
@@ -287,8 +290,8 @@ Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini 
   <string name="morphe_hide_comments_section_summary_on">Bagian komentar disembunyikan</string>
   <string name="morphe_hide_comments_section_summary_off">Bagian komentar ditampilkan</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">Sembunyikan bagian komentar di umpan Beranda</string>
-  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Bagian komentar di umpan Beranda disembunyikan</string>
-  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Bagian komentar di umpan Beranda ditampilkan</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Bagian komentar di bawah video di umpan Beranda disembunyikan</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Bagian komentar di bawah video di umpan Beranda ditampilkan</string>
   <string name="morphe_hide_comments_community_guidelines_title">Sembunyikan pedoman komunitas</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Pedoman komunitas disembunyikan</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Pedoman komunitas ditampilkan</string>
@@ -317,16 +320,16 @@ Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini 
   <string name="morphe_hide_view_count_summary_on">Jumlah penayangan disembunyikan di umpan dan hasil pencarian</string>
   <string name="morphe_hide_view_count_summary_off">Jumlah penayangan ditampilkan di umpan dan hasil pencarian</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Keterbatasan:
-• Rak Shorts, halaman saluran, dan hasil pencarian mungkin masih menampilkan jumlah penayangan
-• Fitur ini tidak berfungsi dengan faktor bentuk otomotif"</string>
+  <string name="morphe_hide_view_count_user_dialog_message">"Batasan:
+• Rak Shorts, halaman saluran, dan hasil pencarian mungkin masih menampilkan jumlah penayangan.
+• Fitur ini tidak berfungsi dengan faktor bentuk otomotif."</string>
   <string name="morphe_hide_upload_time_title">Sembunyikan waktu unggah</string>
   <string name="morphe_hide_upload_time_summary_on">Waktu unggah disembunyikan di umpan dan hasil pencarian</string>
   <string name="morphe_hide_upload_time_summary_off">Waktu unggah ditampilkan di umpan dan hasil pencarian</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Keterbatasan:
-• Rak Shorts, halaman saluran, dan hasil pencarian mungkin masih menampilkan waktu unggah
-• Fitur ini tidak berfungsi dengan faktor bentuk otomotif"</string>
+  <string name="morphe_hide_upload_time_user_dialog_message">"Batasan:
+• Rak Shorts, halaman saluran, dan hasil pencarian mungkin masih menampilkan waktu unggah.
+• Fitur ini tidak berfungsi dengan faktor bentuk otomotif."</string>
   <string name="morphe_hide_keyword_content_screen_title">Sembunyikan kata kunci konten</string>
   <string name="morphe_hide_keyword_content_screen_summary">Sembunyikan pencarian dan feed video menggunakan penyaring kata kunci</string>
   <string name="morphe_hide_keyword_content_home_title">Sembunyikan video beranda dengan kata kunci</string>
@@ -632,7 +635,9 @@ Kukis akan disimpan secara otomatis jika valid"</string>
   <string name="morphe_disable_translucent_status_bar_title">Nonaktifkan bilah status tembus cahaya</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Bilah status buram</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Bilah status buram atau tembus pandang</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">Di beberapa perangkat, mengaktifkan fitur ini dapat mengubah bilah navigasi sistem menjadi transparan.</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Batasan:
+• Bilah hitam mungkin muncul di bagian atas pemutar video.
+• Pada beberapa perangkat, mengaktifkan fitur ini dapat mengubah navigasi sistem menjadi transparan."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Nonaktifkan bilah tembus cahaya terang</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Bilah navigasi mode terang adalah buram</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Bilah navigasi mode terang buram atau tembus pandang</string>

@@ -128,10 +128,6 @@ Cependant, activer cette option entraînera également l’enregistrement de cer
   <string name="morphe_hide_doodles_title">Masquer les Doodles YouTube</string>
   <string name="morphe_hide_doodles_summary_on">L\'animation Doodles sur le logo YouTube est masquée</string>
   <string name="morphe_hide_doodles_summary_off">L\'animation Doodles sur le logo YouTube est affichée</string>
-  <string name="morphe_hide_doodles_user_dialog_message">"Les Doodles YouTube sont affichés quelques jours par an.
-
-Si un Doodle est actuellement visible dans votre région et que cette option de masquage est activée, la barre de filtres située sous la barre de recherche sera également masquée.
-"</string>
   <string name="morphe_hide_channel_bar_title">Masquer la barre de chaîne </string>
   <string name="morphe_hide_channel_bar_summary_on">La barre de chaîne est masquée</string>
   <string name="morphe_hide_channel_bar_summary_off">La barre de chaîne est affichée</string>
@@ -173,8 +169,8 @@ Si un Doodle est actuellement visible dans votre région et que cette option de 
   <string name="morphe_hide_timed_reactions_summary_on">Les réactions en temps réel sont masqués</string>
   <string name="morphe_hide_timed_reactions_summary_off">Les réactions en temps réel sont affichés</string>
   <string name="morphe_hide_video_title_title">Masquer le titre de la vidéo</string>
-  <string name="morphe_hide_video_title_summary_on">Titre de la vidéo dans l’overlay du lecteur est masqué</string>
-  <string name="morphe_hide_video_title_summary_off">Titre de la vidéo dans l’overlay du lecteur est affiché</string>
+  <string name="morphe_hide_video_title_summary_on">Le titre de la vidéo dans l’overlay du lecteur est masqué</string>
+  <string name="morphe_hide_video_title_summary_off">Le titre de la vidéo dans l’overlay du lecteur est affiché</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Masquer \'Résumé de la vidéo généré par IA\'</string>
   <string name="morphe_hide_ai_generated_video_summary_section_summary_on">La section \'Résumé de la vidéo générée par l\'IA\' est masquée</string>
   <string name="morphe_hide_ai_generated_video_summary_section_summary_off">La section \'Résumé de la vidéo générée par l\'IA\' est affichée</string>
@@ -190,6 +186,12 @@ Si un Doodle est actuellement visible dans votre région et que cette option de 
   <string name="morphe_hide_course_progress_section_title">Masquer \'Progression dans le cours\'</string>
   <string name="morphe_hide_course_progress_section_summary_on">La section \'Progression dans le cours\' est masquée</string>
   <string name="morphe_hide_course_progress_section_summary_off">La section \'Progression dans le cours\' est affichée</string>
+  <string name="morphe_hide_explore_section_title">Masquer \'Découvrir\'</string>
+  <string name="morphe_hide_explore_section_summary_on">Les sections \'Découvrir ce cours\' et \'Découvrir le podcast\' sont masquées</string>
+  <string name="morphe_hide_explore_section_summary_off">Les sections \'Découvrir ce cours\' et \'Découvrir le podcast\' sont affichées</string>
+  <string name="morphe_hide_explore_course_section_title">Masquer \'Découvrir ce cours\'</string>
+  <string name="morphe_hide_explore_course_section_summary_on">La section \'Découvrir ce cours\' est masquée</string>
+  <string name="morphe_hide_explore_course_section_summary_off">La section \'Découvrir ce cours\' est affichée</string>
   <string name="morphe_hide_explore_podcast_section_title">Masquer \'Découvrir le podcast\'</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">La section \'Découvrir le podcast\' est masquée</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">La section \'Découvrir le podcast\' est affichée</string>
@@ -288,8 +290,8 @@ Si un Doodle est actuellement visible dans votre région et que cette option de 
   <string name="morphe_hide_comments_section_summary_on">La section \'Commentaires\' est masquée</string>
   <string name="morphe_hide_comments_section_summary_off">La section \'Commentaires\' est affichée</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">Masquer la section \'Commentaires\' sur la page d\'accueil</string>
-  <string name="morphe_hide_comments_section_in_home_feed_summary_on">La section \'Commentaires\' sur la page d\'accueil est masquée</string>
-  <string name="morphe_hide_comments_section_in_home_feed_summary_off">La section \'Commentaires\' sur la page d\'accueil est affichée</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">La section \'Commentaires\' sous les vidéos sur la page d\'accueil est masquée</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">La section \'Commentaires\' sous les vidéos sur la page d\'accueil est affichée</string>
   <string name="morphe_hide_comments_community_guidelines_title">Masquer le règlement de la communauté</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Le règlement de la communauté est masqué</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Le règlement de la communauté est affiché</string>
@@ -320,17 +322,14 @@ Si un Doodle est actuellement visible dans votre région et que cette option de 
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Limitations :
 • Les étagères Shorts, les pages de chaînes et les résultats de recherche peuvent encore afficher le nombre de vues
-• Cette fonctionnalité ne fonctionne pas avec la mise en page automobile
-"</string>
+• Cette fonctionnalité ne fonctionne pas avec le format automobile."</string>
   <string name="morphe_hide_upload_time_title">Masquer l\'heure de mise en ligne</string>
   <string name="morphe_hide_upload_time_summary_on">L\'heure de mise en ligne est masquée dans le flux et les résultats de recherche</string>
   <string name="morphe_hide_upload_time_summary_off">L\'heure de mise en ligne est affichée dans le flux et les résultats de recherche</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Limitations :
 • Les étagères Shorts, les pages de chaînes et les résultats de recherche peuvent encore afficher les heures de mise en ligne
-• Cette fonctionnalité ne fonctionne pas avec la mise en page automobile
-
-"</string>
+• Cette fonctionnalité ne fonctionne pas avec le format automobile."</string>
   <string name="morphe_hide_keyword_content_screen_title">Masquer le contenu par mots-clés</string>
   <string name="morphe_hide_keyword_content_screen_summary">Filtrer les vidéos par mot-clé dans les recherches et le flux</string>
   <string name="morphe_hide_keyword_content_home_title">Filtrer les vidéos dans l\'onglet \'Accueil\' par mot-clé</string>
@@ -636,7 +635,9 @@ Les cookies seront enregistrés automatiquement s'ils sont valides"</string>
   <string name="morphe_disable_translucent_status_bar_title">Désactiver la barre de notification translucide</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">La barre de notification est opaque</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">La barre de notification est opaque ou translucide</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">Sur certains appareils, l’activation de cette fonctionnalité peut rendre la barre de navigation système transparente.</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitations :
+• Une barre noire peut apparaître en haut du lecteur vidéo.
+• Sur certains appareils, l'activation de cette fonctionnalité peut rendre la barre de navigation du système transparente."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Désactiver la barre claire translucide</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">La barre de navigation en mode clair est opaque</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">La barre de navigation en mode clair est opaque ou translucide</string>
@@ -1219,7 +1220,7 @@ Cela modifie l'apparence et les fonctionnalités de l'application, mais des effe
 
 Si cette option est désactivée ultérieurement, il est recommandé de vider les données de l’application pour éviter des bugs d’interface."</string>
   <string name="morphe_spoof_app_version_target_title">Choisir la version à falsifier</string>
-  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Restaure l\'ancienne sauvegarde dans la playlist</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Restaure l\'ancien enregistrement dans la playlist</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Désactiver les icônes en gras</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Restaure de la barre d\'action vidéo non réduite</string>
   <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Restaure les anciennes icônes du lecteur Shorts </string>

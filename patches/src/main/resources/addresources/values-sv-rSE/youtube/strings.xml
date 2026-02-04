@@ -129,9 +129,6 @@ Men om du aktiverar detta kommer även vissa användardata, t.ex. din IP-adress,
   <string name="morphe_hide_doodles_title">Dölj YouTube-doodles</string>
   <string name="morphe_hide_doodles_summary_on">YouTube-doodles-animation på logotypen är dold</string>
   <string name="morphe_hide_doodles_summary_off">YouTube-doodles-animation på logotypen visas</string>
-  <string name="morphe_hide_doodles_user_dialog_message">"YouTube-doodles visas några dagar varje år.
-
-Om en doodle visas för närvarande i din region och den här döljningsinställningen är på, kommer filterfältet under sökfältet också att döljas."</string>
   <string name="morphe_hide_channel_bar_title">Dölj kanalfält</string>
   <string name="morphe_hide_channel_bar_summary_on">Kanalfältet är dolt</string>
   <string name="morphe_hide_channel_bar_summary_off">Kanalfältet visas</string>
@@ -190,6 +187,7 @@ Om en doodle visas för närvarande i din region och den här döljningsinställ
   <string name="morphe_hide_course_progress_section_title">Dölj Kursförlopp</string>
   <string name="morphe_hide_course_progress_section_summary_on">Avsnittet Kursförlopp är dolt</string>
   <string name="morphe_hide_course_progress_section_summary_off">Avsnittet Kursförlopp visas</string>
+  <string name="morphe_hide_explore_section_title">Dölj Utforska</string>
   <string name="morphe_hide_explore_podcast_section_title">Dölj Utforska podden</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Avsnittet Utforska podden är dolt</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Avsnittet Utforska podden visas</string>
@@ -315,16 +313,10 @@ Om en doodle visas för närvarande i din region och den här döljningsinställ
   <string name="morphe_hide_view_count_summary_on">Antal visningar är dolt i flödet och sökresultaten</string>
   <string name="morphe_hide_view_count_summary_off">Antal visningar visas i flödet och sökresultaten</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Begränsningar:
-• Shorts-hyllor, kanalsidor och sökresultat kan fortfarande visa antal visningar
-• Denna funktion fungerar inte med bilformfaktor"</string>
   <string name="morphe_hide_upload_time_title">Dölj uppladdningstid</string>
   <string name="morphe_hide_upload_time_summary_on">Uppladdningstid är dold i flödet och sökresultaten</string>
   <string name="morphe_hide_upload_time_summary_off">Uppladdningstid visas i flödet och sökresultaten</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Begränsningar:
-• Shorts-hyllor, kanalsidor och sökresultat kan fortfarande visa uppladdningstider
-• Denna funktion fungerar inte med bilformfaktor"</string>
   <string name="morphe_hide_keyword_content_screen_title">Dölj innehåll med nyckelord</string>
   <string name="morphe_hide_keyword_content_screen_summary">Dölj videor i flöden och i sökning med hjälp av nyckelordsfilter</string>
   <string name="morphe_hide_keyword_content_home_title">Dölj videor i Hem med nyckelord</string>
@@ -612,7 +604,6 @@ Justera volymen genom att svepa vertikalt till höger på skärmen"</string>
   <string name="morphe_disable_translucent_status_bar_title">Inaktivera genomskinligt statusfält</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statusfältet är ogenomskinligt</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statusfältet är ogenomskinligt eller genomskinligt</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">På vissa enheter kan aktivering av den här funktionen ändra systemets navigeringsfält till genomskinligt.</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Inaktivera ljust genomskinligt fält</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Navigeringsfältet i ljust läge är ogenomskinligt</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Navigeringsfältet i ljust läge är ogenomskinligt eller genomskinligt</string>

@@ -129,9 +129,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_doodles_title">YouTube Doodle を非表示</string>
   <string name="morphe_hide_doodles_summary_on">ロゴの YouTube Doodle アニメーションは表示されません</string>
   <string name="morphe_hide_doodles_summary_off">ロゴの YouTube Doodle アニメーションは表示されます</string>
-  <string name="morphe_hide_doodles_user_dialog_message">"YouTube Doodle は年に数日表示されます。
-
-あなたの地域で Doodle が表示されているときにこの設定をオンにすると、検索結果のフィルタバーが表示されなくなります。"</string>
   <string name="morphe_hide_channel_bar_title">チャンネルバーを非表示</string>
   <string name="morphe_hide_channel_bar_summary_on">チャンネルバーは表示されません</string>
   <string name="morphe_hide_channel_bar_summary_off">チャンネルバーは表示されます</string>
@@ -181,7 +178,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">「質問する」を非表示</string>
   <string name="morphe_hide_ask_section_summary_on">「質問する」セクションは表示されません</string>
   <string name="morphe_hide_ask_section_summary_off">「質問する」セクションは表示されます</string>
-  <string name="morphe_hide_attributes_section_title">付随情報を非表示</string>
+  <string name="morphe_hide_attributes_section_title">関連情報を非表示</string>
   <string name="morphe_hide_attributes_section_summary_on">注目の場所 / ゲーム / 音楽 / 言及されている人物セクションは表示されません</string>
   <string name="morphe_hide_attributes_section_summary_off">注目の場所 / ゲーム / 音楽 / 言及されている人物セクションは表示されます</string>
   <string name="morphe_hide_chapters_section_title">チャプターを非表示</string>
@@ -190,6 +187,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_course_progress_section_title">「コースの進捗状況」を非表示</string>
   <string name="morphe_hide_course_progress_section_summary_on">「コースの進捗状況」セクションは表示されません</string>
   <string name="morphe_hide_course_progress_section_summary_off">「コースの進捗状況」セクションは表示されます</string>
+  <string name="morphe_hide_explore_section_title">「ポッドキャストを検索」を非表示</string>
+  <string name="morphe_hide_explore_section_summary_on">「ポッドキャストを検索」セクションと「このコースを見る」セクションは表示されません</string>
+  <string name="morphe_hide_explore_section_summary_off">「ポッドキャストを検索」セクションと「このコースを見る」セクションは表示されます</string>
+  <string name="morphe_hide_explore_course_section_title">「このコースを見る」を非表示</string>
+  <string name="morphe_hide_explore_course_section_summary_on">「このコースを見る」セクションは表示されません</string>
+  <string name="morphe_hide_explore_course_section_summary_off">「このコースを見る」セクションは表示されます</string>
   <string name="morphe_hide_explore_podcast_section_title">「ポッドキャストを検索」を非表示</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">「ポッドキャストを検索」セクションは表示されません</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">「ポッドキャストを検索」セクションは表示されます</string>
@@ -633,7 +636,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_title">半透明ステータスバーを無効化</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">ステータスバーは透けません</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">ステータスバーは状況に応じて透けます</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">一部のデバイスでは、この機能を有効にすると、システムのナビゲーション バーが半透明になりアプリ内のコンポーネントに重なってしまう場合があります。</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"制限事項:
+• 動画プレーヤーの上部に黒いバーが表示される場合がある
+• 一部のデバイスでは、この機能を有効にすると、システムのナビゲーション バーが半透明になりアプリ内のコンポーネントに重なってしまう場合がある"</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">ライトモードの半透明バーを無効化</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">ライトモードではナビゲーション バーは透けません</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">ライトモードではナビゲーション バーが状況に応じて透けます</string>
@@ -1216,7 +1221,7 @@ Automotive レイアウト
 
 再び偽装をオフにする場合には、UI の不具合を防ぐためにアプリデータを消去することを推奨します。"</string>
   <string name="morphe_spoof_app_version_target_title">アプリバージョンの偽装先</string>
-  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - 古い保存を再生リストに復元</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - 古い「再生リストに保存」を復元</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - アイコンの太字表示を無効化</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - アクション ボタンの文字表示を復元</string>
   <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - ショート プレーヤーの古いアイコンを復元</string>
