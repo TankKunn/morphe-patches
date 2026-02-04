@@ -30,13 +30,6 @@ Second \"item\" text"</string>
   <!-- If any of these experimental strings are changed then also change the hard coded values in the patch for Reddit -->
   <!-- misc.checks.experimentalAppNoticePatch -->
   <string name="morphe_experimental_app_version_dialog_title">🚨 Avviso sperimentale! 🚨</string>
-  <string name="morphe_experimental_app_version_dialog_message">"Stai utilizzando una versione sperimentale dell'app di ⚠️ <b>%1$s</b>
-<br/>
-<br/>
-🔧 Aspettati un comportamento app strano o bug non identificati poiché stiamo affinando i patch per questa versione dell'app.
-<br/>
-<br/>
-Per un'esperienza più stabile, disinstalla questa versione e applica la versione raccomandata di ✅ <b>%2$s</b>"</string>
   <string name="morphe_experimental_app_version_dialog_confirm">⚠️ Voglio sperimentare</string>
   <string name="morphe_experimental_app_version_dialog_open_homepage">✅ Voglio stabile</string>
   <!-- misc.dns.checkWatchHistoryDomainNameResolutionPatch -->
