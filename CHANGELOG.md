@@ -1,3 +1,10 @@
+# [1.11.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.6...v1.11.0-dev.7) (2026-02-04)
+
+
+### Features
+
+* Show an experimental user on the first launch of an experimental app target ([#414](https://github.com/MorpheApp/morphe-patches/issues/414)) ([d52b9c9](https://github.com/MorpheApp/morphe-patches/commit/d52b9c97bc581a67708a0c9efe01472b24e0df5d))
+
 # [1.11.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.5...v1.11.0-dev.6) (2026-02-03)
 
 
