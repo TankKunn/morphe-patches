@@ -1,3 +1,10 @@
+# [1.11.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.10...v1.11.0-dev.11) (2026-02-05)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** `Hide Featured places` also hide watch history shelf ([#420](https://github.com/MorpheApp/morphe-patches/issues/420)) ([fcb6758](https://github.com/MorpheApp/morphe-patches/commit/fcb675828b3465e5ea7b88cc659bbad284f6daa1))
+
 # [1.11.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.9...v1.11.0-dev.10) (2026-02-04)
 
 
