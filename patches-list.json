@@ -1,5 +1,5 @@
 {
-  "version": "1.11.0-dev.12",
+  "version": "1.11.0-dev.13",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -799,8 +799,9 @@
       "use": true,
       "dependencies": [
         "BytecodePatch",
-        "BytecodePatch",
         "ResourcePatch",
+        "BytecodePatch",
+        "BytecodePatch",
         "ResourcePatch",
         "BytecodePatch",
         "ResourcePatch"

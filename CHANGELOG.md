@@ -1,3 +1,10 @@
+# [1.11.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.12...v1.11.0-dev.13) (2026-02-05)
+
+
+### Features
+
+* **YouTube - Hide Shorts components:** Add "Hide in video description" setting ([#426](https://github.com/MorpheApp/morphe-patches/issues/426)) ([7c01227](https://github.com/MorpheApp/morphe-patches/commit/7c01227b49f3feb4382e895fe768cd1cc3e6afd4))
+
 # [1.11.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.11...v1.11.0-dev.12) (2026-02-05)
 
 
