@@ -1,3 +1,10 @@
+# [1.11.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.11...v1.11.0-dev.12) (2026-02-05)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide Quizzes" setting ([#425](https://github.com/MorpheApp/morphe-patches/issues/425)) ([c843c32](https://github.com/MorpheApp/morphe-patches/commit/c843c32e69c078a6b8da2d1c3045f0b31898c53e))
+
 # [1.11.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0-dev.10...v1.11.0-dev.11) (2026-02-05)
 
 
