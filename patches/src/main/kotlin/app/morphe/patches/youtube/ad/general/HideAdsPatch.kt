@@ -5,11 +5,15 @@ import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patches.reddit.utils.compatibility.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.shared.misc.fix.verticalscroll.verticalScrollPatch
 import app.morphe.patches.shared.misc.mapping.ResourceType
 import app.morphe.patches.shared.misc.mapping.getResourceId
 import app.morphe.patches.shared.misc.mapping.resourceMappingPatch
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
+import app.morphe.patches.youtube.misc.contexthook.Endpoint
+import app.morphe.patches.youtube.misc.contexthook.addOSNameHook
+import app.morphe.patches.youtube.misc.contexthook.clientContextHookPatch
 import app.morphe.patches.youtube.misc.fix.backtoexitgesture.fixBackToExitGesturePatch
 import app.morphe.patches.youtube.misc.litho.filter.addLithoFilter
 import app.morphe.patches.youtube.misc.litho.filter.lithoFilterPatch
@@ -41,6 +45,7 @@ private val hideAdsResourcePatch = resourcePatch {
         lithoFilterPatch,
         settingsPatch,
         resourceMappingPatch,
+        clientContextHookPatch,
     )
 
     execute {
@@ -75,16 +80,7 @@ val hideAdsPatch = bytecodePatch(
         fixBackToExitGesturePatch,
     )
 
-    compatibleWith(
-        "com.google.android.youtube"(
-            "20.14.43",
-            "20.21.37",
-            "20.26.46",
-            "20.31.42",
-            "20.37.48",
-            "20.40.45",
-        )
-    )
+    compatibleWith(COMPATIBILITY_YOUTUBE)
 
     execute {
         // Hide end screen store banner
@@ -205,6 +201,16 @@ val hideAdsPatch = bytecodePatch(
                     }
                 }
             }
+        }
+
+        setOf(
+            Endpoint.BROWSE,
+            Endpoint.SEARCH,
+        ).forEach { endpoint ->
+            addOSNameHook(
+                endpoint,
+                "$EXTENSION_CLASS_DESCRIPTOR->hideAds(Ljava/lang/String;)Ljava/lang/String;",
+            )
         }
     }
 }

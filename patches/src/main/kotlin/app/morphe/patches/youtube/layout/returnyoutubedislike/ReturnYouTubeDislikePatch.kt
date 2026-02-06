@@ -5,6 +5,7 @@ import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.opcode
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patches.reddit.utils.compatibility.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.shared.misc.settings.preference.NonInteractivePreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceCategory
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
@@ -30,6 +31,7 @@ import app.morphe.util.findFreeRegister
 import app.morphe.util.getReference
 import app.morphe.util.indexOfFirstInstructionOrThrow
 import app.morphe.util.insertLiteralOverride
+import app.morphe.util.numberOfParameterRegisters
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
@@ -58,16 +60,7 @@ val returnYouTubeDislikePatch = bytecodePatch(
         versionCheckPatch,
     )
 
-    compatibleWith(
-        "com.google.android.youtube"(
-            "20.14.43",
-            "20.21.37",
-            "20.26.46",
-            "20.31.42",
-            "20.37.48",
-            "20.40.45",
-        )
-    )
+    compatibleWith(COMPATIBILITY_YOUTUBE)
 
     execute {
         PreferenceScreen.RETURN_YOUTUBE_DISLIKE.addPreferences(
@@ -138,7 +131,7 @@ val returnYouTubeDislikePatch = bytecodePatch(
         TextComponentLookupFingerprint.match(TextComponentConstructorFingerprint.originalClassDef).let {
             // 21.05 clobbers p0 (this) register.
             // Add additional registers so all parameters including p0 are free to use anywhere in the method.
-            cloneMutableAndPreserveParameters(it.classDef, it.method).apply {
+            it.method.cloneMutableAndPreserveParameters().apply {
                 // Find the instruction for creating the text data object.
                 val textDataClassType = TextComponentDataFingerprint.originalClassDef.type
 
@@ -202,8 +195,10 @@ val returnYouTubeDislikePatch = bytecodePatch(
                         "->" + textComponentConversionContextField.name +
                         ":" + textComponentConversionContextField.type
 
-                it.method.apply {
-                    val insertIndex = it.instructionMatches[1].index
+                // 21.05+ clobbers p0 and must clone to preserve it.
+                it.method.cloneMutableAndPreserveParameters().apply {
+                    // Must offset match indexes since cloning adds additional move instructions.
+                    val insertIndex = it.instructionMatches[1].index + numberOfParameterRegisters
                     val charSequenceRegister = getInstruction<FiveRegisterInstruction>(insertIndex).registerD
                     val conversionContextPathRegister = findFreeRegister(insertIndex, charSequenceRegister)
 

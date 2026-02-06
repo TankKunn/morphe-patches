@@ -4,6 +4,7 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patches.reddit.utils.compatibility.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
@@ -47,16 +48,7 @@ val navigationBarPatch = bytecodePatch(
         toolBarHookPatch
     )
 
-    compatibleWith(
-        "com.google.android.youtube"(
-            "20.14.43",
-            "20.21.37",
-            "20.26.46",
-            "20.31.42",
-            "20.37.48",
-            "20.40.45",
-        )
-    )
+    compatibleWith(COMPATIBILITY_YOUTUBE)
 
     execute {
         val navPreferences = mutableSetOf(
@@ -65,7 +57,7 @@ val navigationBarPatch = bytecodePatch(
             SwitchPreference("morphe_hide_create_button"),
             SwitchPreference("morphe_hide_subscriptions_button"),
             SwitchPreference("morphe_hide_notifications_button"),
-            SwitchPreference("morphe_switch_create_with_notifications_button"),
+            SwitchPreference("morphe_swap_create_with_notifications_button"),
             SwitchPreference("morphe_hide_navigation_button_labels"),
             SwitchPreference("morphe_narrow_navigation_buttons"),
         )
@@ -94,7 +86,7 @@ val navigationBarPatch = bytecodePatch(
         // Switch create with notifications button.
         addOSNameHook(
             Endpoint.GUIDE,
-            "$EXTENSION_CLASS_DESCRIPTOR->switchCreateWithNotificationButton(Ljava/lang/String;)Ljava/lang/String;",
+            "$EXTENSION_CLASS_DESCRIPTOR->swapCreateWithNotificationButton(Ljava/lang/String;)Ljava/lang/String;",
         )
 
         // Hide navigation button labels.

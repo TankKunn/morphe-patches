@@ -1,7 +1,7 @@
 package app.morphe.patches.youtube.layout.hide.general
 
 import app.morphe.patcher.Fingerprint
-import app.morphe.patcher.Match
+import app.morphe.patcher.Match.InstructionMatch
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
@@ -11,7 +11,9 @@ import app.morphe.patcher.extensions.InstructionExtensions.removeInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patcher.util.smali.ExternalLabel
+import app.morphe.patches.reddit.utils.compatibility.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.shared.misc.mapping.ResourceType
 import app.morphe.patches.shared.misc.mapping.getResourceId
 import app.morphe.patches.shared.misc.mapping.resourceMappingPatch
@@ -20,11 +22,11 @@ import app.morphe.patches.shared.misc.settings.preference.NonInteractivePreferen
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
+import app.morphe.patches.youtube.misc.engagement.engagementPanelHookPatch
 import app.morphe.patches.youtube.misc.litho.filter.addLithoFilter
 import app.morphe.patches.youtube.misc.litho.filter.lithoFilterPatch
 import app.morphe.patches.youtube.misc.navigation.navigationBarHookPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_21_or_greater
-import app.morphe.patches.youtube.misc.playservice.is_20_26_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
@@ -32,12 +34,16 @@ import app.morphe.util.findFreeRegister
 import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.util.getReference
 import app.morphe.util.indexOfFirstInstructionReversedOrThrow
+import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.Method
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
+import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
 
 internal var albumCardId = -1L
     private set
@@ -100,22 +106,14 @@ val hideLayoutComponentsPatch = bytecodePatch(
     dependsOn(
         lithoFilterPatch,
         settingsPatch,
+        engagementPanelHookPatch,
         hideLayoutComponentsResourcePatch,
         navigationBarHookPatch,
         versionCheckPatch,
         resourceMappingPatch
     )
 
-    compatibleWith(
-        "com.google.android.youtube"(
-            "20.14.43",
-            "20.21.37",
-            "20.26.46",
-            "20.31.42",
-            "20.37.48",
-            "20.40.45",
-        )
-    )
+    compatibleWith(COMPATIBILITY_YOUTUBE)
 
     execute {
         PreferenceScreen.PLAYER.addPreferences(
@@ -127,6 +125,8 @@ val hideLayoutComponentsPatch = bytecodePatch(
                     SwitchPreference("morphe_hide_attributes_section"),
                     SwitchPreference("morphe_hide_chapters_section"),
                     SwitchPreference("morphe_hide_course_progress_section"),
+                    SwitchPreference("morphe_hide_explore_section"),
+                    SwitchPreference("morphe_hide_explore_course_section"),
                     SwitchPreference("morphe_hide_explore_podcast_section"),
                     SwitchPreference("morphe_hide_featured_links_section"),
                     SwitchPreference("morphe_hide_featured_places_section"),
@@ -139,6 +139,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
                     SwitchPreference("morphe_hide_music_section"),
                     SwitchPreference("morphe_hide_subscribe_button"),
                     SwitchPreference("morphe_hide_transcript_section"),
+                    SwitchPreference("morphe_hide_quizzes_section"),
                 ),
             ),
             PreferenceScreenPreference(
@@ -149,6 +150,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
                     SwitchPreference("morphe_hide_comments_channel_guidelines"),
                     SwitchPreference("morphe_hide_comments_by_members_header"),
                     SwitchPreference("morphe_hide_comments_section"),
+                    SwitchPreference("morphe_hide_comments_section_in_home_feed"),
                     SwitchPreference("morphe_hide_comments_community_guidelines"),
                     SwitchPreference("morphe_hide_comments_create_a_short_button"),
                     SwitchPreference("morphe_hide_comments_emoji_and_timestamp_buttons"),
@@ -314,16 +316,96 @@ val hideLayoutComponentsPatch = bytecodePatch(
 
         // region Show more button
 
-        (if (is_20_26_or_greater) HideShowMoreButtonFingerprint else HideShowMoreLegacyButtonFingerprint).let {
-            it.method.apply {
-                val moveRegisterIndex = it.instructionMatches.last().index
-                val viewRegister = getInstruction<OneRegisterInstruction>(moveRegisterIndex).registerA
+        val (textViewField, buttonContainerField) = with (HideShowMoreButtonSetViewFingerprint) {
+            val textViewIndex = instructionMatches[1].index
+            val buttonContainerIndex = instructionMatches[3].index
 
-                val insertIndex = moveRegisterIndex + 1
+            Pair(
+                method.getInstruction<ReferenceInstruction>(textViewIndex).reference,
+                method.getInstruction<ReferenceInstruction>(buttonContainerIndex).reference
+            )
+        }
+
+        val parentViewMethod = HideShowMoreButtonGetParentViewFingerprint.match(
+            HideShowMoreButtonSetViewFingerprint.originalClassDef
+        ).method
+
+        HideShowMoreButtonFingerprint.clearMatch()
+        HideShowMoreButtonFingerprint.match(
+            HideShowMoreButtonSetViewFingerprint.originalClassDef
+        ).let {
+            it.method.apply {
+                val helperMethod = ImmutableMethod(
+                    definingClass,
+                    "patch_hideShowMoreButton",
+                    listOf(),
+                    "V",
+                    AccessFlags.PRIVATE.value or AccessFlags.FINAL.value,
+                    null,
+                    null,
+                    MutableMethodImplementation(7),
+                ).toMutable().apply {
+                    addInstructions(
+                        0,
+                        """
+                            move-object/from16 v0, p0
+                            invoke-virtual { v0 }, $parentViewMethod
+                            move-result-object v1
+                            iget-object v2, v0, $buttonContainerField
+                            iget-object v3, v0, $textViewField
+                            invoke-static { v1, v2, v3 }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR->hideShowMoreButton(Landroid/view/View;Landroid/view/View;Landroid/widget/TextView;)V
+                            return-void
+                        """
+                    )
+                }
+
+                it.classDef.methods.add(helperMethod)
+
+                findInstructionIndicesReversedOrThrow(Opcode.RETURN_VOID).forEach { index ->
+                    addInstruction(
+                        index,
+                        "invoke-direct/range { p0 .. p0 }, $helperMethod"
+                    )
+                }
+            }
+        }
+
+        // endregion
+
+        // region Subscribed channels bar
+
+        // Tablet
+        val constructorFingerprint = if (is_20_21_or_greater)
+            HideSubscribedChannelsBarConstructorFingerprint
+        else HideSubscribedChannelsBarConstructorLegacyFingerprint
+
+        constructorFingerprint.let {
+            it.method.apply {
+                val index = it.instructionMatches[1].index
+                val register = getInstruction<OneRegisterInstruction>(index).registerA
+
                 addInstruction(
-                    insertIndex,
-                    "invoke-static { v$viewRegister }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR" +
-                            "->hideShowMoreButton(Landroid/view/View;)V",
+                    index + 1,
+                    "invoke-static { v$register }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR" +
+                            "->hideSubscribedChannelsBar(Landroid/view/View;)V",
+                )
+            }
+        }
+
+        // Phone (landscape mode)
+        HideSubscribedChannelsBarLandscapeFingerprint.match(
+            constructorFingerprint.originalClassDef
+        ).let {
+            it.method.apply {
+                val index = it.instructionMatches.last().index
+                val register = getInstruction<OneRegisterInstruction>(index).registerA
+
+                addInstructions(
+                    index + 1,
+                    """
+                        invoke-static { v$register }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR->hideSubscribedChannelsBar(I)I
+                        move-result v$register
+                    """
                 )
             }
         }
@@ -331,6 +413,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
         // endregion
 
         // region crowdfunding box
+
         CrowdfundingBoxFingerprint.let {
             it.method.apply {
                 val insertIndex = it.instructionMatches.last().index
@@ -461,7 +544,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
          * Patch a [Method] with a given [instructions].
          *
          * @param RegisterInstruction The type of instruction to get the register from.
-         * @param insertIndexOffset The offset to add to the end index of the [Match.patternMatch].
+         * @param insertIndexOffset The offset to add to the end index of the [InstructionMatch].
          * @param hookRegisterOffset The offset to add to the register of the hook.
          * @param instructions The instructions to add with the register as a parameter.
          */

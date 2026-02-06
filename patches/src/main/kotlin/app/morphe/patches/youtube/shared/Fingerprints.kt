@@ -41,6 +41,27 @@ internal object BackgroundPlaybackManagerShortsFingerprint : Fingerprint(
     )
 )
 
+internal object EngagementPanelControllerFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),
+    returnType = "L",
+    parameters = listOf("L", "L", "Z", "Z"),
+    filters = listOf(
+        string("EngagementPanelController: cannot show EngagementPanel before EngagementPanelController.init() has been called."),
+        methodCall(smali = "Lj$/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;"),
+        methodCall(smali = "Lj$/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;"),
+        opcode(opcode = Opcode.CHECK_CAST, location = MatchAfterWithin(4)),
+        opcode(opcode = Opcode.IF_EQZ, location = MatchAfterImmediately()),
+        opcode(opcode = Opcode.IGET_OBJECT, location = MatchAfterImmediately()),
+        literal(45615449L),
+        methodCall(smali = "Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;"),
+        fieldAccess(
+            opcode = Opcode.IGET_OBJECT,
+            type = "Ljava/lang/String;",
+            location = MatchAfterWithin(10)
+        )
+    )
+)
+
 internal object LayoutConstructorFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
@@ -52,7 +73,7 @@ internal object LayoutConstructorFingerprint : Fingerprint(
     )
 )
 
-internal object MainActivityConstructorFingerprint : Fingerprint(
+internal object YouTubeMainActivityConstructorFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
     parameters = listOf(),
     custom = { _, classDef ->
@@ -60,7 +81,7 @@ internal object MainActivityConstructorFingerprint : Fingerprint(
     }
 )
 
-internal object MainActivityOnBackPressedFingerprint : Fingerprint(
+internal object YouTubeMainActivityOnBackPressedFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
     parameters = listOf(),
@@ -101,6 +122,21 @@ internal object RollingNumberTextViewAnimationUpdateFingerprint : Fingerprint(
             classDef.superclass ==
             "Lcom/google/android/libraries/youtube/rendering/ui/spec/typography/YouTubeAppCompatTextView;"
     }
+)
+
+internal object SearchRequestBuildParametersFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "Ljava/lang/String;",
+    parameters = listOf(),
+    filters = listOf(
+        string("searchFormData"),
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            name = "toByteArray",
+            location = MatchAfterImmediately()
+        ),
+        opcode(Opcode.MOVE_RESULT_OBJECT, location = MatchAfterImmediately()),
+    )
 )
 
 internal object SeekbarFingerprint : Fingerprint(

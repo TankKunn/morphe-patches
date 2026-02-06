@@ -1,7 +1,7 @@
 package app.morphe.extension.youtube.patches.components;
 
-import app.morphe.extension.shared.StringTrieSearch;
 import app.morphe.extension.youtube.settings.Settings;
+import app.morphe.extension.youtube.shared.EngagementPanel;
 import app.morphe.extension.youtube.shared.PlayerType;
 
 @SuppressWarnings("unused")
@@ -9,28 +9,18 @@ final class DescriptionComponentsFilter extends Filter {
 
     private static final String INFOCARDS_SECTION_PATH = "infocards_section.e";
 
-    private final StringTrieSearch exceptions = new StringTrieSearch();
     private final StringFilterGroup macroMarkersCarousel;
     private final ByteArrayFilterGroupList macroMarkersCarouselGroupList = new ByteArrayFilterGroupList();
+    private final StringFilterGroup playlistSection;
+    private final ByteArrayFilterGroupList playlistSectionGroupList = new ByteArrayFilterGroupList();
     private final StringFilterGroup horizontalShelf;
     private final ByteArrayFilterGroupList horizontalShelfGroupList = new ByteArrayFilterGroupList();
-    private final StringFilterGroup infoCardsSection;
     private final StringFilterGroup featuredLinksSection;
     private final StringFilterGroup featuredVideosSection;
     private final StringFilterGroup subscribeButton;
-    private final StringFilterGroup aiGeneratedVideoSummarySection;
-    private final StringFilterGroup hypePoints;
 
     public DescriptionComponentsFilter() {
-        exceptions.addPatterns(
-                "compact_channel",
-                "description",
-                "grid_video",
-                "inline_expander",
-                "metadata"
-        );
-
-        aiGeneratedVideoSummarySection = new StringFilterGroup(
+        final StringFilterGroup aiGeneratedVideoSummarySection = new StringFilterGroup(
                 Settings.HIDE_AI_GENERATED_VIDEO_SUMMARY_SECTION,
                 "cell_expandable_metadata.e"
         );
@@ -50,9 +40,23 @@ final class DescriptionComponentsFilter extends Filter {
                 "structured_description_video_lockup"
         );
 
-        final StringFilterGroup podcastSection = new StringFilterGroup(
-                Settings.HIDE_EXPLORE_PODCAST_SECTION,
-                "playlist_section"
+        playlistSection = new StringFilterGroup(
+                // YT v20.14.43 doesn't use any buffer for Courses and Podcasts.
+                // So this component is also needed.
+                null,
+                "playlist_section.e"
+        );
+
+        playlistSectionGroupList.addAll(
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_EXPLORE_COURSE_SECTION,
+                        "yt_outline_creator_academy", // For Disable bold icons.
+                        "yt_outline_experimental_graduation_cap"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_EXPLORE_PODCAST_SECTION,
+                        "FEpodcasts_destination"
+                )
         );
 
         final StringFilterGroup transcriptSection = new StringFilterGroup(
@@ -70,12 +74,12 @@ final class DescriptionComponentsFilter extends Filter {
                 "course_progress"
         );
 
-        hypePoints = new StringFilterGroup(
+        final StringFilterGroup hypePoints = new StringFilterGroup(
                 Settings.HIDE_HYPE_POINTS,
                 "hype_points_factoid"
         );
 
-        infoCardsSection = new StringFilterGroup(
+        final StringFilterGroup infoCardsSection = new StringFilterGroup(
                 Settings.HIDE_INFO_CARDS_SECTION,
                 INFOCARDS_SECTION_PATH
         );
@@ -129,6 +133,10 @@ final class DescriptionComponentsFilter extends Filter {
                         Settings.HIDE_MUSIC_SECTION,
                         "yt_outline_audio",
                         "yt_outline_experimental_audio"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_QUIZZES_SECTION,
+                        "post_base_wrapper_slim"
                 )
         );
 
@@ -143,7 +151,7 @@ final class DescriptionComponentsFilter extends Filter {
                 hypePoints,
                 infoCardsSection,
                 macroMarkersCarousel,
-                podcastSection,
+                playlistSection,
                 subscribeButton,
                 transcriptSection
         );
@@ -152,17 +160,37 @@ final class DescriptionComponentsFilter extends Filter {
     @Override
     boolean isFiltered(String identifier, String accessibility, String path, byte[] buffer,
                        StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
-
-        if (matchedGroup == aiGeneratedVideoSummarySection || matchedGroup == hypePoints) {
-            // Only hide if player is open, in case this component is used somewhere else.
-            return PlayerType.getCurrent().isMaximizedOrFullscreen();
+        // The description panel can be opened in both the regular player and Shorts.
+        // If the description panel is opened in a Shorts, PlayerType is 'HIDDEN',
+        // so 'PlayerType.getCurrent().isMaximizedOrFullscreen()' does not guarantee that the description panel is open.
+        // Instead, use the engagement id to check if the description panel is opened.
+        if (!EngagementPanel.isDescription()
+                // The user can minimize the player while the engagement panel is open.
+                //
+                // In this case, the engagement panel is treated as open.
+                // (If the player is dismissed, the engagement panel is considered closed)
+                //
+                // Therefore, the following exceptions can occur:
+                // 1. The user opened a regular video and opened the description panel.
+                // 2. The 'horizontalShelf' elements were hidden.
+                // 3. The user minimized the player.
+                // 4. The user manually refreshed the library tab without dismissing the player.
+                // 5. Since the engagement panel is treated as open, the history shelf is filtered.
+                //
+                // To handle these exceptions, filtering is not performed even when the player is minimized.
+                || PlayerType.getCurrent() == PlayerType.WATCH_WHILE_MINIMIZED
+        ) {
+            return false;
         }
 
         if (matchedGroup == featuredLinksSection || matchedGroup == featuredVideosSection || matchedGroup == subscribeButton) {
             return path.startsWith(INFOCARDS_SECTION_PATH);
         }
 
-        if (exceptions.matches(path)) return false;
+        if (matchedGroup == playlistSection) {
+            if (contentIndex != 0) return false;
+            return Settings.HIDE_EXPLORE_SECTION.get() || playlistSectionGroupList.check(buffer).isFiltered();
+        }
 
         if (matchedGroup == macroMarkersCarousel) {
             return contentIndex == 0 && macroMarkersCarouselGroupList.check(buffer).isFiltered();

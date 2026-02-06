@@ -128,9 +128,6 @@ Namun, mengaktifkan ini juga akan mencatat beberapa data pengguna seperti alamat
   <string name="morphe_hide_doodles_title">Sembunyikan YouTube Doodles</string>
   <string name="morphe_hide_doodles_summary_on">Animasi YouTube Doodles pada logo disembunyikan</string>
   <string name="morphe_hide_doodles_summary_off">Animasi YouTube Doodles pada logo ditampilkan</string>
-  <string name="morphe_hide_doodles_user_dialog_message">"YouTube Doodle muncul beberapa hari setiap tahun.
-
-Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini aktif, bilah filter di bawah bilah pencarian juga akan disembunyikan."</string>
   <string name="morphe_hide_channel_bar_title">Sembunyikan bilah saluran</string>
   <string name="morphe_hide_channel_bar_summary_on">Bilah saluran disembunyikan</string>
   <string name="morphe_hide_channel_bar_summary_off">Bilah saluran ditampilkan</string>
@@ -189,6 +186,12 @@ Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini 
   <string name="morphe_hide_course_progress_section_title">Sembunyikan \'Kemajuan kursus\'</string>
   <string name="morphe_hide_course_progress_section_summary_on">Bagian kemajuan kursus disembunyikan</string>
   <string name="morphe_hide_course_progress_section_summary_off">Bagian kemajuan kursus ditampilkan</string>
+  <string name="morphe_hide_explore_section_title">Sembunyikan Jelajahi</string>
+  <string name="morphe_hide_explore_section_summary_on">Bagian Jelajahi kursus ini dan Jelajahi podcast disembunyikan</string>
+  <string name="morphe_hide_explore_section_summary_off">Bagian Jelajahi kursus ini dan Jelajahi podcast ditampilkan</string>
+  <string name="morphe_hide_explore_course_section_title">Sembunyikan \'Jelajahi kursus ini\'</string>
+  <string name="morphe_hide_explore_course_section_summary_on">Bagian Jelajahi kursus ini disembunyikan</string>
+  <string name="morphe_hide_explore_course_section_summary_off">Bagian Jelajahi kursus ini ditampilkan</string>
   <string name="morphe_hide_explore_podcast_section_title">Sembunyikan \'Jelajahi podcast\'</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Bagian Jelajahi podcast disembunyikan</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Bagian Jelajahi podcast ditampilkan</string>
@@ -225,6 +228,9 @@ Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini 
   <string name="morphe_hide_transcript_section_title">Sembunyikan Transkrip</string>
   <string name="morphe_hide_transcript_section_summary_on">Bagian transkrip disembunyikan</string>
   <string name="morphe_hide_transcript_section_summary_off">Bagian transkrip ditampilkan</string>
+  <string name="morphe_hide_quizzes_section_title">Sembunyikan Kuis</string>
+  <string name="morphe_hide_quizzes_section_summary_on">Bagian Kuis disembunyikan</string>
+  <string name="morphe_hide_quizzes_section_summary_off">Bagian Kuis ditampilkan</string>
   <string name="morphe_hide_description_components_screen_title">Keterangan video</string>
   <string name="morphe_hide_description_components_screen_summary">Sembunyikan atau tampilkan komponen keterangan video</string>
   <string name="morphe_hide_filter_bar_screen_title">Bilah saring</string>
@@ -286,6 +292,9 @@ Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini 
   <string name="morphe_hide_comments_section_title">Sembunyikan bagian komentar</string>
   <string name="morphe_hide_comments_section_summary_on">Bagian komentar disembunyikan</string>
   <string name="morphe_hide_comments_section_summary_off">Bagian komentar ditampilkan</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Sembunyikan bagian komentar di umpan Beranda</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Bagian komentar di bawah video di umpan Beranda disembunyikan</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Bagian komentar di bawah video di umpan Beranda ditampilkan</string>
   <string name="morphe_hide_comments_community_guidelines_title">Sembunyikan pedoman komunitas</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Pedoman komunitas disembunyikan</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Pedoman komunitas ditampilkan</string>
@@ -314,16 +323,16 @@ Jika Doodle saat ini ditampilkan di wilayah Anda dan pengaturan penyembunyi ini 
   <string name="morphe_hide_view_count_summary_on">Jumlah penayangan disembunyikan di umpan dan hasil pencarian</string>
   <string name="morphe_hide_view_count_summary_off">Jumlah penayangan ditampilkan di umpan dan hasil pencarian</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Keterbatasan:
-• Rak Shorts, halaman saluran, dan hasil pencarian mungkin masih menampilkan jumlah penayangan
-• Fitur ini tidak berfungsi dengan faktor bentuk otomotif"</string>
+  <string name="morphe_hide_view_count_user_dialog_message">"Batasan:
+• Rak Shorts, halaman saluran, dan hasil pencarian mungkin masih menampilkan jumlah penayangan.
+• Fitur ini tidak berfungsi dengan faktor bentuk otomotif."</string>
   <string name="morphe_hide_upload_time_title">Sembunyikan waktu unggah</string>
   <string name="morphe_hide_upload_time_summary_on">Waktu unggah disembunyikan di umpan dan hasil pencarian</string>
   <string name="morphe_hide_upload_time_summary_off">Waktu unggah ditampilkan di umpan dan hasil pencarian</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Keterbatasan:
-• Rak Shorts, halaman saluran, dan hasil pencarian mungkin masih menampilkan waktu unggah
-• Fitur ini tidak berfungsi dengan faktor bentuk otomotif"</string>
+  <string name="morphe_hide_upload_time_user_dialog_message">"Batasan:
+• Rak Shorts, halaman saluran, dan hasil pencarian mungkin masih menampilkan waktu unggah.
+• Fitur ini tidak berfungsi dengan faktor bentuk otomotif."</string>
   <string name="morphe_hide_keyword_content_screen_title">Sembunyikan kata kunci konten</string>
   <string name="morphe_hide_keyword_content_screen_summary">Sembunyikan pencarian dan feed video menggunakan penyaring kata kunci</string>
   <string name="morphe_hide_keyword_content_home_title">Sembunyikan video beranda dengan kata kunci</string>
@@ -580,9 +589,9 @@ Mungkin teks terjemahan otomatis tidak tersedia"</string>
   <string name="morphe_caption_cookies_title">Cookie teks</string>
   <string name="morphe_caption_cookies_summary">Cookie untuk digunakan dalam permintaan API Timed Text</string>
   <string name="morphe_get_caption_cookies_title">Dapatkan cookie teks</string>
-  <string name="morphe_get_caption_cookies_summary">"Klik untuk mendapatkan kukis
+  <string name="morphe_get_caption_cookies_summary">"Klik untuk mendapatkan cookie
 
-Kukis akan disimpan secara otomatis jika valid"</string>
+Cookie akan disimpan secara otomatis jika sah"</string>
   <string name="morphe_get_caption_cookies_failed">Gagal mendapatkan cookie</string>
   <string name="morphe_get_caption_cookies_duplicate">Cookie sudah ada</string>
   <string name="morphe_get_caption_cookies_success">Cookie berhasil diperbarui</string>
@@ -609,14 +618,14 @@ Kukis akan disimpan secara otomatis jika valid"</string>
   <string name="morphe_hide_subscriptions_button_title">Sembunyikan Langganan</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Tombol langganan disembunyikan</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Tombol langganan ditampilkan</string>
-  <string name="morphe_hide_notifications_button_title">Sembunyikan Notifikasi</string>
-  <string name="morphe_hide_notifications_button_summary_on">Tombol notifikasi disembunyikan</string>
-  <string name="morphe_hide_notifications_button_summary_off">Tombol notifikasi ditampilkan</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Ganti Buat dengan Notifikasi</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Tombol buat diganti dengan tombol Pemberitahuan</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Tombol buat tidak diganti dengan tombol Notifikasi</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Jika mengubah pengaturan ini tidak berhasil, coba beralih ke mode Penyamaran.</string>
+  <string name="morphe_hide_notifications_button_title">Sembunyikan Pemberitahuan</string>
+  <string name="morphe_hide_notifications_button_summary_on">Tombol pemberitahuan disembunyikan</string>
+  <string name="morphe_hide_notifications_button_summary_off">Tombol pemberitahuan ditampilkan</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Tukar Buat dengan Pemberitahuan</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Tombol buat ditukar dengan tombol Pemberitahuan</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Tombol buat tidak ditukar dengan tombol Pemberitahuan</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Jika mengubah pengaturan ini tidak berhasil, coba beralih ke mode Penyamaran.</string>
   <string name="morphe_hide_navigation_button_labels_title">Sembunyikan label tombol navigasi</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Label disembunyikan</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Label ditampilkan</string>
@@ -629,7 +638,9 @@ Kukis akan disimpan secara otomatis jika valid"</string>
   <string name="morphe_disable_translucent_status_bar_title">Nonaktifkan bilah status tembus cahaya</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Bilah status buram</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Bilah status buram atau tembus pandang</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">Di beberapa perangkat, mengaktifkan fitur ini dapat mengubah bilah navigasi sistem menjadi transparan.</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Batasan:
+• Bilah hitam mungkin muncul di bagian atas pemutar video.
+• Pada beberapa perangkat, mengaktifkan fitur ini dapat mengubah navigasi sistem menjadi transparan."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Nonaktifkan bilah tembus cahaya terang</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Bilah navigasi mode terang adalah buram</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Bilah navigasi mode terang buram atau tembus pandang</string>
@@ -735,10 +746,19 @@ Untuk menampilkan menu trek audio, ubah 'Palsukan aliran video' menjadi 'Android
   <string name="morphe_hide_endscreen_cards_title">Sembunyikan kartu layar akhir</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Kartu layar akhir disembunyikan</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Kartu layar akhir ditampilkan</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Mode Sinematik</string>
+  <string name="morphe_ambient_mode_screen_summary">Abaikan batasan penghematan daya untuk mode Sinematik dan menonaktifkannya sepenuhnya atau dalam mode layar penuh</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Abaikan batasan mode Sinematik</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Batasan mode Sinematik untuk menghemat daya diabaikan</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Batasan mode Sinematik untuk menghemat daya tidak diabaikan</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Mengaktifkan fitur ini dapat menyebabkan masa pakai baterai menjadi lebih buruk.</string>
+  <string name="morphe_disable_ambient_mode_title">Nonaktifkan mode Sinematik</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Mode Sinematik dinonaktifkan</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Mode Sinematik diaktifkan</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Nonaktifkan mode Senematik dalam layar penuh</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Mode sinematik dinonaktifkan</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Mode sinematik diaktifkan</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Mode Sinematik di layar penuh dinonaktifkan</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Mode sinematik di layar penuh diaktifkan</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Sembunyikan kartu info</string>
   <string name="morphe_hide_info_cards_summary_on">Kartu info disembunyikan</string>
@@ -772,9 +792,15 @@ Untuk menampilkan menu trek audio, ubah 'Palsukan aliran video' menjadi 'Android
   <string name="morphe_hide_shorts_subscriptions_title">Sembunyikan Shorts di umpan Langganan</string>
   <string name="morphe_hide_shorts_subscriptions_summary_on">Disembunyikan di umpan Langganan</string>
   <string name="morphe_hide_shorts_subscriptions_summary_off">Ditampilkan di umpan Langganan</string>
+  <string name="morphe_hide_shorts_video_description_title">Sembunyikan Shorts di deskripsi video</string>
+  <string name="morphe_hide_shorts_video_description_summary_on">Disembunyikan di deskripsi video</string>
+  <string name="morphe_hide_shorts_video_description_summary_off">Ditampilkan di deskripsi video</string>
   <string name="morphe_hide_shorts_history_title">Sembunyikan Shorts dalam riwayat tontonan</string>
   <string name="morphe_hide_shorts_history_summary_on">Disembunyikan dalam riwayat tontonan</string>
   <string name="morphe_hide_shorts_history_summary_off">Ditampilkan dalam riwayat tontonan</string>
+  <string name="morphe_hide_shorts_ai_button_title">Sembunyikan tombol AI</string>
+  <string name="morphe_hide_shorts_ai_button_summary_on">Tombol AI disembunyikan</string>
+  <string name="morphe_hide_shorts_ai_button_summary_off">Tombol AI ditampilkan</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_title">Sembunyikan label \'Sulih suara Otomatis\'</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_summary_on">Label sulih suara otomatis disembunyikan</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_summary_off">Label sulih suara otomatis ditampilkan</string>
@@ -938,9 +964,9 @@ Batasan: Dislike mungkin tidak muncul dalam mode penyamaran"</string>
   <string name="morphe_ryd_estimated_like_title">Tampilkan perkiraan suka</string>
   <string name="morphe_ryd_estimated_like_summary_on">Video dengan suka yang dinonaktifkan menampilkan perkiraan jumlah suka</string>
   <string name="morphe_ryd_estimated_like_summary_off">Perkiraan jumlah suka tidak ditampilkan</string>
-  <string name="morphe_ryd_toast_on_connection_error_title">Tampilkan pesan timbul jika API tidak tersedia</string>
-  <string name="morphe_ryd_toast_on_connection_error_summary_on">Pesan timbul tidak ditampilkan jika Return YouTube Dislike tidak tersedia</string>
-  <string name="morphe_ryd_toast_on_connection_error_summary_off">Pesan timbul tidak ditampilkan jika Return YouTube Dislike tidak tersedia</string>
+  <string name="morphe_ryd_toast_on_connection_error_title">Tampilkan pemberitahuan jika API tidak tersedia</string>
+  <string name="morphe_ryd_toast_on_connection_error_summary_on">Pemberitahuan tidak ditampilkan jika Return YouTube Dislike tidak tersedia</string>
+  <string name="morphe_ryd_toast_on_connection_error_summary_off">Pemberitahuan tidak ditampilkan jika Return YouTube Dislike tidak tersedia</string>
   <string name="morphe_ryd_attribution_summary">Data disediakan oleh API Return YouTube Dislike. Tekan di sini untuk mempelajari lebih lanjut</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Statistik API ReturnYoutubeDislike dari perangkat ini</string>
@@ -988,11 +1014,11 @@ Batasan: Dislike mungkin tidak muncul dalam mode penyamaran"</string>
   <string name="morphe_sb_enable_auto_hide_skip_segment_button_sum_off">Tombol Lewati ditampilkan untuk seluruh segmen</string>
   <string name="morphe_sb_auto_hide_skip_button_duration">Durasi tombol Lewati</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_sum">Berapa lama untuk menampilkan tombol lewati dan lewati ke sorotan sebelum bersembunyi secara otomatis</string>
-  <string name="morphe_sb_general_skiptoast">Tampilkan pembatalan pesan timbul lewati</string>
-  <string name="morphe_sb_general_skiptoast_sum_on">Pesan timbul ditampilkan saat segmen dilewati secara otomatis. Ketuk notifikasi pesan timbul untuk membatalkan lewati</string>
-  <string name="morphe_sb_general_skiptoast_sum_off">Pesan timbul tidak ditampilkan</string>
-  <string name="morphe_sb_toast_on_skip_duration">Durasi pesan timbul lewati</string>
-  <string name="morphe_sb_toast_on_skip_duration_sum">Berapa lama waktu yang dibutuhkan untuk menampilkan pembatalan pesan timbul </string>
+  <string name="morphe_sb_general_skiptoast">Tampilkan pembatalan lewati pemberitahuan</string>
+  <string name="morphe_sb_general_skiptoast_sum_on">Pemberitahuan ditampilkan saat segmen dilewati secara otomatis. Ketuk pemberitahuan untuk membatalkan lewati</string>
+  <string name="morphe_sb_general_skiptoast_sum_off">Pemberitahuan tidak ditampilkan</string>
+  <string name="morphe_sb_toast_on_skip_duration">Durasi lewati pemberitahuan</string>
+  <string name="morphe_sb_toast_on_skip_duration_sum">Berapa lama waktu yang dibutuhkan untuk menampilkan pembatalan pemberitahuan</string>
   <string name="morphe_sb_duration_1s">1 detik</string>
   <string name="morphe_sb_duration_2s">2 detik</string>
   <string name="morphe_sb_duration_3s">3 detik</string>
@@ -1020,9 +1046,9 @@ Batasan: Dislike mungkin tidak muncul dalam mode penyamaran"</string>
   <string name="morphe_sb_guidelines_popup_already_read">Sudah dibaca</string>
   <string name="morphe_sb_guidelines_popup_open">Tunjukkan</string>
   <string name="morphe_sb_general">Umum</string>
-  <string name="morphe_sb_toast_on_connection_error">Tampilkan pesan timbul jika API tidak tersedia</string>
-  <string name="morphe_sb_toast_on_connection_error_sum_on">Pesan timbul ditampilkan jika SponsorBlock tidak tersedia</string>
-  <string name="morphe_sb_toast_on_connection_error_sum_off">Pesan timbul tidak ditampilkan jika SponsorBlock tidak tersedia</string>
+  <string name="morphe_sb_toast_on_connection_error">Tampilkan pemberitahuan jika API tidak tersedia</string>
+  <string name="morphe_sb_toast_on_connection_error_sum_on">Pemberitahuan ditampilkan jika SponsorBlock tidak tersedia</string>
+  <string name="morphe_sb_toast_on_connection_error_sum_off">Pemberitahuan tidak ditampilkan jika SponsorBlock tidak tersedia</string>
   <string name="morphe_sb_general_skipcount">Aktifkan pelacakan melewati hitungan</string>
   <string name="morphe_sb_general_skipcount_sum_on">Mengizinkan papan peringkat SponsorBlock mengetahui berapa banyak waktu yang dihemat. Pesan dikirim ke papan peringkat setiap kali sebuah segmen dilewati</string>
   <string name="morphe_sb_general_skipcount_sum_off">Lewati pelacakan jumlah tidak diaktifkan </string>
@@ -1203,8 +1229,10 @@ Ini akan mengubah tampilan dan fitur aplikasi, tetapi efek samping yang tidak di
 
 Jika kemudian dimatikan, disarankan untuk menghapus data aplikasi untuk mencegah bug UI."</string>
   <string name="morphe_spoof_app_version_target_title">Target versi app yang dipalsukan</string>
-  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Pulihkan ikon pemutar Shorts lama</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Pulihkan simpanan lama ke daftar putar</string>
+  <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Nonaktifkan ikon tebal</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Pulihkan bilah tindakan video yang tidak diciutkan</string>
+  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Pulihkan ikon pemutar Shorts lama</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Ubah halaman awal</string>
   <string name="morphe_change_start_page_entry_default">Bawaan</string>
@@ -1350,9 +1378,9 @@ Mengaktifkan ini dapat memperbaiki gambar yang hilang yang diblokir di beberapa 
 Jika diaktifkan, URL video akan dikirim ke server API dan tidak ada data lain yang dikirim. Jika video tidak memiliki gambar mini DeArrow, maka gambar asli atau tangkapan statis yang ditampilkan
 
 Ketuk di sini untuk mempelajari lebih lanjut tentang DeArrow"</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Tampilkan pesan timbul jika API tidak tersedia</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary_on">Pesan timbul ditampilkan jika DeArrow tidak tersedia</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary_off">Pesan timbul tidak ditampilkan jika DeArrow tidak tersedia</string>
+  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Tampilkan pemberitahuan jika API tidak tersedia</string>
+  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary_on">Pemberitahuan ditampilkan jika DeArrow tidak tersedia</string>
+  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary_off">Pemberitahuan tidak ditampilkan jika DeArrow tidak tersedia</string>
   <string name="morphe_alt_thumbnail_dearrow_api_url_title">Titik akhir API DeArrow</string>
   <string name="morphe_alt_thumbnail_dearrow_api_url_summary">URL titik akhir cache thumbnail DeArrow</string>
   <string name="morphe_alt_thumbnail_stills_about_title">Tangkapan video diam</string>
@@ -1418,9 +1446,9 @@ Mengaktifkan ini dapat membuka kualitas video yang lebih tinggi"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Ingat perubahan kualitas video</string>
   <string name="morphe_remember_video_quality_last_selected_summary_on">Perubahan kualitas diatur ke semua video</string>
   <string name="morphe_remember_video_quality_last_selected_summary_off">Perubahan kualitas hanya diatur di video saat ini</string>
-  <string name="morphe_remember_video_quality_last_selected_toast_title">Tampilkan pesan timbul saat kualitas video berubah</string>
-  <string name="morphe_remember_video_quality_last_selected_toast_summary_on">Pesan timbul ditampilkan saat kualitas video bawaan diubah</string>
-  <string name="morphe_remember_video_quality_last_selected_toast_summary_off">Pesan timbul tidak ditampilkan saat kualitas video bawaan diubah</string>
+  <string name="morphe_remember_video_quality_last_selected_toast_title">Tampilkan pemberitahuan saat kualitas video berubah</string>
+  <string name="morphe_remember_video_quality_last_selected_toast_summary_on">Pemberitahuan ditampilkan saat kualitas video bawaan diubah</string>
+  <string name="morphe_remember_video_quality_last_selected_toast_summary_off">Pemberitahuan tidak ditampilkan saat kualitas video bawaan diubah</string>
   <string name="morphe_video_quality_default_wifi_title">Kualitas video bawaan di jaringan Wi-Fi</string>
   <string name="morphe_video_quality_default_mobile_title">Kualitas video bawaan di jaringan selular</string>
   <string name="morphe_remember_shorts_quality_last_selected_title">Ingat perubahan kualitas Shorts</string>
@@ -1458,9 +1486,9 @@ Mengaktifkan ini dapat membuka kualitas video yang lebih tinggi"</string>
   <string name="morphe_remember_playback_speed_last_selected_title">Ingat perubahan kecepatan pemutaran</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Perubahan kecepatan pemutaran berlaku untuk semua video</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_off">Perubahan kecepatan pemutaran berlaku untuk video saat ini</string>
-  <string name="morphe_remember_playback_speed_last_selected_toast_title">Tampilkan pesan timbul saat kecepatan pemutaran berubah</string>
-  <string name="morphe_remember_playback_speed_last_selected_toast_summary_on">Pesan timbul ditampilkan saat kecepatan pemutaran bawaan diubah</string>
-  <string name="morphe_remember_playback_speed_last_selected_toast_summary_off">Pesan timbul tidak ditampilkan ketika kecepatan pemutaran bawaan diubah</string>
+  <string name="morphe_remember_playback_speed_last_selected_toast_title">Tampilkan pemberitahuan saat kecepatan pemutaran berubah</string>
+  <string name="morphe_remember_playback_speed_last_selected_toast_summary_on">Pemberitahuan ditampilkan saat kecepatan pemutaran bawaan diubah</string>
+  <string name="morphe_remember_playback_speed_last_selected_toast_summary_off">Pemberitahuan tidak ditampilkan ketika kecepatan pemutaran bawaan diubah</string>
   <string name="morphe_playback_speed_default_title">Kecepatan pemutaran bawaan</string>
   <string name="morphe_remember_playback_speed_toast">Mengubah kecepatan bawaan menjadi: %s</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
@@ -1483,6 +1511,10 @@ Batasan:
   <string name="morphe_advanced_video_quality_menu_title">Tampilkan menu kualitas video lanjutan</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Menu kualitas video lanjutan ditampilkan</string>
   <string name="morphe_advanced_video_quality_menu_summary_off">Menu kualitas video lanjutan tidak ditampilkan</string>
+  <!-- video.quality.hidePremiumVideoQualityPatch -->
+  <string name="morphe_hide_premium_video_quality_title">Sembunyikan opsi kualitas premium</string>
+  <string name="morphe_hide_premium_video_quality_summary_on">Opsi kualitas premium disembunyikan</string>
+  <string name="morphe_hide_premium_video_quality_summary_off">Pilihan kualitas Premium ditampilkan</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktifkan geser untuk mencari</string>
   <string name="morphe_slide_to_seek_summary_on">Geser untuk mencari diaktifkan</string>

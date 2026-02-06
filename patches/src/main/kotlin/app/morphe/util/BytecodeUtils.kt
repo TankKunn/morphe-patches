@@ -756,26 +756,42 @@ fun BytecodePatchContext.forEachLiteralValueInstruction(
 
 /**
  * Effectively this makes all method parameters registers (including p0) of the cloned method
- * unchanged for all indexes in the method, and these parameters can be referenced directly
+ * unchanged for all indexes in the method, and the method parameters can be referenced directly
  * or used as free registers. Only suitable for static methods with zero parameters.
+ *
+ * **Fingerprint match indexes will be positively offset by [numberOfParameterRegisters]**.
  */
-fun cloneMutableAndPreserveParameters(
+context(BytecodePatchContext)
+fun Method.cloneMutableAndPreserveParameters(
+    indexZeroInstructionsToAdd: String? = null,
+) = cloneMutableAndPreserveParameters(
+    mutableClassDefBy(definingClass),
+    indexZeroInstructionsToAdd
+)
+
+/**
+ * Effectively this makes all method parameters registers (including p0) of the cloned method
+ * unchanged for all indexes in the method, and the method parameters can be referenced directly
+ * or used as free registers. Only suitable for static methods with zero parameters.
+ *
+ * **Fingerprint match indexes will be positively offset by [numberOfParameterRegisters]**.
+ */
+fun Method.cloneMutableAndPreserveParameters(
     mutableClass : MutableClass,
-    method: Method,
     indexZeroInstructionsToAdd: String? = null,
 ) : MutableMethod {
-    check (!AccessFlags.STATIC.isSet(method.accessFlags) || method.parameters.isNotEmpty()) {
+    check (!AccessFlags.STATIC.isSet(accessFlags) || parameters.isNotEmpty()) {
         "Static methods have no parameter registers to preserve"
     }
 
-    val clonedMethod = method.cloneMutable(
-        additionalRegisters = method.numberOfParameterRegisters,
+    val clonedMethod = cloneMutable(
+        additionalRegisters = numberOfParameterRegisters,
         indexZeroInstructionsToAdd = indexZeroInstructionsToAdd,
     )
 
     // Replace existing method with cloned with more registers.
     mutableClass.methods.apply {
-        remove(method)
+        remove(this@cloneMutableAndPreserveParameters)
         add(clonedMethod)
     }
 
@@ -790,8 +806,7 @@ fun cloneMutableAndPreserveParameters(
  * adding to additional new parameters before p0. Added registers always start at index:
  * `method.implementation!!.registerCount`
  *
- * Be aware that any match indexes of the method will now be offset positively by the
- * number of additional registers added.
+ * **Fingerprint match indexes will be positively offset by [numberOfParameterRegisters]**.
  *
  * @param indexZeroInstructionsToAdd Instructions to add at the effective index zero,
  * which is immediately after the required register moves to preserve old registers.

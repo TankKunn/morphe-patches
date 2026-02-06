@@ -128,9 +128,6 @@ Međutim, omogućavanje ovoga će takođe evidentirati neke korisničke podatke,
   <string name="morphe_hide_doodles_title">Sakrij YouTube Doodles</string>
   <string name="morphe_hide_doodles_summary_on">Animacija YouTube Doodlesa na logotipu je skrivena</string>
   <string name="morphe_hide_doodles_summary_off">Animacija YouTube Doodlesa na logotipu je prikazana</string>
-  <string name="morphe_hide_doodles_user_dialog_message">"YouTube Doodles se prikazuje nekoliko dana svake godine.
-
-Ako se Doodle trenutno prikazuje u vašem regionu i ova opcija skrivanja je uključena, traka filtera ispod trake za pretragu takođe će biti skrivena."</string>
   <string name="morphe_hide_channel_bar_title">Sakrij traku kanala</string>
   <string name="morphe_hide_channel_bar_summary_on">Traka kanala je skrivena</string>
   <string name="morphe_hide_channel_bar_summary_off">Traka kanala je prikazana</string>
@@ -189,6 +186,12 @@ Ako se Doodle trenutno prikazuje u vašem regionu i ova opcija skrivanja je uklj
   <string name="morphe_hide_course_progress_section_title">Sakrij \'Napredak kursa\'</string>
   <string name="morphe_hide_course_progress_section_summary_on">Odeljak \'Napredak kursa\' je sakriven</string>
   <string name="morphe_hide_course_progress_section_summary_off">Odeljak \'Napredak kursa\' je prikazan</string>
+  <string name="morphe_hide_explore_section_title">Sakrij dugme „Istražite”</string>
+  <string name="morphe_hide_explore_section_summary_on">Odeljci \'Istražite ovaj kurs\' i \'Istražite podkast\' su sakriveni</string>
+  <string name="morphe_hide_explore_section_summary_off">Odeljci \'Istražite ovaj kurs\' i \'Istražite podkast\' su vidljivi</string>
+  <string name="morphe_hide_explore_course_section_title">Sakrij \'Istražite ovaj kurs\'</string>
+  <string name="morphe_hide_explore_course_section_summary_on">Odeljak „Istražite ovu sekciju kursa” je skriven</string>
+  <string name="morphe_hide_explore_course_section_summary_off">Odeljak „Istražite ovu sekciju kursa” je prikazan</string>
   <string name="morphe_hide_explore_podcast_section_title">Sakrij odeljak „Istražite podkast”</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Odeljak „Istražite podkast” je skriven</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Odeljak „Istražite podkast” je prikazan</string>
@@ -225,6 +228,9 @@ Ako se Doodle trenutno prikazuje u vašem regionu i ova opcija skrivanja je uklj
   <string name="morphe_hide_transcript_section_title">Sakrij transkript</string>
   <string name="morphe_hide_transcript_section_summary_on">Odeljak za transkripciju je skriven</string>
   <string name="morphe_hide_transcript_section_summary_off">Odeljak za transkripciju je prikazan</string>
+  <string name="morphe_hide_quizzes_section_title">Sakrij kvizove</string>
+  <string name="morphe_hide_quizzes_section_summary_on">Odeljak kvizovi je skriven</string>
+  <string name="morphe_hide_quizzes_section_summary_off">Odeljak kvizovi je prikazan</string>
   <string name="morphe_hide_description_components_screen_title">Opis videa</string>
   <string name="morphe_hide_description_components_screen_summary">Sakrijte ili prikažite komponente opisa videa</string>
   <string name="morphe_hide_filter_bar_screen_title">Traka filtera</string>
@@ -286,6 +292,9 @@ Ako se Doodle trenutno prikazuje u vašem regionu i ova opcija skrivanja je uklj
   <string name="morphe_hide_comments_section_title">Sakrij odeljak za komentare</string>
   <string name="morphe_hide_comments_section_summary_on">Odeljak za komentare je skriven</string>
   <string name="morphe_hide_comments_section_summary_off">Odeljak za komentare je prikazan</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Sakrij odeljak za komentare u Feed-u</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Odeljak „Komentari ispod videa u Feed-u” je skriven</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Odeljak „Komentari ispod videa u Feed-u” je prikazan</string>
   <string name="morphe_hide_comments_community_guidelines_title">Sakrij smernice zajednice</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Smernice zajednice su skrivene</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Smernice zajednice su prikazane</string>
@@ -316,14 +325,14 @@ Ako se Doodle trenutno prikazuje u vašem regionu i ova opcija skrivanja je uklj
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Ograničenja:
 • Police Shorts, stranice kanala i rezultati pretrage mogu i dalje prikazivati broj pregleda
-• Ova funkcija ne radi sa automobilskim faktorom forme"</string>
+• Ova funkcija ne radi sa automobilskim faktorom forme."</string>
   <string name="morphe_hide_upload_time_title">Sakrij vreme otpremanja</string>
   <string name="morphe_hide_upload_time_summary_on">Vreme otpremanja je skriveno u fidu i rezultatima pretrage</string>
   <string name="morphe_hide_upload_time_summary_off">Vreme otpremanja je prikazano u fidu i rezultatima pretrage</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Ograničenja:
 • Police Shorts, stranice kanala i rezultati pretrage mogu i dalje prikazivati vreme otpremanja
-• Ova funkcija ne radi sa automobilskim faktorom forme"</string>
+• Ova funkcija ne radi sa automobilskim faktorom forme."</string>
   <string name="morphe_hide_keyword_content_screen_title">Sakrij sadržaj ključne reči</string>
   <string name="morphe_hide_keyword_content_screen_summary">Sakrijte videe iz rezultata pretrage i fida koristeći filtere ključnih reči</string>
   <string name="morphe_hide_keyword_content_home_title">Sakrij videe na kartici „Početna” prema ključnim rečima</string>
@@ -609,14 +618,14 @@ Cookies will be saved automatically if they are valid"</string>
   <string name="morphe_hide_subscriptions_button_title">Sakrij dugme „Praćenja”</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Dugme „Praćenja” je skriveno</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Dugme „Praćenja” je prikazano</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Sakrij obaveštenja</string>
   <string name="morphe_hide_notifications_button_summary_on">Dugme „Obaveštenja” je skriveno</string>
   <string name="morphe_hide_notifications_button_summary_off">Dugme „Obaveštenja” je prikazano</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Zameni dugme „Napravi” dugmetom „Obaveštenja”</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Dugme za stvaranje je zamenjeno dugmetom za obaveštenja</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Dugme „Napravi” nije zamenjeno dugmetom „Obaveštenja”</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Ako promena ovog podešavanja ne utiče, pokušajte da pređete u režim Inkognito.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Zameni dugme „Napravi” dugmetom „Obaveštenja”</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Dugme „Napravi” nije zamenjeno dugmetom „Obaveštenja”</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Dugme „Napravi” nije zamenjeno dugmetom „Obaveštenja”</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Ako promena ovog podešavanja ne utiče, pokušajte da pređete u režim Inkognito.</string>
   <string name="morphe_hide_navigation_button_labels_title">Sakrij oznake dugmadi za navigaciju</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Oznake dugmadi za navigaciju su skrivene</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Oznake dugmadi za navigaciju su prikazane</string>
@@ -629,7 +638,9 @@ Cookies will be saved automatically if they are valid"</string>
   <string name="morphe_disable_translucent_status_bar_title">Onemogući prozirnu statusnu traku</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statusna traka je neprozirna</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statusna traka je neprozirna ili prozirna</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">Na nekim uređajima, omogućavanje ove funkcije može da promeni traku za navigaciju kroz sistem u prozirnu.</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Ograničenja:
+• Crna traka može da se pojavi na vrhu igrača videa.
+• Na nekim uređajima, omogućavanje ove funkcije može promeniti sistemsku traku navigacije u prozirnu."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Onemogući svetlu prozirnu traku za navigaciju</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Traka za navigaciju u svetlom režimu je neprozirna</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Traka za navigaciju u svetlom režimu je neprozirna ili prozirna</string>
@@ -735,10 +746,19 @@ Da bi prikazali meni sa audio trakom, promenite 'Imitirati video tokove' u 'Andr
   <string name="morphe_hide_endscreen_cards_title">Sakrij kartice završnog ekrana</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Kartice završnog ekrana su skrivene</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Kartice završnog ekrana su prikazane</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Režim ambijenta</string>
+  <string name="morphe_ambient_mode_screen_summary">Prebaci ograničenja čuvanja energije za režim ambijenta i isključi ga potpuno ili u punom ekranu</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Prebaci ograničenja režima ambijenta</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Ograničenja režima ambientnog mod-a za čuvanje energije su prebačena.</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Ograničenja režima ambientnog mod-a za čuvanje energije nisu prebačena.</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Ovom akcijom se može pogoršati životak batarije.</string>
+  <string name="morphe_disable_ambient_mode_title">Onemogući režim ambientnog mod-a</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Režim ambientnog mod-a je onemogućen</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Režim ambientnog mod-a je omogućen</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Onemogući „Ambijentalni režim” u režimu preko celog ekrana</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Ambijentalni režim u režimu celog ekrana je onemogućen</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Ambijentalni režim u režimu celog ekrana je omogućen</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Režim ambientnog mod-a u celom ekranu je onemogućen</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Režim ambientnog mod-a u celom ekranu je omogućen</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Sakrij kartice sa informacijama</string>
   <string name="morphe_hide_info_cards_summary_on">Kartice sa informacijama su skrivene</string>
@@ -772,9 +792,15 @@ Da bi prikazali meni sa audio trakom, promenite 'Imitirati video tokove' u 'Andr
   <string name="morphe_hide_shorts_subscriptions_title">Sakrij Shorts u fidu „Praćenja”</string>
   <string name="morphe_hide_shorts_subscriptions_summary_on">Skriveno u fidu „Praćenja”</string>
   <string name="morphe_hide_shorts_subscriptions_summary_off">Prikazano u fidu „Praćenja”</string>
+  <string name="morphe_hide_shorts_video_description_title">Sakrij Shorts u opisu videa</string>
+  <string name="morphe_hide_shorts_video_description_summary_on">Sakriveno u opisu videa</string>
+  <string name="morphe_hide_shorts_video_description_summary_off">Prikaženo u opisu videa</string>
   <string name="morphe_hide_shorts_history_title">Sakrij Shorts u istoriji gledanja</string>
   <string name="morphe_hide_shorts_history_summary_on">Skriveno u istoriji gledanja</string>
   <string name="morphe_hide_shorts_history_summary_off">Prikazano u istoriji gledanja</string>
+  <string name="morphe_hide_shorts_ai_button_title">Sakrij dugme \"AI\"</string>
+  <string name="morphe_hide_shorts_ai_button_summary_on">Dugme \"AI\" je sakriveno</string>
+  <string name="morphe_hide_shorts_ai_button_summary_off">Dugme \"AI\" je prikazano</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_title">Sakrij oznaku \'Automatski dubiran\'</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_summary_on">Oznaka lokacije je skrivena</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_summary_off">Oznaka lokacije je prikazana</string>
@@ -1203,8 +1229,10 @@ Ovo će promeniti izgled i funkcije aplikacije, ali se mogu pojaviti i nepoznati
 
 Ako se kasnije isključi, preporučuje se da izbrišete podatke aplikacije da biste sprečili greške u korisničkom interfejsu."</string>
   <string name="morphe_spoof_app_version_target_title">Ciljna verzija aplikacije za lažiranje</string>
-  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Vraća stare ikonice Shorts plejera</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Vraća stare ikonice Shorts plejera</string>
+  <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Izgubi bold ikone</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Vraća neskupljenu traku radnji videa</string>
+  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Vraća stare ikonice Shorts plejera</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Promena polazne stranice</string>
   <string name="morphe_change_start_page_entry_default">Podrazumevana</string>
@@ -1483,6 +1511,10 @@ Ograničenja:
   <string name="morphe_advanced_video_quality_menu_title">Prikaži napredni meni kvaliteta videa</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Napredni meni kvaliteta videa je prikazan</string>
   <string name="morphe_advanced_video_quality_menu_summary_off">Napredni meni kvaliteta videa nije prikazan</string>
+  <!-- video.quality.hidePremiumVideoQualityPatch -->
+  <string name="morphe_hide_premium_video_quality_title">Sakrij opcije Premium kvaliteta</string>
+  <string name="morphe_hide_premium_video_quality_summary_on">Opcije Premium kvaliteta su sakrivene</string>
+  <string name="morphe_hide_premium_video_quality_summary_off">Premium kvalitetni opcije su prikazane</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Omogući prevlačenje za premotavanje</string>
   <string name="morphe_slide_to_seek_summary_on">Prevlačenje za premotavanje je omogućeno</string>

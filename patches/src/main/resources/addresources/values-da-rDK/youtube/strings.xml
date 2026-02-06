@@ -128,9 +128,6 @@ Aktivering af dette vil dog også logge nogle brugerdata, såsom din IP-adresse.
   <string name="morphe_hide_doodles_title">Skjul YouTube-Doudler</string>
   <string name="morphe_hide_doodles_summary_on">YouTube Doodles-animation på logoet er skjult</string>
   <string name="morphe_hide_doodles_summary_off">YouTube Doodles-animation på logoet vises</string>
-  <string name="morphe_hide_doodles_user_dialog_message">"YouTube-doodles vises et par dage om året.
-
-Hvis et Doodle vises i øjeblikket i din region, og denne skjuleindstilling er aktiveret, skjules filterfeltet under søgefeltet også."</string>
   <string name="morphe_hide_channel_bar_title">Skjul kanallinje</string>
   <string name="morphe_hide_channel_bar_summary_on">Kanalbjælken er skjult</string>
   <string name="morphe_hide_channel_bar_summary_off">Kanalbjælken vises</string>
@@ -189,6 +186,12 @@ Hvis et Doodle vises i øjeblikket i din region, og denne skjuleindstilling er a
   <string name="morphe_hide_course_progress_section_title">Skjul \'Kursforgang\'</string>
   <string name="morphe_hide_course_progress_section_summary_on">Kursforgangssektion er skjult</string>
   <string name="morphe_hide_course_progress_section_summary_off">Kursforgangssektion er vist</string>
+  <string name="morphe_hide_explore_section_title">Skjul Udforsk</string>
+  <string name="morphe_hide_explore_section_summary_on">Udforsk dette kursus og Udforsk podcasts afsnit er skjult</string>
+  <string name="morphe_hide_explore_section_summary_off">Udforsk dette kursus og Udforsk podcasts afsnit er vist</string>
+  <string name="morphe_hide_explore_course_section_title">Skjul \'Udforsk dette kursus\'</string>
+  <string name="morphe_hide_explore_course_section_summary_on">Denne kursusafsnit er skjult</string>
+  <string name="morphe_hide_explore_course_section_summary_off">Denne kursusafsnit vises</string>
   <string name="morphe_hide_explore_podcast_section_title">Skjul \"Udforsk podcasten\"</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Sektionen Udforsk podcasten er skjult</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Sektionen Udforsk podcasten vises</string>
@@ -225,6 +228,9 @@ Hvis et Doodle vises i øjeblikket i din region, og denne skjuleindstilling er a
   <string name="morphe_hide_transcript_section_title">Skjul udskrift</string>
   <string name="morphe_hide_transcript_section_summary_on">Afsnittet er skjult</string>
   <string name="morphe_hide_transcript_section_summary_off">Afsnittet er vist</string>
+  <string name="morphe_hide_quizzes_section_title">Skjul quizzer</string>
+  <string name="morphe_hide_quizzes_section_summary_on">Quizzer-sektion er skjult</string>
+  <string name="morphe_hide_quizzes_section_summary_off">Quizzer-sektion er vist</string>
   <string name="morphe_hide_description_components_screen_title">Video beskrivelse</string>
   <string name="morphe_hide_description_components_screen_summary">Skjul eller vis komponenter til videobeskrivelse</string>
   <string name="morphe_hide_filter_bar_screen_title">Filtrer bjælke</string>
@@ -286,6 +292,9 @@ Hvis et Doodle vises i øjeblikket i din region, og denne skjuleindstilling er a
   <string name="morphe_hide_comments_section_title">Skjul kommentarsektion</string>
   <string name="morphe_hide_comments_section_summary_on">Kommentarer sektion er skjult</string>
   <string name="morphe_hide_comments_section_summary_off">Kommentarer sektion er vist</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Skjul kommentarer i Home-feed</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">Kommentarer under videoer i Home-feed er skjult</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">Kommentarer under videoer i Home-feed vises</string>
   <string name="morphe_hide_comments_community_guidelines_title">Skjul fællesskabsretningslinjer</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">Fællesskabsretningslinjer er skjult</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">Fællesskabsretningslinjer er vist</string>
@@ -315,15 +324,15 @@ Hvis et Doodle vises i øjeblikket i din region, og denne skjuleindstilling er a
   <string name="morphe_hide_view_count_summary_off">Antal visninger vises i feed og søgeresultater</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Begrænsninger:
-• Shorts-hylder, kanalsider og søgeresultater kan stadig vise antal visninger
-• Denne funktion virker ikke med bilformat"</string>
+• Shorts hylder, kanalsider og søgeresultater kan stadig vise antal visninger
+• Denne funktion virker ikke med bilformat."</string>
   <string name="morphe_hide_upload_time_title">Skjul uploadtid</string>
   <string name="morphe_hide_upload_time_summary_on">Uploadtid er skjult i feed og søgeresultater</string>
   <string name="morphe_hide_upload_time_summary_off">Uploadtid vises i feed og søgeresultater</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Begrænsninger:
 • Shorts hylder, kanalsider og søgeresultater kan stadig vise uploadtider
-• Denne funktion virker ikke med bilformat"</string>
+• Denne funktion virker ikke med bilformat."</string>
   <string name="morphe_hide_keyword_content_screen_title">Skjul nøgleordsindhold</string>
   <string name="morphe_hide_keyword_content_screen_summary">Skjul søge- og feed videoer ved hjælp af søgeordsfiltre</string>
   <string name="morphe_hide_keyword_content_home_title">Skjul hjemmevideoer med søgeord</string>
@@ -609,14 +618,14 @@ Tekstlinjer vil blive gemt automatisk, hvis de er gyldige"</string>
   <string name="morphe_hide_subscriptions_button_title">Skjul Abonnementer</string>
   <string name="morphe_hide_subscriptions_button_summary_on">Abonnementer knappen er skjult</string>
   <string name="morphe_hide_subscriptions_button_summary_off">Abonnementer knappen vises</string>
+  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Skjul notifikationer</string>
   <string name="morphe_hide_notifications_button_summary_on">Notifikationsknappen er skjult</string>
   <string name="morphe_hide_notifications_button_summary_off">Notifikationsknappen vises</string>
-  <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_switch_create_with_notifications_button_title">Skift Opret med notifikationer</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_on">Opret knappen er skiftet med Notifikationer knappen</string>
-  <string name="morphe_switch_create_with_notifications_button_summary_off">Opret knappen er ikke skiftet med Notifikationer knappen</string>
-  <string name="morphe_switch_create_with_notifications_button_user_dialog_message">Hvis ændringen af denne indstilling ikke virker, prøv at skifte til Incognito-modus.</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Skift Opret med notifikationer</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Opret knappen er skiftet med Notifikationer knappen</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Opret knappen er ikke skiftet med Notifikationer knappen</string>
+  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Hvis ændringen af denne indstilling ikke virker, prøv at skifte til Incognito-modus.</string>
   <string name="morphe_hide_navigation_button_labels_title">Skjul navigationsknappens etiketter</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Etiketter er skjult</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Etiketter er vist</string>
@@ -629,7 +638,9 @@ Tekstlinjer vil blive gemt automatisk, hvis de er gyldige"</string>
   <string name="morphe_disable_translucent_status_bar_title">Deaktiver gennemsigtig statuslinje</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statuslinjen er opak</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statuslinjen er opak eller gennemsigtig</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">På nogle enheder kan aktivering af denne funktion ændre systemets navigationslinje til gennemsigtig.</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Begrænsninger:
+• En sort streg kan dukke op øverst på videoafspilleren.
+• På nogle enheder kan det ændre systemets navigationsbar til gennemsigtig, når man aktiverer denne funktion."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Deaktiver lys gennemsigtig linje</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Navigationslinjen i lys tilstand er ikke gennemsigtig</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Lys tilstand navigationslinjen er opak eller gennemsigtig</string>
@@ -735,10 +746,19 @@ For at vise Lydspor-menuen, ændr 'Spoof video streams' til 'Android No SDK'"</s
   <string name="morphe_hide_endscreen_cards_title">Skjul slutskærmkort</string>
   <string name="morphe_hide_endscreen_cards_summary_on">Slutskærmskortene er skjult</string>
   <string name="morphe_hide_endscreen_cards_summary_off">Kort til slutskærm vises</string>
-  <!-- layout.hide.fullscreenambientmode.disableFullscreenAmbientModePatch -->
+  <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">Omgivende tilstand</string>
+  <string name="morphe_ambient_mode_screen_summary">Omgaa strenge for sparing af strøm for omgivende tilstand og slå den helt eller fuldskærmst af</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Omgaa omgivende tilstandens strenge</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Afstandsmodusbegrænsninger for energisparning er omgået</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Afstandsmodusbegrænsninger for energisparning er ikke omgået</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Aktivering af dette kan forværre batterilivstid.</string>
+  <string name="morphe_disable_ambient_mode_title">Deaktiver Afstandsmodus</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Afstandsmodus er deaktiveret</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Afstandsmodus er aktiveret</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Deaktiver Ambient-tilstand i fuldskærm</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Omgivelsestilstand deaktiveret</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Omgivelsestilstand aktiveret</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Afstandsmodus i fuldskærm er deaktiveret</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Afstandsmodus i fuldskærm er aktiveret</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Skjul informationskort</string>
   <string name="morphe_hide_info_cards_summary_on">Info kort er skjult</string>
@@ -772,9 +792,15 @@ For at vise Lydspor-menuen, ændr 'Spoof video streams' til 'Android No SDK'"</s
   <string name="morphe_hide_shorts_subscriptions_title">Skjul Shorts i \'Abonnementer\'-feed</string>
   <string name="morphe_hide_shorts_subscriptions_summary_on">Skjult i \'Abonnementer\'-feed</string>
   <string name="morphe_hide_shorts_subscriptions_summary_off">Vises i \'Abonnementer\'-feed</string>
+  <string name="morphe_hide_shorts_video_description_title">Skjul Shorts i video-beskrivelse</string>
+  <string name="morphe_hide_shorts_video_description_summary_on">Skjult i video-beskrivelse</string>
+  <string name="morphe_hide_shorts_video_description_summary_off"> vist i video-beskrivelse</string>
   <string name="morphe_hide_shorts_history_title">Skjul shorts i historik</string>
   <string name="morphe_hide_shorts_history_summary_on">Skjult i historikken</string>
   <string name="morphe_hide_shorts_history_summary_off">Vises i historik</string>
+  <string name="morphe_hide_shorts_ai_button_title">Skjul AI-knappen</string>
+  <string name="morphe_hide_shorts_ai_button_summary_on">AI-knappen er skjult</string>
+  <string name="morphe_hide_shorts_ai_button_summary_off">AI-knappen er vist</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_title">Skjul \'Auto-dubbed\' label</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_summary_on">Placeringsetiket er skjult</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_summary_off">Placeringsetiket er vist</string>
@@ -1203,8 +1229,10 @@ Dette ændrer appens udseende og funktioner, men ukendte bivirkninger kan foreko
 
 Hvis det senere slås fra, anbefales det at rydde app-dataene for at forhindre UI-fejl."</string>
   <string name="morphe_spoof_app_version_target_title">Spoof app version mål</string>
-  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Gendan gamle Shorts player ikoner</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Genenfå old save til spilleliste</string>
+  <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Deaktiver fed bogstaver</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Gendan ikke-kollapset videohandlingslinje</string>
+  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Gendan gamle Shorts player ikoner</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Skift startside</string>
   <string name="morphe_change_start_page_entry_default">Standard</string>
@@ -1483,6 +1511,10 @@ Begrænsninger:
   <string name="morphe_advanced_video_quality_menu_title">Vis avanceret menu for videokvalitet</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Avanceret menu for videokvalitet vises</string>
   <string name="morphe_advanced_video_quality_menu_summary_off">Avanceret menu for videokvalitet vises ikke</string>
+  <!-- video.quality.hidePremiumVideoQualityPatch -->
+  <string name="morphe_hide_premium_video_quality_title">Skjul Premium kvalitetsindstillinger</string>
+  <string name="morphe_hide_premium_video_quality_summary_on">Premium kvalitetsindstillinger er skjult</string>
+  <string name="morphe_hide_premium_video_quality_summary_off">Premium kvalitetsmuligheder vises</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktivér dias for at søge</string>
   <string name="morphe_slide_to_seek_summary_on">Dias for at søge er aktiveret</string>
