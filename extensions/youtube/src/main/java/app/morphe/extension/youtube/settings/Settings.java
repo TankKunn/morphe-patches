@@ -318,7 +318,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting DISABLE_TRANSLUCENT_NAVIGATION_BAR_DARK = new BooleanSetting("morphe_disable_translucent_navigation_bar_dark", FALSE, true);
 
     // Toolbar
-    public static final BooleanSetting HIDE_TOOLBAR_CREATE_BUTTON = new BooleanSetting("morphe_hide_toolbar_create_button", FALSE, true);
+    public static final BooleanSetting HIDE_TOOLBAR_CREATE_BUTTON = new BooleanSetting("morphe_hide_toolbar_create_button", TRUE, true);
     public static final BooleanSetting HIDE_TOOLBAR_NOTIFICATION_BUTTON = new BooleanSetting("morphe_hide_toolbar_notification_button", FALSE, true);
     public static final BooleanSetting HIDE_TOOLBAR_SEARCH_BUTTON = new BooleanSetting("morphe_hide_toolbar_search_button", FALSE, true);
     public static final BooleanSetting WIDE_SEARCHBAR = new BooleanSetting("morphe_wide_searchbar", FALSE, true);
