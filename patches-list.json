@@ -1,5 +1,5 @@
 {
-  "version": "1.11.0",
+  "version": "1.12.0-dev.2",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -1741,7 +1741,8 @@
         "ResourcePatch",
         "BytecodePatch",
         "BytecodePatch",
-        "ResourcePatch"
+        "ResourcePatch",
+        "BytecodePatch"
       ],
       "compatiblePackages": {
         "com.google.android.youtube": [
@@ -2000,6 +2001,7 @@
       "description": "Adds options to set default video qualities and always use the advanced video quality menu.",
       "use": true,
       "dependencies": [
+        "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch",
