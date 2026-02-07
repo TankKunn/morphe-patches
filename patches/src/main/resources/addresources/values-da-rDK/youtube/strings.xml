@@ -1232,7 +1232,6 @@ Hvis det senere slås fra, anbefales det at rydde app-dataene for at forhindre U
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Genenfå old save til spilleliste</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Deaktiver fed bogstaver</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Gendan ikke-kollapset videohandlingslinje</string>
-  <string name="morphe_spoof_app_version_target_entry_19_35">19.35.36 - Gendan gamle Shorts player ikoner</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Skift startside</string>
   <string name="morphe_change_start_page_entry_default">Standard</string>
