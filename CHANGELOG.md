@@ -1,3 +1,11 @@
+# [1.12.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0...v1.12.0-dev.1) (2026-02-07)
+
+
+### Features
+
+* **Spoof video streams:** Default client maintenance ([#448](https://github.com/MorpheApp/morphe-patches/issues/448)) ([36817a3](https://github.com/MorpheApp/morphe-patches/commit/36817a35c0f337f7d988624d8aebac418424a5f2))
+* **YouTube - Video quality:** Add "Prioritize video quality" setting ([#449](https://github.com/MorpheApp/morphe-patches/issues/449)) ([9819078](https://github.com/MorpheApp/morphe-patches/commit/98190781e890e56eeb0771496af43ce710e8443d))
+
 # [1.11.0](https://github.com/MorpheApp/morphe-patches/compare/v1.10.0...v1.11.0) (2026-02-06)
 
 
