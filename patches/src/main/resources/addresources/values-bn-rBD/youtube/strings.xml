@@ -286,6 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_channel_guidelines_title">চ্যানেল নির্দেশিকা লুকান</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_on">চ্যানেল নির্দেশিকা লুকানো হয়েছে</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_off">চ্যানেল নির্দেশিকা দেখানো হয়েছে</string>
+  <string name="morphe_hide_comments_prompts_title">সম্প্রদায় কমেন্ট প্রম্প্ট লুকান</string>
+  <string name="morphe_hide_comments_prompts_summary_on">কমেন্ট প্রম্প্ট লুকিয়ে রয়েছে</string>
+  <string name="morphe_hide_comments_prompts_summary_off">কমেন্ট প্রম্প্ট প্রদর্শিত হয়েছে</string>
   <string name="morphe_hide_comments_by_members_header_title">\'মেম্বারদের মন্তব্য\' হেডার লুকান</string>
   <string name="morphe_hide_comments_by_members_header_summary_on">সদস্যদের দ্বারা মন্তব্য হেডার লুকানো আছে</string>
   <string name="morphe_hide_comments_by_members_header_summary_off">সদস্যদের দ্বারা মন্তব্য হেডার দেখানো হয়েছে</string>
@@ -639,8 +642,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">স্ট্যাটাস বারটি অস্বচ্ছ</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">স্ট্যাটাস বারটি অস্বচ্ছ বা স্বচ্ছ</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"সীমাবদ্ধতা:
-• ভিডিও প্লেয়ারের শীর্ষে কালো বরটি প্রদর্শিত হতে পারে
-• কিছু ডিভাইসে, এই বৈশিষ্ট্যটি সিস্টেম নেভিগেশন বারকে স্বচ্ছ করে তোলা করতে পারে"</string>
+• ভিডিও প্লেয়ারের শীর্ষে কালো বর খুঁজে পাওয়া যেতে পারে।
+• সিস্টেম নেভিগেশন বার ট্রান্সলুসেন্টে পরিবর্তিত হতে পারে এবং ভিডিওতে মন্তব্য করার সুযোগ নেই।"</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">অর্ধস্বচ্ছ হালকা বার নিষ্ক্রিয় করুন</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">হালকা মোড নেভিগেশন বার অস্বচ্ছ</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">লাইট মোড ন্যাভিগেশন বারটি অস্বচ্ছ বা স্বচ্ছ</string>

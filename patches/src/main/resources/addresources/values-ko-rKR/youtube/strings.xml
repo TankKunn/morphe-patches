@@ -289,6 +289,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_channel_guidelines_title">채널 가이드라인 숨기기</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_on">채널 가이드라인이 숨겨집니다</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_off">채널 가이드라인이 표시됩니다</string>
+  <string name="morphe_hide_comments_prompts_title">댓글 프롬프트 숨기기</string>
+  <string name="morphe_hide_comments_prompts_summary_on">댓글 프롬프트가 숨겨집니다</string>
+  <string name="morphe_hide_comments_prompts_summary_off">댓글 프롬프트가 표시됩니다</string>
   <string name="morphe_hide_comments_by_members_header_title">회원별 댓글 헤더 숨기기</string>
   <string name="morphe_hide_comments_by_members_header_summary_on">회원별 댓글 헤더가 숨겨집니다</string>
   <string name="morphe_hide_comments_by_members_header_summary_off">회원별 댓글 헤더가 표시됩니다</string>
@@ -636,9 +639,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_title">반투명 상태바 비활성화하기</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">상태바가 불투명합니다</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">상태바가 불투명하거나 반투명합니다</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"제한 사항:
-• 동영상 플레이어 상단에서 검은색 막대가 표시될 수 있습니다.
-• 일부 기기에서 이 기능을 활성화하면 시스템 네비게이션 바가 투명해질 수 있습니다."</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"제한사항:
+• 비디오 플레이어 상단에 검은색 바가 나타날 수 있습니다.
+• 시스템 네비게이션 바가 투명해지고 비디오에 대한 코멘트를 할 수 없습니다."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">밝은 반투명 하단바 비활성화하기</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">밝은 테마에서 하단바가 불투명합니다</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">밝은 테마에서 하단바가 불투명하거나 반투명합니다</string>

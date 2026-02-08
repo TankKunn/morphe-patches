@@ -286,6 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_channel_guidelines_title">ซ่อนแนวทางปฏิบัติของช่อง</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_on">ซ่อนแนวทางช่องแล้ว</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_off">แสดงแนวทางช่องแล้ว</string>
+  <string name="morphe_hide_comments_prompts_title">ซ่อนคำถามความคิดเห็น</string>
+  <string name="morphe_hide_comments_prompts_summary_on">คำถามความคิดเห็นถูกซ่อนไว้</string>
+  <string name="morphe_hide_comments_prompts_summary_off">คำถามความคิดเห็นแสดงอยู่</string>
   <string name="morphe_hide_comments_by_members_header_title">ซ่อนส่วนหัว \'ความคิดเห็นโดยสมาชิก\'</string>
   <string name="morphe_hide_comments_by_members_header_summary_on">ส่วนหัวความคิดเห็นโดยสมาชิกถูกซ่อน</string>
   <string name="morphe_hide_comments_by_members_header_summary_off">ส่วนหัวความคิดเห็นโดยสมาชิกแสดงอยู่</string>
@@ -637,8 +640,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">แถบสถานะไม่โปร่งแสง</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">แถบสถานะโปร่งแสงหรือไม่โปร่งแสง</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"ข้อจำกัด:
-• บาร์สีดำอาจปรากฏที่ด้านบนของตัวเล่นวิดีโอ
-• บางอุปกรณ์ที่เปิดใช้งานฟีเจอร์นี้อาจเปลี่ยนแถบนำทางระบบเป็นโปร่งใส"</string>
+• บาร์สีดำอาจปรากฏขึ้นด้านบนของตัวเล่นวิดีโอ
+• แถบการนำทางของระบบอาจเปลี่ยนเป็นโปร่งใสและไม่สามารถแสดงความคิดเห็นในวิดีโอได้"</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">ปิดใช้งานแถบนำทางแบบโปร่งแสงสีอ่อน</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">แถบนำทางโหมดสว่างเป็นแบบทึบแสง</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">แถบนำทางโหมดสว่างโปร่งแสงหรือไม่โปร่งแสง</string>

@@ -234,7 +234,7 @@ Włączenie tej opcji spowoduje również rejestrowanie niektórych danych użyt
   <string name="morphe_hide_description_components_screen_title">Opis filmu</string>
   <string name="morphe_hide_description_components_screen_summary">Ukryj lub pokazuj elementy opisu filmu</string>
   <string name="morphe_hide_filter_bar_screen_title">Pasek filtrowania</string>
-  <string name="morphe_hide_filter_bar_screen_summary">Ukryj lub pokazuj pasek filtrów na stronie głównej, powiązanych filmach, wynikach wyszukiwania i historii oglądania</string>
+  <string name="morphe_hide_filter_bar_screen_summary">Ukryj lub pokazuj pasek filtrów na stronie głównej, w powiązanych filmach, wynikach wyszukiwania i historii oglądania</string>
   <string name="morphe_hide_filter_bar_feed_in_feed_title">Na stronie głównej</string>
   <string name="morphe_hide_filter_bar_feed_in_feed_summary_on">Ukryty</string>
   <string name="morphe_hide_filter_bar_feed_in_feed_summary_off">Widoczny</string>
@@ -286,6 +286,9 @@ Włączenie tej opcji spowoduje również rejestrowanie niektórych danych użyt
   <string name="morphe_hide_comments_channel_guidelines_title">Wytyczne kanału</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_on">Ukryte</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_off">Widoczne</string>
+  <string name="morphe_hide_comments_prompts_title">Ukryj prośby o komentowanie</string>
+  <string name="morphe_hide_comments_prompts_summary_on">Prośby o komentowanie są ukryte</string>
+  <string name="morphe_hide_comments_prompts_summary_off">Prośby o komentowanie są wyświetlane</string>
   <string name="morphe_hide_comments_by_members_header_title">Nagłówek \"Komentarze od wspierających\"</string>
   <string name="morphe_hide_comments_by_members_header_summary_on">Ukryty</string>
   <string name="morphe_hide_comments_by_members_header_summary_off">Widoczny</string>
@@ -353,7 +356,7 @@ Słowami mogą być nazwy kanałów oraz dowolny tekst wyświetlany w tytułach 
 
 Słowa zawierające duże litery w środku muszą być wpisane z odpowiednią wielkością liter (np. iPhone, TikTok, LeBlanc)"</string>
   <string name="morphe_hide_keyword_content_about_title">O filtrowaniu słów</string>
-  <string name="morphe_hide_keyword_content_about_summary">"Strona główna / subskrypcji / wyniki wyszukiwania są filtrowane, by ukryć treści, który zawiera słowa z filtra.
+  <string name="morphe_hide_keyword_content_about_summary">"Strona główna / subskrypcji / wyniki wyszukiwania są filtrowane, by ukryć treści, które zawierają słowa z filtra.
 
 Ograniczenia:
 • Shortsy nie mogą być ukryte po nazwie kanału
@@ -413,7 +416,7 @@ Ograniczenia:
   <string name="morphe_copy_video_url_timestamp_summary_on">Widoczny. Stuknij, by skopiować adres URL filmu z czasem. Stuknij i przytrzymaj, aby skopiować adres URL filmu bez czasu</string>
   <string name="morphe_copy_video_url_timestamp_summary_off">Niewidoczny</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
-  <string name="morphe_remove_viewer_discretion_dialog_title">Okno dialogowe treści ograniczonej do oglądania</string>
+  <string name="morphe_remove_viewer_discretion_dialog_title">Ostrzeżenie o treściach wrażliwych</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_on">Usunięte</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_off">Widoczne</string>
   <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Nie pomija to ograniczeń wiekowych, lecz akceptuje je automatycznie.</string>
@@ -622,9 +625,9 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_hide_notifications_button_title">Przycisk do powiadomień</string>
   <string name="morphe_hide_notifications_button_summary_on">Ukryty</string>
   <string name="morphe_hide_notifications_button_summary_off">Widoczny</string>
-  <string name="morphe_swap_create_with_notifications_button_title">Zamień przyciski przesyłania i powiadomień</string>
-  <string name="morphe_swap_create_with_notifications_button_summary_on">Tak</string>
-  <string name="morphe_swap_create_with_notifications_button_summary_off">Nie</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Przyciski przesyłania i powiadomień</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_on">Zamienione</string>
+  <string name="morphe_swap_create_with_notifications_button_summary_off">Niezamienione</string>
   <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Jeśli zmiana tego ustawienia nie przyniesie efektu, spróbuj przełączyć się w tryb incognito.</string>
   <string name="morphe_hide_navigation_button_labels_title">Etykiety przycisków nawigacji</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Ukryte</string>
@@ -639,8 +642,8 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Nie</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Tak</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Ograniczenia:
-• U góry odtwarzacza może pojawić się czarny pasek.
-• Na niektórych urządzeniach włączenie tej funkcji może zmienić pasek nawigacji systemu na przezroczysty."</string>
+• Może pojawić się czarna belka na górze odtwarzacza wideo.
+• Pasek nawigacji systemu może zmienić się na przezroczysty i nie będzie możliwości komentarza do wideo."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Półprzezroczysty pasek w trybie jasnym</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Nie</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Tak</string>
@@ -733,7 +736,7 @@ Aby wyświetlić menu ścieżki dźwiękowej, zmień \"Oszukuj strumienie filmu\
   <string name="morphe_hide_captions_button_title">Przycisk od napisów</string>
   <string name="morphe_hide_captions_button_summary_on">Ukryty</string>
   <string name="morphe_hide_captions_button_summary_off">Widoczny</string>
-  <string name="morphe_hide_cast_button_title">Przycisk od castowania</string>
+  <string name="morphe_hide_cast_button_title">Przycisk od przesyłania</string>
   <string name="morphe_hide_cast_button_summary_on">Ukryty</string>
   <string name="morphe_hide_cast_button_summary_off">Widoczny</string>
   <string name="morphe_hide_player_control_buttons_background_title">Tło przycisków w odtwarzaczu</string>
@@ -755,7 +758,7 @@ Aby wyświetlić menu ścieżki dźwiękowej, zmień \"Oszukuj strumienie filmu\
   <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Włączenie tej opcji może skrócić czas pracy na baterii.</string>
   <string name="morphe_disable_ambient_mode_title">Oświetlenie kinowe</string>
   <string name="morphe_disable_ambient_mode_summary_on">Wyłączone</string>
-  <string name="morphe_disable_ambient_mode_summary_off">Wlączone</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Włączone</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Oświetlenie kinowe w trybie pełnoekranowym</string>
   <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Wyłączone</string>
   <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Włączone</string>
@@ -810,7 +813,7 @@ Aby wyświetlić menu ścieżki dźwiękowej, zmień \"Oszukuj strumienie filmu\
   <string name="morphe_hide_shorts_effect_button_title">Przycisk do efektów</string>
   <string name="morphe_hide_shorts_effect_button_summary_on">Ukryty</string>
   <string name="morphe_hide_shorts_effect_button_summary_off">Widoczny</string>
-  <string name="morphe_hide_shorts_green_screen_button_title">Przycisk od greenscreena</string>
+  <string name="morphe_hide_shorts_green_screen_button_title">Przycisk \"Zielony ekran\"</string>
   <string name="morphe_hide_shorts_green_screen_button_summary_on">Ukryty</string>
   <string name="morphe_hide_shorts_green_screen_button_summary_off">Widoczny</string>
   <string name="morphe_hide_shorts_hashtag_button_title">Przycisk do hashtagów</string>
@@ -952,7 +955,7 @@ Ustawienia → Odtwarzanie → Autoodtwarzanie następnego filmu"</string>
   <string name="morphe_ryd_shorts_title">Liczba łapek w dół w odtwarzaczu Shortsów</string>
   <string name="morphe_ryd_shorts_summary_on">"Widoczna
 
-Ograniczenie: Liczba łapek w dół może nie być widoczna w trybie incognito."</string>
+Ograniczenie: Liczba łapek w dół może nie być widoczna w trybie incognito"</string>
   <string name="morphe_ryd_shorts_summary_off">Niewidoczna</string>
   <string name="morphe_ryd_dislike_percentage_title">Łapki w dół wyświetlane jako procent</string>
   <string name="morphe_ryd_dislike_percentage_summary_on">Tak</string>
@@ -1056,7 +1059,7 @@ Ograniczenie: Liczba łapek w dół może nie być widoczna w trybie incognito."
   <string name="morphe_sb_general_min_duration_sum">Segmenty krótsze niż ta wartość (w sekundach) nie będą pokazywane ani pomijane</string>
   <string name="morphe_sb_general_min_duration_invalid">Nieprawidłowy czas trwania</string>
   <string name="morphe_sb_general_uuid">Twój prywatny identyfikator użytkownika</string>
-  <string name="morphe_sb_general_uuid_sum">Nie powinno się go dzielić i działa jak hasło. Jeżeli ktoś go posiada, może korzystać z SponsorBlock jako ty np. może wysyłać segmenty</string>
+  <string name="morphe_sb_general_uuid_sum">Nie powinno się go dzielić i działa jak hasło. Jeżeli ktoś go posiada, może korzystać ze SponsorBlocka w Twoim imieniu, np. może wysyłać segmenty</string>
   <string name="morphe_sb_general_uuid_invalid">Prywatny identyfikator użytkownika musi mieć przynajmniej 30 znaków</string>
   <string name="morphe_sb_general_api_url">Zmień Adres URL API</string>
   <string name="morphe_sb_general_api_url_sum">Adres SponsorBlock używany do wykonywania połączeń z serwerem</string>
@@ -1297,8 +1300,8 @@ Ograniczenie: Użycie przycisku wstecz na pasku narzędzi może nie działać"</
   <string name="morphe_miniplayer_double_tap_action_title">Gest zmiany rozmiaru miniodtwarzacza</string>
   <string name="morphe_miniplayer_double_tap_action_summary_on">"Włączony
 
-• Kliknij podwójnie, by zwiększyć rozmiar miniodtwarzacza
-• Ponownie kliknij podwójnie, by przywrócić oryginalny rozmiar"</string>
+• Stuknij dwukrotnie, by zwiększyć rozmiar miniodtwarzacza
+• Ponownie stuknij dwukrotnie, by przywrócić oryginalny rozmiar"</string>
   <string name="morphe_miniplayer_double_tap_action_summary_off">Wyłączony</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_title">Gest przeciągnięcia i upuszczenia</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary_on">Wyłączony</string>

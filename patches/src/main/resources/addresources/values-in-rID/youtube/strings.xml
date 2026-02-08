@@ -286,6 +286,9 @@ Namun, mengaktifkan ini juga akan mencatat beberapa data pengguna seperti alamat
   <string name="morphe_hide_comments_channel_guidelines_title">Sembunyikan pedoman saluran</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_on">Pedoman saluran disembunyikan</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_off">Pedoman saluran ditampilkan</string>
+  <string name="morphe_hide_comments_prompts_title">Sembunyikan prompsi komentar</string>
+  <string name="morphe_hide_comments_prompts_summary_on">Prompsi komentar disembunyikan</string>
+  <string name="morphe_hide_comments_prompts_summary_off">Prompsi komentar ditampilkan</string>
   <string name="morphe_hide_comments_by_members_header_title">Sembunyikan header \'Komentar oleh anggota\'</string>
   <string name="morphe_hide_comments_by_members_header_summary_on">Header Komentar oleh anggota disembunyikan</string>
   <string name="morphe_hide_comments_by_members_header_summary_off">Header Komentar oleh anggota ditampilkan</string>
@@ -639,8 +642,8 @@ Cookie akan disimpan secara otomatis jika sah"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Bilah status buram</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Bilah status buram atau tembus pandang</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Batasan:
-• Bilah hitam mungkin muncul di bagian atas pemutar video.
-• Pada beberapa perangkat, mengaktifkan fitur ini dapat mengubah navigasi sistem menjadi transparan."</string>
+• Sebaris hitam mungkin muncul di bagian atas pemain video.
+• Bilah navigasi sistem dapat berubah menjadi transparan dan tidak mungkin untuk mengomentari video."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Nonaktifkan bilah tembus cahaya terang</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Bilah navigasi mode terang adalah buram</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Bilah navigasi mode terang buram atau tembus pandang</string>
@@ -1541,7 +1544,7 @@ Pemutaran video dengan AV1 mungkin tersendat atau kehilangan bingkai."</string>
   <string name="morphe_spoof_video_streams_about_js">• Jika proses pembukaan kode terenkripsi gagal, pemutaran mungkin gagal</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Paksa audio asli tidak tersedia</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">Variasi JavaScript Pemain</string>
+  <string name="morphe_spoof_video_streams_js_variant_title">Varian pemutar JavaScript</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">Tampilkan di Statistik untuk nerds</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">Jenis klien ditampilkan di Statistik untuk nerds</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">Klien disembunyikan di Statistik untuk nerds</string>

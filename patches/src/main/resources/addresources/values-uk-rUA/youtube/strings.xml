@@ -287,6 +287,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_channel_guidelines_title">Приховати правила каналу</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_on">Правила каналу приховано</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_off">Правила каналу показуються</string>
+  <string name="morphe_hide_comments_prompts_title">Приховати підказки коментарів</string>
+  <string name="morphe_hide_comments_prompts_summary_on">Підказки коментарів приховано</string>
+  <string name="morphe_hide_comments_prompts_summary_off">Підказки коментарів показано</string>
   <string name="morphe_hide_comments_by_members_header_title">Приховати \"Коментарі від спонсорів\"</string>
   <string name="morphe_hide_comments_by_members_header_summary_on">Заголовок \"Коментарі від спонсорів\" приховано</string>
   <string name="morphe_hide_comments_by_members_header_summary_off">Заголовок \"Коментарі від спонсорів\" показується</string>
@@ -640,8 +643,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Рядок стану непрозорий</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Рядок стану непрозорий або напівпрозорий</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Обмеження:
-• Чорна смуга може з'явитися вгорі відео плеєра.
-• На деяких пристроях, увімкнення цієї функції може змінити системну панель навігації на прозору."</string>
+• Чорна смуга може з'явитися нагорі програвача відео.
+• Панель навігації системи може змінюватися на прозору, і неможливо коментувати відео."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Вимкнути напівпрозорість світлої панелі</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Панель навігації світлого режиму непрозора</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Панель навігації світлого режиму непрозора або напівпрозора</string>

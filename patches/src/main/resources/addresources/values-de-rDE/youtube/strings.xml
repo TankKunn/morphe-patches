@@ -286,6 +286,9 @@ Dadurch werden jedoch auch einige Benutzerdaten wie deine IP-Adresse protokollie
   <string name="morphe_hide_comments_channel_guidelines_title">Kanalrichtlinien ausblenden</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_on">Kanalrichtlinien sind ausgeblendet</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_off">Kanalrichtlinien werden angezeigt</string>
+  <string name="morphe_hide_comments_prompts_title">Kommentarprompts ausblenden</string>
+  <string name="morphe_hide_comments_prompts_summary_on">Kommentarprompts sind ausgeblendet</string>
+  <string name="morphe_hide_comments_prompts_summary_off">Kommentarprompts werden angezeigt</string>
   <string name="morphe_hide_comments_by_members_header_title">\'Kommentare von Mitgliedern\' im Kopfbereich ausblenden</string>
   <string name="morphe_hide_comments_by_members_header_summary_on">Kopfzeile \'Kommentare von Mitgliedern\' ist ausgeblendet</string>
   <string name="morphe_hide_comments_by_members_header_summary_off">Kopfzeile \'Kommentare von Mitgliedern\' wird angezeigt</string>
@@ -637,8 +640,8 @@ Cookies werden automatisch gespeichert, wenn sie gültig sind"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statusleiste ist undurchsichtig</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Die Statusleiste ist undurchsichtig oder durchscheinend</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Einschränkungen:
-• Ein schwarzer Balken kann oben im Video-Player erscheinen.
-• Auf einigen Geräten kann das Aktivieren dieser Funktion die System-Navigationsleiste transparent machen."</string>
+• Ein schwarzer Balken kann oben im Video-Player angezeigt werden.
+• Die System-Navigationsleiste kann transparent werden und es ist nicht möglich, Videos zu kommentieren."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Hellen, lichtdurchlässigen Balken deaktivieren</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Heller Navigationsbalken ist opak</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Die Navigationsleiste im hellen Modus ist undurchsichtig oder durchscheinend</string>

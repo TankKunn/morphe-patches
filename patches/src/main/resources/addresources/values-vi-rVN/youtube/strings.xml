@@ -287,6 +287,9 @@ Tuy nhiên, bật tính năng này cũng sẽ ghi lại một số dữ liệu n
   <string name="morphe_hide_comments_channel_guidelines_title">Ẩn nguyên tắc kênh</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_on">Nguyên tắc kênh đã bị ẩn</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_off">Nguyên tắc kênh được hiển thị</string>
+  <string name="morphe_hide_comments_prompts_title">Ẩn gợi ý bình luận</string>
+  <string name="morphe_hide_comments_prompts_summary_on">Gợi ý bình luận đang ẩn</string>
+  <string name="morphe_hide_comments_prompts_summary_off">Gợi ý bình luận đang hiển thị</string>
   <string name="morphe_hide_comments_by_members_header_title">Ẩn tiêu đề \'Bình luận của hội viên\'</string>
   <string name="morphe_hide_comments_by_members_header_summary_on">Tiêu đề bình luận của hội viên đã bị ẩn</string>
   <string name="morphe_hide_comments_by_members_header_summary_off">Tiêu đề bình luận của hội viên được hiển thị</string>
@@ -639,9 +642,9 @@ Cookie sẽ được tự động lưu nếu hợp lệ"</string>
   <string name="morphe_disable_translucent_status_bar_title">Vô hiệu hóa thanh trạng thái trong suốt</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Thanh trạng thái sẽ không còn trong suốt</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Thanh trạng thái sẽ trở nên mờ hoặc trong suốt</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Hạn chế:
-• Một thanh đen có thể xuất hiện trên đầu trình phát video
-• Trên một số thiết bị, bật tính năng này có thể thay đổi thanh điều hướng hệ thống thành trong suốt."</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Giới hạn:
+• Có thể xuất hiện một thanh đen trên đầu của trình phát video.
+• Thanh điều hướng hệ thống có thể thay đổi thành trong suốt và không thể bình luận trên video."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Vô hiệu hóa thanh điều hướng trong suốt ở giao diện sáng</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Thanh điều hướng sẽ không còn trong suốt ở giao diện sáng</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Thanh điều hướng sẽ trở nên mờ hoặc trong suốt ở giao diện sáng</string>
