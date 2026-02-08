@@ -1,3 +1,15 @@
+# [1.13.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.12.0...v1.13.0-dev.1) (2026-02-08)
+
+
+### Bug Fixes
+
+* **YouTube - Navigation bar:** Resolve experimental player black bar when "Disable translucent status bar" is enabled ([#464](https://github.com/MorpheApp/morphe-patches/issues/464)) ([1a9dd11](https://github.com/MorpheApp/morphe-patches/commit/1a9dd1128b13161318157e632e8e4125140081b3))
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide comment prompts" setting ([#463](https://github.com/MorpheApp/morphe-patches/issues/463)) ([3ca9551](https://github.com/MorpheApp/morphe-patches/commit/3ca95517f45acbc34a25c569e975e903e6eafa1f))
+
 # [1.12.0](https://github.com/MorpheApp/morphe-patches/compare/v1.11.0...v1.12.0) (2026-02-07)
 
 
