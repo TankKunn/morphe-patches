@@ -1,3 +1,10 @@
+# [1.13.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.2...v1.13.0-dev.3) (2026-02-09)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Resolve "Hide community posts" not working in search results ([#485](https://github.com/MorpheApp/morphe-patches/issues/485)) ([9083a16](https://github.com/MorpheApp/morphe-patches/commit/9083a16bd3f0098acabebee91e660f15b676d1fb))
+
 # [1.13.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.1...v1.13.0-dev.2) (2026-02-08)
 
 
