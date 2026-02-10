@@ -1,3 +1,10 @@
+# [1.13.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.6...v1.13.0-dev.7) (2026-02-10)
+
+
+### Bug Fixes
+
+* **YouTube - Theme:** Adjust theme color replacement ([12fc228](https://github.com/MorpheApp/morphe-patches/commit/12fc2284bd719d9992045474f2b7e0cf20b976fd))
+
 # [1.13.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.5...v1.13.0-dev.6) (2026-02-10)
 
 
