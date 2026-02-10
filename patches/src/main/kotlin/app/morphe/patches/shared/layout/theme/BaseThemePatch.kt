@@ -33,10 +33,8 @@ internal val THEME_DEFAULT_DARK_COLOR_NAMES = setOf(
 internal val THEME_DEFAULT_LIGHT_COLOR_NAMES = setOf(
     "yt_white1", "yt_white2", "yt_white3", "yt_white4",
     "yt_white1_opacity95", "yt_white1_opacity98",
-
-    // Overrides not needed?
-//    "yt_ref_color_constants_baseline_white_white1", "yt_ref_color_constants_baseline_white_white2",
-//    "yt_ref_color_constants_baseline_white_white3", "yt_ref_color_constants_baseline_white_white4",
+    // YT 21.06+
+    "yt_ref_color_constants_baseline_white_white1",
 )
 
 /**
