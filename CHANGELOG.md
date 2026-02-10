@@ -1,3 +1,15 @@
+# [1.13.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.3...v1.13.0-dev.4) (2026-02-10)
+
+
+### Bug Fixes
+
+* **YouTube - Theme:** Apply dark color to 21.06+ experimental app targets ([#495](https://github.com/MorpheApp/morphe-patches/issues/495)) ([62ca1be](https://github.com/MorpheApp/morphe-patches/commit/62ca1bed0f3cc4713420b3299872ce2fb285c03e))
+
+
+### Features
+
+* **YouTube:** Add `Disable layout updates` patch ([#493](https://github.com/MorpheApp/morphe-patches/issues/493)) ([0399388](https://github.com/MorpheApp/morphe-patches/commit/039938837397317471e676e9608e4fcbc25f46ec))
+
 # [1.13.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.2...v1.13.0-dev.3) (2026-02-09)
 
 

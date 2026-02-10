@@ -1,5 +1,5 @@
 {
-  "version": "1.13.0-dev.3",
+  "version": "1.13.0-dev.4",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -390,6 +390,23 @@
       "description": "Adds an option to disable haptic feedback in the player for various actions.",
       "use": true,
       "dependencies": [
+        "BytecodePatch"
+      ],
+      "compatiblePackages": {
+        "com.google.android.youtube": [
+          "20.40.45",
+          "20.31.42",
+          "20.21.37"
+        ]
+      },
+      "options": []
+    },
+    {
+      "name": "Disable layout updates",
+      "description": "Adds an option to disable server side layout updates and use an older UI.",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch",
         "BytecodePatch"
       ],
       "compatiblePackages": {
