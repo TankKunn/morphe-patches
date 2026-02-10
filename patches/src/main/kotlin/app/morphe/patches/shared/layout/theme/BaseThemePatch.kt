@@ -14,8 +14,6 @@ internal const val THEME_COLOR_OPTION_DESCRIPTION = "Can be a hex color (#RRGGBB
 internal val THEME_DEFAULT_DARK_COLOR_NAMES = setOf(
     "yt_black0", "yt_black1", "yt_black2", "yt_black3", "yt_black4",
     "yt_black1_opacity95", "yt_black1_opacity98",
-    "yt_black_pure_opacity5", "yt_black_pure_opacity10", "yt_black_pure_opacity15",
-    "yt_black_pure_opacity30", "yt_black_pure_opacity60", "yt_black_pure_opacity80",
     "yt_status_bar_background_dark", "material_grey_850",
     // YT 21.06+
     // yt_ref_color_constants_baseline_black_black0
