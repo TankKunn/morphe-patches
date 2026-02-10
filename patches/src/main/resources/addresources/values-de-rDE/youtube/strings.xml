@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 Dies kann helfen, Komponenten bei der Erstellung benutzerdefinierter Filter zu identifizieren.
 
 Dadurch werden jedoch auch einige Benutzerdaten wie deine IP-Adresse protokolliert."</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">Layoutaktualisierungen deaktivieren</string>
+  <string name="morphe_disable_layout_updates_summary_on">Der Server aktualisiert das Layout nicht.</string>
+  <string name="morphe_disable_layout_updates_summary_off">Der Server aktualisiert das Layout.</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Layout der App wird auf den bei der ersten Installation verwendeten Layout zurückgesetzt.
+
+Manche serverseitigen Layouts können nicht zurückgesetzt werden.
+
+Folgende Änderungen werden vorgenommen:
+• Komponenten im Player-Flyout-Menü (oder verwandte Einstellungen) können möglicherweise nicht funktionieren.
+• Rollende Zahlen werden nicht animiert.
+• Die Bibliothek Registerkarte wird angezeigt.
+• Musikabteilung der Video-Beschreibung kann möglicherweise nicht funktionieren.
+• Schaltfläche zum Wechseln des Kontos kann auf der Bibliothek Registerkarte nicht angezeigt werden."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">Creator-Shop-Regal ausblenden</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">Creator Store-Regal unter dem Videoplayer ist ausgeblendet</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">Creator Store-Regal unter dem Videoplayer wird angezeigt</string>
   <string name="morphe_hide_album_cards_title">Albumkarten ausblenden</string>
   <string name="morphe_hide_album_cards_summary_on">Albumkarten werden ausgeblendet</string>
   <string name="morphe_hide_album_cards_summary_off">Albumkarten werden angezeigt</string>
@@ -372,9 +389,6 @@ Einschränkungen:
   <string name="morphe_hide_keyword_toast_invalid_length">Keyword ist zu kurz und erfordert Anführungszeichen: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Stichwort wird alle Videos ausblenden: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">Creator-Shop-Regal ausblenden</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">Creator Store-Regal unter dem Videoplayer ist ausgeblendet</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">Creator Store-Regal unter dem Videoplayer wird angezeigt</string>
   <string name="morphe_hide_end_screen_store_banner_title">Endbild-Banner ausblenden</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">Endbildschirm-Shop-Banner ist ausgeblendet</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">Endbildschirm-Shop-Banner wird angezeigt</string>
@@ -990,12 +1004,6 @@ Einschränkung: Dislikes werden möglicherweise nicht im Inkognito-Modus angezei
   <string name="morphe_wide_searchbar_title">breite Suchleiste aktivieren</string>
   <string name="morphe_wide_searchbar_summary_on">Breite Suchleiste ist aktiviert</string>
   <string name="morphe_wide_searchbar_summary_off">Breite Suchleiste ist deaktiviert</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">Alte Suchfilter wiederherstellen</string>
-  <string name="morphe_restore_old_search_filters_summary_on">Sortieren nach Bewertung und hochgeladenem Datum ist in Suchfilter verfügbar</string>
-  <string name="morphe_restore_old_search_filters_summary_off">Sortieren nach Bewertung und hochgeladenem Datum ist in Suchfilter nicht verfügbar</string>
-  <string name="morphe_old_search_filters_sort_by_rating">Bewertung</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">Hochladedatum</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">SponsorBlock aktivieren</string>
   <string name="morphe_sb_enable_sb_sum">SponsorBlock ist ein Crowdsourcing-System zum Überspringen von nervigen Segmenten von YouTube-Videos</string>

@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 Dit kan helpen bij het identificeren van componenten bij het maken van aangepaste filters.
 
 Als u dit inschakelt, worden echter ook bepaalde gebruikersgegevens, zoals uw IP-adres, vastgelegd."</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">Layout-updates uitschakelen</string>
+  <string name="morphe_disable_layout_updates_summary_on">Layout wordt niet bijgewerkt door de server</string>
+  <string name="morphe_disable_layout_updates_summary_off">Layout wordt bijgewerkt door de server</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"De lay-out van de app wordt teruggezet naar de lay-out die bij de eerste installatie werd gebruikt.
+
+Enkele server-side lay-outs kunnen niet worden teruggezet.
+
+Wijzigingen zijn:
+• Componenten in het vliegmenu van de speler (of gerelateerde instellingen) kunnen niet werken.
+• Rollende nummers zijn niet geanimeerd.
+• De bibliotheektab is zichtbaar.
+• De muzieksectie van de videobeschrijving kan niet werken.
+• De accountwisseling knop kan niet zichtbaar zijn op de bibliotheektab."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">Makerswinkelplank verbergen</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">Creator store-plank onder videospeler is verborgen</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">Creator-winkelplank onder videospeler wordt getoond</string>
   <string name="morphe_hide_album_cards_title">Verberg albumkaarten</string>
   <string name="morphe_hide_album_cards_summary_on">Albumkaarten zijn verborgen</string>
   <string name="morphe_hide_album_cards_summary_off">Albumkaarten worden getoond</string>
@@ -372,9 +389,6 @@ Beperkingen:
   <string name="morphe_hide_keyword_toast_invalid_length">Keyword is te kort en vereist aanhalingstekens: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Keyword verbergt alle video\'s: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">Makerswinkelplank verbergen</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">Creator store-plank onder videospeler is verborgen</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">Creator-winkelplank onder videospeler wordt getoond</string>
   <string name="morphe_hide_end_screen_store_banner_title">Verberg de Store-banner op het eindscherm</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">Eindscherm winkelbanner is verborgen</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">Eindscherm winkelbanner wordt getoond</string>
@@ -992,12 +1006,6 @@ Beperking: Vind ik niet leuk verschijnen mogelijk niet in de incognitomodus"</st
   <string name="morphe_wide_searchbar_title">Schakel de brede zoekbalk in</string>
   <string name="morphe_wide_searchbar_summary_on">De brede zoekbalk is ingeschakeld</string>
   <string name="morphe_wide_searchbar_summary_off">De brede zoekbalk is uitgeschakeld</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">Oude zoekfilters herstellen</string>
-  <string name="morphe_restore_old_search_filters_summary_on">Sorteren op beoordeling en sorteren op uploaddatum zijn beschikbaar in het zoekfilter</string>
-  <string name="morphe_restore_old_search_filters_summary_off">Sorteren op beoordeling en sorteren op uploaddatum zijn niet beschikbaar in het zoekfilter</string>
-  <string name="morphe_old_search_filters_sort_by_rating">Beoordeling</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">Upload datum</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">Schakel SponsorBlock in</string>
   <string name="morphe_sb_enable_sb_sum">SponsorBlock is een crowdsourced systeem om vervelende delen van YouTube-video\'s over te slaan</string>

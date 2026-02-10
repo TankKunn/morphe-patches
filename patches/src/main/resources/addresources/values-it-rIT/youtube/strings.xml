@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 Questo può aiutare a identificare i componenti durante la creazione di filtri personalizzati.
 
 Tuttavia, l'abilitazione di questa opzione registrerà anche alcuni dati dell'utente come il tuo indirizzo IP."</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">Disabilita aggiornamenti layout</string>
+  <string name="morphe_disable_layout_updates_summary_on">Il layout non sarà aggiornato dal server</string>
+  <string name="morphe_disable_layout_updates_summary_off">Il layout sarà aggiornato dal server</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"La disposizione dell'app viene ripristinata alla disposizione utilizzata al momento dell'installazione.
+
+Alcune disposizioni lato server potrebbero non essere ripristinate.
+
+I cambiamenti includono:
+• I componenti del menu a comparsa del giocatore (o le impostazioni correlate) potrebbero non funzionare.
+• I numeri progressivi non sono animati.
+• La scheda Libreria è visualizzata.
+• La sezione Musica della descrizione del video potrebbe non funzionare.
+• Il pulsante di cambio account potrebbe non apparire sulla scheda Libreria."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">Nascondi sezione negozio del creatore</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">La sezione del negozio del creator sotto il riproduttore video è nascosta</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">La mensola del negozio del creatore sotto il riproduttore video è mostrata</string>
   <string name="morphe_hide_album_cards_title">Nascondi le schede degli album</string>
   <string name="morphe_hide_album_cards_summary_on">Le schede album sono nascoste</string>
   <string name="morphe_hide_album_cards_summary_off">Le schede degli album sono visibili</string>
@@ -372,9 +389,6 @@ Limitazioni:
   <string name="morphe_hide_keyword_toast_invalid_length">La parola chiave è troppo corta e richiede le virgolette: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">La parola chiave nasconderà tutti i video: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">Nascondi sezione negozio del creatore</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">La sezione del negozio del creator sotto il riproduttore video è nascosta</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">La mensola del negozio del creatore sotto il riproduttore video è mostrata</string>
   <string name="morphe_hide_end_screen_store_banner_title">Nascondi banner del negozio della schermata finale</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">Il banner del negozio nella schermata finale è nascosto</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">Il banner del negozio nella schermata finale è mostrato</string>
@@ -992,12 +1006,6 @@ Limitazione: i \"Non mi piace\" potrebbero non apparire in modalità incognito"<
   <string name="morphe_wide_searchbar_title">Attiva la barra di ricerca estesa</string>
   <string name="morphe_wide_searchbar_summary_on">La barra di ricerca estesa è abilitata</string>
   <string name="morphe_wide_searchbar_summary_off">La barra di ricerca estesa è disabilitata</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">Ripristina vecchi filtri di ricerca</string>
-  <string name="morphe_restore_old_search_filters_summary_on">Ordinamento per valutazione e ordinamento per data di caricamento sono disponibili nei filtri di ricerca</string>
-  <string name="morphe_restore_old_search_filters_summary_off">Ordinamento per valutazione e ordinamento per data di caricamento non sono disponibili nei filtri di ricerca</string>
-  <string name="morphe_old_search_filters_sort_by_rating">Valutazione</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">Data di caricamento</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">Abilita SponsorBlock</string>
   <string name="morphe_sb_enable_sb_sum">SponsorBlock è un sistema collaborativo creato per saltare le parti fastidiose nei video di YouTube</string>

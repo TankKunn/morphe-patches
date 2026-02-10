@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 ซึ่งจะช่วยระบุส่วนประกอบเมื่อสร้างตัวกรองที่กำหนดเองได้
 
 อย่างไรก็ตาม การเปิดใช้งานนี้จะบันทึกข้อมูลผู้ใช้บางอย่าง เช่น ที่อยู่ IP ของคุณด้วย"</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">ปิดการอัปเดตรูปแบบ</string>
+  <string name="morphe_disable_layout_updates_summary_on">รูปแบบจะไม่ได้รับการอัปเดตจากเซิร์ฟเวอร์</string>
+  <string name="morphe_disable_layout_updates_summary_off">รูปแบบจะได้รับการอัปเดตจากเซิร์ฟเวอร์</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"การจัดวางแอปพลิเคชันจะกลับไปใช้งานที่ใช้เมื่อติดตั้งครั้งแรก
+
+บางการจัดวางจากเซิร์ฟเวอร์อาจไม่กลับไป
+
+การเปลี่ยนแปลงรวมไปถึง:
+• ส่วนประกอบในเมนูตัวเลือกของผู้เล่น (หรือการตั้งค่าเกี่ยวข้อง) อาจไม่ทำงาน
+• เลขหมุนไม่ได้รับการแอนิเมชัน
+• แท็บไลบรารีจะแสดง
+• ส่วนเพลงของคำอธิบายวิดีโออาจไม่ทำงาน
+• ปุ่มสลับบัญชีอาจไม่ปรากฏบนแท็บไลบรารี"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">ซ่อนชั้นวางร้านค้าของผู้สร้าง</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">ชั้นวางร้านค้าของครีเอเตอร์ใต้โปรแกรมเล่นวิดีโอถูกซ่อนไว้</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">แสดงชั้นวางร้านค้าของผู้สร้างใต้เครื่องเล่นวิดีโอ</string>
   <string name="morphe_hide_album_cards_title">ซ่อนการ์ดอัลบั้ม</string>
   <string name="morphe_hide_album_cards_summary_on">การ์ดอัลบั้มถูกซ่อน</string>
   <string name="morphe_hide_album_cards_summary_off">การ์ดอัลบั้มถูกแสดง</string>
@@ -372,9 +389,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_keyword_toast_invalid_length">คำสำคัญสั้นเกินไปและต้องใช้เครื่องหมายคำพูด: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">คำสำคัญจะซ่อนวิดีโอทั้งหมด: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">ซ่อนชั้นวางร้านค้าของผู้สร้าง</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">ชั้นวางร้านค้าของครีเอเตอร์ใต้โปรแกรมเล่นวิดีโอถูกซ่อนไว้</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">แสดงชั้นวางร้านค้าของผู้สร้างใต้เครื่องเล่นวิดีโอ</string>
   <string name="morphe_hide_end_screen_store_banner_title">ซ่อนแบนเนอร์ร้านค้าท้ายจอ</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">แบนเนอร์ร้านค้าท้ายหน้าจอถูกซ่อนไว้</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">แบนเนอร์ร้านค้าท้ายหน้าจอแสดงอยู่</string>
@@ -990,12 +1004,6 @@ Second \"item\" text"</string>
   <string name="morphe_wide_searchbar_title">ทั้งหละเย้ยนตะโรกเลียด</string>
   <string name="morphe_wide_searchbar_summary_on">ทั้งละเย้ยนตะโรกเลียด รตรอกลาดต้อง</string>
   <string name="morphe_wide_searchbar_summary_off">ทั้งหละเย้ยนตะโรกเลียด รบกใหม่ยเทศไทย</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">คืนค่าฟิลเตอร์ค้นหาเก่า</string>
-  <string name="morphe_restore_old_search_filters_summary_on">จัดลำดับตามคะแนนและจัดลำดับตามวันที่อัปโหลดพร้อมใช้งานในฟิลเตอร์ค้นหา</string>
-  <string name="morphe_restore_old_search_filters_summary_off">จัดลำดับตามคะแนนและจัดลำดับตามวันที่อัปโหลดไม่อยู่ในฟิลเตอร์ค้นหา</string>
-  <string name="morphe_old_search_filters_sort_by_rating">คะแนน</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">วันที่อัปโหลด</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">เปิดใช้งาน SponsorBlock</string>
   <string name="morphe_sb_enable_sb_sum">SponsorBlock เป็นระบบ crowdsourced สำหรับการข้ามส่วนที่น่ารำคาญของวิดีโอ YouTube</string>

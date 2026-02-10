@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 To může pomoci identifikovat komponenty při vytváření vlastních filtrů.
 
 Povolením této možnosti se však budou zaznamenávat i některá uživatelská data, jako je vaše IP adresa."</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">Zakázat aktualizace rozložení</string>
+  <string name="morphe_disable_layout_updates_summary_on">Rozložení nebude aktualizováno serverem</string>
+  <string name="morphe_disable_layout_updates_summary_off">Rozložení bude aktualizováno serverem</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Položka aplikace se vrací na původní nastavení při prvním použití.
+
+Některé serverové nastavení může nefungovat.
+
+Změny zahrnují:
+• Komponenty v nabídce přehrávače (nebo související nastavení) mohou nefungovat.
+• Čísla se neanimují.
+• Zobrazí se záložka knihovna.
+• Místo hudby v popisu videa může nefungovat.
+• Tlačítko pro přepínání účtu může být na záložce knihovna chybějící."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">Skrýt poličku obchodu tvůrce</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">Police s obchodem tvůrce pod přehrávačem videa je skryta</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">Police obchodu pro tvůrce pod přehrávačem videa je zobrazena</string>
   <string name="morphe_hide_album_cards_title">Skrýt karty alb</string>
   <string name="morphe_hide_album_cards_summary_on">Karty alb jsou skryté</string>
   <string name="morphe_hide_album_cards_summary_off">Karty alb jsou zobrazeny</string>
@@ -373,9 +390,6 @@ Omezení:
   <string name="morphe_hide_keyword_toast_invalid_length">Klíčové slovo je příliš krátké a vyžaduje uvozovky: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Klíčové slovo skryje všechna videa: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">Skrýt poličku obchodu tvůrce</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">Police s obchodem tvůrce pod přehrávačem videa je skryta</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">Police obchodu pro tvůrce pod přehrávačem videa je zobrazena</string>
   <string name="morphe_hide_end_screen_store_banner_title">Skrýt koncový banner obchodu</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">Banner obchodu na závěrečné obrazovce je skryt</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">Banner obchodu na závěrečné obrazovce je zobrazen</string>
@@ -993,12 +1007,6 @@ Omezení: Nelíbí se mi se nemusí zobrazit v anonymním režimu"</string>
   <string name="morphe_wide_searchbar_title">Povolit široký vyhledávací panel</string>
   <string name="morphe_wide_searchbar_summary_on">Široký vyhledávací panel je povolen</string>
   <string name="morphe_wide_searchbar_summary_off">Široký vyhledávací panel je zakázán</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">Obnovit staré filtry hledání</string>
-  <string name="morphe_restore_old_search_filters_summary_on">Řadit podle hodnocení a řadit podle data nahrání je dostupné v filtru hledání</string>
-  <string name="morphe_restore_old_search_filters_summary_off">Řadit podle hodnocení a řadit podle data nahrání není dostupné v filtru hledání</string>
-  <string name="morphe_old_search_filters_sort_by_rating">Hodnocení</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">Datum nahrání</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">Povolit SponsorBlock</string>
   <string name="morphe_sb_enable_sb_sum">SponsorBlock je systém s participací komunity pro přeskakování otravných částí videí na YouTube</string>

@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 يمكن أن يساعد هذا في تحديد المكونات عند إنشاء عوامل تصفية مخصصة.
 
 ومع ذلك، سيؤدي تمكين هذا أيضًا إلى تسجيل بعض بيانات المستخدم مثل عنوان IP الخاص بك."</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">تعطيل تحديثات المظهر</string>
+  <string name="morphe_disable_layout_updates_summary_on">سيتم تعطيل تحديثات المظهر بواسطة الخادم</string>
+  <string name="morphe_disable_layout_updates_summary_off">سيتم تحديث المظهر بواسطة الخادم</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"تغييرات في التطبيق تعود إلى الوضع المستخدم عند التثبيت الأول.
+
+قد لا تعود بعض الإعدادات الخدمية.
+
+تغييرات تشمل:
+• قد لا يعمل بعض المكونات في قائمة اللاعب (أو الإعدادات ذات الصلة).
+• لا يتم تحريك الأرقام المتداولة.
+• يتم عرض علامة التبويب المكتبة.
+• قد لا يعمل قسم الموسيقى في وصف الفيديو.
+• قد لا يظهر زر التبديل بين الحسابات في علامة التبويب المكتبة."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">إخفاء رف متجر المنشئ</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">تم إخفاء رف متجر المنشئ أسفل مشغل الفيديو</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">يتم عرض رف متجر المنشئ أسفل مشغل الفيديو</string>
   <string name="morphe_hide_album_cards_title">إخفاء بطاقات الألبوم</string>
   <string name="morphe_hide_album_cards_summary_on">تم إخفاء بطاقات الألبوم</string>
   <string name="morphe_hide_album_cards_summary_off">يتم عرض بطاقات الألبوم</string>
@@ -372,9 +389,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_keyword_toast_invalid_length">الكلمة المفتاحية قصيرة جدًا وتتطلب اقتباسات: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">الكلمة المفتاحية سوف تخفي جميع الفيديوهات: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">إخفاء رف متجر المنشئ</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">تم إخفاء رف متجر المنشئ أسفل مشغل الفيديو</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">يتم عرض رف متجر المنشئ أسفل مشغل الفيديو</string>
   <string name="morphe_hide_end_screen_store_banner_title">إخفاء لافتة شاشة المتجر النهائية</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">تم إخفاء لافتة المتجر بالشاشة النهائية</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">يتم عرض لافتة المتجر بالشاشة النهائية</string>
@@ -641,8 +655,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_title">تعطيل شريط الحالة الشفاف</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">شريط الحالة غير شفاف</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">شريط الحالة معتم أو شفاف</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"الحدود:
-• قد يظهر شريط أسود في أعلى لاعب الفيديو.
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"القيود:
+• قد يظهر شريط أسود في أعلى مشغل الفيديو.
 • يمكن أن يتغير شريط التنقل في النظام إلى شفاف ولا يمكن التعليق على فيديوهات."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">تعطيل الشريط الشفاف الفاتح</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">شريط التنقل في الوضع الفاتح غير شفاف</string>
@@ -992,12 +1006,6 @@ Second \"item\" text"</string>
   <string name="morphe_wide_searchbar_title">تمكين شريط البحث العريض</string>
   <string name="morphe_wide_searchbar_summary_on">تم تمكين شريط البحث العريض</string>
   <string name="morphe_wide_searchbar_summary_off">تم تعطيل شريط البحث العريض</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">استعادة فلاتر البحث القديمة</string>
-  <string name="morphe_restore_old_search_filters_summary_on">الترتيب حسب التقييم و الترتيب حسب تاريخ التحميل متاحان في فلتر البحث</string>
-  <string name="morphe_restore_old_search_filters_summary_off">الترتيب حسب التقييم و الترتيب حسب تاريخ التحميل غير متاحان في فلتر البحث</string>
-  <string name="morphe_old_search_filters_sort_by_rating">التقييم</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">تاريخ التحميل</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">تمكين SponsorBlock</string>
   <string name="morphe_sb_enable_sb_sum">مانع الرُعَاة هو نظام جماعي لتخطي الأجزاء المزعجة من فيديوهات YouTube</string>

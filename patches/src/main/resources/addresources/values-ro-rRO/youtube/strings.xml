@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 Acest lucru poate ajuta la identificarea componentelor atunci când creați filtre personalizate.
 
 Cu toate acestea, activarea acestei opțiuni va înregistra și unele date ale utilizatorului, cum ar fi adresa dvs. IP."</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">Dezactivaţi actualizările layout-ului</string>
+  <string name="morphe_disable_layout_updates_summary_on">Layout-ul nu va fi actualizat de server</string>
+  <string name="morphe_disable_layout_updates_summary_off">Layout-ul va fi actualizat de server</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Dispozitivul se reface la dispozitivul folosit la instalare.
+
+Unele dispozitive server-side pot nu se reface.
+
+Schimbari includ:
+• Componentele din meniul de zbor al jucătorului (sau setările asociate) pot nu funcționa.
+• Cifrele rotative nu sunt animate.
+• Tabulă de bibliotecă este arătată.
+• Secțiunea muzică a descrierii video poate nu funcționa.
+• Butonul de comutare a contului poate nu apare pe tabulă de bibliotecă."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">Ascunde raftul magazinului creatorului</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">Raftul magazinului creatorului de sub playerul video este ascuns.</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">Raftul magazinului creatorului sub playerul video este afișat</string>
   <string name="morphe_hide_album_cards_title">Ascundeți cardurile de album</string>
   <string name="morphe_hide_album_cards_summary_on">Cardurile de album sunt ascunse</string>
   <string name="morphe_hide_album_cards_summary_off">Cardurile de album sunt afișate</string>
@@ -368,9 +385,6 @@ Limitări:
   <string name="morphe_hide_keyword_toast_invalid_length">Cuvântul cheie este prea scurt și necesită oferte: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Cuvântul cheie va ascunde toate videoclipurile: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">Ascunde raftul magazinului creatorului</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">Raftul magazinului creatorului de sub playerul video este ascuns.</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">Raftul magazinului creatorului sub playerul video este afișat</string>
   <string name="morphe_hide_end_screen_store_banner_title">Ascunde bannerul magazinului de la finalul ecranului</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">Bannerul magazinului de pe ecranul final este ascuns.</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">Bannerul magazinului de pe ecranul final este afișat.</string>
@@ -988,12 +1002,6 @@ Limitare: Este posibil ca aprecierile negative să nu apară în modul incognito
   <string name="morphe_wide_searchbar_title">Activează bara de căutare largă</string>
   <string name="morphe_wide_searchbar_summary_on">Bara de căutare largă este activată</string>
   <string name="morphe_wide_searchbar_summary_off">Bara de căutare largă este dezactivată</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">Restaurează filtrele vechi de căutare</string>
-  <string name="morphe_restore_old_search_filters_summary_on">Sortare după rating și sortare după data de încărcare sunt disponibile în filtrele de căutare</string>
-  <string name="morphe_restore_old_search_filters_summary_off">Sortare după rating și sortare după data de încărcare nu sunt disponibile în filtrele de căutare</string>
-  <string name="morphe_old_search_filters_sort_by_rating">Calitate</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">Data incarcare</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">Activează SponsorBlock</string>
   <string name="morphe_sb_enable_sb_sum">SponsorBlock este un sistem bazat pe crowdsourcing pentru a sări peste părțile enervante din videoclipurile de pe YouTube</string>

@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 זה יכול לעזור לזהות רכיבים בעת יצירת מסננים מותאמים אישית.
 
 עם זאת, הפעלת הגדרה זו תתעד גם כמה נתוני משתמש כמו כתובת ה-IP שלך."</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">השבתה של עדכונים שלayout</string>
+  <string name="morphe_disable_layout_updates_summary_on">השליטה לא תעדכן את השayout על ידי השרת</string>
+  <string name="morphe_disable_layout_updates_summary_off">השליטה תעדכן את השayout על ידי השרת</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"התצורה של האפליקציה חוזרת לתצורה שבה היא הייתה כשהתקנתה לראשונה.
+
+אולי תצורות שרת לא יוחזרו.
+
+השינויים כוללים:
+• תפריטים בלחצן טיסה של השחקן (או הגדרות קשורות) עשויים שלא לעבוד.
+• המספרים המזנקים אינם מונעים.
+• הטאב של ספרייה מופיע.
+• חלק המוזיקה של תיאור הווידאו עשוי שלא לעבוד.
+• כפתור החלפת החשבון עשוי שלא להופיע בטאב הספרייה."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">הסתר מדף חנות היוצר</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">מדף חנות היוצר מתחת לנגן הוידאו מוסתר</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">מדף חנות היוצר מתחת לנגן הוידאו מוצג</string>
   <string name="morphe_hide_album_cards_title">הסתר כרטיסי אלבום</string>
   <string name="morphe_hide_album_cards_summary_on">כרטיסי אלבום מוסתרים</string>
   <string name="morphe_hide_album_cards_summary_off">כרטיסי אלבום מוצגים</string>
@@ -372,9 +389,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_keyword_toast_invalid_length">מילת מפתח קצרה מדי ודורשת מרכאות: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">מילת מפתח תסתיר את כל הסרטונים: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">הסתר מדף חנות היוצר</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">מדף חנות היוצר מתחת לנגן הוידאו מוסתר</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">מדף חנות היוצר מתחת לנגן הוידאו מוצג</string>
   <string name="morphe_hide_end_screen_store_banner_title">הסתר כרזת חנות של מסך סיום</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">באנר החנות של מסך סיום מוסתר</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">באנר החנות של מסך הסיום מוצג</string>
@@ -993,12 +1007,6 @@ Second \"item\" text"</string>
   <string name="morphe_wide_searchbar_title">הפעל סרגל חיפוש רחב</string>
   <string name="morphe_wide_searchbar_summary_on">סרגל חיפוש רחב מופעל</string>
   <string name="morphe_wide_searchbar_summary_off">סרגל חיפוש רחב מושבת</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">שחזר סינון חיפוש ישן</string>
-  <string name="morphe_restore_old_search_filters_summary_on">סידור לפי דירוג וסידור לפי תאריך העלאה זמינים בסינון החיפוש</string>
-  <string name="morphe_restore_old_search_filters_summary_off">סידור לפי דירוג וסידור לפי תאריך העלאה לא זמינים בסינון החיפוש</string>
-  <string name="morphe_old_search_filters_sort_by_rating">דירוג</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">תאריך העלאה</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">הפעל את SponsorBlock</string>
   <string name="morphe_sb_enable_sb_sum">המערכת SponsorBlock היא מערכת מיקור המונים לדילוג על חלקים מעצבנים של סרטוני YouTube</string>

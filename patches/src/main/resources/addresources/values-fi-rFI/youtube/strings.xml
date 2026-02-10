@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 Tämä voi auttaa komponenttien tunnistamisessa, kun luot mukautettuja suodattimia.
 
 Tämän käyttöönotto kirjaa myös joitakin käyttäjätietoja, kuten IP-osoitteesi."</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">Estä layout-päivitykset</string>
+  <string name="morphe_disable_layout_updates_summary_on">Layoutia ei päivitetä palvelimelta</string>
+  <string name="morphe_disable_layout_updates_summary_off">Layout päivitetään palvelimelta</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Sovellusasetukset palautuvat asetuksiin, jotka olivat käytössä kun sovellusta ensimmäisen kerran asennettiin.
+
+Jotkut palvelimella oleva asetukset eivät palautu.
+
+Muutokset sisältävät:
+• Soittimen poistumismenun komponentit (tai liittyvät asetukset) eivät toimi.
+• Numeroinnin liike ei ole animesoitu.
+• Kirjasto-osio näytetään.
+• Videon kuvauksen musiikki-osio ei toimi.
+• Tilien vaihtoa painike ei näy Kirjaston-osiossa."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">Piilota sisällöntuottajan kauppahylly</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">Sisällöntuottajan kauppahylly piilotetaan videosoittimen alla</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">Sisällöntuottajan kauppahylly videosoittimen alla näytetään</string>
   <string name="morphe_hide_album_cards_title">Piilota albumikortit</string>
   <string name="morphe_hide_album_cards_summary_on">Albumikortit piilotetaan</string>
   <string name="morphe_hide_album_cards_summary_off">Albumikortit näytetään</string>
@@ -372,9 +389,6 @@ Rajoitukset
   <string name="morphe_hide_keyword_toast_invalid_length">Avainsana on liian lyhyt ja vaatii lainausmerkkejä: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Avainsana piilottaa kaikki videot: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">Piilota sisällöntuottajan kauppahylly</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">Sisällöntuottajan kauppahylly piilotetaan videosoittimen alla</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">Sisällöntuottajan kauppahylly videosoittimen alla näytetään</string>
   <string name="morphe_hide_end_screen_store_banner_title">Piilota loppunäytön kauppabanneri</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">Loppunäytön kauppabanneri piilotetaan</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">Loppunäytön kauppabanneri näytetään</string>
@@ -992,12 +1006,6 @@ Rajoitus: Ei-tykkäykset eivät välttämättä näy incognito-tilassa"</string>
   <string name="morphe_wide_searchbar_title">Ota leveä hakupalkki käyttöön</string>
   <string name="morphe_wide_searchbar_summary_on">Leveä hakupalkki on käytössä</string>
   <string name="morphe_wide_searchbar_summary_off">Leveä hakupalkki ei ole käytössä</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">Palauta vanhat hakukriteerit</string>
-  <string name="morphe_restore_old_search_filters_summary_on">Arvostelun ja lähetysajan mukaan lajittelu on käytettävissä hakukriteereissä</string>
-  <string name="morphe_restore_old_search_filters_summary_off">Arvostelun ja lähetysajan mukaan lajittelu ei ole käytettävissä hakukriteereissä</string>
-  <string name="morphe_old_search_filters_sort_by_rating">Arvostelu</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">Lähetyspäivä</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">Ota SponsorBlock käyttöön</string>
   <string name="morphe_sb_enable_sb_sum">SponsorBlock on joukkoistettu järjestelmä, jolla voidaan ohittaa YouTube-videoiden ärsyttäviä osia</string>
@@ -1515,6 +1523,8 @@ Rajoitukset:
   <string name="morphe_advanced_video_quality_menu_summary_on">Edistynyt videolaatuvalikko näytetään</string>
   <string name="morphe_advanced_video_quality_menu_summary_off">Edistynyttä videolaatuvalikkoa ei näytetä</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
+  <string name="morphe_hide_premium_video_quality_title">Piilota kalliiden laadun valinnat</string>
+  <string name="morphe_hide_premium_video_quality_summary_on">Kalliiden laadun valinnat piilotettu</string>
   <string name="morphe_hide_premium_video_quality_summary_off">Korkealaatuisia valintoja näytetään</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">Priorisoida video-laatu</string>

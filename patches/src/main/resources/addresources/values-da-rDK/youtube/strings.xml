@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 Dette kan hjælpe med at identificere komponenter, når der oprettes brugerdefinerede filtre.
 
 Aktivering af dette vil dog også logge nogle brugerdata, såsom din IP-adresse."</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">Deaktiver opdateringer af layout</string>
+  <string name="morphe_disable_layout_updates_summary_on">Layout vil ikke blive opdateret af serveren</string>
+  <string name="morphe_disable_layout_updates_summary_off">Layout vil blive opdateret af serveren</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Appens udseende går tilbage til det udseende, der blev brugt ved første installation.
+
+Nogle server-side udseender kan ikke gå tilbage.
+
+Ændringer inkluderer:
+• Komponenter i spillerflydervinduesmenu (eller relaterede indstillinger) kan ikke fungere.
+• Rullende tal er ikke animerede.
+• Biblioteksfladen vises.
+• Musiksektionen af videobeskrivelse kan ikke fungere.
+• Kontobytteskнопка kan ikke vises på Biblioteksfladen."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">Skjul butikshylde for skabere</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">Opretterbutikshylde under videoafspiller er skjult</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">Butikshylde for skaber under videoafspiller vises</string>
   <string name="morphe_hide_album_cards_title">Skjul albumkort</string>
   <string name="morphe_hide_album_cards_summary_on">Albumkort er skjult</string>
   <string name="morphe_hide_album_cards_summary_off">Albumkort vises</string>
@@ -372,9 +389,6 @@ Begrænsninger:
   <string name="morphe_hide_keyword_toast_invalid_length">Søgeordet er for kort og kræver anførselstegn: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Nøgleord vil skjule alle videoer: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">Skjul butikshylde for skabere</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">Opretterbutikshylde under videoafspiller er skjult</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">Butikshylde for skaber under videoafspiller vises</string>
   <string name="morphe_hide_end_screen_store_banner_title">Skjul banner fra butikken på slutskærmen</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">Slutskærmsbutiksbanner er skjult</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">Slutskærmsbutiksbanner vises</string>
@@ -992,12 +1006,6 @@ Begrænsning: Synes ikke godt om vises muligvis ikke i inkognitotilstand"</strin
   <string name="morphe_wide_searchbar_title">Aktiver bred søgelinje</string>
   <string name="morphe_wide_searchbar_summary_on">Bred søgelinje er aktiveret</string>
   <string name="morphe_wide_searchbar_summary_off">Bred søgelinje er deaktiveret</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">Gendan gamle søgefiltre</string>
-  <string name="morphe_restore_old_search_filters_summary_on">Sorter efter vurdering og opladningsdato er tilgængelige i søgefiltren</string>
-  <string name="morphe_restore_old_search_filters_summary_off">Sorter efter vurdering og opladningsdato er ikke tilgængelige i søgefiltren</string>
-  <string name="morphe_old_search_filters_sort_by_rating">Bedømømelse</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">Upload-dato</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">Aktiver SponsorBloker</string>
   <string name="morphe_sb_enable_sb_sum">SponsorBlock er et crowdsourcet system, der springer irriterende dele af YouTube-videoer over</string>

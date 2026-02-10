@@ -44,7 +44,24 @@ Second \"item\" text"</string>
 Isto pode ajudar a identificar componentes ao criar filtros personalizados.
 
 No entanto, ativar isto também irá registar alguns dados do utilizador, como o seu endereço IP."</string>
+  <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">Desativar atualizações de layout</string>
+  <string name="morphe_disable_layout_updates_summary_on">O layout não será atualizado pelo servidor</string>
+  <string name="morphe_disable_layout_updates_summary_off">O layout será atualizado pelo servidor</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"A disposição do aplicativo volta para a disposição usada quando foi instalado pela primeira vez.
+
+Algumas disposições do servidor podem não voltar.
+
+As alterações incluem:
+• Os componentes no menu suspenso do player (ou as configurações relacionadas) podem não funcionar.
+• Os números rodantes não são animados.
+• A guia da biblioteca é exibida.
+• A seção de música da descrição do vídeo pode não funcionar.
+• O botão de alternar de conta pode não aparecer na guia da biblioteca."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_creator_store_shelf_title">Ocultar prateleira da loja do criador</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">A prateleira da loja do criador sob o reprodutor de vídeo está oculta</string>
+  <string name="morphe_hide_creator_store_shelf_summary_off">Prateleira da loja do criador sob o leitor de vídeo é exibida</string>
   <string name="morphe_hide_album_cards_title">Esconder cartões de álbuns</string>
   <string name="morphe_hide_album_cards_summary_on">Cartões de álbuns estão escondidos</string>
   <string name="morphe_hide_album_cards_summary_off">Cartões de álbum são visíveis</string>
@@ -372,9 +389,6 @@ Limitações:
   <string name="morphe_hide_keyword_toast_invalid_length">A palavra-chave é muito curta e requer citações: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Palavra-chave irá ocultar todos os vídeos: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
-  <string name="morphe_hide_creator_store_shelf_title">Ocultar prateleira da loja do criador</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">A prateleira da loja do criador sob o reprodutor de vídeo está oculta</string>
-  <string name="morphe_hide_creator_store_shelf_summary_off">Prateleira da loja do criador sob o leitor de vídeo é exibida</string>
   <string name="morphe_hide_end_screen_store_banner_title">Ocultar banner da loja na tela final</string>
   <string name="morphe_hide_end_screen_store_banner_summary_on">O banner da loja de tela final está oculto</string>
   <string name="morphe_hide_end_screen_store_banner_summary_off">O banner da loja de tela final está exibido</string>
@@ -992,12 +1006,6 @@ Limitação: As não gostos podem não aparecer no modo anônimo"</string>
   <string name="morphe_wide_searchbar_title">Ativar barra de pesquisa ampla</string>
   <string name="morphe_wide_searchbar_summary_on">Barra de pesquisa ampla está ativada</string>
   <string name="morphe_wide_searchbar_summary_off">Barra de pesquisa ampla está desativada</string>
-  <!-- layout.searchfilter.restoreOldSearchFiltersPatch -->
-  <string name="morphe_restore_old_search_filters_title">Restaurar filtros de busca antigos</string>
-  <string name="morphe_restore_old_search_filters_summary_on">Ordenar por avaliação e por data de upload está disponível no filtro de busca</string>
-  <string name="morphe_restore_old_search_filters_summary_off">Ordenar por avaliação e por data de upload não está disponível no filtro de busca</string>
-  <string name="morphe_old_search_filters_sort_by_rating">Classificação</string>
-  <string name="morphe_old_search_filters_sort_by_upload_date">Data de envio</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">Habilitar Patrocínio</string>
   <string name="morphe_sb_enable_sb_sum">SponsorBlock é um sistema de crowdsourcing para saltar partes irritantes de vídeos do YouTube</string>
