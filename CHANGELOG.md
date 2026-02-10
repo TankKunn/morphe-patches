@@ -1,3 +1,10 @@
+# [1.13.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.8...v1.13.0-dev.9) (2026-02-10)
+
+
+### Bug Fixes
+
+* **YouTube - Theme:** Override missing 21.06+ light theme color ([a338f0f](https://github.com/MorpheApp/morphe-patches/commit/a338f0f5e5885cd04539ffd831930d1643303c26))
+
 # [1.13.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.7...v1.13.0-dev.8) (2026-02-10)
 
 
