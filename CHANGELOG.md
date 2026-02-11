@@ -1,3 +1,10 @@
+# [1.13.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.11...v1.13.0-dev.12) (2026-02-11)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide collapse button" and "Hide fullscreen button" settings ([#511](https://github.com/MorpheApp/morphe-patches/issues/511)) ([91f1aad](https://github.com/MorpheApp/morphe-patches/commit/91f1aadb386ccfd58cfaf0cf44601af48225f40c))
+
 # [1.13.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.10...v1.13.0-dev.11) (2026-02-11)
 
 
