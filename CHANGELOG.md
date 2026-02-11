@@ -1,3 +1,10 @@
+# [1.13.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.12...v1.13.0-dev.13) (2026-02-11)
+
+
+### Bug Fixes
+
+* **Spoof video streams:** Change patch to default excluded for root ([546580d](https://github.com/MorpheApp/morphe-patches/commit/546580d53c87329c53ed69809b1e1301998e9fb9))
+
 # [1.13.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.11...v1.13.0-dev.12) (2026-02-11)
 
 
