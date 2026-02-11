@@ -738,14 +738,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_title">隱藏影片畫質選單頁尾</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">已隱藏影片畫質選單頁尾</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">已顯示影片畫質選單頁尾</string>
-  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
-  <string name="morphe_hide_autoplay_button_title">隱藏「自動播放」按鈕</string>
-  <string name="morphe_hide_autoplay_button_summary_on">已隱藏「自動播放」按鈕</string>
-  <string name="morphe_hide_autoplay_button_summary_off">已顯示「自動播放」按鈕</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">隱藏自動播放預覽</string>
   <string name="morphe_hide_autoplay_preview_summary_on">已隱藏自動播放預覽</string>
   <string name="morphe_hide_autoplay_preview_summary_off">已顯示自動播放預覽</string>
+  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
+  <string name="morphe_hide_autoplay_button_title">隱藏「自動播放」按鈕</string>
+  <string name="morphe_hide_autoplay_button_summary_on">已隱藏「自動播放」按鈕</string>
+  <string name="morphe_hide_autoplay_button_summary_off">已顯示「自動播放」按鈕</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">隱藏「字幕」按鈕</string>
   <string name="morphe_hide_captions_button_summary_on">已隱藏「字幕」按鈕</string>
@@ -753,6 +753,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_cast_button_title">隱藏「投放」按鈕</string>
   <string name="morphe_hide_cast_button_summary_on">已隱藏「投放」按鈕</string>
   <string name="morphe_hide_cast_button_summary_off">已顯示「投放」按鈕</string>
+  <string name="morphe_hide_collapse_button_title">隱藏收起按鈕</string>
+  <string name="morphe_hide_collapse_button_summary_on">已隱藏收起按鈕</string>
+  <string name="morphe_hide_collapse_button_summary_off">已顯示收起按鈕</string>
+  <string name="morphe_hide_fullscreen_button_title">隱藏全螢幕按鈕</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">全螢幕按鈕已隱藏</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">全螢幕按鈕已顯示</string>
   <string name="morphe_hide_player_control_buttons_background_title">隱藏播放器控制背景</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">已隱藏播放器控制背景</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">已顯示播放器控制背景</string>

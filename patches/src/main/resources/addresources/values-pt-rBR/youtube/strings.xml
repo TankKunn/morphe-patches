@@ -738,14 +738,14 @@ Para mostrar o menu de faixas de áudio, mude 'Falsificar fluxos de vídeo' para
   <string name="morphe_hide_player_flyout_video_quality_footer_title">Ocultar rodapé do menu de qualidade</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Rodapé do menu de qualidade está oculto</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Rodapé do menu de qualidade está visível</string>
-  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
-  <string name="morphe_hide_autoplay_button_title">Ocultar botão Reprodução automática</string>
-  <string name="morphe_hide_autoplay_button_summary_on">Botão de reprodução automática está oculto</string>
-  <string name="morphe_hide_autoplay_button_summary_off">Botão de reprodução automática não está oculto</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Ocultar visualização automática</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Visualização automática está oculta</string>
   <string name="morphe_hide_autoplay_preview_summary_off">Visualização automática não está oculta</string>
+  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
+  <string name="morphe_hide_autoplay_button_title">Ocultar botão Reprodução automática</string>
+  <string name="morphe_hide_autoplay_button_summary_on">Botão de reprodução automática está oculto</string>
+  <string name="morphe_hide_autoplay_button_summary_off">Botão de reprodução automática não está oculto</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Ocultar botão Legendas</string>
   <string name="morphe_hide_captions_button_summary_on">Botão legendas está oculto</string>
@@ -753,6 +753,12 @@ Para mostrar o menu de faixas de áudio, mude 'Falsificar fluxos de vídeo' para
   <string name="morphe_hide_cast_button_title">Ocultar botão Transmitir</string>
   <string name="morphe_hide_cast_button_summary_on">Botão transmitir está oculto</string>
   <string name="morphe_hide_cast_button_summary_off">Botão transmitir não está oculto</string>
+  <string name="morphe_hide_collapse_button_title">Ocultar botão Recuar</string>
+  <string name="morphe_hide_collapse_button_summary_on">Botão Recuar está oculto</string>
+  <string name="morphe_hide_collapse_button_summary_off">Botão Recuar não está oculto</string>
+  <string name="morphe_hide_fullscreen_button_title">Ocultar botão Tela cheia</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">Botão Tela cheia está oculto</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">Botão Tela cheia está visível</string>
   <string name="morphe_hide_player_control_buttons_background_title">Ocultar plano de fundo dos controles do player</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">O plano de fundo dos controles do reprodutor está oculto</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">O plano de fundo dos controles do player está visível</string>

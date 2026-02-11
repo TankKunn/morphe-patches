@@ -36,7 +36,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Wyłączone</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Włączone</string>
   <!-- misc.debugging.enableDebuggingPatch -->
-  <string name="morphe_debug_protobuffer_title">Logi od protokołu buforu</string>
+  <string name="morphe_debug_protobuffer_title">Logi buforów protokołu</string>
   <string name="morphe_debug_protobuffer_summary_on">Włączone</string>
   <string name="morphe_debug_protobuffer_summary_off">Wyłączone</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Włączenie tego ustawienia spowoduje rejestrowanie dodatkowych logów układu, w tym tekstu na ekranie dla niektórych komponentów interfejsu użytkownika. 
@@ -45,19 +45,19 @@ Może to pomóc w identyfikacji komponentów podczas tworzenia niestandardowych 
 
 Włączenie tej opcji spowoduje również rejestrowanie niektórych danych użytkownika, takich jak adres IP."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
-  <string name="morphe_disable_layout_updates_title">Wyłącz aktualizacje układu</string>
-  <string name="morphe_disable_layout_updates_summary_on">Układ nie będzie aktualizowany przez serwer</string>
-  <string name="morphe_disable_layout_updates_summary_off">Układ będzie aktualizowany przez serwer</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Układ aplikacji powróci do układu używanego podczas pierwszego zainstalowania.
+  <string name="morphe_disable_layout_updates_title">Serwerowe aktualizacje układu</string>
+  <string name="morphe_disable_layout_updates_summary_on">Wyłączone</string>
+  <string name="morphe_disable_layout_updates_summary_off">Włączone</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Układ aplikacji powróci do wersji z momentu pierwszej instalacji.
 
-Niektóre układy po stronie serwera mogą nie powrócić.
+Niektóre zmiany układu wprowadzone po stronie serwera mogą nie zostać przywrócone.
 
 Zmiany obejmują:
-• Komponenty w menu wylotowym gracza (lub związane ustawienia) mogą nie działać.
-• Liczby wruczane nie są animowane.
-• Zakładka biblioteka jest wyświetlana.
-• Sekcja muzyki w opisie wideo może nie działać.
-• Przycisk zmiany konta może nie pojawiać się na zakładce Biblioteka."</string>
+• Komponenty menu ustawień filmu (i powiązanych ustawień) mogą nie działać.
+• Animacje liczb nie działają.
+• Zakładka biblioteki jest widoczna.
+• Sekcja muzyki w opisie filmu może nie działać.
+• Przycisk przełączania konta może nie pojawiać się w zakładce biblioteki."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Półka ze sklepem twórcy</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Ukryta pod odtwarzaczem</string>
@@ -443,8 +443,8 @@ Ograniczenia:
   <string name="morphe_disable_chapter_skip_double_tap_summary_on">Wyłączone</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary_off">Sporadycznie możliwe</string>
   <!-- interaction.downloads.downloadsResourcePatch -->
-  <string name="morphe_external_downloader_screen_title">Zewnętrzna aplikacja od pobierania</string>
-  <string name="morphe_external_downloader_screen_summary">Ustawienia dla zewnętrznej aplikacji od pobierania</string>
+  <string name="morphe_external_downloader_screen_title">Zewnętrzna aplikacja do pobierania</string>
+  <string name="morphe_external_downloader_screen_summary">Ustawienia dla zewnętrznej aplikacji do pobierania</string>
   <string name="morphe_external_downloader_title">Przycisk zewnętrznego pobierania</string>
   <string name="morphe_external_downloader_summary_on">Widoczny</string>
   <string name="morphe_external_downloader_summary_off">Ukryty</string>
@@ -452,8 +452,8 @@ Ograniczenia:
   <string name="morphe_external_downloader_action_button_title">Metoda pobierania filmów</string>
   <string name="morphe_external_downloader_action_button_summary_on">Zewnętrzna aplikacja</string>
   <string name="morphe_external_downloader_action_button_summary_off">Natywne pobieranie</string>
-  <string name="morphe_external_downloader_name_title">Nazwa pakietu aplikacji od pobierania filmów</string>
-  <string name="morphe_external_downloader_name_summary">Nazwa pakietu zainstalowanej zewnętrznej aplikacji od pobierania filmów</string>
+  <string name="morphe_external_downloader_name_title">Nazwa pakietu aplikacji do pobierania filmów</string>
+  <string name="morphe_external_downloader_name_summary">Nazwa pakietu zainstalowanej zewnętrznej aplikacji do pobierania filmów</string>
   <string name="morphe_external_downloader_other_item_hint">Wpisz nazwę pakietu aplikacji</string>
   <string name="morphe_external_downloader_other_item">Inne</string>
   <string name="morphe_external_downloader_not_found_title">Aplikacja nie jest zainstalowana</string>
@@ -679,47 +679,47 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_hide_player_flyout_title">Menu ustawień filmów</string>
   <string name="morphe_hide_player_flyout_summary">Ukryj lub pokazuj elementy menu ustawień filmów</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_captions_title">Menu od napisów</string>
+  <string name="morphe_hide_player_flyout_captions_title">Menu napisów</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">Widoczne</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Menu do dodatkowych ustawień</string>
+  <string name="morphe_hide_player_flyout_additional_settings_title">Menu dodatkowych ustawień</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_off">Widoczne</string>
   <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Menu od wyłącznika czasowego</string>
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Menu wyłącznika czasowego</string>
   <string name="morphe_hide_player_flyout_sleep_timer_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_sleep_timer_summary_off">Widoczne</string>
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Menu od pętli filmu</string>
+  <string name="morphe_hide_player_flyout_loop_video_title">Menu pętli filmu</string>
   <string name="morphe_hide_player_flyout_loop_video_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_loop_video_summary_off">Widoczne</string>
   <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Menu od oświetlenia kinowego</string>
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Menu oświetlenia kinowego</string>
   <string name="morphe_hide_player_flyout_ambient_mode_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_ambient_mode_summary_off">Widoczne</string>
   <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Menu od stabilnej głośności</string>
+  <string name="morphe_hide_player_flyout_stable_volume_title">Menu stabilnej głośności</string>
   <string name="morphe_hide_player_flyout_stable_volume_summary_off">Widoczne</string>
   <string name="morphe_hide_player_flyout_stable_volume_summary_on">Ukryte</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_help_title">Menu od pomocy i opinii</string>
+  <string name="morphe_hide_player_flyout_help_title">Menu pomocy i opinii</string>
   <string name="morphe_hide_player_flyout_help_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_help_summary_off">Widoczne</string>
   <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Menu od prędkości odtwarzania</string>
+  <string name="morphe_hide_player_flyout_speed_title">Menu prędkości odtwarzania</string>
   <string name="morphe_hide_player_flyout_speed_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_speed_summary_off">Widoczne</string>
   <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Menu od blokady ekranu</string>
+  <string name="morphe_hide_player_flyout_lock_screen_title">Menu blokady ekranu</string>
   <string name="morphe_hide_player_flyout_lock_screen_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_lock_screen_summary_off">Widoczne</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Menu od słuchania w YouTube Music</string>
+  <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Menu słuchania w YouTube Music</string>
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_summary_off">Widoczne</string>
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Menu od ścieżki dźwiękowej</string>
+  <string name="morphe_hide_player_flyout_audio_track_title">Menu ścieżki dźwiękowej</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Widoczne</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
@@ -728,24 +728,24 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
 
 Aby wyświetlić menu ścieżki dźwiękowej, zmień \"Oszukuj strumienie filmu\" na \"TV\""</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Menu od oglądania w VR</string>
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Menu oglądania w VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">Widoczne</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Menu od jakości filmu</string>
+  <string name="morphe_hide_player_flyout_video_quality_title">Menu jakości filmu</string>
   <string name="morphe_hide_player_flyout_video_quality_summary_on">Ukryte</string>
   <string name="morphe_hide_player_flyout_video_quality_summary_off">Widoczne</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">Opis menu od jakości</string>
+  <string name="morphe_hide_player_flyout_video_quality_footer_title">Opis menu jakości</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Ukryty</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Widoczny</string>
-  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
-  <string name="morphe_hide_autoplay_button_title">Przycisk \"Autoodtwarzanie\"</string>
-  <string name="morphe_hide_autoplay_button_summary_on">Ukryty</string>
-  <string name="morphe_hide_autoplay_button_summary_off">Widoczny</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Podgląd autoodtwarzania</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Ukryty</string>
   <string name="morphe_hide_autoplay_preview_summary_off">Widoczny</string>
+  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
+  <string name="morphe_hide_autoplay_button_title">Przycisk \"Autoodtwarzanie\"</string>
+  <string name="morphe_hide_autoplay_button_summary_on">Ukryty</string>
+  <string name="morphe_hide_autoplay_button_summary_off">Widoczny</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Przycisk \"Napisy\"</string>
   <string name="morphe_hide_captions_button_summary_on">Ukryty</string>
@@ -753,6 +753,12 @@ Aby wyświetlić menu ścieżki dźwiękowej, zmień \"Oszukuj strumienie filmu\
   <string name="morphe_hide_cast_button_title">Przycisk \"Przesyłaj\"</string>
   <string name="morphe_hide_cast_button_summary_on">Ukryty</string>
   <string name="morphe_hide_cast_button_summary_off">Widoczny</string>
+  <string name="morphe_hide_collapse_button_title">Ukryj przycisk Zwiń</string>
+  <string name="morphe_hide_collapse_button_summary_on">Przycisk Zwiń jest ukryty</string>
+  <string name="morphe_hide_collapse_button_summary_off">Przycisk Zwiń jest widoczny</string>
+  <string name="morphe_hide_fullscreen_button_title">Ukryj przycisk pełekranowy</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">Przycisk pełekranowy jest ukryty</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">Przycisk pełekranowy jest wyświetlany</string>
   <string name="morphe_hide_player_control_buttons_background_title">Tło przycisków w odtwarzaczu</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">Ukryte</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">Widoczne</string>
@@ -1518,7 +1524,7 @@ Ograniczenia:
 • Filmy HDR nie będą używać AVC
 • Niektóre urządzenia nie mogą wymusić użycia AVC"</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">Zaawansowane menu od jakości filmu</string>
+  <string name="morphe_advanced_video_quality_menu_title">Zaawansowane menu jakości filmu</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Widoczne</string>
   <string name="morphe_advanced_video_quality_menu_summary_off">Ukryte</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
@@ -1545,7 +1551,7 @@ Odtwarzanie wideo z AV1 może powodować zacinanie się lub gubienie klatek."</s
   <string name="morphe_spoof_video_streams_about_title">Efekty uboczne oszukiwania</string>
   <string name="morphe_spoof_video_streams_about_experimental">• Jest to eksperymentalny klient i może przestać działać w każdej chwili</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Film może zatrzymać się po pierwszej minucie lub może być niedostępny w niektórych regionach</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Brakuje menu od ścieżki dźwiękowej</string>
+  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Brakuje menu ścieżki dźwiękowej</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Brak kodeka filmu AV1</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• Tryb immersyjny 360° VR nie jest dostępny</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stabilna głośność nie jest dostępna</string>

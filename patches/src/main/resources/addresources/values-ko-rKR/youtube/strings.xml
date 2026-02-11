@@ -45,19 +45,19 @@ Second \"item\" text"</string>
 
 그러나 이 설정을 활성화하면 IP 주소와 같은 일부 사용자 데이터도 기록됩니다."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
-  <string name="morphe_disable_layout_updates_title">레이아웃 업데이트 비활성화</string>
-  <string name="morphe_disable_layout_updates_summary_on">서버에서 레이아웃을 업데이트하지 않습니다.</string>
-  <string name="morphe_disable_layout_updates_summary_off">서버에서 레이아웃을 업데이트합니다.</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"앱 레이아웃이 처음 설치되었을 때 사용된 레이아웃으로 되돌립니다.
+  <string name="morphe_disable_layout_updates_title">레이아웃 업데이트 비활성화하기</string>
+  <string name="morphe_disable_layout_updates_summary_on">레이아웃이 서버에 의해 업데이트되지 않습니다</string>
+  <string name="morphe_disable_layout_updates_summary_off">레이아웃이 서버에 의해 업데이트됩니다</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"앱 레이아웃이 처음 설치할 때 사용되는 레이아웃으로 되돌아갑니다.
 
-서버측 레이아웃은 일부가 되돌릴 수 없습니다.
+일부 서버 측 레이아웃은 되돌려지지 않을 수 있습니다.
 
-변경 사항:
-• 플레이어 플라이아웃 메뉴의 구성 요소(또는 관련 설정)에서는 일부 기능이 작동하지 않을 수 있습니다.
-• 롤링 숫자는 애니메이션되지 않습니다.
-• 라이브러리 탭이 표시됩니다.
-• 비디오 설명의 음악 섹션은 일부 기능이 작동하지 않을 수 있습니다.
-• 라이브러리 탭에서 계정 전환 버튼이 표시되지 않을 수 있습니다."</string>
+변경 사항
+• 플레이어 메뉴 구성 요소(또는 관련 설정)가 작동되지 않을 수 있습니다.
+• 롤링 넘버 애니메이션이 작동되지 않습니다.
+• 보관함 탭이 사용됩니다.
+• 동영상 설명에서 음악 섹션이 작동되지 않을 수 있습니다.
+• 보관함 탭에서 계정 전환 버튼이 표시되지 않을 수 있습니다."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">판매자 스토어 선반 숨기기</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">판매자(크리에이터) 스토어 선반이 숨겨집니다</string>
@@ -568,9 +568,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_thanks_button_summary_off">Thanks 버튼이 표시됩니다</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
-  <string name="morphe_hide_ask_button_title">\'질문하기 (Gemini)\' 숨기기</string>
-  <string name="morphe_hide_ask_button_summary_on">\'질문하기 (Gemini)\' 버튼이 숨겨집니다</string>
-  <string name="morphe_hide_ask_button_summary_off">\'질문하기 (Gemini)\' 버튼이 표시됩니다</string>
+  <string name="morphe_hide_ask_button_title">\'질문하기\' 숨기기</string>
+  <string name="morphe_hide_ask_button_summary_on">\'질문하기\' 버튼이 숨겨집니다</string>
+  <string name="morphe_hide_ask_button_summary_off">\'질문하기\' 버튼이 표시됩니다</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">클립 숨기기</string>
   <string name="morphe_hide_clip_button_summary_on">클립 버튼이 숨겨집니다</string>
@@ -736,14 +736,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_title">화질 설정 메뉴 하단 설명 숨기기</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">화질 설정 메뉴에서 하단 설명이 숨겨집니다</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">화질 설정 메뉴에서 하단 설명이 표시됩니다</string>
-  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
-  <string name="morphe_hide_autoplay_button_title">자동재생 버튼 숨기기</string>
-  <string name="morphe_hide_autoplay_button_summary_on">자동재생 버튼이 숨겨집니다</string>
-  <string name="morphe_hide_autoplay_button_summary_off">자동재생 버튼이 표시됩니다</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">자동재생 미리보기 숨기기</string>
   <string name="morphe_hide_autoplay_preview_summary_on">자동재생 미리보기가 숨겨집니다</string>
   <string name="morphe_hide_autoplay_preview_summary_off">자동재생 미리보기가 표시됩니다</string>
+  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
+  <string name="morphe_hide_autoplay_button_title">자동재생 버튼 숨기기</string>
+  <string name="morphe_hide_autoplay_button_summary_on">자동재생 버튼이 숨겨집니다</string>
+  <string name="morphe_hide_autoplay_button_summary_off">자동재생 버튼이 표시됩니다</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">자막 버튼 숨기기</string>
   <string name="morphe_hide_captions_button_summary_on">자막 버튼이 숨겨집니다</string>
@@ -751,6 +751,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_cast_button_title">크롬캐스트 버튼 숨기기</string>
   <string name="morphe_hide_cast_button_summary_on">크롬캐스트 버튼이 숨겨집니다</string>
   <string name="morphe_hide_cast_button_summary_off">크롬캐스트 버튼이 표시됩니다</string>
+  <string name="morphe_hide_collapse_button_title">숨기기 버튼 숨기기</string>
+  <string name="morphe_hide_collapse_button_summary_on">접기 버튼이 숨겨집니다</string>
+  <string name="morphe_hide_collapse_button_summary_off">접기 버튼이 표시됩니다</string>
+  <string name="morphe_hide_fullscreen_button_title">숨기기 버튼</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">숨기기 버튼이 숨겨집니다</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">숨기기 버튼이 표시됩니다</string>
   <string name="morphe_hide_player_control_buttons_background_title">플레이어 컨트롤 버튼 배경 숨기기</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">플레이어 컨트롤 버튼 배경이 숨겨집니다</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">플레이어 컨트롤 버튼 배경이 표시됩니다</string>

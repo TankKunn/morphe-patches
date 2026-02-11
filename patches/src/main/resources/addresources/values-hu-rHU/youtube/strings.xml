@@ -738,14 +738,14 @@ A hangos menü megjelenítéséhez állítsa 'Spoof video streams' értékét 'T
   <string name="morphe_hide_player_flyout_video_quality_footer_title">Videóminőség menü láblécének elrejtése</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">A videóminőség menü lábléce el van rejtve</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Megjelenik a videóminőség menü lábléce</string>
-  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
-  <string name="morphe_hide_autoplay_button_title">Automatikus lejátszás gomb elrejtése</string>
-  <string name="morphe_hide_autoplay_button_summary_on">Az automatikus lejátszás gomb el van rejtve</string>
-  <string name="morphe_hide_autoplay_button_summary_off">Az automatikus lejátszás gomb látható</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Automatikus előnézet elrejtése</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Az automatikus előnézet el van rejtve</string>
   <string name="morphe_hide_autoplay_preview_summary_off">Az automatikus előnézet látható</string>
+  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
+  <string name="morphe_hide_autoplay_button_title">Automatikus lejátszás gomb elrejtése</string>
+  <string name="morphe_hide_autoplay_button_summary_on">Az automatikus lejátszás gomb el van rejtve</string>
+  <string name="morphe_hide_autoplay_button_summary_off">Az automatikus lejátszás gomb látható</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Felirat gomb elrejtése</string>
   <string name="morphe_hide_captions_button_summary_on">A feliratok gomb el van rejtve</string>
@@ -753,6 +753,12 @@ A hangos menü megjelenítéséhez állítsa 'Spoof video streams' értékét 'T
   <string name="morphe_hide_cast_button_title">Küldés gomb elrejtése</string>
   <string name="morphe_hide_cast_button_summary_on">Az átküldés gomb rejtve van</string>
   <string name="morphe_hide_cast_button_summary_off">Az átküldés gomb látható</string>
+  <string name="morphe_hide_collapse_button_title">Elrejtés gomb elrejtése</string>
+  <string name="morphe_hide_collapse_button_summary_on">Elrejtés gomb elrejtve</string>
+  <string name="morphe_hide_collapse_button_summary_off">Elrejtés gomb látható</string>
+  <string name="morphe_hide_fullscreen_button_title">Elrejtett teljes képernyő gomb</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">Teljes képernyő gomb elrejtve</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">Teljes képernyő gomb látható</string>
   <string name="morphe_hide_player_control_buttons_background_title">Lejátszóvezérlők hátterének elrejtése</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">A lejátszóvezérlők háttere rejtett</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">A lejátszóvezérlők háttere látható</string>

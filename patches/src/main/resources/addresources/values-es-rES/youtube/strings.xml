@@ -738,14 +738,14 @@ Para mostrar el menú de pistas de audio, cambia \"Falsificar transmisiones de v
   <string name="morphe_hide_player_flyout_video_quality_footer_title">Ocultar pie de página del menú \"Calidad\"</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">El pie de página del menú \"Calidad\" está oculto</string>
   <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">El pie de página del menú \"Calidad\" está visible</string>
-  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
-  <string name="morphe_hide_autoplay_button_title">Ocultar botón \"Reproducción automática\"</string>
-  <string name="morphe_hide_autoplay_button_summary_on">El botón \"Reproducción automática\" está oculto</string>
-  <string name="morphe_hide_autoplay_button_summary_off">El botón \"Reproducción automática\" está visible</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Ocultar vista previa automática</string>
   <string name="morphe_hide_autoplay_preview_summary_on">La vista previa automática está oculta</string>
   <string name="morphe_hide_autoplay_preview_summary_off">La vista previa automática está visible</string>
+  <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
+  <string name="morphe_hide_autoplay_button_title">Ocultar botón \"Reproducción automática\"</string>
+  <string name="morphe_hide_autoplay_button_summary_on">El botón \"Reproducción automática\" está oculto</string>
+  <string name="morphe_hide_autoplay_button_summary_off">El botón \"Reproducción automática\" está visible</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Ocultar botón \"Subtítulos\"</string>
   <string name="morphe_hide_captions_button_summary_on">El botón \"Subtítulos\" está oculto</string>
@@ -753,6 +753,12 @@ Para mostrar el menú de pistas de audio, cambia \"Falsificar transmisiones de v
   <string name="morphe_hide_cast_button_title">Ocultar botón \"Transmitir\"</string>
   <string name="morphe_hide_cast_button_summary_on">El botón \"Transmitir\" está oculto</string>
   <string name="morphe_hide_cast_button_summary_off">El botón \"Transmitir\" está visible</string>
+  <string name="morphe_hide_collapse_button_title">Ocultar botón de plegar</string>
+  <string name="morphe_hide_collapse_button_summary_on">El botón de plegar está oculto</string>
+  <string name="morphe_hide_collapse_button_summary_off">El botón de plegar está visible</string>
+  <string name="morphe_hide_fullscreen_button_title">Ocultar botón \"Pantalla completa\"</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">El botón \"Pantalla completa\" está oculto</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">El botón \"Pantalla completa\" está visible</string>
   <string name="morphe_hide_player_control_buttons_background_title">Ocultar fondo de controles del reproductor</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">El fondo de los controles del reproductor está oculto</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">El fondo de los controles del reproductor está visible</string>
