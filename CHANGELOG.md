@@ -1,3 +1,10 @@
+# [1.13.0-dev.14](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.13...v1.13.0-dev.14) (2026-02-12)
+
+
+### Bug Fixes
+
+* **YouTube:** Resolve experimental patching of `21.06.257` ([62f68a4](https://github.com/MorpheApp/morphe-patches/commit/62f68a47a690d027f16e0d05b963ea399f6237bb))
+
 # [1.13.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.12...v1.13.0-dev.13) (2026-02-11)
 
 
