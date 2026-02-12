@@ -9,13 +9,7 @@
 * **YouTube - Hide layout components:** Resolve community posts sometimes showing in the player suggestions ([0d0886a](https://github.com/MorpheApp/morphe-patches/commit/0d0886a1d45cb33bb9b43542009b14849fd47849))
 * **YouTube - Hide Shorts components:** Resolve hiding Shorts also hiding channel page headers ([#518](https://github.com/MorpheApp/morphe-patches/issues/518)) ([966232b](https://github.com/MorpheApp/morphe-patches/commit/966232b6e7bd610b09b2b7ce40ade735115f7748))
 * **YouTube - Navigation bar:** Resolve experimental player black bar when "Disable translucent status bar" is enabled ([#464](https://github.com/MorpheApp/morphe-patches/issues/464)) ([1a9dd11](https://github.com/MorpheApp/morphe-patches/commit/1a9dd1128b13161318157e632e8e4125140081b3))
-* **YouTube - Theme:** Adjust black color overrides ([b779c12](https://github.com/MorpheApp/morphe-patches/commit/b779c1245e241b2ad2929cc01767e86ea814cfc4))
-* **YouTube - Theme:** Adjust theme color replacement ([12fc228](https://github.com/MorpheApp/morphe-patches/commit/12fc2284bd719d9992045474f2b7e0cf20b976fd))
 * **YouTube - Theme:** Apply dark color to 21.06+ experimental app targets ([#495](https://github.com/MorpheApp/morphe-patches/issues/495)) ([62ca1be](https://github.com/MorpheApp/morphe-patches/commit/62ca1bed0f3cc4713420b3299872ce2fb285c03e))
-* **YouTube - Theme:** Override missing 21.06+ light theme color ([a338f0f](https://github.com/MorpheApp/morphe-patches/commit/a338f0f5e5885cd04539ffd831930d1643303c26))
-* **YouTube - Theme:** Resolve theme color incorrectly applying to player overlay ([bbf94ec](https://github.com/MorpheApp/morphe-patches/commit/bbf94ec0b24a1684d8c565a5eec4bf4aefd6bf57))
-* **YouTube - Theme:** Show correct icon light/dark mode if using YouTube light/dark manual override ([3f5d75a](https://github.com/MorpheApp/morphe-patches/commit/3f5d75a39a7450262207bc26e43ef2c3862c9e47))
-* **YouTube - Theme:** Use correct theme color for settings icon ([a6d472d](https://github.com/MorpheApp/morphe-patches/commit/a6d472d35c19ad3aa3a6aa1b2544d61d4070b78e))
 * **YouTube:** Resolve experimental patching of `21.06.257` ([62f68a4](https://github.com/MorpheApp/morphe-patches/commit/62f68a47a690d027f16e0d05b963ea399f6237bb))
 
 
