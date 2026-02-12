@@ -804,6 +804,9 @@ Second \"item\" text"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts প্লেয়ার</string>
   <string name="morphe_shorts_player_screen_summary">Shorts প্লেয়ারের উপাদান লুকান বা দেখান</string>
+  <string name="morphe_hide_shorts_channel_title">চ্যানেল পেজে Shorts লুকান</string>
+  <string name="morphe_hide_shorts_channel_summary_on">চ্যানেল পেজে লুকানো</string>
+  <string name="morphe_hide_shorts_channel_summary_off">চ্যানেল পেজে দেখানো</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">হোম ফিডে Shorts লুকান</string>
   <string name="morphe_hide_shorts_home_summary_on">হোম ফিড এবং সম্পর্কিত ভিডিওতে লুকানো আছে</string>

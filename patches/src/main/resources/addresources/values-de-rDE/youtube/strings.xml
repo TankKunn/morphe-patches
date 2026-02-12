@@ -802,6 +802,9 @@ Um das Audio-Track-Menü anzuzeigen, ändern Sie \"Video-Streams fingieren\" in 
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts Spieler</string>
   <string name="morphe_shorts_player_screen_summary">Shorts-Player-Komponenten aus- oder einblenden</string>
+  <string name="morphe_hide_shorts_channel_title">Kürzfilme im Kanal verstecken</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Versteckt im Kanal</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Angezeigt im Kanal</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Shorts im Startseiten-Feed ausblenden</string>
   <string name="morphe_hide_shorts_home_summary_on">Im Startseiten-Feed und verwandten Videos ausgeblendet</string>

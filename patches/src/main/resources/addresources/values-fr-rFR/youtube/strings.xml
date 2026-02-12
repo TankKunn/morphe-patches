@@ -435,9 +435,9 @@ Limitations :
   <string name="morphe_remove_viewer_discretion_dialog_summary_off">Le message sera affiché</string>
   <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Cela ne contourne pas la restriction d’âge. Cela accepte simplement la confirmation automatiquement</string>
   <!-- layout.hide.signintotv.disableSignInToTvPopupPatch -->
-  <string name="morphe_disable_signin_to_tv_popup_title">Désactiver le pop-up \'Regardez sur un téléviseur\'</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_on">Le pop-up \'Regardez sur un téléviseur\' est désactivé</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_off">Le pop-up \'Regardez sur un téléviseur\' est activé</string>
+  <string name="morphe_disable_signin_to_tv_popup_title">Désactiver le pop-up \'Connectez-vous à la TV\'</string>
+  <string name="morphe_disable_signin_to_tv_popup_summary_on">Le pop-up \'Connectez-vous à la TV\' est désactivé</string>
+  <string name="morphe_disable_signin_to_tv_popup_summary_off">Le pop-up \'Connectez-vous à la TV\' est activé</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Désactiver le double appui pour passer un chapitre</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary_on">Le double appui ne peut jamais déclencher un saut au chapitre suivant/précédent</string>
@@ -804,6 +804,9 @@ Pour afficher le menu Piste audio, modifier 'Falsifier les flux vidéo' en 'TV'"
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Lecteur Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Masquer ou afficher des composants du lecteur Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Masquer les Shorts dans la page du canal</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Masqué dans la page du canal</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Affiché dans la page du canal</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Masquer les Shorts dans le flux \'Accueil\'</string>
   <string name="morphe_hide_shorts_home_summary_on">Masqués dans les flux \'Accueil\' et \'Vidéos similaires\'</string>

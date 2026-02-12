@@ -804,6 +804,9 @@ Per visualizzare il menu audio traccia, cambia 'Spoof video streams' in 'TV'"</s
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Player Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Nascondi o mostra i componenti del lettore Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Nascondi Shorts nella pagina del canale</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Nascosto nella pagina del canale</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Visualizzato nella pagina del canale</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Nascondi Shorts nel feed Home</string>
   <string name="morphe_hide_shorts_home_summary_on">Nascosto nel feed Home e nei video correlati</string>

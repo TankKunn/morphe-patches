@@ -753,9 +753,9 @@ Untuk menampilkan menu trek Audio, ubah 'Palsukan aliran video' menjadi 'TV'"</s
   <string name="morphe_hide_cast_button_title">Sembunyikan tombol Transmisi</string>
   <string name="morphe_hide_cast_button_summary_on">Tombol transmisi disembunyikan</string>
   <string name="morphe_hide_cast_button_summary_off">Tombol transmisi ditampilkan</string>
-  <string name="morphe_hide_collapse_button_title">Sembunyikan tombol Collapse</string>
-  <string name="morphe_hide_collapse_button_summary_on">Tombol Collapse disembunyikan</string>
-  <string name="morphe_hide_collapse_button_summary_off">Tombol Collapse ditampilkan</string>
+  <string name="morphe_hide_collapse_button_title">Sembunyikan tombol Ciutkan</string>
+  <string name="morphe_hide_collapse_button_summary_on">Tombol Ciutkan disembunyikan</string>
+  <string name="morphe_hide_collapse_button_summary_off">Tombol Ciutkan ditampilkan</string>
   <string name="morphe_hide_fullscreen_button_title">Sembunyikan tombol Layar Penuh</string>
   <string name="morphe_hide_fullscreen_button_summary_on">Tombol Layar Penuh disembunyikan</string>
   <string name="morphe_hide_fullscreen_button_summary_off">Tombol Layar Penuh ditampilkan</string>
@@ -804,6 +804,9 @@ Untuk menampilkan menu trek Audio, ubah 'Palsukan aliran video' menjadi 'TV'"</s
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Pemutar Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Sembunyikan atau tampilkan komponen pemutar Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Sembunyikan Shorts di halaman saluran</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Disembunyikan di halaman saluran</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Ditampilkan di halaman saluran</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Sembunyikan Shorts di umpan Beranda</string>
   <string name="morphe_hide_shorts_home_summary_on">Disembunyikan di umpan Beranda dan video terkait</string>

@@ -754,12 +754,12 @@ Cookie sẽ được tự động lưu nếu hợp lệ"</string>
   <string name="morphe_hide_cast_button_title">Ẩn nút truyền</string>
   <string name="morphe_hide_cast_button_summary_on">Nút Truyền đã bị ẩn</string>
   <string name="morphe_hide_cast_button_summary_off">Nút Truyền được hiển thị</string>
-  <string name="morphe_hide_collapse_button_title">Ẩn nút gói gọn</string>
-  <string name="morphe_hide_collapse_button_summary_on">Nút gói gọn đã bị ẩn</string>
-  <string name="morphe_hide_collapse_button_summary_off">Nút gói gọn được hiển thị</string>
+  <string name="morphe_hide_collapse_button_title">Ẩn nút thu nhỏ trình phát</string>
+  <string name="morphe_hide_collapse_button_summary_on">Nút thu nhỏ đã bị ẩn</string>
+  <string name="morphe_hide_collapse_button_summary_off">Nút thu nhỏ được hiển thị</string>
   <string name="morphe_hide_fullscreen_button_title">Ẩn nút Phóng to toàn màn hình</string>
-  <string name="morphe_hide_fullscreen_button_summary_on">Nút Phóng to toàn màn hình đang ẩn</string>
-  <string name="morphe_hide_fullscreen_button_summary_off">Nút Phóng to toàn màn hình đang hiển thị</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">Nút toàn màn hình đã bị ẩn</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">Nút toàn màn hình được hiển thị</string>
   <string name="morphe_hide_player_control_buttons_background_title">Ẩn nền điều khiển trình phát</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">Nền điều khiển trình phát đã bị ẩn</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">Nền điều khiển trình phát được hiển thị</string>
@@ -805,6 +805,9 @@ Cookie sẽ được tự động lưu nếu hợp lệ"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Trình phát Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Ẩn hoặc hiện các thành phần của trình phát Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Ẩn Shorts trong trang kênh</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Ẩn trong trang kênh</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Hiển thị trong trang kênh</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Ẩn Shorts trong thẻ Trang chủ</string>
   <string name="morphe_hide_shorts_home_summary_on">Đã ẩn trong thẻ Trang chủ và video liên quan</string>

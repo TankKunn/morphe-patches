@@ -794,6 +794,9 @@ Tá an meáin an scannáin audio faoi seo"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts seinnteoir</string>
   <string name="morphe_shorts_player_screen_summary">Folaigh nó taispeáin comhpháirteanna seinnteora Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Folaigh Shorts sa leathanach canálach</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Folaite sa leathanach canálach</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Táirgeadh sa leathanach canálach</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Folaigh Shorts sa fhotha Baile</string>
   <string name="morphe_hide_shorts_home_summary_on">I bhfolach sa fhotha Baile agus físeáin ghaolmhara</string>

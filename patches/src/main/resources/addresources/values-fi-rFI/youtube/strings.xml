@@ -804,6 +804,9 @@ Näytäksesi Audiokappale-valikon, muuta 'Spoof video streams' 'TV':ksi"</string
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts-soitin</string>
   <string name="morphe_shorts_player_screen_summary">Piilota tai näytä Shorts-soittimen osia</string>
+  <string name="morphe_hide_shorts_channel_title">Piilota lyhytvideot kanavansivulla</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Piilotettu kanavansivulla</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Näytetty kanavansivulla</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Piilota Shortsit Koti-syötteessä</string>
   <string name="morphe_hide_shorts_home_summary_on">Piilotetaan Koti-syötteessä ja liittyvissä videoissa</string>

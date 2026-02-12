@@ -804,6 +804,9 @@ Om de Audio track menu weer te tonen, verander 'Spoof video streams' naar 'TV'"<
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts-speler</string>
   <string name="morphe_shorts_player_screen_summary">Shorts-spelercomponenten verbergen of tonen</string>
+  <string name="morphe_hide_shorts_channel_title">Verbergen van Shorts in kanaalpagina</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Verborgen in kanaalpagina</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Getoond in kanaalpagina</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Shorts verbergen in Home-feed</string>
   <string name="morphe_hide_shorts_home_summary_on">Verborgen in Home-feed en gerelateerde video\'s</string>

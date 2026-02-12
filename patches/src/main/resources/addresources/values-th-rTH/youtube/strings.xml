@@ -802,6 +802,9 @@ Second \"item\" text"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts Player</string>
   <string name="morphe_shorts_player_screen_summary">ซ่อนหรือแสดงส่วนประกอบเครื่องเล่น Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">ซ่อน Shorts ในหน้าแชนแนล</string>
+  <string name="morphe_hide_shorts_channel_summary_on">ซ่อนอยู่ในหน้าแชนแนล</string>
+  <string name="morphe_hide_shorts_channel_summary_off">แสดงอยู่ในหน้าแชนแนล</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">ซ่อน Shorts ในหน้าแรก</string>
   <string name="morphe_hide_shorts_home_summary_on">ซ่อนในหน้าแรกและวิดีโอที่เกี่ยวข้อง</string>

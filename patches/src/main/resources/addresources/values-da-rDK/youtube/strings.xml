@@ -804,6 +804,9 @@ For at vise Lydspor-menu, ændre 'Simulere video strømme' til 'TV'"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts-afspiller</string>
   <string name="morphe_shorts_player_screen_summary">Skjul eller vis Shorts-afspillerkomponenter</string>
+  <string name="morphe_hide_shorts_channel_title">Skjul Shorts i sidekanal</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Skjult i sidekanal</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Vist i sidekanal</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Skjul Shorts i \'Hjem\'-feed</string>
   <string name="morphe_hide_shorts_home_summary_on">Skjult i \'Hjem\'-feed og relaterede videoer</string>

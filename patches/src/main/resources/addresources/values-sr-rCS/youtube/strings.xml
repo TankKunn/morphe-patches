@@ -804,6 +804,9 @@ Da bi prikazali meni sa zvučnim stazama, promenite 'Spoof video streams' u 'TV'
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts plejer</string>
   <string name="morphe_shorts_player_screen_summary">Sakrijte ili prikažite komponente Shorts plejera</string>
+  <string name="morphe_hide_shorts_channel_title">Sakrij Shorts na stranici kanala</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Skriveno na stranici kanala</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Prikaženo na stranici kanala</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Sakrij Shorts u fidu „Početna”</string>
   <string name="morphe_hide_shorts_home_summary_on">Skriveno u fidu „Početna” i srodnim videima</string>

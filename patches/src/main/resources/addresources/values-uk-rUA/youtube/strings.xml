@@ -756,9 +756,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_cast_button_summary_off">Кнопка \"Трансляція\" у відеоплеєрі показується</string>
   <string name="morphe_hide_collapse_button_title">Приховати кнопку \"Згорнути\"</string>
   <string name="morphe_hide_collapse_button_summary_on">Кнопку \"Згорнути\" приховано</string>
-  <string name="morphe_hide_collapse_button_summary_off">Кнопку \"Згорнути\" показується</string>
+  <string name="morphe_hide_collapse_button_summary_off">Кнопка \"Згорнути\" показується</string>
   <string name="morphe_hide_fullscreen_button_title">Приховати кнопку \"Повний екран\"</string>
-  <string name="morphe_hide_fullscreen_button_summary_on">Кнопка \"Повний екран\" прихована</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">Кнопку \"Повний екран\" приховано</string>
   <string name="morphe_hide_fullscreen_button_summary_off">Кнопка \"Повний екран\" показується</string>
   <string name="morphe_hide_player_control_buttons_background_title">Приховати фон кнопок керування плеєром</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">Фон кнопок керування плеєром приховано</string>
@@ -805,6 +805,9 @@ Second \"item\" text"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Плеєр Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Приховати або показувати компоненти плеєра Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Приховати Shorts на сторінці каналу</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Приховано на сторінці каналу</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Показано на сторінці каналу</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Приховати Shorts у стрічці</string>
   <string name="morphe_hide_shorts_home_summary_on">Приховано в домашній стрічці та пов’язаних відео</string>

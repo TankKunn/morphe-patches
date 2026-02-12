@@ -804,6 +804,9 @@ Da bi prikazali meni sa audio trakom, promenite 'Imitirati video tokove' u 'TV'.
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts плејер</string>
   <string name="morphe_shorts_player_screen_summary">Сакријте или прикажите компоненте Shorts плејера</string>
+  <string name="morphe_hide_shorts_channel_title">Сакриј Shorts у каналу</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Сакријено у каналу</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Приказано у каналу</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Сакриј Shorts у фиду „Почетна”</string>
   <string name="morphe_hide_shorts_home_summary_on">Скривено у фиду „Почетна” и сродним видеима</string>

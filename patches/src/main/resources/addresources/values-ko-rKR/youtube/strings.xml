@@ -432,9 +432,9 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_url_timestamp_summary_on">타임스탬프가 표기된 URL 복사 버튼을 표시합니다\n\n• 버튼을 탭하여 타임스탬프가 표기된 동영상 URL을 복사할 수 있습니다\n• 길게 탭하면 타임스탬프가 표기되지 않은 동영상 URL이 복 사됩니다</string>
   <string name="morphe_copy_video_url_timestamp_summary_off">타임스탬프가 표기된 URL 복사 버튼을 표시하지 않습니다</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
-  <string name="morphe_remove_viewer_discretion_dialog_title">시청 경고 다이얼로그 삭제하기</string>
-  <string name="morphe_remove_viewer_discretion_dialog_summary_on">일부 동영상을 시청하기 전에 표시되는 시청 경고 다이얼로그를 삭제합니다</string>
-  <string name="morphe_remove_viewer_discretion_dialog_summary_off">일부 동영상을 시청하기 전에 표시되는 시청 경고 다이얼로그를 삭제하지 않습니다</string>
+  <string name="morphe_remove_viewer_discretion_dialog_title">시청 경고 다이얼로그 제거하기</string>
+  <string name="morphe_remove_viewer_discretion_dialog_summary_on">일부 동영상을 시청하기 전에 표시되는 시청 경고 다이얼로그를 제거합니다</string>
+  <string name="morphe_remove_viewer_discretion_dialog_summary_off">일부 동영상을 시청하기 전에 표시되는 시청 경고 다이얼로그를 제거하지 않습니다</string>
   <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">이 설정은 다이얼로그를 자동으로 허용하기만 하며 연령 제한(성인인증 절차)을 우회할 수 없습니다.</string>
   <!-- layout.hide.signintotv.disableSignInToTvPopupPatch -->
   <string name="morphe_disable_signin_to_tv_popup_title">\'TV에 로그인\' 팝업 비활성화하기</string>
@@ -751,12 +751,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_cast_button_title">크롬캐스트 버튼 숨기기</string>
   <string name="morphe_hide_cast_button_summary_on">크롬캐스트 버튼이 숨겨집니다</string>
   <string name="morphe_hide_cast_button_summary_off">크롬캐스트 버튼이 표시됩니다</string>
-  <string name="morphe_hide_collapse_button_title">숨기기 버튼 숨기기</string>
+  <string name="morphe_hide_collapse_button_title">접기 버튼 숨기기</string>
   <string name="morphe_hide_collapse_button_summary_on">접기 버튼이 숨겨집니다</string>
   <string name="morphe_hide_collapse_button_summary_off">접기 버튼이 표시됩니다</string>
-  <string name="morphe_hide_fullscreen_button_title">숨기기 버튼</string>
-  <string name="morphe_hide_fullscreen_button_summary_on">숨기기 버튼이 숨겨집니다</string>
-  <string name="morphe_hide_fullscreen_button_summary_off">숨기기 버튼이 표시됩니다</string>
+  <string name="morphe_hide_fullscreen_button_title">전체 화면 버튼 숨기기</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">전체 화면 버튼이 숨겨집니다</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">전체 화면 버튼이 표시됩니다</string>
   <string name="morphe_hide_player_control_buttons_background_title">플레이어 컨트롤 버튼 배경 숨기기</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">플레이어 컨트롤 버튼 배경이 숨겨집니다</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">플레이어 컨트롤 버튼 배경이 표시됩니다</string>
@@ -802,6 +802,9 @@ Second \"item\" text"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts 플레이어</string>
   <string name="morphe_shorts_player_screen_summary">Shorts 플레이어에서 구성요소를 숨기거나 표시할 수 있습니다</string>
+  <string name="morphe_hide_shorts_channel_title">채널 페이지에서 Shorts 숨기기</string>
+  <string name="morphe_hide_shorts_channel_summary_on">채널 페이지에서 숨겨집니다</string>
+  <string name="morphe_hide_shorts_channel_summary_off">채널 페이지에서 표시됩니다</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">홈 피드에서 Shorts 숨기기</string>
   <string name="morphe_hide_shorts_home_summary_on">홈 피드 및 관련 동영상에서 숨겨집니다</string>
@@ -1198,7 +1201,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_stats_title">기록</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">기록을 일시적으로 가져올 수 없습니다 (응답 시간 초과)</string>
-  <string name="morphe_sb_stats_loading">불러오는 중 ...</string>
+  <string name="morphe_sb_stats_loading">불러오는 중...</string>
   <string name="morphe_sb_stats_sb_disabled">SponsorBlock을 비활성화하였습니다</string>
   <string name="morphe_sb_stats_username">사용자 이름: &lt;b&gt;%s&lt;/b&gt;</string>
   <string name="morphe_sb_stats_username_change">사용자 이름을 변경하려면 여기를 탭하세요</string>
@@ -1447,7 +1450,7 @@ DeArrow에 대해 자세히 알아보려면 여기를 탭하세요"</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">동영상 확대 진동 피드백을 비활성화합니다</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">동영상 확대 진동 피드백을 활성화합니다</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
-  <string name="microg_offline_account_login_error">최근에 계정 로그인 정보를 변경했다면 MicroG를 삭제하고 다시 설치하세요.</string>
+  <string name="microg_offline_account_login_error">최근에 계정 로그인 정보를 변경했다면 MicroG를 제거하고 다시 설치하세요.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->
   <string name="morphe_bypass_url_redirects_title">리다이렉션 없이 링크 바로 열기</string>
   <string name="morphe_bypass_url_redirects_summary_on">앱 내에서 외부 링크를 열 경우에 URL 리다이렉션(youtube.com/redirect)을 거치지 않고 연결됩니다</string>

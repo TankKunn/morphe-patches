@@ -753,12 +753,12 @@ Para mostrar el menú de pistas de audio, cambia \"Falsificar transmisiones de v
   <string name="morphe_hide_cast_button_title">Ocultar botón \"Transmitir\"</string>
   <string name="morphe_hide_cast_button_summary_on">El botón \"Transmitir\" está oculto</string>
   <string name="morphe_hide_cast_button_summary_off">El botón \"Transmitir\" está visible</string>
-  <string name="morphe_hide_collapse_button_title">Ocultar botón de plegar</string>
-  <string name="morphe_hide_collapse_button_summary_on">El botón de plegar está oculto</string>
-  <string name="morphe_hide_collapse_button_summary_off">El botón de plegar está visible</string>
-  <string name="morphe_hide_fullscreen_button_title">Ocultar botón \"Pantalla completa\"</string>
-  <string name="morphe_hide_fullscreen_button_summary_on">El botón \"Pantalla completa\" está oculto</string>
-  <string name="morphe_hide_fullscreen_button_summary_off">El botón \"Pantalla completa\" está visible</string>
+  <string name="morphe_hide_collapse_button_title">Ocultar botón de contraer</string>
+  <string name="morphe_hide_collapse_button_summary_on">El botón de contraer está oculto</string>
+  <string name="morphe_hide_collapse_button_summary_off">El botón de contraer está visible</string>
+  <string name="morphe_hide_fullscreen_button_title">Ocultar botón de pantalla completa</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">El botón de pantalla completa está oculto</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">El botón de pantalla completa está visible</string>
   <string name="morphe_hide_player_control_buttons_background_title">Ocultar fondo de controles del reproductor</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">El fondo de los controles del reproductor está oculto</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">El fondo de los controles del reproductor está visible</string>
@@ -804,6 +804,9 @@ Para mostrar el menú de pistas de audio, cambia \"Falsificar transmisiones de v
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Reproductor de Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Ocultar o mostrar componentes del reproductor de Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Ocultar Shorts en la página del canal</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Ocultos en la página del canal</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Visibles en la página del canal</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Ocultar Shorts en feed \"Inicio\"</string>
   <string name="morphe_hide_shorts_home_summary_on">Ocultos en el feed \"Inicio\" y vídeos relacionados</string>

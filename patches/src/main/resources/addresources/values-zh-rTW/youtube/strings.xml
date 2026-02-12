@@ -804,6 +804,9 @@ Second \"item\" text"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts 播放器</string>
   <string name="morphe_shorts_player_screen_summary">隱藏或顯示 Shorts 播放器元件</string>
+  <string name="morphe_hide_shorts_channel_title">在頻道頁面中隱藏 Shorts</string>
+  <string name="morphe_hide_shorts_channel_summary_on">在頻道頁面中隱藏</string>
+  <string name="morphe_hide_shorts_channel_summary_off">在頻道頁面中顯示</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">在首頁推薦內容中隱藏 Shorts</string>
   <string name="morphe_hide_shorts_home_summary_on">已在首頁推薦內容和相關影片中隱藏</string>

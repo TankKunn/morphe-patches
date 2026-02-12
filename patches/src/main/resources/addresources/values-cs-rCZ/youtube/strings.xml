@@ -805,6 +805,9 @@ Abyste zobrazili menu s zvukovou stopou, změňte 'Falešné video proudy' na 'T
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Přehrávač Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Skrýt nebo zobrazit komponenty přehrávače Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Skrýt Shorts v kanálu</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Skryto v kanálu</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Zobrazeno v kanálu</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Skrýt Shorts v domovské liště</string>
   <string name="morphe_hide_shorts_home_summary_on">Skryto v domovské liště a souvisejících videích</string>

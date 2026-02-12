@@ -695,6 +695,9 @@ Second \"item\" text"</string>
   <!-- Seekbar shown inside video thumbnails found on the Home / Subscriptions / Search / History.  The seekbar shows the prior watch progress from when the video was last opened. -->
   <string name="morphe_fullscreen_large_seekbar_summary_on">Create a Short button is hidden</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
+  <string name="morphe_hide_shorts_channel_title">छुपाएं शॉर्ट्स चैनल पेज पर</string>
+  <string name="morphe_hide_shorts_channel_summary_on">चैनल पेज पर छुपा हुआ</string>
+  <string name="morphe_hide_shorts_channel_summary_off">चैनल पेज पर दिखाया गया</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_video_description_title">छुपाएं वीडियो विवरण में शॉर्ट्स</string>

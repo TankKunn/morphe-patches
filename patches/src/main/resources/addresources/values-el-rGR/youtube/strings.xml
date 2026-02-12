@@ -806,6 +806,9 @@ Second \"item\" text"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Οθόνη αναπαραγωγής Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Απόκρυψη ή εμφάνιση στοιχείων στην οθόνη αναπαραγωγής Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Απόκρυψη Shorts στην σελίδα καναλιού</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Απόκρυψη στην σελίδα καναλιού</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Εμφάνιση στην σελίδα καναλιού</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Shorts στην αρχική ροή και στα σχετικά βίντεο</string>
   <string name="morphe_hide_shorts_home_summary_on">Κρυμμένα</string>

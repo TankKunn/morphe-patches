@@ -798,6 +798,9 @@ Second \"item\" text"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Дублирането на видеа се показва</string>
   <string name="morphe_shorts_player_screen_summary">Скрий дублиране на видеа</string>
+  <string name="morphe_hide_shorts_channel_title">Скриване на \"Shorts\" в страницата на канала</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Скрит в страницата на канала</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Показан в страницата на канала</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Дублирането на видеа е скрито</string>
   <string name="morphe_hide_shorts_home_summary_on">Дублирането на видеа се показва</string>

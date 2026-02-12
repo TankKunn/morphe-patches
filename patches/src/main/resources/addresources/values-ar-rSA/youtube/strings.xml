@@ -753,12 +753,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_cast_button_title">إخفاء زر البث</string>
   <string name="morphe_hide_cast_button_summary_on">تم إخفاء زر البث</string>
   <string name="morphe_hide_cast_button_summary_off">يتم عرض زر البث</string>
-  <string name="morphe_hide_collapse_button_title">إخفاء زر التوسيع</string>
-  <string name="morphe_hide_collapse_button_summary_on">تم إخفاء زر التوسيع</string>
-  <string name="morphe_hide_collapse_button_summary_off">يتم عرض زر التوسيع</string>
-  <string name="morphe_hide_fullscreen_button_title">إخفاء زر الشاشة الكاملة</string>
-  <string name="morphe_hide_fullscreen_button_summary_on">تم إخفاء زر الشاشة الكاملة</string>
-  <string name="morphe_hide_fullscreen_button_summary_off">يتم عرض زر الشاشة الكاملة</string>
+  <string name="morphe_hide_collapse_button_title">إخفاء زر الطَيّ</string>
+  <string name="morphe_hide_collapse_button_summary_on">تم إخفاء زر الطَيّ</string>
+  <string name="morphe_hide_collapse_button_summary_off">يتم عرض زر الطَيّ</string>
+  <string name="morphe_hide_fullscreen_button_title">إخفاء زر ملء الشاشة</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">تم إخفاء زر ملء الشاشة</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">يتم عرض زر ملء الشاشة</string>
   <string name="morphe_hide_player_control_buttons_background_title">إخفاء خلفية عناصر التحكم بالمشغل</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">تم إخفاء خلفية عناصر تحكم المشغل</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">يتم عرض خلفية عناصر تحكم المشغل</string>
@@ -804,6 +804,9 @@ Second \"item\" text"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">مشغل Shorts</string>
   <string name="morphe_shorts_player_screen_summary">إخفاء أو عرض مكونات مشغل Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">إخفاء فيديوهات Shorts في صفحة القناة</string>
+  <string name="morphe_hide_shorts_channel_summary_on">مخفية في صفحة القناة</string>
+  <string name="morphe_hide_shorts_channel_summary_off">تُعرض في صفحة القناة</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">إخفاء Shorts في الصفحة الرئيسية</string>
   <string name="morphe_hide_shorts_home_summary_on">مخفي في موجز الصفحة الرئيسية والفيديوهات ذات الصلة</string>

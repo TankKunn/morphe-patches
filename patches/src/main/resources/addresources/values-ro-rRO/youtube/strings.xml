@@ -800,6 +800,9 @@ Pentru a arăta meniul audio, schimbați 'Spoof video streams' în 'TV'"</string
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Player Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Ascunde sau afișează componentele playerului Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Ascunde Shorts-urile din pagina canalului.</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Ascuns în pagina canalului.</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Arătat în pagina canalului.</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Ascunde Shorts-urile din feedul Acasă.</string>
   <string name="morphe_hide_shorts_home_summary_on">Ascunse în feedul Acasă și în videoclipurile similare.</string>

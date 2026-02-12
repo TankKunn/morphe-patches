@@ -798,6 +798,9 @@ Da biste prikazali meni za audio traku, promijenite 'Spoof video streams' u 'TV'
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Tipka za Cast je prikazana</string>
   <string name="morphe_shorts_player_screen_summary">Tipka za Cast je skrivena</string>
+  <string name="morphe_hide_shorts_channel_title">Skrijte Shorts na stranici kanala</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Skriveno na stranici kanala</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Prikaženo na stranici kanala</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Tipka za Cast je prikazana</string>
   <string name="morphe_hide_shorts_home_summary_on">Tipka za Cast je skrivena</string>

@@ -473,22 +473,22 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_tapping_summary_off">タップによるシークは無効です。シークバーをタップしても、タップした位置に移動しません</string>
   <!-- interaction.swipecontrols.swipeControlsResourcePatch -->
   <string name="morphe_swipe_brightness_title">明るさジェスチャーを有効化</string>
-  <string name="morphe_swipe_brightness_summary_on">"全画面表示中の明るさジェスチャーは有効です
+  <string name="morphe_swipe_brightness_summary_on">"全画面表示モードの明るさジェスチャーは有効です
 
 画面左側を縦にスワイプして明るさを調節します"</string>
-  <string name="morphe_swipe_brightness_summary_off">全画面表示中の明るさジェスチャーは無効です</string>
+  <string name="morphe_swipe_brightness_summary_off">全画面表示モードの明るさジェスチャーは無効です</string>
   <string name="morphe_swipe_volume_title">音量ジェスチャーを有効化</string>
-  <string name="morphe_swipe_volume_summary_on">"全画面表示中の音量ジェスチャーは有効です
+  <string name="morphe_swipe_volume_summary_on">"全画面表示モードの音量ジェスチャーは有効です
 
 画面右側を縦にスワイプして音量を調節します"</string>
-  <string name="morphe_swipe_volume_summary_off">全画面表示中の音量ジェスチャーは無効です</string>
+  <string name="morphe_swipe_volume_summary_off">全画面表示モードの音量ジェスチャーは無効です</string>
   <string name="morphe_swipe_press_to_engage_title">長押しスワイプ ジェスチャーを有効化</string>
   <string name="morphe_swipe_press_to_engage_summary_on">長押しスワイプは有効です\n\n明るさ / 音量ジェスチャーの開始には、画面の長押しが必要です</string>
   <string name="morphe_swipe_press_to_engage_summary_off">長押しスワイプは無効です\n\n明るさ / 音量ジェスチャーの開始には、画面の長押しは必要ありません</string>
   <string name="morphe_swipe_haptic_feedback_title">触覚フィードバックを有効化</string>
   <string name="morphe_swipe_haptic_feedback_summary_on">触覚フィードバックは有効です</string>
   <string name="morphe_swipe_haptic_feedback_summary_off">触覚フィードバックは無効です</string>
-  <string name="morphe_swipe_save_and_restore_brightness_title">明るさを保存＆復元</string>
+  <string name="morphe_swipe_save_and_restore_brightness_title">明るさを保存 &amp; 復元</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary_on">全画面表示を終了 / 開始するときに明るさを保存 / 復元します</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary_off">全画面表示を終了 / 開始するときに明るさを保存 / 復元しません</string>
   <string name="morphe_swipe_lowest_value_enable_auto_brightness_title">明るさジェスチャーの自動調節を有効化</string>
@@ -754,12 +754,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_cast_button_title">キャストボタンを非表示</string>
   <string name="morphe_hide_cast_button_summary_on">キャストボタンはプレーヤー オーバーレイに表示されません</string>
   <string name="morphe_hide_cast_button_summary_off">キャストボタンはプレーヤー オーバーレイに表示されます</string>
-  <string name="morphe_hide_collapse_button_title">折りたたみボタンを非表示にする</string>
-  <string name="morphe_hide_collapse_button_summary_on">折りたたみボタンは非表示です</string>
-  <string name="morphe_hide_collapse_button_summary_off">折りたたみボタンは表示されます</string>
-  <string name="morphe_hide_fullscreen_button_title">非表示にするフルスクリーン ボタン</string>
-  <string name="morphe_hide_fullscreen_button_summary_on">フルスクリーン ボタンは非表示になります</string>
-  <string name="morphe_hide_fullscreen_button_summary_off">フルスクリーン ボタンは表示されます</string>
+  <string name="morphe_hide_collapse_button_title">最小化ボタンを非表示</string>
+  <string name="morphe_hide_collapse_button_summary_on">最小化ボタンはプレーヤー オーバーレイに表示されません</string>
+  <string name="morphe_hide_collapse_button_summary_off">最小化ボタンはプレーヤー オーバーレイに表示されます</string>
+  <string name="morphe_hide_fullscreen_button_title">全画面表示ボタンを非表示</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">全画面表示ボタンはプレーヤー オーバーレイに表示されません</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">全画面表示ボタンはプレーヤー オーバーレイに表示されます</string>
   <string name="morphe_hide_player_control_buttons_background_title">プレーヤー コントロールの背景を非表示</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">プレーヤー コントロールの背景は表示されません</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">プレーヤー コントロールの背景は表示されます</string>
@@ -805,6 +805,9 @@ Second \"item\" text"</string>
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">ショート プレーヤー</string>
   <string name="morphe_shorts_player_screen_summary">ショート プレーヤーのコンポーネントを表示または非表示にします</string>
+  <string name="morphe_hide_shorts_channel_title">チャンネルページでショートを非表示</string>
+  <string name="morphe_hide_shorts_channel_summary_on">チャンネルページで非表示</string>
+  <string name="morphe_hide_shorts_channel_summary_off">チャンネルページで表示</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">ホームフィードでショートを非表示</string>
   <string name="morphe_hide_shorts_home_summary_on">ホームフィードおよび関連動画にはショート動画は表示されません</string>

@@ -804,6 +804,9 @@ Para exibir o menu de faixa de áudio, altere 'Spoof video streams' para 'TV'"</
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Reprodutor de Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Ocultar ou mostrar componentes do player de Shorts</string>
+  <string name="morphe_hide_shorts_channel_title">Esconder Shorts na página do canal</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Oculto na página do canal</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Mostrado na página do canal</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Ocultar Shorts no feed inicial</string>
   <string name="morphe_hide_shorts_home_summary_on">Oculto no feed inicial e vídeos relacionados</string>

@@ -804,6 +804,9 @@ Ses izleme menüsünü görüntülemek için, 'Spoof video akışları'yi 'TV' o
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts oynatıcı</string>
   <string name="morphe_shorts_player_screen_summary">Shorts oynatıcı bileşenlerini gizle veya göster</string>
+  <string name="morphe_hide_shorts_channel_title">Kanal sayfasında Shorts\'ları gizle</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Kanal sayfasında gizli</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Kanal sayfasında gösteriliyor</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Ana Sayfa akışında Shorts\'u gizle</string>
   <string name="morphe_hide_shorts_home_summary_on">Ana Sayfa akışında ve ilgili videolarda gizli</string>
