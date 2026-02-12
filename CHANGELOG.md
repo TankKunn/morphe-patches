@@ -1,3 +1,10 @@
+# [1.13.0-dev.15](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.14...v1.13.0-dev.15) (2026-02-12)
+
+
+### Bug Fixes
+
+* **YouTube - Hide Shorts components:** Resolve hiding Shorts also hiding channel page headers ([#518](https://github.com/MorpheApp/morphe-patches/issues/518)) ([966232b](https://github.com/MorpheApp/morphe-patches/commit/966232b6e7bd610b09b2b7ce40ade735115f7748))
+
 # [1.13.0-dev.14](https://github.com/MorpheApp/morphe-patches/compare/v1.13.0-dev.13...v1.13.0-dev.14) (2026-02-12)
 
 
