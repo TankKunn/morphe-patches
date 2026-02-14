@@ -1,3 +1,10 @@
+# [1.14.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.2...v1.14.0-dev.3) (2026-02-14)
+
+
+### Bug Fixes
+
+* Use jsdelivr for patch bundle hosting ([3b8b3f0](https://github.com/MorpheApp/morphe-patches/commit/3b8b3f087859ebb17b9beffd4c2ce3fdca627a4a))
+
 # [1.14.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.1...v1.14.0-dev.2) (2026-02-14)
 
 
