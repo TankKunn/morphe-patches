@@ -1,3 +1,10 @@
+# [1.14.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.1...v1.14.0-dev.2) (2026-02-14)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide feed flyout menu filter" setting ([#535](https://github.com/MorpheApp/morphe-patches/issues/535)) ([06c8215](https://github.com/MorpheApp/morphe-patches/commit/06c8215d4320b38ad5f168eabcb5fc29a6ce4640))
+
 # [1.14.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.13.1-dev.1...v1.14.0-dev.1) (2026-02-13)
 
 
