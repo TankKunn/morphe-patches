@@ -1,3 +1,10 @@
+# [1.14.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.3...v1.14.0-dev.4) (2026-02-15)
+
+
+### Features
+
+* Add `Disable DRC audio` patch ([#461](https://github.com/MorpheApp/morphe-patches/issues/461)) ([e1bd7bd](https://github.com/MorpheApp/morphe-patches/commit/e1bd7bda5bc6916c6142a9b1102d094411a5a89f))
+
 # [1.14.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.2...v1.14.0-dev.3) (2026-02-14)
 
 
