@@ -1,4 +1,4 @@
-package app.morphe.patches.music.audio.exclusiveaudio
+package app.morphe.patches.music.misc.audio
 
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.music.misc.extension.sharedExtensionPatch
