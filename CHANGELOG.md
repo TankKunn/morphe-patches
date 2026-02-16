@@ -1,3 +1,10 @@
+# [1.14.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.4...v1.14.0-dev.5) (2026-02-16)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide channel tab filter" setting ([#540](https://github.com/MorpheApp/morphe-patches/issues/540)) ([5cca175](https://github.com/MorpheApp/morphe-patches/commit/5cca175398ade42675b3c5e082d8fbe7b1043ab1))
+
 # [1.14.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.3...v1.14.0-dev.4) (2026-02-15)
 
 
