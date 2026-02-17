@@ -1,8 +1,8 @@
 /*
  * Copyright 2025 Morphe.
- * https://github.com/morpheapp/morphe-patches
+ * https://github.com/MorpheApp/morphe-patches
  *
- * File-Specific License Notice (GPLv3 Section 7 Additional Permission).
+ * File-Specific License Notice (GPLv3 Section 7 Terms)
  *
  * This file is part of the Morphe patches project and is licensed under
  * the GNU General Public License version 3 (GPLv3), with the Additional
@@ -439,6 +439,16 @@ fun BytecodePatchContext.traverseClassHierarchy(targetClass: MutableClass, callb
  * @see ReferenceInstruction
  */
 inline fun <reified T : Reference> Instruction.getReference() = (this as? ReferenceInstruction)?.reference as? T
+
+/**
+ * @return The mutable method for this method call reference.
+ */
+context(BytecodePatchContext)
+fun MethodReference.getMutableMethod(): MutableMethod {
+    return mutableClassDefBy(this.definingClass).methods.first { classMethod ->
+        MethodUtil.methodSignaturesMatch(classMethod, this@getMutableMethod)
+    }
+}
 
 /**
  * @return The index of the first opcode specified, or -1 if not found.
