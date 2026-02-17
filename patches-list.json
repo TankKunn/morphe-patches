@@ -1,5 +1,5 @@
 {
-  "version": "1.14.0-dev.5",
+  "version": "1.14.0-dev.6",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -513,8 +513,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -805,8 +806,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -820,8 +822,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -999,8 +1002,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1051,8 +1055,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1084,8 +1089,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1227,29 +1233,13 @@
       "description": "Adds an option to skip over redirection URLs in external links.",
       "use": true,
       "dependencies": [
-        "BytecodePatch",
         "BytecodePatch"
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
-        ]
-      },
-      "options": []
-    },
-    {
-      "name": "Open links externally",
-      "description": "Adds an option to always open links in your browser instead of in the in-app-browser.",
-      "use": true,
-      "dependencies": [
-        "BytecodePatch",
-        "BytecodePatch"
-      ],
-      "compatiblePackages": {
-        "com.reddit.frontpage": [
-          "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1377,8 +1367,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1447,8 +1438,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1499,8 +1491,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1592,8 +1585,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []

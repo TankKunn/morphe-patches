@@ -1,3 +1,10 @@
+# [1.14.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.5...v1.14.0-dev.6) (2026-02-17)
+
+
+### Features
+
+* **Reddit:** Support version `2026.04.0` ([#545](https://github.com/MorpheApp/morphe-patches/issues/545)) ([c59a0fc](https://github.com/MorpheApp/morphe-patches/commit/c59a0fc966cbe3f94c5bf3886fd96eaa80049b98))
+
 # [1.14.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.4...v1.14.0-dev.5) (2026-02-16)
 
 
