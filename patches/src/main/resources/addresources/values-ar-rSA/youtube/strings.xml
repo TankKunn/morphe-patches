@@ -225,7 +225,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_summary_on">تم تمكين تصفية قائمة الموجز المنبثقة</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">تم تعطيل تصفية قائمة الموجز المنبثقة</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">تصفية قائمة الموجز المنبثقة</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">قائمة بأسماء القائمة المنبثقة المراد تصفيتها، مفصولة بسطور جديدة</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">أدخل أسماء تصفية القائمة المنبثقة، اسم واحد لكل سطر</string>
   <string name="morphe_hide_gaming_section_title">إخفاء الألعاب</string>
   <string name="morphe_hide_gaming_section_summary_on">تم إخفاء قسم الألعاب</string>
   <string name="morphe_hide_gaming_section_summary_off">يتم عرض قسم الألعاب</string>
@@ -271,6 +271,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">يُعرض في السجلّ</string>
   <string name="morphe_channel_screen_title">صفحة القناة</string>
   <string name="morphe_channel_screen_summary">إخفاء أو عرض مكونات صفحة القناة</string>
+  <string name="morphe_hide_channel_tab_title">تمكين تصفية علامة تبويب القناة</string>
+  <string name="morphe_hide_channel_tab_summary_on">تم تمكين تصفية علامة تبويب القناة</string>
+  <string name="morphe_hide_channel_tab_summary_off">تم تعطيل تصفية علامة تبويب القناة</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">فلتر علامة تبويب القناة</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">أدخل أسماء تصفية علامة تبويب القناة، اسم واحد لكل سطر</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">إخفاء زر المنتدى</string>
   <string name="morphe_hide_community_button_summary_on">تم إخفاء زر المنتدى</string>

@@ -226,7 +226,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_summary_on">Фільтр спливаючого меню стрічки увімкнено</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Фільтр спливаючого меню стрічки вимкнено</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Фільтр спливаючого меню стрічки</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Список спливаючих назв меню для фільтрації, розділених новими рядками</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Введіть назви спливаючого меню для фільтрації, по одній на рядок</string>
   <string name="morphe_hide_gaming_section_title">Приховати \"Геймінг\"</string>
   <string name="morphe_hide_gaming_section_summary_on">Секцію \"Геймінгу\" приховано</string>
   <string name="morphe_hide_gaming_section_summary_off">Секція \"Геймінгу\" показується</string>
@@ -272,6 +272,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Показується в історії переглядів</string>
   <string name="morphe_channel_screen_title">Сторінка каналу</string>
   <string name="morphe_channel_screen_summary">Приховати або показувати компоненти сторінки каналу</string>
+  <string name="morphe_hide_channel_tab_title">Увімкнути фільтр вкладок каналу</string>
+  <string name="morphe_hide_channel_tab_summary_on">Фільтр вкладки каналу ввімкнено</string>
+  <string name="morphe_hide_channel_tab_summary_off">Фільтр вкладки каналу вимкнено</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Фільтр вкладки каналу</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Введіть назви вкладок каналів для фільтрації, по одній на рядок</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Приховати кнопку \"Спільнота\"</string>
   <string name="morphe_hide_community_button_summary_on">Кнопку \"Спільнота\" приховано</string>

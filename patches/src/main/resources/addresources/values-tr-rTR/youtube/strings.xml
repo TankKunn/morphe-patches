@@ -225,7 +225,7 @@ Değişiklikler şunlardır:
   <string name="morphe_hide_feed_flyout_menu_summary_on">Besleme akış menüsü filtresi etkinleştirildi</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Besleme akış menüsü filtresi devre dışı bırakıldı</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Besleme akış menüsü filtresi</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Filtrelenecek uçuş menü adları, yeni satırla ayrılmış şekilde listesi</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Uçak menü adlarını filtrelemek için, her satırda bir tane girin</string>
   <string name="morphe_hide_gaming_section_title">Oyunları Gizle</string>
   <string name="morphe_hide_gaming_section_summary_on">Oyunlar Bölümü Gizlidir</string>
   <string name="morphe_hide_gaming_section_summary_off">Oyunlar Bölümü Görünür</string>
@@ -271,6 +271,11 @@ Değişiklikler şunlardır:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">İzleme geçmişinde görünür</string>
   <string name="morphe_channel_screen_title">Kanal sayfası</string>
   <string name="morphe_channel_screen_summary">Kanal sayfası bileşenlerini gizle veya göster</string>
+  <string name="morphe_hide_channel_tab_title">Kanal sekmesinde filtre etkinleştir</string>
+  <string name="morphe_hide_channel_tab_summary_on">Kanal sekmesi filtresi etkinleştirildi</string>
+  <string name="morphe_hide_channel_tab_summary_off">Kanal sekmesi filtresi devre dışı bırakıldı</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Kanal sekmesi filtre</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Filtrelemek için kanal sekme adlarını, her satırda birer, girin</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Topluluk düğmesini gizle</string>
   <string name="morphe_hide_community_button_summary_on">Topluluk düğmesi gizli</string>

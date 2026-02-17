@@ -225,7 +225,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_summary_on">信息流飞出菜单筛选器已启用</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">信息流飞出菜单筛选器已禁用</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">信息流飞出菜单筛选器</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">列出过滤的飞出菜单名称，每行一个</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">输入飞出菜单名称以按名称过滤，每行一个</string>
   <string name="morphe_hide_gaming_section_title">隐藏「混剪」</string>
   <string name="morphe_hide_gaming_section_summary_on">「混剪」部分已隐藏</string>
   <string name="morphe_hide_gaming_section_summary_off">「混剪」部分已显示</string>
@@ -271,6 +271,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">在观看历史记录中显示</string>
   <string name="morphe_channel_screen_title">频道页面</string>
   <string name="morphe_channel_screen_summary">隐藏或显示频道页面组件</string>
+  <string name="morphe_hide_channel_tab_title">启用频道标签过滤</string>
+  <string name="morphe_hide_channel_tab_summary_on">频道标签过滤已启用</string>
+  <string name="morphe_hide_channel_tab_summary_off">频道标签过滤已禁用</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">频道标签过滤</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">输入要过滤的频道标签名称，每行一个</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">隐藏「社区」按钮</string>
   <string name="morphe_hide_community_button_summary_on">「社区」按钮已隐藏</string>

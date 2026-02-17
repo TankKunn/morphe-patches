@@ -225,7 +225,7 @@ Schimbari includ:
   <string name="morphe_hide_feed_flyout_menu_summary_on">Filtrele meniului lateral al fluxului sunt active</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Filtrele meniului lateral al fluxului sunt dezactivate</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtrele meniului lateral al fluxului</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Lista numelor meniului flyout pentru filtrare, separate de linii noi</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Introduceţi numele meniurilor pentru filtrări, unul pe linie</string>
   <string name="morphe_hide_gaming_section_title">Ascunde Gaming</string>
   <string name="morphe_hide_gaming_section_summary_on">Sectiunea Gaming este ascunsă</string>
   <string name="morphe_hide_gaming_section_summary_off">Sectiunea Gaming este afișată</string>
@@ -271,6 +271,11 @@ Schimbari includ:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Afișat în istoricul de vizionare</string>
   <string name="morphe_channel_screen_title">Pagina canalului</string>
   <string name="morphe_channel_screen_summary">Ascunde sau afișează componentele paginii canalului</string>
+  <string name="morphe_hide_channel_tab_title">Activează filtru pentru tabul canalului</string>
+  <string name="morphe_hide_channel_tab_summary_on">Filtrul pentru tabul canalului este activat</string>
+  <string name="morphe_hide_channel_tab_summary_off">Filtrul pentru tabul canalului este dezactivat</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtru tabulare canal</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Introduceți numele taburilor canalului pentru filtrarea acestora, unul pe linie</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Ascunde butonul \'Comunitate\'</string>
   <string name="morphe_hide_community_button_summary_on">Butonul \'Comunitate\' este ascuns</string>

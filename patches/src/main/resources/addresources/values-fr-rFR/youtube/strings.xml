@@ -225,7 +225,7 @@ Les changements incluent :
   <string name="morphe_hide_feed_flyout_menu_summary_on">Le filtre du menu déroulant est activé</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Le filtre du menu déroulant est désactivé</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtre du menu déroulant</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Liste des noms du menu déroulant à filtrer, séparés par des sauts de ligne</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Entrez les noms du menu déroulant à filtrer, un par ligne</string>
   <string name="morphe_hide_gaming_section_title">Masquer \'Jeux vidéo\'</string>
   <string name="morphe_hide_gaming_section_summary_on">La section \'Jeux vidéo\' est masquée</string>
   <string name="morphe_hide_gaming_section_summary_off">La section \'Jeux vidéo\' est affichée</string>
@@ -271,6 +271,11 @@ Les changements incluent :
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Affichée dans l\'historique</string>
   <string name="morphe_channel_screen_title">Page de chaîne</string>
   <string name="morphe_channel_screen_summary">Masquer ou afficher les composants de la page de chaîne</string>
+  <string name="morphe_hide_channel_tab_title">Activer le filtre de l’onglet de chaîne</string>
+  <string name="morphe_hide_channel_tab_summary_on">Le filtre de l’onglet de chaîne est activé</string>
+  <string name="morphe_hide_channel_tab_summary_off">Le filtre de l’onglet de chaîne est desactivé</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtre de l\'onglet de chaîne</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Entrez les noms d\'onglet de chaîne à filtrer, un par ligne</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Masquer le bouton \'Communauté\'</string>
   <string name="morphe_hide_community_button_summary_on">Le bouton \'Communauté\' est masqué</string>
@@ -1518,7 +1523,7 @@ L’activation de cette option peut débloquer des qualités vidéo plus élevé
   <string name="morphe_playback_speed_default_title">Vitesse de lecture par défaut</string>
   <string name="morphe_remember_playback_speed_toast">Vitesse de lecture par défaut modifiée en : %s</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
-  <string name="morphe_disable_hdr_video_title">Déaactiver les vidéos HDR</string>
+  <string name="morphe_disable_hdr_video_title">Désactiver les vidéos HDR</string>
   <string name="morphe_disable_hdr_video_summary_on">Les vidéos en HDR sont désactivés</string>
   <string name="morphe_disable_hdr_video_summary_off">Les vidéos en HDR sont activés</string>
   <string name="morphe_force_avc_codec_title">Forcer AVC (H.264)</string>

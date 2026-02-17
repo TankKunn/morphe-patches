@@ -222,6 +222,11 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_featured_videos_section_title">Dölj utvalda videor</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Avsnittet med utvalda videor är dolt</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Avsnittet med utvalda videor visas</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Aktivera filter för flyout-menyn i flöden</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Filter för flyout-menyn i flöden är aktiverat</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Filter för flyout-menyn i flöden är inaktiverat</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filter för flyout-menyn i flöden</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Ange namnen på de objekt i flyout-menyn som ska filtreras bort, ett per rad</string>
   <string name="morphe_hide_gaming_section_title">Dölj Gaming</string>
   <string name="morphe_hide_gaming_section_summary_on">Gaming-avsnittet är dolt</string>
   <string name="morphe_hide_gaming_section_summary_off">Gaming-avsnittet visas</string>
@@ -267,6 +272,11 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Visas i visningshistoriken</string>
   <string name="morphe_channel_screen_title">Kanalsida</string>
   <string name="morphe_channel_screen_summary">Dölj eller visa komponenter på kanalsidan</string>
+  <string name="morphe_hide_channel_tab_title">Aktivera filter för kanalflikar</string>
+  <string name="morphe_hide_channel_tab_summary_on">Filter för kanalflikar är aktiverat</string>
+  <string name="morphe_hide_channel_tab_summary_off">Filter för kanalflikar är inaktiverat</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filter för kanalflikar</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Ange namnen på de kanalflikar som ska filtreras bort, en per rad</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Dölj knappen Community</string>
   <string name="morphe_hide_community_button_summary_on">Knappen Community är dold</string>
@@ -647,7 +657,7 @@ Cookies sparas automatiskt om de är giltiga"</string>
   <string name="morphe_hide_navigation_button_labels_title">Dölj etiketter för navigeringsknappar</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Etiketter är dolda</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Etiketter visas</string>
-  <string name="morphe_narrow_navigation_buttons_title">Aktivera smala navigationsknappar</string>
+  <string name="morphe_narrow_navigation_buttons_title">Aktivera smala navigeringsknappar</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">Avståndet mellan navigeringsknapparna är smalt</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">Avståndet mellan navigeringsknapparna är normalt</string>
   <string name="morphe_navigation_bar_animations_title">Aktivera animeringar för navigeringsfältet</string>

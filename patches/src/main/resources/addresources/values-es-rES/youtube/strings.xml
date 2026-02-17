@@ -225,7 +225,7 @@ Los cambios incluyen:
   <string name="morphe_hide_feed_flyout_menu_summary_on">El filtro del menú desplegable del feed está activado</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">El filtro del menú desplegable del feed está desactivado</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtro del menú desplegable del feed</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Lista de nombres del menú desplegable a filtrar separados por una nueva línea</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Ingrese los nombres del menú desplegable para filtrar, uno por línea</string>
   <string name="morphe_hide_gaming_section_title">Ocultar \"Juegos\"</string>
   <string name="morphe_hide_gaming_section_summary_on">La sección \"Juegos\" está oculta</string>
   <string name="morphe_hide_gaming_section_summary_off">La sección \"Juegos\" está visible</string>
@@ -271,6 +271,11 @@ Los cambios incluyen:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Visible en historial de reproducciones</string>
   <string name="morphe_channel_screen_title">Página del canal</string>
   <string name="morphe_channel_screen_summary">Ocultar o mostrar componentes de la página del canal</string>
+  <string name="morphe_hide_channel_tab_title">Activar filtro de pestaña del canal</string>
+  <string name="morphe_hide_channel_tab_summary_on">Filtro de pestaña del canal activado</string>
+  <string name="morphe_hide_channel_tab_summary_off">Filtro de pestaña del canal desactivado</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtro de pestaña del canal</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Ingrese los nombres de las pestañas del canal para filtrar, uno por línea</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Ocultar botón \"Comunidad\"</string>
   <string name="morphe_hide_community_button_summary_on">El botón \"Comunidad\" está oculto</string>

@@ -227,7 +227,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_summary_on">Το φίλτρο του μενού του feed είναι ενεργοποιημένο</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Το φίλτρο του μενού του feed είναι απενεργοποιημένο</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Φίλτρο του μενού του feed</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Λίστα με ονόματα μενού φλόγας για φιλτράρισμα, διαχωρισμένα με νέες γραμμές</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Εισάγετε τα ονόματα του flyout menu για φιλτράρισμα, ένα ανά γραμμή</string>
   <string name="morphe_hide_gaming_section_title">Κρύψε Γαμών</string>
   <string name="morphe_hide_gaming_section_summary_on">Η ενότητα Γαμών είναι κρυμμένη</string>
   <string name="morphe_hide_gaming_section_summary_off">Η ενότητα Γαμών εμφανίζεται</string>
@@ -273,6 +273,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Εμφανίζεται</string>
   <string name="morphe_channel_screen_title">Σελίδα καναλιού</string>
   <string name="morphe_channel_screen_summary">Απόκρυψη ή εμφάνιση στοιχείων της σελίδας καναλιού</string>
+  <string name="morphe_hide_channel_tab_title">Ενεργοποίηση φίλτρου κατηγορίες καναλιών</string>
+  <string name="morphe_hide_channel_tab_summary_on">Φίλτρο κατηγορίες καναλιών ενεργοποιημένο</string>
+  <string name="morphe_hide_channel_tab_summary_off">Φίλτρο κατηγορίες καναλιών απενεργοποιημένο</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Φίλτρο καρτέλας καναλιού</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Εισάγετε τα ονόματα καρτέλες καναλιού για φιλτράρισμα, ένα ανά γραμμή</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Κρύψε Κουμπί Κοινότητας</string>
   <string name="morphe_hide_community_button_summary_on">Το κουμπί Κοινότητας είναι κρυμμένο</string>

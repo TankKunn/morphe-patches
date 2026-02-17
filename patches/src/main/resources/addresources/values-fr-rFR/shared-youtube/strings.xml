@@ -64,9 +64,9 @@ La lecture peut ne pas fonctionner"</string>
   <!-- "Default client" must be the same translated text as morphe_spoof_video_streams_client_type_title -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary_disabled">Pour utiliser cette fonction, changez le \'Client par défaut\' en Android VR</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_title">Se connecter à Android VR</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"La connexion à Android VR peut résoudre les problèmes de lecture pour certains utilisateurs
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Se connecter à Android VR peut résoudre les problèmes de lecture pour certains utilisateurs.
 
-Pour vous connecter, appuyez sur Continuer ci-dessous"</string>
+Pour vous connecter, appuyez sur 'Continuer' ci-dessous."</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">Continuer</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">Se déconnecter</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">Instructions</string>
@@ -91,7 +91,7 @@ Pour vous connecter, appuyez sur Continuer ci-dessous"</string>
   <string name="morphe_oauth2_connection_failure_status_400">La connexion à Android VR a expiré, réessayez de vous connecter à VR</string>
   <string name="morphe_oauth2_connection_failure_status">OAuth2 est temporairement indisponible (statut %d)</string>
   <string name="morphe_oauth2_connection_failure_generic">OAuth2 est temporairement indisponible</string>
-  <string name="morphe_oauth2_connection_failure_auth_not_approved">Impossible de vous connecter à VR : l\'authentification a été refusée</string>
+  <string name="morphe_oauth2_connection_failure_auth_not_approved">Impossible de se connecter à la VR, l’authentification sur le site web n’a pas été approuvée</string>
   <string name="morphe_oauth2_connection_failure_auth_error">Impossible de se connecter à VR : %s</string>
   <string name="morphe_oauth2_toast_reset">Déconnexion de Android VR</string>
   <string name="morphe_oauth2_toast_invalid">Jeton de connexion à VR invalide, veuillez réessayer la connexion à VR</string>

@@ -225,7 +225,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_summary_on">Филтърът за излизане на лентата е включен</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Филтърът за излизане на лентата е изключен</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Филтър за излизане на лентата</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Списък с имената на извадъчните менюта за филтриране, разделени с нов ред</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Въведете имената на менюто за филтриране, по едно на ред</string>
   <string name="morphe_hide_gaming_section_title">Скриване на \'Игра\'</string>
   <string name="morphe_hide_gaming_section_summary_on">Сеcció с игра е скрита</string>
   <string name="morphe_hide_gaming_section_summary_off">Сеcció с игра е показана</string>
@@ -271,6 +271,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Показани в история на гледане</string>
   <string name="morphe_channel_screen_title">Канал страница</string>
   <string name="morphe_channel_screen_summary">Скрийте или покажете компоненти на канал страницата</string>
+  <string name="morphe_hide_channel_tab_title">Разрешете филтриране по таб на канал</string>
+  <string name="morphe_hide_channel_tab_summary_on">Филтриране по таб на канал е разрешено</string>
+  <string name="morphe_hide_channel_tab_summary_off">Филтриране по таб на канал е забранено</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Филтър за таб на канал</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Въведете имената на табовете на канала, за филтриране, едно на ред</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Скриване на бутона \'Общност\'</string>
   <string name="morphe_hide_community_button_summary_on">Бутона \'Общност\' е скрит</string>

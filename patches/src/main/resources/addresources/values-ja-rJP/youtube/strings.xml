@@ -222,11 +222,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_videos_section_title">おすすめ動画を非表示</string>
   <string name="morphe_hide_featured_videos_section_summary_on">情報カード セクション内のおすすめ動画セクションは表示されません</string>
   <string name="morphe_hide_featured_videos_section_summary_off">情報カード セクション内のおすすめ動画セクションは表示されます</string>
-  <string name="morphe_hide_feed_flyout_menu_title">フィード フライアウト メニュー フィルターを有効化する</string>
-  <string name="morphe_hide_feed_flyout_menu_summary_on">フィード フライアウト メニュー フィルターが有効化されています</string>
-  <string name="morphe_hide_feed_flyout_menu_summary_off">フィード フライアウト メニュー フィルターが無効化されています</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">フィード フライアウト メニュー フィルター</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">非表示にするコンポーネントの path builder string のリスト (改行区切り)</string>
+  <string name="morphe_hide_feed_flyout_menu_title">フィードのフライアウト メニューのフィルタを有効化</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">フィードのフライアウト メニューのフィルタは有効です</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">フィードのフライアウト メニューのフィルタは無効です</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">フィードのフライアウト メニューのフィルタ</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">非表示にするフライアウト メニューのメニュー名を改行区切りで入力してください</string>
   <string name="morphe_hide_gaming_section_title">ゲームを非表示</string>
   <string name="morphe_hide_gaming_section_summary_on">ゲーム セクションは表示されません</string>
   <string name="morphe_hide_gaming_section_summary_off">ゲーム セクションは表示されます</string>
@@ -272,6 +272,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">再生履歴には表示されます</string>
   <string name="morphe_channel_screen_title">チャンネル ページ</string>
   <string name="morphe_channel_screen_summary">チャンネル ページのコンポーネントを表示または非表示にします</string>
+  <string name="morphe_hide_channel_tab_title">チャネル ページのタブのフィルタを有効化</string>
+  <string name="morphe_hide_channel_tab_summary_on">チャンネル ページのタブのフィルタは有効です</string>
+  <string name="morphe_hide_channel_tab_summary_off">チャンネル ページのタブのフィルタは無効です</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">チャネル ページのタブのフィルタ</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">非表示にするチャンネル ページのタブのタブ名を改行区切りで入力してください</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">コミュニティ ボタンを非表示</string>
   <string name="morphe_hide_community_button_summary_on">コミュニティ ボタンは表示されません</string>

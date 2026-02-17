@@ -219,7 +219,7 @@ Promjene uključuju:
   <string name="morphe_hide_feed_flyout_menu_summary_on">Filtar ispada menija za pretplate je omogućen</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Filtar ispada menija za pretplate je onemogućen</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtar ispada menija za pretplate</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Popis imena izvučenog menija za filtriranje, odvojena novim linijama</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Unesite nazive izbornika da biste filtrirali, po jedan po liniji</string>
   <string name="morphe_hide_gaming_section_title">Sakrij \'Igre\'</string>
   <string name="morphe_hide_gaming_section_summary_on">Odjeljak \'Igre\' je skriven</string>
   <string name="morphe_hide_gaming_section_summary_off">Odjeljak \'Igre\' je prikazan</string>
@@ -265,6 +265,11 @@ Promjene uključuju:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Kanalna stranica je prikazana</string>
   <string name="morphe_channel_screen_title">Sakrij \'Prikaži\' tipku</string>
   <string name="morphe_channel_screen_summary">Tipka za emitiranje je prikazana</string>
+  <string name="morphe_hide_channel_tab_title">Omogući filtriranje tablice kanala</string>
+  <string name="morphe_hide_channel_tab_summary_on">Filtriranje tablice kanala je omogućeno</string>
+  <string name="morphe_hide_channel_tab_summary_off">Filtriranje tablice kanala je onemogućeno</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filter po kanalu</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Unesite nazive kanala za filtriranje, po jedan po liniji</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Sakrij tipku \'Zajednica\'</string>
   <string name="morphe_hide_community_button_summary_on">Skrivena je tipka za zajednicu</string>

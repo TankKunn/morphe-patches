@@ -225,7 +225,7 @@ Wijzigingen zijn:
   <string name="morphe_hide_feed_flyout_menu_summary_on">Filter voor het uitvouwmenu van de feed is ingeschakeld</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Filter voor het uitvouwmenu van de feed is uitgeschakeld</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filter voor het uitvouwmenu van de feed</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Lijst met flyout menu namen om te filteren gescheiden door een nieuwe regel</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Voer de flyout menu namen in om te filteren, één per lijn</string>
   <string name="morphe_hide_gaming_section_title">Verberg Gaming</string>
   <string name="morphe_hide_gaming_section_summary_on">Sectie Gaming is verborgen</string>
   <string name="morphe_hide_gaming_section_summary_off">Sectie Gaming is zichtbaar</string>
@@ -271,6 +271,11 @@ Wijzigingen zijn:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Getoond in kijkgeschiedenis</string>
   <string name="morphe_channel_screen_title">Kanaalpagina</string>
   <string name="morphe_channel_screen_summary">Kanaalpagina-componenten verbergen of tonen</string>
+  <string name="morphe_hide_channel_tab_title">Kanaal tab filter inschakelen</string>
+  <string name="morphe_hide_channel_tab_summary_on">Kanaal tab filter is ingeschakeld</string>
+  <string name="morphe_hide_channel_tab_summary_off">Kanaal tab filter is uitgeschakeld</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Kanal tabfilter</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Voer de namen van de kanalen in om te filteren, één per regel</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Verberg \'Community\' knop</string>
   <string name="morphe_hide_community_button_summary_on">Knop \'Community\' is verborgen</string>

@@ -225,7 +225,7 @@ Változások:
   <string name="morphe_hide_feed_flyout_menu_summary_on">A táplálkozó hurokmenü szűrője engedélyezve van</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">A táplálkozó hurokmenü szűrője le van tiltva</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Táplálkozó hurokmenü szűrő</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Szűrő menü név lista, új sorral elválasztva</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Adja meg a flyout menü neveit, egy sorban, egy-egy sorban</string>
   <string name="morphe_hide_gaming_section_title">Játék elrejtése</string>
   <string name="morphe_hide_gaming_section_summary_on">A játék szakció el van rejtve</string>
   <string name="morphe_hide_gaming_section_summary_off">A játék szakció látható</string>
@@ -271,6 +271,11 @@ Változások:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Megjelenítve az előzményekben</string>
   <string name="morphe_channel_screen_title">Csatornaoldal</string>
   <string name="morphe_channel_screen_summary">Csatornaoldal komponenseinek elrejtése vagy megjelenítése</string>
+  <string name="morphe_hide_channel_tab_title">Csatorna tabla szűrő engedélyezése</string>
+  <string name="morphe_hide_channel_tab_summary_on">Csatorna tabla szűrője engedélyezve van</string>
+  <string name="morphe_hide_channel_tab_summary_off">Csatorna tabla szűrője ki van kapcsolva</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Csatorna tabla szűrő</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Adja meg a csatorna tabla neveit, egy sorban, egy-egy sorban</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Közösség gomb elrejtése</string>
   <string name="morphe_hide_community_button_summary_on">A közösség gomb el van rejtve</string>

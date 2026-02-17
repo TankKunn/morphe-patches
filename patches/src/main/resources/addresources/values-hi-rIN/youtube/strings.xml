@@ -226,7 +226,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_summary_on">फ़ीड फ़्लाईआउट मेनू फ़िल्टर सक्षम है</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">फ़ीड फ़्लाईआउट मेनू फ़िल्टर अक्षम है</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">फ़ीड फ़्लाईआउट मेनू फ़िल्टर</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">फ्लाईआउट मेनू नामों की सूची फ़िल्टर करें, नई लाइन पर विभाजित करें</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">फ़्लायआउट मेनू के नाम दर्ज करके फ़िल्टर करें, एक पंक्ति में एक</string>
   <string name="morphe_hide_gaming_section_title">गेमिंग छुपाएं</string>
   <string name="morphe_hide_gaming_section_summary_on">गेमिंग का क्षेत्र छुपा हुआ है</string>
   <string name="morphe_hide_gaming_section_summary_off">गेमिंग का क्षेत्र दिखाया गया है</string>
@@ -272,6 +272,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">दर्शाया गया है इतिहास में</string>
   <string name="morphe_channel_screen_title">चैनल पेज</string>
   <string name="morphe_channel_screen_summary">चैनल पेज घटकों को छुपाएं या दिखाएं</string>
+  <string name="morphe_hide_channel_tab_title">चैनल टैब फ़िल्टर सक्षम करें</string>
+  <string name="morphe_hide_channel_tab_summary_on">चैनल टैब फ़िल्टर सक्षम है</string>
+  <string name="morphe_hide_channel_tab_summary_off">चैनल टैब फ़िल्टर अक्षम है</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">चैनल टैब फ़िल्टर</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">फ़िल्टर करने के लिए चैनल टैब के नाम दर्ज करें, एक पंक्ति में एक</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">समुदाय बटन छुपाएं</string>
   <string name="morphe_hide_community_button_summary_on">सामुदायिक बटन छुपा हुआ है</string>

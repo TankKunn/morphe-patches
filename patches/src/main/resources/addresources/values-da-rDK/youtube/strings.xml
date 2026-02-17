@@ -225,7 +225,7 @@ Nogle server-side udseender kan ikke gå tilbage.
   <string name="morphe_hide_feed_flyout_menu_summary_on">Filflytmenålteringsfilter er aktiveret</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Filflytmenålteringsfilter er deaktiveret</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filflytmenålteringsfilter</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Liste over flyout-menunavne til filtrering, adskilt af ny linje</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Angiv flyout-menunavnene, der skal filtreres, et prå linje</string>
   <string name="morphe_hide_gaming_section_title">Skjul \'Gaming\'</string>
   <string name="morphe_hide_gaming_section_summary_on">Sektionen for \'Gaming\' er skjult</string>
   <string name="morphe_hide_gaming_section_summary_off">Sektionen for \'Gaming\' er vist</string>
@@ -271,6 +271,11 @@ Nogle server-side udseender kan ikke gå tilbage.
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Vist i seerhistorik</string>
   <string name="morphe_channel_screen_title">Kanalside</string>
   <string name="morphe_channel_screen_summary">Skjul eller vis kanalsidekomponenter</string>
+  <string name="morphe_hide_channel_tab_title">Aktiver kanalflådefilter</string>
+  <string name="morphe_hide_channel_tab_summary_on">Kanalflådefilter er aktiveret</string>
+  <string name="morphe_hide_channel_tab_summary_off">Kanalflådefilter er deaktiveret</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filterkanalflade</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Angiv kanalfladenavne, der skal filtreres, ét pr. linje</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Skjul \'Community\' knappen</string>
   <string name="morphe_hide_community_button_summary_on">Knappen \'Community\' er skjult</string>

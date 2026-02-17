@@ -25,7 +25,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_screen_04_general_title">Ogólne</string>
   <string name="morphe_settings_screen_05_player_title">Odtwarzacz</string>
   <string name="morphe_settings_screen_07_seekbar_title">Pasek postępu filmu</string>
-  <string name="morphe_settings_screen_08_swipe_controls_title">Sterowanie przesuwaniem</string>
+  <string name="morphe_settings_screen_08_swipe_controls_title">Sterowanie gestami</string>
   <string name="morphe_settings_screen_11_misc_title">Pozostałe</string>
   <string name="morphe_settings_screen_12_video_title">Film</string>
   <string name="morphe_restore_old_settings_menus_title">Stare menu ustawień</string>
@@ -39,9 +39,9 @@ Second \"item\" text"</string>
   <string name="morphe_debug_protobuffer_title">Logi buforów protokołu</string>
   <string name="morphe_debug_protobuffer_summary_on">Włączone</string>
   <string name="morphe_debug_protobuffer_summary_off">Wyłączone</string>
-  <string name="morphe_debug_protobuffer_user_dialog_message">"Włączenie tego ustawienia spowoduje rejestrowanie dodatkowych logów układu, w tym tekstu na ekranie dla niektórych komponentów interfejsu użytkownika. 
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Włączenie tego ustawienia spowoduje rejestrowanie dodatkowych danych układu, w tym tekstu wyświetlanego w niektórych komponentach interfejsu.
 
-Może to pomóc w identyfikacji komponentów podczas tworzenia niestandardowych filtrów.
+Może to pomóc w identyfikacji komponentów podczas tworzenia własnych filtrów.
 
 Włączenie tej opcji spowoduje również rejestrowanie niektórych danych użytkownika, takich jak adres IP."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -122,7 +122,7 @@ Zmiany obejmują:
   <string name="morphe_hide_search_suggestions_summary_off">Widoczne</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
-  <string name="morphe_hide_show_more_button_title">Przycisk \'Pokaż więcej\'</string>
+  <string name="morphe_hide_show_more_button_title">Przycisk \"Pokaż więcej\"</string>
   <string name="morphe_hide_show_more_button_summary_on">Ukryty w wynikach wyszukiwania</string>
   <string name="morphe_hide_show_more_button_summary_off">Widoczny w wynikach wyszukiwania</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Pasek z subskrybowanymi kanałami</string>
@@ -209,7 +209,7 @@ Zmiany obejmują:
   <string name="morphe_hide_explore_course_section_title">Sekcja \"Poznaj ten kurs\"</string>
   <string name="morphe_hide_explore_course_section_summary_on">Ukryta</string>
   <string name="morphe_hide_explore_course_section_summary_off">Widoczna</string>
-  <string name="morphe_hide_explore_podcast_section_title">Sekcja \'Poznaj podcast\'</string>
+  <string name="morphe_hide_explore_podcast_section_title">Sekcja \"Poznaj podcast\"</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Ukryta</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Widoczna</string>
   <string name="morphe_hide_featured_links_section_title">Sekcja z polecanymi linkami</string>
@@ -225,7 +225,7 @@ Zmiany obejmują:
   <string name="morphe_hide_feed_flyout_menu_summary_on">Włączony</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Wyłączony</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtr menu ze strony głównej</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Lista nazw menu do filtrowania, która musi być oddzielona nowymi wierszami</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Wpisz nazwy menu do filtrowania, po jednej w wierszu</string>
   <string name="morphe_hide_gaming_section_title">Sekcja z grami</string>
   <string name="morphe_hide_gaming_section_summary_on">Ukryta</string>
   <string name="morphe_hide_gaming_section_summary_off">Widoczna</string>
@@ -271,6 +271,11 @@ Zmiany obejmują:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Widoczny</string>
   <string name="morphe_channel_screen_title">Strona kanału</string>
   <string name="morphe_channel_screen_summary">Ukryj lub pokazuj komponenty strony kanału</string>
+  <string name="morphe_hide_channel_tab_title">Filtr sekcji na stronie kanałów</string>
+  <string name="morphe_hide_channel_tab_summary_on">Włączony</string>
+  <string name="morphe_hide_channel_tab_summary_off">Wyłączony</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtr sekcji na stronie kanałów</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Wpisz nazwy sekcji do filtrowania, po jednej w wierszu</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Przycisk Społeczność</string>
   <string name="morphe_hide_community_button_summary_on">Ukryty</string>
@@ -286,7 +291,7 @@ Zmiany obejmują:
   <string name="morphe_hide_links_preview_title">Podgląd linków</string>
   <string name="morphe_hide_links_preview_summary_on">Ukryty</string>
   <string name="morphe_hide_links_preview_summary_off">Widoczny</string>
-  <string name="morphe_hide_members_shelf_title">Półka z wspierającymi kanał</string>
+  <string name="morphe_hide_members_shelf_title">Półka ze wspierającymi kanał</string>
   <string name="morphe_hide_members_shelf_summary_on">Ukryta</string>
   <string name="morphe_hide_members_shelf_summary_off">Widoczna</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
@@ -378,7 +383,7 @@ Słowami mogą być nazwy kanałów oraz dowolny tekst wyświetlany w tytułach 
 
 Słowa zawierające duże litery w środku muszą być wpisane z odpowiednią wielkością liter (np. iPhone, TikTok, LeBlanc)"</string>
   <string name="morphe_hide_keyword_content_about_title">O filtrowaniu słów</string>
-  <string name="morphe_hide_keyword_content_about_summary">"Strona główna / subskrypcji / wyniki wyszukiwania są filtrowane, by ukryć treści, które zawierają słowa z filtra.
+  <string name="morphe_hide_keyword_content_about_summary">"Strona główna / subskrypcji / wyniki wyszukiwania są filtrowane, by ukryć treści, które zawierają słowa z filtra
 
 Ograniczenia:
 • Shortsy nie mogą być ukryte po nazwie kanału
@@ -386,12 +391,12 @@ Ograniczenia:
 • Wyszukiwanie słowa z filtru może nie pokazywać żadnych wyników"</string>
   <string name="morphe_hide_keyword_content_about_whole_words_title">Uwzględnij całe wyrazy</string>
   <!-- Translations must use a localized example. For languages that do not use spaces between words (Chinese, Japanese, etc.) the English AI example should be used since no localized examples exist. Or if using machine translations, or if nobody wants to think of a localized example, then the English 'ai' example should be left as-is. -->
-  <string name="morphe_hide_keyword_content_about_whole_words_summary">Otoczenie słowa/frazy podwójnym cudzysłowem może zapobiec częściowemu dopasowywaniu tytułów filmów i nazw kanałów&lt;br&gt;&lt;br&gt;Na przykład,&lt;br&gt;&lt;b&gt;\"ai\"&lt;/b&gt; ukryje film: &lt;b&gt;Jak działa AI?&lt;/b&gt;&lt;br&gt;lecz nie ukryje: &lt;b&gt;Style drzewka Bonsai&lt;/b&gt;</string>
+  <string name="morphe_hide_keyword_content_about_whole_words_summary">Otoczenie słowa/frazy podwójnym cudzysłowem może zapobiec częściowemu dopasowaniu tytułów filmów i nazw kanałów&lt;br&gt;&lt;br&gt;Na przykład,&lt;br&gt;&lt;b&gt;\"ai\"&lt;/b&gt; ukryje film: &lt;b&gt;Jak działa AI?&lt;/b&gt;&lt;br&gt;lecz nie ukryje: &lt;b&gt;Style drzewka Bonsai&lt;/b&gt;</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_hide_keyword_toast_invalid_common">Nie można użyć słowa: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_common_whole_word_required">Dodaj cudzysłowy, aby użyć słowa: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_conflicting">Słowo zawiera sprzeczne deklaracje: %s</string>
-  <string name="morphe_hide_keyword_toast_invalid_length">Słowo jest za krótkie i wymaga cudzysłowu: %s</string>
+  <string name="morphe_hide_keyword_toast_invalid_length">Słowo jest za krótkie i wymaga użycia cudzysłowu: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Słowo ukryje wszystkie filmy: %s</string>
   <!-- ad.general.hideAdsResourcePatch -->
   <string name="morphe_hide_end_screen_store_banner_title">Baner sklepowy po zakończeniu filmu</string>
@@ -444,7 +449,7 @@ Ograniczenia:
   <string name="morphe_disable_signin_to_tv_popup_summary_on">Wyłączony</string>
   <string name="morphe_disable_signin_to_tv_popup_summary_off">Włączony</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
-  <string name="morphe_disable_chapter_skip_double_tap_title">Pominięcie rozdziału podwójnym kliknięciem</string>
+  <string name="morphe_disable_chapter_skip_double_tap_title">Pominięcie rozdziału dwukrotnym stuknięciem</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary_on">Wyłączone</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary_off">Sporadycznie możliwe</string>
   <!-- interaction.downloads.downloadsResourcePatch -->
@@ -499,23 +504,23 @@ Dostosuj głośność, przesuwając pionowo po prawej stronie ekranu"</string>
   <string name="morphe_swipe_lowest_value_enable_auto_brightness_summary_on">Po przesunięciu w dół do najniższej wartości jasności</string>
   <string name="morphe_swipe_lowest_value_enable_auto_brightness_summary_off">Wyłączona</string>
   <string name="morphe_swipe_lowest_value_enable_auto_brightness_overlay_text">Automatycznie</string>
-  <string name="morphe_swipe_overlay_timeout_title">Limit czasu widoczności nakładki</string>
+  <string name="morphe_swipe_overlay_timeout_title">Czas wyświetlania nakładki gestów</string>
   <string name="morphe_swipe_overlay_timeout_summary">Liczba milisekund, przez które nakładka jest widoczna</string>
-  <string name="morphe_swipe_overlay_background_opacity_title">Przejrzystość tła nakładki przesuwania</string>
+  <string name="morphe_swipe_overlay_background_opacity_title">Przezroczystość tła nakładki przesuwania</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Wartość pomiędzy 0 a 100</string>
   <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Wartość musi być pomiędzy 0 a 100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Kolor nakładki zmieniania jasności przesuwaniem</string>
-  <string name="morphe_swipe_overlay_progress_brightness_color_summary">Kolor paska postępu dla elementów sterujących jasnością</string>
+  <string name="morphe_swipe_overlay_progress_brightness_color_summary">Kolor paska postępu dla sterowania jasnością</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Kolor nakładki zmieniania głośności przesuwaniem</string>
-  <string name="morphe_swipe_overlay_progress_volume_color_summary">Kolor paska postępu dla elementów sterujących głośnością</string>
-  <string name="morphe_swipe_text_overlay_size_title">Rozmiar tekstu nakładki przesuwania</string>
-  <string name="morphe_swipe_text_overlay_size_summary">Rozmiar tekstu dla nakładki przesunięcia między 1-30</string>
+  <string name="morphe_swipe_overlay_progress_volume_color_summary">Kolor paska postępu dla sterowania głośnością</string>
+  <string name="morphe_swipe_text_overlay_size_title">Rozmiar tekstu nakładki gestów</string>
+  <string name="morphe_swipe_text_overlay_size_summary">Rozmiar tekstu dla nakładki gestów pomiędzy 1 a 30</string>
   <string name="morphe_swipe_text_overlay_size_invalid_toast">Rozmiar tekstu musi być pomiędzy 1 a 30</string>
   <string name="morphe_swipe_threshold_title">Minimalna długość przesunięcia</string>
   <string name="morphe_swipe_threshold_summary">Wartość progowa, przy której następuje przesunięcie</string>
   <string name="morphe_swipe_volume_sensitivity_title">Czułość przesunięcia głośności</string>
   <string name="morphe_swipe_volume_sensitivity_summary">O ile zmienia się głośność na przesunięcie</string>
-  <string name="morphe_swipe_overlay_style_title">Styl nakładki przesuwania</string>
+  <string name="morphe_swipe_overlay_style_title">Styl nakładki gestów</string>
   <string name="morphe_swipe_overlay_style_entry_1">Pozioma</string>
   <string name="morphe_swipe_overlay_style_entry_2">Pozioma (minimalna - góra)</string>
   <string name="morphe_swipe_overlay_style_entry_3">Pozioma (minimalna - środek)</string>
@@ -623,7 +628,7 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_fix_transcript_summary_off">Wyłączone</string>
   <!-- layout.buttons.navigation.navigationButtonsPatch -->
   <string name="morphe_navigation_buttons_screen_title">Przyciski nawigacji</string>
-  <string name="morphe_navigation_buttons_screen_summary">Ukryj lub zmień przyciski na pasku nawigacji</string>
+  <string name="morphe_navigation_buttons_screen_summary">Ukryj lub pokazuj przyciski paska nawigacji</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_home_button_title">Przycisk Główna</string>
   <string name="morphe_hide_home_button_summary_on">Ukryty</string>
@@ -835,7 +840,7 @@ Aby wyświetlić menu ścieżki dźwiękowej, zmień \"Oszukuj strumienie filmu\
   <string name="morphe_hide_shorts_auto_dubbed_label_title">Etykieta automatycznego dubbingu</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_summary_on">Ukryta</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_summary_off">Widoczna</string>
-  <string name="morphe_hide_shorts_super_thanks_button_title">Przycisk \'Kup Super Podziękowanie\'</string>
+  <string name="morphe_hide_shorts_super_thanks_button_title">Przycisk \"Kup Super Podziękowanie\"</string>
   <string name="morphe_hide_shorts_super_thanks_button_summary_on">Ukryty</string>
   <string name="morphe_hide_shorts_super_thanks_button_summary_off">Widoczny</string>
   <string name="morphe_hide_shorts_effect_button_title">Przycisk Efekt</string>
@@ -937,7 +942,7 @@ Aby wyświetlić menu ścieżki dźwiękowej, zmień \"Oszukuj strumienie filmu\
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Widoczny</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Sugerowane filmy na końcu filmu</string>
-  <string name="morphe_end_screen_suggested_video_summary_on">"Ukryte, lecz wyłącznie, gdy autoodtwarzanie jest wyłączone.
+  <string name="morphe_end_screen_suggested_video_summary_on">"Ukryte, lecz wyłącznie, gdy autoodtwarzanie jest wyłączone
 
 Autoodtwarzanie można zmienić w ustawieniach YouTube:
 Ustawienia → Odtwarzanie → Autoodtwarzanie następnego filmu"</string>
@@ -965,7 +970,7 @@ Ustawienia → Odtwarzanie → Autoodtwarzanie następnego filmu"</string>
   <string name="morphe_open_videos_fullscreen_portrait_summary_on">Włączone</string>
   <string name="morphe_open_videos_fullscreen_portrait_summary_off">Wyłączone</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityResourcePatch -->
-  <string name="morphe_player_overlay_opacity_title">Niestandardowa przezroczystość nakładki odtwarzacza</string>
+  <string name="morphe_player_overlay_opacity_title">Przezroczystość nakładki odtwarzacza</string>
   <string name="morphe_player_overlay_opacity_summary">Wartość przezroczystości musi wynosić między 0 a 100, gdzie 0 oznacza przezroczystość</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Przezroczystość nakładki odtwarzacza musi wynosić między 0 a 100</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
@@ -975,7 +980,7 @@ Ustawienia → Odtwarzanie → Autoodtwarzanie następnego filmu"</string>
   <string name="morphe_ryd_failure_client_rate_limit_requested">Liczba łapek w dół nie jest dostępna (limit API użytkownika)</string>
   <string name="morphe_ryd_failure_generic">Liczba łapek w dół nie jest dostępna (%s)</string>
   <!-- Brief notification (Toast) shown if the user enables RYD while a video is opened, and then tries to vote for the video. -->
-  <string name="morphe_ryd_failure_ryd_enabled_while_playing_video_then_user_voted">Odśwież film, aby zagłosować używając Return YouTube Dislike</string>
+  <string name="morphe_ryd_failure_ryd_enabled_while_playing_video_then_user_voted">Odśwież film, aby zagłosować, używając Return YouTube Dislike</string>
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Ukryte przez właściciela</string>
   <string name="morphe_ryd_enabled_summary_on">Łapki w dół są widoczne</string>
@@ -998,7 +1003,7 @@ Ograniczenie: Liczba łapek w dół może nie być widoczna w trybie incognito"<
   <string name="morphe_ryd_toast_on_connection_error_title">Komunikat o niedostępności API</string>
   <string name="morphe_ryd_toast_on_connection_error_summary_on">Widoczny</string>
   <string name="morphe_ryd_toast_on_connection_error_summary_off">Niewidoczny</string>
-  <string name="morphe_ryd_attribution_summary">Dane są dostarczane przez API Return YouTube Dislike. Stuknij tutaj by dowiedzieć się więcej.</string>
+  <string name="morphe_ryd_attribution_summary">Dane są dostarczane przez API Return YouTube Dislike. Stuknij tutaj, aby dowiedzieć się więcej</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Statystyki API Return YouTube Dislike tego urządzenia</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Średni czas odpowiedzi API</string>
@@ -1022,7 +1027,7 @@ Ograniczenie: Liczba łapek w dół może nie być widoczna w trybie incognito"<
   <string name="morphe_wide_searchbar_summary_off">Wyłączony</string>
   <!-- layout.sponsorblock.sponsorBlockResourcePatch -->
   <string name="morphe_sb_enable_sb">SponsorBlock</string>
-  <string name="morphe_sb_enable_sb_sum">SponsorBlock to system pomijania denerwujących fragmentów w filmach na YouTube.</string>
+  <string name="morphe_sb_enable_sb_sum">SponsorBlock to system społecznościowy służący do pomijania uciążliwych fragmentów filmów na YouTube</string>
   <string name="morphe_sb_appearance_category">Wygląd</string>
   <string name="morphe_sb_enable_voting">Przycisk głosowania</string>
   <string name="morphe_sb_enable_voting_sum_on">Widoczny</string>
@@ -1055,7 +1060,7 @@ Ograniczenie: Liczba łapek w dół może nie być widoczna w trybie incognito"<
   <string name="morphe_sb_duration_9s">9 sekund</string>
   <string name="morphe_sb_duration_10s">10 sekund</string>
   <string name="morphe_sb_general_time_without">Czas bez segmentów</string>
-  <string name="morphe_sb_general_time_without_sum_on">Pokazuje czas trwania filmu, odejmując czas trwania zsumowanej długości segmentów, pojawia się w nawiasach obok czasu trwania filmu</string>
+  <string name="morphe_sb_general_time_without_sum_on">Pokazuje czas trwania filmu po odjęciu wszystkich segmentów</string>
   <string name="morphe_sb_general_time_without_sum_off">Pokazuje pełną długość filmu</string>
   <string name="morphe_sb_create_segment_category">Tworzenie nowych segmentów</string>
   <string name="morphe_sb_enable_create_segment">Przycisk Utwórz nowy segment</string>
@@ -1083,11 +1088,11 @@ Ograniczenie: Liczba łapek w dół może nie być widoczna w trybie incognito"<
   <string name="morphe_sb_general_uuid">Twój prywatny identyfikator użytkownika</string>
   <string name="morphe_sb_general_uuid_sum">Nie należy go udostępniać, gdyż działa jak hasło. Jeżeli ktoś go posiada, może korzystać ze SponsorBlocka w Twoim imieniu, np. może wysyłać segmenty</string>
   <string name="morphe_sb_general_uuid_invalid">Prywatny identyfikator użytkownika musi mieć przynajmniej 30 znaków</string>
-  <string name="morphe_sb_general_api_url">Zmień URL API</string>
-  <string name="morphe_sb_general_api_url_sum">Adres SponsorBlock używany do wykonywania połączeń z serwerem</string>
-  <string name="morphe_sb_api_url_reset">URL API został zresetowany</string>
-  <string name="morphe_sb_api_url_invalid">URL API jest nieprawidłowy</string>
-  <string name="morphe_sb_api_url_changed">URL API został zmieniony</string>
+  <string name="morphe_sb_general_api_url">Zmień adres URL API</string>
+  <string name="morphe_sb_general_api_url_sum">Adres, którego SponsorBlock używa do komunikacji z serwerem</string>
+  <string name="morphe_sb_api_url_reset">Adres URL API został zresetowany</string>
+  <string name="morphe_sb_api_url_invalid">Adres URL API jest nieprawidłowy</string>
+  <string name="morphe_sb_api_url_changed">Adres URL API został zmieniony</string>
   <string name="morphe_sb_settings_ie">Zaimportuj / Wyeksportuj ustawienia</string>
   <string name="morphe_sb_settings_copy">Kopiuj</string>
   <string name="morphe_sb_settings_ie_sum">Twoja konfiguracja JSON SponsorBlock może zostać zaimportowana / wyeksportowana do Morphe i innych platform SponsorBlocka</string>
@@ -1097,7 +1102,7 @@ Ograniczenie: Liczba łapek w dół może nie być widoczna w trybie incognito"<
   <string name="morphe_sb_settings_export_failed">Nie udało się wyeksportować: %s</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning">"Twoje ustawienia zawierają prywatny identyfikator użytkownika SponsorBlock.
 
-Twój identyfikator użytkownika jest jak hasło i nie powinno być nigdy udostępniane."</string>
+Twój identyfikator działa jak hasło i nigdy nie powinien być udostępniany."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Nie pokazuj ponownie</string>
   <string name="morphe_sb_diff_segments">Zmień sposoby pomijania segmentów</string>
   <string name="morphe_sb_segments_sponsor">Treści Sponsorowane</string>
@@ -1207,20 +1212,20 @@ Gotowy do przesłania?"</string>
   <string name="morphe_sb_stats_title">Statystyki</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Statystyki są tymczasowo niedostępne (API nie reaguje)</string>
-  <string name="morphe_sb_stats_loading">Ładowanie...</string>
+  <string name="morphe_sb_stats_loading">Wczytywanie...</string>
   <string name="morphe_sb_stats_sb_disabled">SponsorBlock jest wyłączony</string>
   <string name="morphe_sb_stats_username">Twoja nazwa użytkownika: &lt;b&gt;%s&lt;/b&gt;</string>
   <string name="morphe_sb_stats_username_change">Stuknij tutaj, aby zmienić nazwę użytkownika</string>
   <string name="morphe_sb_stats_username_change_unknown_error">Nie można zmienić nazwy użytkownika: Status: %1$d %2$s</string>
   <string name="morphe_sb_stats_username_changed">Nazwa użytkownika została zmieniona</string>
   <string name="morphe_sb_stats_reputation">Twoja reputacja to &lt;b&gt;%.2f&lt;/b&gt;</string>
-  <string name="morphe_sb_stats_submissions">Stworzyłeś &lt;b&gt;%s&lt;/b&gt; segmentów</string>
+  <string name="morphe_sb_stats_submissions">Utworzyłeś(aś) &lt;b&gt;%s&lt;/b&gt; segmentów</string>
   <string name="morphe_sb_stats_submissions_sum">Stuknij tutaj, by zobaczyć swoje segmenty</string>
   <string name="morphe_sb_stats_saved_zero">Tablica wyników SponsorBlock</string>
-  <string name="morphe_sb_stats_saved">Uchroniłeś ludzi przed &lt;b&gt;%s&lt;/b&gt; segmentami</string>
+  <string name="morphe_sb_stats_saved">Uchroniłeś(aś) ludzi przed &lt;b&gt;%s&lt;/b&gt; segmentami</string>
   <string name="morphe_sb_stats_saved_sum_zero">Stuknij tutaj, aby zobaczyć globalne statystyki i najlepszych użytkowników</string>
   <string name="morphe_sb_stats_saved_sum">To &lt;b&gt;%s&lt;/b&gt; ich życia.&lt;br&gt;Stuknij tutaj, aby zobaczyć tabelę wyników</string>
-  <string name="morphe_sb_stats_self_saved">Pominąłeś &lt;b&gt;%s&lt;/b&gt; segmentów</string>
+  <string name="morphe_sb_stats_self_saved">Pominąłeś(ęłaś) &lt;b&gt;%s&lt;/b&gt; segmentów</string>
   <string name="morphe_sb_stats_self_saved_sum">To &lt;b&gt;%s&lt;/b&gt;</string>
   <string name="morphe_sb_stats_self_saved_reset_title">Czy chcesz zresetować liczbę pominiętych segmentów?</string>
   <string name="morphe_sb_stats_saved_hour_format">%1$s godzin %2$s minut</string>
@@ -1397,16 +1402,16 @@ Włączenie tej opcji może naprawić brakujące obrazy, które są blokowane w 
   <string name="morphe_alt_thumbnail_options_entry_2">DeArrow i oryginalne miniaturki</string>
   <string name="morphe_alt_thumbnail_options_entry_3">DeArrow i miniaturki przechwycone z filmu</string>
   <string name="morphe_alt_thumbnail_options_entry_4">Miniaturki przechwycone z filmu</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"DeArrow dostarcza miniaturki filmów z YouTube pochodzące z procesu crowdsourcingu. Miniaturki te są często bardziej trafne niż te dostarczane przez YouTube
+  <string name="morphe_alt_thumbnail_dearrow_about_summary">"DeArrow udostępnia tworzone przez społeczność miniaturki filmów na YouTube, które są często bardziej trafne niż te dostarczane przez YouTube
 
-Jeśli opcja ta jest włączona, URL filmów będą wysyłane do serwera API i nie będą wysyłane żadne inne dane. Jeśli film nie posiada miniaturki od DeArrow, to wyświetla się oryginalna lub przechwycona z filmu
+Jeśli opcja ta jest włączona, do serwera API wysyłane są wyłącznie adresy URL filmów. W przypadku braku miniaturek DeArrow, wyświetlana jest miniaturka oryginalna lub kadr z filmu
 
 Stuknij tutaj, aby dowiedzieć się więcej o DeArrow"</string>
   <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Komunikat o niedostępności API</string>
   <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary_on">Widoczny</string>
   <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary_off">Niewidoczny</string>
   <string name="morphe_alt_thumbnail_dearrow_api_url_title">Punkt końcowy API DeArrow</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">URL punktu końcowego do miniaturek DeArrow</string>
+  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">Adres URL punktu końcowego do miniaturek DeArrow</string>
   <string name="morphe_alt_thumbnail_stills_about_title">Miniaturki przechwycone z filmu</string>
   <string name="morphe_alt_thumbnail_stills_about_summary">Miniaturki przechwytywane z filmu są brane z początku, środka lub końca filmu. Obrazy te są wbudowane w YouTube, więc żadne zewnętrzne API nie jest używane</string>
   <string name="morphe_alt_thumbnail_stills_fast_title">Szybkie przechwytywanie miniaturek z filmu</string>
@@ -1438,7 +1443,7 @@ Wyższe jakości wideo mogą zostać odblokowane, ale możesz doświadczyć zaci
   <string name="morphe_spoof_device_dimensions_summary_off">"Rozdzielczość urządzenia nie jest oszukiwana
 
 Włączenie tej opcji może odblokować wyższe jakości wideo"</string>
-  <string name="morphe_spoof_device_dimensions_user_dialog_message">Włączenie tego może spowodować zacinanie się odtwarzanego filmu, pogorszenie żywotności baterii i nieznane efekty uboczne.</string>
+  <string name="morphe_spoof_device_dimensions_user_dialog_message">Włączenie tego może spowodować zacinanie się obrazu, szybsze zużycie baterii oraz inne nieprzewidziane skutki uboczne.</string>
   <!-- misc.hapticfeedback.disableHapticFeedbackPatch -->
   <string name="morphe_disable_haptic_feedback_title">Wibracje</string>
   <string name="morphe_disable_haptic_feedback_summary">Zmień wibracje</string>
@@ -1455,7 +1460,7 @@ Włączenie tej opcji może odblokować wyższe jakości wideo"</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Wyłączone</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Włączone</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
-  <string name="microg_offline_account_login_error">Jeśli niedawno zmieniono dane logowania do konta, odinstaluj i zainstaluj ponownie MicroG.</string>
+  <string name="microg_offline_account_login_error">Jeśli Twoje dane logowania zostały ostatnio zmienione, odinstaluj i zainstaluj ponownie MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->
   <string name="morphe_bypass_url_redirects_title">Bezpośrednie otwieranie linków</string>
   <string name="morphe_bypass_url_redirects_summary_on">Włączone</string>

@@ -226,7 +226,7 @@ Změny zahrnují:
   <string name="morphe_hide_feed_flyout_menu_summary_on">Filtr výběru zboží je povolen</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Filtr výběru zboží je zakázán</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtr výběru zboží</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Seznam názvů položek flyout menu k filtrování, oddělených novým řádkem</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Zadejte názvy flyout menu k filtrování, jeden na řádku</string>
   <string name="morphe_hide_gaming_section_title">Skrýt Hru</string>
   <string name="morphe_hide_gaming_section_summary_on">Sekce Hry je skryta</string>
   <string name="morphe_hide_gaming_section_summary_off">Sekce Hry je zobrazená</string>
@@ -272,6 +272,11 @@ Změny zahrnují:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Zobrazené v historii sledování</string>
   <string name="morphe_channel_screen_title">Stránka kanálu</string>
   <string name="morphe_channel_screen_summary">Skrýt nebo zobrazit komponenty stránky kanálu</string>
+  <string name="morphe_hide_channel_tab_title">Povolit filtr záložky kanálu</string>
+  <string name="morphe_hide_channel_tab_summary_on">Filtr záložky kanálu je povolen</string>
+  <string name="morphe_hide_channel_tab_summary_off">Filtr záložky kanálu je zakázán</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtr pro kanálovou kartu</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Zadejte názvy kanálových karet pro filtrování, po jednom na řádek</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Skrýt tlačítko Spoluprace</string>
   <string name="morphe_hide_community_button_summary_on">Tlačítko Spoluprace je skryté</string>

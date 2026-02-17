@@ -225,7 +225,7 @@ I cambiamenti includono:
   <string name="morphe_hide_feed_flyout_menu_summary_on">Il filtro del menu a comparsa dell\'elenco è abilitato</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Il filtro del menu a comparsa dell\'elenco è disabilitato</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtro del menu a comparsa dell\'elenco</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Elenco dei nomi del menu a comparsa da filtrare, separati da nuove righe</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Inserisci i nomi del menu a tendina per filtrare, uno per riga</string>
   <string name="morphe_hide_gaming_section_title">Nascondi Remix</string>
   <string name="morphe_hide_gaming_section_summary_on">La sezione film è nascosta</string>
   <string name="morphe_hide_gaming_section_summary_off">La sezione film è visibile</string>
@@ -271,6 +271,11 @@ I cambiamenti includono:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Mostrato nella cronologia visualizzazioni</string>
   <string name="morphe_channel_screen_title">Pagina canale</string>
   <string name="morphe_channel_screen_summary">Nascondi o mostra i componenti della pagina del canale</string>
+  <string name="morphe_hide_channel_tab_title">Attiva il filtro della scheda canale</string>
+  <string name="morphe_hide_channel_tab_summary_on">Il filtro della scheda canale è attivo</string>
+  <string name="morphe_hide_channel_tab_summary_off">Il filtro della scheda canale è disattivo</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtro della scheda del canale</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Inserisci i nomi delle schede del canale per filtrare, uno per riga</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Nascondi il pulsante Commenti</string>
   <string name="morphe_hide_community_button_summary_on">Il pulsante Commenti è nascosto</string>

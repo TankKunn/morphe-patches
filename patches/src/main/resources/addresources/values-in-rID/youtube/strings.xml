@@ -225,7 +225,7 @@ Perubahan termasuk:
   <string name="morphe_hide_feed_flyout_menu_summary_on">Penyaring menu umpan flyout diaktifkan</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Penyaring menu umpan flyout dinonaktifkan</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Penyaring menu umpan flyout</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Daftar nama menu flyout untuk disaring, dipisahkan oleh baris baru</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Masukkan nama menu flyout untuk disaring, satu per baris</string>
   <string name="morphe_hide_gaming_section_title">Sembunyikan Gaming</string>
   <string name="morphe_hide_gaming_section_summary_on">Bagian Gaming disembunyikan</string>
   <string name="morphe_hide_gaming_section_summary_off">Bagian Gaming ditampilkan</string>
@@ -271,6 +271,11 @@ Perubahan termasuk:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Ditampilkan di riwayat tontonan</string>
   <string name="morphe_channel_screen_title">Halaman saluran</string>
   <string name="morphe_channel_screen_summary">Sembunyikan atau tampilkan komponen halaman saluran</string>
+  <string name="morphe_hide_channel_tab_title">Aktifkan penyaring tab saluran</string>
+  <string name="morphe_hide_channel_tab_summary_on">Penyaring tab saluran diaktifkan</string>
+  <string name="morphe_hide_channel_tab_summary_off">Penyaring tab saluran dinonaktifkan</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Penyaring tab saluran</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Masukkan nama tab saluran untuk disaring, satu per baris</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Sembunyikan tombol Komunitas</string>
   <string name="morphe_hide_community_button_summary_on">Tombol komunitas disembunyikan</string>
@@ -1289,7 +1294,7 @@ Jika kemudian dimatikan, disarankan untuk menghapus data aplikasi untuk mencegah
 Batasan: Menggunakan tombol kembali pada toolbar mungkin tidak berfungsi"</string>
   <string name="morphe_change_start_page_always_summary_off">Halaman awal hanya diubah saat aplikasi dimulai</string>
   <!-- layout.startupshortsreset.disableResumingShortsOnStartupPatch -->
-  <string name="morphe_disable_resuming_shorts_player_title">Nonaktifkan melanjutkan memutar video Shorts</string>
+  <string name="morphe_disable_resuming_shorts_player_title">Nonaktifkan melanjutkan pemutar Shorts</string>
   <string name="morphe_disable_resuming_shorts_player_summary_on">Pemutaran Shorts tidak akan dilanjutkan saat aplikasi dimulai</string>
   <string name="morphe_disable_resuming_shorts_player_summary_off">Pemutaran Shorts akan dilanjutkan saat aplikasi dimulai</string>
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
@@ -1388,7 +1393,7 @@ Mengaktifkan ini dapat memperbaiki gambar yang hilang yang diblokir di beberapa 
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_alt_thumbnail_home_title">Tab beranda</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">Bilah Langganan</string>
+  <string name="morphe_alt_thumbnail_subscription_title">Tab Langganan</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_alt_thumbnail_library_title">Tab Anda</string>
   <string name="morphe_alt_thumbnail_player_title">Daftar putar &amp; rekomendasi pemutar</string>

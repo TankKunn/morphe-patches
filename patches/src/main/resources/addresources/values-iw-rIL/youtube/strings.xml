@@ -225,7 +225,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_summary_on">סינון תפריט הטיסה של האכבר מופעל</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">סינון תפריט הטיסה של האכבר מושבת</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">סינון תפריט הטיסה של האכבר</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">רשימה של שמות תפריט פלייאוט לסינון, מופרדים על ידי שורות חדשות</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">הזן את שמות תפריט הפופאפ כדי לסנן לפי, אחד בכל שורה</string>
   <string name="morphe_hide_gaming_section_title">הסתר רמיקס</string>
   <string name="morphe_hide_gaming_section_summary_on">מדור הסרטים מוסתר</string>
   <string name="morphe_hide_gaming_section_summary_off">מדור הסרטים מוצג</string>
@@ -271,6 +271,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">מוצג בהיסטוריית הצפייה</string>
   <string name="morphe_channel_screen_title">דף ערוץ</string>
   <string name="morphe_channel_screen_summary">הסתר או הצג רכיבי דף ערוץ</string>
+  <string name="morphe_hide_channel_tab_title">הפעל סנן טאב ערוץ</string>
+  <string name="morphe_hide_channel_tab_summary_on">סנן טאב ערוץ מופעל</string>
+  <string name="morphe_hide_channel_tab_summary_off">סנן טאב ערוץ מושבת</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">טאב ערוץ סינטר</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">הזן את שמות הטאבים של הערוץ כדי לסנן, אחד בכל שורה</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">הסתר לחצן תגובות</string>
   <string name="morphe_hide_community_button_summary_on">לחצן תגובות מוסתר</string>

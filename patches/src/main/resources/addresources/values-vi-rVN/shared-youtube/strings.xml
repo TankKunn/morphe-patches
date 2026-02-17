@@ -64,9 +64,9 @@ Có thể gặp lỗi khi phát."</string>
   <!-- "Default client" must be the same translated text as morphe_spoof_video_streams_client_type_title -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary_disabled">Để dùng tính năng này, thay đổi \'Client mặc định\' thành Android VR</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_title">Đăng nhập vào Android VR</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Đăng nhập vào Android VR có thể khắc phục sự cố phát cho một số người dùng
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Đăng nhập Android VR có thể khắc phục lỗi khi phát cho một số người dùng
 
-Để đăng nhập, ấn tiếp tục ở bên dưới"</string>
+Bấm tiếp tục bên dưới để đăng nhập"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">Tiếp tục</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">Đăng xuất</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">Hướng dẫn</string>
@@ -88,17 +88,17 @@ Có thể gặp lỗi khi phát."</string>
 • Nếu ứng dụng này không được sử dụng trong 6 tháng thì Google sẽ xóa xác thực này
 • Nếu bạn thay đổi mật khẩu Google hoặc xóa bỏ cài đặt thiết bị này khỏi cài đặt Google thì cần đăng nhập lại"</string>
   <string name="morphe_oauth2_connection_failure_timeout">OAuth2 tạm thời không khả dụng (API đã hết thời gian chờ)</string>
-  <string name="morphe_oauth2_connection_failure_status_400">Phiên đăng nhập vào Android VR đã hết hạn, hãy thử đăng nhập vào VR lại</string>
+  <string name="morphe_oauth2_connection_failure_status_400">Phiên đăng nhập Android VR đã hết hạn, hãy thử đăng nhập lại vào VR</string>
   <string name="morphe_oauth2_connection_failure_status">OAuth2 tạm thời không khả dụng (trạng thái %d)</string>
   <string name="morphe_oauth2_connection_failure_generic">OAuth2 tạm thời không khả dụng</string>
-  <string name="morphe_oauth2_connection_failure_auth_not_approved">Không thể đăng nhập vào VR, xác thực trang web đã không được chấp thuận</string>
+  <string name="morphe_oauth2_connection_failure_auth_not_approved">Không thể đăng nhập vào VR vì xác thực qua trang web không được chấp thuận</string>
   <string name="morphe_oauth2_connection_failure_auth_error">Không thể đăng nhập vào VR: %s</string>
   <string name="morphe_oauth2_toast_reset">Đã đăng xuất khỏi Android VR</string>
-  <string name="morphe_oauth2_toast_invalid">Mã đăng nhập VR không hợp lệ, vui lòng thử đăng nhập vào VR lại</string>
+  <string name="morphe_oauth2_toast_invalid">Mã đăng nhập VR không hợp lệ, hãy thử đăng nhập lại vào VR</string>
   <!-- misc.audio.drc.drcAudioPatch -->
   <string name="morphe_disable_drc_audio_title">Tắt âm thanh DRC</string>
-  <string name="morphe_disable_drc_audio_summary_on">Âm thanh DRC đã bị tắt</string>
-  <string name="morphe_disable_drc_audio_summary_off">Âm thanh DRC đã được bật</string>
+  <string name="morphe_disable_drc_audio_summary_on">Tính năng nén dải động đã tắt</string>
+  <string name="morphe_disable_drc_audio_summary_off">Tính năng nén dải động đã bật</string>
   <!-- misc.audio.tracks.forceOriginalAudioPatch -->
   <string name="morphe_force_original_audio_title">Buộc ngôn ngữ âm thanh gốc</string>
   <string name="morphe_force_original_audio_summary_on">Đang dùng ngôn ngữ âm thanh gốc</string>

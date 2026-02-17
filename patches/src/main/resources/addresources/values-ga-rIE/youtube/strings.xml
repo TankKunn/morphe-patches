@@ -216,6 +216,7 @@ Mar sin féin, logálfaidh sé seo roinnt sonraí úsáideora freisin, mar shamp
   <string name="morphe_hide_feed_flyout_menu_summary_on">Tá scagaire réamhfhírinne an fhíseán gníomhach</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Tá scagaire réamhfhírinne an fhíseán míchumasaithe</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Scagaire réamhfhírinne an fhíseán</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Cuir na ainmneacha menú an fhliú an tseo chugainn, amháin per líne.</string>
   <string name="morphe_hide_gaming_section_title">Folaigh an chuid ábhar le feiceáil</string>
   <string name="morphe_hide_gaming_section_summary_on">Tá an chuid ábhar le feiceáil i bhfolach</string>
   <string name="morphe_hide_gaming_section_summary_off">Taispeántar an chuid ábhar le feiceáil</string>
@@ -261,6 +262,11 @@ Mar sin féin, logálfaidh sé seo roinnt sonraí úsáideora freisin, mar shamp
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Taispeántar i stair faire</string>
   <string name="morphe_channel_screen_title">Leathanach cainéil</string>
   <string name="morphe_channel_screen_summary">Folaigh nó taispeáin comhpháirteanna leathanach cainéil</string>
+  <string name="morphe_hide_channel_tab_title">Cumasaigh scagaire tab an chanal</string>
+  <string name="morphe_hide_channel_tab_summary_on">Tá scagaire tab an chanal cumasaithe</string>
+  <string name="morphe_hide_channel_tab_summary_off">Tá scagaire tab an chanal míchumasaithe</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Tab canal le haghaidh filte</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Scríobh na ainmneacha tab chugainn le haghaidh filte, amháin ar gach líne</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Folaigh an cnaipe \'Community\'</string>
   <string name="morphe_hide_community_button_summary_on">Tá an cnaipe \'Community\' i bhfolach</string>

@@ -225,7 +225,7 @@ Muutokset sisältävät:
   <string name="morphe_hide_feed_flyout_menu_summary_on">Ruokailun ulosmenu-suoja on käytössä</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Ruokailun ulosmenu-suoja ei ole käytössä</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Ruokailun ulosmenu-suoja</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Luettelo lentopalkin nimistöä suodatettavaksi erottamalla uusilla riveillä</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Syötä lentopalkin nimiä suodatukselle, yksi rivi kerrallaan</string>
   <string name="morphe_hide_gaming_section_title">Piilota Remix</string>
   <string name="morphe_hide_gaming_section_summary_on">Elokuvat-osio piilotetaan</string>
   <string name="morphe_hide_gaming_section_summary_off">Elokuvat-osio näytetään</string>
@@ -271,6 +271,11 @@ Muutokset sisältävät:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Näytetään katseluhistoriassa</string>
   <string name="morphe_channel_screen_title">Kanavasivu</string>
   <string name="morphe_channel_screen_summary">Piilota tai näytä kanavasivun osia</string>
+  <string name="morphe_hide_channel_tab_title">Käytä kanavakaappi-suodatusta</string>
+  <string name="morphe_hide_channel_tab_summary_on">Kanavakaappi-suodatin on päällä</string>
+  <string name="morphe_hide_channel_tab_summary_off">Kanavakaappi-suodatin on poissa päältä</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Kanavasiirto suodatin</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Kirjoita kanavasiirto nimitysrivi, yksi rivi kerrallaan</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Piilota Kommentit-painike</string>
   <string name="morphe_hide_community_button_summary_on">Kommentit-painike piilotetaan</string>

@@ -272,6 +272,11 @@ Ví dụ:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Đã hiển thị trong nhật ký xem</string>
   <string name="morphe_channel_screen_title">Trang kênh</string>
   <string name="morphe_channel_screen_summary">Ẩn hoặc hiện các thành phần trang kênh</string>
+  <string name="morphe_hide_channel_tab_title">Bật bộ lọc tùy chỉnh</string>
+  <string name="morphe_hide_channel_tab_summary_on">Bộ lọc tùy chỉnh đã được bật</string>
+  <string name="morphe_hide_channel_tab_summary_off">Bộ lọc tùy chỉnh đã tắt</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Lọc tab kênh</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Nhập tên tab kênh để lọc, một dòng mỗi tab</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Ẩn nút Cộng đồng</string>
   <string name="morphe_hide_community_button_summary_on">Nút Cộng đồng đã bị ẩn</string>

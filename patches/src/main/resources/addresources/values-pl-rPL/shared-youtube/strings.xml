@@ -64,9 +64,9 @@ Odtwarzanie może nie działać"</string>
   <!-- "Default client" must be the same translated text as morphe_spoof_video_streams_client_type_title -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary_disabled">By używać tej funkcji, zmień \"Domyślny klient\" na Android VR</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_title">Zaloguj się do Android VR</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Zalogowanie się do Android VR może rozwiązać problemy z odtwarzaniem dla niektórych użytkowników
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Zalogowanie się do Android VR może rozwiązać problemy z odtwarzaniem u niektórych użytkowników
 
-By się zalogować, naciśnij kontynuuj poniżej"</string>
+Aby się zalogować, naciśnij \"Kontynuuj\" poniżej"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">Kontynuuj</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">Wyloguj się</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">Instrukcje</string>
@@ -80,7 +80,7 @@ By się zalogować, naciśnij kontynuuj poniżej"</string>
 5. Wróć do aplikacji po zobaczeniu \"Urządzenie połączone\""</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">Otwórz stronę</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">Nie udało się wygenerować kodu aktywacyjnego</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">Nie udało się wygenerować tokenu uwierzytelniającego</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">Nie udało się wygenerować tokenu autoryzacji</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">Zalogowano pomyślnie</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_message">"Autoryzacja zapisana
 
@@ -88,17 +88,17 @@ By się zalogować, naciśnij kontynuuj poniżej"</string>
 • Jeśli nie będziesz używać aplikacji przez 6 miesięcy, Google usunie autoryzację
 • W przypadku zmiany hasła lub wyrejestrowania urządzenia w ustawieniach konta Google konieczne będzie ponowne zalogowanie się"</string>
   <string name="morphe_oauth2_connection_failure_timeout">OAuth2 jest tymczasowo niedostępny (API nie reaguje)</string>
-  <string name="morphe_oauth2_connection_failure_status_400">Sesja Android VR wygasła, spróbuj zalogować się do VR ponownie</string>
+  <string name="morphe_oauth2_connection_failure_status_400">Sesja logowania Android VR wygasła, spróbuj zalogować się ponownie</string>
   <string name="morphe_oauth2_connection_failure_status">OAuth2 jest tymczasowo niedostępny (status %d)</string>
   <string name="morphe_oauth2_connection_failure_generic">OAuth2 jest tymczasowo niedostępny</string>
-  <string name="morphe_oauth2_connection_failure_auth_not_approved">Nie można zalogować się do VR, uwierzytelnienie na stronie nie zostało zatwierdzone</string>
+  <string name="morphe_oauth2_connection_failure_auth_not_approved">Nie można zalogować się do VR, autoryzacja na stronie nie została zatwierdzona</string>
   <string name="morphe_oauth2_connection_failure_auth_error">Nie można zalogować się do VR: %s</string>
   <string name="morphe_oauth2_toast_reset">Wylogowano z Android VR</string>
-  <string name="morphe_oauth2_toast_invalid">Nieprawidłowy token logowania VR, spróbuj zalogować się do VR ponownie</string>
+  <string name="morphe_oauth2_toast_invalid">Nieprawidłowy token logowania VR, spróbuj zalogować się ponownie</string>
   <!-- misc.audio.drc.drcAudioPatch -->
-  <string name="morphe_disable_drc_audio_title">Wyłącz dźwięk DRC</string>
-  <string name="morphe_disable_drc_audio_summary_on">Dźwięk DRC jest wyłączony</string>
-  <string name="morphe_disable_drc_audio_summary_off">Dźwięk DRC jest włączony</string>
+  <string name="morphe_disable_drc_audio_title">Kompresja dynamiki (DRC)</string>
+  <string name="morphe_disable_drc_audio_summary_on">Wyłączona</string>
+  <string name="morphe_disable_drc_audio_summary_off">Włączona</string>
   <!-- misc.audio.tracks.forceOriginalAudioPatch -->
   <string name="morphe_force_original_audio_title">Wymuś oryginalny język audio</string>
   <string name="morphe_force_original_audio_summary_on">Włączone</string>

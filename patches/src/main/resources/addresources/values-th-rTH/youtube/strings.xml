@@ -225,7 +225,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_summary_on">ตัวกรองเมนูฟลายเอาท์ฟีดถูกเปิด</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">ตัวกรองเมนูฟลายเอาท์ฟีดถูกปิด</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">ตัวกรองเมนูฟลายเอาท์ฟีด</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">รายการชื่อเมนูฟลายเอาท์ที่กรองคั่นด้วยบรรทัดใหม่</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">ป้อนชื่อเมนูflyoutเพื่อกรองโดยแต่ละบรรทัด</string>
   <string name="morphe_hide_gaming_section_title">ซ่อนปุ่มถาม</string>
   <string name="morphe_hide_gaming_section_summary_on">ส่วนภาพยนตร์ถูกซ่อนไว้</string>
   <string name="morphe_hide_gaming_section_summary_off">ส่วนภาพยนตร์แสดงอยู่</string>
@@ -271,6 +271,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">แสดงในประวัติการดู</string>
   <string name="morphe_channel_screen_title">หน้าช่อง</string>
   <string name="morphe_channel_screen_summary">ซ่อนหรือแสดงองค์ประกอบของหน้าช่อง</string>
+  <string name="morphe_hide_channel_tab_title">เปิดใช้งานตัวกรองแท็บช่อง</string>
+  <string name="morphe_hide_channel_tab_summary_on">ตัวกรองแท็บช่องเปิดใช้งานแล้ว</string>
+  <string name="morphe_hide_channel_tab_summary_off">ตัวกรองแท็บช่องปิดใช้งานแล้ว</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">ตัวกรองแท็บช่อง</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">ป้อนชื่อแท็บช่องที่ต้องการกรอง, แบบแต่ละแถว</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">ซ่อนปุ่มแสดงความคิดเห็น</string>
   <string name="morphe_hide_community_button_summary_on">ปุ่มความคิดเห็นถูกซ่อนอยู่</string>

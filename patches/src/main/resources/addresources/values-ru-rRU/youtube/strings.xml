@@ -225,7 +225,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_summary_on">Фильтр всплывающего меню ленты включен</string>
   <string name="morphe_hide_feed_flyout_menu_summary_off">Фильтр всплывающего меню ленты отключен</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Фильтр всплывающего меню ленты</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Список всплывающих названий меню для фильтрации, разделенных новыми строками</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Введите названия всплывающего меню для фильтрации, по одной на строку</string>
   <string name="morphe_hide_gaming_section_title">Скрыть \"Игры\"</string>
   <string name="morphe_hide_gaming_section_summary_on">Раздел игр скрыт</string>
   <string name="morphe_hide_gaming_section_summary_off">Раздел игр показан</string>
@@ -271,6 +271,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Панель фильтров в истории просмотров показана</string>
   <string name="morphe_channel_screen_title">Страница канала</string>
   <string name="morphe_channel_screen_summary">Скрыть или показать компоненты страницы канала</string>
+  <string name="morphe_hide_channel_tab_title">Включить фильтр вкладок канала</string>
+  <string name="morphe_hide_channel_tab_summary_on">Фильтр вкладки канала включен</string>
+  <string name="morphe_hide_channel_tab_summary_off">Фильтр вкладки канала выключен</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Фильтр вкладки канала</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Введите названия вкладок каналов для фильтрации, по одной на строку</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Скрыть кнопку \"Сообщество\"</string>
   <string name="morphe_hide_community_button_summary_on">Кнопка \"Сообщество\" скрыта</string>
