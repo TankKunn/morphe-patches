@@ -48,16 +48,17 @@ Ali, aktivacija ove postavke će također logirati neke osobne podatke poput Va�
   <string name="morphe_disable_layout_updates_title">Onemori razlaga ažuriranja</string>
   <string name="morphe_disable_layout_updates_summary_on">Razlog neće biti ažuriran sa servera</string>
   <string name="morphe_disable_layout_updates_summary_off">Razlog će biti ažuriran sa servera</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Razlog za isključenje ažuriranja je da se aplikacija vratila na početni izgled pri prvom pokretanju.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Razlog je prebačen na razlog korišten u vrijeme prvog instaliranja.
 
-Neke server-side postavke možda neće biti vraćene.
+Neke server-side razloge mogu ne biti prebačene.
 
 Promjene uključuju:
-• Komponenti u izborniku leta (ili povezani postavke) možda neće funkcionirati.
-• Brojevi u krugovima nisu animirani.
-• Tab za biblioteku je prikazan.
-• Muzička sekcija opisa videa možda neće funkcionirati.
-• Gumb za promjenu računa možda neće biti prikazan na tabu za biblioteku."</string>
+• Dijelovi u izvučenom meniju igrača (ili povezanih postavki) mogu ne funkcionirati.
+• Brojevi u kretanju nisu animirani.
+• Tab \"Biblioteke\" je prikazana.
+• Muzička sekcija opisa videa može ne funkcionirati.
+• Dijelovi u izvučenom meniju igrača ne mogu biti sakriveni.
+• Gumb za prebačavanje računa može ne biti prikazan na tabu \"Biblioteke\"."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Sakrij dugme za pretraživanje na tablici</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Dugme za pretraživanje na tablici je skriveno</string>
@@ -660,8 +661,8 @@ Kapke će biti automatski spremljene ako su ispravne"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Status traka je opaka ili transluzentna</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Translucentna navigacijska traka ili opaka</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Ograničenja:
-• Moguće je da se na vrhu pregleda videozapisa pojavi crna traka.
-• Baru za navigaciju sustava može se promijeniti u prozirnu i nije moguće komentirati videozapise."</string>
+• Moguće je da se crna traka pojavi na vrhu video plejera.
+• Navigacijska traka sustava može postati prozirna, i nije moguće komentirati videozapise."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Translucentna navigacijska traka je opaka</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Translucentna navigacijska traka je opaka ili transluzentna</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Translucentna navigacijska traka je opaka ili transluzentna</string>
@@ -679,6 +680,9 @@ Kapke će biti automatski spremljene ako su ispravne"</string>
   <string name="morphe_hide_toolbar_search_button_title">Sakrij tipku \'Pretraži\'</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Tipka za pretraživanje je skrivena</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Tipka za pretraživanje je prikazana</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Sakrij tipku za glasovni pretragu</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Tipka za glasovni pretragu je skrivena</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Tipka za glasovni pretragu je prikazana</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Flyout meni</string>
   <string name="morphe_hide_player_flyout_summary">Sakrij ili prikaži stavke flyout menija</string>

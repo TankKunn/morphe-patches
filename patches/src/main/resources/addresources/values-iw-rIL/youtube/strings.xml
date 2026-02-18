@@ -48,16 +48,17 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_title">השבתה של עדכונים שלayout</string>
   <string name="morphe_disable_layout_updates_summary_on">השליטה לא תעדכן את השayout על ידי השרת</string>
   <string name="morphe_disable_layout_updates_summary_off">השליטה תעדכן את השayout על ידי השרת</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"התצורה של האפליקציה חוזרת לתצורה שבה היא הייתה כשהתקנתה לראשונה.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"התצורה של האפליקציה חוזרת לתצורה שהייתה בשימוש לראשונה.
 
-אולי תצורות שרת לא יוחזרו.
+לתצורות מסוימות שרתיי עשויה שלא לחזור.
 
 השינויים כוללים:
-• תפריטים בלחצן טיסה של השחקן (או הגדרות קשורות) עשויים שלא לעבוד.
-• המספרים המזנקים אינם מונעים.
-• הטאב של ספרייה מופיע.
-• חלק המוזיקה של תיאור הווידאו עשוי שלא לעבוד.
-• כפתור החלפת החשבון עשוי שלא להופיע בטאב הספרייה."</string>
+• מרכיבים בתפריט הטיסה של שחקן (או הגדרות קשורות) עשויים שלא לעבוד.
+• המספרים המתגלגלים אינם מתנוענים.
+• טאב ספרייה מופיע.
+•部分 של המוזיקה של תיאור הוידאו עשויה שלא לעבוד.
+•מרכיבי תפריט הטיסה של שחקן לא ניתן להסתר.
+• כפתור החלפת חשבון עשוי שלא להופיע על טאב הספרייה."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">הסתר מדף חנות היוצר</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">מדף חנות היוצר מתחת לנגן הוידאו מוסתר</string>
@@ -666,8 +667,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">שורת מצב אטומה</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">שורת מצב אטומה או שקופה</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"הגבלות:
-• סרגל שחור עשוי להופיע наверח של שחקת הסרט
-• סרגל הניווט של המערכת עשוי להשתנות ל شفוף ואין אפשרות להגיב לסרטים."</string>
+• סרגל שחור עשוי להופיע наверח של שחקת הסרט.
+• סרגל הניווט של המערכת עשוי להשתנות לtrasparent, ואז לא יהיה אפשרי להגיב על הסרטים."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">השבת סרגל בהיר שקוף</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">סרגל ניווט במצב בהיר הוא אטום</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">סרגל ניווט במצב בהיר הוא אטום או שקוף</string>
@@ -685,6 +686,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">הסתר לחצן חיפוש</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">לחצן החיפוש מוסתר</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">לחצן החיפוש מוצג</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">הסתר לחצן חיפוש קול</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">לחצן חיפוש קול מוסתר</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">לחצן חיפוש קול מוצג</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">תפריט נשלף</string>
   <string name="morphe_hide_player_flyout_summary">הסתר או הצג פריטי תפריט נשלף של נגן</string>

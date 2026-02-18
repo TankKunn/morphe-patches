@@ -48,16 +48,17 @@ Ancak, bunun etkinleştirilmesi IP adresiniz gibi bazı kullanıcı verilerini d
   <string name="morphe_disable_layout_updates_title">Yerleşim güncellemelerini devre dışı bırak</string>
   <string name="morphe_disable_layout_updates_summary_on">Sunucu, yerleşimi güncellemeyecektir</string>
   <string name="morphe_disable_layout_updates_summary_off">Sunucu, yerleşimi güncelleyecektir</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Uygulama ilk kurulduğu zaman kullanılan düzeni geri alır.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Uygulama ilk kurulduğunda kullanılan düzeni geri döner.
 
-Bazı sunucu tarafı düzenler geri alınmayabilir.
+Bazı sunucu tarafı düzenler geri döndürülmez olabilir.
 
-Değişiklikler şunlardır:
-• Çalar flyout menüsü bileşenleri (ve ilgili ayarlar) işlevsiz kalabilir.
-• Yürüyen numaralar animasyonlu değildir.
+Değişiklikler şunları içerir:
+• Çalınan bileşenler menüde (veya ilgili ayarlar) çalışmayabilir.
+• Yürüten sayılar animasyonlu değildir.
 • Kütüphane sekmesi gösterilir.
-• Video açıklaması müzik bölümünde sorun yaşanabilir.
-• Kütüphane sekesinde hesap değiştirme düğmesi görüntülenmeyebilir."</string>
+• Video açıklaması müzik bölümünde çalışmayabilir.
+• Çalınan bileşenler menü öğeleri gizlenemez.
+• Kütüphane sekmesinde hesap değiştirme düğmesi görünebilir."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">İçerik oluşturucu mağaza rafını gizle</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Video oynatıcısının altındaki içerik üreticisi mağazası rafı gizli</string>
@@ -666,7 +667,7 @@ Geçerli ise otomatik olarak kaydedilecek"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Durum çubuğu opak</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Durum çubuğu opak veya yarı saydam</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Sınırlamalar:
-• Video oynatıcıın üstünde siyah bir çubuğu görülebilir.
+• Video oynatma çubuğunun üstünde siyah bir çubuğun görünebileceği olabilir.
 • Sistem navigasyon çubuğu şeffaf hale gelebilir ve videolara yorum yapmak mümkün olmayabilir."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Aydınlık temada yarı saydam çubuğu devre dışı bırak</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Aydınlık temada gezinti çubuğu opak</string>
@@ -685,6 +686,9 @@ Geçerli ise otomatik olarak kaydedilecek"</string>
   <string name="morphe_hide_toolbar_search_button_title">Arama düğmesini gizle</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Arama düğmesi gizli</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Arama düğmesi görünür</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Arama düğmesini gizle</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Arama düğmesi gizli</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Arama düğmesi görünür</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Açılır menü</string>
   <string name="morphe_hide_player_flyout_summary">Oynatıcı açılır menü öğelerini gizle veya göster</string>

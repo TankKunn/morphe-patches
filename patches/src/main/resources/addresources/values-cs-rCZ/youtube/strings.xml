@@ -48,16 +48,17 @@ Povolením této možnosti se však budou zaznamenávat i některá uživatelsk�
   <string name="morphe_disable_layout_updates_title">Zakázat aktualizace rozložení</string>
   <string name="morphe_disable_layout_updates_summary_on">Rozložení nebude aktualizováno serverem</string>
   <string name="morphe_disable_layout_updates_summary_off">Rozložení bude aktualizováno serverem</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Položka aplikace se vrací na původní nastavení při prvním použití.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Rozloha aplikace se vrací na rozlohu použitou při prvním instalaci.
 
-Některé serverové nastavení může nefungovat.
+Některé serverové rozlohy mohou nevrátit.
 
 Změny zahrnují:
-• Komponenty v nabídce přehrávače (nebo související nastavení) mohou nefungovat.
+• Komponenty v nabídce player flyout menu (nebo související nastavení) mohou nefungovat.
 • Čísla se neanimují.
-• Zobrazí se záložka knihovna.
-• Místo hudby v popisu videa může nefungovat.
-• Tlačítko pro přepínání účtu může být na záložce knihovna chybějící."</string>
+• Zobrazuje se záložka knihovna.
+• Sekce hudby v popisu videa může nefungovat.
+• položky nabídky player flyout menu nelze skryti.
+• Tlačítko pro přepnutí účtu může nevyjít na záložce knihovna."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Skrýt poličku obchodu tvůrce</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Police s obchodem tvůrce pod přehrávačem videa je skryta</string>
@@ -686,6 +687,9 @@ Cookies budou automaticky uloženy, pokud jsou platné."</string>
   <string name="morphe_hide_toolbar_search_button_title">Skrýt tlačítko Hledat</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Tlačítko vyhledávání je skryté</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Tlačítko vyhledávání je zobrazené</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Skrýt tlačítko hledání hlasem</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Tlačítko hledání hlasem je skryté</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Tlačítko hledání hlasem je zobrazené</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Vyskakovací menu</string>
   <string name="morphe_hide_player_flyout_summary">Skrýt nebo zobrazit položky vyskakovacího menu přehrávače</string>

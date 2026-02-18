@@ -48,16 +48,17 @@ Tämän käyttöönotto kirjaa myös joitakin käyttäjätietoja, kuten IP-osoit
   <string name="morphe_disable_layout_updates_title">Estä layout-päivitykset</string>
   <string name="morphe_disable_layout_updates_summary_on">Layoutia ei päivitetä palvelimelta</string>
   <string name="morphe_disable_layout_updates_summary_off">Layout päivitetään palvelimelta</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Sovellusasetukset palautuvat asetuksiin, jotka olivat käytössä kun sovellusta ensimmäisen kerran asennettiin.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Sovellusasetukset palautuvat asetuksiin, jotka olivat käytössä kun sovellus asennettiin ensi kertaa.
 
-Jotkut palvelimella oleva asetukset eivät palautu.
+Joistakin palvelimella oleva asetukset eivät välttämättä palautu.
 
 Muutokset sisältävät:
-• Soittimen poistumismenun komponentit (tai liittyvät asetukset) eivät toimi.
-• Numeroinnin liike ei ole animesoitu.
+• Soittimen poistumismenun (tai liittyvien asetusten) komponentit eivät välttämättä toimi.
+• Nollat eivät ole animoituja.
 • Kirjasto-osio näytetään.
-• Videon kuvauksen musiikki-osio ei toimi.
-• Tilien vaihtoa painike ei näy Kirjaston-osiossa."</string>
+• Musiikkiosio videoiden kuvauksessa ei välttämättä toimi.
+• Soittimen poistumismenun kohteita ei voi piilottaa.
+• Tilien vaihtoa ei välttämättä näytetä Kirjasto-osiossa."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Piilota sisällöntuottajan kauppahylly</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Sisällöntuottajan kauppahylly piilotetaan videosoittimen alla</string>
@@ -666,8 +667,8 @@ Kuvatekstit tallennetaan automaattisesti, jos ne ovat validit"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Tilapalkki on läpinäkymätön</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Tilapalkki on läpinäkymätön tai läpikuultava</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Rajoitukset:
-• Video-soittimen yläosaan saattaa tulla musta viiva.
-• Järjestelmän navigointipalkki voi muuttua läpinäkyväksi, ja videoille ei voi jättää kommentteja."</string>
+• Video-soittimessa saattaa esiintyä musta juova yläosassa.
+• Järjestelmän navigointipalkki saattaa muuttua läpinäkyväksi, ja ei ole mahdollista kommentoida videoita."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Poista vaalea läpikuultava palkki käytöstä</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Vaalean tilan navigointipalkki on läpinäkymätön</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Vaalean tilan navigointipalkki on läpinäkymätön tai läpikuultava</string>
@@ -685,6 +686,9 @@ Kuvatekstit tallennetaan automaattisesti, jos ne ovat validit"</string>
   <string name="morphe_hide_toolbar_search_button_title">Piilota Haku-painike</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Hakupainike piilotetaan</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Hakupainike näytetään</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Piilota äänihaku-nappi</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Äänihaku-nappi on piilotettu</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Äänihaku-nappi on näkyvissä</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Flyout-valikko</string>
   <string name="morphe_hide_player_flyout_summary">Piilota tai näytä soittimen flyout-valikon kohteita</string>

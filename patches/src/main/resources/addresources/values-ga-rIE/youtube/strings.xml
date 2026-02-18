@@ -48,7 +48,17 @@ Mar sin féin, logálfaidh sé seo roinnt sonraí úsáideora freisin, mar shamp
   <string name="morphe_disable_layout_updates_title">Taiscigh athruithe leathacháin</string>
   <string name="morphe_disable_layout_updates_summary_on">Ní thaiscfeadh an leathachán ag an seirbhís</string>
   <string name="morphe_disable_layout_updates_summary_off">Taiscfeadh an seirbhís an leathachán</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Tá seo ag tástáil an gcló."</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Tá seo an t-áitréimh app ag taitin mar atá sé nuair a d'fhéadfadh tú é a instáláil.
+
+Ní thaitneófar seo le háitréimh seirbhísí ar an gCúrsaóireacht.
+
+Tá an t-áitréimh atá á n-úsáid agat:
+• Ní gclófaí an gclóireacht sa menú 'flyout' an phléarála (agus na seomraí atá le fáil agat).
+• Ní gclófaí an gclóireacht sa menú 'flyout' an phléarála.
+• Taispeánfar an tab 'Library'.
+• Ní gclófaí an gclóireacht sa rogha 'Music' sa 'description' an vhídeo.
+• Ní gclófaí an gclóireacht sa menú 'flyout' an phléarála.
+• Ní thaispeánfar an 'Account switch' ag an tsiombail 'Library'."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Folaigh seilf siopa an chruthaitheora</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Seilf siopa an chruthaitheora faoin imreoir físeáin i bhfolach</string>
@@ -654,10 +664,9 @@ Tá sé seo ag tairgfí cookies áiríonna seachtracha"</string>
   <string name="morphe_disable_translucent_status_bar_title">Díchumasaigh barra stádais tréshoilseach</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Tá an barra stádais teimhneach</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Tá an barra stádais teimhneach nó tréshoilseach</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Teorainneacha:
-• Cruthach dubh atá ag tarlú ar lár an gclipséadáin.
-• Tugann an barlún rialacháin an chórais seo le haghaidh trasna.
-Ní féidir clárú ar gclipséid."</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Teorainn:
+• Tugtar barr dubh ar an gclipsiúchán.
+• Tugtar an barlión na siostair trasna, agus níl sé in ann cúnamh a thabhairt ar vídioí."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Díchumasaigh barra tréshoilseach solais</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Tá an barra nascleanúna i mód solais teimhneach</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Tá barra nascleanúna mód solais teimhneach nó tréshoilseach</string>
@@ -675,6 +684,9 @@ Ní féidir clárú ar gclipséid."</string>
   <string name="morphe_hide_toolbar_search_button_title">Folaigh cnaipe Cuardaigh</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Tá cnaipe cuardaigh i bhfolach</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Taispeántar an cnaipe cuardaigh</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Folaigh cnaipe tástála guth</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Tá cnaipe tástála guth i bhfolach</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Taispeántar an cnaipe tástála guth</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Roghchlár Flyout</string>
   <string name="morphe_hide_player_flyout_summary">Folaigh nó taispeáin míreanna roghchlár flyout an imreora</string>

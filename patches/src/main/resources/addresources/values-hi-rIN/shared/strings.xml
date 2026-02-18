@@ -54,9 +54,9 @@ Second \"item\" text"</string>
   <string name="morphe_show_menu_icons_summary_on">सेटिंग आइकन दिखाए जा रहे हैं</string>
   <string name="morphe_show_menu_icons_summary_off">सेटिंग आइकन दिखाए नहीं जा रहे हैं</string>
   <string name="morphe_language_title">Morphe भाषा</string>
-  <string name="morphe_language_user_dialog_message">"一些语言的翻译可能缺失或不完整。
+  <string name="morphe_language_user_dialog_message">"कुछ भाषाओं के अनुवाद可能 अदृश्य या अपूर्ण हो सकते हैं।
 
-要翻译新语言或改进现有翻译，请访问translate.morphe.software"</string>
+नई भाषाओं का अनुवाद करने या मौजूदा अनुवादों को सुधारने के लिए, visit morphe.software/translate"</string>
   <string name="morphe_language_DEFAULT">एप्लिकेशन भाषा</string>
   <string name="morphe_pref_import_export_title">आयात / निर्यात</string>
   <string name="morphe_pref_import_export_summary">Morphe सेटिंग्स आयात करें / निर्यात करें</string>

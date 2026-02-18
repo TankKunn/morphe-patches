@@ -53,11 +53,12 @@ Međutim, omogućavanje ovoga će takođe evidentirati neke korisničke podatke,
 Neke server-side layauti mogu da ne vraćaju.
 
 Promene uključuju:
-• Komponenti u izvučnom meniju igrača (ili povezanih postavki) mogu da ne funkcionišu.
-• Brojevi u toku nisu animirani.
+• Komponenti u izborniku igrača (ili povezane postavke) mogu da ne funkcionišu.
+• Brojevi koji se kreću nisu animirani.
 • Tab za biblioteku je prikazan.
 • Muzička sekcija opisa videa može da ne funkcioniše.
-• Dugme za prelazak računa možda neće biti prikazano na tabu za biblioteku."</string>
+• stavke izbornika igrača ne mogu da se sakriju.
+• Dugme za prebačavanje računa možda neće biti prikazano na tabu za biblioteku."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Sakrij policu prodavnice kreatora</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Polica prodavnice kreatora ispod video plejera je skrivena</string>
@@ -667,7 +668,7 @@ Cookies will be saved automatically if they are valid"</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statusna traka je neprozirna ili prozirna</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Ograničenja:
 • Moguće je da se na vrhu video plejera pojavi crna traka.
-• Sistemske navigacione trake mogu postati prozirne i nije moguće komentarisati videozapise."</string>
+• Sistemske navigacione trake mogu postati prozirne, a komentarisanje videozapisa nije moguće."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Onemogući svetlu prozirnu traku za navigaciju</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Traka za navigaciju u svetlom režimu je neprozirna</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Traka za navigaciju u svetlom režimu je neprozirna ili prozirna</string>
@@ -685,6 +686,9 @@ Cookies will be saved automatically if they are valid"</string>
   <string name="morphe_hide_toolbar_search_button_title">Sakrij dugme \"Pretraga\"</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Dugme „Pretraga” je skriveno</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Dugme „Pretraga” je prikazano</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Sakrij dugme „Glasovna pretraga”</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Dugme „Glasovna pretraga” je skriveno</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Dugme „Glasovna pretraga” je prikazano</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Padajući meni</string>
   <string name="morphe_hide_player_flyout_summary">Sakrijte ili prikažite predmete u padajućem meniju plejera</string>

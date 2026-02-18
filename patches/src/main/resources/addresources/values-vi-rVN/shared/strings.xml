@@ -54,9 +54,9 @@ Second \"item\" text"</string>
   <string name="morphe_show_menu_icons_summary_on">Các biểu tượng cài đặt được hiển thị</string>
   <string name="morphe_show_menu_icons_summary_off">Các biểu tượng cài đặt không được hiển thị</string>
   <string name="morphe_language_title">Ngôn ngữ thiết lập Morphe</string>
-  <string name="morphe_language_user_dialog_message">"Có thể bị thiếu một số ngôn ngữ hoặc chưa hoàn thiện.
+  <string name="morphe_language_user_dialog_message">"Một số ngôn ngữ có thể bị thiếu hoặc chưa hoàn thiện.
 
-Bạn có thể yêu cầu thêm ngôn ngữ hoặc cải thiện bản dịch hiện tại bằng cách truy cập %s"</string>
+Bạn có thể yêu cầu thêm ngôn ngữ hoặc cải thiện bản dịch hiện tại bằng cách truy cập morphe.software/translate"</string>
   <string name="morphe_language_DEFAULT">Ngôn ngữ ứng dụng</string>
   <string name="morphe_pref_import_export_title">Nhập hoặc Xuất</string>
   <string name="morphe_pref_import_export_summary">Nhập hoặc xuất các cài đặt Morphe</string>

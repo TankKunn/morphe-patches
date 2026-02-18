@@ -48,15 +48,16 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_title">अपडेट लेआउट को अक्षम करना</string>
   <string name="morphe_disable_layout_updates_summary_on">सर्वर से लेआउट को अपडेट नहीं किया जाएगा</string>
   <string name="morphe_disable_layout_updates_summary_off">सर्वर से लेआउट को अपडेट किया जाएगा</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"एप्लिकेशन का लेआउट पहली बार स्थापित किए जाने पर उपयोग किए जाने वाले लेआउट पर वापस चला जाता है।
+  <string name="morphe_disable_layout_updates_user_dialog_message">"एप्लिकेशन का लेआउट पहली इंस्टॉल के समय उपयोग किए गए लेआउट पर वापस आ जाता है।
 
-कुछ सर्वर-साइड लेआउट वापस नहीं चल सकते हैं।
+कुछ सर्वर-साइड लेआउट वापस नहीं आ सकते हैं।
 
-परिवर्तन शामिल हैं:
-• प्लेयर फ्लाईआउट मेनू (या संबंधित सेटिंग्स) में कंपोनेंट्स काम नहीं करना सकते हैं।
+बदलावों में शामिल हैं:
+• प्लेयर फ्लाईआउट मेनू (या संबंधित सेटिंग्स) के घटक काम नहीं सकते हैं।
 • रोलिंग नंबर्स एनिमेट नहीं होते हैं।
 • लाइब्रेरी टैब दिखाई देता है।
-• वीडियो विवरण में म्यूजिक सैक्शन काम नहीं करना सकता है।
+• वीडियो विवरण में म्यूज़िक सैक्शन काम नहीं सकता है।
+• प्लेयर फ्लाईआउट मेनू आइटम छिपाए नहीं जा सकते हैं।
 • लाइब्रेरी टैब पर अकाउंट स्विच बटन दिखाई नहीं देता है।"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">छुपाएं क्रिएटर स्टोर शेल्फ</string>
@@ -648,8 +649,8 @@ Second \"item\" text"</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">नैविगेशन बटन के बीच अंतर सामान्य है</string>
   <string name="morphe_disable_translucent_status_bar_title">Filter bar</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"सीमाएँ:
-• वीडियो प्लेयर के शीर्ष पर काला बैंड हो सकता है।
-• नैविगेशन बार सिस्टम ट्रांसल्यूसेंट हो सकता है और वीडियो पर टिप्पणी करना संभव नहीं हो सकता।"</string>
+• वीडियो प्लेयर के शीर्ष पर एक काला बैंड हो सकता है।
+• प्रणाली नavigation बार ट्रांज़्पेरेंट हो सकता है, और वीडियो पर टिप्पणी करना संभव नहीं हो सकता है।"</string>
   <string name="morphe_toolbar_screen_title">टूलबार</string>
   <string name="morphe_toolbar_screen_summary">टूलबार घटकों को छुपाएं या बदलें</string>
   <string name="morphe_hide_toolbar_create_button_title">छुपाएं \'सृजना\' बटन</string>
@@ -661,6 +662,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">छुपाएं \'खोज\' बटन</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">खोज बटन छुपा हुआ है</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">सर्च बटन दिखाया गया है</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">वॉइस सर्च बटन छुपाएं</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">वॉइस सर्च बटन छुपा हुआ है</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">वॉइस सर्च बटन दिखाया जाता है</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->

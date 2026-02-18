@@ -50,13 +50,14 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_summary_off">سيتم تحديث المظهر بواسطة الخادم</string>
   <string name="morphe_disable_layout_updates_user_dialog_message">"يعود تصميم التطبيق إلى التصميم المستخدم عند التثبيت الأَوّلي.
 
-قد لا تعود بعض تصميمات جانب الخادم إلى وضعها السابق.
+قد لا تعود بعض التصميمات من جانب الخادم إلى وضعها السابق.
 
 تشمل التغييرات ما يلي:
 • قد لا تعمل عناصر قائمة المشغل المنبثقة (أو الإعدادات ذات الصلة).
 • الأرقام لا تُحدَّث لحظيًا.
 • يتم عرض علامة تبويب المكتبة.
 • قد لا يعمل قسم الموسيقى في وصف الفيديو.
+• لا يمكن إخفاء عناصر قائمة المشغل المنبثقة.
 • قد لا يظهر زر تبديل الحساب في علامة تبويب المكتبة."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">إخفاء رف متجر المنشئ</string>
@@ -667,7 +668,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">شريط الحالة معتم أو شفاف</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"القيود:
 • قد يظهر شريط أسود في أعلى مشغل الفيديو.
-• يمكن أن يتغير شريط التنقل في النظام إلى شفاف ولا يمكن التعليق على فيديوهات."</string>
+• يمكن أن يتغير شريط التنقل في النظام إلى شفاف، ولا يمكن التعليق على الفيديوهات."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">تعطيل الشريط الشفاف الفاتح</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">شريط التنقل في الوضع الفاتح غير شفاف</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">شريط التنقل في الوضع الفاتح معتم او شفاف</string>
@@ -685,6 +686,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">إخفاء زر البحث</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">تم إخفاء زر البحث</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">يتم عرض زر البحث</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">إخفاء زر البحث الصوتي</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">تم إخفاء زر البحث الصوتي</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">يتم عرض زر البحث الصوتي</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">القائمة المنبثقة</string>
   <string name="morphe_hide_player_flyout_summary">إخفاء أو عرض عناصر قائمة المشغل المنبثقة</string>

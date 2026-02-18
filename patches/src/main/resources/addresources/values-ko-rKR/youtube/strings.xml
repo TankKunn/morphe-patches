@@ -52,11 +52,12 @@ Second \"item\" text"</string>
 
 일부 서버 측 레이아웃은 되돌려지지 않을 수 있습니다.
 
-변경 사항
-• 플레이어 메뉴 구성 요소(또는 관련 설정)가 작동되지 않을 수 있습니다.
-• 롤링 넘버 애니메이션이 작동되지 않습니다.
-• 보관함 탭이 사용됩니다.
-• 동영상 설명에서 음악 섹션이 작동되지 않을 수 있습니다.
+변경 사항:
+• 플레이어 메뉴 구성 요소(또는 관련 설정)가 작동하지 않을 수 있습니다.
+• 롤링 넘버 애니메이션이 작동하지 않습니다.
+• 보관함 탭이 표시됩니다.
+• 동영상 설명에서 음악 섹션이 작동하지 않을 수 있습니다.
+• 플레이어 메뉴 구성요소 항목을 숨길 수 없습니다.
 • 보관함 탭에서 계정 전환 버튼이 표시되지 않을 수 있습니다."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">판매자 스토어 선반 숨기기</string>
@@ -665,7 +666,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">상태바가 불투명하거나 반투명합니다</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"제한 사항:
 • 동영상 플레이어 상단에 검은색 바가 나타날 수 있습니다.
-• 시스템 네비게이션 바가 투명하게 변경될 수 있으며 동영상에 댓글을 달 수 없습니다."</string>
+• 시스템 네비게이션 바가 투명하게 변경될 수 있으며, 동영상에 댓글을 달 수 없습니다."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">밝은 반투명 하단바 비활성화하기</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">밝은 테마에서 하단바가 불투명합니다</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">밝은 테마에서 하단바가 불투명하거나 반투명합니다</string>
@@ -683,6 +684,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">검색 버튼 숨기기</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">검색 버튼이 숨겨집니다</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">검색 버튼이 표시됩니다</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">음성 검색 버튼 숨기기</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">음성 검색 버튼이 숨겨집니다</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">음성 검색 버튼이 표시됩니다</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">메뉴 구성요소</string>
   <string name="morphe_hide_player_flyout_summary">플레이어에서 메뉴 구성요소를 숨기거나 표시할 수 있습니다</string>

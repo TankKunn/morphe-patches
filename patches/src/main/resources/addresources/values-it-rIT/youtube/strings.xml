@@ -53,10 +53,11 @@ Tuttavia, l'abilitazione di questa opzione registrerà anche alcuni dati dell'ut
 Alcune disposizioni lato server potrebbero non essere ripristinate.
 
 I cambiamenti includono:
-• I componenti del menu a comparsa del giocatore (o le impostazioni correlate) potrebbero non funzionare.
+• I componenti nel menu a comparsa del lettore (o le impostazioni correlate) potrebbero non funzionare.
 • I numeri progressivi non sono animati.
 • La scheda Libreria è visualizzata.
 • La sezione Musica della descrizione del video potrebbe non funzionare.
+• Gli elementi del menu a comparsa del lettore non possono essere nascosti.
 • Il pulsante di cambio account potrebbe non apparire sulla scheda Libreria."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Nascondi sezione negozio del creatore</string>
@@ -666,7 +667,7 @@ I cookie verranno salvati automaticamente se sono validi"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">La barra di stato è opaca</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">La barra di stato è opaca o traslucida</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitazioni:
-• Potrebbe apparire una barra nera in alto nel riproduttore video.
+• Una barra nera potrebbe apparire in cima al lettore video.
 • La barra di navigazione del sistema può diventare trasparente e non è possibile commentare i video."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Disabilita la barra traslucida chiara</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">La barra di navigazione in modalità chiara è opaca</string>
@@ -685,6 +686,9 @@ I cookie verranno salvati automaticamente se sono validi"</string>
   <string name="morphe_hide_toolbar_search_button_title">Nascondi pulsante Cerca</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Il pulsante di ricerca è nascosto</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Il pulsante di ricerca è mostrato</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Nascondi pulsante di ricerca vocale</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Il pulsante di ricerca vocale è nascosto</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Il pulsante di ricerca vocale è mostrato</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menù a comparsa</string>
   <string name="morphe_hide_player_flyout_summary">Mostra o nascondi le voci del menu di flyout del player</string>

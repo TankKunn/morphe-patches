@@ -48,16 +48,17 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_title">Вимкнути оновлення макета</string>
   <string name="morphe_disable_layout_updates_summary_on">Макет не буде оновлено сервером</string>
   <string name="morphe_disable_layout_updates_summary_off">Макет буде оновлено сервером</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Макет програми повертається до макета, який використовувався під час першої інсталяції.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Інтерфейс програми повертається до того, який використовувався під час першого встановлення.
 
-Деякі серверні макети можуть не повертатися.
+Деякі серверні інтерфейси можуть не відновитись.
 
 Зміни включають:
-• Компоненти у спливаючому меню плеєра (або пов’язаних налаштуваннях) можуть не працювати.
-• Анімовані лічильники не анімуються.
-• Відображається вкладка \"Бібліотека\".
-• Розділ \"Музика\" в описі відео може не працювати.
-• Кнопка перемикання облікового запису може не відображатися на вкладці \"Бібліотека\"."</string>
+• Компоненти в меню програвача (або пов'язаних налаштувань) можуть не працювати.
+• Числа, що рухаються, не анімовані.
+• Відображається вкладка Бібліотека.
+• Розділ Музики в описі відео може не працювати.
+• Елементи спливаючого меню програвача не можна приховати.
+• Кнопка перемикання облікового запису може не відображатися на вкладці Бібліотека."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Приховати полицю магазину автора</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Полицю магазину автора під відеоплеєром приховано</string>
@@ -686,6 +687,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">Приховати кнопку \"Пошук\"</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Кнопку \"Пошук\" приховано</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Кнопка \"Пошук\" показується</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Приховати кнопку Голосового пошуку</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Кнопка Голосового пошуку прихована</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Кнопка Голосового пошуку показана</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Висувне меню</string>
   <string name="morphe_hide_player_flyout_summary">Приховати або показувати пункти висувного меню плеєра</string>

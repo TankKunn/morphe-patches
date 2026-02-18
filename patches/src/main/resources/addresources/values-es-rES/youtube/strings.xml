@@ -667,7 +667,7 @@ Las cookies se guardarán automáticamente si son válidas"</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">La barra de estado es opaca o translúcida</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitaciones:
 • Puede aparecer una barra negra en la parte superior del reproductor de video.
-• La barra de navegación del sistema puede cambiar a transparente y no es posible comentar videos."</string>
+• La barra de navegación del sistema puede volverse transparente y no será posible comentar los videos."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Desactivar barra translúcida clara</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">La barra de navegación en modo claro es opaca</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">La barra de navegación en modo claro es opaca o translúcida</string>
@@ -685,6 +685,9 @@ Las cookies se guardarán automáticamente si son válidas"</string>
   <string name="morphe_hide_toolbar_search_button_title">Ocultar botón \"Buscar\"</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">El botón \"Buscar\" está oculto</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">El botón \"Buscar\" está visible</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Ocultar el botón de búsqueda de voz</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">El botón de búsqueda de voz está oculto</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">El botón de búsqueda de voz está visible</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menú desplegable</string>
   <string name="morphe_hide_player_flyout_summary">Ocultar o mostrar elementos del menú desplegable del reproductor</string>

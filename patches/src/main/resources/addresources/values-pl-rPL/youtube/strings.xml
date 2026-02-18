@@ -57,6 +57,7 @@ Zmiany obejmują:
 • Animacje liczb nie działają.
 • Zakładka biblioteki jest widoczna.
 • Sekcja muzyki w opisie filmu może nie działać.
+• Elementy menu odtwarzacza nie mogą zostać ukryte.
 • Przycisk przełączania konta może nie pojawiać się w zakładce biblioteki."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Półka ze sklepem twórcy</string>
@@ -666,8 +667,8 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Wyłączone</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Włączone</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Ograniczenia:
-• U góry odtwarzacza może pojawić się czarny pasek.
-• Pasek nawigacji może stać się przezroczysty, co uniemożliwi komentowanie filmów."</string>
+• Na górze odtwarzacza może pojawić się czarny pasek.
+• Systemowy pasek nawigacji może stać się przezroczysty, co uniemożliwi komentowanie filmów."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Półprzezroczysty pasek w trybie jasnym</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Wyłączone</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Włączone</string>
@@ -685,6 +686,9 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_hide_toolbar_search_button_title">Przycisk Szukaj</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Ukryty</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Widoczny</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Przycisk \"Wyszukiwanie głosowe\"</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Ukryty</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Widoczny</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menu ustawień filmów</string>
   <string name="morphe_hide_player_flyout_summary">Ukryj lub pokazuj elementy menu ustawień filmów</string>

@@ -48,16 +48,17 @@ Aktivering af dette vil dog også logge nogle brugerdata, såsom din IP-adresse.
   <string name="morphe_disable_layout_updates_title">Deaktiver opdateringer af layout</string>
   <string name="morphe_disable_layout_updates_summary_on">Layout vil ikke blive opdateret af serveren</string>
   <string name="morphe_disable_layout_updates_summary_off">Layout vil blive opdateret af serveren</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Appens udseende går tilbage til det udseende, der blev brugt ved første installation.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"App layout vender tilbage til den layout, der blev brugt ved første installation.
 
-Nogle server-side udseender kan ikke gå tilbage.
+Nogle server-side layouts kan ikke vende tilbage.
 
 Ændringer inkluderer:
-• Komponenter i spillerflydervinduesmenu (eller relaterede indstillinger) kan ikke fungere.
-• Rullende tal er ikke animerede.
+• Komponenter i spiller flytmenu (eller relaterede indstillinger) kan ikke fungere.
+• Rullende tal er ikke animeret.
 • Biblioteksfladen vises.
 • Musiksektionen af videobeskrivelse kan ikke fungere.
-• Kontobytteskнопка kan ikke vises på Biblioteksfladen."</string>
+• Spiller flytmenu items kan ikke skjules.
+• Kontobyttesknap kan ikke vises på biblioteksfladen."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Skjul butikshylde for skabere</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Opretterbutikshylde under videoafspiller er skjult</string>
@@ -665,9 +666,9 @@ Tekstlinjer vil blive gemt automatisk, hvis de er gyldige"</string>
   <string name="morphe_disable_translucent_status_bar_title">Deaktiver gennemsigtig statuslinje</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statuslinjen er opak</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statuslinjen er opak eller gennemsigtig</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">" Begrænsninger:
-• En sort streg kan dukke op i toppen af videoafspilleren.
-• Systemnavigationsbaren kan blive gennemsigtig, og det er ikke muligt at kommentere videoer."</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Begrænsninger:
+• En sort streg kan vises øverst på videoafspilleren.
+• Systemnavigationsbaren kan blive transparent, og det er ikke muligt at kommentere videoer."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Deaktiver lys gennemsigtig linje</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Navigationslinjen i lys tilstand er ikke gennemsigtig</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Lys tilstand navigationslinjen er opak eller gennemsigtig</string>
@@ -685,6 +686,9 @@ Tekstlinjer vil blive gemt automatisk, hvis de er gyldige"</string>
   <string name="morphe_hide_toolbar_search_button_title">Skjul \"Søg\"-knappen</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Søgeknappen er skjult</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Søgeknappen vises</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Skjul Stemmesøgning-knap</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Stemmesøgning-knappen er skjult</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Stemmesøgning-knappen vises</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Udfyldningsmenu</string>
   <string name="morphe_hide_player_flyout_summary">Skjul eller vis spiller flyout menupunkter</string>

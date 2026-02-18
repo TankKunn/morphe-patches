@@ -57,6 +57,7 @@ Les changements incluent :
 • Les statistiques en temps réel ne sont pas animés.
 • L'onglet 'Bibliothèque' est affiché.
 • La section 'Musique' de la description vidéo peut ne pas fonctionner.
+• Les éléments du menu déroulant du lecteur peuvent pas être masqués.
 • Le bouton de 'Changer de compte' peut ne pas apparaître dans l'onglet 'Bibliothèque'."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Masquer l\'étagère de boutique du créateur</string>
@@ -667,7 +668,7 @@ Les cookies seront enregistrés automatiquement s'ils sont valides"</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">La barre de notification est opaque ou translucide</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitations :
 • Une barre noire peut apparaître en haut du lecteur vidéo.
-• La barre de navigation système peut devenir transparente et il est impossible de commenter les vidéos."</string>
+• La barre de navigation système peut devenir transparente et il n'est pas possible de commenter les vidéos."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Désactiver la barre claire translucide</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">La barre de navigation en mode clair est opaque</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">La barre de navigation en mode clair est opaque ou translucide</string>
@@ -685,6 +686,9 @@ Les cookies seront enregistrés automatiquement s'ils sont valides"</string>
   <string name="morphe_hide_toolbar_search_button_title">Masquer le bouton \'Rechercher\'</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Le bouton \'Rechercher\' est masqué</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Le bouton \'Rechercher\' est affiché</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Masquer le bouton \'Recherche vocale\'</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Le bouton \'Recherche vocale\' est masqué</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Le bouton \'Recherche vocale\' est affiché</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menu déroulant</string>
   <string name="morphe_hide_player_flyout_summary">Masquer ou afficher des éléments du menu déroulant du lecteur</string>
@@ -1154,7 +1158,7 @@ Votre ID utilisateur est comme un mot de passe et ne doit jamais être partagé.
   <string name="morphe_sb_skipped_preview_beginning">Aperçu passé</string>
   <string name="morphe_sb_skipped_preview_middle">Aperçu passé</string>
   <string name="morphe_sb_skipped_preview_end">Résumé passé</string>
-  <string name="morphe_sb_skipped_filler">Remplissages passés</string>
+  <string name="morphe_sb_skipped_filler">Remplissage passé</string>
   <string name="morphe_sb_skipped_nomusic">Section non musicale passée</string>
   <string name="morphe_sb_skipped_unsubmitted">Segment non soumis passé</string>
   <string name="morphe_sb_skipped_multiple_segments">Plusieurs segments passés</string>

@@ -48,16 +48,6 @@ Men om du aktiverar detta kommer även vissa användardata, t.ex. din IP-adress,
   <string name="morphe_disable_layout_updates_title">Inaktivera layoutuppdateringar</string>
   <string name="morphe_disable_layout_updates_summary_on">Layouten uppdateras inte av servern</string>
   <string name="morphe_disable_layout_updates_summary_off">Layouten uppdateras av servern</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Appens layout återställs till den layout som användes när den installerades.
-
-Vissa layouter på serversidan kanske inte återställs.
-
-Ändringar:
-• Komponenter i spelarens flyout-meny (eller relaterade inställningar) kanske inte fungerar.
-• Rullande siffror animeras inte.
-• Fliken Bibliotek visas.
-• Avsnittet Musik i videobeskrivningen kanske inte fungerar.
-• Knappen Byt konto kanske inte visas i fliken Bibliotek."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Dölj butikshylla för kreatörer</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Butikshylla för kreatörer under videospelaren är dold</string>
@@ -272,10 +262,10 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Visas i visningshistoriken</string>
   <string name="morphe_channel_screen_title">Kanalsida</string>
   <string name="morphe_channel_screen_summary">Dölj eller visa komponenter på kanalsidan</string>
-  <string name="morphe_hide_channel_tab_title">Aktivera filter för kanalflikar</string>
-  <string name="morphe_hide_channel_tab_summary_on">Filter för kanalflikar är aktiverat</string>
-  <string name="morphe_hide_channel_tab_summary_off">Filter för kanalflikar är inaktiverat</string>
-  <string name="morphe_hide_channel_tab_filter_strings_title">Filter för kanalflikar</string>
+  <string name="morphe_hide_channel_tab_title">Aktivera kanalfliksfilter</string>
+  <string name="morphe_hide_channel_tab_summary_on">Kanalfliksfilter är aktiverat</string>
+  <string name="morphe_hide_channel_tab_summary_off">Kanalfliksfilter är inaktiverat</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Kanalfliksfilter</string>
   <string name="morphe_hide_channel_tab_filter_strings_summary">Ange namnen på de kanalflikar som ska filtreras bort, en per rad</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Dölj knappen Community</string>
@@ -666,9 +656,6 @@ Cookies sparas automatiskt om de är giltiga"</string>
   <string name="morphe_disable_translucent_status_bar_title">Inaktivera genomskinligt statusfält</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statusfältet är ogenomskinligt</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statusfältet är ogenomskinligt eller genomskinligt</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Begränsningar:
-• Ett svart fält kan synas högst upp i videospelaren.
-• Systemets navigeringsfält kan bli genomskinligt och det är inte möjligt att kommentera videor."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Inaktivera ljust genomskinligt fält</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Navigeringsfältet i ljust läge är ogenomskinligt</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Navigeringsfältet i ljust läge är ogenomskinligt eller genomskinligt</string>

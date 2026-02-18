@@ -48,16 +48,17 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_title">Απενεργοποίηση ενημερώσεων διάταξης</string>
   <string name="morphe_disable_layout_updates_summary_on">Η διάταξη δεν θα ενημερώνεται από τον διακομιστή</string>
   <string name="morphe_disable_layout_updates_summary_off">Η διάταξη θα ενημερώνεται από τον διακομιστή</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Η διάταξη της εφαρμογής επιστρέφει στη διάταξη που χρησιμοποιήθηκε όταν εγκαταστάθηκε για πρώτη φορά.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Η διάταξη της εφαρμογής επαναφέρεται στη διάταξη που χρησιμοποιήθηκε όταν εγκαταστάθηκε για πρώτη φορά.
 
-Διάταξεις από τον διακομιστή μπορεί να μην επιστρέψουν.
+Διάταξεις που είναι διαθέσιμες από τον διακομιστή μπορεί να μην επαναφερθούν.
 
 Οι αλλαγές περιλαμβάνουν:
-• Οι συστατικές του μενού πλαισίου του παίκτη (ή τις σχετικές ρυθμίσεις) μπορεί να μην λειτουργούν.
-• Οι αναλυτικοί αριθμοί δεν είναι εικονοποιημένοι.
+• Οι συστατικές στο μενού πλαισίου αναπαραγωγής (ή τις σχετικές ρυθμίσεις) μπορεί να μην λειτουργούν.
+• Οι αναμετρικές αριθμοί δεν είναι αναμείγνυνται.
 • Η καρτέλα βιβλιοθήκης εμφανίζεται.
-• Η μουσική ενότητα της περιγραφής του βίντεο μπορεί να μην λειτουργεί.
-• Ο κουμπί αλλαγής λογαριασμού μπορεί να μην εμφανιστεί στην καρτέλα Βιβλιοθήκη."</string>
+• Ο部分 μουσικής του περιεχομένου περιγραφής βίντεο μπορεί να μην λειτουργήσει.
+• Οι επιλογές του μενού πλαισίου αναπαραγωγής δεν μπορούν να αποκρυφθούν.
+• Ο κουμπί αλλαγής λογαριασμού μπορεί να μην εμφανιστεί στη καρτέλα Βιβλιοθήκη."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Ενότητα καταστήματος δημιουργού</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Κρυμμένη\n\nΑφορά την ενότητα καταστήματος δημιουργού κάτω από την οθόνη αναπαραγωγής</string>
@@ -668,8 +669,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Η γραμμή κατάστασης δεν είναι διαφανής</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Η διαφάνεια της γραμμής κατάστασης ορίζεται αυτόματα</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Περιορισμοί:
-• Μήκος μαύρου μπάρου μπορεί να εμφανιστεί στην κορυφή του παίκτη βίντεο.
-• Η συστοιχία διασύνδεσης του συστήματος μπορεί να αλλάξει σε διαφανές και δεν είναι δυνατός σχολιασμός βίντεο."</string>
+• Μήνυμα μαύρης γραμμής μπορεί να εμφανιστεί στην κορυφή του παίκτη βίντεο.
+• Η συστοιχία διαδρομών του συστήματος μπορεί να αλλάξει σε διαφανή, και δεν είναι δυνατή η σχολή σε βίντεο."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Απενεργοποίηση διαφανούς γραμμής στο φωτεινό θέμα</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Η γραμμή πλοήγησης στο φωτεινό θέμα δεν είναι διαφανής</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Η διαφάνεια της γραμμής πλοήγησης στο φωτεινό θέμα ορίζεται αυτόματα</string>
@@ -687,6 +688,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">Κρύψε κουμπί Αναζήτηση</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Κρυμμένο</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Εμφανίζεται</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Απόκρυψη κουμπιού αναζήτησης φωνής</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Το κουμπί αναζήτησης φωνής είναι κρυμμένο</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Το κουμπί αναζήτησης φωνής εμφανίζεται</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Αναδυόμενο μενού ρυθμίσεων</string>
   <string name="morphe_hide_player_flyout_summary">Απόκρυψη ή εμφάνιση στοιχείων του αναδυόμενου μενού στην οθόνη αναπαραγωγής</string>

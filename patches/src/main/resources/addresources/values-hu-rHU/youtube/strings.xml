@@ -53,10 +53,11 @@ Ez a funkció azonban néhány felhasználói adatot is naplóz, például az IP
 Néhány szerveroldali felépítés nem visszakerül.
 
 Változások:
-• A lejátszó repülőablakban (vagy kapcsolódó beállítások) található komponensek nem működhetnek.
-• A forgó számok nem animálódnak.
-• A könyvtár tab is megjelenik.
-• A videó leírásának zene szakasza nem működhet.
+• A lejátszó repülőmenüben található összetevők (vagy kapcsolódó beállítások) nem működhetnek.
+• A forgó számok nem animálva.
+• A könyvtár tab is látható.
+• A videóleírásban található zene szakasz nem működhet.
+• A lejátszó repülőmenü pontjait nem lehet elrejtni.
 • A könyvtár tab-on a fiókváltó gomb nem jelenhet meg."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Alkotói áruház polcának elrejtése</string>
@@ -666,8 +667,8 @@ Automatikus megfordítási megjelenítés lehetségesen nem áll rendelkezésre"
   <string name="morphe_disable_translucent_status_bar_summary_on">Az állapotsor nem áttetsző</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Az állapotsor nem áttetsző vagy áttetsző</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitációk:
-• A videólejátszó tetején fekete sáv jelenhet meg.
-• A rendszer navigációs sávja átlátszóvá válhat, és nem lehet megjegyzésként írni a videókra."</string>
+• Fekete sáv jelenhet meg a videólejátszó tetején.
+• A rendszer navigációs sávja átlátszóvá válhat, és nem lehetséges a videók megjegyzése."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Világos, átlátszó sáv letiltása</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Világos módban az átlátszó navigációs sáv átlátszatlan</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">A világos módú navigációs sáv nem áttetsző vagy áttetsző</string>
@@ -685,6 +686,9 @@ Automatikus megfordítási megjelenítés lehetségesen nem áll rendelkezésre"
   <string name="morphe_hide_toolbar_search_button_title">Elrejtés a Keresés gomb</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">A keresés gomb el van rejtve</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">A keresés gomb látható</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Keresés gomb elrejtése</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Keresés gomb elrejtve</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">A keresés gomb látható</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Előugró menü</string>
   <string name="morphe_hide_player_flyout_summary">A lejátszó előugró menüpontjainak elrejtése vagy megjelenítése</string>

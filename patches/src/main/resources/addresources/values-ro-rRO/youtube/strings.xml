@@ -48,16 +48,17 @@ Cu toate acestea, activarea acestei opțiuni va înregistra și unele date ale u
   <string name="morphe_disable_layout_updates_title">Dezactivaţi actualizările layout-ului</string>
   <string name="morphe_disable_layout_updates_summary_on">Layout-ul nu va fi actualizat de server</string>
   <string name="morphe_disable_layout_updates_summary_off">Layout-ul va fi actualizat de server</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Dispozitivul se reface la dispozitivul folosit la instalare.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Dispozitivul revine la dispozitivul folosit la instalarea initiala.
 
-Unele dispozitive server-side pot nu se reface.
+Unele dispozitive server-side pot nu reveni.
 
-Schimbari includ:
-• Componentele din meniul de zbor al jucătorului (sau setările asociate) pot nu funcționa.
-• Cifrele rotative nu sunt animate.
-• Tabulă de bibliotecă este arătată.
-• Secțiunea muzică a descrierii video poate nu funcționa.
-• Butonul de comutare a contului poate nu apare pe tabulă de bibliotecă."</string>
+Schimbari incluse:
+• Componentele din meniul de zbor al jucătorului (sau setările legate) pot nu funcționa.
+• Numerele rotative nu sunt animate.
+• Tabul de bibliotecă este afișat.
+• Secțiunea muzică a descrierii video-ului pot nu funcționa.
+• Elementele meniului de zbor al jucătorului nu pot fi ascunse.
+• Butonul de schimbare a contului poate nu apărea pe tabul de bibliotecă."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Ascunde raftul magazinului creatorului</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Raftul magazinului creatorului de sub playerul video este ascuns.</string>
@@ -662,8 +663,8 @@ Cookie-urile vor fi salvate automatik daca sunt valide"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Bara de stare este opaca</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Bara de stare este opaca sau translucida</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitâri:
-• O barâ neagrâ poate apârâ la partea superioarâ a jucâtorului video.
-• bara de navigare a sistemului poate fi transparentâ, iar comentariile pe video nu sunt posibile."</string>
+• O barâ neagrâ poate apare la ²nalul jucâtorului video.
+• bara de navigare a sistemului poate fi transparentâ, iar comântarea pe videouri nu este posibilâ."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Dezactivează bara de navigare translucidă deschisă</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Bara de navigare în modul deschis este opacă</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Bara de navigare în modul deschis este opaca sau translucida</string>
@@ -681,6 +682,9 @@ Cookie-urile vor fi salvate automatik daca sunt valide"</string>
   <string name="morphe_hide_toolbar_search_button_title">Ascunde butonul Căutare</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Butonul de căutare este ascuns</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Butonul de căutare este afișat</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Ascunde butonul de căutare vocală</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Butonul de căutare vocală este ascuns</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Butonul de căutare vocală este afișat</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Meniu flyout</string>
   <string name="morphe_hide_player_flyout_summary">Ascunde sau arată elementele de meniu Flyout ale jucătorului</string>

@@ -57,6 +57,7 @@ Second \"item\" text"</string>
 • 数字の回転アニメーションが表示されない。
 • マイページタブがライブラリタブに戻る。
 • 動画の概要欄の音楽セクションが動作しない場合がある。
+• プレーヤーのフライアウト メニューの項目を非表示にできない。
 • ライブラリタブに「アカウントを切り替える」ボタンが表示されない場合がある。"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">クリエイターのストア欄を非表示</string>
@@ -667,8 +668,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">ステータスバーは透けません</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">ステータスバーは状況に応じて透けます</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"制限事項：
-• 動画プレーヤーの上部に黒いバーが表示される場合がある
-• システムのナビゲーション バーが半透明になり、動画にコメントできなくなる場合がある"</string>
+• 動画プレーヤーの上部に黒いバーが表示される場合があります
+• システムのナビゲーション バーが半透明になり、動画にコメントできなくなる場合があります"</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">ライトモードの半透明バーを無効化</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">ライトモードではナビゲーション バーは透けません</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">ライトモードではナビゲーション バーが状況に応じて透けます</string>
@@ -686,6 +687,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">検索ボタンを非表示</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">検索ボタンは表示されません</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">検索ボタンは表示されます</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">検索ボタンを非表示</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">検索ボタンは表示されません</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">検索ボタンは表示されます</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">フライアウト メニュー</string>
   <string name="morphe_hide_player_flyout_summary">プレーヤー オーバーレイの歯車アイコンボタンから呼び出されるフライアウト メニューの項目を表示または非表示にします</string>
