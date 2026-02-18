@@ -8,7 +8,7 @@ package app.morphe.patches.youtube.layout.hide.updatescreen
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patches.youtube.misc.playservice.is_20_21_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_20_22_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import com.android.tools.smali.dexlib2.AccessFlags
@@ -22,8 +22,8 @@ val hideUpdateScreenPatch = bytecodePatch(
     dependsOn(versionCheckPatch)
 
     execute {
-        // Only disable update screen for 20.26 and lower. This can be later adjusted if desired.
-        if (!is_20_21_or_greater) {
+        // Only disable update screen for 20.21 and lower. This can be later adjusted if desired.
+        if (!is_20_22_or_greater) {
             Fingerprint(
                 accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
                 parameters = listOf("Landroid/content/Intent;", "Z")
