@@ -1,3 +1,10 @@
+# [1.14.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.8...v1.14.0-dev.9) (2026-02-18)
+
+
+### Bug Fixes
+
+* **Override certificate pinning:** Handle element missing from network config ([#574](https://github.com/MorpheApp/morphe-patches/issues/574)) ([7b4d015](https://github.com/MorpheApp/morphe-patches/commit/7b4d015e4fb37163127257a23de7757c5d2a1f9d))
+
 # [1.14.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.7...v1.14.0-dev.8) (2026-02-18)
 
 
