@@ -1,3 +1,10 @@
+# [1.14.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.6...v1.14.0-dev.7) (2026-02-18)
+
+
+### Bug Fixes
+
+* **Spoof video streams:** Using the TV client can cause a V8 runtime memory leak ([#564](https://github.com/MorpheApp/morphe-patches/issues/564)) ([59a4061](https://github.com/MorpheApp/morphe-patches/commit/59a4061b28b4be38c4a836a22aa2af429edad5e2))
+
 # [1.14.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.5...v1.14.0-dev.6) (2026-02-17)
 
 

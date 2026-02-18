@@ -1,5 +1,5 @@
 {
-  "version": "1.14.0-dev.6",
+  "version": "1.14.0-dev.7",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -1588,47 +1588,6 @@
           "2026.04.0",
           "2026.03.0",
           "2025.48.0"
-        ]
-      },
-      "options": []
-    },
-    {
-      "name": "Spoof video streams",
-      "description": "Adds options to spoof the client video streams to fix playback.",
-      "use": false,
-      "dependencies": [
-        "BytecodePatch",
-        "BytecodePatch",
-        "ResourcePatch",
-        "BytecodePatch",
-        "BytecodePatch",
-        "RawResourcePatch"
-      ],
-      "compatiblePackages": {
-        "com.google.android.apps.youtube.music": [
-          "8.40.54",
-          "8.10.52",
-          "7.29.52"
-        ]
-      },
-      "options": []
-    },
-    {
-      "name": "Spoof video streams",
-      "description": "Adds options to spoof the client video streams to fix playback.",
-      "use": false,
-      "dependencies": [
-        "BytecodePatch",
-        "BytecodePatch",
-        "ResourcePatch",
-        "BytecodePatch",
-        "RawResourcePatch"
-      ],
-      "compatiblePackages": {
-        "com.google.android.youtube": [
-          "20.40.45",
-          "20.31.42",
-          "20.21.37"
         ]
       },
       "options": []
