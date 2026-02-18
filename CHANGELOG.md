@@ -1,3 +1,10 @@
+# [1.14.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.7...v1.14.0-dev.8) (2026-02-18)
+
+
+### Features
+
+* **YouTube - Navigation bar:** Add "Hide voice search button" setting ([#513](https://github.com/MorpheApp/morphe-patches/issues/513)) ([b59ec4b](https://github.com/MorpheApp/morphe-patches/commit/b59ec4b9e67c00e6fa284b50de294c805c255399))
+
 # [1.14.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0-dev.6...v1.14.0-dev.7) (2026-02-18)
 
 

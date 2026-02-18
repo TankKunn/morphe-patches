@@ -1,5 +1,5 @@
 {
-  "version": "1.14.0-dev.7",
+  "version": "1.14.0-dev.8",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -965,7 +965,8 @@
         "ResourcePatch",
         "BytecodePatch",
         "ResourcePatch",
-        "ResourcePatch"
+        "ResourcePatch",
+        "BytecodePatch"
       ],
       "compatiblePackages": {
         "com.google.android.youtube": [
