@@ -23,6 +23,7 @@ import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPrefer
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
+import app.morphe.patches.youtube.layout.hide.updatescreen.hideUpdateScreenPatch
 import app.morphe.patches.youtube.misc.engagement.engagementPanelHookPatch
 import app.morphe.patches.youtube.misc.litho.filter.addLithoFilter
 import app.morphe.patches.youtube.misc.litho.filter.lithoFilterPatch
@@ -112,7 +113,8 @@ val hideLayoutComponentsPatch = bytecodePatch(
         hideLayoutComponentsResourcePatch,
         navigationBarHookPatch,
         versionCheckPatch,
-        resourceMappingPatch
+        resourceMappingPatch,
+        hideUpdateScreenPatch
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)
