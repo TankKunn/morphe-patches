@@ -3,12 +3,11 @@ package app.morphe.patches.youtube.layout.buttons.navigation
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
+import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
-import app.morphe.patches.youtube.layout.toolbar.hookToolBar
-import app.morphe.patches.youtube.layout.toolbar.toolBarHookPatch
 import app.morphe.patches.youtube.misc.contexthook.Endpoint
 import app.morphe.patches.youtube.misc.contexthook.addOSNameHook
 import app.morphe.patches.youtube.misc.contexthook.clientContextHookPatch
@@ -22,6 +21,8 @@ import app.morphe.patches.youtube.misc.playservice.is_20_46_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
+import app.morphe.patches.youtube.misc.toolbar.hookToolBar
+import app.morphe.patches.youtube.misc.toolbar.toolBarHookPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.findInstructionIndicesReversedOrThrow
@@ -33,7 +34,8 @@ import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
-private const val EXTENSION_CLASS_DESCRIPTOR = "Lapp/morphe/extension/youtube/patches/NavigationBarPatch;"
+private const val EXTENSION_CLASS_DESCRIPTOR =
+    "Lapp/morphe/extension/youtube/patches/NavigationBarPatch;"
 
 val navigationBarPatch = bytecodePatch(
     name = "Navigation bar",
@@ -84,7 +86,7 @@ val navigationBarPatch = bytecodePatch(
             )
         )
 
-        // Switch create with notifications button.
+        // Swap create with notifications button.
         addOSNameHook(
             Endpoint.GUIDE,
             "$EXTENSION_CLASS_DESCRIPTOR->swapCreateWithNotificationButton(Ljava/lang/String;)Ljava/lang/String;",
@@ -178,7 +180,8 @@ val navigationBarPatch = bytecodePatch(
         val toolbarPreferences = mutableSetOf(
             SwitchPreference("morphe_hide_toolbar_create_button"),
             SwitchPreference("morphe_hide_toolbar_notification_button"),
-            SwitchPreference("morphe_hide_toolbar_search_button")
+            SwitchPreference("morphe_hide_toolbar_search_button"),
+            SwitchPreference("morphe_hide_toolbar_voice_search_button")
         )
         if (!is_20_31_or_greater) {
             toolbarPreferences += SwitchPreference("morphe_wide_searchbar")
@@ -196,6 +199,55 @@ val navigationBarPatch = bytecodePatch(
         hookToolBar("$EXTENSION_CLASS_DESCRIPTOR->hideNotificationButton")
         hookToolBar("$EXTENSION_CLASS_DESCRIPTOR->hideSearchButton")
 
+        // Hide old search button
+        //
+        // Old search button appears in the Library tab when the app is first installed,
+        // or when 'Disable layout update' is enabled
+        // This button cannot be hidden with [toolBarHookPatch]
+        OldSearchButtonVisibilityFingerprint.match(
+            OldSearchButtonAccessibilityLabelFingerprint.originalClassDef
+        ).let {
+            it.method.apply {
+                val index = it.instructionMatches.first().index
+                val instruction = getInstruction<FiveRegisterInstruction>(index)
+
+                replaceInstruction(
+                    index,
+                    "invoke-static { v${instruction.registerC}, v${instruction.registerD} }, " +
+                            "$EXTENSION_CLASS_DESCRIPTOR->hideOldSearchButton(Landroid/view/MenuItem;I)V"
+                )
+            }
+        }
+
+        // Hide voice search button in the search bar while typing.
+        SearchButtonsVisibilityFingerprint.match(
+            SearchFragmentFingerprint.originalClassDef
+        ).let {
+            it.method.apply {
+                val index = it.instructionMatches[2].index
+                val instruction = getInstruction<FiveRegisterInstruction>(index)
+
+                replaceInstruction(
+                    index,
+                    "invoke-static { v${instruction.registerC}, v${instruction.registerD} }, " +
+                            "$EXTENSION_CLASS_DESCRIPTOR->hideVoiceSearchButton(Landroid/view/View;I)V"
+                )
+            }
+        }
+
+        // Hide voice search button in the search bar in search results.
+        SearchResultButtonVisibilityFingerprint.let {
+            it.method.apply {
+                val index = it.instructionMatches.last().index
+                val register = getInstruction<FiveRegisterInstruction>(index).registerC
+
+                addInstruction(
+                    index + 1,
+                    "invoke-static { v$register }, $EXTENSION_CLASS_DESCRIPTOR->" +
+                            "hideVoiceSearchButton(Landroid/view/View;)V"
+                )
+            }
+        }
 
         //
         // Wide searchbar
