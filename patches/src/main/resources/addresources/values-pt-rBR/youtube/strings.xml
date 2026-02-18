@@ -54,7 +54,7 @@ Alguns layouts controlados pelo servidor podem não voltar.
 
 As mudanças incluem:
 • Os componentes no menu suspenso do player (ou as configurações relacionadas) podem não funcionar.
-• Os números animados não teram animação.
+• Os números animados não terão animação.
 • A guia da biblioteca é exibida.
 • A seção de música da descrição do vídeo pode não funcionar.
 • O botão de alternância de conta pode não aparecer na guia da biblioteca."</string>
@@ -162,7 +162,7 @@ As mudanças incluem:
   <string name="morphe_hide_info_panels_summary_off">O painel de informações é mostrado</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
-  <string name="morphe_hide_join_membership_button_title">Ocultar botão Seja Membro</string>
+  <string name="morphe_hide_join_membership_button_title">Ocultar botão Seja membro</string>
   <string name="morphe_hide_join_membership_button_summary_on">O botão \'Seja membro\' está oculto</string>
   <string name="morphe_hide_join_membership_button_summary_off">O botão \'Seja membro\' é exibido</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
@@ -221,6 +221,11 @@ As mudanças incluem:
   <string name="morphe_hide_featured_videos_section_title">Ocultar vídeos em destaque</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Seção de vídeos em destaque está oculta</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Seção de vídeos em destaque está visível</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Habilitar filtro do menu de voo do feed</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Filtro do menu de voo do feed está habilitado</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Filtro do menu de voo do feed está desativado</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtro do menu de voo do feed</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Informe os nomes do menu de flyout para filtrar, um por linha</string>
   <string name="morphe_hide_gaming_section_title">Ocultar Gaming</string>
   <string name="morphe_hide_gaming_section_summary_on">Seção de Gaming está oculta</string>
   <string name="morphe_hide_gaming_section_summary_off">Seção de Gaming está visível</string>
@@ -266,6 +271,11 @@ As mudanças incluem:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Exibido no histórico de exibição</string>
   <string name="morphe_channel_screen_title">Página do canal</string>
   <string name="morphe_channel_screen_summary">Ocultar ou exibir componentes da página do canal</string>
+  <string name="morphe_hide_channel_tab_title">Ativar filtro de guia de canal</string>
+  <string name="morphe_hide_channel_tab_summary_on">Filtro de guia de canal está ativado</string>
+  <string name="morphe_hide_channel_tab_summary_off">Filtro de guia de canal está desativado</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtro de guia de canal</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Digite os nomes das guias de canal para filtrar, um por linha</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Ocultar botão \'Comunidade\'</string>
   <string name="morphe_hide_community_button_summary_on">Botão \'Comunidade\' está oculto</string>
@@ -275,7 +285,7 @@ As mudanças incluem:
   <string name="morphe_hide_for_you_shelf_summary_on">Prateleira Para você está oculta</string>
   <string name="morphe_hide_for_you_shelf_summary_off">Prateleira Para você está exibida</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_join_button_title">Ocultar botão Participar</string>
+  <string name="morphe_hide_join_button_title">Ocultar botão Seja membro</string>
   <string name="morphe_hide_join_button_summary_on">Botão seja membro está oculto</string>
   <string name="morphe_hide_join_button_summary_off">Botão seja membro não está oculto</string>
   <string name="morphe_hide_links_preview_title">Ocultar prévia de links</string>
@@ -327,9 +337,9 @@ As mudanças incluem:
   <string name="morphe_hide_comments_preview_comment_title">Ocultar prévia de comentário</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Prévia de comentário está oculta</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">A prévia de comentário é exibida</string>
-  <string name="morphe_hide_comments_thanks_button_title">Ocultar o botão \"Obrigado\"</string>
+  <string name="morphe_hide_comments_thanks_button_title">Ocultar o botão \"Valeu\"</string>
   <string name="morphe_hide_comments_thanks_button_summary_on">Botão valeu está oculto</string>
-  <string name="morphe_hide_comments_thanks_button_summary_off">O botão valeu é mostrada</string>
+  <string name="morphe_hide_comments_thanks_button_summary_off">O botão valeu está visível</string>
   <string name="morphe_custom_filter_screen_title">Filtro personalizado</string>
   <string name="morphe_custom_filter_screen_summary">Ocultar componentes usando filtros personalizados</string>
   <string name="morphe_custom_filter_title">Ativar filtro personalizado</string>
@@ -433,7 +443,7 @@ Limitações:
   <string name="morphe_remove_viewer_discretion_dialog_title">Remover diálogo de restrição</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_on">Diálogo foi removido</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_off">O diálogo vai ser mostrado</string>
-  <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Isto não ignora a restrição de idade, apenas a aceita automaticamente.</string>
+  <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">A restrição de idade não é ignorada, apenas aceita automaticamente.</string>
   <!-- layout.hide.signintotv.disableSignInToTvPopupPatch -->
   <string name="morphe_disable_signin_to_tv_popup_title">Desativar pop-up de fazer login na TV</string>
   <string name="morphe_disable_signin_to_tv_popup_summary_on">O pop-up de fazer login na TV está desativado</string>
@@ -567,7 +577,7 @@ Ajuste o volume deslizando verticalmente no lado direito da tela"</string>
   <!-- 'Thanks' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_thanks_button_title">Ocultar Valeu</string>
   <string name="morphe_hide_thanks_button_summary_on">Botão valeu está oculto</string>
-  <string name="morphe_hide_thanks_button_summary_off">O botão valeu é mostrado</string>
+  <string name="morphe_hide_thanks_button_summary_off">O botão valeu está visível</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Ocultar \"Perguntar\"</string>
@@ -588,13 +598,13 @@ Ajuste o volume deslizando verticalmente no lado direito da tela"</string>
   <string name="morphe_hide_save_button_summary_off">O botão Salvar é exibido</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Legendas</string>
-  <string name="morphe_captions_screen_summary">Desativar legendas autom├íticas ou definir cookies de legenda</string>
+  <string name="morphe_captions_screen_summary">Desativar legendas automáticas ou definir cookies de legenda</string>
   <!-- layout.captions.autoCaptionsPatch -->
   <string name="morphe_auto_captions_style_title">Visibilidade de legendas automáticas</string>
   <string name="morphe_auto_captions_style_entry_1">Mostrar quando mudo e não mudo</string>
   <string name="morphe_auto_captions_style_entry_2">Não mostrar nunca</string>
   <string name="morphe_auto_captions_style_entry_3">Mostrar quando não mudo</string>
-  <string name="morphe_auto_captions_style_entry_4">Mostrar quando silenciado</string>
+  <string name="morphe_auto_captions_style_entry_4">Mostrar quando mudo</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Mostrar legendas automáticas</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Esconder legendas automáticas</string>
   <!-- layout.captions.captionCookiesPatch -->
@@ -675,6 +685,9 @@ Os cookies serão salvos automaticamente se forem válidos"</string>
   <string name="morphe_hide_toolbar_search_button_title">Ocultar botão Pesquisar</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Botão de pesquisa está oculto</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Botão de pesquisa está visível</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Ocultar botão de busca por voz</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Botão de busca por voz está oculto</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Botão de busca por voz está visível</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menu suspenso</string>
   <string name="morphe_hide_player_flyout_summary">Ocultar ou mostrar itens no menu suspenso do player</string>
@@ -745,7 +758,7 @@ Para mostrar o menu de faixas de áudio, mude 'Falsificar fluxos de vídeo' para
   <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
   <string name="morphe_hide_autoplay_button_title">Ocultar botão Reprodução automática</string>
   <string name="morphe_hide_autoplay_button_summary_on">Botão de reprodução automática está oculto</string>
-  <string name="morphe_hide_autoplay_button_summary_off">Botão de reprodução automática não está oculto</string>
+  <string name="morphe_hide_autoplay_button_summary_off">Botão de reprodução automática está visível</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
   <string name="morphe_hide_captions_button_title">Ocultar botão Legendas</string>
   <string name="morphe_hide_captions_button_summary_on">Botão legendas está oculto</string>
@@ -843,7 +856,7 @@ Para mostrar o menu de faixas de áudio, mude 'Falsificar fluxos de vídeo' para
   <string name="morphe_hide_shorts_hashtag_button_summary_on">O botão hashtag está oculto</string>
   <string name="morphe_hide_shorts_hashtag_button_summary_off">Botão hashtag é mostrado</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_join_button_title">Ocultar botão Participar</string>
+  <string name="morphe_hide_shorts_join_button_title">Ocultar botão Seja membro</string>
   <string name="morphe_hide_shorts_join_button_summary_on">Botão seja membro está oculto</string>
   <string name="morphe_hide_shorts_join_button_summary_off">Botão seja membro não está oculto</string>
   <string name="morphe_hide_shorts_live_preview_title">Ocultar prévia ao vivo</string>
@@ -935,7 +948,7 @@ Para mostrar o menu de faixas de áudio, mude 'Falsificar fluxos de vídeo' para
   <string name="morphe_end_screen_suggested_video_summary_on">"O vídeo sugerido na tela final fica oculto quando a reprodução automática está desativada
 
 A reprodução automática pode ser alterada nas configurações do YouTube:
-Configurações → Reprodução → Reproduzir próximo vídeo automaticamente"</string>
+Configurações → Reprodução → Começar o próximo vídeo automaticamente"</string>
   <string name="morphe_end_screen_suggested_video_summary_off">O vídeo sugerido na tela final é exibido</string>
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
   <string name="morphe_hide_related_videos_overlay_title">Ocultar sobreposição de vídeos relacionados</string>

@@ -48,16 +48,17 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_title">Изключи актуализацията на макета</string>
   <string name="morphe_disable_layout_updates_summary_on">Макетът няма да бъде актуализиран от сървъра</string>
   <string name="morphe_disable_layout_updates_summary_off">Макетът ще бъде актуализиран от сървъра</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Разместването на приложението се връща към това, което се използвало при първоначалната инсталиране.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Лаятът на приложението се връща към лаяут, използван при първоначална инсталиране.
 
-Некато сървърно-странично разместване може да не се връща.
+Некоторые серверни лаяути може да не се връщат.
 
 Промени включват:
 • Компонентите в менюто за полети на играча (или свързани настройки) може да не работят.
-• Броятки не са анимирани.
-• Табът за библиотека се показва.
-• Музикалния раздел на описанието на видеото може да не работи.
-• Кнопката за превключване на сметка може да не се показва на таба за библиотека."</string>
+• Броят на роловете не е анимиран.
+• Табът Библиотека се показва.
+• Музикалният раздел на описанието на видеото може да не работи.
+• Елементите в менюто за полети на играча не могат да бъдат скрити.
+• Кнопката за превключване на сметка може да не се показва на таба Библиотека."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Скрийте магазинни банера</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Магазинните банера са скрити</string>
@@ -221,6 +222,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_videos_section_title">Скриване на \'Избрани видеоклипове\'</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Сеcció с избрани видеоклипове е скрита</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Сеcció с избрани видеоклипове е показана</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Включете филтър за излизане на лентата</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Филтърът за излизане на лентата е включен</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Филтърът за излизане на лентата е изключен</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Филтър за излизане на лентата</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Въведете имената на менюто за филтриране, по едно на ред</string>
   <string name="morphe_hide_gaming_section_title">Скриване на \'Игра\'</string>
   <string name="morphe_hide_gaming_section_summary_on">Сеcció с игра е скрита</string>
   <string name="morphe_hide_gaming_section_summary_off">Сеcció с игра е показана</string>
@@ -266,6 +272,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Показани в история на гледане</string>
   <string name="morphe_channel_screen_title">Канал страница</string>
   <string name="morphe_channel_screen_summary">Скрийте или покажете компоненти на канал страницата</string>
+  <string name="morphe_hide_channel_tab_title">Разрешете филтриране по таб на канал</string>
+  <string name="morphe_hide_channel_tab_summary_on">Филтриране по таб на канал е разрешено</string>
+  <string name="morphe_hide_channel_tab_summary_off">Филтриране по таб на канал е забранено</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Филтър за таб на канал</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Въведете имената на табовете на канала, за филтриране, едно на ред</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Скриване на бутона \'Общност\'</string>
   <string name="morphe_hide_community_button_summary_on">Бутона \'Общност\' е скрит</string>
@@ -651,7 +662,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Изключи светла прозрачна лента за навигация</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Ограничения:
 • Може да се появи черна лента в горната част на видеоплеера.
-• Навигационната лента на системата може да промени на прозрачна и не е възможно да се коментира на видеа."</string>
+• Системната навигационна лента може да стане прозрачна, и не е възможно да се коментира на видеа."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Лентата за навигация в светъл режим е непрозрачна или прозрачна</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Изключи тъмна прозрачна лента за навигация</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Лентата за навигация в тъмен режим е непрозрачна</string>
@@ -669,6 +680,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">Скриване на бутона за Търсене</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Бутона за Търсене е скрит</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Бутона за Търсене се показва</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Скриване на бутона за гласово търсене</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Бутона за гласово търсене е скрит</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Бутона за гласово търсене се показва</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Бутонът за коментари се показва</string>
   <string name="morphe_hide_player_flyout_summary">Скрий дублиране на видеа</string>

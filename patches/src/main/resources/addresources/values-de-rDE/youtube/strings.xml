@@ -48,16 +48,17 @@ Dadurch werden jedoch auch einige Benutzerdaten wie deine IP-Adresse protokollie
   <string name="morphe_disable_layout_updates_title">Layoutaktualisierungen deaktivieren</string>
   <string name="morphe_disable_layout_updates_summary_on">Der Server aktualisiert das Layout nicht.</string>
   <string name="morphe_disable_layout_updates_summary_off">Der Server aktualisiert das Layout.</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Layout der App wird auf den bei der ersten Installation verwendeten Layout zurückgesetzt.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Das Layout der App wird auf das Layout zurückgesetzt, das beim ersten Installieren verwendet wurde.
 
 Manche serverseitigen Layouts können nicht zurückgesetzt werden.
 
 Folgende Änderungen werden vorgenommen:
-• Komponenten im Player-Flyout-Menü (oder verwandte Einstellungen) können möglicherweise nicht funktionieren.
+• Komponenten im Abspielmenü-menü (oder related settings) können eventuell nicht funktionieren.
 • Rollende Zahlen werden nicht animiert.
 • Die Bibliothek Registerkarte wird angezeigt.
-• Musikabteilung der Video-Beschreibung kann möglicherweise nicht funktionieren.
-• Schaltfläche zum Wechseln des Kontos kann auf der Bibliothek Registerkarte nicht angezeigt werden."</string>
+• Der Musikteil der Video-Beschreibung könnte nicht funktionieren.
+• Abspielmenü-menü-Elemente können nicht ausgeblendet werden.
+• Der Kontoschaltknopf könnte auf der Bibliothek Registerkarte nicht erscheinen."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Creator-Shop-Regal ausblenden</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Creator Store-Regal unter dem Videoplayer ist ausgeblendet</string>
@@ -221,6 +222,11 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_featured_videos_section_title">Vorgestellte Videos ausblenden</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Bereich \'Vorgestellte Videos\' ist ausgeblendet</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Bereich \'Vorgestellte Videos\' wird angezeigt</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Aktiviere Filtermenü Flyout</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Filtermenü Flyout ist aktiviert</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Filtermenü Flyout ist deaktiviert</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtermenü Flyout</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Geben Sie die Flyout-Menü-Namen ein, um nach diesen zu filtern, einen pro Zeile</string>
   <string name="morphe_hide_gaming_section_title">Gaming ausblenden</string>
   <string name="morphe_hide_gaming_section_summary_on">Gaming-Bereich ist ausgeblendet</string>
   <string name="morphe_hide_gaming_section_summary_off">Gaming-Bereich wird angezeigt</string>
@@ -266,6 +272,11 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Im Wiedergabeverlauf angezeigt</string>
   <string name="morphe_channel_screen_title">Kanalseite</string>
   <string name="morphe_channel_screen_summary">Kanalseitenkomponenten ausblenden oder anzeigen</string>
+  <string name="morphe_hide_channel_tab_title">Kanalregisterfilter aktivieren</string>
+  <string name="morphe_hide_channel_tab_summary_on">Kanalregisterfilter ist aktiviert</string>
+  <string name="morphe_hide_channel_tab_summary_off">Kanalregisterfilter ist deaktiviert</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Kanalregisterfilter</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Geben Sie die Kanalregisternamen ein, um nach ihnen zu filtern, jeweils einer pro Zeile.</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Schaltfläche \'Community\' ausblenden</string>
   <string name="morphe_hide_community_button_summary_on">\'Community\' ist ausgeblendet</string>
@@ -654,8 +665,8 @@ Cookies werden automatisch gespeichert, wenn sie gültig sind"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statusleiste ist undurchsichtig</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Die Statusleiste ist undurchsichtig oder durchscheinend</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Einschränkungen:
-• Ein schwarzer Balken kann oben im Video-Player angezeigt werden.
-• Die System-Navigationsleiste kann transparent werden und es ist nicht möglich, Videos zu kommentieren."</string>
+• Es kann ein schwarzer Balken oben im Video-Player erscheinen.
+• Die System-Navigationsleiste kann transparent werden, und es ist nicht möglich, Videos zu kommentieren."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Hellen, lichtdurchlässigen Balken deaktivieren</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Heller Navigationsbalken ist opak</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Die Navigationsleiste im hellen Modus ist undurchsichtig oder durchscheinend</string>
@@ -673,6 +684,9 @@ Cookies werden automatisch gespeichert, wenn sie gültig sind"</string>
   <string name="morphe_hide_toolbar_search_button_title">Suchen-Schaltfläche ausblenden</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Suchschaltfläche wird ausgeblendet</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Suchschaltfläche wird angezeigt</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Stummschaltknopf für die Sprachsuche ausblenden</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Stummschaltknopf für die Sprachsuche ist ausgeblendet</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Stummschaltknopf für die Sprachsuche ist angezeigt</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Einstellungs-Menü</string>
   <string name="morphe_hide_player_flyout_summary">Einträge des Einstellungsmenüs ein- oder ausblenden</string>
@@ -1533,11 +1547,11 @@ Einschränkungen:
   <string name="morphe_hide_premium_video_quality_summary_on">Premium-Qualitätsoptionen sind versteckt</string>
   <string name="morphe_hide_premium_video_quality_summary_off">Hochwertige Optionen werden angezeigt</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
-  <string name="morphe_prioritize_video_quality_title">VideountertÃ¼tung priorisieren</string>
-  <string name="morphe_prioritize_video_quality_summary_on">VideountertÃ¼tung wird priorisiert</string>
+  <string name="morphe_prioritize_video_quality_title">Videoqualität priorisieren</string>
+  <string name="morphe_prioritize_video_quality_summary_on">Videoqualität wird priorisiert</string>
   <string name="morphe_prioritize_video_quality_summary_off">Video-Codecs werden priorisiert</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
-  <string name="morphe_slide_to_seek_title">Folie zum Suchen aktivieren</string>
+  <string name="morphe_slide_to_seek_title">Slide zum Suchen aktivieren</string>
   <string name="morphe_slide_to_seek_summary_on">Slide zum Suchen ist aktiviert</string>
   <string name="morphe_slide_to_seek_summary_off">Slide zum Suchen ist nicht aktiviert</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->

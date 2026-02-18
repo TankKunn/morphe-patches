@@ -1,8 +1,8 @@
 /*
  * Copyright 2025 Morphe.
- * https://github.com/morpheapp/morphe-patches
+ * https://github.com/MorpheApp/morphe-patches
  *
- * File-Specific License Notice (GPLv3 Section 7 Additional Permission).
+ * File-Specific License Notice (GPLv3 Section 7 Terms)
  *
  * This file is part of the Morphe patches project and is licensed under
  * the GNU General Public License version 3 (GPLv3), with the Additional
@@ -27,7 +27,7 @@
  *
  * All other terms of the Morphe Patches LICENSE, including Section 7c
  * (Project Name Restriction) and the GPLv3 itself, remain fully
-  * applicable to this file.
+ * applicable to this file.
  */
 
 package app.morphe.util
@@ -200,7 +200,7 @@ fun MutableMethod.injectHideViewCall(
 
 /**
  * Inserts instructions at a given index, using the existing control flow label at that index.
- * Inserted instructions can have it's own control flow labels as well.
+ * Inserted instructions can have its own control flow labels as well.
  *
  * Effectively this changes the code from:
  * :label
@@ -439,6 +439,16 @@ fun BytecodePatchContext.traverseClassHierarchy(targetClass: MutableClass, callb
  * @see ReferenceInstruction
  */
 inline fun <reified T : Reference> Instruction.getReference() = (this as? ReferenceInstruction)?.reference as? T
+
+/**
+ * @return The mutable method for this method call reference.
+ */
+context(BytecodePatchContext)
+fun MethodReference.getMutableMethod(): MutableMethod {
+    return mutableClassDefBy(this.definingClass).methods.first { classMethod ->
+        MethodUtil.methodSignaturesMatch(classMethod, this@getMutableMethod)
+    }
+}
 
 /**
  * @return The index of the first opcode specified, or -1 if not found.
@@ -885,6 +895,8 @@ fun Method.cloneMutable(
     }
 }
 
+fun Boolean.toHexString(): String = if (this) "0x1" else "0x0"
+
 /**
  * @return The number of registers for all parameters, including p0.
  * This includes 2 registers for each wide parameter.
@@ -1316,14 +1328,14 @@ internal fun setExtensionIsPatchIncluded(patchExtensionClassType: String) {
     val returnType = "Z"
 
     val fingerprint = Fingerprint(
+        definingClass = patchExtensionClassType,
+        name = methodName,
         returnType = returnType,
         parameters = listOf(),
-        custom = { method, classDef ->
-            AccessFlags.STATIC.isSet(method.accessFlags) && method.name == methodName
+        custom = { method, _ ->
+            AccessFlags.STATIC.isSet(method.accessFlags)
         }
     )
-
-    fingerprint.match(classDefBy(patchExtensionClassType))
 
     if (fingerprint.methodOrNull == null) {
         throw PatchException(

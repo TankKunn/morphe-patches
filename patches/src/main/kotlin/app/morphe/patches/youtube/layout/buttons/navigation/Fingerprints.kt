@@ -5,11 +5,17 @@ import app.morphe.patcher.OpcodesFilter
 import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.opcode
+import app.morphe.patcher.string
 import app.morphe.patches.shared.misc.mapping.ResourceType
 import app.morphe.patches.shared.misc.mapping.resourceLiteral
 import app.morphe.patches.youtube.layout.hide.general.YouTubeDoodlesImageViewFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
+
+private val SET_VISIBILITY_METHOD_CALL = methodCall(
+    opcode = Opcode.INVOKE_VIRTUAL,
+    smali = "Landroid/view/View;->setVisibility(I)V"
+)
 
 internal object CreatePivotBarFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
@@ -42,28 +48,24 @@ internal object CollapsingToolbarLayoutFeatureFlag : Fingerprint(
 )
 
 internal object PivotBarStyleFingerprint : Fingerprint(
+    definingClass = "/PivotBar;",
     returnType = "V",
     parameters = listOf("L"),
     filters = OpcodesFilter.opcodesToFilters(
         Opcode.INVOKE_STATIC,
         Opcode.MOVE_RESULT,
         Opcode.XOR_INT_2ADDR
-    ),
-    custom = { method, _ ->
-        method.definingClass.endsWith("/PivotBar;")
-    }
+    )
 )
 
 internal object PivotBarChangedFingerprint : Fingerprint(
+    definingClass = "/PivotBar;",
+    name = "onConfigurationChanged",
     returnType = "V",
     filters = OpcodesFilter.opcodesToFilters(
         Opcode.INVOKE_STATIC,
         Opcode.MOVE_RESULT
-    ),
-    custom = { method, _ ->
-        method.definingClass.endsWith("/PivotBar;")
-                && method.name == "onConfigurationChanged"
-    }
+    )
 )
 
 internal object TranslucentNavigationStatusBarFeatureFlagFingerprint : Fingerprint(
@@ -114,7 +116,67 @@ internal object WideSearchbarLayoutFingerprint : Fingerprint(
     returnType = "Landroid/view/View;",
     parameters = listOf("L", "L"),
     filters = listOf(
-        resourceLiteral(ResourceType.LAYOUT, "action_bar_ringo"),
+        resourceLiteral(ResourceType.LAYOUT, "action_bar_ringo")
     )
 )
 
+internal object OldSearchButtonAccessibilityLabelFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "Ljava/lang/CharSequence;",
+    parameters = listOf(),
+    filters = listOf(
+        resourceLiteral(ResourceType.STRING, "menu_search")
+    )
+)
+
+/**
+ * Matches to class found in [OldSearchButtonAccessibilityLabelFingerprint].
+ */
+internal object OldSearchButtonVisibilityFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "V",
+    filters = listOf(
+        methodCall(
+            opcode = Opcode.INVOKE_INTERFACE,
+            smali = "Landroid/view/MenuItem;->setShowAsAction(I)V"
+        )
+    )
+)
+
+internal object SearchResultButtonVisibilityFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "Landroid/view/View;",
+    filters = listOf(
+        literal(45423782L), // lens search button feature flags.
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            smali = "Landroid/view/View;->setOnClickListener(Landroid/view/View\$OnClickListener;)V"
+        ),
+    )
+)
+
+/**
+ * Matches to class found in [SearchFragmentFingerprint].
+ */
+internal object SearchButtonsVisibilityFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf("Ljava/lang/String;"),
+    filters = listOf(
+        methodCall(
+            opcode = Opcode.INVOKE_STATIC,
+            smali = "Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z"
+        ),
+        SET_VISIBILITY_METHOD_CALL, // clear button.
+        SET_VISIBILITY_METHOD_CALL, // voice search button.
+        SET_VISIBILITY_METHOD_CALL  // lens search button.
+    )
+)
+
+internal object SearchFragmentFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "Landroid/view/View;",
+    filters = listOf(
+        string("search-lens-button")
+    )
+)

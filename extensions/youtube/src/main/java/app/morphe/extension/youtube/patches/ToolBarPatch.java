@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ */
+
 package app.morphe.extension.youtube.patches;
 
 import android.view.View;
@@ -11,22 +16,14 @@ public class ToolBarPatch {
     /**
      * Injection point.
      */
-    public static void hookToolBar(Enum<?> buttonEnum, ImageView imageView) {
-        final String enumString = buttonEnum.name();
-        if (enumString.isEmpty() ||
-                imageView == null ||
-                !(imageView.getParent() instanceof View view)) {
-            return;
+    public static void hookToolBar(Enum<?> iconEnum, ImageView imageView) {
+        if (iconEnum != null && imageView.getParent() instanceof View view) {
+            String enumName = iconEnum.name();
+            Logger.printDebug(() -> "enum: " + enumName);
+            hookToolBar(enumName, view);
         }
-
-        Logger.printDebug(() -> "enumString: " + enumString);
-
-        hookToolBar(enumString, view);
     }
 
-    /**
-     * Injection point.
-     */
     private static void hookToolBar(String enumString, View parentView) {
         // Code added during patching.
     }

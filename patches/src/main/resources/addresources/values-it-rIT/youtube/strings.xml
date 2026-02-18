@@ -53,10 +53,11 @@ Tuttavia, l'abilitazione di questa opzione registrerà anche alcuni dati dell'ut
 Alcune disposizioni lato server potrebbero non essere ripristinate.
 
 I cambiamenti includono:
-• I componenti del menu a comparsa del giocatore (o le impostazioni correlate) potrebbero non funzionare.
+• I componenti nel menu a comparsa del lettore (o le impostazioni correlate) potrebbero non funzionare.
 • I numeri progressivi non sono animati.
 • La scheda Libreria è visualizzata.
 • La sezione Musica della descrizione del video potrebbe non funzionare.
+• Gli elementi del menu a comparsa del lettore non possono essere nascosti.
 • Il pulsante di cambio account potrebbe non apparire sulla scheda Libreria."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Nascondi sezione negozio del creatore</string>
@@ -221,6 +222,11 @@ I cambiamenti includono:
   <string name="morphe_hide_featured_videos_section_title">Nascondi video correlati</string>
   <string name="morphe_hide_featured_videos_section_summary_on">La sezione dei contenuti in primo piano è nascosta</string>
   <string name="morphe_hide_featured_videos_section_summary_off">La sezione dei contenuti in primo piano è mostrata</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Abilita filtro del menu a comparsa dell\'elenco</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Il filtro del menu a comparsa dell\'elenco è abilitato</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Il filtro del menu a comparsa dell\'elenco è disabilitato</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtro del menu a comparsa dell\'elenco</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Inserisci i nomi del menu a tendina per filtrare, uno per riga</string>
   <string name="morphe_hide_gaming_section_title">Nascondi Remix</string>
   <string name="morphe_hide_gaming_section_summary_on">La sezione film è nascosta</string>
   <string name="morphe_hide_gaming_section_summary_off">La sezione film è visibile</string>
@@ -266,6 +272,11 @@ I cambiamenti includono:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Mostrato nella cronologia visualizzazioni</string>
   <string name="morphe_channel_screen_title">Pagina canale</string>
   <string name="morphe_channel_screen_summary">Nascondi o mostra i componenti della pagina del canale</string>
+  <string name="morphe_hide_channel_tab_title">Attiva il filtro della scheda canale</string>
+  <string name="morphe_hide_channel_tab_summary_on">Il filtro della scheda canale è attivo</string>
+  <string name="morphe_hide_channel_tab_summary_off">Il filtro della scheda canale è disattivo</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtro della scheda del canale</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Inserisci i nomi delle schede del canale per filtrare, uno per riga</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Nascondi il pulsante Commenti</string>
   <string name="morphe_hide_community_button_summary_on">Il pulsante Commenti è nascosto</string>
@@ -656,7 +667,7 @@ I cookie verranno salvati automaticamente se sono validi"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">La barra di stato è opaca</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">La barra di stato è opaca o traslucida</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitazioni:
-• Potrebbe apparire una barra nera in alto nel riproduttore video.
+• Una barra nera potrebbe apparire in cima al lettore video.
 • La barra di navigazione del sistema può diventare trasparente e non è possibile commentare i video."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Disabilita la barra traslucida chiara</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">La barra di navigazione in modalità chiara è opaca</string>
@@ -675,6 +686,9 @@ I cookie verranno salvati automaticamente se sono validi"</string>
   <string name="morphe_hide_toolbar_search_button_title">Nascondi pulsante Cerca</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Il pulsante di ricerca è nascosto</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Il pulsante di ricerca è mostrato</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Nascondi pulsante di ricerca vocale</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Il pulsante di ricerca vocale è nascosto</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Il pulsante di ricerca vocale è mostrato</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menù a comparsa</string>
   <string name="morphe_hide_player_flyout_summary">Mostra o nascondi le voci del menu di flyout del player</string>

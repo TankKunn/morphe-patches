@@ -48,16 +48,17 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_title">Онемогу ажурирање излазног погледа</string>
   <string name="morphe_disable_layout_updates_summary_on">Излазни поглед неће бити ажуриран са сервера</string>
   <string name="morphe_disable_layout_updates_summary_off">Излазни поглед ће бити ажуриран са сервера</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Razlog je da se aplikacija vraća na izgled koji je imao kada je prvobrano instalirana.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Položaj aplikacije vraća se na položaj korišćen kada je prvobično instalirana.
 
-Neke server-side izgledne postavke mogu da ne budu vraćene.
+Neke server-side postavke mogu da ne vraćaju.
 
 Promene uključuju:
-• Dijelovi u izborniku za player flyout (ili povezane postavke) mogu da ne funkcionišu.
-• Brojevi se ne animiraju.
-• Tab za biblioteku je prikazana.
+• Komponenti u izbočnom meniju igrača (ili povezanih postavki) mogu da ne funkcionišu.
+• Brojevi u kretanju nisu animirani.
+• Tab za biblioteku je prikazan.
 • Muzička sekcija opisa videa može da ne funkcioniše.
-• Dugme za prebačavanje računa možda neće biti prikazano na tabu za biblioteku."</string>
+• stavke izbočnog menija igrača ne mogu da se sakriju.
+• Dugme za preswitch naloga možda neće biti na tabu za biblioteku."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Сакриј полицу продавнице креатора</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Полица продавнице креатора испод видео плејера је скривена</string>
@@ -221,6 +222,11 @@ Promene uključuju:
   <string name="morphe_hide_featured_videos_section_title">Сакриј одељак истакнутог садржаја</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Одељак истакнутог садржаја је скривен</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Одељак истакнутог садржаја је приказан</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Omogući filter izbočnice za ispis</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Filter izbočnice za ispis je omogućen</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Filter izbočnice za ispis je onemogućen</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filter izbočnice za ispis</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Унесите имена изборних менија за филтрирање, једно по линији</string>
   <string name="morphe_hide_gaming_section_title">Сакриј дугме „Играње”</string>
   <string name="morphe_hide_gaming_section_summary_on">Одељак за игре је скривен</string>
   <string name="morphe_hide_gaming_section_summary_off">Одељак за игре је приказан</string>
@@ -266,6 +272,11 @@ Promene uključuju:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Приказано у историји гледања</string>
   <string name="morphe_channel_screen_title">Страница канала</string>
   <string name="morphe_channel_screen_summary">Сакријте или прикажите компоненте странице канала</string>
+  <string name="morphe_hide_channel_tab_title">Омогући филтер табеле канала</string>
+  <string name="morphe_hide_channel_tab_summary_on">Филтер табеле канала је омогућен</string>
+  <string name="morphe_hide_channel_tab_summary_off">Филтер табеле канала је онемогућен</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Филтер табова канала</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Унесите имена табова канала за филтрирање, једно по линији</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Сакриј дугме „Здравље”</string>
   <string name="morphe_hide_community_button_summary_on">Дугме „Здравље” је скривено</string>
@@ -655,9 +666,9 @@ Cookies će biti automatski sačuvani ako su ispravni"</string>
   <string name="morphe_disable_translucent_status_bar_title">Онемогући прозирну статусну траку</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Статусна трака је непрозирна</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Статусна трака је непрозирна или прозирна</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Ograničenja:
-• Moguće je da se na vrhu video plejera pojavi crna traka.
-• Sistemske navigacijske trake mogu postati prozirne i nije moguće komentarisati videozapise."</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Ограничења:
+• Може да се појави црна трака на врху видео плејера.
+• Системска навигациона трака може да промени боју у провидна, и тада није могуће да се коментаришу видеа."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Онемогући светлу прозирну траку за навигацију</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Трака за навигацију у светлом режиму је непрозирна</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Трака за навигацију у светлом режиму је непрозирна или прозирна</string>
@@ -675,6 +686,9 @@ Cookies će biti automatski sačuvani ako su ispravni"</string>
   <string name="morphe_hide_toolbar_search_button_title">Сакриј дугме \"Претрага\"</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Дугме „Претрага” је скривено</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Дугме „Претрага” је приказано</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Сакриј дугме „Гласна претрага”</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Дугме „Гласна претрага” је скривено</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Дугме „Гласна претрага” је приказано</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Падајући мени</string>
   <string name="morphe_hide_player_flyout_summary">Сакријте или прикажите предмете у падајућем менију плејера</string>

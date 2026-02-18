@@ -48,16 +48,17 @@ Cu toate acestea, activarea acestei opțiuni va înregistra și unele date ale u
   <string name="morphe_disable_layout_updates_title">Dezactivaţi actualizările layout-ului</string>
   <string name="morphe_disable_layout_updates_summary_on">Layout-ul nu va fi actualizat de server</string>
   <string name="morphe_disable_layout_updates_summary_off">Layout-ul va fi actualizat de server</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Dispozitivul se reface la dispozitivul folosit la instalare.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Dispozitivul revine la dispozitivul folosit la instalarea initiala.
 
-Unele dispozitive server-side pot nu se reface.
+Unele dispozitive server-side pot nu reveni.
 
-Schimbari includ:
-• Componentele din meniul de zbor al jucătorului (sau setările asociate) pot nu funcționa.
-• Cifrele rotative nu sunt animate.
-• Tabulă de bibliotecă este arătată.
-• Secțiunea muzică a descrierii video poate nu funcționa.
-• Butonul de comutare a contului poate nu apare pe tabulă de bibliotecă."</string>
+Schimbari incluse:
+• Componentele din meniul de zbor al jucătorului (sau setările legate) pot nu funcționa.
+• Numerele rotative nu sunt animate.
+• Tabul de bibliotecă este afișat.
+• Secțiunea muzică a descrierii video-ului pot nu funcționa.
+• Elementele meniului de zbor al jucătorului nu pot fi ascunse.
+• Butonul de schimbare a contului poate nu apărea pe tabul de bibliotecă."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Ascunde raftul magazinului creatorului</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Raftul magazinului creatorului de sub playerul video este ascuns.</string>
@@ -221,6 +222,11 @@ Schimbari includ:
   <string name="morphe_hide_featured_videos_section_title">Ascunde videoclipurile recomandate</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Sectiunea cu videoclipuri recomandate este ascunsă</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Sectiunea cu videoclipuri recomandate este afișată</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Activează filtrele meniului lateral al fluxului</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Filtrele meniului lateral al fluxului sunt active</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Filtrele meniului lateral al fluxului sunt dezactivate</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtrele meniului lateral al fluxului</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Introduceţi numele meniurilor pentru filtrări, unul pe linie</string>
   <string name="morphe_hide_gaming_section_title">Ascunde Gaming</string>
   <string name="morphe_hide_gaming_section_summary_on">Sectiunea Gaming este ascunsă</string>
   <string name="morphe_hide_gaming_section_summary_off">Sectiunea Gaming este afișată</string>
@@ -266,6 +272,11 @@ Schimbari includ:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Afișat în istoricul de vizionare</string>
   <string name="morphe_channel_screen_title">Pagina canalului</string>
   <string name="morphe_channel_screen_summary">Ascunde sau afișează componentele paginii canalului</string>
+  <string name="morphe_hide_channel_tab_title">Activează filtru pentru tabul canalului</string>
+  <string name="morphe_hide_channel_tab_summary_on">Filtrul pentru tabul canalului este activat</string>
+  <string name="morphe_hide_channel_tab_summary_off">Filtrul pentru tabul canalului este dezactivat</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtru tabulare canal</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Introduceți numele taburilor canalului pentru filtrarea acestora, unul pe linie</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Ascunde butonul \'Comunitate\'</string>
   <string name="morphe_hide_community_button_summary_on">Butonul \'Comunitate\' este ascuns</string>
@@ -652,8 +663,8 @@ Cookie-urile vor fi salvate automatik daca sunt valide"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Bara de stare este opaca</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Bara de stare este opaca sau translucida</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitâri:
-• O barâ neagrâ poate apârâ la partea superioarâ a jucâtorului video.
-• bara de navigare a sistemului poate fi transparentâ, iar comentariile pe video nu sunt posibile."</string>
+• O barâ neagrâ poate apare la ²nalul jucâtorului video.
+• bara de navigare a sistemului poate fi transparentâ, iar comântarea pe videouri nu este posibilâ."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Dezactivează bara de navigare translucidă deschisă</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Bara de navigare în modul deschis este opacă</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Bara de navigare în modul deschis este opaca sau translucida</string>
@@ -671,6 +682,9 @@ Cookie-urile vor fi salvate automatik daca sunt valide"</string>
   <string name="morphe_hide_toolbar_search_button_title">Ascunde butonul Căutare</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Butonul de căutare este ascuns</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Butonul de căutare este afișat</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Ascunde butonul de căutare vocală</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Butonul de căutare vocală este ascuns</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Butonul de căutare vocală este afișat</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Meniu flyout</string>
   <string name="morphe_hide_player_flyout_summary">Ascunde sau arată elementele de meniu Flyout ale jucătorului</string>

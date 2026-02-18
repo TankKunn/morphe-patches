@@ -56,7 +56,7 @@ Second \"item\" text"</string>
   <string name="morphe_language_title">Bahasa Morphe</string>
   <string name="morphe_language_user_dialog_message">"Terjemahan untuk beberapa bahasa mungkin hilang atau tidak lengkap.
 
-Untuk menerjemahkan bahasa baru atau meningkatkan terjemahan yang sudah ada, kunjungi translate.morphe.software"</string>
+Untuk menerjemahkan bahasa baru atau meningkatkan terjemahan yang sudah ada, kunjungi morphe.software/translate"</string>
   <string name="morphe_language_DEFAULT">Bahasa aplikasi</string>
   <string name="morphe_pref_import_export_title">Impor / Ekspor</string>
   <string name="morphe_pref_import_export_summary">Impor / Ekspor setelan Morphe</string>
@@ -71,7 +71,7 @@ Untuk menerjemahkan bahasa baru atau meningkatkan terjemahan yang sudah ada, kun
   <string name="morphe_settings_about_links_translations">Terjemahan</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Debug</string>
-  <string name="morphe_debug_screen_summary">Mengaktifkan atau menonaktifkan pilihan debugging</string>
+  <string name="morphe_debug_screen_summary">Aktifkan atau nonaktifkan pilihan debugging</string>
   <string name="morphe_debug_title">Pencatatan debug</string>
   <string name="morphe_debug_summary_on">Pencatatan debug diaktifkan</string>
   <string name="morphe_debug_summary_off">Pencatatan debug dinonaktifkan</string>

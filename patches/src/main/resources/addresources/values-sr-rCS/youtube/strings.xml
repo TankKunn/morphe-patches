@@ -53,11 +53,12 @@ Međutim, omogućavanje ovoga će takođe evidentirati neke korisničke podatke,
 Neke server-side layauti mogu da ne vraćaju.
 
 Promene uključuju:
-• Komponenti u izvučnom meniju igrača (ili povezanih postavki) mogu da ne funkcionišu.
-• Brojevi u toku nisu animirani.
+• Komponenti u izborniku igrača (ili povezane postavke) mogu da ne funkcionišu.
+• Brojevi koji se kreću nisu animirani.
 • Tab za biblioteku je prikazan.
 • Muzička sekcija opisa videa može da ne funkcioniše.
-• Dugme za prelazak računa možda neće biti prikazano na tabu za biblioteku."</string>
+• stavke izbornika igrača ne mogu da se sakriju.
+• Dugme za prebačavanje računa možda neće biti prikazano na tabu za biblioteku."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Sakrij policu prodavnice kreatora</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Polica prodavnice kreatora ispod video plejera je skrivena</string>
@@ -221,6 +222,11 @@ Promene uključuju:
   <string name="morphe_hide_featured_videos_section_title">Sakrij istaknute videe</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Odeljak sa istaknutim videima je skriven</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Odeljak sa istaknutim videima je prikazan</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Omogući filter izvučnog menija za ispis</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Filter izvučnog menija za ispis je omogućen</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Filter izvučnog menija za ispis je onemogućen</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filter izvučnog menija za ispis</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Unesite nazive izbornika za filtriranje, po jedan po liniji</string>
   <string name="morphe_hide_gaming_section_title">Sakrij dugme „Remiks”</string>
   <string name="morphe_hide_gaming_section_summary_on">Odeljak za filmove je skriven</string>
   <string name="morphe_hide_gaming_section_summary_off">Odeljak za filmove je prikazan</string>
@@ -266,6 +272,11 @@ Promene uključuju:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Prikazano u istoriji gledanja</string>
   <string name="morphe_channel_screen_title">Stranica kanala</string>
   <string name="morphe_channel_screen_summary">Sakrijte ili prikažite komponente stranice kanala</string>
+  <string name="morphe_hide_channel_tab_title">Omogući filtriranje po kanalu</string>
+  <string name="morphe_hide_channel_tab_summary_on">Filtriranje po kanalu je omogućeno</string>
+  <string name="morphe_hide_channel_tab_summary_off">Filtriranje po kanalu je onemogućeno</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filter po kanalu</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Unesite nazive kanala za filtriranje, po jedan po liniji</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Sakrij dugme „Komentari”</string>
   <string name="morphe_hide_community_button_summary_on">Dugme „Komentari” je skriveno</string>
@@ -657,7 +668,7 @@ Cookies will be saved automatically if they are valid"</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statusna traka je neprozirna ili prozirna</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Ograničenja:
 • Moguće je da se na vrhu video plejera pojavi crna traka.
-• Sistemske navigacione trake mogu postati prozirne i nije moguće komentarisati videozapise."</string>
+• Sistemske navigacione trake mogu postati prozirne, a komentarisanje videozapisa nije moguće."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Onemogući svetlu prozirnu traku za navigaciju</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Traka za navigaciju u svetlom režimu je neprozirna</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Traka za navigaciju u svetlom režimu je neprozirna ili prozirna</string>
@@ -675,6 +686,9 @@ Cookies will be saved automatically if they are valid"</string>
   <string name="morphe_hide_toolbar_search_button_title">Sakrij dugme \"Pretraga\"</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Dugme „Pretraga” je skriveno</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Dugme „Pretraga” je prikazano</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Sakrij dugme „Glasovna pretraga”</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Dugme „Glasovna pretraga” je skriveno</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Dugme „Glasovna pretraga” je prikazano</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Padajući meni</string>
   <string name="morphe_hide_player_flyout_summary">Sakrijte ili prikažite predmete u padajućem meniju plejera</string>

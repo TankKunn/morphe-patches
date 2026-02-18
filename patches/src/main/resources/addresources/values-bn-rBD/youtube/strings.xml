@@ -48,16 +48,17 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_title">লেআউট আপডেট বন্ধ করুন</string>
   <string name="morphe_disable_layout_updates_summary_on">সার্ভার লেআউট আপডেট করবে না</string>
   <string name="morphe_disable_layout_updates_summary_off">সার্ভার লেআউট আপডেট করবে</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"অ্যাপের লেআউটটি প্রথম ইনস্টল করার সময় ব্যবহৃত লেআউটে ফিরে যায়।
+  <string name="morphe_disable_layout_updates_user_dialog_message">"অ্যাপের লেআউট প্রথম ইনস্টল করার সময় ব্যবহৃত লেআউটে ফিরে যায়।
 
-কিছু সার্ভার-সাইড লেআউট ফিরে যেতে পারে না।
+কিছু সার্ভার-সাইড লেআউট ফিরে না যেতে পারে।
 
-বিকল্পগুলি অন্তর্ভুক্ত:
-• প্লেয়ার ফ্লাইআউট মেনু (অথবা সম্পর্কিত সেটিংস) এর উপাদানগুলি কাজ করতে পারে না।
-• রোলিং নম্বরগুলি অ্যানিমেটেড হয় না।
-• লাইব্রেরি ট্যাব প্রদর্শিত হয়।
-• ভিডিও বর্ণনায় মিউজিক বিভাগটি কাজ করতে পারে না।
-• লাইব্রেরি ট্যাবে অ্যাকাউন্ট সুইচ বাটন প্রদর্শিত হতে পারে না।"</string>
+পরিবর্তনগুলি:
+• প্লেয়ার ফ্লাইআউট মেনু (অথবা সম্পর্কিত সেটিংস) এর কম্পোনেন্টগুলি কাজ করতে পারে না।
+• রোলিং নম্বরগুলি অ্যানিমেটেড নয়।
+• লাইব্রেরি ট্যাব দেখানো হয়।
+• ভিডিও বর্ণনায় মিউজিক সেকশন কাজ করতে পারে না।
+• প্লেয়ার ফ্লাইআউট মেনু আইটেমগুলি লুকানো যায় না।
+• লাইব্রেরি ট্যাবে অ্যাকাউন্ট চেঞ্জ বাটন দেখা যায় না।"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">ক্রিয়েটর স্টোর শেল্ফ লুকান</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">ভিডিও প্লেয়ারের নিচে ক্রিয়েটর স্টোর শেলফ লুকানো আছে</string>
@@ -221,6 +222,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_videos_section_title">বিশেষ ভিডিও লুকান</string>
   <string name="morphe_hide_featured_videos_section_summary_on">বিশেষ ভিডিও বিভাগ লুকানো আছে</string>
   <string name="morphe_hide_featured_videos_section_summary_off">বিশেষ ভিডিও বিভাগ দেখানো হচ্ছে</string>
+  <string name="morphe_hide_feed_flyout_menu_title">ফিড ফ্লাইটমেন্যু ফিল্টার চালু করুন</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">ফিড ফ্লাইটমেন্যু ফিল্টার চালু হয়েছে</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">ফিড ফ্লাইটমেন্যু ফিল্টার নিস্ক্রিয় হয়েছে</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">ফিড ফ্লাইটমেন্যু ফিল্টার</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">ফ্লাইটমেনু নামগুলি ফিল্টার করতে, প্রতিটি লাইনে একটি করে লিখুন</string>
   <string name="morphe_hide_gaming_section_title">Remix লুকান</string>
   <string name="morphe_hide_gaming_section_summary_on">গেমিং বিভাগ লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_gaming_section_summary_off">গেমিং বিভাগ প্রদর্শিত হয়েছে</string>
@@ -266,6 +272,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">দেখার ইতিহাসে দেখানো হয়েছে</string>
   <string name="morphe_channel_screen_title">চ্যানেল পৃষ্ঠা</string>
   <string name="morphe_channel_screen_summary">চ্যানেল পৃষ্ঠার উপাদানগুলি লুকান বা দেখান</string>
+  <string name="morphe_hide_channel_tab_title">চ্যানেল ট্যাব ফিল্টার সক্রিয় করুন</string>
+  <string name="morphe_hide_channel_tab_summary_on">চ্যানেল ট্যাব ফিল্টার সক্রিয় আছে</string>
+  <string name="morphe_hide_channel_tab_summary_off">চ্যানেল ট্যাব ফিল্টার নিস্ক্রিয় আছে</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">চ্যানেল ট্যাব ফিল্টার</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">চ্যানেল ট্যাবের নাম লিখুন, ফিল্টার করতে, প্রতিটি লাইনে একটি</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">\'কমিউনিটি\' বোতামটি লুকান</string>
   <string name="morphe_hide_community_button_summary_on">মন্তব্য বোতাম লুকিয়ে রয়েছে</string>
@@ -656,8 +667,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">স্ট্যাটাস বারটি অস্বচ্ছ</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">স্ট্যাটাস বারটি অস্বচ্ছ বা স্বচ্ছ</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"সীমাবদ্ধতা:
-• ভিডিও প্লেয়ারের শীর্ষে কালো বর খুঁজে পাওয়া যেতে পারে।
-• সিস্টেম নেভিগেশন বার ট্রান্সলুসেন্টে পরিবর্তিত হতে পারে এবং ভিডিওতে মন্তব্য করার সুযোগ নেই।"</string>
+• ভিডিও প্লেয়ারে শীর্ষে কালো বর খুঁজে পাওয়ার পারে.
+• সিস্টেম নেভিগেশন বার ট্রান্সলুসেন্ট হয়ে যেতে পারে, এবং ভিডিওতে মন্তব্য করতে পারবেন না।"</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">অর্ধস্বচ্ছ হালকা বার নিষ্ক্রিয় করুন</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">হালকা মোড নেভিগেশন বার অস্বচ্ছ</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">লাইট মোড ন্যাভিগেশন বারটি অস্বচ্ছ বা স্বচ্ছ</string>
@@ -675,6 +686,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">লুকান অনুসন্ধান বাটন</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">অনুসন্ধান বাটন লুকানো আছে</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">অনুসন্ধান বাটন দেখানো হয়েছে</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">অনুসন্ধান বাটন লুকান</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">অনুসন্ধান বাটন লুকানো আছে</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">অনুসন্ধান বাটন দেখানো হয়েছে</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">ফ্লাইআউট মেনু</string>
   <string name="morphe_hide_player_flyout_summary">ফ্লাইআউট মেনুর আইটেম দেখান বা লুকান</string>

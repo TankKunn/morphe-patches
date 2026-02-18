@@ -1,81 +1,94 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ */
 package app.morphe.patches.reddit.ad
 
 import app.morphe.patcher.Fingerprint
-import app.morphe.patcher.OpcodesFilter
+import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.methodCall
+import app.morphe.patcher.opcode
 import app.morphe.patcher.string
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
-internal val listingFingerprint = Fingerprint(
-    returnType = "V",
+internal object ListingFingerprint : Fingerprint(
+    definingClass = "Lcom/reddit/domain/model/listing/Listing;",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
-    filters = OpcodesFilter.opcodesToFilters(
-        Opcode.INVOKE_DIRECT,
-        Opcode.IPUT_OBJECT
-    ),
-    // "children" are present throughout multiple versions
-    strings = listOf(
-        "children",
-        "uxExperiences"
-    ),
-    custom = { _, classDef ->
-        classDef.type.endsWith("/Listing;")
-    },
+    returnType = "V",
+    filters = listOf(
+        string("children"),
+        string("uxExperiences"),
+        opcode(Opcode.INVOKE_DIRECT),
+        fieldAccess(
+            opcode = Opcode.IPUT_OBJECT,
+            definingClass = "this",
+            name = "children"
+        )
+    )
 )
 
-internal val submittedListingFingerprint = Fingerprint(
-    returnType = "V",
+internal object SubmittedListingFingerprint : Fingerprint(
+    definingClass = "Lcom/reddit/domain/model/listing/SubmittedListing;",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
-    filters = OpcodesFilter.opcodesToFilters(
-        Opcode.INVOKE_DIRECT,
-        Opcode.IPUT_OBJECT
-    ),
-    // "children" are present throughout multiple versions
-    strings = listOf(
-        "children",
-        "videoUploads"
-    ),
-    custom = { _, classDef ->
-        classDef.type.endsWith("/SubmittedListing;")
-    },
+    returnType = "V",
+    filters = listOf(
+        string("children"),
+        string("videoUploads"),
+        opcode(Opcode.INVOKE_DIRECT),
+        opcode(Opcode.IPUT_OBJECT),
+    )
 )
 
-internal val adPostSectionConstructorFingerprint = Fingerprint(
+internal object AdPostSectionConstructorFingerprint : Fingerprint(
+    name = "<init>",
     returnType = "V",
     filters = listOf(
         string("sections")
-    ),
-    custom = { methodDef, _ ->
-        methodDef.name == "<init>"
-    }
+    )
 )
 
-internal val adPostSectionToStringFingerprint = Fingerprint(
+internal object AdPostSectionToStringFingerprint : Fingerprint(
+    name = "toString",
     returnType = "Ljava/lang/String;",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
-    parameters = emptyList(),
-    strings = listOf(
-        "AdPostSection(linkId=",
-        ", sections=",
-    ),
-    custom = { methodDef, _ ->
-        methodDef.name == "toString"
-    }
+    parameters = listOf(),
+    filters = listOf(
+        string("AdPostSection(linkId=")
+    )
 )
 
-internal val commentsViewModelConstructorFingerprint = Fingerprint(
-    returnType = "V",
-    custom = { methodDef, classDef ->
-        classDef.superclass == "Lcom/reddit/screen/presentation/CompositionViewModel;" &&
-                methodDef.definingClass.endsWith("/CommentsViewModel;") &&
-                methodDef.name == "<init>"
-    },
+/**
+ * 2026.04+
+ */
+internal object CommentsAdStateToStringFingerprint : Fingerprint(
+    name = "toString",
+    returnType = "Ljava/lang/String;",
+    filters = listOf(
+        string("CommentsAdState(conversationAdViewState="),
+        string(", adsLoadCompleted="),
+    )
 )
 
-internal val immutableListBuilderFingerprint = Fingerprint(
+internal object CommentsViewModelAdLoaderFingerprint : Fingerprint(
+    definingClass = "Lcom/reddit/comments/presentation/CommentsViewModel;",
     returnType = "V",
-    parameters = emptyList(),
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    parameters = listOf("Z", "L", "I"),
+    filters = listOf(
+        methodCall(
+            opcode = Opcode.INVOKE_DIRECT,
+            name = "<init>",
+            parameters = listOf("Z", "I"),
+            returnType = "V"
+        )
+    )
+)
+
+internal object ImmutableListBuilderFingerprint : Fingerprint(
+    name = "<clinit>",
+    returnType = "V",
+    parameters = listOf(),
     filters = listOf(
         methodCall(
             opcode = Opcode.INVOKE_STATIC,
@@ -86,18 +99,5 @@ internal val immutableListBuilderFingerprint = Fingerprint(
             opcode = Opcode.INVOKE_STATIC,
             parameters = listOf("Ljava/lang/Iterable;")
         )
-    ),
-    custom = { methodDef, _ ->
-        methodDef.name == "<clinit>"
-    }
-)
-
-internal val postDetailAdLoaderFingerprint = Fingerprint(
-    returnType = "L",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
-    parameters = listOf("L"),
-    custom = { methodDef, classDef ->
-        methodDef.name == "invokeSuspend" &&
-            classDef.type.contains("/RedditPostDetailAdLoader\$loadPostDetailAds$")
-    }
+    )
 )

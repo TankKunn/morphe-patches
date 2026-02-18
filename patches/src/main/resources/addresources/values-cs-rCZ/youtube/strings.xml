@@ -48,16 +48,17 @@ Povolením této možnosti se však budou zaznamenávat i některá uživatelsk�
   <string name="morphe_disable_layout_updates_title">Zakázat aktualizace rozložení</string>
   <string name="morphe_disable_layout_updates_summary_on">Rozložení nebude aktualizováno serverem</string>
   <string name="morphe_disable_layout_updates_summary_off">Rozložení bude aktualizováno serverem</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Položka aplikace se vrací na původní nastavení při prvním použití.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Rozloha aplikace se vrací na rozlohu použitou při prvním instalaci.
 
-Některé serverové nastavení může nefungovat.
+Některé serverové rozlohy mohou nevrátit.
 
 Změny zahrnují:
-• Komponenty v nabídce přehrávače (nebo související nastavení) mohou nefungovat.
+• Komponenty v nabídce player flyout menu (nebo související nastavení) mohou nefungovat.
 • Čísla se neanimují.
-• Zobrazí se záložka knihovna.
-• Místo hudby v popisu videa může nefungovat.
-• Tlačítko pro přepínání účtu může být na záložce knihovna chybějící."</string>
+• Zobrazuje se záložka knihovna.
+• Sekce hudby v popisu videa může nefungovat.
+• položky nabídky player flyout menu nelze skryti.
+• Tlačítko pro přepnutí účtu může nevyjít na záložce knihovna."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Skrýt poličku obchodu tvůrce</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Police s obchodem tvůrce pod přehrávačem videa je skryta</string>
@@ -222,6 +223,11 @@ Změny zahrnují:
   <string name="morphe_hide_featured_videos_section_title">Skrýt odkazované videa</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Sekce odkazovaných videí je skryta</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Sekce odkazovaných videí je zobrazená</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Povolit filtr výběru zboží</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Filtr výběru zboží je povolen</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Filtr výběru zboží je zakázán</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtr výběru zboží</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Zadejte názvy flyout menu k filtrování, jeden na řádku</string>
   <string name="morphe_hide_gaming_section_title">Skrýt Hru</string>
   <string name="morphe_hide_gaming_section_summary_on">Sekce Hry je skryta</string>
   <string name="morphe_hide_gaming_section_summary_off">Sekce Hry je zobrazená</string>
@@ -267,6 +273,11 @@ Změny zahrnují:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Zobrazené v historii sledování</string>
   <string name="morphe_channel_screen_title">Stránka kanálu</string>
   <string name="morphe_channel_screen_summary">Skrýt nebo zobrazit komponenty stránky kanálu</string>
+  <string name="morphe_hide_channel_tab_title">Povolit filtr záložky kanálu</string>
+  <string name="morphe_hide_channel_tab_summary_on">Filtr záložky kanálu je povolen</string>
+  <string name="morphe_hide_channel_tab_summary_off">Filtr záložky kanálu je zakázán</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtr pro kanálovou kartu</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Zadejte názvy kanálových karet pro filtrování, po jednom na řádek</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Skrýt tlačítko Spoluprace</string>
   <string name="morphe_hide_community_button_summary_on">Tlačítko Spoluprace je skryté</string>
@@ -676,6 +687,9 @@ Cookies budou automaticky uloženy, pokud jsou platné."</string>
   <string name="morphe_hide_toolbar_search_button_title">Skrýt tlačítko Hledat</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Tlačítko vyhledávání je skryté</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Tlačítko vyhledávání je zobrazené</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Skrýt tlačítko hledání hlasem</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Tlačítko hledání hlasem je skryté</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Tlačítko hledání hlasem je zobrazené</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Vyskakovací menu</string>
   <string name="morphe_hide_player_flyout_summary">Skrýt nebo zobrazit položky vyskakovacího menu přehrávače</string>

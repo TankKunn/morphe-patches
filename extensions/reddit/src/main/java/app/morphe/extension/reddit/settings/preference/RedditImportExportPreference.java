@@ -1,3 +1,7 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ */
 package app.morphe.extension.reddit.settings.preference;
 
 import static app.morphe.extension.shared.StringRef.StringKeyLookup;
@@ -8,6 +12,7 @@ import java.util.Map;
 
 import app.morphe.extension.shared.settings.preference.ImportExportPreference;
 
+@SuppressWarnings("deprecation")
 public class RedditImportExportPreference extends ImportExportPreference {
     private static final StringKeyLookup strings = new StringKeyLookup(
             Map.of(
@@ -25,7 +30,7 @@ public class RedditImportExportPreference extends ImportExportPreference {
         super(context);
 
         this.setTitle("Import / Export");
-        this.setSummary("Import / Export Morphe settings.");
+        this.setSummary("Import / Export Morphe settings");
     }
 
     protected String getString(String key, Object... args) {

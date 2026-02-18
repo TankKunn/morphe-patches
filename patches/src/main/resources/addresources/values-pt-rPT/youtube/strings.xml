@@ -48,15 +48,16 @@ No entanto, ativar isto também irá registar alguns dados do utilizador, como o
   <string name="morphe_disable_layout_updates_title">Desativar atualizações de layout</string>
   <string name="morphe_disable_layout_updates_summary_on">O layout não será atualizado pelo servidor</string>
   <string name="morphe_disable_layout_updates_summary_off">O layout será atualizado pelo servidor</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"A disposição do aplicativo volta para a disposição usada quando foi instalado pela primeira vez.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"A layout do aplicativo volta para a layout usada quando primeiro instalado.
 
-Algumas disposições do servidor podem não voltar.
+Algumas layouts do lado do servidor podem não voltar.
 
-As alterações incluem:
-• Os componentes no menu suspenso do player (ou as configurações relacionadas) podem não funcionar.
-• Os números rodantes não são animados.
-• A guia da biblioteca é exibida.
+As mudanças incluem:
+• Os componentes no menu de voo do player (ou as configurações relacionadas) podem não funcionar.
+• Os números rolantes não são animados.
+• A guia da biblioteca é mostrada.
 • A seção de música da descrição do vídeo pode não funcionar.
+• Os itens do menu de voo do player não podem ser ocultados.
 • O botão de alternar de conta pode não aparecer na guia da biblioteca."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Ocultar prateleira da loja do criador</string>
@@ -221,6 +222,11 @@ As alterações incluem:
   <string name="morphe_hide_featured_videos_section_title">Ocultar vídeos relacionados</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Seção de vídeos em destaque está oculta</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Seção de vídeos em destaque está visível</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Habilitar filtro do menu de voo de feed</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Filtro do menu de voo de feed está habilitado</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Filtro do menu de voo de feed está desativado</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtro do menu de voo de feed</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Insira os nomes do menu de flyout para filtrar, um por linha</string>
   <string name="morphe_hide_gaming_section_title">Ocultar Jogos</string>
   <string name="morphe_hide_gaming_section_summary_on">Seção de Jogos está oculta</string>
   <string name="morphe_hide_gaming_section_summary_off">Seção de Jogos está visível</string>
@@ -266,6 +272,11 @@ As alterações incluem:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Visível no histórico de exibição</string>
   <string name="morphe_channel_screen_title">Página do canal</string>
   <string name="morphe_channel_screen_summary">Ocultar ou exibir componentes da página do canal</string>
+  <string name="morphe_hide_channel_tab_title">Ativar filtro de guia de canal</string>
+  <string name="morphe_hide_channel_tab_summary_on">Filtro de guia de canal ativado</string>
+  <string name="morphe_hide_channel_tab_summary_off">Filtro de guia de canal desativado</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filtro de guia de canal</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Digite os nomes das guias do canal para filtrar, um por linha</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Ocultar botão \'Comunidade\'</string>
   <string name="morphe_hide_community_button_summary_on">Botão \'Comunidade\' está oculto</string>
@@ -655,9 +666,9 @@ Os cookies serão salvos automaticamente se forem válidos"</string>
   <string name="morphe_disable_translucent_status_bar_title">Desativar a barra de status translúcida</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">A barra de status é opaca</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">A barra de status é opaca ou translúcida</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitations:
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitações:
 • Uma barra preta pode aparecer na parte superior do reprodutor de vídeo.
-• A barra de navegação do sistema pode mudar para transparente e não é possível comentar em vídeos."</string>
+• A barra de navegação do sistema pode tornar-se transparente, e não é possível comentar em vídeos."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Desativar a barra translúcida clara</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">A barra de navegação no modo claro é opaca</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">A barra de navegação em modo claro é opaca ou translúcida</string>
@@ -675,6 +686,9 @@ Os cookies serão salvos automaticamente se forem válidos"</string>
   <string name="morphe_hide_toolbar_search_button_title">Ocultar botão de pesquisa</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">O botão de pesquisa está oculto</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">O botão de pesquisa está visível</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Ocultar botão de pesquisa por voz</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">O botão de pesquisa por voz está oculto</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">O botão de pesquisa por voz está visível</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menu suspenso</string>
   <string name="morphe_hide_player_flyout_summary">Esconder ou mostrar itens do menu de saída do player</string>

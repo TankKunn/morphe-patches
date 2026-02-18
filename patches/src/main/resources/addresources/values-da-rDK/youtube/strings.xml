@@ -48,16 +48,17 @@ Aktivering af dette vil dog også logge nogle brugerdata, såsom din IP-adresse.
   <string name="morphe_disable_layout_updates_title">Deaktiver opdateringer af layout</string>
   <string name="morphe_disable_layout_updates_summary_on">Layout vil ikke blive opdateret af serveren</string>
   <string name="morphe_disable_layout_updates_summary_off">Layout vil blive opdateret af serveren</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Appens udseende går tilbage til det udseende, der blev brugt ved første installation.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"App layout vender tilbage til den layout, der blev brugt ved første installation.
 
-Nogle server-side udseender kan ikke gå tilbage.
+Nogle server-side layouts kan ikke vende tilbage.
 
 Ændringer inkluderer:
-• Komponenter i spillerflydervinduesmenu (eller relaterede indstillinger) kan ikke fungere.
-• Rullende tal er ikke animerede.
+• Komponenter i spiller flytmenu (eller relaterede indstillinger) kan ikke fungere.
+• Rullende tal er ikke animeret.
 • Biblioteksfladen vises.
 • Musiksektionen af videobeskrivelse kan ikke fungere.
-• Kontobytteskнопка kan ikke vises på Biblioteksfladen."</string>
+• Spiller flytmenu items kan ikke skjules.
+• Kontobyttesknap kan ikke vises på biblioteksfladen."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Skjul butikshylde for skabere</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Opretterbutikshylde under videoafspiller er skjult</string>
@@ -221,6 +222,11 @@ Nogle server-side udseender kan ikke gå tilbage.
   <string name="morphe_hide_featured_videos_section_title">Skjul \'Fremhævet videoer\'</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Sektionen for \'Fremhævet videoer\' er skjult</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Sektionen for \'Fremhævet videoer\' er vist</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Aktiver filflytmenålteringsfilter</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Filflytmenålteringsfilter er aktiveret</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Filflytmenålteringsfilter er deaktiveret</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filflytmenålteringsfilter</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Angiv flyout-menunavnene, der skal filtreres, et prå linje</string>
   <string name="morphe_hide_gaming_section_title">Skjul \'Gaming\'</string>
   <string name="morphe_hide_gaming_section_summary_on">Sektionen for \'Gaming\' er skjult</string>
   <string name="morphe_hide_gaming_section_summary_off">Sektionen for \'Gaming\' er vist</string>
@@ -266,6 +272,11 @@ Nogle server-side udseender kan ikke gå tilbage.
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Vist i seerhistorik</string>
   <string name="morphe_channel_screen_title">Kanalside</string>
   <string name="morphe_channel_screen_summary">Skjul eller vis kanalsidekomponenter</string>
+  <string name="morphe_hide_channel_tab_title">Aktiver kanalflådefilter</string>
+  <string name="morphe_hide_channel_tab_summary_on">Kanalflådefilter er aktiveret</string>
+  <string name="morphe_hide_channel_tab_summary_off">Kanalflådefilter er deaktiveret</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Filterkanalflade</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Angiv kanalfladenavne, der skal filtreres, ét pr. linje</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Skjul \'Community\' knappen</string>
   <string name="morphe_hide_community_button_summary_on">Knappen \'Community\' er skjult</string>
@@ -655,9 +666,9 @@ Tekstlinjer vil blive gemt automatisk, hvis de er gyldige"</string>
   <string name="morphe_disable_translucent_status_bar_title">Deaktiver gennemsigtig statuslinje</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statuslinjen er opak</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statuslinjen er opak eller gennemsigtig</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">" Begrænsninger:
-• En sort streg kan dukke op i toppen af videoafspilleren.
-• Systemnavigationsbaren kan blive gennemsigtig, og det er ikke muligt at kommentere videoer."</string>
+  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Begrænsninger:
+• En sort streg kan vises øverst på videoafspilleren.
+• Systemnavigationsbaren kan blive transparent, og det er ikke muligt at kommentere videoer."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Deaktiver lys gennemsigtig linje</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Navigationslinjen i lys tilstand er ikke gennemsigtig</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Lys tilstand navigationslinjen er opak eller gennemsigtig</string>
@@ -675,6 +686,9 @@ Tekstlinjer vil blive gemt automatisk, hvis de er gyldige"</string>
   <string name="morphe_hide_toolbar_search_button_title">Skjul \"Søg\"-knappen</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Søgeknappen er skjult</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Søgeknappen vises</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Skjul Stemmesøgning-knap</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Stemmesøgning-knappen er skjult</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Stemmesøgning-knappen vises</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Udfyldningsmenu</string>
   <string name="morphe_hide_player_flyout_summary">Skjul eller vis spiller flyout menupunkter</string>

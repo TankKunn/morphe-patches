@@ -1,5 +1,5 @@
 {
-  "version": "1.13.0",
+  "version": "1.14.0-dev.9",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -368,6 +368,40 @@
       "options": []
     },
     {
+      "name": "Disable DRC audio",
+      "description": "Adds an option to disable dynamic range compression (DRC).",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch",
+        "BytecodePatch"
+      ],
+      "compatiblePackages": {
+        "com.google.android.apps.youtube.music": [
+          "8.40.54",
+          "8.10.52",
+          "7.29.52"
+        ]
+      },
+      "options": []
+    },
+    {
+      "name": "Disable DRC audio",
+      "description": "Adds an option to disable dynamic range compression (DRC).",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch",
+        "BytecodePatch"
+      ],
+      "compatiblePackages": {
+        "com.google.android.youtube": [
+          "20.40.45",
+          "20.31.42",
+          "20.21.37"
+        ]
+      },
+      "options": []
+    },
+    {
       "name": "Disable double tap actions",
       "description": "Adds an option to disable player double tap gestures.",
       "use": true,
@@ -479,8 +513,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -771,8 +806,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -786,8 +822,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -928,7 +965,8 @@
         "ResourcePatch",
         "BytecodePatch",
         "ResourcePatch",
-        "ResourcePatch"
+        "ResourcePatch",
+        "BytecodePatch"
       ],
       "compatiblePackages": {
         "com.google.android.youtube": [
@@ -965,8 +1003,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1017,8 +1056,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1050,8 +1090,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1193,29 +1234,13 @@
       "description": "Adds an option to skip over redirection URLs in external links.",
       "use": true,
       "dependencies": [
-        "BytecodePatch",
         "BytecodePatch"
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
-        ]
-      },
-      "options": []
-    },
-    {
-      "name": "Open links externally",
-      "description": "Adds an option to always open links in your browser instead of in the in-app-browser.",
-      "use": true,
-      "dependencies": [
-        "BytecodePatch",
-        "BytecodePatch"
-      ],
-      "compatiblePackages": {
-        "com.reddit.frontpage": [
-          "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1343,8 +1368,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1413,8 +1439,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1465,8 +1492,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
+          "2025.48.0"
         ]
       },
       "options": []
@@ -1558,49 +1586,9 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.04.0",
           "2026.03.0",
-          "2025.43.0"
-        ]
-      },
-      "options": []
-    },
-    {
-      "name": "Spoof video streams",
-      "description": "Adds options to spoof the client video streams to fix playback.",
-      "use": false,
-      "dependencies": [
-        "BytecodePatch",
-        "BytecodePatch",
-        "ResourcePatch",
-        "BytecodePatch",
-        "BytecodePatch",
-        "RawResourcePatch"
-      ],
-      "compatiblePackages": {
-        "com.google.android.apps.youtube.music": [
-          "8.40.54",
-          "8.10.52",
-          "7.29.52"
-        ]
-      },
-      "options": []
-    },
-    {
-      "name": "Spoof video streams",
-      "description": "Adds options to spoof the client video streams to fix playback.",
-      "use": false,
-      "dependencies": [
-        "BytecodePatch",
-        "BytecodePatch",
-        "ResourcePatch",
-        "BytecodePatch",
-        "RawResourcePatch"
-      ],
-      "compatiblePackages": {
-        "com.google.android.youtube": [
-          "20.40.45",
-          "20.31.42",
-          "20.21.37"
+          "2025.48.0"
         ]
       },
       "options": []

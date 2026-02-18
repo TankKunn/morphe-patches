@@ -221,6 +221,11 @@ Perubahan termasuk:
   <string name="morphe_hide_featured_videos_section_title">Sembunyikan video Unggulan</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Bagian video unggulan disembunyikan</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Bagian video unggulan ditampilkan</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Aktifkan penyaring menu umpan flyout</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Penyaring menu umpan flyout diaktifkan</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Penyaring menu umpan flyout dinonaktifkan</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Penyaring menu umpan flyout</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Masukkan nama menu flyout untuk disaring, satu per baris</string>
   <string name="morphe_hide_gaming_section_title">Sembunyikan Gaming</string>
   <string name="morphe_hide_gaming_section_summary_on">Bagian Gaming disembunyikan</string>
   <string name="morphe_hide_gaming_section_summary_off">Bagian Gaming ditampilkan</string>
@@ -266,6 +271,11 @@ Perubahan termasuk:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Ditampilkan di riwayat tontonan</string>
   <string name="morphe_channel_screen_title">Halaman saluran</string>
   <string name="morphe_channel_screen_summary">Sembunyikan atau tampilkan komponen halaman saluran</string>
+  <string name="morphe_hide_channel_tab_title">Aktifkan penyaring tab saluran</string>
+  <string name="morphe_hide_channel_tab_summary_on">Penyaring tab saluran diaktifkan</string>
+  <string name="morphe_hide_channel_tab_summary_off">Penyaring tab saluran dinonaktifkan</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Penyaring tab saluran</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Masukkan nama tab saluran untuk disaring, satu per baris</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Sembunyikan tombol Komunitas</string>
   <string name="morphe_hide_community_button_summary_on">Tombol komunitas disembunyikan</string>
@@ -463,9 +473,9 @@ Keterbatasan
 Verifikasi nama paket sudah benar dan aplikasi sudah terpasang"</string>
   <string name="morphe_external_downloader_empty_warning">Nama paket tidak boleh kosong</string>
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
-  <string name="morphe_disable_precise_seeking_gesture_title">Matikan gerakan pencarian presisi</string>
-  <string name="morphe_disable_precise_seeking_gesture_summary_on">Gerakan dinonaktifkan</string>
-  <string name="morphe_disable_precise_seeking_gesture_summary_off">Gerakan diaktifkan</string>
+  <string name="morphe_disable_precise_seeking_gesture_title">Nonaktifkan gerakan pencarian presisi</string>
+  <string name="morphe_disable_precise_seeking_gesture_summary_on">Gerakan pencarian yang presisi dinonaktifkan</string>
+  <string name="morphe_disable_precise_seeking_gesture_summary_off">Gerakan pencarian yang presisi diaktifkan</string>
   <!-- interaction.seekbar.enableSeekbarTappingPatch -->
   <string name="morphe_seekbar_tapping_title">Aktifkan ketuk untuk mencari</string>
   <string name="morphe_seekbar_tapping_summary_on">Ketuk untuk mencari diaktifkan</string>
@@ -656,8 +666,8 @@ Cookie akan disimpan secara otomatis jika sah"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Bilah status buram</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Bilah status buram atau tembus pandang</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Batasan:
-• Baris hitam mungkin muncul di bagian atas pemutar video.
-• Bilah navigasi sistem dapat berubah menjadi transparan dan tidak mungkin untuk mengomentari video."</string>
+• Garis hitam mungkin muncul di bagian atas pemutar video.
+• Bilah navigasi sistem dapat berubah menjadi transparan, dan tidak mungkin untuk mengomentari video."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Nonaktifkan bilah tembus cahaya terang</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Bilah navigasi mode terang adalah buram</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Bilah navigasi mode terang buram atau tembus pandang</string>
@@ -675,6 +685,9 @@ Cookie akan disimpan secara otomatis jika sah"</string>
   <string name="morphe_hide_toolbar_search_button_title">Sembunyikan tombol Pencarian</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Tombol pencarian disembunyikan</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Tombol pencarian ditampilkan</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Sembunyikan tombol pencarian Suara</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Tombol pencarian Suara disembunyikan</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Tombol pencarian Suara ditampilkan</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menu flyout</string>
   <string name="morphe_hide_player_flyout_summary">Sembunyikan atau tampilkan item menu pemutar flyout</string>
@@ -951,7 +964,7 @@ Pengaturan → Pemutaran → Putar otomatis video berikutnya"</string>
   <string name="morphe_hide_player_popup_panels_summary_off">Panel pesan timbul pemutar ditampilkan</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Keluar dari mode layar penuh di akhir video</string>
-  <string name="morphe_exit_fullscreen_entry_1">Nonaktif</string>
+  <string name="morphe_exit_fullscreen_entry_1">Dinonaktifkan</string>
   <string name="morphe_exit_fullscreen_entry_2">Potret</string>
   <string name="morphe_exit_fullscreen_entry_3">Lanskap</string>
   <string name="morphe_exit_fullscreen_entry_4">Potret dan lanskap</string>
@@ -1284,7 +1297,7 @@ Jika kemudian dimatikan, disarankan untuk menghapus data aplikasi untuk mencegah
 Batasan: Menggunakan tombol kembali pada toolbar mungkin tidak berfungsi"</string>
   <string name="morphe_change_start_page_always_summary_off">Halaman awal hanya diubah saat aplikasi dimulai</string>
   <!-- layout.startupshortsreset.disableResumingShortsOnStartupPatch -->
-  <string name="morphe_disable_resuming_shorts_player_title">Matikan melanjutkan pemutar video Shorts</string>
+  <string name="morphe_disable_resuming_shorts_player_title">Nonaktifkan melanjutkan pemutar Shorts</string>
   <string name="morphe_disable_resuming_shorts_player_summary_on">Pemutaran Shorts tidak akan dilanjutkan saat aplikasi dimulai</string>
   <string name="morphe_disable_resuming_shorts_player_summary_off">Pemutaran Shorts akan dilanjutkan saat aplikasi dimulai</string>
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
@@ -1303,7 +1316,7 @@ Batasan: Menggunakan tombol kembali pada toolbar mungkin tidak berfungsi"</strin
   <string name="morphe_miniplayer_screen_title">Pemutar Mini</string>
   <string name="morphe_miniplayer_screen_summary">Ubah gaya pemutar mini dalam aplikasi</string>
   <string name="morphe_miniplayer_type_title">Jenis pemutar mini</string>
-  <string name="morphe_miniplayer_type_entry_0">Nonaktif</string>
+  <string name="morphe_miniplayer_type_entry_0">Dinonaktifkan</string>
   <string name="morphe_miniplayer_type_entry_1">Bawaan</string>
   <string name="morphe_miniplayer_type_entry_2">Minimal</string>
   <string name="morphe_miniplayer_type_entry_3">Tablet</string>
@@ -1355,7 +1368,7 @@ Gesek untuk memperluas atau menutup"</string>
   <string name="morphe_gradient_loading_screen_summary_on">Layar pemuatan akan memiliki latar belakang gradien</string>
   <string name="morphe_gradient_loading_screen_summary_off">Layar pemuatan akan memiliki latar belakang yang solid</string>
   <string name="morphe_splash_screen_animation_style_title">Gaya layar pembuka</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Nonaktif</string>
+  <string name="morphe_splash_screen_animation_style_entry_1">Dinonaktifkan</string>
   <string name="morphe_splash_screen_animation_style_entry_2">Berwarna</string>
   <string name="morphe_splash_screen_animation_style_entry_3">Hitam dan putih</string>
   <string name="morphe_seekbar_custom_color_title">Aktifkan warna seekbar khusus</string>
@@ -1383,7 +1396,7 @@ Mengaktifkan ini dapat memperbaiki gambar yang hilang yang diblokir di beberapa 
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_alt_thumbnail_home_title">Tab beranda</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">Bilah Langganan</string>
+  <string name="morphe_alt_thumbnail_subscription_title">Tab Langganan</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_alt_thumbnail_library_title">Tab Anda</string>
   <string name="morphe_alt_thumbnail_player_title">Daftar putar &amp; rekomendasi pemutar</string>
@@ -1446,7 +1459,7 @@ Mengaktifkan ini dapat membuka kualitas video yang lebih tinggi"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Nonaktifkan sentuh getar urungkan pencarian</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Sentuh getar urungkan pencarian dinonaktifkan</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Sentuh getar urungkan pencarian diaktifkan</string>
-  <string name="morphe_disable_haptic_feedback_zoom_title">Matikan sentuh getar zoom</string>
+  <string name="morphe_disable_haptic_feedback_zoom_title">Nonaktifkan sentuh getar zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Sentuh getar zoom dinonaktifkan</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Sentuh getar zoom diaktifkan</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->

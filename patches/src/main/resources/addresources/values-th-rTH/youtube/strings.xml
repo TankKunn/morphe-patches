@@ -48,15 +48,16 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_title">ปิดการอัปเดตรูปแบบ</string>
   <string name="morphe_disable_layout_updates_summary_on">รูปแบบจะไม่ได้รับการอัปเดตจากเซิร์ฟเวอร์</string>
   <string name="morphe_disable_layout_updates_summary_off">รูปแบบจะได้รับการอัปเดตจากเซิร์ฟเวอร์</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"การจัดวางแอปพลิเคชันจะกลับไปใช้งานที่ใช้เมื่อติดตั้งครั้งแรก
+  <string name="morphe_disable_layout_updates_user_dialog_message">"การวางแผนแอปพลิเคชันจะกลับไปใช้แผนที่ใช้เมื่อติดตั้งครั้งแรก
 
-บางการจัดวางจากเซิร์ฟเวอร์อาจไม่กลับไป
+บางแผนที่ด้านเซิร์ฟเวอร์อาจไม่กลับมา
 
-การเปลี่ยนแปลงรวมไปถึง:
-• ส่วนประกอบในเมนูตัวเลือกของผู้เล่น (หรือการตั้งค่าเกี่ยวข้อง) อาจไม่ทำงาน
-• เลขหมุนไม่ได้รับการแอนิเมชัน
+การเปลี่ยนแปลงรวมถึง:
+• ส่วนประกอบในเมนูตัวเลือกของเพลเยอร์ (หรือการตั้งค่าเกี่ยวข้อง) อาจไม่ทำงาน
+• เลขปริ้นท์ไม่ได้รับการเคลื่อนไหว
 • แท็บไลบรารีจะแสดง
 • ส่วนเพลงของคำอธิบายวิดีโออาจไม่ทำงาน
+• สิ่งที่แสดงในเมนูตัวเลือกของเพลเยอร์ไม่สามารถซ่อนได้
 • ปุ่มสลับบัญชีอาจไม่ปรากฏบนแท็บไลบรารี"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">ซ่อนชั้นวางร้านค้าของผู้สร้าง</string>
@@ -221,6 +222,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_videos_section_title">ซ่อนวิดีโอที่เกี่ยวข้อง</string>
   <string name="morphe_hide_featured_videos_section_summary_on">ส่วนเนื้อหาแนะนำถูกซ่อนอยู่</string>
   <string name="morphe_hide_featured_videos_section_summary_off">ส่วนเนื้อหาแนะนำถูกแสดง</string>
+  <string name="morphe_hide_feed_flyout_menu_title">เปิดตัวกรองเมนูฟลายเอาท์ฟีด</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">ตัวกรองเมนูฟลายเอาท์ฟีดถูกเปิด</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">ตัวกรองเมนูฟลายเอาท์ฟีดถูกปิด</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">ตัวกรองเมนูฟลายเอาท์ฟีด</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">ป้อนชื่อเมนูflyoutเพื่อกรองโดยแต่ละบรรทัด</string>
   <string name="morphe_hide_gaming_section_title">ซ่อนปุ่มถาม</string>
   <string name="morphe_hide_gaming_section_summary_on">ส่วนภาพยนตร์ถูกซ่อนไว้</string>
   <string name="morphe_hide_gaming_section_summary_off">ส่วนภาพยนตร์แสดงอยู่</string>
@@ -266,6 +272,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">แสดงในประวัติการดู</string>
   <string name="morphe_channel_screen_title">หน้าช่อง</string>
   <string name="morphe_channel_screen_summary">ซ่อนหรือแสดงองค์ประกอบของหน้าช่อง</string>
+  <string name="morphe_hide_channel_tab_title">เปิดใช้งานตัวกรองแท็บช่อง</string>
+  <string name="morphe_hide_channel_tab_summary_on">ตัวกรองแท็บช่องเปิดใช้งานแล้ว</string>
+  <string name="morphe_hide_channel_tab_summary_off">ตัวกรองแท็บช่องปิดใช้งานแล้ว</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">ตัวกรองแท็บช่อง</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">ป้อนชื่อแท็บช่องที่ต้องการกรอง, แบบแต่ละแถว</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">ซ่อนปุ่มแสดงความคิดเห็น</string>
   <string name="morphe_hide_community_button_summary_on">ปุ่มความคิดเห็นถูกซ่อนอยู่</string>
@@ -655,7 +666,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">แถบสถานะโปร่งแสงหรือไม่โปร่งแสง</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"ข้อจำกัด:
 • บาร์สีดำอาจปรากฏขึ้นด้านบนของตัวเล่นวิดีโอ
-• แถบการนำทางของระบบอาจเปลี่ยนเป็นโปร่งใสและไม่สามารถแสดงความคิดเห็นในวิดีโอได้"</string>
+• บาร์นำทางระบบอาจเปลี่ยนเป็นโปร่งใส และไม่สามารถแสดงความคิดเห็นในวิดีโอได้"</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">ปิดใช้งานแถบนำทางแบบโปร่งแสงสีอ่อน</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">แถบนำทางโหมดสว่างเป็นแบบทึบแสง</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">แถบนำทางโหมดสว่างโปร่งแสงหรือไม่โปร่งแสง</string>
@@ -673,6 +684,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">ซ่อนปุ่มค้นหา</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">ซ่อนปุ่มค้นหาแล้ว</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">แสดงปุ่มค้นหาแล้ว</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">ซ่อนปุ่มค้นหาเสียง</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">ปุ่มค้นหาเสียงถูกซ่อนแล้ว</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">ปุ่มค้นหาเสียงถูกแสดงแล้ว</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">เมนูแบบเลื่อนลง</string>
   <string name="morphe_hide_player_flyout_summary">ซ่อนหรือแสดงรายการเมนูแบบเลื่อนลงของเครื่องเล่น</string>

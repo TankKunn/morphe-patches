@@ -29,9 +29,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_summary_on">Video reklamları gizlidir</string>
   <string name="morphe_music_hide_video_ads_summary_off">Video reklamları görünür</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
-  <string name="morphe_music_play_permanent_repeat_title">Kəsintisiz təkrarlamanı aktivləşdir</string>
-  <string name="morphe_music_play_permanent_repeat_summary_on">Kəsintisiz təkrarlama aktivdir</string>
-  <string name="morphe_music_play_permanent_repeat_summary_off">Kəsintisiz təkrarlama qapalıdır</string>
+  <string name="morphe_music_play_permanent_repeat_title">Daimi təkrarlamanı aktivləşdir</string>
+  <string name="morphe_music_play_permanent_repeat_summary_on">Daimi təkrarlama aktivdir</string>
+  <string name="morphe_music_play_permanent_repeat_summary_off">Daimi təkrarlama qapalıdır</string>
   <!-- layout.buttons.hideButtons -->
   <string name="morphe_music_hide_cast_button_title">Yayım düyməsini gizlət</string>
   <string name="morphe_music_hide_cast_button_summary_on">Yayım düyməsi gizlidir</string>

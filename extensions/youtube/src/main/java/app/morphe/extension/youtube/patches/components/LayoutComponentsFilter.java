@@ -17,6 +17,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -25,7 +26,6 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.StringTrieSearch;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.BooleanSetting;
-import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.youtube.patches.ChangeHeaderPatch;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.NavigationBar;
@@ -46,6 +46,21 @@ public final class LayoutComponentsFilter extends Filter {
             null,
             "&list="
     );
+
+    private static final List<String> flyoutMenuFilterStrings;
+    static {
+        String[] flyoutFilters = Settings.HIDE_FEED_FLYOUT_MENU_FILTER_STRINGS.get().split("\\n");
+        List<String> filters = new ArrayList<>(flyoutFilters.length);
+
+        for (String line : flyoutFilters) {
+            String trimmed = line.trim();
+            if (!trimmed.isEmpty()) {
+                filters.add(trimmed);
+            }
+        }
+
+        flyoutMenuFilterStrings = filters;
+    }
 
     private final StringTrieSearch exceptions = new StringTrieSearch();
     private final StringFilterGroup communityPosts;
@@ -801,5 +816,97 @@ public final class LayoutComponentsFilter extends Filter {
      */
     public static boolean hideSearchSuggestions(String typingString) {
         return Settings.HIDE_SEARCH_SUGGESTIONS.get() && typingString.isEmpty();
+    }
+
+    /**
+     *
+     * Injection point.
+     *
+     * Hide feed flyout menu for phone
+     *
+     * @param menuTitleCharSequence menu title
+     */
+    @Nullable
+    public static CharSequence hideFlyoutMenu(@Nullable CharSequence menuTitleCharSequence) {
+        if (menuTitleCharSequence == null || !Settings.HIDE_FEED_FLYOUT_MENU.get()
+                || flyoutMenuFilterStrings.isEmpty()) {
+            return menuTitleCharSequence;
+        }
+
+        String menuTitleString = menuTitleCharSequence.toString();
+
+        for (String filter : flyoutMenuFilterStrings) {
+            if (!filter.isEmpty()) {
+                if (menuTitleString.equalsIgnoreCase(filter)) {
+                    return null;
+                }
+            }
+        }
+
+        return menuTitleCharSequence;
+    }
+
+    /**
+     * Injection point.
+     *
+     * hide feed flyout panel for tablet
+     *
+     * @param menuTextView          flyout text view
+     * @param menuTitleCharSequence raw text
+     */
+    public static void hideFlyoutMenu(TextView menuTextView, CharSequence menuTitleCharSequence) {
+        if (menuTitleCharSequence == null || !Settings.HIDE_FEED_FLYOUT_MENU.get()
+                || flyoutMenuFilterStrings.isEmpty()) {
+            return;
+        }
+
+        if (!(menuTextView.getParent() instanceof View parentView)) {
+            return;
+        }
+
+        String menuTitleString = menuTitleCharSequence.toString();
+
+        for (String filter : flyoutMenuFilterStrings) {
+            if (menuTitleString.equalsIgnoreCase(filter) && !filter.isEmpty()) {
+                Utils.hideViewByLayoutParams(parentView);
+            }
+        }
+    }
+
+    /**
+     *
+     * Injection point.
+     *
+     * Rather than simply hiding the channel tab view, completely removes channel tab from list.
+     * If a channel tab is removed from the list, users will not be able to open it by swiping.
+     *
+     * @param channelTabText Text assigned to the channel tab, such as "Shorts", "Playlists",
+     *                       "Community", "Store". This text follows the user's language.
+     * @return Whether to remove the channel tab from the list.
+     */
+    public static boolean hideChannelTab(@Nullable String channelTabText) {
+        if (!Settings.HIDE_CHANNEL_TAB.get()) {
+            return false;
+        }
+
+        if (TextUtils.isEmpty(channelTabText)) {
+            return false;
+        }
+
+        String rawFilters = Settings.HIDE_CHANNEL_TAB_FILTER_STRINGS.get();
+        if (TextUtils.isEmpty(rawFilters)) {
+            return false;
+        }
+
+        String[] blockList = rawFilters.split("\\n");
+
+        for (String filter : blockList) {
+            String trimmed = filter.trim();
+            if (!trimmed.isEmpty() && channelTabText.equalsIgnoreCase(trimmed)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

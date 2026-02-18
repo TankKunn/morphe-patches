@@ -48,16 +48,6 @@ Men om du aktiverar detta kommer även vissa användardata, t.ex. din IP-adress,
   <string name="morphe_disable_layout_updates_title">Inaktivera layoutuppdateringar</string>
   <string name="morphe_disable_layout_updates_summary_on">Layouten uppdateras inte av servern</string>
   <string name="morphe_disable_layout_updates_summary_off">Layouten uppdateras av servern</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Appens layout återställs till den layout som användes när den installerades.
-
-Vissa layouter på serversidan kanske inte återställs.
-
-Ändringar:
-• Komponenter i spelarens flyout-meny (eller relaterade inställningar) kanske inte fungerar.
-• Rullande siffror animeras inte.
-• Fliken Bibliotek visas.
-• Avsnittet Musik i videobeskrivningen kanske inte fungerar.
-• Knappen Byt konto kanske inte visas i fliken Bibliotek."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Dölj butikshylla för kreatörer</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Butikshylla för kreatörer under videospelaren är dold</string>
@@ -101,9 +91,9 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_latest_posts_summary_off">Senaste inlägg visas</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
-  <string name="morphe_hide_latest_videos_button_title">Dölj knappen Senaste videor</string>
-  <string name="morphe_hide_latest_videos_button_summary_on">Knappen Senaste videor är dold</string>
-  <string name="morphe_hide_latest_videos_button_summary_off">Knappen Senaste videor visas</string>
+  <string name="morphe_hide_latest_videos_button_title">Dölj knappen Senaste videorna</string>
+  <string name="morphe_hide_latest_videos_button_summary_on">Knappen Senaste videorna är dold</string>
+  <string name="morphe_hide_latest_videos_button_summary_off">Knappen Senaste videorna visas</string>
   <string name="morphe_hide_mix_playlists_title">Dölj mix-spellistor</string>
   <string name="morphe_hide_mix_playlists_summary_on">Mix-spellistor är dolda</string>
   <string name="morphe_hide_mix_playlists_summary_off">Mix-spellistor visas</string>
@@ -222,6 +212,11 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_featured_videos_section_title">Dölj utvalda videor</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Avsnittet med utvalda videor är dolt</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Avsnittet med utvalda videor visas</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Aktivera filter för flyout-menyn i flöden</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Filter för flyout-menyn i flöden är aktiverat</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Filter för flyout-menyn i flöden är inaktiverat</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filter för flyout-menyn i flöden</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Ange namnen på de objekt i flyout-menyn som ska filtreras bort, ett per rad</string>
   <string name="morphe_hide_gaming_section_title">Dölj Gaming</string>
   <string name="morphe_hide_gaming_section_summary_on">Gaming-avsnittet är dolt</string>
   <string name="morphe_hide_gaming_section_summary_off">Gaming-avsnittet visas</string>
@@ -267,6 +262,11 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Visas i visningshistoriken</string>
   <string name="morphe_channel_screen_title">Kanalsida</string>
   <string name="morphe_channel_screen_summary">Dölj eller visa komponenter på kanalsidan</string>
+  <string name="morphe_hide_channel_tab_title">Aktivera kanalfliksfilter</string>
+  <string name="morphe_hide_channel_tab_summary_on">Kanalfliksfilter är aktiverat</string>
+  <string name="morphe_hide_channel_tab_summary_off">Kanalfliksfilter är inaktiverat</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Kanalfliksfilter</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Ange namnen på de kanalflikar som ska filtreras bort, en per rad</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Dölj knappen Community</string>
   <string name="morphe_hide_community_button_summary_on">Knappen Community är dold</string>
@@ -304,9 +304,9 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_comments_channel_guidelines_title">Dölj kanalriktlinjer</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_on">Kanalriktlinjer är dolda</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_off">Kanalriktlinjer visas</string>
-  <string name="morphe_hide_comments_prompts_title">Dölj ledtexter i kommentarerna</string>
-  <string name="morphe_hide_comments_prompts_summary_on">Ledtexter i kommentarerna är dolda</string>
-  <string name="morphe_hide_comments_prompts_summary_off">Ledtexter i kommentarerna visas</string>
+  <string name="morphe_hide_comments_prompts_title">Dölj ledtexter för kommentarerna</string>
+  <string name="morphe_hide_comments_prompts_summary_on">Ledtexter för kommentarerna är dolda</string>
+  <string name="morphe_hide_comments_prompts_summary_off">Ledtexter för kommentarerna visas</string>
   <string name="morphe_hide_comments_by_members_header_title">Dölj rubriken Kommentarer från medlemmar</string>
   <string name="morphe_hide_comments_by_members_header_summary_on">Rubriken Kommentarer från medlemmar är dold</string>
   <string name="morphe_hide_comments_by_members_header_summary_off">Rubriken Kommentarer från medlemmar visas</string>
@@ -647,7 +647,7 @@ Cookies sparas automatiskt om de är giltiga"</string>
   <string name="morphe_hide_navigation_button_labels_title">Dölj etiketter för navigeringsknappar</string>
   <string name="morphe_hide_navigation_button_labels_summary_on">Etiketter är dolda</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Etiketter visas</string>
-  <string name="morphe_narrow_navigation_buttons_title">Aktivera smala navigationsknappar</string>
+  <string name="morphe_narrow_navigation_buttons_title">Aktivera smala navigeringsknappar</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">Avståndet mellan navigeringsknapparna är smalt</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">Avståndet mellan navigeringsknapparna är normalt</string>
   <string name="morphe_navigation_bar_animations_title">Aktivera animeringar för navigeringsfältet</string>
@@ -656,9 +656,6 @@ Cookies sparas automatiskt om de är giltiga"</string>
   <string name="morphe_disable_translucent_status_bar_title">Inaktivera genomskinligt statusfält</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statusfältet är ogenomskinligt</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statusfältet är ogenomskinligt eller genomskinligt</string>
-  <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Begränsningar:
-• Ett svart fält kan synas högst upp i videospelaren.
-• Systemets navigeringsfält kan bli genomskinligt och det är inte möjligt att kommentera videor."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Inaktivera ljust genomskinligt fält</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Navigeringsfältet i ljust läge är ogenomskinligt</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_off">Navigeringsfältet i ljust läge är ogenomskinligt eller genomskinligt</string>
@@ -754,6 +751,12 @@ Om du vill att menyn Ljudspår ska visas ändrar du \"Förfalska videoströmmar\
   <string name="morphe_hide_cast_button_title">Dölj knappen Casta</string>
   <string name="morphe_hide_cast_button_summary_on">Knappen Casta är dold</string>
   <string name="morphe_hide_cast_button_summary_off">Knappen Casta visas</string>
+  <string name="morphe_hide_collapse_button_title">Dölj komprimeringsknappen</string>
+  <string name="morphe_hide_collapse_button_summary_on">Komprimeringsknappen är dold</string>
+  <string name="morphe_hide_collapse_button_summary_off">Komprimeringsknappen visas</string>
+  <string name="morphe_hide_fullscreen_button_title">Dölj helskärmsknappen</string>
+  <string name="morphe_hide_fullscreen_button_summary_on">Helskärmsknappen är dold</string>
+  <string name="morphe_hide_fullscreen_button_summary_off">Helskärmsknappen visas</string>
   <string name="morphe_hide_player_control_buttons_background_title">Dölj bakgrunder för uppspelningsknappar</string>
   <string name="morphe_hide_player_control_buttons_background_summary_on">Bakgrunder för uppspelningsknappar är dolda</string>
   <string name="morphe_hide_player_control_buttons_background_summary_off">Bakgrunder för uppspelningsknappar visas</string>
@@ -799,6 +802,9 @@ Om du vill att menyn Ljudspår ska visas ändrar du \"Förfalska videoströmmar\
   <!-- layout.hide.shorts.hideShortsComponentsResourcePatch -->
   <string name="morphe_shorts_player_screen_title">Shorts-spelare</string>
   <string name="morphe_shorts_player_screen_summary">Dölj eller visa komponenter i Shorts-spelaren</string>
+  <string name="morphe_hide_shorts_channel_title">Dölj Shorts-videor på kanalsidan</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Döljs på kanalsidan</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Visas på kanalsidan</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Dölj Shorts-videor i hemflödet</string>
   <string name="morphe_hide_shorts_home_summary_on">Döljs i hemflödet och liknande videor</string>
@@ -811,7 +817,7 @@ Om du vill att menyn Ljudspår ska visas ändrar du \"Förfalska videoströmmar\
   <string name="morphe_hide_shorts_subscriptions_summary_on">Döljs i flödet Prenumerationer</string>
   <string name="morphe_hide_shorts_subscriptions_summary_off">Visas i flödet Prenumerationer</string>
   <string name="morphe_hide_shorts_video_description_title">Dölj Shorts-videor i videobeskrivningen</string>
-  <string name="morphe_hide_shorts_video_description_summary_on">Dolda i videobeskrivningen</string>
+  <string name="morphe_hide_shorts_video_description_summary_on">Döljs i videobeskrivningen</string>
   <string name="morphe_hide_shorts_video_description_summary_off">Visas i videobeskrivningen</string>
   <string name="morphe_hide_shorts_history_title">Dölj Shorts-videor i visningshistoriken</string>
   <string name="morphe_hide_shorts_history_summary_on">Döljs i visningshistoriken</string>

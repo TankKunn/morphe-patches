@@ -48,15 +48,16 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_title">अपडेट लेआउट को अक्षम करना</string>
   <string name="morphe_disable_layout_updates_summary_on">सर्वर से लेआउट को अपडेट नहीं किया जाएगा</string>
   <string name="morphe_disable_layout_updates_summary_off">सर्वर से लेआउट को अपडेट किया जाएगा</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"एप्लिकेशन का लेआउट पहली बार स्थापित किए जाने पर उपयोग किए जाने वाले लेआउट पर वापस चला जाता है।
+  <string name="morphe_disable_layout_updates_user_dialog_message">"एप्लिकेशन का लेआउट पहली इंस्टॉल के समय उपयोग किए गए लेआउट पर वापस आ जाता है।
 
-कुछ सर्वर-साइड लेआउट वापस नहीं चल सकते हैं।
+कुछ सर्वर-साइड लेआउट वापस नहीं आ सकते हैं।
 
-परिवर्तन शामिल हैं:
-• प्लेयर फ्लाईआउट मेनू (या संबंधित सेटिंग्स) में कंपोनेंट्स काम नहीं करना सकते हैं।
+बदलावों में शामिल हैं:
+• प्लेयर फ्लाईआउट मेनू (या संबंधित सेटिंग्स) के घटक काम नहीं सकते हैं।
 • रोलिंग नंबर्स एनिमेट नहीं होते हैं।
 • लाइब्रेरी टैब दिखाई देता है।
-• वीडियो विवरण में म्यूजिक सैक्शन काम नहीं करना सकता है।
+• वीडियो विवरण में म्यूज़िक सैक्शन काम नहीं सकता है।
+• प्लेयर फ्लाईआउट मेनू आइटम छिपाए नहीं जा सकते हैं।
 • लाइब्रेरी टैब पर अकाउंट स्विच बटन दिखाई नहीं देता है।"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">छुपाएं क्रिएटर स्टोर शेल्फ</string>
@@ -222,6 +223,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_videos_section_title">फ़ीचर्ड वीडियो छुपाएं</string>
   <string name="morphe_hide_featured_videos_section_summary_on">फ़ीचर्ड वीडियो का क्षेत्र छुपा हुआ है</string>
   <string name="morphe_hide_featured_videos_section_summary_off">फ़ीचर्ड वीडियो का क्षेत्र दिखाया गया है</string>
+  <string name="morphe_hide_feed_flyout_menu_title">फ़ीड फ़्लाईआउट मेनू फ़िल्टर को सक्षम करें</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">फ़ीड फ़्लाईआउट मेनू फ़िल्टर सक्षम है</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">फ़ीड फ़्लाईआउट मेनू फ़िल्टर अक्षम है</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">फ़ीड फ़्लाईआउट मेनू फ़िल्टर</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">फ़्लायआउट मेनू के नाम दर्ज करके फ़िल्टर करें, एक पंक्ति में एक</string>
   <string name="morphe_hide_gaming_section_title">गेमिंग छुपाएं</string>
   <string name="morphe_hide_gaming_section_summary_on">गेमिंग का क्षेत्र छुपा हुआ है</string>
   <string name="morphe_hide_gaming_section_summary_off">गेमिंग का क्षेत्र दिखाया गया है</string>
@@ -267,6 +273,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">दर्शाया गया है इतिहास में</string>
   <string name="morphe_channel_screen_title">चैनल पेज</string>
   <string name="morphe_channel_screen_summary">चैनल पेज घटकों को छुपाएं या दिखाएं</string>
+  <string name="morphe_hide_channel_tab_title">चैनल टैब फ़िल्टर सक्षम करें</string>
+  <string name="morphe_hide_channel_tab_summary_on">चैनल टैब फ़िल्टर सक्षम है</string>
+  <string name="morphe_hide_channel_tab_summary_off">चैनल टैब फ़िल्टर अक्षम है</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">चैनल टैब फ़िल्टर</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">फ़िल्टर करने के लिए चैनल टैब के नाम दर्ज करें, एक पंक्ति में एक</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">समुदाय बटन छुपाएं</string>
   <string name="morphe_hide_community_button_summary_on">सामुदायिक बटन छुपा हुआ है</string>
@@ -569,11 +580,22 @@ Second \"item\" text"</string>
   <string name="morphe_hide_thanks_button_summary_off">थैंक्यू बटन दिखाया जाता है</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
+  <string name="morphe_hide_ask_button_title">पूछ ताछ छुपाएं </string>
+  <string name="morphe_hide_ask_button_summary_on">पूछ ताछ बटन छुपा हुआ है</string>
+  <string name="morphe_hide_ask_button_summary_off">पूछ ताछ बटन दिख रहा है</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_clip_button_title">क्लिप छिपाएं</string>
   <string name="morphe_hide_clip_button_summary_on">क्लिप बटन छुपा हुआ है</string>
   <string name="morphe_hide_clip_button_summary_off">क्लिप बटन दिखाया गया है</string>
+  <string name="morphe_hide_clip_button_user_dialog_message">यह गुप्त फ़ंक्शन कुछ उपयोगकर्ता खातों के लिए काम नहीं करेगा।</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shop_button_title">शॉप छिपाएं</string>
+  <string name="morphe_hide_shop_button_summary_on">शॉप बटन छिपा है</string>
+  <string name="morphe_hide_shop_button_summary_off">शॉप बटन दिख रहा है</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_save_button_title">सेव छिपाएं</string>
+  <string name="morphe_hide_save_button_summary_on">सेव बटन छिपा है</string>
+  <string name="morphe_hide_save_button_summary_off">सेव बटन दिख रहा है</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">शीर्षक</string>
   <string name="morphe_captions_screen_summary">शीर्षकों को स्वचालित रूप से सक्षम होने से रोकें या कप्शन कुकीज़ सेट करें</string>
@@ -605,8 +627,16 @@ Second \"item\" text"</string>
   <string name="morphe_fix_transcript_summary_on">ट्रांसक्रिप्ट उपलब्ध है</string>
   <string name="morphe_fix_transcript_summary_off">एक पूर्व शर्त जांच विफल होने के कारण ट्रांसक्रिप्ट उपलब्ध हो सकता है नहीं</string>
   <!-- layout.buttons.navigation.navigationButtonsPatch -->
+  <string name="morphe_navigation_buttons_screen_title">नविगेशन बटन</string>
+  <string name="morphe_navigation_buttons_screen_summary">नविगेशन बार बटनों को छुपाएं या बदलें</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_home_button_title">होम बटन छिपाएं</string>
+  <string name="morphe_hide_home_button_summary_on">होम बटन छिपा है </string>
+  <string name="morphe_hide_home_button_summary_off">होम बटन दिख रहा है </string>
   <!-- 'Shorts' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_shorts_button_title">Shorts बटन छिपाएं</string>
+  <string name="morphe_hide_shorts_button_summary_on">Shorts बटन छिपा है </string>
+  <string name="morphe_hide_shorts_button_summary_off">Shorts बटन दिख रहा है</string>
   <!-- 'Create' has no display name. Translate normally. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -619,8 +649,8 @@ Second \"item\" text"</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">नैविगेशन बटन के बीच अंतर सामान्य है</string>
   <string name="morphe_disable_translucent_status_bar_title">Filter bar</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"सीमाएँ:
-• वीडियो प्लेयर के शीर्ष पर काला बैंड हो सकता है।
-• नैविगेशन बार सिस्टम ट्रांसल्यूसेंट हो सकता है और वीडियो पर टिप्पणी करना संभव नहीं हो सकता।"</string>
+• वीडियो प्लेयर के शीर्ष पर एक काला बैंड हो सकता है।
+• प्रणाली नavigation बार ट्रांज़्पेरेंट हो सकता है, और वीडियो पर टिप्पणी करना संभव नहीं हो सकता है।"</string>
   <string name="morphe_toolbar_screen_title">टूलबार</string>
   <string name="morphe_toolbar_screen_summary">टूलबार घटकों को छुपाएं या बदलें</string>
   <string name="morphe_hide_toolbar_create_button_title">छुपाएं \'सृजना\' बटन</string>
@@ -632,6 +662,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">छुपाएं \'खोज\' बटन</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">खोज बटन छुपा हुआ है</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">सर्च बटन दिखाया गया है</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">वॉइस सर्च बटन छुपाएं</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">वॉइस सर्च बटन छुपा हुआ है</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">वॉइस सर्च बटन दिखाया जाता है</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->

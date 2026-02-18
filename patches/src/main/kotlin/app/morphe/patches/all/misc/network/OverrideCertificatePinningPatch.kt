@@ -1,9 +1,9 @@
 package app.morphe.patches.all.misc.network
 
 import app.morphe.patcher.patch.resourcePatch
-import app.morphe.util.Utils.trimIndentMultiline
 import app.morphe.util.adoptChild
 import app.morphe.util.getNode
+import app.morphe.util.trimIndentMultiline
 import org.w3c.dom.Element
 import java.io.File
 
@@ -42,7 +42,14 @@ val overrideCertificatePinningPatch = resourcePatch(
                     "base-config",
                     "debug-overrides"
                 ).forEach { tagName ->
-                    val configElement = document.getNode(tagName) as Element
+                    val configElement = document.getNode(tagName) as? Element ?: tagName.let {
+                        document.getNode("network-security-config").adoptChild(tagName) {
+                            if (tagName == "base-config") {
+                                setAttribute("cleartextTrafficPermitted", "true")
+                            }
+                        }
+                        document.getNode(tagName)
+                    }
                     val configChildNodes = configElement.childNodes
                     for (i in 0 until configChildNodes.length) {
                         val anchorNode = configChildNodes.item(i)

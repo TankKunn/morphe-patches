@@ -52,7 +52,7 @@ Tuy nhiên, bật tính năng này cũng sẽ ghi lại một số dữ liệu n
 
 Một số bố cục do máy chủ áp dụng có thể không quay trở lại hoàn toàn.
 
-Ví dụ:
+Thay đổi bao gồm:
 • Một số mục trong menu tùy chọn có thể không hoạt động.
 • Không có hiệu ứng số cuộn.
 • Thẻ Thư viện có thể hiện lại.
@@ -222,6 +222,11 @@ Ví dụ:
   <string name="morphe_hide_featured_videos_section_title">Ẩn Video nổi bật</string>
   <string name="morphe_hide_featured_videos_section_summary_on">Phần video nổi bật đã bị ẩn</string>
   <string name="morphe_hide_featured_videos_section_summary_off">Phần video nổi bật được hiển thị</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Bật bộ lọc menu tùy chọn trên trang video</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">Bộ lọc menu tùy chọn trên trang video đã được bật</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">Bộ lọc menu tùy chọn trên trang video đã tắt</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Bộ lọc menu tùy chọn trên trang video</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Nhập tên menu tùy chọn mà bạn muốn lọc, mỗi dòng một menu</string>
   <string name="morphe_hide_gaming_section_title">Ẩn Gaming</string>
   <string name="morphe_hide_gaming_section_summary_on">Phần Gaming đã bị ẩn</string>
   <string name="morphe_hide_gaming_section_summary_off">Phần Gaming được hiển thị</string>
@@ -267,6 +272,11 @@ Ví dụ:
   <string name="morphe_hide_filter_bar_feed_in_history_summary_off">Đã hiển thị trong nhật ký xem</string>
   <string name="morphe_channel_screen_title">Trang kênh</string>
   <string name="morphe_channel_screen_summary">Ẩn hoặc hiện các thành phần trang kênh</string>
+  <string name="morphe_hide_channel_tab_title">Bật bộ lọc thẻ kênh</string>
+  <string name="morphe_hide_channel_tab_summary_on">Bộ lọc thẻ kênh đã được bật</string>
+  <string name="morphe_hide_channel_tab_summary_off">Bộ lọc tùy chỉnh đã tắt</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Cài đặt bộ lọc</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">Nhập tên thẻ kênh mà bạn muốn lọc, một dòng mỗi thẻ</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Ẩn nút Cộng đồng</string>
   <string name="morphe_hide_community_button_summary_on">Nút Cộng đồng đã bị ẩn</string>
@@ -657,7 +667,7 @@ Cookie sẽ được tự động lưu nếu hợp lệ"</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Thanh trạng thái sẽ không còn trong suốt</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Thanh trạng thái sẽ trở nên mờ hoặc trong suốt</string>
   <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Hạn chế:
-• Có thể xuất hiện một thanh màu đen trên cùng của trình phát video.
+• Có thể xuất hiện một thanh màu đen trên cùng trình phát video.
 • Thanh điều hướng của hệ thống có thể trở nên trong suốt và không thể bình luận trên video."</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">Vô hiệu hóa thanh điều hướng trong suốt ở giao diện sáng</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary_on">Thanh điều hướng sẽ không còn trong suốt ở giao diện sáng</string>
@@ -676,6 +686,9 @@ Cookie sẽ được tự động lưu nếu hợp lệ"</string>
   <string name="morphe_hide_toolbar_search_button_title">Ẩn nút Tìm kiếm</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Nút tìm kiếm đã bị ẩn</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Nút tìm kiếm được hiển thị</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Ẩn nút Tìm kiếm bằng giọng nói</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Nút tìm kiếm bằng giọng nói đã bị ẩn</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Nút tìm kiếm bằng giọng nói được hiển thị</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menu tuỳ chọn</string>
   <string name="morphe_hide_player_flyout_summary">Ẩn hoặc hiện các mục menu tuỳ chọn trên trình phát</string>
@@ -806,8 +819,8 @@ Cookie sẽ được tự động lưu nếu hợp lệ"</string>
   <string name="morphe_shorts_player_screen_title">Trình phát Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Ẩn hoặc hiện các thành phần của trình phát Shorts</string>
   <string name="morphe_hide_shorts_channel_title">Ẩn Shorts trong trang kênh</string>
-  <string name="morphe_hide_shorts_channel_summary_on">Ẩn trong trang kênh</string>
-  <string name="morphe_hide_shorts_channel_summary_off">Hiển thị trong trang kênh</string>
+  <string name="morphe_hide_shorts_channel_summary_on">Đã ẩn trong trang kênh</string>
+  <string name="morphe_hide_shorts_channel_summary_off">Đã hiển thị trong trang kênh</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_home_title">Ẩn Shorts trong thẻ Trang chủ</string>
   <string name="morphe_hide_shorts_home_summary_on">Đã ẩn trong thẻ Trang chủ và video liên quan</string>

@@ -1,17 +1,17 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ */
 package app.morphe.patches.reddit.misc.extension.hooks
 
-import app.morphe.patcher.Fingerprint
+import app.morphe.patches.shared.misc.extension.activityOnCreateExtensionHook
 
-internal val redditMainActivityOnCreateFingerprint = Fingerprint(
-    returnType = "V",
-    parameters = listOf("Landroid/os/Bundle;"),
-    custom = { method, classDef ->
-        method.name == "onCreate" && classDef.type == "Lcom/reddit/launch/main/MainActivity;"
-    }
+internal val redditActivityOnCreateHook = activityOnCreateExtensionHook(
+    activityClassType = "Lcom/reddit/launch/main/MainActivity;",
+    targetBundleMethod = true,
 )
 
-internal val redditActivityOnCreateFingerprint = Fingerprint(
-    custom = { method, classDef ->
-        method.name == "onCreate" && classDef.type.endsWith("/FrontpageApplication;")
-    }
+internal val redditApplicationOnCreateHook = activityOnCreateExtensionHook(
+    activityClassType = "Lcom/reddit/frontpage/FrontpageApplication;",
+    targetBundleMethod = false,
 )
