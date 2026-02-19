@@ -1,3 +1,10 @@
+# [1.15.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.1...v1.15.0-dev.2) (2026-02-19)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Replace "Hide search suggestions" with "Hide You may like section" ([#581](https://github.com/MorpheApp/morphe-patches/issues/581)) ([29d891c](https://github.com/MorpheApp/morphe-patches/commit/29d891c63c6b5c937420f7e9fb796b530c45847f))
+
 # [1.15.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0...v1.15.0-dev.1) (2026-02-19)
 
 
