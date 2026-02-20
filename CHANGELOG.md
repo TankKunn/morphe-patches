@@ -1,3 +1,10 @@
+# [1.15.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.3...v1.15.0-dev.4) (2026-02-20)
+
+
+### Features
+
+* **Spoof video streams:** Add `Android Reel` client ([#580](https://github.com/MorpheApp/morphe-patches/issues/580)) ([01bbde3](https://github.com/MorpheApp/morphe-patches/commit/01bbde3dfea162eedf9af36dddffaba5d750db73))
+
 # [1.15.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.2...v1.15.0-dev.3) (2026-02-20)
 
 
