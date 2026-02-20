@@ -1,3 +1,10 @@
+# [1.15.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.2...v1.15.0-dev.3) (2026-02-20)
+
+
+### Features
+
+* Add `Disable QUIC protocol` patch ([#586](https://github.com/MorpheApp/morphe-patches/issues/586)) ([41fac61](https://github.com/MorpheApp/morphe-patches/commit/41fac61cfdfeb0e469f13eb8d4e54e7cb054f34d))
+
 # [1.15.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.1...v1.15.0-dev.2) (2026-02-19)
 
 
