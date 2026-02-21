@@ -1,3 +1,10 @@
+# [1.15.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.4...v1.15.0-dev.5) (2026-02-21)
+
+
+### Features
+
+* **YouTube - Hide ads:** Add `Hide player popup ads` setting ([#583](https://github.com/MorpheApp/morphe-patches/issues/583)) ([82c9f29](https://github.com/MorpheApp/morphe-patches/commit/82c9f29f0903416bade9613a6672822003968893))
+
 # [1.15.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.3...v1.15.0-dev.4) (2026-02-20)
 
 
