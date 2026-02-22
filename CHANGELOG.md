@@ -1,3 +1,10 @@
+# [1.15.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.5...v1.15.0-dev.6) (2026-02-22)
+
+
+### Bug Fixes
+
+* **YouTube - Captions:** Captions are not available in Shorts when `Auto captions visibility` is `Never show` ([#591](https://github.com/MorpheApp/morphe-patches/issues/591)) ([e386664](https://github.com/MorpheApp/morphe-patches/commit/e3866641aa544598174e5a65ef22654410b3e5c5))
+
 # [1.15.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.4...v1.15.0-dev.5) (2026-02-21)
 
 
