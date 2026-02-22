@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">छुपाएं भुगतान प्रचार लेबल</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">पेड़ प्रचार लेबल छिपा दिया गया है</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">पेड़ प्रचार लेबल दिखाया जाता है</string>
+  <string name="morphe_hide_player_popup_ads_title">प्लेयर पॉपअप विज्ञापन छिपाएं</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">प्लेयर पॉपअप विज्ञापन छिपाए गए हैं</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">प्लेयर पॉपअप विज्ञापन दिखाई दिए जाते हैं</string>
   <string name="morphe_hide_self_sponsor_ads_title">छुपाएं स्वयं प्रायोजित कार्ड</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">स्वयं प्रायोजित कार्ड छिपे हुए हैं</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">स्वयं प्रायोजित कार्ड दिखाए जाते हैं</string>
@@ -758,7 +761,10 @@ Second \"item\" text"</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
   <!-- layout.hide.time.hideTimestampPatch -->
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">प्लेयर पॉपअप पैनल्स अक्षम करें</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">प्लेयर पॉपअप पैनल्स को अक्षम किया गया है</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">प्लेयर पॉपअप पैनल्स को सक्षम किया गया है</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <!-- layout.player.fullscreen.openVideosFullscreen -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityResourcePatch -->

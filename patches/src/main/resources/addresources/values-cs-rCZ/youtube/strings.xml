@@ -416,6 +416,9 @@ Omezení:
   <string name="morphe_hide_paid_promotion_label_title">Skrýt štítek placené propagace</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Štítek placené propagace je skrytý</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Štítek placené propagace je zobrazen</string>
+  <string name="morphe_hide_player_popup_ads_title">Skrýt vyskakovací reklamy hráče</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Vyskakovací reklamy hráče jsou skryté</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Vyskakovací reklamy hráče jsou zobrazeny</string>
   <string name="morphe_hide_self_sponsor_ads_title">Skrýt karty se sponzorovanými produkty</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Karty se sponzorovanými produkty jsou skryté</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Karty se sponzorovanými produkty jsou zobrazeny</string>
@@ -960,10 +963,10 @@ Nastavení → Přehrávání → Automatické přehrávání dalšího videa"</
   <string name="morphe_hide_timestamp_title">Skrýt čas videa</string>
   <string name="morphe_hide_timestamp_summary_on">Čas je skrytý</string>
   <string name="morphe_hide_timestamp_summary_off">Čas je zobrazen</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Skrýt vyskakovací panely přehrávače</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Vyskakovací panely přehrávače jsou skryté</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Vyskakovací panely přehrávače jsou zobrazeny</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Zakázat vyskakovací panely hráče</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Vyskakovací panely přehrávače jsou zakázány</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Vyskakovací panely přehrávače jsou povoleny</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Ukončit režim celé obrazovky na konci videa</string>
   <string name="morphe_exit_fullscreen_entry_1">Vypnuto</string>

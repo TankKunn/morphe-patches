@@ -131,7 +131,7 @@ Second \"item\" text"</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
   <!-- layout.hide.time.hideTimestampPatch -->
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_entry_1">Atspējots</string>
   <!-- layout.player.fullscreen.openVideosFullscreen -->

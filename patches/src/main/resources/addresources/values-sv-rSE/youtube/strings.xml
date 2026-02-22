@@ -937,10 +937,7 @@ Inställningar → Uppspelning → Spela upp nästa video automatiskt"</string>
   <string name="morphe_hide_timestamp_title">Dölj videotidsstämpel</string>
   <string name="morphe_hide_timestamp_summary_on">Tidsstämpel är dold</string>
   <string name="morphe_hide_timestamp_summary_off">Tidsstämpel visas</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Dölj popup-paneler i spelaren</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Popup-paneler i spelaren är dolda</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Popup-paneler i spelaren visas</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Avsluta helskärmsläge i slutet av videon</string>
   <string name="morphe_exit_fullscreen_entry_1">Inaktiverat</string>

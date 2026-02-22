@@ -415,6 +415,9 @@ Korlátozások
   <string name="morphe_hide_paid_promotion_label_title">Fizetett promóció címke elrejtése</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">A fizetett promóciós címke el van rejtve</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">A fizetett promóciós címke meg van jelenítve</string>
+  <string name="morphe_hide_player_popup_ads_title">Elrejtés a lejátszó előugró reklámok</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">A lejátszó előugró reklámok elrejtve</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">A lejátszó előugró reklámok megjelennek</string>
   <string name="morphe_hide_self_sponsor_ads_title">Önpromóciós kártyák elrejtése</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Az önpromóciós kártyák rejtve vannak</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Az önpromóciós kártyák megjelennek</string>
@@ -959,10 +962,10 @@ Beállítások → Lejátszás → Következő videó automatikus lejátszása"<
   <string name="morphe_hide_timestamp_title">Videó időbélyegzőjének elrejtése</string>
   <string name="morphe_hide_timestamp_summary_on">Az időbélyegző elrejtve</string>
   <string name="morphe_hide_timestamp_summary_off">Az időbélyegző megjelenik</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Lejátszó előugró paneleinek elrejtése</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">A lejátszó előugró panelei el vannak rejtve</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">A lejátszó előugró panelei megjelennek</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Lejátszó előugró panelek letiltása</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">A lejátszó előugró panelei lettek letiltva</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">A lejátszó előugró panelei engedélyezve</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Kilépés a teljes képernyőből</string>
   <string name="morphe_exit_fullscreen_entry_1">Letiltva</string>

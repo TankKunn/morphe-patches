@@ -415,6 +415,9 @@ Ograničenja:
   <string name="morphe_hide_paid_promotion_label_title">Sakrij oznaku plaćene promocije</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Oznaka plaćeme promocije je skrivena</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Oznaka plaćene promocije je prikazana</string>
+  <string name="morphe_hide_player_popup_ads_title">Sakrij oglasne popupe u plejeru</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Oglasni popupi u plejeru su sakriveni</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Oglasni popupi u plejeru su prikazani</string>
   <string name="morphe_hide_self_sponsor_ads_title">Sakrij kartice samosponzorstva</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Kartice samosponzorstva su skrivene</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Kartice samosponzorstva su prikazane</string>
@@ -959,10 +962,10 @@ Podešavanja → Reprodukcija → Automatski pusti sledeći video"</string>
   <string name="morphe_hide_timestamp_title">Sakrij vremensku oznaku videa</string>
   <string name="morphe_hide_timestamp_summary_on">Vremenska oznaka videa je skrivena</string>
   <string name="morphe_hide_timestamp_summary_off">Vremenska oznaka videa je prikazana</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Sakrij iskačuće table u plejeru</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Iskačuće table u plejeru su skrivene</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Iskačući paneli plejera su prikazani</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Onemogući oglasne popupe u plejeru</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Iskačuće table u plejeru su onemogućene</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Iskačuće table u plejeru su omogućene</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Izlaz iz režima celog ekrana na kraju videa</string>
   <string name="morphe_exit_fullscreen_entry_1">Onemogućeno</string>

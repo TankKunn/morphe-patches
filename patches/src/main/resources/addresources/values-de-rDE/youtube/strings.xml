@@ -415,6 +415,9 @@ Einschränkungen:
   <string name="morphe_hide_paid_promotion_label_title">\"Enthält bezahlte Werbung\"-Hinweis ausblenden</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">\"Enthält bezahlte Werbung\"-Hinweis wird ausgeblendet</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">\"Enthält bezahlte Werbung\"-Hinweis wird angezeigt</string>
+  <string name="morphe_hide_player_popup_ads_title">Anzeigen im Spieler-Popup ausblenden</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Anzeigen im Spieler-Popup sind ausgeblendet</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Anzeigen im Spieler-Popup werden angezeigt</string>
   <string name="morphe_hide_self_sponsor_ads_title">Selbst gesponserte Karten ausblenden</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Selbst gesponserte Karten sind ausgeblendet</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Selbstgesponserte Karten werden angezeigt</string>
@@ -957,10 +960,10 @@ Einstellungen → Wiedergabe → Nächstes Video automatisch abspielen"</string>
   <string name="morphe_hide_timestamp_title">Verstecke Video-Zeitstempel</string>
   <string name="morphe_hide_timestamp_summary_on">Zeitstempel ist ausgeblendet</string>
   <string name="morphe_hide_timestamp_summary_off">Zeitstempel wird angezeigt</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Player-Popup-Panels ausblenden</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Player-Popup-Fenster sind ausgeblendet</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Player-Popup-Fenster werden angezeigt</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Spieler-Popup-Panels deaktivieren</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Player-Popup-Fenster sind deaktiviert</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Player-Popup-Fenster sind aktiviert</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Beenden Sie den Vollbildmodus am Ende des Videos</string>
   <string name="morphe_exit_fullscreen_entry_1">Deaktiviert</string>

@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">隐藏付费推广标签</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">付费推广标签已隐藏</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">付费推广标签已显示</string>
+  <string name="morphe_hide_player_popup_ads_title">隐藏播放器弹出广告</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">播放器弹出广告已隐藏</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">播放器弹出广告已显示</string>
   <string name="morphe_hide_self_sponsor_ads_title">隐藏自我推广卡片</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">自我推广卡片已隐藏</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">自我推广卡片已显示</string>
@@ -959,10 +962,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">隐藏视频时间戳</string>
   <string name="morphe_hide_timestamp_summary_on">时间戳已隐藏</string>
   <string name="morphe_hide_timestamp_summary_off">时间戳已显示</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">隐藏播放器弹出面板</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">播放器弹出面板已隐藏</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">播放器弹出面板已显示</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">禁用播放器弹出面板</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">播放器弹出面板已禁用</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">播放器弹出面板已启用</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">视频结尾时退出全屏模式</string>
   <string name="morphe_exit_fullscreen_entry_1">已禁用</string>

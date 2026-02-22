@@ -415,6 +415,9 @@ Limitações:
   <string name="morphe_hide_paid_promotion_label_title">Ocultar rótulo de promoção paga</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">O rótulo de promoção pago está oculto</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Rótulo de promoção pago é mostrado</string>
+  <string name="morphe_hide_player_popup_ads_title">Esconder anúncios popup do jogador</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Anúncios popup do jogador estão escondidos</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Anúncios popup do jogador são visíveis</string>
   <string name="morphe_hide_self_sponsor_ads_title">Esconder cartões autopatrocinados</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Cartões auto-patrocinados estão escondidos</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Cartões auto-patrocinados são visíveis</string>
@@ -959,10 +962,10 @@ Configurações → Reprodução → Reproduzir o próximo vídeo automaticament
   <string name="morphe_hide_timestamp_title">Esconder timestamp do vídeo</string>
   <string name="morphe_hide_timestamp_summary_on">Timestamp está escondido</string>
   <string name="morphe_hide_timestamp_summary_off">Timestamp é visível</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Esconder painéis popup do player</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Painéis pop-up do jogador estão escondidos</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Painéis pop-up do jogador são visíveis</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Desativar painéis popup do jogador</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Painéis pop-up do jogador estão desativados</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Painéis pop-up do jogador estão ativados</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Sair do modo de ecrã inteiro no final do vídeo</string>
   <string name="morphe_exit_fullscreen_entry_1">Desativado</string>

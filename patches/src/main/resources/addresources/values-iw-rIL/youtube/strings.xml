@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">הסתר תווית קידום מכירות בתשלום</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">תווית קידום מכירות בתשלום מוסתרת</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">תווית קידום מכירות בתשלום מוצגת</string>
+  <string name="morphe_hide_player_popup_ads_title">הסתר פרסומות פופאפ של שחקן</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">פרסומות פופאפ של שחקן מוסתרות</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">פרסומות פופאפ של שחקן מוצגות</string>
   <string name="morphe_hide_self_sponsor_ads_title">הסתר כרטיסים בחסות עצמית</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">כרטיסים בחסות עצמית מוסתרים</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">כרטיסים בחסות עצמית מוצגים</string>
@@ -960,10 +963,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">הסתר חותמת זמן של סרטון</string>
   <string name="morphe_hide_timestamp_summary_on">חותמת זמן מוסתרת</string>
   <string name="morphe_hide_timestamp_summary_off">חותמת זמן מוצגת</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">הסתר לוחות נגן צצים</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">לוחות נגן צצים מוסתרים</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">לוחות נגן צצים מוצגים</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">השבתה לוחות פופאפ של שחקן</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">לוחות נגן צצים מושבתים</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">לוחות נגן צצים פעילים</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">צא ממצב מסך מלא בסוף סרטון</string>
   <string name="morphe_exit_fullscreen_entry_1">מושבת</string>

@@ -417,6 +417,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">유료 광고 포함 라벨 숨기기</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">유료 광고 포함 라벨이 숨겨집니다</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">유료 광고 포함 라벨이 표시됩니다</string>
+  <string name="morphe_hide_player_popup_ads_title">플레이어 팝업 광고 숨기기</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">플레이어 팝업 광고가 숨겨집니다</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">플레이어 팝업 광고가 표시됩니다</string>
   <string name="morphe_hide_self_sponsor_ads_title">셀프 스폰서 카드 숨기기</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">셀프 스폰서 카드가 숨겨집니다</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">셀프 스폰서 카드가 표시됩니다</string>
@@ -736,9 +739,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">오디오 트랙 메뉴가 표시됩니다</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"오디오 트랙 메뉴가 숨겨져 있습니다
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"오디오 트랙 메뉴가 숨겨집니다
 
-오디오 트랙 메뉴를 표시하려면, '동영상 스트림 변경하기'를 'Android Reel'이나 'TV'로 변경하세요"</string>
+오디오 트랙 메뉴를 표시하려면, '동영상 스트림 속이기'에서 '기본 클라이언트'를 'Android Reel'이나 'TV'로 변경하세요"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">VR로 보기 숨기기</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">VR로 보기 메뉴가 숨겨집니다</string>
@@ -957,10 +960,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">동영상 타임스탬프 숨기기</string>
   <string name="morphe_hide_timestamp_summary_on">타임스탬프가 숨겨집니다</string>
   <string name="morphe_hide_timestamp_summary_off">타임스탬프가 표시됩니다</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">플레이어 팝업 패널 숨기기</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">다음 플레이어 팝업 패널이 숨겨집니다:\n실시간 채팅, 재생목록, etc.</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">다음 플레이어 팝업 패널이 표시됩니다:\n실시간 채팅, 재생목록, etc.</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">플레이어 팝업 패널 비활성화하기</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">플레이어 팝업 패널이 숨겨집니다:\n실시간 채팅, 재생목록, etc.</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">플레이어 팝업 패널이 표시됩니다:\n실시간 채팅, 재생목록, etc.</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">동영상 종료 시 전체 화면에서 나가기</string>
   <string name="morphe_exit_fullscreen_entry_1">사용 안 함</string>
@@ -1310,7 +1313,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_autoplay_title">Shorts 자동재생</string>
   <string name="morphe_shorts_autoplay_summary_on">Shorts가 자동넘김됩니다</string>
   <string name="morphe_shorts_autoplay_summary_off">Shorts가 반복재생됩니다</string>
-  <string name="morphe_shorts_autoplay_background_title">Shorts 백그라운드 재생 자동넘김</string>
+  <string name="morphe_shorts_autoplay_background_title">Shorts 백그라운드 재생 자동재생</string>
   <string name="morphe_shorts_autoplay_background_summary_on">Shorts 백그라운드 재생이 자동넘김됩니다</string>
   <string name="morphe_shorts_autoplay_background_summary_off">Shorts 백그라운드 재생이 반복재생됩니다</string>
   <!-- layout.miniplayer.miniplayerPatch -->

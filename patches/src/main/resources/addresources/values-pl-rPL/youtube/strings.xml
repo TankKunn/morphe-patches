@@ -415,6 +415,9 @@ Ograniczenia:
   <string name="morphe_hide_paid_promotion_label_title">Etykiety płatnej promocji</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Ukryte</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Widoczne</string>
+  <string name="morphe_hide_player_popup_ads_title">Wyskakujące reklamy w odtwarzaczu</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Ukryte</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Widoczne</string>
   <string name="morphe_hide_self_sponsor_ads_title">Karty z autopromocją</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Ukryte</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Widoczne</string>
@@ -738,9 +741,9 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Widoczne</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu ścieżki dźwiękowej jest ukryty
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Ukryte
 
-Aby wyświetlić menu ścieżki dźwiękowej, zmień \"Oszukuj strumień filmu\" na \"Android Reel\" lub \"TV\""</string>
+Aby wyświetlić menu ścieżki dźwiękowej, zmień \"Oszukuj strumienie filmu\" na \"Android Reel\" lub \"TV\""</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Menu oglądania w VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Ukryte</string>
@@ -959,10 +962,10 @@ Ustawienia → Odtwarzanie → Autoodtwarzanie następnego filmu"</string>
   <string name="morphe_hide_timestamp_title">Czas filmu</string>
   <string name="morphe_hide_timestamp_summary_on">Ukryty</string>
   <string name="morphe_hide_timestamp_summary_off">Widoczny</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Wyskakujące panele w odtwarzaczu</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Ukryte</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Widoczne</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Wyskakujące panele w odtwarzaczu</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Wyłączone</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Włączone</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Wychodzenie z trybu pełnoekranowego po zakończeniu filmu</string>
   <string name="morphe_exit_fullscreen_entry_1">Wyłączone</string>

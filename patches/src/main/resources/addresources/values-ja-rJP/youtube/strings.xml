@@ -140,9 +140,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_web_search_results_title">ウェブ検索結果を非表示</string>
   <string name="morphe_hide_web_search_results_summary_on">ウェブ検索結果は表示されません</string>
   <string name="morphe_hide_web_search_results_summary_off">ウェブ検索結果は表示されます</string>
-  <string name="morphe_hide_you_may_like_section_title">おすすめセクションを非表示</string>
-  <string name="morphe_hide_you_may_like_section_summary_on">検索履歴のおすすめセクションは表示されません</string>
-  <string name="morphe_hide_you_may_like_section_summary_off">検索履歴のおすすめセクションは表示されます</string>
+  <string name="morphe_hide_you_may_like_section_title">「おすすめ」セクションを非表示</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">検索履歴の「おすすめ」セクションは表示されません</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">検索履歴の「おすすめ」セクションは表示されます</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">YouTube Doodle を非表示</string>
   <string name="morphe_hide_doodles_summary_on">ロゴの YouTube Doodle アニメーションは表示されません</string>
@@ -215,8 +215,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">「ポッドキャストを検索」セクションは表示されません</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">「ポッドキャストを検索」セクションは表示されます</string>
   <string name="morphe_hide_featured_links_section_title">おすすめリンクを非表示</string>
-  <string name="morphe_hide_featured_links_section_summary_on">情報カード セクション内のおすすめ動画セクションは表示されません</string>
-  <string name="morphe_hide_featured_links_section_summary_off">情報カード セクション内のおすすめ動画セクションは表示されます</string>
+  <string name="morphe_hide_featured_links_section_summary_on">情報カード セクション内のおすすめリンク セクションは表示されません</string>
+  <string name="morphe_hide_featured_links_section_summary_off">情報カード セクション内のおすすめリンク セクションは表示されます</string>
   <string name="morphe_hide_featured_places_section_title">「注目の場所」を非表示</string>
   <string name="morphe_hide_featured_places_section_summary_on">注目の場所セクションは表示されません</string>
   <string name="morphe_hide_featured_places_section_summary_off">注目の場所セクションは表示されます</string>
@@ -416,6 +416,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">「プロモーションを含みます」ラベルを非表示</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">「プロモーションを含みます」ラベルは表示されません</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">「プロモーションを含みます」ラベルは表示されます</string>
+  <string name="morphe_hide_player_popup_ads_title">プレーヤーのポップアップ広告を非表示</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">プレーヤーのポップアップ広告は表示されません</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">プレーヤーのポップアップ広告は表示されます</string>
   <string name="morphe_hide_self_sponsor_ads_title">自己宣伝カードを非表示</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">自己宣伝カードは表示されません</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">自己宣伝カードは表示されます</string>
@@ -627,7 +630,7 @@ Second \"item\" text"</string>
   <!-- layout.captions.transcriptPatch -->
   <string name="morphe_fix_transcript_title">文字起こしを修正</string>
   <string name="morphe_fix_transcript_summary_on">文字起こしは利用可能です</string>
-  <string name="morphe_fix_transcript_summary_off">Precondition check failure エラーによって文字起こしが利用できない場合があります</string>
+  <string name="morphe_fix_transcript_summary_off">前提条件チェックの失敗によって文字起こしが利用できない場合があります</string>
   <!-- layout.buttons.navigation.navigationButtonsPatch -->
   <string name="morphe_navigation_buttons_screen_title">ナビゲーション ボタン</string>
   <string name="morphe_navigation_buttons_screen_summary">ナビゲーション バーのボタンを変更または非表示にします</string>
@@ -739,9 +742,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">「音声トラック」は表示されます</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"「オーディオトラック」メニューは表示されません
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"「音声トラック」は表示されません
 
-「オーディオトラック」メニューを表示するには、['動画ストリームを偽装'] を 'Android Reel' または 'TV' に変更してください"</string>
+「音声トラック」を表示するには、[動画ストリームを偽装] を「Android Reel」または「TV」に変更してください"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">「VR で見る」を非表示</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">「VR で見る」は表示されません</string>
@@ -786,7 +789,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_endscreen_cards_summary_off">終了画面カードは表示されます</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
   <string name="morphe_ambient_mode_screen_title">アンビエント モード</string>
-  <string name="morphe_ambient_mode_screen_summary">アンビエント モードの省電力制限を回避、または完全に / 全画面表示中のアンビエント モードを無効化します</string>
+  <string name="morphe_ambient_mode_screen_summary">アンビエント モードの省電力制限を回避します。また、アンビエント モードを完全にもしくは全画面表示中に無効化します</string>
   <string name="morphe_bypass_ambient_mode_restrictions_title">アンビエント モードの制限を回避</string>
   <string name="morphe_bypass_ambient_mode_restrictions_summary_on">アンビエント モードの省電力制限は回避されます</string>
   <string name="morphe_bypass_ambient_mode_restrictions_summary_off">アンビエント モードの省電力制限は回避されません</string>
@@ -960,10 +963,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">動画のタイムスタンプを非表示</string>
   <string name="morphe_hide_timestamp_summary_on">動画の現在位置を示すタイムスタンプは表示されません</string>
   <string name="morphe_hide_timestamp_summary_off">動画の現在位置を示すタイムスタンプは表示されます</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">プレーヤー ポップアップ パネルを非表示</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">プレーヤー ポップアップ パネルは表示されません\n\nプレイリストやライブ配信のチャット欄などを閉じた状態で動画を開きます</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">プレーヤー ポップアップ パネルは表示されます\n\nプレイリストやライブ配信のチャット欄などを展開した状態で動画を開きます</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">プレーヤー ポップアップ パネルを無効化</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">プレーヤー ポップアップ パネルは無効です\n\nプレイリストやライブ配信のチャット欄などを閉じた状態で動画を開きます</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">プレーヤー ポップアップ パネルは有効です\n\nプレイリストやライブ配信のチャット欄などを展開した状態で動画を開きます</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">再生終了時に全画面表示を解除</string>
   <string name="morphe_exit_fullscreen_entry_1">無効</string>

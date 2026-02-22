@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">إخفاء تسمية الترقية المدفوعة</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">تم إخفاء تسمية الترقية المدفوعة</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">يتم عرض تسمية الترقية المدفوعة</string>
+  <string name="morphe_hide_player_popup_ads_title">إخفاء إعلانات المشغل المنبثقة</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">تم إخفاء إعلانات المشغل المنبثقة</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">يتم عرض إعلانات المشغل المنبثقة</string>
   <string name="morphe_hide_self_sponsor_ads_title">إخفاء بطاقات الرعاية الذاتية</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">تم إخفاء بطاقات الرعاية الذاتية</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">يتم عرض بطاقات الرعاية الذاتية</string>
@@ -959,10 +962,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">إخفاء الطابع الزمني للفيديو</string>
   <string name="morphe_hide_timestamp_summary_on">تم إخفاء الطابع الزمني</string>
   <string name="morphe_hide_timestamp_summary_off">يتم عرض الطابع الزمني</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">إخفاء لوحات المشغل المنبثقة</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">تم إخفاء لوحات المشغل المنبثقة</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">يتم عرض لوحات المشغل المنبثقة</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">تعطيل لوحات المشغل المنبثقة</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">تم تعطيل لوحات المشغل المنبثقة</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">تم تمكين لوحات المشغل المنبثقة</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">الخروج من وضع ملء الشاشة عند انتهاء الفيديو</string>
   <string name="morphe_exit_fullscreen_entry_1">معطل</string>

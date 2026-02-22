@@ -415,6 +415,9 @@ Hạn chế:
   <string name="morphe_hide_paid_promotion_label_title">Ẩn nhãn quảng cáo trả phí</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Nhãn quảng cáo trả phí đã bị ẩn</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Nhãn quảng cáo trả phí được hiển thị</string>
+  <string name="morphe_hide_player_popup_ads_title">Ẩn quảng cáo bật lên trên trình phát</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Quảng cáo bật lên trên trình phát đã bị ẩn</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Quảng cáo bật lên trên trình phát được hiển thị</string>
   <string name="morphe_hide_self_sponsor_ads_title">Ẩn thẻ tự tài trợ</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Các thẻ tự tài trợ đã bị ẩn</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Các thẻ tự tài trợ được hiển thị</string>
@@ -959,10 +962,10 @@ Cài đặt → Phát → Tự động phát video tiếp theo"</string>
   <string name="morphe_hide_timestamp_title">Ẩn dấu thời gian video</string>
   <string name="morphe_hide_timestamp_summary_on">Dấu thời gian đã bị ẩn</string>
   <string name="morphe_hide_timestamp_summary_off">Dấu thời gian được hiển thị</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Ẩn bảng tự bật lên trên trình phát</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Bảng bật lên trên trình phát đã bị ẩn</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Bảng bật lên trên trình phát được hiển thị</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Tắt bảng bật lên trên trình phát</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Bảng bật lên trên trình phát đã tắt</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Bảng bật lên trên trình phát đã bật</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Thoát chế độ toàn màn hình khi kết thúc video</string>
   <string name="morphe_exit_fullscreen_entry_1">Tắt</string>

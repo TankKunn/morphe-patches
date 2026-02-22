@@ -416,6 +416,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">Приховати \"Містить пряму рекламу\"</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Мітку \"Містить пряму рекламу\" приховано</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Мітка \"Містить пряму рекламу\" показується</string>
+  <string name="morphe_hide_player_popup_ads_title">Приховати спливаючі оголошення гравця</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Спливаючі оголошення гравця приховано</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Спливаючі оголошення гравця показуються</string>
   <string name="morphe_hide_self_sponsor_ads_title">Приховати картки само спонсорства</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Картки само спонсорства приховано</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Картки само спонсорства показуються</string>
@@ -739,9 +742,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Пункт меню \"Звукова доріжка\" показується</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Меню доріжок звуку приховане
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Меню аудіодоріжок приховано
 
-Щоб показати меню доріжок звуку, змініть 'Фальсифікувати потоки відео' на 'Android Reel' або 'TV'"</string>
+Щоб показати меню аудіо доріжок, змініть \"Підроблені відео потоки\" на \"Android Reel\" або \"TV\""</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Приховати \"Дивитись у VR\"</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Пункт меню \"Дивитись у VR\" приховано</string>
@@ -960,10 +963,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">Приховати мітку часу відео</string>
   <string name="morphe_hide_timestamp_summary_on">Мітку часу відео над панеллю прогресу приховано</string>
   <string name="morphe_hide_timestamp_summary_off">Мітка часу відео над панеллю прогресу показується</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Приховати спливаючі панелі плеєра</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Автоматичні спливаючі панелі плеєра приховано, такі як список відтворення чи чат</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Автоматичні спливаючі панелі плеєра показуються</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Відключити спливаючі панелі гравця</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Автоматичні спливаючі панелі плеєра приховано, такі як список відтворення чи чат</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Автоматичні спливаючі панелі плеєра активовано, такі як список відтворення чи чат</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Вийти з повноекранного режиму в кінці відео</string>
   <string name="morphe_exit_fullscreen_entry_1">Вимкнено</string>

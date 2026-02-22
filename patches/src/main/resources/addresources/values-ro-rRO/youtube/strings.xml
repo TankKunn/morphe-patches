@@ -411,6 +411,9 @@ Limitări:
   <string name="morphe_hide_paid_promotion_label_title">Ascunde eticheta promoției cu plată</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Eticheta promoției plătite este ascunsă</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Eticheta promoției plătite este afișată</string>
+  <string name="morphe_hide_player_popup_ads_title">Ascunde anunțurile pop-up ale jucătorului</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Anunțurile pop-up ale jucătorului sunt ascunse</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Anunțurile pop-up ale jucătorului sunt afișate</string>
   <string name="morphe_hide_self_sponsor_ads_title">Ascunde cardurile auto-sponsorizate</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Cardurile sponsorizate automat sunt ascunse</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Cardurile sponsorizate automat sunt afișate</string>
@@ -955,10 +958,10 @@ Setări → Redare → Redare automată videoclipul următor"</string>
   <string name="morphe_hide_timestamp_title">Ascunde marcajul temporal video</string>
   <string name="morphe_hide_timestamp_summary_on">Marcajul de timp este ascuns</string>
   <string name="morphe_hide_timestamp_summary_off">Ora este afișată</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Ascunde panourile pop-up jucător</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Panourile pop-up ale jucătorilor sunt ascunse</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Panourile pop-up ale jucătorului sunt afișate</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title"> Dezactivați panourile pop-up ale jucătorului</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Panourile pop-up ale jucătorilor sunt dezactivate</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Panourile pop-up ale jucătorilor sunt active</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Ieșiți din modul ecran complet la sfârșitul videoclipului</string>
   <string name="morphe_exit_fullscreen_entry_1">Dezactivat</string>

@@ -415,6 +415,9 @@ Sınırlamalar
   <string name="morphe_hide_paid_promotion_label_title">Ücretli tanıtım etiketini gizle</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Ücretli tanıtım etiketi gizli</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Ücretli tanıtım etiketi görünür</string>
+  <string name="morphe_hide_player_popup_ads_title">Oynatıcı açılır reklamları gizle</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Oynatıcı açılır reklamları gizli</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Oynatıcı açılır reklamları görünür</string>
   <string name="morphe_hide_self_sponsor_ads_title">Kendine sponsor kartları gizle</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Kendine sponsor kartlar gizli</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Kendine sponsor kartlar görünür</string>
@@ -959,10 +962,10 @@ Ayarlar → Oynatma → Sonraki videoyu otomatik oynat"</string>
   <string name="morphe_hide_timestamp_title">Video zaman damgasını gizle</string>
   <string name="morphe_hide_timestamp_summary_on">Video zaman damgası gizli</string>
   <string name="morphe_hide_timestamp_summary_off">Video zaman damgası görünür</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Oynatıcı açılır panellerini gizle</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Oynatıcı açılır panelleri gizli</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Oynatıcı açılır panelleri görünür</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Oynatıcı açılır panelleri devre dışı bırak</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Oynatıcı açılır panelleri kapatıldı</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Oynatıcı açılır panelleri açıldı</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Video sonunda tam ekran modundan çık</string>
   <string name="morphe_exit_fullscreen_entry_1">Devre dışı</string>

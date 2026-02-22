@@ -417,6 +417,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">Ετικέτες προώθησης επί πληρωμή</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Κρυμμένες</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Εμφανίζονται</string>
+  <string name="morphe_hide_player_popup_ads_title">Απόκρυψη διαφημίσεων παίκτη</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Οι διαφημίσεις του παίκτη είναι κρυμμένες</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Οι διαφημίσεις του παίκτη εμφανίζονται</string>
   <string name="morphe_hide_self_sponsor_ads_title">Κάρτες αυτοπροώθησης</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Κρυμμένες</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Εμφανίζονται</string>
@@ -961,10 +964,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">Χρονική πρόοδος βίντεο</string>
   <string name="morphe_hide_timestamp_summary_on">Κρυμμένη</string>
   <string name="morphe_hide_timestamp_summary_off">Εμφανίζεται</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Αναδυόμενα παράθυρα οθόνης αναπαραγωγής</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Κρυμμένα</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Εμφανίζονται</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Απενεργοποίηση αναδυόμενων διαφημίσεων παίκτη</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Οι καρτέλες του παίκτη είναι απενεργοποιημένες</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Οι καρτέλες του παίκτη είναι ενεργοποιημένες</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Έξοδος από την λειτουργία πλήρους οθόνης στο τέλος του βίντεο</string>
   <string name="morphe_exit_fullscreen_entry_1">Ανενεργό</string>

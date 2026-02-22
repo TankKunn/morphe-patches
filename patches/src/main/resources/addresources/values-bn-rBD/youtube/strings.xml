@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">অর্থের বিনিময়ে প্রচার অন্তর্ভুক্ত রয়েছে ব্যানার লুকান</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">অর্থের বিনিময়ে প্রচার অন্তর্ভুক্ত রয়েছে ব্যানার লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">অর্থের বিনিময়ে প্রচার অন্তর্ভুক্ত রয়েছে ব্যানার প্রদর্শিত হয়েছে</string>
+  <string name="morphe_hide_player_popup_ads_title">প্লেয়ার পপআপ বিজ্ঞাপন লুকান</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">প্লেয়ার পপআপ বিজ্ঞাপন লুকিয়ে রয়েছে</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">প্লেয়ার পপআপ বিজ্ঞাপন প্রদর্শিত হয়েছে</string>
   <string name="morphe_hide_self_sponsor_ads_title">স্ব-স্পন্সর কার্ড লুকান</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">স্ব-স্পন্সর কার্ড লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">স্ব-স্পন্সর কার্ড প্রদর্শিত হয়েছে</string>
@@ -959,10 +962,10 @@ YouTube সেটিংসে অটো প্লে পরিবর্তন �
   <string name="morphe_hide_timestamp_title">ভিডিওর সময়স্ট্যাম্প লুকান</string>
   <string name="morphe_hide_timestamp_summary_on">সময়স্ট্যাম্প লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_timestamp_summary_off">সময়স্ট্যাম্প প্রদর্শিত হয়েছে</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">প্লেয়ার পপআপ প্যানেলগুলো লুকান</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">প্লেয়ার পপআপ প্যানেলগুলো লুকিয়ে রয়েছে</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">প্লেয়ার পপআপ প্যানেলগুলো প্রদর্শিত হয়েছে</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">প্লেয়ার পপআপ প্যানেলগুলো লুকান</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">প্লেয়ার পপআপ প্যানেলগুলো ডিসাবলড</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">প্লেয়ার পপআপ প্যানেলগুলো এনাবলড</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">ভিডিও শেষ হওয়ার সময় পূর্ণ পর্দা মোড থেকে বেরিয়ে যান</string>
   <string name="morphe_exit_fullscreen_entry_1">নিষ্ক্রিয়</string>

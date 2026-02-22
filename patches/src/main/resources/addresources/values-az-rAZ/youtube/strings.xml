@@ -850,10 +850,7 @@ Avtomatik oynatma YouTube ayarlarında dəyişdirilə bilər: Ayarlar → Oxunu�
   <string name="morphe_hide_timestamp_title">Video vaxt möhürünü gizlət</string>
   <string name="morphe_hide_timestamp_summary_on">Vaxt möhürü gizlidir</string>
   <string name="morphe_hide_timestamp_summary_off">Vaxt möhürü göstərilir</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Oynadıcı açılan pəncərə panellərin gizlə</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Oynadıcı açılan pəncərə panelləri gizlidir</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Oynadıcı açılan pəncərə panelləri göstərilir</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Video sonunda tam ekran rejimindən çıx</string>
   <string name="morphe_exit_fullscreen_entry_1">Qapalı</string>

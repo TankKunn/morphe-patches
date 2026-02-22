@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">Скрийте отметка за платна реклама</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Отметката за платна реклама е скрита</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Отметката за платна реклама е показана</string>
+  <string name="morphe_hide_player_popup_ads_title">Скриване на поп-ап обяви за играч</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Поп-ап обяви за играч са скрити</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Поп-ап обяви за играч се показват</string>
   <string name="morphe_hide_self_sponsor_ads_title">Скрийте самопромотирани карти</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Самопромотираните карти са скрити</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Самопромотираните карти са показани</string>
@@ -950,10 +953,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">Дублирането на видеа е скрито</string>
   <string name="morphe_hide_timestamp_summary_on">Дублирането на видеа се показва</string>
   <string name="morphe_hide_timestamp_summary_off">Скрий дублиране на видеа</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Дублирането на видеа е скрито</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Дублирането на видеа се показва</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Скрий дублиране на видеа</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Изключване на поп-ап панели за играч</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Панелите за играч са изключени</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Панелите за играч са включени</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Дублирането на видеа е скрито</string>
   <string name="morphe_exit_fullscreen_entry_1">Дублирането на видеа се показва</string>

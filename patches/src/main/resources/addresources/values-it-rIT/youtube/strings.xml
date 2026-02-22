@@ -415,6 +415,9 @@ Limitazioni:
   <string name="morphe_hide_paid_promotion_label_title">Nascondi l\'etichetta della promozione a pagamento</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">L\'etichetta della promozione a pagamento è nascosta</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">L\'etichetta della promozione a pagamento è visibile</string>
+  <string name="morphe_hide_player_popup_ads_title">Nascondi gli annunci popup del giocatore</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Gli annunci popup del giocatore sono nascosti</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Gli annunci popup del giocatore sono visibili</string>
   <string name="morphe_hide_self_sponsor_ads_title">Nascondi le schede autopromozionali</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Le schede autopromozionali sono nascoste</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Le schede autopromozionali sono visibili</string>
@@ -959,10 +962,10 @@ Impostazioni → Riproduzione → Riproduzione automatica video successivo"</str
   <string name="morphe_hide_timestamp_title">Nascondi timestamp video</string>
   <string name="morphe_hide_timestamp_summary_on">Il timestamp è nascosto</string>
   <string name="morphe_hide_timestamp_summary_off">Il timestamp è visibile</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Nascondi i pannelli popup del player</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">I pannelli popup del player sono nascosti</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">I pannelli popup del player sono visibili</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Disabilita i pannelli popup del giocatore</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">I pannelli popup del player sono disabilitati</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">I pannelli popup del player sono abilitati</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Esci dalla modalità schermo intero al termine del video</string>
   <string name="morphe_exit_fullscreen_entry_1">Disabilitato</string>

@@ -414,6 +414,9 @@ Limitações:
   <string name="morphe_hide_paid_promotion_label_title">Ocultar o rótulo de promoção paga</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">O rótulo de promoção paga está oculto</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">O rótulo de promoção paga é mostrada</string>
+  <string name="morphe_hide_player_popup_ads_title">Ocultar anúncios popup do jogador</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Anúncios popup do jogador estão ocultos</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Anúncios popup do jogador estão visíveis</string>
   <string name="morphe_hide_self_sponsor_ads_title">Ocultar cartões auto-patrocinados</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Cartões autopatrocinados estão ocultos</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Cartões autopatrocinados não estão ocultos</string>
@@ -958,10 +961,10 @@ Configurações → Reprodução → Começar o próximo vídeo automaticamente"
   <string name="morphe_hide_timestamp_title">Ocultar tempo do vídeo</string>
   <string name="morphe_hide_timestamp_summary_on">Tempo está oculto</string>
   <string name="morphe_hide_timestamp_summary_off">Tempo não está oculto</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Ocultar painel popup de reprodutor</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Painel pop-up do reprodutor está oculto</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Painel pop-up do reprodutor não está oculto</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Desativar painéis popup do jogador</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Painel pop-up do reprodutor estÃ¡ desativado</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Painel pop-up do reprodutor estÃ¡ ativado</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Sair do modo de tela cheia ao final do vídeo</string>
   <string name="morphe_exit_fullscreen_entry_1">Desativado</string>

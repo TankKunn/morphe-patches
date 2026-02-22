@@ -415,6 +415,9 @@ Beperkingen:
   <string name="morphe_hide_paid_promotion_label_title">Betaalde promotielabel verbergen</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Betaalde promotielabel is verborgen</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Betaalde promotielabel wordt getoond</string>
+  <string name="morphe_hide_player_popup_ads_title">Verberg speler pop-up reclames</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Speler pop-up reclames zijn verborgen</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Speler pop-up reclames zijn zichtbaar</string>
   <string name="morphe_hide_self_sponsor_ads_title">Zelf gesponsorde kaarten verbergen</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Zelf gesponsorde kaarten zijn verborgen</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Zelf gesponsorde kaarten worden getoond</string>
@@ -959,10 +962,10 @@ Instellingen → Afspelen → Volgende video automatisch afspelen"</string>
   <string name="morphe_hide_timestamp_title">Verberg de videotijd</string>
   <string name="morphe_hide_timestamp_summary_on">De tijd is verborgen</string>
   <string name="morphe_hide_timestamp_summary_off">De tijd is zichtbaar</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Verberg de pop-upvensters van de speler</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">De pop-upvensters van de speler zijn verborgen</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">De pop-upvensters van de speler zijn zichtbaar</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Uitschakelen speler pop-up panelen</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Speler pop-up panelen zijn uitgeschakeld</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Speler pop-up panelen zijn ingeschakeld</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Afsluiten van volledig scherm modus bij einde van de video</string>
   <string name="morphe_exit_fullscreen_entry_1">Uitgeschakeld</string>

@@ -418,6 +418,7 @@ Ograničenja:
   <string name="morphe_hide_paid_promotion_label_title">Sakrij oznaku za plaćeno promoviranje</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Oznaka za plaćeno promoviranje je skrivena</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Oznaka za plaćeno promoviranje je prikazana</string>
+  <string name="morphe_hide_player_popup_ads_title">Sakrij skočne oglase igrača</string>
   <string name="morphe_hide_self_sponsor_ads_title">Sakrij samostalne oglase</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Samostalne oglase su skrivene</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Samostalne oglase su prikazane</string>
@@ -956,10 +957,7 @@ Kapke će biti automatski spremljene ako su ispravne"</string>
   <string name="morphe_hide_timestamp_title">Sakrij oznaku za trajanje videoa</string>
   <string name="morphe_hide_timestamp_summary_on">Oznaka za trajanje videoa je skrivena</string>
   <string name="morphe_hide_timestamp_summary_off">Oznaka za trajanje videoa se prikazuju</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Sakrij dugmice za pop-up panela</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Dugmice za pop-up panela su skrivena</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Dugmice za pop-up panela se prikazuju</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Izlaz iz punoglasnog režima pri kraju videoa</string>
   <string name="morphe_exit_fullscreen_entry_1">Onemogućeno</string>

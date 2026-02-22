@@ -414,6 +414,9 @@ Keterbatasan
   <string name="morphe_hide_paid_promotion_label_title">Sembunyikan label promosi berbayar</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Label promosi berbayar disembunyikan</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Label promosi berbayar ditampilkan</string>
+  <string name="morphe_hide_player_popup_ads_title">Sembunyikan iklan pesan timbul pemutar</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Iklan pesan timbul pemutar disembunyikan</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Iklan pesan timbul pemutar ditampilkan</string>
   <string name="morphe_hide_self_sponsor_ads_title">Sembunyikan kartu bersponsor pribadi</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Kartu bersponsor pribadi disembunyikan</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Kartu bersponsor pribadi ditampilkan</string>
@@ -958,10 +961,10 @@ Pengaturan → Pemutaran → Putar otomatis video berikutnya"</string>
   <string name="morphe_hide_timestamp_title">Sembunyikan penanda waktu video</string>
   <string name="morphe_hide_timestamp_summary_on">Penanda waktu disembunyikan</string>
   <string name="morphe_hide_timestamp_summary_off">Penanda waktu ditampilkan</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Sembunyikan panel pesan timbul pemutar</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Panel pesan timbul pemutar disembunyikan</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Panel pesan timbul pemutar ditampilkan</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Nonaktifkan panel pesan timbul pemutar</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Panel pesan timbul pemutar dinonaktifkan</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Panel pesan timbul pemutar diaktifkan</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Keluar dari mode layar penuh di akhir video</string>
   <string name="morphe_exit_fullscreen_entry_1">Dinonaktifkan</string>

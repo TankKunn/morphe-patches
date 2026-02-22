@@ -119,7 +119,7 @@ Second \"item\" text"</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
   <!-- layout.hide.time.hideTimestampPatch -->
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <!-- layout.player.fullscreen.openVideosFullscreen -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityResourcePatch -->

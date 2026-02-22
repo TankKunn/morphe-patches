@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">ซ่อนป้ายโฆษณาที่จ่ายเงิน</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">ป้ายโฆษณาที่จ่ายเงินถูกซ่อน</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">ป้ายโฆษณาที่จ่ายเงินจะแสดง</string>
+  <string name="morphe_hide_player_popup_ads_title">ซ่อนโปปอัพของผู้เล่น</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">โปปอัพของผู้เล่นถูกซ่อนอยู่</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">โปปอัพของผู้เล่นแสดงอยู่</string>
   <string name="morphe_hide_self_sponsor_ads_title">ซ่อนการ์ดที่สนับสนุนตัวเอง</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">การ์ดที่สนับสนุนตัวเองถูกซ่อน</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">การ์ดที่สนับสนุนตัวเองจะแสดง</string>
@@ -957,10 +960,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">ซ่อนเวลาของวิดีโอ</string>
   <string name="morphe_hide_timestamp_summary_on">เวลาถูกซ่อนอยู่</string>
   <string name="morphe_hide_timestamp_summary_off">เวลาแสดงอยู่</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">ซ่อนแผงป๊อปอัปของเครื่องเล่น</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">แผงป๊อปอัปของเครื่องเล่นถูกซ่อนอยู่</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">แผงป๊อปอัปของเครื่องเล่นแสดงอยู่</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">ปิดใช้งานโปปอัพของผู้เล่น</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">แผงป๊อปอัปของเครื่องเล่นถูกซ่อนอยู่</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">แผงป๊อปอัปของเครื่องเล่นเปิดอยู่</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">ออกจากโหมดเต็มหน้าจอเมื่อสิ้นสุดวิดีโอ</string>
   <string name="morphe_exit_fullscreen_entry_1">ปิดใช้งาน</string>

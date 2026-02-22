@@ -414,6 +414,9 @@ Limitaciones:
   <string name="morphe_hide_paid_promotion_label_title">Ocultar etiqueta de promoción pagada</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">La etiqueta de promoción pagada está oculta</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">La etiqueta de promoción pagada está visible</string>
+  <string name="morphe_hide_player_popup_ads_title">Ocultar anuncios emergentes del reproductor</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Los anuncios emergentes del reproductor están ocultos</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Los anuncios emergentes del reproductor están visibles</string>
   <string name="morphe_hide_self_sponsor_ads_title">Ocultar tarjetas autopatrocinadas</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Las tarjetas autopatrocinadas están ocultas</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Las tarjetas autopatrocinadas están visibles</string>
@@ -958,10 +961,10 @@ Configuración → Reproducción → Reproducción automática del siguiente ví
   <string name="morphe_hide_timestamp_title">Ocultar fecha y hora de vídeo</string>
   <string name="morphe_hide_timestamp_summary_on">La fecha y hora está oculta</string>
   <string name="morphe_hide_timestamp_summary_off">La fecha y hora está visible</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Ocultar paneles emergentes del reproductor</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Los paneles emergentes del reproductor están ocultos</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Los paneles emergentes del reproductor están visibles</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Desactivar paneles emergentes del reproductor</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Los paneles emergentes del reproductor están desactivados</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Los paneles emergentes del reproductor están activados</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Salir del modo de pantalla completa al final del vídeo</string>
   <string name="morphe_exit_fullscreen_entry_1">Desactivado</string>

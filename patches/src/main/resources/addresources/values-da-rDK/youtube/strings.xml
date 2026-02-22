@@ -415,6 +415,9 @@ Begrænsninger:
   <string name="morphe_hide_paid_promotion_label_title">Skjul betalt kampagneetiket</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Betalt reklamemærke er skjult</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Betalt salgsfremmende mærke er vist</string>
+  <string name="morphe_hide_player_popup_ads_title">Skjul spiller pop-up reklamer</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Spiller pop-up reklamer er skjult</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Spiller pop-up reklamer er vist</string>
   <string name="morphe_hide_self_sponsor_ads_title">Skjul selvsponsorerede kort</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Selvsponsorerede kort er skjult</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Selvsponsorerede kort vises</string>
@@ -959,10 +962,10 @@ Indstillinger → Afspilning → Afspil næste video automatisk"</string>
   <string name="morphe_hide_timestamp_title">Skjul tidsstempel på video</string>
   <string name="morphe_hide_timestamp_summary_on">Tidsstempel er skjult</string>
   <string name="morphe_hide_timestamp_summary_off">Tidsstempel er vist</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Skjul pop op- paneler</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Spiller popup paneler er skjult</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Spiller popup paneler vises</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Deaktiver spiller pop-up paneler</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Spiller popup paneler er deaktiveret</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Spiller popup paneler er aktiveret</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Afslut fuldskærmstilstand ved videoens afslutning</string>
   <string name="morphe_exit_fullscreen_entry_1">Deaktiveret</string>
