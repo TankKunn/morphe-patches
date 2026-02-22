@@ -1,3 +1,10 @@
+# [1.15.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.6...v1.15.0-dev.7) (2026-02-22)
+
+
+### Bug Fixes
+
+* **YouTube - Hide Shorts components:** Resolve hiding Shorts not working ([#610](https://github.com/MorpheApp/morphe-patches/issues/610)) ([dbef1c4](https://github.com/MorpheApp/morphe-patches/commit/dbef1c419e6b871e5587e9c6f800ff622e962c2c))
+
 # [1.15.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.5...v1.15.0-dev.6) (2026-02-22)
 
 
