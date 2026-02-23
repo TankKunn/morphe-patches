@@ -1,5 +1,5 @@
 {
-  "version": "1.15.0-dev.7",
+  "version": "1.15.0-dev.8",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -458,6 +458,7 @@
       "description": "Adds an option to disable haptic feedback in the player for various actions.",
       "use": true,
       "dependencies": [
+        "BytecodePatch",
         "BytecodePatch"
       ],
       "compatiblePackages": {

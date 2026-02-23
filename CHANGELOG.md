@@ -1,3 +1,10 @@
+# [1.15.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.7...v1.15.0-dev.8) (2026-02-23)
+
+
+### Features
+
+* **YouTube - Disable haptic feedback:** Add `Disable tap and hold haptics` setting ([#592](https://github.com/MorpheApp/morphe-patches/issues/592)) ([279722a](https://github.com/MorpheApp/morphe-patches/commit/279722a153573cc4d93bbe8becef31aa930cf0aa))
+
 # [1.15.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.6...v1.15.0-dev.7) (2026-02-22)
 
 
