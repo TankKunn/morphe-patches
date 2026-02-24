@@ -1,3 +1,10 @@
+# [1.15.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.8...v1.15.0-dev.9) (2026-02-24)
+
+
+### Bug Fixes
+
+* **YouTube - Hide ads:** Hide new type of ad ([#594](https://github.com/MorpheApp/morphe-patches/issues/594)) ([87c2d24](https://github.com/MorpheApp/morphe-patches/commit/87c2d24725e4ceccb9a000c95e1b7487ff9fc6b6))
+
 # [1.15.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0-dev.7...v1.15.0-dev.8) (2026-02-23)
 
 
