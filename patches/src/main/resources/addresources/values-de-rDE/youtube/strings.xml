@@ -1461,6 +1461,9 @@ Durch Aktivieren dieser Option können höhere Videoqualitäten freigeschaltet w
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Haptik für das Rückgängigmachen der Suche deaktivieren</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Die Haptik für das Rückgängigmachen der Suche ist deaktiviert</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Die Haptik für das Rückgängigmachen der Suche ist aktiviert</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Deaktivieren Sie das Antippen und Halten von Haptik</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Antippen und Halten von Haptik ist deaktiviert</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Antippen und Halten von Haptik ist aktiviert</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Zoomhaptik deaktivieren</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Zoomhaptik ist deaktiviert</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Zoomhaptik ist aktiviert</string>

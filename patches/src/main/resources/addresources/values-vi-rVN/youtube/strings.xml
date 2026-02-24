@@ -1462,6 +1462,9 @@ Bật tính năng này có thể mở khóa chất lượng video cao hơn"</str
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Tắt phản hồi xúc giác khi huỷ tua</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Phản hồi xúc giác khi huỷ tua đã tắt</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Phản hồi xúc giác khi huỷ tua đã bật</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Tắt phản hồi xúc giác khi bấm giữ</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Phản hồi xúc giác khi bấm giữ đã tắt</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Phản hồi xúc giác khi bấm giữ đã bật</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Tắt phản hồi xúc giác khi thu phóng</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Phản hồi xúc giác khi thu phóng đã tắt</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Phản hồi xúc giác khi thu phóng đã bật</string>

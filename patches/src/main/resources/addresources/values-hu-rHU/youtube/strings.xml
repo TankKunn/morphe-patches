@@ -1461,6 +1461,9 @@ Ez a beállítás lehetővé teszi a magasabb videóminőségek feloldását"</s
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Keresés visszavonása haptikus visszajelzésének letiltása</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">A keresés visszavonása haptikus visszajelzése ki van kapcsolva</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">A keresés visszavonása haptikus visszajelzése be van kapcsolva</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Haptikus visszajelzések tap és tartás letiltása</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Tap és tartás haptikus visszajelzése letiltva</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Tap és tartás haptikus visszajelzése engedélyezve</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Haptikus zoom letiltása</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Haptikus zoom le van tiltva</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Haptikus zoom be van kapcsolva</string>

@@ -1463,6 +1463,9 @@ Aktivering af dette kan låse op for højere videokvalitet"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Deaktivér fortryd søge-haptik</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Fortryd søge-haptik er deaktiveret</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Fortryd søge-haptik er aktiveret</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Deaktiver tap og hold haptik</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Tap og hold haptik er deaktiveret</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Tap og hold haptik er aktiveret</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Deaktivér zoom haptics</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Zoom haptics er deaktiveret</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Zoom haptics er aktiveret</string>

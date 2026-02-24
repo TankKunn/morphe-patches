@@ -1468,6 +1468,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">停用拖曳還原觸覺回饋</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">已停用拖曳還原觸覺回饋</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">已啟用拖曳還原觸覺回饋</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">停用按住觸覺反饋</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">已停用按住觸覺反饋</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">已啟用按住觸覺反饋</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">停用縮放震動</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">已停用縮放觸覺回饋</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">已啟用縮放觸覺回饋</string>

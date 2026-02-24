@@ -1463,6 +1463,9 @@ Abilitare questa opzione può sbloccare qualità video più elevate"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Disabilita l\'aptica di annullamento della ricerca</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">L\'aptica di annullamento della ricerca è disabilitata</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">L\'aptica di annullamento della ricerca è abilitata</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Disabilita tap e hold aptica</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Tap e hold aptica disabilitata</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Tap e hold aptica abilitata</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Disabilita zoom aptico</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Lo zoom aptico è disabilitato</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Lo zoom aptico è abilitato</string>

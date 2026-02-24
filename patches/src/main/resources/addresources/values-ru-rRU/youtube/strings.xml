@@ -1463,6 +1463,9 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Отключить виброотклик отмены перемотки</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Виброотклик отмены перемотки отключен</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Виброотклик отмены перемотки включен</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Отключить виброотклик при долгом нажатии</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Виброотклик при долгом нажатии отключен</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Виброотклик при долгом нажатии включен</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Отключить виброотклик при масштабировании</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Виброотклик при масштабировании отключен</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Виброотклик при масштабировании включен</string>

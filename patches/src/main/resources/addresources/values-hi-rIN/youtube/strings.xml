@@ -822,6 +822,9 @@ Second \"item\" text"</string>
 
 विदियो गुणवत्ता अधिक हो सकती है, लेकिन आप वीडियो प्लेबैक स्टटरिंग, बटरी लाइफ बिगड़ना, और अनजान साइड इफेक्ट्स का अनुभव कर सकते हैं"</string>
   <!-- misc.hapticfeedback.disableHapticFeedbackPatch -->
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">डिसेबल टैप ऐंड होल्ड हॅप्टिक्स</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">टैप ऐंड होल्ड हॅप्टिक्स डिसेबल है</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">टैप ऐंड होल्ड हॅप्टिक्स एनाबल है</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <!-- misc.links.bypassURLRedirectsPatch -->
   <!-- misc.links.openLinksExternallyPatch -->

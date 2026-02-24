@@ -1463,6 +1463,9 @@ Włączenie tej opcji może odblokować wyższe jakości wideo"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Wibracje podczas cofania przewijania</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Wyłączone</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Włączone</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Wibracje przy stuknięciu i przytrzymaniu</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Wyłączone</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Włączone</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Wibracje podczas przybliżania filmu</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Wyłączone</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Włączone</string>
@@ -1516,7 +1519,7 @@ Włączenie tej opcji może odblokować wyższe jakości wideo"</string>
   <string name="morphe_custom_playback_speeds_invalid">Prędkości niestandardowe muszą być mniejsze niż %s</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Nieprawidłowe prędkości odtwarzania niestandardowego</string>
   <string name="morphe_custom_playback_speeds_auto">Automatyczna</string>
-  <string name="morphe_speed_tap_and_hold_title">Szybkość dostosowywana dotknięciem i przytrzymaniem</string>
+  <string name="morphe_speed_tap_and_hold_title">Szybkość dostosowywana stuknięciem i przytrzymaniem</string>
   <string name="morphe_speed_tap_and_hold_summary">Prędkość odtwarzania w granicach od 0 do 8</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Zapamiętuj zmiany prędkości odtwarzania</string>

@@ -871,8 +871,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_new_posts_button_summary_on">새로운 게시물 버튼이 숨겨집니다</string>
   <string name="morphe_hide_shorts_new_posts_button_summary_off">새로운 게시물 버튼이 표시됩니다</string>
   <string name="morphe_hide_shorts_paused_overlay_buttons_title">일시 정지 오버레이 버튼 숨기기</string>
-  <string name="morphe_hide_shorts_paused_overlay_buttons_summary_on">일시 중지된 오버레이 버튼이 숨겨집니다</string>
-  <string name="morphe_hide_shorts_paused_overlay_buttons_summary_off">일시 중지된 오버레이 버튼이 표시됩니다</string>
+  <string name="morphe_hide_shorts_paused_overlay_buttons_summary_on">일시 정지 오버레이 버튼이 숨겨집니다</string>
+  <string name="morphe_hide_shorts_paused_overlay_buttons_summary_off">일시 정지 오버레이 버튼이 표시됩니다</string>
   <string name="morphe_hide_shorts_preview_comment_title">댓글 미리보기 숨기기</string>
   <string name="morphe_hide_shorts_preview_comment_summary_on">댓글 미리보기가 숨겨집니다</string>
   <string name="morphe_hide_shorts_preview_comment_summary_off">댓글 미리보기가 표시됩니다</string>
@@ -1463,6 +1463,9 @@ DeArrow에 대해 자세히 알아보려면 여기를 탭하세요"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">탐색 취소 진동 피드백 비활성화하기</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">탐색 취소 진동 피드백을 비활성화합니다</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">탐색 취소 진동 피드백을 활성화합니다</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">길게 탭하기 진동 피드백 비활성화하기</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">길게 탭하기 진동 피드백을 비활성화합니다</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">길게 탭하기 진동 피드백을 활성화합니다</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">동영상 확대 진동 피드백 비활성화하기</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">동영상 확대 진동 피드백을 비활성화합니다</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">동영상 확대 진동 피드백을 활성화합니다</string>

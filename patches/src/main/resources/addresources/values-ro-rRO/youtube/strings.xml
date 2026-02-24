@@ -1459,6 +1459,9 @@ Activarea acestei opțiuni poate debloca calități video mai mari"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Dezactivare haptics anulare căutare</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Haptica de anulare a căutării este dezactivată</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Haptica de anulare a căutării este activată</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Dezactivaţi hapticile la tap şi hold</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Hapticile la tap şi hold sunt dezactivate</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Hapticile la tap şi hold sunt active</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Dezactivare haptics zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Haptica zoom este dezactivată</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Haptica zoom este activată</string>

@@ -1462,6 +1462,9 @@ Habilitar isso pode desbloquear qualidades de vídeo mais altas"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Desativar feedback tátil de desfazer busca</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">O feedback tátil de desfazer busca está desativado</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">O feedback tátil de desfazer busca está ativado</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Desativar feedback tátil de toque e segurar</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Feedback tátil de toque e segurar está desativado</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Feedback tátil de toque e segurar está ativado</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Desativar zoom tátil</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">O zoom tátil está desativado</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">O zoom tátil está ativado</string>

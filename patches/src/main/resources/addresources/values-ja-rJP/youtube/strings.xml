@@ -1462,6 +1462,9 @@ Automotive レイアウト
   <string name="morphe_disable_haptic_feedback_seek_undo_title">シーク取り消しの触覚フィードバックを無効化</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">シーク取り消しの触覚フィードバックは無効です</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">シーク取り消しの触覚フィードバックは有効です</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">長押しの触覚フィードバックを無効化</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">長押しの触覚フィードバックは無効です</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">長押しの触覚フィードバックは有効です</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">ズームの触覚フィードバックを無効化</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">ズームの触覚フィードバックは無効です</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">ズームの触覚フィードバックは有効です</string>

@@ -1467,6 +1467,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">禁用撤销查找触觉反馈</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">撤销查找触觉反馈已禁用</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">撤销查找触觉反馈已启用</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">禁用长按触觉反馈</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">长按触觉反馈已禁用</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">长按触觉反馈已启用</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">禁用缩放触觉反馈</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">缩放触觉反馈已禁用</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">缩放触觉反馈已启用</string>

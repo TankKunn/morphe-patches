@@ -1464,6 +1464,9 @@ Povolením této funkce lze odemknout vyšší kvality videa"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Zakázat haptiku pro vrácení zpět vyhledávání</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Haptika pro vrácení zpět vyhledávání je vypnutá</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Haptika pro vrácení zpět vyhledávání je zapnutá</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Zakázat haptiku pro tap a držení</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Haptika pro tap a držení je zakázána</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Haptika pro tap a držení je povolena</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Zakázat haptiku pro zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Haptika zoomu je vypnutá</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Haptika zoomu je zapnutá</string>

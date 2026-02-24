@@ -1463,6 +1463,9 @@ Ako ovo omogućite, mogu biti otključani viši kvaliteti videa"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Onemogući vibraciju poništavanja premotavanja</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Vibracija poništavanja premotavanja je onemogućena</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Vibracija poništavanja premotavanja je omogućena</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Onemogući tap i držanje haptika</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Tap i držanje haptika je onemogućeno</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Tap i držanje haptika je omogućeno</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Onemogući vibraciju pri uveličavanju</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Vibracija pri uveličavanju je onemogućena</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Vibracija pri uveličavanju je omogućena</string>

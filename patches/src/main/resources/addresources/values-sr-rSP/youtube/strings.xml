@@ -1463,6 +1463,9 @@ Da bi prikazali meni sa zvučnim stazama, promenite 'Imitirati video tokove' u '
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Онемогући вибрацију поништавања премотавања </string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Вибрација поништавања премотавања је онемогућена</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Вибрација поништавања премотавања је омогућена</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Онемогући вибрације при дугом притиску</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Вибрације при дугом притиску су онемогућене</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Вибрације при дугом притиску су омогућене</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Онемогући вибрацију при увеличавању</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Вибрација при увеличавању је онемогућена</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Вибрација при увеличавању је омогућена</string>

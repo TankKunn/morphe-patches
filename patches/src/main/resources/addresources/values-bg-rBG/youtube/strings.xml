@@ -1447,6 +1447,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Музика</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Новини</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Известия</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Изключи вибрации при натискане и държане</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Вибрации при натискане и държане са изключени</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Вибрации при натискане и държане са включени</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Плейлисти</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Търсене</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Магазин</string>

@@ -1461,6 +1461,9 @@ Het inschakelen hiervan kan hogere videokwaliteiten ontgrendelen"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Haptiek voor ongedaan maken van zoeken uitschakelen</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Haptiek voor ongedaan maken van zoeken is uitgeschakeld</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Haptiek voor ongedaan maken van zoeken is ingeschakeld</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Uitschakelen tap en houd haptiek</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Tap en houd haptiek is uitgeschakeld</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Tap en houd haptiek is ingeschakeld</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Zoom-haptics uitschakelen</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Zoom-haptics is uitgeschakeld</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Zoom-haptics is ingeschakeld</string>

@@ -1461,6 +1461,9 @@ User id ของคุณเหมือนกับรหัสผ่าน �
   <string name="morphe_disable_haptic_feedback_seek_undo_title">ปิดใช้งานแฮปติกยกเลิกการค้นหา</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">ปิดใช้งานแฮปติกยกเลิกการค้นหา</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">เปิดใช้งานแฮปติกยกเลิกการค้นหา</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">ปิดใช้งานแฮปติกการกดและถือ</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">ปิดใช้งานแฮปติกการกดและถือ</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">เปิดใช้งานแฮปติกการกดและถือ</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">ปิดใช้งานแฮปติกซูม</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">ปิดใช้งานแฮปติกซูม</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">เปิดใช้งานแฮปติกซูม</string>

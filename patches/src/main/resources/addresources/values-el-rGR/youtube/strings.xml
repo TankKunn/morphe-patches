@@ -1463,6 +1463,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Απενεργοποίηση απόκρισης δόνησης κατά τη λειτουργία «Αφήστε για ακύρωση»</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Η απόκριση δόνησης κατά τη λειτουργία «Αφήστε για ακύρωση» είναι απενεργοποιημένη</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Η απόκριση δόνησης κατά τη λειτουργία «Αφήστε για ακύρωση» είναι ενεργοποιημένη</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Απενεργοποίηση απόκρισης δόνησης κατά το πατημα και κρατημα</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Η απόκριση δόνησης κατά το πατημα και κρατημα είναι απενεργοποιημένη</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Η απόκριση δόνησης κατά το πατημα και κρατημα είναι ενεργοποιημένη</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Απενεργοποίηση απόκρισης δόνησης χειρονομίας ζουμ</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Η απόκριση δόνησης της χειρονομίας ζουμ είναι απενεργοποιημένη</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Η απόκριση δόνησης της χειρονομίας ζουμ είναι ενεργοποιημένη</string>

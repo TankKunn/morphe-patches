@@ -1464,6 +1464,9 @@ DeArrow সম্পর্কে আরও জানতে এখানে ট�
   <string name="morphe_disable_haptic_feedback_seek_undo_title">সীক আনডু কম্পন নিষ্ক্রিয় করুন</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">সীক আনডু কম্পন নিষ্ক্রিয় করা হয়েছে</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">সীক আনডু কম্পন সক্রিয় করা হয়েছে</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">ট্যাপ এবং হোল্ড হ্যাপ্টিক্স নিষ্ক্রিয় করুন</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">ট্যাপ এবং হোল্ড হ্যাপ্টিক্স নিষ্ক্রিয় করা হয়েছে</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">ট্যাপ এবং হোল্ড হ্যাপ্টিক্স সক্রিয় করা হয়েছে</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">জুম করার কম্পন নিষ্ক্রিয় করুন</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">জুম করার কম্পন নিষ্ক্রিয় করা হয়েছে</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">জুম করার কম্পন সক্রিয় করা হয়েছে</string>

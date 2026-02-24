@@ -1465,6 +1465,9 @@ L’activation de cette option peut débloquer des qualités vidéo plus élevé
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Désactiver le retour haptique lors du relâchement de la barre de progression</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Le retour haptique lors du relâchement de la barre de progression est désactivé</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Le retour haptique lors du relâchement de la barre de progression est activé</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Désactiver le retour haptique lors d\'appui long</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Le retour haptique d\'appui lors d\'appui long est désactivé</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Le retour haptique d\'appui lors d\'appui long est activé</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Désactiver le retour haptique du zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Le retour haptique du zoom est désactivé</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Le retour haptique du zoom est activé</string>

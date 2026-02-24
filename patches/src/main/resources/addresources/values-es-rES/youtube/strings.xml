@@ -1462,6 +1462,9 @@ Activar esto puede desbloquear calidades de vídeo más altas"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Desactivar vibración al deshacer la búsqueda</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">La vibración al deshacer la búsqueda está desactivada</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">La vibración al deshacer la búsqueda está activada</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Desactivar vibración al mantener pulsado</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">La vibración al mantener pulsado está desactivada</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">La vibración al mantener pulsado está activada</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Desactivar vibración del zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">La vibración del zoom está desactivada</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">La vibración del zoom está activada</string>

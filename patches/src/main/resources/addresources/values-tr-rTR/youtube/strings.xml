@@ -1463,6 +1463,9 @@ Bunu etkinleştirmek daha yüksek video kalitelerini açabilir"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Sardırmayı geri alma titreşimini devre dışı bırak</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Sardırmayı geri alma titreşimi devre dışı</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Sardırmayı geri alma titreşimi etkin</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Sardırmayı tutma ve bırak titreşimini devre dışı bırak</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Sardırmayı tutma ve bırak titreşimi devre dışı</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Sardırmayı tutma ve bırak titreşimi etkin</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Yakınlaştırma titreşimini devre dışı bırak</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Yakınlaştırma titreşimi devre dışı</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Yakınlaştırma titreşimi etkin</string>

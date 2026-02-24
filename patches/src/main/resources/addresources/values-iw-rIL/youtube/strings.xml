@@ -1462,6 +1462,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">השבת משוב ברטט עבור ביטול דילוג</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">משוב ברטט עבור ביטול דילוג מושבת</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">משוב ברטט עבור ביטול דילוג מופעל</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">השבת משוב טאפ אנד הולד</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">משוב טאפ אנד הולד מושבת</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">משוב טאפ אנד הולד מופעל</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">השבת משוב זום ברטט</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">משוב ברטט עבור זום מושבת</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">משוב ברטט עבור זום מופעל</string>

@@ -1464,6 +1464,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">تعطيل اهتزاز التراجع عن التمرير</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">تم تعطيل اهتزاز التراجع عن التمرير</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">تم تمكين اهتزاز التراجع عن التمرير</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">تعطيل اهتزازات النقر والنقر المطول</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">تم تعطيل اهتزازات النقر والنقر المطول</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">تم تمكين اهتزازات النقر والنقر المطول</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">تعطيل الاهتزاز عند التكبير</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">تم تعطيل الاهتزاز عند التكبير</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">تم تمكين الاهتزاز عند التكبير</string>
