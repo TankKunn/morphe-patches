@@ -278,9 +278,9 @@ internal val addResourcesPatch = resourcePatch(
 
         appsToInclude.forEach { app ->
             locales.forEach { locale ->
-                addResourcesFromFile(app, locale, BundledResourceType.COLORS)
-                addResourcesFromFile(app, locale, BundledResourceType.ARRAYS)
-                addResourcesFromFile(app, locale, BundledResourceType.STRINGS)
+                BundledResourceType.entries.forEach { type ->
+                    addResourcesFromFile(app, locale, type)
+                }
             }
         }
     }
