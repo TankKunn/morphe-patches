@@ -33,6 +33,7 @@
 
 package app.morphe.util.resource
 
+import app.morphe.patches.all.misc.resources.StringResourceSanitizer.sanitizeAndroidResourceString
 import app.morphe.patches.all.misc.resources.locales
 import app.morphe.util.inputStreamFromBundledResource
 import org.w3c.dom.Element
@@ -73,7 +74,7 @@ internal fun main(args: Array<String>) {
                         val name = element.getAttribute("name")
                         val value = element.textContent
                         try {
-                            StringResource.sanitizeAndroidResourceString(
+                            sanitizeAndroidResourceString(
                                 key = name,
                                 value = value,
                                 filePath = srcSubPath,
