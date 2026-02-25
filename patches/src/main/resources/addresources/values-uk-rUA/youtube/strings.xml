@@ -48,17 +48,17 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_title">Вимкнути оновлення макета</string>
   <string name="morphe_disable_layout_updates_summary_on">Макет не буде оновлено сервером</string>
   <string name="morphe_disable_layout_updates_summary_off">Макет буде оновлено сервером</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Інтерфейс програми повертається до того, який використовувався під час першого встановлення.
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Макет застосунку повертається до макета, який використовувався під час першої інсталяції.
 
-Деякі серверні інтерфейси можуть не відновитись.
+Деякі серверні макети можуть не повертатися.
 
 Зміни включають:
-• Компоненти в меню програвача (або пов'язаних налаштувань) можуть не працювати.
-• Числа, що рухаються, не анімовані.
-• Відображається вкладка Бібліотека.
-• Розділ Музики в описі відео може не працювати.
-• Елементи спливаючого меню програвача не можна приховати.
-• Кнопка перемикання облікового запису може не відображатися на вкладці Бібліотека."</string>
+• Компоненти у спливаючому меню плеєра (або пов’язаних налаштуваннях) можуть не працювати.
+• Анімовані лічильники не анімуються.
+• Відображається вкладка \"Бібліотека\".
+• Розділ \"Музика\" в описі відео може не працювати.
+• Елементи спливаючого меню плеєра не можна приховати.
+• Кнопка перемикання облікового запису може не відображатися на вкладці \"Бібліотека\"."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Приховати полицю магазину автора</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Полицю магазину автора під відеоплеєром приховано</string>
@@ -119,9 +119,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">Приховати \"ігрові елементи\"</string>
   <string name="morphe_hide_playables_summary_on">Розділ \"ігрові елементи\" приховано</string>
   <string name="morphe_hide_playables_summary_off">Розділ \"ігрові елементи\" показується</string>
-  <string name="morphe_hide_search_suggestions_title">Приховати пропозиції пошуку</string>
-  <string name="morphe_hide_search_suggestions_summary_on">Пропозиції пошуку приховано</string>
-  <string name="morphe_hide_search_suggestions_summary_off">Пропозиції пошуку показуються</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Приховати кнопку \"Показати більше\"</string>
@@ -143,6 +140,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_web_search_results_title">Приховати результати вебпошуку</string>
   <string name="morphe_hide_web_search_results_summary_on">Результати вебпошуку приховано</string>
   <string name="morphe_hide_web_search_results_summary_off">Результати вебпошуку показуються</string>
+  <string name="morphe_hide_you_may_like_section_title">Приховати розділ \"Вам може сподобатися\"</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">Розділ \"Вам може сподобатися\" приховано</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">Розділ \"Вам може сподобатися\" показується</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">Приховати YouTube Doodles</string>
   <string name="morphe_hide_doodles_summary_on">Анімацію YouTube Doodles на логотипі приховано</string>
@@ -274,9 +274,9 @@ Second \"item\" text"</string>
   <string name="morphe_channel_screen_title">Сторінка каналу</string>
   <string name="morphe_channel_screen_summary">Приховати або показувати компоненти сторінки каналу</string>
   <string name="morphe_hide_channel_tab_title">Увімкнути фільтр вкладок каналу</string>
-  <string name="morphe_hide_channel_tab_summary_on">Фільтр вкладки каналу ввімкнено</string>
-  <string name="morphe_hide_channel_tab_summary_off">Фільтр вкладки каналу вимкнено</string>
-  <string name="morphe_hide_channel_tab_filter_strings_title">Фільтр вкладки каналу</string>
+  <string name="morphe_hide_channel_tab_summary_on">Фільтр вкладок каналу увімкнено</string>
+  <string name="morphe_hide_channel_tab_summary_off">Фільтр вкладок каналу вимкнено</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">Фільтр вкладок каналу</string>
   <string name="morphe_hide_channel_tab_filter_strings_summary">Введіть назви вкладок каналів для фільтрації, по одній на рядок</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_community_button_title">Приховати кнопку \"Спільнота\"</string>
@@ -416,6 +416,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">Приховати \"Містить пряму рекламу\"</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Мітку \"Містить пряму рекламу\" приховано</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Мітка \"Містить пряму рекламу\" показується</string>
+  <string name="morphe_hide_player_popup_ads_title">Приховувати спливаючу рекламу в плеєрі</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Спливаючу рекламу в плеєрі приховано</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Спливаюча рекламу в плеєрі показується</string>
   <string name="morphe_hide_self_sponsor_ads_title">Приховати картки само спонсорства</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Картки само спонсорства приховано</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Картки само спонсорства показуються</string>
@@ -687,9 +690,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_toolbar_search_button_title">Приховати кнопку \"Пошук\"</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Кнопку \"Пошук\" приховано</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Кнопка \"Пошук\" показується</string>
-  <string name="morphe_hide_toolbar_voice_search_button_title">Приховати кнопку Голосового пошуку</string>
-  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Кнопка Голосового пошуку прихована</string>
-  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Кнопка Голосового пошуку показана</string>
+  <string name="morphe_hide_toolbar_voice_search_button_title">Приховати кнопку \"Голосовий пошук\"</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_on">Кнопку \"Голосовий пошук\" приховано</string>
+  <string name="morphe_hide_toolbar_voice_search_button_summary_off">Кнопка \"Голосовий пошук\" показується</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Висувне меню</string>
   <string name="morphe_hide_player_flyout_summary">Приховати або показувати пункти висувного меню плеєра</string>
@@ -738,10 +741,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">Пункт меню \"Звукова доріжка\" приховано</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Пункт меню \"Звукова доріжка\" показується</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
+          'Android Reel' and 'TV' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Пункт меню \"Звукова доріжка\" приховано
 
-Для того, щоб пункт меню \"Звукова доріжка\" показувався, змініть клієнт \"Підробки відеопотоків\" на TV"</string>
+Для того, щоб пункт меню \"Звукова доріжка\" показувався, змініть клієнт \"Підміни відеопотоків\" на \"Android Reel\" або \"TV\""</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Приховати \"Дивитись у VR\"</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Пункт меню \"Дивитись у VR\" приховано</string>
@@ -960,10 +963,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">Приховати мітку часу відео</string>
   <string name="morphe_hide_timestamp_summary_on">Мітку часу відео над панеллю прогресу приховано</string>
   <string name="morphe_hide_timestamp_summary_off">Мітка часу відео над панеллю прогресу показується</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Приховати спливаючі панелі плеєра</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Автоматичні спливаючі панелі плеєра приховано, такі як список відтворення чи чат</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Автоматичні спливаючі панелі плеєра показуються</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Вимкнути спливаючі панелі плеєра</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Спливаючі панелі плеєра вимкнено, такі як список відтворення чи чат</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Спливаючі панелі плеєра увімкнено, такі як список відтворення чи чат</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Вийти з повноекранного режиму в кінці відео</string>
   <string name="morphe_exit_fullscreen_entry_1">Вимкнено</string>
@@ -1461,6 +1464,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Вимкнути вібрацію скасування перемотування</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Вібрацію скасування перемотування вимкнено</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Вібрацію скасування перемотування ввімкнено</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Вимкнути вібрацію при тривалому натисканні</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Вібрацію при тривалому натисканні вимкнено</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Вібрація при тривалому натисканні ввімкнена</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Вимкнути вібрацію при масштабуванні</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Вібрацію при масштабуванні вимкнено</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Вібрацію при масштабуванні ввімкнено</string>

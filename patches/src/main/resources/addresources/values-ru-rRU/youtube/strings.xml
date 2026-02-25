@@ -118,9 +118,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">Скрыть встроенные игры</string>
   <string name="morphe_hide_playables_summary_on">Встроенные игры в ленте скрыты</string>
   <string name="morphe_hide_playables_summary_off">Встроенные игры в ленте показаны</string>
-  <string name="morphe_hide_search_suggestions_title">Скрыть подсказки поиска</string>
-  <string name="morphe_hide_search_suggestions_summary_on">Предложения поиска скрыты</string>
-  <string name="morphe_hide_search_suggestions_summary_off">Предложения поиска показаны</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Скрыть кнопку \"Показать еще\"</string>
@@ -142,6 +139,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_web_search_results_title">Скрыть результаты веб-поиска</string>
   <string name="morphe_hide_web_search_results_summary_on">Результаты веб-поиска в ленте скрыты</string>
   <string name="morphe_hide_web_search_results_summary_off">Результаты веб-поиска в ленте показаны</string>
+  <string name="morphe_hide_you_may_like_section_title">Скрыть раздел Вам может понравиться</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">Раздел Вам может понравиться скрыто</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">Раздел Вам может понравиться показан</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">Скрыть YouTube Doodles</string>
   <string name="morphe_hide_doodles_summary_on">Анимация YouTube Doodles на логотипе скрыта</string>
@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">Скрыть метку платной акции</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Метка платной акции в плеере скрыта</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Метка платной акции в плеере показана</string>
+  <string name="morphe_hide_player_popup_ads_title">Скрыть всплывающие окна плеера</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Всплывающие окна плеера скрыты</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Всплывающие окна плеера показаны</string>
   <string name="morphe_hide_self_sponsor_ads_title">Скрыть заставки саморекламы</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Заставки саморекламы под информацией о видео скрыты</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Заставки саморекламы под информацией о видео показаны</string>
@@ -737,10 +740,10 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_hide_player_flyout_audio_track_summary_on">Пункт \"Звуковая дорожка\" в выдвижном меню плеера скрыт</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Пункт \"Звуковая дорожка\" в выдвижном меню плеера показан</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Меню дорожек аудио спрятано
+          'Android Reel' and 'TV' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Меню аудио дорожек скрыто
 
-Чтобы показать меню дорожек аудио, измените 'Подделывать потоки видео' на 'TV'"</string>
+Чтобы отобразить меню аудио дорожек, измените «Поддельные видео потоки» на «Android Reel» или «TV»"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Скрыть пункт \"Смотреть в VR-режиме\"</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Пункт \"Смотреть в VR-режиме\" в выдвижном меню плеера скрыт</string>
@@ -959,10 +962,10 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_hide_timestamp_title">Скрыть метку времени видео</string>
   <string name="morphe_hide_timestamp_summary_on">Метка времени видео над полосой прогресса скрыта</string>
   <string name="morphe_hide_timestamp_summary_off">Метка времени видео над полосой прогресса показана</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Скрыть всплывающие панели плеера</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Автоматически всплывающие панели в плеере скрыты</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Автоматически всплывающие панели в плеере показаны</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Отключить всплывающие панели плеера</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Автоматически всплывающие панели в плеере скрыты</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Автоматически всплывающие панели в плеере отображаются</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Выходить из полноэкранного режима по окончании видео</string>
   <string name="morphe_exit_fullscreen_entry_1">Отключено</string>
@@ -1460,6 +1463,9 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Отключить виброотклик отмены перемотки</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Виброотклик отмены перемотки отключен</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Виброотклик отмены перемотки включен</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Отключить виброотклик при долгом нажатии</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Виброотклик при долгом нажатии отключен</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Виброотклик при долгом нажатии включен</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Отключить виброотклик при масштабировании</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Виброотклик при масштабировании отключен</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Виброотклик при масштабировании включен</string>

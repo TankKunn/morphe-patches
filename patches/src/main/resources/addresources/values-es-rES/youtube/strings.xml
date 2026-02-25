@@ -117,9 +117,6 @@ Los cambios incluyen:
   <string name="morphe_hide_playables_title">Ocultar jugables</string>
   <string name="morphe_hide_playables_summary_on">Los jugables están ocultos</string>
   <string name="morphe_hide_playables_summary_off">Los jugables están visibles</string>
-  <string name="morphe_hide_search_suggestions_title">Ocultar sugerencias de búsqueda</string>
-  <string name="morphe_hide_search_suggestions_summary_on">Las sugerencias de búsqueda están ocultas</string>
-  <string name="morphe_hide_search_suggestions_summary_off">Las sugerencias de búsqueda están visibles</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Ocultar botón \"Mostrar más\"</string>
@@ -141,6 +138,9 @@ Los cambios incluyen:
   <string name="morphe_hide_web_search_results_title">Ocultar resultados de búsqueda web</string>
   <string name="morphe_hide_web_search_results_summary_on">Los resultados de búsqueda web están ocultos</string>
   <string name="morphe_hide_web_search_results_summary_off">Los resultados de la búsqueda web están visibles</string>
+  <string name="morphe_hide_you_may_like_section_title">Ocultar sección \"Quizá te guste\"</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">La sección \"Quizá te guste\" está oculta</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">La sección \"Quizá te guste\" está visible</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">Ocultar Doodles de YouTube</string>
   <string name="morphe_hide_doodles_summary_on">La animación de los Doodles de YouTube en el logo está oculta</string>
@@ -414,6 +414,9 @@ Limitaciones:
   <string name="morphe_hide_paid_promotion_label_title">Ocultar etiqueta de promoción pagada</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">La etiqueta de promoción pagada está oculta</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">La etiqueta de promoción pagada está visible</string>
+  <string name="morphe_hide_player_popup_ads_title">Ocultar anuncios emergentes del reproductor</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Los anuncios emergentes del reproductor están ocultos</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Los anuncios emergentes del reproductor están visibles</string>
   <string name="morphe_hide_self_sponsor_ads_title">Ocultar tarjetas autopatrocinadas</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Las tarjetas autopatrocinadas están ocultas</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Las tarjetas autopatrocinadas están visibles</string>
@@ -736,10 +739,10 @@ Las cookies se guardarán automáticamente si son válidas"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">El menú \"Pista de audio\" está oculto</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">El menú \"Pista de audio\" está visible</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
+          'Android Reel' and 'TV' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"El menú de pistas de audio está oculto
 
-Para mostrar el menú de pistas de audio, cambia \"Falsificar transmisiones de vídeo\" a \"TV\""</string>
+Para mostrar el menú de pistas de audio, cambia 'Falsificar transmisiones de vídeo' a 'Android Reel' o 'TV'"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Ocultar \"Ver en realidad virtual\"</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">El menú \"Ver en realidad virtual\" está oculto</string>
@@ -958,10 +961,10 @@ Configuración → Reproducción → Reproducción automática del siguiente ví
   <string name="morphe_hide_timestamp_title">Ocultar fecha y hora de vídeo</string>
   <string name="morphe_hide_timestamp_summary_on">La fecha y hora está oculta</string>
   <string name="morphe_hide_timestamp_summary_off">La fecha y hora está visible</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Ocultar paneles emergentes del reproductor</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Los paneles emergentes del reproductor están ocultos</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Los paneles emergentes del reproductor están visibles</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Desactivar paneles emergentes del reproductor</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Los paneles emergentes del reproductor están desactivados</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Los paneles emergentes del reproductor están activados</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Salir del modo de pantalla completa al final del vídeo</string>
   <string name="morphe_exit_fullscreen_entry_1">Desactivado</string>
@@ -1459,6 +1462,9 @@ Activar esto puede desbloquear calidades de vídeo más altas"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Desactivar vibración al deshacer la búsqueda</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">La vibración al deshacer la búsqueda está desactivada</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">La vibración al deshacer la búsqueda está activada</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Desactivar vibración al mantener pulsado</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">La vibración al mantener pulsado está desactivada</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">La vibración al mantener pulsado está activada</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Desactivar vibración del zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">La vibración del zoom está desactivada</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">La vibración del zoom está activada</string>

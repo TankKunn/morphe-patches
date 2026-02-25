@@ -45,6 +45,9 @@ Bu, xüsusi filtrlər yaradarkən quruluşları müəyyən etməyə kömək edə
 
 Hər halda, bunu aktivləşdirmə IP ünvanınız kimi bəzi istifadəçi məlumatın da daxil edəcək."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">Tərtibat yenilənmələrini qapat</string>
+  <string name="morphe_disable_layout_updates_summary_on">Tərtibat server tərəfindən yenilənməyəcək</string>
+  <string name="morphe_disable_layout_updates_summary_off">Tərtibat server tərəfindən yenilənəcək</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Yaradıcı mağaza bölümün gizlət</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Yaradıcı alış-veriş cərgəsi video oynadıcı altında gizlidir</string>
@@ -104,9 +107,6 @@ Hər halda, bunu aktivləşdirmə IP ünvanınız kimi bəzi istifadəçi məlum
   <string name="morphe_hide_playables_title">Oynadılan elementləri gizlət</string>
   <string name="morphe_hide_playables_summary_on">Oynadılanlar gizlidir</string>
   <string name="morphe_hide_playables_summary_off">Oynadılanlar göstərilir</string>
-  <string name="morphe_hide_search_suggestions_title">Axtarış təkliflərini gizlət</string>
-  <string name="morphe_hide_search_suggestions_summary_on">Axtarış təklifləri gizlədilib</string>
-  <string name="morphe_hide_search_suggestions_summary_off">Axtarış təklifləri göstərilir</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">\'Daha çox göstər\' düyməsini gizlət</string>
@@ -128,6 +128,9 @@ Hər halda, bunu aktivləşdirmə IP ünvanınız kimi bəzi istifadəçi məlum
   <string name="morphe_hide_web_search_results_title">Veb axtarış nəticələrini gizlət</string>
   <string name="morphe_hide_web_search_results_summary_on">Veb axtarış nəticələri gizlədilir</string>
   <string name="morphe_hide_web_search_results_summary_off">Veb axtarış nəticələri göstərilir</string>
+  <string name="morphe_hide_you_may_like_section_title">Bəyənə bilərsiniz bölməsini gizlət</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">Bəyənə bilərsiniz bölməsi gizlidir</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">Bəyənə bilərsiniz bölməsi görünür</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">YouTube Doodle-ları gizlət</string>
   <string name="morphe_hide_doodles_summary_on">YouTube Doodles animasiyası simvolda gizlidir</string>
@@ -187,7 +190,15 @@ Hər halda, bunu aktivləşdirmə IP ünvanınız kimi bəzi istifadəçi məlum
   <string name="morphe_hide_chapters_section_title">Fəsilləri Gizlət</string>
   <string name="morphe_hide_chapters_section_summary_on">Bölümlər bölməsi gizlidir</string>
   <string name="morphe_hide_chapters_section_summary_off">Bölümlər bölməsi göstərilir</string>
+  <string name="morphe_hide_course_progress_section_title">\"Kurs irəliləyişin\"-i Gizlət</string>
+  <string name="morphe_hide_course_progress_section_summary_on">Kurs irəliləyiş bölməsi gizlidir</string>
+  <string name="morphe_hide_course_progress_section_summary_off">Kurs irəliləyiş bölməsi görünür</string>
   <string name="morphe_hide_explore_section_title">Kəşf edin-i gizlət</string>
+  <string name="morphe_hide_explore_section_summary_on">Bu kursu araşdırın və Podkastı araşdırın bölmələri gizlidir</string>
+  <string name="morphe_hide_explore_section_summary_off">Bu kursu araşdırın və Podkastı araşdırın bölmələri görünür</string>
+  <string name="morphe_hide_explore_course_section_title">\"Bu kursu araşdırın\"-ı gizlət</string>
+  <string name="morphe_hide_explore_course_section_summary_on">Bu kursu araşdırın bölməsi gizlidir</string>
+  <string name="morphe_hide_explore_course_section_summary_off">Bu kursu araşdırın bölməsi görünür</string>
   <string name="morphe_hide_explore_podcast_section_title">\'Podkastı araşdırın\"-ı Gizlət</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Podkast bölməsin araşdırın gizlidir</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Podkast bölməsin araşdırın görünür</string>
@@ -661,7 +672,7 @@ Ekranın sağ tərəfində düzünə sürüşdürərək səs səviyyəsini tənz
   <string name="morphe_hide_player_flyout_audio_track_summary_on">Səs axını menyusu gizlidir</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Səs axını menyusu göstərilir</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
+          'Android Reel' and 'TV' must be kept untranslated. -->
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">\"VR-da İzləni\" gizlət</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">VR menyusunda izləmə gizlidir</string>
@@ -853,10 +864,7 @@ Avtomatik oynatma YouTube ayarlarında dəyişdirilə bilər: Ayarlar → Oxunu�
   <string name="morphe_hide_timestamp_title">Video vaxt möhürünü gizlət</string>
   <string name="morphe_hide_timestamp_summary_on">Vaxt möhürü gizlidir</string>
   <string name="morphe_hide_timestamp_summary_off">Vaxt möhürü göstərilir</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Oynadıcı açılan pəncərə panellərin gizlə</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Oynadıcı açılan pəncərə panelləri gizlidir</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Oynadıcı açılan pəncərə panelləri göstərilir</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Video sonunda tam ekran rejimindən çıx</string>
   <string name="morphe_exit_fullscreen_entry_1">Qapalı</string>

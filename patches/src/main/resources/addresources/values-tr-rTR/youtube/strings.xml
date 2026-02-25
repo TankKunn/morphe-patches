@@ -118,9 +118,6 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_playables_title">Hazır Oyunlar\'ı gizle</string>
   <string name="morphe_hide_playables_summary_on">Hazır Oyunlar gizli</string>
   <string name="morphe_hide_playables_summary_off">Hazır Oyunlar görünür</string>
-  <string name="morphe_hide_search_suggestions_title">Arama önerilerini gizle</string>
-  <string name="morphe_hide_search_suggestions_summary_on">Arama önerileri gizli</string>
-  <string name="morphe_hide_search_suggestions_summary_off">Arama önerileri görünür</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">\'Daha fazla göster\' düğmesini gizle</string>
@@ -142,6 +139,9 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_web_search_results_title">Web arama sonuçlarını gizle</string>
   <string name="morphe_hide_web_search_results_summary_on">Web arama sonuçları gizli</string>
   <string name="morphe_hide_web_search_results_summary_off">Web arama sonuçları görünür</string>
+  <string name="morphe_hide_you_may_like_section_title">Gizle Yorumlar kısmı</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">Yorumlar kısmı gizli</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">Yorumlar kısmı görünüyor</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">YouTube Doodle\'larını gizle</string>
   <string name="morphe_hide_doodles_summary_on">Logodaki YouTube Doodles animasyonu gizli</string>
@@ -415,6 +415,9 @@ Sınırlamalar
   <string name="morphe_hide_paid_promotion_label_title">Ücretli tanıtım etiketini gizle</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Ücretli tanıtım etiketi gizli</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Ücretli tanıtım etiketi görünür</string>
+  <string name="morphe_hide_player_popup_ads_title">Oynatıcı açılır reklamları gizle</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Oynatıcı açılır reklamları gizli</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Oynatıcı açılır reklamları görünür</string>
   <string name="morphe_hide_self_sponsor_ads_title">Kendine sponsor kartları gizle</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Kendine sponsor kartlar gizli</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Kendine sponsor kartlar görünür</string>
@@ -737,10 +740,10 @@ Geçerli ise otomatik olarak kaydedilecek"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">Ses parçası menüsü gizli</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Ses parçası menüsü görünür</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Ses izleme menüsü gizlenmiş
+          'Android Reel' and 'TV' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Ses izleri menüsü gizlendi
 
-Ses izleme menüsünü görüntülemek için, 'Spoof video akışları'yi 'TV' olarak değiştirin"</string>
+Ses izleri menüsünü görüntülemek için, 'Video akışları sahtekarlığı'yi 'Android Reel' veya 'TV' olarak değiştirin"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">VR modunda izlemeyi gizle</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">VR modunda izle menüsü gizli</string>
@@ -959,10 +962,10 @@ Ayarlar → Oynatma → Sonraki videoyu otomatik oynat"</string>
   <string name="morphe_hide_timestamp_title">Video zaman damgasını gizle</string>
   <string name="morphe_hide_timestamp_summary_on">Video zaman damgası gizli</string>
   <string name="morphe_hide_timestamp_summary_off">Video zaman damgası görünür</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Oynatıcı açılır panellerini gizle</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Oynatıcı açılır panelleri gizli</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Oynatıcı açılır panelleri görünür</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Oynatıcı açılır panelleri devre dışı bırak</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Oynatıcı açılır panelleri kapatıldı</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Oynatıcı açılır panelleri açıldı</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Video sonunda tam ekran modundan çık</string>
   <string name="morphe_exit_fullscreen_entry_1">Devre dışı</string>
@@ -1460,6 +1463,9 @@ Bunu etkinleştirmek daha yüksek video kalitelerini açabilir"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Sardırmayı geri alma titreşimini devre dışı bırak</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Sardırmayı geri alma titreşimi devre dışı</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Sardırmayı geri alma titreşimi etkin</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Sardırmayı tutma ve bırak titreşimini devre dışı bırak</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Sardırmayı tutma ve bırak titreşimi devre dışı</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Sardırmayı tutma ve bırak titreşimi etkin</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Yakınlaştırma titreşimini devre dışı bırak</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Yakınlaştırma titreşimi devre dışı</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Yakınlaştırma titreşimi etkin</string>

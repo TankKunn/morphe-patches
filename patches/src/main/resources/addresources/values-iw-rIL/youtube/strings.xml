@@ -118,9 +118,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">הסתר משחקייה</string>
   <string name="morphe_hide_playables_summary_on">המשחקייה מוסתרת</string>
   <string name="morphe_hide_playables_summary_off">המשחקייה מוצגת</string>
-  <string name="morphe_hide_search_suggestions_title">הסתר הצעות חיפוש</string>
-  <string name="morphe_hide_search_suggestions_summary_on">הצעות חיפוש מוסתרות</string>
-  <string name="morphe_hide_search_suggestions_summary_off">הצעות חיפוש מוצגות</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">הסתר לחצן \'הצג עוד\'</string>
@@ -142,6 +139,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_web_search_results_title">הסתר תוצאות חיפוש באינטרנט</string>
   <string name="morphe_hide_web_search_results_summary_on">תוצאות חיפוש באינטרנט מוסתרות</string>
   <string name="morphe_hide_web_search_results_summary_off">תוצאות חיפוש באינטרנט מוצגות</string>
+  <string name="morphe_hide_you_may_like_section_title">הסתר מדור \"אולי תעניק\"</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">מדור \"אולי תעניק\" מוסתר</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">מדור \"אולי תעניק\" מוצג</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">הסתר YouTube Doodles</string>
   <string name="morphe_hide_doodles_summary_on">הנפשת YouTube Doodles על הלוגו מוסתרת</string>
@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">הסתר תווית קידום מכירות בתשלום</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">תווית קידום מכירות בתשלום מוסתרת</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">תווית קידום מכירות בתשלום מוצגת</string>
+  <string name="morphe_hide_player_popup_ads_title">הסתר פרסומות פופאפ של שחקן</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">פרסומות פופאפ של שחקן מוסתרות</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">פרסומות פופאפ של שחקן מוצגות</string>
   <string name="morphe_hide_self_sponsor_ads_title">הסתר כרטיסים בחסות עצמית</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">כרטיסים בחסות עצמית מוסתרים</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">כרטיסים בחסות עצמית מוצגים</string>
@@ -737,10 +740,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">תפריט טראק אודיו מוסתר</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">תפריט טראק אודיו מוצג</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"תפריט רצועת אודיו מוסתר
+          'Android Reel' and 'TV' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"תפריט מסלול אודיו מוסתר
 
-כדי להראה את תפריט הרצועת אודיו, שנה את 'מילוי סטריאו וידאו' ל'TV'"</string>
+כדי להראות את תפריט מסלול האודיו, שנה את 'מילוי סטריאו וידאו' ל'ריל אנדרואיד' או 'טלוויזיה'"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">הסתר \'צפה ב-VR\'</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">תפריט \'צפה ב-VR\' מוסתר</string>
@@ -960,10 +963,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">הסתר חותמת זמן של סרטון</string>
   <string name="morphe_hide_timestamp_summary_on">חותמת זמן מוסתרת</string>
   <string name="morphe_hide_timestamp_summary_off">חותמת זמן מוצגת</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">הסתר לוחות נגן צצים</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">לוחות נגן צצים מוסתרים</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">לוחות נגן צצים מוצגים</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">השבתה לוחות פופאפ של שחקן</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">לוחות נגן צצים מושבתים</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">לוחות נגן צצים פעילים</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">צא ממצב מסך מלא בסוף סרטון</string>
   <string name="morphe_exit_fullscreen_entry_1">מושבת</string>
@@ -1459,6 +1462,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">השבת משוב ברטט עבור ביטול דילוג</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">משוב ברטט עבור ביטול דילוג מושבת</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">משוב ברטט עבור ביטול דילוג מופעל</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">השבת משוב טאפ אנד הולד</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">משוב טאפ אנד הולד מושבת</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">משוב טאפ אנד הולד מופעל</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">השבת משוב זום ברטט</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">משוב ברטט עבור זום מושבת</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">משוב ברטט עבור זום מופעל</string>

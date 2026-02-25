@@ -117,9 +117,6 @@ Perubahan termasuk:
   <string name="morphe_hide_playables_title">Sembunyikan Permainan</string>
   <string name="morphe_hide_playables_summary_on">Permainan disembunyikan</string>
   <string name="morphe_hide_playables_summary_off">Permainan ditampilkan</string>
-  <string name="morphe_hide_search_suggestions_title">Sembunyikan saran pencarian</string>
-  <string name="morphe_hide_search_suggestions_summary_on">Saran pencarian disembunyikan</string>
-  <string name="morphe_hide_search_suggestions_summary_off">Saran pencarian ditampilkan</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Sembunyikan tombol \'Tampilkan selengkapnya\'</string>
@@ -141,6 +138,9 @@ Perubahan termasuk:
   <string name="morphe_hide_web_search_results_title">Sembunyikan hasil pencarian web</string>
   <string name="morphe_hide_web_search_results_summary_on">Hasil pencarian web disembunyikan</string>
   <string name="morphe_hide_web_search_results_summary_off">Hasil pencarian web ditampilkan</string>
+  <string name="morphe_hide_you_may_like_section_title">Sembunyikan bagian Anda mungkin suka</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">Bagian Anda mungkin suka disembunyikan</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">Bagian Anda mungkin suka ditampilkan</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">Sembunyikan YouTube Doodles</string>
   <string name="morphe_hide_doodles_summary_on">Animasi YouTube Doodles pada logo disembunyikan</string>
@@ -414,6 +414,9 @@ Keterbatasan
   <string name="morphe_hide_paid_promotion_label_title">Sembunyikan label promosi berbayar</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Label promosi berbayar disembunyikan</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Label promosi berbayar ditampilkan</string>
+  <string name="morphe_hide_player_popup_ads_title">Sembunyikan iklan pesan timbul pemutar</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Iklan pesan timbul pemutar disembunyikan</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Iklan pesan timbul pemutar ditampilkan</string>
   <string name="morphe_hide_self_sponsor_ads_title">Sembunyikan kartu bersponsor pribadi</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Kartu bersponsor pribadi disembunyikan</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Kartu bersponsor pribadi ditampilkan</string>
@@ -736,10 +739,10 @@ Cookie akan disimpan secara otomatis jika sah"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">Menu trek audio disembunyikan</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Menu trek audio ditampilkan</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
+          'Android Reel' and 'TV' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu trek audio disembunyikan
 
-Untuk menampilkan menu trek Audio, ubah 'Palsukan aliran video' menjadi 'TV'"</string>
+Untuk menampilkan menu trek audio, ubah 'Palsukan aliran video' menjadi 'Android Reel' atau 'TV'"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Sembunyikan Tonton di VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Menu tonton di VR disembunyikan</string>
@@ -958,10 +961,10 @@ Pengaturan → Pemutaran → Putar otomatis video berikutnya"</string>
   <string name="morphe_hide_timestamp_title">Sembunyikan penanda waktu video</string>
   <string name="morphe_hide_timestamp_summary_on">Penanda waktu disembunyikan</string>
   <string name="morphe_hide_timestamp_summary_off">Penanda waktu ditampilkan</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Sembunyikan panel pesan timbul pemutar</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Panel pesan timbul pemutar disembunyikan</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Panel pesan timbul pemutar ditampilkan</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Nonaktifkan panel pesan timbul pemutar</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Panel pesan timbul pemutar dinonaktifkan</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Panel pesan timbul pemutar diaktifkan</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Keluar dari mode layar penuh di akhir video</string>
   <string name="morphe_exit_fullscreen_entry_1">Dinonaktifkan</string>
@@ -1459,6 +1462,9 @@ Mengaktifkan ini dapat membuka kualitas video yang lebih tinggi"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Nonaktifkan sentuh getar urungkan pencarian</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Sentuh getar urungkan pencarian dinonaktifkan</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Sentuh getar urungkan pencarian diaktifkan</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Nonaktifkan getar sentuh dan tahan</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Getar sentuh dan tahan dinonaktifkan</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Getar sentuh dan tahan diaktifkan</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Nonaktifkan sentuh getar zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Sentuh getar zoom dinonaktifkan</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Sentuh getar zoom diaktifkan</string>

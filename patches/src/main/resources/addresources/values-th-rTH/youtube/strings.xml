@@ -118,9 +118,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">ซ่อน Playables</string>
   <string name="morphe_hide_playables_summary_on">Playables ถูกซ่อนไว้</string>
   <string name="morphe_hide_playables_summary_off">Playables แสดงอยู่</string>
-  <string name="morphe_hide_search_suggestions_title">ซ่อนคำแนะนำในการค้นหา</string>
-  <string name="morphe_hide_search_suggestions_summary_on">ซ่อนคำแนะนำในการค้นหา</string>
-  <string name="morphe_hide_search_suggestions_summary_off">แสดงคำแนะนำในการค้นหา</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">ซ่อนปุ่ม \"แสดงเพิ่มเติม\"</string>
@@ -142,6 +139,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_web_search_results_title">ซ่อนผลลัพธ์การค้นหาบนเว็บ</string>
   <string name="morphe_hide_web_search_results_summary_on">ผลลัพธ์การค้นหาบนเว็บถูกซ่อน</string>
   <string name="morphe_hide_web_search_results_summary_off">ผลลัพธ์การค้นหาบนเว็บจะแสดง</string>
+  <string name="morphe_hide_you_may_like_section_title">ซ่อนส่วนที่คุณอาจชอบ</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">ส่วนที่คุณอาจชอบถูกซ่อนอยู่</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">ส่วนที่คุณอาจชอบแสดงอยู่</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">ซ่อน Doodles ของ YouTube</string>
   <string name="morphe_hide_doodles_summary_on">ภาพเคลื่อนไหว YouTube Doodles บนโลโก้ถูกซ่อนไว้</string>
@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">ซ่อนป้ายโฆษณาที่จ่ายเงิน</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">ป้ายโฆษณาที่จ่ายเงินถูกซ่อน</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">ป้ายโฆษณาที่จ่ายเงินจะแสดง</string>
+  <string name="morphe_hide_player_popup_ads_title">ซ่อนโปปอัพของผู้เล่น</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">โปปอัพของผู้เล่นถูกซ่อนอยู่</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">โปปอัพของผู้เล่นแสดงอยู่</string>
   <string name="morphe_hide_self_sponsor_ads_title">ซ่อนการ์ดที่สนับสนุนตัวเอง</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">การ์ดที่สนับสนุนตัวเองถูกซ่อน</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">การ์ดที่สนับสนุนตัวเองจะแสดง</string>
@@ -735,10 +738,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">เมนูแทร็กเสียงซ่อนอยู่</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">เมนูแทร็กเสียงแสดงอยู่</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
+          'Android Reel' and 'TV' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"เมนูแทร็กเสียงถูกซ่อน
 
-เพื่อแสดงเมนูแทร็กเสียงให้เห็น เปลี่ยน 'Spoof video streams' เป็น 'TV'"</string>
+เพื่อแสดงเมนูแทร็กเสียงให้เห็น ต้องเปลี่ยน 'Spoof video streams' เป็น 'Android Reel' หรือ 'TV'"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">ซ่อนดูใน VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">เมนูดูใน VR ซ่อนอยู่</string>
@@ -957,10 +960,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">ซ่อนเวลาของวิดีโอ</string>
   <string name="morphe_hide_timestamp_summary_on">เวลาถูกซ่อนอยู่</string>
   <string name="morphe_hide_timestamp_summary_off">เวลาแสดงอยู่</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">ซ่อนแผงป๊อปอัปของเครื่องเล่น</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">แผงป๊อปอัปของเครื่องเล่นถูกซ่อนอยู่</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">แผงป๊อปอัปของเครื่องเล่นแสดงอยู่</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">ปิดใช้งานโปปอัพของผู้เล่น</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">แผงป๊อปอัปของเครื่องเล่นถูกซ่อนอยู่</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">แผงป๊อปอัปของเครื่องเล่นเปิดอยู่</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">ออกจากโหมดเต็มหน้าจอเมื่อสิ้นสุดวิดีโอ</string>
   <string name="morphe_exit_fullscreen_entry_1">ปิดใช้งาน</string>
@@ -1458,6 +1461,9 @@ User id ของคุณเหมือนกับรหัสผ่าน �
   <string name="morphe_disable_haptic_feedback_seek_undo_title">ปิดใช้งานแฮปติกยกเลิกการค้นหา</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">ปิดใช้งานแฮปติกยกเลิกการค้นหา</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">เปิดใช้งานแฮปติกยกเลิกการค้นหา</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">ปิดใช้งานแฮปติกการกดและถือ</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">ปิดใช้งานแฮปติกการกดและถือ</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">เปิดใช้งานแฮปติกการกดและถือ</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">ปิดใช้งานแฮปติกซูม</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">ปิดใช้งานแฮปติกซูม</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">เปิดใช้งานแฮปติกซูม</string>

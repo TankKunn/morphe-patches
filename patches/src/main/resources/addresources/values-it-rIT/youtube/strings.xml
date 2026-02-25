@@ -118,9 +118,6 @@ I cambiamenti includono:
   <string name="morphe_hide_playables_title">Nascondi Sala Giochi</string>
   <string name="morphe_hide_playables_summary_on">I giochi sono nascosti</string>
   <string name="morphe_hide_playables_summary_off">I giochi sono visibili</string>
-  <string name="morphe_hide_search_suggestions_title">Nascondi i suggerimenti di ricerca</string>
-  <string name="morphe_hide_search_suggestions_summary_on">I suggerimenti di ricerca sono nascosti</string>
-  <string name="morphe_hide_search_suggestions_summary_off">I suggerimenti di ricerca sono visibili</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Nascondi il pulsante \'Mostra di più\'</string>
@@ -142,6 +139,9 @@ I cambiamenti includono:
   <string name="morphe_hide_web_search_results_title">Nascondi i risultati della ricerca web</string>
   <string name="morphe_hide_web_search_results_summary_on">I risultati della ricerca web sono nascosti</string>
   <string name="morphe_hide_web_search_results_summary_off">I risultati della ricerca web sono visibili</string>
+  <string name="morphe_hide_you_may_like_section_title">Nascondi la sezione \"Potrebbe piacerti\"</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">La sezione \"Potrebbe piacerti\" è nascosta</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">La sezione \"Potrebbe piacerti\" è visibile</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">Nascondi Doodles di YouTube</string>
   <string name="morphe_hide_doodles_summary_on">L\'animazione YouTube Doodles sul logo è nascosta</string>
@@ -415,6 +415,9 @@ Limitazioni:
   <string name="morphe_hide_paid_promotion_label_title">Nascondi l\'etichetta della promozione a pagamento</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">L\'etichetta della promozione a pagamento è nascosta</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">L\'etichetta della promozione a pagamento è visibile</string>
+  <string name="morphe_hide_player_popup_ads_title">Nascondi gli annunci popup del giocatore</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Gli annunci popup del giocatore sono nascosti</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Gli annunci popup del giocatore sono visibili</string>
   <string name="morphe_hide_self_sponsor_ads_title">Nascondi le schede autopromozionali</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Le schede autopromozionali sono nascoste</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Le schede autopromozionali sono visibili</string>
@@ -737,10 +740,10 @@ I cookie verranno salvati automaticamente se sono validi"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">Il menu Traccia audio è nascosto</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Il menu Traccia audio è visibile</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu audio traccia nascosto
+          'Android Reel' and 'TV' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu audio nascosto
 
-Per visualizzare il menu audio traccia, cambia 'Spoof video streams' in 'TV'"</string>
+Per visualizzare il menu audio, cambia 'Falsifica flussi video' in 'Android Reel' o 'TV'"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Nascondi Guarda in VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Il menu Guarda in VR è nascosto</string>
@@ -959,10 +962,10 @@ Impostazioni → Riproduzione → Riproduzione automatica video successivo"</str
   <string name="morphe_hide_timestamp_title">Nascondi timestamp video</string>
   <string name="morphe_hide_timestamp_summary_on">Il timestamp è nascosto</string>
   <string name="morphe_hide_timestamp_summary_off">Il timestamp è visibile</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Nascondi i pannelli popup del player</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">I pannelli popup del player sono nascosti</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">I pannelli popup del player sono visibili</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Disabilita i pannelli popup del giocatore</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">I pannelli popup del player sono disabilitati</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">I pannelli popup del player sono abilitati</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Esci dalla modalità schermo intero al termine del video</string>
   <string name="morphe_exit_fullscreen_entry_1">Disabilitato</string>
@@ -1460,6 +1463,9 @@ Abilitare questa opzione può sbloccare qualità video più elevate"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Disabilita l\'aptica di annullamento della ricerca</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">L\'aptica di annullamento della ricerca è disabilitata</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">L\'aptica di annullamento della ricerca è abilitata</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Disabilita tap e hold aptica</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Tap e hold aptica disabilitata</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Tap e hold aptica abilitata</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Disabilita zoom aptico</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Lo zoom aptico è disabilitato</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Lo zoom aptico è abilitato</string>

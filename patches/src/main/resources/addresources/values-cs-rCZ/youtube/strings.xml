@@ -119,9 +119,6 @@ Změny zahrnují:
   <string name="morphe_hide_playables_title">Skrýt Playables</string>
   <string name="morphe_hide_playables_summary_on">Playables jsou skryté</string>
   <string name="morphe_hide_playables_summary_off">Playables jsou zobrazené</string>
-  <string name="morphe_hide_search_suggestions_title">Skrýt návrhy vyhledávání</string>
-  <string name="morphe_hide_search_suggestions_summary_on">Návrhy vyhledávání jsou skryté</string>
-  <string name="morphe_hide_search_suggestions_summary_off">Návrhy vyhledávání jsou zobrazeny</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Skrýt tlačítko „Zobrazit více“</string>
@@ -143,6 +140,9 @@ Změny zahrnují:
   <string name="morphe_hide_web_search_results_title">Skryté webové výsledky vyhledávání</string>
   <string name="morphe_hide_web_search_results_summary_on">Webové výsledky vyhledávání jsou skryté</string>
   <string name="morphe_hide_web_search_results_summary_off">Webové výsledky vyhledávání jsou zobrazeny</string>
+  <string name="morphe_hide_you_may_like_section_title">Skrýt sekci \"Můžete si přihlížet\"</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">Sekce \"Můžete si přihlížet\" je skryta</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">Sekce \"Můžete si přihlížet\" je zobrazená</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">Skrýt YouTube Doodles</string>
   <string name="morphe_hide_doodles_summary_on">Animace \"Doodles\" YouTube na logu je skrytá</string>
@@ -416,6 +416,9 @@ Omezení:
   <string name="morphe_hide_paid_promotion_label_title">Skrýt štítek placené propagace</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Štítek placené propagace je skrytý</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Štítek placené propagace je zobrazen</string>
+  <string name="morphe_hide_player_popup_ads_title">Skrýt vyskakovací reklamy hráče</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Vyskakovací reklamy hráče jsou skryté</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Vyskakovací reklamy hráče jsou zobrazeny</string>
   <string name="morphe_hide_self_sponsor_ads_title">Skrýt karty se sponzorovanými produkty</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Karty se sponzorovanými produkty jsou skryté</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Karty se sponzorovanými produkty jsou zobrazeny</string>
@@ -738,10 +741,10 @@ Cookies budou automaticky uloženy, pokud jsou platné."</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">Nabídka zvukové stopy je skryta</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Nabídka zvukové stopy je zobrazena</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu s zvukovou stopou je skryt
+          'Android Reel' and 'TV' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu s zvukovými stopami je skrytý
 
-Abyste zobrazili menu s zvukovou stopou, změňte 'Falešné video proudy' na 'TV'."</string>
+Abyste zobrazili menu s zvukovými stopami, změňte 'Zamaskované video proudy' na 'Android Reel' nebo 'TV'"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Skrýt Sledovat ve VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Nabídka Sledovat ve VR je skryta</string>
@@ -960,10 +963,10 @@ Nastavení → Přehrávání → Automatické přehrávání dalšího videa"</
   <string name="morphe_hide_timestamp_title">Skrýt čas videa</string>
   <string name="morphe_hide_timestamp_summary_on">Čas je skrytý</string>
   <string name="morphe_hide_timestamp_summary_off">Čas je zobrazen</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Skrýt vyskakovací panely přehrávače</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Vyskakovací panely přehrávače jsou skryté</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Vyskakovací panely přehrávače jsou zobrazeny</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Zakázat vyskakovací panely hráče</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Vyskakovací panely přehrávače jsou zakázány</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Vyskakovací panely přehrávače jsou povoleny</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Ukončit režim celé obrazovky na konci videa</string>
   <string name="morphe_exit_fullscreen_entry_1">Vypnuto</string>
@@ -1461,6 +1464,9 @@ Povolením této funkce lze odemknout vyšší kvality videa"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Zakázat haptiku pro vrácení zpět vyhledávání</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Haptika pro vrácení zpět vyhledávání je vypnutá</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Haptika pro vrácení zpět vyhledávání je zapnutá</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Zakázat haptiku pro tap a držení</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Haptika pro tap a držení je zakázána</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Haptika pro tap a držení je povolena</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Zakázat haptiku pro zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Haptika zoomu je vypnutá</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Haptika zoomu je zapnutá</string>

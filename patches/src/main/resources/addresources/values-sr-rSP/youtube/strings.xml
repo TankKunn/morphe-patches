@@ -118,9 +118,6 @@ Promene uključuju:
   <string name="morphe_hide_playables_title">Сакриј салу за игру</string>
   <string name="morphe_hide_playables_summary_on">Сала за игру је скривена</string>
   <string name="morphe_hide_playables_summary_off">Сала за игру је приказана</string>
-  <string name="morphe_hide_search_suggestions_title">Сакриј предлоге за претрагу</string>
-  <string name="morphe_hide_search_suggestions_summary_on">Предлози за претрагу су скривени</string>
-  <string name="morphe_hide_search_suggestions_summary_off">Предлози за претрагу су приказани</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Сакриј дугме „Прикажи још”</string>
@@ -142,6 +139,9 @@ Promene uključuju:
   <string name="morphe_hide_web_search_results_title">Сакриј резултате веб-претраге</string>
   <string name="morphe_hide_web_search_results_summary_on">Резултати веб-претраге су скривени</string>
   <string name="morphe_hide_web_search_results_summary_off">Резултати веб-претраге су приказани</string>
+  <string name="morphe_hide_you_may_like_section_title">Сакриј одељак за могуће лике</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">Одељак за могуће лике је скривен</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">Одељак за могуће лике је приказан</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">Сакриј YouTube Doodles</string>
   <string name="morphe_hide_doodles_summary_on">Анимација YouTube Doodles-а на логотипу је скривена</string>
@@ -415,6 +415,9 @@ Promene uključuju:
   <string name="morphe_hide_paid_promotion_label_title">Сакриј ознаку плаћене промоције</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">Ознака плаћене промоције је скривена</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">Ознака плаћене промоције је приказана</string>
+  <string name="morphe_hide_player_popup_ads_title">Сакриј рекламе у плејеру</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">Рекламе у плејеру су скривене</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">Рекламе у плејеру су приказане</string>
   <string name="morphe_hide_self_sponsor_ads_title">Сакриј картице самоспонзорства</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">Картице самоспонзорства су скривене</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">Картице самоспонзорства су приказане</string>
@@ -737,10 +740,10 @@ Cookies će biti automatski sačuvani ako su ispravni"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">Мени „Аудио снимак” је скривен</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">Мени „Аудио снимак” је приказан</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meni sa audio trakom je sakriven
+          'Android Reel' and 'TV' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meni sa zvučnim stazama je sakriven
 
-Da bi prikazali meni sa audio trakom, promenite 'Imitirati video tokove' u 'TV'."</string>
+Da bi prikazali meni sa zvučnim stazama, promenite 'Imitirati video tokove' u 'Android Reel' ili 'TV'"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Сакриј дугме „Гледај у ВР”</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Дугме „Гледај у ВР” је скривено</string>
@@ -959,10 +962,10 @@ Da bi prikazali meni sa audio trakom, promenite 'Imitirati video tokove' u 'TV'.
   <string name="morphe_hide_timestamp_title">Сакриј временску ознаку видеа</string>
   <string name="morphe_hide_timestamp_summary_on">Временска ознака видеа је скривена</string>
   <string name="morphe_hide_timestamp_summary_off">Временска ознака видеа је приказана</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">Сакриј искачуће табле у плејеру</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">Искачуће табле у плејеру су скривене</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">Искачуће табле у плејеру су приказане</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">Онемогући рекламе у плејеру</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">Искачуће табле у плејеру су скривене</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">Искачуће табле у плејеру су приказане</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Излаз из режима целог екрана на крају видеа</string>
   <string name="morphe_exit_fullscreen_entry_1">Онемогућено</string>
@@ -1460,6 +1463,9 @@ Da bi prikazali meni sa audio trakom, promenite 'Imitirati video tokove' u 'TV'.
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Онемогући вибрацију поништавања премотавања </string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">Вибрација поништавања премотавања је онемогућена</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">Вибрација поништавања премотавања је омогућена</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Онемогући вибрације при дугом притиску</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">Вибрације при дугом притиску су онемогућене</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">Вибрације при дугом притиску су омогућене</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Онемогући вибрацију при увеличавању</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Вибрација при увеличавању је онемогућена</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Вибрација при увеличавању је омогућена</string>

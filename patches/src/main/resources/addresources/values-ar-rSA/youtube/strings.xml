@@ -118,9 +118,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">إخفاء هيّا نلعب</string>
   <string name="morphe_hide_playables_summary_on">تم إخفاء هيّا نلعب</string>
   <string name="morphe_hide_playables_summary_off">يتم عرض هيّا نلعب</string>
-  <string name="morphe_hide_search_suggestions_title">إخفاء اقتراحات البحث</string>
-  <string name="morphe_hide_search_suggestions_summary_on">تم إخفاء اقتراحات البحث</string>
-  <string name="morphe_hide_search_suggestions_summary_off">يتم عرض اقتراحات البحث</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">إخفاء زر \'عرض المزيد\'</string>
@@ -142,6 +139,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_web_search_results_title">إخفاء نتائج بحث الويب</string>
   <string name="morphe_hide_web_search_results_summary_on">تم إخفاء نتائج البحث على الويب</string>
   <string name="morphe_hide_web_search_results_summary_off">يتم عرض نتائج البحث على الويب</string>
+  <string name="morphe_hide_you_may_like_section_title">إخفاء قسم قد يعجبك</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">تم إخفاء قسم قد يعجبك</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">يتم عرض قسم قد يعجبك</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">إخفاء رسومات YouTube</string>
   <string name="morphe_hide_doodles_summary_on">تم إخفاء رسوم Doodles المتحركة على شعار YouTube</string>
@@ -415,6 +415,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_paid_promotion_label_title">إخفاء تسمية الترقية المدفوعة</string>
   <string name="morphe_hide_paid_promotion_label_summary_on">تم إخفاء تسمية الترقية المدفوعة</string>
   <string name="morphe_hide_paid_promotion_label_summary_off">يتم عرض تسمية الترقية المدفوعة</string>
+  <string name="morphe_hide_player_popup_ads_title">إخفاء إعلانات المشغل المنبثقة</string>
+  <string name="morphe_hide_player_popup_ads_summary_on">تم إخفاء إعلانات المشغل المنبثقة</string>
+  <string name="morphe_hide_player_popup_ads_summary_off">يتم عرض إعلانات المشغل المنبثقة</string>
   <string name="morphe_hide_self_sponsor_ads_title">إخفاء بطاقات الرعاية الذاتية</string>
   <string name="morphe_hide_self_sponsor_ads_summary_on">تم إخفاء بطاقات الرعاية الذاتية</string>
   <string name="morphe_hide_self_sponsor_ads_summary_off">يتم عرض بطاقات الرعاية الذاتية</string>
@@ -737,10 +740,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_on">تم إخفاء قائمة المقطع الصوتي</string>
   <string name="morphe_hide_player_flyout_audio_track_summary_off">يتم عرض قائمة المقطع الصوتي</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'TV' must be kept untranslated. -->
+          'Android Reel' and 'TV' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"تم إخفاء قائمة المقطع الصوتي
 
-لعرض قائمة المقطع الصوتي، غيّر 'Spoof Video Streams' إلى 'TV'"</string>
+لعرض قائمة المقطع الصوتي، غيّر 'Spoof Video Streams' إلى 'Android Reel' أو 'TV'"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">إخفاء المشاهدة في VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">تم إخفاء قائمة المشاهدة في الوضع الافتراضي</string>
@@ -959,10 +962,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timestamp_title">إخفاء الطابع الزمني للفيديو</string>
   <string name="morphe_hide_timestamp_summary_on">تم إخفاء الطابع الزمني</string>
   <string name="morphe_hide_timestamp_summary_off">يتم عرض الطابع الزمني</string>
-  <!-- layout.panels.popup.playerPopupPanelsPatch -->
-  <string name="morphe_hide_player_popup_panels_title">إخفاء لوحات المشغل المنبثقة</string>
-  <string name="morphe_hide_player_popup_panels_summary_on">تم إخفاء لوحات المشغل المنبثقة</string>
-  <string name="morphe_hide_player_popup_panels_summary_off">يتم عرض لوحات المشغل المنبثقة</string>
+  <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">تعطيل لوحات المشغل المنبثقة</string>
+  <string name="morphe_disable_player_popup_panels_summary_on">تم تعطيل لوحات المشغل المنبثقة</string>
+  <string name="morphe_disable_player_popup_panels_summary_off">تم تمكين لوحات المشغل المنبثقة</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">الخروج من وضع ملء الشاشة عند انتهاء الفيديو</string>
   <string name="morphe_exit_fullscreen_entry_1">معطل</string>
@@ -1461,6 +1464,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">تعطيل اهتزاز التراجع عن التمرير</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_on">تم تعطيل اهتزاز التراجع عن التمرير</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_summary_off">تم تمكين اهتزاز التراجع عن التمرير</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">تعطيل اهتزازات النقر والنقر المطول</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_on">تم تعطيل اهتزازات النقر والنقر المطول</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_summary_off">تم تمكين اهتزازات النقر والنقر المطول</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">تعطيل الاهتزاز عند التكبير</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">تم تعطيل الاهتزاز عند التكبير</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">تم تمكين الاهتزاز عند التكبير</string>
