@@ -45,6 +45,9 @@ Bu, xüsusi filtrlər yaradarkən quruluşları müəyyən etməyə kömək edə
 
 Hər halda, bunu aktivləşdirmə IP ünvanınız kimi bəzi istifadəçi məlumatın da daxil edəcək."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">Tərtibat yenilənmələrini qapat</string>
+  <string name="morphe_disable_layout_updates_summary_on">Tərtibat server tərəfindən yenilənməyəcək</string>
+  <string name="morphe_disable_layout_updates_summary_off">Tərtibat server tərəfindən yenilənəcək</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Yaradıcı mağaza bölümün gizlət</string>
   <string name="morphe_hide_creator_store_shelf_summary_on">Yaradıcı alış-veriş cərgəsi video oynadıcı altında gizlidir</string>
@@ -125,6 +128,9 @@ Hər halda, bunu aktivləşdirmə IP ünvanınız kimi bəzi istifadəçi məlum
   <string name="morphe_hide_web_search_results_title">Veb axtarış nəticələrini gizlət</string>
   <string name="morphe_hide_web_search_results_summary_on">Veb axtarış nəticələri gizlədilir</string>
   <string name="morphe_hide_web_search_results_summary_off">Veb axtarış nəticələri göstərilir</string>
+  <string name="morphe_hide_you_may_like_section_title">Bəyənə bilərsiniz bölməsini gizlət</string>
+  <string name="morphe_hide_you_may_like_section_summary_on">Bəyənə bilərsiniz bölməsi gizlidir</string>
+  <string name="morphe_hide_you_may_like_section_summary_off">Bəyənə bilərsiniz bölməsi görünür</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_doodles_title">YouTube Doodle-ları gizlət</string>
   <string name="morphe_hide_doodles_summary_on">YouTube Doodles animasiyası simvolda gizlidir</string>
@@ -184,7 +190,15 @@ Hər halda, bunu aktivləşdirmə IP ünvanınız kimi bəzi istifadəçi məlum
   <string name="morphe_hide_chapters_section_title">Fəsilləri Gizlət</string>
   <string name="morphe_hide_chapters_section_summary_on">Bölümlər bölməsi gizlidir</string>
   <string name="morphe_hide_chapters_section_summary_off">Bölümlər bölməsi göstərilir</string>
+  <string name="morphe_hide_course_progress_section_title">\"Kurs irəliləyişin\"-i Gizlət</string>
+  <string name="morphe_hide_course_progress_section_summary_on">Kurs irəliləyiş bölməsi gizlidir</string>
+  <string name="morphe_hide_course_progress_section_summary_off">Kurs irəliləyiş bölməsi görünür</string>
   <string name="morphe_hide_explore_section_title">Kəşf edin-i gizlət</string>
+  <string name="morphe_hide_explore_section_summary_on">Bu kursu araşdırın və Podkastı araşdırın bölmələri gizlidir</string>
+  <string name="morphe_hide_explore_section_summary_off">Bu kursu araşdırın və Podkastı araşdırın bölmələri görünür</string>
+  <string name="morphe_hide_explore_course_section_title">\"Bu kursu araşdırın\"-ı gizlət</string>
+  <string name="morphe_hide_explore_course_section_summary_on">Bu kursu araşdırın bölməsi gizlidir</string>
+  <string name="morphe_hide_explore_course_section_summary_off">Bu kursu araşdırın bölməsi görünür</string>
   <string name="morphe_hide_explore_podcast_section_title">\'Podkastı araşdırın\"-ı Gizlət</string>
   <string name="morphe_hide_explore_podcast_section_summary_on">Podkast bölməsin araşdırın gizlidir</string>
   <string name="morphe_hide_explore_podcast_section_summary_off">Podkast bölməsin araşdırın görünür</string>

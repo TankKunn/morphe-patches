@@ -73,10 +73,10 @@ YouTube Premium ユーザーの場合、この設定は必要ない可能性が�
   <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"アクティベーション コード: %s
 
-1. 下記の [ウェブサイトを開く] をタップして「デバイスの接続」と表示されるウェブサイトを開きます
+1. 下記の [ウェブサイトを開く] をタップして「デバイスの接続」と表示されるウェブサイトを開く
 2. 上記のアクティベーション コードをクリップボードから貼り付け (もしくは手入力)
-3. Google にログイン。複数のアカウントがある場合は、YouTube で使用するアカウントを選択してください
-4. [許可] をタップして YouTube VR へのアクセスを許可
+3. Google にログイン (未ログインの場合)。複数のアカウントがある場合は、YouTube で使用するアカウントを選択する
+4. [許可] をタップして YouTube VR へのアクセスを許可する
 5. 「デバイスを接続しました」というメッセージが表示された後にこのアプリに戻る"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">ウェブサイトを開く</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">アクティベーション コードの発行に失敗しました</string>
