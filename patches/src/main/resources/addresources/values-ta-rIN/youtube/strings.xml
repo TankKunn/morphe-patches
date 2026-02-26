@@ -55,14 +55,15 @@ Second \"item\" text"</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <!-- ad.general.hideAdsResourcePatch -->
   <!-- ad.video.videoAdsPatch -->
-  <!-- interaction.copyvideourl.copyVideoUrlResourcePatch -->
+  <!-- interaction.copyvideourl.copyVideoURLResourcePatch -->
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
-  <!-- layout.hide.signintotv.disableSignInToTvPopupPatch -->
+  <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <!-- interaction.downloads.downloadsResourcePatch -->
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
-  <!-- interaction.seekbar.enableSeekbarTappingPatch -->
+  <!-- interaction.seekbar.enableSlideToSeekPatch -->
+  <!-- interaction.seekbar.enableTapToSeekPatch -->
   <!-- interaction.swipecontrols.swipeControlsResourcePatch -->
   <!-- layout.buttons.action.hideButtonsPatch -->
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
@@ -178,7 +179,6 @@ Second \"item\" text"</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <!-- video.quality.prioritizeVideoQualityPatch -->
-  <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
 </resources>

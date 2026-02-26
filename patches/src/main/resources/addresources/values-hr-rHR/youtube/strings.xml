@@ -142,7 +142,6 @@ Promjene uključuju:
   <string name="morphe_hide_web_search_results_title">Sakrij web pretrage rezultate</string>
   <string name="morphe_hide_web_search_results_summary_on">Rezultati web pretrage su skriveni</string>
   <string name="morphe_hide_web_search_results_summary_off">Rezultati web pretrage su prikazani</string>
-  <string name="morphe_hide_you_may_like_section_title">Skrij \"Mogu ti se sviđati\" odjeljak</string>
   <string name="morphe_hide_you_may_like_section_summary_on">Odjeljak \"Mogu ti se sviđati\" je skrio</string>
   <string name="morphe_hide_you_may_like_section_summary_off">Odjeljak \"Mogu ti se sviđati\" je prikazan</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
@@ -435,7 +434,7 @@ Ograničenja:
   <string name="morphe_hide_video_ads_title">Sakrij video oglase</string>
   <string name="morphe_hide_video_ads_summary_on">Video oglase su skrivene</string>
   <string name="morphe_hide_video_ads_summary_off">Video oglase su prikazane</string>
-  <!-- interaction.copyvideourl.copyVideoUrlResourcePatch -->
+  <!-- interaction.copyvideourl.copyVideoURLResourcePatch -->
   <string name="morphe_share_copy_url_success">URL je kopiran u međuspremnik</string>
   <string name="morphe_share_copy_url_timestamp_success">URL s vremenskom oznakom je kopiran</string>
   <string name="morphe_copy_video_url_title">Prikaz dugme za kopiranje URL-a</string>
@@ -449,10 +448,10 @@ Ograničenja:
   <string name="morphe_remove_viewer_discretion_dialog_summary_on">Prozor će biti skriven</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_off">Prozor će biti prikazan</string>
   <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Ovo je samo prihvaćanje ograničenja, a ne ga automatski prihvaćate.</string>
-  <!-- layout.hide.signintotv.disableSignInToTvPopupPatch -->
-  <string name="morphe_disable_signin_to_tv_popup_title">Onemogući \'Prijava na TV\' prozor</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_on">Popup za prijavu na TV je onemogućeno</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_off">Popup za prijavu na TV je omogućeno</string>
+  <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
+  <string name="morphe_disable_sign_in_to_tv_popup_title">Onemogući \'Prijava na TV\' prozor</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_summary_on">Popup za prijavu na TV je onemogućeno</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_summary_off">Popup za prijavu na TV je omogućeno</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Onemogu otprezanje na dvostruko pritisak</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary_on">Dvostruko pritisanje nikada ne može pokrenuti prethod na sljedeći/prethodni pogled</string>
@@ -481,10 +480,14 @@ Potvrdite da naziv paketa je tačan i da je aplikacija instalirana."</string>
   <string name="morphe_disable_precise_seeking_gesture_title">Onemogu precizan pritisak</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_on">Precizan pritisak je onemogu</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_off">Precizan pritisak je omogućeno</string>
-  <!-- interaction.seekbar.enableSeekbarTappingPatch -->
-  <string name="morphe_seekbar_tapping_title">Omogu tapanje za pretraživanje</string>
-  <string name="morphe_seekbar_tapping_summary_on">Tapanje za pretraživanje je omogućeno</string>
-  <string name="morphe_seekbar_tapping_summary_off">Tapanje za pretraživanje je onemogućeno</string>
+  <!-- interaction.seekbar.enableSlideToSeekPatch -->
+  <string name="morphe_slide_to_seek_title">Omogu slide to seek</string>
+  <string name="morphe_slide_to_seek_summary_on">Slide to seek je omogućeno</string>
+  <string name="morphe_slide_to_seek_summary_off">Slide to seek nije omogućeno</string>
+  <!-- interaction.seekbar.enableTapToSeekPatch -->
+  <string name="morphe_tap_to_seek_title">Omogu tapanje za pretraživanje</string>
+  <string name="morphe_tap_to_seek_summary_on">Tapanje za pretraživanje je omogućeno</string>
+  <string name="morphe_tap_to_seek_summary_off">Tapanje za pretraživanje je onemogućeno</string>
   <!-- interaction.swipecontrols.swipeControlsResourcePatch -->
   <string name="morphe_swipe_brightness_title">Omogu kontrolu jakosti</string>
   <string name="morphe_swipe_brightness_summary_on">"Kontrola jakosti je omogućena
@@ -654,6 +657,7 @@ Kapke će biti automatski spremljene ako su ispravne"</string>
   <string name="morphe_hide_notifications_button_title">Sakrij Notifications</string>
   <string name="morphe_hide_notifications_button_summary_on">Tipka za obavijesti je skrivena</string>
   <string name="morphe_hide_notifications_button_summary_off">Tipka za obavijesti je prikazana</string>
+  <string name="morphe_show_search_button_summary_on">Tipka za pretraživanje je prikazana</string>
   <string name="morphe_swap_create_with_notifications_button_title">Zamijeni Stvori s Obavijesti</string>
   <string name="morphe_swap_create_with_notifications_button_summary_on">Dugme Stvori je zamijenjeno s dugmom Obavijesti</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">Dugme Stvori nije zamijenjeno s dugmom Obavijesti</string>
@@ -781,9 +785,9 @@ Kapke će biti automatski spremljene ako su ispravne"</string>
   <string name="morphe_hide_player_previous_next_buttons_summary_on">Tipka za Cast je skrivena</string>
   <string name="morphe_hide_player_previous_next_buttons_summary_off">Tipka za Cast je prikazana</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsResourcePatch -->
-  <string name="morphe_hide_endscreen_cards_title">Tipka za Cast je skrivena</string>
-  <string name="morphe_hide_endscreen_cards_summary_on">Tipka za Cast je prikazana</string>
-  <string name="morphe_hide_endscreen_cards_summary_off">Tipka za Cast je skrivena</string>
+  <string name="morphe_hide_end_screen_cards_title">Tipka za Cast je skrivena</string>
+  <string name="morphe_hide_end_screen_cards_summary_on">Tipka za Cast je prikazana</string>
+  <string name="morphe_hide_end_screen_cards_summary_off">Tipka za Cast je skrivena</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
   <string name="morphe_ambient_mode_screen_title">Mod za okruženje</string>
   <string name="morphe_ambient_mode_screen_summary">Prebaci ograničenja za spuštanje snaga za Mod za okruženje i onemogući ga u potpunosti ili u punom zaslonu</string>
@@ -1084,9 +1088,7 @@ Ograničenje: Dislajke možda neće biti prikazane u anonimnom režimu"</string>
   <string name="morphe_sb_general_min_duration">Minimalno trajanje segmenata</string>
   <string name="morphe_sb_general_min_duration_sum">Segmenati kraći od ove vrijednosti (u sekundama) neće biti prikazani ili preskačani</string>
   <string name="morphe_sb_general_min_duration_invalid">Nevaže vrijednost trajanja</string>
-  <string name="morphe_sb_general_uuid">Vaš privatni korisnički ID</string>
   <string name="morphe_sb_general_uuid_sum">Ovo je potrebno držati u tajnosti. Ovo je kao lozinka i ne bi se trebali dijeliti s nikom. Ako netko ima ovo, može se preobraziti</string>
-  <string name="morphe_sb_general_uuid_invalid">Privatni korisnički ID mora biti najmanje 30 znakova dug</string>
   <string name="morphe_sb_general_api_url">Promijenite API URL</string>
   <string name="morphe_sb_general_api_url_sum">Adresa koju koristi SponsorBlock za pozive na server</string>
   <string name="morphe_sb_api_url_reset">Reset API URL-a</string>
@@ -1095,13 +1097,9 @@ Ograničenje: Dislajke možda neće biti prikazane u anonimnom režimu"</string>
   <string name="morphe_sb_settings_ie">Uvezi postavke upravitelja</string>
   <string name="morphe_sb_settings_copy">Kopirajte</string>
   <string name="morphe_sb_settings_ie_sum">Vaš SponsorBlock JSON konfiguraciju koju se može uvezeti / izvesti na Morphe i druge platforme SponsorBlock</string>
-  <string name="morphe_sb_settings_ie_sum_warning">Vaša SponsorBlock JSON konfiguracija koju se može uvezeti / izvesti na Morphe i druge platforme SponsorBlock. Ovo uključuje vaš privatni korisnički ID. Sigurno dijelite ovo mudro.</string>
   <string name="morphe_sb_settings_import_successful">Postavke uspješno uvezeno</string>
   <string name="morphe_sb_settings_import_failed">Nije moguće uvesti: %s</string>
   <string name="morphe_sb_settings_export_failed">Nije moguće izvesti: %s</string>
-  <string name="morphe_sb_settings_morphe_export_user_id_warning">"Postavke sadrže privatni identifikator korisnika SponsorBlock-a.
-
-Vaš identifikator je kao lozinka, i nikada ne smije biti dijeljen."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Nije moguće podesati segment: %1$d %2$s</string>
   <string name="morphe_sb_diff_segments">SponsorBlock je privremeno nedostupan</string>
   <string name="morphe_sb_segments_sponsor">Sponsor</string>
@@ -1547,10 +1545,6 @@ Ograničenja:
   <string name="morphe_prioritize_video_quality_title">Prioritiraj kvalitetu videozapisa</string>
   <string name="morphe_prioritize_video_quality_summary_on">Kvaliteta videozapisa je prioritetna</string>
   <string name="morphe_prioritize_video_quality_summary_off">Video kodovi su prioritetni</string>
-  <!-- interaction.seekbar.enableSlideToSeekPatch -->
-  <string name="morphe_slide_to_seek_title">Omogu slide to seek</string>
-  <string name="morphe_slide_to_seek_summary_on">Slide to seek je omogućeno</string>
-  <string name="morphe_slide_to_seek_summary_off">Slide to seek nije omogućeno</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Omogu Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary_on">"Video codec je AVC (H.264), VP9 ili AV1

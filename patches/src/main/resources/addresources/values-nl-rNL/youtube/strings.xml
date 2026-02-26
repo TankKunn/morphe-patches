@@ -139,7 +139,7 @@ Wijzigingen zijn:
   <string name="morphe_hide_web_search_results_title">Webzoekresultaten verbergen</string>
   <string name="morphe_hide_web_search_results_summary_on">Webzoekresultaten zijn verborgen</string>
   <string name="morphe_hide_web_search_results_summary_off">Webzoekresultaten worden getoond</string>
-  <string name="morphe_hide_you_may_like_section_title">Verberg \'Je kunt misschien liken\' sectie</string>
+  <string name="morphe_hide_you_may_like_section_title">Verberg \'Je kunt ook liken\' sectie</string>
   <string name="morphe_hide_you_may_like_section_summary_on">De \'Je kunt misschien liken\' sectie is verborgen</string>
   <string name="morphe_hide_you_may_like_section_summary_off">De \'Je kunt misschien liken\' sectie is zichtbaar</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
@@ -434,7 +434,7 @@ Beperkingen:
   <string name="morphe_hide_video_ads_title">Video-advertenties verbergen</string>
   <string name="morphe_hide_video_ads_summary_on">Video-advertenties zijn verborgen</string>
   <string name="morphe_hide_video_ads_summary_off">Video-advertenties worden getoond</string>
-  <!-- interaction.copyvideourl.copyVideoUrlResourcePatch -->
+  <!-- interaction.copyvideourl.copyVideoURLResourcePatch -->
   <string name="morphe_share_copy_url_success">URL gekopieerd naar klembord</string>
   <string name="morphe_share_copy_url_timestamp_success">URL met tijdstempel gekopieerd</string>
   <string name="morphe_copy_video_url_title">Knop \"Video-URL kopiëren\" weergeven</string>
@@ -448,10 +448,10 @@ Beperkingen:
   <string name="morphe_remove_viewer_discretion_dialog_summary_on">Dialog wordt verwijderd</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_off">Dialog wordt getoond</string>
   <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Dit omzeilt de leeftijdsbeperking niet. Het accepteert het alleen automatisch.</string>
-  <!-- layout.hide.signintotv.disableSignInToTvPopupPatch -->
-  <string name="morphe_disable_signin_to_tv_popup_title">Pop-up \'Inloggen op tv\' uitschakelen</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_on">Pop-up \'Inloggen op tv\' is uitgeschakeld</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_off">Pop-up \'Inloggen op tv\' is ingeschakeld</string>
+  <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
+  <string name="morphe_disable_sign_in_to_tv_popup_title">Pop-up \'Inloggen op tv\' uitschakelen</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_summary_on">Pop-up \'Inloggen op tv\' is uitgeschakeld</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_summary_off">Pop-up \'Inloggen op tv\' is ingeschakeld</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Dubbeltik om hoofdstukken over te slaan uitschakelen</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary_on">Dubbeltikken kan nooit leiden tot het overslaan naar het volgende/vorige hoofdstuk.</string>
@@ -480,10 +480,14 @@ Controleer of de pakketnaam correct is en de app is geïnstalleerd"</string>
   <string name="morphe_disable_precise_seeking_gesture_title">Precisie-zoekbeweging uitschakelen</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_on">Beweging is uitgeschakeld</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_off">Beweging is ingeschakeld</string>
-  <!-- interaction.seekbar.enableSeekbarTappingPatch -->
-  <string name="morphe_seekbar_tapping_title">Tikken om te zoeken inschakelen</string>
-  <string name="morphe_seekbar_tapping_summary_on">Tikken om te zoeken is ingeschakeld</string>
-  <string name="morphe_seekbar_tapping_summary_off">Tikken om te zoeken is uitgeschakeld</string>
+  <!-- interaction.seekbar.enableSlideToSeekPatch -->
+  <string name="morphe_slide_to_seek_title">Schuiven om te zoeken inschakelen</string>
+  <string name="morphe_slide_to_seek_summary_on">Schuiven om te zoeken is ingeschakeld</string>
+  <string name="morphe_slide_to_seek_summary_off">Schuiven om te zoeken is niet ingeschakeld</string>
+  <!-- interaction.seekbar.enableTapToSeekPatch -->
+  <string name="morphe_tap_to_seek_title">Tikken om te zoeken inschakelen</string>
+  <string name="morphe_tap_to_seek_summary_on">Tikken om te zoeken is ingeschakeld</string>
+  <string name="morphe_tap_to_seek_summary_off">Tikken om te zoeken is uitgeschakeld</string>
   <!-- interaction.swipecontrols.swipeControlsResourcePatch -->
   <string name="morphe_swipe_brightness_title">Helderheidsbeweging inschakelen</string>
   <string name="morphe_swipe_brightness_summary_on">"Volledig scherm helderheid swipe is ingeschakeld
@@ -653,6 +657,11 @@ Cookies worden automatisch opgeslagen als ze geldig zijn"</string>
   <string name="morphe_hide_notifications_button_title">Meldingen verbergen</string>
   <string name="morphe_hide_notifications_button_summary_on">Meldingsknop is verborgen</string>
   <string name="morphe_hide_notifications_button_summary_off">Meldingsknop wordt weergegeven</string>
+  <string name="morphe_show_search_button_title">Toon zoekknop</string>
+  <string name="morphe_show_search_button_summary_on">Zoekknop is weergegeven</string>
+  <string name="morphe_show_search_button_summary_off">Zoekknop wordt niet getoond</string>
+  <string name="morphe_search_button_index_title">Zoekknop index</string>
+  <string name="morphe_search_button_index_invalid">Zoekknop index moet lager zijn dan %s</string>
   <string name="morphe_swap_create_with_notifications_button_title">Ruilen Maak met Meldingen</string>
   <string name="morphe_swap_create_with_notifications_button_summary_on">Maak-knop is geruild met Meldingen-knop</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">Maak-knop is niet geruild met Meldingen-knop</string>
@@ -783,9 +792,9 @@ Om het menu voor audio-spoor te tonen, verander 'Spoof video streams' naar 'Andr
   <string name="morphe_hide_player_previous_next_buttons_summary_on">Knoppen Vorige &amp; Volgende zijn verborgen</string>
   <string name="morphe_hide_player_previous_next_buttons_summary_off">Knoppen Vorige &amp; Volgende worden getoond</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsResourcePatch -->
-  <string name="morphe_hide_endscreen_cards_title">Verberg eindschermkaarten</string>
-  <string name="morphe_hide_endscreen_cards_summary_on">Eindschermkaarten zijn verborgen</string>
-  <string name="morphe_hide_endscreen_cards_summary_off">Eindschermkaarten worden weergegeven</string>
+  <string name="morphe_hide_end_screen_cards_title">Verberg eindschermkaarten</string>
+  <string name="morphe_hide_end_screen_cards_summary_on">Eindschermkaarten zijn verborgen</string>
+  <string name="morphe_hide_end_screen_cards_summary_off">Eindschermkaarten worden weergegeven</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
   <string name="morphe_ambient_mode_screen_title">Sfeervolle modus</string>
   <string name="morphe_ambient_mode_screen_summary">Omzeil beperkingen voor de sfeervolle modus en uitschakelen geheel of in volscherm</string>
@@ -1094,7 +1103,7 @@ Beperking: Vind ik niet leuk verschijnen mogelijk niet in de incognitomodus"</st
   <string name="morphe_sb_general_min_duration_invalid">Ongeldige tijdduur</string>
   <string name="morphe_sb_general_uuid">Je persoonlijke gebruikers-ID</string>
   <string name="morphe_sb_general_uuid_sum">Deze moet privé worden gehouden. Dit is als een wachtwoord en moet niet met iemand worden gedeeld. Als iemand dit heeft, kan hij zich voordoen als u</string>
-  <string name="morphe_sb_general_uuid_invalid">Uw persoonlijke gebruikers-ID moet minimaal 30 tekens lang zijn</string>
+  <string name="morphe_sb_general_uuid_invalid">Je persoonlijke gebruikers-ID moet minimaal 30 tekens lang zijn</string>
   <string name="morphe_sb_general_api_url">Verander API-URL</string>
   <string name="morphe_sb_general_api_url_sum">Het adres dat SponsorBlock gebruikt om oproepen naar de server te doen</string>
   <string name="morphe_sb_api_url_reset">API-URL opnieuw ingesteld</string>
@@ -1103,13 +1112,13 @@ Beperking: Vind ik niet leuk verschijnen mogelijk niet in de incognitomodus"</st
   <string name="morphe_sb_settings_ie">Instellingen importeren/exporteren</string>
   <string name="morphe_sb_settings_copy">Kopiëren</string>
   <string name="morphe_sb_settings_ie_sum">Uw SponsorBlock JSON-configuratie die kan worden geïmporteerd/geëxporteerd naar Morphe en andere SponsorBlock-platforms</string>
-  <string name="morphe_sb_settings_ie_sum_warning">Uw SponsorBlock JSON-configuratie die kan worden geïmporteerd/geëxporteerd naar Morphe en andere SponsorBlock-platforms. Dit omvat uw persoonlijke gebruikers-ID. Deel dit verstandig</string>
+  <string name="morphe_sb_settings_ie_sum_warning">Je SponsorBlock JSON-configuratie die kan worden geïmporteerd/geëxporteerd naar Morphe en andere SponsorBlock-platforms. Dit omvat je persoonlijke gebruikers-ID. Deel dit verstandig</string>
   <string name="morphe_sb_settings_import_successful">Instellingen met succes geïmporteerd</string>
   <string name="morphe_sb_settings_import_failed">Importeren mislukt: %s</string>
   <string name="morphe_sb_settings_export_failed">Exporteren mislukt: %s</string>
-  <string name="morphe_sb_settings_morphe_export_user_id_warning">"Uw instellingen bevatten een privé SponsorBlock-gebruikers-ID.
+  <string name="morphe_sb_settings_morphe_export_user_id_warning">"Je instellingen bevatten een privé SponsorBlock-gebruikers-ID.
 
-Uw gebruikers-ID is als een wachtwoord en mag nooit worden gedeeld."</string>
+Je gebruikers-ID is als een wachtwoord en mag nooit worden gedeeld."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Niet meer tonen</string>
   <string name="morphe_sb_diff_segments">Verander het segmentgedrag</string>
   <string name="morphe_sb_segments_sponsor">Sponsor</string>
@@ -1556,10 +1565,6 @@ Beperkingen:
   <string name="morphe_prioritize_video_quality_title">Videokwaliteit wordt prioriteit gegeven</string>
   <string name="morphe_prioritize_video_quality_summary_on">Videokwaliteit wordt prioriteit gegeven</string>
   <string name="morphe_prioritize_video_quality_summary_off">Video-codecs worden prioriteit gegeven</string>
-  <!-- interaction.seekbar.enableSlideToSeekPatch -->
-  <string name="morphe_slide_to_seek_title">Schuiven om te zoeken inschakelen</string>
-  <string name="morphe_slide_to_seek_summary_on">Schuiven om te zoeken is ingeschakeld</string>
-  <string name="morphe_slide_to_seek_summary_off">Schuiven om te zoeken is niet ingeschakeld</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Sta Android VR AV1 toe</string>
   <string name="morphe_spoof_video_streams_av1_summary_on">"Videocodec is AVC (H.264), VP9 of AV1

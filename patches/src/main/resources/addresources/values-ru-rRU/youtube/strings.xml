@@ -139,7 +139,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_web_search_results_title">Скрыть результаты веб-поиска</string>
   <string name="morphe_hide_web_search_results_summary_on">Результаты веб-поиска в ленте скрыты</string>
   <string name="morphe_hide_web_search_results_summary_off">Результаты веб-поиска в ленте показаны</string>
-  <string name="morphe_hide_you_may_like_section_title">Скрыть раздел Вам может понравиться</string>
+  <string name="morphe_hide_you_may_like_section_title">Скрыть раздел \"Вам может понравиться\"</string>
   <string name="morphe_hide_you_may_like_section_summary_on">Раздел Вам может понравиться скрыто</string>
   <string name="morphe_hide_you_may_like_section_summary_off">Раздел Вам может понравиться показан</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
@@ -434,7 +434,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_ads_title">Скрыть видеорекламу</string>
   <string name="morphe_hide_video_ads_summary_on">Видеореклама в плеере скрыта</string>
   <string name="morphe_hide_video_ads_summary_off">Видеореклама в плеере показана</string>
-  <!-- interaction.copyvideourl.copyVideoUrlResourcePatch -->
+  <!-- interaction.copyvideourl.copyVideoURLResourcePatch -->
   <string name="morphe_share_copy_url_success">URL-адрес скопирован</string>
   <string name="morphe_share_copy_url_timestamp_success">URL-адрес с меткой времени скопирован</string>
   <string name="morphe_copy_video_url_title">Показать кнопку копирования URL видео</string>
@@ -448,10 +448,10 @@ Second \"item\" text"</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_on">Диалоговое окно о нежелательном контенте скрыто</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_off">Диалоговое окно о нежелательном контенте показано</string>
   <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Данная опция не обходит возрастное ограничение. Она только принимает возрастное ограничение автоматически.</string>
-  <!-- layout.hide.signintotv.disableSignInToTvPopupPatch -->
-  <string name="morphe_disable_signin_to_tv_popup_title">Отключить всплывающее окно \"Вход на ТВ\"</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_on">Всплывающее окно \"Вход на ТВ\" отключено</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_off">Всплывающее окно \"Вход на ТВ\" включено</string>
+  <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
+  <string name="morphe_disable_sign_in_to_tv_popup_title">Отключить всплывающее окно \"Вход на ТВ\"</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_summary_on">Всплывающее окно \"Вход на ТВ\" отключено</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_summary_off">Всплывающее окно \"Вход на ТВ\" включено</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Отключить пропуск главы по двойному касанию</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary_on">Двойное касание никогда не приведет к переходу к следующей/предыдущей главе</string>
@@ -480,10 +480,14 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_title">Отключить жест покадровой перемотки</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_on">Жест покадровой перемотки отключен</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_off">Жест покадровой перемотки включен</string>
-  <!-- interaction.seekbar.enableSeekbarTappingPatch -->
-  <string name="morphe_seekbar_tapping_title">Включить перемотку нажатием</string>
-  <string name="morphe_seekbar_tapping_summary_on">Перемотка нажатием на полосу прогресса включена</string>
-  <string name="morphe_seekbar_tapping_summary_off">Перемотка нажатием на полосу прогресса отключена</string>
+  <!-- interaction.seekbar.enableSlideToSeekPatch -->
+  <string name="morphe_slide_to_seek_title">Включить перемотку видео слайдом</string>
+  <string name="morphe_slide_to_seek_summary_on">Перемотка видео слайдом включена</string>
+  <string name="morphe_slide_to_seek_summary_off">Перемотка видео слайдом выключена</string>
+  <!-- interaction.seekbar.enableTapToSeekPatch -->
+  <string name="morphe_tap_to_seek_title">Включить перемотку нажатием</string>
+  <string name="morphe_tap_to_seek_summary_on">Перемотка нажатием на полосу прогресса включена</string>
+  <string name="morphe_tap_to_seek_summary_off">Перемотка нажатием на полосу прогресса отключена</string>
   <!-- interaction.swipecontrols.swipeControlsResourcePatch -->
   <string name="morphe_swipe_brightness_title">Включить регулировку яркости жестом</string>
   <string name="morphe_swipe_brightness_summary_on">"Регулировка яркости жестом включена
@@ -653,6 +657,11 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_hide_notifications_button_title">Скрыть кнопку \"Уведомления\"</string>
   <string name="morphe_hide_notifications_button_summary_on">Кнопка \"Уведомления\" в панели навигации скрыта</string>
   <string name="morphe_hide_notifications_button_summary_off">Кнопка \"Уведомления\" в панели навигации показана</string>
+  <string name="morphe_show_search_button_title">Показать кнопку поиска</string>
+  <string name="morphe_show_search_button_summary_on">Кнопка \"Поиск\" показана</string>
+  <string name="morphe_show_search_button_summary_off">Кнопка поиска не показана</string>
+  <string name="morphe_search_button_index_title">Поисковая кнопка индекс</string>
+  <string name="morphe_search_button_index_invalid">Индекс поисковой кнопки должен быть меньше %s</string>
   <string name="morphe_swap_create_with_notifications_button_title">Переключить кнопки \"Создать\" и \"Уведомления\"</string>
   <string name="morphe_swap_create_with_notifications_button_summary_on">Кнопка \"Создать\" заменена кнопкой \"Уведомления\"</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">Кнопка \"Создать\" не поменяна местами с кнопкой \"Уведомления\"</string>
@@ -783,9 +792,9 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_hide_player_previous_next_buttons_summary_on">Кнопки \"Предыдущееи Следующее скрыты</string>
   <string name="morphe_hide_player_previous_next_buttons_summary_off">Кнопки Предыдущее и следующее отображаются</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsResourcePatch -->
-  <string name="morphe_hide_endscreen_cards_title">Скрыть заставки следующих видео</string>
-  <string name="morphe_hide_endscreen_cards_summary_on">Заставки следующих видео в конце просмотра скрыты</string>
-  <string name="morphe_hide_endscreen_cards_summary_off">Заставки следующих видео в конце просмотра показаны</string>
+  <string name="morphe_hide_end_screen_cards_title">Скрыть заставки следующих видео</string>
+  <string name="morphe_hide_end_screen_cards_summary_on">Заставки следующих видео в конце просмотра скрыты</string>
+  <string name="morphe_hide_end_screen_cards_summary_off">Заставки следующих видео в конце просмотра показаны</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
   <string name="morphe_ambient_mode_screen_title">Режим подсветки</string>
   <string name="morphe_ambient_mode_screen_summary">Обойти ограничения экономии энергии для режима подсветки и отключить его полностью или в полноэкранном режиме</string>
@@ -1107,9 +1116,10 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_sb_settings_import_successful">Настройки успешно импортированы</string>
   <string name="morphe_sb_settings_import_failed">Не удалось импортировать: %s</string>
   <string name="morphe_sb_settings_export_failed">Не удалось экспортировать: %s</string>
-  <string name="morphe_sb_settings_morphe_export_user_id_warning">"Ваши настройки содержат уникальный идентификатор пользователя SponsorBlock.
+  <string name="morphe_sb_settings_morphe_export_user_id_warning">"Ваши настройки SponsorBlock содержат уникальный идентификатор пользователя.
 
-Ваш идентификатор пользователя как пароль, им не стоит ни с кем делиться."</string>
+Ваш идентификатор пользователя как пароль, им не стоит ни с кем делиться.
+"</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Не показывать снова</string>
   <string name="morphe_sb_diff_segments">Изменить поведение сегмента</string>
   <string name="morphe_sb_segments_sponsor">Спонсорская реклама</string>
@@ -1558,10 +1568,6 @@ Cookies будут сохраняться автоматически, если �
   <string name="morphe_prioritize_video_quality_title">Приоритет видео</string>
   <string name="morphe_prioritize_video_quality_summary_on">Качество видео приоритетно</string>
   <string name="morphe_prioritize_video_quality_summary_off">Кодеки видео приоритетны</string>
-  <!-- interaction.seekbar.enableSlideToSeekPatch -->
-  <string name="morphe_slide_to_seek_title">Включить перемотку видео слайдом</string>
-  <string name="morphe_slide_to_seek_summary_on">Перемотка видео слайдом включена</string>
-  <string name="morphe_slide_to_seek_summary_off">Перемотка видео слайдом выключена</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Разрешить Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary_on">"Видеокодек: AVC (H.264), VP9 или AV1

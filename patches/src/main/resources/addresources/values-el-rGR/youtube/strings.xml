@@ -141,7 +141,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_web_search_results_title">Αποτελέσματα αναζήτησης στο διαδίκτυο</string>
   <string name="morphe_hide_web_search_results_summary_on">Κρυμμένα</string>
   <string name="morphe_hide_web_search_results_summary_off">Εμφανίζονται</string>
-  <string name="morphe_hide_you_may_like_section_title">Απόκρυψη ενότητας που μπορείς να την προτιμήσεις</string>
+  <string name="morphe_hide_you_may_like_section_title">Απόκρυψη της ενότητας ‘Μήπως σου αρέσει’</string>
   <string name="morphe_hide_you_may_like_section_summary_on">Η ενότητα που μπορείς να την προτιμήσεις είναι κρυμμένη</string>
   <string name="morphe_hide_you_may_like_section_summary_off">Η ενότητα που μπορείς να την προτιμήσεις εμφανίζεται</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
@@ -436,7 +436,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_ads_title">Διαφημίσεις βίντεο</string>
   <string name="morphe_hide_video_ads_summary_on">Κρυμμένες</string>
   <string name="morphe_hide_video_ads_summary_off">Εμφανίζονται</string>
-  <!-- interaction.copyvideourl.copyVideoUrlResourcePatch -->
+  <!-- interaction.copyvideourl.copyVideoURLResourcePatch -->
   <string name="morphe_share_copy_url_success">Η διεύθυνση URL αντιγράφηκε στο πρόχειρο</string>
   <string name="morphe_share_copy_url_timestamp_success">Η διεύθυνση URL αντιγράφηκε με χρονική σήμανση</string>
   <string name="morphe_copy_video_url_title">Εμφάνιση κουμπιού αντιγραφής URL του βίντεο</string>
@@ -450,10 +450,10 @@ Second \"item\" text"</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_on">Κρυμμένο</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_off">Εμφανίζεται</string>
   <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Αυτό δεν παρακάμπτει τον ηλικιακό περιορισμό. Απλώς τον αποδέχεται αυτόματα.</string>
-  <!-- layout.hide.signintotv.disableSignInToTvPopupPatch -->
-  <string name="morphe_disable_signin_to_tv_popup_title">Απενεργοποίηση αναδυόμενου παραθύρου σύνδεσης στην τηλεόραση</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_on">Το αναδυόμενο παράθυρο σύνδεσης στην τηλεόραση είναι απενεργοποιημένο</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_off">Το αναδυόμενο παράθυρο σύνδεσης στην τηλεόραση είναι ενεργοποιημένο</string>
+  <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
+  <string name="morphe_disable_sign_in_to_tv_popup_title">Απενεργοποίηση αναδυόμενου παραθύρου σύνδεσης στην τηλεόραση</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_summary_on">Το αναδυόμενο παράθυρο σύνδεσης στην τηλεόραση είναι απενεργοποιημένο</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_summary_off">Το αναδυόμενο παράθυρο σύνδεσης στην τηλεόραση είναι ενεργοποιημένο</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Απενεργοποίηση παράλειψης κεφαλαίου με διπλό πάτημα</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary_on">Το διπλό πάτημα δεν παραλείπει ποτέ στο επόμενο/προηγούμενο κεφάλαιο</string>
@@ -482,10 +482,14 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_title">Απενεργοποίηση ακριβής αναζήτησης</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_on">Η χειρονομία αναζήτησης καρέ-καρέ είναι απενεργοποιημένη</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_off">Η χειρονομία αναζήτησης καρέ-καρέ είναι ενεργοποιημένη</string>
-  <!-- interaction.seekbar.enableSeekbarTappingPatch -->
-  <string name="morphe_seekbar_tapping_title">Πάτημα για αναζήτηση στη γραμμή προόδου</string>
-  <string name="morphe_seekbar_tapping_summary_on">Το πάτημα για αναζήτηση στη γραμμή προόδου είναι ενεργοποιημένο</string>
-  <string name="morphe_seekbar_tapping_summary_off">Το πάτημα για αναζήτηση στη γραμμή προόδου είναι απενεργοποιημένο</string>
+  <!-- interaction.seekbar.enableSlideToSeekPatch -->
+  <string name="morphe_slide_to_seek_title">Χειρονομία συρσίματος για αναζήτηση</string>
+  <string name="morphe_slide_to_seek_summary_on">Η χειρονομία συρσίματος για αναζήτηση στη γραμμή προόδου είναι ενεργοποιημένη</string>
+  <string name="morphe_slide_to_seek_summary_off">Η χειρονομία συρσίματος για αναζήτηση στη γραμμή προόδου είναι απενεργοποιημένη</string>
+  <!-- interaction.seekbar.enableTapToSeekPatch -->
+  <string name="morphe_tap_to_seek_title">Πάτημα για αναζήτηση στη γραμμή προόδου</string>
+  <string name="morphe_tap_to_seek_summary_on">Το πάτημα για αναζήτηση στη γραμμή προόδου είναι ενεργοποιημένο</string>
+  <string name="morphe_tap_to_seek_summary_off">Το πάτημα για αναζήτηση στη γραμμή προόδου είναι απενεργοποιημένο</string>
   <!-- interaction.swipecontrols.swipeControlsResourcePatch -->
   <string name="morphe_swipe_brightness_title">Σάρωση οθόνης για φωτεινότητα</string>
   <string name="morphe_swipe_brightness_summary_on">"Η χειρονομία σάρωσης για αλλαγή φωτεινότητας στην πλήρη οθόνη είναι ενεργοποιημένη
@@ -655,6 +659,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_notifications_button_title">Κουμπί «Ειδοποιήσεις»</string>
   <string name="morphe_hide_notifications_button_summary_on">Κρυμμένο</string>
   <string name="morphe_hide_notifications_button_summary_off">Εμφανίζεται</string>
+  <string name="morphe_show_search_button_title">Εμφάνιση κουμπιού αναζήτησης</string>
+  <string name="morphe_show_search_button_summary_on">Εμφανίζεται</string>
+  <string name="morphe_show_search_button_summary_off">Δεν εμφανίζεται κουμπί αναζήτησης</string>
+  <string name="morphe_search_button_index_title">Κουμπί αναζήτησης</string>
+  <string name="morphe_search_button_index_invalid">Ο δείκτης του κουμπιού αναζήτησης πρέπει να είναι μικρότερος από %s</string>
   <string name="morphe_swap_create_with_notifications_button_title">Εναλλαγή κουμπιού «Δημιουργία» με κουμπί «Ειδοποιήσεις»</string>
   <string name="morphe_swap_create_with_notifications_button_summary_on">Το κουμπί «Δημιουργία» έχει αλλάξει με το κουμπί «Ειδοποιήσεις»</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">Το κουμπί «Δημιουργία» δεν έχει αλλάξει με το κουμπί «Ειδοποιήσεις»</string>
@@ -785,9 +794,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_previous_next_buttons_summary_on">Τα κουμπιά Προηγούμενο &amp; Επόμενο είναι κρυφό</string>
   <string name="morphe_hide_player_previous_next_buttons_summary_off">Τα κουμπιά Προηγούμενο &amp; Επόμενο εμφανίζονται</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsResourcePatch -->
-  <string name="morphe_hide_endscreen_cards_title">Κάρτες τελικής οθόνης</string>
-  <string name="morphe_hide_endscreen_cards_summary_on">Κρυμμένες</string>
-  <string name="morphe_hide_endscreen_cards_summary_off">Εμφανίζονται</string>
+  <string name="morphe_hide_end_screen_cards_title">Κάρτες τελικής οθόνης</string>
+  <string name="morphe_hide_end_screen_cards_summary_on">Κρυμμένες</string>
+  <string name="morphe_hide_end_screen_cards_summary_off">Εμφανίζονται</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
   <string name="morphe_ambient_mode_screen_title">Λειτουργία περιβάλλοντος</string>
   <string name="morphe_ambient_mode_screen_summary">Παράκαμψη περιορισμώνкономиής ενέργειας για τη λειτουργία περιβάλλοντος και απενεργοποίηση της εντελώς ή σε πλήρη οθόνη</string>
@@ -1094,7 +1103,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_general_min_duration">Ελάχιστη διάρκεια τμήματος</string>
   <string name="morphe_sb_general_min_duration_sum">Τμήματα μικρότερα από την καθορισμένη τιμή (σε δευτερόλεπτα) δεν θα εμφανίζονται ούτε θα παραλείπονται</string>
   <string name="morphe_sb_general_min_duration_invalid">Μη έγκυρη διάρκεια χρόνου</string>
-  <string name="morphe_sb_general_uuid">Το ιδιωτικό σας αναγνωριστικό χρήστη</string>
+  <string name="morphe_sb_general_uuid">Το ιδιωτικό αναγνωριστικό χρήστη σου</string>
   <string name="morphe_sb_general_uuid_sum">Αυτό πρέπει να μείνει μυστικό. Είναι σαν έναν κωδικό που δεν πρέπει να μοιραστείτε με κανέναν. Εάν κάποιος αποκτήσει αυτόν τον κωδικό, μπορεί να σας υποδυθεί</string>
   <string name="morphe_sb_general_uuid_invalid">Το ιδιωτικό αναγνωριστικό χρήστη πρέπει να είναι τουλάχιστον 30 χαρακτήρες</string>
   <string name="morphe_sb_general_api_url">Αλλαγή διεύθυνσης API</string>
@@ -1111,7 +1120,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_settings_export_failed">Η εξαγωγή απέτυχε: %s</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning">"Οι ρυθμίσεις σας περιέχουν ένα ιδιωτικό αναγνωριστικό χρήστη SponsorBlock.
 
-Το αναγνωριστικό χρήστη σας είναι σαν κωδικός πρόσβασης και δεν πρέπει ποτέ να μοιράζεται."</string>
+Το αναγνωριστικό χρήστη σου είναι σαν κωδικός πρόσβασης και δεν πρέπει ποτέ να μοιράζεται."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Να μην εμφανιστεί ξανά</string>
   <string name="morphe_sb_diff_segments">Αλλαγή συμπεριφοράς τμημάτων</string>
   <string name="morphe_sb_segments_sponsor">Χορηγός</string>
@@ -1558,10 +1567,6 @@ Second \"item\" text"</string>
   <string name="morphe_prioritize_video_quality_title">Προτεραιότητα ποιότητας βίντεο</string>
   <string name="morphe_prioritize_video_quality_summary_on">Η ποιότητα του βίντεο προτεραιώνεται</string>
   <string name="morphe_prioritize_video_quality_summary_off">Οι κωδικοί του βίντεο προτεραιώνονται</string>
-  <!-- interaction.seekbar.enableSlideToSeekPatch -->
-  <string name="morphe_slide_to_seek_title">Χειρονομία συρσίματος για αναζήτηση</string>
-  <string name="morphe_slide_to_seek_summary_on">Η χειρονομία συρσίματος για αναζήτηση στη γραμμή προόδου είναι ενεργοποιημένη</string>
-  <string name="morphe_slide_to_seek_summary_off">Η χειρονομία συρσίματος για αναζήτηση στη γραμμή προόδου είναι απενεργοποιημένη</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Να επιτρέπεται ο κωδικοποιητής Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary_on">"Ο κωδικοποιητής βίντεο είναι ο AVC (H.264), ο VP9 ή ο AV1

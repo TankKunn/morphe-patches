@@ -434,7 +434,7 @@ Limitations :
   <string name="morphe_hide_video_ads_title">Masquer les publicités vidéo</string>
   <string name="morphe_hide_video_ads_summary_on">Les publicités vidéo sont masquées</string>
   <string name="morphe_hide_video_ads_summary_off">Les publicités vidéo sont affichées</string>
-  <!-- interaction.copyvideourl.copyVideoUrlResourcePatch -->
+  <!-- interaction.copyvideourl.copyVideoURLResourcePatch -->
   <string name="morphe_share_copy_url_success">URL copiée dans le presse-papiers</string>
   <string name="morphe_share_copy_url_timestamp_success">URL avec horodatage copiée</string>
   <string name="morphe_copy_video_url_title">Afficher un bouton \'Copier l\'URL de la vidéo\'</string>
@@ -448,10 +448,10 @@ Limitations :
   <string name="morphe_remove_viewer_discretion_dialog_summary_on">Le message sera supprimé</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary_off">Le message sera affiché</string>
   <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Cela ne contourne pas la restriction d’âge. Cela accepte simplement la confirmation automatiquement</string>
-  <!-- layout.hide.signintotv.disableSignInToTvPopupPatch -->
-  <string name="morphe_disable_signin_to_tv_popup_title">Désactiver le pop-up \'Connectez-vous à la TV\'</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_on">Le pop-up \'Connectez-vous à la TV\' est désactivé</string>
-  <string name="morphe_disable_signin_to_tv_popup_summary_off">Le pop-up \'Connectez-vous à la TV\' est activé</string>
+  <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
+  <string name="morphe_disable_sign_in_to_tv_popup_title">Désactiver le pop-up \'Connectez-vous à la TV\'</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_summary_on">Le pop-up \'Connectez-vous à la TV\' est désactivé</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_summary_off">Le pop-up \'Connectez-vous à la TV\' est activé</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Désactiver le double appui pour passer un chapitre</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary_on">Le double appui ne peut jamais déclencher un saut au chapitre suivant/précédent</string>
@@ -480,10 +480,14 @@ Vérifiez que le nom du package est correct et que l’application est bien inst
   <string name="morphe_disable_precise_seeking_gesture_title">Désactiver le geste de barre de progression précise</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_on">Le geste est désactivé</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_off">Le geste est activé</string>
-  <!-- interaction.seekbar.enableSeekbarTappingPatch -->
-  <string name="morphe_seekbar_tapping_title">Activer l\'appui pour rechercher</string>
-  <string name="morphe_seekbar_tapping_summary_on">L\'appui pour rechercher est activé</string>
-  <string name="morphe_seekbar_tapping_summary_off">L\'appui pour rechercher est désactivé</string>
+  <!-- interaction.seekbar.enableSlideToSeekPatch -->
+  <string name="morphe_slide_to_seek_title">Activer \'Faites glisser pour rechercher\'</string>
+  <string name="morphe_slide_to_seek_summary_on">Faites glisser pour rechercher est activé</string>
+  <string name="morphe_slide_to_seek_summary_off">Faites glisser pour rechercher n\'est pas activé</string>
+  <!-- interaction.seekbar.enableTapToSeekPatch -->
+  <string name="morphe_tap_to_seek_title">Activer l\'appui pour rechercher</string>
+  <string name="morphe_tap_to_seek_summary_on">L\'appui pour rechercher est activé</string>
+  <string name="morphe_tap_to_seek_summary_off">L\'appui pour rechercher est désactivé</string>
   <!-- interaction.swipecontrols.swipeControlsResourcePatch -->
   <string name="morphe_swipe_brightness_title">Activer les gestes de luminosité</string>
   <string name="morphe_swipe_brightness_summary_on">"Le geste pour régler la luminosité en plein écran est activé
@@ -653,6 +657,11 @@ Les cookies seront enregistrés automatiquement s'ils sont valides"</string>
   <string name="morphe_hide_notifications_button_title">Masquer \'Notifications\'</string>
   <string name="morphe_hide_notifications_button_summary_on">Le bouton \'Notifications\' est masqué</string>
   <string name="morphe_hide_notifications_button_summary_off">Le bouton \'Notifications\' est affiché</string>
+  <string name="morphe_show_search_button_title">Afficher le bouton \'Rechercher\'</string>
+  <string name="morphe_show_search_button_summary_on">Le bouton \'Rechercher\' est affiché</string>
+  <string name="morphe_show_search_button_summary_off">Le bouton \'Rechercher\' n\'est pas affiché</string>
+  <string name="morphe_search_button_index_title">Index du bouton \'Rechercher\'</string>
+  <string name="morphe_search_button_index_invalid">L\'index du bouton \'Rechercher\' doit être inférieur à %s</string>
   <string name="morphe_swap_create_with_notifications_button_title">Échanger \'Créer\' et \'Notifications\'</string>
   <string name="morphe_swap_create_with_notifications_button_summary_on">Le bouton \'Créer\' est échangé avec le bouton \'Notifications\'</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">Le bouton \'Créer\' n\'est pas échangé avec le bouton \'Notifications\'</string>
@@ -783,9 +792,9 @@ Pour afficher le menu 'Pste audio', modifier 'Falsifier les flux vidéo' en 'And
   <string name="morphe_hide_player_previous_next_buttons_summary_on">Les boutons \'Précédent\' &amp; \'Suivant\' sont masqués</string>
   <string name="morphe_hide_player_previous_next_buttons_summary_off">Les boutons \'Précédent\' &amp; \'Suivant\' sont affichés</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsResourcePatch -->
-  <string name="morphe_hide_endscreen_cards_title">Masquer les cartes d\'écran de fin</string>
-  <string name="morphe_hide_endscreen_cards_summary_on">Les cartes d\'écran de fin sont masqués</string>
-  <string name="morphe_hide_endscreen_cards_summary_off">Les cartes d\'écran de fin sont affichés</string>
+  <string name="morphe_hide_end_screen_cards_title">Masquer les cartes d\'écran de fin</string>
+  <string name="morphe_hide_end_screen_cards_summary_on">Les cartes d\'écran de fin sont masqués</string>
+  <string name="morphe_hide_end_screen_cards_summary_off">Les cartes d\'écran de fin sont affichés</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
   <string name="morphe_ambient_mode_screen_title">Mode Ambiant</string>
   <string name="morphe_ambient_mode_screen_summary">Contourner les restrictions d’économie d’énergie pour le mode Ambiant et le désactiver complètement ou en plein écran</string>
@@ -1092,7 +1101,7 @@ Limitation : Il se peut que les 'Je n'aime pas' n'apparaissent pas en navigatio
   <string name="morphe_sb_general_min_duration">Durée minimale d\'un segment</string>
   <string name="morphe_sb_general_min_duration_sum">Les segments plus courts que cette valeur (en secondes) ne pourront être affichés ou passés</string>
   <string name="morphe_sb_general_min_duration_invalid">Durée invalide</string>
-  <string name="morphe_sb_general_uuid">Votre ID d\'utilisateur privé</string>
+  <string name="morphe_sb_general_uuid">Votre ID utilisateur privé</string>
   <string name="morphe_sb_general_uuid_sum">Cela doit rester confidentiel. C’est comme un mot de passe et ne doit être partagé avec personne. Si quelqu’un obtient cela, il pourra usurper votre identité</string>
   <string name="morphe_sb_general_uuid_invalid">L’ID utilisateur privé doit comporter au moins 30 caractères</string>
   <string name="morphe_sb_general_api_url">Modifier l\'URL de l\'API</string>
@@ -1562,10 +1571,6 @@ Limitations :
   <string name="morphe_prioritize_video_quality_title">Prioriser la qualité vidéo</string>
   <string name="morphe_prioritize_video_quality_summary_on">La qualité vidéo est priorisée</string>
   <string name="morphe_prioritize_video_quality_summary_off">Les codecs vidéo sont priorisés</string>
-  <!-- interaction.seekbar.enableSlideToSeekPatch -->
-  <string name="morphe_slide_to_seek_title">Activer \'Faites glisser pour rechercher\'</string>
-  <string name="morphe_slide_to_seek_summary_on">Faites glisser pour rechercher est activé</string>
-  <string name="morphe_slide_to_seek_summary_off">Faites glisser pour rechercher n\'est pas activé</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Autoriser AV1 sur Android VR</string>
   <string name="morphe_spoof_video_streams_av1_summary_on">"Le codec vidéo est AVC (H.264), VP9 ou AV1
