@@ -1,5 +1,5 @@
 {
-  "version": "1.15.0",
+  "version": "1.16.0-dev.1",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -369,7 +369,7 @@
     },
     {
       "name": "Disable DRC audio",
-      "description": "Adds an option to disable dynamic range compression (DRC).",
+      "description": "Adds an option to disable DRC (Dynamic Range Compression) audio.",
       "use": true,
       "dependencies": [
         "BytecodePatch",
@@ -386,7 +386,7 @@
     },
     {
       "name": "Disable DRC audio",
-      "description": "Adds an option to disable dynamic range compression (DRC).",
+      "description": "Adds an option to disable DRC (Dynamic Range Compression) audio.",
       "use": true,
       "dependencies": [
         "BytecodePatch",
@@ -403,7 +403,7 @@
     },
     {
       "name": "Disable QUIC protocol",
-      "description": "Adds an option to disable the QUIC (Quick UDP Internet Connections) network protocol.",
+      "description": "Adds an option to disable QUIC (Quick UDP Internet Connections) network protocol.",
       "use": true,
       "dependencies": [
         "BytecodePatch",
@@ -420,7 +420,7 @@
     },
     {
       "name": "Disable QUIC protocol",
-      "description": "Adds an option to disable the QUIC (Quick UDP Internet Connections) network protocol.",
+      "description": "Adds an option to disable QUIC (Quick UDP Internet Connections) network protocol.",
       "use": true,
       "dependencies": [
         "BytecodePatch",
@@ -1231,6 +1231,7 @@
         "BytecodePatch",
         "BytecodePatch",
         "ResourcePatch",
+        "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch"
       ],

@@ -1,3 +1,10 @@
+# [1.16.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0...v1.16.0-dev.1) (2026-02-26)
+
+
+### Features
+
+* **YouTube - Navigation bar:** Add `Show search button` setting ([#634](https://github.com/MorpheApp/morphe-patches/issues/634)) ([b46e492](https://github.com/MorpheApp/morphe-patches/commit/b46e4923592ce5f752d6e2db156a3838c25f4f4f))
+
 # [1.15.0](https://github.com/MorpheApp/morphe-patches/compare/v1.14.0...v1.15.0) (2026-02-25)
 
 
