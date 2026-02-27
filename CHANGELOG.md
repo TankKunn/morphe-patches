@@ -1,3 +1,10 @@
+# [1.16.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.1...v1.16.0-dev.2) (2026-02-27)
+
+
+### Features
+
+* **YouTube:** Add `Open system share sheet` patch ([#625](https://github.com/MorpheApp/morphe-patches/issues/625)) ([64ff907](https://github.com/MorpheApp/morphe-patches/commit/64ff9079777a2b935886c35eae0e454984d56b52))
+
 # [1.16.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.15.0...v1.16.0-dev.1) (2026-02-26)
 
 
