@@ -1,3 +1,10 @@
+# [1.16.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.7...v1.16.0-dev.8) (2026-03-01)
+
+
+### Bug Fixes
+
+* **YouTube Music - Change start page:** Hide Podcast option that shows an error message for users in unsupported countries ([b0a9fb6](https://github.com/MorpheApp/morphe-patches/commit/b0a9fb68ba2909889612165f1f1df5bff8fecd21))
+
 # [1.16.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.6...v1.16.0-dev.7) (2026-03-01)
 
 
