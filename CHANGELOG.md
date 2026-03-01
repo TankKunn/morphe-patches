@@ -1,3 +1,10 @@
+# [1.16.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.4...v1.16.0-dev.5) (2026-03-01)
+
+
+### Bug Fixes
+
+* **YouTube - Double tap to seek:** Playback setting menu does not open when patched with CLI pre-release ([ba1784d](https://github.com/MorpheApp/morphe-patches/commit/ba1784df70cb4cbfe786e991e75bb1d8f97a6dbf))
+
 # [1.16.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.3...v1.16.0-dev.4) (2026-03-01)
 
 
