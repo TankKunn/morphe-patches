@@ -1,3 +1,10 @@
+# [1.16.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.3...v1.16.0-dev.4) (2026-03-01)
+
+
+### Bug Fixes
+
+* **YouTube - Hide Shorts components:** Resolve Shorts header not being hidden ([#649](https://github.com/MorpheApp/morphe-patches/issues/649)) ([84901c2](https://github.com/MorpheApp/morphe-patches/commit/84901c261ea0808514cca24c5bd7687389acae5c))
+
 # [1.16.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.2...v1.16.0-dev.3) (2026-02-28)
 
 
