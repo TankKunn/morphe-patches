@@ -1,3 +1,10 @@
+# [1.16.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.6...v1.16.0-dev.7) (2026-03-01)
+
+
+### Features
+
+* **YouTube Music:** Add `Change start page` patch ([#653](https://github.com/MorpheApp/morphe-patches/issues/653)) ([bc3c1bd](https://github.com/MorpheApp/morphe-patches/commit/bc3c1bda7afd3748f3bd7c7a9831ae4bad64b80f))
+
 # [1.16.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.5...v1.16.0-dev.6) (2026-03-01)
 
 
