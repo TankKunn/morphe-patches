@@ -1,3 +1,10 @@
+# [1.16.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.5...v1.16.0-dev.6) (2026-03-01)
+
+
+### Features
+
+* **YouTube Music:** Add `Change header` patch ([#650](https://github.com/MorpheApp/morphe-patches/issues/650)) ([f6f03e5](https://github.com/MorpheApp/morphe-patches/commit/f6f03e55d01863f3d436e00108cc608d933ddbd9))
+
 # [1.16.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.4...v1.16.0-dev.5) (2026-03-01)
 
 
