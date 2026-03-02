@@ -1,3 +1,10 @@
+# [1.16.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.8...v1.16.0-dev.9) (2026-03-02)
+
+
+### Features
+
+* **YouTube:** Add `Override YouTube Music actions` patch ([#677](https://github.com/MorpheApp/morphe-patches/issues/677)) ([904dcda](https://github.com/MorpheApp/morphe-patches/commit/904dcda3f17faf26753529351d5c4b57cdbda162))
+
 # [1.16.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0-dev.7...v1.16.0-dev.8) (2026-03-01)
 
 
