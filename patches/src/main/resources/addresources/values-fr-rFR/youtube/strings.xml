@@ -959,12 +959,12 @@ Pour afficher le menu 'Pste audio', modifier 'Falsifier les flux vidéo' en 'And
   <string name="morphe_hide_shorts_navigation_bar_summary_off">La barre de navigation est affichée</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Masquer \'Vidéo suggéréé\' à l\'écran de fin</string>
-  <string name="morphe_end_screen_suggested_video_summary_on">La vidéo suggérée à l\'écran de fin est masquée lorsque la lecture automatique est désactivée</string>
+  <string name="morphe_end_screen_suggested_video_summary_on">L\'écran de fin suggérant une vidéo est masqué</string>
   <string name="morphe_end_screen_suggested_video_summary_off">L\'écran de fin suggérant une vidéo est affiché</string>
   <string name="morphe_end_screen_suggested_video_user_dialog_message">"Ce paramètre ne fonctionne que si 'Lecture automatique de la vidéo suivante' est désactivée.
 
-'Lecture automatique de la vidéo suivante' peut être modifiée dans les paramètres de YouTube :
-Paramètres → Lecture (ou Lecture automatique)→ Lecture automatique de vidéo suivante"</string>
+Vous pouvez modifier cela dans YouTube :
+Paramètres → Lecture (ou Lecture automatique) → Lecture automatique de vidéo suivante"</string>
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
   <string name="morphe_hide_related_videos_overlay_title">Masquer l\'overlay des vidéos similaires</string>
   <string name="morphe_hide_related_videos_overlay_summary_on">L\'overlay des vidéos similaires en mode plein écran est masqué</string>
@@ -1284,6 +1284,12 @@ Si cette option est désactivée ultérieurement, il est recommandé de vider le
   <string name="morphe_open_system_share_sheet_title">Ouverture du menu \'Partager\' du système</string>
   <string name="morphe_open_system_share_sheet_summary_on">Ouverture du menu \'Partager\' du système</string>
   <string name="morphe_open_system_share_sheet_summary_off">Ouverture du menu \'Partager\' de l\'application</string>
+  <!-- layout.music.overrideYouTubeMusicActionsPatch -->
+  <string name="morphe_override_youtube_music_button_title">Remplacer le bouton \'YouTube Music\'</string>
+  <string name="morphe_override_youtube_music_button_summary_on">Le bouton \'YouTube Music\' ouvre votre application music cible</string>
+  <string name="morphe_override_youtube_music_button_summary_off">Le bouton YouTube Music ouvre l\'application native</string>
+  <string name="morphe_music_package_name_title">Nom de package Morphe Music</string>
+  <string name="morphe_music_package_name_summary">Nom du package de l\'application music cible</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Changer la page de démarrage</string>
   <string name="morphe_change_start_page_entry_default">Par défaut</string>
@@ -1310,11 +1316,11 @@ Si cette option est désactivée ultérieurement, il est recommandé de vider le
   <string name="morphe_change_start_page_entry_virtual_reality">Réalité virtuelle</string>
   <string name="morphe_change_start_page_entry_watch_later">À regarder plus tard</string>
   <string name="morphe_change_start_page_entry_your_clips">Vos clips</string>
-  <string name="morphe_change_start_page_always_title">Toujours modifier la page de démarrage</string>
-  <string name="morphe_change_start_page_always_summary_on">"La page de démarrage est toujours modifiée.
+  <string name="morphe_change_start_page_always_title">Toujours changer la page de démarrage</string>
+  <string name="morphe_change_start_page_always_summary_on">"La page de démarrage est toujours changée
 
 Limitation : Le bouton 'Retour' de la barre d'outils peut ne pas fonctionner."</string>
-  <string name="morphe_change_start_page_always_summary_off">La page de démarrage est modifiée uniquement au démarrage de l\'application</string>
+  <string name="morphe_change_start_page_always_summary_off">La page de démarrage est changée uniquement au démarrage de l\'application</string>
   <!-- layout.startupshortsreset.disableResumingShortsOnStartupPatch -->
   <string name="morphe_disable_resuming_shorts_player_title">Désactiver la reprise de lecture Shorts</string>
   <string name="morphe_disable_resuming_shorts_player_summary_on">Les Shorts ne reprennent pas au démarrage de l\'application</string>
