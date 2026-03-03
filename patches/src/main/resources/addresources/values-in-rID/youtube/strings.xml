@@ -958,11 +958,11 @@ Untuk menampilkan menu trek audio, ubah 'Palsukan aliran video' menjadi 'Android
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Bilah navigasi ditampilkan</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_end_screen_suggested_video_title">Sembunyikan video yang disarankan di layar akhir</string>
-  <string name="morphe_end_screen_suggested_video_summary_on">Layar akhir video yang disarankan tersembunyi</string>
+  <string name="morphe_end_screen_suggested_video_summary_on">Layar akhir video yang disarankan disembunyikan</string>
   <string name="morphe_end_screen_suggested_video_summary_off">Video yang disarankan di layar akhir ditampilkan</string>
   <string name="morphe_end_screen_suggested_video_user_dialog_message">"Pengaturan ini hanya berfungsi jika 'Putar otomatis video berikutnya' dimatikan.
 
-'Putar otomatis video berikutnya' dapat diubah di pengaturan YouTube:
+Anda dapat mengubahnya di YouTube:
 Pengaturan → Pemutaran (atau Putar otomatis) → Putar otomatis video berikutnya"</string>
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
   <string name="morphe_hide_related_videos_overlay_title">Sembunyikan hamparan video terkait</string>
