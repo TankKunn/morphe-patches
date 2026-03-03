@@ -182,7 +182,7 @@ public class Utils {
     }
 
     /**
-     * Hide a view by setting its visibility to GONE.
+     * Hide a view by setting its visibility as GONE.
      *
      * @param setting The setting to check for hiding the view.
      * @param view      The view to hide.
@@ -194,7 +194,7 @@ public class Utils {
     }
 
     /**
-     * Hide a view by setting its visibility to GONE.
+     * Hide a view by setting its visibility as GONE.
      *
      * @param condition The setting to check for hiding the view.
      * @param view      The view to hide.
@@ -264,7 +264,7 @@ public class Utils {
             // Could do a thread sleep, but that will trigger an exception if the thread is interrupted.
             meaninglessValue += Long.numberOfLeadingZeros((long) Math.exp(Math.random()));
         }
-        // Return the value, otherwise the compiler or VM might optimize and remove the meaningless time wasting work,
+        // Return the value, otherwise the compiler or VM might optimize and remove the meaningless time-wasting work,
         // leaving an empty loop that hammers on the System.currentTimeMillis native call.
         return meaninglessValue;
     }
@@ -294,6 +294,30 @@ public class Utils {
             }
         }
         return false;
+    }
+
+    /**
+     * Checks if a specific app package is installed and enabled on the device.
+     *
+     * @param packageName The application package name to check (e.g., "app.morphe.android.apps.youtube.music").
+     * @return True if the package is installed and enabled, false otherwise.
+     */
+    public static boolean isPackageEnabled(String packageName) {
+        Context currentContext = getContext();
+        if (currentContext == null || !isNotEmpty(packageName)) {
+            return false;
+        }
+
+        try {
+            PackageManager pm = currentContext.getPackageManager();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                return pm.getApplicationInfo(packageName, PackageManager.ApplicationInfoFlags.of(0)).enabled;
+            } else {
+                return pm.getApplicationInfo(packageName, 0).enabled;
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
     }
 
     public interface MatchFilter<T> {
@@ -442,7 +466,7 @@ public class Utils {
     private static Boolean isRightToLeftTextLayout;
 
     /**
-     * @return If the device language uses right to left text layout (Hebrew, Arabic, etc).
+     * @return If the device language uses right to left text layout (Hebrew, Arabic, etc.).
      *         If this should match any Morphe language override then instead use
      *         {@link #isRightToLeftLocale(Locale)} with {@link BaseSettings#MORPHE_LANGUAGE}.
      *         This is the default locale of the device, which may differ if
@@ -456,7 +480,7 @@ public class Utils {
     }
 
     /**
-     * @return If the locale uses right to left text layout (Hebrew, Arabic, etc).
+     * @return If the locale uses right to left text layout (Hebrew, Arabic, etc.).
      */
     public static boolean isRightToLeftLocale(Locale locale) {
         String displayLanguage = locale.getDisplayLanguage();
@@ -485,7 +509,7 @@ public class Utils {
 
     /**
      * @return if the text contains at least 1 number character,
-     *         including any unicode numbers such as Arabic.
+     *         including any Unicode numbers such as Arabic.
      */
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     public static boolean containsNumber(CharSequence text) {
@@ -1125,7 +1149,7 @@ public class Utils {
     }
 
     /**
-     * Uses {@link #adjustColorBrightness(int, float)} depending if light or dark mode is active.
+     * Uses {@link #adjustColorBrightness(int, float)} depending on if light or dark mode is active.
      */
     @ColorInt
     public static int adjustColorBrightness(@ColorInt int baseColor, float lightThemeFactor, float darkThemeFactor) {

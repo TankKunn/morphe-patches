@@ -1,3 +1,11 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ *
+ * Original hard forked code:
+ * https://github.com/ReVanced/revanced-patches/commit/724e6d61b2ecd868c1a9a37d465a688e83a74799
+ */
+
 package app.morphe.patches.youtube.video.information
 
 import app.morphe.patcher.Fingerprint
@@ -45,8 +53,10 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodImplementation
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 import com.android.tools.smali.dexlib2.util.MethodUtil
+import java.lang.ref.WeakReference
 
-private const val EXTENSION_CLASS_DESCRIPTOR = "Lapp/morphe/extension/youtube/patches/VideoInformation;"
+private const val EXTENSION_CLASS_DESCRIPTOR =
+    "Lapp/morphe/extension/youtube/patches/VideoInformation;"
 private const val EXTENSION_PLAYER_INTERFACE =
     "Lapp/morphe/extension/youtube/patches/VideoInformation\$PlaybackController;"
 private const val EXTENSION_VIDEO_QUALITY_MENU_INTERFACE =
@@ -54,41 +64,41 @@ private const val EXTENSION_VIDEO_QUALITY_MENU_INTERFACE =
 internal const val EXTENSION_VIDEO_QUALITY_INTERFACE =
     "Lapp/morphe/extension/youtube/patches/VideoInformation\$VideoQualityInterface;"
 
-private lateinit var playerInitMethod: MutableMethod
+private lateinit var playerInitMethodRef : WeakReference<MutableMethod>
 private var playerInitInsertIndex = -1
 private var playerInitInsertRegister = -1
 
-private lateinit var mdxInitMethod: MutableMethod
+private lateinit var mdxInitMethodRef : WeakReference<MutableMethod>
 private var mdxInitInsertIndex = -1
 private var mdxInitInsertRegister = -1
 
-private lateinit var timeMethod: MutableMethod
+private lateinit var timeMethodRef : WeakReference<MutableMethod>
 private var timeInitInsertIndex = 2
 
-// Old speed menu, where speeds are entries in a list.  Method is also used by the player speed button.
-private lateinit var legacySpeedSelectionInsertMethod: MutableMethod
+// Old speed menu, where speeds are entries in a list. Method is also used by the player speed button.
+private lateinit var legacySpeedSelectionInsertMethodRef : WeakReference<MutableMethod>
 private var legacySpeedSelectionInsertIndex = -1
 private var legacySpeedSelectionValueRegister = -1
 
 // New speed menu, with preset buttons and 0.05x fine adjustments buttons.
-private lateinit var speedSelectionInsertMethod: MutableMethod
+private lateinit var speedSelectionInsertMethodRef : WeakReference<MutableMethod>
 private var speedSelectionInsertIndex = -1
 private var speedSelectionValueRegister = -1
 
 // Change playback speed method.
-private lateinit var setPlaybackSpeedMethod: MutableMethod
+private lateinit var setPlaybackSpeedMethodRef : WeakReference<MutableMethod>
 private var setPlaybackSpeedMethodIndex = -1
 
-internal lateinit var playerStatusMethod: MutableMethod
+internal lateinit var playerStatusMethodRef : WeakReference<MutableMethod>
 
 // Used by other patches.
-internal lateinit var setPlaybackSpeedContainerClassFieldReference: FieldReference
+internal lateinit var setPlaybackSpeedContainerClassFieldReferenceClassTypeRef : WeakReference<ClassDef>
     private set
-internal lateinit var setPlaybackSpeedContainerClassFieldReferenceClassType: ClassDef
+internal lateinit var setPlaybackSpeedContainerClassFieldReferenceRef : WeakReference<FieldReference>
     private set
-internal lateinit var setPlaybackSpeedClassFieldReference: FieldReference
+internal lateinit var setPlaybackSpeedClassFieldReferenceRef : WeakReference<FieldReference>
     private set
-internal lateinit var setPlaybackSpeedMethodReference: MethodReference
+internal lateinit var setPlaybackSpeedMethodReferenceRef : WeakReference<MethodReference>
     private set
 
 val videoInformationPatch = bytecodePatch(
@@ -102,7 +112,9 @@ val videoInformationPatch = bytecodePatch(
     )
 
     execute {
-        playerInitMethod = PlayerInitFingerprint.classDef.methods.first { MethodUtil.isConstructor(it) }
+        val playerInitMethod = PlayerInitFingerprint.classDef.methods.first { MethodUtil.isConstructor(it) }
+
+        playerInitMethodRef = WeakReference(playerInitMethod)
 
         // Find the location of the first invoke-direct call and extract the register storing the 'this' object reference.
         val initThisIndex = playerInitMethod.indexOfFirstInstructionOrThrow {
@@ -123,7 +135,8 @@ val videoInformationPatch = bytecodePatch(
         )
 
         with(MdxPlayerDirectorSetVideoStageFingerprint) {
-            mdxInitMethod = classDef.methods.first { MethodUtil.isConstructor(it) }
+            val mdxInitMethod = classDef.methods.first { MethodUtil.isConstructor(it) }
+            mdxInitMethodRef = WeakReference(mdxInitMethod)
 
             val initThisIndex = mdxInitMethod.indexOfFirstInstructionOrThrow {
                 opcode == Opcode.INVOKE_DIRECT && getReference<MethodReference>()?.name == "<init>"
@@ -132,12 +145,12 @@ val videoInformationPatch = bytecodePatch(
             mdxInitInsertIndex = initThisIndex + 1
 
             // Hook the MDX director for use through the extension.
-            onCreateHookMdx(EXTENSION_CLASS_DESCRIPTOR, "initializeMdx")
+            onCreateHookMDX(EXTENSION_CLASS_DESCRIPTOR, "initializeMDX")
 
-            val MdxSeekFingerprintResultMethod = MdxSeekFingerprint.match(classDef).method
-            val MdxSeekRelativeFingerprintResultMethod = MdxSeekRelativeFingerprint.match(classDef).method
+            val mdxSeekFingerprintResultMethod = MdxSeekFingerprint.match(classDef).method
+            val mdxSeekRelativeFingerprintResultMethod = MdxSeekRelativeFingerprint.match(classDef).method
 
-            addSeekInterfaceMethods(classDef, MdxSeekFingerprintResultMethod, MdxSeekRelativeFingerprintResultMethod)
+            addSeekInterfaceMethods(classDef, mdxSeekFingerprintResultMethod, mdxSeekRelativeFingerprintResultMethod)
         }
 
         with(CreateVideoPlayerSeekbarFingerprint) {
@@ -171,11 +184,12 @@ val videoInformationPatch = bytecodePatch(
             )
         )
 
-        playerStatusMethod =
+        playerStatusMethodRef = WeakReference(
             PlayerStatusFingerprint.match(PlayerInitFingerprint.originalClassDef).method
+        )
 
         /*
-         * Inject call for video ids
+         * Inject call for video IDs
          */
         val videoIdMethodDescriptor = "$EXTENSION_CLASS_DESCRIPTOR->setVideoId(Ljava/lang/String;)V"
         hookVideoId(videoIdMethodDescriptor)
@@ -183,8 +197,8 @@ val videoInformationPatch = bytecodePatch(
         hookPlayerResponseVideoId(
             "$EXTENSION_CLASS_DESCRIPTOR->setPlayerResponseVideoId(Ljava/lang/String;Z)V",
         )
-        // Call before any other video id hooks,
-        // so they can use VideoInformation and check if the video id is for a Short.
+        // Call before any other video ID hooks,
+        // so they can use VideoInformation and check if the video ID is for a Short.
         addPlayerResponseMethodHook(
             Hook.ProtoBufferParameterBeforeVideoId(
                 "$EXTENSION_CLASS_DESCRIPTOR->" +
@@ -195,15 +209,19 @@ val videoInformationPatch = bytecodePatch(
         /*
          * Set the video time method
          */
-        timeMethod = PlayerControllerSetTimeReferenceFingerprint.instructionMatches.first()
-            .getInstruction<ReferenceInstruction>()
-            .getReference<MethodReference>()!!
-            .getMutableMethod()
+        timeMethodRef = WeakReference(
+            PlayerControllerSetTimeReferenceFingerprint.instructionMatches.first()
+                .getInstruction<ReferenceInstruction>()
+                .getReference<MethodReference>()!!
+                .getMutableMethod()
+        )
 
         /*
          * Hook the methods which set the time
          */
         videoTimeHook(EXTENSION_CLASS_DESCRIPTOR, "setVideoTime")
+
+        val setPlaybackSpeedMethodReference: MethodReference
 
         /*
          * Hook the user playback speed selection.
@@ -211,7 +229,7 @@ val videoInformationPatch = bytecodePatch(
         OnPlaybackSpeedItemClickFingerprint.match(OnPlaybackSpeedItemClickParentFingerprint.classDef).method.apply {
             val speedSelectionValueInstructionIndex = indexOfFirstInstructionOrThrow(Opcode.IGET)
 
-            legacySpeedSelectionInsertMethod = this
+            legacySpeedSelectionInsertMethodRef = WeakReference(this)
             legacySpeedSelectionInsertIndex = speedSelectionValueInstructionIndex + 1
             legacySpeedSelectionValueRegister =
                 getInstruction<TwoRegisterInstruction>(speedSelectionValueInstructionIndex).registerA
@@ -220,16 +238,20 @@ val videoInformationPatch = bytecodePatch(
                 indexOfFirstInstructionOrThrow(speedSelectionValueInstructionIndex) {
                     val reference = getReference<MethodReference>()
                     reference?.parameterTypes?.size == 1 && reference.parameterTypes.first() == "F"
-                }
-            ).reference as MethodReference
+                }).reference as MethodReference
+            setPlaybackSpeedMethodReferenceRef = WeakReference(setPlaybackSpeedMethodReference)
 
-            setPlaybackSpeedContainerClassFieldReference = getInstruction<ReferenceInstruction>(
+            val setPlaybackSpeedContainerClassFieldReference = getInstruction<ReferenceInstruction>(
                 indexOfFirstInstructionOrThrow(Opcode.IF_EQZ) - 1
             ).reference as FieldReference
+            setPlaybackSpeedContainerClassFieldReferenceRef = WeakReference(
+                setPlaybackSpeedContainerClassFieldReference
+            )
 
+            val setPlaybackSpeedContainerClassFieldReferenceClassType : ClassDef
             if (is_20_49_or_greater) {
                 // Only one class implements the interface. Patcher currently does not have a
-                // 'first' accessor for looking up classes, so do it ourself to verify
+                // 'first' accessor for looking up classes, so do it ourselves to verify
                 // we're using the expected class type.
                 var fieldReferenceType: ClassDef? = null
                 classDefForEach { def ->
@@ -241,20 +263,30 @@ val videoInformationPatch = bytecodePatch(
                     }
                 }
                 setPlaybackSpeedContainerClassFieldReferenceClassType = fieldReferenceType!!
+                setPlaybackSpeedContainerClassFieldReferenceClassTypeRef = WeakReference(
+                    setPlaybackSpeedContainerClassFieldReferenceClassType
+                )
             } else {
-                setPlaybackSpeedContainerClassFieldReferenceClassType =
-                    classDefBy(setPlaybackSpeedContainerClassFieldReference.type)
+                setPlaybackSpeedContainerClassFieldReferenceClassType = classDefBy(
+                    setPlaybackSpeedContainerClassFieldReference.type
+                )
+                setPlaybackSpeedContainerClassFieldReferenceClassTypeRef = WeakReference(
+                    setPlaybackSpeedContainerClassFieldReferenceClassType
+                )
             }
 
-            setPlaybackSpeedClassFieldReference = getInstruction<ReferenceInstruction>(
+            val setPlaybackSpeedClassFieldReference = getInstruction<ReferenceInstruction>(
                 indexOfFirstInstructionOrThrow(speedSelectionValueInstructionIndex) {
                     getReference<FieldReference>()?.type?.startsWith("L") == true
                 }
             ).reference as FieldReference
+            setPlaybackSpeedClassFieldReferenceRef = WeakReference(setPlaybackSpeedClassFieldReference)
 
-            setPlaybackSpeedMethod = mutableClassDefBy(
-                setPlaybackSpeedMethodReference.definingClass
-            ).methods.first { it.name == setPlaybackSpeedMethodReference.name }
+            setPlaybackSpeedMethodRef = WeakReference(
+                mutableClassDefBy(
+                    setPlaybackSpeedMethodReference.definingClass
+                ).methods.first { it.name == setPlaybackSpeedMethodReference.name }
+            )
 
             setPlaybackSpeedMethodIndex = 0
 
@@ -335,7 +367,7 @@ val videoInformationPatch = bytecodePatch(
             it.method.apply {
                 val index = it.instructionMatches.first().index
 
-                speedSelectionInsertMethod = this
+                speedSelectionInsertMethodRef = WeakReference(this)
                 speedSelectionInsertIndex = index + 1
                 speedSelectionValueRegister = getInstruction<TwoRegisterInstruction>(index).registerA
             }
@@ -529,16 +561,16 @@ private fun MutableMethod.insertTimeHook(insertIndex: Int, descriptor: String) =
     insert(insertIndex, "p1, p2", descriptor)
 
 /**
- * Hook the player controller.  Called when a video is opened or the current video is changed.
+ * Hook the player controller. Called when a video is opened or the current video is changed.
  *
- * Note: This hook is called very early and is called before the video id, video time, video length,
+ * Note: This hook is called very early and is called before the video ID, video time, video length,
  * and many other data fields are set.
  *
  * @param targetMethodClass The descriptor for the class to invoke when the player controller is created.
  * @param targetMethodName The name of the static method to invoke when the player controller is created.
  */
 internal fun onCreateHook(targetMethodClass: String, targetMethodName: String) =
-    playerInitMethod.insert(
+    playerInitMethodRef.get()!!.insert(
         playerInitInsertIndex++,
         "v$playerInitInsertRegister",
         "$targetMethodClass->$targetMethodName($EXTENSION_PLAYER_INTERFACE)V",
@@ -550,8 +582,8 @@ internal fun onCreateHook(targetMethodClass: String, targetMethodName: String) =
  * @param targetMethodClass The descriptor for the class to invoke when the player controller is created.
  * @param targetMethodName The name of the static method to invoke when the player controller is created.
  */
-internal fun onCreateHookMdx(targetMethodClass: String, targetMethodName: String) =
-    mdxInitMethod.insert(
+internal fun onCreateHookMDX(targetMethodClass: String, targetMethodName: String) =
+    mdxInitMethodRef.get()!!.insert(
         mdxInitInsertIndex++,
         "v$mdxInitInsertRegister",
         "$targetMethodClass->$targetMethodName($EXTENSION_PLAYER_INTERFACE)V",
@@ -565,7 +597,7 @@ internal fun onCreateHookMdx(targetMethodClass: String, targetMethodName: String
  * @param targetMethodName The name of the static method to invoke when the player controller is created.
  */
 fun videoTimeHook(targetMethodClass: String, targetMethodName: String) =
-    timeMethod.insertTimeHook(
+    timeMethodRef.get()!!.insertTimeHook(
         timeInitInsertIndex++,
         "$targetMethodClass->$targetMethodName(J)V",
     )
@@ -574,7 +606,7 @@ fun videoTimeHook(targetMethodClass: String, targetMethodName: String) =
  * Hook when the video speed is changed for any reason _except when the user manually selects a new speed_.
  */
 fun videoSpeedChangedHook(targetMethodClass: String, targetMethodName: String) =
-    setPlaybackSpeedMethod.addInstruction(
+    setPlaybackSpeedMethodRef.get()!!.addInstruction(
         setPlaybackSpeedMethodIndex++,
         "invoke-static { p1 }, $targetMethodClass->$targetMethodName(F)V"
     )
@@ -583,12 +615,12 @@ fun videoSpeedChangedHook(targetMethodClass: String, targetMethodName: String) =
  * Hook the video speed selected by the user.
  */
 fun userSelectedPlaybackSpeedHook(targetMethodClass: String, targetMethodName: String) {
-    legacySpeedSelectionInsertMethod.addInstruction(
+    legacySpeedSelectionInsertMethodRef.get()!!.addInstruction(
         legacySpeedSelectionInsertIndex++,
         "invoke-static { v$legacySpeedSelectionValueRegister }, $targetMethodClass->$targetMethodName(F)V"
     )
 
-    speedSelectionInsertMethod.addInstruction(
+    speedSelectionInsertMethodRef.get()!!.addInstruction(
         speedSelectionInsertIndex++,
         "invoke-static { v$speedSelectionValueRegister }, $targetMethodClass->$targetMethodName(F)V",
     )
