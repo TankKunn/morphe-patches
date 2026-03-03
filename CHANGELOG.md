@@ -1,3 +1,10 @@
+## [1.16.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.16.1-dev.1...v1.16.1-dev.2) (2026-03-03)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Resolve "Hide Explore the podcast" not working ([#691](https://github.com/MorpheApp/morphe-patches/issues/691)) ([fd50458](https://github.com/MorpheApp/morphe-patches/commit/fd504587cacaf665816c908b5db124f7a2e7bdd1))
+
 ## [1.16.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0...v1.16.1-dev.1) (2026-03-03)
 
 
