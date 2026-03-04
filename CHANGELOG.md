@@ -1,3 +1,10 @@
+# [1.17.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.1...v1.17.0-dev.2) (2026-03-04)
+
+
+### Bug Fixes
+
+* **Custom branding:** Do not override base app name for root installation ([8eb6d48](https://github.com/MorpheApp/morphe-patches/commit/8eb6d483a53e99eaa5aece259f0d5a27d2ef5053))
+
 # [1.17.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.16.1-dev.2...v1.17.0-dev.1) (2026-03-04)
 
 
