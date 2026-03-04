@@ -1,3 +1,10 @@
+# [1.17.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.16.1-dev.2...v1.17.0-dev.1) (2026-03-04)
+
+
+### Features
+
+* **YouTube:** Add `Hide releated videos` patch ([#685](https://github.com/MorpheApp/morphe-patches/issues/685)) ([7a960e1](https://github.com/MorpheApp/morphe-patches/commit/7a960e1a9f52ee2dcaea84298a62e9e2867100b7))
+
 ## [1.16.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.16.1-dev.1...v1.16.1-dev.2) (2026-03-03)
 
 
