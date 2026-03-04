@@ -1,3 +1,10 @@
+# [1.17.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.2...v1.17.0-dev.3) (2026-03-04)
+
+
+### Features
+
+* **YouTube Music:** Add experimental support for `9.09.52` ([e42d9c1](https://github.com/MorpheApp/morphe-patches/commit/e42d9c1bbdd6985378be47c8f9138ccdb22ead1e))
+
 # [1.17.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.1...v1.17.0-dev.2) (2026-03-04)
 
 

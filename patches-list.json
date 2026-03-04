@@ -1,5 +1,5 @@
 {
-  "version": "1.17.0-dev.2",
+  "version": "1.17.0-dev.3",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -326,7 +326,8 @@
         "BytecodePatch",
         "BytecodePatch",
         "ResourcePatch",
-        "BytecodePatch"
+        "BytecodePatch",
+        "ResourcePatch"
       ],
       "compatiblePackages": {
         "com.google.android.apps.youtube.music": [
@@ -363,7 +364,8 @@
       "dependencies": [
         "BytecodePatch",
         "ResourcePatch",
-        "BytecodePatch"
+        "BytecodePatch",
+        "ResourcePatch"
       ],
       "compatiblePackages": {
         "com.google.android.youtube": [
