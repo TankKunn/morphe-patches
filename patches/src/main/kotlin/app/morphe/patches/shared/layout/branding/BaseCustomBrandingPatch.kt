@@ -335,20 +335,6 @@ internal fun baseCustomBrandingPatch(
                 )
             }
 
-            application.setAttribute(
-                "android:label",
-                if (useCustomName) {
-                    // Use custom name everywhere.
-                    customName!!
-                } else {
-                    // The YT application name can appear in some places alongside the system
-                    // YouTube app, such as the settings app list and in the "open with" file picker.
-                    // Because the YouTube app cannot be completely uninstalled and only disabled,
-                    // use a custom name for this situation to disambiguate which app is which.
-                    "@string/morphe_custom_branding_name_entry_2"
-                }
-            )
-
             val enabledNameIndex = if (useCustomName) numberOfPresetAppNames else 1 // 1 indexing
             val enabledIconIndex = if (useCustomIcon) iconStyleNames.size else 0 // 0 indexing
 
@@ -483,5 +469,32 @@ internal fun baseCustomBrandingPatch(
         }
 
         executeBlock()
+    }
+
+    finalize {
+        val useCustomName = customName != null
+        val isRootInstall = setOrGetFallbackPackageName(originalAppPackageName) == originalAppPackageName
+        if (isRootInstall && !useCustomName) {
+            // Don't override root base app name because it's not visible in the launcher
+            // and Magisk module can show "YouTube Morphe Morphe".
+            return@finalize
+        }
+
+        document("AndroidManifest.xml").use { document ->
+            val application = document.getElementsByTagName("application").item(0) as Element
+            application.setAttribute(
+                "android:label",
+                if (useCustomName) {
+                    // Use custom name everywhere.
+                    customName!!
+                } else {
+                    // The YT application name can appear in some places alongside the system
+                    // YouTube app, such as the settings app list and in the "open with" file picker.
+                    // Because the YouTube app cannot be completely uninstalled and only disabled,
+                    // use a custom name for this situation to disambiguate which app is which.
+                    "@string/morphe_custom_branding_name_entry_2"
+                }
+            )
+        }
     }
 }
