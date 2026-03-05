@@ -180,7 +180,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_quick_actions_title">빠른 동작 컨테이너 숨기기</string>
   <string name="morphe_hide_quick_actions_summary_on">전체 화면에서 빠른 동작 컨테이너가 숨겨집니다</string>
   <string name="morphe_hide_quick_actions_summary_off">전체 화면에서 빠른 동작 컨테이너가 표시됩니다</string>
-  <string name="morphe_hide_quick_actions_related_videos_title">빠른 동작에서 관련 동영상 숨기기</string>
+  <string name="morphe_hide_quick_actions_related_videos_title">빠른 동작 관련 동영상 숨기기</string>
   <string name="morphe_hide_quick_actions_related_videos_summary_on">빠른 동작 컨테이너에서 관련 동영상이 숨겨집니다</string>
   <string name="morphe_hide_quick_actions_related_videos_summary_off">빠른 동작 컨테이너에서 관련 동영상이 표시됩니다</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">구독자를 위한 커뮤니티 가이드라인 숨기기</string>

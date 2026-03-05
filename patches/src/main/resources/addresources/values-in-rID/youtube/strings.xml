@@ -669,7 +669,7 @@ Cookie akan disimpan secara otomatis jika sah"</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">Tombol buat tidak ditukar dengan tombol Pemberitahuan</string>
   <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Jika mengubah pengaturan ini tidak berhasil, coba beralih ke mode Penyamaran.</string>
   <string name="morphe_hide_navigation_button_labels_title">Sembunyikan label tombol navigasi</string>
-  <string name="morphe_hide_navigation_button_labels_summary_on">Label tombol navigasi tersembunyi</string>
+  <string name="morphe_hide_navigation_button_labels_summary_on">Label tombol navigasi disembunyikan</string>
   <string name="morphe_hide_navigation_button_labels_summary_off">Label tombol navigasi ditampilkan</string>
   <string name="morphe_hide_navigation_bar_title">Sembunyikan bilah navigasi</string>
   <string name="morphe_hide_navigation_bar_summary_on">Bilah navigasi disembunyikan</string>
@@ -677,7 +677,7 @@ Cookie akan disimpan secara otomatis jika sah"</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Ini sepenuhnya menyembunyikan bilah navigasi termasuk tab Anda.
 
 Untuk mengakses Pengaturan:
-Buka video apa saja → Buka menu Kualitas → Ketuk 'Pengaturan &gt; Preferensi Kualitas Video' di bagian bawah."</string>
+Buka video apa pun → Buka menu Kualitas → Ketuk 'Pengaturan &gt; Preferensi Kualitas Video' di bagian bawah."</string>
   <string name="morphe_narrow_navigation_buttons_title">Aktifkan tombol navigasi sempit</string>
   <string name="morphe_narrow_navigation_buttons_summary_on"> Jarak antara tombol navigasi cukup sempit</string>
   <string name="morphe_narrow_navigation_buttons_summary_off"> Jarak antara tombol navigasi cukup normal</string>
@@ -702,7 +702,7 @@ Buka video apa saja → Buka menu Kualitas → Ketuk 'Pengaturan &gt; Preferensi
   <string name="morphe_hide_toolbar_create_button_summary_on">Tombol buat disembunyikan</string>
   <string name="morphe_hide_toolbar_create_button_summary_off">Tombol buat ditampilkan</string>
   <string name="morphe_hide_toolbar_microphone_button_title">Sembunyikan Mikrofon</string>
-  <string name="morphe_hide_toolbar_microphone_button_summary_on">Tombol mikrofon tersembunyi</string>
+  <string name="morphe_hide_toolbar_microphone_button_summary_on">Tombol mikrofon disembunyikan</string>
   <string name="morphe_hide_toolbar_microphone_button_summary_off">Tombol mikrofon ditampilkan</string>
   <string name="morphe_hide_toolbar_notification_button_title">Sembunyikan Pemberitahuan</string>
   <string name="morphe_hide_toolbar_notification_button_summary_on">Tombol pemberitahuan disembunyikan</string>
@@ -711,17 +711,17 @@ Buka video apa saja → Buka menu Kualitas → Ketuk 'Pengaturan &gt; Preferensi
   <string name="morphe_hide_toolbar_search_button_summary_on">Tombol pencarian disembunyikan</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Tombol pencarian ditampilkan</string>
   <string name="morphe_replace_toolbar_create_button_title">Ganti Buat dengan Pengaturan</string>
-  <string name="morphe_replace_toolbar_create_button_summary_on">Tombol Buat diganti dengan Tombol Pengaturan</string>
-  <string name="morphe_replace_toolbar_create_button_summary_off">Tombol Buat tidak diganti dengan Tombol Pengaturan</string>
-  <string name="morphe_replace_toolbar_create_button_user_dialog_message">Ketokan perilaku tombol Pengaturan pada tab Anda juga dibatalkan</string>
+  <string name="morphe_replace_toolbar_create_button_summary_on">Tombol Buat diganti dengan tombol Pengaturan</string>
+  <string name="morphe_replace_toolbar_create_button_summary_off">Tombol Buat tidak diganti dengan tombol Pengaturan</string>
+  <string name="morphe_replace_toolbar_create_button_user_dialog_message">Perilaku klik tombol Pengaturan di tab Anda juga ditimpa.</string>
   <string name="morphe_replace_toolbar_create_button_type_title">Tindakan tombol Pengaturan</string>
-  <string name="morphe_replace_toolbar_create_button_type_summary_on">"Ketuk untuk membuka Pengaturan YouTube
-Ketuk dan tahan untuk membuka Pengaturan Morphe"</string>
+  <string name="morphe_replace_toolbar_create_button_type_summary_on">"Ketuk untuk membuka pengaturan Morphe
+Ketuk dan tahan untuk membuka pengaturan YouTube"</string>
   <string name="morphe_replace_toolbar_create_button_type_summary_off">"Ketuk untuk membuka Pengaturan YouTube
 Ketuk dan tahan untuk membuka Pengaturan Morphe"</string>
-  <string name="morphe_rearrange_toolbar_buttons_title">Atur ulang tombol yang diganti</string>
-  <string name="morphe_rearrange_toolbar_buttons_summary_on">Tombol diatur ulang</string>
-  <string name="morphe_rearrange_toolbar_buttons_summary_off">Tombol tidak diatur ulang</string>
+  <string name="morphe_rearrange_toolbar_buttons_title">Atur ulang susunan tombol yang diganti</string>
+  <string name="morphe_rearrange_toolbar_buttons_summary_on">Tombol disusun ulang</string>
+  <string name="morphe_rearrange_toolbar_buttons_summary_off">Tombol tidak disusun ulang</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menu flyout</string>
   <string name="morphe_hide_player_flyout_summary">Sembunyikan atau tampilkan item menu pemutar flyout</string>

@@ -671,8 +671,8 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">Niezamienione</string>
   <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Jeśli zmiana tego ustawienia nie przyniesie efektu, spróbuj przełączyć się w tryb incognito.</string>
   <string name="morphe_hide_navigation_button_labels_title">Etykiety przycisków nawigacji</string>
-  <string name="morphe_hide_navigation_button_labels_summary_on">Ukryty</string>
-  <string name="morphe_hide_navigation_button_labels_summary_off">Widoczny</string>
+  <string name="morphe_hide_navigation_button_labels_summary_on">Ukryte</string>
+  <string name="morphe_hide_navigation_button_labels_summary_off">Widoczne</string>
   <string name="morphe_hide_navigation_bar_title">Pasek nawigacji</string>
   <string name="morphe_hide_navigation_bar_summary_on">Ukryty</string>
   <string name="morphe_hide_navigation_bar_summary_off">Widoczny</string>
@@ -712,7 +712,7 @@ Otwórz dowolny film → Otwórz menu jakości → Kliknij \"Ustawienia > Prefer
   <string name="morphe_hide_toolbar_search_button_title">Przycisk wyszukiwania</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Ukryty</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Widoczny</string>
-  <string name="morphe_replace_toolbar_create_button_title">Zastąp przycisk tworzenia ustawieniami</string>
+  <string name="morphe_replace_toolbar_create_button_title">Przyciski przesyłania i ustawień</string>
   <string name="morphe_replace_toolbar_create_button_summary_on">Zamienione</string>
   <string name="morphe_replace_toolbar_create_button_summary_off">Niezamienione</string>
   <string name="morphe_replace_toolbar_create_button_user_dialog_message">Działanie przycisku ustawień na stronie \"Ty\" również zostanie nadpisane.</string>

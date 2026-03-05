@@ -703,24 +703,24 @@ Ouvrez une vidéo → Ouvrez le menu 'Qualité' → Appuyez sur 'Paramètres &gt
   <string name="morphe_hide_toolbar_create_button_title">Masquer \'Créer\'</string>
   <string name="morphe_hide_toolbar_create_button_summary_on">Le bouton \'Créer\' est masqué</string>
   <string name="morphe_hide_toolbar_create_button_summary_off">Le bouton \'Créer\' est affiché</string>
-  <string name="morphe_hide_toolbar_microphone_button_title">Masquer le bouton Micro</string>
-  <string name="morphe_hide_toolbar_microphone_button_summary_on">Le bouton Micro est masqué</string>
-  <string name="morphe_hide_toolbar_microphone_button_summary_off">Le bouton Micro est affiché</string>
+  <string name="morphe_hide_toolbar_microphone_button_title">Masquer \'Micro\'</string>
+  <string name="morphe_hide_toolbar_microphone_button_summary_on">Le bouton \'Micro\' est masqué</string>
+  <string name="morphe_hide_toolbar_microphone_button_summary_off">Le bouton \'Micro\' est affiché</string>
   <string name="morphe_hide_toolbar_notification_button_title">Masquer \'Notifications\'</string>
   <string name="morphe_hide_toolbar_notification_button_summary_on">Le bouton \'Notifications\' est masqué</string>
   <string name="morphe_hide_toolbar_notification_button_summary_off">Le bouton \'Notifications\' est affiché</string>
-  <string name="morphe_hide_toolbar_search_button_title">Masquer Rechercher</string>
+  <string name="morphe_hide_toolbar_search_button_title">Masquer \'Rechercher\'</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Le bouton \'Rechercher\' est masqué</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Le bouton \'Rechercher\' est affiché</string>
-  <string name="morphe_replace_toolbar_create_button_title">Remplacer Créer par Paramètres</string>
-  <string name="morphe_replace_toolbar_create_button_summary_on">Le bouton \'Créer\' est remplacé par le bouton Paramètres</string>
-  <string name="morphe_replace_toolbar_create_button_summary_off">Le bouton \'Créer\' n\'est pas remplacé par le bouton Paramètres</string>
-  <string name="morphe_replace_toolbar_create_button_user_dialog_message">Le comportement de l\'appui sur le bouton Paramètres dans l\'onglet Vous est également surchargé.</string>
-  <string name="morphe_replace_toolbar_create_button_type_title">Action du bouton Paramètres</string>
-  <string name="morphe_replace_toolbar_create_button_type_summary_on">"Touchez pour ouvrir les Paramètres de Morphe
-Touchez et maintenez enfoncé pour ouvrir les Paramètres de YouTube"</string>
-  <string name="morphe_replace_toolbar_create_button_type_summary_off">"Touchez pour ouvrir les Paramètres de YouTube
-Touchez et maintenez enfoncé pour ouvrir les Paramètres de Morphe"</string>
+  <string name="morphe_replace_toolbar_create_button_title">Remplacer \'Créer par \'Paramètres\'</string>
+  <string name="morphe_replace_toolbar_create_button_summary_on">Le bouton \'Créer\' est remplacé par le bouton \'Paramètres\'</string>
+  <string name="morphe_replace_toolbar_create_button_summary_off">Le bouton \'Créer\' n\'est pas remplacé par le bouton \'Paramètres\'</string>
+  <string name="morphe_replace_toolbar_create_button_user_dialog_message">Le comportement au clic du bouton \'Paramètres\' dans l’onglet \'Vous\' est également remplacé</string>
+  <string name="morphe_replace_toolbar_create_button_type_title">Action du bouton \'Paramètres\'</string>
+  <string name="morphe_replace_toolbar_create_button_type_summary_on">"Appuyez pour ouvrir les paramètres Morphe
+Appuyez longuement pour ouvrir les paramètres YouTube"</string>
+  <string name="morphe_replace_toolbar_create_button_type_summary_off">"Appuyez pour ouvrir les paramètres YouTube
+Appuyez longuement pour ouvrir les paramètres Morphe"</string>
   <string name="morphe_rearrange_toolbar_buttons_title">Réorganiser les boutons remplacés</string>
   <string name="morphe_rearrange_toolbar_buttons_summary_on">Les boutons sont réorganisés</string>
   <string name="morphe_rearrange_toolbar_buttons_summary_off">Les boutons ne sont pas réorganisés</string>

@@ -671,8 +671,8 @@ Second \"item\" text"</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">作成ボタンと通知ボタンは入れ替わりません</string>
   <string name="morphe_swap_create_with_notifications_button_user_dialog_message">この設定を変更しても効果がない場合は、シークレット モードへの切り替えをお試しください。</string>
   <string name="morphe_hide_navigation_button_labels_title">ボタンをアイコンのみで表示</string>
-  <string name="morphe_hide_navigation_button_labels_summary_on">Navigation button labels are hidden</string>
-  <string name="morphe_hide_navigation_button_labels_summary_off">Navigation button labels are shown</string>
+  <string name="morphe_hide_navigation_button_labels_summary_on">ナビゲーション ボタンはアイコンのみで表示されます</string>
+  <string name="morphe_hide_navigation_button_labels_summary_off">ナビゲーション ボタンはアイコンと文字で表示されます</string>
   <string name="morphe_hide_navigation_bar_title">ナビゲーション バーを非表示</string>
   <string name="morphe_hide_navigation_bar_summary_on">ナビゲーション バーは表示されません</string>
   <string name="morphe_hide_navigation_bar_summary_off">ナビゲーション バーは表示されます</string>
@@ -683,9 +683,9 @@ Open any video → Open Quality menu → Tap 'Settings &gt; Video Quality Prefer
   <string name="morphe_narrow_navigation_buttons_title">ナビゲーション ボタンの間を詰める</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">ナビゲーション ボタンは狭い間隔で表示されます</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">ナビゲーション ボタンは通常の間隔で表示されます</string>
-  <string name="morphe_navigation_bar_animations_title">ナビゲーションバーのアニメーションを有効にする</string>
-  <string name="morphe_navigation_bar_animations_summary_on">ナビゲーション遷移がアニメーション表示されます</string>
-  <string name="morphe_navigation_bar_animations_summary_off">ナビゲーション遷移はアニメーション表示されません</string>
+  <string name="morphe_navigation_bar_animations_title">ナビゲーション バーのアニメーションを有効化</string>
+  <string name="morphe_navigation_bar_animations_summary_on">ナビゲーションの遷移がアニメーション表示されます</string>
+  <string name="morphe_navigation_bar_animations_summary_off">ナビゲーションの遷移はアニメーション表示されません</string>
   <string name="morphe_disable_translucent_status_bar_title">半透明ステータスバーを無効化</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">ステータスバーは透けません</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">ステータスバーは状況に応じて透けます</string>
