@@ -1,3 +1,10 @@
+# [1.17.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.3...v1.17.0-dev.4) (2026-03-05)
+
+
+### Features
+
+* **YouTube - Navigation bar:** Add "Hide navigation bar", "Replace Create with Settings", and "Show Settings" settings ([#688](https://github.com/MorpheApp/morphe-patches/issues/688)) ([1b87895](https://github.com/MorpheApp/morphe-patches/commit/1b8789530e9ca50f439653cb4c55ae1a031d980b))
+
 # [1.17.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.2...v1.17.0-dev.3) (2026-03-04)
 
 
