@@ -1,3 +1,12 @@
+# [1.17.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.4...v1.17.0-dev.5) (2026-03-05)
+
+
+### Features
+
+* **Spoof video streams:** Add "Force player JavaScript hash" and "Player JavaScript hash" ([#722](https://github.com/MorpheApp/morphe-patches/issues/722)) ([c184dbe](https://github.com/MorpheApp/morphe-patches/commit/c184dbe74aac4f2c2f7cb74955a05063209a9f2e))
+* **YouTube Music:** Add support for `8.44.54` ([113e0b3](https://github.com/MorpheApp/morphe-patches/commit/113e0b3f67a5470e000c0e15d91d0c44ab18b66d))
+* **YouTube:** Add support for `20.44.38` ([b022292](https://github.com/MorpheApp/morphe-patches/commit/b022292192de08a913429400a44003fdc2622c3c))
+
 # [1.17.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.3...v1.17.0-dev.4) (2026-03-05)
 
 
