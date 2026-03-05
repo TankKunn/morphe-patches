@@ -149,6 +149,7 @@ internal object SetEnumMapFingerprint : Fingerprint(
 )
 
 internal object InitializeBottomBarContainerFingerprint : Fingerprint(
+    name = "run",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
     filters = listOf(
@@ -157,8 +158,5 @@ internal object InitializeBottomBarContainerFingerprint : Fingerprint(
             opcode = Opcode.INVOKE_VIRTUAL,
             smali = "Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View\$OnLayoutChangeListener;)V"
         )
-    ),
-    custom = { _, classDef ->
-        AccessFlags.SYNTHETIC.isSet(classDef.accessFlags)
-    }
+    )
 )
