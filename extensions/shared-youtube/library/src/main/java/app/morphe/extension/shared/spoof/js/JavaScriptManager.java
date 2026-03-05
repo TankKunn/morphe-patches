@@ -1,3 +1,8 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ */
+
 package app.morphe.extension.shared.spoof.js;
 
 import static app.morphe.extension.shared.Utils.isNotEmpty;
@@ -27,7 +32,9 @@ import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.innertube.PlayerResponseOuterClass.Format;
 import app.morphe.extension.shared.innertube.PlayerResponseOuterClass.StreamingData;
 import app.morphe.extension.shared.requests.Requester;
+import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
+import app.morphe.extension.shared.settings.preference.AbstractPreferenceFragment;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -181,7 +188,10 @@ public final class JavaScriptManager {
             long lastSavedTime = SharedYouTubeSettings.SPOOF_VIDEO_STREAMS_JS_SAVED_MILLISECONDS.get();
 
             if (!SharedYouTubeSettings.SPOOF_VIDEO_STREAMS_JS_HASH.isSetToDefault()
-                    && currentTime - lastSavedTime < PLAYER_JS_CACHE_EXPIRATION_MILLISECONDS) {
+                    // If 'Force player JavaScript hash' is enabled, the 'Player JavaScript hash' will always be used.
+                    // In other words, the cache expiration is not checked, and the YouTube iframe API is not fetched either.
+                    && (SharedYouTubeSettings.SPOOF_VIDEO_STREAMS_FORCE_JS_HASH.get()
+                    || currentTime - lastSavedTime < PLAYER_JS_CACHE_EXPIRATION_MILLISECONDS)) {
                 // There is a hash saved in the settings and it was saved within 3 days.
                 // Use the hash saved in the settings.
                 cachedPlayerJsHash = SharedYouTubeSettings.SPOOF_VIDEO_STREAMS_JS_HASH.get();
@@ -196,7 +206,10 @@ public final class JavaScriptManager {
                     Matcher matcher = PLAYER_JS_HASH_PATTERN.matcher(iframeContent);
                     if (matcher.find()) {
                         cachedPlayerJsHash = matcher.group(1);
-                        SharedYouTubeSettings.SPOOF_VIDEO_STREAMS_JS_HASH.save(cachedPlayerJsHash);
+                        AbstractPreferenceFragment.settingImportInProgress = true;
+                        Setting.privateSetValueFromString(SharedYouTubeSettings.SPOOF_VIDEO_STREAMS_JS_HASH, cachedPlayerJsHash);
+                        SharedYouTubeSettings.SPOOF_VIDEO_STREAMS_JS_HASH.saveToPreferences();
+                        AbstractPreferenceFragment.settingImportInProgress = false;
                         SharedYouTubeSettings.SPOOF_VIDEO_STREAMS_JS_SAVED_MILLISECONDS.save(currentTime);
                     } else {
                         Logger.printException(() -> "iframeContent not found");
@@ -289,6 +302,7 @@ public final class JavaScriptManager {
      * @param streamingData StreamingData containing obfuscated parameters.
      * @return              StreamingData builder containing deobfuscated parameters.
      */
+    @Nullable
     public static StreamingData.Builder getDeobfuscatedStreamingData(StreamingData streamingData) {
         StreamingData.Builder streamingDataBuilder = streamingData.toBuilder();
         String serverAbrStreamingUrl = streamingData.getServerAbrStreamingUrl();
@@ -297,28 +311,36 @@ public final class JavaScriptManager {
         streamingDataBuilder.clearFormats();
 
         // Deobfuscate formats.
-        deobfuscateFormat(
+        boolean deobfuscateResult = deobfuscateFormat(
                 streamingDataBuilder,
                 streamingData.getFormatsList(),
                 serverAbrStreamingUrl,
                 false
         );
 
+        if (!deobfuscateResult) {
+            return null;
+        }
+
         // Initialize streamingDataBuilder before adding adaptiveFormats.
         streamingDataBuilder.clearAdaptiveFormats();
 
         // Deobfuscate adaptiveFormats.
-        deobfuscateFormat(
+        deobfuscateResult = deobfuscateFormat(
                 streamingDataBuilder,
                 streamingData.getAdaptiveFormatsList(),
                 serverAbrStreamingUrl,
                 true
         );
 
+        if (!deobfuscateResult) {
+            return null;
+        }
+
         return streamingDataBuilder;
     }
 
-    private static void deobfuscateFormat(StreamingData.Builder streamingDataBuilder,
+    private static boolean deobfuscateFormat(StreamingData.Builder streamingDataBuilder,
                                          List<Format> formats,
                                          String serverAbrStreamingUrl,
                                          boolean isAdaptiveFormats) {
@@ -374,8 +396,17 @@ public final class JavaScriptManager {
                 );
 
                 // Since there is only one obfuscated n-parameter, there is also only one deobfuscated n-parameter
-                String deobfuscatedNParameter = results.first.get(0);
+                List<String> deobfuscatedNParameters = results.first;
+                if (deobfuscatedNParameters.isEmpty()) {
+                    Logger.printException(() -> "Failed to deobfuscate n-parameter");
+                    return false;
+                }
+                String deobfuscatedNParameter = deobfuscatedNParameters.get(0);
                 List<String> deobfuscatedSParameters = results.second;
+                if (hasSignatureCipher && deobfuscatedSParameters.isEmpty()) {
+                    Logger.printException(() -> "Failed to deobfuscate signatureCipher");
+                    return false;
+                }
 
                 int i = 0;
                 for (Format format : formats) {
@@ -400,8 +431,12 @@ public final class JavaScriptManager {
                         ? serverAbrStreamingUrl.replace(obfuscatedNParameter, deobfuscatedNParameter)
                         : ""
                 );
+
+                return true;
             }
         }
+
+        return false;
     }
 
     private static String getNQueryParameter(String url) {
