@@ -1,3 +1,10 @@
+# [1.17.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.5...v1.17.0-dev.6) (2026-03-05)
+
+
+### Bug Fixes
+
+* Resolve navigation bar patch not working ([9e21cfd](https://github.com/MorpheApp/morphe-patches/commit/9e21cfd1c55b880e01f3ffd9296dcdab36e2282b))
+
 # [1.17.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.4...v1.17.0-dev.5) (2026-03-05)
 
 
