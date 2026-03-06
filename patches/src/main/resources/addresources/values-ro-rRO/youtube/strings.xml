@@ -651,14 +651,14 @@ Cookie-urile vor fi salvate automatik daca sunt valide"</string>
   <string name="morphe_hide_notifications_button_title">Ascunde notificările</string>
   <string name="morphe_hide_notifications_button_summary_on">Butonul Notificări este ascuns</string>
   <string name="morphe_hide_notifications_button_summary_off">Butonul Notificări este afișat</string>
-  <string name="morphe_show_search_button_title">Show Search</string>
+  <string name="morphe_show_search_button_title">Afișează Căutare</string>
   <string name="morphe_show_search_button_summary_on">Butonul de căutare este afișat</string>
   <string name="morphe_show_search_button_summary_off">Butonul de căutare nu este arătat</string>
   <string name="morphe_search_button_index_title">Butonul căutări</string>
   <string name="morphe_search_button_index_invalid">Indexul butonului căutări trebuie să fie mai mic decăt %s</string>
-  <string name="morphe_show_settings_button_title">Show Settings</string>
-  <string name="morphe_show_settings_button_summary_on">Settings button is shown</string>
-  <string name="morphe_show_settings_button_summary_off">Settings button is not shown</string>
+  <string name="morphe_show_settings_button_title">Afișează Setări</string>
+  <string name="morphe_show_settings_button_summary_on">Se afișează butonul Setări</string>
+  <string name="morphe_show_settings_button_summary_off">Butonul Setări nu este afișat</string>
   <string name="morphe_settings_button_index_title">Indexul butonului Setări</string>
   <string name="morphe_settings_button_index_invalid">Indexul butonului Setări trebuie să fie mai mic decât %s</string>
   <string name="morphe_swap_create_with_notifications_button_title">Comuta Creare cu Notificări</string>
@@ -1619,7 +1619,7 @@ Redarea video cu AV1 poate sacada sau pierde cadre."</string>
   <string name="morphe_spoof_video_streams_about_js">• Dacă deobfuscarea eșuează, reproducerea poate eșua</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Forțarea sunetului original nu este disponibilă</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">Varianta JavaScript a playerului</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">Varianta JavaScript a playerului</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">Afișează în Statistici pentru pasionați</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">Tipul clientului este afișat în Statistici pentru pasionați</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">Clientul este ascuns în Statistici pentru pasionați</string>

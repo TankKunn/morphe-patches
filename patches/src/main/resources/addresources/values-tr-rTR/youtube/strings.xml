@@ -663,22 +663,22 @@ Geçerli ise otomatik olarak kaydedilecek"</string>
   <string name="morphe_show_settings_button_title">Ayarlar Göster</string>
   <string name="morphe_show_settings_button_summary_on">Ayarlar düğmesi görüntüleniyor</string>
   <string name="morphe_show_settings_button_summary_off">Ayarlar düğmesi görüntülenmiyor</string>
-  <string name="morphe_settings_button_index_title">Settings button index</string>
+  <string name="morphe_settings_button_index_title">Ayarlar düğmesi indeksi</string>
   <string name="morphe_settings_button_index_invalid">Settings button index must be less than %s</string>
   <string name="morphe_swap_create_with_notifications_button_title">Oluştur ve Bildirimleri yer değiştir</string>
   <string name="morphe_swap_create_with_notifications_button_summary_on">Oluştur düğmesi ile Bildirimler düğmesinin yerleri değiştirilmez</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">Oluştur düğmesi ile Bildirimler düğmesinin yerleri değiştirilmez</string>
   <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Bu ayar değiştirilmezse, Incognito moduna geçiş yapın.</string>
   <string name="morphe_hide_navigation_button_labels_title">Gezinme düğmeleri etiketlerini gizle</string>
-  <string name="morphe_hide_navigation_button_labels_summary_on">Navigation button labels are hidden</string>
-  <string name="morphe_hide_navigation_button_labels_summary_off">Navigation button labels are shown</string>
+  <string name="morphe_hide_navigation_button_labels_summary_on">Navigasyon düğmesi etiketleri gizleniyor</string>
+  <string name="morphe_hide_navigation_button_labels_summary_off">Navigasyon düğmesi etiketleri gösteriliyor</string>
   <string name="morphe_hide_navigation_bar_title">Gezinme çubuğunu gizle</string>
   <string name="morphe_hide_navigation_bar_summary_on">Gezinme çubuğu gizli</string>
   <string name="morphe_hide_navigation_bar_summary_off">Gezinme çubuğu görünür</string>
-  <string name="morphe_hide_navigation_bar_user_dialog_message">"This hides the navigation bar entirely including You tab.
+  <string name="morphe_hide_navigation_bar_user_dialog_message">"Bu, Yol sekmesini de dahil olmak üzere gezinme çubuğunu tamamen gizler.
 
-To access Settings:
-Open any video → Open Quality menu → Tap 'Settings > Video Quality Preferences' at the bottom."</string>
+Ayarlara erişmek için:
+Herhangi bir videoyu açın → Kalite menüsünü açın → Altta 'Ayarlar > Video Kalitesi Tercihleri'ne dokunun."</string>
   <string name="morphe_narrow_navigation_buttons_title">Navigasyon düğmeleri dar yapılandırmayı etkinleştirin</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">Navigasyon düğmeleri arasındaki boşluk dar</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">Navigasyon düğmeleri arasındaki boşluk normal</string>
@@ -702,27 +702,27 @@ Open any video → Open Quality menu → Tap 'Settings > Video Quality Preferenc
   <string name="morphe_hide_toolbar_create_button_title">Oluştur\'u gizle</string>
   <string name="morphe_hide_toolbar_create_button_summary_on">Oluştur düğmesi gizli</string>
   <string name="morphe_hide_toolbar_create_button_summary_off">Oluştur düğmesi görünür</string>
-  <string name="morphe_hide_toolbar_microphone_button_title">Hide Microphone</string>
-  <string name="morphe_hide_toolbar_microphone_button_summary_on">Microphone button is hidden</string>
-  <string name="morphe_hide_toolbar_microphone_button_summary_off">Microphone button is shown</string>
+  <string name="morphe_hide_toolbar_microphone_button_title">Mikrofonu gizle</string>
+  <string name="morphe_hide_toolbar_microphone_button_summary_on">Mikrofon düğmesi gizlenmiş</string>
+  <string name="morphe_hide_toolbar_microphone_button_summary_off">Mikrofon düğmesi gösteriliyor</string>
   <string name="morphe_hide_toolbar_notification_button_title">Bildirimleri gizle</string>
   <string name="morphe_hide_toolbar_notification_button_summary_on">Bildirimler düğmesi gizli</string>
   <string name="morphe_hide_toolbar_notification_button_summary_off">Bildirimler düğmesi görünür</string>
-  <string name="morphe_hide_toolbar_search_button_title">Hide Search</string>
+  <string name="morphe_hide_toolbar_search_button_title">Ara\'yı gizle</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Arama düğmesi gizli</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Arama düğmesi görünür</string>
-  <string name="morphe_replace_toolbar_create_button_title">Replace Create with Settings</string>
-  <string name="morphe_replace_toolbar_create_button_summary_on">Create button is replaced with Settings button</string>
-  <string name="morphe_replace_toolbar_create_button_summary_off">Create button is not replaced with Settings button</string>
-  <string name="morphe_replace_toolbar_create_button_user_dialog_message">The click behavior of the Settings button in You tab is also overridden.</string>
-  <string name="morphe_replace_toolbar_create_button_type_title">Settings button action</string>
-  <string name="morphe_replace_toolbar_create_button_type_summary_on">"Tap to open Morphe settings
-Tap and hold to open YouTube settings"</string>
-  <string name="morphe_replace_toolbar_create_button_type_summary_off">"Tap to open YouTube settings
-Tap and hold to open Morphe settings"</string>
-  <string name="morphe_rearrange_toolbar_buttons_title">Rearrange the replaced buttons</string>
-  <string name="morphe_rearrange_toolbar_buttons_summary_on">Buttons are rearranged</string>
-  <string name="morphe_rearrange_toolbar_buttons_summary_off">Buttons are not rearranged</string>
+  <string name="morphe_replace_toolbar_create_button_title">Ayarları Oluştur ile değiştir</string>
+  <string name="morphe_replace_toolbar_create_button_summary_on">Oluştur düğmesi ile Ayarlar düğmesinin yerleri değiştirilir</string>
+  <string name="morphe_replace_toolbar_create_button_summary_off">Oluştur düğmesi ile Ayarlar düğmesinin yerleri değiştirilir</string>
+  <string name="morphe_replace_toolbar_create_button_user_dialog_message">You sekmesindeki Ayarlar butonunun tıklama davranışı da geçersiz kılınıyor.</string>
+  <string name="morphe_replace_toolbar_create_button_type_title">Ayarlar düğmesi indeksi</string>
+  <string name="morphe_replace_toolbar_create_button_type_summary_on">"Morphe ayarlarını açmak için dokunun
+YouTube ayarlarını açmak için basılı tutun"</string>
+  <string name="morphe_replace_toolbar_create_button_type_summary_off">"Morphe ayarlarını açmak için dokunun
+YouTube ayarlarını açmak için basılı tutun"</string>
+  <string name="morphe_rearrange_toolbar_buttons_title">Yer değiştirilen düğmeleri yeniden düzenle</string>
+  <string name="morphe_rearrange_toolbar_buttons_summary_on">Düğmeler yeniden düzenlendi</string>
+  <string name="morphe_rearrange_toolbar_buttons_summary_off">Düğmeler yeniden düzenlenmedi</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Açılır menü</string>
   <string name="morphe_hide_player_flyout_summary">Oynatıcı açılır menü öğelerini gizle veya göster</string>
@@ -1623,7 +1623,7 @@ AV1 ile video oynatma takılabilir veya kare atlayabilir."</string>
   <string name="morphe_spoof_video_streams_about_js">• Eşleştirme başarısız olursa oynatma da başarısız olabilir</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Orijinal sesi zorlama mevcut değil</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">Oynatıcı JavaScript varyantı</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">Oynatıcı JavaScript varyantı</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">Meraklısı için istatistiklerde göster</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">İstemci tipi meraklısı için istatistiklerde gösterilir</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">İstemci, meraklısı için istatistiklerde gizli</string>

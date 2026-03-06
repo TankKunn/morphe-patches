@@ -1623,7 +1623,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_js">• إذا فشل فك التشفير، قد يفشل التشغيل</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• فرض الصوت الأصلي غير متاح</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">مشغل JavaScript المتغير</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">مشغل JavaScript المتغير</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">عرض في إحصاءات تقنية</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">يتم عرض نوع العميل في إحصاءات تقنية</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">تم إخفاء نوع العميل في إحصاءات تقنية</string>

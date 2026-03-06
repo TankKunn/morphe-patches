@@ -1623,7 +1623,7 @@ Reprodukcija videa s AV1 može zastajkivati ili preskakati kadrove."</string>
   <string name="morphe_spoof_video_streams_about_js">• Ako deobfuskacija ne uspeva, reprodukcija može neuspeti</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Prisiljavanje originalnog zvuka nije dostupno</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">Varijanta JavaScript igračnog programa</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">Varijanta JavaScript igračnog programa</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">Prikaži u „Statistici za znalce”</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">Tip klijenta je prikazan u „Statistici za znalce”</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">Tip klijenta je skriven u „Statistici za znalce”</string>

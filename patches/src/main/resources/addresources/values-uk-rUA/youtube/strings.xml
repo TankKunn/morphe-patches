@@ -1624,7 +1624,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_js">• Якщо деобфускація не вдається, відтворення може завершитися невдачею</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Примусово оригінальна мова звукової доріжки\" недоступна</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">Варіант JavaScript плеєра</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">Варіант JavaScript плеєра</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">Показувати у \"Статистиці для сисадмінів\"</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">Тип клієнта показується у вікні \"Статистика для сисадмінів\"</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">Тип клієнта приховано у вікні \"Статистика для сисадмінів\"</string>

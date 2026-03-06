@@ -1621,7 +1621,7 @@ Het afspelen van video met AV1 kan haperen of frames overslaan."</string>
   <string name="morphe_spoof_video_streams_about_js">• Als deontminering mislukt, kan afspelen mislukken</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Oorspronkelijke audio forceren is niet beschikbaar</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">Player JavaScript variant</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">Player JavaScript variant</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">Weergeven in Stats for nerds</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">Het clienttype wordt getoond in Stats for nerds</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">Client is verborgen in Stats for nerds</string>

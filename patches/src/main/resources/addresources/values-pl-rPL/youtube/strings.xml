@@ -1624,7 +1624,7 @@ Odtwarzanie wideo z AV1 może powodować zacinanie się lub gubienie klatek."</s
   <string name="morphe_spoof_video_streams_about_js">• Jeśli odszyfrowywanie się nie powiedzie, odtwarzanie może się nie powieść</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Wymuszanie oryginalnej ścieżki audio nie działa</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">Wariant JavaScript odtwarzacza</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">Wariant JavaScript odtwarzacza</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">Informacja w statystykach dla nerdów</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">Widoczna</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">Ukryta</string>

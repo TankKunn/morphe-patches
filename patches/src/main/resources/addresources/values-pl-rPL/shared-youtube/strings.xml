@@ -95,15 +95,15 @@ Aby się zalogować, naciśnij \"Kontynuuj\" poniżej"</string>
   <string name="morphe_oauth2_connection_failure_auth_error">Nie można zalogować się do VR: %s</string>
   <string name="morphe_oauth2_toast_reset">Wylogowano z Android VR</string>
   <string name="morphe_oauth2_toast_invalid">Nieprawidłowy token logowania VR, spróbuj zalogować się ponownie</string>
-  <string name="morphe_spoof_video_streams_force_js_hash_title">Wymuś hasz JavaScript gracza</string>
-  <string name="morphe_spoof_video_streams_force_js_hash_summary_on">"Aktualizacja hasza JavaScript gracza jest wyłączona
+  <string name="morphe_spoof_video_streams_force_player_js_hash_title">Aktualizacja hash JavaScript odtwarzacza</string>
+  <string name="morphe_spoof_video_streams_force_player_js_hash_summary_on">"Wyłączona
 
-• Wymagany jest prawidłowy hasz JavaScript gracza
-• Odtwarzanie nie powiedzie się, jeśli hasz JavaScript gracza zostanie unieważniony w GVS"</string>
-  <string name="morphe_spoof_video_streams_force_js_hash_summary_off">Aktualizacja hasza JavaScript gracza jest włączona</string>
-  <string name="morphe_spoof_video_streams_force_js_hash_user_dialog_message">Hasze JavaScript gracza są ważne przez około miesiąc, a przestarzałe hasze mogą zostać unieważnione przez GVS.</string>
-  <string name="morphe_spoof_video_streams_js_hash_title">Skrypt JavaScript odtwarzacza</string>
-  <string name="morphe_spoof_video_streams_js_hash_summary">Wprowadź poprawny skrypt JavaScript odtwarzacza</string>
+• Wymagany jest prawidłowy hash JavaScript odtwarzacza
+• Odtwarzanie nie powiedzie się, jeśli hash JavaScript zostanie unieważniony w GVS"</string>
+  <string name="morphe_spoof_video_streams_force_player_js_hash_summary_off">Włączona</string>
+  <string name="morphe_spoof_video_streams_force_player_js_hash_user_dialog_message">Hashe JavaScript odtwarzacza są ważne przez około miesiąc, a nieaktualne hashe mogą zostać unieważnione przez GVS.</string>
+  <string name="morphe_spoof_video_streams_player_js_hash_title">Hash JavaScript odtwarzacza</string>
+  <string name="morphe_spoof_video_streams_player_js_hash_summary">Wprowadź poprawny hash JavaScript odtwarzacza</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Protokół QUIC</string>
   <string name="morphe_disable_quic_protocol_summary_on">Wyłączony</string>

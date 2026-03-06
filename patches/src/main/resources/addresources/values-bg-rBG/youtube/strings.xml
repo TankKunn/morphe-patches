@@ -1607,7 +1607,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_js">• Ако деобфускацията провали, възпроизвеждането може да провали</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Не е налично \"Принудително оригинално аудио\"</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">Вариант на Player JavaScript</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">Вариант на Player JavaScript</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">Покажи в Статистики за гики</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">Тип клиент е показан в Статистики за гики</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">Клиентът е скрит в Статистики за гики</string>

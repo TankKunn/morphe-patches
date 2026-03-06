@@ -1622,7 +1622,7 @@ Die Videowiedergabe mit AV1 kann stottern oder Bilder überspringen."</string>
   <string name="morphe_spoof_video_streams_about_js">• Wenn die Deobfuskation fehlschlägt, kann die Wiedergabe fehlschlagen</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Originalton erzwingen ist nicht verfügbar</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">Player-JavaScript-Variante</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">Player-JavaScript-Variante</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">In Statistiken für Nerds anzeigen</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">Der Client-Typ wird in den Statistiken für Nerds angezeigt</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">Der Client wird in den Statistiken für Nerds ausgeblendet</string>

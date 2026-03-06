@@ -718,8 +718,6 @@ Fhail isteach ar fíolán arbhachaidh → Fhail isteach ar margaíocht → Tába
   <string name="morphe_replace_toolbar_create_button_type_title">Morphe</string>
   <string name="morphe_replace_toolbar_create_button_type_summary_on">"Tap to open Morphe settings
 Tap and hold to open YouTube settings"</string>
-  <string name="morphe_replace_toolbar_create_button_type_summary_off">"Tap to open YouTube settings
-Tap and hold to open Morphe settings"</string>
   <string name="morphe_rearrange_toolbar_buttons_title">An práinneáil na cnaipeí suidéartha</string>
   <string name="morphe_rearrange_toolbar_buttons_summary_on">Tá na cnaipeí suidéartha déanta</string>
   <string name="morphe_rearrange_toolbar_buttons_summary_off">Níl na cnaipeí suidéartha déanta</string>
@@ -1623,7 +1621,7 @@ D’fhéadfadh sé go mbeadh stad nó go gcaillfí frámaí ag athsheinm físe l
   <string name="morphe_spoof_video_streams_about_js">• Má theipeann ar an dí-dhorchadas, d\'fhéadfadh teip a bheith ar an athsheinm</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Níl an fuaim bhunaidh iallach ar fáil</string>
-  <string name="morphe_spoof_video_streams_js_variant_title">Leagan JavaScript an imreora</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">Leagan JavaScript an imreora</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">Taispeáin sna Staitisticí do nerds</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">Taispeántar cineál an chliaint i Staitisticí do nerds</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">Tá an cliant i bhfolach i Staitisticí do nerds</string>
