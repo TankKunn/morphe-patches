@@ -1,3 +1,10 @@
+## [1.17.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0...v1.17.1-dev.1) (2026-03-06)
+
+
+### Bug Fixes
+
+* **YouTube - Hide player flyout menu items:** Do not hide entire flyout menu for eperimental app targets ([7407796](https://github.com/MorpheApp/morphe-patches/commit/7407796551978351a74db742715154ca8e96493e))
+
 # [1.17.0](https://github.com/MorpheApp/morphe-patches/compare/v1.16.0...v1.17.0) (2026-03-06)
 
 
