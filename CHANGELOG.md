@@ -1,3 +1,10 @@
+# [1.17.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.7...v1.17.0-dev.8) (2026-03-06)
+
+
+### Features
+
+* **Spoof video streams:** Minor improvements reflecting code review ([#730](https://github.com/MorpheApp/morphe-patches/issues/730)) ([cbfe030](https://github.com/MorpheApp/morphe-patches/commit/cbfe03035683ee6b7c205327eabcd3e515c35ec8))
+
 # [1.17.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0-dev.6...v1.17.0-dev.7) (2026-03-06)
 
 
