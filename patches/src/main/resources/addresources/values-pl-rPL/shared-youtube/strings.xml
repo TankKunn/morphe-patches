@@ -43,7 +43,7 @@ Jeśli chcesz najbardziej stabilną wersję, to &lt;b&gt;odinstaluj&lt;/b&gt; t�
   <string name="morphe_check_watch_history_domain_name_dialog_ignore">Nie pokazuj ponownie</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_screen_title">Oszukuj strumienie filmu</string>
-  <string name="morphe_spoof_video_streams_screen_summary">Oszukuje strumień filmu klienta, by zapobiec problemom z odtwarzaniem.</string>
+  <string name="morphe_spoof_video_streams_screen_summary">Oszukuje strumień filmu klienta, aby zapobiec problemom z odtwarzaniem</string>
   <string name="morphe_spoof_video_streams_title">Oszukuj strumienie filmu</string>
   <string name="morphe_spoof_video_streams_summary_on">"Strumienie filmu są oszukiwane
 
@@ -59,7 +59,7 @@ Odtwarzanie może nie działać"</string>
   <string name="morphe_spoof_video_streams_client_type_title">Domyślny klient</string>
   <!-- Ensure this translation matches the translation of morphe_spoof_video_streams_no_clients_suggest_vr_toast -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_about_title">Logowanie Android VR</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary">Nie jesteś zalogowany do Android VR. Stuknij tutaj, by się zalogować</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary">Nie jesteś zalogowany do Android VR. Stuknij tutaj, aby się zalogować</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary_signed_in">Obecnie zalogowany do Android VR</string>
   <!-- "Default client" must be the same translated text as morphe_spoof_video_streams_client_type_title -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary_disabled">By używać tej funkcji, zmień \"Domyślny klient\" na Android VR</string>
@@ -113,7 +113,7 @@ Aby się zalogować, naciśnij \"Kontynuuj\" poniżej"</string>
   <string name="morphe_disable_drc_audio_summary_on">Wyłączona</string>
   <string name="morphe_disable_drc_audio_summary_off">Włączona</string>
   <!-- misc.audio.tracks.forceOriginalAudioPatch -->
-  <string name="morphe_force_original_audio_title">Wymuś oryginalny język audio</string>
+  <string name="morphe_force_original_audio_title">Wymuszenie oryginalnej ścieżki dźwiękowej</string>
   <string name="morphe_force_original_audio_summary_on">Włączone</string>
   <string name="morphe_force_original_audio_summary_off">Wyłączone</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->

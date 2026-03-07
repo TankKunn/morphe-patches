@@ -986,7 +986,7 @@ Second \"item\" text"</string>
   <string name="morphe_end_screen_suggested_video_user_dialog_message">"この設定は、[次の動画を自動再生] がオフの場合にのみ有効です。
 
 [次の動画を自動再生] は、YouTube の設定で変更できます:
-[設定] > [再生] (または [自動再生]) > [次の動画を自動再生]"</string>
+[設定] &gt; [再生] (または [自動再生]) &gt; [次の動画を自動再生]"</string>
   <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->
   <string name="morphe_hide_player_related_videos_title">関連動画を非表示</string>
   <string name="morphe_hide_player_related_videos_summary_on">関連動画は表示されません</string>

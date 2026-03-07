@@ -50,7 +50,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_search_button_summary_on">Ukryty</string>
   <string name="morphe_music_hide_search_button_summary_off">Widoczny</string>
   <!-- layout.startpage.changeStartPagePatch -->
-  <string name="morphe_change_start_page_title">Zmień stronę startową</string>
+  <string name="morphe_change_start_page_title">Strona startowa</string>
   <string name="morphe_change_start_page_entry_default">Domyślna</string>
   <string name="morphe_change_start_page_entry_charts">Listy przebojów</string>
   <string name="morphe_change_start_page_entry_episodes_for_later">Odcinki na później</string>

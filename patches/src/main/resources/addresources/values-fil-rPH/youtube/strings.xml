@@ -619,6 +619,7 @@ Ayusin ang volume sa pamamagitan ng pag-swipe pababa nang patayo sa kanang bahag
   <string name="morphe_set_caption_cookies_summary_off">"Hindi ise-set ang caption cookies
 
 Maaring hindi magamit ang auto-translate ng captions"</string>
+  <string name="morphe_caption_cookies_title">Pamagat ng mga cookie</string>
   <string name="morphe_caption_cookies_summary">Cookies na gagamitin sa Timed Text API requests</string>
   <string name="morphe_get_caption_cookies_title">Kumuha ng caption cookies</string>
   <string name="morphe_get_caption_cookies_summary">"I-click para kumuha ng cookies
