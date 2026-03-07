@@ -1,3 +1,11 @@
+# [1.18.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.17.1-dev.1...v1.18.0-dev.1) (2026-03-07)
+
+
+### Features
+
+* Add Kurmanji Crowdin translations ([2413a08](https://github.com/MorpheApp/morphe-patches/commit/2413a083ddd6c6768e5db5bd7e814107c97cb8e1))
+* **YouTube:** Add experimental support for `21.20.493` ([c09049d](https://github.com/MorpheApp/morphe-patches/commit/c09049d46b94b5fa0097f3a53398469356b440f1))
+
 ## [1.17.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0...v1.17.1-dev.1) (2026-03-06)
 
 
