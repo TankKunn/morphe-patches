@@ -1023,6 +1023,7 @@ Nast → Lêxistık (an Otomatîkî) → Otomatîkî vîdyoya din vekilê"</stri
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_ryd_failure_connection_timeout">Nexweşîyên ji aliyê xalîbazbûnê ve qeyd nêrîn. (API demdar bû).</string>
+  <string name="morphe_ryd_failure_connection_status_code">Nezrêyan niçeber (status %d)</string>
   <string name="morphe_ryd_failure_client_rate_limit_requested">Nexweşî ji aliyê malperavê ve qeyd nêrîn (sînorê malperavê ji xalîbazbûna rêzgirtî).</string>
   <string name="morphe_ryd_failure_generic">Nexweşî ji aliyê xalîbazbûnê ve nêrîn (%s).</string>
   <!-- Brief notification (Toast) shown if the user enables RYD while a video is opened, and then tries to vote for the video. -->
@@ -1272,6 +1273,7 @@ Amade ye ji bo weşandinê?"</string>
   <string name="morphe_sb_stats_saved_sum">Ev &lt;b&gt;%s&lt;/b&gt; ji jiyana wan ye.&lt;br&gt;Li vir bibînin lêstikeya</string>
   <string name="morphe_sb_stats_self_saved">Hwar &lt;b&gt;%s&lt;/b&gt; segment derxistine</string>
   <string name="morphe_sb_stats_self_saved_sum">Ev &lt;b&gt;%s&lt;/b&gt; ye</string>
+  <string name="morphe_sb_stats_self_saved_reset_title">Kontora pêşbariya segmentên çêkirinê?</string>
   <string name="morphe_sb_stats_saved_hour_format">%1$s saat %2$s dakiqey</string>
   <string name="morphe_sb_stats_saved_minute_format">%1$s dakiqey %2$s sekund</string>
   <string name="morphe_sb_stats_saved_second_format">%s sekund</string>
@@ -1588,6 +1590,7 @@ Sînergirên:
 • Video yan HDR dê AVC bikar nebin
 • Hin alav nikarên AVC zor bike"</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
+  <string name="morphe_advanced_video_quality_menu_title">Menyûa advanced qualitya vîdyoyê nîşane bike</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Nivîsara mêjûlê ya kalîteya video tê nîşandin</string>
   <string name="morphe_advanced_video_quality_menu_summary_off">Nivîsara mêjûlê ya kalîteya video ne tê nîşandin</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->

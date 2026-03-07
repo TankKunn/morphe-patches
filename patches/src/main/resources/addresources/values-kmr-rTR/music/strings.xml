@@ -65,10 +65,11 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_category_bar_title">Keleka kategoriya veşêre</string>
   <string name="morphe_music_hide_category_bar_summary_on">Keleka kategoriya veşartin</string>
   <string name="morphe_music_hide_category_bar_summary_off">Keleka kategoriya nîşan darın</string>
-  <!-- layout.miniplayercolor.changeMiniplayerColor -->
+  <!-- layout.miniplayer.changeMiniplayerColor -->
   <string name="morphe_music_change_miniplayer_color_title">Rengê miniplayer-a biguhezîne</string>
   <string name="morphe_music_change_miniplayer_color_summary_on">Rengê miniplayerê bi lîstikvanê tamasekî hevgal be</string>
   <string name="morphe_music_change_miniplayer_color_summary_off">Miniplayer mêrîkê default-a bi kar bîne</string>
+  <!-- layout.miniplayer.enableForcedMiniplayer -->
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Keleka navigasyonê</string>
   <string name="morphe_music_navigation_bar_screen_summary">Kelekên keleka navigasyonê veşêre an biguhezîne</string>

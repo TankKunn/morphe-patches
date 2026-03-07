@@ -223,8 +223,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_videos_section_summary_on">已隱藏精選影片區塊</string>
   <string name="morphe_hide_featured_videos_section_summary_off">已顯示精選影片區塊</string>
   <string name="morphe_hide_feed_flyout_menu_title">啟用推薦內容彈出式選單篩選器</string>
-  <string name="morphe_hide_feed_flyout_menu_summary_on">推薦內容彈出式選單篩選器已啟用</string>
-  <string name="morphe_hide_feed_flyout_menu_summary_off">推薦內容彈出式選單篩選器已停用</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_on">已啟用推薦內容彈出式選單篩選器</string>
+  <string name="morphe_hide_feed_flyout_menu_summary_off">已停用推薦內容彈出式選單篩選器</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">推薦內容彈出式選單篩選器</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">輸入彈出式選單名稱以進行篩選，每行一個</string>
   <string name="morphe_hide_gaming_section_title">隱藏「遊戲」</string>
