@@ -1,3 +1,18 @@
+# [1.18.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.18.0-dev.1...v1.18.0-dev.2) (2026-03-07)
+
+
+### Bug Fixes
+
+* **Custom branding:** Safely clone bitmaps to prevent native recycled crash in Glide ([#732](https://github.com/MorpheApp/morphe-patches/issues/732)) ([f5ffa47](https://github.com/MorpheApp/morphe-patches/commit/f5ffa4735097f4d9aaf33c55d469fdf20fcd3d83))
+* **YouTube - Hide Shorts components:** Hide Shorts in search nav button ([#749](https://github.com/MorpheApp/morphe-patches/issues/749)) ([4bb1162](https://github.com/MorpheApp/morphe-patches/commit/4bb11623be6828e4e0d53afc736678c34400266f))
+
+
+### Features
+
+* Add `Disable Play Store updates`, `Custom branding name for Reddit`, improve `Change package name` ([#575](https://github.com/MorpheApp/morphe-patches/issues/575)) ([60a2f9e](https://github.com/MorpheApp/morphe-patches/commit/60a2f9e5b27ca126c4cce3a7207c197675f10d80))
+* **Reddit:** Add experimental support for `2026.10.0` ([#762](https://github.com/MorpheApp/morphe-patches/issues/762)) ([7117724](https://github.com/MorpheApp/morphe-patches/commit/711772404d3a4cee3ac51b6837d15de2e419de3b))
+* **YouTube Music:** Add `Enable forced miniplayer` patch ([#720](https://github.com/MorpheApp/morphe-patches/issues/720)) ([9c6f5f5](https://github.com/MorpheApp/morphe-patches/commit/9c6f5f542d47222a8d7e1873b3742647455d6bf9))
+
 # [1.18.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.17.1-dev.1...v1.18.0-dev.1) (2026-03-07)
 
 
