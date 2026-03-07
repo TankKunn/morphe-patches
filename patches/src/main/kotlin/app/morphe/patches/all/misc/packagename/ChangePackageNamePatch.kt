@@ -60,11 +60,15 @@ private fun applyGetPackageName(oldPackageName: String, vararg classesToChange: 
             }
         ) return@classDefForEach
 
+        val mutableClass by lazy {
+            mutableClassDefBy(classDef)
+        }
+
         classDef.methods.forEach { method ->
             if (method.implementation == null) return@forEach
 
-            val mutableClass by lazy {
-                mutableClassDefBy(classDef)
+            val mutableMethod by lazy {
+                mutableClass.findMutableMethodOf(method)
             }
 
             method.findInstructionIndicesReversed(
@@ -75,14 +79,14 @@ private fun applyGetPackageName(oldPackageName: String, vararg classesToChange: 
             ).forEach { index ->
                 val moveResultIndex = index + 1
 
-                // Ignore calls to getPackageName() that do not use the return value
+                // Ignore calls to getPackageName() that do not use the return value.
                 val returnInstruction = method.getInstruction(moveResultIndex)
                 if (returnInstruction.opcode != Opcode.MOVE_RESULT_OBJECT) {
                     return@forEach
                 }
 
                 val register = (returnInstruction as OneRegisterInstruction).registerA
-                mutableClass.findMutableMethodOf(method).replaceInstruction(
+                mutableMethod.replaceInstruction(
                     moveResultIndex,
                     """
                         # Replace return-object with constant string
