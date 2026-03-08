@@ -544,6 +544,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">Απενεργοποίηση λάμψης κουμπιών «Μου αρέσει» και «Εγγραφή»</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Τα κουμπιά «Μου αρέσει» και «Εγγραφή» δεν θα λάμπουν όταν αναφέρονται</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Τα κουμπιά «Μου αρέσει» και «Εγγραφή» θα λάμπουν όταν αναφέρονται</string>
+  <string name="morphe_hide_action_bar_title">Κρύψιμο γραμμής ενεργειών</string>
+  <string name="morphe_hide_action_bar_summary_on">Η γραμμή ενεργειών είναι κρυμμένη</string>
+  <string name="morphe_hide_action_bar_summary_off">Η γραμμή ενεργειών εμφανίζεται</string>
   <string name="morphe_hide_like_dislike_button_title">Κουμπιά «Μου αρέσει» και «Δεν μου αρέσει»</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Κρυμμένα</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Εμφανίζονται</string>

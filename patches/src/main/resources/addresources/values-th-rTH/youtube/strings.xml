@@ -540,6 +540,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">ปิดการเรืองแสงถูกใจและติดตาม</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">ปุ่มถูกใจและกดติดตามจะไม่เรืองแสงเมื่อกล่าวถึง</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">ปุ่มถูกใจและกดติดตามจะเรืองแสงเมื่อกล่าวถึง</string>
+  <string name="morphe_hide_action_bar_title">ซ่อนแถบการทำงาน</string>
+  <string name="morphe_hide_action_bar_summary_on">แถบการทำงานถูกซ่อน</string>
+  <string name="morphe_hide_action_bar_summary_off">แถบการทำงานแสดงอยู่</string>
   <string name="morphe_hide_like_dislike_button_title">ซ่อนชอบและไม่ชอบ</string>
   <string name="morphe_hide_like_dislike_button_summary_on">ปุ่มชอบและไม่ชอบถูกซ่อน</string>
   <string name="morphe_hide_like_dislike_button_summary_off">ปุ่มชอบและไม่ชอบถูกแสดง</string>

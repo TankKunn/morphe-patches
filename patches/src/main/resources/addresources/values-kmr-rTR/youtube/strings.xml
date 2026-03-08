@@ -546,6 +546,9 @@ Bi serêşîya navînî zerrekirina dengê saz bike"</string>
   <string name="morphe_disable_like_subscribe_glow_title">Qefal bike hilêra û aboneman termê</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Hilêra û termeyê dê zivirne nakin dema ku hatin gotin</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Hilêra û termeyê dê zivirin dema ku hatin gotin</string>
+  <string name="morphe_hide_action_bar_title">نکف رررنة</string>
+  <string name="morphe_hide_action_bar_summary_on">نکفة رررنة ضططزيري</string>
+  <string name="morphe_hide_action_bar_summary_off">Reng barê çalakîyan nîşane dibe</string>
   <string name="morphe_hide_like_dislike_button_title">Veyşin Hilêra û Neraza bike</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Kalan Hilêra û Neraza bike veşîye</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Kalan Hilêra û Neraza bike nîşandîne</string>

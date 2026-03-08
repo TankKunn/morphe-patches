@@ -543,6 +543,9 @@ Upravte hlasitost svislým přejetím po pravé straně obrazovky"</string>
   <string name="morphe_disable_like_subscribe_glow_title">Deaktivovat zvýraznění tlačítek Like a Subscribe</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Tlačítka Like a Subscribe po zmínce nebudou zvýrazněna</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Tlačítka Like a Subscribe po zmínce budou zvýrazněna</string>
+  <string name="morphe_hide_action_bar_title">Skrýt lištu akcí</string>
+  <string name="morphe_hide_action_bar_summary_on">Lišta akcí je skrytá</string>
+  <string name="morphe_hide_action_bar_summary_off">Lišta akcí je zobrazena</string>
   <string name="morphe_hide_like_dislike_button_title">Skrýt Like a Dislike</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Tlačítka Like a Dislike jsou skryta</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Tlačítka Like a Dislike jsou zobrazena</string>

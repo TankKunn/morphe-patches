@@ -544,6 +544,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">Отключить подсветку кнопок \"Лайк\" и \"Подписаться\"</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Кнопки \"Лайк\" и \"Подписаться\" при упоминании не подсвечиваются</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Кнопки \"Лайк\" и \"Подписаться\" при упоминании подсвечиваются</string>
+  <string name="morphe_hide_action_bar_title">Скрыть панель действий</string>
+  <string name="morphe_hide_action_bar_summary_on">Панель действий скрыта</string>
+  <string name="morphe_hide_action_bar_summary_off">Панель действий показана</string>
   <string name="morphe_hide_like_dislike_button_title">Скрыть кнопки \"Лайк\" и \"Дизлайк\"</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Кнопки \"Лайк\" и \"Дизлайк\" под плеером скрыты</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Кнопки \"Лайк\" и \"Дизлайк\" под плеером показаны</string>

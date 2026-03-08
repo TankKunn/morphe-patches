@@ -544,6 +544,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">高評価とチャンネル登録のエフェクトを無効化</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">高評価ボタンとチャンネル登録ボタンのエフェクトは無効です</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">高評価ボタンとチャンネル登録ボタンのエフェクトは有効です</string>
+  <string name="morphe_hide_action_bar_title">アクションバーを非表示</string>
+  <string name="morphe_hide_action_bar_summary_on">アクションバーは表示されません</string>
+  <string name="morphe_hide_action_bar_summary_off">アクションバーは表示されます</string>
   <string name="morphe_hide_like_dislike_button_title">高評価ボタンと低評価ボタンを非表示</string>
   <string name="morphe_hide_like_dislike_button_summary_on">高評価ボタンと低評価ボタンは表示されません</string>
   <string name="morphe_hide_like_dislike_button_summary_off">高評価ボタンと低評価ボタンは表示されます</string>
@@ -722,7 +725,7 @@ Second \"item\" text"</string>
   <string name="morphe_replace_toolbar_create_button_type_summary_off">"タップすると YouTube の設定を開きます
 長押しすると Morphe の設定を開きます"</string>
   <string name="morphe_rearrange_toolbar_buttons_title">置き換えたボタンを並び替え</string>
-  <string name="morphe_rearrange_toolbar_buttons_summary_on">置き換えたボタンはマイページタブのボタンと同じ順序で配置されます</string>
+  <string name="morphe_rearrange_toolbar_buttons_summary_on">置き換えたボタンはマイページタブのボタンの順序で配置されます</string>
   <string name="morphe_rearrange_toolbar_buttons_summary_off">置き換えたボタンは置き換え元のボタンの位置にそのまま配置されます</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">フライアウト メニュー</string>

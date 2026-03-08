@@ -22,7 +22,7 @@ Second \"item\" text"</string>
   <string name="morphe_custom_branding_name_entry_5">自訂</string>
   <string name="morphe_custom_branding_icon_title">應用程式圖示</string>
   <string name="morphe_custom_branding_icon_entry_1">原始</string>
-  <string name="morphe_custom_branding_icon_entry_2">Morphe 通知</string>
+  <string name="morphe_custom_branding_icon_entry_2">Morphe 黑色</string>
   <string name="morphe_custom_branding_icon_entry_3">Morphe 深色</string>
   <string name="morphe_custom_branding_icon_entry_4">Morphe 淺色</string>
   <!-- Translations of this should be identical to morphe_custom_branding_name_entry_5 -->

@@ -536,6 +536,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">Изключване на светене на бутоните \"Like\" и \"Subscribe\"</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Бутоните \"Like\" и \"Subscribe\" няма да светят при спомена</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Бутоните \"Like\" и \"Subscribe\" ще светят при спомена</string>
+  <string name="morphe_hide_action_bar_title">Скриване на действие бар</string>
+  <string name="morphe_hide_action_bar_summary_on">Действие бар е скрито</string>
+  <string name="morphe_hide_action_bar_summary_off">Действие бар е показано</string>
   <string name="morphe_hide_like_dislike_button_title">Скриване на бутон \"Like\" и \"Dislike\"</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Бутоните \"Like\" и \"Dislike\" са скрити</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Бутоните \"Like\" и \"Dislike\" са показани</string>

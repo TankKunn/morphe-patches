@@ -542,6 +542,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">লাইক এবং সাবস্ক্রাইব বোতাম গ্লো বন্ধ করুন</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">উল্লেখ করলে সক্রিয়করন এবং সাবস্ক্রাইব বোতাম উজ্জ্বল হবে না</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">উল্লেখ করলে সক্রিয়করন এবং সাবস্ক্রাইব বোতাম উজ্জ্বল হবে</string>
+  <string name="morphe_hide_action_bar_title">অ্যাকশন বার লুকান</string>
+  <string name="morphe_hide_action_bar_summary_on">অ্যাকশন বার লুকানো হয়েছে</string>
+  <string name="morphe_hide_action_bar_summary_off">অ্যাকশন বার দেখানো হয়েছে</string>
   <string name="morphe_hide_like_dislike_button_title">Like এবং Dislike লুকান</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Like এবং Dislike বোতাম লুকানো আছে</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Like এবং Dislike বোতাম দেখানো হচ্ছে</string>

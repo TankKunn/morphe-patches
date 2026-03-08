@@ -542,6 +542,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">停用「喜歡」和「訂閱」的發光效果</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">提及時，「喜歡」和「訂閱」按鈕不會發光</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">提及時，「喜歡」和「訂閱」按鈕會發光</string>
+  <string name="morphe_hide_action_bar_title">隱藏動作列</string>
+  <string name="morphe_hide_action_bar_summary_on">動作列已隱藏</string>
+  <string name="morphe_hide_action_bar_summary_off">動作列已顯示</string>
   <string name="morphe_hide_like_dislike_button_title">隱藏喜歡人數和不喜歡人數</string>
   <string name="morphe_hide_like_dislike_button_summary_on">已隱藏「喜歡」和「不喜歡」按鈕</string>
   <string name="morphe_hide_like_dislike_button_summary_off">已顯示「喜歡」和「不喜歡」按鈕</string>

@@ -543,6 +543,9 @@ Ayusin ang volume sa pamamagitan ng pag-swipe pababa nang patayo sa kanang bahag
   <string name="morphe_disable_like_subscribe_glow_title">I-disable ang glow ng Like at Subscribe</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Ang button ng Like at Subscribe ay hindi magliliwanag kapag nabanggit</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Ang button ng Like at Subscribe ay magliliwanag kapag nabanggit</string>
+  <string name="morphe_hide_action_bar_title">Itago ang action bar</string>
+  <string name="morphe_hide_action_bar_summary_on">Nakatago ang action bar</string>
+  <string name="morphe_hide_action_bar_summary_off">Ipinapakita ang action bar</string>
   <string name="morphe_hide_like_dislike_button_title">Itago ang Like at Dislike</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Ang mga button ng Like at Dislike ay nakatago</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Ang mga button ng Like at Dislike ay ipinapakita</string>

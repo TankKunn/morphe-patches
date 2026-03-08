@@ -542,6 +542,9 @@ Ajusta el volumen deslizando verticalmente en el lado derecho de la pantalla"</s
   <string name="morphe_disable_like_subscribe_glow_title">Desactivar brillo de \"Me gusta\" y \"Suscribirme\"</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Los botones \"Me gusta\" y \"Suscribirme\" no brillarán cuando se pulsen</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Los botones \"Me gusta\" y \"Suscribirme\" brillarán cuando se pulsen</string>
+  <string name="morphe_hide_action_bar_title">Ocultar barra de acción</string>
+  <string name="morphe_hide_action_bar_summary_on">La barra de acción está oculta</string>
+  <string name="morphe_hide_action_bar_summary_off">La barra de acción está visible</string>
   <string name="morphe_hide_like_dislike_button_title">Ocultar \"Me gusta\" y \"No me gusta\"</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Los botones \"Me gusta\" y \"No me gusta\" están ocultos</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Los botones \"Me gusta\" y \"No me gusta\" están visibles</string>

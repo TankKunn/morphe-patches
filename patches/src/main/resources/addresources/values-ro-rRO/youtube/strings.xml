@@ -539,6 +539,9 @@ Reglați volumul glisând vertical pe partea dreaptă a ecranului"</string>
   <string name="morphe_disable_like_subscribe_glow_title">Dezactivați luminozitatea butonului Like and Subscribe</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Butonul Like and Subscribe nu va străluci când este menționat</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Butonul Like and Subscribe va străluci când este menționat</string>
+  <string name="morphe_hide_action_bar_title">Ascunde bara de acțiuni</string>
+  <string name="morphe_hide_action_bar_summary_on">Bara de acțiuni este ascunsă</string>
+  <string name="morphe_hide_action_bar_summary_off">Bara de acțiuni este afișată</string>
   <string name="morphe_hide_like_dislike_button_title">Ascunde Like și Dislike</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Butoanele Like și Dislike sunt ascunse</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Butoanele Like și Dislike sunt afișate</string>

@@ -544,6 +544,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">Вимкнути блимання кнопок \"Лайк\" та \"Підписатися\"</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Кнопки \"Лайк\" та \"Підписатися\" не будуть блимати при згадуванні</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Кнопки \"Лайк\" та \"Підписатися\" не будуть блимати при згадуванні</string>
+  <string name="morphe_hide_action_bar_title">Приховати панель дій</string>
+  <string name="morphe_hide_action_bar_summary_on">Панель дій приховано</string>
+  <string name="morphe_hide_action_bar_summary_off">Панель дій показано</string>
   <string name="morphe_hide_like_dislike_button_title">Приховати \"Лайк\" та \"Дизлайк\"</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Кнопки \"Лайк\" та \"Дизлайк\" приховано</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Кнопки \"Лайк\" та \"Дизлайк\" показуються</string>

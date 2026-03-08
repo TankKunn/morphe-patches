@@ -542,6 +542,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">禁用点赞和订阅光晕效果</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">提及时，喜欢和订阅按钮不会发光</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">提及时，喜欢和订阅按钮会发光</string>
+  <string name="morphe_hide_action_bar_title">隐藏操作栏</string>
+  <string name="morphe_hide_action_bar_summary_on">操作栏已隐藏</string>
+  <string name="morphe_hide_action_bar_summary_off">操作栏已显示</string>
   <string name="morphe_hide_like_dislike_button_title">隐藏「顶」和「踩」按钮</string>
   <string name="morphe_hide_like_dislike_button_summary_on">点赞与点踩按钮已隐藏</string>
   <string name="morphe_hide_like_dislike_button_summary_off">点赞与点踩按钮已显示</string>

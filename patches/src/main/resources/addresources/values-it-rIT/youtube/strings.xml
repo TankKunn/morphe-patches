@@ -543,6 +543,9 @@ Regola il volume scorrendo verticalmente sul lato destro dello schermo"</string>
   <string name="morphe_disable_like_subscribe_glow_title">Disabilita l\'effetto glow per \"Mi piace\" e \"Iscriviti\"</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">I pulsanti Mi piace e Iscriviti non saranno evidenziati quando menzionati</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">I pulsanti Mi piace e Iscriviti saranno evidenziati quando menzionati</string>
+  <string name="morphe_hide_action_bar_title">Nascondi la barra azione</string>
+  <string name="morphe_hide_action_bar_summary_on">La barra azione è nascosta</string>
+  <string name="morphe_hide_action_bar_summary_off">La barra azione è visibile</string>
   <string name="morphe_hide_like_dislike_button_title">Nascondi Mi Piace e Non Mi Piace</string>
   <string name="morphe_hide_like_dislike_button_summary_on">I pulsanti Mi Piace e Non Mi Piace sono nascosti</string>
   <string name="morphe_hide_like_dislike_button_summary_off">I pulsanti Mi Piace e Non Mi Piace sono visibili</string>

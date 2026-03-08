@@ -543,6 +543,9 @@ Vui lòng kiểm tra lại tên gói và đảm bảo ứng dụng đã được
   <string name="morphe_disable_like_subscribe_glow_title">Tắt hiệu ứng phát sáng nút Thích và Đăng ký</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Nút Thích và Đăng ký sẽ không phát sáng khi được tương tác</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Nút Thích và Đăng ký sẽ phát sáng khi được tương tác</string>
+  <string name="morphe_hide_action_bar_title">Ẩn thanh thao tác</string>
+  <string name="morphe_hide_action_bar_summary_on">Thanh thao tác đã bị ẩn</string>
+  <string name="morphe_hide_action_bar_summary_off">Thanh thao tác được hiển thị</string>
   <string name="morphe_hide_like_dislike_button_title">Ẩn Thích và Không thích</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Các nút Thích và Không thích đã bị ẩn</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Các nút Thích và Không thích được hiển thị</string>

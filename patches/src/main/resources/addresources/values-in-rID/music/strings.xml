@@ -70,6 +70,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_change_miniplayer_color_summary_on">Warna pemutar mini sesuai dengan pemutar layar penuh</string>
   <string name="morphe_music_change_miniplayer_color_summary_off">Pemutar mini menggunakan warna standar</string>
   <!-- layout.miniplayer.enableForcedMiniplayer -->
+  <string name="morphe_music_enable_forced_miniplayer_title">Aktifkan paksa miniplayer</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary_on">Miniplayer tetap diminimalkan saat perubahan pemutaran</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary_off">Miniplayer diperluas ke layar penuh saat perubahan pemutaran</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Bilah navigasi</string>
   <string name="morphe_music_navigation_bar_screen_summary">Sembunyikan atau ubah tombol bilah navigasi</string>

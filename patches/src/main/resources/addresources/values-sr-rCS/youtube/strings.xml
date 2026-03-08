@@ -543,6 +543,9 @@ Podesite jačinu zvuka prevlačenjem vertikalno na desnoj strani ekrana"</string
   <string name="morphe_disable_like_subscribe_glow_title">Onemogući sjaj dugmadi „Sviđanje” i „Zaprati”</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Dugmad „Sviđanje” i „Zaprati” neće svetleti pri dodiru</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Dugmad „Sviđanje” i „Zaprati” će svetleti pri dodiru</string>
+  <string name="morphe_hide_action_bar_title">Sakrij radnu traku</string>
+  <string name="morphe_hide_action_bar_summary_on">Radna traka je skrivena</string>
+  <string name="morphe_hide_action_bar_summary_off">Radna traka je prikazana</string>
   <string name="morphe_hide_like_dislike_button_title">Sakrij dugmad „Sviđanje” i „Nesviđanje”</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Dugmad „Sviđanje” i „Nesviđanje” su skrivena</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Dugmad „Sviđanje” i „Nesviđanje” su prikazana</string>

@@ -542,6 +542,9 @@ Promene uključuju:
   <string name="morphe_disable_like_subscribe_glow_title">Онемогући сјај дугмади „Свиђање” и „Запрати”</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Дугмад „Свиђање” и „Запрати” неће светлети при додиру</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Дугмад „Свиђање” и „Запрати” ће светлети при додиру</string>
+  <string name="morphe_hide_action_bar_title">Сакриј траку</string>
+  <string name="morphe_hide_action_bar_summary_on">Трака је скривена</string>
+  <string name="morphe_hide_action_bar_summary_off">Трака је приказана</string>
   <string name="morphe_hide_like_dislike_button_title">Сакриј дугмад „Свиђање” и „Несвиђање”</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Дугмад „Свиђање” и „Несвиђање” су скривена</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Дугмад „Свиђање” и „Несвиђање” су приказана</string>

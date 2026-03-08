@@ -542,6 +542,9 @@ Passen Sie die Helligkeit an, indem Sie auf der linken Seite des Bildschirms ver
   <string name="morphe_disable_like_subscribe_glow_title">Like und Subscribe Button leuchten nicht mehr, wenn sie erwähnt werden</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Like- und Subscribe-Button leuchten nicht, wenn sie erwähnt werden</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Like- und Subscribe-Button leuchten, wenn sie erwähnt werden</string>
+  <string name="morphe_hide_action_bar_title">Aktionsleiste ausblenden</string>
+  <string name="morphe_hide_action_bar_summary_on">Die Aktionsleiste ist ausgeblendet</string>
+  <string name="morphe_hide_action_bar_summary_off">Die Aktionsleiste wird angezeigt</string>
   <string name="morphe_hide_like_dislike_button_title">Verstecke Likes und Dislikes</string>
   <string name="morphe_hide_like_dislike_button_summary_on">\"Gefällt mir\"-Tasten sind ausgeblendet</string>
   <string name="morphe_hide_like_dislike_button_summary_off">\"Gefällt mir\"-Tasten werden angezeigt</string>

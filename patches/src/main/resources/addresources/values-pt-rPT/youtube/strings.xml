@@ -543,6 +543,9 @@ Ajuste o volume deslizando verticalmente no lado direito da tela"</string>
   <string name="morphe_disable_like_subscribe_glow_title">Desativar o brilho de \"Gostar\" e \"Subscrever\"</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Os botões “Gosto” e “Subscrever” não brilham quando são mencionados</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">O botão de gostar e subscrever brilhará quando mencionado</string>
+  <string name="morphe_hide_action_bar_title">Esconder barra de ação</string>
+  <string name="morphe_hide_action_bar_summary_on">A barra de ação está oculta</string>
+  <string name="morphe_hide_action_bar_summary_off">A barra de ação está visível</string>
   <string name="morphe_hide_like_dislike_button_title">Esconder Curtir e Descurtir</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Botões de Curtir e Desmarcar estão escondidos</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Botões de Curtir e Desmarcar são visíveis</string>

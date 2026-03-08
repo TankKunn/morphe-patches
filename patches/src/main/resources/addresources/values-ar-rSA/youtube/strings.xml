@@ -542,6 +542,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">تعطيل توهج الإعجاب واشتراك</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">لن يتوهج زر أعجبني واشتراك عند الإشارة إليه</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">سيتوهَّج زر أعجبني واشتراك عند الإشارة إليه </string>
+  <string name="morphe_hide_action_bar_title">إخفاء شريط الإجراءات</string>
+  <string name="morphe_hide_action_bar_summary_on">تم إخفاء شريط الإجراءات</string>
+  <string name="morphe_hide_action_bar_summary_off">يتم عرض شريط الإجراءات</string>
   <string name="morphe_hide_like_dislike_button_title">إخفاء أعجبني ولم يعجبني</string>
   <string name="morphe_hide_like_dislike_button_summary_on">تم إخفاء أزرار أعجبني ولم يعجبني</string>
   <string name="morphe_hide_like_dislike_button_summary_off">يتم عرض أزرار أعجبني ولم يعجبني</string>

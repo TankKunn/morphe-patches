@@ -543,6 +543,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">लाइक और सबस्क्राइब ग्लो को डिसेबल करें</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">लाइक और सब्सक्राइब बटन रोशनी नहीं होगी जब कहा जाएगा</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">लाइक और सब्सक्राइब बटन रोशनी होगी जब कहा जाएगा</string>
+  <string name="morphe_hide_action_bar_title">एक्शन बार छिपाएँ</string>
+  <string name="morphe_hide_action_bar_summary_on">एक्शन बार छिपा हुआ है</string>
+  <string name="morphe_hide_action_bar_summary_off">एक्शन बार दिखाया गया है</string>
   <string name="morphe_hide_like_dislike_button_title">लाइक और डिस्लाइक को छुपाएं</string>
   <string name="morphe_hide_like_dislike_button_summary_on">लाइक और डिस्लाइक बटन छुपे हुए हैं</string>
   <string name="morphe_hide_like_dislike_button_summary_off">लाइक और डिस्लाइक बटन दिखाई दिए हैं</string>

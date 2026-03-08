@@ -544,6 +544,9 @@ Dostosuj głośność, przesuwając pionowo po prawej stronie ekranu"</string>
   <string name="morphe_disable_like_subscribe_glow_title">Poświata przycisków Polub i Subskrybuj</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Brak podczas wspomnienia</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Podczas wspomnienia</string>
+  <string name="morphe_hide_action_bar_title">Pasek akcji</string>
+  <string name="morphe_hide_action_bar_summary_on">Ukryty</string>
+  <string name="morphe_hide_action_bar_summary_off">Widoczny</string>
   <string name="morphe_hide_like_dislike_button_title">Przyciski Polub i Nie lubię</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Ukryte</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Widoczne</string>

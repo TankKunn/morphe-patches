@@ -70,9 +70,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_change_miniplayer_color_summary_on">يتطابق لون المشغل المصغر مع المشغل بملء الشاشة</string>
   <string name="morphe_music_change_miniplayer_color_summary_off">يستخدم المشغل المصغر اللون الافتراضي</string>
   <!-- layout.miniplayer.enableForcedMiniplayer -->
-  <string name="morphe_music_enable_forced_miniplayer_title">تمكين مشغل موسيقى مصغر إجباري</string>
-  <string name="morphe_music_enable_forced_miniplayer_summary_on">يظل مشغل الموسيقى مصغراً عند تغيير التشغيل</string>
-  <string name="morphe_music_enable_forced_miniplayer_summary_off">يتوسع مشغل الموسيقى إلى ملء الشاشة عند تغيير التشغيل</string>
+  <string name="morphe_music_enable_forced_miniplayer_title">تمكين فرض المشغل المصغر</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary_on">يبقى المشغل المصغر مصغرًا عند تغيير التشغيل</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary_off">يتوسع المشغل المصغر إلى ملء الشاشة عند تغيير التشغيل</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">شريط التنقل</string>
   <string name="morphe_music_navigation_bar_screen_summary">إخفاء أزرار شريط التنقل أو تغييرها</string>

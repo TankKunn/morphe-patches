@@ -70,6 +70,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_change_miniplayer_color_summary_on">Tumutugma sa fullscreen na manlalaro ang kulay ng miniplayer</string>
   <string name="morphe_music_change_miniplayer_color_summary_off">Gumagamit ng default na kulay ang miniplayer</string>
   <!-- layout.miniplayer.enableForcedMiniplayer -->
+  <string name="morphe_music_enable_forced_miniplayer_title">Paganahin ang pinilit na miniplayer</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary_on">Nanatiling minimized ang miniplayer kapag nagbago ang playback</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary_off">Lumawak ang miniplayer sa fullscreen kapag nagbago ang playback</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Navigation bar</string>
   <string name="morphe_music_navigation_bar_screen_summary">Itago o baguhin ang mga navigation bar button</string>

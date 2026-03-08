@@ -71,8 +71,8 @@ Second \"item\" text"</string>
   <string name="morphe_music_change_miniplayer_color_summary_off">Le mini-lecteur utilise la couleur par défaut</string>
   <!-- layout.miniplayer.enableForcedMiniplayer -->
   <string name="morphe_music_enable_forced_miniplayer_title">Activer le mini-lecteur forcé</string>
-  <string name="morphe_music_enable_forced_miniplayer_summary_on">Le mini-lecteur reste minimisé lors des changements de lecture</string>
-  <string name="morphe_music_enable_forced_miniplayer_summary_off">Le mini-lecteur s\'étend en plein écran lors des changements de lecture</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary_on">Le mini-lecteur reste réduit lorsque la lecture change</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary_off">Le mini-lecteur passe en plein écran lorsque la lecture change</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Barre de navigation</string>
   <string name="morphe_music_navigation_bar_screen_summary">Masquer ou modifier les boutons de la barre de navigation</string>

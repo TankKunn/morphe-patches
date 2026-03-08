@@ -540,6 +540,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">빛나는 \'좋아요\' / \'구독\' 비활성화하기</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">동영상에서 \'Like (좋아요)\' 또는 \'Subscribe (구독)\' 버튼이 언급되었을 때, 해당 버튼에 빛나는 애니메이션을 적용하지 않습니다</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">동영상에서 \'Like (좋아요)\' 또는 \'Subscribe (구독)\' 버튼이 언급되었을 때, 해당 버튼에 빛나는 애니메이션을 적용합니다</string>
+  <string name="morphe_hide_action_bar_title">동작바 숨기기</string>
+  <string name="morphe_hide_action_bar_summary_on">동작바가 숨겨집니다</string>
+  <string name="morphe_hide_action_bar_summary_off">동작바가 표시됩니다</string>
   <string name="morphe_hide_like_dislike_button_title">좋아요 &amp; 싫어요 숨기기</string>
   <string name="morphe_hide_like_dislike_button_summary_on">좋아요 &amp; 싫어요 버튼이 숨겨집니다</string>
   <string name="morphe_hide_like_dislike_button_summary_off">좋아요 &amp; 싫어요 버튼이 표시됩니다</string>

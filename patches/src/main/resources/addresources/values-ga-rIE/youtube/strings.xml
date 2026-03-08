@@ -543,6 +543,9 @@ Coigeartaigh an toirt trí swipeáil go hingearach ar thaobh na láimhe deise de
   <string name="morphe_disable_like_subscribe_glow_title">Díchumasaigh lonradh na cnaipí Is maith liom / Liostáil</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Ní bheidh na cnaipe Is maith liom agus Liostáil ag lonrú nuair a luaitear iad</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Lonróidh na cnaipe Is maith liom agus Liostáil nuair a luaitear iad</string>
+  <string name="morphe_hide_action_bar_title">Folaigh barr na cruinneas</string>
+  <string name="morphe_hide_action_bar_summary_on">Tá barr na cruinneas i bhfolach</string>
+  <string name="morphe_hide_action_bar_summary_off">Taispeántar barr na cruinneas</string>
   <string name="morphe_hide_like_dislike_button_title">Folaigh Is Maith Liom agus Ní Maith Liom</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Tá cnaipí Is Maith Liom agus Ní Maith Liom i bhfolach</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Taispeántar cnaipí Is Maith Liom agus Ní Maith Liom</string>

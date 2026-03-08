@@ -543,6 +543,9 @@ Säädä äänenvoimakkuutta pyyhkäisemällä pystysuoraan näytön oikealta pu
   <string name="morphe_disable_like_subscribe_glow_title">Poista Tykkää- ja Tilaa-painikkeiden hehku</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Tykkää- ja Tilaa-painikkeet eivät hehku mainittaessa</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Tykkää- ja Tilaa-painikkeet hehkuvat mainittaessa</string>
+  <string name="morphe_hide_action_bar_title">Piilota toimintopalkki</string>
+  <string name="morphe_hide_action_bar_summary_on">Toimintopalkki on piilotettu</string>
+  <string name="morphe_hide_action_bar_summary_off">Toimintopalkki on näytössä</string>
   <string name="morphe_hide_like_dislike_button_title">Piilota Tykkää ja En tykkää</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Tykkää- ja En tykkää -painikkeet piilotetaan</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Tykkää- ja En tykkää -painikkeet näytetään</string>

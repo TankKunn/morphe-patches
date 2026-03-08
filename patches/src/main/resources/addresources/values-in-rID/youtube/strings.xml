@@ -542,6 +542,9 @@ Menyesuaikan volume dengan mengusap secara vertikal di sisi kanan layar"</string
   <string name="morphe_disable_like_subscribe_glow_title">Nonaktifkan kilauan Suka dan Langganan</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">Tombol Suka dan Berlangganan tidak akan berkilau saat disebut</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">Tombol Suka dan Berlangganan akan berkilau saat disebut</string>
+  <string name="morphe_hide_action_bar_title">Sembunyikan bilah tindakan</string>
+  <string name="morphe_hide_action_bar_summary_on">Bilah tindakan disembunyikan</string>
+  <string name="morphe_hide_action_bar_summary_off">Bilah tindakan ditampilkan</string>
   <string name="morphe_hide_like_dislike_button_title">Sembunyikan Suka dan Tidak Suka</string>
   <string name="morphe_hide_like_dislike_button_summary_on">Tombol Suka dan Tidak suka disembunyikan</string>
   <string name="morphe_hide_like_dislike_button_summary_off">Tombol Suka dan Tidak suka ditampilkan</string>

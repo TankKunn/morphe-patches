@@ -542,6 +542,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_like_subscribe_glow_title">השבת זוהר אהבתי והרשמה למינוי</string>
   <string name="morphe_disable_like_subscribe_glow_summary_on">לחצן אהבתי והרשמה למינוי לא יזהר כאשר מוזכר</string>
   <string name="morphe_disable_like_subscribe_glow_summary_off">לחצן אהבתי והרשמה למינוי יזהר כאשר מוזכר</string>
+  <string name="morphe_hide_action_bar_title">הסתר סרגל פעולות</string>
+  <string name="morphe_hide_action_bar_summary_on">סרגל הפעולות מוסתר</string>
+  <string name="morphe_hide_action_bar_summary_off">סרגל הפעולות מוצג</string>
   <string name="morphe_hide_like_dislike_button_title">הסתר אהבתי ודיסלייק</string>
   <string name="morphe_hide_like_dislike_button_summary_on">לחצני אהבתי ודיסלייק מוסתרים</string>
   <string name="morphe_hide_like_dislike_button_summary_off">לחצני אהבתי ודיסלייק מוצגים</string>

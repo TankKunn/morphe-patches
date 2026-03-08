@@ -70,6 +70,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_change_miniplayer_color_summary_on">Rengê miniplayerê bi lîstikvanê tamasekî hevgal be</string>
   <string name="morphe_music_change_miniplayer_color_summary_off">Miniplayer mêrîkê default-a bi kar bîne</string>
   <!-- layout.miniplayer.enableForcedMiniplayer -->
+  <string name="morphe_music_enable_forced_miniplayer_title">Serê pêşandanê tim miniplayer werekî jêdî were çalak kirin</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary_on">Miniplayer dema ku belavbûna audio diguhere, timê kêmkirî dimîne</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary_off">Miniplayer dema ku belavbûna audio diguhere, bi ekranê betal fireh dibe</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Keleka navigasyonê</string>
   <string name="morphe_music_navigation_bar_screen_summary">Kelekên keleka navigasyonê veşêre an biguhezîne</string>

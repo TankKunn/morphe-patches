@@ -524,7 +524,7 @@ Justera volymen genom att svepa vertikalt till höger på skärmen"</string>
   <string name="morphe_swipe_text_overlay_size_summary">Textstorleken för svepöverlägg mellan 1 och 30</string>
   <string name="morphe_swipe_text_overlay_size_invalid_toast">Textstorleken måste vara mellan 1 och 30</string>
   <string name="morphe_swipe_threshold_title">Tröskelvärde för svep</string>
-  <string name="morphe_swipe_threshold_summary">Tröskelvärdet för att svep ska uppstå</string>
+  <string name="morphe_swipe_threshold_summary">Tröskelvärdet för att svep ska registreras</string>
   <string name="morphe_swipe_volume_sensitivity_title">Svepkänslighet för volymgest</string>
   <string name="morphe_swipe_volume_sensitivity_summary">Hur mycket volymen ändras per svep</string>
   <string name="morphe_swipe_overlay_style_title">Stil på svepöverlägg</string>
