@@ -1,3 +1,10 @@
+# [1.18.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.18.0-dev.2...v1.18.0-dev.3) (2026-03-08)
+
+
+### Bug Fixes
+
+* **YouTube - Hide video action buttons:** Some action buttons cannot be hidden in YouTube 20.22+ ([#736](https://github.com/MorpheApp/morphe-patches/issues/736)) ([61ebf75](https://github.com/MorpheApp/morphe-patches/commit/61ebf754b8e92a072ed9721573fb26cfe468e888))
+
 # [1.18.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.18.0-dev.1...v1.18.0-dev.2) (2026-03-07)
 
 
