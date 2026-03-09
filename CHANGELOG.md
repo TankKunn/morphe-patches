@@ -1,3 +1,10 @@
+# [1.18.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.18.0-dev.3...v1.18.0-dev.4) (2026-03-09)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Replace "Hide AI comments summary" with "Sanitize category bar" ([#731](https://github.com/MorpheApp/morphe-patches/issues/731)) ([bb0debf](https://github.com/MorpheApp/morphe-patches/commit/bb0debfc6343afd2b723411a15354209a734c691))
+
 # [1.18.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.18.0-dev.2...v1.18.0-dev.3) (2026-03-08)
 
 
