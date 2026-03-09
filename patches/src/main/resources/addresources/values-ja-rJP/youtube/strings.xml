@@ -306,9 +306,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">AI による「チャットの要約」を非表示</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">AI による「チャットの要約」は表示されません</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">AI による「チャットの要約」は表示されます</string>
-  <string name="morphe_hide_comments_ai_summary_title">AI によるコメントの要約を非表示</string>
-  <string name="morphe_hide_comments_ai_summary_summary_on">AI によるコメントの要約は表示されません\n\nコメント欄のヘッダーにはトピックボタンは表示されません</string>
-  <string name="morphe_hide_comments_ai_summary_summary_off">AI によるコメントの要約は表示されます\n\nコメント欄のヘッダーにはトピックボタンが表示されます</string>
   <string name="morphe_hide_comments_channel_guidelines_title">チャンネルのガイドラインを非表示</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_on">チャンネルのガイドラインは表示されません</string>
   <string name="morphe_hide_comments_channel_guidelines_summary_off">チャンネルのガイドラインは表示されます</string>
@@ -339,6 +336,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_thanks_button_title">Thanks ボタンを非表示</string>
   <string name="morphe_hide_comments_thanks_button_summary_on">Thanks ボタンは表示されません</string>
   <string name="morphe_hide_comments_thanks_button_summary_off">Thanks ボタンは表示されます</string>
+  <string name="morphe_sanitize_comments_category_bar_title">カテゴリバーを簡素化</string>
+  <string name="morphe_sanitize_comments_category_bar_summary_on">コメント欄のカテゴリバーには、「人気順」および「新しい順」以外のカテゴリボタンは表示されません</string>
+  <string name="morphe_sanitize_comments_category_bar_summary_off">コメント欄のカテゴリバーには、さまざまなカテゴリボタンが表示される場合があります</string>
   <string name="morphe_custom_filter_screen_title">カスタム フィルタ</string>
   <string name="morphe_custom_filter_screen_summary">カスタム フィルタを使用してコンポーネントを非表示にします</string>
   <string name="morphe_custom_filter_title">カスタム フィルタを有効化</string>
