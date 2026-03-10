@@ -1,3 +1,10 @@
+# [1.18.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.18.0-dev.4...v1.18.0-dev.5) (2026-03-10)
+
+
+### Features
+
+* **Spoof video streams:** Default client maintenance ([#789](https://github.com/MorpheApp/morphe-patches/issues/789)) ([142367e](https://github.com/MorpheApp/morphe-patches/commit/142367e1c0ee3f03341fa5c3c0483aed7384c208))
+
 # [1.18.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.18.0-dev.3...v1.18.0-dev.4) (2026-03-09)
 
 
