@@ -334,9 +334,9 @@ Los cambios incluyen:
   <string name="morphe_hide_comments_thanks_button_title">Ocultar botón \"Gracias\"</string>
   <string name="morphe_hide_comments_thanks_button_summary_on">El botón \"Gracias\" está oculto</string>
   <string name="morphe_hide_comments_thanks_button_summary_off">El botón \"Gracias\" está visible</string>
-  <string name="morphe_sanitize_comments_category_bar_title">Sanear barra de categorías</string>
-  <string name="morphe_sanitize_comments_category_bar_summary_on">Los botones de categoría excepto \'Principal\' y \'Más reciente\' están ocultos en la barra de categorías de comentarios</string>
-  <string name="morphe_sanitize_comments_category_bar_summary_off">Los botones de categoría se muestran en la barra de categorías de comentarios</string>
+  <string name="morphe_sanitize_comments_category_bar_title">Desinfectar barra de categorías</string>
+  <string name="morphe_sanitize_comments_category_bar_summary_on">Los botones de categoría, excepto \"Mejores\" y \"Más recientes\", están ocultos en la barra de categorías de comentarios</string>
+  <string name="morphe_sanitize_comments_category_bar_summary_off">Los botones de categoría están visibles en la barra de categorías de comentarios</string>
   <string name="morphe_custom_filter_screen_title">Filtro personalizado</string>
   <string name="morphe_custom_filter_screen_summary">Oculta componentes usando filtros personalizados</string>
   <string name="morphe_custom_filter_title">Activar filtro personalizado</string>

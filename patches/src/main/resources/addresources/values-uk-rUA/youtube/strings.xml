@@ -337,8 +337,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_thanks_button_summary_on">Кнопку \"Дякую\" приховано</string>
   <string name="morphe_hide_comments_thanks_button_summary_off">Кнопка \"Дякую\" показується</string>
   <string name="morphe_sanitize_comments_category_bar_title">Очистити панель категорій</string>
-  <string name="morphe_sanitize_comments_category_bar_summary_on">Кнопки категорій, окрім \'Топ\' і \'Новіші\', приховані у панелі категорій коментарів</string>
-  <string name="morphe_sanitize_comments_category_bar_summary_off">Кнопки категорій відображаються у панелі категорій коментарів</string>
+  <string name="morphe_sanitize_comments_category_bar_summary_on">Кнопки категорій, окрім \"Найпопулярніші\" та \"Найновіші\", приховано на панелі категорій коментарів</string>
+  <string name="morphe_sanitize_comments_category_bar_summary_off">Кнопки категорій показуються на панелі категорій коментарів</string>
   <string name="morphe_custom_filter_screen_title">Користувацький фільтр</string>
   <string name="morphe_custom_filter_screen_summary">Приховати компоненти за допомогою користувацьких фільтрів</string>
   <string name="morphe_custom_filter_title">Увімкнути користувацький фільтр</string>
@@ -1349,7 +1349,7 @@ Second \"item\" text"</string>
   <string name="morphe_change_start_page_always_summary_on">"Початкова сторінка завжди змінюється
 
 Обмеження: Використання кнопки \"Назад\" на панелі інструментів може не працювати"</string>
-  <string name="morphe_change_start_page_always_summary_off">Початкова сторінка змінюється лише під час запуску програми</string>
+  <string name="morphe_change_start_page_always_summary_off">Початкова сторінка змінюється лише під час запуску застосунку</string>
   <!-- layout.startupshortsreset.disableResumingShortsOnStartupPatch -->
   <string name="morphe_disable_resuming_shorts_player_title">Вимкнути відновлення плеєра Shorts</string>
   <string name="morphe_disable_resuming_shorts_player_summary_on">Плеєр Shorts не відновиться після запуску застосунку</string>

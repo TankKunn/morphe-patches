@@ -206,7 +206,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_course_progress_section_title">「コースの進捗状況」を非表示</string>
   <string name="morphe_hide_course_progress_section_summary_on">「コースの進捗状況」セクションは表示されません</string>
   <string name="morphe_hide_course_progress_section_summary_off">「コースの進捗状況」セクションは表示されます</string>
-  <string name="morphe_hide_explore_section_title">「ポッドキャストを検索」を非表示</string>
+  <string name="morphe_hide_explore_section_title">「ポッドキャストを検索」と「このコースを見る」を非表示</string>
   <string name="morphe_hide_explore_section_summary_on">「ポッドキャストを検索」セクションと「このコースを見る」セクションは表示されません</string>
   <string name="morphe_hide_explore_section_summary_off">「ポッドキャストを検索」セクションと「このコースを見る」セクションは表示されます</string>
   <string name="morphe_hide_explore_course_section_title">「このコースを見る」を非表示</string>
@@ -319,8 +319,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_summary_on">コメント セクションは表示されません</string>
   <string name="morphe_hide_comments_section_summary_off">コメント セクションは表示されます</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">ホームフィードでコメント欄を非表示</string>
-  <string name="morphe_hide_comments_section_in_home_feed_summary_on">ホームフィードの動画の下にはコメント欄は表示されません</string>
-  <string name="morphe_hide_comments_section_in_home_feed_summary_off">ホームフィードの動画の下にはコメント欄が表示されます</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_on">ホームフィードの動画の下には、コメント欄は表示されません</string>
+  <string name="morphe_hide_comments_section_in_home_feed_summary_off">ホームフィードの動画の下には、コメント欄が表示されます</string>
   <string name="morphe_hide_comments_community_guidelines_title">コミュニティ ガイドラインを非表示</string>
   <string name="morphe_hide_comments_community_guidelines_summary_on">コミュニティ ガイドラインは表示されません</string>
   <string name="morphe_hide_comments_community_guidelines_summary_off">コミュニティ ガイドラインは表示されます</string>
