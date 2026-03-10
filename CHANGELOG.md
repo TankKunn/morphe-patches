@@ -17,7 +17,7 @@
 * **Reddit:** Add experimental support for `2026.10.0` ([#762](https://github.com/MorpheApp/morphe-patches/issues/762)) ([7117724](https://github.com/MorpheApp/morphe-patches/commit/711772404d3a4cee3ac51b6837d15de2e419de3b))
 * **Spoof video streams:** Default client maintenance ([#789](https://github.com/MorpheApp/morphe-patches/issues/789)) ([142367e](https://github.com/MorpheApp/morphe-patches/commit/142367e1c0ee3f03341fa5c3c0483aed7384c208))
 * **YouTube Music:** Add `Enable forced miniplayer` patch ([#720](https://github.com/MorpheApp/morphe-patches/issues/720)) ([9c6f5f5](https://github.com/MorpheApp/morphe-patches/commit/9c6f5f542d47222a8d7e1873b3742647455d6bf9))
-* **YouTube:** Add experimental support for `21.20.493` ([c09049d](https://github.com/MorpheApp/morphe-patches/commit/c09049d46b94b5fa0097f3a53398469356b440f1))
+* **YouTube:** Add experimental support for `21.10.493` ([c09049d](https://github.com/MorpheApp/morphe-patches/commit/c09049d46b94b5fa0097f3a53398469356b440f1))
 
 # [1.18.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.18.0-dev.4...v1.18.0-dev.5) (2026-03-10)
 
