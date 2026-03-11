@@ -1,3 +1,11 @@
+## [1.18.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.18.0...v1.18.1-dev.1) (2026-03-11)
+
+
+### Bug Fixes
+
+* **YouTube - Alternative thumbnails:** Use correct DeArrow parameter casing ([a35a012](https://github.com/MorpheApp/morphe-patches/commit/a35a01243b2bfa674d5711f3db0a0f675f4ebc6f))
+* **YouTube - Hide Shorts components:** Hide Shorts shelf hides autoplaying videos in the feed ([#788](https://github.com/MorpheApp/morphe-patches/issues/788)) ([01328e7](https://github.com/MorpheApp/morphe-patches/commit/01328e7f048949384186f0ce6fd4230f81e32702))
+
 # [1.18.0](https://github.com/MorpheApp/morphe-patches/compare/v1.17.0...v1.18.0) (2026-03-10)
 
 
