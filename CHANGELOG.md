@@ -1,3 +1,10 @@
+## [1.18.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.18.1-dev.1...v1.18.1-dev.2) (2026-03-11)
+
+
+### Bug Fixes
+
+* **YouTube - Shorts autoplay:** Shorts do not autoplay when using older app targets ([1c6478e](https://github.com/MorpheApp/morphe-patches/commit/1c6478e02a6e2a0c795f40608c653ed115292e5e))
+
 ## [1.18.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.18.0...v1.18.1-dev.1) (2026-03-11)
 
 
