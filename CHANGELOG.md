@@ -1,3 +1,16 @@
+# [1.19.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.18.1-dev.2...v1.19.0-dev.1) (2026-03-12)
+
+
+### Bug Fixes
+
+* **YouTube - Hide Shorts components:** Resolve "Hide 'Use this sound' button" and "Hide 'Use this template' button" not working ([#815](https://github.com/MorpheApp/morphe-patches/issues/815)) ([9f2a67b](https://github.com/MorpheApp/morphe-patches/commit/9f2a67bd38ac2b8fd038197736f8db0483960c7d))
+
+
+### Features
+
+* **Theme:** Use dynamic system accents for Material You colors ([#693](https://github.com/MorpheApp/morphe-patches/issues/693)) ([1a2e61c](https://github.com/MorpheApp/morphe-patches/commit/1a2e61ce2e64f82adc51f215ed79b8c02cf6b869))
+* **YouTube - Playback speed:** Allows disabling tap and hold speed ([#819](https://github.com/MorpheApp/morphe-patches/issues/819)) ([948a8a1](https://github.com/MorpheApp/morphe-patches/commit/948a8a1c4d29b2d8855225706cb7db9c060d7a18))
+
 ## [1.18.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.18.1-dev.1...v1.18.1-dev.2) (2026-03-11)
 
 

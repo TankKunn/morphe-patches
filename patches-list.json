@@ -1,5 +1,5 @@
 {
-  "version": "1.18.1-dev.2",
+  "version": "1.19.0-dev.1",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -1930,7 +1930,10 @@
           "default": "@android:color/black",
           "values": {
             "Pure black": "@android:color/black",
-            "Material You": "@android:color/system_neutral1_900",
+            "Material You (Neutral)": "@android:color/system_neutral1_900",
+            "Material You - Primary": "@android:color/system_accent1_800",
+            "Material You - Secondary": "@android:color/system_accent2_800",
+            "Material You - Tertiary": "@android:color/system_accent3_800",
             "Classic (old YouTube)": "#212121",
             "Catppuccin (Mocha)": "#181825",
             "Dark pink": "#290025",
@@ -1974,7 +1977,10 @@
           "default": "@android:color/black",
           "values": {
             "Pure black": "@android:color/black",
-            "Material You": "@android:color/system_neutral1_900",
+            "Material You (Neutral)": "@android:color/system_neutral1_900",
+            "Material You - Primary": "@android:color/system_accent1_800",
+            "Material You - Secondary": "@android:color/system_accent2_800",
+            "Material You - Tertiary": "@android:color/system_accent3_800",
             "Classic (old YouTube)": "#212121",
             "Catppuccin (Mocha)": "#181825",
             "Dark pink": "#290025",
@@ -1994,7 +2000,10 @@
           "default": "@android:color/white",
           "values": {
             "White": "@android:color/white",
-            "Material You": "@android:color/system_neutral1_50",
+            "Material You (Neutral)": "@android:color/system_neutral1_100",
+            "Material You - Primary": "@android:color/system_accent1_200",
+            "Material You - Secondary": "@android:color/system_accent2_200",
+            "Material You - Tertiary": "@android:color/system_accent3_200",
             "Catppuccin (Latte)": "#E6E9EF",
             "Light pink": "#FCCFF3",
             "Light blue": "#D1E0FF",
