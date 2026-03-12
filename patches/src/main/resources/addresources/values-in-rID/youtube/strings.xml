@@ -1568,7 +1568,9 @@ Mengaktifkan ini dapat membuka kualitas video yang lebih tinggi"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Kecepatan pemutaran khusus tidak sah</string>
   <string name="morphe_custom_playback_speeds_auto">Otomatis</string>
   <string name="morphe_speed_tap_and_hold_title">Kecepatan ketuk dan tahan khusus</string>
-  <string name="morphe_speed_tap_and_hold_summary">Kecepatan pemutaran antara 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Kecepatan pemutaran antara 0-8
+
+Jika 0, ketuk dan tahan kecepatan dinonaktifkan"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Ingat perubahan kecepatan pemutaran</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Perubahan kecepatan pemutaran berlaku untuk semua video</string>

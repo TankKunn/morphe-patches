@@ -1569,7 +1569,7 @@ Second \"item\" text"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">سرعات التشغيل المخصصة غير صالحة</string>
   <string name="morphe_custom_playback_speeds_auto">تلقائي</string>
   <string name="morphe_speed_tap_and_hold_title">سرعة النقر مع الاستمرار المخصصة</string>
-  <string name="morphe_speed_tap_and_hold_summary">سرعة التشغيل بين 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"سرعة التشغيل بين 0-8\n\nإذا كانت 0، يتم تعطيل سرعة النقر مع الاستمرار"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">تذكر تغييرات سرعة التشغيل</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">تطبيق تغييرات سرعة التشغيل على جميع الفيديوهات</string>

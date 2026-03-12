@@ -1569,7 +1569,9 @@ Ako ovo omogućite, mogu biti otključani viši kvaliteti videa"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Nevažeće prilagođene brzine reprodukcije</string>
   <string name="morphe_custom_playback_speeds_auto">Automatski</string>
   <string name="morphe_speed_tap_and_hold_title">Prilagođena brzina dodirivanja i zadržavanja</string>
-  <string name="morphe_speed_tap_and_hold_summary">Brzina reprodukcije između 0 i 8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Brzina reprodukcije između 0-8
+
+Ako je 0, tap i držanje brzine je onemogućeno"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Zapamti promene brzine reprodukcije</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Promene brzine reprodukcije se primenjuju na sve videe</string>

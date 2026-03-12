@@ -1570,7 +1570,9 @@ Second \"item\" text"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Неправильні користувацькі швидкості відтворення</string>
   <string name="morphe_custom_playback_speeds_auto">Авто</string>
   <string name="morphe_speed_tap_and_hold_title">Користувацька швидкість при натисканні та утриманні</string>
-  <string name="morphe_speed_tap_and_hold_summary">Швидкість відтворення від 0 до 8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Швидкість відтворення між 0-8
+
+Якщо 0, торкання та утримування швидкості вимкнено"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Запам\'ятовувати зміни швидкості</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Зміни швидкості відтворення застосовуються до всіх відео</string>

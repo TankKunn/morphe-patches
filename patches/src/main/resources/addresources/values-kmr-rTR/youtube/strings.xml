@@ -1566,7 +1566,9 @@ Ev dikare bişîne asta bilind a keyfiyetên vîdyoyê"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Hızên çavkaniyê nevalî</string>
   <string name="morphe_custom_playback_speeds_auto">Otomatîk</string>
   <string name="morphe_speed_tap_and_hold_title">Hız-hokma ser-dûre</string>
-  <string name="morphe_speed_tap_and_hold_summary">Nîşana pêşveçûna zû ya navberê 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Hejmara lêdanê di navbera 0-8 de
+
+Ger 0 be, destikî dane girtinê hatiye qefal kirin"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Guhertinên hız-hokmê ya serbixwe ya birêve bibe</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Guhertinên hız-hokmê ji hemû vîdyoyên veşartinê re qebûl kirin</string>

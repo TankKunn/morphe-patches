@@ -1399,7 +1399,6 @@ Bunu aktivləşdirmə daha yüksək video keyfiyyətləri əngəlin silə bilər
   <string name="morphe_custom_playback_speeds_parse_exception">Fərdi oynatma sürətləri etibarsızdır</string>
   <string name="morphe_custom_playback_speeds_auto">Avtomatik</string>
   <string name="morphe_speed_tap_and_hold_title">Xüsusi toxunma və saxlanılma sürəti</string>
-  <string name="morphe_speed_tap_and_hold_summary">0-8 arası oynatma sürəti</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Oynatma sürəti dəyişikliklərin xatırla</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Oynatma sürəti dəyişiklikləri bütün videolara aiddir</string>

@@ -1569,7 +1569,9 @@ Povolením této funkce lze odemknout vyšší kvality videa"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Neplatné vlastní rychlosti přehrávání</string>
   <string name="morphe_custom_playback_speeds_auto">Automaticky</string>
   <string name="morphe_speed_tap_and_hold_title">Vlastní rychlost stisknutí a podržení</string>
-  <string name="morphe_speed_tap_and_hold_summary">Rychlost přehrávání 0 až 8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Rychlost přehrávání mezi 0-8
+
+Pokud je 0, dotykové a podržení rychlosti je vypnuto"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Pamatovat si změny rychlosti přehrávání</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Změny rychlosti přehrávání se vztahují na všechna videa</string>

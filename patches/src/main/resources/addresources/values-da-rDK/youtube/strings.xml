@@ -1569,7 +1569,9 @@ Aktivering af dette kan låse op for højere videokvalitet"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Ugyldige brugerdefinerede afspilningshastigheder</string>
   <string name="morphe_custom_playback_speeds_auto">Automatisk</string>
   <string name="morphe_speed_tap_and_hold_title">Brugerdefineret hastighed, når du holder den nede</string>
-  <string name="morphe_speed_tap_and_hold_summary">Afspilningshastighed mellem 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Afspilningshastighed mellem 0-8
+
+Hvis 0, skal du trykke og holde for at deaktivere hastighed"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Husk ændringer i afspilningshastighed</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Ændring af afspilningshastighed gælder for alle videoer</string>

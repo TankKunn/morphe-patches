@@ -1567,7 +1567,9 @@ Het inschakelen hiervan kan hogere videokwaliteiten ontgrendelen"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Ongeldige aangepaste afspeelsnelheden</string>
   <string name="morphe_custom_playback_speeds_auto">Automatisch</string>
   <string name="morphe_speed_tap_and_hold_title">De snelheid van aangepast tikken en vasthouden</string>
-  <string name="morphe_speed_tap_and_hold_summary">Afspeelsnelheid tussen 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Afspeelsnelheid tussen 0-8
+
+Als 0, tik en houd snelheidsfunctie is uitgeschakeld"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Onthoud wijzigingen in afspeelsnelheid</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Wijzigingen in afspeelsnelheid worden op alle video\'s toegepast</string>

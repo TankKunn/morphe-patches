@@ -1555,7 +1555,9 @@ Second \"item\" text"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Влачене и пускане е изключено</string>
   <string name="morphe_custom_playback_speeds_auto">Auto</string>
   <string name="morphe_speed_tap_and_hold_title">Изключете хоризонтално влачене движение</string>
-  <string name="morphe_speed_tap_and_hold_summary">Хоризонтално влачене движение е изключено</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Скорост на възпроизвеждане между 0-8
+
+Ако 0, докосване и задържане на скоростта е забранено"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Запомнете промените в скоростта на възпроизвеждане</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Скрийте бутоните за надграждане</string>

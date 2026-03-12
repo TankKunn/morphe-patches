@@ -1570,7 +1570,9 @@ Włączenie tej opcji może odblokować wyższe jakości wideo"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Nieprawidłowe prędkości odtwarzania niestandardowego</string>
   <string name="morphe_custom_playback_speeds_auto">Automatyczna</string>
   <string name="morphe_speed_tap_and_hold_title">Prędkość dostosowywana przytrzymaniem</string>
-  <string name="morphe_speed_tap_and_hold_summary">Prędkość odtwarzania od 0 do 8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Prędkość odtwarzania od 0 do 8
+
+Jeśli 0, dotknięcie i przytrzymanie prędkości jest wyłączone"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Zapamiętywanie prędkości odtwarzania</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Dotyczy wszystkich filmów</string>

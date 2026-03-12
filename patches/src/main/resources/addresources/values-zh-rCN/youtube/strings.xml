@@ -1572,7 +1572,9 @@ Second \"item\" text"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">自定义播放速度无效</string>
   <string name="morphe_custom_playback_speeds_auto">自动</string>
   <string name="morphe_speed_tap_and_hold_title">自定义长按速度</string>
-  <string name="morphe_speed_tap_and_hold_summary">0-8之间的播放速度</string>
+  <string name="morphe_speed_tap_and_hold_summary">"回放速度在 0-8 之间
+
+如果为 0，则禁用点击并按住速度"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">记住播放速度更改</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">播放速度更改适用于所有视频</string>

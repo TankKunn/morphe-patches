@@ -1572,7 +1572,9 @@ Tämä voi avata korkealaatuisemmat videot"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Virheelliset mukautetut toistonopeudet</string>
   <string name="morphe_custom_playback_speeds_auto">Automaattinen</string>
   <string name="morphe_speed_tap_and_hold_title">Mukautettu napauta ja pidä pohjassa -nopeus</string>
-  <string name="morphe_speed_tap_and_hold_summary">Toistonopeus 0–8 välillä</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Toistonopeus välillä 0–8
+
+Jos 0, napauta ja pidä painettuna -nopeutta ei ole käytössä"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Muista toistonopeuden muutokset</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Toistonopeuden muutokset koskevat kaikkia videoita</string>

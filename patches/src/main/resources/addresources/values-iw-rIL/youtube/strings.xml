@@ -1567,7 +1567,9 @@ Second \"item\" text"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">מהירויות הפעלה מותאמות אישית לא חוקיות</string>
   <string name="morphe_custom_playback_speeds_auto">אוטומטי</string>
   <string name="morphe_speed_tap_and_hold_title">מהירות הקשה והחזקה מותאמת אישית</string>
-  <string name="morphe_speed_tap_and_hold_summary">מהירות הפעלה בין 0 ל-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"מהירות ניגון בין 0-8
+
+אם 0, לחיצה ארוכה על מהירות מושבתת"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">זכור שינויי מהירות הפעלה</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">שינויי מהירות הפעלה חלים על כל הסרטונים</string>

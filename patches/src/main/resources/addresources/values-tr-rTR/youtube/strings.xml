@@ -1569,7 +1569,9 @@ Bunu etkinleştirmek daha yüksek video kalitelerini açabilir"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Geçersiz özel oynatma hızları</string>
   <string name="morphe_custom_playback_speeds_auto">Oto</string>
   <string name="morphe_speed_tap_and_hold_title">Dokunup basılı tutma özel hızı</string>
-  <string name="morphe_speed_tap_and_hold_summary">0-8 arası oynatma hızı</string>
+  <string name="morphe_speed_tap_and_hold_summary">"0-8 arasında oynatma hızı
+
+0 ise, dokunarak ve tutarak hız etkinliği devre dışı bırakılır"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Oynatma hızı değişikliklerini hatırla</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Oynatma hızı değişiklikleri tüm videolara uygulanır</string>

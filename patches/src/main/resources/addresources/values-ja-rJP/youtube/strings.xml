@@ -1568,7 +1568,9 @@ Automotive レイアウト
   <string name="morphe_custom_playback_speeds_parse_exception">カスタム再生速度リストの値が無効です</string>
   <string name="morphe_custom_playback_speeds_auto">自動</string>
   <string name="morphe_speed_tap_and_hold_title">長押し倍速再生の速度</string>
-  <string name="morphe_speed_tap_and_hold_summary">再生速度の範囲は 0-8 で、0 および 8 は含まれません</string>
+  <string name="morphe_speed_tap_and_hold_summary">"0～8の再生速度
+
+0の場合、タップ＆ホールド速度が無効になります"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">再生速度の変更を保存</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">再生速度の変更はすべての動画に適用されます</string>

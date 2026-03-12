@@ -1565,7 +1565,9 @@ Ez a beállítás lehetővé teszi a magasabb videóminőségek feloldását"</s
   <string name="morphe_custom_playback_speeds_parse_exception">Érvénytelen egyéni lejátszási sebességek</string>
   <string name="morphe_custom_playback_speeds_auto">Automatikus</string>
   <string name="morphe_speed_tap_and_hold_title">Egyéni koppintás és tartás sebesség</string>
-  <string name="morphe_speed_tap_and_hold_summary">Lejátszási sebesség 0-8 között</string>
+  <string name="morphe_speed_tap_and_hold_summary">"0-8 közötti visszajátszási sebesség
+
+Ha 0, a koppintásos és tartásos sebesség kikapcsolva"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Lejátszási sebesség módosításainak megjegyzése</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">A lejátszási sebesség módosítása minden videóra érvényes</string>

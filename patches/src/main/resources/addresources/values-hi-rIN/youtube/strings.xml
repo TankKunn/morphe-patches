@@ -1565,7 +1565,9 @@ Settings → Playback (or Autoplay) → Autoplay next video"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">अमान्य कस्टम प्लेबैक स्पीड</string>
   <string name="morphe_custom_playback_speeds_auto">स्वचालित</string>
   <string name="morphe_speed_tap_and_hold_title">कस्टम टैप और होल्ड स्पीड</string>
-  <string name="morphe_speed_tap_and_hold_summary">0-8 के बीच प्लेबैक स्पीड</string>
+  <string name="morphe_speed_tap_and_hold_summary">"0-8 के बीच प्लेबैक गति
+
+यदि 0 है, तो टैप और होल्ड गति अक्षम है"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">प्लेबैक स्पीड परिवर्तन याद रखें</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">प्लेबैक स्पीड परिवर्तन सभी वीडियो पर लागू होते हैं</string>

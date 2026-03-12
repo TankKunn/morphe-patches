@@ -1569,7 +1569,9 @@ Ang pag-enable nito ay maaaring mag-unlock ng mas mataas na kalidad ng video"</s
   <string name="morphe_custom_playback_speeds_parse_exception">Hindi balido ang custom na bilis ng pag-playback</string>
   <string name="morphe_custom_playback_speeds_auto">Awtomatiko</string>
   <string name="morphe_speed_tap_and_hold_title">Custom na bilis ng pag-tap at pagpindot</string>
-  <string name="morphe_speed_tap_and_hold_summary">Bilis ng pag-playback sa pagitan ng 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Bilis ng pag-playback sa pagitan ng 0-8
+
+Kung 0, hindi pinagana ang bilis sa pag-tap at paghawak"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Tandaan ang mga pagbabago sa bilis ng pag-playback</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Ang mga pagbabago sa bilis ng pag-playback ay ilalapat sa lahat ng mga video</string>

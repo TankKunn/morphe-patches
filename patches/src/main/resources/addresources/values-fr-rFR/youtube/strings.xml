@@ -1572,7 +1572,9 @@ L’activation de cette option peut débloquer des qualités vidéo plus élevé
   <string name="morphe_custom_playback_speeds_parse_exception">Vitesses de lecture personnalisées invalides</string>
   <string name="morphe_custom_playback_speeds_auto">Automatique</string>
   <string name="morphe_speed_tap_and_hold_title">Vitesse personnalisée pour l’appui long</string>
-  <string name="morphe_speed_tap_and_hold_summary">Vitesse de lecture comprise entre 0 et 8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Vitesses de lecture entre 0 et 
+
+Si 0, la vitesse par appui long est désactivée."</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Enregistrer la modification de vitesse de lecture</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">La modification de vitesse de lecture est appliqué pour toutes les vidéos</string>

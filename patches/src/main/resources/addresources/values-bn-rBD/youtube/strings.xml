@@ -1569,7 +1569,9 @@ DeArrow সম্পর্কে আরও জানতে এখানে ট�
   <string name="morphe_custom_playback_speeds_parse_exception">অবৈধ কাস্টম প্লেব্যাক গতি</string>
   <string name="morphe_custom_playback_speeds_auto">স্বতস্ফূর্তভাবে</string>
   <string name="morphe_speed_tap_and_hold_title">কাস্টম ট্যাপ এন্ড হোল্ড স্পিড</string>
-  <string name="morphe_speed_tap_and_hold_summary">০-৮ এর মধ্যে প্লেব্যাক স্পিড</string>
+  <string name="morphe_speed_tap_and_hold_summary">"0-8 এর মধ্যে প্লেব্যাক স্পিড
+
+যদি 0 হয়, তাহলে ট্যাপ এবং হোল্ড স্পিড ডিজেবল করা হবে"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">প্লেব্যাকের স্পিড পরিবর্তন মনে রাখুন</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">প্লেব্যাকের স্পিড পরিবর্তন সকল ভিডিওতে প্রয়োগ হবে</string>

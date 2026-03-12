@@ -1570,7 +1570,6 @@ Om du aktiverar detta kan högre videokvaliteter låsas upp"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Ogiltiga anpassade uppspelningshastigheter</string>
   <string name="morphe_custom_playback_speeds_auto">Automatiskt</string>
   <string name="morphe_speed_tap_and_hold_title">Anpassad hastighet för att trycka länge</string>
-  <string name="morphe_speed_tap_and_hold_summary">Uppspelningshastighet mellan 0 och 8</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Kom ihåg ändringar av uppspelningshastigheten</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Ändring av uppspelningshastighet gäller för alla videor</string>

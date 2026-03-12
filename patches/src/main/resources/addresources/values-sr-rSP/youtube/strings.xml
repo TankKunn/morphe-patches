@@ -1568,7 +1568,9 @@ Vaš korisnički ID je kao lozinka i nikada ga ne treba deliti."</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Неважеће прилагођене брзине репродукције</string>
   <string name="morphe_custom_playback_speeds_auto">Аутоматски</string>
   <string name="morphe_speed_tap_and_hold_title">Прилагођена брзина додиривања и задржавања</string>
-  <string name="morphe_speed_tap_and_hold_summary">Брзина репродукције између 0 и 8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Брзина репродукције између 0-8
+
+Ако је 0, додиром и задржавањем је забрањена брзина"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Запамти промене брзине репродукције</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Промене брзине репродукције се примењују на све видее</string>

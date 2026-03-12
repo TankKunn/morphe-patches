@@ -1569,7 +1569,9 @@ D’fhéadfadh cáilíochtaí físe níos airde a bheith díghlasáilte ach d’
   <string name="morphe_custom_playback_speeds_parse_exception">Luasanna athsheinm saincheaptha neamhbhailí</string>
   <string name="morphe_custom_playback_speeds_auto">Uath</string>
   <string name="morphe_speed_tap_and_hold_title">Luas saincheaptha tapála agus coinnigh</string>
-  <string name="morphe_speed_tap_and_hold_summary">Luas athsheinm eatarthu 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Rapéáilme speed idir 0-8
+
+Más 0, déantar deacáin an luas tap agus hold"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Cuimhnigh athruithe ar luas athsheinm</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Baineann athruithe luais athsheinm le gach físeáin</string>

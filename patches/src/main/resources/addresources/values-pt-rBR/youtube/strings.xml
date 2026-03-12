@@ -1568,7 +1568,9 @@ Habilitar isso pode desbloquear qualidades de vídeo mais altas"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Velocidades de reprodução personalizadas inválidas</string>
   <string name="morphe_custom_playback_speeds_auto">Automático</string>
   <string name="morphe_speed_tap_and_hold_title">Velocidade personalizada de tocar e segurar</string>
-  <string name="morphe_speed_tap_and_hold_summary">Velocidade de reprodução entre 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Velocidade de reprodução entre 0 e 8
+
+Se 0, tocar e segurar desativa a velocidade"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Lembrar mudança na velocidade de reprodução</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Mudanças de velocidade de reprodução se aplicam a todos os vídeos</string>

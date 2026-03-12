@@ -1567,8 +1567,10 @@ Bật tính năng này có thể mở khóa chất lượng video cao hơn"</str
   <string name="morphe_custom_playback_speeds_invalid">Tốc độ tùy chỉnh phải nhỏ hơn %s</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Tốc độ phát lại tùy chỉnh không hợp lệ</string>
   <string name="morphe_custom_playback_speeds_auto">Tự động</string>
-  <string name="morphe_speed_tap_and_hold_title">Tốc độ bấm và giữ tùy chỉnh</string>
-  <string name="morphe_speed_tap_and_hold_summary">Tốc độ phát từ 0 đến 8</string>
+  <string name="morphe_speed_tap_and_hold_title">Tùy chỉnh tốc độ phát khi bấm giữ</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Giá trị tốc độ phát nằm trong khoảng từ 0 đến 8
+
+Nhập 0 để tắt tính năng này"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Nhớ các thay đổi tốc độ phát</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Thay đổi tốc độ phát áp dụng cho tất cả video</string>

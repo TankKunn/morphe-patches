@@ -1565,7 +1565,9 @@ Activarea acestei opțiuni poate debloca calități video mai mari"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Viteze de redare personalizate nevalide</string>
   <string name="morphe_custom_playback_speeds_auto">Automat</string>
   <string name="morphe_speed_tap_and_hold_title">Viteză personalizată de apăsare și menținere</string>
-  <string name="morphe_speed_tap_and_hold_summary">Viteză de redare între 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Viteză de redare între 0-8
+
+Dacă 0, atingerea lungă pentru a activa viteza este dezactivată"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Memorează schimbările vitezei de redare</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Schimbarea vitezei de redare se aplică tuturor videoclipurilor</string>

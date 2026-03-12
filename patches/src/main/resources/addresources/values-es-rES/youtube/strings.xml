@@ -1536,8 +1536,8 @@ Activar esto puede desbloquear calidades de vídeo más altas"</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Mostrar notificación al cambiar la calidad de vídeo</string>
   <string name="morphe_remember_video_quality_last_selected_toast_summary_on">Se muestra una notificación cuando se cambia la calidad de vídeo predeterminada</string>
   <string name="morphe_remember_video_quality_last_selected_toast_summary_off">No se muestra una notificación cuando se cambia la calidad de vídeo predeterminada</string>
-  <string name="morphe_video_quality_default_wifi_title">Calidad de vídeo predeterminada en la red Wi-Fi</string>
-  <string name="morphe_video_quality_default_mobile_title">Calidad de vídeo predeterminada en la red móvil</string>
+  <string name="morphe_video_quality_default_wifi_title">Calidad predeterminada de vídeo en la red Wi-Fi</string>
+  <string name="morphe_video_quality_default_mobile_title">Calidad predeterminada de vídeo en la red móvil</string>
   <string name="morphe_remember_shorts_quality_last_selected_title">Recordar cambios en la calidad de Shorts</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary_on">Los cambios de calidad se aplican a todos los Shorts</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary_off">Los cambios de calidad solo se aplican al Short actual</string>
@@ -1568,7 +1568,9 @@ Activar esto puede desbloquear calidades de vídeo más altas"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Velocidades personalizadas de reproducción no válidas</string>
   <string name="morphe_custom_playback_speeds_auto">Automático</string>
   <string name="morphe_speed_tap_and_hold_title">Velocidad personalizada al mantener pulsado</string>
-  <string name="morphe_speed_tap_and_hold_summary">Velocidad de reproducción entre 0 y 8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Velocidad de reproducción entre 0 y 8
+
+Si es 0, tocar y mantener pulsado desactiva la velocidad"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Recordar cambios de velocidad de reproducción</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Los cambios de velocidad de reproducción se aplican a todos los vídeos</string>

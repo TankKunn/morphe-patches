@@ -1568,7 +1568,9 @@ Second \"item\" text"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Μη έγκυρες προσαρμοσμένες ταχύτητες αναπαραγωγής</string>
   <string name="morphe_custom_playback_speeds_auto">Αυτόματη</string>
   <string name="morphe_speed_tap_and_hold_title">Προσαρμοσμένη ταχύτητα παρατεταμένου πατήματος</string>
-  <string name="morphe_speed_tap_and_hold_summary">Ταχύτητα αναπαραγωγής μεταξύ 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Ταχύτητα αναπαραγωγής μεταξύ 0-8
+
+Εάν 0, απενεργοποιείται η ταχύτητα πατήματος και συγκράτησης"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Απομνημόνευση αλλαγών ταχύτητας αναπαραγωγής</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Οι αλλαγές ταχύτητας αναπαραγωγής ισχύουν για όλα τα βίντεο</string>
