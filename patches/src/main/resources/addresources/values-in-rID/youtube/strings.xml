@@ -1288,12 +1288,18 @@ Siap mengirim?"</string>
   <string name="morphe_change_form_factor_entry_4">Otomotif</string>
   <string name="morphe_change_form_factor_user_dialog_message">"Perubahan meliputi:
 
-Tata letak tablet
+Tata letak Tablet
 • Postingan komunitas disembunyikan
+• Pengaturan pemutaran di feed tidak tersedia
+• Tombol Remix dan Tombol Suara tidak tersedia di Shorts
+• Bilah tindakan video tidak dilipat
 
-Tata letak otomotif
-• Shorts dibuka di pemutar biasa
-• Umpan diatur berdasarkan topik dan channel"</string>
+Tata letak Otomotif
+• Feed diatur berdasarkan topik dan saluran
+• Pengaturan pemutaran di feed tidak tersedia
+• Tombol Remix dan Tombol Suara tidak tersedia di Shorts
+• Shorts terbuka di pemutar reguler
+• Bilah tindakan video tidak dilipat"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Palsukan versi app</string>
   <string name="morphe_spoof_app_version_summary_on">Versi dipalsukan</string>

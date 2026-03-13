@@ -1288,14 +1288,20 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">スマートフォン</string>
   <string name="morphe_change_form_factor_entry_3">タブレット</string>
   <string name="morphe_change_form_factor_entry_4">Automotive</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"以下の変更を伴います:
+  <string name="morphe_change_form_factor_user_dialog_message">"変更点:
 
-タブレット レイアウト
-• コミュニティ投稿が表示されない
+タブレットレイアウト
+• コミュニティの投稿は非表示
+• フィードでの再生設定は利用できません
+• ショート動画の「リミックス」ボタンと「サウンド」ボタンは利用できません
+• 動画アクションバーは折りたたまれません
 
-Automotive レイアウト
-• ショート動画を通常のプレーヤーで開く
-• フィードがトピックやチャンネルごとに分類された形で表示される"</string>
+自動車レイアウト
+• フィードはトピックとチャンネルで構成されています
+• フィードでの再生設定は利用できません
+• ショート動画の「リミックス」ボタンと「サウンド」ボタンは利用できません
+• ショート動画は通常のプレーヤーで開きます
+• 動画アクションバーは折りたたまれません"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">アプリのバージョンを偽装</string>
   <string name="morphe_spoof_app_version_summary_on">アプリのバージョンは偽装されています</string>
@@ -1564,13 +1570,13 @@ Automotive レイアウト
   <string name="morphe_restore_old_speed_menu_summary_off">新しいスタイルの再生速度メニューが表示されます</string>
   <string name="morphe_custom_playback_speeds_title">カスタム再生速度リスト</string>
   <string name="morphe_custom_playback_speeds_summary">カスタム再生速度リストを編集します</string>
-  <string name="morphe_custom_playback_speeds_invalid">再生速度は %s 未満でなければなりません</string>
+  <string name="morphe_custom_playback_speeds_invalid">再生速度は %s 以下でなければなりません</string>
   <string name="morphe_custom_playback_speeds_parse_exception">カスタム再生速度リストの値が無効です</string>
   <string name="morphe_custom_playback_speeds_auto">自動</string>
   <string name="morphe_speed_tap_and_hold_title">長押し倍速再生の速度</string>
-  <string name="morphe_speed_tap_and_hold_summary">"0～8の再生速度
+  <string name="morphe_speed_tap_and_hold_summary">"再生速度の範囲は 0-8 です
 
-0の場合、タップ＆ホールド速度が無効になります"</string>
+0 に設定すると、長押し倍速再生そのものが無効になります。"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">再生速度の変更を保存</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">再生速度の変更はすべての動画に適用されます</string>

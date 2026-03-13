@@ -1294,10 +1294,16 @@ Second \"item\" text"</string>
 
 平板电脑布局
 • 社区帖子已隐藏
+• 订阅源中的播放设置不可用
+• Shorts 中未提供 Remix 按钮和 Sound 按钮
+• 视频操作栏未折叠
 
-汽车布局
+车载布局
+• 订阅源按主题和频道组织
+• 订阅源中的播放设置不可用
+• Shorts 中未提供 Remix 按钮和 Sound 按钮
 • Shorts 在常规播放器中打开
-• Feed 按主题和频道组织"</string>
+• 视频操作栏未折叠"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">伪装应用程序版本</string>
   <string name="morphe_spoof_app_version_summary_on">客户端版本已伪装</string>

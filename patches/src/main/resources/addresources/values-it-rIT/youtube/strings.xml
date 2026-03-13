@@ -1287,14 +1287,20 @@ Pronto per l'invio?"</string>
   <string name="morphe_change_form_factor_entry_2">Telefono</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Veicoli</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Le modifiche includono:
+  <string name="morphe_change_form_factor_user_dialog_message">"Modifiche incluse:
 
 Layout per tablet
 • I post della community sono nascosti
+• L'impostazione di riproduzione nei feed non è disponibile
+• Il pulsante Remix e il pulsante Audio non sono disponibili in Shorts
+• La barra delle azioni video non è collassata
 
 Layout per auto
-• Gli Shorts si aprono nel normale player
-• Il feed è organizzato per argomenti e canali"</string>
+• Il feed è organizzato per argomenti e canali
+• L'impostazione di riproduzione nei feed non è disponibile
+• Il pulsante Remix e il pulsante Audio non sono disponibili in Shorts
+• Shorts si apre nel lettore standard
+• La barra delle azioni video non è collassata"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Simula la versione dell\'app</string>
   <string name="morphe_spoof_app_version_summary_on">La simulazione della versione dell\'app è attivata</string>

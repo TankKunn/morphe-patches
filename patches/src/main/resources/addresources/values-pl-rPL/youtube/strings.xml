@@ -1288,14 +1288,20 @@ Gotowy do przesłania?"</string>
   <string name="morphe_change_form_factor_entry_2">Telefonowy</string>
   <string name="morphe_change_form_factor_entry_3">Tabletowy</string>
   <string name="morphe_change_form_factor_entry_4">Samochodowy</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Zmiany zawierają:
+  <string name="morphe_change_form_factor_user_dialog_message">"Zmiany obejmują:
 
-Układ tabletowy:
+Układ dla tabletów
 • Posty społeczności są ukryte
+• Ustawienie odtwarzania w kanałach nie jest dostępne
+• Przycisk Remix i przycisk Dźwięku nie są dostępne w Shorts
+• Pasek akcji wideo nie jest zwijany
 
-Układ samochodowy:
-• Shortsy otwierają się w zwykłym odtwarzaczu
-• Strona główna jest sortowana po tematach i kanałach"</string>
+Układ dla samochodów
+• Kanał jest zorganizowany według tematów i kanałów
+• Ustawienie odtwarzania w kanałach nie jest dostępne
+• Przycisk Remix i przycisk Dźwięku nie są dostępne w Shorts
+• Shorts otwierają się w regularnym odtwarzaczu
+• Pasek akcji wideo nie jest zwijany"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Oszukiwanie wersji aplikacji</string>
   <string name="morphe_spoof_app_version_summary_on">Włączone</string>
@@ -1572,7 +1578,7 @@ Włączenie tej opcji może odblokować wyższe jakości wideo"</string>
   <string name="morphe_speed_tap_and_hold_title">Prędkość dostosowywana przytrzymaniem</string>
   <string name="morphe_speed_tap_and_hold_summary">"Prędkość odtwarzania od 0 do 8
 
-Jeśli 0, dotknięcie i przytrzymanie prędkości jest wyłączone"</string>
+Wartość 0 wyłącza funkcję"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Zapamiętywanie prędkości odtwarzania</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Dotyczy wszystkich filmów</string>

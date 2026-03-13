@@ -97,7 +97,7 @@ Second \"item\" text"</string>
   <string name="morphe_debug_feature_flags_manager_summary">管理布林功能旗標</string>
   <string name="morphe_debug_feature_flags_manager_active_header">啟用的旗標 (%d)</string>
   <string name="morphe_debug_feature_flags_manager_blocked_header">已封鎖的旗標 (%d)</string>
-  <string name="morphe_debug_feature_flags_manager_search_hint">搜尋旗標...</string>
+  <string name="morphe_debug_feature_flags_manager_search_hint">搜尋旗標...…</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">已儲存旗標</string>
   <string name="morphe_debug_feature_flags_manager_toast_reset">已重設旗標</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">已複製旗標到剪貼簿</string>

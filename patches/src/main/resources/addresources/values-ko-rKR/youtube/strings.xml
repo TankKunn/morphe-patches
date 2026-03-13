@@ -1285,14 +1285,20 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">폰</string>
   <string name="morphe_change_form_factor_entry_3">태블릿</string>
   <string name="morphe_change_form_factor_entry_4">오토모티브</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"변경 사항:
+  <string name="morphe_change_form_factor_user_dialog_message">"변경 사항은 다음과 같습니다.
 
 태블릿 레이아웃
-• 커뮤니티 게시물이 숨겨집니다
+• 커뮤니티 게시물은 숨겨져 있습니다.
+• 피드에서 재생 설정은 사용할 수 없습니다.
+• Shorts에서 믹스 버튼과 사운드 버튼은 사용할 수 없습니다.
+• 동영상 작업 표시줄이 접히지 않습니다.
 
-오토모티브 레이아웃
-• Shorts가 일반 플레이어에서 재생됩니다
-• 피드가 주제와 채널별로 구성됩니다"</string>
+자동차 레이아웃
+• 피드가 주제 및 채널별로 구성됩니다.
+• 피드에서 재생 설정은 사용할 수 없습니다.
+• Shorts에서 믹스 버튼과 사운드 버튼은 사용할 수 없습니다.
+• Shorts가 일반 플레이어에서 열립니다.
+• 동영상 작업 표시줄이 접히지 않습니다."</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">앱 버전 속이기</string>
   <string name="morphe_spoof_app_version_summary_on">앱 버전이 속여집니다</string>

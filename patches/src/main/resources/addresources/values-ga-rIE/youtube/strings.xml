@@ -1287,14 +1287,20 @@ Réidh le cur isteach?"</string>
   <string name="morphe_change_form_factor_entry_2">Guthán</string>
   <string name="morphe_change_form_factor_entry_3">Táibléad</string>
   <string name="morphe_change_form_factor_entry_4">Gluaisteán</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Áirítear leis na hathruithe:
+  <string name="morphe_change_form_factor_user_dialog_message">"Álainn na hathrú: 
 
-Leagan amach táibléid
-• Tá poist phobail i bhfolach
+Críothacht teilgtheoir
+• Tá ranna pobail faoi chríocha
+• Ní féidir suim leanúna a chur i riantanas
+• Ní bhíonn cnaipe Athrú agus cnaipe Fuar le himeacht i Shorts
+• Ní thiocfaidh barr gníomhaireachta fídeá in chloisteach
 
-Leagan amach gluaisteán
-• Gearrscannáin oscailte sa ghnáth-imreoir
-• Tá an fotha eagraithe de réir topaicí agus bealaí"</string>
+Críothacht feithicil
+• Tá an riantanas ordaithe de réir áit agus gcórais
+• Ní féidir suim leanúna a chur i riantanas
+• Ní bhíonn cnaipe Athrú agus cnaipe Fuar le himeacht i Shorts
+• Osclaíonn Shorts sa n-imreoir ginearálta
+• Ní thiocfaidh barr gníomhaireachta fídeá in chloisteach"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Leagan aip bréige</string>
   <string name="morphe_spoof_app_version_summary_on">Leagan bréagach</string>

@@ -1285,14 +1285,20 @@ Készen állsz a beküldésre?"</string>
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Táblagép</string>
   <string name="morphe_change_form_factor_entry_4">Autóipari</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"A változások a következők:
+  <string name="morphe_change_form_factor_user_dialog_message">"A módosítások a következők:
 
-Tablet elrendezés
-• A közösségi bejegyzések rejtve vannak
+Táblagépes elrendezés
+• A közösségi bejegyzések el vannak rejtve
+• A feed-ben történő lejátszás beállítás nem érhető el
+• A Remix gomb és a Hang gomb nem érhető el a Shortsban
+• A videó műveleti sáv nem omlik össze
 
-Autóipari elrendezés
-• A \"Shorts\" a szokásos lejátszóban nyílik meg
-• A hírcsatorna témák és csatornák szerint van rendezve"</string>
+Autóelrendezés
+• A feed témák és csatornák szerint van szervezve
+• A feed-ben történő lejátszás beállítás nem érhető el
+• A Remix gomb és a Hang gomb nem érhető el a Shortsban
+• A Shorts a hagyományos lejátszóban nyílnak meg
+• A videó műveleti sáv nem omlik össze"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Alkalmazásverzió hamisítása</string>
   <string name="morphe_spoof_app_version_summary_on">A verzió hamisítva</string>
