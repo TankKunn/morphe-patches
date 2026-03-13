@@ -1,3 +1,17 @@
+# [1.19.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.19.0-dev.1...v1.19.0-dev.2) (2026-03-13)
+
+
+### Bug Fixes
+
+* **Sanitize sharing links:** Sanitize new `is` sharing parameter ([18b1fdb](https://github.com/MorpheApp/morphe-patches/commit/18b1fdb80c76a2fc4510fc53775437f5cbfc8bd9))
+* **YouTube - Change form factor:** Explore button sometimes shows in Automotive layout ([#820](https://github.com/MorpheApp/morphe-patches/issues/820)) ([2980489](https://github.com/MorpheApp/morphe-patches/commit/2980489f3c0e6c95d9fd71c8b094ae9423da2a1b))
+
+
+### Features
+
+* **Reddit:** Add experimental support for `2026.11.0` ([e09ddcb](https://github.com/MorpheApp/morphe-patches/commit/e09ddcb9d4082ccd13d3b131baf91d24cf003942))
+* **YouTube:** Add experimental support for `21.11.480` ([d8ced89](https://github.com/MorpheApp/morphe-patches/commit/d8ced89845969bc09275ae540af82229f67799b3))
+
 # [1.19.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.18.1-dev.2...v1.19.0-dev.1) (2026-03-12)
 
 
