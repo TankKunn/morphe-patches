@@ -1288,20 +1288,20 @@ Prêt à le soumettre ?"</string>
   <string name="morphe_change_form_factor_entry_2">Téléphone</string>
   <string name="morphe_change_form_factor_entry_3">Tablette</string>
   <string name="morphe_change_form_factor_entry_4">Automobile</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Les modifications incluent :
+  <string name="morphe_change_form_factor_user_dialog_message">"Les changements incluent :
 
-Disposition pour tablette
-• Les publications de la communauté sont masquées
-• Le paramètre de lecture dans les flux n'est pas disponible
-• Le bouton Remix et le bouton Son ne sont pas disponibles dans Shorts
-• La barre d'actions vidéo n'est pas rétractée
+Mise en page Tablette
+• Les posts communautaires sont masquées
+• Le lecture dans les paramètres de flux n'est pas disponible
+• Le bouton 'Remix' et le bouton 'Son' ne sont pas disponibles dans les Shorts
+• La barre d’actions de la vidéo n’est pas réduite
 
-Disposition pour automobile
-• Le flux est organisé par sujets et chaînes
-• Le paramètre de lecture dans les flux n'est pas disponible
-• Le bouton Remix et le bouton Son ne sont pas disponibles dans Shorts
-• Les Shorts s'ouvrent dans le lecteur standard
-• La barre d'actions vidéo n'est pas rétractée"</string>
+Mise en page Automobile
+• Le flux est organisé par sujets et par chaînes
+• Le lecture dans les paramètres de flux n'est pas disponible
+• Le bouton 'Remix' et le bouton 'Son' ne sont pas disponibles dans les Shorts
+• Les Shorts s'ouvrent dans le lecteur normal
+• La barre d’actions de la vidéo n’est pas réduite"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Falsifier la version de l\'application</string>
   <string name="morphe_spoof_app_version_summary_on">Version falsifiée</string>

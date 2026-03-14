@@ -800,8 +800,8 @@ A Hangos menü megjelenítéséhez változtassa meg a 'Spoof video streams'-et '
   <string name="morphe_hide_captions_button_title">Felirat gomb elrejtése</string>
   <string name="morphe_hide_captions_button_summary_on">A feliratok gomb el van rejtve</string>
   <string name="morphe_hide_captions_button_summary_off">A feliratok gomb látható</string>
-  <string name="morphe_hide_cast_button_title">Küldés gomb elrejtése</string>
-  <string name="morphe_hide_cast_button_summary_on">Az átküldés gomb rejtve van</string>
+  <string name="morphe_hide_cast_button_title">Átküldés gomb elrejtése</string>
+  <string name="morphe_hide_cast_button_summary_on">Az átküldés gomb el van rejtve</string>
   <string name="morphe_hide_cast_button_summary_off">Az átküldés gomb látható</string>
   <string name="morphe_hide_collapse_button_title">Elrejtés gomb elrejtése</string>
   <string name="morphe_hide_collapse_button_summary_on">Elrejtés gomb elrejtve</string>

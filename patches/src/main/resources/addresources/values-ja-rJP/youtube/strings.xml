@@ -1288,20 +1288,20 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">スマートフォン</string>
   <string name="morphe_change_form_factor_entry_3">タブレット</string>
   <string name="morphe_change_form_factor_entry_4">Automotive</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"変更点:
+  <string name="morphe_change_form_factor_user_dialog_message">"以下の変更を伴います:
 
-タブレットレイアウト
-• コミュニティの投稿は非表示
-• フィードでの再生設定は利用できません
-• ショート動画の「リミックス」ボタンと「サウンド」ボタンは利用できません
-• 動画アクションバーは折りたたまれません
+タブレット レイアウト
+• コミュニティ投稿が表示されない
+• YouTube 設定に「フィードで再生」が表示されない
+• ショート動画の「リミックス」ボタンと「サウンド」ボタンが利用できない
+• 動画のアクションバーの文字表示が復元される
 
-自動車レイアウト
-• フィードはトピックとチャンネルで構成されています
-• フィードでの再生設定は利用できません
-• ショート動画の「リミックス」ボタンと「サウンド」ボタンは利用できません
-• ショート動画は通常のプレーヤーで開きます
-• 動画アクションバーは折りたたまれません"</string>
+Automotive レイアウト
+• フィードがトピックやチャンネルごとに分類された形で表示される
+• YouTube 設定に「フィードで再生」が表示されない
+• ショート動画のリミックスボタンとサウンドボタンが利用できない
+• ショート動画が通常のプレーヤーで再生される
+• 動画のアクションバーの文字表示が復元される"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">アプリのバージョンを偽装</string>
   <string name="morphe_spoof_app_version_summary_on">アプリのバージョンは偽装されています</string>
@@ -1314,7 +1314,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_app_version_target_title">アプリバージョンの偽装先</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - 古い「再生リストに保存」を復元</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - アイコンの太字表示を無効化</string>
-  <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - アクション ボタンの文字表示を復元</string>
+  <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - 動画のアクションバーの文字表示を復元</string>
   <!-- misc.sharesheet.openSystemShareSheetPatch -->
   <string name="morphe_open_system_share_sheet_title">システムの共有メニューを開く</string>
   <string name="morphe_open_system_share_sheet_summary_on">システムの共有メニューを開きます</string>

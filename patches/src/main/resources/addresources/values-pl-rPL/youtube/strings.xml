@@ -1288,20 +1288,20 @@ Gotowy do przesłania?"</string>
   <string name="morphe_change_form_factor_entry_2">Telefonowy</string>
   <string name="morphe_change_form_factor_entry_3">Tabletowy</string>
   <string name="morphe_change_form_factor_entry_4">Samochodowy</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Zmiany obejmują:
+  <string name="morphe_change_form_factor_user_dialog_message">"Zmiany zawierają:
 
-Układ dla tabletów
+Układ tabletowy
 • Posty społeczności są ukryte
-• Ustawienie odtwarzania w kanałach nie jest dostępne
-• Przycisk Remix i przycisk Dźwięku nie są dostępne w Shorts
-• Pasek akcji wideo nie jest zwijany
+• Ustawienie odtwarzania na stronie głównej nie jest dostępne
+• Przyciski Remiks i Dźwięk nie są dostępne w Shortsach
+• Pasek akcji filmu nie jest zwinięty
 
-Układ dla samochodów
-• Kanał jest zorganizowany według tematów i kanałów
-• Ustawienie odtwarzania w kanałach nie jest dostępne
-• Przycisk Remix i przycisk Dźwięku nie są dostępne w Shorts
-• Shorts otwierają się w regularnym odtwarzaczu
-• Pasek akcji wideo nie jest zwijany"</string>
+Układ samochodowy
+• Strona główna jest uporządkowana według tematów i kanałów
+• Ustawienie odtwarzania na stronie głównej nie jest dostępne
+• Przyciski Remiks i Dźwięk nie są dostępne w Shortsach
+• Shortsy otwierają się w zwykłym odtwarzaczu
+• Pasek akcji filmu nie jest zwinięty"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Oszukiwanie wersji aplikacji</string>
   <string name="morphe_spoof_app_version_summary_on">Włączone</string>
@@ -1314,7 +1314,7 @@ Jeśli później zostanie to wyłączone, rekomendowane jest usunięcie danych a
   <string name="morphe_spoof_app_version_target_title">Oszukiwana wersja aplikacji</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Przywraca stare menu dodawania do playlisty</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Wyłącza pogrubione ikony</string>
-  <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Przywraca nieskondensowany pasek akcji filmu</string>
+  <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Przywraca niezwinięty pasek akcji filmu</string>
   <!-- misc.sharesheet.openSystemShareSheetPatch -->
   <string name="morphe_open_system_share_sheet_title">Wygląd panelu udostępniania</string>
   <string name="morphe_open_system_share_sheet_summary_on">Systemowy</string>
