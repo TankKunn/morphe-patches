@@ -1,3 +1,13 @@
+# [1.19.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.19.0-dev.2...v1.19.0-dev.3) (2026-03-14)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Resolve "Hide community posts" not working when selecting a channel from subscribed channels bar in Subscriptions tab ([#816](https://github.com/MorpheApp/morphe-patches/issues/816)) ([416d4ea](https://github.com/MorpheApp/morphe-patches/commit/416d4ea2b1c7d545d5c9c6ec1af1ce58a8ff5904))
+* **YouTube - Hide Shorts components:** Resolve "Hide 'Use this sound' button" and "Hide 'Use this template' button" breaking Shorts player ([#830](https://github.com/MorpheApp/morphe-patches/issues/830)) ([ffff45a](https://github.com/MorpheApp/morphe-patches/commit/ffff45a529f788707464eed85b7cc6c2c7e513fb))
+* **YouTube - Video quality:** Initial video quality is not overridden ([#822](https://github.com/MorpheApp/morphe-patches/issues/822)) ([753026a](https://github.com/MorpheApp/morphe-patches/commit/753026a6a11552be34b41d55f5d6c0bc728858c7))
+* **YouTube:** Do not show fullscreen black gradient with 21.03+ experimental app targets ([0202d57](https://github.com/MorpheApp/morphe-patches/commit/0202d57a2cb0af94257f06163f0c8e219346ac95))
+
 # [1.19.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.19.0-dev.1...v1.19.0-dev.2) (2026-03-13)
 
 
