@@ -1,3 +1,10 @@
+# [1.19.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.19.0-dev.3...v1.19.0-dev.4) (2026-03-15)
+
+
+### Features
+
+* **Reddit:** Add "Disable modern home" and "Show view count", fix "Hide navigation buttons" ([#823](https://github.com/MorpheApp/morphe-patches/issues/823)) ([d7c26f2](https://github.com/MorpheApp/morphe-patches/commit/d7c26f257470b66d319bc8e156d9651552a7aac0))
+
 # [1.19.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.19.0-dev.2...v1.19.0-dev.3) (2026-03-14)
 
 
