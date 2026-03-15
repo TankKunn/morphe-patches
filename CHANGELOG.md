@@ -1,3 +1,10 @@
+# [1.19.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.19.0-dev.4...v1.19.0-dev.5) (2026-03-15)
+
+
+### Bug Fixes
+
+* **YouTube - Disable Shorts resuming on startup:** Resolve patch not working on experimental versions ([#848](https://github.com/MorpheApp/morphe-patches/issues/848)) ([0b8e77a](https://github.com/MorpheApp/morphe-patches/commit/0b8e77ac56ffc637bf2186e98189857362a14438))
+
 # [1.19.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.19.0-dev.3...v1.19.0-dev.4) (2026-03-15)
 
 

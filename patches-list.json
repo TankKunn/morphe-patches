@@ -1,5 +1,5 @@
 {
-  "version": "1.19.0-dev.4",
+  "version": "1.19.0-dev.5",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -553,6 +553,25 @@
       "options": []
     },
     {
+      "name": "Disable Shorts resuming on startup",
+      "description": "Adds an option to disable Shorts from resuming on app startup when Shorts were last being watched.",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch",
+        "BytecodePatch",
+        "ResourcePatch"
+      ],
+      "compatiblePackages": {
+        "com.google.android.youtube": [
+          "20.44.38",
+          "20.40.45",
+          "20.31.42",
+          "20.21.37"
+        ]
+      },
+      "options": []
+    },
+    {
       "name": "Disable double tap actions",
       "description": "Adds an option to disable player double tap gestures.",
       "use": true,
@@ -630,25 +649,6 @@
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch"
-      ],
-      "compatiblePackages": {
-        "com.google.android.youtube": [
-          "20.44.38",
-          "20.40.45",
-          "20.31.42",
-          "20.21.37"
-        ]
-      },
-      "options": []
-    },
-    {
-      "name": "Disable resuming Shorts on startup",
-      "description": "Adds an option to disable the Shorts player from resuming on app startup when Shorts were last being watched.",
-      "use": true,
-      "dependencies": [
-        "BytecodePatch",
-        "BytecodePatch",
-        "ResourcePatch"
       ],
       "compatiblePackages": {
         "com.google.android.youtube": [
