@@ -23,7 +23,6 @@
 ### Features
 
 * **Reddit:** Add "Disable modern home" and "Show view count", fix "Hide navigation buttons" ([#823](https://github.com/MorpheApp/morphe-patches/issues/823)) ([d7c26f2](https://github.com/MorpheApp/morphe-patches/commit/d7c26f257470b66d319bc8e156d9651552a7aac0))
-* **Reddit:** Add experimental support for `2026.11.0` ([e09ddcb](https://github.com/MorpheApp/morphe-patches/commit/e09ddcb9d4082ccd13d3b131baf91d24cf003942))
 * **Spoof video streams:** Update yt-dlp-ejs ([#871](https://github.com/MorpheApp/morphe-patches/issues/871)) ([0fd599a](https://github.com/MorpheApp/morphe-patches/commit/0fd599a08145c9a78d0882342095a26f6a230102))
 * **Theme:** Use dynamic system accents for Material You colors ([#693](https://github.com/MorpheApp/morphe-patches/issues/693)) ([1a2e61c](https://github.com/MorpheApp/morphe-patches/commit/1a2e61ce2e64f82adc51f215ed79b8c02cf6b869))
 * **YouTube - Playback speed:** Allows disabling tap and hold speed ([#819](https://github.com/MorpheApp/morphe-patches/issues/819)) ([948a8a1](https://github.com/MorpheApp/morphe-patches/commit/948a8a1c4d29b2d8855225706cb7db9c060d7a18))
