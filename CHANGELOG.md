@@ -47,7 +47,6 @@
 
 ### Features
 
-* **Reddit:** Add experimental support for `2026.11.0` ([e09ddcb](https://github.com/MorpheApp/morphe-patches/commit/e09ddcb9d4082ccd13d3b131baf91d24cf003942))
 * **YouTube:** Add experimental support for `21.11.480` ([d8ced89](https://github.com/MorpheApp/morphe-patches/commit/d8ced89845969bc09275ae540af82229f67799b3))
 
 # [1.19.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.18.1-dev.2...v1.19.0-dev.1) (2026-03-12)
