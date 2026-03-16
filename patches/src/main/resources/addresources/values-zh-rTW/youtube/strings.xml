@@ -1355,10 +1355,10 @@ Second \"item\" text"</string>
 
 限制：工具列上的返回按鈕可能無法運作"</string>
   <string name="morphe_change_start_page_always_summary_off">起始頁面僅在應用程式啟動時變更</string>
-  <!-- layout.startupshortsreset.disableResumingShortsOnStartupPatch -->
-  <string name="morphe_disable_resuming_shorts_player_title">停用 Shorts 播放器接續播放功能</string>
-  <string name="morphe_disable_resuming_shorts_player_summary_on">應用程式啟動時，Shorts 播放器將不會接續播放</string>
-  <string name="morphe_disable_resuming_shorts_player_summary_off">應用程式啟動時，Shorts 播放器將接續播放</string>
+  <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
+  <string name="morphe_disable_shorts_resuming_on_startup_title">停用應用程式啟動時自動播放Shorts</string>
+  <string name="morphe_disable_shorts_resuming_on_startup_summary_on">應用程式啟動時，Shorts 不會自動接續播放</string>
+  <string name="morphe_disable_shorts_resuming_on_startup_summary_off">應用程式啟動時，Shorts 會自動接續播放</string>
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
   <string name="morphe_shorts_player_type_title">Shorts 開啟方式</string>
   <string name="morphe_shorts_player_type_shorts">Shorts 播放器</string>
