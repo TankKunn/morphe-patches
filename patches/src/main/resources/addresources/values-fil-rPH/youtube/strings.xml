@@ -1287,14 +1287,20 @@ Handa nang isumite?"</string>
   <string name="morphe_change_form_factor_entry_2">Telepono</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Automotive</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Kabilang ang mga pagbabago:
+  <string name="morphe_change_form_factor_user_dialog_message">"Kasama sa mga pagbabago:
 
 Tablet layout
-• Nakatagong mga post ng komunidad
+• Nakatago ang mga post ng komunidad
+• Hindi magagamit ang playback sa feeds setting
+• Hindi magagamit ang Remix button at Sound button sa Shorts
+• Hindi nakatiklop ang Video action bar
 
 Automotive layout
-• Ang Shorts ay nagbubukas sa regular na player
-• Ang feed ay inaayos ayon sa mga paksa at channels"</string>
+• Nakapag-ayos ang feed ayon sa mga paksa at channel
+• Hindi magagamit ang playback sa feeds setting
+• Hindi magagamit ang Remix button at Sound button sa Shorts
+• Ang Shorts ay bumubukas sa regular na player
+• Hindi nakatiklop ang Video action bar"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Spoof app version</string>
   <string name="morphe_spoof_app_version_summary_on">Bersyon ay ginaya</string>
@@ -1349,10 +1355,10 @@ Kung i-off ang, inirerekomenda na i-clear ang app data para maiwasan ang UI bugs
 
 Limitasyon: Ang paggamit ng pindutan ng back sa toolbar ay maaaring hindi gumana"</string>
   <string name="morphe_change_start_page_always_summary_off">Binabago lamang ang panimulang pahina sa pagsisimula ng app</string>
-  <!-- layout.startupshortsreset.disableResumingShortsOnStartupPatch -->
-  <string name="morphe_disable_resuming_shorts_player_title">I-disable ang pagbabalik ng Shorts player</string>
-  <string name="morphe_disable_resuming_shorts_player_summary_on">Hindi ipagpapatuloy ng Shorts player ang pag-play sa pagsisimula ng app</string>
-  <string name="morphe_disable_resuming_shorts_player_summary_off">Ipagpapatuloy ng Shorts player ang pag-play sa pagsisimula ng app</string>
+  <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
+  <string name="morphe_disable_shorts_resuming_on_startup_title">I-disable ang Shorts na nagpapatuloy sa startup</string>
+  <string name="morphe_disable_shorts_resuming_on_startup_summary_on">Ang Shorts ay hindi magpapatuloy sa startup ng app</string>
+  <string name="morphe_disable_shorts_resuming_on_startup_summary_off">Ang Shorts ay magpapatuloy sa startup ng app</string>
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
   <string name="morphe_shorts_player_type_title">Buksan ang Shorts gamit ang</string>
   <string name="morphe_shorts_player_type_shorts">Shorts player</string>
@@ -1569,7 +1575,9 @@ Ang pag-enable nito ay maaaring mag-unlock ng mas mataas na kalidad ng video"</s
   <string name="morphe_custom_playback_speeds_parse_exception">Hindi balido ang custom na bilis ng pag-playback</string>
   <string name="morphe_custom_playback_speeds_auto">Awtomatiko</string>
   <string name="morphe_speed_tap_and_hold_title">Custom na bilis ng pag-tap at pagpindot</string>
-  <string name="morphe_speed_tap_and_hold_summary">Bilis ng pag-playback sa pagitan ng 0-8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Bilis ng pag-playback sa pagitan ng 0-8
+
+Kung 0, hindi pinagana ang bilis sa pag-tap at paghawak"</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Tandaan ang mga pagbabago sa bilis ng pag-playback</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">Ang mga pagbabago sa bilis ng pag-playback ay ilalapat sa lahat ng mga video</string>

@@ -4,6 +4,8 @@
  *
  * Original hard forked code:
  * https://github.com/ReVanced/revanced-patches/commit/724e6d61b2ecd868c1a9a37d465a688e83a74799
+ *
+ * See the included NOTICE file for GPLv3 §7(b) and §7(c) terms that apply to Morphe contributions.
  */
 
 package app.morphe.extension.youtube.patches;
@@ -109,8 +111,8 @@ public class ShortsAutoplayPatch {
             }
 
             ShortsLoopBehavior autoPlayBehavior = IS_21_10_OR_GREATER
-                    ? ShortsLoopBehavior.SINGLE_PLAY
-                    : ShortsLoopBehavior.AUTO_ADVANCE;
+                    ? ShortsLoopBehavior.AUTO_ADVANCE
+                    : ShortsLoopBehavior.SINGLE_PLAY;
 
             Enum<?> overrideBehavior = (autoplay
                     ? autoPlayBehavior

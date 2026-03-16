@@ -1288,14 +1288,20 @@ Prêt à le soumettre ?"</string>
   <string name="morphe_change_form_factor_entry_2">Téléphone</string>
   <string name="morphe_change_form_factor_entry_3">Tablette</string>
   <string name="morphe_change_form_factor_entry_4">Automobile</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Les changements incluent :
+  <string name="morphe_change_form_factor_user_dialog_message">"Les changements incluent :
 
 Mise en page Tablette
-• Les 'Posts communautaires' sont masqués
+• Les posts communautaires sont masquées
+• Le lecture dans les paramètres de flux n'est pas disponible
+• Le bouton 'Remix' et le bouton 'Son' ne sont pas disponibles dans les Shorts
+• La barre d’actions de la vidéo n’est pas réduite
 
 Mise en page Automobile
+• Le flux est organisé par sujets et par chaînes
+• Le lecture dans les paramètres de flux n'est pas disponible
+• Le bouton 'Remix' et le bouton 'Son' ne sont pas disponibles dans les Shorts
 • Les Shorts s'ouvrent dans le lecteur normal
-• Le flux est organisé par sujets et chaînes"</string>
+• La barre d’actions de la vidéo n’est pas réduite"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Falsifier la version de l\'application</string>
   <string name="morphe_spoof_app_version_summary_on">Version falsifiée</string>
@@ -1350,10 +1356,10 @@ Si cette option est désactivée ultérieurement, il est recommandé de vider le
 
 Limitation : Le bouton 'Retour' de la barre d'outils peut ne pas fonctionner."</string>
   <string name="morphe_change_start_page_always_summary_off">La page de démarrage est changée uniquement au démarrage de l\'application</string>
-  <!-- layout.startupshortsreset.disableResumingShortsOnStartupPatch -->
-  <string name="morphe_disable_resuming_shorts_player_title">Désactiver la reprise de lecture Shorts</string>
-  <string name="morphe_disable_resuming_shorts_player_summary_on">Les Shorts ne reprennent pas au démarrage de l\'application</string>
-  <string name="morphe_disable_resuming_shorts_player_summary_off">Les Shorts reprennent au démarrage de l\'application</string>
+  <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
+  <string name="morphe_disable_shorts_resuming_on_startup_title">Désactiver la reprise des Shorts au démarrage</string>
+  <string name="morphe_disable_shorts_resuming_on_startup_summary_on">Les Shorts ne reprennent pas au démarrage de l\'application</string>
+  <string name="morphe_disable_shorts_resuming_on_startup_summary_off">Les Shorts reprennent au démarrage de l\'application</string>
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
   <string name="morphe_shorts_player_type_title">Ouvrir les Shorts avec</string>
   <string name="morphe_shorts_player_type_shorts">Le lecteur Shorts</string>
@@ -1572,7 +1578,9 @@ L’activation de cette option peut débloquer des qualités vidéo plus élevé
   <string name="morphe_custom_playback_speeds_parse_exception">Vitesses de lecture personnalisées invalides</string>
   <string name="morphe_custom_playback_speeds_auto">Automatique</string>
   <string name="morphe_speed_tap_and_hold_title">Vitesse personnalisée pour l’appui long</string>
-  <string name="morphe_speed_tap_and_hold_summary">Vitesse de lecture comprise entre 0 et 8</string>
+  <string name="morphe_speed_tap_and_hold_summary">"Vitesses de lecture entre 0 et 8
+
+Si 0, la vitesse par appui long est désactivée."</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Enregistrer la modification de vitesse de lecture</string>
   <string name="morphe_remember_playback_speed_last_selected_summary_on">La modification de vitesse de lecture est appliqué pour toutes les vidéos</string>

@@ -1355,10 +1355,16 @@ Ready to submit?"</string>
 
 Tablet layout
 • Community posts are hidden
+• Playback in feeds setting is not available
+• Remix button and Sound button are not available in Shorts
+• Video action bar is not collapsed
 
 Automotive layout
+• Feed is organized by topics and channels
+• Playback in feeds setting is not available
+• Remix button and Sound button are not available in Shorts
 • Shorts open in the regular player
-• Feed is organized by topics and channels"</string>
+• Video action bar is not collapsed"</string>
 
     <!-- layout.spoofappversion.spoofAppVersionPatch -->
     <string name="morphe_spoof_app_version_title">Spoof app version</string>
@@ -1419,10 +1425,10 @@ If later turned off, it is recommended to clear the app data to prevent UI bugs.
 Limitation: Using the back button on the toolbar may not work"</string>
     <string name="morphe_change_start_page_always_summary_off">Start page is changed only on app startup</string>
 
-    <!-- layout.startupshortsreset.disableResumingShortsOnStartupPatch -->
-    <string name="morphe_disable_resuming_shorts_player_title">Disable resuming Shorts player</string>
-    <string name="morphe_disable_resuming_shorts_player_summary_on">Shorts player will not resume on app startup</string>
-    <string name="morphe_disable_resuming_shorts_player_summary_off">Shorts player will resume on app startup</string>
+    <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
+    <string name="morphe_disable_shorts_resuming_on_startup_title">Disable Shorts resuming on startup</string>
+    <string name="morphe_disable_shorts_resuming_on_startup_summary_on">Shorts will not resume on app startup</string>
+    <string name="morphe_disable_shorts_resuming_on_startup_summary_off">Shorts will resume on app startup</string>
 
     <!-- layout.shortsplayer.shortsPlayerTypePatch -->
     <string name="morphe_shorts_player_type_title">Open Shorts with</string>
@@ -1671,7 +1677,9 @@ Enabling this can unlock higher video qualities"</string>
     <string name="morphe_custom_playback_speeds_parse_exception">Invalid custom playback speeds</string>
     <string name="morphe_custom_playback_speeds_auto">Auto</string>
     <string name="morphe_speed_tap_and_hold_title">Custom tap and hold speed</string>
-    <string name="morphe_speed_tap_and_hold_summary">Playback speed between 0-8</string>
+    <string name="morphe_speed_tap_and_hold_summary">"Playback speed between 0-8
+
+If 0, tap and hold speed is disabled"</string>
 
     <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
     <string name="morphe_remember_playback_speed_last_selected_title">Remember playback speed changes</string>

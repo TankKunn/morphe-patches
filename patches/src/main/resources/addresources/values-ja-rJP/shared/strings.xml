@@ -48,7 +48,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_search_empty_history_title">検索履歴はありません</string>
   <string name="morphe_settings_search_empty_history_summary">検索履歴を保存するには、検索クエリを入力して Enter キーを押してください</string>
   <string name="morphe_settings_search_history_title">設定の検索履歴を表示</string>
-  <string name="morphe_settings_search_history_summary_on">設定の検索履歴は表示されます</string>
+  <string name="morphe_settings_search_history_summary_on">設定の検索履歴が表示されます</string>
   <string name="morphe_settings_search_history_summary_off">設定の検索履歴は表示されません</string>
   <string name="morphe_show_menu_icons_title">Morphe の設定にアイコンを表示</string>
   <string name="morphe_show_menu_icons_summary_on">Morphe の設定メニューにはアイコンが表示されます</string>
@@ -87,11 +87,11 @@ Second \"item\" text"</string>
   <string name="morphe_debug_export_logs_to_clipboard_title">デバッグログのエクスポート</string>
   <string name="morphe_debug_export_logs_to_clipboard_summary">Morphe のデバッグログをクリップボードにコピーします</string>
   <string name="morphe_debug_logs_disabled">デバッグログが無効になっています</string>
-  <string name="morphe_debug_logs_none_found">ログが見つかりませんでした</string>
+  <string name="morphe_debug_logs_none_found">ログが見つかりません</string>
   <string name="morphe_debug_logs_copied_to_clipboard">ログをコピーしました</string>
   <string name="morphe_debug_logs_failed_to_export">ログのエクスポートに失敗しました: %s</string>
   <string name="morphe_debug_logs_clear_buffer_title">デバッグログを消去</string>
-  <string name="morphe_debug_logs_clear_buffer_summary">保存されている Morphe のすべてのデバッグログを消去します</string>
+  <string name="morphe_debug_logs_clear_buffer_summary">保存されているすべての Morphe のデバッグログを消去します</string>
   <string name="morphe_debug_logs_clear_toast">ログを消去しました</string>
   <string name="morphe_debug_feature_flags_manager_title">feature flag マネージャー</string>
   <string name="morphe_debug_feature_flags_manager_summary">各機能のオン / オフを制御する feature flag を管理します</string>
