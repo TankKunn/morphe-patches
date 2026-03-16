@@ -16,6 +16,7 @@ import android.util.Pair;
 import android.widget.LinearLayout;
 
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.shared.settings.BaseSettings;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
 import app.morphe.extension.shared.ui.CustomDialog;
 
@@ -32,6 +33,15 @@ public class InitializationPatch {
         if (SharedYouTubeSettings.SETTINGS_INITIALIZED.get()) {
             return;
         }
+
+        // TODO: Eventually remove this check.
+        // Don't prompt to restart on an app upgrade from older patches that did not ask to restart.
+        if (System.currentTimeMillis() - BaseSettings.FIRST_TIME_APP_LAUNCHED.get() > (10 * 60 * 1000)) {
+            // App was first launched more than 10 minutes ago.
+            SharedYouTubeSettings.SETTINGS_INITIALIZED.save(true);
+            return;
+        }
+
         runOnMainThreadDelayed(() -> SharedYouTubeSettings.SETTINGS_INITIALIZED.save(true), 1000);
         runOnMainThreadDelayed(() -> {
             Pair<Dialog, LinearLayout> dialogPair = CustomDialog.create(
