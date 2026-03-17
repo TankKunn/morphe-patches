@@ -217,6 +217,8 @@ internal val localesReddit = listOf(
     AppLocale("kmr-rTR", "kmr", false)
 )
 
+internal val localesAll by lazy { (localesYouTube + localesReddit).distinct() }
+
 internal class AppLocale(
     private val srcLocale: String,
     private val destLocale: String,
@@ -230,6 +232,24 @@ internal class AppLocale(
     override fun toString(): String {
         return "AppLocale(srcLocale='${getSrcLocaleFolderName()}', destLocale='${getDestLocaleFolderName()}', " +
                 "isBuiltInLanguage=$isBuiltInLanguage)"
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as AppLocale
+
+        if (srcLocale != other.srcLocale) return false
+        if (destLocale != other.destLocale) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = srcLocale.hashCode()
+        result = 31 * result + destLocale.hashCode()
+        return result
     }
 
     private companion object {
