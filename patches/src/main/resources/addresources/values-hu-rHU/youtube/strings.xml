@@ -1436,7 +1436,7 @@ Csúsztassa a kibontáshoz vagy bezáráshoz"</string>
   <string name="morphe_seekbar_custom_color_invalid">Érvénytelen keresősáv színértéke</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
-  <string name="morphe_header_logo_title">Fejléc logó</string>
+  <string name="morphe_header_logo_title">Fejléclogó</string>
   <string name="morphe_header_logo_entry_1">Alapértelmezett</string>
   <string name="morphe_header_logo_entry_2">Normál</string>
   <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->

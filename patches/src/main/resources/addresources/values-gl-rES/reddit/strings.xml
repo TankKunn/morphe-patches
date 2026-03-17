@@ -16,5 +16,7 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  
+  <string name="morphe_screen_ads_title">Anuncios</string>
+  <string name="morphe_screen_miscellaneous_title">Miscelánea</string>
+  <string name="morphe_about_title">Acerca de</string>
 </resources>

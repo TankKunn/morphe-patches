@@ -16,5 +16,9 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  
+  <string name="morphe_screen_ads_title">Annonser</string>
+  <string name="morphe_hide_create_button_title">Dölj knappen Skapa</string>
+  <string name="morphe_screen_miscellaneous_title">Övrigt</string>
+  <string name="morphe_about_title">Om</string>
+  <string name="morphe_sanitize_sharing_links_title">Rensa delningslänkar</string>
 </resources>

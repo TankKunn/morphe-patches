@@ -16,5 +16,8 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  
+  <string name="morphe_screen_ads_title">Oglasi</string>
+  <string name="morphe_screen_miscellaneous_title">Razno</string>
+  <string name="morphe_about_title">O aplikaciji</string>
+  <string name="morphe_sanitize_sharing_links_title">Očisti poveznice za dijeljenje</string>
 </resources>

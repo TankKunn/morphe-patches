@@ -16,5 +16,7 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  
+  <string name="morphe_screen_ads_title">Reklamy</string>
+  <string name="morphe_screen_miscellaneous_title">Ostatné</string>
+  <string name="morphe_about_title">O aplikácii</string>
 </resources>

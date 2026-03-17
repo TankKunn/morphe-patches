@@ -187,6 +187,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_on">YouTube Premium promo je skryté</string>
   <string name="morphe_hide_youtube_premium_promotions_summary_off">YouTube Premium promo sa zobrazuje</string>
   <!-- ad.video.videoAdsPatch -->
+  <string name="morphe_hide_video_ads_title">Skryť videoreklamy</string>
+  <string name="morphe_hide_video_ads_summary_on">Videoreklamy sú skryté</string>
+  <string name="morphe_hide_video_ads_summary_off">Videoreklamy sa zobrazujú</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.copyvideourl.copyVideoURLResourcePatch -->
   <string name="morphe_share_copy_url_success">URL skopírované do schránky</string>
@@ -222,32 +225,85 @@ Uistite sa, že názov balíka je správny a aplikácia je nainštalovaná"</str
   <!-- interaction.seekbar.enableTapToSeekPatch -->
   <!-- interaction.swipecontrols.swipeControlsResourcePatch -->
   <!-- layout.buttons.action.hideButtonsPatch -->
+  <string name="morphe_hide_like_dislike_button_title">Skryť \'Páči sa mi\' a \'Nepáči sa mi\'</string>
+  <string name="morphe_hide_like_dislike_button_summary_on">Tlačidlá \'Páči sa mi\' a \'Nepáči sa mi\' sú skryté</string>
+  <string name="morphe_hide_like_dislike_button_summary_off">Tlačidlá \'Páči sa mi\' a \'Nepáči sa mi\' sa zobrazujú</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_share_button_title">Skryť tlačidlo Zdieľať</string>
+  <string name="morphe_hide_share_button_summary_on">Tlačidlo Zdieľať je skryté</string>
+  <string name="morphe_hide_share_button_summary_off">Tlačidlo Zdieľať sa zobrazuje</string>
   <!-- 'Stop ads' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- Button does not have any text and is only shown as an icon, and only when the video information area is collapsed to a compact state. -->
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears on live streamed videos. -->
+  <string name="morphe_hide_report_button_title">Skryť tlačidlo Nahlásiť</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_remix_button_title">Skryť tlačidlo Remixovať</string>
+  <string name="morphe_hide_remix_button_summary_on">Tlačidlo Remixovať je skryté</string>
+  <string name="morphe_hide_remix_button_summary_off">Tlačidlo Remixovať sa zobrazuje</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Hype' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears on videos uploaded by the logged-in user. -->
   <!-- 'Promote' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Thanks' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_thanks_button_title">Skryť tlačidlo Poďakovať</string>
+  <string name="morphe_hide_thanks_button_summary_on">Tlačidlo Poďakovať je skryté</string>
+  <string name="morphe_hide_thanks_button_summary_off">Tlačidlo Poďakovať sa zobrazuje</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_clip_button_title">Skryť tlačidlo Klip</string>
+  <string name="morphe_hide_clip_button_summary_on">Tlačidlo Klip je skryté</string>
+  <string name="morphe_hide_clip_button_summary_off">Tlačidlo Klip sa zobrazuje</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_save_button_title">Skryť tlačidlo Uložiť</string>
+  <string name="morphe_hide_save_button_summary_on">Tlačidlo Uložiť je skryté</string>
+  <string name="morphe_hide_save_button_summary_off">Tlačidlo Uložiť sa zobrazuje</string>
   <!-- layout.captions.captionsPatch -->
   <!-- layout.captions.autoCaptionsPatch -->
   <!-- layout.captions.captionCookiesPatch -->
   <!-- layout.captions.transcriptPatch -->
   <!-- layout.buttons.navigation.navigationButtonsPatch -->
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_home_button_title">Skryť tlačidlo Domov</string>
+  <string name="morphe_hide_home_button_summary_on">Tlačidlo Domov je skryté</string>
+  <string name="morphe_hide_home_button_summary_off">Tlačidlo Domov sa zobrazuje</string>
   <!-- 'Shorts' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_shorts_button_title">Skryť tlačidlo Shorts</string>
+  <string name="morphe_hide_shorts_button_summary_on">Tlačidlo Shorts je skryté</string>
+  <string name="morphe_hide_shorts_button_summary_off">Tlačidlo Shorts sa zobrazuje</string>
   <!-- 'Create' has no display name. Translate normally. -->
+  <string name="morphe_hide_create_button_title">Skryť tlačidlo Vytvoriť</string>
+  <string name="morphe_hide_create_button_summary_on">Tlačidlo Vytvoriť je skryté</string>
+  <string name="morphe_hide_create_button_summary_off">Tlačidlo Vytvoriť sa zobrazuje</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_subscriptions_button_title">Skryť tlačidlo Odbery</string>
+  <string name="morphe_hide_subscriptions_button_summary_on">Tlačidlo Odbery je skryté</string>
+  <string name="morphe_hide_subscriptions_button_summary_off">Tlačidlo Odbery sa zobrazuje</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_notifications_button_title">Skryť tlačidlo Upozornenia</string>
+  <string name="morphe_hide_notifications_button_summary_on">Tlačidlo Upozornenia je skryté</string>
+  <string name="morphe_hide_notifications_button_summary_off">Tlačidlo Upozornenia sa zobrazuje</string>
+  <string name="morphe_show_search_button_title">Skryť tlačidlo Hľadať</string>
+  <string name="morphe_show_search_button_summary_on">Tlačidlo Hľadať sa zobrazuje</string>
+  <string name="morphe_show_search_button_summary_off">Tlačidlo Hľadať sa nezobrazuje</string>
+  <string name="morphe_show_settings_button_title">Zobraziť tlačidlo Nastavenia</string>
+  <string name="morphe_show_settings_button_summary_on">Tlačidlo Nastavenia sa zobrazuje</string>
+  <string name="morphe_show_settings_button_summary_off">Tlačidlo Nastavenia sa nezobrazuje</string>
+  <string name="morphe_toolbar_screen_title">Panel nástrojov</string>
+  <string name="morphe_hide_toolbar_create_button_title">Skryť tlačidlo Vytvoriť</string>
+  <string name="morphe_hide_toolbar_create_button_summary_on">Tlačidlo Vytvoriť je skryté</string>
+  <string name="morphe_hide_toolbar_create_button_summary_off">Tlačidlo Vytvoriť sa zobrazuje</string>
+  <string name="morphe_hide_toolbar_microphone_button_title">Skryť tlačidlo mikrofónu</string>
+  <string name="morphe_hide_toolbar_microphone_button_summary_on">Tlačidlo mikrofónu je skryté</string>
+  <string name="morphe_hide_toolbar_microphone_button_summary_off">Tlačidlo mikrofónu sa zobrazuje</string>
+  <string name="morphe_hide_toolbar_notification_button_title">Skryť tlačidlo Upozornenia</string>
+  <string name="morphe_hide_toolbar_notification_button_summary_on">Tlačidlo Upozornenia je skryté</string>
+  <string name="morphe_hide_toolbar_notification_button_summary_off">Tlačidlo Upozornenia sa zobrazuje</string>
+  <string name="morphe_replace_toolbar_create_button_title">Nahradiť tlačidlo Vytvoriť tlačidlom Nastavenia</string>
+  <string name="morphe_replace_toolbar_create_button_summary_on">Tlačidlo Vytvoriť je nahradené tlačidlom Nastavenia</string>
+  <string name="morphe_replace_toolbar_create_button_summary_off">Tlačidlo Vytvoriť nie je nahradené tlačidlom Nastavenia</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -280,6 +336,9 @@ Uistite sa, že názov balíka je správny a aplikácia je nainštalovaná"</str
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_remix_button_title">Skryť tlačidlo Remixovať</string>
+  <string name="morphe_hide_shorts_remix_button_summary_on">Tlačidlo Remixovať je skryté</string>
+  <string name="morphe_hide_shorts_remix_button_summary_off">Tlačidlo Remixovať sa zobrazuje</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
@@ -301,6 +360,20 @@ Uistite sa, že názov balíka je správny a aplikácia je nainštalovaná"</str
   <!-- A segment start and end time, such as "02:10 to 03:40". -->
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <!-- layout.formfactor.changeFormFactorPatch -->
+  <string name="morphe_change_form_factor_user_dialog_message">"Zmeny zahrňujú:
+
+Rozloženie pre tablet
+• Komunitné príspevky sú skryté
+• Nastavenie prehrávania vo feede nie je dostupné
+• Tlačidlá Remixovať a Zvuk nie sú dostupné v Shorts
+• Panel akcií videa je rozbalený
+
+Rozloženie pre automobil
+• Feed je usporiadaný podľa tém a kanálov
+• Nastavenie prehrávania vo feede nie je dostupné
+• Tlačidlá Remixovať a Zvuk nie sú dostupné v Shorts
+• Shorts sa prehrávajú v obyčajnom prehrávači
+• Panel akcií videa je rozbalený"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <!-- misc.sharesheet.openSystemShareSheetPatch -->
   <!-- layout.music.overrideYouTubeMusicActionsPatch -->
@@ -334,6 +407,17 @@ Uistite sa, že názov balíka je správny a aplikácia je nainštalovaná"</str
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <!-- video.codecs.disableVideoCodecsPatch -->
+  <string name="morphe_force_avc_codec_summary_on">Video kodek je vynútený na AVC (H.264)</string>
+  <string name="morphe_force_avc_codec_summary_off">Video kodek je zvolený automaticky</string>
+  <string name="morphe_force_avc_codec_user_dialog_message">"Výhody:
+• Môže zlepšiť výdrž batérie
+• Môže obnoviť chýbajúce video rozlíšenia na starších zariadeniach
+
+Obmedzenia:
+• Maximálne rozlíšenie je 1080p
+• Vyššia spotreba dát pri prehrávaní videa ako VP9 alebo AV1
+• HDR videá nebudú využívať AVC
+• Niektoré zariadenia nemôžu vynútiť AVC"</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <!-- video.quality.prioritizeVideoQualityPatch -->

@@ -69,6 +69,10 @@ Second \"item\" text"</string>
   <string name="morphe_settings_about_links_website">ウェブサイト</string>
   <string name="morphe_settings_about_links_donate">寄付</string>
   <string name="morphe_settings_about_links_translations">翻訳</string>
+  <string name="morphe_settings_about_links_credits">クレジット</string>
+  <string name="morphe_settings_about_links_dev_header_up_to_date">最新の情報</string>
+  <string name="morphe_settings_about_links_dev_header_update_available">利用可能な更新があります</string>
+  <string name="morphe_settings_about_contributors_current">現在開発中</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">デバッグ</string>
   <string name="morphe_debug_screen_summary">デバッグ オプションを有効または無効にします</string>

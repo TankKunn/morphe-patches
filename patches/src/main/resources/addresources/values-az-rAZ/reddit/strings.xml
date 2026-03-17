@@ -16,5 +16,8 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  
+  <string name="morphe_screen_ads_title">Reklamlar</string>
+  <string name="morphe_screen_miscellaneous_title">Çoxvariantlı</string>
+  <string name="morphe_about_title">Haqqında</string>
+  <string name="morphe_sanitize_sharing_links_title">Paylaşım linklərin təmizlə</string>
 </resources>
