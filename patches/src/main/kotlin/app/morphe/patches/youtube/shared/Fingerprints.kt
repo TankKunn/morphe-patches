@@ -94,6 +94,13 @@ internal object YouTubeMainActivityOnBackPressedFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
     parameters = listOf(),
+    filters = listOf(
+        methodCall(
+            opcode = Opcode.INVOKE_SUPER,
+            name = "onBackPressed"
+        ),
+        opcode(Opcode.RETURN_VOID)
+    )
 )
 
 internal object YouTubeActivityOnCreateFingerprint : Fingerprint(
