@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.GoogleApiActivity;
+package com.google.android.gms.common.api;
 
 import android.app.Activity;
 

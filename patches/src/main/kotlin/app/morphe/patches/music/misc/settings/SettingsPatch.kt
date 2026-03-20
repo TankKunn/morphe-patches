@@ -18,6 +18,7 @@ import app.morphe.patches.shared.GoogleApiActivityOnCreateFingerprint
 import app.morphe.patches.shared.misc.checks.experimentalAppNoticePatch
 import app.morphe.patches.shared.misc.initialization.initializationPatch
 import app.morphe.patches.shared.misc.mapping.resourceMappingPatch
+import app.morphe.patches.shared.misc.settings.MORPHE_SETTINGS_INTENT
 import app.morphe.patches.shared.misc.settings.preference.BasePreference
 import app.morphe.patches.shared.misc.settings.preference.BasePreferenceScreen
 import app.morphe.patches.shared.misc.settings.preference.InputType
@@ -45,7 +46,7 @@ private val settingsResourcePatch = resourcePatch {
                 IntentPreference(
                     titleKey = "morphe_settings_title",
                     summaryKey = null,
-                    intent = newIntent("morphe_settings_intent"),
+                    intent = newIntent(MORPHE_SETTINGS_INTENT),
                 ) to "settings_headers"
             ),
             preferences = preferences

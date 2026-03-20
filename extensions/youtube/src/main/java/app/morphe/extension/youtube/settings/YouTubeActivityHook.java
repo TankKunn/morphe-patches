@@ -7,7 +7,7 @@ import android.preference.PreferenceFragment;
 import android.view.View;
 import android.widget.Toolbar;
 
-import com.google.android.gms.common.api.GoogleApiActivity.GoogleApiActivity;
+import com.google.android.gms.common.api.GoogleApiActivity;
 
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
