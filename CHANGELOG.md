@@ -1,3 +1,11 @@
+# [1.20.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.20.0-dev.4...v1.20.0-dev.5) (2026-03-20)
+
+
+### Bug Fixes
+
+* **YouTube - Change miniplayer color:** Fix patching experimental app target changes ([1c6c61f](https://github.com/MorpheApp/morphe-patches/commit/1c6c61f82e0fbbf4e8609b84c26b005ed3c50df2))
+* **YouTube - Navigation bar:** Use updated activity hook for toolbar settings menu ([fafac89](https://github.com/MorpheApp/morphe-patches/commit/fafac89df0680a9fd8fe3dc09983f99c157b8dca))
+
 # [1.20.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.20.0-dev.3...v1.20.0-dev.4) (2026-03-20)
 
 
