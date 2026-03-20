@@ -45,7 +45,7 @@ Second \"item\" text"</string>
   <string name="morphe_check_watch_history_domain_name_dialog_ignore">不再顯示</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_screen_title">偽裝影片串流</string>
-  <string name="morphe_spoof_video_streams_screen_summary">偽裝客戶端影片串流以避免播放問題</string>
+  <string name="morphe_spoof_video_streams_screen_summary">偽裝用戶端影片串流以避免播放問題</string>
   <string name="morphe_spoof_video_streams_title">偽裝影片串流</string>
   <string name="morphe_spoof_video_streams_summary_on">"已偽裝視訊串流
 
@@ -53,7 +53,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_summary_off">"視訊串流未經偽裝
 
 影片可能無法播放"</string>
-  <string name="morphe_spoof_video_streams_no_clients_toast">未能擷取任何客戶端串流</string>
+  <string name="morphe_spoof_video_streams_no_clients_toast">未能擷取任何用戶端串流</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">關閉此設定可能會導致播放問題。</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -104,8 +104,8 @@ Second \"item\" text"</string>
 • 如果 GVS 撤銷了播放器 JavaScript 雜湊值，則會無法播放影片"</string>
   <string name="morphe_spoof_video_streams_disable_player_js_update_summary_off">已啟用播放器 JavaScript 更新</string>
   <string name="morphe_spoof_video_streams_disable_player_js_update_user_dialog_message">播放器 JavaScript 雜湊值有效期約一個月，且過期的雜湊值可能被 GVS 撤銷。</string>
-  <string name="morphe_spoof_video_streams_player_js_hash_title">播放器 JavaScript 雜湊值</string>
-  <string name="morphe_spoof_video_streams_player_js_hash_summary">請輸入有效的播放器 JavaScript 雜湊值</string>
+  <string name="morphe_spoof_video_streams_player_js_hash_value_title">播放器 JavaScript 雜湊值</string>
+  <string name="morphe_spoof_video_streams_player_js_hash_value_summary">請輸入有效的播放器 JavaScript 雜湊值</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">停用 QUIC 協定</string>
   <string name="morphe_disable_quic_protocol_summary_on">已停用 QUIC 協定</string>

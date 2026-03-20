@@ -301,6 +301,16 @@ Los cambios incluyen:
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">El botón \"Suscribirme\" está visible</string>
   <string name="morphe_comments_screen_title">Comentarios</string>
   <string name="morphe_comments_screen_summary">Ocultar o mostrar componentes de la sección de comentarios</string>
+  <string name="morphe_hide_comments_carousel_title">Activar filtro de carrusel de comentarios</string>
+  <string name="morphe_hide_comments_carousel_summary_on">El filtro de carrusel de comentarios está activado</string>
+  <string name="morphe_hide_comments_carousel_summary_off">El filtro de carrusel de comentarios está desactivado</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Nota
+
+• Asegúrate de introducir el nombre exacto del elemento del carrusel (p. ej., Preguntar, Promocionar este vídeo, Escuchar en YouTube Music, etc.).
+• Ocultar elementos del carrusel puede tener efectos secundarios no deseados.
+• Si se ocultan todos los elementos del carrusel, también se ocultará toda la sección de comentarios."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Filtro de carrusel de comentarios</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Ingrese los nombres del carrusel de comentarios para filtrar, uno por línea</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Ocultar resumen del chat con IA</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">El resumen del chat con IA está oculto</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">El resumen del chat con IA está visible</string>
@@ -473,6 +483,21 @@ Limitaciones:
 
 Verifica que el nombre del paquete sea correcto y que la aplicación esté instalada"</string>
   <string name="morphe_external_downloader_empty_warning">El nombre del paquete no puede estar vacío</string>
+  <!-- interaction.loop.loopVideoPatch -->
+  <string name="morphe_loop_video_title">Activar vídeo en bucle</string>
+  <string name="morphe_loop_video_summary_on">El vídeo se repetirá</string>
+  <string name="morphe_loop_video_summary_off">El vídeo no se repetirá</string>
+  <!-- interaction.loop.loopVideoButtonPatch -->
+  <string name="morphe_loop_video_button_title">Mostrar botón de vídeo en bucle</string>
+  <string name="morphe_loop_video_button_summary_on">El botón de vídeo en bucle está visible</string>
+  <string name="morphe_loop_video_button_summary_off">El botón de vídeo en bucle está oculto</string>
+  <string name="morphe_loop_video_button_toast_on">El vídeo en bucle está activado</string>
+  <string name="morphe_loop_video_button_toast_off">El vídeo en bucle está desactivado</string>
+  <!-- interaction.reload.reloadVideoPatch -->
+  <string name="morphe_reload_video_title">Mostrar botón de recargar vídeo</string>
+  <string name="morphe_reload_video_summary_on">El botón de recargar vídeo está visible</string>
+  <string name="morphe_reload_video_summary_off">El botón de recargar vídeo está oculto</string>
+  <string name="morphe_dismiss_player_not_available_toast">El id del vídeo no está disponible. Por favor, vuelva a abrir el vídeo manualmente.</string>
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
   <string name="morphe_disable_precise_seeking_gesture_title">Desactivar gesto de búsqueda precisa</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_on">El gesto de búsqueda precisa está desactivado</string>
@@ -1486,16 +1511,6 @@ Pulsa aquí para saber más sobre DeArrow"</string>
   <string name="morphe_alt_thumbnail_dearrow_error">DeArrow no está disponible temporalmente (código de estado: %s)</string>
   <string name="morphe_alt_thumbnail_dearrow_error_generic">DeArrow no está disponible temporalmente</string>
   <!-- misc.announcements.announcementsPatch -->
-  <!-- misc.loopvideo.loopVideoPatch -->
-  <string name="morphe_loop_video_title">Activar vídeo en bucle</string>
-  <string name="morphe_loop_video_summary_on">El vídeo se repetirá</string>
-  <string name="morphe_loop_video_summary_off">El vídeo no se repetirá</string>
-  <!-- misc.loopvideo.button.loopVideoButtonPatch -->
-  <string name="morphe_loop_video_button_title">Mostrar botón de vídeo en bucle</string>
-  <string name="morphe_loop_video_button_summary_on">El botón de vídeo en bucle está visible</string>
-  <string name="morphe_loop_video_button_summary_off">El botón de vídeo en bucle está oculto</string>
-  <string name="morphe_loop_video_button_toast_on">El vídeo en bucle está activado</string>
-  <string name="morphe_loop_video_button_toast_off">El vídeo en bucle está desactivado</string>
   <!-- misc.dimensions.spoof.spoofDeviceDimensionsPatch -->
   <string name="morphe_spoof_device_dimensions_title">Falsificar dimensiones del dispositivo</string>
   <string name="morphe_spoof_device_dimensions_summary_on">"Las dimensiones del dispositivo están falsificadas

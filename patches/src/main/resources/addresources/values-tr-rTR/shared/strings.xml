@@ -60,6 +60,12 @@ Yeni dilleri çevirmek veya mevcut çevirileri geliştirmek için morphe.softwar
   <string name="morphe_language_DEFAULT">Uygulama dili</string>
   <string name="morphe_pref_import_export_title">İçe / Dışa aktar</string>
   <string name="morphe_pref_import_export_summary">Morphe ayarlarını içe / dışa aktar</string>
+  <string name="morphe_settings_import_file">Dosyadan aktar</string>
+  <string name="morphe_settings_import_file_success">Ayarlar başarıyla içe aktarıldı, uygulamak için Kaydet\'e dokunun</string>
+  <string name="morphe_settings_import_file_failed">Ayarlar içe aktarılamadı</string>
+  <string name="morphe_settings_export_file">Dosyaya aktar</string>
+  <string name="morphe_settings_export_file_success">Ayarlar başarıyla dışa aktarıldı</string>
+  <string name="morphe_settings_export_file_failed">Ayarlar dışa aktarılamadı</string>
   <!-- String is also duplicated in Reddit about preference -->
   <string name="morphe_settings_about_links_body_version_current">Morphe Patches &lt;i&gt;%s&lt;/i&gt; sürümünü kullanıyorsunuz</string>
   <string name="morphe_settings_about_links_body_version_outdated">Morphe Patches &lt;i&gt;%1$s&lt;/i&gt; sürümünü kullanıyorsunuz&lt;br&gt;&lt;br&gt;&lt;b&gt;Güncelleme mevcut: &lt;i&gt;%2$s&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;Yamaları güncellemek için Morphe uygulamasını kullanın</string>
@@ -69,6 +75,17 @@ Yeni dilleri çevirmek veya mevcut çevirileri geliştirmek için morphe.softwar
   <string name="morphe_settings_about_links_website">Website</string>
   <string name="morphe_settings_about_links_donate">Bağış</string>
   <string name="morphe_settings_about_links_translations">Çeviriler</string>
+  <string name="morphe_settings_about_links_credits">Takdir</string>
+  <string name="morphe_settings_about_links_dev_header_up_to_date">Güncel</string>
+  <string name="morphe_settings_about_links_dev_header_update_available">Güncelleme mevcut</string>
+  <string name="morphe_settings_about_contributors_current">Güncel geliştirme</string>
+  <string name="morphe_settings_about_contributors_prior">Önceki geliştirme</string>
+  <string name="morphe_settings_about_links_morphe">Etkin geliştirme</string>
+  <string name="morphe_settings_about_links_rvx">2022 – 2025</string>
+  <string name="morphe_settings_about_links_rv">2022 – 2025</string>
+  <string name="morphe_settings_about_links_vanced">2019 – 2022</string>
+  <string name="morphe_settings_about_links_licenses">Lisans bildirimleri</string>
+  <string name="morphe_settings_about_licenses_loading">Yükleniyor...</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Hata ayıklama</string>
   <string name="morphe_debug_screen_summary">Hata ayıklama seçeneklerini etkinleştir veya devre dışı bırak</string>
@@ -121,4 +138,13 @@ MicroG için pil optimizasyonlarını devre dışı bırakmak, pil kullanımın�
 
 Devam düğmesine dokunun ve optimizasyon değişikliklerine izin verin."</string>
   <string name="gms_core_dialog_continue_text">Devam et</string>
+  <string name="morphe_gms_core_battery_optimization_dialog_title">Akü optimizasyonları iletişim kutusu</string>
+  <string name="morphe_gms_core_battery_optimization_dialog_summary_on">MicroG pil optimizasyonları iletişim kutusu gösteriliyor</string>
+  <string name="morphe_gms_core_battery_optimization_dialog_summary_off">MicroG pil optimizasyonları iletişim kutusu gösterilmiyor</string>
+  <string name="morphe_gms_core_battery_optimization_dialog_user_dialog_message">"Bunu devre dışı bırakmak MicroG pil optimizasyonları istemini gizleyecektir.
+
+Pil optimizasyonları değiştirilmezse aşağıdaki sorunlarla karşılaşabilirsiniz:
+• Uygulama rastgele kapanabilir
+• Bildirimler çalışmayabilir
+• Arka planda oynatma çalışmayabilir"</string>
 </resources>
