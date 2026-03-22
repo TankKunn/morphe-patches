@@ -303,6 +303,16 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Εμφανίζεται</string>
   <string name="morphe_comments_screen_title">Σχόλια</string>
   <string name="morphe_comments_screen_summary">Απόκρυψη ή εμφάνιση στοιχείων στα σχόλια</string>
+  <string name="morphe_hide_comments_carousel_title">Ενεργοποίηση φίλτρου περιφοράς σχολίων</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Το φίλτρο της διαφάνειας σχολίων είναι ενεργοποιημένο</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Το φίλτρο της διαφάνειας σχολίων είναι απενεργοποιημένο</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Σημείωση
+
+• Βεβαιωθείτε ότι καταχωρείτε το ακριβές όνομα του στοιχείου του καρουζέλ (π.χ. Ρώτα, Δημιούργησε δημοσίευση, Άκουσε στο YouTube Music, κ.λπ.).
+• Η απόκρυψη στοιχείων του καρουζέλ ενδέχεται να έχει ακούσιες συνέπειες.
+• Εάν όλα τα στοιχεία του καρουζέλ είναι κρυμμένα, θα κρυφτεί και ολόκληρο το τμήμα των σχολίων."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Φίλτρο περιστροφικού καρουζέλ σχολίων</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Εισάγετε τα ονόματα του καρουζέλ σχολίων για να φιλτράρετε, ένα ανά γραμμή</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Σύνοψη συζήτησης που δημιουργήθηκε από AI</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">Κρυμμένη</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">Εμφανίζεται</string>
@@ -330,6 +340,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Κουμπιά χρονοσήμανσης και emoji</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Κρυμμένα</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Εμφανίζονται</string>
+  <string name="morphe_hide_comments_info_button_title">Κουμπί Απόκρυψης Πληροφοριών</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Το κουμπί Πληροφοριών είναι κρυμμένο</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Το κουμπί Πληροφοριών είναι εμφανές</string>
   <string name="morphe_hide_comments_preview_comment_title">Προεπισκόπηση σχολίου</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Κρυμμένη</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Εμφανίζεται</string>

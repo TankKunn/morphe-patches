@@ -302,6 +302,16 @@ Wijzigingen zijn:
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Abonneerknop wordt weergegeven</string>
   <string name="morphe_comments_screen_title">Reacties</string>
   <string name="morphe_comments_screen_summary">Reacties verbergen of tonen</string>
+  <string name="morphe_hide_comments_carousel_title">Schakel filter voor commentaarcarrousel in</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Commentaarcarrousel filter is ingeschakeld</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Commenten carrousel filter is uitgeschakeld</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Let op
+
+• Zorg ervoor dat u de exacte naam van het carrouselitem invoert (bijv. Vraag, Like deze video, Luister op YouTube Music, enz.).
+• Het verbergen van carrouselitems kan onbedoelde gevolgen hebben.
+• Als alle carrouselitems verborgen zijn, wordt de gehele commentaarsectie ook verborgen."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Commenten carrousel filter</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Voer de namen van de commentaarcarrousels in om op te filteren, één per regel</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">AI-chatsamenvatting verbergen</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">AI-chatsamenvatting is verborgen</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">AI-chatsamenvatting is getoond</string>
@@ -329,6 +339,9 @@ Wijzigingen zijn:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Emoji- en tijdstempelknoppen verbergen</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Emoji- en tijdstempelknoppen zijn verborgen</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Emoji- en tijdstempelknoppen zijn weergegeven</string>
+  <string name="morphe_hide_comments_info_button_title">Verberg Info-knop</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Info-knop is verborgen</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Info-knop is zichtbaar</string>
   <string name="morphe_hide_comments_preview_comment_title">Reactie in preview verbergen</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Preview reactie is verborgen</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Preview reactie wordt getoond</string>

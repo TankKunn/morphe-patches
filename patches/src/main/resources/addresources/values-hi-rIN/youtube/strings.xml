@@ -302,6 +302,16 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">चैनल पेज पर सबस्क्राइब बटन दिखाया गया है</string>
   <string name="morphe_comments_screen_title">टिप्पणियाँ</string>
   <string name="morphe_comments_screen_summary">कमेंट्स सेक्शन घटकों को छुपाएं या दिखाएं</string>
+  <string name="morphe_hide_comments_carousel_title">टिप्पणी कैरोसेल फ़िल्टर</string>
+  <string name="morphe_hide_comments_carousel_summary_on">टिप्पणी कैरोसेल फ़िल्टर सक्षम है</string>
+  <string name="morphe_hide_comments_carousel_summary_off">टिप्पणी कैरोसेल फ़िल्टर निष्क्रिय किया गया है</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"ध्यान दें
+
+• सुनिश्चित करें कि आप कैरोसेल आइटम का सटीक नाम दर्ज करें (जैसे, पूछें, इस वीडियो को हाइलाइट करें, YouTube Music पर सुनें, आदि)।
+• कैरोसेल आइटम को छिपाने के अप्रत्याशित दुष्प्रभाव हो सकते हैं।
+• यदि सभी कैरोसेल आइटम छिपे हुए हैं, तो पूरी कमेंट सेक्शन भी छिपी रहेगी।"</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">टिप्पणी कैरोसेल फ़िल्टर</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">टिप्पणी कैरोसेल के नाम दर्ज करें जिनसे फ़िल्टर किया जा सकता है, प्रत्येक पंक्ति में एक</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">छुपाएं एआई चैट सारांश</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">AI चैट सारांश छिपा हुआ है</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">AI चैट सारांश दिखाया जाता है</string>
@@ -329,6 +339,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">इमोजी और टाइमस्टैम्प बटन को छुपाएं</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">इमोजी और टाइमस्टैम्प बटन छुपे हुए हैं</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">इमोजी और टाइमस्टैम्प बटन दिखाए जाते हैं</string>
+  <string name="morphe_hide_comments_info_button_title">छुपाएं जानकारी बटन</string>
+  <string name="morphe_hide_comments_info_button_summary_on">जानकारी बटन छिपा है</string>
+  <string name="morphe_hide_comments_info_button_summary_off">जानकारी बटन दिख रहा है</string>
   <string name="morphe_hide_comments_preview_comment_title">छुपाएं पूर्वावलोकन टिप्पणी</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">पूर्वावलोकन टिप्पणी छिपाई गई है</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">पूर्वावलोकन टिप्पणी दिखाई गई है</string>

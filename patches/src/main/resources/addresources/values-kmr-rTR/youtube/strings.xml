@@ -305,6 +305,16 @@ Guherînan têne xistine:
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Butona \'Subscribe\' (li hejmara kanalê) vekirin nêşerîn e.</string>
   <string name="morphe_comments_screen_title">Şirove</string>
   <string name="morphe_comments_screen_summary">Komên dane çekandina komên şirove veşêre an nîşe bike</string>
+  <string name="morphe_hide_comments_carousel_title">Filtra karuselê komentaran çalak bike</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Filtra karusêla komentaran çalak kirin</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Filtra karusêla komentaran qut kirin</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"
+
+• Evîn bike ku navê eşerê carousel bi rastî vafre (bo nimûne, Bifikirî, Bê celebekin vîdyoyê, Gula li YouTube Music, hwd.).
+• Vebijarkirina eşerên carousel dikare bandorên ne xwezîyan hebe.
+• Ger hemû eşerên carousel veşêwirin, hemû beşa şîroveyan jî wê veşêwirin."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Filtra karuselê komentaran çalak bike</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Navê karuselê yên komên şîroveyan da ku bi wan ve filtir bikin, yek di her rêzê de</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Xelîza xebatî ya AI veşêrin</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">Xelîza xebatî ya AI veşartin</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">Xelîza xebatî ya AI nîşandin</string>
@@ -332,6 +342,9 @@ Guherînan têne xistine:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Bişkoka Emoji û Demreya veşêrin</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Bişkoka Emoji û Demreya veşartin</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Bişkoka Emoji û Demreya nîşandin</string>
+  <string name="morphe_hide_comments_info_button_title">قمونو ُنوسه</string>
+  <string name="morphe_hide_comments_info_button_summary_on">قمونو ُنوسه منوسوي</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Şikeka agahê nîşan têne </string>
   <string name="morphe_hide_comments_preview_comment_title">Pêşbîna şîroveyê veşêrin</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Pêşbîna şîroveyê veşartin</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Pêşbîna şîroveyê nîşandin</string>

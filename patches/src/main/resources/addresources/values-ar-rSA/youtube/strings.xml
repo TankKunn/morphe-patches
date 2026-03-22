@@ -338,6 +338,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">إخفاء أزرار الرموز التعبيرية والطابع الزمني</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">تم إخفاء أزرار الرموز التعبيرية والطوابع الزمنية</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">يتم عرض أزرار الرموز التعبيرية والطوابع الزمنية</string>
+  <string name="morphe_hide_comments_info_button_title">إخفاء زر المعلومات</string>
+  <string name="morphe_hide_comments_info_button_summary_on">تم إخفاء زر المعلومات</string>
+  <string name="morphe_hide_comments_info_button_summary_off">يتم عرض زر المعلومات</string>
   <string name="morphe_hide_comments_preview_comment_title">إخفاء تعليق المعاينة</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">تم إخفاء تعليق المعاينة</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">يتم عرض تعليق المعاينة</string>

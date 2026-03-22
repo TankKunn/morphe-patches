@@ -301,6 +301,16 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">לחצן הרשמה למינוי מוצג</string>
   <string name="morphe_comments_screen_title">תגובות</string>
   <string name="morphe_comments_screen_summary">הסתר או הצג רכיבי מדור תגובות</string>
+  <string name="morphe_hide_comments_carousel_title">הפעלת מסנן קרוסלת תגובות</string>
+  <string name="morphe_hide_comments_carousel_summary_on">סינון סרגל התגובות מופעל</string>
+  <string name="morphe_hide_comments_carousel_summary_off">מסנן סבוב הערות מושבת</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"הערה
+
+• הקפידו להזין את השם המדויק של הפריט בסבוב הקרוסלה (לדוגמה, שאל, הצבע על סרטון זה, האזן ב-YouTube Music וכו').
+• הסתרת פריטים בסבוב הקרוסלה עלולה לגרום לתופעות לוואי בלתי צפויות.
+• אם כל הפריטים בסבוב הקרוסלה מוסתרים, גם כל סעיף התגובות יוסתר."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">סינון סרגל תגובות</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">הזן שמות סרגל ההערות לסינון, אחד בכל שורה</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">הסתר סיכום AI של צ\'אט</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">סיכום AI של צ\'אט מוסתר</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">סיכום AI של צ\'אט מוצג</string>
@@ -328,6 +338,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">הסתר לחצני אימוג\'י וחותמת זמן</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">לחצני אימוג\'י וחותמת זמן מוסתרים</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">לחצני אימוג\'י וחותמת זמן מוצגים</string>
+  <string name="morphe_hide_comments_info_button_title">הסתר לחצן מידע</string>
+  <string name="morphe_hide_comments_info_button_summary_on">לחצן המידע מוסתר</string>
+  <string name="morphe_hide_comments_info_button_summary_off">לחצן המידע מוצג</string>
   <string name="morphe_hide_comments_preview_comment_title">הסתר תצוגה מקדימה של תגובה</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">תצוגה מקדימה של תגובה מוסתרת</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">תצוגה מקדימה של תגובה מוצגת</string>

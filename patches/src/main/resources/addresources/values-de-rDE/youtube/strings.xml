@@ -303,6 +303,16 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">\'Abonnieren\' wird angezeigt</string>
   <string name="morphe_comments_screen_title">Kommentare</string>
   <string name="morphe_comments_screen_summary">Komponenten der Kommentar-Sektion ausblenden oder anzeigen</string>
+  <string name="morphe_hide_comments_carousel_title">Kommentar-Karussell-Filter aktivieren</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Kommentar-Karussell-Filter ist aktiviert</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Kommentar-Karussell-Filter ist deaktiviert</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Hinweis
+
+• Achten Sie darauf, den genauen Namen des Karussellartikels einzugeben (z. B. Fragen, Dieses Video bewerben, Auf YouTube Music hören usw.).
+• Das Ausblenden von Karussellartikeln kann unbeabsichtigte Nebenwirkungen haben.
+• Wenn alle Karussellartikel ausgeblendet sind, wird auch der gesamte Kommentarbereich ausgeblendet."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Kommentar-Karussell-Filter</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Geben Sie die Namen des Kommentar-Karussells ein, durch die gefiltert werden soll, eines pro Zeile</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">KI-Chat-Zusammenfassung ausblenden</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">KI-Chat-Zusammenfassung ist ausgeblendet</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">KI-Chat-Zusammenfassung wird angezeigt</string>
@@ -330,6 +340,9 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Emoji- und Zeitstempel-Schaltflächen ausblenden</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Emoji- und Zeitstempel-Schaltflächen sind ausgeblendet</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Emoji- und Zeitstempel-Schaltflächen werden angezeigt</string>
+  <string name="morphe_hide_comments_info_button_title">Info-Button ausblenden</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Info-Button ist ausgeblendet</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Info-Button wird angezeigt</string>
   <string name="morphe_hide_comments_preview_comment_title">Vorschaukommentar ausblenden</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Vorschau des Kommentars ist ausgeblendet</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Vorschau des Kommentars wird angezeigt</string>

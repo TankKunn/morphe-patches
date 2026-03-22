@@ -302,6 +302,16 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Knappen Abonnér vises</string>
   <string name="morphe_comments_screen_title">Kommentarer</string>
   <string name="morphe_comments_screen_summary">Skjul eller vis kommentarer sektion komponenter</string>
+  <string name="morphe_hide_comments_carousel_title">Aktiver kommentarkarussel filter</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Kommentarerne carousel filter er aktiveret</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Kommentarerne er deaktiveret</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Note
+
+• Sørg for at du indtaster det nøjagtige navn på karusellens element (f.eks. Spørg, Hype denne video, Lyt på YouTube Music osv.).
+• Skjuling af karusellens elementer kan have utilsigtede bivirkninger.
+• Hvis alle karusellens elementer er skjult, vil hele kommentarfeltet også være skjult."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Kommentarer-karuselfilter</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Indtast kommentarerne navne for at filtrere efter, én pr. linje</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Skjul AI-chatsammendrag</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">AI-chatsammendrag er skjult</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">AI-chatsammendrag vises</string>
@@ -329,6 +339,9 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Skjul Emoji- og Tidsstempelknapper</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Emoji- og Tidsstempelknapper er skjult</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Emoji- og Tidsstempelknapper vises</string>
+  <string name="morphe_hide_comments_info_button_title">Skjul Info-knap</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Info-knappen er skjult</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Info-knappen vises</string>
   <string name="morphe_hide_comments_preview_comment_title">Skjul forhåndsvisning kommentar</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Forhåndsvisning kommentar er skjult</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Forhåndsvis kommentar er vist</string>

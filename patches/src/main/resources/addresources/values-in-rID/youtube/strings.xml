@@ -336,6 +336,9 @@ Perubahan termasuk:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Sembunyikan tombol Emoji dan Penanda Waktu</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Tombol Emoji dan Penanda Waktu disembunyikan</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Tombol Emoji dan Penanda Waktu ditampilkan</string>
+  <string name="morphe_hide_comments_info_button_title">Sembunyikan tombol Info</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Tombol Info disembunyikan</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Tombol Info ditampilkan</string>
   <string name="morphe_hide_comments_preview_comment_title">Sembunyikan pratinjau komentar</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Pratinjau komentar disembunyikan</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Pratinjau komentar ditampilkan</string>

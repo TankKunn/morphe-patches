@@ -301,6 +301,16 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">订阅按钮已显示</string>
   <string name="morphe_comments_screen_title">评论</string>
   <string name="morphe_comments_screen_summary">隐藏或显示评论部分</string>
+  <string name="morphe_hide_comments_carousel_title">启用评论轮播过滤</string>
+  <string name="morphe_hide_comments_carousel_summary_on">自定义筛选器已启用</string>
+  <string name="morphe_hide_comments_carousel_summary_off">自定义筛选器已禁用</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"注意
+
+• 确保输入轮播项的确切名称（例如，提问、热播此视频、在 YouTube Music 上收听等）。
+• 隐藏轮播项可能会产生意想不到的副作用。
+• 如果隐藏了所有轮播项，则整个评论区也会被隐藏。"</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">启用评论轮播过滤</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">输入要按行筛选的评论轮播图名称</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">隐藏 AI 聊天摘要</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">AI 聊天摘要已隐藏</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">AI 聊天摘要已显示</string>
@@ -328,6 +338,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">隐藏表情符号和时间戳按钮</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">表情符号和时间戳按钮已隐藏</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">表情符号和时间戳按钮已显示</string>
+  <string name="morphe_hide_comments_info_button_title">隐藏信息按钮</string>
+  <string name="morphe_hide_comments_info_button_summary_on">信息按钮已隐藏</string>
+  <string name="morphe_hide_comments_info_button_summary_off">信息按钮已显示</string>
   <string name="morphe_hide_comments_preview_comment_title">隐藏评论预览</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">评论预览已隐藏</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">评论预览已显示</string>

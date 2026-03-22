@@ -340,6 +340,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Скрыть кнопки эмодзи и метки времени</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Кнопки эмодзи и метки времени скрыты</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Кнопки эмодзи и метки времени показаны</string>
+  <string name="morphe_hide_comments_info_button_title">Скрыть кнопку \"Инфо\"</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Кнопка \"Инфо\" скрыта</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Кнопка \"Инфо\" показана</string>
   <string name="morphe_hide_comments_preview_comment_title">Скрыть предпросмотр комментария</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Предпросмотр комментария под плеером скрыт</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Предпросмотр комментария под плеером показан</string>

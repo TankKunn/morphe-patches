@@ -302,6 +302,16 @@ I cambiamenti includono:
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Il pulsante Iscriviti è visibile</string>
   <string name="morphe_comments_screen_title">Commenti</string>
   <string name="morphe_comments_screen_summary">Mostra o nascondi i componenti della sezione commenti</string>
+  <string name="morphe_hide_comments_carousel_title">Abilita filtro carosello commenti</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Il filtro personalizzato è attivo</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Il filtro personalizzato è disattivato</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Nota
+
+• Assicurarsi di inserire il nome esatto dell'elemento carosello (ad esempio, Chiedi, Condividi questo video, Ascolta su YouTube Music, ecc.).
+• Nascondere gli elementi carosello potrebbe avere effetti collaterali imprevisti.
+• Se tutti gli elementi carosello sono nascosti, anche l'intera sezione commenti sarà nascosta."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Filtro carosello commenti</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Inserisci i nomi del carosello commenti da filtrare, uno per riga</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Nascondi riepilogo chat IA</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">Il riepilogo chat IA è nascosto</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">Il riepilogo chat IA è mostrato</string>
@@ -329,6 +339,9 @@ I cambiamenti includono:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Nascondi i pulsanti Emoji e Timestamp</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">I pulsanti Emoji e Timestamp sono nascosti</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">I pulsanti Emoji e Timestamp sono mostrati</string>
+  <string name="morphe_hide_comments_info_button_title">Nascondi il pulsante Info</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Il pulsante Info è nascosto</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Il pulsante Info è visibile</string>
   <string name="morphe_hide_comments_preview_comment_title">Nascondi il commento di anteprima</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Il commento di anteprima è nascosto</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Il commento di anteprima è visibile</string>

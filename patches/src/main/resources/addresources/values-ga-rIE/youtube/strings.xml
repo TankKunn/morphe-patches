@@ -302,6 +302,16 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Taispeántar cnaipe Liostáil</string>
   <string name="morphe_comments_screen_title">Tráchtanna</string>
   <string name="morphe_comments_screen_summary">Folaigh nó taispeáin comhpháirteanna na rannóige tráchtanna</string>
+  <string name="morphe_hide_comments_carousel_title">Cumhuighneáil scáthán tráchtaí</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Tá scagaire cluaisín na dtuismitheoirí cumasaithe</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Tá scagaire na gcomhairliúchán díchumasaithe</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Nóta
+
+• Táimis ar maíniú go dtagann an t-ainm cruinneáil ar an mír carousel (e.g. Faigh, Hype an bhideó, Éist ar YouTube Music, etc.).
+• D'fhéadfá drochthionas a bhaint le míreanna carousel a shíneadh.
+• Má bhítear ag síneadh ar gach mír carousel, déanfar an rannán comhráiteoir ar fad a shíneadh freisin."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Scáthán léaráidí na dtuairim</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Ioscur na hainmneacha rollaí na mblianaí chun scagadh a dháanamh orthu, ceann amháin in aghaidh na líne</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Folaigh achoimre comhrá IS</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">Tá achoimre comhrá IS i bhfolach</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">Taispeántar achoimre ar chomhrá IS</string>
@@ -329,6 +339,9 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Folaigh cnaipí Emoji agus Stampa Ama</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Tá cnaipí Emoji agus Stampa Ama i bhfolach</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Taispeántar cnaipí Emoji agus Stampa Ama</string>
+  <string name="morphe_hide_comments_info_button_title">Folaigh an cnaipe Eolas</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Tá an cnaipe Eolas i bhfolach</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Taispeántar cnaipe Eolas</string>
   <string name="morphe_hide_comments_preview_comment_title">Folaigh trácht réamhamharc</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Tá an trácht réamhamhairc i bhfolach</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Taispeántar réamhamharc tráchta</string>

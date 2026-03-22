@@ -301,6 +301,16 @@ Promene uključuju:
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Дугме „Запрати” је приказано</string>
   <string name="morphe_comments_screen_title">Коментари</string>
   <string name="morphe_comments_screen_summary">Сакријте или прикажите компоненте одељка за коментаре</string>
+  <string name="morphe_hide_comments_carousel_title">Омогући филтер за ротирајућу траку коментара</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Филтер за коментаре је укључен</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Филтер за коментаре је онемогућен</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Napomena
+
+• Обавезно унесите тачан назив ставке карусела (нпр. Питај, Хвали овај видео, Слушај на YouTube Music, итд.).
+• Скривање ставки карусела може имати непредвиђене последице.
+• Ако су све ставке карусела скривене, тада ће бити скривен и цео одељак коментара."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Филтер карусела коментара</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Унесите називе караосела коментара да бисте филтрирали по њима, један по реду</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Сакриј „Резиме ћаскања који је генерисала вештачка интелигенција”</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">„Резиме ћаскања који је генерисала вештачка интелигенција” је скривен</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">„Резиме ћаскања који је генерисала вештачка интелигенција” је приказан</string>
@@ -328,6 +338,9 @@ Promene uključuju:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Сакриј дугмад емоџија и временске ознаке</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Дугмад емоџија и временске ознаке су скривена</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Дугмад емоџија и временске ознаке су приказана</string>
+  <string name="morphe_hide_comments_info_button_title">Сакриј дугме Инфо</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Дугме Инфо је скривено</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Дугме Инфо је приказано</string>
   <string name="morphe_hide_comments_preview_comment_title">Сакриј коментар за преглед</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Коментар за преглед је скривен</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Коментар за преглед је приказан</string>

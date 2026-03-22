@@ -302,6 +302,16 @@ Změny zahrnují:
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Tlačítko Odebírat je zobrazeno</string>
   <string name="morphe_comments_screen_title">Komentáře</string>
   <string name="morphe_comments_screen_summary">Skrýt nebo zobrazit komponenty sekce komentářů</string>
+  <string name="morphe_hide_comments_carousel_title">Povolit filtr kolotoče komentářů</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Filtr kolotoče komentářů je povolen</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Filtr přehledu komentářů je zakázán</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Poznámka
+
+• Ujistěte se, že zadáváte přesný název položky otočky (např. Zeptejte se, Zdůrazněte toto video, Poslechněte si na YouTube Music atd.).
+• Skrytí položek otočky může mít neočekávané vedlejší účinky.
+• Pokud jsou všechny položky otočky skryté, bude skrytá i celá sekce komentářů."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Povolit filtr kolotoče komentářů</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Zadejte názvy komentářových karuselů, podle kterých se má filtrovat, jeden na řádek</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Skrýt souhrn chatu s AI</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">Souhrn chatu s AI je skryt</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">Souhrn chatu s AI je zobrazen</string>
@@ -329,6 +339,9 @@ Změny zahrnují:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Skrýt tlačítka emotikonů a časových značek</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Tlačítka emotikonů a časových značek jsou skryta</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Tlačítka emotikonů a časových značek jsou zobrazena</string>
+  <string name="morphe_hide_comments_info_button_title">Skrýt tlačítko Info</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Tlačítko Info je skryté</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Tlačítko Info je zobrazeno</string>
   <string name="morphe_hide_comments_preview_comment_title">Skrýt náhled komentáře</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Náhled komentáře je skrytý</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Zobrazuje se náhled komentáře</string>

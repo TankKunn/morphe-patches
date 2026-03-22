@@ -302,6 +302,16 @@ Schimbari incluse:
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Butonul Abonare este afișat</string>
   <string name="morphe_comments_screen_title">Comentarii</string>
   <string name="morphe_comments_screen_summary">Ascunde sau afișează componentele secțiunii comentarii</string>
+  <string name="morphe_hide_comments_carousel_title">Activează filtru carusel comentarii</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Filtru carusel comentarii este activat</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Filtru carousel comentarii este dezactivat</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Notă
+
+• Asigurați-vă că introduceți exact numele elementului carousel (de exemplu, Întrebare, Hype acest videoclip, Ascultă pe YouTube Music, etc.).
+• Ascunderea elementelor carousel poate avea efecte secundare neintenționate.
+• Dacă toate elementele carousel sunt ascunse, întreaga secțiune de comentarii va fi, de asemenea, ascunsă."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Filtru carousel comentarii</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Introduce numele carousel-urilor de comentarii pentru a filtra, câte unul pe linie</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Ascunde rezumatul chatului AI</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">Rezumatul chatului AI este ascuns</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">Rezumatul chatului AI este afișat</string>
@@ -329,6 +339,9 @@ Schimbari incluse:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Ascunde butoanele Emoji și Marcaj temporal</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Butoanele Emoji și Marcaj temporal sunt ascunse</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Butoanele Emoji și Marcaj temporal sunt afișate</string>
+  <string name="morphe_hide_comments_info_button_title">Ascunde butonul Info</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Butonul Info este ascuns</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Butonul Info este afișat</string>
   <string name="morphe_hide_comments_preview_comment_title">Ascunde previzualizarea comentariului</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Previzualizarea comentariului este ascunsă</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Previzualizarea comentariului este afișată</string>
