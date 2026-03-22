@@ -18,7 +18,6 @@ import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerHid
 import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerHideSubtextsAvailability;
 import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerHorizontalDragAvailability;
 import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerType;
-import static app.morphe.extension.youtube.patches.NavigationBarPatch.ReplaceToolbarCreateButtonAvailability;
 import static app.morphe.extension.youtube.patches.OpenShortsInRegularPlayerPatch.ShortsPlayerType;
 import static app.morphe.extension.youtube.patches.components.PlayerFlyoutMenuItemsFilter.HideAudioFlyoutMenuAvailability;
 import static app.morphe.extension.youtube.patches.spoof.SpoofVideoStreamsPatch.SpoofClientAv1Availability;
@@ -341,9 +340,10 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting SWAP_CREATE_WITH_NOTIFICATIONS_BUTTON = new BooleanSetting("morphe_swap_create_with_notifications_button", TRUE, true,
             "morphe_swap_create_with_notifications_button_user_dialog_message", parentNot(HIDE_NAVIGATION_BAR));
     public static final BooleanSetting SHOW_SEARCH_BUTTON = new BooleanSetting("morphe_show_search_button", FALSE, true, parentNot(HIDE_NAVIGATION_BAR));
-    public static final IntegerSetting SEARCH_BUTTON_INDEX = new IntegerSetting("morphe_search_button_index", 4, true, parent(SHOW_SEARCH_BUTTON));
+    public static final IntegerSetting SHOW_SEARCH_BUTTON_INDEX = new IntegerSetting("morphe_show_search_button_index", 4, true, parent(SHOW_SEARCH_BUTTON));
     public static final BooleanSetting SHOW_SETTINGS_BUTTON = new BooleanSetting("morphe_show_settings_button", FALSE, true, parentNot(HIDE_NAVIGATION_BAR));
-    public static final IntegerSetting SETTINGS_BUTTON_INDEX = new IntegerSetting("morphe_settings_button_index", 5, true, parent(SHOW_SETTINGS_BUTTON));
+    public static final IntegerSetting SHOW_SETTINGS_BUTTON_INDEX = new IntegerSetting("morphe_show_settings_button_index", 5, true, parent(SHOW_SETTINGS_BUTTON));
+    public static final BooleanSetting SHOW_SETTINGS_BUTTON_TYPE = new BooleanSetting("morphe_show_settings_button_type", FALSE, true, parent(SHOW_SETTINGS_BUTTON));
     public static final BooleanSetting HIDE_NAVIGATION_BUTTON_LABELS = new BooleanSetting("morphe_hide_navigation_button_labels", FALSE, true, parentNot(HIDE_NAVIGATION_BAR));
     public static final BooleanSetting NARROW_NAVIGATION_BUTTONS = new BooleanSetting("morphe_narrow_navigation_buttons", FALSE, true, parentNot(HIDE_NAVIGATION_BAR));
     public static final BooleanSetting NAVIGATION_BAR_ANIMATIONS = new BooleanSetting("morphe_navigation_bar_animations", FALSE, parentNot(HIDE_NAVIGATION_BAR));
@@ -355,10 +355,9 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_TOOLBAR_MICROPHONE_BUTTON = new BooleanSetting("morphe_hide_toolbar_microphone_button", FALSE, true);
     public static final BooleanSetting HIDE_TOOLBAR_NOTIFICATION_BUTTON = new BooleanSetting("morphe_hide_toolbar_notification_button", FALSE, true);
     public static final BooleanSetting HIDE_TOOLBAR_SEARCH_BUTTON = new BooleanSetting("morphe_hide_toolbar_search_button", FALSE, true);
-    public static final BooleanSetting REPLACE_TOOLBAR_CREATE_BUTTON = new BooleanSetting("morphe_replace_toolbar_create_button", FALSE, true,
-            "morphe_replace_toolbar_create_button_user_dialog_message", new ReplaceToolbarCreateButtonAvailability());
-    public static final BooleanSetting REPLACE_TOOLBAR_CREATE_BUTTON_TYPE = new BooleanSetting("morphe_replace_toolbar_create_button_type", FALSE, true, parent(REPLACE_TOOLBAR_CREATE_BUTTON));
-    public static final BooleanSetting REARRANGE_TOOLBAR_BUTTONS = new BooleanSetting("morphe_rearrange_toolbar_buttons", TRUE, true, parent(REPLACE_TOOLBAR_CREATE_BUTTON));
+    public static final BooleanSetting SHOW_TOOLBAR_SETTINGS_BUTTON = new BooleanSetting("morphe_show_toolbar_settings_button", FALSE, true);
+    public static final IntegerSetting SHOW_TOOLBAR_SETTINGS_BUTTON_INDEX = new IntegerSetting("morphe_show_toolbar_settings_button_index", 4, true, parent(SHOW_TOOLBAR_SETTINGS_BUTTON));
+    public static final BooleanSetting SHOW_TOOLBAR_SETTINGS_BUTTON_TYPE = new BooleanSetting("morphe_show_toolbar_settings_button_type", FALSE, true, parent(SHOW_TOOLBAR_SETTINGS_BUTTON));
     public static final BooleanSetting WIDE_SEARCHBAR = new BooleanSetting("morphe_wide_searchbar", FALSE, true);
 
     // Shorts
