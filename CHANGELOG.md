@@ -1,3 +1,10 @@
+# [1.21.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.21.0-dev.2...v1.21.0-dev.3) (2026-03-22)
+
+
+### Bug Fixes
+
+* Change to patcher 1.3.1 ([02b09cf](https://github.com/MorpheApp/morphe-patches/commit/02b09cfa7aebe4a4cf954aa9490fcbf06884dfce))
+
 # [1.21.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.21.0-dev.1...v1.21.0-dev.2) (2026-03-22)
 
 
