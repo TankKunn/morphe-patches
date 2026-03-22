@@ -47,7 +47,7 @@ internal val disablePlayStoreUpdatesPatch = resourcePatch(
     description = "Disables Play Store updates by setting the version code to the maximum allowed. " +
             "This patch does not work if the app is installed by mounting and may cause unexpected " +
             "issues with some apps.",
-    use = false
+    default = false
 ) {
     finalize {
         document("AndroidManifest.xml").use { document ->

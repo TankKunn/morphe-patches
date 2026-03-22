@@ -49,7 +49,7 @@ private const val NETWORK_SECURITY_CONFIG_ATTRIBUTE_NAME = "android:networkSecur
 val overrideCertificatePinningPatch = resourcePatch(
     name = "Override certificate pinning",
     description = "Overrides certificate pinning, allowing to inspect traffic via a proxy.",
-    use = false
+    default = false
 ) {
     execute {
         val resXmlDirectory = get("res/xml")
