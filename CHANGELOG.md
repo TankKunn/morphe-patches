@@ -1,3 +1,17 @@
+# [1.21.0](https://github.com/MorpheApp/morphe-patches/compare/v1.20.0...v1.21.0) (2026-03-22)
+
+
+### Bug Fixes
+
+* Change to patcher 1.3.1 ([02b09cf](https://github.com/MorpheApp/morphe-patches/commit/02b09cfa7aebe4a4cf954aa9490fcbf06884dfce))
+* **YouTube - Hide player flyout menu items:** Do not hide speed flyout menu if 'Hide loop video' is enabled ([46834e5](https://github.com/MorpheApp/morphe-patches/commit/46834e5fdbba474e6aff693caad7ae14b6f0eb65))
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide Info button" setting ([#944](https://github.com/MorpheApp/morphe-patches/issues/944)) ([d43fbeb](https://github.com/MorpheApp/morphe-patches/commit/d43fbeb9b790eba32f62656a95a613c06d8ef021))
+* **YouTube - Navigation bar:** Add "Show Settings" in Toolbar and "Settings button action" in Navigation buttons ([#750](https://github.com/MorpheApp/morphe-patches/issues/750)) ([7bd589e](https://github.com/MorpheApp/morphe-patches/commit/7bd589eaf4abd1a69989be336b2f6e5521581bd5))
+
 # [1.21.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.21.0-dev.2...v1.21.0-dev.3) (2026-03-22)
 
 
