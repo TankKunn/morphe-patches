@@ -32,7 +32,7 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Los menús de configuración antiguos están visibles</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Los menús de configuración antiguos están ocultos</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
-  <string name="morphe_shorts_disable_background_playback_title">Desactivar reproducción en segundo plano de Shorts</string>
+  <string name="morphe_shorts_disable_background_playback_title">Desactivar reproducción de Shorts en segundo plano</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">La reproducción en segundo plano de Shorts está desactivada</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">La reproducción en segundo plano de Shorts está activada</string>
   <!-- misc.debugging.enableDebuggingPatch -->
@@ -338,6 +338,9 @@ Los cambios incluyen:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Ocultar botones de emoji y marca de tiempo</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">Los botones de emoji y marca de tiempo están ocultos</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">Los botones de emoji y marca de tiempo están visibles</string>
+  <string name="morphe_hide_comments_info_button_title">Ocultar botón de información</string>
+  <string name="morphe_hide_comments_info_button_summary_on">El botón de información está oculto</string>
+  <string name="morphe_hide_comments_info_button_summary_off">El botón de información está visible</string>
   <string name="morphe_hide_comments_preview_comment_title">Ocultar vista previa de comentarios</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">La vista previa de comentarios está oculta</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">La vista previa de comentarios está visible</string>
@@ -497,7 +500,7 @@ Verifica que el nombre del paquete sea correcto y que la aplicación esté insta
   <string name="morphe_reload_video_title">Mostrar botón de recargar vídeo</string>
   <string name="morphe_reload_video_summary_on">El botón de recargar vídeo está visible</string>
   <string name="morphe_reload_video_summary_off">El botón de recargar vídeo está oculto</string>
-  <string name="morphe_dismiss_player_not_available_toast">El id del vídeo no está disponible. Por favor, vuelva a abrir el vídeo manualmente.</string>
+  <string name="morphe_dismiss_player_not_available_toast">El ID del vídeo no está disponible. Por favor, vuelva a abrir el vídeo manualmente.</string>
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
   <string name="morphe_disable_precise_seeking_gesture_title">Desactivar gesto de búsqueda precisa</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_on">El gesto de búsqueda precisa está desactivado</string>
@@ -685,13 +688,14 @@ Las cookies se guardarán automáticamente si son válidas"</string>
   <string name="morphe_show_search_button_title">Mostrar búsqueda</string>
   <string name="morphe_show_search_button_summary_on">El botón de búsqueda está visible</string>
   <string name="morphe_show_search_button_summary_off">El botón de búsqueda está oculto</string>
-  <string name="morphe_search_button_index_title">Índice del botón de búsqueda</string>
-  <string name="morphe_search_button_index_invalid">El índice del botón de búsqueda debe ser menor que %s</string>
+  <string name="morphe_show_search_button_index_title">Índice del botón de búsqueda</string>
   <string name="morphe_show_settings_button_title">Mostrar ajustes</string>
   <string name="morphe_show_settings_button_summary_on">El botón de ajustes está visible</string>
   <string name="morphe_show_settings_button_summary_off">El botón de ajustes está oculto</string>
-  <string name="morphe_settings_button_index_title">Índice del botón de búsqueda</string>
-  <string name="morphe_settings_button_index_invalid">El índice del botón de ajustes debe ser inferior a %s</string>
+  <string name="morphe_show_settings_button_index_title">Índice del botón de configuración</string>
+  <string name="morphe_show_settings_button_type_title">Acción del botón de configuración</string>
+  <string name="morphe_show_settings_button_type_summary_on">Toque para abrir la configuración de Morphe</string>
+  <string name="morphe_show_settings_button_type_summary_off">Pulsa para abrir la configuración de YouTube</string>
   <string name="morphe_swap_create_with_notifications_button_title">Intercambiar \"Crear\" con \"Notificaciones\"</string>
   <string name="morphe_swap_create_with_notifications_button_summary_on">El botón \"Crear\" se ha intercambiado con el botón \"Notificaciones\"</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">El botón \"Crear\" no se ha intercambiado con el botón \"Notificaciones\"</string>
@@ -738,18 +742,15 @@ Abrir cualquier vídeo → Abrir el menú Calidad → Pulsar en \"Configuración
   <string name="morphe_hide_toolbar_search_button_title">Ocultar búsqueda</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">El botón \"Buscar\" está oculto</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">El botón \"Buscar\" está visible</string>
-  <string name="morphe_replace_toolbar_create_button_title">Reemplazar \"Crear\" con \"Configuración\"</string>
-  <string name="morphe_replace_toolbar_create_button_summary_on">El botón \"Crear\" se reemplaza por el botón \"Configuración\"</string>
-  <string name="morphe_replace_toolbar_create_button_summary_off">El botón \"Crear\" no se reemplaza por el botón \"Configuración\"</string>
-  <string name="morphe_replace_toolbar_create_button_user_dialog_message">El comportamiento de pulsación del botón \"Configuración\" en la pestaña \"Tú\" también se reemplaza.</string>
-  <string name="morphe_replace_toolbar_create_button_type_title">Acción del botón \"Configuración\"</string>
-  <string name="morphe_replace_toolbar_create_button_type_summary_on">"Pulsar para abrir los ajustes de Morphe
+  <string name="morphe_show_toolbar_settings_button_title">Mostrar ajustes</string>
+  <string name="morphe_show_toolbar_settings_button_summary_on">El botón de ajustes está mostrado</string>
+  <string name="morphe_show_toolbar_settings_button_summary_off">El botón de ajustes está oculto</string>
+  <string name="morphe_show_toolbar_settings_button_index_title">Índice del botón de ajustes</string>
+  <string name="morphe_show_toolbar_settings_button_type_title">Acción del botón de ajustes</string>
+  <string name="morphe_show_toolbar_settings_button_type_summary_on">"Pulsar para abrir los ajustes de Morphe
 Mantener pulsado para abrir la configuración de YouTube"</string>
-  <string name="morphe_replace_toolbar_create_button_type_summary_off">"Pulsar para abrir la configuración de YouTube
+  <string name="morphe_show_toolbar_settings_button_type_summary_off">"Pulsar para abrir la configuración de YouTube
 Mantener pulsado para abrir los ajustes de Morphe"</string>
-  <string name="morphe_rearrange_toolbar_buttons_title">Reorganizar los botones reemplazados</string>
-  <string name="morphe_rearrange_toolbar_buttons_summary_on">Los botones están reorganizados</string>
-  <string name="morphe_rearrange_toolbar_buttons_summary_off">Los botones no están reorganizados</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menú desplegable</string>
   <string name="morphe_hide_player_flyout_summary">Ocultar o mostrar elementos del menú desplegable del reproductor</string>
@@ -818,16 +819,16 @@ Para mostrar el menú de pistas de audio, cambia 'Falsificar transmisiones de v�
   <string name="morphe_hide_autoplay_preview_summary_on">La vista previa automática está oculta</string>
   <string name="morphe_hide_autoplay_preview_summary_off">La vista previa automática está visible</string>
   <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
-  <string name="morphe_hide_autoplay_button_title">Ocultar botón \"Reproducción automática\"</string>
-  <string name="morphe_hide_autoplay_button_summary_on">El botón \"Reproducción automática\" está oculto</string>
-  <string name="morphe_hide_autoplay_button_summary_off">El botón \"Reproducción automática\" está visible</string>
+  <string name="morphe_hide_autoplay_button_title">Ocultar botón de reproducción automática</string>
+  <string name="morphe_hide_autoplay_button_summary_on">El botón de reproducción automática está oculto</string>
+  <string name="morphe_hide_autoplay_button_summary_off">El botón de reproducción automática está visible</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
-  <string name="morphe_hide_captions_button_title">Ocultar botón \"Subtítulos\"</string>
-  <string name="morphe_hide_captions_button_summary_on">El botón \"Subtítulos\" está oculto</string>
-  <string name="morphe_hide_captions_button_summary_off">El botón \"Subtítulos\" está visible</string>
-  <string name="morphe_hide_cast_button_title">Ocultar botón \"Transmitir\"</string>
-  <string name="morphe_hide_cast_button_summary_on">El botón \"Transmitir\" está oculto</string>
-  <string name="morphe_hide_cast_button_summary_off">El botón \"Transmitir\" está visible</string>
+  <string name="morphe_hide_captions_button_title">Ocultar botón de subtítulos</string>
+  <string name="morphe_hide_captions_button_summary_on">El botón de subtítulos está oculto</string>
+  <string name="morphe_hide_captions_button_summary_off">El botón de subtítulos está visible</string>
+  <string name="morphe_hide_cast_button_title">Ocultar botón de transmitir</string>
+  <string name="morphe_hide_cast_button_summary_on">El botón de transmitir está oculto</string>
+  <string name="morphe_hide_cast_button_summary_off">El botón de transmitir está visible</string>
   <string name="morphe_hide_collapse_button_title">Ocultar botón de contraer</string>
   <string name="morphe_hide_collapse_button_summary_on">El botón de contraer está oculto</string>
   <string name="morphe_hide_collapse_button_summary_off">El botón de contraer está visible</string>
@@ -905,9 +906,9 @@ Para mostrar el menú de pistas de audio, cambia 'Falsificar transmisiones de v�
   <string name="morphe_hide_shorts_auto_dubbed_label_title">Ocultar etiqueta \"Doblaje automático\"</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_summary_on">La etiqueta \"Doblaje automático\" está oculta</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_summary_off">La etiqueta \"Doblaje automático\" está visible</string>
-  <string name="morphe_hide_shorts_super_thanks_button_title">Ocultar botón \"Comprar Súper Gracias\"</string>
-  <string name="morphe_hide_shorts_super_thanks_button_summary_on">El botón \"Comprar Súper Gracias\" está oculto</string>
-  <string name="morphe_hide_shorts_super_thanks_button_summary_off">El botón \"Comprar Súper Gracias\" está visible</string>
+  <string name="morphe_hide_shorts_super_thanks_button_title">Ocultar botón \"Comprar Super Thanks\"</string>
+  <string name="morphe_hide_shorts_super_thanks_button_summary_on">El botón \"Comprar Super Thanks\" está oculto</string>
+  <string name="morphe_hide_shorts_super_thanks_button_summary_off">El botón \"Comprar Super Thanks\" está visible</string>
   <string name="morphe_hide_shorts_effect_button_title">Ocultar botón \"Efecto\"</string>
   <string name="morphe_hide_shorts_effect_button_summary_on">El botón \"Efecto\" está oculto</string>
   <string name="morphe_hide_shorts_effect_button_summary_off">El botón \"Efecto\" está visible</string>
@@ -1340,8 +1341,8 @@ Si se desactiva posteriormente, se recomienda borrar los datos de la aplicación
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Restaura la barra de acciones de vídeo no contraída</string>
   <!-- misc.sharesheet.openSystemShareSheetPatch -->
   <string name="morphe_open_system_share_sheet_title">Abrir la hoja de compartir del sistema</string>
-  <string name="morphe_open_system_share_sheet_summary_on">Abre la hoja de compartir del sistema</string>
-  <string name="morphe_open_system_share_sheet_summary_off">Abre la hoja de compartir en la aplicación</string>
+  <string name="morphe_open_system_share_sheet_summary_on">Se abre la hoja de compartir del sistema</string>
+  <string name="morphe_open_system_share_sheet_summary_off">Se abre la hoja de compartir de la aplicación</string>
   <!-- layout.music.overrideYouTubeMusicActionsPatch -->
   <string name="morphe_override_youtube_music_button_title">Reemplazar botón de YouTube Music</string>
   <string name="morphe_override_youtube_music_button_summary_on">El botón de YouTube Music abre tu app de música de destino</string>

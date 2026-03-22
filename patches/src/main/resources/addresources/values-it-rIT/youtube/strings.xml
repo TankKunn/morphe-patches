@@ -302,6 +302,16 @@ I cambiamenti includono:
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Il pulsante Iscriviti è visibile</string>
   <string name="morphe_comments_screen_title">Commenti</string>
   <string name="morphe_comments_screen_summary">Mostra o nascondi i componenti della sezione commenti</string>
+  <string name="morphe_hide_comments_carousel_title">Abilita filtro carosello commenti</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Il filtro personalizzato è attivo</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Il filtro personalizzato è disattivato</string>
+  <string name="morphe_hide_comments_carousel_dialog_message">"Nota
+
+• Assicurarsi di inserire il nome esatto dell'elemento carosello (ad esempio, Chiedi, Condividi questo video, Ascolta su YouTube Music, ecc.).
+• Nascondere gli elementi carosello potrebbe avere effetti collaterali imprevisti.
+• Se tutti gli elementi carosello sono nascosti, anche l'intera sezione commenti sarà nascosta."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Filtro carosello commenti</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Inserisci i nomi del carosello commenti da filtrare, uno per riga</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Nascondi riepilogo chat IA</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">Il riepilogo chat IA è nascosto</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">Il riepilogo chat IA è mostrato</string>
@@ -329,6 +339,9 @@ I cambiamenti includono:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Nascondi i pulsanti Emoji e Timestamp</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">I pulsanti Emoji e Timestamp sono nascosti</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">I pulsanti Emoji e Timestamp sono mostrati</string>
+  <string name="morphe_hide_comments_info_button_title">Nascondi il pulsante Info</string>
+  <string name="morphe_hide_comments_info_button_summary_on">Il pulsante Info è nascosto</string>
+  <string name="morphe_hide_comments_info_button_summary_off">Il pulsante Info è visibile</string>
   <string name="morphe_hide_comments_preview_comment_title">Nascondi il commento di anteprima</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">Il commento di anteprima è nascosto</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">Il commento di anteprima è visibile</string>
@@ -676,13 +689,14 @@ I cookie verranno salvati automaticamente se sono validi"</string>
   <string name="morphe_show_search_button_title">Mostra Ricerca</string>
   <string name="morphe_show_search_button_summary_on">Il pulsante di ricerca è mostrato</string>
   <string name="morphe_show_search_button_summary_off">Pulsante di ricerca non mostrato</string>
-  <string name="morphe_search_button_index_title">Indice pulsante di ricerca</string>
-  <string name="morphe_search_button_index_invalid">L\'indice del pulsante di ricerca deve essere inferiore a %s</string>
+  <string name="morphe_show_search_button_index_title">Indice pulsante di ricerca</string>
   <string name="morphe_show_settings_button_title">Mostra Impostazioni</string>
   <string name="morphe_show_settings_button_summary_on">Il pulsante Impostazioni è visualizzato</string>
   <string name="morphe_show_settings_button_summary_off">Il pulsante Impostazioni non è visualizzato</string>
-  <string name="morphe_settings_button_index_title">Pulsante Imposta indice</string>
-  <string name="morphe_settings_button_index_invalid">L\'indice del pulsante Imposta deve essere inferiore a %s</string>
+  <string name="morphe_show_settings_button_index_title">Indice pulsante Impostazioni</string>
+  <string name="morphe_show_settings_button_type_title">Azione pulsante Impostazioni</string>
+  <string name="morphe_show_settings_button_type_summary_on">Tocca per aprire le impostazioni Morphe</string>
+  <string name="morphe_show_settings_button_type_summary_off">Toccare per aprire le impostazioni di YouTube</string>
   <string name="morphe_swap_create_with_notifications_button_title">Scambia Crea con Notifiche</string>
   <string name="morphe_swap_create_with_notifications_button_summary_on">Il pulsante Crea è stato scambiato con il pulsante Notifiche</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">Il pulsante Crea non è stato scambiato con il pulsante Notifiche</string>
@@ -729,18 +743,15 @@ Aprire qualsiasi video → Aprire il menu Qualità → Fare clic su 'Impostazion
   <string name="morphe_hide_toolbar_search_button_title">Nascondi Ricerca</string>
   <string name="morphe_hide_toolbar_search_button_summary_on">Il pulsante di ricerca è nascosto</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">Il pulsante di ricerca è mostrato</string>
-  <string name="morphe_replace_toolbar_create_button_title">Sostituisci Crea con Imposta</string>
-  <string name="morphe_replace_toolbar_create_button_summary_on">Il pulsante Crea è sostituito dal pulsante Imposta</string>
-  <string name="morphe_replace_toolbar_create_button_summary_off">Il pulsante Crea non è sostituito dal pulsante Imposta</string>
-  <string name="morphe_replace_toolbar_create_button_user_dialog_message">L\'azione del pulsante Imposta nella scheda You è inoltre sovrascritta.</string>
-  <string name="morphe_replace_toolbar_create_button_type_title">Azione del pulsante Imposta</string>
-  <string name="morphe_replace_toolbar_create_button_type_summary_on">"Fare clic per aprire le Impostazioni di Morphe
-Fare clic e tenere premuto per aprire le Impostazioni di YouTube"</string>
-  <string name="morphe_replace_toolbar_create_button_type_summary_off">"Fare clic per aprire le Impostazioni di YouTube
-Fare clic e tenere premuto per aprire le Impostazioni di Morphe"</string>
-  <string name="morphe_rearrange_toolbar_buttons_title">Riorganizza i pulsanti sostituiti</string>
-  <string name="morphe_rearrange_toolbar_buttons_summary_on">I pulsanti sono riorganizzati</string>
-  <string name="morphe_rearrange_toolbar_buttons_summary_off">I pulsanti non sono riorganizzati</string>
+  <string name="morphe_show_toolbar_settings_button_title">Mostra impostazioni</string>
+  <string name="morphe_show_toolbar_settings_button_summary_on">Il pulsante Impostazioni è visibile</string>
+  <string name="morphe_show_toolbar_settings_button_summary_off">Il pulsante Impostazioni non è visibile</string>
+  <string name="morphe_show_toolbar_settings_button_index_title">Indice del pulsante Impostazioni</string>
+  <string name="morphe_show_toolbar_settings_button_type_title">Azione del pulsante Impostazioni</string>
+  <string name="morphe_show_toolbar_settings_button_type_summary_on">"Toccare per aprire le impostazioni di Morphe
+Tenere premuto per aprire le impostazioni di YouTube"</string>
+  <string name="morphe_show_toolbar_settings_button_type_summary_off">"Toccare per aprire le impostazioni di YouTube
+Tenere premuto per aprire le impostazioni di Morphe"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menù a comparsa</string>
   <string name="morphe_hide_player_flyout_summary">Mostra o nascondi le voci del menu di flyout del player</string>
