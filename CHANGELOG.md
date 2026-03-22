@@ -1,3 +1,10 @@
+# [1.21.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.20.0...v1.21.0-dev.1) (2026-03-22)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide Info button" setting ([#944](https://github.com/MorpheApp/morphe-patches/issues/944)) ([d43fbeb](https://github.com/MorpheApp/morphe-patches/commit/d43fbeb9b790eba32f62656a95a613c06d8ef021))
+
 # [1.20.0](https://github.com/MorpheApp/morphe-patches/compare/v1.19.0...v1.20.0) (2026-03-20)
 
 
