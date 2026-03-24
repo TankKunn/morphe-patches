@@ -1,3 +1,10 @@
+# [1.22.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.3...v1.22.0-dev.4) (2026-03-24)
+
+
+### Bug Fixes
+
+* **Reddit:** App side bar may not be shown ([7df05c2](https://github.com/MorpheApp/morphe-patches/commit/7df05c2637fbcc370d7f10950ca8f586134e09e1))
+
 # [1.22.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.2...v1.22.0-dev.3) (2026-03-24)
 
 
