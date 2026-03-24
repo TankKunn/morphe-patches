@@ -1,3 +1,10 @@
+# [1.22.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.2...v1.22.0-dev.3) (2026-03-24)
+
+
+### Features
+
+* Per-theme notification and monochrome icons, add Play icon ([#978](https://github.com/MorpheApp/morphe-patches/issues/978)) ([ddc59c9](https://github.com/MorpheApp/morphe-patches/commit/ddc59c9a96d4b77ca72642e4919e27b9872beee0))
+
 # [1.22.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.1...v1.22.0-dev.2) (2026-03-24)
 
 

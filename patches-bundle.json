@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-03-24T17:20:41",
-  "description": "# [1.22.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.1...v1.22.0-dev.2) (2026-03-24)\n\n\n### Features\n\n* **Reddit:** Add experimental support for `2026.12.0` ([#999](https://github.com/MorpheApp/morphe-patches/issues/999)) ([8df2a01](https://github.com/MorpheApp/morphe-patches/commit/8df2a010ef2950c503dcb640b19207357da0d248))",
-  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.22.0-dev.2/patches-1.22.0-dev.2.mpp",
+  "created_at": "2026-03-24T18:36:55",
+  "description": "# [1.22.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.2...v1.22.0-dev.3) (2026-03-24)\n\n\n### Features\n\n* Per-theme notification and monochrome icons, add Play icon ([#978](https://github.com/MorpheApp/morphe-patches/issues/978)) ([ddc59c9](https://github.com/MorpheApp/morphe-patches/commit/ddc59c9a96d4b77ca72642e4919e27b9872beee0))",
+  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.22.0-dev.3/patches-1.22.0-dev.3.mpp",
   "signature_download_url": "",
-  "version": "1.22.0-dev.2"
+  "version": "1.22.0-dev.3"
 }
