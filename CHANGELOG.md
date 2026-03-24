@@ -1,3 +1,10 @@
+# [1.22.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.1...v1.22.0-dev.2) (2026-03-24)
+
+
+### Features
+
+* **Reddit:** Add experimental support for `2026.12.0` ([#999](https://github.com/MorpheApp/morphe-patches/issues/999)) ([8df2a01](https://github.com/MorpheApp/morphe-patches/commit/8df2a010ef2950c503dcb640b19207357da0d248))
+
 # [1.22.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.21.1...v1.22.0-dev.1) (2026-03-23)
 
 
