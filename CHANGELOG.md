@@ -1,3 +1,73 @@
+# [1.22.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.6...v1.22.0-dev.7) (2026-03-28)
+
+
+### Bug Fixes
+
+* **YouTube - Hide ads:** Hide all promotion banner ads ([#987](https://github.com/MorpheApp/morphe-patches/issues/987)) ([9096bcd](https://github.com/MorpheApp/morphe-patches/commit/9096bcd4cea53c57a8cb336421d53302ea8cd444))
+
+
+### Features
+
+* **YouTube Music:** Add experimental support for `9.12.51` ([746bdb9](https://github.com/MorpheApp/morphe-patches/commit/746bdb9649ebbb252ac222110a3ca09eda227458))
+* **YouTube:** Add experimental support for `21.13.163` ([ef345ba](https://github.com/MorpheApp/morphe-patches/commit/ef345ba5579a3631420ca5f29d2e415ae7f19948))
+
+# [1.22.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.5...v1.22.0-dev.6) (2026-03-26)
+
+
+### Bug Fixes
+
+* **Settings:** Improve back gesture, prevent double-clicks, and fix theme update ([#920](https://github.com/MorpheApp/morphe-patches/issues/920)) ([a2e86d2](https://github.com/MorpheApp/morphe-patches/commit/a2e86d28171e13179d672766929f9c7e9afe3003))
+
+
+### Features
+
+* Set notification icon independently of the launcher icon ([#1006](https://github.com/MorpheApp/morphe-patches/issues/1006)) ([f21c62d](https://github.com/MorpheApp/morphe-patches/commit/f21c62de9e2897c5096d1545a40cfe21c6c25f44))
+
+
+### Performance Improvements
+
+* **Litho filtering:** Use Boyer-Moore-Horspool algorithm instead of KMP ([#960](https://github.com/MorpheApp/morphe-patches/issues/960)) ([5b65548](https://github.com/MorpheApp/morphe-patches/commit/5b655488bea90372ccf0e103cdb3229b51b8bfbd))
+
+# [1.22.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.4...v1.22.0-dev.5) (2026-03-24)
+
+
+### Bug Fixes
+
+* **Reddit - Hide sidebar components:** Update patch to work with `2026.12.0` ([bdcde63](https://github.com/MorpheApp/morphe-patches/commit/bdcde634e457912e61bce21192fd6e8d8bad3ea2))
+
+# [1.22.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.3...v1.22.0-dev.4) (2026-03-24)
+
+
+### Bug Fixes
+
+* **Reddit:** App side bar may not be shown ([7df05c2](https://github.com/MorpheApp/morphe-patches/commit/7df05c2637fbcc370d7f10950ca8f586134e09e1))
+
+# [1.22.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.2...v1.22.0-dev.3) (2026-03-24)
+
+
+### Features
+
+* Per-theme notification and monochrome icons, add Play icon ([#978](https://github.com/MorpheApp/morphe-patches/issues/978)) ([ddc59c9](https://github.com/MorpheApp/morphe-patches/commit/ddc59c9a96d4b77ca72642e4919e27b9872beee0))
+
+# [1.22.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.1...v1.22.0-dev.2) (2026-03-24)
+
+
+### Features
+
+* **Reddit:** Add experimental support for `2026.12.0` ([#999](https://github.com/MorpheApp/morphe-patches/issues/999)) ([8df2a01](https://github.com/MorpheApp/morphe-patches/commit/8df2a010ef2950c503dcb640b19207357da0d248))
+
+# [1.22.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.21.1...v1.22.0-dev.1) (2026-03-23)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Resolve patch failing on `20.21.37` and `20.31.42` ([#971](https://github.com/MorpheApp/morphe-patches/issues/971)) ([387df8c](https://github.com/MorpheApp/morphe-patches/commit/387df8cc609b26ff2591b3a97e3865996e425db3))
+
+
+### Features
+
+* **YouTube - Navigation bar:** Add "Disable auto-hide navigation bar" setting ([#973](https://github.com/MorpheApp/morphe-patches/issues/973)) ([f04d001](https://github.com/MorpheApp/morphe-patches/commit/f04d00108539368894aca6820e160324ab102559))
+
 ## [1.21.1](https://github.com/MorpheApp/morphe-patches/compare/v1.21.0...v1.21.1) (2026-03-22)
 
 

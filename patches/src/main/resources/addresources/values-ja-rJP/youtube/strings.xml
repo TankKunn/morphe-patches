@@ -24,6 +24,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_screen_03_feed_title">フィード</string>
   <string name="morphe_settings_screen_04_general_title">全般</string>
   <string name="morphe_settings_screen_05_player_title">プレーヤー</string>
+  <string name="morphe_settings_screen_06_shorts_title">ショート</string>
   <string name="morphe_settings_screen_07_seekbar_title">シークバー</string>
   <string name="morphe_settings_screen_08_swipe_controls_title">スワイプ コントロール</string>
   <string name="morphe_settings_screen_11_misc_title">その他</string>
@@ -126,8 +127,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_summary_on">「もっと見る」ボタンは検索結果に表示されません</string>
   <string name="morphe_hide_show_more_button_summary_off">「もっと見る」ボタンは検索結果に表示されます</string>
   <string name="morphe_hide_subscribed_channels_bar_title">登録済みチャンネルの一覧を非表示</string>
-  <string name="morphe_hide_subscribed_channels_bar_summary_on">登録済みチャンネルの一覧は登録チャンネルタブのヘッダーに表示されません</string>
-  <string name="morphe_hide_subscribed_channels_bar_summary_off">登録済みチャンネルの一覧は登録チャンネルタブのヘッダーに表示されます</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_on">登録チャンネルタブのヘッダーに登録済みチャンネルの一覧は表示されません</string>
+  <string name="morphe_hide_subscribed_channels_bar_summary_off">登録チャンネルタブのヘッダーに登録済みチャンネルの一覧が表示されます</string>
   <string name="morphe_hide_surveys_title">アンケートを非表示</string>
   <string name="morphe_hide_surveys_summary_on">アンケートは表示されません</string>
   <string name="morphe_hide_surveys_summary_off">アンケートは表示されます</string>
@@ -145,9 +146,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_you_may_like_section_summary_on">検索履歴の「おすすめ」セクションは表示されません</string>
   <string name="morphe_hide_you_may_like_section_summary_off">検索履歴の「おすすめ」セクションは表示されます</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
-  <string name="morphe_hide_doodles_title">YouTube Doodle を非表示</string>
-  <string name="morphe_hide_doodles_summary_on">ロゴの YouTube Doodle アニメーションは表示されません</string>
-  <string name="morphe_hide_doodles_summary_off">ロゴの YouTube Doodle アニメーションは表示されます</string>
+  <string name="morphe_hide_youtube_doodles_title">YouTube Doodle を非表示</string>
+  <string name="morphe_hide_youtube_doodles_summary_on">ロゴの YouTube Doodle アニメーションは表示されません</string>
+  <string name="morphe_hide_youtube_doodles_summary_off">ロゴの YouTube Doodle アニメーションは表示されます</string>
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">"YouTube Doodle は、世界各地で年間数日表示されます。
+
+YouTube Doodle が表示されていると、カスタマイズしたヘッダーが表示されなくなる場合があります。"</string>
   <string name="morphe_hide_channel_bar_title">チャンネルバーを非表示</string>
   <string name="morphe_hide_channel_bar_summary_on">チャンネルバーは表示されません</string>
   <string name="morphe_hide_channel_bar_summary_off">チャンネルバーは表示されます</string>
@@ -306,9 +310,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_carousel_title">横スライド欄のフィルタを有効化</string>
   <string name="morphe_hide_comments_carousel_summary_on">コメント セクションの横スライド欄のフィルタは有効です</string>
   <string name="morphe_hide_comments_carousel_summary_off">コメント セクションの横スライド欄のフィルタは無効です</string>
-  <string name="morphe_hide_comments_carousel_dialog_message">"注意
-
-• 横スライド欄の正確なタイトルをフィルタに入力してください。(例:「質問する」「この動画をパイプする」「YouTube Music で聴く」など)
+  <string name="morphe_hide_comments_carousel_user_dialog_message">"注意:
+• 横スライド欄の正確なタイトルをフィルタに入力してください。(例:「質問する」「この動画をハイプする」「YouTube Music で聴く」など)
 • 横スライド欄を非表示にすると予期せぬ副作用が発生する可能性がある。
 • すべての横スライド欄を非表示にした場合、コメント セクションごと表示されなくなる。"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">横スライド欄のフィルタ</string>
@@ -341,8 +344,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_on">絵文字ボタンとタイムスタンプ ボタンは表示されません</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_summary_off">絵文字ボタンとタイムスタンプ ボタンは表示されます</string>
   <string name="morphe_hide_comments_info_button_title">情報ボタンを非表示</string>
-  <string name="morphe_hide_comments_info_button_summary_on">情報ボタンは表示されません</string>
-  <string name="morphe_hide_comments_info_button_summary_off">情報ボタンは表示されます</string>
+  <string name="morphe_hide_comments_info_button_summary_on">情報ボタン (i アイコン) は表示されません</string>
+  <string name="morphe_hide_comments_info_button_summary_off">情報ボタン (i アイコン) は表示されます</string>
   <string name="morphe_hide_comments_preview_comment_title">コメントのプレビューを非表示</string>
   <string name="morphe_hide_comments_preview_comment_summary_on">コメントのプレビューは表示されません</string>
   <string name="morphe_hide_comments_preview_comment_summary_off">コメントのプレビューは表示されます</string>
@@ -448,7 +451,7 @@ Second \"item\" text"</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.copyvideourl.copyVideoURLResourcePatch -->
   <string name="morphe_share_copy_url_success">URL をクリップボードにコピーしました</string>
-  <string name="morphe_share_copy_url_timestamp_success">タイムスタンプ付きの URL をコピーしました</string>
+  <string name="morphe_share_copy_url_timestamp_success">タイムスタンプ付き URL をコピーしました</string>
   <string name="morphe_copy_video_url_title">「動画の URL をコピー」ボタンを表示</string>
   <string name="morphe_copy_video_url_summary_on">プレーヤー オーバーレイに「動画の URL をコピー」ボタンが表示されます。タップすると動画の URL が、長押しするとタイムスタンプ付きの URL がそれぞれコピーされます</string>
   <string name="morphe_copy_video_url_summary_off">プレーヤー オーバーレイに「動画の URL をコピー」ボタンは表示されません</string>
@@ -696,8 +699,8 @@ Second \"item\" text"</string>
   <string name="morphe_show_settings_button_summary_off">設定ボタンは表示されません</string>
   <string name="morphe_show_settings_button_index_title">設定ボタンの表示位置</string>
   <string name="morphe_show_settings_button_type_title">設定ボタンの動作</string>
-  <string name="morphe_show_settings_button_type_summary_on">Morphe の設定を開くにはタップしてください</string>
-  <string name="morphe_show_settings_button_type_summary_off">YouTubeの設定を開くにはタップします</string>
+  <string name="morphe_show_settings_button_type_summary_on">タップすると Morphe の設定を開きます</string>
+  <string name="morphe_show_settings_button_type_summary_off">タップすると YouTube の設定を開きます</string>
   <string name="morphe_swap_create_with_notifications_button_title">「作成」と「通知」を入れ替え</string>
   <string name="morphe_swap_create_with_notifications_button_summary_on">作成ボタンと通知ボタンが入れ替わります</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">作成ボタンと通知ボタンは入れ替わりません</string>
@@ -710,14 +713,17 @@ Second \"item\" text"</string>
   <string name="morphe_hide_navigation_bar_summary_off">ナビゲーション バーは表示されます</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"この機能は、マイページタブを含むナビゲーション バー全体を完全に非表示にします。
 
-[設定] にアクセスする方法:
-任意の動画を開く → 画質メニューを開く → 一番下の「[設定] &gt; [動画の画質設定]」をタップ"</string>
+[設定] にアクセスするには、以下の手順で設定ボタンを表示してください:
+[全般] &gt; [ツールバー] &gt; [設定ボタンを表示]"</string>
   <string name="morphe_narrow_navigation_buttons_title">ナビゲーション ボタンの間を詰める</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">ナビゲーション ボタンは間隔を詰めて表示されます</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">ナビゲーション ボタンは間隔を詰めずに表示されます</string>
   <string name="morphe_navigation_bar_animations_title">ナビゲーション バーのアニメーションを有効化</string>
   <string name="morphe_navigation_bar_animations_summary_on">ナビゲーションの遷移がアニメーション表示されます</string>
   <string name="morphe_navigation_bar_animations_summary_off">ナビゲーションの遷移はアニメーション表示されません</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_title">ナビゲーション バーの自動非表示を無効化</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_on">下にスクロールすると、ナビゲーション バーが非表示になります</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">下にスクロールしても、ナビゲーション バーは表示され続けます</string>
   <string name="morphe_disable_translucent_status_bar_title">半透明ステータスバーを無効化</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">ステータスバーは透けません</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">ステータスバーは状況に応じて透けます</string>
@@ -749,10 +755,10 @@ Second \"item\" text"</string>
   <string name="morphe_show_toolbar_settings_button_summary_off">設定ボタンは表示されません</string>
   <string name="morphe_show_toolbar_settings_button_index_title">設定ボタンの表示位置</string>
   <string name="morphe_show_toolbar_settings_button_type_title">設定ボタンの動作</string>
-  <string name="morphe_show_toolbar_settings_button_type_summary_on">"タップすると Morphe の設定を開きます
-長押しすると YouTube の設定を開きます"</string>
-  <string name="morphe_show_toolbar_settings_button_type_summary_off">"タップすると YouTube の設定を開きます
-長押しすると Morphe の設定を開きます"</string>
+  <string name="morphe_show_toolbar_settings_button_type_summary_on">"タップすると Morphe の設定を開く
+長押しすると YouTube の設定を開く"</string>
+  <string name="morphe_show_toolbar_settings_button_type_summary_off">"タップすると YouTube の設定を開く
+長押しすると Morphe の設定を開く"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">フライアウト メニュー</string>
   <string name="morphe_hide_player_flyout_summary">プレーヤー オーバーレイの歯車アイコンボタンから呼び出されるフライアウト メニューの項目を表示または非表示にします</string>
@@ -1009,10 +1015,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">ナビゲーション バーは表示されません</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">ナビゲーション バーは表示されます</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
-  <string name="morphe_end_screen_suggested_video_title">終了画面の「関連動画」を非表示</string>
-  <string name="morphe_end_screen_suggested_video_summary_on">終了画面の「関連動画」は表示されません</string>
-  <string name="morphe_end_screen_suggested_video_summary_off">終了画面の「関連動画」は表示されます</string>
-  <string name="morphe_end_screen_suggested_video_user_dialog_message">"この設定は、[次の動画を自動再生] がオフの場合にのみ有効です。
+  <string name="morphe_hide_end_screen_suggested_video_title">終了画面の「関連動画」を非表示</string>
+  <string name="morphe_hide_end_screen_suggested_video_summary_on">終了画面の「関連動画」は表示されません</string>
+  <string name="morphe_hide_end_screen_suggested_video_summary_off">終了画面の「関連動画」は表示されます</string>
+  <string name="morphe_hide_end_screen_suggested_video_user_dialog_message">"この設定は、[次の動画を自動再生] がオフの場合にのみ有効です。
 
 [次の動画を自動再生] は、YouTube の設定で変更できます:
 [設定] &gt; [再生] (または [自動再生]) &gt; [次の動画を自動再生]"</string>
@@ -1371,6 +1377,7 @@ Automotive レイアウト
   <string name="morphe_change_start_page_entry_playlists">再生リスト</string>
   <string name="morphe_change_start_page_entry_search">検索</string>
   <string name="morphe_change_start_page_entry_shopping">ショッピング</string>
+  <string name="morphe_change_start_page_entry_shorts">ショート</string>
   <string name="morphe_change_start_page_entry_sports">スポーツ</string>
   <string name="morphe_change_start_page_entry_subscriptions">登録チャンネル</string>
   <string name="morphe_change_start_page_entry_trending">急上昇</string>

@@ -24,6 +24,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_screen_03_feed_title">الموجز</string>
   <string name="morphe_settings_screen_04_general_title">عام</string>
   <string name="morphe_settings_screen_05_player_title">المشغل</string>
+  <string name="morphe_settings_screen_06_shorts_title">Shorts</string>
   <string name="morphe_settings_screen_07_seekbar_title">شريط تقدم الفيديو</string>
   <string name="morphe_settings_screen_08_swipe_controls_title">التحكم عن طريق إيماءة التمرير</string>
   <string name="morphe_settings_screen_11_misc_title">خيارات متنوعة</string>
@@ -143,9 +144,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_you_may_like_section_summary_on">تم إخفاء قسم قد يعجبك</string>
   <string name="morphe_hide_you_may_like_section_summary_off">يتم عرض قسم قد يعجبك</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
-  <string name="morphe_hide_doodles_title">إخفاء رسومات YouTube</string>
-  <string name="morphe_hide_doodles_summary_on">تم إخفاء رسوم Doodles المتحركة على شعار YouTube</string>
-  <string name="morphe_hide_doodles_summary_off">يتم عرض رسوم Doodles المتحركة على شعار YouTube</string>
+  <string name="morphe_hide_youtube_doodles_title">إخفاء رسومات YouTube</string>
+  <string name="morphe_hide_youtube_doodles_summary_on">تم إخفاء رسوم Doodles المتحركة على شعار YouTube</string>
+  <string name="morphe_hide_youtube_doodles_summary_off">يتم عرض رسوم Doodles المتحركة على شعار YouTube</string>
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">"يتم عرض رسومات YouTube لبضعة أيام كل عام في أجزاء مختلفة من العالم.
+
+قد يؤدي عرض رسومات YouTube إلى منع ظهور علامات الشعار المخصصة."</string>
   <string name="morphe_hide_channel_bar_title">إخفاء شريط القناة</string>
   <string name="morphe_hide_channel_bar_summary_on">تم إخفاء شريط القناة</string>
   <string name="morphe_hide_channel_bar_summary_off">يتم عرض شريط القناة</string>
@@ -304,8 +308,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_carousel_title">تمكين شريط تصفية التعليقات</string>
   <string name="morphe_hide_comments_carousel_summary_on">تم تمكين شريط تصفية التعليقات</string>
   <string name="morphe_hide_comments_carousel_summary_off">تم تعطيل شريط تصفية التعليقات</string>
-  <string name="morphe_hide_comments_carousel_dialog_message">"ملاحظة
-
+  <string name="morphe_hide_comments_carousel_user_dialog_message">"ملاحظة:
 • تأكد من إدخال الاسم الدقيق لعنصر الشريط (مثل: طرح سؤال، تشجيع هذا الفيديو، الاستماع إلى موسيقى YouTube، الخ.).
 • قد يؤدي إخفاء عناصر الشريط إلى نتائج غير متوقعة.
 • إذا تم إخفاء جميع عناصر الشريط، فسيتم إخفاء قسم التعليقات بالكامل أيضًا."</string>
@@ -706,16 +709,19 @@ Second \"item\" text"</string>
   <string name="morphe_hide_navigation_bar_title">إخفاء شريط التنقل</string>
   <string name="morphe_hide_navigation_bar_summary_on">تم إخفاء شريط التنقل</string>
   <string name="morphe_hide_navigation_bar_summary_off">يتم عرض شريط التنقل</string>
-  <string name="morphe_hide_navigation_bar_user_dialog_message">"هذا يخفي شريط التنقل بالكامل بما في ذلك علامة أنت.
+  <string name="morphe_hide_navigation_bar_user_dialog_message">"يؤدي هذا إلى إخفاء شريط التنقل بالكامل، بما في ذلك علامة التبويب 'أنت'.
 
-للوصول إلى الإعدادات:
-افتح أي فيديو ← افتح قائمة الجودة ← اضغط على 'الإعدادات &gt; تفضيلات جودة الفيديو' في الأسفل."</string>
+للوصول إلى الإعدادات، قم بتمكين زر الإعدادات عبر
+عام ← شريط الأدوات ← عرض الإعدادات."</string>
   <string name="morphe_narrow_navigation_buttons_title">تمكين أزرار التنقل الضيقة</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">التباعد بين أزرار التنقل ضيق</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">التباعد بين أزرار التنقل عادي</string>
   <string name="morphe_navigation_bar_animations_title">تمكين تأثير حركة التنقل في شريط التنقل</string>
   <string name="morphe_navigation_bar_animations_summary_on">تم تمكين تأثير حركة التنقل في شريط التنقل</string>
   <string name="morphe_navigation_bar_animations_summary_off">تم تعطيل تأثير حركة التنقل في شريط التنقل</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_title">تعطيل إخفاء شريط التنقل تلقائيًا</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_on">لن يتم إخفاء شريط التنقل أثناء التمرير</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">سيتم إخفاء شريط التنقل أثناء التمرير</string>
   <string name="morphe_disable_translucent_status_bar_title">تعطيل شريط الحالة الشفاف</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">شريط الحالة غير شفاف</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">شريط الحالة معتم أو شفاف</string>
@@ -1007,10 +1013,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">تم إخفاء شريط التنقل</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">يتم عرض شريط التنقل</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
-  <string name="morphe_end_screen_suggested_video_title">إخفاء الفيديو المقترح في شاشة النهاية</string>
-  <string name="morphe_end_screen_suggested_video_summary_on">تم إخفاء الفيديو المقترح في شاشة النهاية</string>
-  <string name="morphe_end_screen_suggested_video_summary_off">يتم عرض الفيديو المقترح في شاشة النهاية</string>
-  <string name="morphe_end_screen_suggested_video_user_dialog_message">"يعمل هذا الإعداد فقط إذا كان 'تشغيل الفيديو التالي تلقائيًا' معطلًا.
+  <string name="morphe_hide_end_screen_suggested_video_title">إخفاء الفيديو المقترح في شاشة النهاية</string>
+  <string name="morphe_hide_end_screen_suggested_video_summary_on">تم إخفاء الفيديو المقترح في شاشة النهاية</string>
+  <string name="morphe_hide_end_screen_suggested_video_summary_off">يتم عرض الفيديو المقترح في شاشة النهاية</string>
+  <string name="morphe_hide_end_screen_suggested_video_user_dialog_message">"يعمل هذا الإعداد فقط إذا كان 'تشغيل الفيديو التالي تلقائيًا' معطلًا.
 
 يمكن تغيير 'تشغيل الفيديو التالي تلقائيًا' في إعدادات YouTube:
 الإعدادات ← التشغيل (أو التشغيل التلقائي) ← تشغيل الفيديو التالي تلقائيًا"</string>
@@ -1370,6 +1376,7 @@ Second \"item\" text"</string>
   <string name="morphe_change_start_page_entry_playlists">قوائم التشغيل</string>
   <string name="morphe_change_start_page_entry_search">البحث</string>
   <string name="morphe_change_start_page_entry_shopping">تسوق</string>
+  <string name="morphe_change_start_page_entry_shorts">Shorts</string>
   <string name="morphe_change_start_page_entry_sports">الرياضة</string>
   <string name="morphe_change_start_page_entry_subscriptions">الاشتراكات</string>
   <string name="morphe_change_start_page_entry_trending">المحتوى الرائج</string>

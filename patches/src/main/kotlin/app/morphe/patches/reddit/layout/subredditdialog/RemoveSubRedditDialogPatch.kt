@@ -6,12 +6,9 @@
  */
 package app.morphe.patches.reddit.layout.subredditdialog
 
-import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
-import app.morphe.patcher.methodCall
-import app.morphe.patcher.opcode
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.reddit.misc.settings.settingsPatch
 import app.morphe.patches.reddit.shared.Constants.COMPATIBILITY_REDDIT
@@ -19,6 +16,7 @@ import app.morphe.util.setExtensionIsPatchIncluded
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import java.util.logging.Logger
 
 private const val EXTENSION_CLASS_DESCRIPTOR =
     "Lapp/morphe/extension/reddit/patches/RemoveSubRedditDialogPatch;"
@@ -56,11 +54,18 @@ val removeSubRedditDialogPatch = bytecodePatch(
             }
         }
 
-        listOf(
-            NSFWAlertDialogBuilderFingerprint,
-            NSFWAlertDialogInstanceFingerprint
-        ).forEach { fingerprint ->
-            fingerprint.let {
+        // TODO: Fix up this patch
+        if (packageMetadata.versionName >= "2026.12.0") {
+            Logger.getLogger(this::class.java.name).warning(
+                "\"Remove subreddit dialog\" does not yet fully support 2026.12.0+"
+            )
+        }
+
+        NSFWAlertShowDialogFingerprint.matchAll(
+            // TODO: remove classDef parameter when patcher 1.3.3+ is released.
+            NSFWAlertDialogClassFingerprint.classDef
+        ).forEach { match ->
+            match.let {
                 it.method.apply {
                     val index = it.instructionMatches.first().index
                     val moveResultIndex = index + 1

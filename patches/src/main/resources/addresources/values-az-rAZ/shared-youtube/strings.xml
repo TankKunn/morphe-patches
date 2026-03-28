@@ -20,19 +20,23 @@ Second \"item\" text"</string>
   <string name="morphe_restart_first_run">Tənzimləməni bitirmək üçün yenidən başlat</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">Tətbiq adı</string>
-  <!-- Translations of this should be identical to morphe_custom_branding_icon_entry_5 -->
+  <!-- Translations of this should be identical to morphe_custom_branding_icon_entry_6 -->
   <string name="morphe_custom_branding_name_entry_5">Fərdi</string>
   <string name="morphe_custom_branding_icon_title">Tətbiq simvolu</string>
   <string name="morphe_custom_branding_icon_entry_1">Əsil</string>
   <string name="morphe_custom_branding_icon_entry_2">Morphe qara</string>
   <string name="morphe_custom_branding_icon_entry_3">Morphe qaranlıq</string>
   <string name="morphe_custom_branding_icon_entry_4">Morphe işıqlı</string>
+  <string name="morphe_custom_branding_icon_entry_5">Morphe oyunu</string>
   <!-- Translations of this should be identical to morphe_custom_branding_name_entry_5 -->
-  <string name="morphe_custom_branding_icon_entry_5">Fərdi</string>
+  <string name="morphe_custom_branding_icon_entry_6">Fərdi</string>
+  <string name="morphe_custom_branding_notification_icon_title">Bildiriş simvolu</string>
+  <string name="morphe_custom_branding_notification_icon_entry_1">Tətbiq simvolun izlə</string>
   <!-- If any of these experimental strings are changed then also change the hard coded values in the patch for Reddit -->
   <!-- misc.checks.experimentalAppNoticePatch -->
-  <string name="morphe_experimental_app_version_dialog_title">🚨 Təcrübi Xəbərdarlıq 🚨</string>
-  <string name="morphe_experimental_app_version_dialog_message">"Siz ⚠️ &lt;b&gt;%1$s&lt;/b&gt; &lt;br/&gt;&lt;br/&gt; nömrəsinin təcrübi tətbiq versiyasın istifadə edirsiniz
+  <string name="morphe_experimental_app_version_dialog_title">🚨 Təcrübi Xəbərdarlığı 🚨</string>
+  <string name="morphe_experimental_app_version_dialog_message">"Siz ⚠️ &lt;b&gt;%1$s&lt;/b&gt;
+&lt;br/&gt;&lt;br/&gt; nömrəsinin təcrübi tətbiq versiyasın istifadə edirsiniz
 
 🔧 Bu tətbiq versiyası üçün yamaqları həssas köklədiyimiz üçün qəribə tətbiq davranışı və ya naməlum səhvlər gözləyin. &lt;br/&gt;&lt;br/&gt;
 

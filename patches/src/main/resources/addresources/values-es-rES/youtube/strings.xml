@@ -24,6 +24,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_screen_03_feed_title">Feed</string>
   <string name="morphe_settings_screen_04_general_title">General</string>
   <string name="morphe_settings_screen_05_player_title">Reproductor</string>
+  <string name="morphe_settings_screen_06_shorts_title">Shorts</string>
   <string name="morphe_settings_screen_07_seekbar_title">Barra de progreso</string>
   <string name="morphe_settings_screen_08_swipe_controls_title">Controles deslizantes</string>
   <string name="morphe_settings_screen_11_misc_title">Otros</string>
@@ -50,17 +51,18 @@ Sin embargo, si activas esto, también se registrarán algunos datos del usuario
   <string name="morphe_disable_layout_updates_summary_off">El diseño se actualizará desde el servidor</string>
   <string name="morphe_disable_layout_updates_user_dialog_message">"El diseño de la aplicación vuelve al diseño utilizado cuando se instaló por primera vez.
 
-Es posible que algunos diseños del lado del servidor no se reviertan.
+Es posible que algunos diseños del lado del servidor no se restablezcan.
 
 Los cambios incluyen:
-• Los componentes del menú desplegable del reproductor (o los ajustes relacionados) pueden no funcionar.
-• Los números rodantes no están animados.
-• La pestaña Biblioteca está visible.
-• La sección de música de la descripción del vídeo puede no funcionar.
-• El botón de cambio de cuenta puede no aparecer en la pestaña Biblioteca."</string>
+• Es posible que los componentes del menú desplegable del reproductor (o ajustes relacionados) no funcionen.
+• Los números rotativos (contadores) no están animados.
+• Se muestra la pestaña de la Biblioteca.
+• Es posible que la sección de música en la descripción del video no funcione.
+• No se pueden ocultar los elementos del menú desplegable del reproductor.
+• Es posible que el botón de cambio de cuenta no aparezca en la pestaña de la Biblioteca."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Ocultar estantería de tienda del creador</string>
-  <string name="morphe_hide_creator_store_shelf_summary_on">La estantería de la tienda del creador debajo del reproductor de vídeo está oculta</string>
+  <string name="morphe_hide_creator_store_shelf_summary_on">Se oculta el estante de productos del creador debajo del reproductor de video.</string>
   <string name="morphe_hide_creator_store_shelf_summary_off">La estantería de la tienda del creador debajo del reproductor de vídeo está visible</string>
   <string name="morphe_hide_album_cards_title">Ocultar tarjetas de álbum</string>
   <string name="morphe_hide_album_cards_summary_on">Las tarjetas de álbum están ocultas</string>
@@ -143,9 +145,12 @@ Los cambios incluyen:
   <string name="morphe_hide_you_may_like_section_summary_on">La sección \"Quizá te guste\" está oculta</string>
   <string name="morphe_hide_you_may_like_section_summary_off">La sección \"Quizá te guste\" está visible</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
-  <string name="morphe_hide_doodles_title">Ocultar Doodles de YouTube</string>
-  <string name="morphe_hide_doodles_summary_on">La animación de los Doodles de YouTube en el logo está oculta</string>
-  <string name="morphe_hide_doodles_summary_off">La animación de los Doodles de YouTube en el logo está visible</string>
+  <string name="morphe_hide_youtube_doodles_title">Ocultar Doodles de YouTube</string>
+  <string name="morphe_hide_youtube_doodles_summary_on">La animación de los Doodles de YouTube en el logo está oculta</string>
+  <string name="morphe_hide_youtube_doodles_summary_off">La animación de los Doodles de YouTube en el logo está visible</string>
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">"Los Doodles de YouTube se muestran unos pocos días cada año en varias partes del mundo.
+
+Mostrar los Doodles de YouTube puede impedir que se muestren encabezados personalizados."</string>
   <string name="morphe_hide_channel_bar_title">Ocultar barra de canales</string>
   <string name="morphe_hide_channel_bar_summary_on">La barra de canales está oculta</string>
   <string name="morphe_hide_channel_bar_summary_off">La barra de canales está visible</string>
@@ -304,8 +309,7 @@ Los cambios incluyen:
   <string name="morphe_hide_comments_carousel_title">Activar filtro de carrusel de comentarios</string>
   <string name="morphe_hide_comments_carousel_summary_on">El filtro de carrusel de comentarios está activado</string>
   <string name="morphe_hide_comments_carousel_summary_off">El filtro de carrusel de comentarios está desactivado</string>
-  <string name="morphe_hide_comments_carousel_dialog_message">"Nota
-
+  <string name="morphe_hide_comments_carousel_user_dialog_message">"Nota:
 • Asegúrate de introducir el nombre exacto del elemento del carrusel (p. ej., Preguntar, Promocionar este vídeo, Escuchar en YouTube Music, etc.).
 • Ocultar elementos del carrusel puede tener efectos secundarios no deseados.
 • Si se ocultan todos los elementos del carrusel, también se ocultará toda la sección de comentarios."</string>
@@ -692,10 +696,10 @@ Las cookies se guardarán automáticamente si son válidas"</string>
   <string name="morphe_show_settings_button_title">Mostrar ajustes</string>
   <string name="morphe_show_settings_button_summary_on">El botón de ajustes está visible</string>
   <string name="morphe_show_settings_button_summary_off">El botón de ajustes está oculto</string>
-  <string name="morphe_show_settings_button_index_title">Índice del botón de configuración</string>
-  <string name="morphe_show_settings_button_type_title">Acción del botón de configuración</string>
-  <string name="morphe_show_settings_button_type_summary_on">Toque para abrir la configuración de Morphe</string>
-  <string name="morphe_show_settings_button_type_summary_off">Pulsa para abrir la configuración de YouTube</string>
+  <string name="morphe_show_settings_button_index_title">Índice del botón de ajustes</string>
+  <string name="morphe_show_settings_button_type_title">Acción del botón de ajustes</string>
+  <string name="morphe_show_settings_button_type_summary_on">Pulsar para abrir los ajustes de Morphe</string>
+  <string name="morphe_show_settings_button_type_summary_off">Pulsar para abrir la configuración de YouTube</string>
   <string name="morphe_swap_create_with_notifications_button_title">Intercambiar \"Crear\" con \"Notificaciones\"</string>
   <string name="morphe_swap_create_with_notifications_button_summary_on">El botón \"Crear\" se ha intercambiado con el botón \"Notificaciones\"</string>
   <string name="morphe_swap_create_with_notifications_button_summary_off">El botón \"Crear\" no se ha intercambiado con el botón \"Notificaciones\"</string>
@@ -706,16 +710,18 @@ Las cookies se guardarán automáticamente si son válidas"</string>
   <string name="morphe_hide_navigation_bar_title">Ocultar barra de navegación</string>
   <string name="morphe_hide_navigation_bar_summary_on">La barra de navegación está oculta</string>
   <string name="morphe_hide_navigation_bar_summary_off">La barra de navegación está visible</string>
-  <string name="morphe_hide_navigation_bar_user_dialog_message">"Esto oculta completamente la barra de navegación, incluyendo la pestaña \"Tú\".
+  <string name="morphe_hide_navigation_bar_user_dialog_message">"Esto oculta por completo la barra de navegación, incluida la pestaña \"Tú\".
 
-Para acceder a la configuración:
-Abrir cualquier vídeo → Abrir el menú Calidad → Pulsar en \"Configuración > Preferencias de calidad de vídeo\" en la parte inferior."</string>
+Para acceder a los ajustes, activa el botón de ajustes a través de General → Barra de herramientas → Mostrar ajustes."</string>
   <string name="morphe_narrow_navigation_buttons_title">Activar botones de navegación estrechos</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">El espaciado entre los botones de navegación es estrecho</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">El espaciado entre los botones de navegación es normal</string>
   <string name="morphe_navigation_bar_animations_title">Activar animaciones de barra de navegación</string>
   <string name="morphe_navigation_bar_animations_summary_on">Las transiciones de navegación están animadas</string>
   <string name="morphe_navigation_bar_animations_summary_off">Las transiciones de navegación no están animadas</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_title">Desactivar ocultación automática de la barra de navegación</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_on">La barra de navegación no se ocultará al desplazarse</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">La barra de navegación se ocultará al desplazarse</string>
   <string name="morphe_disable_translucent_status_bar_title">Desactivar barra de estado translúcida</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">La barra de estado es opaca</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">La barra de estado es opaca o translúcida</string>
@@ -743,7 +749,7 @@ Abrir cualquier vídeo → Abrir el menú Calidad → Pulsar en \"Configuración
   <string name="morphe_hide_toolbar_search_button_summary_on">El botón \"Buscar\" está oculto</string>
   <string name="morphe_hide_toolbar_search_button_summary_off">El botón \"Buscar\" está visible</string>
   <string name="morphe_show_toolbar_settings_button_title">Mostrar ajustes</string>
-  <string name="morphe_show_toolbar_settings_button_summary_on">El botón de ajustes está mostrado</string>
+  <string name="morphe_show_toolbar_settings_button_summary_on">El botón de ajustes está visible</string>
   <string name="morphe_show_toolbar_settings_button_summary_off">El botón de ajustes está oculto</string>
   <string name="morphe_show_toolbar_settings_button_index_title">Índice del botón de ajustes</string>
   <string name="morphe_show_toolbar_settings_button_type_title">Acción del botón de ajustes</string>
@@ -1007,10 +1013,10 @@ Para mostrar el menú de pistas de audio, cambia 'Falsificar transmisiones de v�
   <string name="morphe_hide_shorts_navigation_bar_summary_on">La barra de navegación está oculta</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">La barra de navegación está visible</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
-  <string name="morphe_end_screen_suggested_video_title">Ocultar vídeo sugerido en pantalla final</string>
-  <string name="morphe_end_screen_suggested_video_summary_on">El vídeo sugerido en la pantalla final está oculto</string>
-  <string name="morphe_end_screen_suggested_video_summary_off">El vídeo sugerido en la pantalla final está visible</string>
-  <string name="morphe_end_screen_suggested_video_user_dialog_message">"Este ajuste solo funciona si \"Reproducción automática del siguiente vídeo\" está desactivada.
+  <string name="morphe_hide_end_screen_suggested_video_title">Ocultar vídeo sugerido en pantalla final</string>
+  <string name="morphe_hide_end_screen_suggested_video_summary_on">El vídeo sugerido en la pantalla final está oculto</string>
+  <string name="morphe_hide_end_screen_suggested_video_summary_off">El vídeo sugerido en la pantalla final está visible</string>
+  <string name="morphe_hide_end_screen_suggested_video_user_dialog_message">"Este ajuste solo funciona si \"Reproducción automática del siguiente vídeo\" está desactivada.
 
 Puedes cambiar esto en YouTube: 
 Configuración → Reproducción → Reproducción automática del siguiente vídeo"</string>
@@ -1369,6 +1375,7 @@ Si se desactiva posteriormente, se recomienda borrar los datos de la aplicación
   <string name="morphe_change_start_page_entry_playlists">Listas de reproducción</string>
   <string name="morphe_change_start_page_entry_search">Búsqueda</string>
   <string name="morphe_change_start_page_entry_shopping">Compras</string>
+  <string name="morphe_change_start_page_entry_shorts">Shorts</string>
   <string name="morphe_change_start_page_entry_sports">Deportes</string>
   <string name="morphe_change_start_page_entry_subscriptions">Suscripciones</string>
   <string name="morphe_change_start_page_entry_trending">Tendencias</string>
