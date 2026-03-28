@@ -47,7 +47,7 @@ Bu, özel filtreler oluştururken bileşenlerin belirlenmesine yardımcı olabil
 Ancak, bunun etkinleştirilmesi IP adresiniz gibi bazı kullanıcı verilerini de günlüğe kaydeder."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Arayüz güncellemelerini devre dışı bırak</string>
-  <string name="morphe_disable_layout_updates_summary_on">Arayüz sunucu tarafından güncellemeyecek</string>
+  <string name="morphe_disable_layout_updates_summary_on">Arayüz sunucu tarafından güncellenmeyecek</string>
   <string name="morphe_disable_layout_updates_summary_off">Arayüz sunucu tarafından güncellenecek</string>
   <string name="morphe_disable_layout_updates_user_dialog_message">"Uygulama ilk kurulduğunda kullanılan düzeni geri döner.
 
@@ -306,15 +306,15 @@ YouTube Doodles göstermek, özel başlıkların görüntülenmesini engelleyebi
   <string name="morphe_hide_subscribe_button_in_channel_page_summary_off">Abone ol düğmesi görünür</string>
   <string name="morphe_comments_screen_title">Yorumlar</string>
   <string name="morphe_comments_screen_summary">Yorumlar kısmı bileşenlerini gizle veya göster</string>
-  <string name="morphe_hide_comments_carousel_title">Kaydırmalı yorum filtresi aktifleştir</string>
-  <string name="morphe_hide_comments_carousel_summary_on">Kaydırmalı yorum filtresi açık</string>
-  <string name="morphe_hide_comments_carousel_summary_off">Kaydırmalı yorum filtresi kapalı.</string>
+  <string name="morphe_hide_comments_carousel_title">Yorumlar döngüsü filtresini etkinleştir</string>
+  <string name="morphe_hide_comments_carousel_summary_on">Yorumlar döngüsü filtresi etkin</string>
+  <string name="morphe_hide_comments_carousel_summary_off">Yorumlar döngüsü filtresi devre dışı</string>
   <string name="morphe_hide_comments_carousel_user_dialog_message">"Not:
-• Kaydırmalı öğenin tam adını girdiğinizden emin olun (Örn: Ask, Hype this video, Listen on YouTube Music, vb.).
+• Kaydırmalı öğenin tam adını girdiğinizden emin olun (Örn: Sor, Bu videoyu hype edin, YouTube Music'te dinleyin, vb.).
 • Kaydırmalı öğeleri gizlemek beklenmedik yan etkilere neden olabilir.
-• Tüm kaydırmalı öğeler gizlenirse, yorumlar bölümünün tamamı da gizlenecektir."</string>
-  <string name="morphe_hide_comments_carousel_filter_strings_title">Kaydırmalı yorum filtresi</string>
-  <string name="morphe_hide_comments_carousel_filter_strings_summary">Filtrelemek istediğiniz kaydırmalı yorum adlarını, her satıra bir tane gelecek şekilde girin.</string>
+• Tüm kaydırmalı öğeler gizlenirse yorumlar bölümünün tamamı da gizlenecektir."</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">Yorumlar döngüsü filtresi</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">Filtrelemek istediğiniz yorumlar döngüsü adlarını her satıra bir tane olacak şekilde girin</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Yapay zeka sohbet özetini gizle</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_on">Yapay zeka sohbet özeti gizli</string>
   <string name="morphe_hide_comments_ai_chat_summary_summary_off">Yapay zeka sohbet özeti görünür</string>
@@ -710,16 +710,16 @@ Geçerli ise otomatik olarak kaydedilecek"</string>
   <string name="morphe_hide_navigation_bar_title">Gezinme çubuğunu gizle</string>
   <string name="morphe_hide_navigation_bar_summary_on">Gezinme çubuğu gizli</string>
   <string name="morphe_hide_navigation_bar_summary_off">Gezinme çubuğu görünür</string>
-  <string name="morphe_hide_navigation_bar_user_dialog_message">"Bu, 'You' sekmesini de dahil olmak üzere, tamamen gezinme çubuğunu gizler.
+  <string name="morphe_hide_navigation_bar_user_dialog_message">"Bu, 'Siz' sekmesi de dahil olmak üzere gezinme çubuğunu tamamen gizler.
 
-Ayarlara erişmek için, Ayarlar düğmesini Genel → Araç Çubuğu → Ayarları Göster yoluyla etkinleştirin."</string>
+Ayarlara erişmek için, Genel → Araç Çubuğu → Ayarları Göster yoluyla Ayarlar düğmesini etkinleştirin."</string>
   <string name="morphe_narrow_navigation_buttons_title">Dar gezinme düğmelerini etkinleştir</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">Gezinme düğmeleri arasındaki boşluk dar</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">Gezinme düğmeleri arasındaki boşluk normal</string>
   <string name="morphe_navigation_bar_animations_title">Gezinme çubuğu animasyonlarını etkinleştir</string>
   <string name="morphe_navigation_bar_animations_summary_on">Gezinme geçişleri animasyonludur</string>
   <string name="morphe_navigation_bar_animations_summary_off">Gezinme geçişleri animasyonlu değildir</string>
-  <string name="morphe_disable_auto_hide_navigation_bar_title">Otomatik gizleme özelliğini devre dışı bırak.</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_title">Gezinme çubuğunun otomatik gizlenmesini devre dışı bırak</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary_on">Gezinme çubuğu kaydırma sırasında gizlenmeyecek</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary_off">Gezinme çubuğu kaydırma sırasında gizlenecek</string>
   <string name="morphe_disable_translucent_status_bar_title">Yarı saydam durum çubuğunu devre dışı bırak</string>
@@ -761,7 +761,7 @@ Morphe ayarlarını açmak için basılı tutun"</string>
   <string name="morphe_hide_player_flyout_title">Açılır menü</string>
   <string name="morphe_hide_player_flyout_summary">Oynatıcı açılır menü öğelerini gizle veya göster</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_captions_title">Altyazıları gizle</string>
+  <string name="morphe_hide_player_flyout_captions_title">Altyazılar\'ı gizle</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">Altyazılar menüsü gizli</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">Altyazılar menüsü görünür</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -769,11 +769,11 @@ Morphe ayarlarını açmak için basılı tutun"</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">Ek ayarlar / Diğer menüsü gizli</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_off">Ek ayarlar / Diğer menüsü görünür</string>
   <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Uyku zamanlayıcısını gizle</string>
-  <string name="morphe_hide_player_flyout_sleep_timer_summary_on">Uyku zamanlayıcısı menüsü gizli</string>
-  <string name="morphe_hide_player_flyout_sleep_timer_summary_off">Uyku zamanlayıcısı menüsü görünür</string>
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Uyku modu zamanlayıcı\'yı gizle</string>
+  <string name="morphe_hide_player_flyout_sleep_timer_summary_on">Uyku modu zamanlayıcı menüsü gizli</string>
+  <string name="morphe_hide_player_flyout_sleep_timer_summary_off">Uyku modu zamanlayıcı menüsü görünür</string>
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Videoyu döngüye almayı gizle</string>
+  <string name="morphe_hide_player_flyout_loop_video_title">Videoyu döngüye al\'ı gizle</string>
   <string name="morphe_hide_player_flyout_loop_video_summary_on">Videoyu döngüye al menüsü gizli</string>
   <string name="morphe_hide_player_flyout_loop_video_summary_off">Videoyu döngüye al menüsü görünür</string>
   <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -781,7 +781,7 @@ Morphe ayarlarını açmak için basılı tutun"</string>
   <string name="morphe_hide_player_flyout_ambient_mode_summary_on">Ambiyans modu menüsü gizli</string>
   <string name="morphe_hide_player_flyout_ambient_mode_summary_off">Ambiyans modu menüsü görünür</string>
   <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Sabit sesi gizle</string>
+  <string name="morphe_hide_player_flyout_stable_volume_title">Sabit ses\'i gizle</string>
   <string name="morphe_hide_player_flyout_stable_volume_summary_off">Sabit ses menüsü görünür</string>
   <string name="morphe_hide_player_flyout_stable_volume_summary_on">Sabit ses menüsü gizli</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -852,18 +852,18 @@ Ses Parçası menüsünü görüntülemek için, 'Video akışlarını taklit et
   <string name="morphe_hide_end_screen_cards_summary_on">Bitiş ekranı kartları gizli</string>
   <string name="morphe_hide_end_screen_cards_summary_off">Bitiş ekranı kartları görünür</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
-  <string name="morphe_ambient_mode_screen_title">Ambiyans Modu</string>
-  <string name="morphe_ambient_mode_screen_summary">Ambiyans Modu için güç tasarruf kısıtlamalarını atla ve tamamen veya tam ekran olarak devre dışı bırak</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_title">Ambiyans Modu kısıtlamalarını atla</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Akış modu kısıtlamaları güç tasarrufu için atlanıyor</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Akış modu kısıtlamaları güç tasarrufu için atlanmıyor</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Bu işlemi etkinleştirmek pil ömürünü azaltabilir.</string>
-  <string name="morphe_disable_ambient_mode_title">Akış modunu devre dışı bırak</string>
-  <string name="morphe_disable_ambient_mode_summary_on">Akış modu devre dışı bırakıldı</string>
-  <string name="morphe_disable_ambient_mode_summary_off">Akış modu etkinleştirildi</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_title">Tam ekranda ambiyans modunu devre dışı bırak</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Tam ekran akış modu devre dışı bırakıldı</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Tam ekran akış modu etkinleştirildi</string>
+  <string name="morphe_ambient_mode_screen_title">Ambiyans modu</string>
+  <string name="morphe_ambient_mode_screen_summary">Ambiyans modu için güç tasarrufu kısıtlamalarını atla ve bu modu tamamen veya tam ekran modunda devre dışı bırak</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Ambiyans modu kısıtlamalarını atla</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_on">Güç tasarrufu Ambiyans modu kısıtlamaları atlanıyor</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary_off">Güç tasarrufu Ambiyans modu kısıtlamaları atlanmıyor</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Bunu etkinleştirmek pil ömürünü azaltabilir.</string>
+  <string name="morphe_disable_ambient_mode_title">Ambiyans modunu devre dışı bırak</string>
+  <string name="morphe_disable_ambient_mode_summary_on">Ambiyans modu devre dışı</string>
+  <string name="morphe_disable_ambient_mode_summary_off">Ambiyans modu etkin</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_title">Ambiyans modunu tam ekranda devre dışı bırak</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_on">Ambiyans modu tam ekranda devre dışı</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_summary_off">Ambiyans modu tam ekranda etkin</string>
   <!-- layout.hide.infocards.hideInfocardsResourcePatch -->
   <string name="morphe_hide_info_cards_title">Bilgi kartlarını gizle</string>
   <string name="morphe_hide_info_cards_summary_on">Bilgi kartları gizli</string>
@@ -1657,7 +1657,7 @@ AV1 ile video oynatma takılabilir veya kare atlayabilir."</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Orijinal sesi zorlama mevcut değil</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Oynatıcı JavaScript varyantı</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_title">Meraklısı için istatistiklerde göster</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">İstemci tipi meraklısı için istatistiklerde gösterilir</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">İstemci, meraklısı için istatistiklerde gizli</string>
+  <string name="morphe_spoof_video_streams_stats_for_nerds_title">Meraklısı için istatistikler\'de göster</string>
+  <string name="morphe_spoof_video_streams_stats_for_nerds_summary_on">İstemci tipi Meraklısı için istatistikler\'de görünür</string>
+  <string name="morphe_spoof_video_streams_stats_for_nerds_summary_off">İstemci, Meraklısı için istatistikler\'de gizli</string>
 </resources>

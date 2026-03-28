@@ -146,12 +146,12 @@ Les changements incluent :
   <string name="morphe_hide_you_may_like_section_summary_on">La section \'Recommandations\' est masquée</string>
   <string name="morphe_hide_you_may_like_section_summary_off">La section \'Recommandations\' est affichée</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
-  <string name="morphe_hide_youtube_doodles_title">Masquer les Doodles YouTube</string>
-  <string name="morphe_hide_youtube_doodles_summary_on">L\'animation Doodles sur le logo YouTube est masquée</string>
-  <string name="morphe_hide_youtube_doodles_summary_off">L\'animation Doodles sur le logo YouTube est affichée</string>
-  <string name="morphe_hide_youtube_doodles_user_dialog_message">"Les Doodles YouTube sont affichés quelques jours par an dans diverses régions du monde.
+  <string name="morphe_hide_youtube_doodles_title">Masquer les YouTube Doodles</string>
+  <string name="morphe_hide_youtube_doodles_summary_on">L\'animation YouTube Doodles sur le logo est masquée</string>
+  <string name="morphe_hide_youtube_doodles_summary_off">L\'animation YouTube Doodles sur le logo est affichée</string>
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">"Les YouTube Doodles sont affichés quelques jours par an dans différentes régions du monde.
 
-Afficher les Doodles YouTube peut empêcher l'affichage des en-têtes personnalisés."</string>
+L’affichage des YouTube Doodles peut empêcher l’affichage des en-têtes personnalisés."</string>
   <string name="morphe_hide_channel_bar_title">Masquer la barre de chaîne </string>
   <string name="morphe_hide_channel_bar_summary_on">La barre de chaîne est masquée</string>
   <string name="morphe_hide_channel_bar_summary_off">La barre de chaîne est affichée</string>
@@ -711,9 +711,9 @@ Les cookies seront enregistrés automatiquement s'ils sont valides"</string>
   <string name="morphe_hide_navigation_bar_title">Masquer la barre de navigation</string>
   <string name="morphe_hide_navigation_bar_summary_on">La barre de navigation est masquée</string>
   <string name="morphe_hide_navigation_bar_summary_off">La barre de navigation est affichée</string>
-  <string name="morphe_hide_navigation_bar_user_dialog_message">"Cela masque complètement la barre de navigation, y compris l’onglet « Vous ».
+  <string name="morphe_hide_navigation_bar_user_dialog_message">"Cela masque complètement la barre de navigation, y compris l’onglet 'Vous'.
 
-Pour accéder aux paramètres, activez le bouton Paramètres via Général → Barre d’outils → Afficher les paramètres."</string>
+Pour accéder aux paramètres, activez le bouton 'Paramètres' via Général → Barre d’outils → Afficher 'Paramètres'"</string>
   <string name="morphe_narrow_navigation_buttons_title">Activer les boutons de navigation compacts</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">L\'espacement entre les boutons de navigation sont réduit</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">L\'espacement entre les boutons de navigation sont normaux</string>
@@ -721,8 +721,8 @@ Pour accéder aux paramètres, activez le bouton Paramètres via Général → B
   <string name="morphe_navigation_bar_animations_summary_on">Les transitions de navigation sont animées</string>
   <string name="morphe_navigation_bar_animations_summary_off">Les transitions de navigation ne sont pas animées</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Désactiver le masquage automatique de la barre de navigation</string>
-  <string name="morphe_disable_auto_hide_navigation_bar_summary_on">La barre de navigation ne se masquera pas automatiquement</string>
-  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">La barre de navigation se masquera pendant le défilement</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_on">La barre de navigation ne se masquera pas lors du défilement</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">La barre de navigation se masquera lors du défilement</string>
   <string name="morphe_disable_translucent_status_bar_title">Désactiver la barre de notification translucide</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">La barre de notification est opaque</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">La barre de notification est opaque ou translucide</string>

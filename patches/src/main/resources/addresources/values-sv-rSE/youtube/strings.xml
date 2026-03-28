@@ -149,6 +149,9 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_youtube_doodles_title">Dölj YouTube-doodles</string>
   <string name="morphe_hide_youtube_doodles_summary_on">YouTube-doodles-animation på logotypen är dold</string>
   <string name="morphe_hide_youtube_doodles_summary_off">YouTube-doodles-animation på logotypen visas</string>
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">"YouTube-doodles visas några dagar varje år i olika delar av världen.
+
+Om YouTube-doodles visas kan det hindra anpassade sidhuvuden från att visas."</string>
   <string name="morphe_hide_channel_bar_title">Dölj kanalfält</string>
   <string name="morphe_hide_channel_bar_summary_on">Kanalfältet är dolt</string>
   <string name="morphe_hide_channel_bar_summary_off">Kanalfältet visas</string>
@@ -307,6 +310,10 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_comments_carousel_title">Aktivera filter för kommentarsfältskarusellen</string>
   <string name="morphe_hide_comments_carousel_summary_on">Filter för kommentarsfältskarusellen är aktiverat</string>
   <string name="morphe_hide_comments_carousel_summary_off">Filter för kommentarsfältskarusellen är inaktiverat</string>
+  <string name="morphe_hide_comments_carousel_user_dialog_message">"Obs!
+• Se till att ange det exakta namnet på objektet i karusellen (t.ex. Fråga, Hajpa den här videon, Lyssna på YouTube Music m.fl.).
+• Om du döljer objekt i karusellen kan det leda till oavsiktliga bieffekter.
+• Om alla objekt i karusellen har dolts döljs även hela kommentarsfältet"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Filter för kommentarsfältskarusellen</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">Ange namnen på de objekt i kommentarsfältskarusellen som ska filtreras bort, ett per rad</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Dölj AI-sammanfattning av chatt</string>
@@ -704,12 +711,18 @@ Cookies sparas automatiskt om de är giltiga"</string>
   <string name="morphe_hide_navigation_bar_title">Dölj navigeringsfältet</string>
   <string name="morphe_hide_navigation_bar_summary_on">Navigeringsfältet är dolt</string>
   <string name="morphe_hide_navigation_bar_summary_off">Navigeringsfältet visas</string>
+  <string name="morphe_hide_navigation_bar_user_dialog_message">"Det här döljer navigeringsfältet helt, inklusive fliken Ditt YouTube.
+
+Om du vill komma åt inställningarna aktiverar du knappen Inställningar via Allmänt → Verktygsfält → Visa Inställningar"</string>
   <string name="morphe_narrow_navigation_buttons_title">Aktivera smala navigeringsknappar</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">Avståndet mellan navigeringsknapparna är smalt</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">Avståndet mellan navigeringsknapparna är normalt</string>
   <string name="morphe_navigation_bar_animations_title">Aktivera animeringar för navigeringsfältet</string>
   <string name="morphe_navigation_bar_animations_summary_on">Navigeringsoverlägg animeras</string>
   <string name="morphe_navigation_bar_animations_summary_off">Navigeringsoverlägg animeras inte</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_title">Inaktivera att navigeringsfältet döljs automatiskt</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_on">Navigeringsfältet döljs inte när du skrollar</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">Navigeringsfältet döljs när du skrollar</string>
   <string name="morphe_disable_translucent_status_bar_title">Inaktivera genomskinligt statusfält</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statusfältet är ogenomskinligt</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statusfältet är ogenomskinligt eller genomskinligt</string>

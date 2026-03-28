@@ -149,9 +149,9 @@ Zmiany obejmują:
   <string name="morphe_hide_youtube_doodles_title">YouTube Doodles</string>
   <string name="morphe_hide_youtube_doodles_summary_on">Ukryte</string>
   <string name="morphe_hide_youtube_doodles_summary_off">Widoczne</string>
-  <string name="morphe_hide_youtube_doodles_user_dialog_message">"YouTube Doodles są wyświetlane kilka dni w roku w różnych częściach świata.
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">"YouTube Doodles pojawiają się przez kilka dni w roku w różnych częściach świata.
 
-Wyświetlanie YouTube Doodles może uniemożliwić wyświetlanie niestandardowych nagłówków."</string>
+Ich obecność może blokować widoczność własnych logo w nagłówku."</string>
   <string name="morphe_hide_channel_bar_title">Pasek kanału</string>
   <string name="morphe_hide_channel_bar_summary_on">Ukryty</string>
   <string name="morphe_hide_channel_bar_summary_off">Widoczny</string>
@@ -311,7 +311,6 @@ Wyświetlanie YouTube Doodles może uniemożliwić wyświetlanie niestandardowyc
   <string name="morphe_hide_comments_carousel_summary_on">Włączony</string>
   <string name="morphe_hide_comments_carousel_summary_off">Wyłączony</string>
   <string name="morphe_hide_comments_carousel_user_dialog_message">"Uwaga:
-
 • Upewnij się, że wprowadzasz dokładną nazwę elementu karuzeli (np. Pytania, Podbij ten film, Słuchaj w YouTube Music itp.).
 • Ukrywanie elementów karuzeli może mieć nieoczekiwane skutki uboczne.
 • Jeśli wszystkie elementy karuzeli zostaną ukryte, cała sekcja komentarzy również zostanie ukryta."</string>
@@ -712,18 +711,18 @@ Ciasteczka zostaną zapisane automatycznie, jeśli są poprawne"</string>
   <string name="morphe_hide_navigation_bar_title">Pasek nawigacji</string>
   <string name="morphe_hide_navigation_bar_summary_on">Ukryty</string>
   <string name="morphe_hide_navigation_bar_summary_off">Widoczny</string>
-  <string name="morphe_hide_navigation_bar_user_dialog_message">"To całkowicie ukrywa pasek nawigacyjny, w tym zakładkę 'You'.
+  <string name="morphe_hide_navigation_bar_user_dialog_message">"To całkowicie ukrywa pasek nawigacji, w tym stronę \"Ty\".
 
-Aby uzyskać dostęp do Ustawień, włącz przycisk Ustawienia za pośrednictwem Ogólne → Pasek narzędzi → Pokaż Ustawienia."</string>
+Aby przejść do ustawień, włącz przycisk w menu: Ogólne → Pasek narzędzi → Przycisk Ustawienia."</string>
   <string name="morphe_narrow_navigation_buttons_title">Wąskie przyciski nawigacji</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">Włączone</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">Wyłączone</string>
   <string name="morphe_navigation_bar_animations_title">Animacje paska nawigacji</string>
   <string name="morphe_navigation_bar_animations_summary_on">Włączone</string>
   <string name="morphe_navigation_bar_animations_summary_off">Wyłączone</string>
-  <string name="morphe_disable_auto_hide_navigation_bar_title">Wyłącz automatyczne ukrywanie paska nawigacyjnego</string>
-  <string name="morphe_disable_auto_hide_navigation_bar_summary_on">Navigation bar will not hide while scrolling</string>
-  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">Navigation bar will hide while scrolling</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_title">Pasek nawigacji</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_on">Widoczny podczas przewijania</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">Znika podczas przewijania</string>
   <string name="morphe_disable_translucent_status_bar_title">Półprzezroczysty pasek statusu</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Wyłączony</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Włączony</string>

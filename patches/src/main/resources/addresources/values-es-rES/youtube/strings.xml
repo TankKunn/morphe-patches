@@ -710,9 +710,9 @@ Las cookies se guardarán automáticamente si son válidas"</string>
   <string name="morphe_hide_navigation_bar_title">Ocultar barra de navegación</string>
   <string name="morphe_hide_navigation_bar_summary_on">La barra de navegación está oculta</string>
   <string name="morphe_hide_navigation_bar_summary_off">La barra de navegación está visible</string>
-  <string name="morphe_hide_navigation_bar_user_dialog_message">"Esto oculta completamente la barra de navegación, incluido el “Yo” pestaña.
+  <string name="morphe_hide_navigation_bar_user_dialog_message">"Esto oculta por completo la barra de navegación, incluida la pestaña \"Tú\".
 
-Para acceder a la configuración, habilita el botón de Configuración a través de General → Barra de herramientas → Mostrar Configuración."</string>
+Para acceder a los ajustes, activa el botón de ajustes a través de General → Barra de herramientas → Mostrar ajustes."</string>
   <string name="morphe_narrow_navigation_buttons_title">Activar botones de navegación estrechos</string>
   <string name="morphe_narrow_navigation_buttons_summary_on">El espaciado entre los botones de navegación es estrecho</string>
   <string name="morphe_narrow_navigation_buttons_summary_off">El espaciado entre los botones de navegación es normal</string>
