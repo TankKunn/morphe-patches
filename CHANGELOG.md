@@ -1,3 +1,16 @@
+# [1.22.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.6...v1.22.0-dev.7) (2026-03-28)
+
+
+### Bug Fixes
+
+* **YouTube - Hide ads:** Hide all promotion banner ads ([#987](https://github.com/MorpheApp/morphe-patches/issues/987)) ([9096bcd](https://github.com/MorpheApp/morphe-patches/commit/9096bcd4cea53c57a8cb336421d53302ea8cd444))
+
+
+### Features
+
+* **YouTube Music:** Add experimental support for `9.12.51` ([746bdb9](https://github.com/MorpheApp/morphe-patches/commit/746bdb9649ebbb252ac222110a3ca09eda227458))
+* **YouTube:** Add experimental support for `21.13.163` ([ef345ba](https://github.com/MorpheApp/morphe-patches/commit/ef345ba5579a3631420ca5f29d2e415ae7f19948))
+
 # [1.22.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0-dev.5...v1.22.0-dev.6) (2026-03-26)
 
 
