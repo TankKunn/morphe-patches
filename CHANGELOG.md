@@ -1,3 +1,15 @@
+# [1.23.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0...v1.23.0-dev.1) (2026-03-29)
+
+
+### Bug Fixes
+
+* **YouTube - Theme:** Carbon background color does not use custom background color with experimental app targets ([fa2439d](https://github.com/MorpheApp/morphe-patches/commit/fa2439d09286db83a0d588b407bbc5248e1589cf))
+
+
+### Features
+
+* **YouTube:** Add Morphe bold style player buttons ([#954](https://github.com/MorpheApp/morphe-patches/issues/954)) ([7f70b6f](https://github.com/MorpheApp/morphe-patches/commit/7f70b6f10ab5e600f4297d4208641a0ea2d817b1))
+
 # [1.22.0](https://github.com/MorpheApp/morphe-patches/compare/v1.21.1...v1.22.0) (2026-03-28)
 
 
