@@ -111,10 +111,7 @@ val navigationBarPatch = bytecodePatch(
             SwitchPreference("morphe_disable_translucent_status_bar")
         )
 
-        if (!is_20_45_or_greater) {
-            // Feature has not worked well for a while and YT seems to have abandoned this a/b test.
-            navPreferences += SwitchPreference("morphe_navigation_bar_animations")
-        }
+        navPreferences += SwitchPreference("morphe_navigation_bar_animations")
 
         if (is_20_31_or_greater) {
             navPreferences += SwitchPreference("morphe_disable_auto_hide_navigation_bar")
