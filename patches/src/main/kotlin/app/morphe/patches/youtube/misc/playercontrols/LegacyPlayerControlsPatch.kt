@@ -21,10 +21,6 @@ import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patches.shared.misc.mapping.resourceMappingPatch
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
-import app.morphe.patches.youtube.misc.playservice.is_19_25_or_greater
-import app.morphe.patches.youtube.misc.playservice.is_19_35_or_greater
-import app.morphe.patches.youtube.misc.playservice.is_20_19_or_greater
-import app.morphe.patches.youtube.misc.playservice.is_20_20_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_28_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_30_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_40_or_greater
@@ -34,11 +30,9 @@ import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.util.copyXmlNode
 import app.morphe.util.findElementByAttributeValue
 import app.morphe.util.findElementByAttributeValueOrThrow
-import app.morphe.util.indexOfFirstInstructionOrThrow
 import app.morphe.util.inputStreamFromBundledResource
 import app.morphe.util.insertLiteralOverride
 import app.morphe.util.returnEarly
-import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import org.w3c.dom.Node
@@ -332,28 +326,10 @@ val legacyPlayerControlsPatch = bytecodePatch(
         // that uses layout file youtube_video_exploder_controls_bottom_ui_container.xml
         // The change to support this is simple and only requires adding buttons to both layout files,
         // but for now force this different layout off since it's still an experimental test.
-        if (is_19_35_or_greater) {
-            overrideExploderLayout(PlayerBottomControlsExploderFeatureFlagFingerprint)
-        }
-
-        // A/B test of different top overlay controls. Two different layouts can be used:
-        // youtube_cf_navigation_improvement_controls_layout.xml
-        // youtube_cf_minimal_impact_controls_layout.xml
-        //
-        // Flag was removed in 20.19+
-        if (is_19_25_or_greater && !is_20_19_or_greater) {
-            PlayerTopControlsExperimentalLayoutFeatureFlagFingerprint.method.apply {
-                val index = indexOfFirstInstructionOrThrow(Opcode.MOVE_RESULT_OBJECT)
-                val register = getInstruction<OneRegisterInstruction>(index).registerA
-
-                addInstruction(index + 1, "const-string v$register, \"default\"")
-            }
-        }
+        overrideExploderLayout(PlayerBottomControlsExploderFeatureFlagFingerprint)
 
         // Turn off a/b tests of ugly player buttons that don't match the style of custom player buttons.
-        if (is_20_20_or_greater) {
-            overrideExploderLayout(PlayerControlsFullscreenLargeButtonsFeatureFlagFingerprint)
-        }
+        overrideExploderLayout(PlayerControlsFullscreenLargeButtonsFeatureFlagFingerprint)
 
         if (is_20_28_or_greater) {
             overrideExploderLayout(PlayerControlsLargeOverlayButtonsFeatureFlagFingerprint)
