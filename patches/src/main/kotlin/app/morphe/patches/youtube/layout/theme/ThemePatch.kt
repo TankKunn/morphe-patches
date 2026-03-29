@@ -24,6 +24,7 @@ import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playservice.is_19_47_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_02_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_06_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_08_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
@@ -231,6 +232,15 @@ val themePatch = baseThemePatch(
                 it.instructionMatches.first().index,
                 "$EXTENSION_CLASS_DESCRIPTOR->gradientLoadingScreenEnabled(Z)Z"
             )
+        }
+
+        if (is_21_08_or_greater) {
+            CarbonColorThemeFeatureFlagFingerprint.let {
+                it.method.insertLiteralOverride(
+                    it.instructionMatches.first().index,
+                    false
+                )
+            }
         }
 
         if (is_19_47_or_greater) {
