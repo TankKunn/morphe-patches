@@ -1,5 +1,5 @@
 {
-  "version": "1.23.0-dev.1",
+  "version": "1.23.0-dev.2",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -1444,8 +1444,7 @@
       "use": true,
       "dependencies": [
         "BytecodePatch",
-        "BytecodePatch",
-        "ResourcePatch"
+        "BytecodePatch"
       ],
       "compatiblePackages": {
         "com.google.android.youtube": [
@@ -1788,7 +1787,6 @@
       "description": "Adds an option to show the dislike count of videos with Return YouTube Dislike.",
       "use": true,
       "dependencies": [
-        "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch",

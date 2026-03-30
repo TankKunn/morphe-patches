@@ -1,3 +1,15 @@
+# [1.23.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.1...v1.23.0-dev.2) (2026-03-30)
+
+
+### Bug Fixes
+
+* Notification icon entries key mismatch ([#1040](https://github.com/MorpheApp/morphe-patches/issues/1040)) ([01ef1ea](https://github.com/MorpheApp/morphe-patches/commit/01ef1ea731196325a00de060d6f34f51644a94c5))
+
+
+### Features
+
+* **Reddit:** Add experimental support for `2026.13.0` ([722f5bf](https://github.com/MorpheApp/morphe-patches/commit/722f5bf34f986c51b9631575cd09eb64dac47314))
+
 # [1.23.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.22.0...v1.23.0-dev.1) (2026-03-29)
 
 
