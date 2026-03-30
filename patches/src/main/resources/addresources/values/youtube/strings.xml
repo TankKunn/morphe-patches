@@ -763,7 +763,7 @@ To access Settings, enable the Settings button via General → Toolbar → Show 
     <string name="morphe_navigation_bar_animations_summary_off">Navigation transitions are not animated</string>
     <string name="morphe_disable_auto_hide_navigation_bar_title">Disable auto-hiding navigation bar</string>
     <string name="morphe_disable_auto_hide_navigation_bar_summary_on">Navigation bar will not hide while scrolling</string>
-    <string name="morphe_disable_auto_hide_navigation_bar_summary_off">Navigation bar will hide while scrolling</string>
+    <string name="morphe_disable_auto_hide_navigation_bar_summary_off">Navigation bar may hide while scrolling</string>
     <string name="morphe_disable_translucent_status_bar_title">Disable translucent status bar</string>
     <string name="morphe_disable_translucent_status_bar_summary_on">Status bar is opaque</string>
     <string name="morphe_disable_translucent_status_bar_summary_off">Status bar is opaque or translucent</string>
