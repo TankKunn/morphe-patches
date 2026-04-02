@@ -724,7 +724,7 @@ Saadaksesi asetukset, ota Asetukset-painike käyttöön kohdasta Yleiset → Ty�
   <string name="morphe_navigation_bar_animations_summary_off">Navigaatiosiirtymiä ei animoida</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Poista automaattisen piilottamisen käytöstä navigointipalkissa</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary_on">Navigaatiopalkki ei piilou skrollauksen aikana</string>
-  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">Navigaatiopalkki piiloutuu skrollauksen aikana</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">Navigaatiopalkki voi piiloutua vierittämisen aikana</string>
   <string name="morphe_disable_translucent_status_bar_title">Poista läpikuultava tilapalkki käytöstä</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Tilapalkki on läpinäkymätön</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Tilapalkki on läpinäkymätön tai läpikuultava</string>
@@ -1422,12 +1422,6 @@ Rajoitus: Työkalupalkin takaisin-painikkeen käyttäminen ei välttämättä to
   <string name="morphe_miniplayer_disable_rounded_corners_title">Poista pyöristetyt kulmat käytöstä</string>
   <string name="morphe_miniplayer_disable_rounded_corners_summary_on">Kulmat ovat suorakulmaisia</string>
   <string name="morphe_miniplayer_disable_rounded_corners_summary_off">Kulmat on pyöristetty</string>
-  <string name="morphe_miniplayer_double_tap_action_title">Ota kaksoisnapautus ja koon muuttaminen nipistämällä käyttöön</string>
-  <string name="morphe_miniplayer_double_tap_action_summary_on">"Kaksoisnapautustoiminto ja koon muuttaminen nipistämällä ovat käytössä
-
-• Kaksoisnapauta suurentaaksesi minisoittimen kokoa
-• Kaksoisnapauta uudelleen alkuperäisen koon palauttamiseksi"</string>
-  <string name="morphe_miniplayer_double_tap_action_summary_off">Kaksoisnapautustoiminto ja koon muuttaminen nipistämällä eivät olet käytössä</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_title">Poista vedä ja pudota käytöstä</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary_on">Vedä ja pudota ei ole käytössä</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary_off">"Vedä ja pudota on käytössä
@@ -1441,11 +1435,6 @@ Minisoitin voidaan vetää pois näytöltä vasemmalle tai oikealle"</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Piilota peittokuvan painikkeet</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_summary_on">Peittokuvan painikkeet piilotetaan</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_summary_off">Peittokuvan painikkeet näytetään</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_title">Piilota laajennus- ja sulkemispainikkeet</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_summary_on">"Painikkeet on piilotettu
-
-Pyhkäise laajentaaksesi tai sulkeaksesi"</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_summary_off">Laajennus- ja sulkemispainikkeet näytetään</string>
   <string name="morphe_miniplayer_hide_subtext_title">Piilota alatekstit</string>
   <string name="morphe_miniplayer_hide_subtext_summary_on">Alatekstit piilotetaan</string>
   <string name="morphe_miniplayer_hide_subtext_summary_off">Alatekstit näytetään</string>

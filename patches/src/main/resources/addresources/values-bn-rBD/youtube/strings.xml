@@ -720,7 +720,7 @@ YouTube Doodles দেখানো কাস্টম হেডার প্র�
   <string name="morphe_navigation_bar_animations_summary_off">নেভিগেশন ট্রানজিশনগুলি অ্যানিমেটেড নয়</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">স্বয়ংক্রিয়ভাবে নেভিগেশন বার লুকানো নিষ্ক্রিয় করুন</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary_on">স্ক্রোল করার সময় নেভিগেশন বারটি লুকানো থাকবে না</string>
-  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">স্ক্রোল করার সময় নেভিগেশন বারটি লুকানো হবে</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">স্ক্রোল করার সময় নেভিগেশন বার লুকানো হতে পারে</string>
   <string name="morphe_disable_translucent_status_bar_title">অর্ধস্বচ্ছ স্থিতি বার নিষ্ক্রিয় করুন</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">স্ট্যাটাস বারটি অস্বচ্ছ</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">স্ট্যাটাস বারটি অস্বচ্ছ বা স্বচ্ছ</string>
@@ -1418,12 +1418,6 @@ YouTube সেটিংস খুলতে ট্যাপ এবং ধরে �
   <string name="morphe_miniplayer_disable_rounded_corners_title">গোলাকার কোণা নিষ্ক্রিয় করুন</string>
   <string name="morphe_miniplayer_disable_rounded_corners_summary_on">কোণগুলি বর্গাকার</string>
   <string name="morphe_miniplayer_disable_rounded_corners_summary_off">কোণগুলি গোলাকার</string>
-  <string name="morphe_miniplayer_double_tap_action_title">ডাবল-ট্যাপ এবং পিঞ্চ টু রিসাইজ সক্ষম করুন</string>
-  <string name="morphe_miniplayer_double_tap_action_summary_on">"ডাবল-ট্যাপ করার ক্রিয়া এবং আকার পরিবর্তন করার জন্য চিমটি দেওয়া সক্রিয়
-
-• miniplayer আকার বৃদ্ধি করতে ডাবল ট্যাপ করুন
-• মূল আকার পুনরুদ্ধার করতে আবার ডাবল ট্যাপ করুন"</string>
-  <string name="morphe_miniplayer_double_tap_action_summary_off">ডাবল-ট্যাপ অ্যাকশন এবং পিঞ্চ টু রিসাইজ অক্ষম</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_title">টেনে-ছেড়ে দেওয়া নিষ্ক্রিয় করুন</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary_on">ড্র্যাগ এবং ড্রপ অক্ষম</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary_off">"ড্র্যাগ এবং ড্রপ সক্রিয়
@@ -1437,11 +1431,6 @@ Miniplayer স্ক্রিন থেকে বামে বা ডানে �
   <string name="morphe_miniplayer_hide_overlay_buttons_title">ওভারলে বোতাম লুকান</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_summary_on">ওভারলে বোতাম লুকানো আছে</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_summary_off">ওভারলে বোতাম দেখানো হয়েছে</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_title">এক্সপ্যান্ড এবং ক্লোজ বোতাম লুকান</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_summary_on">"বোতাম লুকানো আছে
-
-এক্সপ্যান্ড বা ক্লোজ করতে সোয়াইপ করুন"</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_summary_off">এক্সপ্যান্ড এবং ক্লোজ বোতাম দেখানো হচ্ছে</string>
   <string name="morphe_miniplayer_hide_subtext_title">উপপাঠ লুকান</string>
   <string name="morphe_miniplayer_hide_subtext_summary_on">উপপাঠ লুকিয়ে রয়েছে</string>
   <string name="morphe_miniplayer_hide_subtext_summary_off">উপপাঠ প্রদর্শিত হয়েছে</string>

@@ -721,7 +721,7 @@ Da biste pristupili Podešavanjima, omogućite dugme Podešavanja preko Opšte �
   <string name="morphe_navigation_bar_animations_summary_off">Animacije prelaza navigacije su isključene</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Onemogući automatsko skrivanje navigacione trake</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary_on">Ploča za navigaciju se neće sakrivati pri skrolovanju</string>
-  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">Ploča za navigaciju će se sakrivati pri skrolovanju</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary_off">Pločica za navigaciju se može sakriti prilikom skrolovanja</string>
   <string name="morphe_disable_translucent_status_bar_title">Onemogući prozirnu statusnu traku</string>
   <string name="morphe_disable_translucent_status_bar_summary_on">Statusna traka je neprozirna</string>
   <string name="morphe_disable_translucent_status_bar_summary_off">Statusna traka je neprozirna ili prozirna</string>
@@ -1418,12 +1418,6 @@ Ograničenje: Korišćenje dugmeta „Nazad” na traci sa alatkama možda neće
   <string name="morphe_miniplayer_disable_rounded_corners_title">Onemogući zaobljene uglove</string>
   <string name="morphe_miniplayer_disable_rounded_corners_summary_on">Uglovi su kvadratni</string>
   <string name="morphe_miniplayer_disable_rounded_corners_summary_off">Uglovi su zaobljeni</string>
-  <string name="morphe_miniplayer_double_tap_action_title">Omogući dvostruki dodir i štipanje za promenu veličine</string>
-  <string name="morphe_miniplayer_double_tap_action_summary_on">"Radnja dvostrukog dodira i štipanja za promenu veličine je omogućena
-
-• Dvaput dodirnite da biste povećali veličinu mini-plejera
-• Dvaput dodirnite ponovo da biste vratili originalnu veličinu"</string>
-  <string name="morphe_miniplayer_double_tap_action_summary_off">Radnja dvostrukog dodira i štipanja za promenu veličine je onemogućena</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_title">Onemogući prevlačenje i otpuštanje</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary_on">Prevlačenje i otpuštanje je onemogućeno</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary_off">"Povlačenje i otpuštanje je omogućeno
@@ -1437,11 +1431,6 @@ Mini-plejer se može prevući sa ekrana ulevo ili udesno"</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Sakrij dugmad preklopa</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_summary_on">Dugmad preklopa su skrivena</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_summary_off">Dugmad preklopa su prikazana</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_title">Sakrij dugmad za proširenje i zatvaranje</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_summary_on">"Dugmad su sakrivena
-
-Povucite za proširenje ili zatvaranje"</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_summary_off">Dugmad za proširenje i zatvaranje su prikazana</string>
   <string name="morphe_miniplayer_hide_subtext_title">Sakrij podtekstove</string>
   <string name="morphe_miniplayer_hide_subtext_summary_on">Podtekstovi su skriveni</string>
   <string name="morphe_miniplayer_hide_subtext_summary_off">Podtekstovi su prikazani</string>

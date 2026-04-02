@@ -19,7 +19,7 @@ Second \"item\" text"</string>
   <!-- misc.settings.settingsResourcePatch -->
   <string name="morphe_settings_submenu_title">設定</string>
   <string name="morphe_settings_confirm_user_dialog_title">本当に続行してもよろしいですか？</string>
-  <string name="morphe_settings_save">保存</string>
+  <string name="morphe_settings_save">適用</string>
   <string name="morphe_settings_reset">リセット</string>
   <string name="morphe_settings_reset_color">色を初期化</string>
   <string name="morphe_settings_color_invalid">色の値が無効です</string>
@@ -61,7 +61,7 @@ Second \"item\" text"</string>
   <string name="morphe_pref_import_export_title">インポート / エクスポート</string>
   <string name="morphe_pref_import_export_summary">Morphe の設定をインポート / エクスポートします</string>
   <string name="morphe_settings_import_file">ファイル入力</string>
-  <string name="morphe_settings_import_file_success">ファイル入力: [保存] を押して設定に反映</string>
+  <string name="morphe_settings_import_file_success">ファイル入力: [適用] を押して設定に反映</string>
   <string name="morphe_settings_import_file_failed">設定のファイル入力に失敗しました</string>
   <string name="morphe_settings_export_file">ファイル出力</string>
   <string name="morphe_settings_export_file_success">設定のファイル出力に成功しました</string>

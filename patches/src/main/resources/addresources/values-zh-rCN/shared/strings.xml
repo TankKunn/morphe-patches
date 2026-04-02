@@ -75,7 +75,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_about_links_website">网站</string>
   <string name="morphe_settings_about_links_donate">捐助</string>
   <string name="morphe_settings_about_links_translations">翻译</string>
-  <string name="morphe_settings_about_links_credits">积分</string>
+  <string name="morphe_settings_about_links_credits">贡献表</string>
   <string name="morphe_settings_about_links_dev_header_up_to_date">最新</string>
   <string name="morphe_settings_about_links_dev_header_update_available">有可用更新</string>
   <string name="morphe_settings_about_contributors_current">当前开发</string>

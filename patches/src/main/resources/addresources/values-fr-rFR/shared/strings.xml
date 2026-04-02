@@ -105,7 +105,7 @@ Vous ne serez plus averti en cas d’événements inattendus."</string>
   <string name="morphe_debug_export_logs_to_clipboard_title">Exporter les journaux de débogage</string>
   <string name="morphe_debug_export_logs_to_clipboard_summary">Copie les journaux de débogage Morphe dans le presse-papiers</string>
   <string name="morphe_debug_logs_disabled">La journalisation de débogage est désactivée</string>
-  <string name="morphe_debug_logs_none_found">Aucuns journaux trouvés</string>
+  <string name="morphe_debug_logs_none_found">Aucun journal trouvé</string>
   <string name="morphe_debug_logs_copied_to_clipboard">Journaux copiés</string>
   <string name="morphe_debug_logs_failed_to_export">Échec de l\'exportation des journaux : %s</string>
   <string name="morphe_debug_logs_clear_buffer_title">Effacer les journaux de débogage</string>
@@ -131,7 +131,7 @@ Vous ne serez plus averti en cas d’événements inattendus."</string>
 
 Suivez le guide 'Don’t kill my app' pour votre téléphone et appliquez les instructions à votre installation de MicroG.
 
-Cela est indispensable pour que l’application fonctionne correctement."</string>
+Cela est nécessaire pour que l’application fonctionne correctement."</string>
   <string name="gms_core_dialog_open_website_text">Ouvrir le site Web</string>
   <string name="gms_core_dialog_not_whitelisted_using_battery_optimizations_message">"Les optimisations de la batterie doivent être désactivées pour MicroG pour éviter des problèmes.
 

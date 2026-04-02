@@ -1237,12 +1237,6 @@ Məhdudiyyət: Alətlər cizgisindəki geri düyməsin istifadə işləməyə bi
   <string name="morphe_miniplayer_disable_rounded_corners_title">Dəyirmi küncləri qapat</string>
   <string name="morphe_miniplayer_disable_rounded_corners_summary_on">Künclər kvadratdır</string>
   <string name="morphe_miniplayer_disable_rounded_corners_summary_off">Künclər dairəvidir</string>
-  <string name="morphe_miniplayer_double_tap_action_title">Ölçüsünü dəyişmək üçün cüt toxunmanı və çimdikləməni aktiv et</string>
-  <string name="morphe_miniplayer_double_tap_action_summary_on">"Ölçüsün dəyişmək üçün cüt kliklə və çimdiklə
-
-• Kiçik oynadıcı ölçüsün artırmaq üçün cüt toxun
-• Orijinal ölçünü bərpa etmək üçün təkrar cüt toxun"</string>
-  <string name="morphe_miniplayer_double_tap_action_summary_off">Ölçüsünü dəyişdirmək üçün cüt toxunma fəaliyyəti və çimdikləmə yoxdur</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_title">Sürüklə və burax-ı qapat</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary_on">\"Sürüklə və burax\" aktiv deyil</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary_off">"Sürüklə və burax aktivdir
@@ -1256,11 +1250,6 @@ Kiçik oynadıcı ekrandan sola və ya sağa sürüklənə bilər"</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Örtük düymələrini gizlət</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_summary_on">Örtük düymələri gizlidir</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_summary_off">Örtük düymələri görünür</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_title">Genişləndirmə və bağlama düymələrini gizlət</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_summary_on">"Düymələr gizlənib
-
-Genişləndirmək və ya bağlamaq üçün sürüşdürün"</string>
-  <string name="morphe_miniplayer_hide_overlay_buttons_legacy_summary_off">Genişləndirmə və bağlama düymələri göstərilir</string>
   <string name="morphe_miniplayer_hide_subtext_title">Alt mətnləri gizlət</string>
   <string name="morphe_miniplayer_hide_subtext_summary_on">Alt mətnlər gizlədilir</string>
   <string name="morphe_miniplayer_hide_subtext_summary_off">Alt mətnlər göstərilir</string>
