@@ -324,7 +324,6 @@
         <item>@string/morphe_change_start_page_entry_all_subscriptions</item>
         <item>@string/morphe_change_start_page_entry_browse</item>
         <item>@string/morphe_change_start_page_entry_courses</item>
-        <item>@string/morphe_change_start_page_entry_explore</item>
         <item>@string/morphe_change_start_page_entry_fashion</item>
         <item>@string/morphe_change_start_page_entry_gaming</item>
         <item>@string/morphe_change_start_page_entry_history</item>
@@ -341,7 +340,6 @@
         <item>@string/morphe_change_start_page_entry_shorts</item>
         <item>@string/morphe_change_start_page_entry_sports</item>
         <item>@string/morphe_change_start_page_entry_subscriptions</item>
-        <item>@string/morphe_change_start_page_entry_trending</item>
         <item>@string/morphe_change_start_page_entry_virtual_reality</item>
         <item>@string/morphe_change_start_page_entry_watch_later</item>
         <item>@string/morphe_change_start_page_entry_your_clips</item>
@@ -351,7 +349,6 @@
         <item>ALL_SUBSCRIPTIONS</item>
         <item>BROWSE</item>
         <item>COURSES</item>
-        <item>EXPLORE</item>
         <item>FASHION</item>
         <item>GAMING</item>
         <item>HISTORY</item>
@@ -368,7 +365,6 @@
         <item>SHORTS</item>
         <item>SPORTS</item>
         <item>SUBSCRIPTIONS</item>
-        <item>TRENDING</item>
         <item>VIRTUAL_REALITY</item>
         <item>WATCH_LATER</item>
         <item>YOUR_CLIPS</item>
