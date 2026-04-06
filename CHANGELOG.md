@@ -1,3 +1,15 @@
+# [1.23.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.6...v1.23.0-dev.7) (2026-04-06)
+
+
+### Bug Fixes
+
+* **YouTube - Change start page:** Remove explore and trending start pages that YouTube no longer supports ([f165f0c](https://github.com/MorpheApp/morphe-patches/commit/f165f0c2a44f37ab3e2f036644eb5057f0a89bd4))
+
+
+### Features
+
+* **YouTube:** Add `Play all` patch ([#1012](https://github.com/MorpheApp/morphe-patches/issues/1012)) ([b3ac238](https://github.com/MorpheApp/morphe-patches/commit/b3ac238aa15342706d60532ea0bba12f45fef2ac))
+
 # [1.23.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.5...v1.23.0-dev.6) (2026-04-05)
 
 
