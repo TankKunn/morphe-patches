@@ -16,7 +16,6 @@ public final class HidePlayerOverlayButtonsPatch {
 
     private static final boolean HIDE_AUTOPLAY_BUTTON_ENABLED = Settings.HIDE_AUTOPLAY_BUTTON.get();
     private static final Boolean HIDE_FULLSCREEN_BUTTON_ENABLED = Settings.HIDE_FULLSCREEN_BUTTON.get();
-    private static final boolean RESTORE_OLD_PLAYER_BUTTONS = Settings.RESTORE_OLD_PLAYER_BUTTONS.get();
 
     /**
      * Injection point.
@@ -118,7 +117,7 @@ public final class HidePlayerOverlayButtonsPatch {
             return imageView;
         }
 
-        if (RESTORE_OLD_PLAYER_BUTTONS) {
+        if (LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS) {
             imageView.setVisibility(View.GONE);
             return null;
         }

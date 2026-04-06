@@ -185,7 +185,6 @@ public class PlayerOverlayButton {
         }
     }
 
-    public static final boolean RESTORE_OLD_PLAYER_BUTTONS = Settings.RESTORE_OLD_PLAYER_BUTTONS.get();
     private static final Boolean HIDE_FULLSCREEN_BUTTON_ENABLED = Settings.HIDE_FULLSCREEN_BUTTON.get();
 
     /** Top bar: video title container */

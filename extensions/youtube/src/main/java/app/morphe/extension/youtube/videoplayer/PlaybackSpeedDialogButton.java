@@ -20,6 +20,7 @@ import java.text.DecimalFormat;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.patches.playback.speed.CustomPlaybackSpeedPatch;
 import app.morphe.extension.youtube.settings.Settings;
@@ -43,7 +44,8 @@ public class PlaybackSpeedDialogButton {
      */
     public static void initializeButton(View controlsView) {
         try {
-            if (PlayerOverlayButton.RESTORE_OLD_PLAYER_BUTTONS || !Settings.PLAYBACK_SPEED_DIALOG_BUTTON.get()) {
+            if (LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS
+                    || !Settings.PLAYBACK_SPEED_DIALOG_BUTTON.get()) {
                 return;
             }
 
@@ -62,7 +64,7 @@ public class PlaybackSpeedDialogButton {
 
     public static void initializeLegacyButton(View controlsView) {
         try {
-            if (!PlayerOverlayButton.RESTORE_OLD_PLAYER_BUTTONS) {
+            if (!LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS) {
                 return;
             }
 

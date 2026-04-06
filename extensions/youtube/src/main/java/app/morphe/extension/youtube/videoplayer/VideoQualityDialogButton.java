@@ -19,7 +19,6 @@ import static app.morphe.extension.youtube.patches.VideoInformation.AUTOMATIC_VI
 import static app.morphe.extension.youtube.patches.VideoInformation.isPremiumVideoQuality;
 import static app.morphe.extension.youtube.videoplayer.LegacyPlayerControlButton.fadeInDuration;
 import static app.morphe.extension.youtube.videoplayer.LegacyPlayerControlButton.getDialogBackgroundColor;
-import static app.morphe.extension.youtube.videoplayer.PlayerOverlayButton.RESTORE_OLD_PLAYER_BUTTONS;
 
 import android.content.Context;
 import android.text.Spannable;
@@ -46,6 +45,7 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.shared.ui.SheetBottomDialog;
+import app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.patches.VideoInformation.VideoQualityInterface;
 import app.morphe.extension.youtube.patches.playback.quality.RememberVideoQualityPatch;
@@ -82,7 +82,8 @@ public class VideoQualityDialogButton {
      */
     public static void initializeButton(View controlsView) {
         try {
-            if (RESTORE_OLD_PLAYER_BUTTONS || !Settings.VIDEO_QUALITY_DIALOG_BUTTON.get()) {
+            if (LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS
+                    || !Settings.VIDEO_QUALITY_DIALOG_BUTTON.get()) {
                 return;
             }
 
@@ -104,7 +105,7 @@ public class VideoQualityDialogButton {
      */
     public static void initializeLegacyButton(View controlsView) {
         try {
-            if (!PlayerOverlayButton.RESTORE_OLD_PLAYER_BUTTONS) {
+            if (!LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS) {
                 return;
             }
 

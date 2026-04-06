@@ -13,7 +13,9 @@ import app.morphe.extension.youtube.settings.Settings;
 @SuppressWarnings("unused")
 public class LegacyPlayerControlsPatch {
 
-    private static final boolean RESTORE_OLD_PLAYER_BUTTONS = Settings.RESTORE_OLD_PLAYER_BUTTONS.get();
+    // 20.31 is first version with working buttons, but the layout is weird with oval-shaped player buttons.
+    public static final boolean RESTORE_OLD_PLAYER_BUTTONS = Settings.RESTORE_OLD_PLAYER_BUTTONS.get()
+            || !VersionCheckPatch.IS_20_31_OR_GREATER;
 
     public static WeakReference<View> fullscreenButtonRef = new WeakReference<>(null);
 

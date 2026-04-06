@@ -22,10 +22,10 @@ import java.util.Objects;
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.ui.Dim;
+import app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.sponsorblock.SegmentPlaybackController;
 import app.morphe.extension.youtube.sponsorblock.objects.SponsorSegment;
-import app.morphe.extension.youtube.videoplayer.PlayerOverlayButton;
 
 public class SkipSponsorButton extends FrameLayout {
     /**
@@ -43,7 +43,7 @@ public class SkipSponsorButton extends FrameLayout {
      * the bold player buttons.
      */
     public static final int SB_BUTTON_EXTRA_VERTICAL_PADDING =
-            PlayerOverlayButton.RESTORE_OLD_PLAYER_BUTTONS
+            LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS
             ? 0
             : Dim.dp10;
     private final LinearLayout skipSponsorBtnContainer;

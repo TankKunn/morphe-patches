@@ -261,9 +261,11 @@ val legacyPlayerControlsPatch = bytecodePatch(
     )
 
     execute {
-        PreferenceScreen.PLAYER.addPreferences(
-            SwitchPreference("morphe_restore_old_player_buttons")
-        )
+        if (is_20_30_or_greater) {
+            PreferenceScreen.PLAYER.addPreferences(
+                SwitchPreference("morphe_restore_old_player_buttons")
+            )
+        }
 
         PlayerBottomControlsInflateFingerprint.let {
             it.method.apply {
