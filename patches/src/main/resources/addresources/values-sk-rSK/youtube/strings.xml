@@ -246,6 +246,7 @@ Uistite sa, že názov balíka je správny a aplikácia je nainštalovaná"</str
   <string name="morphe_loop_video_button_summary_off">Tlačidlo opakovania videa sa nezobrazuje</string>
   <string name="morphe_loop_video_button_toast_on">Opakovanie videa je zapnuté</string>
   <string name="morphe_loop_video_button_toast_off">Opakovanie videa je vypnuté</string>
+  <!-- interaction.playall.playAllButtonPatch -->
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Zobraziť tlačidlo pre obnovenie videa</string>
   <string name="morphe_reload_video_summary_on">Tlačidlo obnovenia videa sa zobrazuje</string>

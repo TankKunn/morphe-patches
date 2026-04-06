@@ -430,6 +430,7 @@ Paket adının düzgün olduğun yoxla və tətbiqi quraşdırın"</string>
   <string name="morphe_loop_video_button_summary_off">Təkrarlama video menyusu göstərilir</string>
   <string name="morphe_loop_video_button_toast_on">Video təkrarlama açıqdır</string>
   <string name="morphe_loop_video_button_toast_off">Video təkrarlama qapalıdır</string>
+  <!-- interaction.playall.playAllButtonPatch -->
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Videonu təkrar yüklə düyməsini göstər</string>
   <string name="morphe_reload_video_summary_on">Videonu təkrar yüklə düyməsi görünür</string>

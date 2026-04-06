@@ -501,6 +501,7 @@ Kontrollera att paketnamnet är korrekt och att appen är installerad"</string>
   <string name="morphe_loop_video_button_summary_off">Knapp för videoslinga visas inte</string>
   <string name="morphe_loop_video_button_toast_on">Videoslinga är aktiverat</string>
   <string name="morphe_loop_video_button_toast_off">Videoslinga är inaktiverat</string>
+  <!-- interaction.playall.playAllButtonPatch -->
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Visa knapp för att läsa in videon igen</string>
   <string name="morphe_reload_video_summary_on">Knapp för att läsa in videon igen visas</string>

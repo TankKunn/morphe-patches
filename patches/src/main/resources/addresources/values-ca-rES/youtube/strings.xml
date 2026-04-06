@@ -79,6 +79,7 @@ Second \"item\" text"</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <!-- interaction.loop.loopVideoPatch -->
   <!-- interaction.loop.loopVideoButtonPatch -->
+  <!-- interaction.playall.playAllButtonPatch -->
   <!-- interaction.reload.reloadVideoPatch -->
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
   <!-- interaction.seekbar.livestreamDvrPatch -->

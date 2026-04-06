@@ -18,7 +18,7 @@ Second \"item\" text"</string>
 <resources>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
-  <string name="morphe_settings_screen_00_about_title">O Morpheu</string>
+  <string name="morphe_settings_screen_00_about_title">O Morphe</string>
   <string name="morphe_settings_screen_01_ads_title">Reklame</string>
   <string name="morphe_settings_screen_02_alt_thumbnails_title">Alternativne naslovne slike</string>
   <string name="morphe_settings_screen_03_feed_title">Feed</string>
@@ -63,6 +63,7 @@ Second \"item\" text"</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <!-- interaction.loop.loopVideoPatch -->
   <!-- interaction.loop.loopVideoButtonPatch -->
+  <!-- interaction.playall.playAllButtonPatch -->
   <!-- interaction.reload.reloadVideoPatch -->
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
   <!-- interaction.seekbar.livestreamDvrPatch -->

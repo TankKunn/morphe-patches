@@ -501,6 +501,25 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_button_summary_off">Εμφανίζεται</string>
   <string name="morphe_loop_video_button_toast_on">Η επανάληψη βίντεο είναι ενεργοποιημένη</string>
   <string name="morphe_loop_video_button_toast_off">Η επανάληψη βίντεο είναι απενεργοποιημένη</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Εμφάνιση κουμπιού αναπαραγωγής όλων</string>
+  <string name="morphe_play_all_button_summary_on">"Εμφανίζεται το κουμπί αναπαραγωγής όλων.\nΠατήστε για να δημιουργήσετε μια λίστα αναπαραγωγής με όλα τα βίντεο από το κανάλι.\nΠατήστε και κρατήστε πατημένο για να αναιρέσετε.\n\nΠληροφορίες: Ίσως να μην λειτουργεί σε ζωντανές μεταδόσεις"</string>
+  <string name="morphe_play_all_button_summary_off">Δεν εμφανίζεται το κουμπί αναπαραγωγής όλων</string>
+  <string name="morphe_play_all_button_type_title">Λειτουργία δημιουργίας λίστας αναπαραγωγής</string>
+  <string name="morphe_play_all_button_type_entry_0">Όλα τα περιεχόμενα (Ταξινόμηση κατά χρόνο, Αυξανόμενη σειρά)</string>
+  <string name="morphe_play_all_button_type_entry_1">Όλα τα περιεχόμενα (Ταξινόμηση κατά χρόνο)</string>
+  <string name="morphe_play_all_button_type_entry_2">Όλα τα περιεχόμενα (Ταξινόμηση κατά δημοτικότητα)</string>
+  <string name="morphe_play_all_button_type_entry_3">Μόνο βίντεο (Ταξινόμηση κατά χρόνο)</string>
+  <string name="morphe_play_all_button_type_entry_4">Μόνο βίντεο (Ταξινόμηση κατά δημοτικότητα)</string>
+  <string name="morphe_play_all_button_type_entry_5">Μόνο Shorts (Ταξινόμηση κατά χρόνο)</string>
+  <string name="morphe_play_all_button_type_entry_6">Μόνο Shorts (Ταξινόμηση κατά δημοτικότητα)</string>
+  <string name="morphe_play_all_button_type_entry_7">Μόνο μεταδιδόμενα βίντεο (Ταξινόμηση κατά χρόνο)</string>
+  <string name="morphe_play_all_button_type_entry_8">Μόνο μεταδιδόμενα βίντεο (Ταξινόμηση κατά δημοτικότητα)</string>
+  <string name="morphe_play_all_button_type_entry_9">Μόνο περιεχόμενο μελών</string>
+  <string name="morphe_play_all_button_type_entry_10">Μόνο βίντεο μελών</string>
+  <string name="morphe_play_all_button_type_entry_11">Μόνο Shorts μελών</string>
+  <string name="morphe_play_all_button_type_entry_12">Μόνο ζωντανές μεταδόσεις μελών</string>
+  <string name="morphe_play_all_button_not_available_toast">Δεν ήταν δυνατή η δημιουργία λίστας αναπαραγωγής λόγω ασυμφωνίας αναγνωριστικού καναλιού</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Εμφάνιση κουμπιού επανεξέτασης βίντεο</string>
   <string name="morphe_reload_video_summary_on">Εμφανίζεται το κουμπί επανεξέτασης βίντεο</string>
@@ -1622,7 +1641,7 @@ Second \"item\" text"</string>
 • Τα βίντεο HDR δεν θα χρησιμοποιούν τον κωδικοποιητή AVC
 • Ορισμένες συσκευές δεν μπορούν να επιβάλλουν τον κωδικοποιητή AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Για να χρησιμοποιήσετε αυτήν τη λειτουργία, αλλάξτε το \"Παραποίηση ροών βίντεο\" σε Android VR ή Android Studio</string>
+  <string name="morphe_force_avc_codec_not_available">Για να χρησιμοποιήσετε αυτήν τη λειτουργία, αλλάξτε τη \"Παραποίηση ροών βίντεο\" σε Android VR ή Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Εμφάνιση προχωρημένου μενού ποιότητας βίντεο</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Εμφανίζεται το προχωρημένο μενού ποιότητας βίντεο</string>

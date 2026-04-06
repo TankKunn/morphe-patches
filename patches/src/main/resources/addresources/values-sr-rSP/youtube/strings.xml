@@ -499,6 +499,25 @@ Promene uključuju:
   <string name="morphe_loop_video_button_summary_off">Дугме „Понављај видео” није приказано</string>
   <string name="morphe_loop_video_button_toast_on">Понављање видеа је укључено</string>
   <string name="morphe_loop_video_button_toast_off">Понављање видеа је искључено</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Покажи дугме за пуштање свих</string>
+  <string name="morphe_play_all_button_summary_on">"Дугме за пуштање свих је приказано\nДодирните да бисте генерисали листа свих видео снимака из канала\nДовлатните и задржите да бисте поништили\n\nИнфо: Можда неће радити на ливим стримовима"</string>
+  <string name="morphe_play_all_button_summary_off">Дугме за пуштање свих није приказано</string>
+  <string name="morphe_play_all_button_type_title">Режим генерисања листе</string>
+  <string name="morphe_play_all_button_type_entry_0">Сав садржаја (Сортирај по времену, Растући)</string>
+  <string name="morphe_play_all_button_type_entry_1">Сав садржај (Сортирај по времену)</string>
+  <string name="morphe_play_all_button_type_entry_2">Сав садржај (Сортирај по популарности)</string>
+  <string name="morphe_play_all_button_type_entry_3">Видео записи само (Сортирај по времену)</string>
+  <string name="morphe_play_all_button_type_entry_4">Видео записи само (Сортирај по популарности)</string>
+  <string name="morphe_play_all_button_type_entry_5">Shorts само (Сортирај по времену)</string>
+  <string name="morphe_play_all_button_type_entry_6">Shorts само (Сортирај по популарности)</string>
+  <string name="morphe_play_all_button_type_entry_7">Емитовани видео записи само (Сортирај по времену)</string>
+  <string name="morphe_play_all_button_type_entry_8">Емитовани видео записи само (Сортирај по популарности)</string>
+  <string name="morphe_play_all_button_type_entry_9">Садржај само за чланове</string>
+  <string name="morphe_play_all_button_type_entry_10">Видео записи само за чланове</string>
+  <string name="morphe_play_all_button_type_entry_11">Shorts само за чланове</string>
+  <string name="morphe_play_all_button_type_entry_12">Емитовани видео записи само за чланове</string>
+  <string name="morphe_play_all_button_not_available_toast">Није могуће генерисати листа ожигу због нескладног ID-ја канала</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Покажи дугме за поновно приказивање видеа</string>
   <string name="morphe_reload_video_summary_on">Дугме за поновно приказивање видеа је приказано</string>

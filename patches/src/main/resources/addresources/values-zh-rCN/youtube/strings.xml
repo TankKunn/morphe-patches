@@ -500,6 +500,29 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_button_summary_off">循环播放视频未显示</string>
   <string name="morphe_loop_video_button_toast_on">循环播放视频已开启</string>
   <string name="morphe_loop_video_button_toast_off">循环播放视频已关闭</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">显示播放所有按钮</string>
+  <string name="morphe_play_all_button_summary_on">"显示播放所有按钮
+点击生成频道所有视频的播放列表
+长按以撤销
+
+提示：可能无法在直播流上使用"</string>
+  <string name="morphe_play_all_button_summary_off">未显示播放所有按钮</string>
+  <string name="morphe_play_all_button_type_title">生成播放列表模式</string>
+  <string name="morphe_play_all_button_type_entry_0">所有内容（按时间排序，升序）</string>
+  <string name="morphe_play_all_button_type_entry_1">所有内容（按时间排序）</string>
+  <string name="morphe_play_all_button_type_entry_2">所有内容（按受欢迎程度排序）</string>
+  <string name="morphe_play_all_button_type_entry_3">视频内容（按时间排序）</string>
+  <string name="morphe_play_all_button_type_entry_4">视频内容（按受欢迎程度排序）</string>
+  <string name="morphe_play_all_button_type_entry_5">Shorts内容（按时间排序）</string>
+  <string name="morphe_play_all_button_type_entry_6">Shorts内容（按受欢迎程度排序）</string>
+  <string name="morphe_play_all_button_type_entry_7">直播视频内容（按时间排序）</string>
+  <string name="morphe_play_all_button_type_entry_8">直播视频内容（按受欢迎程度排序）</string>
+  <string name="morphe_play_all_button_type_entry_9">仅限会员内容</string>
+  <string name="morphe_play_all_button_type_entry_10">会员专属视频</string>
+  <string name="morphe_play_all_button_type_entry_11">会员专属Shorts</string>
+  <string name="morphe_play_all_button_type_entry_12">会员专属直播</string>
+  <string name="morphe_play_all_button_not_available_toast">由于频道ID不匹配，无法生成播放列表</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">显示重新加载视频按钮</string>
   <string name="morphe_reload_video_summary_on">显示重新加载视频按钮</string>

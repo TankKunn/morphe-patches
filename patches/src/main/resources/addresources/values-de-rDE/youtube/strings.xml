@@ -501,6 +501,29 @@ Stellen Sie sicher, dass der Paketname korrekt ist und die App installiert ist"<
   <string name="morphe_loop_video_button_summary_off">Schaltfläche „Video wiederholen“ ist ausgeblendet</string>
   <string name="morphe_loop_video_button_toast_on">Loop-Video ist aktiviert</string>
   <string name="morphe_loop_video_button_toast_off">Loop-Video ist deaktiviert</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Zeige Alle-Wiedergeben-Button</string>
+  <string name="morphe_play_all_button_summary_on">"Der Alle-Wiedergeben-Button wird angezeigt.
+Tippen Sie, um eine Wiedergabeliste mit allen Videos aus dem Kanal zu generieren.
+Tippen und halten Sie gedrückt, um die Aktion rückgängig zu machen.
+
+Info: Funktioniert möglicherweise nicht bei Live-Stream"</string>
+  <string name="morphe_play_all_button_summary_off">Der Alle-Wiedergeben-Button wird nicht angezeigt</string>
+  <string name="morphe_play_all_button_type_title">Playliste erstellen Modus</string>
+  <string name="morphe_play_all_button_type_entry_0">Alle Inhalte (Sortieren nach Zeit, Aufsteigend)</string>
+  <string name="morphe_play_all_button_type_entry_1">Alle Inhalte (Sortieren nach Zeit)</string>
+  <string name="morphe_play_all_button_type_entry_2">Alle Inhalte (Sortieren nach Beliebtheit)</string>
+  <string name="morphe_play_all_button_type_entry_3">Nur Videos (Sortieren nach Zeit)</string>
+  <string name="morphe_play_all_button_type_entry_4">Nur Videos (Sortieren nach Beliebtheit)</string>
+  <string name="morphe_play_all_button_type_entry_5">Nur Shorts (Sortieren nach Zeit)</string>
+  <string name="morphe_play_all_button_type_entry_6">Nur Shorts (Sortieren nach Beliebtheit)</string>
+  <string name="morphe_play_all_button_type_entry_7">Nur gestreamte Video (Sortieren nach Zeit)</string>
+  <string name="morphe_play_all_button_type_entry_8">Nur gestreamte Videos (Sortieren nach Beliebtheit)</string>
+  <string name="morphe_play_all_button_type_entry_9">Nur Inhalte aller Mitglieder</string>
+  <string name="morphe_play_all_button_type_entry_10">Nur Mitglieder-Videos</string>
+  <string name="morphe_play_all_button_type_entry_11">Nur Mitglieder-Shorts</string>
+  <string name="morphe_play_all_button_type_entry_12">Nur Mitglieder-Live-Streams</string>
+  <string name="morphe_play_all_button_not_available_toast">Fehler beim Generieren der Playlist aufgrund von Kanal-ID-Diskrepanz</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Video-Wiederholschaltfläche anzeigen</string>
   <string name="morphe_reload_video_summary_on">Schaltfläche „Video wiederholen“ wird angezeigt</string>

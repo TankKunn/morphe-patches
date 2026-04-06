@@ -501,6 +501,25 @@ Doza navê pakkê rast be û sepan serdest be"</string>
   <string name="morphe_loop_video_button_summary_off">Butona pêlîstina vîdyoyê nêşerin</string>
   <string name="morphe_loop_video_button_toast_on">Loop vîdyoyê ye ser</string>
   <string name="morphe_loop_video_button_toast_off">Loop vîdyoyê ye xwer</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Butona \'hezî bînin xêrê\' nîşan bike</string>
+  <string name="morphe_play_all_button_summary_on">"Butona 'hezî bînin xêrê' nîşan diwe"</string>
+  <string name="morphe_play_all_button_summary_off">Butona \'hezî bînin xêrê\' nîşan nade</string>
+  <string name="morphe_play_all_button_type_title">Moda çêkirina rêzika lîstikê</string>
+  <string name="morphe_play_all_button_type_entry_0">Hemû pêşniyar (Sort bi demê, Reqabî)</string>
+  <string name="morphe_play_all_button_type_entry_1">Hemû pêşniyar (Sort bi demê)</string>
+  <string name="morphe_play_all_button_type_entry_2">Hemû pêşniyar (Sort bi populerî)</string>
+  <string name="morphe_play_all_button_type_entry_3">Tenan vîdyoyên (Sort bi demê)</string>
+  <string name="morphe_play_all_button_type_entry_4">Tenan vîdyoyên (Sort bi populerî)</string>
+  <string name="morphe_play_all_button_type_entry_5">Tenan Shorts (Sort bi demê)</string>
+  <string name="morphe_play_all_button_type_entry_6">Tenan Shorts (Sort bi populerî)</string>
+  <string name="morphe_play_all_button_type_entry_7">Tenan pêşbira vekirî (Sort bi demê)</string>
+  <string name="morphe_play_all_button_type_entry_8">Tenan pêşbira vekirî (Sort bi populerî)</string>
+  <string name="morphe_play_all_button_type_entry_9">Tenan pêşniyarên endam</string>
+  <string name="morphe_play_all_button_type_entry_10">Tenan vîdyoyên endam</string>
+  <string name="morphe_play_all_button_type_entry_11">Tenan Shorts-ên endam</string>
+  <string name="morphe_play_all_button_type_entry_12">Tenan pêşbiraya zindî ya endam</string>
+  <string name="morphe_play_all_button_not_available_toast">Li berxwe nebûna pêşdizgeha rêzê ji ber nakokatiya ID-ya kanalê</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Sergî rewşa videoê paşê vebike</string>
   <string name="morphe_reload_video_summary_on">Sergûşê rewşa videoê destûr e</string>

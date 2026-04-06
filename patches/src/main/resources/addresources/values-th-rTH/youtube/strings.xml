@@ -500,6 +500,27 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_button_summary_off">เมนูการวนซ้ำวิดีโอแสดงอยู่</string>
   <string name="morphe_loop_video_button_toast_on">เปิดใช้งานการเล่นวิดีโอซ้ำแล้ว</string>
   <string name="morphe_loop_video_button_toast_off">ปิดใช้งานการเล่นวิดีโอซ้ำแล้ว</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">แสดงปุ่มเล่นทั้งหมด</string>
+  <string name="morphe_play_all_button_summary_on">"แสดงปุ่มเล่นทั้งหมด\nแตะเพื่อสร้างรายการเพลงทั้งหมดจากช่อง\nแตะค้างไว้เพื่อยกเลิก
+
+ข้อมูล: อาจใช้ไม่ได้กับสตรีมสด"</string>
+  <string name="morphe_play_all_button_summary_off">ไม่แสดงปุ่มเล่นทั้งหมด</string>
+  <string name="morphe_play_all_button_type_title">โหมดสร้างรายการเพลง</string>
+  <string name="morphe_play_all_button_type_entry_0">เนื้อหาทั้งหมด (เรียงตามเวลา, จากน้อยไปมาก)</string>
+  <string name="morphe_play_all_button_type_entry_1">เนื้อหาทั้งหมด (เรียงตามเวลา)</string>
+  <string name="morphe_play_all_button_type_entry_2">เนื้อหาทั้งหมด (เรียงตามยอดนิยม)</string>
+  <string name="morphe_play_all_button_type_entry_3">วิดีโอเท่านั้น (เรียงตามเวลา)</string>
+  <string name="morphe_play_all_button_type_entry_4">วิดีโอเท่านั้น (เรียงตามยอดนิยม)</string>
+  <string name="morphe_play_all_button_type_entry_5">Shorts เท่านั้น (เรียงตามเวลา)</string>
+  <string name="morphe_play_all_button_type_entry_6">Shorts เท่านั้น (เรียงตามยอดนิยม)</string>
+  <string name="morphe_play_all_button_type_entry_7">วิดีโอสตรีมมิ่งเท่านั้น (เรียงตามเวลา)</string>
+  <string name="morphe_play_all_button_type_entry_8">วิดีโอสตรีมมิ่งเท่านั้น (เรียงตามยอดนิยม)</string>
+  <string name="morphe_play_all_button_type_entry_9">เนื้อหาเฉพาะสมาชิกเท่านั้น</string>
+  <string name="morphe_play_all_button_type_entry_10">วิดีโอเฉพาะสมาชิกเท่านั้น</string>
+  <string name="morphe_play_all_button_type_entry_11">Shorts เฉพาะสมาชิกเท่านั้น</string>
+  <string name="morphe_play_all_button_type_entry_12">สตรีมสดเฉพาะสมาชิกเท่านั้น</string>
+  <string name="morphe_play_all_button_not_available_toast">ไม่สามารถสร้างเพลย์ลิสต์ได้เนื่องจาก ID ช่องไม่ตรงกัน</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">แสดงปุ่มโหลดวิดีโอ</string>
   <string name="morphe_reload_video_summary_on">ปุ่มโหลดวิดีโอแสดง</string>

@@ -472,6 +472,7 @@ dەستەکان دەتوانن ناوی کەناڵ بێت یان هەر نووس
   <string name="morphe_loop_video_button_summary_off">دگمه‌ی بژاردەی وێنە نەماوە</string>
   <string name="morphe_loop_video_button_toast_on">وەڵا پێكردنەوەی ڤیدۆ ساراوە</string>
   <string name="morphe_loop_video_button_toast_off">وەڵا پێكردنەوەی ڤیدۆ نا ساراوە</string>
+  <!-- interaction.playall.playAllButtonPatch -->
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">دەربازکردنی دەربۆیەکانیان،ދުళաքޅb پھیඨგთ</string>
   <string name="morphe_reload_video_summary_on">دەربۆی دەربازبوویشن ڕۆن</string>

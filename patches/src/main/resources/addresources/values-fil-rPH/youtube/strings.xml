@@ -500,6 +500,25 @@ Suriin kung tama ang pangalan ng package at naka-install ang app"</string>
   <string name="morphe_loop_video_button_summary_off">Hindi ipinapakita ang button ng loop ng video</string>
   <string name="morphe_loop_video_button_toast_on">Naka-on ang loop video</string>
   <string name="morphe_loop_video_button_toast_off">Naka-off ang loop video</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Ipakita ang button na \'Play all\'</string>
+  <string name="morphe_play_all_button_summary_on">"Ipinapakita ang button na 'Play all'\nI-tap para bumuo ng playlist ng lahat ng video mula sa channel\nI-tap nang matagal para i-undo\n\nImpormasyon: Maaaring hindi gumana sa live streams"</string>
+  <string name="morphe_play_all_button_summary_off">Hindi ipinapakita ang button na \'Play all\'</string>
+  <string name="morphe_play_all_button_type_title">Mode ng pagbuo ng playlist</string>
+  <string name="morphe_play_all_button_type_entry_0">Lahat ng nilalaman (Pagbukud-bukurin ayon sa oras, Papataas)</string>
+  <string name="morphe_play_all_button_type_entry_1">Lahat ng nilalaman (Pagbukud-bukurin ayon sa oras)</string>
+  <string name="morphe_play_all_button_type_entry_2">Lahat ng nilalaman (Pagbukud-bukurin ayon sa sikat)</string>
+  <string name="morphe_play_all_button_type_entry_3">Mga bidyo lamang (Pagbukud-bukurin ayon sa oras)</string>
+  <string name="morphe_play_all_button_type_entry_4">Mga bidyo lamang (Pagbukud-bukurin ayon sa sikat)</string>
+  <string name="morphe_play_all_button_type_entry_5">Shorts lamang (Pagbukud-bukurin ayon sa oras)</string>
+  <string name="morphe_play_all_button_type_entry_6">Shorts lamang (Pagbukud-bukurin ayon sa sikat)</string>
+  <string name="morphe_play_all_button_type_entry_7">Mga na-stream na bidyo lamang (Pagbukud-bukurin ayon sa oras)</string>
+  <string name="morphe_play_all_button_type_entry_8">Mga na-stream na bidyo lamang (Pagbukud-bukurin ayon sa sikat)</string>
+  <string name="morphe_play_all_button_type_entry_9">Lahat ng nilalaman ng miyembro lamang</string>
+  <string name="morphe_play_all_button_type_entry_10">Mga bidyo ng miyembro lamang</string>
+  <string name="morphe_play_all_button_type_entry_11">Mga Shorts ng miyembro lamang</string>
+  <string name="morphe_play_all_button_type_entry_12">Mga live stream ng miyembro lamang</string>
+  <string name="morphe_play_all_button_not_available_toast">Hindi maaring buuin ang playlist dahil sa hindi tugmang ID ng channel</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Ipakita ang button na i-reload ang video</string>
   <string name="morphe_reload_video_summary_on">Ipinapakita ang button na i-reload ang video</string>

@@ -497,6 +497,29 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_button_summary_off">Бутона за повторение на видеоклипа не е показан</string>
   <string name="morphe_loop_video_button_toast_on">Видео в цикъл е включено</string>
   <string name="morphe_loop_video_button_toast_off">Промянете стартова страница</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Показване на бутон „Пусни всички“</string>
+  <string name="morphe_play_all_button_summary_on">"Показва се бутон „Пусни всички“
+Докоснете, за да генерирате плейлист с всички видеа от канала
+Задръжте, за да отмените
+
+Информация: Възможно е да не работи при стрийми на живо"</string>
+  <string name="morphe_play_all_button_summary_off">Не се показва бутон „Пусни всички“</string>
+  <string name="morphe_play_all_button_type_title">Режим генериране на плейлист</string>
+  <string name="morphe_play_all_button_type_entry_0">Всички съдържания (Сортиране по време, във възходящ ред)</string>
+  <string name="morphe_play_all_button_type_entry_1">Всички съдържания (Сортиране по време)</string>
+  <string name="morphe_play_all_button_type_entry_2">Всички съдържания (Сортиране по популярност)</string>
+  <string name="morphe_play_all_button_type_entry_3">Само видеа (Сортиране по време)</string>
+  <string name="morphe_play_all_button_type_entry_4">Само видеа (Сортиране по популярност)</string>
+  <string name="morphe_play_all_button_type_entry_5">Само Shorts (Сортиране по време)</string>
+  <string name="morphe_play_all_button_type_entry_6">Само Shorts (Сортиране по популярност)</string>
+  <string name="morphe_play_all_button_type_entry_7">Само поточни видеа (Сортиране по време)</string>
+  <string name="morphe_play_all_button_type_entry_8">Само поточни видеа (Сортиране по популярност)</string>
+  <string name="morphe_play_all_button_type_entry_9">Само съдържание на всички членове</string>
+  <string name="morphe_play_all_button_type_entry_10">Само видеа на членове</string>
+  <string name="morphe_play_all_button_type_entry_11">Само Shorts на членове</string>
+  <string name="morphe_play_all_button_type_entry_12">Само поточни излъчвания на членове</string>
+  <string name="morphe_play_all_button_not_available_toast">Неуспешно генериране на плейлист поради несъответствие в ID на канал</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Покажи бутона за презареждане на видеото</string>
   <string name="morphe_reload_video_summary_on">Показва се бутонът за презареждане на видеото</string>

@@ -501,6 +501,25 @@ Zkontrolujte, zda je název balíčku správný a aplikace je nainstalována"</s
   <string name="morphe_loop_video_button_summary_off">Menu Opakování videa je zobrazeno</string>
   <string name="morphe_loop_video_button_toast_on">Smyčka videa je zapnuta</string>
   <string name="morphe_loop_video_button_toast_off">Smyčka videa je vypnuta</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Zobrazit tlačítko přehrát vše</string>
+  <string name="morphe_play_all_button_summary_on">"Tlačítko přehrát vše je zobrazeno\nKlepněte pro vygenerování seznamu přehrávání všech videí z kanálu\nKlepněte a podržte pro zrušení\n\nInfo: Možná nebude fungovat u živých přenosů"</string>
+  <string name="morphe_play_all_button_summary_off">Tlačítko přehrát vše není zobrazeno</string>
+  <string name="morphe_play_all_button_type_title">Režim generování seznamu přehrávání</string>
+  <string name="morphe_play_all_button_type_entry_0">Všechny položky (Seřadit podle času, vzestupně)</string>
+  <string name="morphe_play_all_button_type_entry_1">Všechny položky (Seřadit podle času)</string>
+  <string name="morphe_play_all_button_type_entry_2">Všechny položky (Seřadit podle oblíbenosti)</string>
+  <string name="morphe_play_all_button_type_entry_3">Pouze videa (Seřadit podle času)</string>
+  <string name="morphe_play_all_button_type_entry_4">Pouze videa (Seřadit podle oblíbenosti)</string>
+  <string name="morphe_play_all_button_type_entry_5">Pouze Shorts (Seřadit podle času)</string>
+  <string name="morphe_play_all_button_type_entry_6">Pouze Shorts (Seřadit podle oblíbenosti)</string>
+  <string name="morphe_play_all_button_type_entry_7">Pouze streamovaná videa (Seřadit podle času)</string>
+  <string name="morphe_play_all_button_type_entry_8">Pouze streamovaná videa (Seřadit podle oblíbenosti)</string>
+  <string name="morphe_play_all_button_type_entry_9">Pouze obsah od všech členů</string>
+  <string name="morphe_play_all_button_type_entry_10">Pouze videa pro členy</string>
+  <string name="morphe_play_all_button_type_entry_11">Pouze Shorts pro členy</string>
+  <string name="morphe_play_all_button_type_entry_12">Pouze živé streamy pro členy</string>
+  <string name="morphe_play_all_button_not_available_toast">Nelze vygenerovat seznam přehrávání kvůli nesouladu ID kanálu</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Zobrazit tlačítko pro obnovení videa</string>
   <string name="morphe_reload_video_summary_on">Tlačítko pro obnovení videa je zobrazeno</string>

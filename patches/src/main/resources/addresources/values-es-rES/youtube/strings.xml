@@ -500,6 +500,29 @@ Verifica que el nombre del paquete sea correcto y que la aplicación esté insta
   <string name="morphe_loop_video_button_summary_off">El botón de vídeo en bucle está oculto</string>
   <string name="morphe_loop_video_button_toast_on">El vídeo en bucle está activado</string>
   <string name="morphe_loop_video_button_toast_off">El vídeo en bucle está desactivado</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Mostrar botón \"Reproducir todo\"</string>
+  <string name="morphe_play_all_button_summary_on">"El botón \"Reproducir todo\" está visible
+Pulse para generar una lista de reproducción con todos los vídeos del canal
+Mantén pulsado para deshacer
+
+Información: Es posible que no funcione en transmisiones en directo"</string>
+  <string name="morphe_play_all_button_summary_off">El botón \"Reproducir todo\" está oculto</string>
+  <string name="morphe_play_all_button_type_title">Modo generar lista de reproducción</string>
+  <string name="morphe_play_all_button_type_entry_0">Todos los contenidos (ordenados por tiempo, ascendente)</string>
+  <string name="morphe_play_all_button_type_entry_1">Todos los contenidos (ordenados por tiempo)</string>
+  <string name="morphe_play_all_button_type_entry_2">Todos los contenidos (ordenados por popularidad)</string>
+  <string name="morphe_play_all_button_type_entry_3">Solo vídeos (ordenados por tiempo)</string>
+  <string name="morphe_play_all_button_type_entry_4">Solo vídeos (ordenados por popularidad)</string>
+  <string name="morphe_play_all_button_type_entry_5">Solo Shorts (ordenados por tiempo)</string>
+  <string name="morphe_play_all_button_type_entry_6">Solo Shorts (ordenados por popularidad)</string>
+  <string name="morphe_play_all_button_type_entry_7">Solo vídeos transmitidos (ordenados por tiempo)</string>
+  <string name="morphe_play_all_button_type_entry_8">Solo vídeos transmitidos (ordenados por popularidad)</string>
+  <string name="morphe_play_all_button_type_entry_9">Todos los contenidos solo para miembros</string>
+  <string name="morphe_play_all_button_type_entry_10">Vídeos solo para miembros</string>
+  <string name="morphe_play_all_button_type_entry_11">Shorts solo para miembros</string>
+  <string name="morphe_play_all_button_type_entry_12">Transmisiones en vivo solo para miembros</string>
+  <string name="morphe_play_all_button_not_available_toast">No se puede generar la lista de reproducción porque el ID del canal no coincide</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Mostrar botón de recargar vídeo</string>
   <string name="morphe_reload_video_summary_on">El botón de recargar vídeo está visible</string>

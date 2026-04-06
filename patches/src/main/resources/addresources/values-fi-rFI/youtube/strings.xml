@@ -501,6 +501,25 @@ Tarkista, että paketin nimi on oikein ja sovellus on asennettu"</string>
   <string name="morphe_loop_video_button_summary_off">Toista videota jatkuvasti -valinta näytetään</string>
   <string name="morphe_loop_video_button_toast_on">Jatkuva toisto on käytössä</string>
   <string name="morphe_loop_video_button_toast_off">Jatkuva toisto ei ole käytössä</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Näytä soittokaikki-painike</string>
+  <string name="morphe_play_all_button_summary_on">"Soittokaikki-painiketta ei näytetä\nNapauta luodaksesi soittolistan kaikista kanavan videoista\nPidä painettuna peruuttaaksesi\n\nInfo: Ei välttämättä toimi suoratoistoissa"</string>
+  <string name="morphe_play_all_button_summary_off">Soittokaikki-painiketta ei näytetä</string>
+  <string name="morphe_play_all_button_type_title">Luo soittolistan tila</string>
+  <string name="morphe_play_all_button_type_entry_0">Kaikki sisällöt (Järjestä ajan mukaan, Nouseva)</string>
+  <string name="morphe_play_all_button_type_entry_1">Kaikki sisällöt (Järjestä ajan mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_2">Kaikki sisällöt (Järjestä suosion mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_3">Videot (Järjestä ajan mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_4">Videot (Järjestä suosion mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_5">Shortsit (Järjestä ajan mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_6">Shortsit (Järjestä suosion mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_7">Striimivideot (Järjestä ajan mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_8">Striimivideot (Järjestä suosion mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_9">Vain jäsenien sisällöt</string>
+  <string name="morphe_play_all_button_type_entry_10">Vain jäsenten videot</string>
+  <string name="morphe_play_all_button_type_entry_11">Vain jäsenten shortsit</string>
+  <string name="morphe_play_all_button_type_entry_12">Vain jäsenten striimivideot</string>
+  <string name="morphe_play_all_button_not_available_toast">Kanavatunnuserojen vuoksi soittolistaa ei voitu luoda</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Näytä videon uudelleenlataus -painike</string>
   <string name="morphe_reload_video_summary_on">Videon uudelleenlataus -painike näytetään</string>
