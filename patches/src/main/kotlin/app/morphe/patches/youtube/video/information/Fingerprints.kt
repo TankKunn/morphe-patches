@@ -213,12 +213,3 @@ internal object SetVideoQualityFingerprint : Fingerprint(
         Opcode.IGET_OBJECT,
     )
 )
-
-internal object ChannelIdFingerprint : Fingerprint(
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
-    returnType = "V",
-    parameters = listOf("Ljava/lang/Object;"),
-    filters = listOf(
-        string("com.google.android.apps.youtube.mdx.watch.LAST_MEALBAR_PROMOTED_LIVE_FEED_CHANNELS")
-    )
-)
