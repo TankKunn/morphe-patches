@@ -1,3 +1,10 @@
+# [1.23.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.7...v1.23.0-dev.8) (2026-04-06)
+
+
+### Bug Fixes
+
+* **YouTube - Overlay buttons:** Always use thin player overlay buttons with 20.21.37 ([db96e8e](https://github.com/MorpheApp/morphe-patches/commit/db96e8e34d7e0c1393562a7f1dfa5fd0fb1f9c5d))
+
 # [1.23.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.6...v1.23.0-dev.7) (2026-04-06)
 
 
