@@ -1,3 +1,15 @@
+# [1.23.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.8...v1.23.0-dev.9) (2026-04-08)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Hide new type of community post ([#1114](https://github.com/MorpheApp/morphe-patches/issues/1114)) ([9fc6aef](https://github.com/MorpheApp/morphe-patches/commit/9fc6aefba130629cbeefb5d4bfa1cd798e9ce995))
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add "Hide search term thumbnails" setting ([#1116](https://github.com/MorpheApp/morphe-patches/issues/1116)) ([61d5fd6](https://github.com/MorpheApp/morphe-patches/commit/61d5fd62f300640240a82f477bb56c82cbedfbee))
+
 # [1.23.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.7...v1.23.0-dev.8) (2026-04-06)
 
 
