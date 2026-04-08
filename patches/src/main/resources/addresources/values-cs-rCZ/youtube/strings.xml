@@ -120,6 +120,9 @@ Změny zahrnují:
   <string name="morphe_hide_playables_title">Skrýt Playables</string>
   <string name="morphe_hide_playables_summary_on">Playables jsou skryté</string>
   <string name="morphe_hide_playables_summary_off">Playables jsou zobrazené</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Skrýt náhledy vyhledávacích výrazů</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Náhledy vyhledávacích výrazů jsou skryté</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Náhledy vyhledávacích výrazů jsou zobrazeny</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Skrýt tlačítko „Zobrazit více“</string>

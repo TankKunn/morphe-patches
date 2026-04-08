@@ -119,6 +119,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">隱藏遊戲角落</string>
   <string name="morphe_hide_playables_summary_on">已隱藏遊戲角落</string>
   <string name="morphe_hide_playables_summary_off">已顯示遊戲角落</string>
+  <string name="morphe_hide_search_term_thumbnails_title">隱藏搜尋詞縮圖</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">搜尋詞縮圖已隱藏</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">搜尋詞縮圖已顯示</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">隱藏「顯示更多」按鈕</string>

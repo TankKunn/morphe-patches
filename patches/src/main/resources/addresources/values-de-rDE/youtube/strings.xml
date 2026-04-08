@@ -121,6 +121,9 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_playables_title">Playables ausblenden</string>
   <string name="morphe_hide_playables_summary_on">Playables sind ausgeblendet</string>
   <string name="morphe_hide_playables_summary_off">Playables werden angezeigt</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Suchbegriff-Miniaturen ausblenden</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Suchbegriff-Miniaturen sind ausgeblendet</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Suchbegriff-Miniaturen sind sichtbar</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Schaltfläche \'Mehr anzeigen\' ausblenden</string>

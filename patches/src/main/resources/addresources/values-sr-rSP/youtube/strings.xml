@@ -119,6 +119,9 @@ Promene uključuju:
   <string name="morphe_hide_playables_title">Сакриј салу за игру</string>
   <string name="morphe_hide_playables_summary_on">Сала за игру је скривена</string>
   <string name="morphe_hide_playables_summary_off">Сала за игру је приказана</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Скриј мале слике у трази за претрагом</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Мале слике у трази за претрагом су скривене</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Мале слике у трази за претрагом су приказане</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Сакриј дугме „Прикажи још”</string>

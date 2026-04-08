@@ -40,11 +40,11 @@ Second \"item\" text"</string>
   <string name="morphe_settings_search_clear_history">زمووكی به‌ژياره‌كه‌كه‌يه‌كه‌ سه‌ره‌ده‌كامه‌</string>
   <string name="morphe_settings_search_clear_history_message">ئایا خؤت به‌خۆشه‌وه‌ده‌يكه‌ى زه‌مه‌نوه‌كانه‌ به‌ده‌سته؟</string>
   <string name="morphe_settings_search_tips_title">رزگارێ لێکدان</string>
-  <string name="morphe_settings_search_tips_summary">"•  سێرا پێڵیکە بۆ ئەوەی بگەی بەو ڕێگەوانە
-•  سێرا دێركە بۆ ئەوەی بگەی بەو ڕێکدالە
-•  دابەزینەکە پاڵە بۆ پاراستنی لێکدانەکان لە ناسینە
-•  لێکدان پێشێلی ڕێگە و ڕێوشکە دەوێت
-•  ڕێکارە سەرەکیەکان دەربارە دەوێ ڕێکارە خۆش ئەنجام بدەن"</string>
+  <string name="morphe_settings_search_tips_summary">"• ڕێگایەکی خەوەڵدانێ بۆی چێبکە
+• ناخیستنێک دەربارەوێ بۆی خەوەڵدانێ
+• هەڵکەوتینێ دەربارەوێ بپارێزە بابەتەکە بۆ مێشەڕە
+• لێکۆڵینەوێک نەخوێندراوێتە سەرەتایەک و نیشانەیەک
+• دەستکارییەکانی باوک دەلێن سەردا دەستکارییەکانی منداڵێ نەبێت"</string>
   <string name="morphe_settings_search_empty_history_title">ڕاسته‌ بدره‌، له‌گه‌عى ті بانه‌ لاسه‌ یاێت؟</string>
   <string name="morphe_settings_search_empty_history_summary">بۆو زه‌مه‌نوه‌كه‌ ڕژازكه‌يه‌كه كه‌وه‌، وتاره‌يه‌ك بRoh رباشه‌كه‌ بهدینه‌ه تا هێلفه‌ر تهزتی بالانه‌كه‌ دا lepاهار بهنگرئ</string>
   <string name="morphe_settings_search_history_title">تنتینگِ بهژوکى كه‌ سكيّاره مِن ركبتانكه‌كتانكه‌ كه‌ لاوه‌كانա տրա պեռթըն վեղտερ տሩթռլ</string>
@@ -64,8 +64,8 @@ Da zanîn zimanên nû wergerin an jî wergeranên hebin çêbibin, serdana morp
   <string name="morphe_settings_import_file_success">Sazkar ji pelê serketin, kilîna Çeke da bi kar bîne</string>
   <string name="morphe_settings_import_file_failed">ຂ້ອຍບໍ່ສາມາດຈະເບິ່ງຫຍັງໄດ້</string>
   <string name="morphe_settings_export_file">Bo pelê derxistin</string>
-  <string name="morphe_settings_export_file_success">Sazkar serketin bo pelê derxistine</string>
-  <string name="morphe_settings_export_file_failed">Nekirine serketin ji bo sazkarê derxistine</string>
+  <string name="morphe_settings_export_file_success">ئەم فێڵانەی دەستخاتن سەرکەوتێت</string>
+  <string name="morphe_settings_export_file_failed">\"نەگەشت بە دەربازبوونی ڕێکخستنەکان\"</string>
   <!-- String is also duplicated in Reddit about preference -->
   <string name="morphe_settings_about_links_body_version_current">هاتوو ئەڤدە ئەڤ ژ هەند سەركەفتو  %s <i> </i>ڕشتە هەبوو</string>
   <string name="morphe_settings_about_links_dev_header">نوسین</string>

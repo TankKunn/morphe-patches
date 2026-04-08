@@ -120,6 +120,9 @@ Schimbari incluse:
   <string name="morphe_hide_playables_title">Ascunde Playables</string>
   <string name="morphe_hide_playables_summary_on">Playables sunt ascunse</string>
   <string name="morphe_hide_playables_summary_off">Playables sunt afișate</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Ascunde miniaturile termenilor de căutare</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Miniaturile termenilor de căutare sunt ascunse</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Miniaturile termenilor de căutare sunt afișate</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Ascunderea butonului „Afișează mai multe”</string>

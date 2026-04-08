@@ -121,6 +121,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">ゲームルームを非表示</string>
   <string name="morphe_hide_playables_summary_on">ゲームルームは表示されません</string>
   <string name="morphe_hide_playables_summary_off">ゲームルームは表示されます</string>
+  <string name="morphe_hide_search_term_thumbnails_title">検索履歴のサムネイルを非表示</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">検索履歴のサムネイルは表示されません</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">検索履歴のサムネイルは表示されます</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">「もっと見る」ボタンを非表示</string>

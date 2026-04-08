@@ -121,6 +121,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">Приховати \"ігрові елементи\"</string>
   <string name="morphe_hide_playables_summary_on">Розділ \"ігрові елементи\" приховано</string>
   <string name="morphe_hide_playables_summary_off">Розділ \"ігрові елементи\" показується</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Приховати мініатюри пошукових запитів</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Мініатюри пошукових запитів приховано</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Мініатюри пошукових запитів показано</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Приховати кнопку \"Показати більше\"</string>

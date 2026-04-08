@@ -120,6 +120,9 @@ Wijzigingen zijn:
   <string name="morphe_hide_playables_title">Speelbare items verbergen</string>
   <string name="morphe_hide_playables_summary_on">Speelbare items zijn verborgen</string>
   <string name="morphe_hide_playables_summary_off">Spellen worden getoond</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Verberg zoekterm thumbnails</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Zoekterm thumbnails zijn verborgen</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Zoekterm thumbnails worden weergegeven</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Verberg knop \'Meer weergeven\'</string>

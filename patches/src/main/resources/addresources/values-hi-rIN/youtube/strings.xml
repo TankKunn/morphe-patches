@@ -120,6 +120,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">छुपाएं प्लेबल्स</string>
   <string name="morphe_hide_playables_summary_on">गेम प्लेलिस्टें छुपाई गई हैं</string>
   <string name="morphe_hide_playables_summary_off">गेम प्लेलिस्टें दिखाई जाती हैं</string>
+  <string name="morphe_hide_search_term_thumbnails_title">छिपाएँ खोज शब्द थंबनेल</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">खोज शब्द थंबनेल छिपा दिए गए हैं</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">खोज शब्द थंबनेल दिखाए जा रहे हैं</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">छुपाएं \'और दिखाएं\' बटन</string>

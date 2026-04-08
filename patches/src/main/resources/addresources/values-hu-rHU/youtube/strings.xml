@@ -119,6 +119,9 @@ Változások:
   <string name="morphe_hide_playables_title">Lejátszható elemek elrejtése</string>
   <string name="morphe_hide_playables_summary_on">A játékszoba rejtett</string>
   <string name="morphe_hide_playables_summary_off">A játékszoba megjelenik</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Rejtse el a kereseti kifejezés miniatúráit</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">A kereseti kifejezés miniatúrái el vannak rejtve</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">A kereseti kifejezés miniatúrái láthatóak</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">\'Továbbiak megjelenítése\' gomb elrejtése</string>

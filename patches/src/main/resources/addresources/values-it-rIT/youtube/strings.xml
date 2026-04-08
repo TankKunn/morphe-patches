@@ -120,6 +120,9 @@ I cambiamenti includono:
   <string name="morphe_hide_playables_title">Nascondi Sala Giochi</string>
   <string name="morphe_hide_playables_summary_on">I giochi sono nascosti</string>
   <string name="morphe_hide_playables_summary_off">I giochi sono visibili</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Nascondi le miniature dei termini di ricerca</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Le miniature dei termini di ricerca sono nascoste</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Le miniature dei termini di ricerca sono visualizzate</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Nascondi il pulsante \'Mostra di più\'</string>

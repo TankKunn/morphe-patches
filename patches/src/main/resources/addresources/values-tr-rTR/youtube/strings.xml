@@ -120,6 +120,9 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_playables_title">Hazır Oyunlar\'ı gizle</string>
   <string name="morphe_hide_playables_summary_on">Hazır Oyunlar gizli</string>
   <string name="morphe_hide_playables_summary_off">Hazır Oyunlar görünür</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Arama terimi küçük resimlerini gizle</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Arama terimi küçük resimleri gizli</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Arama terimi küçük resimleri görünür</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">\'Daha fazla göster\' düğmesini gizle</string>
@@ -501,28 +504,28 @@ Paket adının doğru olduğunu ve uygulamanın yüklü olduğunu doğrulayın"<
   <string name="morphe_loop_video_button_toast_on">Videoyu döngüye alma açık</string>
   <string name="morphe_loop_video_button_toast_off">Videoyu döngüye alma kapalı</string>
   <!-- interaction.playall.playAllButtonPatch -->
-  <string name="morphe_play_all_button_title">Oynat tüm düğmesini göster</string>
-  <string name="morphe_play_all_button_summary_on">"Oynat tüm düğmesi gösteriliyor.
-Kanalınızdaki tüm videolardan oluşan bir çalma listesi oluşturmak için dokunun.
-İptal etmek için basılı tutun.
+  <string name="morphe_play_all_button_title">Tümünü oynat düğmesini göster</string>
+  <string name="morphe_play_all_button_summary_on">"Tümünü oynat düğmesi gösteriliyor
+Kanaldaki tüm videoların oynatma listesini oluşturmak için dokunun
+İptal etmek için basılı tutun
 
 Bilgi: Canlı yayınlarda çalışmayabilir"</string>
-  <string name="morphe_play_all_button_summary_off">Oynat tüm düğmesi gösterilmiyor</string>
-  <string name="morphe_play_all_button_type_title">Çalma listesi oluşturma modu</string>
-  <string name="morphe_play_all_button_type_entry_0">Tüm içerikler (Sırayla zamana göre, Artan)</string>
-  <string name="morphe_play_all_button_type_entry_1">Tüm içerikler (Sırayla zamana göre)</string>
-  <string name="morphe_play_all_button_type_entry_2">Tüm içerikler (Sırayla popülerliğe göre)</string>
-  <string name="morphe_play_all_button_type_entry_3">Videolar sadece (Sırayla zamana göre)</string>
-  <string name="morphe_play_all_button_type_entry_4">Videolar sadece (Sırayla popülerliğe göre)</string>
-  <string name="morphe_play_all_button_type_entry_5">Shorts sadece (Sırayla zamana göre)</string>
-  <string name="morphe_play_all_button_type_entry_6">Shorts sadece (Sırayla popülerliğe göre)</string>
-  <string name="morphe_play_all_button_type_entry_7">Yayınlanan videolar sadece (Sırayla zamana göre)</string>
-  <string name="morphe_play_all_button_type_entry_8">Yayınlanan videolar sadece (Sırayla popülerliğe göre)</string>
-  <string name="morphe_play_all_button_type_entry_9">Tüm Üyeler sadece içerikler</string>
-  <string name="morphe_play_all_button_type_entry_10">Üyeler sadece videolar</string>
-  <string name="morphe_play_all_button_type_entry_11">Üyeler sadece Shorts</string>
-  <string name="morphe_play_all_button_type_entry_12">Üyeler sadece canlı yayınlar</string>
-  <string name="morphe_play_all_button_not_available_toast">Kanal kimlik eşleşmezliği nedeniyle oynatma listesi oluşturulamadı</string>
+  <string name="morphe_play_all_button_summary_off">Tümünü oynat düğmesi gösterilmiyor</string>
+  <string name="morphe_play_all_button_type_title">Oynatma listesi oluşturma modu</string>
+  <string name="morphe_play_all_button_type_entry_0">Tüm içerikler (Zamana göre sırala, Artan)</string>
+  <string name="morphe_play_all_button_type_entry_1">Tüm içerikler (Zamana göre sırala)</string>
+  <string name="morphe_play_all_button_type_entry_2">Tüm içerikler (Popülerliğe göre sırala)</string>
+  <string name="morphe_play_all_button_type_entry_3">Sadece videolar (Zamana göre sırala)</string>
+  <string name="morphe_play_all_button_type_entry_4">Sadece videolar (Popülerliğe göre sırala)</string>
+  <string name="morphe_play_all_button_type_entry_5">Sadece Shorts (Zamana göre sırala)</string>
+  <string name="morphe_play_all_button_type_entry_6">Sadece Shorts (Popülerliğe göre sırala)</string>
+  <string name="morphe_play_all_button_type_entry_7">Sadece yayınlanan videolar (Zamana göre sırala)</string>
+  <string name="morphe_play_all_button_type_entry_8">Sadece yayınlanan videolar (Popülerliğe göre sırala)</string>
+  <string name="morphe_play_all_button_type_entry_9">Tüm Üyelere özel içerikler</string>
+  <string name="morphe_play_all_button_type_entry_10">Üyelere özel videolar</string>
+  <string name="morphe_play_all_button_type_entry_11">Üyelere özel Shorts</string>
+  <string name="morphe_play_all_button_type_entry_12">Üyelere özel canlı yayınlar</string>
+  <string name="morphe_play_all_button_not_available_toast">Kanal kimliği uyuşmazlığı nedeniyle oynatma listesi oluşturulamadı</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Videoyu yeniden yükle düğmesini göster</string>
   <string name="morphe_reload_video_summary_on">Videoyu yeniden yükle düğmesi gösteriliyor</string>

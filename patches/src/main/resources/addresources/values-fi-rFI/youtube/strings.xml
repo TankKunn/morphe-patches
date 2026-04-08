@@ -120,6 +120,9 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_playables_title">Piilota Pelattavat</string>
   <string name="morphe_hide_playables_summary_on">Pelattavat piilotetaan</string>
   <string name="morphe_hide_playables_summary_off">Pelattavat näytetään</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Piilota hakutermin pienoiskuvat</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Hakutermin pienoiskuvat on piilotettu</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Hakutermin pienoiskuvat on näytössä</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Piilota \"Näytä lisää\" -painike</string>

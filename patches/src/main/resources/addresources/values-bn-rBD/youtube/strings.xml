@@ -119,6 +119,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">খেলার উপযুক্ত লুকান</string>
   <string name="morphe_hide_playables_summary_on">খেলার উপযুক্ত লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_playables_summary_off">খেলার উপযুক্ত প্রদর্শিত হয়েছে</string>
+  <string name="morphe_hide_search_term_thumbnails_title">অনুসন্ধান শর্তাবলীর থাম্বনেইল লুকানো</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">অনুসন্ধান শর্তাবলীর থাম্বনেইল লুকানো হয়েছে</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">অনুসন্ধান শর্তাবলীর থাম্বনেইল দেখানো হচ্ছে</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">\'আরও দেখান\' বোতাম লুকান</string>

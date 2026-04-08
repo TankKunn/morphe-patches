@@ -121,6 +121,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">Απόκρυψη \"Παιχνίδια YouTube\"</string>
   <string name="morphe_hide_playables_summary_on">Τα \"Παιχνίδια YouTube\" έχουν αποκρυφτεί</string>
   <string name="morphe_hide_playables_summary_off">Τα \"Παιχνίδια YouTube\" εμφανίζονται</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Κρύψτε τις μικρογραφίες των όρων αναζήτησης</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Οι μικρογραφίες των όρων αναζήτησης είναι κρυμμένες</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Οι μικρογραφίες των όρων αναζήτησης εμφανίζονται</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Απόκρυψη κουμπιού \"Εμφάνιση περισσότερων\" στα αποτελέσματα αναζήτησης</string>

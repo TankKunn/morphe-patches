@@ -120,6 +120,9 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_playables_title">Skjul Spilleobjekter</string>
   <string name="morphe_hide_playables_summary_on">Spilleobjekter er skjult</string>
   <string name="morphe_hide_playables_summary_off">Afspilningstabeller vises</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Skjul miniaturebilleder for søgeord</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Miniaturebilleder for søgeord er skjult</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Miniaturebilleder for søgeord er vist</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Skjul knappen \'Vis mere\'</string>

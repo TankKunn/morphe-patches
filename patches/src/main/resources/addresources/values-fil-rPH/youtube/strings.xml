@@ -120,6 +120,9 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_playables_title">Itago ang Mga Playable</string>
   <string name="morphe_hide_playables_summary_on">Nakatago ang Mga Playable</string>
   <string name="morphe_hide_playables_summary_off">Ipinapakita ang Mga Playable</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Itago ang mga thumbnail ng termino sa paghahanap</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Nakatago ang mga thumbnail ng termino sa paghahanap</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Ipinapakita ang mga thumbnail ng termino sa paghahanap</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Itago ang button na \'Magpakita ng higit pa\'</string>
