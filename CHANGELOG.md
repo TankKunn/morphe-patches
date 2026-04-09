@@ -1,3 +1,10 @@
+# [1.23.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.9...v1.23.0-dev.10) (2026-04-09)
+
+
+### Features
+
+* **YouTube - Seekbar:** Add "Expand livestream DVR duration" setting ([#1110](https://github.com/MorpheApp/morphe-patches/issues/1110)) ([1a446d0](https://github.com/MorpheApp/morphe-patches/commit/1a446d089c969993813a5017150ac8e648e26786))
+
 # [1.23.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.8...v1.23.0-dev.9) (2026-04-08)
 
 
