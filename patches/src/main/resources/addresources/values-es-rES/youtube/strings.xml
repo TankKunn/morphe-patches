@@ -539,6 +539,8 @@ Información: Es posible que no funcione en transmisiones en directo"</string>
   <string name="morphe_livestream_dvr_title">Activar DVR de transmisión en vivo</string>
   <string name="morphe_livestream_dvr_summary_on">La búsqueda está permitida en todas las transmisiones en vivo</string>
   <string name="morphe_livestream_dvr_summary_off">La búsqueda podría no estar disponible en las transmisiones en vivo</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Activar esto puede causar un comportamiento inesperado al buscar transmisiones en directo si \"Falsificar transmisiones de vídeo\" no está activado.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activar deslizar para buscar</string>
   <string name="morphe_slide_to_seek_summary_on">Deslizar para buscar está activado</string>
@@ -1650,6 +1652,12 @@ Limitaciones:
 • Algunos dispositivos no pueden forzar AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Para usar esta función, cambia \'Falsificar transmisiones de vídeo\' a VR o Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Expandir duración del DVR de transmisión en directo</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">La duración del DVR de la transmisión en directo se amplía hasta 7 días</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">La duración del DVR de la transmisión en directo está limitada al valor predeterminado del servidor</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Este ajuste puede causar un comportamiento inesperado si \"Falsificar transmisiones de vídeo\" no está activado.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Mostrar menú avanzado de calidad de vídeo</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">El menú avanzado de calidad de vídeo está visible</string>

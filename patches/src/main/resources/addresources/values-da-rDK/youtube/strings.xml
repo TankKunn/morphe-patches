@@ -539,6 +539,8 @@ Info: Fungerer muligvis ikke på live-streams"</string>
   <string name="morphe_livestream_dvr_title">Aktivér livestream DVR</string>
   <string name="morphe_livestream_dvr_summary_on">Afspilning er tilladt på alle livestreams</string>
   <string name="morphe_livestream_dvr_summary_off">Afspilning er muligvis ikke tilgængelig på livestreams</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Aktivering af denne funktion kan medføre uventet søgning i livestream, hvis \'Spoof videostrømme\' ikke er aktiveret.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktivér dias for at søge</string>
   <string name="morphe_slide_to_seek_summary_on">Dias for at søge er aktiveret</string>
@@ -1650,6 +1652,12 @@ Begrænsninger:
 • Nogle enheder kan ikke tvinge AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">For at bruge denne funktion skal du ændre \'Spoof video streams\' til Android VR eller Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Udvid livestream DVR-varighed</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Livestream DVR-varighed er udvidet op til 7 dage</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Livestream DVR-varighed er begrænset til standardserverindstillingen</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Denne indstilling kan medføre uventet adfærd, hvis \'Spoof video streams\' ikke er slået til.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Vis avanceret menu for videokvalitet</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Avanceret menu for videokvalitet vises</string>

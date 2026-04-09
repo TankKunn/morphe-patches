@@ -536,6 +536,8 @@ Zkontrolujte, zda je název balíčku správný a aplikace je nainstalována"</s
   <string name="morphe_livestream_dvr_title">Povolit záznam přímého přenosu</string>
   <string name="morphe_livestream_dvr_summary_on">Posouvání je povoleno u všech živých přenosů</string>
   <string name="morphe_livestream_dvr_summary_off">Posouvání nemusí být dostupné u živých přenosů</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Povolení této funkce může způsobit neočekávané chování při přechodu ve živém streamu, pokud není povolena možnost \'Simulovat video streamy\'.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Povolit posun pro hledání</string>
   <string name="morphe_slide_to_seek_summary_on">Posun pro hledání je povolen</string>
@@ -1647,6 +1649,12 @@ Omezení:
 • Některá zařízení nemohou vynutit AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Chcete-li použít tuto funkci, změňte \'Zfalšovat video streamy\' na Android VR nebo Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Rozšířit dobu záznamu živého vysílání</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Doba záznamu živého vysílání je rozšířena až na 7 dní</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Doba záznamu živého vysílání je omezena na výchozí hodnotu serveru</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Toto nastavení může způsobovat neočekávané chování, pokud není povolena možnost \'Nahrávat falešné video streamy\'.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Zobrazit rozšířené menu kvality videa</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Zobrazuje se rozšířené menu kvality videa</string>

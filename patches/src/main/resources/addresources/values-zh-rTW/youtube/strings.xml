@@ -534,6 +534,8 @@ Second \"item\" text"</string>
   <string name="morphe_livestream_dvr_title">啟用直播 DVR</string>
   <string name="morphe_livestream_dvr_summary_on">可在所有直播中尋找</string>
   <string name="morphe_livestream_dvr_summary_off">直播中可能無法尋找</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">啟用此功能可能會導致影片串流回溯行為出乎意料，除非已啟用「偽造影片串流」。</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">啟用滑動預覽</string>
   <string name="morphe_slide_to_seek_summary_on">已啟用滑動預覽</string>
@@ -1650,6 +1652,12 @@ Second \"item\" text"</string>
 • 部分裝置無法強制使用 AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">若要使用此功能，請將「偽造視訊串流」變更為 Android VR 或 Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">擴展直播 DVR 錄製時長</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">直播 DVR 錄製時長已擴展至 7 天</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">直播 DVR 錄製時長已限制為伺服器預設值</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">如果未啟用「偽造影片串流」，此設定可能會導致意外行為。</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">顯示進階影片畫質選單</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">已顯示進階影片畫質選單</string>

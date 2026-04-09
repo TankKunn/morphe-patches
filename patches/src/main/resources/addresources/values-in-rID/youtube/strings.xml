@@ -119,9 +119,9 @@ Perubahan termasuk:
   <string name="morphe_hide_playables_title">Sembunyikan Permainan</string>
   <string name="morphe_hide_playables_summary_on">Permainan disembunyikan</string>
   <string name="morphe_hide_playables_summary_off">Permainan ditampilkan</string>
-  <string name="morphe_hide_search_term_thumbnails_title">Sembunyikan thumbnail istilah pencarian</string>
-  <string name="morphe_hide_search_term_thumbnails_summary_on">Thumbnail istilah pencarian disembunyikan</string>
-  <string name="morphe_hide_search_term_thumbnails_summary_off">Thumbnail istilah pencarian ditampilkan</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Sembunyikan thumbnail frasa pencarian</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Thumbnail frasa pencarian disembunyikan</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Thumbnail frasa pencarian ditampilkan</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Sembunyikan tombol \'Tampilkan selengkapnya\'</string>
@@ -538,6 +538,8 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_livestream_dvr_title">Aktifkan siaran langsung DVR</string>
   <string name="morphe_livestream_dvr_summary_on">Mencari diperbolehkan di semua siaran langsung</string>
   <string name="morphe_livestream_dvr_summary_off">Mencari mungkin tidak tersedia di siaran langsung</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Mengaktifkan ini mungkin menyebabkan perilaku pencarian livestream yang tidak terduga jika \'Palsukan aliran video\' tidak diaktifkan.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktifkan geser untuk mencari</string>
   <string name="morphe_slide_to_seek_summary_on">Geser untuk mencari diaktifkan</string>
@@ -1649,6 +1651,12 @@ Batasan:
 • Beberapa perangkat tidak dapat memaksakan AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Untuk menggunakan fitur ini, ubah \'Palsukan aliran video\' ke Android VR atau Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Perluas durasi siaran langsung DVR</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Durasi siaran langsung DVR diperluas hingga 7 hari</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Durasi siaran langsung DVR terbatas pada bawaan server</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Pengaturan ini dapat menyebabkan perilaku tak terduga jika \'Palsukan aliran video\' tidak diaktifkan.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Tampilkan menu kualitas video lanjutan</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Menu kualitas video lanjutan ditampilkan</string>

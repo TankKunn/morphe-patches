@@ -536,6 +536,8 @@ Second \"item\" text"</string>
   <string name="morphe_livestream_dvr_title">הפעל DVR לשידור חי</string>
   <string name="morphe_livestream_dvr_summary_on">ניתן לחפש בכל שידורים חיים</string>
   <string name="morphe_livestream_dvr_summary_off">ייתכן שלא ניתן יהיה לחפש בשידורים חיים</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">הפעלת התכונה הזו עלולה לגרום להתנהגות חיפוש לא צפויה בשידורי חיים, אם \'הדמיית זרמי וידאו\' לא מופעלת.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">הפעל החלק כדי לדלג</string>
   <string name="morphe_slide_to_seek_summary_on">החלק כדי לדלג מופעל</string>
@@ -1646,6 +1648,12 @@ Second \"item\" text"</string>
 • התקנים מסוימים אינם יכולים לאכוף AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">כדי להשתמש בתכונה זו, שנה את \'זיוף זרמי וידאו\' ל-Android VR או Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">הרחב את משך ה-DVR בשידור חי</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">משך ה-DVR בשידור חי הורחב עד 7 ימים</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">משך ה-DVR בשידור חי מוגבל לברירת המחדל של השרת</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">הגדרת זו עלולה לגרום להתנהגות בלתי צפויה אם \'הפעלת זרמי וידאו מדומים\' אינה מופעלת.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">הצג תפריט איכות סרטון מתקדם</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">תפריט איכות סרטון מתקדם מוצג</string>

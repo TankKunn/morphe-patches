@@ -540,6 +540,8 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_livestream_dvr_title">Przewijanie transmisji na żywo</string>
   <string name="morphe_livestream_dvr_summary_on">Odblokowane</string>
   <string name="morphe_livestream_dvr_summary_off">Domyślne</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Włączenie tej opcji może powodować błędy podczas przewijania transmisji, jeśli opcja \"Fałszowanie strumieni filmów\" nie jest włączona.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Przesunięcie, aby przewinąć</string>
   <string name="morphe_slide_to_seek_summary_on">Włączone</string>
@@ -1651,6 +1653,12 @@ Ograniczenia:
 • Niektóre urządzenia nie pozwalają na wymuszenie AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Aby użyć tej funkcji, zmień \"Fałszowanie strumieni filmów\" na Android VR lub Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Limit przewijania transmisji na żywo</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Wydłużony do 7 dni</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Domyślny limit serwera</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">To ustawienie może powodować błędy, jeśli opcja \"Fałszowanie strumieni filmów\" nie jest włączona.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Zaawansowane menu jakości filmu</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Widoczne</string>

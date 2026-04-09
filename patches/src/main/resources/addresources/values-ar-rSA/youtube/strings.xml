@@ -534,6 +534,8 @@ Second \"item\" text"</string>
   <string name="morphe_livestream_dvr_title">تمكين التنقل في البث المباشر</string>
   <string name="morphe_livestream_dvr_summary_on">يُسمح بالتقديم والتأخير في جميع البثوث المباشرة</string>
   <string name="morphe_livestream_dvr_summary_off">قد لا يكون التقديم والتأخير متاحًا في البثوث المباشرة</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">تمكين هذا قد يتسبب في سلوك بحث غير متوقع للبث المباشر إذا لم يتم تمكين \"تزييف تدفقات الفيديو\".</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">تمكين التمرير للتقديم أو الترجيع</string>
   <string name="morphe_slide_to_seek_summary_on">تم تمكين التمرير للتقديم أو الترجيع</string>
@@ -1645,6 +1647,12 @@ Second \"item\" text"</string>
 • لا يمكن لبعض الأجهزة فرض AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">لاستخدام هذه الميزة، غيّر \'Spoof video streams\' إلى Android VR أو Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">توسيع مدة تسجيل البث المباشر</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">تم توسيع مدة تسجيل البث المباشر لتصل إلى 7 أيام</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">مدة تسجيل البث المباشر محدودة إلى الإعداد الافتراضي للخادم</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">قد يتسبب هذا الإعداد في سلوك غير متوقع إذا لم يتم تمكين \"تزييف تدفقات الفيديو\".</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">عرض قائمة جودة الفيديو المتقدمة</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">يتم عرض قائمة جودة الفيديو المتقدمة</string>

@@ -534,6 +534,8 @@ Ellenőrizze, hogy a csomagnév helyes-e, és az alkalmazás telepítve van-e."<
   <string name="morphe_livestream_dvr_title">Engedélyezze az élsőségi DVR-t</string>
   <string name="morphe_livestream_dvr_summary_on">A keresés minden élsőségnél engedélyezett</string>
   <string name="morphe_livestream_dvr_summary_off">A keresés előfordulhat, hogy nem áll rendelkezésre az élsőségnél</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">A funkció engedélyezése váratlan élő közvetítés keresést okozhat, ha a \'Videó stream-ek hamisítása\' nem engedélyezett.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Csúsztatás engedélyezése a kereséshez</string>
   <string name="morphe_slide_to_seek_summary_on">A csúsztatás a kereséshez engedélyezve van</string>
@@ -1642,6 +1644,12 @@ Korlátozások:
 • Néhány eszköz nem tudja kikényszeríteni az AVC-t"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">A funkció használatához módosítsa a \"Videóstreamek hamisítása\" beállítást Android VR vagy Android Studio-ra</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Bővítsd a közvetítés DVR idejét</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">A közvetítés DVR ideje legfeljebb 7 napra bővült</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">A közvetítés DVR ideje korlátozott a szerver alapértelmezésére</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Ez a beállítás váratlan viselkedést okozhat, ha a \'Spoof video stream\'-et nem engedélyezted.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Speciális videóminőség menü megjelenítése</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">A speciális videóminőség menü látható</string>

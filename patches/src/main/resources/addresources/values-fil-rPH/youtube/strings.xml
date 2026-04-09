@@ -535,6 +535,8 @@ Suriin kung tama ang pangalan ng package at naka-install ang app"</string>
   <string name="morphe_livestream_dvr_title">I-enable ang livestream DVR</string>
   <string name="morphe_livestream_dvr_summary_on">Pinapayagan ang paghahanap sa lahat ng livestreams</string>
   <string name="morphe_livestream_dvr_summary_off">Maaaring hindi available ang paghahanap sa mga livestreams</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Ang pag-e-enable nito ay maaaring magdulot ng hindi inaasahang paghahanap sa livestream kung hindi naka-enable ang \'Spoof video streams\'.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Paganahin ang slide to seek</string>
   <string name="morphe_slide_to_seek_summary_on">Ang slide to seek ay pinagana</string>
@@ -1646,6 +1648,12 @@ Mga limitasyon:
 • Ang ilang device ay hindi mapipilitan ng AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Upang gamitin ang tampok na ito, baguhin ang \'Gayahin ang mga video stream\' sa Android VR o Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Palawakin ang tagal ng livestream DVR</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Ang tagal ng livestream DVR ay pinalawak nang hanggang 7 araw</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Ang tagal ng livestream DVR ay limitado sa default ng server</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Ang setting na ito ay maaaring magdulot ng hindi inaasahang pag-uugali kung ang \'Spoof video streams\' ay hindi naka-enable.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Ipakita ang advanced na menu ng kalidad ng video</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Ipinapakita ang advanced na menu ng kalidad ng video</string>

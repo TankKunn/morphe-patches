@@ -536,6 +536,8 @@ Tarkista, että paketin nimi on oikein ja sovellus on asennettu"</string>
   <string name="morphe_livestream_dvr_title">Ota suoratoistinauhoitus käyttöön</string>
   <string name="morphe_livestream_dvr_summary_on">Hakeminen on sallittu kaikissa suoratoistoissa</string>
   <string name="morphe_livestream_dvr_summary_off">Hakeminen ei ehkä ole saatavilla suoratoistoissa</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Tämän käyttöönotto voi aiheuttaa odottamattoman suoratoiston hakukäyttäytymisen, jos \'Spoof-videovirrat\' ei ole käytössä.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Ota kelaus liu\'uttamalla käyttöön</string>
   <string name="morphe_slide_to_seek_summary_on">Kelaus liu\'uttamalla on käytössä</string>
@@ -1650,6 +1652,12 @@ Rajoitukset:
 • Jotkin laitteet eivät voi pakottaa AVC:tä"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Käyttääksesi tätä ominaisuutta, muuta \'Naamioi videovirrat\' arvoksi Android VR tai Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Laajenna suoran lähetyksen DVR:n kestoa</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Suoran lähetyksen DVR:n kesto on laajennettu enintään 7 päivään</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Suoran lähetyksen DVR:n kesto on rajoitettu palvelimen oletusasetukseen</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Tämä asetus voi aiheuttaa odottamattoman käytöksen, jos \'Väärennä videovirtoja\' ei ole käytössä.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Näytä edistynyt videolaatuvalikko</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Edistynyt videolaatuvalikko näytetään</string>

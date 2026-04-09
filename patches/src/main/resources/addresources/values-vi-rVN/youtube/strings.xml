@@ -539,6 +539,8 @@ Lưu ý: Có thể không hoạt động trên video phát trực tiếp"</strin
   <string name="morphe_livestream_dvr_title">Bật DVR phát trực tiếp</string>
   <string name="morphe_livestream_dvr_summary_on">Cho phép tua trên tất cả các phiên phát trực tiếp</string>
   <string name="morphe_livestream_dvr_summary_off">Không được tua trên tất cả các phiên phát trực tiếp</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Việc bật tính năng này có thể gây ra hành vi tìm kiếm livestream không mong muốn nếu \'Spoof video streams\' không được bật.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Bật vuốt để tua</string>
   <string name="morphe_slide_to_seek_summary_on">Vuốt để tua đã được bật</string>
@@ -1649,6 +1651,12 @@ Hạn chế:
 • Một số thiết bị không thể buộc sử dụng AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Để dùng tính năng này, hãy đổi \'Giả mạo luồng phát video\' thành Android VR hoặc Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Mở rộng thời lượng DVR phát trực tiếp</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Thời lượng DVR phát trực tiếp đã được mở rộng lên đến 7 ngày</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Thời lượng DVR phát trực tiếp bị giới hạn ở cài đặt mặc định của máy chủ</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Cài đặt này có thể gây ra hành vi không mong muốn nếu \'Spoof video streams\' chưa được bật.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Hiện menu chất lượng video nâng cao</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Menu chất lượng video nâng cao được hiển thị</string>

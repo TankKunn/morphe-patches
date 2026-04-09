@@ -534,6 +534,8 @@ Doza navê pakkê rast be û sepan serdest be"</string>
   <string name="morphe_livestream_dvr_title">Stêrkirina DVR-ya pêşandanê serdest bike</string>
   <string name="morphe_livestream_dvr_summary_on">Li hemû pêşandanên zindî, lêgerîkê serdest e</string>
   <string name="morphe_livestream_dvr_summary_off">Lêgerîkê li hin pêşandanên zindî nedibê</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Evîn kirin ev ditina kêfê, hezarkirina lê kolanbûna rêzê nabe rast, ger \'Kolana rêzên wîdeoyê\' çê nebûne.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Slide to seek çalak bike</string>
   <string name="morphe_slide_to_seek_summary_on">Slide to seek çalak e</string>
@@ -1638,6 +1640,12 @@ Sînergirên:
 • Hin alav nikarên AVC zor bike"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Bo ku evîna vê taybetmendê bikaribin, \'Spoof video streams\' bibe Android VR an Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Dîmendera destûra rêzê ya DVR-ê zêde bike</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Destûra DVR-a rêzê heta 7 rojan zêdekirî ye</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Destûra DVR-a rêzê ji bo nirşa pêşdigera serverê sînordar e</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Ev danan dibe ku bo berê pêwîst begerên neexwe bibin heke \'Rêzên wîdeoyê xelet bike\' çenekirî nabin.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Menyûa advanced qualitya vîdyoyê nîşane bike</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Nivîsara mêjûlê ya kalîteya video tê nîşandin</string>

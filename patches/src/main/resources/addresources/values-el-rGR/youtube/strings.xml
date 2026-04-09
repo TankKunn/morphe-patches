@@ -536,6 +536,8 @@ Second \"item\" text"</string>
   <string name="morphe_livestream_dvr_title">Ενεργοποίηση εγγραφής ζωντανής μετάδοσης DVR</string>
   <string name="morphe_livestream_dvr_summary_on">Η αναζήτηση επιτρέπεται σε όλες τις ζωντανές μεταδόσεις</string>
   <string name="morphe_livestream_dvr_summary_off">Η αναζήτηση ενδέχεται να μην είναι διαθέσιμη στις ζωντανές μεταδόσεις</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Η ενεργοποίηση αυτής της δυνατότητας ενδέχεται να προκαλέσει απρόσμενη συμπεριφορά αναζήτησης ζωντανής ροής, εάν δεν είναι ενεργοποιημένη η επιλογή \'Spoof video streams\'.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Χειρονομία συρσίματος για αναζήτηση</string>
   <string name="morphe_slide_to_seek_summary_on">Η χειρονομία συρσίματος για αναζήτηση στη γραμμή προόδου είναι ενεργοποιημένη</string>
@@ -1645,6 +1647,12 @@ Second \"item\" text"</string>
 • Ορισμένες συσκευές δεν μπορούν να επιβάλλουν τον κωδικοποιητή AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Για να χρησιμοποιήσετε αυτήν τη λειτουργία, αλλάξτε τη \"Παραποίηση ροών βίντεο\" σε Android VR ή Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Επέκταση της διάρκειας του DVR της ζωντανής μετάδοσης</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Η διάρκεια του DVR της ζωντανής μετάδοσης έχει επεκταθεί έως και 7 ημέρες</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Η διάρκεια του DVR της ζωντανής μετάδοσης περιορίζεται στην προεπιλογή του διακομιστή</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Αυτή η ρύθμιση ενδέχεται να προκαλέσει απρόβλεπτη συμπεριφορά εάν δεν είναι ενεργοποιημένη η επιλογή \'Spoof video streams\'.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Εμφάνιση προχωρημένου μενού ποιότητας βίντεο</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Εμφανίζεται το προχωρημένο μενού ποιότητας βίντεο</string>

@@ -535,6 +535,8 @@ YouTube Doodles दिखाने से कस्टम हेडर प्र
   <string name="morphe_livestream_dvr_title">लाइवस्ट्रीम DVR सक्षम करें</string>
   <string name="morphe_livestream_dvr_summary_on">सभी लाइवस्ट्रीम पर खोजने की अनुमति है</string>
   <string name="morphe_livestream_dvr_summary_off">लाइवस्ट्रीम पर खोजना उपलब्ध नहीं हो सकता है</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">यह सक्षम करने से \'वीडियो स्ट्रीम को स्पूफ करें\' सक्षम नहीं होने पर अप्रत्याशित लाइवस्ट्रीम खोज व्यवहार हो सकता है।</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">स्लाइड टू सीक सक्षम करें</string>
   <string name="morphe_slide_to_seek_summary_on">स्लाइड टू सीक सक्षम है</string>
@@ -1642,6 +1644,12 @@ Settings → Playback (or Autoplay) → Autoplay next video"</string>
 • कुछ डिवाइस AVC को बल नहीं लगा सकते"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">इस सुविधा का उपयोग करने के लिए, \'Spoof video streams\' को Android VR या Android Studio में बदलें</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">लाइवस्ट्रीम DVR अवधि का विस्तार करें</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">लाइवस्ट्रीम DVR अवधि 7 दिनों तक बढ़ा दी गई है</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">लाइवस्ट्रीम DVR अवधि सर्वर डिफ़ॉल्ट तक सीमित है</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">यदि \'वीडियो स्ट्रीम को स्पूफ करें\' सक्षम नहीं है तो यह सेटिंग अप्रत्याशित व्यवहार का कारण बन सकती है।</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">उन्नत वीडियो गुणवत्ता मेनू दिखाएं</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">उन्नत वीडियो गुणवत्ता मेनू दिखाया गया है</string>

@@ -536,6 +536,8 @@ Second \"item\" text"</string>
   <string name="morphe_livestream_dvr_title">Активиране на livestream DVR</string>
   <string name="morphe_livestream_dvr_summary_on">Търсенето е разрешено за всички livestreams</string>
   <string name="morphe_livestream_dvr_summary_off">Търсенето може да не е налично за livestreams</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Активирането на тази опция може да доведе до неочаквано търсене на живо предаване, ако не е активирана опцията \'Имитиране на видео потоци\'.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Зареждаването ще има твърд фон</string>
   <string name="morphe_slide_to_seek_summary_on">Стил на екрана</string>
@@ -1639,6 +1641,12 @@ Second \"item\" text"</string>
 • Някои устройства не могат да принудят AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">За да използвате тази функция, променете \'Spoof video streams\' на Android VR или Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Разширете продължителността на livestream DVR</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Продължителността на livestream DVR е разширена до 7 дни</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Продължителността на livestream DVR е ограничена до стандартната стойност на сървъра</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Тази настройка може да доведе до неочаквано поведение, ако \'Имитиране на видео потоци\' не е активирано.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Непрозрачност на миниплеера трябва да бъде между 0-100</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Включете градиентен заряд за зареждане</string>

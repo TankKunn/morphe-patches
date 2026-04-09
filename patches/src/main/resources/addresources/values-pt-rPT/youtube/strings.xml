@@ -535,6 +535,8 @@ Verifique se o nome do pacote está correto e se o aplicativo está instalado"</
   <string name="morphe_livestream_dvr_title">Habilitar DVR de livestream</string>
   <string name="morphe_livestream_dvr_summary_on">A busca é permitida em todos os livestreams</string>
   <string name="morphe_livestream_dvr_summary_off">A busca pode não estar disponível em livestreams</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Ativar isto pode causar um comportamento inesperado de pesquisa de livestream se \'Spoof video streams\' não estiver ativado.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Habilitar o slide para procurar</string>
   <string name="morphe_slide_to_seek_summary_on">Deslize para procurar está ativado</string>
@@ -1646,6 +1648,12 @@ Limitações:
 • Alguns dispositivos não conseguem forçar AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Para usar este recurso, altere \'Falsificar streams de vídeo\' para Android VR ou Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Expandir a duração do DVR de livestream</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">A duração do DVR de livestream foi expandida até 7 dias</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">A duração do DVR de livestream está limitada à padrão do servidor</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Esta configuração pode causar comportamento inesperado se \'Simular fluxos de vídeo\' não estiver ativado.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Mostrar menu de qualidade de vídeo avançado</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">O menu de qualidade de vídeo avançado é mostrado</string>

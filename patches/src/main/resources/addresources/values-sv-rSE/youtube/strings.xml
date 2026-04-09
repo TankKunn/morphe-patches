@@ -537,6 +537,7 @@ Information: Kanske inte fungerar i livestreamar"</string>
   <string name="morphe_livestream_dvr_title">Aktivera DVR för livestreamar</string>
   <string name="morphe_livestream_dvr_summary_on">Sökning tillåts i alla livestreamar</string>
   <string name="morphe_livestream_dvr_summary_off">Sökning är eventuellt inte tillgänglig i livestreamar</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktivera Dra för att söka</string>
   <string name="morphe_slide_to_seek_summary_on">Dra för att söka är aktiverat</string>
@@ -1649,6 +1650,8 @@ Begränsningar:
 • Vissa enheter kan inte tvinga AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Om du vill använda den här funktionen ändrar du \"Förfalska videoströmmar\" till Android VR eller Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Visa avancerad videokvalitetsmeny</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Avancerad videokvalitetsmeny visas</string>

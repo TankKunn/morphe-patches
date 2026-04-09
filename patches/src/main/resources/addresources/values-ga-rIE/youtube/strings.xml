@@ -120,6 +120,7 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_playables_title">Folaigh na heilimintí inseinnte</string>
   <string name="morphe_hide_playables_summary_on">Tá na heilimintí inseinnte i bhfolach</string>
   <string name="morphe_hide_playables_summary_off">Taispeántar na heilimintí inseinnte</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Íoc go bhféadfá urlisí téarmaí ​​suite</string>
   <string name="morphe_hide_search_term_thumbnails_summary_on">Tá fabhtanna ceardaigh ar fáil agus iad i bhfolach</string>
   <string name="morphe_hide_search_term_thumbnails_summary_off">Tá fabhtanna ceardaigh ar taispeán</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
@@ -534,6 +535,7 @@ Fíoraigh go bhfuil ainm an phacáiste ceart agus go bhfuil an aip suiteáilte"<
   <string name="morphe_livestream_dvr_title">Guranna livestream DVR</string>
   <string name="morphe_livestream_dvr_summary_on">Ceadaí é an t-soilgiú ar gach livestream</string>
   <string name="morphe_livestream_dvr_summary_off">Seans nach mbeidh an t-soilgiú ar fáil ar ghánaí beatha</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Cumasaigh sleamhnán a lorg</string>
   <string name="morphe_slide_to_seek_summary_on">Tá sleamhnán le lorg cumasaithe</string>
@@ -1645,6 +1647,12 @@ Teorainneacha:
 • Ní féidir le roinnt gléasanna AVC a bhrú"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Chun an gné seo a úsáid, athraigh \'Sruthanna físe bréige\' go Android VR nó Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Scail séadacha DPV tirsdheanta</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Tá DPV tirsdheanta le faighteamh go dtí 7 lá</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Tá DPV tirsdheanta teoranta go dtí an treochaomhacht ar an gcuideachta freiceadóra</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Féadfaidh an socruithe seo a bheith ina gcúis le rud ar bith neamhdlistear i gcás nach bhfuil \'Sruthanna fíodáin faisceacha\' áibithe.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Taispeáin roghchlár ardcháilíochta físeáin</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Taispeántar roghchlár ardchaighdeáin físe</string>
