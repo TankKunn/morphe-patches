@@ -1,3 +1,11 @@
+# [1.23.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.10...v1.23.0-dev.11) (2026-04-09)
+
+
+### Bug Fixes
+
+* **YouTube:** "Restore old setings menu" does not work with experimental app targets ([#1127](https://github.com/MorpheApp/morphe-patches/issues/1127)) ([74826e6](https://github.com/MorpheApp/morphe-patches/commit/74826e6aea75dec8e7290f33e4bf9eb476d2abe8))
+* **YouTube:** Bold player buttons break under certain conditions ([#1126](https://github.com/MorpheApp/morphe-patches/issues/1126)) ([8d928f5](https://github.com/MorpheApp/morphe-patches/commit/8d928f596323b4d33cd2ae071a6c47101a61404b))
+
 # [1.23.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0-dev.9...v1.23.0-dev.10) (2026-04-09)
 
 
