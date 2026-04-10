@@ -1,3 +1,11 @@
+# [1.24.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.1...v1.24.0-dev.2) (2026-04-10)
+
+
+### Bug Fixes
+
+* **Reddit - Remove subreddit dialog:** Does not work with experimental app targets ([#1130](https://github.com/MorpheApp/morphe-patches/issues/1130)) ([2560192](https://github.com/MorpheApp/morphe-patches/commit/2560192985c53b63858e78311057d30d5a2887f7))
+* **YouTube - Playback speed:** 21.15.282 speed button text alignment is wrong ([16104ac](https://github.com/MorpheApp/morphe-patches/commit/16104ac969c89cb58ca49d47c04792a0918ba173))
+
 # [1.24.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.23.0...v1.24.0-dev.1) (2026-04-09)
 
 
