@@ -1,3 +1,15 @@
+# [1.24.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.3...v1.24.0-dev.4) (2026-04-10)
+
+
+### Bug Fixes
+
+* **YouTube:** Use legacy layout parameters with older app targets ([329473a](https://github.com/MorpheApp/morphe-patches/commit/329473aadec23209800ad54aa4daa5df5a24e8f3))
+
+
+### Features
+
+* **YouTube Music:** Add experimental support for `9.14.51` ([e8c941f](https://github.com/MorpheApp/morphe-patches/commit/e8c941ff053e20e54e6303ed405ca5421a4e5768))
+
 # [1.24.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.2...v1.24.0-dev.3) (2026-04-10)
 
 
