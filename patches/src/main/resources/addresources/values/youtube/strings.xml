@@ -837,11 +837,17 @@ Tap and hold to open Morphe settings"</string>
 
     <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
     <string name="morphe_hide_player_flyout_title">Flyout menu</string>
-    <string name="morphe_hide_player_flyout_summary">Hide or show player flyout menu items</string>
+    <string name="morphe_hide_player_flyout_summary">Hide or show player flyout menu components</string>
     <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
     <string name="morphe_hide_player_flyout_captions_title">Hide Captions</string>
     <string name="morphe_hide_player_flyout_captions_summary_on">Captions menu is hidden</string>
     <string name="morphe_hide_player_flyout_captions_summary_off">Captions menu is shown</string>
+    <string name="morphe_hide_player_flyout_captions_footer_title">Hide Captions footer</string>
+    <string name="morphe_hide_player_flyout_captions_footer_summary_on">Captions menu footer is hidden</string>
+    <string name="morphe_hide_player_flyout_captions_footer_summary_off">Captions menu footer is shown</string>
+    <string name="morphe_hide_player_flyout_captions_header_title">Hide Captions header</string>
+    <string name="morphe_hide_player_flyout_captions_header_summary_on">Captions menu header is hidden</string>
+    <string name="morphe_hide_player_flyout_captions_header_summary_off">Captions menu header is shown</string>
     <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
     <string name="morphe_hide_player_flyout_additional_settings_title">Hide Additional settings / More</string>
     <string name="morphe_hide_player_flyout_additional_settings_summary_on">Additional settings / More menu is hidden</string>
@@ -887,17 +893,23 @@ Tap and hold to open Morphe settings"</string>
     <string name="morphe_hide_player_flyout_audio_track_not_available">"Audio track menu is hidden
 
 To show the Audio track menu, change \'Spoof video streams\' to \'Android Reel\' or \'TV\'"</string>
+    <string name="morphe_hide_player_flyout_audio_track_footer_title">Hide Audio track footer</string>
+    <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">Audio track menu footer is hidden</string>
+    <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">Audio track menu footer is shown</string>
     <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
     <string name="morphe_hide_player_flyout_watch_in_vr_title">Hide Watch in VR</string>
     <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Watch in VR menu is hidden</string>
     <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">Watch in VR menu is shown</string>
     <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-    <string name="morphe_hide_player_flyout_video_quality_title">Hide Quality menu</string>
-    <string name="morphe_hide_player_flyout_video_quality_summary_on">Quality menu is hidden</string>
-    <string name="morphe_hide_player_flyout_video_quality_summary_off">Quality menu is shown</string>
-    <string name="morphe_hide_player_flyout_video_quality_footer_title">Hide Quality menu footer</string>
-    <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Quality menu footer is hidden</string>
-    <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Quality menu footer is shown</string>
+    <string name="morphe_hide_player_flyout_quality_title">Hide Quality</string>
+    <string name="morphe_hide_player_flyout_quality_summary_on">Quality menu is hidden</string>
+    <string name="morphe_hide_player_flyout_quality_summary_off">Quality menu is shown</string>
+    <string name="morphe_hide_player_flyout_quality_footer_title">Hide Quality footer</string>
+    <string name="morphe_hide_player_flyout_quality_footer_summary_on">Quality menu footer is hidden</string>
+    <string name="morphe_hide_player_flyout_quality_footer_summary_off">Quality menu footer is shown</string>
+    <string name="morphe_hide_player_flyout_quality_header_title">Hide Quality header</string>
+    <string name="morphe_hide_player_flyout_quality_header_summary_on">Quality menu header is hidden</string>
+    <string name="morphe_hide_player_flyout_quality_header_summary_off">Quality menu header is shown</string>
 
     <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
     <string name="morphe_hide_autoplay_preview_title">Hide autoplay preview</string>
