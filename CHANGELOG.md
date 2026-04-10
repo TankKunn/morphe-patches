@@ -1,3 +1,15 @@
+# [1.24.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.2...v1.24.0-dev.3) (2026-04-10)
+
+
+### Bug Fixes
+
+* **YouTube - SponsorBlock:** 400 error is shown when closing 21.15.282 video player ([c9a5530](https://github.com/MorpheApp/morphe-patches/commit/c9a553048c318ec79ae893c06b0fe3aaf381528d))
+
+
+### Features
+
+* **YouTube - Hide player flyout menu components:** Add "Hide Audio track footer", "Hide Captions footer", and "Hide Captions header" settings ([#642](https://github.com/MorpheApp/morphe-patches/issues/642)) ([19c6c2d](https://github.com/MorpheApp/morphe-patches/commit/19c6c2d525c6dab715f21210d690ea68f7b22f7a))
+
 # [1.24.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.1...v1.24.0-dev.2) (2026-04-10)
 
 

@@ -1,5 +1,5 @@
 {
-  "version": "1.24.0-dev.2",
+  "version": "1.24.0-dev.3",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -1233,6 +1233,10 @@
       "description": "Adds options to hide menu components that appear when pressing the gear icon in the video player.",
       "use": true,
       "dependencies": [
+        "BytecodePatch",
+        "BytecodePatch",
+        "ResourcePatch",
+        "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch"
