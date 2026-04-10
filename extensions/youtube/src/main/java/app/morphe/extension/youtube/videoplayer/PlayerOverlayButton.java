@@ -27,6 +27,7 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.youtube.patches.HidePlayerOverlayButtonsPatch;
 import app.morphe.extension.youtube.settings.Settings;
 
 public class PlayerOverlayButton {
@@ -134,7 +135,10 @@ public class PlayerOverlayButton {
                     && sourcePaddingRight == button.getPaddingRight()
                     && sourcePaddingBottom == button.getPaddingBottom())
             ) {
-                button.setLayoutParams(source.getLayoutParams());
+                // Fullscreen button has a custom margin layout parameters class
+                // and if used directly causes a broken layout with 21.15+
+                // if quality and speed button are shown.
+                button.setLayoutParams(new ViewGroup.MarginLayoutParams(source.getLayoutParams()));
                 button.setPadding(
                         sourcePaddingLeft,
                         sourcePaddingTop,
@@ -151,8 +155,13 @@ public class PlayerOverlayButton {
                 button.setX(xOffset);
             }
 
-            // Y position does not seem to need an update,
-            // and if fullscreen button is hidden it's Y position is off-screen.
+            float positionY = source.getY();
+            if (HidePlayerOverlayButtonsPatch.HIDE_FULLSCREEN_BUTTON_ENABLED) {
+                positionY += HidePlayerOverlayButtonsPatch.FULLSCREEN_HIDDEN_Y_OFFSET;
+            }
+            if (button.getY() != positionY) {
+                button.setY(positionY);
+            }
 
             Drawable sourceButtonBackground = source.getBackground();
             Drawable.ConstantState newConstantState = sourceButtonBackground != null
