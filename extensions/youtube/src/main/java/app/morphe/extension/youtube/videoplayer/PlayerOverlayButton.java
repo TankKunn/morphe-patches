@@ -28,6 +28,7 @@ import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.HidePlayerOverlayButtonsPatch;
+import app.morphe.extension.youtube.patches.VersionCheckPatch;
 import app.morphe.extension.youtube.settings.Settings;
 
 public class PlayerOverlayButton {
@@ -135,10 +136,16 @@ public class PlayerOverlayButton {
                     && sourcePaddingRight == button.getPaddingRight()
                     && sourcePaddingBottom == button.getPaddingBottom())
             ) {
-                // Fullscreen button has a custom margin layout parameters class
-                // and if used directly causes a broken layout with 21.15+
-                // if quality and speed button are shown.
-                button.setLayoutParams(new ViewGroup.MarginLayoutParams(source.getLayoutParams()));
+                //noinspection ExtractMethodRecommender
+                ViewGroup.LayoutParams layoutParams = source.getLayoutParams();
+                if (VersionCheckPatch.IS_21_15_OR_GREATER) {
+                    // Fullscreen button has a custom margin layout parameters class
+                    // and if used directly causes a broken layout with 21.15+
+                    // if quality and speed button are shown. Older app targets
+                    // must use the original layut otherwise app crashes with a cast exception.
+                    layoutParams = new ViewGroup.MarginLayoutParams(layoutParams);
+                }
+                button.setLayoutParams(layoutParams);
                 button.setPadding(
                         sourcePaddingLeft,
                         sourcePaddingTop,
