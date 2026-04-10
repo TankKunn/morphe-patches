@@ -15,7 +15,7 @@ import app.morphe.extension.youtube.settings.Settings;
 public final class HidePlayerOverlayButtonsPatch {
 
     private static final boolean HIDE_AUTOPLAY_BUTTON_ENABLED = Settings.HIDE_AUTOPLAY_BUTTON.get();
-    public static final Boolean HIDE_FULLSCREEN_BUTTON_ENABLED = Settings.HIDE_FULLSCREEN_BUTTON.get();
+    private static final Boolean HIDE_FULLSCREEN_BUTTON_ENABLED = Settings.HIDE_FULLSCREEN_BUTTON.get();
     public static final int FULLSCREEN_HIDDEN_Y_OFFSET = 100000;
 
     /**

@@ -163,7 +163,7 @@ public class PlayerOverlayButton {
             }
 
             float positionY = source.getY();
-            if (HidePlayerOverlayButtonsPatch.HIDE_FULLSCREEN_BUTTON_ENABLED) {
+            if (HIDE_FULLSCREEN_BUTTON_ENABLED) {
                 positionY += HidePlayerOverlayButtonsPatch.FULLSCREEN_HIDDEN_Y_OFFSET;
             }
             if (button.getY() != positionY) {
@@ -229,7 +229,12 @@ public class PlayerOverlayButton {
 
     private static void updateContainerMargins(View lowerButtonSource) {
         // Keep both containers' end margins in sync with the current button count.
-        chapterTitleContainer.updateMargin(lowerButtonSource.getWidth(), buttonControllers.size());
+        final int totalLowerButtons = buttonControllers.size() - (HIDE_FULLSCREEN_BUTTON_ENABLED
+                ? 1
+                : 0);
+        if (totalLowerButtons > 0) {
+            chapterTitleContainer.updateMargin(lowerButtonSource.getWidth(), totalLowerButtons);
+        }
         videoHeadingContainer.updateMargin(LegacyPlayerControlButton.buttonWidth, getTotalUpperButtonCount());
     }
 
