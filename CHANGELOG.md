@@ -1,3 +1,12 @@
+# [1.24.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.5...v1.24.0-dev.6) (2026-04-12)
+
+
+### Features
+
+* **YouTube - Hide layout components:** Add list preference for hiding expandable cards ([#1123](https://github.com/MorpheApp/morphe-patches/issues/1123)) ([7f96bcd](https://github.com/MorpheApp/morphe-patches/commit/7f96bcd6fd4cea0c69e3aa683393e9db4ef7aab5))
+* **YouTube Music:** Add support for `8.47.56` ([fc5bcdd](https://github.com/MorpheApp/morphe-patches/commit/fc5bcdd988f48e00c3ab031f41890ec2792a3a2e))
+* **YouTube:** Add support for `20.47.62` ([b143f54](https://github.com/MorpheApp/morphe-patches/commit/b143f54c63f94651b6cd14ae1969746047f2ad60))
+
 # [1.24.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.4...v1.24.0-dev.5) (2026-04-11)
 
 
