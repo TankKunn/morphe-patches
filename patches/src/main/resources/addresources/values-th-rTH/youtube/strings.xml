@@ -70,9 +70,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">ซ่อนบัตรศิลปิน</string>
   <string name="morphe_hide_artist_cards_summary_on">บัตรศิลปินถูกซ่อนไว้</string>
   <string name="morphe_hide_artist_cards_summary_off">บัตรศิลปินแสดงอยู่</string>
-  <string name="morphe_hide_chips_shelf_title">ซ่อนชั้นวางชิป</string>
-  <string name="morphe_hide_chips_shelf_summary_on">ชั้นวางชิปถูกซ่อน</string>
-  <string name="morphe_hide_chips_shelf_summary_off">ชั้นวางชิปแสดงอยู่</string>
   <string name="morphe_hide_community_posts_title">ซ่อนโพสต์ชุมชน</string>
   <string name="morphe_hide_community_posts_summary_on">โพสต์ชุมชนถูกซ่อนไว้</string>
   <string name="morphe_hide_community_posts_summary_off">โพสต์ชุมชนแสดงอยู่</string>
@@ -80,26 +77,32 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary_on">แบนเนอร์ขนาดกะทัดรัดถูกซ่อนไว้</string>
   <string name="morphe_hide_compact_banner_summary_off">แบนเนอร์ขนาดกะทัดรัดแสดงอยู่</string>
   <string name="morphe_hide_expandable_card_title">ซ่อนการ์ดแบบขยายได้</string>
-  <string name="morphe_hide_expandable_card_summary_on">การ์ดแบบขยายได้ใต้คลิปวิดีโอถูกซ่อนไว้</string>
-  <string name="morphe_hide_expandable_card_summary_off">การ์ดแบบขยายได้ใต้คลิปวิดีโอแสดงอยู่</string>
+  <string name="morphe_hide_expandable_card_entry_1">การ์ดแบบขยายได้ใต้คลิปวิดีโอแสดงอยู่</string>
+  <string name="morphe_hide_expandable_card_entry_2">การ์ดแบบขยายได้ใต้คลิปวิดีโอถูกซ่อนไว้</string>
+  <string name="morphe_hide_expandable_card_entry_3">การ์ดแบบขยายได้ใต้คลิปวิดีโอถูกซ่อนไว้</string>
+  <string name="morphe_hide_expandable_card_entry_4">Product and summary card under videos are hidden</string>
+  <string name="morphe_hide_expandable_card_entry_5">Expandable cards under videos are hidden</string>
   <string name="morphe_hide_floating_microphone_button_title">ซ่อนปุ่มไมโครโฟนแบบลอย</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">ปุ่มไมโครโฟนลอยในหน้าการค้นหาถูกซ่อนไว้</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">แสดงปุ่มไมโครโฟนลอยในหน้าค้นหา</string>
   <string name="morphe_hide_horizontal_shelves_title">ซ่อนชั้นวางแนวนอน</string>
-  <string name="morphe_hide_horizontal_shelves_summary_on">"ซ่อนชั้นวางแนวนอน เช่น:
-• ข่าวล่าสุด
-• ดูต่อ
-• สำรวจช่องเพิ่มเติม
-• ที่เกี่ยวข้องมากที่สุด
-• ช้อปปิ้ง
-• ดูอีกครั้ง"</string>
+  <string name="morphe_hide_horizontal_shelves_summary_on">"Horizontal shelves are hidden, such as:
+
+• Breaking news
+• Community posts you may like
+• Continue watching
+• Explore more channels
+• Explore more topics
+• For You
+• Latest videos
+• Most relevant
+• Posts from Creator's Community
+• Shopping
+• Watch it again"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">ชั้นวางแนวนอนแสดงอยู่</string>
   <string name="morphe_hide_image_shelf_title">ซ่อนชั้นวางรูปภาพ</string>
   <string name="morphe_hide_image_shelf_summary_on">ชั้นวางรูปภาพในผลการค้นหาถูกซ่อนไว้</string>
   <string name="morphe_hide_image_shelf_summary_off">ชั้นวางรูปภาพในผลการค้นหาแสดงอยู่</string>
-  <string name="morphe_hide_latest_posts_title">ซ่อนโพสต์ล่าสุด</string>
-  <string name="morphe_hide_latest_posts_summary_on">โพสต์ล่าสุดถูกซ่อนไว้</string>
-  <string name="morphe_hide_latest_posts_summary_off">โพสต์ล่าสุดแสดงอยู่</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">ซ่อนปุ่ม \'วิดีโอล่าสุด\'</string>
@@ -298,6 +301,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_members_shelf_title">ซ่อนชั้นวางสมาชิก</string>
   <string name="morphe_hide_members_shelf_summary_on">ชั้นวางสมาชิกถูกซ่อนไว้</string>
   <string name="morphe_hide_members_shelf_summary_off">แสดงชั้นวางของสมาชิก</string>
+  <string name="morphe_hide_posts_shelf_title">Hide posts shelf</string>
+  <string name="morphe_hide_posts_shelf_summary_on">Posts shelf is hidden</string>
+  <string name="morphe_hide_posts_shelf_summary_off">Posts shelf is shown</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">ซ่อนปุ่มแชร์</string>
   <string name="morphe_hide_store_button_summary_on">ปุ่มแชร์ถูกซ่อน</string>

@@ -69,9 +69,6 @@ Perubahan termasuk:
   <string name="morphe_hide_artist_cards_title">Sembunyikan kartu artis</string>
   <string name="morphe_hide_artist_cards_summary_on">Kartu artis disembunyikan</string>
   <string name="morphe_hide_artist_cards_summary_off">Kartu artis ditampilkan</string>
-  <string name="morphe_hide_chips_shelf_title">Sembunyikan kepingan rak</string>
-  <string name="morphe_hide_chips_shelf_summary_on">Kepingan rak disembunyikan</string>
-  <string name="morphe_hide_chips_shelf_summary_off">Kepingan rak ditampilkan</string>
   <string name="morphe_hide_community_posts_title">Sembunyikan postingan komunitas</string>
   <string name="morphe_hide_community_posts_summary_on">Postingan komunitas disembunyikan</string>
   <string name="morphe_hide_community_posts_summary_off">Postingan komunitas ditampilkan</string>
@@ -79,27 +76,32 @@ Perubahan termasuk:
   <string name="morphe_hide_compact_banner_summary_on">Spanduk ringkas disembunyikan</string>
   <string name="morphe_hide_compact_banner_summary_off">Spanduk ringkas ditampilkan</string>
   <string name="morphe_hide_expandable_card_title">Sembunyikan kartu yang dapat diperluas</string>
-  <string name="morphe_hide_expandable_card_summary_on">Kartu yang dapat diperluas di bawah video disembunyikan</string>
-  <string name="morphe_hide_expandable_card_summary_off">Kartu yang dapat diperluas di bawah video ditampilkan</string>
+  <string name="morphe_hide_expandable_card_entry_1">Kartu yang dapat diperluas di bawah video ditampilkan</string>
+  <string name="morphe_hide_expandable_card_entry_2">Kartu yang dapat diperluas di bawah video disembunyikan</string>
+  <string name="morphe_hide_expandable_card_entry_3">Kartu yang dapat diperluas di bawah video disembunyikan</string>
+  <string name="morphe_hide_expandable_card_entry_4">Kartu dan ringkasan produk di bawah video disembunyikan</string>
+  <string name="morphe_hide_expandable_card_entry_5">Kartu yang dapat diperluas di bawah video disembunyikan</string>
   <string name="morphe_hide_floating_microphone_button_title">Sembunyikan tombol mikrofon mengambang</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Tombol mikrofon mengambang di pencarian disembunyikan</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">Tombol mikrofon mengambang dalam pencarian ditampilkan</string>
   <string name="morphe_hide_horizontal_shelves_title">Sembunyikan rak-rak mendatar</string>
   <string name="morphe_hide_horizontal_shelves_summary_on">"Rak horizontal disembunyikan, seperti:
+
 • Berita terkini
+• Postingan komunitas yang mungkin Anda sukai
 • Lanjutkan menonton
 • Jelajahi lebih banyak saluran
+• Jelajahi lebih banyak topik
 • Untuk Anda
+• Video terbaru
 • Paling relevan
+• Postingan dari Komunitas Creator
 • Belanja
 • Tonton lagi"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">Rak horizontal ditampilkan</string>
   <string name="morphe_hide_image_shelf_title">Sembunyikan rak gambar</string>
   <string name="morphe_hide_image_shelf_summary_on">Rak gambar dalam hasil pencarian disembunyikan</string>
   <string name="morphe_hide_image_shelf_summary_off">Rak gambar dalam hasil pencarian ditampilkan</string>
-  <string name="morphe_hide_latest_posts_title">Sembunyikan postingan terbaru</string>
-  <string name="morphe_hide_latest_posts_summary_on">Postingan terbaru disembunyikan</string>
-  <string name="morphe_hide_latest_posts_summary_off">Postingan terbaru ditampilkan</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Sembunyikan tombol \'Video terbaru\'</string>
@@ -298,6 +300,9 @@ Menampilkan YouTube Doodles mungkin mencegah menampilkan header khusus."</string
   <string name="morphe_hide_members_shelf_title">Sembunyikan rak anggota</string>
   <string name="morphe_hide_members_shelf_summary_on">Rak anggota disembunyikan</string>
   <string name="morphe_hide_members_shelf_summary_off">Rak anggota ditampilkan</string>
+  <string name="morphe_hide_posts_shelf_title">Sembunyikan rak postingan</string>
+  <string name="morphe_hide_posts_shelf_summary_on">Rak postingan disembunyikan</string>
+  <string name="morphe_hide_posts_shelf_summary_off">Rak postingan ditampilkan</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">Sembunyikan tombol Toko</string>
   <string name="morphe_hide_store_button_summary_on">Tombol toko disembunyikan</string>

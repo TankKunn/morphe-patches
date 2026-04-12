@@ -70,38 +70,39 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_artist_cards_title">Interpretenkarten ausblenden</string>
   <string name="morphe_hide_artist_cards_summary_on">Interpretenkarten sind ausgeblendet</string>
   <string name="morphe_hide_artist_cards_summary_off">Interpretenkarten werden angezeigt</string>
-  <string name="morphe_hide_chips_shelf_title">Chips ausblenden</string>
-  <string name="morphe_hide_chips_shelf_summary_on">Chips werden ausgeblendet</string>
-  <string name="morphe_hide_chips_shelf_summary_off">Chips werden angezeigt</string>
   <string name="morphe_hide_community_posts_title">Communitybeiträge ausblenden</string>
   <string name="morphe_hide_community_posts_summary_on">Communitybeiträge sind ausgeblendet</string>
   <string name="morphe_hide_community_posts_summary_off">Communitybeiträge werden angezeigt</string>
   <string name="morphe_hide_compact_banner_title">Kompakte Banner ausblenden</string>
   <string name="morphe_hide_compact_banner_summary_on">Kompakte Banner sind ausgeblendet</string>
   <string name="morphe_hide_compact_banner_summary_off">Kompakte Banner werden angezeigt</string>
-  <string name="morphe_hide_expandable_card_title">Ausklappbare Karte ausblenden</string>
-  <string name="morphe_hide_expandable_card_summary_on">Ausklappbare Karte unter Videos ist ausgeblendet</string>
-  <string name="morphe_hide_expandable_card_summary_off">Ausklappbare Karte unter Videos wird angezeigt</string>
+  <string name="morphe_hide_expandable_card_title">Ausklappbare Karten ausblenden</string>
+  <string name="morphe_hide_expandable_card_entry_1">Ausklappbare Karten unter Videos werden angezeigt</string>
+  <string name="morphe_hide_expandable_card_entry_2">Nur Produktkarte unter Videos ist ausgeblendet</string>
+  <string name="morphe_hide_expandable_card_entry_3">Nur Zusammenfassungskarte unter Videos ist ausgeblendet</string>
+  <string name="morphe_hide_expandable_card_entry_4">Produkt- und Zusammenfassungskarte unter Videos sind ausgeblendet</string>
+  <string name="morphe_hide_expandable_card_entry_5">Ausklappbare Karten unter Videos sind ausgeblendet</string>
   <string name="morphe_hide_floating_microphone_button_title">Schwebende Mikrofon-Schaltfläche ausblenden</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Schwebende Mikrofon-Schaltfläche wird in der Suche ausgeblendet</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">Schwebende Mikrofon-Schaltfläche wird in der Suche angezeigt</string>
   <string name="morphe_hide_horizontal_shelves_title">Horizontale Reihen ausblenden</string>
-  <string name="morphe_hide_horizontal_shelves_summary_on">"Horizontale Regale sind ausgeblendet, wie zum Beispiel:
+  <string name="morphe_hide_horizontal_shelves_summary_on">"Horizontale Bereiche sind ausgeblendet, wie z. B.:
 
-• Aktuelle Nachrichten
-• Weiter ansehen
+• Eilmeldungen
+• Community-Beiträge, die Ihnen gefallen könnten
+• Weiter schauen
 • Mehr Kanäle entdecken
+• Mehr Themen entdecken
 • Für Sie
-• Am relevantesten
+• Neueste Videos
+• Relevanteste
+• Beiträge aus der Creators Community
 • Einkaufen
-• Nochmals ansehen"</string>
+• Später ansehen"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">Horizontale Reihen werden angezeigt</string>
   <string name="morphe_hide_image_shelf_title">Bild-Reihe ausblenden</string>
   <string name="morphe_hide_image_shelf_summary_on">Bild-Reihe in den Suchergebnissen ist ausgeblendet</string>
   <string name="morphe_hide_image_shelf_summary_off">Bild-Reihe in den Suchergebnissen wird angezeigt</string>
-  <string name="morphe_hide_latest_posts_title">Neueste Beiträge ausblenden</string>
-  <string name="morphe_hide_latest_posts_summary_on">Neueste Beiträge werden ausgeblendet</string>
-  <string name="morphe_hide_latest_posts_summary_off">Neueste Beiträge werden angezeigt</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Verbergen der Schaltfläche \'Letzte Videos\'</string>
@@ -300,6 +301,9 @@ Das Anzeigen von YouTube Doodles kann verhindern, dass benutzerdefinierte Header
   <string name="morphe_hide_members_shelf_title">Mitglieder-Abschnitt ausblenden</string>
   <string name="morphe_hide_members_shelf_summary_on">Mitglieder-Abschnitt ist ausgeblendet</string>
   <string name="morphe_hide_members_shelf_summary_off">Mitglieder-Abschnitt wird angezeigt</string>
+  <string name="morphe_hide_posts_shelf_title">Beitragsbereiche ausblenden</string>
+  <string name="morphe_hide_posts_shelf_summary_on">Beitragsbereich ist ausgeblendet</string>
+  <string name="morphe_hide_posts_shelf_summary_off">Beitragsbereich wird angezeigt</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">Schaltfläche \'Store\' ausblenden</string>
   <string name="morphe_hide_store_button_summary_on">\'Store\' wird ausgeblendet</string>

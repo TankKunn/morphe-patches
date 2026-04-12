@@ -70,9 +70,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">Скрыть карточки исполнителей</string>
   <string name="morphe_hide_artist_cards_summary_on">Карточки исполнителей под плеером скрыты</string>
   <string name="morphe_hide_artist_cards_summary_off">Карточки исполнителей под плеером показаны</string>
-  <string name="morphe_hide_chips_shelf_title">Скрыть секцию тегов похожих видео</string>
-  <string name="morphe_hide_chips_shelf_summary_on">Секция тегов похожих видео под плеером скрыта</string>
-  <string name="morphe_hide_chips_shelf_summary_off">Секция тегов похожих видео под плеером показана</string>
   <string name="morphe_hide_community_posts_title">Скрыть публикации сообщества</string>
   <string name="morphe_hide_community_posts_summary_on">Публикации сообщества в ленте скрыты</string>
   <string name="morphe_hide_community_posts_summary_off">Публикации сообщества в ленте показаны</string>
@@ -80,28 +77,32 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary_on">Компактные баннеры в ленте скрыты</string>
   <string name="morphe_hide_compact_banner_summary_off">Компактные баннеры в ленте показаны</string>
   <string name="morphe_hide_expandable_card_title">Скрыть расширяемые фрагменты</string>
-  <string name="morphe_hide_expandable_card_summary_on">Расширяемые фрагменты под плеером скрыты</string>
-  <string name="morphe_hide_expandable_card_summary_off">Расширяемые фрагменты под плеером показаны</string>
+  <string name="morphe_hide_expandable_card_entry_1">Расширяемые фрагменты под плеером показаны</string>
+  <string name="morphe_hide_expandable_card_entry_2">Расширяемые фрагменты под плеером скрыты</string>
+  <string name="morphe_hide_expandable_card_entry_3">Расширяемые фрагменты под плеером скрыты</string>
+  <string name="morphe_hide_expandable_card_entry_4">Карточки продуктов и сводки скрыты под видео</string>
+  <string name="morphe_hide_expandable_card_entry_5">Расширяемые карточки скрыты под видео</string>
   <string name="morphe_hide_floating_microphone_button_title">Скрыть плавающую кнопку микрофона</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Плавающая кнопка микрофона в поиске скрыта</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">Плавающая кнопка микрофона в поиске показана</string>
   <string name="morphe_hide_horizontal_shelves_title">Скрыть горизонтальные секции</string>
-  <string name="morphe_hide_horizontal_shelves_summary_on">"Горизонтальные полки скрыты:
+  <string name="morphe_hide_horizontal_shelves_summary_on">"Горизонтальные полки скрыты, такие как:
 
-• Горячие новости
-• Продолжить, просмотр
-• Посмотреть, больше каналов
-• Для вас
-• Самые уместные
+• Свежие новости
+• Публикации сообщества, которые вам могут понравиться
+• Продолжить просмотр
+• Исследовать больше каналов
+• Исследовать больше тем
+• Рекомендации
+• Последние видео
+• Самые релевантные
+• Публикации из Сообщества создателя
 • Покупки
-• Смотреть, снова"</string>
+• Посмотреть снова"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">Горизонтальные секции показаны</string>
   <string name="morphe_hide_image_shelf_title">Скрыть секцию изображений</string>
   <string name="morphe_hide_image_shelf_summary_on">Секция изображений в результатах поиска скрыта</string>
   <string name="morphe_hide_image_shelf_summary_off">Секция изображений в результатах поиска показана</string>
-  <string name="morphe_hide_latest_posts_title">Скрыть последние публикации</string>
-  <string name="morphe_hide_latest_posts_summary_on">Последние публикации в ленте скрыты</string>
-  <string name="morphe_hide_latest_posts_summary_off">Последние публикации в ленте показаны</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Скрыть кнопку \"Последние видео\"</string>
@@ -300,6 +301,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_members_shelf_title">Скрыть секцию участников</string>
   <string name="morphe_hide_members_shelf_summary_on">Секция участников на странице канала скрыта</string>
   <string name="morphe_hide_members_shelf_summary_off">Секция участников на странице канала показана</string>
+  <string name="morphe_hide_posts_shelf_title">Скрыть полку с публикациями</string>
+  <string name="morphe_hide_posts_shelf_summary_on">Полка с публикациями скрыта</string>
+  <string name="morphe_hide_posts_shelf_summary_off">Полка с публикациями показана</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">Скрыть кнопку \"Магазин\"</string>
   <string name="morphe_hide_store_button_summary_on">Кнопка \"Магазин\" скрыта</string>

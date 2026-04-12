@@ -70,36 +70,39 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">إخفاء بطاقات الفنان</string>
   <string name="morphe_hide_artist_cards_summary_on">تم إخفاء بطاقات الفنان</string>
   <string name="morphe_hide_artist_cards_summary_off">يتم عرض بطاقات الفنان</string>
-  <string name="morphe_hide_chips_shelf_title">إخفاء رف الشرائح</string>
-  <string name="morphe_hide_chips_shelf_summary_on">تم إخفاء رف الشرائح</string>
-  <string name="morphe_hide_chips_shelf_summary_off">يتم عرض رف الشرائح</string>
   <string name="morphe_hide_community_posts_title">إخفاء مشاركات المجتمع</string>
   <string name="morphe_hide_community_posts_summary_on">تم إخفاء مشاركات المجتمع</string>
   <string name="morphe_hide_community_posts_summary_off">يتم عرض مشاركات المجتمع</string>
   <string name="morphe_hide_compact_banner_title">إخفاء اللافتات المصغرة</string>
   <string name="morphe_hide_compact_banner_summary_on">تم إخفاء اللافتات المصغرة</string>
   <string name="morphe_hide_compact_banner_summary_off">يتم عرض اللافتات المصغرة</string>
-  <string name="morphe_hide_expandable_card_title">إخفاء البطاقة القابلة للتوسع</string>
-  <string name="morphe_hide_expandable_card_summary_on">تم إخفاء البطاقة القابلة للتوسع أسفل مقاطع الفيديو</string>
-  <string name="morphe_hide_expandable_card_summary_off">يتم عرض البطاقة القابلة للتوسع أسفل مقاطع الفيديو</string>
+  <string name="morphe_hide_expandable_card_title">إخفاء البطاقات القابلة للتوسع</string>
+  <string name="morphe_hide_expandable_card_entry_1">يتم عرض البطاقات القابلة للتوسع أسفل الفيديوهات</string>
+  <string name="morphe_hide_expandable_card_entry_2">تم إخفاء بطاقة المنتج فقط أسفل الفيديوهات</string>
+  <string name="morphe_hide_expandable_card_entry_3">تم إخفاء بطاقة الملخص فقط أسفل الفيديوهات</string>
+  <string name="morphe_hide_expandable_card_entry_4">تم إخفاء بطاقة المنتج والملخص أسفل الفيديوهات</string>
+  <string name="morphe_hide_expandable_card_entry_5">تم إخفاء البطاقات القابلة للتوسع أسفل الفيديوهات</string>
   <string name="morphe_hide_floating_microphone_button_title">إخفاء زر الميكروفون العائم</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">تم إخفاء زر الميكروفون العائم في البحث</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">يتم عرض زر الميكروفون العائم في البحث</string>
   <string name="morphe_hide_horizontal_shelves_title">إخفاء الرفوف الأفقية</string>
   <string name="morphe_hide_horizontal_shelves_summary_on">"تم إخفاء الأرفف الأفقية، مثل:
+
 • الأخبار العاجلة
+• منشورات المجتمع التي قد تعجبك
 • متابعة المشاهدة
-• استكشاف المزيد من القنوات
+• استكشف المزيد من القنوات
+• استكشف المزيد من المواضيع
+• من أجلك
+• أحدث الفيديوهات
 • الأكثر صلة
+• منشورات من مجتمع المبدعين
 • التسوق
 • أريد أن أشاهدها مرة أخرى"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">يتم عرض الأرفف الأفقية</string>
   <string name="morphe_hide_image_shelf_title">إخفاء رف الصور</string>
   <string name="morphe_hide_image_shelf_summary_on">تم إخفاء رف الصور في نتائج البحث</string>
   <string name="morphe_hide_image_shelf_summary_off">يتم عرض رف الصور في نتائج البحث</string>
-  <string name="morphe_hide_latest_posts_title">إخفاء آخر المشاركات</string>
-  <string name="morphe_hide_latest_posts_summary_on">تم إخفاء أحدث المشاركات</string>
-  <string name="morphe_hide_latest_posts_summary_off">يتم عرض أحدث المشاركات</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">إخفاء زر \'أحدث الفيديوهات\'</string>
@@ -298,6 +301,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_members_shelf_title">إخفاء رف الأعضاء</string>
   <string name="morphe_hide_members_shelf_summary_on">تم إخفاء رف الأعضاء</string>
   <string name="morphe_hide_members_shelf_summary_off">يتم عرض رف الأعضاء</string>
+  <string name="morphe_hide_posts_shelf_title">إخفاء رف المنشورات</string>
+  <string name="morphe_hide_posts_shelf_summary_on">تم إخفاء رف المنشورات</string>
+  <string name="morphe_hide_posts_shelf_summary_off">يتم عرض رف المنشورات</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">إخفاء زر المتجر</string>
   <string name="morphe_hide_store_button_summary_on">تم إخفاء زر المتجر</string>

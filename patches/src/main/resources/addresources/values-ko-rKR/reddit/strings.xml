@@ -26,8 +26,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_modern_home_summary">모던 스타일 홈 UI를 비활성화합니다</string>
   <string name="morphe_disable_screenshot_popup_title">스크린샷 팝업 비활성화하기</string>
   <string name="morphe_disable_screenshot_popup_summary">스크린샷 촬영 시 나타나는 팝업을 비활성화합니다</string>
-  <string name="morphe_hide_ask_button_title">Ask 버튼 숨기기</string>
-  <string name="morphe_hide_ask_button_summary">검색창에서 Ask 버튼을 숨깁니다</string>
+  <string name="morphe_hide_ask_button_title">Ask (Reddit Answers) 버튼 숨기기</string>
+  <string name="morphe_hide_ask_button_summary">검색창에서 Ask (Reddit Answers) 버튼을 숨깁니다</string>
   <string name="morphe_hide_answers_button_title">Answers 버튼 숨기기</string>
   <string name="morphe_hide_answers_button_summary">하단바에서 Answers 버튼을 숨깁니다</string>
   <string name="morphe_hide_chat_button_title">채팅 버튼 숨기기</string>

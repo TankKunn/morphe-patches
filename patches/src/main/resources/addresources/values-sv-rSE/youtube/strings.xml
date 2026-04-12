@@ -70,38 +70,20 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_artist_cards_title">Dölj artistkort</string>
   <string name="morphe_hide_artist_cards_summary_on">Artistkort är dolda</string>
   <string name="morphe_hide_artist_cards_summary_off">Artistkort visas</string>
-  <string name="morphe_hide_chips_shelf_title">Dölj hylla med brickor</string>
-  <string name="morphe_hide_chips_shelf_summary_on">Hylla med brickor är dold</string>
-  <string name="morphe_hide_chips_shelf_summary_off">Hylla med brickor visas</string>
   <string name="morphe_hide_community_posts_title">Dölj community-inlägg</string>
   <string name="morphe_hide_community_posts_summary_on">Community-inlägg är dolda</string>
   <string name="morphe_hide_community_posts_summary_off">Community-inlägg visas</string>
   <string name="morphe_hide_compact_banner_title">Dölj kompakta banners</string>
   <string name="morphe_hide_compact_banner_summary_on">Kompakta banners är dolda</string>
   <string name="morphe_hide_compact_banner_summary_off">Kompakta banners visas</string>
-  <string name="morphe_hide_expandable_card_title">Dölj expanderbart kort</string>
-  <string name="morphe_hide_expandable_card_summary_on">Expanderbart kort under videor är dolt</string>
-  <string name="morphe_hide_expandable_card_summary_off">Expanderbart kort under videor visas</string>
   <string name="morphe_hide_floating_microphone_button_title">Dölj flytande mikrofonknapp</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Flytande mikrofonknapp i sökning är dold</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">Flytande mikrofonknapp i sökning visas</string>
   <string name="morphe_hide_horizontal_shelves_title">Dölj horisontella hyllor</string>
-  <string name="morphe_hide_horizontal_shelves_summary_on">"Horisontella hyllor är dolda, till exempel:
-
-• Senaste nytt
-• Fortsätt att titta
-• Utforska fler kanaler
-• För dig
-• Mest relevanta
-• Shopping
-• Titta igen"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">Horisontella hyllor visas</string>
   <string name="morphe_hide_image_shelf_title">Dölj bildhylla</string>
   <string name="morphe_hide_image_shelf_summary_on">Bildhylla i sökresultat är dold</string>
   <string name="morphe_hide_image_shelf_summary_off">Bildhylla i sökresultat visas</string>
-  <string name="morphe_hide_latest_posts_title">Dölj senaste inlägg</string>
-  <string name="morphe_hide_latest_posts_summary_on">Senaste inlägg är dolda</string>
-  <string name="morphe_hide_latest_posts_summary_off">Senaste inlägg visas</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Dölj knappen Senaste videorna</string>

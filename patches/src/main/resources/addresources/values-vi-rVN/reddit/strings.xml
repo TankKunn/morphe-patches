@@ -69,6 +69,6 @@ Hạn chế: Chỉ hiển thị nếu API trả về số lượt xem"</string>
   <string name="morphe_sanitize_sharing_links_summary">Xóa các tham số theo dõi khỏi liên kết chia sẻ</string>
   <string name="morphe_open_links_directly_title">Mở liên kết trực tiếp</string>
   <string name="morphe_open_links_directly_summary">Bỏ qua các URL chuyển hướng khi mở các liên kết ngoài</string>
-  <string name="morphe_open_links_externally_title">Mở liên kết bên ngoài</string>
-  <string name="morphe_open_links_externally_summary">Mở liên kết trong trình duyệt của bạn thay vì trình duyệt trong ứng dụng</string>
+  <string name="morphe_open_links_externally_title">Mở liên kết bằng ứng dụng ngoài</string>
+  <string name="morphe_open_links_externally_summary">Mở liên kết bằng trình duyệt của bạn thay vì trình duyệt tích hợp trong ứng dụng</string>
 </resources>

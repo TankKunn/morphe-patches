@@ -70,9 +70,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">कलाकार कार्ड्स लपवा</string>
   <string name="morphe_hide_artist_cards_summary_on">कलाकार कार्ड्स लपविलेले आहेत</string>
   <string name="morphe_hide_artist_cards_summary_off">कलाकार कार्ड्स दर्शविले जातात</string>
-  <string name="morphe_hide_chips_shelf_title">चिप्स शेल्फ लपवा</string>
-  <string name="morphe_hide_chips_shelf_summary_on">चिप्स शेल्फ लपविलेला आहे</string>
-  <string name="morphe_hide_chips_shelf_summary_off">चिप्स शेल्फ दर्शविला जातो</string>
   <string name="morphe_hide_community_posts_title">समुदाय पोस्ट्स लपवा</string>
   <string name="morphe_hide_community_posts_summary_on">समुदाय पोस्ट्स लपविलेले आहेत</string>
   <string name="morphe_hide_community_posts_summary_off">समुदाय पोस्ट्स दर्शविले जातात</string>
@@ -80,28 +77,32 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary_on">कॉम्पॅक्ट बॅनर लपविलेला आहे</string>
   <string name="morphe_hide_compact_banner_summary_off">कॉम्पॅक्ट बॅनर दर्शविला जातो</string>
   <string name="morphe_hide_expandable_card_title">विस्तारित कार्ड लपवा</string>
-  <string name="morphe_hide_expandable_card_summary_on">व्हिडिओ अंतर्गत विस्तारित कार्ड लपविलेले आहे</string>
-  <string name="morphe_hide_expandable_card_summary_off">व्हिडिओ अंतर्गत विस्तारित कार्ड दर्शविले जाते</string>
+  <string name="morphe_hide_expandable_card_entry_1">व्हिडिओ अंतर्गत विस्तारित कार्ड दर्शविले जातात</string>
+  <string name="morphe_hide_expandable_card_entry_2">व्हिडिओ अंतर्गत फक्त उत्पादन कार्ड लपवले जाते</string>
+  <string name="morphe_hide_expandable_card_entry_3">व्हिडिओ अंतर्गत फक्त सारांश कार्ड लपवले जाते</string>
+  <string name="morphe_hide_expandable_card_entry_4">व्हिडिओ अंतर्गत प्रॉडक्ट आणि सारांश कार्ड लपविलेले आहे</string>
+  <string name="morphe_hide_expandable_card_entry_5">व्हिडिओ अंतर्गत विस्तारणीय कार्ड लपविलेले आहे</string>
   <string name="morphe_hide_floating_microphone_button_title">फ्लोटिंग मायक्रोफोन बटण लपवा</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">सर्चमधील फ्लोटिंग मायक्रोफोन बटण लपविलेले आहे</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">सर्चमधील फ्लोटिंग मायक्रोफोन बटण दर्शविले जाते</string>
   <string name="morphe_hide_horizontal_shelves_title">horizontal शेल्फ लपवा</string>
-  <string name="morphe_hide_horizontal_shelves_summary_on">"horizontal शेल्फ लपलेले आहेत, जसे की:
+  <string name="morphe_hide_horizontal_shelves_summary_on">"क्षैतिज शेल्फ लपविलेले आहेत, जसे की:
 
-• ताज्या बातम्या
-• पाहणे सुरू ठेवा
+• ब्रेकिंग न्यूज
+• तुम्हाला आवडतील अशा कम्युनिटी पोस्ट्स
+• पुढे पहाणे
 • अधिक चॅनेल एक्सप्लोर करा
+• अधिक विषय एक्सप्लोर करा
 • तुमच्यासाठी
-• सर्वाधिक संबंधित
-• खरेदी
-• ते परत पहा"</string>
+• नवीनतम व्हिडिओ
+• सर्वात संबंधित
+• क्रिएटरच्या कम्युनिटीमधील पोस्ट्स
+• शॉपिंग
+• ते पुन्हा पहा"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">Horizontal शेल्फ दर्शविले जातात</string>
   <string name="morphe_hide_image_shelf_title">इमेज शेल्फ लपवा</string>
   <string name="morphe_hide_image_shelf_summary_on">शोध परिणामांमध्ये प्रतिमा शेल्फ लपविला गेला आहे</string>
   <string name="morphe_hide_image_shelf_summary_off">शोध परिणामांमध्ये प्रतिमा शेल्फ दर्शविला गेला आहे</string>
-  <string name="morphe_hide_latest_posts_title">नवीनतम पोस्ट लपवा</string>
-  <string name="morphe_hide_latest_posts_summary_on">नवीनतम पोस्ट लपविलेले आहेत</string>
-  <string name="morphe_hide_latest_posts_summary_off">नवीनतम पोस्ट दर्शविलेले आहेत</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">\'नवीनतम व्हिडिओ\' बटन लपवा</string>
@@ -300,6 +301,9 @@ YouTube डूडल्स दर्शविल्याने कस्टम 
   <string name="morphe_hide_members_shelf_title">सदस्य शेल्फ लपवा</string>
   <string name="morphe_hide_members_shelf_summary_on">सदस्य शेल्फ लपलेला आहे</string>
   <string name="morphe_hide_members_shelf_summary_off">सदस्य शेल्फ दर्शविला जातो</string>
+  <string name="morphe_hide_posts_shelf_title">पोस्ट्स शेल्फ लपवा</string>
+  <string name="morphe_hide_posts_shelf_summary_on">पोस्ट्स शेल्फ लपविलेले आहे</string>
+  <string name="morphe_hide_posts_shelf_summary_off">पोस्ट्स शेल्फ दर्शविला आहे</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">स्टोअर बटण लपवा</string>
   <string name="morphe_hide_store_button_summary_on">स्टोअर बटण लपविलेले आहे</string>
