@@ -40,8 +40,8 @@ public class RedditActivityHook {
      * Injection point.
      */
     public static boolean hook(Activity activity) {
-        String initialUrl = activity.getIntent().getStringExtra("com.reddit.extra.initial_url");
-        if (initialUrl != null && initialUrl.contains(MORPHE_LABEL)) {
+        Intent intent = activity.getIntent();
+        if (MORPHE_LABEL.equals(intent.getStringExtra("com.reddit.extra.initial_url"))) {
             initialize(activity);
             return true;
         }

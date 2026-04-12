@@ -163,7 +163,7 @@ val settingsPatch = bytecodePatch(
                 val freeRegister = findFreeRegister(insertIndex)
 
                 addInstructionsWithLabels(
-                    insertIndex,
+                    insertIndex + 1,
                     """
                         invoke-static/range { p0 .. p0 }, $EXTENSION_CLASS_DESCRIPTOR->hook(Landroid/app/Activity;)Z
                         move-result v$freeRegister
