@@ -1,3 +1,13 @@
+# [1.24.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.6...v1.24.0-dev.7) (2026-04-14)
+
+
+### Bug Fixes
+
+* **Settings:** Bypass click debounce for toggleable preferences ([#1175](https://github.com/MorpheApp/morphe-patches/issues/1175)) ([b7f453f](https://github.com/MorpheApp/morphe-patches/commit/b7f453fb1bdcc3c962a41d07ef840b352249d1db))
+* **YouTube - Hide player flyout menu components:** Cannot hide flyout menu items with `20.21.37` ([#1158](https://github.com/MorpheApp/morphe-patches/issues/1158)) ([3374765](https://github.com/MorpheApp/morphe-patches/commit/3374765710cd3988e19a2aa15132eedc86f2b5c2))
+* **YouTube - Hide player flyout menu components:** Resolve "Hide Captions footer" hiding other components ([#1160](https://github.com/MorpheApp/morphe-patches/issues/1160)) ([cf9259a](https://github.com/MorpheApp/morphe-patches/commit/cf9259ab50f5cc8aafe8c615ae7cf87215ac0160))
+* **YouTube:** Background playback PiP shows a black bar after using livestream chat ([#1173](https://github.com/MorpheApp/morphe-patches/issues/1173)) ([1a30f60](https://github.com/MorpheApp/morphe-patches/commit/1a30f6022166a11cacbce7e098ed474039458829))
+
 # [1.24.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.5...v1.24.0-dev.6) (2026-04-12)
 
 
