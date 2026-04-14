@@ -76,6 +76,9 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_compact_banner_title">Dölj kompakta banners</string>
   <string name="morphe_hide_compact_banner_summary_on">Kompakta banners är dolda</string>
   <string name="morphe_hide_compact_banner_summary_off">Kompakta banners visas</string>
+  <string name="morphe_hide_expandable_card_title">Dölj expanderbara kort</string>
+  <string name="morphe_hide_expandable_card_entry_1">Expanderbara kort under videor visas</string>
+  <string name="morphe_hide_expandable_card_entry_5">Expanderbara kort under videor är dolda</string>
   <string name="morphe_hide_floating_microphone_button_title">Dölj flytande mikrofonknapp</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Flytande mikrofonknapp i sökning är dold</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">Flytande mikrofonknapp i sökning visas</string>

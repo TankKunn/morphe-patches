@@ -80,25 +80,25 @@ Second \"item\" text"</string>
   <string name="morphe_hide_expandable_card_entry_1">Расширяемые фрагменты под плеером показаны</string>
   <string name="morphe_hide_expandable_card_entry_2">Расширяемые фрагменты под плеером скрыты</string>
   <string name="morphe_hide_expandable_card_entry_3">Расширяемые фрагменты под плеером скрыты</string>
-  <string name="morphe_hide_expandable_card_entry_4">Карточки продуктов и сводки скрыты под видео</string>
-  <string name="morphe_hide_expandable_card_entry_5">Расширяемые карточки скрыты под видео</string>
+  <string name="morphe_hide_expandable_card_entry_4">Карточка товара и краткое содержание под видео скрыты</string>
+  <string name="morphe_hide_expandable_card_entry_5">Разворачивающиеся карточки под видеороликами скрыты</string>
   <string name="morphe_hide_floating_microphone_button_title">Скрыть плавающую кнопку микрофона</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Плавающая кнопка микрофона в поиске скрыта</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">Плавающая кнопка микрофона в поиске показана</string>
   <string name="morphe_hide_horizontal_shelves_title">Скрыть горизонтальные секции</string>
   <string name="morphe_hide_horizontal_shelves_summary_on">"Горизонтальные полки скрыты, такие как:
 
-• Свежие новости
+• Срочные новости
 • Публикации сообщества, которые вам могут понравиться
 • Продолжить просмотр
 • Исследовать больше каналов
 • Исследовать больше тем
-• Рекомендации
+• Для тебя
 • Последние видео
-• Самые релевантные
+• Самые актуальные
 • Публикации из Сообщества создателя
 • Покупки
-• Посмотреть снова"</string>
+• Смотреть еще раз"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">Горизонтальные секции показаны</string>
   <string name="morphe_hide_image_shelf_title">Скрыть секцию изображений</string>
   <string name="morphe_hide_image_shelf_summary_on">Секция изображений в результатах поиска скрыта</string>
@@ -543,7 +543,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_off">Жест покадровой перемотки включен</string>
   <!-- interaction.seekbar.livestreamDvrPatch -->
   <string name="morphe_livestream_dvr_title">Включить прямую трансляцию DVR</string>
-  <string name="morphe_livestream_dvr_summary_on">Поиск доступен на всех живых трансляциях</string>
+  <string name="morphe_livestream_dvr_summary_on">Поиск разрешен на всех прямых трансляциях</string>
   <string name="morphe_livestream_dvr_summary_off">Поиск может быть недоступен в прямых трансляциях</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_user_dialog_message">Включение этой функции может привести к неожиданному поведению при перемотке прямой трансляции, если функция \"Подмена видео потоков\" не включена.</string>

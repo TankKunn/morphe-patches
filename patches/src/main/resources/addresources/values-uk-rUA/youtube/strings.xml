@@ -79,26 +79,26 @@ Second \"item\" text"</string>
   <string name="morphe_hide_expandable_card_title">Приховати розширювальні картки</string>
   <string name="morphe_hide_expandable_card_entry_1">Розширювальні картки під відео показуються</string>
   <string name="morphe_hide_expandable_card_entry_2">Приховано тільки картку товару під відео</string>
-  <string name="morphe_hide_expandable_card_entry_3">Приховано тільки картку зведення під відео</string>
-  <string name="morphe_hide_expandable_card_entry_4">Картка товару та підсумку прихована під відео</string>
-  <string name="morphe_hide_expandable_card_entry_5">Розширювані картки приховані під відео</string>
+  <string name="morphe_hide_expandable_card_entry_3">Приховано тільки картку підсумку під відео</string>
+  <string name="morphe_hide_expandable_card_entry_4">Приховано картки товару та підсумку під відео</string>
+  <string name="morphe_hide_expandable_card_entry_5">Розширювальні картки під відео приховано</string>
   <string name="morphe_hide_floating_microphone_button_title">Приховати плаваючу кнопку мікрофона</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Плаваючу кнопку мікрофона в пошуку приховано</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">Плаваюча кнопка мікрофона в пошуку показується</string>
   <string name="morphe_hide_horizontal_shelves_title">Приховати горизонтальні полиці</string>
-  <string name="morphe_hide_horizontal_shelves_summary_on">"Горизонтальні полиці приховані, зокрема:
+  <string name="morphe_hide_horizontal_shelves_summary_on">"Горизонтальні полиці приховані, наприклад:
 
-• Гарячі новини
-• Публікації спільноти, які вам можуть сподобатися
+• Останні новини
+• Рекомендовані дописи спільноти
 • Продовжити перегляд
-• Переглянути більше каналів
-• Переглянути більше тем
+• Перегляньте більше каналів
+• Перегляньте більше тем
 • Для вас
 • Останні відео
-• Найдоречніші
-• Публікації зі Спільноти творця
+• Найбільш релевантні
+• Дописи зі спільноти автора
 • Покупки
-• Дивитися знову"</string>
+• Переглянути знову"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">Горизонтальні полиці показуються</string>
   <string name="morphe_hide_image_shelf_title">Приховати полицю із зображеннями</string>
   <string name="morphe_hide_image_shelf_summary_on">Полицю із зображеннями в результатах пошуку приховано</string>
@@ -301,9 +301,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_members_shelf_title">Приховати полицю учасників</string>
   <string name="morphe_hide_members_shelf_summary_on">Полицю учасників приховано</string>
   <string name="morphe_hide_members_shelf_summary_off">Полиця учасників показується</string>
-  <string name="morphe_hide_posts_shelf_title">Приховати полицю з публікаціями</string>
-  <string name="morphe_hide_posts_shelf_summary_on">Полиця з публікаціями прихована</string>
-  <string name="morphe_hide_posts_shelf_summary_off">Полиця з публікаціями показана</string>
+  <string name="morphe_hide_posts_shelf_title">Приховати полицю з дописами</string>
+  <string name="morphe_hide_posts_shelf_summary_on">Полицю з дописами приховано</string>
+  <string name="morphe_hide_posts_shelf_summary_off">Полиця з дописами показується</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">Приховати кнопку \"Магазин\"</string>
   <string name="morphe_hide_store_button_summary_on">Кнопку \"Магазин\" приховано</string>

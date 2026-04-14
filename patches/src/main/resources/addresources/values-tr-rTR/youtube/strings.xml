@@ -40,9 +40,9 @@ Second \"item\" text"</string>
   <string name="morphe_debug_protobuffer_title">Hata ayıklama protokol arabelleği</string>
   <string name="morphe_debug_protobuffer_summary_on">Hata ayıklama kayıtları protokol arabelleğini içerir</string>
   <string name="morphe_debug_protobuffer_summary_off">Hata ayıklama kayıtları protokol arabelleğini içermez</string>
-  <string name="morphe_debug_protobuffer_user_dialog_message">"Bu ayarın etkinleştirilmesi, bazı kullanıcı arayüzü bileşenleri için ek düzen verilerini, ekran üzerindeki metin dahil olmak üzere günlüğe kaydeder.
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Bu ayarı etkinleştirmek, bazı kullanıcı arayüzü bileşenleri için ekrandaki metin de dahil olmak üzere ek düzen verilerini günlüğe kaydeder.
 
-Bu, özel filtreler oluştururken bileşenlerin belirlenmesine yardımcı olabilir.
+Bu, özel filtreler oluştururken bileşenleri tanımlamaya yardımcı olabilir.
 
 Ancak, bunun etkinleştirilmesi IP adresiniz gibi bazı kullanıcı verilerini de günlüğe kaydeder."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -77,10 +77,10 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_compact_banner_summary_on">Kompakt afişler gizli</string>
   <string name="morphe_hide_compact_banner_summary_off">Kompakt afişler görünür</string>
   <string name="morphe_hide_expandable_card_title">Genişletilebilir kartları gizle</string>
-  <string name="morphe_hide_expandable_card_entry_1">Videoların altındaki genişletilebilir kartlar gösterilir</string>
-  <string name="morphe_hide_expandable_card_entry_2">Videoların altındaki sadece ürün kartı gizlenir</string>
-  <string name="morphe_hide_expandable_card_entry_3">Videoların altındaki sadece özet kartı gizlenir</string>
-  <string name="morphe_hide_expandable_card_entry_4">Videoların altındaki genişletilebilir kart gizli</string>
+  <string name="morphe_hide_expandable_card_entry_1">Videoların altındaki genişletilebilir kartlar görünür</string>
+  <string name="morphe_hide_expandable_card_entry_2">Videoların altındaki sadece ürün kartı gizli</string>
+  <string name="morphe_hide_expandable_card_entry_3">Videoların altındaki sadece özet kartı gizli</string>
+  <string name="morphe_hide_expandable_card_entry_4">Videoların altındaki ürün ve özet kartı gizli</string>
   <string name="morphe_hide_expandable_card_entry_5">Videoların altındaki genişletilebilir kartlar gizli</string>
   <string name="morphe_hide_floating_microphone_button_title">Yüzen mikrofon düğmesini gizle</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Aramadaki yüzen mikrofon düğmesi gizli</string>
@@ -301,9 +301,9 @@ YouTube Doodles göstermek, özel başlıkların görüntülenmesini engelleyebi
   <string name="morphe_hide_members_shelf_title">Üyeler rafını gizle</string>
   <string name="morphe_hide_members_shelf_summary_on">Üyeler rafı gizli</string>
   <string name="morphe_hide_members_shelf_summary_off">Üyeler rafı görünür</string>
-  <string name="morphe_hide_posts_shelf_title">Gönderi rafını gizle</string>
-  <string name="morphe_hide_posts_shelf_summary_on">Gönderi rafı gizli</string>
-  <string name="morphe_hide_posts_shelf_summary_off">Gönderi rafı görünür</string>
+  <string name="morphe_hide_posts_shelf_title">Gönderiler rafını gizle</string>
+  <string name="morphe_hide_posts_shelf_summary_on">Gönderiler rafı gizli</string>
+  <string name="morphe_hide_posts_shelf_summary_off">Gönderiler rafı görünür</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">Mağaza düğmesini gizle</string>
   <string name="morphe_hide_store_button_summary_on">Mağaza düğmesi gizli</string>

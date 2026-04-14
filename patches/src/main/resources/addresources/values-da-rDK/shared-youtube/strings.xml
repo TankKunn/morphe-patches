@@ -32,16 +32,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_branding_icon_entry_6">Brugerdefineret</string>
   <string name="morphe_custom_branding_notification_icon_title">Notifikationsikon</string>
   <string name="morphe_custom_branding_notification_icon_entry_1">Følg app-ikon</string>
-  <!-- If any of these experimental strings are changed then also change the hard coded values in the patch for Reddit -->
-  <!-- misc.checks.experimentalAppNoticePatch -->
-  <string name="morphe_experimental_app_version_dialog_title">🚨 Eksperimentel Advarsel 🚨</string>
-  <string name="morphe_experimental_app_version_dialog_message">"Du bruger en eksperimentel app-version af ⚠️ &lt;b&gt;%1$s&lt;/b&gt;
-&lt;br/&gt;&lt;br/&gt;
-🔧 Forvent mærkelige app-adfærd eller uidentificerede fejl, mens vi finjusterer rettelserne til denne app-version.
-&lt;br/&gt;&lt;br/&gt;
-Hvis du ønsker den mest problemfrie oplevelse, så &lt;b&gt;afinstaller&lt;/b&gt; denne og opdater den anbefalede app-version af ✅ &lt;b&gt;%2$s&lt;/b&gt;"</string>
-  <string name="morphe_experimental_app_version_dialog_confirm">⚠️ Jeg vil have eksperimentel</string>
-  <string name="morphe_experimental_app_version_dialog_open_homepage">✅ Jeg vil have stabil</string>
   <!-- misc.dns.checkWatchHistoryDomainNameResolutionPatch -->
   <string name="morphe_check_watch_history_domain_name_dialog_title">Morphe Meddelelse</string>
   <string name="morphe_check_watch_history_domain_name_dialog_message">Din afspilningshistorik gemmes ikke.&lt;br&gt;&lt;br&gt;Dette skyldes sandsynligvis en DNS-annonceblokker eller netværksproxy.&lt;br&gt;&lt;br&gt;For at løse dette, whitelist &lt;b&gt;s.youtube.com&lt;/b&gt; eller slå alle DNS-blokkere og proxyservere fra.</string>
