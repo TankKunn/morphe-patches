@@ -1398,10 +1398,10 @@ Si cette option est désactivée ultérieurement, il est recommandé de vider le
   <string name="morphe_open_system_share_sheet_title">Ouverture du menu \'Partager\' du système</string>
   <string name="morphe_open_system_share_sheet_summary_on">Ouverture du menu \'Partager\' du système</string>
   <string name="morphe_open_system_share_sheet_summary_off">Ouverture du menu \'Partager\' de l\'application</string>
-  <!-- layout.music.overrideYouTubeMusicActionsPatch -->
-  <string name="morphe_override_youtube_music_button_title">Remplacer le bouton \'YouTube Music\'</string>
-  <string name="morphe_override_youtube_music_button_summary_on">Le bouton \'YouTube Music\' ouvre votre application musicale cible</string>
-  <string name="morphe_override_youtube_music_button_summary_off">Le bouton YouTube Music ouvre l\'application native</string>
+  <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
+  <string name="morphe_override_youtube_music_buttons_title">Remplacer le bouton \'YouTube Music\'</string>
+  <string name="morphe_override_youtube_music_buttons_summary_on">Le bouton \'YouTube Music\' ouvre votre application musicale cible</string>
+  <string name="morphe_override_youtube_music_buttons_summary_off">Le bouton YouTube Music ouvre l\'application native</string>
   <string name="morphe_music_package_name_title">Nom de package Morphe Music</string>
   <string name="morphe_music_package_name_summary">Nom du package de l\'application musicale cible</string>
   <!-- layout.startpage.changeStartPagePatch -->

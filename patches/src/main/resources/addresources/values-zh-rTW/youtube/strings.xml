@@ -1395,10 +1395,10 @@ Second \"item\" text"</string>
   <string name="morphe_open_system_share_sheet_title">開啟系統分享面板</string>
   <string name="morphe_open_system_share_sheet_summary_on">開啟系統分享面板</string>
   <string name="morphe_open_system_share_sheet_summary_off">在應用程式內開啟分享面板</string>
-  <!-- layout.music.overrideYouTubeMusicActionsPatch -->
-  <string name="morphe_override_youtube_music_button_title">覆蓋 YouTube Music 按鈕</string>
-  <string name="morphe_override_youtube_music_button_summary_on">YouTube Music 按鈕會開啟您的目標音樂應用程式</string>
-  <string name="morphe_override_youtube_music_button_summary_off">YouTube Music 按鈕會開啟原生應用程式</string>
+  <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
+  <string name="morphe_override_youtube_music_buttons_title">覆蓋 YouTube Music 按鈕</string>
+  <string name="morphe_override_youtube_music_buttons_summary_on">YouTube Music 按鈕會開啟您的目標音樂應用程式</string>
+  <string name="morphe_override_youtube_music_buttons_summary_off">YouTube Music 按鈕會開啟原生應用程式</string>
   <string name="morphe_music_package_name_title">Morphe Music 套件名稱</string>
   <string name="morphe_music_package_name_summary">目標音樂應用程式的套件名稱</string>
   <!-- layout.startpage.changeStartPagePatch -->
