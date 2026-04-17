@@ -1,5 +1,5 @@
 {
-  "version": "1.24.0-dev.9",
+  "version": "1.24.0-dev.10",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -453,6 +453,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -661,6 +662,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -714,6 +716,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1010,6 +1013,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1025,6 +1029,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1085,6 +1090,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1100,6 +1106,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1301,6 +1308,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1361,6 +1369,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1416,6 +1425,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1602,6 +1612,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1618,6 +1629,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1843,6 +1855,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1919,6 +1932,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -1997,6 +2011,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]
@@ -2077,6 +2092,7 @@
       ],
       "compatiblePackages": {
         "com.reddit.frontpage": [
+          "2026.10.0",
           "2026.04.0",
           "2025.48.0"
         ]

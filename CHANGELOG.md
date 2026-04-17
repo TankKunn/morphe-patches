@@ -1,3 +1,17 @@
+# [1.24.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.9...v1.24.0-dev.10) (2026-04-17)
+
+
+### Bug Fixes
+
+* **YouTube:** Fullscreen gradient does not show with bold player layout ([d019c01](https://github.com/MorpheApp/morphe-patches/commit/d019c0172d0a3f205f457c9bde873a7fbfb54bd9))
+
+
+### Features
+
+* **Reddit:** Support version `2026.10.0` ([ea135fb](https://github.com/MorpheApp/morphe-patches/commit/ea135fb439b784c1b4336cc5245b64d8af5b2697))
+* Use shared morphe-patches-library for common code ([#1068](https://github.com/MorpheApp/morphe-patches/issues/1068)) ([a0c5c06](https://github.com/MorpheApp/morphe-patches/commit/a0c5c060bd34159ebe3d13a172e61aa37860a887))
+* **YouTube:** Add experimental support for `21.16.240` ([5a0992c](https://github.com/MorpheApp/morphe-patches/commit/5a0992c98a5e560193706a200eebf51a49f9cb06))
+
 # [1.24.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.8...v1.24.0-dev.9) (2026-04-16)
 
 
