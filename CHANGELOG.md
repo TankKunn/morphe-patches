@@ -1,3 +1,10 @@
+# [1.24.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.12...v1.24.0-dev.13) (2026-04-19)
+
+
+### Bug Fixes
+
+* **YouTube:** Resolve app crash when opening community post ([41a5e66](https://github.com/MorpheApp/morphe-patches/commit/41a5e66b04afb51ff25d0b620e053c50605f1939))
+
 # [1.24.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.11...v1.24.0-dev.12) (2026-04-19)
 
 
