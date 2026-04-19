@@ -1,3 +1,10 @@
+# [1.24.0-dev.14](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.13...v1.24.0-dev.14) (2026-04-19)
+
+
+### Bug Fixes
+
+* **YouTube:** Resolve 20.47.62 crashing ([d472802](https://github.com/MorpheApp/morphe-patches/commit/d4728022e29c8babf811bf56f3b32174e81bdef7))
+
 # [1.24.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0-dev.12...v1.24.0-dev.13) (2026-04-19)
 
 
