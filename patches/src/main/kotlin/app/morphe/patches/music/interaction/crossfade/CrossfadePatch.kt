@@ -164,7 +164,7 @@ val crossfadePatch = bytecodePatch(
         if (!is_8_05_or_greater || is_9_00_or_greater) {
             return@execute log.warning(
                 "Track crossfade is not yet available for YouTube Music 9.x. " +
-                    "Patch YouTube Music 8.44.54–8.50.51 for crossfade.",
+                        "Patch the recommended non experimental version for crossfade",
             )
         }
 
