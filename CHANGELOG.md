@@ -1,3 +1,16 @@
+# [1.25.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.1...v1.25.0-dev.2) (2026-04-24)
+
+
+### Bug Fixes
+
+* **YouTube:** prevent related video hiding with restricted video confirmation watching ([#1235](https://github.com/MorpheApp/morphe-patches/issues/1235)) ([7005f13](https://github.com/MorpheApp/morphe-patches/commit/7005f13aa385768bb9c5852ee395cb028fa21d79))
+
+
+### Features
+
+* **YouTube - Navigation bar:** Add "Hide Cast button" setting ([#1268](https://github.com/MorpheApp/morphe-patches/issues/1268)) ([53dd12c](https://github.com/MorpheApp/morphe-patches/commit/53dd12c0b25587f6cf5ea5c54f2a7b3924b03d75))
+* **YouTube:** Add experimental support for `21.17.480` ([1bb6403](https://github.com/MorpheApp/morphe-patches/commit/1bb64036c33ce225d0f172d1e865e68b3f25ae72))
+
 # [1.25.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0...v1.25.0-dev.1) (2026-04-22)
 
 
