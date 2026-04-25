@@ -1,3 +1,11 @@
+# [1.25.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.2...v1.25.0-dev.3) (2026-04-25)
+
+
+### Features
+
+* **Reddit:** Add experimental support for `2026.17.0` ([c41d0f8](https://github.com/MorpheApp/morphe-patches/commit/c41d0f8782781aadfcea25d96fbe37295074f014))
+* **YouTube Music:** Add experimental support for `9.16.51` ([e743ba8](https://github.com/MorpheApp/morphe-patches/commit/e743ba870674f7826f81987c0d18393c97b35d1a))
+
 # [1.25.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.1...v1.25.0-dev.2) (2026-04-24)
 
 
