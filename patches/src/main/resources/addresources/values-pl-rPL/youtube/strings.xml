@@ -1095,6 +1095,9 @@ Aby wyświetlić menu ścieżki dźwiękowej, zmień \"Fałszowanie strumieni fi
   <string name="morphe_hide_shorts_full_video_link_label_title">Etykieta linku do filmu</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Ukryta</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Widoczna</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Polubienie dwukrotnym stuknięciem w Shortsach</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Wyłączone</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Włączone</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Pasek nawigacji</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Ukryty</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Widoczny</string>

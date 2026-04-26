@@ -1096,6 +1096,9 @@ Om het menu voor audio-spoor te tonen, verander 'Spoof video streams' naar 'Andr
   <string name="morphe_hide_shorts_full_video_link_label_title">Videolinklabel verbergen</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Het label \"Volledige videolink\" is verborgen</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Het label \"Volledige videolink\" is zichtbaar</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Schakel dubbeltikken op Shorts voor \'leuk vinden\' uit</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Dubbeltikken op Shorts voor \'leuk vinden\' wordt genegeerd</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Dubbeltikken om een like te geven voor Shorts is toegestaan</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Verberg de navigatiebalk</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">De navigatiebalk is verborgen</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">De navigatiebalk is zichtbaar</string>

@@ -1094,6 +1094,9 @@ Bấm giữ để mở cài đặt Morphe"</string>
   <string name="morphe_hide_shorts_full_video_link_label_title">Ẩn nhãn liên kết video</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Nhãn liên kết tới video đầy đủ đã bị ẩn</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Nhãn liên kết tới video đầy đủ được hiển thị</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Tắt bấm hai lần để thích trong Shorts</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Bấm hai lần để thích trong Shorts không hoạt động</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Bấm hai lần để thích trong Shorts vẫn hoạt động</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Ẩn thanh điều hướng</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Thanh điều hướng đã bị ẩn</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Thanh điều hướng được hiển thị</string>

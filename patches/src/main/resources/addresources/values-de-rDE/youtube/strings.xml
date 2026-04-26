@@ -1095,6 +1095,9 @@ Um das Menü anzuzeigen, ändern Sie \"Video-Streams fälschen\" in \"Android Re
   <string name="morphe_hide_shorts_full_video_link_label_title">Video-Link-Label ausblenden</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Video-Link-Label ist ausgeblendet</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Video-Link-Label wird angezeigt</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Deaktivieren Sie Doppeltippen auf Shorts, um zu gefallen</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Doppeltippen auf Shorts zum Liken wird ignoriert</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Doppeltes Tippen auf Shorts zum Liken ist erlaubt</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Navigationsleiste ausblenden</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Navigationsleiste ist ausgeblendet</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Navigationsleiste wird angezeigt</string>

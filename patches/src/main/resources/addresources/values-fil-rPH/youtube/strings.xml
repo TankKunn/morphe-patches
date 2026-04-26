@@ -1095,6 +1095,9 @@ Upang ipakita ang menu ng Audio track, baguhin ang 'Spoof video streams' sa 'And
   <string name="morphe_hide_shorts_full_video_link_label_title">Itago ang label ng video link</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Nakatago ang label ng video link</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Ipinapakita ang label ng video link</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Huwag paganahin ang dobleng pagtapik sa Shorts para mag-like</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Hindi pinapansin ang dobleng pagtapik sa Shorts para mag-like</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Pinapayagan ang dobleng pag-tap sa Shorts para magustuhan</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Itago ang navigation bar</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Nakatago ang navigation bar</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Ipinapakita ang navigation bar</string>

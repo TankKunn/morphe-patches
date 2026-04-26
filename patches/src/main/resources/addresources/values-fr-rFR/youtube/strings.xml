@@ -1095,6 +1095,9 @@ Pour afficher le menu 'Pste audio', modifier 'Falsifier les flux vidéo' en 'And
   <string name="morphe_hide_shorts_full_video_link_label_title">Masquer le libellé de lien vidéo</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Le libellé de lien vidéo est masqué</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Le libellé de lien vidéo est affiché</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Désactiver le double appui pour aimer sur les Shorts</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Le double appui pour aimer sur les Shorts est ignoré</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Le double appui pour aimer sur les Shorts est autorisé</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Masquer la barre de navigation</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">La barre de navigation est masquée</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">La barre de navigation est affichée</string>

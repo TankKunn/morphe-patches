@@ -1095,6 +1095,9 @@ Para mostrar el menú de pistas de audio, cambia 'Falsificar transmisiones de v�
   <string name="morphe_hide_shorts_full_video_link_label_title">Ocultar etiqueta de enlace del vídeo</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">La etiqueta de enlace del vídeo está oculto</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">La etiqueta de enlace del vídeo está visible</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Desactivar doble toque en Shorts para dar me gusta</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">El doble toque en Shorts para dar me gusta se ignora</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">El doble toque en Shorts para dar me gusta se permite</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Ocultar barra de navegación</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">La barra de navegación está oculta</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">La barra de navegación está visible</string>

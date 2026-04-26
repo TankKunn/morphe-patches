@@ -1095,6 +1095,9 @@ A Hangos menü megjelenítéséhez változtassa meg a 'Spoof video streams'-et '
   <string name="morphe_hide_shorts_full_video_link_label_title">Videóhivatkozás címkéjének elrejtése</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">A teljes videólink címke el van rejtve</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">A teljes videólink címke megjelenik</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Letiltja a Shorts dupla koppintásos lájkolását</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">A Shorts dupla koppintásos lájkolása figyelmen kívül hagyva</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">A Shorts videók duplaérintéses lájkolása engedélyezett</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Navigációs sáv elrejtése</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">A navigációs sáv el van rejtve</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">A navigációs sáv megjelenik</string>

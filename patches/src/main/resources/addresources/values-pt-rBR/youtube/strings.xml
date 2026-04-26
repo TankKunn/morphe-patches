@@ -1094,6 +1094,9 @@ Para mostrar o menu de faixas de áudio, mude 'Spoof video streams' para 'Androi
   <string name="morphe_hide_shorts_full_video_link_label_title">Ocultar rótulo do link do vídeo</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Rótulo do link do vídeo está oculto</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Rótulo do link do vídeo não está oculto</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Desativar toque duplo nos Shorts para curtir</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">O toque duplo nos Shorts para curtir está sendo ignorado</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Permitir toque duplo em Shorts para curtir</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Ocultar barra de navegação</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Barra de navegação está oculta</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Barra de navegação não está oculta</string>

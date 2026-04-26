@@ -1095,6 +1095,9 @@ Ses Parçası menüsünü görüntülemek için, 'Video akışlarını taklit et
   <string name="morphe_hide_shorts_full_video_link_label_title">Video bağlantısı etiketini gizle</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Video bağlantısı etiketi gizli</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Video bağlantısı etiketi görünür</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Shorts\'ta çift dokunarak beğenmeyi devre dışı bırak</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Shorts\'ta çift dokunarak beğenme yok sayılıyor</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Shorts\'ta çift dokunarak beğenmeye izin veriliyor</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Gezinme çubuğunu gizle</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Gezinme çubuğu gizli</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Gezinme çubuğu görünür</string>

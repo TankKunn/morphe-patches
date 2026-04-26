@@ -1095,6 +1095,9 @@ Da bi prikazali meni sa zvučnim stazama, promenite 'Imitiraj video tokove' u 'A
   <string name="morphe_hide_shorts_full_video_link_label_title">Sakrij oznaku linka videa</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Oznaka linka Shorts videa je skrivena</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Oznaka linka Shorts videa je prikazana</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Isključite dvostruki dodir za lajk na Shorts-u</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Dostupno je ignorisanje dvostrukog dodira za lajk na Shorts-u</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Dvaput tapnite za lajk na Shorts-u je omogućeno</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Sakrij traku za navigaciju</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Traka za navigaciju je skrivena</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Traka za navigaciju je prikazana</string>

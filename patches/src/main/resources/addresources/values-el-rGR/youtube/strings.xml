@@ -1095,6 +1095,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_full_video_link_label_title">Ετικέτα συνδέσμου βίντεο</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Κρυμμένες</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Εμφανίζονται</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Απενεργοποίηση διπλού αγγίγματος στα Shorts για να κάνετε \"μου αρέσει\"</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Το διπλό άγγιγμα στα Shorts για να κάνετε \"μου αρέσει\" αγνοείται</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Επιτρέπεται το διπλό πάτημα στα Shorts για να αρέσει</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Γραμμή πλοήγησης</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Η γραμμή πλοήγησης θα είναι κρυμμένη κατά την αναπαραγωγή Shorts</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Η γραμμή πλοήγησης εμφανίζεται κατά την αναπαραγωγή Shorts</string>

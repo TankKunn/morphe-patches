@@ -1095,6 +1095,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_full_video_link_label_title">隱藏影片連結標籤</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">已隱藏影片連結標籤</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">已顯示影片連結標籤</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">關閉 Shorts 雙擊按讚</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Shorts 雙擊按讚已停用</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">允許在 Shorts 上雙擊按讚</string>
   <string name="morphe_hide_shorts_navigation_bar_title">隱藏導覽列</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">已隱藏導覽列</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">已顯示導覽列</string>

@@ -1094,6 +1094,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_full_video_link_label_title">إخفاء تسمية رابط الفيديو</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">تم إخفاء تسمية رابط الفيديو</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">يتم عرض تسمية رابط الفيديو</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">تعطيل النقر المزدوج لإبداء الإعجاب في Shorts</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">تم تجاهل النقر المزدوج لإبداء الإعجاب في Shorts</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">يتم السماح بالنقر المزدوج للإعجاب في Shorts</string>
   <string name="morphe_hide_shorts_navigation_bar_title">إخفاء شريط التنقل</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">تم إخفاء شريط التنقل</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">يتم عرض شريط التنقل</string>

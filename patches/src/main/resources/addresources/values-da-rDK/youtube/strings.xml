@@ -1096,6 +1096,9 @@ For at vise Lydspor-menuen, ændre 'Spoof video streams' til 'Android Reel' elle
   <string name="morphe_hide_shorts_full_video_link_label_title">Skjul videolinketiket</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Videolinketiket er skjult</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Videolinketiket vises</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Deaktiver dobbelt tap på Shorts for at like</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Dobbelt tap på Shorts for at like ignoreres</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Dobbelt tap for at kunne lide er tilladt på Shorts</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Skjul navigationsbjælken</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Navigationsbjælken er skjult</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Navigationsbjælken vises</string>

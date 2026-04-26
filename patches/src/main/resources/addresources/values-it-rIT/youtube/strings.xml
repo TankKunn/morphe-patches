@@ -1095,6 +1095,9 @@ Per visualizzare il menu audio, cambia 'Falsifica flussi video' in 'Android Reel
   <string name="morphe_hide_shorts_full_video_link_label_title">Nascondi etichetta link video</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">L\'etichetta del link del video è nascosta</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">L\'etichetta del link del video è visibile</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Disattiva il doppio tocco su Shorts per mettere \"Mi piace\"</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Il doppio tocco su Shorts per mettere \"Mi piace\" viene ignorato.</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">È consentito il doppio tocco sui video Shorts per mettere \"Mi piace\"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Nascondi la barra di navigazione</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">La barra di navigazione è nascosta</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">La barra di navigazione è visibile</string>

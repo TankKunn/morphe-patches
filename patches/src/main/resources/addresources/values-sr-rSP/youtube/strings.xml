@@ -1092,6 +1092,9 @@ Da bi prikazali meni sa zvučnim stazama, promenite 'Imitirati video tokove' u '
   <string name="morphe_hide_shorts_full_video_link_label_title">Сакриј ознаку линка видеа</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Ознака линка Shorts видеа је скривена</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Ознака линка Shorts видеа је приказана</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Онемогући дупли тап на Shorts за лајковање</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Дупли тап на Shorts за лајковање се игнорише</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Дозвољено је дупло кликање на Shorts за лајковање</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Сакриј траку за навигацију</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Трака за навигацију је скривена</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Трака за навигацију је приказана</string>

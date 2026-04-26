@@ -1095,6 +1095,9 @@ Da prikažete meni zvočnih skladb, spremenite 'Športni video tokove' v 'Androi
   <string name="morphe_hide_shorts_full_video_link_label_title">Skrij oznako povezave do videa</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Oznaka povezave do videa je skrita</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Oznaka povezave do videa je prikazana</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Onemogoči dvojni dotik na Shorts za všeček</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Dvojni dotik na Shorts za všeček je ignoriran</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Dvojni tap za všeček na Shorts je dovoljen</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Skrij navigacijsko vrstico</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Navigacijska vrstica je skrita</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Navigacijska vrstica je prikazana</string>

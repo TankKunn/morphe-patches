@@ -803,8 +803,8 @@ Second \"item\" text"</string>
   <string name="morphe_toolbar_screen_title">Панель інструментів</string>
   <string name="morphe_toolbar_screen_summary">Приховати або показати компоненти панелі інструментів</string>
   <string name="morphe_hide_toolbar_cast_button_title">Приховати \"Трансляція\"</string>
-  <string name="morphe_hide_toolbar_cast_button_summary_on">Кнопка \"Трансляції\" прихована</string>
-  <string name="morphe_hide_toolbar_cast_button_summary_off">Кнопка \"Трансляції\" показана</string>
+  <string name="morphe_hide_toolbar_cast_button_summary_on">Кнопку \"Трансляції\" приховано</string>
+  <string name="morphe_hide_toolbar_cast_button_summary_off">Кнопка \"Трансляції\" показується</string>
   <string name="morphe_hide_toolbar_create_button_title">Приховати \"Створити\"</string>
   <string name="morphe_hide_toolbar_create_button_summary_on">Кнопку \"Створити\" приховано</string>
   <string name="morphe_hide_toolbar_create_button_summary_off">Кнопка \"Створити\" показується</string>
@@ -1095,6 +1095,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_full_video_link_label_title">Приховати мітку посилання відео</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Мітку посилання на відео приховано</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Мітка посилання на відео показується</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Вимкнути подвійне натискання для вподобання Shorts</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Подвійне натискання для вподобання Shorts ігнорується</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Подвійне натискання для вподобання Shorts дозволено</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Приховати панель навігації</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Панель навігації приховано</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Панель навігації показується</string>

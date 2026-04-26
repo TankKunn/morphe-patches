@@ -1089,6 +1089,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_full_video_link_label_title">Дублирането на видеа е скрито</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Дублирането на видеа се показва</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Скрий дублиране на видеа</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Деактивиране на двойното докосване на Shorts за харесване</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Двойното докосване на Shorts за харесване се игнорира</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Разрешено е двойното натискане върху Shorts за харесване</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Дублирането на видеа е скрито</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Дублирането на видеа се показва</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Скрий дублиране на видеа</string>

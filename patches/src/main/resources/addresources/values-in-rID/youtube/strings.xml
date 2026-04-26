@@ -801,7 +801,7 @@ Untuk mengakses Pengaturan, aktifkan tombol Pengaturan melalui Umum → Bilah Al
   <string name="morphe_disable_translucent_navigation_bar_dark_summary_off">Bilah navigasi mode gelap buram atau tembus pandang</string>
   <string name="morphe_toolbar_screen_title">Bilah alat</string>
   <string name="morphe_toolbar_screen_summary">Sembunyikan atau tampilkan komponen bilah alat</string>
-  <string name="morphe_hide_toolbar_cast_button_title">Sembunyikan Cast</string>
+  <string name="morphe_hide_toolbar_cast_button_title">Sembunyikan Transmisi</string>
   <string name="morphe_hide_toolbar_cast_button_summary_on">Tombol transmisi disembunyikan</string>
   <string name="morphe_hide_toolbar_cast_button_summary_off">Tombol transmisi ditampilkan</string>
   <string name="morphe_hide_toolbar_create_button_title">Sembunyikan Buat</string>
@@ -1094,6 +1094,9 @@ Untuk menampilkan menu trek audio, ubah 'Palsukan aliran video' menjadi 'Android
   <string name="morphe_hide_shorts_full_video_link_label_title">Sembunyikan label tautan video</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Label tautan video disembunyikan</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Label tautan video ditampilkan</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Nonaktifkan ketuk dua kali di Shorts untuk menyukai</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Ketuk dua kali di Shorts untuk menyukai diabaikan</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Ketuk dua kali untuk menyukai Shorts diizinkan</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Sembunyikan bilah navigasi</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Bilah navigasi disembunyikan</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Bilah navigasi ditampilkan</string>

@@ -1027,6 +1027,9 @@ Da menuya rêza dengîyê nîşandin, 'Rêzên vîdyoyê spoof bikin' ta 'Androi
   <string name="morphe_hide_shorts_full_video_link_label_title">Etîketa girêdayîa video veşêre</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Etîketa girêdayîa video veşîne</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Etîketa girêdayîa video nîşan darde</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Liikekirina duble tepekirina derxîne</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Liikekirina duble tepekirina têne hewa kirin</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Liker kirê Shortsê bi du klikkirinê tê destûrkirin</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Barê navigasyonê veşêre</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Barê navigasyonê veşîne</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Barê navigasyonê nîşan darde</string>

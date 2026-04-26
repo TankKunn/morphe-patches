@@ -1091,6 +1091,9 @@ Pentru a afișa meniul de track-uri audio, schimba 'Spoof video streams' în 'An
   <string name="morphe_hide_shorts_full_video_link_label_title">Ascunde eticheta linkului video</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Eticheta link-ului video este ascunsă</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Eticheta link-ului video este afișată</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Dezactivează dubla atingere pentru a da Like la Shorts</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Dubla atingere pentru a da Like la Shorts este ignorată</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Dublu tap pentru a da Like pe Shorts este permis</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Ascunde bara de navigare</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Bara de navigare este ascunsă</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Bara de navigare este afișată</string>

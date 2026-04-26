@@ -1096,6 +1096,9 @@ Abyste zobrazili menu s zvukovými stopami, změňte 'Zamaskované video proudy'
   <string name="morphe_hide_shorts_full_video_link_label_title">Skrýt popisek odkazu na video</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Štítek odkazu na video je skrytý</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Štítek odkazu na video je zobrazen</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Vypnout dvojité klepnutí na Shorts pro označení lajkem</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Dvojité klepnutí na Shorts pro označení lajkem je ignorováno</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Dvojité klepnutí na Shorts pro označení lajkem je povoleno</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Skrýt navigační panel</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Navigační panel je skrytý</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Navigační panel je zobrazen</string>

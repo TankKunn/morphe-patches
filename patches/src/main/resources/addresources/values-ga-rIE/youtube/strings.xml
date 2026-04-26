@@ -802,7 +802,7 @@ Chun rochtain a fháil ar Socruithe, cumasaigh an cnaipe Socruithe trí Ghinear�
   <string name="morphe_disable_translucent_navigation_bar_dark_summary_off">Tá barra nascleanúna mód dorcha teimhneach nó tréshoilseach</string>
   <string name="morphe_toolbar_screen_title">Barra Uirlisí</string>
   <string name="morphe_toolbar_screen_summary">Folaigh nó taispeáin comhpháirteanna an bharra uirlisí</string>
-  <string name="morphe_hide_toolbar_cast_button_title">Folaigh an teilgthe</string>
+  <string name="morphe_hide_toolbar_cast_button_title">Folaigh Cast</string>
   <string name="morphe_hide_toolbar_cast_button_summary_on">Tá cnaipe Cast i bhfolach</string>
   <string name="morphe_hide_toolbar_cast_button_summary_off">Taispeántar cnaipe Cast</string>
   <string name="morphe_hide_toolbar_create_button_title">Folaigh Cruthaigh</string>
@@ -1095,6 +1095,9 @@ Chun an roghchlár rianta fuaime a thaispeáint, athraigh 'Sruthanna físe bréi
   <string name="morphe_hide_shorts_full_video_link_label_title">Folaigh lipéad nasc físe</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Tá lipéad an naisc físe i bhfolach</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Taispeántar lipéad nasc físe</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Díchumasaigh Shorts le tapáil faoi dhó chun \'Is maith liom\'</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Déantar neamhaird de chliceáil faoi dhó ar Shorts chun \'Is maith liom\'.</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Ceadaítear cliceáil faoi dhó ar Shorts chun \'Is maith liom\'.</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Folaigh an barra nascleanúna</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Tá an barra nascleanúna i bhfolach</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Taispeántar barra nascleanúna</string>

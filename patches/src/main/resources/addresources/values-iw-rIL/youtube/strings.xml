@@ -1095,6 +1095,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_full_video_link_label_title">הסתר תווית קישור לסרטון</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">תווית קישור סרטון מוסתרת</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">תווית קישור סרטון מוצגת</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">אל תאפשר הקשה כפולה ב-Shorts כדי לסמן לייק</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">הקשה כפולה ב-Shorts כדי לסמן לייק מבוטלת</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">הלחיצה הכפולה על Shorts מקובלת</string>
   <string name="morphe_hide_shorts_navigation_bar_title">הסתר סרגל ניווט</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">סרגל ניווט מוסתר</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">סרגל ניווט מוצג</string>
