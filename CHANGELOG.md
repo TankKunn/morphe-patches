@@ -1,3 +1,15 @@
+# [1.25.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.3...v1.25.0-dev.4) (2026-04-26)
+
+
+### Bug Fixes
+
+* **YouTube - Theme:** Apply light/dark theme colors to `21.17.480` ([290315f](https://github.com/MorpheApp/morphe-patches/commit/290315f9847158f947adf045234e99292d7190cd))
+
+
+### Features
+
+* **YouTube - Hide Shorts components:** Add "Disable double-tap to like" setting ([#1275](https://github.com/MorpheApp/morphe-patches/issues/1275)) ([73c2c58](https://github.com/MorpheApp/morphe-patches/commit/73c2c58f27f62e1221215ce54e39fe9859feeaf5))
+
 # [1.25.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.2...v1.25.0-dev.3) (2026-04-25)
 
 
