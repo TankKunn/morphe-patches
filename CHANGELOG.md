@@ -1,3 +1,10 @@
+# [1.25.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.6...v1.25.0-dev.7) (2026-04-28)
+
+
+### Bug Fixes
+
+* **YouTube Music - Track crossfade:** Stop playback when app is closed and improvements to auto-play crossfade transitions ([#1243](https://github.com/MorpheApp/morphe-patches/issues/1243)) ([676d61b](https://github.com/MorpheApp/morphe-patches/commit/676d61b5b81f2c63fe27570f38148d7d9297177e))
+
 # [1.25.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.5...v1.25.0-dev.6) (2026-04-27)
 
 
