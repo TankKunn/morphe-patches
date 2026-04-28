@@ -1,3 +1,10 @@
+# [1.25.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.7...v1.25.0-dev.8) (2026-04-28)
+
+
+### Bug Fixes
+
+* **YouTube Music - Track crossfade:** Crossfade does not work when screen is locked ([#1312](https://github.com/MorpheApp/morphe-patches/issues/1312)) ([cc7b8f1](https://github.com/MorpheApp/morphe-patches/commit/cc7b8f1b7b96bcbba099bf388bb7cd73db51db13))
+
 # [1.25.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.6...v1.25.0-dev.7) (2026-04-28)
 
 
