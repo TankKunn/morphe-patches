@@ -225,7 +225,6 @@ public class CrossfadeManager {
     private static final int READY_TIMEOUT_MS = 10000;
     private static final int STATE_READY = 3;
     private static final int REASON_DIRECTOR_RESET = 5;
-    private static final long AUTO_ADVANCE_THRESHOLD_MS = 5000;
     private static final long MONITOR_POLL_MS = 100;
     // Extra lead time to absorb poll granularity + new-player READY latency (~120-200ms typical).
     // Ensures the fade-out completes before the old track's audio content runs out.
@@ -363,26 +362,10 @@ public class CrossfadeManager {
                 return false;
             }
 
-            boolean isAutoAdvance = false;
-            try {
-                long pos = currentExo.patch_getCurrentPosition();
-                long duration = currentExo.patch_getDuration();
-                long remaining = (duration > 0) ? duration - pos : Long.MAX_VALUE;
-                isAutoAdvance = duration > 0 && remaining >= 0
-                        && remaining < AUTO_ADVANCE_THRESHOLD_MS;
-                final boolean finalIsAutoAdvance = isAutoAdvance;
-                Logger.printDebug(() -> "stopVideo(5): pos=" + pos + "ms dur=" + duration
-                        + "ms remaining=" + remaining + "ms → "
-                        + (finalIsAutoAdvance ? "AUTO-ADVANCE" : "MANUAL SKIP"));
-            } catch (Exception ex) {
-                Logger.printDebug(() -> "Could not read position/duration, assuming manual skip", ex);
-            }
-
-            if (isAutoAdvance && !Settings.CROSSFADE_ON_AUTO_ADVANCE.get()) {
-                Logger.printDebug(() -> "stopVideo(5): skip — auto-advance crossfade disabled");
-                return false;
-            }
-            if (!isAutoAdvance && !Settings.CROSSFADE_ON_SKIP.get()) {
+            // onBeforeStopVideo is always a manual skip — true auto-advance is handled
+            // exclusively by onBeforePlayNext. The position-based isAutoAdvance heuristic
+            // caused CROSSFADE_ON_SKIP to be bypassed for skips near the end of a track.
+            if (!Settings.CROSSFADE_ON_SKIP.get()) {
                 Logger.printDebug(() -> "stopVideo(5): skip — manual skip crossfade disabled");
                 return false;
             }
@@ -598,7 +581,7 @@ public class CrossfadeManager {
         tryAttachLongPressHandler();
 
         if (sessionPaused.get() || getCrossfadeDurationMs() <= 0
-                || crossfadeInProgress || !activityRunning) {
+                || crossfadeInProgress) {
             return false;
         }
 
@@ -874,7 +857,7 @@ public class CrossfadeManager {
         autoAdvanceMonitorRunnable = new Runnable() {
             @Override
             public void run() {
-                if (sessionPaused.get() || !activityRunning
+                if (sessionPaused.get()
                         || !Settings.CROSSFADE_ON_AUTO_ADVANCE.get()
                         || crossfadeInProgress) {
                     return;
@@ -1358,7 +1341,8 @@ public class CrossfadeManager {
         if (!CROSSFADE_ENABLED) return;
 
         activityRunning = false;
-        stopAutoAdvanceMonitor();
+        // Do not stop the auto-advance monitor here — crossfade must continue
+        // working when the screen is locked or the player is minimized (#1311).
         if (crossfadeInProgress) {
             Logger.printDebug(() -> "onActivityStop: aborting crossfade");
             abortCrossfadeNow();
@@ -1532,6 +1516,7 @@ public class CrossfadeManager {
 
     private static Runnable pendingLongPress;
     private static volatile boolean longPressHandled = false;
+    private static Runnable longPressAttachRetry;
 
     private static void tryAttachLongPressHandler() {
         if (!isSessionControlEnabled()) return;
@@ -1546,55 +1531,103 @@ public class CrossfadeManager {
         }
         if (allAlive && !longPressRefs.isEmpty()) return;
 
-        mainHandler.post(() -> {
-            try {
-                Activity activity = Utils.getActivity();
-                if (activity == null || activity.getWindow() == null) return;
+        // Cancel any pending retry before scheduling a fresh attempt.
+        if (longPressAttachRetry != null) {
+            mainHandler.removeCallbacks(longPressAttachRetry);
+        }
+        longPressAttachRetry = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Activity activity = Utils.getActivity();
+                    if (activity == null || activity.getWindow() == null) return;
 
-                View decorView = activity.getWindow().getDecorView();
-                Resources res = activity.getResources();
-                String pkg = activity.getPackageName();
+                    Resources res = activity.getResources();
+                    String pkg = activity.getPackageName();
 
-                List<View> allButtons = new ArrayList<>();
-                for (String idName : SHUFFLE_IDS) {
-                    @SuppressLint("DiscouragedApi")
-                    int id = res.getIdentifier(idName, "id", pkg);
-                    if (id == 0) {
-                        Logger.printDebug(() -> "  shuffle id '" + idName + "' → not found in resources");
-                        continue;
+                    // Collect all root views across every open window (main activity +
+                    // any BottomSheetDialogs or overlays). The queue panel opens in its
+                    // own Window, so activity.getWindow().getDecorView() alone misses it.
+                    List<View> roots = getAllWindowRoots(activity);
+
+                    List<View> allButtons = new ArrayList<>();
+                    for (String idName : SHUFFLE_IDS) {
+                        @SuppressLint("DiscouragedApi")
+                        int id = res.getIdentifier(idName, "id", pkg);
+                        if (id == 0) {
+                            Logger.printDebug(() -> "  shuffle id '" + idName + "' → not found in resources");
+                            continue;
+                        }
+                        for (View root : roots) {
+                            List<View> matched = new ArrayList<>();
+                            findAllViewsById(root, id, matched);
+                            for (View v : matched) {
+                                Logger.printDebug(() -> "  shuffle id '" + idName + "' → "
+                                        + v.getClass().getSimpleName()
+                                        + " vis=" + v.getVisibility()
+                                        + " attached=" + v.isAttachedToWindow()
+                                        + " parent=" + (v.getParent() != null
+                                            ? v.getParent().getClass().getSimpleName() : "null"));
+                                if (v.isAttachedToWindow()) {
+                                    allButtons.add(v);
+                                }
+                            }
+                        }
                     }
-                    List<View> matched = new ArrayList<>();
-                    findAllViewsById(decorView, id, matched);
-                    for (View v : matched) {
-                        Logger.printDebug(() -> "  shuffle id '" + idName + "' → "
-                                + v.getClass().getSimpleName()
-                                + " vis=" + v.getVisibility()
-                                + " attached=" + v.isAttachedToWindow()
-                                + " parent=" + (v.getParent() != null
-                                    ? v.getParent().getClass().getSimpleName() : "null"));
+
+                    Logger.printDebug(() -> "Found " + allButtons.size()
+                            + " attached shuffle button instances");
+
+                    if (allButtons.isEmpty()) {
+                        // No attached buttons found — retry in 500ms in case the
+                        // queue panel is still opening or the view hasn't attached yet.
+                        mainHandler.postDelayed(this, 500);
+                        return;
                     }
-                    allButtons.addAll(matched);
+
+                    longPressRefs.clear();
+                    longPressAttachRetry = null;
+
+                    for (View shuffleBtn : allButtons) {
+                        attachTouchLongPress(shuffleBtn);
+                        longPressRefs.add(new WeakReference<>(shuffleBtn));
+
+                        View parent = (View) shuffleBtn.getParent();
+                        if (parent != null && parent.getParent() != null) {
+                            attachTouchLongPress(parent);
+                            longPressRefs.add(new WeakReference<>(parent));
+                        }
+                    }
+                } catch (Exception ex) {
+                    Logger.printDebug(() -> "Long-press attach skipped", ex);
                 }
-
-                Logger.printDebug(() -> "Found " + allButtons.size()
-                        + " shuffle button instances");
-
-                longPressRefs.clear();
-
-                for (View shuffleBtn : allButtons) {
-                    attachTouchLongPress(shuffleBtn);
-                    longPressRefs.add(new WeakReference<>(shuffleBtn));
-
-                    View parent = (View) shuffleBtn.getParent();
-                    if (parent != null && parent != decorView) {
-                        attachTouchLongPress(parent);
-                        longPressRefs.add(new WeakReference<>(parent));
-                    }
-                }
-            } catch (Exception ex) {
-                Logger.printDebug(() -> "Long-press attach skipped", ex);
             }
-        });
+        };
+        mainHandler.post(longPressAttachRetry);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static List<View> getAllWindowRoots(Activity activity) {
+        List<View> roots = new ArrayList<>();
+        // Always include the main activity window.
+        if (activity.getWindow() != null) {
+            roots.add(activity.getWindow().getDecorView());
+        }
+        try {
+            // WindowManagerGlobal.mViews holds the root view of every open Window
+            // (dialogs, bottom sheets, etc.) in this process.
+            Class<?> wmg = Class.forName("android.view.WindowManagerGlobal");
+            Object instance = wmg.getMethod("getInstance").invoke(null);
+            java.lang.reflect.Field mViews = wmg.getDeclaredField("mViews");
+            mViews.setAccessible(true);
+            List<View> allViews = (List<View>) mViews.get(instance);
+            if (allViews != null) {
+                roots.addAll(allViews);
+            }
+        } catch (Exception ex) {
+            Logger.printDebug(() -> "getAllWindowRoots: reflection failed", ex);
+        }
+        return roots;
     }
 
     private static void findAllViewsById(View root, int id,
