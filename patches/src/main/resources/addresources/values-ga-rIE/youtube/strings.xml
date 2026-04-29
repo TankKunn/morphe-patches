@@ -1369,12 +1369,20 @@ go
 (%3$s)
 
 Réidh le cur isteach?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Cuir isteach</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Caithfidh an tús a bheith roimh an deireadh</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Marcáil dhá shuíomh ar an mbarra ama ar dtús</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Markáil suíomh ar an mbarr ama ar dtúsaigh</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Féach ar an deighleog agus cinntigh léim réidh</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Cuir am an deighleog in eagar de láimh</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Ar mhaith leat an t-am a chur in eagar do thús nó deireadh an deighleog?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Am neamhbhailí tugtha</string>
+  <string name="morphe_sb_new_segment_highlight_title">Cuir tairgeadh in áit an tsocraithe</string>
+  <string name="morphe_sb_new_segment_highlight_content">"An bhfuil an t-am le haghaidh na soiléireachta ceart?
+
+%s
+
+Níl tú ag cur soiléireacht isteach, tapáil Cancel agus marcálann an dara suíomh."</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Seol soiléireacht</string>
   <string name="morphe_sb_stats_title">Staitisticí</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Níl staitisticí ar fáil faoi láthair (tá an API síos)</string>

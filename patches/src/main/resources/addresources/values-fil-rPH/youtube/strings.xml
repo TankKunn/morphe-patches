@@ -1369,12 +1369,20 @@ Na umiiral na"</string>
 (%3$s)
 
 Handa nang isumite?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Isumite</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Dapat bago ang simula kaysa dulo</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Markahan muna ang dalawang lokasyon sa time bar</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Magmarka muna ng lokasyon sa time bar</string>
   <string name="morphe_sb_new_segment_preview_segment_first">I-preview ang segment, at tiyakin na ito ay maayos na nag-skip</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">I-edit ng mano-mano ang timing ng segment</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Gusto mo bang i-edit ang timing para sa simula o dulo ng segment?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Hindi wastong oras ang ibinigay</string>
+  <string name="morphe_sb_new_segment_highlight_title">Isumite ang highlight</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Tama ba ang oras ng highlight?
+
+%s
+
+Kung hindi ka nagsumite ng highlight, pindutin ang Kanselahin at markahan ang pangalawang lokasyon"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Isumite ang highlight</string>
   <string name="morphe_sb_stats_title">Stats</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Pansamantalang hindi magagamit ang stats (pababa ang API)</string>

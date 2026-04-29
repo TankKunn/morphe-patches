@@ -1365,12 +1365,20 @@ Settings → Playback (or Autoplay) → Autoplay next video"</string>
 (%3$s)
 
 क्या सबमिट करने के लिए तैयार हैं?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">जमा करें</string>
   <string name="morphe_sb_new_segment_start_is_before_end">शुरू अंत से पहले होना चाहिए</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">समय पट्टी पर पहले दो स्थान चिह्नित करें</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">पहले समय बार पर एक स्थान चिह्नित करें</string>
   <string name="morphe_sb_new_segment_preview_segment_first">खंड का पूर्वावलोकन करें, और सुनिश्चित करें कि यह सुचारू रूप से छोड़ देता है</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">खंड के समय को मैन्युअल रूप से संपादित करें</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">क्या आप खंड के आरंभ या अंत के समय को संपादित करना चाहेंगे?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">अमान्य समय दिया गया</string>
+  <string name="morphe_sb_new_segment_highlight_title">हाइलाइट जमा करें</string>
+  <string name="morphe_sb_new_segment_highlight_content">"क्या हाइलाइट का समय सही है?
+
+%s
+
+यदि आप हाइलाइट सबमिट नहीं कर रहे हैं, तो रद्द करें पर टैप करें और दूसरा स्थान चिह्नित करें।"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">हाइलाइट सबमिट करें</string>
   <string name="morphe_sb_stats_title">आंकड़े</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">आंकड़े अस्थायी रूप से उपलब्ध नहीं हैं (API डाउन)</string>

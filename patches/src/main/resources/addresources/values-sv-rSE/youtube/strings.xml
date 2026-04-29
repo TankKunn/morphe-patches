@@ -983,9 +983,9 @@ Om du vill att menyn Ljudspår ska visas ändrar du \"Förfalska videoströmmar\
   <string name="morphe_hide_shorts_search_summary_on">Döljs i sökresultat</string>
   <string name="morphe_hide_shorts_search_summary_off">Visas i sökresultat</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_hide_shorts_subscriptions_title">Dölj Shorts-videor i flödet Prenumerationer</string>
-  <string name="morphe_hide_shorts_subscriptions_summary_on">Döljs i flödet Prenumerationer</string>
-  <string name="morphe_hide_shorts_subscriptions_summary_off">Visas i flödet Prenumerationer</string>
+  <string name="morphe_hide_shorts_subscriptions_title">Dölj Shorts-videor i prenumerationsflödet</string>
+  <string name="morphe_hide_shorts_subscriptions_summary_on">Döljs i prenumerationsflödet</string>
+  <string name="morphe_hide_shorts_subscriptions_summary_off">Visas i prenumerationsflödet</string>
   <string name="morphe_hide_shorts_video_description_title">Dölj Shorts-videor i videobeskrivningen</string>
   <string name="morphe_hide_shorts_video_description_summary_on">Döljs i videobeskrivningen</string>
   <string name="morphe_hide_shorts_video_description_summary_off">Visas i videobeskrivningen</string>
@@ -1095,6 +1095,9 @@ Om du vill att menyn Ljudspår ska visas ändrar du \"Förfalska videoströmmar\
   <string name="morphe_hide_shorts_full_video_link_label_title">Dölj etikett för videolänk</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_on">Etikett för videolänk är dold</string>
   <string name="morphe_hide_shorts_full_video_link_label_summary_off">Etikett för videolänk visas</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Inaktivera dubbeltryck för att gilla i Shorts</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_on">Dubbeltryck för att gilla i Shorts ignoreras</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_summary_off">Dubbeltryck för att gilla i Shorts tillåts</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Dölj navigeringsfältet</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_on">Navigeringsfältet är dolt</string>
   <string name="morphe_hide_shorts_navigation_bar_summary_off">Navigeringsfältet visas</string>
@@ -1367,7 +1370,6 @@ till
 
 Redo att skicka in?"</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Starten måste infalla före slutet</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Markera två platser i tidsfältet först</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Förhandsgranska segmentet och se till att det hoppar över smidigt</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Redigera tid för segment manuellt</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Vill du ändra tidpunkten för starten eller slutet av segmentet?</string>

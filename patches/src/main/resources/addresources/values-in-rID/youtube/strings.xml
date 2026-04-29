@@ -1368,12 +1368,20 @@ sampai
 (%3$s)
 
 Siap mengirim?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Kirim</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Awal harus sebelum akhir</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Tandai dua lokasi pada bilah waktu terlebih dahulu</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Tandai lokasi terlebih dahulu di bilah waktu</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Pratinjau segmen, dan pastikan segmen dilewati dengan lancar</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Ubah waktu segmen secara manual</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Apakah Anda ingin menubah waktu awal atau akhir segmen?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Waktu yang diberikan tidak sah</string>
+  <string name="morphe_sb_new_segment_highlight_title">Kirim sorotan</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Apakah waktu sorotan sudah benar?
+
+%s
+
+Jika Anda tidak mengirimkan sorotan, ketuk Batal dan tandai lokasi kedua."</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Kirim sorotan</string>
   <string name="morphe_sb_stats_title">Statistik</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Statistik sementara tidak tersedia (API tidak aktif)</string>

@@ -1369,12 +1369,20 @@ Second \"item\" text"</string>
 (%3$s)
 
 Είστε έτοιμοι για υποβολή;"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Υποβολή</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Η αρχή πρέπει να είναι πριν από το τέλος</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Σημειώστε δύο σημεία στην γραμμή προόδου πρώτα</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Πρώτα, επιλέξτε μια θέση στη χρονογραμμή</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Κάντε προεπισκόπηση του τμήματος, και σιγουρευτείτε ότι παραλείπεται σωστά</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Επεξεργασία χρονισμού του τμήματος χειροκίνητα</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Θέλετε να επεξεργαστείτε τον χρονισμό του τμήματος από την αρχή ή από το τέλος του τμήματος;</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Δόθηκε μη έγκυρος χρόνος</string>
+  <string name="morphe_sb_new_segment_highlight_title">Υποβολή επισήμανσης</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Είναι σωστή η ώρα επισήμανσης;
+
+%s
+
+Αν δεν υποβάλλετε μια επισήμανση, πατήστε Ακύρωση και σημειώστε τη δεύτερη τοποθεσία"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Υποβολή επισήμανσης</string>
   <string name="morphe_sb_stats_title">Στατιστικά</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Στατιστικά προσωρινά μη διαθέσιμα (API εκτός λειτουργίας)</string>

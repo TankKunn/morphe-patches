@@ -1369,12 +1369,20 @@ a
 (%3$s)
 
 Chcete to odoslať?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Odoslať</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Začiatok musí byť pred koncom</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Najprv označte dve miesta na časovej lište</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Najprv označte miesto na časovej osi</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Skontrolujte segment a uistite sa, že preskočí plynulo</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Manuálne upravte časovanie segmentu</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Chcete upraviť časovanie pre začiatok alebo koniec segmentu?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Zadali ste nesprávny čas</string>
+  <string name="morphe_sb_new_segment_highlight_title">Odoslať zvýraznenie</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Je čas zvýraznenia správny?
+
+%s
+
+Ak neodosielate zvýraznenie, klepnite na Zrušiť a označte druhú polohu"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Odoslať zvýraznenie</string>
   <string name="morphe_sb_stats_title">Štatistiky</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Štatistiky sú dočasne nedostupné (API je nedostupné)</string>

@@ -901,7 +901,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_quality_header_summary_on">تم إخفاء عنوان قائمة جودة الفيديو الحالي</string>
   <string name="morphe_hide_player_flyout_quality_header_summary_off">يتم عرض عنوان قائمة جودة الفيديو الحالي</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
-  <string name="morphe_hide_autoplay_preview_title">إخفاء معاينة التشغيل التلقائي</string>
+  <string name="morphe_hide_autoplay_preview_title">إخفاء عرض التشغيل التلقائي</string>
   <string name="morphe_hide_autoplay_preview_summary_on">تم إخفاء معاينة التشغيل التلقائي</string>
   <string name="morphe_hide_autoplay_preview_summary_off">يتم عرض معاينة التشغيل التلقائي</string>
   <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
@@ -1369,12 +1369,20 @@ Second \"item\" text"</string>
 (%3$s)
 
 هل أنت مستعد للإرسال؟"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">إرسال</string>
   <string name="morphe_sb_new_segment_start_is_before_end">يجب أن تكون البداية قبل النهاية</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">ضع علامة على موقعين في شريط الوقت أولًا</string>
-  <string name="morphe_sb_new_segment_preview_segment_first">معاينة المقطع، والتأكد من تخطيه بسلاسة</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">حدد موقعًا على شريط الوقت أولًا</string>
+  <string name="morphe_sb_new_segment_preview_segment_first">عاين المقطع وتأكد من أن التخطي يتم بسلاسة</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">تعديل توقيت المقطع يدويًا</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">هل تود تعديل التوقيت لبداية أو نهاية المقطع؟</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">الوقت المحدد غير صحيح</string>
+  <string name="morphe_sb_new_segment_highlight_title">إرسال المقطع الأبرز</string>
+  <string name="morphe_sb_new_segment_highlight_content">"هل وقت المقطع الأبرز صحيح؟
+
+%s
+
+إذا لم تكن تريد إرسال المقطع الأبرز، اضغط إلغاء وحدد الموقع الثاني"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">تم إرسال المقطع الأبرز</string>
   <string name="morphe_sb_stats_title">إحصائيات</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">الإحصائيات غير متوفرة مؤقتًا (API معطل)</string>

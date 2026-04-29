@@ -1300,12 +1300,20 @@ heta
 (%3$s)
 
 Amade ye ji bo weşandinê?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Şandin</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Destpêk pêşberê astengiyê be</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Yek dest û yek astengî li ser tîrosê hinê marke bike</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Berê li ser bareya demê cihêkî işaret bike</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Segmentî pêşdîbike û pê ewle bûne ku ji bilêv pêşdîbike</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Editê weqta segmentê bi destan bike</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Dixerî ku weqta destpêkê aniya astengiyê ya segmentê edit bike?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Weqta serdest tê dayîn</string>
+  <string name="morphe_sb_new_segment_highlight_title">Şandina ronahîkirinê</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Ma demêna ronahîkirinê rast e?
+
+%s
+
+Ger hûn ne dixwin ronahîyek, bikirtînin Betal kirin û cîhê duyemîn nîşan bikin."</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Ronahîkirinê bişînin</string>
   <string name="morphe_sb_stats_title">Stats</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Stats di wextê din de pêşbîn naben (API xurt e)</string>

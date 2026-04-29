@@ -1370,12 +1370,20 @@ til
 (%3$s)
 
 Klar til at indsende?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Indsend</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Start skal være før slutningen</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Markér to steder på tidslinjen først</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Markér først et sted på tidslinjen</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Gennemse segmentet, og sikre en glat overgang</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Rediger timing af segment manuelt</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Vil du redigere timingen for start eller afslutning af segmentet?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Ugyldig tid givet</string>
+  <string name="morphe_sb_new_segment_highlight_title">Indsend fremhævelse</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Er fremhævningstiden korrekt?
+
+%s
+
+Hvis du ikke sender en fremhævning, skal du trykke på Annuller og markere den anden placering"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Send fremhævning</string>
   <string name="morphe_sb_stats_title">Statistik</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Statistikker er midlertidigt ikke tilgængelige (API er nede)</string>

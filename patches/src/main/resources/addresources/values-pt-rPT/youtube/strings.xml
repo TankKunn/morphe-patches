@@ -1369,12 +1369,20 @@ para
 (%3$s)
 
 Pronto para enviar?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Enviar</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Iniciar deve ser antes do fim</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Marcar dois locais na barra de tempo</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Marque primeiro um local na barra de tempo</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Pré-visualizar o segmento e garantir que pula suavemente</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Editar tempo de segmento manualmente</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Você deseja editar o tempo para o início ou o fim do segmento?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Data inválida</string>
+  <string name="morphe_sb_new_segment_highlight_title">Enviar realce</string>
+  <string name="morphe_sb_new_segment_highlight_content">"O tempo de destaque está correto?
+
+%s
+
+Se você não estiver enviando um destaque, toque em Cancelar e marque a segunda localização."</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Enviar destaque</string>
   <string name="morphe_sb_stats_title">Estatísticas</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">As estatísticas não estão disponíveis temporariamente (API está em baixo)</string>

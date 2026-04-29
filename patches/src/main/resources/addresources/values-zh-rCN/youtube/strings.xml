@@ -1374,12 +1374,20 @@ Second \"item\" text"</string>
 (%3$s)
 
 准备好提交了吗？"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">提交</string>
   <string name="morphe_sb_new_segment_start_is_before_end">起始位置须在结束位置前</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">首先在时间栏上标记两个位置</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">首先在时间线上标记一个位置</string>
   <string name="morphe_sb_new_segment_preview_segment_first">预览片段，并确保它可以顺利跳过</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">手动编辑线段时间</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">您想要编辑片段开始或结束的时间吗？</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">给定的时间无效</string>
+  <string name="morphe_sb_new_segment_highlight_title">提交高亮</string>
+  <string name="morphe_sb_new_segment_highlight_content">"高亮显示的时间是否正确？
+
+%s
+
+如果您没有提交高亮显示，请点击“取消”并标记第二个位置。"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">提交高亮显示</string>
   <string name="morphe_sb_stats_title">统计</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">统计信息暂时不可用（API 已关闭）</string>

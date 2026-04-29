@@ -1373,12 +1373,20 @@ ja päättyy
 (%3$s)
 
 Oletko valmis lähettämään?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Lähetä</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Alun on oltava ennen loppua</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Merkitse ensin kaksi kohtaa aikapalkissa</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Merkitse ensin sijainti aikajanalle</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Esikatsele osio ja varmista, että se ohitetaan sujuvasti</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Muokkaa osion ajoitusta manuaalisesti</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Haluatko muokata osion alku- vai loppuaikaa?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Annettu aika on virheellinen</string>
+  <string name="morphe_sb_new_segment_highlight_title">Lähetä korostus</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Onko korostuksen ajankohta oikea?
+
+%s
+
+Jos et lähetä korostusta, napauta Peruuta ja merkitse toinen sijainti"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Lähetä korostus</string>
   <string name="morphe_sb_stats_title">Tilastot</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Tilastot eivät ole tilapäisesti saatavilla (API ei ole käytettävissä)</string>

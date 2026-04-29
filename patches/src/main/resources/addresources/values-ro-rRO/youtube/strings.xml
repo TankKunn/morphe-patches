@@ -1365,12 +1365,20 @@ până în
 (%3$s)
 
 Ești gata să trimiți?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Trimite</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Începe trebuie să fie înainte de sfârșit</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Marchează mai întâi două locații pe bara de timp</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Marchează mai întâi o locație pe bara de timp</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Previzualizați segmentul și asigurați-vă că sare fără probleme</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Editați sincronizarea segmentului manual</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Doriți să editați sincronizarea pentru începutul sau sfârșitul segmentului?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Oră nevalidă dată</string>
+  <string name="morphe_sb_new_segment_highlight_title">Trimite evidențiere</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Este corectă perioada de evidențiere?
+
+%s
+
+Dacă nu trimiteți o evidențiere, apăsați Anulare și marcați a doua locație"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Trimite evidențiere</string>
   <string name="morphe_sb_stats_title">Statistici</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Statisticile nu sunt disponibile temporar (API este defect)</string>

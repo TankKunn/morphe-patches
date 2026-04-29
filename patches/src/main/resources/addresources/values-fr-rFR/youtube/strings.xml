@@ -1369,12 +1369,20 @@ Il existe déjà"</string>
 (%3$s)
 
 Prêt à le soumettre ?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Soumettre</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Le début doit précéder la fin</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Marquez d\'abord deux emplacements sur la barre de progression</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Marquez d’abord un point sur la barre de lecture</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Prévisualisez le segment et assurez-vous que le saut soit fluide</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Éditer la durée du segment manuellement</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Souhaitez-vous modifier la durée du début ou de la fin du segment ?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">La durée spécifiée est invalide</string>
+  <string name="morphe_sb_new_segment_highlight_title">Soumettre le point clé</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Le point clé est-il correct ?
+
+%s
+
+Si vous ne soumettez pas de point clé, appuyez sur 'Annuler' et marquez le deuxième point"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Soumettre le point clé</string>
   <string name="morphe_sb_stats_title">Statistiques</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Les statistiques sont temporairement indisponibles (API indisponible)</string>

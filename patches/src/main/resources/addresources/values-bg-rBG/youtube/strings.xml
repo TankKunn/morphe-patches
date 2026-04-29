@@ -1361,12 +1361,20 @@ Second \"item\" text"</string>
 (%3$s)
 
 Готови да се поднесе?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Потвърждавам</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Началото трябва да е преди края</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Маркирайте две позиции на времевата лента преди</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Първо маркирайте място на времевата лента</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Предвижте сегмента и убедете се, че той преминава гладко</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Редактирайте времето на сегмента ръчно</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Искате ли да редактирате времето за началото или края на сегмента?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Невалидно време е въведено</string>
+  <string name="morphe_sb_new_segment_highlight_title">Изпращане на акцент</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Вярно ли е времето на отметката?
+
+%s
+
+Ако не изпращате отметка, натиснете \"Отказ\" и маркирайте втората локация."</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Изпрати отметка</string>
   <string name="morphe_sb_stats_title">Съобщения</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Съобщенията са временно недостъпни (API е изпаднал)</string>

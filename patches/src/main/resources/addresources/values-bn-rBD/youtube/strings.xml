@@ -1370,12 +1370,20 @@ YouTube সেটিংস খুলতে ট্যাপ এবং ধরে �
 
 (%3$s)
 জমা দিতে প্রস্তুত।"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">জমা দিন</string>
   <string name="morphe_sb_new_segment_start_is_before_end">শুরু অবশ্যই শেষের আগে হতে হবে</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">আগে সময় বারে দুটি অবস্থান চিহ্নিত করুন</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">প্রথমে টাইমবারে একটি স্থান চিহ্নিত করুন</string>
   <string name="morphe_sb_new_segment_preview_segment_first">সেগমেন্টটি পূর্বরূপ দেখুন এবং নিশ্চিত হোন যে এটি মসৃণভাবে এড়িয়ে যাচ্ছে</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">সেগমেন্টের সময় ম্যানুয়ালি সম্পাদনা করুন</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">আপনি কি সেগমেন্টের শুরু বা শেষের সময় সম্পাদনা করতে চান?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">ভুল সময় দেয়া হয়েছে</string>
+  <string name="morphe_sb_new_segment_highlight_title">হাইলাইট জমা দিন</string>
+  <string name="morphe_sb_new_segment_highlight_content">"হাইলাইট করার সময় সঠিক আছে?
+
+%s
+
+যদি আপনি হাইলাইট জমা না দেন, তাহলে বাতিল করুন এবং দ্বিতীয় লোকেশনটি চিহ্নিত করুন।"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">হাইলাইট জমা দিন</string>
   <string name="morphe_sb_stats_title">পরিসংখ্যান</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">পরিসংখ্যান সাময়িকভাবে উপলব্ধ নেই (API ডাউন)</string>

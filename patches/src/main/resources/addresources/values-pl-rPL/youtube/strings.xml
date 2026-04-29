@@ -1369,12 +1369,20 @@ do
 (%3$s)
 
 Wysłać?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Wyślij</string>
   <string name="morphe_sb_new_segment_start_is_before_end">Początek musi być przed końcem</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Najpierw zaznacz dwa miejsca na pasku postępu filmu</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Najpierw zaznacz lokalizację na osi czasu</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Obejrzyj podgląd i upewnij się, że segment pomijany jest płynnie</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">Edytuj ręcznie czas segmentu</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Czy chcesz edytować czas rozpoczęcia czy zakończenia segmentu?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Podano nieprawidłowy format czasu</string>
+  <string name="morphe_sb_new_segment_highlight_title">Wyślij wyróżnienie</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Czy czas wyróżnienia jest poprawny?
+
+%s
+
+Jeśli nie wysyłasz wyróżnienia, dotknij Anuluj i zaznacz drugą lokalizację"</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Wyślij wyróżnienie</string>
   <string name="morphe_sb_stats_title">Statystyki</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Statystyki są niedostępne (API nie reaguje)</string>

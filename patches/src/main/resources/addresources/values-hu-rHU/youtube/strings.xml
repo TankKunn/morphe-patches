@@ -1368,12 +1368,20 @@ Már létezik"</string>
 (%3$s)
 
 Készen állsz a beküldésre?"</string>
+  <string name="morphe_sb_new_segment_confirm_submit">Beküldés</string>
   <string name="morphe_sb_new_segment_start_is_before_end">A kezdetnek a vége előtt kell lennie</string>
-  <string name="morphe_sb_new_segment_mark_locations_first">Előbb jelöljön meg két pontot az idősávon</string>
+  <string name="morphe_sb_new_segment_mark_locations_first">Először jelölj ki egy pozíciót az idővonalon</string>
   <string name="morphe_sb_new_segment_preview_segment_first">Szakasz előnézete a zökkenőmentesen kihagyás érdekében</string>
   <string name="morphe_sb_new_segment_edit_by_hand_title">A szakasz időzítésének kézi beállítása</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Akarja szerkeszteni a rész kezdetének vagy végének időzítését?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Érvénytelen idő van megadva</string>
+  <string name="morphe_sb_new_segment_highlight_title">Kiemelés beküldése</string>
+  <string name="morphe_sb_new_segment_highlight_content">"Helyes a kiemelés időpontja?
+
+%s
+
+Ha nem szeretne kiemelést küldeni, nyomja meg a Mégse gombot, és jelölje meg a második helyszínt."</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Kiemelés küldése</string>
   <string name="morphe_sb_stats_title">Statisztikák</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">A statisztikák átmenetileg nem érhetők el (az API nem működik)</string>
