@@ -1,3 +1,10 @@
+# [1.25.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.8...v1.25.0-dev.9) (2026-04-29)
+
+
+### Features
+
+* **YouTube - Sponsorblock:** Add highlight segment submission ([#1301](https://github.com/MorpheApp/morphe-patches/issues/1301)) ([000846f](https://github.com/MorpheApp/morphe-patches/commit/000846feb0c8fafd3c67f9d2c8c759c941c13b4d))
+
 # [1.25.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.7...v1.25.0-dev.8) (2026-04-28)
 
 
