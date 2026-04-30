@@ -1013,9 +1013,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_join_button_title">إخفاء زر الانضمام</string>
   <string name="morphe_hide_shorts_join_button_summary_on">تم إخفاء زر الانضمام</string>
   <string name="morphe_hide_shorts_join_button_summary_off">يتم عرض زر الانضمام</string>
-  <string name="morphe_hide_shorts_live_preview_title">إخفاء معاينة الروابط</string>
-  <string name="morphe_hide_shorts_live_preview_summary_on">تم إخفاء معاينة الروابط</string>
-  <string name="morphe_hide_shorts_live_preview_summary_off">يتم عرض معاينة الروابط</string>
+  <string name="morphe_hide_shorts_live_preview_title">إخفاء عرض البث المباشر</string>
+  <string name="morphe_hide_shorts_live_preview_summary_on">تم إخفاء عرض البث المباشر</string>
+  <string name="morphe_hide_shorts_live_preview_summary_off">يتم إظهار عرض البث المباشر</string>
   <string name="morphe_hide_shorts_location_label_title">إخفاء تسمية الموقع</string>
   <string name="morphe_hide_shorts_location_label_summary_on">تم إخفاء تسمية الموقع</string>
   <string name="morphe_hide_shorts_location_label_summary_off">يتم عرض تسمية الموقع</string>

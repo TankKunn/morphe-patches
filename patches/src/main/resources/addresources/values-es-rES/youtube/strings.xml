@@ -1376,13 +1376,13 @@ a
   <string name="morphe_sb_new_segment_edit_by_hand_title">Editar tiempo del segmento manualmente</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">¿Quieres editar el tiempo para el inicio o el final del segmento?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Tiempo no válido</string>
-  <string name="morphe_sb_new_segment_highlight_title">Enviar resaltado</string>
-  <string name="morphe_sb_new_segment_highlight_content">"¿Es correcta la hora del destaque?
+  <string name="morphe_sb_new_segment_highlight_title">Enviar destacado</string>
+  <string name="morphe_sb_new_segment_highlight_content">"¿Es correcto el tiempo del destacado?
 
 %s
 
-Si no vas a enviar un destaque, toca Cancelar y marca la segunda ubicación."</string>
-  <string name="morphe_sb_new_segment_highlight_submit">Enviar destaque</string>
+Si no vas a enviar un destacado, pulsa Cancelar y marca la segunda ubicación."</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Enviar destacado</string>
   <string name="morphe_sb_stats_title">Estadísticas</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Estadísticas no disponibles temporalmente (la API está inactiva)</string>

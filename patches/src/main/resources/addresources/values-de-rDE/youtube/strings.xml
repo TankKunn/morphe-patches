@@ -1377,7 +1377,7 @@ Bereit zum Einreichen?"</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">Möchtest du den Zeitpunkt für den Anfang oder das Ende des Segments bearbeiten?</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">Ungültige Zeit angegeben</string>
   <string name="morphe_sb_new_segment_highlight_title">Hervorhebung übermitteln</string>
-  <string name="morphe_sb_new_segment_highlight_content">"Ist die Markierungszeit korrekt?
+  <string name="morphe_sb_new_segment_highlight_content">"Ist die Markierung korrekt?
 
 %s
 
