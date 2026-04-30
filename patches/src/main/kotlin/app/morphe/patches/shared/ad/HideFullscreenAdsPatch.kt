@@ -7,6 +7,7 @@
 
 package app.morphe.patches.shared.ad
 
+import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
@@ -19,6 +20,7 @@ import app.morphe.util.findFreeRegister
 import app.morphe.util.getReference
 import app.morphe.util.indexOfFirstInstructionReversedOrThrow
 import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
@@ -36,6 +38,19 @@ internal fun hideFullscreenAdsPatch(
         preferenceScreen.addPreferences(
             SwitchPreference("morphe_hide_fullscreen_ads")
         )
+
+        // non-litho view, used in some old clients
+        InterstitialsContainerFingerprint.let {
+            it.method.apply {
+                val index = it.instructionMatches.first().index + 2
+                val register = getInstruction<OneRegisterInstruction>(index).registerA
+
+                addInstruction(
+                    index + 1,
+                    "invoke-static { v$register }, $EXTENSION_CLASS->hideFullscreenAds(Landroid/view/View;)V"
+                )
+            }
+        }
 
         LithoDialogBuilderFingerprint.let {
             it.method.cloneMutableAndPreserveParameters().apply {

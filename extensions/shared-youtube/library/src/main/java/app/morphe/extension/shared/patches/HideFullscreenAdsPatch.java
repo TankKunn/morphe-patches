@@ -30,6 +30,14 @@ public class HideFullscreenAdsPatch {
     );
 
     /**
+     * Injection point.
+     * Invoke only in old clients.
+     */
+    public static void hideFullscreenAds(View view) {
+        Utils.hideViewBy0dpUnderCondition(SharedYouTubeSettings.HIDE_FULLSCREEN_ADS, view);
+    }
+
+    /**
      * Rest of the implementation added by patch.
      */
     private static void closeDialog(Object customDialog) {
