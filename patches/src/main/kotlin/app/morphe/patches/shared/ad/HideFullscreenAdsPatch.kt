@@ -7,6 +7,7 @@
 
 package app.morphe.patches.shared.ad
 
+import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.all.misc.resources.resourceMappingPatch
@@ -22,7 +23,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
-private const val EXTENSION_CLASS = "Lapp/morphe/extension/shared/patches/HideFullscreenAdsPatch;"
+internal const val EXTENSION_CLASS = "Lapp/morphe/extension/shared/patches/HideFullscreenAdsPatch;"
 
 internal fun hideFullscreenAdsPatch(
     preferenceScreen: BasePreferenceScreen.Screen
@@ -53,6 +54,17 @@ internal fun hideFullscreenAdsPatch(
                     """
                         move-object/from16 v$freeRegister, p1
                         invoke-static { v$insertRegister, v$freeRegister }, $EXTENSION_CLASS->closeFullscreenAd(Ljava/lang/Object;[B)V
+                    """
+                )
+
+                // Set close dialog method.
+                val customDialogOnBackPressedMethod = CustomDialogOnBackPressedFingerprint.method
+
+                FullscreenAdsPatchFingerprint.method.addInstructions(
+                    0,
+                    """
+                        check-cast p0, ${customDialogOnBackPressedMethod.definingClass}
+                        invoke-virtual { p0 }, $customDialogOnBackPressedMethod
                     """
                 )
             }
