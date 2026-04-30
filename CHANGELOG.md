@@ -1,3 +1,10 @@
+# [1.25.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.9...v1.25.0-dev.10) (2026-04-30)
+
+
+### Bug Fixes
+
+* **YouTube Music - Hide ads:** Home feed does not load when Hide fullscreen ads setting is enabled ([0208916](https://github.com/MorpheApp/morphe-patches/commit/0208916e2774451c6fc72258005adc4221c84953))
+
 # [1.25.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.8...v1.25.0-dev.9) (2026-04-29)
 
 
