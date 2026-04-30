@@ -35,15 +35,15 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.25.0-dev.10](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.10)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;110 patches total
+> **[v1.25.0-dev.11](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.11)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;110 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;66 patches</summary>
 <br>
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;21.17.480 | 🧪&nbsp;21.16.240 | 🧪&nbsp;21.05.265 | 20.47.62 | 20.45.36 | 20.31.42 | 20.21.37 |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 🧪&nbsp;21.17.480 | 🧪&nbsp;21.16.240 | 🧪&nbsp;21.05.265 | 20.47.62 | 20.31.42 | 20.21.37 |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
@@ -122,7 +122,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;9.16.51 | 🧪&nbsp;9.15.50 | 🧪&nbsp;8.50.51 | 8.47.56 | 8.44.54 | 7.29.52 |
+| 🧪&nbsp;9.17.51 | 🧪&nbsp;9.16.51 | 🧪&nbsp;9.15.50 | 🧪&nbsp;8.50.51 | 8.47.56 | 7.29.52 |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |

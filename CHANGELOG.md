@@ -1,3 +1,16 @@
+# [1.25.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.10...v1.25.0-dev.11) (2026-04-30)
+
+
+### Bug Fixes
+
+* **YouTube - Hide ads:** Fullscreen ads sometimes show with older versions of YouTube ([4a58cb9](https://github.com/MorpheApp/morphe-patches/commit/4a58cb9dafa51429cc46ab2b2c8098d7eb622e50))
+* **YouTube - Remove background playback restrictions:** Add in-app setting to manually turn off the patch ([#1325](https://github.com/MorpheApp/morphe-patches/issues/1325)) ([7877952](https://github.com/MorpheApp/morphe-patches/commit/7877952d5a29cf19b931227014964ea471e5d870))
+
+
+### Features
+
+* **YouTube Music:** Add experimental support for `9.17.51` ([d4cd2a6](https://github.com/MorpheApp/morphe-patches/commit/d4cd2a628219e9dc57cb15452178514ee8aaebea))
+
 # [1.25.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.9...v1.25.0-dev.10) (2026-04-30)
 
 
