@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Alte Einstellungsmenüs werden angezeigt</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Alte Einstellungsmenüs werden nicht angezeigt</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Einschränkungen für Hintergrundwiedergabe entfernen</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Hintergrundwiedergabe ist uneingeschränkt</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Hintergrundwiedergabe ist eingeschränkt</string>
   <string name="morphe_shorts_disable_background_playback_title">Hintergrundwiedergabe von Shorts deaktivieren</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Hintergrundwiedergabe von Shorts ist deaktiviert</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Hintergrundwiedergabe von Shorts ist aktiviert</string>
@@ -1636,6 +1639,15 @@ Durch Aktivieren dieser Option können höhere Videoqualitäten freigeschaltet w
   <string name="morphe_disable_haptic_feedback_zoom_title">Zoomhaptik deaktivieren</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Zoomhaptik ist deaktiviert</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Zoomhaptik ist aktiviert</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Benachrichtigungsmediensteuerelemente</string>
+  <string name="morphe_notification_media_screen_summary">Mediensteuerelemente auf dem Sperrbildschirm ausblenden</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Ein- und Ausblenden der Schaltflächen \"Vorheriger\" und \"Nächster\"</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Die Schaltflächen \"Vorheriger\" und \"Nächster\" sind in der Medienbenachrichtigung, auf dem Sperrbildschirm und in der Kopfhörersteuerung ausgeblendet.</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Die Schaltflächen \"Vorheriger\" und \"Nächster\" werden in der Medienbenachrichtigung, auf dem Sperrbildschirm und in der Kopfhörersteuerung angezeigt.</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Suchleiste deaktivieren</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Die Suchleiste in der Medienbenachrichtigung und auf dem Sperrbildschirm ist schreibgeschützt.</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Die Suchleiste in der Medienbenachrichtigung und auf dem Sperrbildschirm ist verschiebbar.</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Wenn Sie kürzlich Ihre Kontoanmeldedaten geändert haben, deinstallieren Sie MicroG und installieren Sie es erneut.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

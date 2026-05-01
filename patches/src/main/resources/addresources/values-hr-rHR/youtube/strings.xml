@@ -1470,6 +1470,7 @@ Omogućava se otključivanje viših video kvaliteta"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Onemogu dugmice za zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Dugmice za zoom su onemogućene</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Dugmice za zoom su omogućene</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Ako nedavno ste promijenili računski prijavne detalje, morate deinstalirati i ponovo instalirati MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

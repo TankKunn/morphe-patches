@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">A régi beállítások menü jelenik meg</string>
   <string name="morphe_restore_old_settings_menus_summary_off">A régi beállítások menü nem jelenik meg</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">A háttérlejátszás korlátozásainak eltávolítása</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">A háttérlejátszás nem korlátozott</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">A háttérlejátszás korlátozott</string>
   <string name="morphe_shorts_disable_background_playback_title">A Shorts háttérben történő lejátszásának letiltása</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">A Shorts háttérben történő lejátszása le van tiltva</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">A Shorts háttérben történő lejátszása engedélyezve van</string>
@@ -1633,6 +1636,15 @@ Ez a beállítás lehetővé teszi a magasabb videóminőségek feloldását"</s
   <string name="morphe_disable_haptic_feedback_zoom_title">Haptikus zoom letiltása</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Haptikus zoom le van tiltva</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Haptikus zoom be van kapcsolva</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Értesítési médiavezérlők</string>
+  <string name="morphe_notification_media_screen_summary">Rejtse el a zárlákon lévő médiavezérlő komponenseket</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Elrejteni a \'Előző\' és \'Következő\' gombokat</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Az \'Előző\' és \'Következő\' gombok el vannak rejtve a médiaértesítésben, a zárlaképernyőn és a fejhallgató vezérlőin</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Az \'Előző\' és \'Következő\' gombok megjelennek az értesítésben, a zárlaképernyőn és a fejhallgató vezérlőin</string>
+  <string name="morphe_disable_notification_media_seekbar_title">A keresősáv letiltása</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">A médiaértesítés és a zárlaképernyő keresősávja csak olvasható</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">A médiaértesítés és a zárlaképernyő keresősávja húzható</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Ha nemrég módosította a fiókja bejelentkezési adatait, távolítsa el, majd telepítse újra a MicroG-t.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

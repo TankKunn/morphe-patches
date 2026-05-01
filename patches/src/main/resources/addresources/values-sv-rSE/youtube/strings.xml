@@ -1628,6 +1628,7 @@ Om du aktiverar detta kan högre videokvaliteter låsas upp"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Inaktivera zoomhaptik</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Zoomhaptik är inaktiverad</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Zoomhaptik är aktiverad</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Om du nyligen har ändrat dina inloggningsuppgifter, avinstallera och installera om MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

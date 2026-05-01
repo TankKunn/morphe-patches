@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Gamle indstillingsmenuer er vist</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Gamle indstillingsmenuer er ikke vist</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Fjern restriktioner for afspilning i baggrunden</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Afsspilning i baggrunden er ikke begrænset</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Baggrundsafspilning er begrænset</string>
   <string name="morphe_shorts_disable_background_playback_title">Deaktiver baggrundsafspilning af Shorts</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Baggrundsafspilning af Shorts er deaktiveret</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Baggrundsafspilning af Shorts er aktiveret</string>
@@ -1637,6 +1640,15 @@ Aktivering af dette kan låse op for højere videokvalitet"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Deaktivér zoom haptics</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Zoom haptics er deaktiveret</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Zoom haptics er aktiveret</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Underretningsmedie-kontroller</string>
+  <string name="morphe_notification_media_screen_summary">Skjul låseskærmsmedie-kontrolkomponenter</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Skjul Forrige &amp; Næste knapper</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Forrige &amp; Næste knapper er skjult i medienotifikation, låseskærm og hovedtelefonstyring</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Forrige &amp; Næste knapper vises i notifikation, låseskærm og hovedtelefonstyring</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Deaktiver søgefelt</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Søgefeltet i medienotifikation og låseskærm er skrivebeskyttet</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Søgefeltet i medienotifikation og låseskærm kan trækkes i</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Hvis du for nylig har ændret dine kontooplysninger, skal du afinstallere og geninstallere MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

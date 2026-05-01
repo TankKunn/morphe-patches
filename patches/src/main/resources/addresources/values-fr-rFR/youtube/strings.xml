@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Les anciens menus des paramètres sont affichés</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Les anciens menus des paramètres ne sont pas affichés</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Supprimer les restrictions de lecture en arrière-plan</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">La lecture en arrière-plan n\'est pas restreinte</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">La lecture en arrière-plan est restreinte</string>
   <string name="morphe_shorts_disable_background_playback_title">Désactiver la lecture en arrière-plan des Shorts</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">La lecture en arrière-plan des Shorts est désactivée</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">La lecture en arrière-plan des Shorts est activée</string>
@@ -1638,6 +1641,15 @@ Activer ceci peut débloquer des qualités vidéo plus élevées
   <string name="morphe_disable_haptic_feedback_zoom_title">Désactiver le retour haptique du zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Le retour haptique du zoom est désactivé</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Le retour haptique du zoom est activé</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Commandes multimédias des notifications</string>
+  <string name="morphe_notification_media_screen_summary">Masquer les composants de contrôle multimédia de l\'écran de verrouillage</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Masquer les boutons \'Précédent\' &amp; \'Suivant\'</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Les boutons \'Précédent\' &amp; \'Suivant\' sont masqués dans la notification multimédia, l\'écran de verrouillage et les commandes du casque</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Les boutons \'Précédent\' &amp; \'Suivant\' sont affichés dans la notification, l\'écran de verrouillage et les commandes du casque</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Désactiver la barre de recherche</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">La barre de recherche dans la notification multimédia et l\'écran de verrouillage est en lecture seule</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">La barre de recherche dans la notification multimédia et l\'écran de verrouillage est glissable</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Si vous avez récemment modifié les identifiants de connexion de votre compte, désinstallez et réinstallez MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

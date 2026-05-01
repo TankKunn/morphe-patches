@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Старите менюта с настройки се показват</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Старите менюта с настройки не се показват</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Премахване на ограниченията за възпроизвеждане във фонов режим</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Възпроизвеждането във фонов режим не е ограничено</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Възпроизвеждането във фонов режим е ограничено</string>
   <string name="morphe_shorts_disable_background_playback_title">Възпроизвеждане на  Shorts в фонов режим</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Фоновото възпроизвеждане на Shorts е деактивирано</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Фоновото възпроизвеждане на Shorts е активирано</string>
@@ -1626,6 +1629,15 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Плейлисти</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Търсене</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Магазин</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Управление на мултимедия от известията</string>
+  <string name="morphe_notification_media_screen_summary">Скрий компонентите за управление на мултимедия на заключения екран</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Скрий предишни и следващи бутони</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Предишни и следващи бутони са скрити в медийното известие, заключен екран и контролите за слушалки</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Предишни и следващи бутони са видими в известието, заключен екран и контролите за слушалки</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Деактивирай лентата за търсене</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Лентата за търсене в медийното известие и заключения екран е само за четене</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Лентата за търсене в медийното известие и заключения екран е подвижна</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Спорт</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

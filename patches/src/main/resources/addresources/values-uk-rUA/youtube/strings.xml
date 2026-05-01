@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Показується старе меню налаштувань</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Показується нове меню налаштувань</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Зняти обмеження фонового відтворення</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Фонове відтворення не обмежене</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Фонове відтворення обмежене</string>
   <string name="morphe_shorts_disable_background_playback_title">Вимкнути фонове відтворення Shorts</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Фонове відтворення Shorts вимкнено</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Фонове відтворення Shorts увімкнено</string>
@@ -1636,6 +1639,15 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Вимкнути вібрацію при масштабуванні</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Вібрацію при масштабуванні вимкнено</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Вібрацію при масштабуванні ввімкнено</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Елементи керування медіа у сповіщеннях</string>
+  <string name="morphe_notification_media_screen_summary">Приховати елементи керування медіа на екрані блокування</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Приховати кнопки Попереднє та Наступне</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Кнопки Попереднє та Наступне приховано в медіасповіщенні, на екрані блокування та в керуванні навушниками</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Кнопки Попереднє та Наступне показуються в медіасповіщенні, на екрані блокування та в керуванні навушниками</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Вимкнути панель прогресу</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Панель прогресу в медіасповіщенні та на екрані блокування доступна лише для перегляду</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Панель прогресу в медіасповіщенні та на екрані блокування доступна для перемотування</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Якщо Ви нещодавно змінили дані для входу у свій обліковий запис, видаліть і повторно встановіть MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

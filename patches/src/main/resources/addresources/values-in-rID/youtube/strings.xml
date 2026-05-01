@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Menu pengaturan lama ditampilkan</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Menu pengaturan lama tidak ditampilkan</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Hapus pembatasan pemutaran latar belakang</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Pemutaran latar belakang tidak dibatasi</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Pemutaran latar belakang dibatasi</string>
   <string name="morphe_shorts_disable_background_playback_title">Nonaktifkan pemutaran Shorts di latar belakang</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Pemutaran Shorts di latar belakang dinonaktifkan</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Pemutaran Shorts di latar belakang diaktifkan</string>
@@ -1635,6 +1638,15 @@ Mengaktifkan ini dapat membuka kualitas video yang lebih tinggi"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Nonaktifkan sentuh getar zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Sentuh getar zoom dinonaktifkan</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Sentuh getar zoom diaktifkan</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Kontrol media notifikasi</string>
+  <string name="morphe_notification_media_screen_summary">Sembunyikan komponen kontrol media layar kunci</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Sembunyikan tombol Sebelumnya &amp; Berikutnya</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Tombol Sebelumnya &amp; Berikutnya disembunyikan di notifikasi media, layar kunci, dan kontrol headphone</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Tombol Sebelumnya &amp; Berikutnya ditampilkan di notifikasi, layar kunci, dan kontrol headphone</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Nonaktifkan bilah pencari</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Bilah pencari di notifikasi media dan layar kunci bersifat hanya baca</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Bilah pencari di notifikasi media dan layar kunci dapat diseret</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Jika Anda baru saja mengubah detail login akun Anda, copot pemasangan dan ulangi memasang MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

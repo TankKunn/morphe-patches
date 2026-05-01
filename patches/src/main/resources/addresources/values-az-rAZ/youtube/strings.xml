@@ -1325,6 +1325,7 @@ Bunu aktivləşdirmə daha yüksək video keyfiyyətləri əngəlin silə bilər
   <string name="morphe_disable_haptic_feedback_zoom_title">Yaxınlaşdırma reaksiyasın qapat</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Yaxınlaşdırma reaksiyası qapalıdır</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Yaxınlaşdırma reaksiyası aktivdir</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Bu yaxınlarda hesabınıza giriş məlumatlarınızı dəyişmisinizsə, MicroG-ni silin və təkrar quraşdırın.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

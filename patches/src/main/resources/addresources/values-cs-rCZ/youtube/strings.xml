@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Staré menu nastavení se zobrazují</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Staré menu nastavení se nezobrazují</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Odstranit omezení přehrávání na pozadí</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Přehrávání na pozadí není omezeno</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Přehrávání na pozadí je omezené</string>
   <string name="morphe_shorts_disable_background_playback_title">Zakázat přehrávání Shorts na pozadí</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Přehrávání Shorts na pozadí je zakázáno</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Přehrávání Shorts na pozadí je povoleno</string>
@@ -1637,6 +1640,15 @@ Povolením této funkce lze odemknout vyšší kvality videa"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Zakázat haptiku pro zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Haptika zoomu je vypnutá</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Haptika zoomu je zapnutá</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Ovládací prvky médií pro oznámení</string>
+  <string name="morphe_notification_media_screen_summary">Skrýt ovládací prvky médií na zamykací obrazovce</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Skrýt tlačítka Předchozí a Další</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Tlačítka Předchozí a Další jsou skrytá v oznamovací liště, na uzamčené obrazovce a v ovládání sluchátek</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Tlačítka Předchozí a Další jsou zobrazená v oznamovací liště, na uzamčené obrazovce a v ovládání sluchátek</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Zakázat posuvník</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Posuvník v oznamovací liště a na uzamčené obrazovce je jen pro čtení</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Posuvník v oznamovací liště a na uzamčené obrazovce je posouván</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Pokud jste nedávno změnili přihlašovací údaje svého účtu, odinstalujte a znovu nainstalujte MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

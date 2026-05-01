@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">पुराने सेटिंग्स मेनू दिखाए जाते हैं</string>
   <string name="morphe_restore_old_settings_menus_summary_off">पुराने सेटिंग्स मेनू नहीं दिखाए जाते हैं</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">पृष्ठभूमि प्लेबैक प्रतिबंध हटाएं</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">पृष्ठभूमि प्लेबैक अप्रतिबंधित है</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">पृष्ठभूमि प्लेबैक प्रतिबंधित है</string>
   <string name="morphe_shorts_disable_background_playback_title">डिसेबल शॉर्ट्स बैकग्राउंड प्ले</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">बैकग्राउंड प्ले डिसेबल हो गया है</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">बैकग्राउंड प्ले एनबल हो गया है</string>
@@ -1632,6 +1635,15 @@ Settings → Playback (or Autoplay) → Autoplay next video"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">ज़ूम haptिक्स अक्षम करें</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">ज़ूम haptिक्स अक्षम है</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">ज़ूम haptिक्स सक्षम है</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">सूचना मीडिया नियंत्रण</string>
+  <string name="morphe_notification_media_screen_summary">लॉक स्क्रीन मीडिया नियंत्रण घटकों को छिपाएं</string>
+  <string name="morphe_hide_notification_media_prev_next_title">छिपाएँ पिछला और अगला बटन</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">मीडिया सूचना, लॉकस्क्रीन और हेडफ़ोन नियंत्रण में पिछला और अगला बटन छिपाए गए हैं</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">मीडिया सूचना, लॉकस्क्रीन और हेडफ़ोन नियंत्रण में पिछला और अगला बटन दिखाए जाते हैं</string>
+  <string name="morphe_disable_notification_media_seekbar_title">सीकबार अक्षम करें</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">मीडिया सूचना और लॉकस्क्रीन में Seekbar केवल पढ़ने के लिए है</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">मीडिया सूचना और लॉकस्क्रीन में Seekbar ड्रैग करने योग्य है</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">यदि आपने हाल ही में अपना खाता लॉगिन विवरण बदल दिया है, तो MicroG को अनइंस्टॉल और फिर से इंस्टॉल करें।</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

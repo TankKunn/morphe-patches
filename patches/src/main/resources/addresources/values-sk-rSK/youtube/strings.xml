@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Zobrazuje sa staré menu nastavení</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Staré menu nastavení sa nezobrazuje</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Odstrániť obmedzenia prehrávania na pozadí</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Prehrávanie na pozadí nie je obmedzené</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Prehrávanie na pozadí je obmedzené</string>
   <string name="morphe_shorts_disable_background_playback_title">Zakázať prehrávanie Shorts na pozadí</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Prehrávanie Shorts na pozadí je zakázané</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Prehrávanie Shorts na pozadí je povolené</string>
@@ -1636,6 +1639,15 @@ Povolením tejto možnosti môžete odomknúť vyššiu kvalitu videa"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Zakázať haptickú spätnú väzbu pre zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Haptická spätná väzba pre zoom je zakázaná</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Haptická spätná väzba pre zoom je povolená</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Ovládacie prvky médií v upozorneniach</string>
+  <string name="morphe_notification_media_screen_summary">Skryť komponenty ovládania médií na uzamknutej obrazovke</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Skryť tlačidlá Predchádzajúca &amp; Ďalej</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Tlačidlá Predchádzajúca &amp; Ďalej sú skryté v oznamovaní médií, na uzamknutej obrazovke a v ovládaniach slúchadiel</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Tlačidlá Predchádzajúca &amp; Ďalej sú zobrazené v oznamovaní médií, na uzamknutej obrazovke a v ovládaniach slúchadiel</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Zakázať ukazovateľ priebehu (seekbar)</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Ukazovateľ priebehu (seekbar) v oznamovaní médií a na uzamknutej obrazovke je v režime iba na čítanie</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Ukazovateľ priebehu (seekbar) v oznamovaní médií a na uzamknutej obrazovke je možné ťahať</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Ak ste nedávno zmenili svoje prihlasovacie údaje k účtu, odinštalujte a znovu nainštalujte microG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

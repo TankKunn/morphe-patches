@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Vanhat asetusvalikot näytetään</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Vanhoja asetusvalikoita ei näytetä</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Poista taustatoiston rajoitukset</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Taustatoisto ei ole rajoitettua</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Taustatoiston esto on käytössä</string>
   <string name="morphe_shorts_disable_background_playback_title">Poista Shortsien taustatoisto käytöstä</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Shortsien taustatoisto ei ole käytössä</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Shortsien taustatoisto on käytössä</string>
@@ -1640,6 +1643,15 @@ Tämä voi avata korkealaatuisemmat videot"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Poista zoomaushaptiikka käytöstä</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Zoomaushaptiikka ei ole käytössä</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Zoomaushaptiikka on käytössä</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Ilmoitusten mediakontrollit</string>
+  <string name="morphe_notification_media_screen_summary">Piilota lukitusnäytön mediakontrollien komponentit</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Piilota Edellinen &amp; Seuraava -painikkeet</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Edellinen &amp; Seuraava -painikkeet eivät ole näkyvissä mediatiedotuksissa, lukitusnäytössä ja kuulokkeiden ohjauksissa</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Edellinen &amp; Seuraava -painikkeet näkyvät ilmoituksissa, lukitusnäytössä ja kuulokkeiden ohjauksissa</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Poista seekbar käytöstä</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Median tiedotuksen ja lukitusnäytön seekbar on vain luku -tila</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Median tiedotuksen ja lukitusnäytön seekbar on vedettävä</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Jos olet äskettäin muuttanut tilisi kirjautumistietoja, poista ja asenna MicroG uudelleen.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

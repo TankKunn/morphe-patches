@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Włączone</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Wyłączone</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Odtwarzanie w tle bez ograniczeń</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Włączone</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Wyłączone</string>
   <string name="morphe_shorts_disable_background_playback_title">Odtwarzanie Shortsów w tle</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Wyłączone</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Włączone</string>
@@ -1636,6 +1639,15 @@ Włączenie tej opcji może odblokować wyższe jakości filmów"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Wibracje podczas przybliżania filmu</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Wyłączone</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Włączone</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Elementy sterowania multimediami w powiadomieniach</string>
+  <string name="morphe_notification_media_screen_summary">Ukryj elementy sterowania multimediami na ekranie blokady</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Ukryj przyciski Poprzedni i Następny</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Przyciski Poprzedni i Następny są ukryte w powiadomieniu multimediów, na ekranie blokady i w sterowaniu słuchawkami</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Przyciski Poprzedni i Następny są wyświetlane w powiadomieniu, na ekranie blokady i w sterowaniu słuchawkami</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Wyłącz pasek przewijania</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Pasek przewijania w powiadomieniu multimediów i na ekranie blokady jest tylko do odczytu</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Pasek przewijania w powiadomieniu multimediów i na ekranie blokady jest przeciągalny</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Wystąpił błąd logowania, jeśli Twoje hasło zostało zmienione, spróbuj przeinstalować MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

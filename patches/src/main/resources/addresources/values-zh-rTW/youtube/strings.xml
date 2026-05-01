@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">已顯示舊版設定選單</string>
   <string name="morphe_restore_old_settings_menus_summary_off">不顯示舊版設定選單</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">移除背景播放限制</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">背景播放已取消限制</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">背景播放受到限制</string>
   <string name="morphe_shorts_disable_background_playback_title">停用背景播放 Shorts</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">已停用背景播放 Shorts</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">已啟用背景播放 Shorts</string>
@@ -1641,6 +1644,15 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">停用縮放震動</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">已停用縮放觸覺回饋</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">已啟用縮放觸覺回饋</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">通知媒體控制項</string>
+  <string name="morphe_notification_media_screen_summary">隱藏鎖定畫面媒體控制元件</string>
+  <string name="morphe_hide_notification_media_prev_next_title">隱藏上一曲和下一曲按鈕</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">上一曲和下一曲按鈕在媒體通知、鎖定畫面和耳機控制中已隱藏</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">上一曲和下一曲按鈕在通知、鎖定畫面和耳機控制中可見</string>
+  <string name="morphe_disable_notification_media_seekbar_title">停用搜尋條</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">媒體通知和鎖定畫面中的搜尋條為唯讀模式</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">媒體通知和鎖定畫面中的搜尋條可拖曳</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">如果您最近變更了帳戶登入詳細資訊，請解除安裝並重新安裝 MicroG。</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

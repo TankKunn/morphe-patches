@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Taispeántar sean-roghchláir socruithe</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Ní thaispeántar sean-roghchláir socruithe</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Deoraigh srianta imchúlaí</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Tá imchúlaí faoi riar gan srian</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Tá srianta ar athsheinm chúlra</string>
   <string name="morphe_shorts_disable_background_playback_title">Díchumasaigh seinnte Cúlra Shorts</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Tá seinm chúlra Shorts díchumasaithe</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Tá seinm chúlra Shorts cumasaithe</string>
@@ -1636,6 +1639,15 @@ D’fhéadfadh cáilíochtaí físe níos airde a bheith díghlasáilte ach d’
   <string name="morphe_disable_haptic_feedback_zoom_title">Díchumasaigh haptaic súmála</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Tá haptaic súmála díchumasaithe</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Tá haptaic súmála cumasaithe</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Rialuithe meáin fógra</string>
+  <string name="morphe_notification_media_screen_summary">Ceadaigh go ndíbhfófar comhpháirteanna rialaithe meáin scáileán glaca</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Folaigh cnaipí Roimhe Seo &amp; Ar Aghaidh</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Tá cnaipí Roimhe Seo &amp; Ar Aghaidh ceilte sa sonraíocht meáin, ar scáileán gluaiseachta, agus ar rialuithe cluasán</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Tá cnaipí Roimhe Seo &amp; Ar Aghaidh á seaimh sa sonraíocht, ar scáileán gluaiseachta, agus ar rialuithe cluasán</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Díchumasaigh barra cuardaigh</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Tá barra cuardaigh sa sonraíocht meáin agus ar scáileán gluaiseachta inléiteach amháin</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Tá barra cuardaigh sa sonraíocht meáin agus ar scáileán gluaiseachta in-tarraingthe</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Má d’athraigh tú sonraí logála isteach do chuntais le déanaí, ansin díshuiteáil agus athshuiteáil MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

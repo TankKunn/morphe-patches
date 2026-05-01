@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">תפריטי הגדרות ישנים מוצגים</string>
   <string name="morphe_restore_old_settings_menus_summary_off">תפריטי הגדרות ישנים אינם מוצגים</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">הסר הגבלות השמעת רקע</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">השמעת רקע אינה מוגבלת</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">השמעת רקע מוגבלת</string>
   <string name="morphe_shorts_disable_background_playback_title">השבת הפעלה ברקע של Shorts</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">הפעלה ברקע של Shorts מושבתת</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">הפעלה ברקע של Shorts מופעלת</string>
@@ -1635,6 +1638,15 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">השבת משוב זום ברטט</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">משוב ברטט עבור זום מושבת</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">משוב ברטט עבור זום מופעל</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">פקדי מדיה בהתראות</string>
+  <string name="morphe_notification_media_screen_summary">הסתר רכיבי בקרה של מדיה במסך הנעילה</string>
+  <string name="morphe_hide_notification_media_prev_next_title">הסתר כפתורי קודם &amp; הבא</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">כפתורי הקודם &amp; הבא מוסתרים בהתראות מדיה, במסך הנעילה ובפקדי אוזניות</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">כפתורי הקודם &amp; הבא מוצגים בהתראות, במסך הנעילה ובפקדי אוזניות</string>
+  <string name="morphe_disable_notification_media_seekbar_title">השבת סרגל חיפוש</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">סרגל החיפוש בהתראות מדיה ובמסך הנעילה הוא לקריאה בלבד</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">ניתן לגרור את סרגל החיפוש בהתראות מדיה ובמסך הנעילה</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">אם פרטי הכניסה לחשבונך השתנו לאחרונה, אז יש להסיר ולהתקין מחדש את MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

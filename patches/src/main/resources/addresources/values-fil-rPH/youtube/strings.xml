@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">Ipinapakita ang mga lumang menu ng pagpipilian</string>
   <string name="morphe_restore_old_settings_menus_summary_off">Hindi ipinapakita ang mga lumang menu ng pagpipilian</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Alisin ang mga paghihigpit sa pagtugtog sa likuran</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">Walang paghihigpit ang pagtugtog sa likuran</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">Pinaghihigpitan ang pagpapatugtog sa background</string>
   <string name="morphe_shorts_disable_background_playback_title">Patayin ang pag-play ng Shorts sa likuran</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">Nakapatay ang pag-play ng Shorts sa likuran</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">Pinagana ang pag-play ng Shorts sa likuran</string>
@@ -1636,6 +1639,15 @@ Ang pag-enable nito ay maaaring mag-unlock ng mas mataas na kalidad ng video"</s
   <string name="morphe_disable_haptic_feedback_zoom_title">I-disable ang haptics ng pag-zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Hindi pinagana ang haptics ng pag-zoom</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Pinagana ang haptics ng pag-zoom</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Mga kontrol sa media ng abiso</string>
+  <string name="morphe_notification_media_screen_summary">Itago ang mga bahagi ng kontrol sa media sa lock screen</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Itago ang Prev &amp; Next na mga button</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Nakatago ang mga Previous &amp; Next na button sa media notification, lockscreen, at headphone controls</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Ipinapakita ang mga Previous &amp; Next na button sa notification, lockscreen, at headphone controls</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Huwag paganahin ang seekbar</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">Ang seekbar sa media notification at lockscreen ay read-only</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">Ang seekbar sa media notification at lockscreen ay draggable</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Kung kamakailan mo binago ang iyong mga detalye sa pag-login ng account, i-uninstall at i-reinstall ang MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">I vecchi menu delle impostazioni vengono mostrati</string>
   <string name="morphe_restore_old_settings_menus_summary_off">I vecchi menu delle impostazioni non vengono mostrati</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">Rimuovi le restrizioni alla riproduzione in background</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">La riproduzione in background non è soggetta a restrizioni</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">La riproduzione in background è limitata</string>
   <string name="morphe_shorts_disable_background_playback_title">Disattiva la riproduzione degli Shorts in background</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">La riproduzione in background degli Shorts è disattivata</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">La riproduzione in background degli Shorts è abilitata</string>
@@ -1636,6 +1639,15 @@ Abilitare questa opzione può sbloccare qualità video più elevate"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Disabilita zoom aptico</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">Lo zoom aptico è disabilitato</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Lo zoom aptico è abilitato</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Controlli multimediali delle notifiche</string>
+  <string name="morphe_notification_media_screen_summary">Nascondi i componenti di controllo multimediali dalla schermata di blocco</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Nascondi i pulsanti Precedente e Successivo</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">I pulsanti Precedente e Successivo sono nascosti nella notifica multimediale, nella schermata di blocco e nei controlli delle cuffie</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">I pulsanti Precedente e Successivo sono visualizzati nella notifica multimediale, nella schermata di blocco e nei controlli delle cuffie</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Disabilita la barra di ricerca</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">La barra di ricerca nella notifica multimediale e nella schermata di blocco è in sola lettura</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">La barra di ricerca nella notifica multimediale e nella schermata di blocco è trascinabile</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Se di recente hai modificato i dettagli di accesso al tuo account, disinstalla e reinstalla MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

@@ -33,6 +33,9 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_summary_on">يتم عرض قوائم الإعدادات القديمة</string>
   <string name="morphe_restore_old_settings_menus_summary_off">لا يتم عرض قوائم الإعدادات القديمة</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">إزالة قيود التشغيل في الخلفية</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_on">التشغيل في الخلفية غير مقيد</string>
+  <string name="morphe_remove_background_playback_restrictions_summary_off">تم تقييد التشغيل في الخلفية</string>
   <string name="morphe_shorts_disable_background_playback_title">تعطيل تشغيل فيديوهات Shorts في الخلفية</string>
   <string name="morphe_shorts_disable_background_playback_summary_on">تم تعطيل تشغيل Shorts بالخلفية</string>
   <string name="morphe_shorts_disable_background_playback_summary_off">تم تمكين تشغيل Shorts بالخلفية</string>
@@ -1636,6 +1639,15 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">تعطيل الاهتزاز عند التكبير</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">تم تعطيل الاهتزاز عند التكبير</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">تم تمكين الاهتزاز عند التكبير</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">عناصر تحكم الوسائط في الإشعارات</string>
+  <string name="morphe_notification_media_screen_summary">إخفاء عناصر تحكم الوسائط في شاشة القفل</string>
+  <string name="morphe_hide_notification_media_prev_next_title">إخفاء أزرار \"السابق\" و \"التالي\"</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">أزرار \"السابق\" و \"التالي\" مخفية في إشعار الوسائط وشاشة القفل وعناصر التحكم في سماعة الرأس</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">تظهر أزرار \"السابق\" و \"التالي\" في الإشعار وشاشة القفل وعناصر التحكم في سماعة الرأس</string>
+  <string name="morphe_disable_notification_media_seekbar_title">تعطيل شريط البحث</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">شريط البحث في إشعار الوسائط وشاشة القفل للقراءة فقط</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">شريط البحث في إشعار الوسائط وشاشة القفل قابل للسحب</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">إذا قمت مؤخرًا بتغيير تفاصيل تسجيل الدخول إلى حسابك، فقم بإلغاء تثبيت MicroG وإعادة تثبيته.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

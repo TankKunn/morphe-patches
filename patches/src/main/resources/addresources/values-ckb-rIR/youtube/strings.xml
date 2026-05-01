@@ -1341,6 +1341,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_disable_haptic_feedback_zoom_title">عیبهی زۈم دەس نالوײەە تا ڕاۈە</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">زۈم دەس نە سارا تەك دەمن زير زۈور فا وديئە</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">زۈم دەس ئەگەڵ ساراوە</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">هەركێ ڕوخی نیگەړانت گۆری ڕووخانی دڵسۈکره، پەرگەتەن و كارخوری مایكروجی دەر داسةكی زۆر بۊرى</string>
   <!-- misc.links.bypassURLRedirectsPatch -->
