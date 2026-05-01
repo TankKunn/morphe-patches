@@ -35,9 +35,9 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.25.0-dev.11](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.11)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;110 patches total
+> **[v1.25.0-dev.12](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.25.0-dev.12)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;111 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;66 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;67 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -89,6 +89,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Hide timestamp](#hide-timestamp) | Adds an option to hide the timestamp in the bottom left of the video player. |  |
 | [Hide video action buttons](#hide-video-action-buttons) | Adds options to hide video action buttons in fullscreen and portrait modes. |  |
 | [Loop video](#loop-video) | Adds an option to loop videos and display loop video button in the video player. |  |
+| [Media notification controls](#media-notification-controls) | Adds options to disable the seekbar and previous/next buttons in the media notification and headphone controls. |  |
 | [Miniplayer](#miniplayer) | Adds options to change the in-app minimized player. |  |
 | [Navigation bar](#navigation-bar) | Adds options to hide and change the bottom navigation bar (such as the Shorts button)  and the upper navigation toolbar. Patching version 20.21.37 and lower also adds a setting to use a wide searchbar. |  |
 | [Open Shorts in regular player](#open-shorts-in-regular-player) | Adds options to open Shorts in the regular video player. |  |
@@ -161,7 +162,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;2026.17.0 | 🧪&nbsp;2026.16.0 | 🧪&nbsp;2026.15.1 | 2026.10.0 | 2026.04.0 |
+| 🧪&nbsp;2026.18.0 | 🧪&nbsp;2026.17.0 | 🧪&nbsp;2026.16.0 | 2026.10.0 | 2026.04.0 |
 | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |

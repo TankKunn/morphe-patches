@@ -1,3 +1,11 @@
+# [1.25.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.11...v1.25.0-dev.12) (2026-05-01)
+
+
+### Features
+
+* **Reddit:** Add experimental support for `2026.18.0` ([019c338](https://github.com/MorpheApp/morphe-patches/commit/019c338c9c4c82f0b5342c117553887a4c6defce))
+* **YouTube - System media controls:** Add options to hide prev/next and seekbar in notification media controls ([#1322](https://github.com/MorpheApp/morphe-patches/issues/1322)) ([71aa218](https://github.com/MorpheApp/morphe-patches/commit/71aa218979117e5cc56d4656a578860845278b38))
+
 # [1.25.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0-dev.10...v1.25.0-dev.11) (2026-04-30)
 
 
