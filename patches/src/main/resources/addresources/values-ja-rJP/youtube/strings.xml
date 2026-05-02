@@ -1639,14 +1639,14 @@ Automotive レイアウト
   <string name="morphe_disable_haptic_feedback_zoom_summary_on">ズームの触覚フィードバックは無効です</string>
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">ズームの触覚フィードバックは有効です</string>
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">通知メディアコントロール</string>
-  <string name="morphe_notification_media_screen_summary">ロック画面のメディアコントロールコンポーネントを非表示</string>
+  <string name="morphe_notification_media_screen_title">ロック画面のメディア コントロール</string>
+  <string name="morphe_notification_media_screen_summary">通知パネルとロック画面に表示されるメディア コントロールのコンポーネントを非表示にします</string>
   <string name="morphe_hide_notification_media_prev_next_title">前の動画ボタンと次の動画ボタンを非表示</string>
-  <string name="morphe_hide_notification_media_prev_next_summary_on">メディア通知、ロック画面、ヘッドホンコントロールでは、前の動画ボタンと次の動画ボタンが非表示になります</string>
-  <string name="morphe_hide_notification_media_prev_next_summary_off">メディア通知、ロック画面、ヘッドホンコントロールでは、前の動画ボタンと次の動画ボタンが表示されます</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">通知パネルおよびロック画面のメディア コントロールには、前の動画ボタンと次の動画ボタンが表示されません。ヘッドホンからの操作による前の動画 / 次の動画機能も無効です</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">通知パネルおよびロック画面のメディア コントロールには、前の動画ボタンと次の動画ボタンが表示されます。ヘッドホンからの操作による前の動画 / 次の動画機能も有効です</string>
   <string name="morphe_disable_notification_media_seekbar_title">シークバーを無効化</string>
-  <string name="morphe_disable_notification_media_seekbar_summary_on">メディア通知とロック画面のシークバーは読み取り専用です</string>
-  <string name="morphe_disable_notification_media_seekbar_summary_off">メディア通知とロック画面のシークバーはドラッグ可能です</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">通知パネルおよびロック画面のメディア コントロールのシークバーはシーク操作が無効です</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">通知パネルおよびロック画面のメディア コントロールのシークバーはシーク操作が有効です</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">最近アカウントのログイン情報を変更した場合は、MicroG をアンインストールして再インストールしてください。</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

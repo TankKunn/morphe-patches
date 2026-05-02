@@ -1645,9 +1645,9 @@ Activar esto puede desbloquear calidades de vídeo más altas"</string>
   <string name="morphe_hide_notification_media_prev_next_title">Ocultar botones \"Anterior\" y \"Siguiente\"</string>
   <string name="morphe_hide_notification_media_prev_next_summary_on">Los botones \"Anterior\" y \"Siguiente\" están ocultos en la notificación multimedia, la pantalla de bloqueo y los controles de los auriculares</string>
   <string name="morphe_hide_notification_media_prev_next_summary_off">Los botones \"Anterior\" y \"Siguiente\" se muestran en la notificación, la pantalla de bloqueo y los controles de los auriculares</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Desactivar la barra de búsqueda</string>
-  <string name="morphe_disable_notification_media_seekbar_summary_on">La barra de búsqueda en la notificación multimedia y la pantalla de bloqueo es de solo lectura</string>
-  <string name="morphe_disable_notification_media_seekbar_summary_off">La barra de búsqueda en la notificación multimedia y la pantalla de bloqueo es arrastrable</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Desactivar barra de progreso</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">La barra de progreso en la notificación multimedia y la pantalla de bloqueo es de solo lectura</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">La barra de progreso en la notificación multimedia y la pantalla de bloqueo es arrastrable</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Si has cambiado recientemente los datos de inicio de sesión de tu cuenta, desinstala y vuelve a instalar MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

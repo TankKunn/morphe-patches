@@ -1643,13 +1643,13 @@ Activer ceci peut débloquer des qualités vidéo plus élevées
   <string name="morphe_disable_haptic_feedback_zoom_summary_off">Le retour haptique du zoom est activé</string>
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">Commandes multimédias des notifications</string>
-  <string name="morphe_notification_media_screen_summary">Masquer les composants de contrôle multimédia de l\'écran de verrouillage</string>
+  <string name="morphe_notification_media_screen_summary">Masquer les composants des commandes multimédia de l’écran de verrouillage</string>
   <string name="morphe_hide_notification_media_prev_next_title">Masquer les boutons \'Précédent\' &amp; \'Suivant\'</string>
-  <string name="morphe_hide_notification_media_prev_next_summary_on">Les boutons \'Précédent\' &amp; \'Suivant\' sont masqués dans la notification multimédia, l\'écran de verrouillage et les commandes du casque</string>
-  <string name="morphe_hide_notification_media_prev_next_summary_off">Les boutons \'Précédent\' &amp; \'Suivant\' sont affichés dans la notification, l\'écran de verrouillage et les commandes du casque</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Désactiver la barre de recherche</string>
-  <string name="morphe_disable_notification_media_seekbar_summary_on">La barre de recherche dans la notification multimédia et l\'écran de verrouillage est en lecture seule</string>
-  <string name="morphe_disable_notification_media_seekbar_summary_off">La barre de recherche dans la notification multimédia et l\'écran de verrouillage est glissable</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_on">Les boutons \'Précédent\' &amp; \'Suivant\' sont masqués dans la notification multimédia, sur l\'écran de verrouillage et les commandes du casque</string>
+  <string name="morphe_hide_notification_media_prev_next_summary_off">Les boutons \'Précédent\' &amp; \'Suivant\' sont affichés dans la notification multimédia, sur l\'écran de verrouillage et les commandes du casque</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Désactiver la barre de progression</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_on">La barre de progression dans la notification multimédia et sur l’écran de verrouillage est en lecture seule</string>
+  <string name="morphe_disable_notification_media_seekbar_summary_off">La barre de progression dans la notification multimédia et sur l’écran de verrouillage est déplaçable</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Si vous avez récemment modifié les identifiants de connexion de votre compte, désinstallez et réinstallez MicroG.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->
