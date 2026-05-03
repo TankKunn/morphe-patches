@@ -1,3 +1,15 @@
+# [1.26.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0...v1.26.0-dev.1) (2026-05-03)
+
+
+### Bug Fixes
+
+* **YouTube - Swipe controls:** 2x speed action is triggered when the status bar is visible on Android 15+ ([#1341](https://github.com/MorpheApp/morphe-patches/issues/1341)) ([e0005d3](https://github.com/MorpheApp/morphe-patches/commit/e0005d38ac9140a0a4209a28bdf9601ac9759034))
+
+
+### Features
+
+* **YouTube:** Add experimental support for `21.18.163` ([1bc264a](https://github.com/MorpheApp/morphe-patches/commit/1bc264af775087244c2fa50f66b76999cad48fa0))
+
 # [1.25.0](https://github.com/MorpheApp/morphe-patches/compare/v1.24.0...v1.25.0) (2026-05-02)
 
 
