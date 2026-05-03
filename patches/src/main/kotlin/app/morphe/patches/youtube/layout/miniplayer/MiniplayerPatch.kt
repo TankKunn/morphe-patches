@@ -73,7 +73,7 @@ val miniplayerPatch = bytecodePatch(
                 )
             }
 
-
+        preferences += SwitchPreference("morphe_miniplayer_disable_resuming")
         preferences += SwitchPreference("morphe_miniplayer_disable_drag_and_drop")
         preferences += SwitchPreference("morphe_miniplayer_disable_horizontal_drag")
         preferences += SwitchPreference("morphe_miniplayer_disable_rounded_corners")
@@ -159,6 +159,25 @@ val miniplayerPatch = bytecodePatch(
                 """
             )
         }
+
+        // region Disable resuming miniplayer (Continue watching)
+
+        ShowMiniplayerCommandFingerprint.let {
+            it.method.apply {
+                val index = it.instructionMatches[1].index
+                val register = getInstruction<OneRegisterInstruction>(index).registerA
+
+                addInstructions(
+                    index,
+                    """
+                        invoke-static { v$register }, $EXTENSION_CLASS->disableResumingStartupMiniPlayer(Z)Z
+                        move-result v$register
+                    """
+                )
+            }
+        }
+
+        // endregion
 
         // region Enable tablet miniplayer.
         // Parts of the YT code is removed in 20.37+ and the legacy player no longer works.
