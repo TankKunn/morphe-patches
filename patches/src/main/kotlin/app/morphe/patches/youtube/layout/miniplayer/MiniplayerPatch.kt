@@ -26,7 +26,6 @@ import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.findInstructionIndicesReversedOrThrow
-import app.morphe.util.getMutableMethod
 import app.morphe.util.getReference
 import app.morphe.util.indexOfFirstInstructionOrThrow
 import app.morphe.util.indexOfFirstLiteralInstructionOrThrow
@@ -35,7 +34,6 @@ import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.Method
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
-import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
@@ -194,18 +192,10 @@ val miniplayerPatch = bytecodePatch(
             // endregion
 
             // region Legacy tablet miniplayer hooks.
-            MiniplayerOverrideFingerprint.let {
-                it.instructionMatches.last()
-                    .getInstruction<ReferenceInstruction>()
-                    .getReference<MethodReference>()!!
-                    .getMutableMethod()
-                    .apply {
-                        findReturnIndicesReversed().forEach { index ->
-                            insertLegacyTabletMiniplayerOverride(
-                                index
-                            )
-                        }
-                    }
+            MiniplayerOverrideFingerprint.instructionMatches.last().getMethodCalled().apply {
+                findReturnIndicesReversed().forEach { index ->
+                    insertLegacyTabletMiniplayerOverride(index)
+                }
             }
 
             MiniplayerResponseModelSizeCheckFingerprint.let {
