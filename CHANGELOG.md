@@ -1,3 +1,16 @@
+# [1.26.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.26.0-dev.2...v1.26.0-dev.3) (2026-05-05)
+
+
+### Bug Fixes
+
+* Disable 'open with' link verification that prevents opening YouTube/Music/Reddit web links on some devices ([b9dbfc1](https://github.com/MorpheApp/morphe-patches/commit/b9dbfc1e05df0f2268b11caef2f3391dc3d8797d))
+
+
+### Features
+
+* **YouTube - Miniplayer:** Add "Disable resuming miniplayer" setting ([#1342](https://github.com/MorpheApp/morphe-patches/issues/1342)) ([0eb81a9](https://github.com/MorpheApp/morphe-patches/commit/0eb81a91c2d70d4416a56fc91f3d238e4c6f2f29))
+* **YouTube - Sanitize sharing links:** Add setting to change Share links to shortened URLs ([#1346](https://github.com/MorpheApp/morphe-patches/issues/1346)) ([f24c119](https://github.com/MorpheApp/morphe-patches/commit/f24c1190796904e77a77a79e086208e6c059b09b))
+
 # [1.26.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.26.0-dev.1...v1.26.0-dev.2) (2026-05-03)
 
 
