@@ -1,3 +1,10 @@
+# [1.26.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.26.0-dev.3...v1.26.0-dev.4) (2026-05-05)
+
+
+### Bug Fixes
+
+* Resolve patching error with older versions of Android ([84c74ae](https://github.com/MorpheApp/morphe-patches/commit/84c74ae7a9678ab7c89a660d0dd38d78db506e8f))
+
 # [1.26.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.26.0-dev.2...v1.26.0-dev.3) (2026-05-05)
 
 
