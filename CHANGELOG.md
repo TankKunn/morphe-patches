@@ -1,3 +1,10 @@
+## [1.26.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.26.0...v1.26.1-dev.1) (2026-05-06)
+
+
+### Bug Fixes
+
+* Add patch exception message for users who ignore the Manager update prompt ([87beb32](https://github.com/MorpheApp/morphe-patches/commit/87beb32f10b05fd960e86cf393bbd14bba9460b5))
+
 # [1.26.0](https://github.com/MorpheApp/morphe-patches/compare/v1.25.0...v1.26.0) (2026-05-05)
 
 
