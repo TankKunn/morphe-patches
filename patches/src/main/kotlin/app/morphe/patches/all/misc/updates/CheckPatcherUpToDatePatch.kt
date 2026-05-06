@@ -3,7 +3,6 @@ package app.morphe.patches.all.misc.updates
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.patch.resourcePatch
 
 // TODO: Delete this after Manager 1.17.0 has been released
 internal val checkPatcherUpToDatePatch = bytecodePatch {
@@ -11,7 +10,7 @@ internal val checkPatcherUpToDatePatch = bytecodePatch {
         try {
             Fingerprint(
                 filters = listOf(
-                    methodCall()
+                    methodCall(definingClass = "Lapp/morphe/extension/shared/Utils;")
                 )
             ).instructionMatches.first().getMethodCalled()
         } catch (_: Throwable) {
