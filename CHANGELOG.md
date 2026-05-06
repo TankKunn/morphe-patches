@@ -1,3 +1,10 @@
+## [1.26.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.26.1-dev.1...v1.26.1-dev.2) (2026-05-06)
+
+
+### Bug Fixes
+
+* Add YouTube patch exception message for users who ignore the Manager update prompt ([296e137](https://github.com/MorpheApp/morphe-patches/commit/296e137e63f79493fedea773c1d415cc1da94064))
+
 ## [1.26.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.26.0...v1.26.1-dev.1) (2026-05-06)
 
 
