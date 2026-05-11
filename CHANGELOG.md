@@ -1,3 +1,10 @@
+# [1.27.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.27.0-dev.3...v1.27.0-dev.4) (2026-05-11)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Resolve Shorts freezing and feed scrolling issues ([#1433](https://github.com/MorpheApp/morphe-patches/issues/1433)) ([85e0b0c](https://github.com/MorpheApp/morphe-patches/commit/85e0b0c08f465e067716d52c66af396f28b267b0))
+
 # [1.27.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.27.0-dev.2...v1.27.0-dev.3) (2026-05-10)
 
 
