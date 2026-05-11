@@ -4,8 +4,6 @@ import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.OpcodesFilter
 import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
-import app.morphe.patcher.opcode
-import app.morphe.patcher.parametersMatch
 import app.morphe.patcher.string
 import app.morphe.util.getReference
 import app.morphe.util.indexOfFirstInstruction
@@ -183,6 +181,17 @@ internal object MediaSessionFeatureFlagFingerprint : Fingerprint(
     returnType = "Z",
     filters = listOf(
         literal(45640404L)
+    )
+)
+
+// Feature flag that causes Shorts content to freeze and fail to load when scrolling.
+// Flag does not seem to affect Shorts if spoofing is off.
+internal object ReelItemWatchResponseFeatureFlagFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "Z",
+    parameters = listOf(),
+    filters = listOf(
+        literal(45638126L)
     )
 )
 

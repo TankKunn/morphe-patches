@@ -260,6 +260,21 @@ public class SpoofVideoStreamsPatch {
      * Injection point.
      * Turns off a feature flag that interferes with video playback.
      */
+    public static boolean useReelItemWatchResponseFeatureFlag(boolean original) {
+        if (original) {
+            Logger.printDebug(() -> "useReelItemWatchResponse is set on");
+        }
+
+        if (!SPOOF_VIDEO_STREAMS) {
+            return original;
+        }
+        return false;
+    }
+
+    /**
+     * Injection point.
+     * Turns off a feature flag that interferes with video playback.
+     */
     public static boolean useMediaSessionFeatureFlag(boolean original) {
         if (original) {
             Logger.printDebug(() -> "useMediaSessionFeatureFlag is set on");
