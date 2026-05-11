@@ -1,3 +1,10 @@
+# [1.27.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.27.0-dev.4...v1.27.0-dev.5) (2026-05-11)
+
+
+### Bug Fixes
+
+* **Spoof video streams:** Change default client to Android VR ([cafec9c](https://github.com/MorpheApp/morphe-patches/commit/cafec9c61ec65740358777121172896ed7efdf18))
+
 # [1.27.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.27.0-dev.3...v1.27.0-dev.4) (2026-05-11)
 
 
