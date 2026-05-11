@@ -19,6 +19,7 @@ import static app.morphe.extension.shared.spoof.js.JavaScriptManager.getJavaScri
 import static app.morphe.extension.shared.spoof.js.JavaScriptManager.getJavaScriptVariant;
 import static app.morphe.extension.shared.spoof.requests.PlayerRoutes.GET_PLAYER_STREAMING_DATA;
 import static app.morphe.extension.shared.spoof.requests.PlayerRoutes.GET_REEL_STREAMING_DATA;
+import static app.morphe.extension.shared.spoof.requests.PlayerRoutes.SEND_SAVE_VIDEO_TO_PLAYLIST;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +40,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
@@ -155,11 +157,11 @@ public class StreamOrDetailsDataRequest {
 
     private StreamOrDetailsDataRequest(@Nullable Route.CompiledRoute endpoint,
                                        String videoId, Map<String, String> playerHeaders) {
+        this.videoId = videoId;
         // Strictly require playerHeaders only if endpoint is null (only for Stream fetching)
         if (endpoint == null) {
             Objects.requireNonNull(playerHeaders);
         }
-        this.videoId = videoId;
         this.future = submitOnBackgroundThread(() -> fetch(endpoint, videoId, playerHeaders));
     }
 
@@ -173,7 +175,7 @@ public class StreamOrDetailsDataRequest {
         return streamCache.get(videoId);
     }
 
-    public static StreamOrDetailsDataRequest fetchDetailsRequest(Route.CompiledRoute videoDetailsEndpoint,
+    public static StreamOrDetailsDataRequest getDetailsRequest(Route.CompiledRoute videoDetailsEndpoint,
                                                                  String videoId, Map<String, String> fetchHeaders) {
         // Always fetch, even if there is an existing request for the same video.
         StreamOrDetailsDataRequest request = new StreamOrDetailsDataRequest(videoDetailsEndpoint, videoId, fetchHeaders);
@@ -205,7 +207,6 @@ public class StreamOrDetailsDataRequest {
                                           boolean showErrorToasts) {
         Objects.requireNonNull(clientType);
         Objects.requireNonNull(videoId);
-        Objects.requireNonNull(playerHeaders);
 
         final boolean isStream = clientType.endpoint == GET_PLAYER_STREAMING_DATA || clientType.endpoint == GET_REEL_STREAMING_DATA;
 
@@ -213,55 +214,52 @@ public class StreamOrDetailsDataRequest {
 
         try {
             HttpURLConnection connection;
-            connection = PlayerRoutes.getPlayerResponseConnectionFromRoute(
-                    clientType.endpoint,
-                    clientType.userAgent,
-                    clientType.clientName,
-                    clientType.clientVersion
-            );
+            connection = PlayerRoutes.getPlayerResponseConnectionFromRoute(clientType);
             connection.setConnectTimeout(HTTP_TIMEOUT_MILLISECONDS);
             connection.setReadTimeout(HTTP_TIMEOUT_MILLISECONDS);
 
             boolean authHeadersIncludes = false;
             authHeadersOverrides = false;
 
-            for (String key : REQUEST_HEADER_KEYS) {
-                String value = playerHeaders.get(key);
+            if (isStream || clientType.endpoint == SEND_SAVE_VIDEO_TO_PLAYLIST) {
+                for (String key : REQUEST_HEADER_KEYS) {
+                    String value = playerHeaders.get(key);
 
-                if (value != null) {
-                    if (key.equals(AUTHORIZATION_HEADER)) {
-                        if (isStream) {
-                            if (clientType.supportsOAuth2) {
-                                String authorization = OAuth2Requester.getAndUpdateAccessTokenIfNeeded();
-                                if (authorization.isEmpty()) {
-                                    // Access token is empty, the user has not signed in to VR.
-                                    // YouTube/YouTube Music access tokens cannot be used with YouTube VR.
-                                    // Do not set the header.
+                    if (value != null) {
+                        if (key.equals(AUTHORIZATION_HEADER)) {
+                            if (isStream) {
+                                if (clientType.supportsOAuth2) {
+                                    String authorization = OAuth2Requester.getAndUpdateAccessTokenIfNeeded();
+                                    if (authorization.isEmpty()) {
+                                        // Access token is empty, the user has not signed in to VR.
+                                        // YouTube/YouTube Music access tokens cannot be used with YouTube VR.
+                                        // Do not set the header.
+                                        Logger.printDebug(() -> "Not including request header: " + key);
+                                        continue;
+                                    } else {
+                                        // Access token is not empty, the user has signed in to VR.
+                                        // Set the header.
+                                        value = authorization;
+                                        authHeadersOverrides = true;
+                                    }
+                                } else if (!clientType.canLogin) {
                                     Logger.printDebug(() -> "Not including request header: " + key);
                                     continue;
-                                } else {
-                                    // Access token is not empty, the user has signed in to VR.
-                                    // Set the header.
-                                    value = authorization;
-                                    authHeadersOverrides = true;
                                 }
-                            } else if (!clientType.canLogin) {
-                                Logger.printDebug(() -> "Not including request header: " + key);
-                                continue;
                             }
+                            authHeadersIncludes = true;
                         }
-                        authHeadersIncludes = true;
+
+                        Logger.printDebug(() -> "Including request header: " + key);
+                        connection.setRequestProperty(key, value);
                     }
-
-                    Logger.printDebug(() -> "Including request header: " + key);
-                    connection.setRequestProperty(key, value);
                 }
-            }
 
-            if (isStream && !authHeadersIncludes && clientType.requireLogin) {
-                Logger.printDebug(() -> "Skipping client since user is not logged in: " + clientType
-                        + " videoId: " + videoId);
-                return null;
+                if (isStream && !authHeadersIncludes && clientType.requireLogin) {
+                    Logger.printDebug(() -> "Skipping client since user is not logged in: " + clientType
+                            + " videoId: " + videoId);
+                    return null;
+                }
             }
 
             Logger.printDebug(() -> "Fetching video " + (isStream ? "stream" : "details") +
@@ -368,6 +366,8 @@ public class StreamOrDetailsDataRequest {
 
                 JSONObject jsonResponse = new JSONObject(response);
 
+                Logger.printDebug(() -> String.format("Video details response:\n\n%s", response));
+
                 if (clientType.endpoint.equals(PlayerRoutes.GET_CHANNEL_FROM_ID)) {
                     return jsonResponse
                             .getJSONObject("videoDetails")
@@ -395,12 +395,13 @@ public class StreamOrDetailsDataRequest {
             // Retry with different client if empty response body is received.
             int i = 0;
             for (ClientType clientTypeStream : clientStreamOrderToUse) {
-                Logger.printDebug(() -> "Fetching: " + clientTypeStream.endpoint);
+                Logger.printDebug(() -> "Fetching using endpoint: " + clientTypeStream.endpoint.getCompiledRoute());
 
                 // Show an error if the last client type fails, or if debug is enabled then show for all attempts.
                 final boolean showErrorToast = (++i == clientStreamOrderToUse.length) || debugEnabled;
 
                 HttpURLConnection connection = send(clientTypeStream, videoId, playerHeaders, showErrorToast);
+                Logger.printDebug(() -> "Connection result: " + connection);
                 if (connection != null) {
                     Object playerResponseBuffer = buildPlayerStreamOrDetailsResponse(clientTypeStream, connection);
 
@@ -431,11 +432,11 @@ public class StreamOrDetailsDataRequest {
         } else {
             for (ClientType clientTypeDetails : ClientType.values()) {
                 if (clientTypeDetails.endpoint == videoDetailsEndpoint) {
-                    Logger.printDebug(() -> String.valueOf(clientTypeDetails.endpoint));
+                    Logger.printDebug(() -> "Fetching using endpoint: " + clientTypeDetails.endpoint.getCompiledRoute());
 
                     HttpURLConnection connection =
                         send(clientTypeDetails, videoId, playerHeaders, false);
-
+                    Logger.printDebug(() -> "Connection result: " + connection);
                     if (connection != null) {
                         return buildPlayerStreamOrDetailsResponse(clientTypeDetails, connection);
                     }
@@ -446,30 +447,33 @@ public class StreamOrDetailsDataRequest {
     }
 
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
-    public boolean fetchStreamOrDetailsCompleted() {
+    public boolean fetchIsDone() {
         return future.isDone();
     }
 
     @Nullable
-    public Object getStreamOrDetails() {
+    public Object getStreamDetails() {
         try {
             // This hook is always called off the main thread,
             // but this can later be called for the same video ID from the main thread.
             // This is not a concern, since the fetch will always be finished
             // and never block the main thread.
             // But if debugging, then still verify this is the situation.
-            if (BaseSettings.DEBUG.get() && !fetchStreamOrDetailsCompleted() && Utils.isCurrentlyOnMainThread()) {
-                Logger.printException(() -> "Error: Blocking main thread");
+            if (BaseSettings.DEBUG.get() && !fetchIsDone() && Utils.isCurrentlyOnMainThread()) {
+                Logger.printException(() -> "Debug: Blocking main thread");
             }
-
             return future.get(MAX_MILLISECONDS_TO_WAIT_FOR_FETCH, TimeUnit.MILLISECONDS);
         } catch (TimeoutException ex) {
-            Logger.printInfo(() -> "getStreamOrDetails timed out", ex);
+            Logger.printInfo(() -> "getStreamDetails timed out", ex);
+            future.cancel(true);
+        } catch (CancellationException ex) {
+            Logger.printInfo(() -> "getStreamDetails was previously cancelled");
         } catch (InterruptedException ex) {
-            Logger.printException(() -> "getStreamOrDetails interrupted", ex);
+            Logger.printException(() -> "getStreamDetails interrupted", ex);
+            future.cancel(true);
             Thread.currentThread().interrupt(); // Restore interrupt status flag.
         } catch (ExecutionException ex) {
-            Logger.printException(() -> "getStreamOrDetails failure", ex);
+            Logger.printException(() -> "getStreamDetails failure", ex);
         }
 
         return null;

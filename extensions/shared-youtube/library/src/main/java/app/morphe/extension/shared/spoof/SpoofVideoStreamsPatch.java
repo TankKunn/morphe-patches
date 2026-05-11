@@ -13,12 +13,11 @@ import java.util.Map;
 import java.util.Objects;
 
 import app.morphe.extension.shared.Logger;
-import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.requests.Route;
 import app.morphe.extension.shared.settings.AppLanguage;
-import app.morphe.extension.shared.settings.BaseSettings;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
+import app.morphe.extension.shared.spoof.requests.PlayerRoutes;
 import app.morphe.extension.shared.spoof.requests.StreamOrDetailsDataRequest;
 
 @SuppressWarnings("unused")
@@ -334,10 +333,10 @@ public class SpoofVideoStreamsPatch {
             try {
                 StreamOrDetailsDataRequest request = StreamOrDetailsDataRequest.getStreamRequestForVideoId(videoId);
                 if (request != null) {
-                    var stream = request.getStreamOrDetails();
+                    var stream = (byte[]) request.getStreamDetails();
                     if (stream != null) {
                         Logger.printDebug(() -> "Overriding video stream: " + videoId);
-                        return (byte[]) stream;
+                        return stream;
                     }
                 }
 
@@ -350,13 +349,8 @@ public class SpoofVideoStreamsPatch {
         return null;
     }
 
-    @Nullable
     public static StreamOrDetailsDataRequest fetchDetails(Route.CompiledRoute videoDetailsEndpoint, String videoId) {
-        Map<String, String> headers = currentVideoRequestHeader;
-        if (headers == null) {
-            return null;
-        }
-        return StreamOrDetailsDataRequest.fetchDetailsRequest(videoDetailsEndpoint, videoId, headers);
+        return StreamOrDetailsDataRequest.getDetailsRequest(videoDetailsEndpoint, videoId, currentVideoRequestHeader);
     }
 
     /**
