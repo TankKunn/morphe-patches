@@ -13,13 +13,14 @@ package app.morphe.extension.shared.spoof.requests;
 import static app.morphe.extension.shared.StringRef.str;
 import static app.morphe.extension.shared.Utils.isNotEmpty;
 import static app.morphe.extension.shared.Utils.submitOnBackgroundThread;
+import static app.morphe.extension.shared.spoof.SpoofVideoStreamsPatch.originalPageIDHeaderValue;
 import static app.morphe.extension.shared.spoof.js.JavaScriptEngineSupport.supportsJavaScriptEngine;
 import static app.morphe.extension.shared.spoof.js.JavaScriptManager.getDeobfuscatedStreamingData;
 import static app.morphe.extension.shared.spoof.js.JavaScriptManager.getJavaScriptHash;
 import static app.morphe.extension.shared.spoof.js.JavaScriptManager.getJavaScriptVariant;
+import static app.morphe.extension.shared.spoof.requests.PlayerRoutes.GET_CHANNEL_FROM_ID;
 import static app.morphe.extension.shared.spoof.requests.PlayerRoutes.GET_PLAYER_STREAMING_DATA;
 import static app.morphe.extension.shared.spoof.requests.PlayerRoutes.GET_REEL_STREAMING_DATA;
-import static app.morphe.extension.shared.spoof.requests.PlayerRoutes.SEND_SAVE_VIDEO_TO_PLAYLIST;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -100,10 +101,11 @@ public class StreamOrDetailsDataRequest {
         Logger.printDebug(() -> "Available spoof clients: " + orderToUse);
     }
 
-    private static final String AUTHORIZATION_HEADER = "Authorization";
+    private static final String AUTHORIZATION_HEADER = "Authorization"; // Available only to logged-in users.
+    private static final String PAGE_ID_HEADER = "X-Goog-PageId"; // Available only to logged-in users.
 
     private static final String[] REQUEST_HEADER_KEYS = {
-            AUTHORIZATION_HEADER, // Available only to logged-in users.
+            AUTHORIZATION_HEADER,
             "X-GOOG-API-FORMAT-VERSION",
             "X-Goog-Visitor-Id"
     };
@@ -221,31 +223,29 @@ public class StreamOrDetailsDataRequest {
             boolean authHeadersIncludes = false;
             authHeadersOverrides = false;
 
-            if (isStream || clientType.endpoint == SEND_SAVE_VIDEO_TO_PLAYLIST) {
+            if (clientType.endpoint != GET_CHANNEL_FROM_ID) {
                 for (String key : REQUEST_HEADER_KEYS) {
                     String value = playerHeaders.get(key);
 
                     if (value != null) {
                         if (key.equals(AUTHORIZATION_HEADER)) {
-                            if (isStream) {
-                                if (clientType.supportsOAuth2) {
-                                    String authorization = OAuth2Requester.getAndUpdateAccessTokenIfNeeded();
-                                    if (authorization.isEmpty()) {
-                                        // Access token is empty, the user has not signed in to VR.
-                                        // YouTube/YouTube Music access tokens cannot be used with YouTube VR.
-                                        // Do not set the header.
-                                        Logger.printDebug(() -> "Not including request header: " + key);
-                                        continue;
-                                    } else {
-                                        // Access token is not empty, the user has signed in to VR.
-                                        // Set the header.
-                                        value = authorization;
-                                        authHeadersOverrides = true;
-                                    }
-                                } else if (!clientType.canLogin) {
+                            if (clientType.supportsOAuth2) {
+                                String authorization = OAuth2Requester.getAndUpdateAccessTokenIfNeeded();
+                                if (authorization.isEmpty()) {
+                                    // Access token is empty, the user has not signed in to VR.
+                                    // YouTube/YouTube Music access tokens cannot be used with YouTube VR.
+                                    // Do not set the header.
                                     Logger.printDebug(() -> "Not including request header: " + key);
                                     continue;
+                                } else {
+                                    // Access token is not empty, the user has signed in to VR.
+                                    // Set the header.
+                                    value = authorization;
+                                    authHeadersOverrides = true;
                                 }
+                            } else if (!clientType.canLogin) {
+                                Logger.printDebug(() -> "Not including request header: " + key);
+                                continue;
                             }
                             authHeadersIncludes = true;
                         }
@@ -255,7 +255,12 @@ public class StreamOrDetailsDataRequest {
                     }
                 }
 
-                if (isStream && !authHeadersIncludes && clientType.requireLogin) {
+                if (!originalPageIDHeaderValue.isEmpty()) {
+                    Logger.printDebug(() -> "Including PAGE_ID_HEADER header: " + originalPageIDHeaderValue);
+                    connection.setRequestProperty(PAGE_ID_HEADER, originalPageIDHeaderValue);
+                }
+
+                if (!authHeadersIncludes && clientType.requireLogin) {
                     Logger.printDebug(() -> "Skipping client since user is not logged in: " + clientType
                             + " videoId: " + videoId);
                     return null;
@@ -366,13 +371,11 @@ public class StreamOrDetailsDataRequest {
 
                 JSONObject jsonResponse = new JSONObject(response);
 
-                Logger.printDebug(() -> String.format("Video details response:\n\n%s", response));
-
                 if (clientType.endpoint.equals(PlayerRoutes.GET_CHANNEL_FROM_ID)) {
                     return jsonResponse
                             .getJSONObject("videoDetails")
                             .getString("channelId");
-                } else if (clientType.endpoint.equals(PlayerRoutes.SEND_SAVE_VIDEO_TO_PLAYLIST)) {
+                } else if (clientType.endpoint.equals(PlayerRoutes.SEND_SAVE_VIDEO_TO_WATCH_LATER)) {
                     return response;
                 }
             }

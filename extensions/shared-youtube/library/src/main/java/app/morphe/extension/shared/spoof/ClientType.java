@@ -244,12 +244,12 @@ public enum ClientType {
             ANDROID_REEL.buildID,
             ANDROID_REEL.clientVersion,
             ANDROID_REEL.clientPlatform,
-            ANDROID_REEL.canLogin,
-            ANDROID_REEL.requireLogin,
-            ANDROID_REEL.supportsMultiAudioTracks,
+            true,
+            true,
+            false,
             ANDROID_REEL.supportsOAuth2,
             ANDROID_REEL.requireJS,
-            PlayerRoutes.SEND_SAVE_VIDEO_TO_PLAYLIST,
+            PlayerRoutes.SEND_SAVE_VIDEO_TO_WATCH_LATER,
             "Save To Watch Later"
     );
 
