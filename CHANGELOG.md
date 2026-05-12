@@ -1,3 +1,15 @@
+# [1.27.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.27.0-dev.5...v1.27.0-dev.6) (2026-05-12)
+
+
+### Bug Fixes
+
+* **YouTube - Save to watch later:** Support saving videos to 'brand' accounts, prevent opening live shorts from live avatar ([#1438](https://github.com/MorpheApp/morphe-patches/issues/1438)) ([0b12c81](https://github.com/MorpheApp/morphe-patches/commit/0b12c81793aac544f83aa36ee0c19c88cf81cbda))
+
+
+### Features
+
+* **YouTube:** Add `Open channel of live avatar` patch ([#1408](https://github.com/MorpheApp/morphe-patches/issues/1408)) ([b221097](https://github.com/MorpheApp/morphe-patches/commit/b221097be8f1422f35f69b10d94775a2e245b01b))
+
 # [1.27.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.27.0-dev.4...v1.27.0-dev.5) (2026-05-11)
 
 
