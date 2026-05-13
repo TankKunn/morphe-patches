@@ -81,8 +81,28 @@ val openChannelOfLiveAvatarPatch = bytecodePatch(
 
         val playbackStartVideoIdMethod = PlaybackStartDescriptorToStringFingerprint
             .instructionMatches[1].getMethodCalled()
-        val playbackStartVideoIdMethodName = playbackStartVideoIdMethod.name
-        val playbackStartVideoIdMethodClass = playbackStartVideoIdMethod.definingClass
+        fun patchLogic(mapRegister: String, playerDescriptorClassRegister: String, free1: String, free2: String): String {
+            val methodParameter = playerDescriptorClassRegister.startsWith("p")
+
+            return """
+                move-object/from16 $free1, $mapRegister
+                ${
+                    if (methodParameter) "move-object/from16 $free2, $playerDescriptorClassRegister"
+                    else ""
+                }
+                invoke-virtual { ${
+                    if (methodParameter) free2
+                    else playerDescriptorClassRegister
+                } }, ${playbackStartVideoIdMethod.definingClass}->${playbackStartVideoIdMethod.name}()Ljava/lang/String;
+                move-result-object $free2
+                invoke-static { $free1, $free2 }, $EXTENSION_CLASS->openChannel(Ljava/util/Map;Ljava/lang/String;)Z
+                move-result $free1
+                if-eqz $free1, :ignore
+                return-void
+                :ignore
+                nop
+            """
+        }
 
         clientSettingEndpointFingerprint.let {
             it.method.apply {
@@ -95,17 +115,7 @@ val openChannelOfLiveAvatarPatch = bytecodePatch(
 
                 addInstructionsAtControlFlowLabel(
                     insertIndex,
-                    """
-                        move-object/from16 v$free1, p2
-                        invoke-virtual { v$moveResultRegister }, $playbackStartVideoIdMethodClass->$playbackStartVideoIdMethodName()Ljava/lang/String;
-                        move-result-object v$free2
-                        invoke-static { v$free1, v$free2 }, $EXTENSION_CLASS->openChannel(Ljava/util/Map;Ljava/lang/String;)Z
-                        move-result v$free1
-                        if-eqz v$free1, :ignore
-                        return-void
-                        :ignore
-                        nop
-                    """
+                    patchLogic("p2", "v$moveResultRegister", "v$free1", "v$free2")
                 )
             }
         }
@@ -114,18 +124,7 @@ val openChannelOfLiveAvatarPatch = bytecodePatch(
         // and by coincidence that patch runs before this patch which is critical.
         ShortsPlaybackIntentFingerprint.method.addInstructionsWithLabels(
             0,
-            """
-                move-object/from16 v0, p1
-                invoke-virtual { v0 }, $playbackStartVideoIdMethodClass->$playbackStartVideoIdMethodName()Ljava/lang/String;
-                move-result-object v1
-                move-object/from16 v0, p2
-                invoke-static { v0, v1 }, $EXTENSION_CLASS->openChannel(Ljava/util/Map;Ljava/lang/String;)Z
-                move-result v0
-                if-eqz v0, :ignore
-                return-void
-                :ignore
-                nop
-            """
+            patchLogic("p2", "p1", "v0", "v1")
         )
     }
 }
