@@ -1,3 +1,10 @@
+## [1.27.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.27.0...v1.27.1-dev.1) (2026-05-13)
+
+
+### Bug Fixes
+
+* **YouTube - Open channel of live avatar:** Patch may not work when app is using non English language ([#1459](https://github.com/MorpheApp/morphe-patches/issues/1459)) ([34d55c2](https://github.com/MorpheApp/morphe-patches/commit/34d55c27d9f915cc39bed37af5a9a4c1e28a3e0f))
+
 # [1.27.0](https://github.com/MorpheApp/morphe-patches/compare/v1.26.0...v1.27.0) (2026-05-12)
 
 
