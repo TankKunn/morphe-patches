@@ -1,3 +1,10 @@
+## [1.27.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.27.1-dev.1...v1.27.1-dev.2) (2026-05-13)
+
+
+### Bug Fixes
+
+* **YouTube - Open channel of live avatar:** Add missing resources ([#1463](https://github.com/MorpheApp/morphe-patches/issues/1463)) ([0870e3c](https://github.com/MorpheApp/morphe-patches/commit/0870e3c3dc8a3ec3bd42af174bb7d63106658d29))
+
 ## [1.27.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.27.0...v1.27.1-dev.1) (2026-05-13)
 
 
