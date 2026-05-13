@@ -95,6 +95,8 @@ public final class OpenChannelOfLiveAvatarPatch {
                 );
                 Utils.runOnBackgroundThread(() -> {
                     if (liveAvatarChannelRequest.getStreamDetails() instanceof String channelID && !channelID.isEmpty()) {
+                        Logger.printDebug(() -> "live avatar response: " + channelID);
+
                         Utils.runOnMainThread(() -> {
                             var context = mainActivityRef.get();
                             if (context != null) {
