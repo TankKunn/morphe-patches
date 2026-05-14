@@ -184,8 +184,6 @@ internal object MediaFetchHotConfigAlternativeFingerprint : Fingerprint(
 // then videos will never start playback and load forever.
 // Flag does not seem to affect playback if spoofing is off.
 internal object PlaybackStartDescriptorFeatureFlagFingerprint : Fingerprint(
-    parameters = listOf(),
-    returnType = "Z",
     filters = listOf(
         literal(45665455L)
     )
