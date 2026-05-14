@@ -207,11 +207,9 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 Morphe Patches are licensed under the [GNU General Public License v3.0](LICENSE), with additional conditions under GPLv3 Section 7:
 
-- **Attribution (7b):** Any use of this code, including derivatives, must display a visible notice:
-
-  > This app uses code from Morphe. To learn more, visit https://morphe.software
-
+- **Attribution (7b):** Any use of this code, including derivatives, must preserve all notices.
+  
 - **Name Restriction (7c):** The name **"Morphe"** may not be used for derivative works.  
-  Derivatives must adopt a distinct identity unrelated to "Morphe."
+  Derivatives must adopt a distinct identity unrelated to "Morphe".
 
 See the [LICENSE](LICENSE) file for the full GPLv3 terms and the [NOTICE](NOTICE) file for full conditions of GPLv3 Section 7
