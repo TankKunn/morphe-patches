@@ -41,6 +41,7 @@ import app.morphe.patches.youtube.misc.navigation.navigationBarHookPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_21_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_26_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_11_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_20_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.proto.elementProtoParserHookPatch
 import app.morphe.patches.youtube.misc.proto.hookElement
@@ -771,38 +772,70 @@ val hideLayoutComponentsPatch = bytecodePatch(
         // region hide channel tab
 
         val channelTabBuilderMethod = ChannelTabBuilderFingerprint.method
-        ChannelTabRendererFingerprint.let { match ->
-            match.method.apply {
-                val iteratorIndex = indexOfFirstInstructionReversedOrThrow {
-                    getReference<MethodReference>()?.name == "hasNext"
-                }
-
-                val iteratorRegister = getInstruction<FiveRegisterInstruction>(iteratorIndex).registerC
+        if (is_21_20_or_greater) {
+            ChannelTabAddFingerprint.method.apply {
                 val targetIndex = indexOfFirstInstructionReversedOrThrow {
-                    val reference = (this as? ReferenceInstruction)?.reference as? MethodReference
-
+                    val reference = getReference<MethodReference>()
                     opcode == Opcode.INVOKE_INTERFACE &&
                             reference?.returnType == channelTabBuilderMethod.returnType &&
                             reference.parameterTypes == channelTabBuilderMethod.parameterTypes
                 }
-
-                val objectIndex = indexOfFirstInstructionReversedOrThrow(targetIndex, Opcode.IGET_OBJECT)
-                val objectInstruction = getInstruction<TwoRegisterInstruction>(objectIndex)
-                val objectReference = getInstruction<ReferenceInstruction>(objectIndex).reference
+                val objectIndex = indexOfFirstInstructionReversedOrThrow(
+                    targetIndex,
+                    Opcode.IGET_OBJECT
+                )
+                val register = getInstruction<TwoRegisterInstruction>(objectIndex).registerA
+                val insertIndex = objectIndex + 1
+//                val objectReference =
+//                    getInstruction<ReferenceInstruction>(objectIndex).reference
+                val free = findFreeRegister(insertIndex, register)
 
                 addInstructionsWithLabels(
-                    objectIndex + 1,
+                    insertIndex,
                     """
-                        invoke-static { v${objectInstruction.registerA} }, $LAYOUT_COMPONENTS_FILTER->hideChannelTab(Ljava/lang/String;)Z
-                        move-result v${objectInstruction.registerA}
-                        if-eqz v${objectInstruction.registerA}, :ignore
-                        invoke-interface { v$iteratorRegister }, Ljava/util/Iterator;->remove()V
-                        goto :next_iterator
+                        invoke-static { v$register }, $LAYOUT_COMPONENTS_FILTER->hideChannelTab(Ljava/lang/String;)Z
+                        move-result v$free
+                        if-eqz v$free, :ignore
+                        return-void
                         :ignore
-                        iget-object v${objectInstruction.registerA}, v${objectInstruction.registerB}, $objectReference
-                    """,
-                    ExternalLabel("next_iterator", getInstruction(iteratorIndex))
+                        nop
+                    """
                 )
+            }
+        } else {
+            ChannelTabRendererFingerprint.let { match ->
+                match.method.apply {
+                    val iteratorIndex = indexOfFirstInstructionReversedOrThrow {
+                        getReference<MethodReference>()?.name == "hasNext"
+                    }
+
+                    val iteratorRegister = getInstruction<FiveRegisterInstruction>(iteratorIndex).registerC
+                    val targetIndex = indexOfFirstInstructionReversedOrThrow {
+                        val reference = (this as? ReferenceInstruction)?.reference as? MethodReference
+
+                        opcode == Opcode.INVOKE_INTERFACE &&
+                                reference?.returnType == channelTabBuilderMethod.returnType &&
+                                reference.parameterTypes == channelTabBuilderMethod.parameterTypes
+                    }
+
+                    val objectIndex = indexOfFirstInstructionReversedOrThrow(targetIndex, Opcode.IGET_OBJECT)
+                    val objectInstruction = getInstruction<TwoRegisterInstruction>(objectIndex)
+                    val objectReference = getInstruction<ReferenceInstruction>(objectIndex).reference
+
+                    addInstructionsWithLabels(
+                        objectIndex + 1,
+                        """
+                            invoke-static { v${objectInstruction.registerA} }, $LAYOUT_COMPONENTS_FILTER->hideChannelTab(Ljava/lang/String;)Z
+                            move-result v${objectInstruction.registerA}
+                            if-eqz v${objectInstruction.registerA}, :ignore
+                            invoke-interface { v$iteratorRegister }, Ljava/util/Iterator;->remove()V
+                            goto :next_iterator
+                            :ignore
+                            iget-object v${objectInstruction.registerA}, v${objectInstruction.registerB}, $objectReference
+                        """,
+                        ExternalLabel("next_iterator", getInstruction(iteratorIndex))
+                    )
+                }
             }
         }
 

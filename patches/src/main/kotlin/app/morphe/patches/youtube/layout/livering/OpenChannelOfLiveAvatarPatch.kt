@@ -10,6 +10,8 @@ import app.morphe.patches.all.misc.resources.createResourceDestinationDirectoryI
 import app.morphe.patches.all.misc.resources.localesYouTube
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.layout.shortsplayer.ShortsPlaybackIntentFingerprint
+import app.morphe.patches.youtube.layout.shortsplayer.ShortsPlaybackIntentFingerprintLegacy
+import app.morphe.patches.youtube.misc.playservice.is_21_20_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
@@ -122,7 +124,8 @@ val openChannelOfLiveAvatarPatch = bytecodePatch(
 
         // Same method is modified by openShortsInRegularPlayerPatch,
         // and by coincidence that patch runs before this patch which is critical.
-        ShortsPlaybackIntentFingerprint.method.addInstructionsWithLabels(
+        (if (is_21_20_or_greater) ShortsPlaybackIntentFingerprint
+        else ShortsPlaybackIntentFingerprintLegacy).method.addInstructionsWithLabels(
             0,
             patchLogic("p2", "p1", "v0", "v1")
         )
