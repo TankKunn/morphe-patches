@@ -1,3 +1,12 @@
+# [1.28.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.27.1-dev.2...v1.28.0-dev.1) (2026-05-14)
+
+
+### Features
+
+* Add miscellaneous link handling preference to help change 'open with' links ([#1389](https://github.com/MorpheApp/morphe-patches/issues/1389)) ([c364ced](https://github.com/MorpheApp/morphe-patches/commit/c364ced39ccbe5a4183cb07c2e70d4a666b08c46))
+* Simplify settings summary text ([#1366](https://github.com/MorpheApp/morphe-patches/issues/1366)) ([67576a8](https://github.com/MorpheApp/morphe-patches/commit/67576a8ffd2c81326acc178454148bbca315a855))
+* **YouTube Music:** Add experimental support for `9.19.50` ([a2c0681](https://github.com/MorpheApp/morphe-patches/commit/a2c06815d0c3345bfc29aac0f7d555ac03f1f543))
+
 ## [1.27.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.27.1-dev.1...v1.27.1-dev.2) (2026-05-13)
 
 
