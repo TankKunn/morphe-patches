@@ -62,7 +62,6 @@ private val hideAdsResourcePatch = resourcePatch {
             SwitchPreference("morphe_hide_player_popup_ads", summaryKey = null),
             SwitchPreference("morphe_hide_self_sponsor_ads", summaryKey = null),
             SwitchPreference("morphe_hide_shopping_links", summaryKey = null),
-            SwitchPreference("morphe_hide_view_products_banner", summaryKey = null),
             SwitchPreference("morphe_hide_youtube_premium_promotions", summaryKey = null),
         )
 
