@@ -1,3 +1,19 @@
+# [1.28.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.28.0-dev.2...v1.28.0-dev.3) (2026-05-15)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Hide new type of community post ([#1476](https://github.com/MorpheApp/morphe-patches/issues/1476)) ([50085da](https://github.com/MorpheApp/morphe-patches/commit/50085dab0ceed84778d40b40150f7a16c5ea18ec))
+* **YouTube - Open channel of live avatar:** patch doesn't work for arabic/korean localizations ([ff16083](https://github.com/MorpheApp/morphe-patches/commit/ff160839fdcc03e24c9eff3eec4499b58febc26a))
+* **YouTube - Open channel of live avatar:** patch doesn't work for vietnamese localization ([#1479](https://github.com/MorpheApp/morphe-patches/issues/1479)) ([2a5979e](https://github.com/MorpheApp/morphe-patches/commit/2a5979ee3184ea4ca7a045c61363c853e6cbea15))
+* **YouTube - PlayerOverlayButton:** set videoHeading container ref only in upper bar constructor to avoid race condition ([#1478](https://github.com/MorpheApp/morphe-patches/issues/1478)) ([93c6300](https://github.com/MorpheApp/morphe-patches/commit/93c6300450a5fafbb815a79d112707880109f358))
+* **YouTube - PlayerOverlayButton:** Video heading margin not applied when no bottom buttons present ([#1472](https://github.com/MorpheApp/morphe-patches/issues/1472)) ([12bee40](https://github.com/MorpheApp/morphe-patches/commit/12bee40312e040c7bccd17f9d1af2e56d3214972))
+
+
+### Features
+
+* **YouTube:** Add experimental support for `21.20.400` ([a4d1412](https://github.com/MorpheApp/morphe-patches/commit/a4d1412849e578189adb04130f8559905cfe8f8f))
+
 # [1.28.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.28.0-dev.1...v1.28.0-dev.2) (2026-05-14)
 
 
