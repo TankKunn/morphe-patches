@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Deaktiver baggrundsafspilning</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Fejlfindingslog protokolbuffer</string>
-  <string name="morphe_debug_protobuffer_summary">Indeholder rå protokolbufferdata i debugloggen for at hjælpe med at identificere UI-komponenter</string>
+  <string name="morphe_debug_protobuffer_summary">Tilføjer yderligere logningsinformation for udviklere til at identificere app-komponenter</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Aktivering af denne indstilling logger yderligere layoutdata, inklusive tekst på skærmen for nogle UI-komponenter.
 
 Dette kan hjælpe med at identificere komponenter, når der oprettes brugerdefinerede filtre.
@@ -217,12 +217,12 @@ Visning af YouTube Doodles kan forhindre brugerdefinerede overskrifter i at bliv
   <string name="morphe_hide_view_count_title">Skjul antal visninger</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Begrænsninger:
-• Shorts hylder, kanalsider og søgeresultater kan stadig vise antal visninger
-• Denne funktion virker ikke med bilformat."</string>
+• Shorts-hylder, kanalsider og søgeresultater kan stadig vise antal visninger.
+• Denne funktion virker ikke med bilformat"</string>
   <string name="morphe_hide_upload_time_title">Skjul uploadtidspunkt</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Begrænsninger:
-• Shorts hylder, kanalsider og søgeresultater kan stadig vise uploadtider
+• Shorts hylder, kanalsider og søgeresultater kan stadig vise uploadtider.
 • Denne funktion virker ikke med bilformat."</string>
   <string name="morphe_hide_keyword_content_screen_title">Nøgleordsfilter</string>
   <string name="morphe_hide_keyword_content_screen_summary">Vælg specifikke ord eller sætninger for at skjule videoer i feeds og søgninger</string>
@@ -284,7 +284,7 @@ Begrænsninger:
   <string name="morphe_external_downloader_title">Vis ekstern download-knap</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Overskriv knappen Download</string>
-  <string name="morphe_external_downloader_action_button_summary">Stryg lodret på venstre side af fuldskærmstilstand for at justere lysstyrken</string>
+  <string name="morphe_external_downloader_action_button_summary">Erstatter YouTubes indbyggede downloadfunktion med din valgte tredjeparts download-app</string>
   <string name="morphe_external_downloader_name_title">Downloader pakkenavn</string>
   <string name="morphe_external_downloader_name_summary">Pakkenavn på din installerede eksterne download-app</string>
   <string name="morphe_external_downloader_other_item_hint">Indtast pakkenavnet</string>
@@ -449,7 +449,7 @@ Kontrollér at pakkenavnet er korrekt og at appen er installeret"</string>
   <string name="morphe_caption_cookies_title">Undertekst-cookies</string>
   <string name="morphe_caption_cookies_summary">Skjul Collapse knap</string>
   <string name="morphe_get_caption_cookies_title">Hent undertekst-cookies</string>
-  <string name="morphe_get_caption_cookies_summary">"Skjuler den mørke skygge omkring videoafspillerens kontrolknapper"</string>
+  <string name="morphe_get_caption_cookies_summary">Skjuler den mørke skygge omkring videoafspillerens kontrolknapper</string>
   <string name="morphe_get_caption_cookies_failed">Kunne ikke hente cookies</string>
   <string name="morphe_get_caption_cookies_duplicate">Cookies findes allerede</string>
   <string name="morphe_get_caption_cookies_success">Cookies blev opdateret succesfuldt</string>
@@ -515,9 +515,9 @@ For at få adgang til Indstillinger skal du aktivere knappen Indstillinger via G
   <string name="morphe_hide_player_flyout_audio_track_title">Skjul \'Lydspor\'-menuen</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Lydspor'-menuen er skjult
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track'-menuen er skjult
 
-        For at vise 'Lydspor'-menuen skal du ændre 'Spoof videostreams' til 'Android Reel' eller 'TV'"</string>
+For at vise 'Audio Track'-menuen skal du ændre 'Spoof video streams' til 'Android Reel' eller 'TV'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skjul \'Lydspor\'-menuens sidefod</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skjul Undertekster-menuen</string>
@@ -766,7 +766,9 @@ Indstillinger → Afspilning (eller Automatisk afspil) → Afspil automatisk næ
   <string name="morphe_sb_settings_ie">Importér/eksport indstillinger</string>
   <string name="morphe_sb_settings_copy">Kopiér</string>
   <string name="morphe_sb_settings_ie_summary">Din SponsorBlock JSON konfiguration, der kan importeres/eksporteres til Morphe og andre SponsorBlock platforme</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Din SponsorBlock JSON konfiguration, der kan importeres/eksporteres til Morphe og andre SponsorBlock platforme. Dette omfatter dit private bruger id. Sørg for at dele dette med omtanke </string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Din SponsorBlock JSON konfiguration, der kan importeres/eksporteres til Morphe og andre SponsorBlock platforme.
+    
+Dette omfatter dit private bruger id. Sørg for at dele dette med omtanke"</string>
   <string name="morphe_sb_settings_import_successful">Indstillinger importeret med succes</string>
   <string name="morphe_sb_settings_import_failed">Importering mislykkedes: %s</string>
   <string name="morphe_sb_settings_export_failed">Eksportering mislykkedes: %s</string>
@@ -914,7 +916,7 @@ Hvis du ikke sender en fremhævning, skal du trykke på Annuller og markere den 
   <string name="morphe_sb_about_title">Om</string>
   <string name="morphe_sb_about_api_summary">Data leveres af SponsorBlock API. Tryk her for at få flere oplysninger og se downloads til andre platforme</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Layout-formfaktor</string>
+  <string name="morphe_change_form_factor_title">Enhedslayout</string>
   <string name="morphe_change_form_factor_entry_1">Standard</string>
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>

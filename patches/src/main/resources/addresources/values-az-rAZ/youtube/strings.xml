@@ -154,14 +154,8 @@ YouTube Doodles görünməsi xüsusi sərlövhələrin göstərilməsinə mane o
   <string name="morphe_custom_filter_toast_invalid_syntax">Etibarsız fərdi filtr: %s</string>
   <string name="morphe_hide_view_count_title">Baxış sayını gizlət</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Məhdudiyyətlər:
-• Shorts tabelləri, kanal səhifələri və axtarış nəticələri baxış sayını yenə də göstərə bilər.
-• Bu xüsusiyyət avtomobil forma göstəricisi ilə işləmir."</string>
   <string name="morphe_hide_upload_time_title">Yüklənilmə vaxtını gizlət</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Məhdudiyyətlər:
-• Shorts tabelləri, kanal səhifələri və axtarış nəticələri yüklənmə vaxtlarını yenə də göstərə bilər.
-• Bu xüsusiyyət avtomobil forma göstəricisi ilə işləmir."</string>
   <string name="morphe_hide_keyword_content_screen_title">Açar söz çeşidləyici</string>
   <string name="morphe_hide_keyword_content_home_title">Ev videolarını açar sözlərə görə gizlət</string>
   <string name="morphe_hide_keyword_content_search_title">Axtarış nəticələrini açar sözlərlə gizlət</string>
@@ -674,7 +668,6 @@ Təqdim etməyə hazırdır?"</string>
   <string name="morphe_sb_about_title">Haqqında</string>
   <string name="morphe_sb_about_api_summary">Məlumat SponsorBlock API tərəfindən təqdim edilir. Daha ətraflı öyrənmək və digər platformalar üzrə yükləmələrə baxmaq üçün bura toxunun</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Tərtibat forma göstəricisi</string>
   <string name="morphe_change_form_factor_entry_1">İlkin</string>
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Planşet</string>

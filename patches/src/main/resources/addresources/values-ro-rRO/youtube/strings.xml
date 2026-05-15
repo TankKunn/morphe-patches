@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Dezactivează redarea în fundal a Shorts</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Jurnal protocol buffer</string>
-  <string name="morphe_debug_protobuffer_summary">Include date brute cu buffer de protocol în jurnalul de depanare pentru a ajuta la identificarea componentelor UI</string>
+  <string name="morphe_debug_protobuffer_summary">Adaugă informații suplimentare de înregistrare pentru dezvoltatori pentru a identifica componentele aplicației</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Activarea acestei setări va înregistra date suplimentare despre aspect, inclusiv textul de pe ecran pentru unele componente UI.
 
 Acest lucru poate ajuta la identificarea componentelor atunci când creați filtre personalizate.
@@ -216,10 +216,12 @@ Afisarea Doodle-urilor YouTube poate împiedica afișarea header-elor personaliz
   <string name="morphe_custom_filter_toast_invalid_syntax">Filtru personalizat nevalid: %s</string>
   <string name="morphe_hide_view_count_title">Ascunde numărul de vizualizări</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Limitări:\n• Secțiunile Shorts, paginile canalelor și rezultatele căutării pot afișa în continuare numărul de vizualizări\n• Această funcție nu funcționează cu factorul de formă auto."</string>
+  <string name="morphe_hide_view_count_user_dialog_message">"Limitări:\n• Secțiunile Shorts, paginile canalelor și rezultatele căutării pot afișa în continuare numărul de vizualizări\n• Această funcție nu funcționează cu factorul de formă auto"</string>
   <string name="morphe_hide_upload_time_title">Ascunde ora de încărcare</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Limitări:\n• Secțiunile Shorts, paginile canalelor și rezultatele căutării pot afișa în continuare orele de încărcare\n• Această funcție nu funcționează cu factorul de formă auto."</string>
+  <string name="morphe_hide_upload_time_user_dialog_message">"Limitări:
+• Rafturile Shorts, paginile canalelor și rezultatele căutării pot afișa în continuare orele de încărcare.
+• Această funcție nu funcționează cu factorul de formă auto."</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtru de cuvinte cheie</string>
   <string name="morphe_hide_keyword_content_screen_summary">Alegeți cuvinte sau fraze specifice pentru a ascunde videoclipuri în fluxuri și căutare</string>
   <string name="morphe_hide_keyword_content_home_title">Ascunde videoclipurile de acasă după cuvintele cheie</string>
@@ -280,7 +282,7 @@ Limitări:
   <string name="morphe_external_downloader_title">Arată butonul extern de descărcare</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Suprascrie butonul de acțiune Descarcă</string>
-  <string name="morphe_external_downloader_action_button_summary">Glisați vertical pe partea dreaptă a modului ecran complet pentru a regla volumul</string>
+  <string name="morphe_external_downloader_action_button_summary">Înlocuiește funcția de descărcare încorporată a YouTube cu aplicația ta terță de descărcare preferată.</string>
   <string name="morphe_external_downloader_name_title">Descărcător nume pachet</string>
   <string name="morphe_external_downloader_name_summary">Numele pachetului aplicației dvs. de descărcare externă instalate</string>
   <string name="morphe_external_downloader_other_item_hint">Introduceți numele pachetului</string>
@@ -445,7 +447,7 @@ Verificați dacă numele pachetului este corect și dacă aplicația este instal
   <string name="morphe_caption_cookies_title">Cookie-uri de captions</string>
   <string name="morphe_caption_cookies_summary">Alegeți ce componente să apară în meniul flyout</string>
   <string name="morphe_get_caption_cookies_title">Obtine cookie-uri de captions</string>
-  <string name="morphe_get_caption_cookies_summary">"Ascunde meniul Pista audio"</string>
+  <string name="morphe_get_caption_cookies_summary">Ascunde meniul Pista audio</string>
   <string name="morphe_get_caption_cookies_failed">Eșec în preluarea cookie-urilor</string>
   <string name="morphe_get_caption_cookies_duplicate">Cookie-urile există deja</string>
   <string name="morphe_get_caption_cookies_success">Cookie-urile au fost actualizate cu succes</string>
@@ -511,9 +513,9 @@ Pentru a accesa Setări, activați butonul Setări prin General → Bara de inst
   <string name="morphe_hide_player_flyout_audio_track_title">Ascunde meniul \'Piesă audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meniul 'Piesă audio' este ascuns
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meniul 'Audio Track' este ascuns
 
-Pentru a afișa meniul 'Piesă audio', schimbă 'Simulare fluxuri video' în 'Android Reel' sau 'TV'"</string>
+Pentru a afișa meniul 'Audio Track', schimbați 'Spoof video streams' în 'Android Reel' sau 'TV'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ascunde subsolul meniului \'Piesă audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ascunde meniul Subtitrări</string>
@@ -762,7 +764,7 @@ Setări → Reproducere (sau Autoreproducere) → Reproduceți următorul video"
   <string name="morphe_sb_settings_ie">Importă/Exportă setări</string>
   <string name="morphe_sb_settings_copy">Copiere</string>
   <string name="morphe_sb_settings_ie_summary">Configurația SponsorBlock JSON care poate fi importată/exportată către Morphe și alte platforme SponsorBlock</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Configurația ta SponsorBlock JSON care poate fi importată/exportată în Morphe și alte platforme SponsorBlock. Aceasta include ID-ul tău privat de utilizator. Asigură-te că distribui asta cu înțelepciune</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Configurația SponsorBlock JSON care poate fi importată/exportată către Morphe și alte platforme SponsorBlock. Asta include id-ul tău privat de utilizator. Asigură-te că împărtășești asta cu înțelepciune"</string>
   <string name="morphe_sb_settings_import_successful">Setări importate cu succes</string>
   <string name="morphe_sb_settings_import_failed">Nu s-a putut importa: %s</string>
   <string name="morphe_sb_settings_export_failed">Nu s-a putut exporta: %s</string>
@@ -910,7 +912,7 @@ Dacă nu trimiteți o evidențiere, apăsați Anulare și marcați a doua locaț
   <string name="morphe_sb_about_title">Despre</string>
   <string name="morphe_sb_about_api_summary">Datele sunt furnizate de API-ul SponsorBlock. Apasă aici pentru a afla mai multe și a vedea descărcările pentru alte platforme</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Formatul aspectului formularului</string>
+  <string name="morphe_change_form_factor_title">Aspect dispozitiv</string>
   <string name="morphe_change_form_factor_entry_1">Implicit</string>
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tabletă</string>

@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">השבת הפעלת רקע</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Debug log protocol buffer</string>
-  <string name="morphe_debug_protobuffer_summary">כולל נתונים גולמיים של פרוטוקול באפר בניתוח באגים כדי לסייע בזיהוי רכיבי ממשק המשתמש</string>
+  <string name="morphe_debug_protobuffer_summary">מוסיף מידע תיעוד נוסף למפתחים כדי לזהות רכיבי אפליקציה</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"הפעלת הגדרה זו תתעד נתוני פריסה נוספים, כולל טקסט שעל המסך עבור רכיבי ממשק משתמש מסוימים.
 
 זה יכול לעזור לזהות רכיבים בעת יצירת מסננים מותאמים אישית.
@@ -216,14 +216,14 @@ Second \"item\" text"</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">מסנן מותאם אישית לא חוקי: %s</string>
   <string name="morphe_hide_view_count_title">הסתר ספירת צפיות</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Limitations:
-• Shorts shelves, channel pages, and search results may still show view counts.
-• This feature does not work with automotive form factor."</string>
+  <string name="morphe_hide_view_count_user_dialog_message">"מגבלות:
+• מדפי Shorts, דפי ערוצים ותוצאות חיפוש עשויים עדיין להציג ספירות צפיות.
+• תכונה זו אינה פועלת עם גורם צורה לרכב"</string>
   <string name="morphe_hide_upload_time_title">הסתר זמן העלאה</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Limitations:
-• Shorts shelves, channel pages, and search results may still show upload times.
-• This feature does not work with automotive form factor."</string>
+  <string name="morphe_hide_upload_time_user_dialog_message">"הגבלות:
+• מדפי Shorts, דפי ערוץ ותוצאות חיפוש עדיין עשויים להציג זמני העלאה.
+• תכונה זו אינה פועלת עם גורם צורה לרכב."</string>
   <string name="morphe_hide_keyword_content_screen_title">מסנן מילות מפתח</string>
   <string name="morphe_hide_keyword_content_screen_summary">בחר מילות מפתח או ביטויים ספציפיים להסתרת סרטונים בפידים ובחיפוש</string>
   <string name="morphe_hide_keyword_content_home_title">הסתר סרטוני בית לפי מילות מפתח</string>
@@ -284,7 +284,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_title">הצג לחצן הורדה חיצונית</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">עקוף את פעולת לחצן ההורדה</string>
-  <string name="morphe_external_downloader_action_button_summary">החלקת אצבע אנכית בצד ימין במצב מסך מלא להתאמת עוצמת הקול</string>
+  <string name="morphe_external_downloader_action_button_summary">מחליף את פונקציית ההורדה המובנית של YouTube באפליקציית ההורדה של צד שלישי שבחרת</string>
   <string name="morphe_external_downloader_name_title">שם חבילת מוריד</string>
   <string name="morphe_external_downloader_name_summary">שם החבילה של יישום ההורדות החיצוני המותקן שלך</string>
   <string name="morphe_external_downloader_other_item_hint">הזן את שם החבילה</string>
@@ -449,7 +449,7 @@ Second \"item\" text"</string>
   <string name="morphe_caption_cookies_title">קוקיס תיאור</string>
   <string name="morphe_caption_cookies_summary">הסתר כפתור \'קריסה\'</string>
   <string name="morphe_get_caption_cookies_title">קבל קוקיס תיאור</string>
-  <string name="morphe_get_caption_cookies_summary">"הסתר כפתור 'מסך מלא'"</string>
+  <string name="morphe_get_caption_cookies_summary">הסתר כפתור \'מסך מלא\'</string>
   <string name="morphe_get_caption_cookies_failed">שגיאה בהפקת קוקיס</string>
   <string name="morphe_get_caption_cookies_duplicate">קוקיס קיימים כבר</string>
   <string name="morphe_get_caption_cookies_success">קוקיס עודכנו בהצלחה</string>
@@ -515,9 +515,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_title">הסתר תפריט \'רצועת אודיו\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"תפריט 'רצועת אודיו' מוסתר
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"תפריט 'Audio Track' מוסתר
 
-        כדי להציג את תפריט 'רצועת אודיו', שנה את 'שיבוש זרמי וידאו' ל-'Android Reel' או 'TV'"</string>
+כדי להציג את תפריט 'Audio Track', שנה את 'Spoof video streams' ל-'Android Reel' או 'TV'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">הסתר כותרת תחתונה של תפריט \'רצועת אודיו\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">הסתר תפריט כתוביות</string>
@@ -766,7 +766,9 @@ Second \"item\" text"</string>
   <string name="morphe_sb_settings_ie">ייבוא/ייצוא הגדרות</string>
   <string name="morphe_sb_settings_copy">העתק</string>
   <string name="morphe_sb_settings_ie_summary">תצורת JSON של ה-SponsorBlock שלך שניתן לייבא/לייצא אל Morphe ופלטפורמות SponsorBlock אחרות</string>
-  <string name="morphe_sb_settings_ie_summary_warning">תצורת JSON של ה-SponsorBlock שלך שניתן לייבא/לייצא ל-Morphe ופלטפורמות SponsorBlock אחרות. זה כולל את מזהה המשתמש הפרטי שלך. הקפד לשתף את זה בתבונה</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"תצורת JSON של SponsorBlock שלך שניתן לייבא/לייצא אל Morphe ופלטפורמות SponsorBlock אחרות.
+    
+זה כולל את מזהה המשתמש הפרטי שלך. הקפד לשתף את זה בתבונה."</string>
   <string name="morphe_sb_settings_import_successful">ההגדרות יובאו בהצלחה</string>
   <string name="morphe_sb_settings_import_failed">נכשל לייבא את: %s</string>
   <string name="morphe_sb_settings_export_failed">נכשל לייצא את: %s</string>
@@ -914,7 +916,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_about_title">אודות</string>
   <string name="morphe_sb_about_api_summary">הנתונים מסופקים על ידי SponsorBlock API. הקש כאן כדי ללמוד עוד ולראות הורדות עבור פלטפורמות אחרות</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">גורם צורת הפריסה</string>
+  <string name="morphe_change_form_factor_title">פריסת מכשיר</string>
   <string name="morphe_change_form_factor_entry_1">ברירת מחדל</string>
   <string name="morphe_change_form_factor_entry_2">טלפון</string>
   <string name="morphe_change_form_factor_entry_3">טאבלט</string>

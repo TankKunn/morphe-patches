@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Desactivar reproducción en segundo plano</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Registro de depuración de búfer de protocolo</string>
-  <string name="morphe_debug_protobuffer_summary">Incluye datos de búfer de protocolo sin procesar en el registro de depuración para ayudar a identificar los componentes de la interfaz de usuario</string>
+  <string name="morphe_debug_protobuffer_summary">Agrega información de registro adicional para que los desarrolladores identifiquen los componentes de la app</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Si activas este ajuste, se registrarán datos de diseño adicionales, incluido el texto en pantalla de algunos componentes de la interfaz de usuario.
 
 Esto puede ayudar a identificar componentes al crear filtros personalizados.
@@ -135,7 +135,7 @@ Mostrar los Doodles de YouTube puede impedir que se muestren encabezados persona
   <string name="morphe_hide_description_components_screen_title">Descripción del vídeo</string>
   <string name="morphe_hide_description_components_screen_summary">Elija qué componentes aparecen en la descripción del vídeo</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Ocultar sección \"Resumen de vídeo generado por IA\"</string>
-  <string name="morphe_hide_ask_section_title">Ocultar sección \"Preguntas\"</string>
+  <string name="morphe_hide_ask_section_title">Ocultar sección \"Preguntar\"</string>
   <string name="morphe_hide_attributes_section_title">Ocultar sección \"Atributos\"</string>
   <string name="morphe_hide_attributes_section_summary">Se ocultan las secciones Lugares destacados, Juegos, Música y Personas mencionadas</string>
   <string name="morphe_hide_chapters_section_title">Ocultar sección \"Capítulos\"</string>
@@ -218,12 +218,12 @@ Mostrar los Doodles de YouTube puede impedir que se muestren encabezados persona
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Limitaciones:
 • Los estantes de Shorts, las páginas de los canales y los resultados de búsqueda pueden seguir mostrando el número de visualizaciones.
-• Esta función no funciona con el factor de forma automotriz."</string>
+• Esta función no es compatible con el diseño para automóviles."</string>
   <string name="morphe_hide_upload_time_title">Ocultar hora de subida</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Limitaciones:
 • Los estantes de Shorts, las páginas de los canales y los resultados de búsqueda pueden seguir mostrando los tiempos de subida.
-• Esta función no funciona con el factor de forma automotriz."</string>
+• Esta función no es compatible con el diseño para automóviles."</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtro de palabras clave</string>
   <string name="morphe_hide_keyword_content_screen_summary">Elija palabras o frases específicas para ocultar vídeos en los feeds y en los resultados de búsqueda</string>
   <string name="morphe_hide_keyword_content_home_title">Ocultar vídeos de inicio por palabras clave</string>
@@ -284,7 +284,7 @@ Limitaciones:
   <string name="morphe_external_downloader_title">Mostrar botón de descarga externa</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Reemplazar botón de acción de descarga</string>
-  <string name="morphe_external_downloader_action_button_summary">Redirige el botón de descarga a su descargador externo en lugar del descargador integrado nativo</string>
+  <string name="morphe_external_downloader_action_button_summary">Reemplaza la función de descarga integrada de YouTube con tu aplicación de descarga de terceros elegida.</string>
   <string name="morphe_external_downloader_name_title">Nombre del paquete del descargador</string>
   <string name="morphe_external_downloader_name_summary">Nombre del paquete de tu aplicación de descarga externa instalada</string>
   <string name="morphe_external_downloader_other_item_hint">Introduce el nombre del paquete</string>
@@ -451,7 +451,7 @@ Información: Es posible que no funcione en las retransmisiones en directo"</str
   <string name="morphe_caption_cookies_title">Cookies de la leyenda</string>
   <string name="morphe_caption_cookies_summary">Obtiene y guarda las cookies automáticamente si son válidas</string>
   <string name="morphe_get_caption_cookies_title">Obtener cookies de la leyenda</string>
-  <string name="morphe_get_caption_cookies_summary">"Resuelve un fallo de comprobación de precondiciones que puede impedir que se cargue la transcripción"</string>
+  <string name="morphe_get_caption_cookies_summary">Resuelve un fallo de comprobación de precondiciones que puede impedir que se cargue la transcripción</string>
   <string name="morphe_get_caption_cookies_failed">No se pudo obtener las cookies</string>
   <string name="morphe_get_caption_cookies_duplicate">Las cookies ya existen</string>
   <string name="morphe_get_caption_cookies_success">Las cookies se actualizaron correctamente</string>
@@ -517,7 +517,9 @@ Para acceder a los ajustes, activa el botón de ajustes a través de General →
   <string name="morphe_hide_player_flyout_audio_track_title">Mostrar los \'No me gusta\' como porcentaje</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Muestra los 'No me gusta' como un porcentaje de 'Me gusta' en lugar de un número"</string>
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"El menú \"Pista de audio\" está oculto
+
+Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de vídeo\" a \"Android Reel\" o \"TV\"."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Usar botón compacto de \'Me gusta\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Reduce el ancho del botón \'Me gusta\' para ahorrar espacio</string>
@@ -766,7 +768,9 @@ Configuración → Reproducción → Reproducción automática del siguiente ví
   <string name="morphe_sb_settings_ie">Importar / Exportar ajustes</string>
   <string name="morphe_sb_settings_copy">Copiar</string>
   <string name="morphe_sb_settings_ie_summary">Tus ajustes de SponsorBlock en formato JSON que pueden ser importados / exportados a Morphe y otras plataformas de SponsorBlock</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Tus ajustes de SponsorBlock en formato JSON que pueden ser importados / exportados a Morphe y otras plataformas de SponsorBlock. Esto incluye tu ID de usuario privado. Asegúrate de compartir esto sabiamente</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Tu configuración de SponsorBlock en formato JSON que puede ser importada / exportada a Morphe y otras plataformas de SponsorBlock.
+    
+Esto incluye tu ID de usuario privado. Asegúrate de compartir esto sabiamente."</string>
   <string name="morphe_sb_settings_import_successful">Ajustes importados correctamente</string>
   <string name="morphe_sb_settings_import_failed">Error al importar: %s</string>
   <string name="morphe_sb_settings_export_failed">Error al exportar: %s</string>
@@ -914,7 +918,7 @@ Si no vas a enviar un destacado, pulsa Cancelar y marca la segunda ubicación."<
   <string name="morphe_sb_about_title">Información</string>
   <string name="morphe_sb_about_api_summary">Los datos son proporcionados por la API de SponsorBlock. Pulsa aquí para aprender más y ver las descargas para otras plataformas</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Factor de forma del diseño</string>
+  <string name="morphe_change_form_factor_title">Diseño del dispositivo</string>
   <string name="morphe_change_form_factor_entry_1">Predeterminado</string>
   <string name="morphe_change_form_factor_entry_2">Teléfono</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>

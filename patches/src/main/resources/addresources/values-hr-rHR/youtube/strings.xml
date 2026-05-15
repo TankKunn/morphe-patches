@@ -142,14 +142,8 @@ Promjene uključuju:
   <string name="morphe_custom_filter_toast_invalid_syntax">Nevaže kustom filtar: %s</string>
   <string name="morphe_hide_view_count_title">Dodajte navlake za koristiti ključ: %s</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Ograničenja:
-• Police, stranice kanala i rezultati pretrage još uvijek mogu prikazati broj pregleda.
-• Ova značajka ne radi s formfaktorom automobila."</string>
   <string name="morphe_hide_upload_time_title">Sakrij broj pregleda</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Ograničenja:
-• Police, stranice kanala i rezultati pretrage još uvijek mogu prikazati vrijeme postavljanja.
-• Ova značajka ne radi s formfaktorom automobila."</string>
   <string name="morphe_hide_keyword_content_home_title">Sakrij videozapise na tablici Početna pomoću ključnim riječima</string>
   <string name="morphe_hide_keyword_content_search_title">Sakrij pretrage pomoću ključnim riječima</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Sakrij videozapise na tablici Pretplatezene pomoću ključnim riječima</string>
@@ -489,7 +483,6 @@ Postavke → Reprodukcija (ili Automatska reprodukcija) → Automatska reprodukc
   <string name="morphe_sb_api_url_changed">API URL promijenjen</string>
   <string name="morphe_sb_settings_ie">Uvezi postavke upravitelja</string>
   <string name="morphe_sb_settings_copy">Kopirajte</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Vaša JSON konfiguracija SponsorBlocka koja se može uvesti/izvesti u Morphe i druge SponsorBlock platforme. To uključuje vaš privatni korisnički ID. Obavezno ovo mudro podijelite.</string>
   <string name="morphe_sb_settings_import_successful">Postavke uspješno uvezeno</string>
   <string name="morphe_sb_settings_import_failed">Nije moguće uvesti: %s</string>
   <string name="morphe_sb_settings_export_failed">Nije moguće izvesti: %s</string>
@@ -616,7 +609,6 @@ Gotovo je li spreman za slanje?"</string>
   <string name="morphe_sb_about_title">O aplikaciji</string>
   <string name="morphe_sb_about_api_summary">Podaci su dobavljeni od API-ja SponsorBlock. Kliknite ovdje da saznajte više i pogledajte preuzimke za druge platforme</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Format prikaza</string>
   <string name="morphe_change_form_factor_entry_1">Zadano</string>
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>

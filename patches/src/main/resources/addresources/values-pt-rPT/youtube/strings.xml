@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Desativar reprodução de fundo de Shorts</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Registo do buffer de protocolo</string>
-  <string name="morphe_debug_protobuffer_summary">Inclui dados brutos do buffer de protocolo no log de depuração para ajudar a identificar os componentes da IU</string>
+  <string name="morphe_debug_protobuffer_summary">Adiciona informações adicionais ao registo para desenvolvedores identificarem componentes da aplicação</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Ativar esta definição irá registar dados de layout adicionais, incluindo o texto no ecrã para alguns componentes da IU.
 
 Isto pode ajudar a identificar componentes ao criar filtros personalizados.
@@ -217,13 +217,13 @@ A exibição de Doodles do YouTube pode impedir a exibição de cabeçalhos pers
   <string name="morphe_hide_view_count_title">Ocultar contagem de visualizações</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Limitações:
-• As prateleiras de Shorts, páginas de canal e resultados da pesquisa ainda podem mostrar contagens de visualização
-• Este recurso não funciona com o fator de forma automotivo."</string>
+• As prateleiras de Shorts, páginas de canal e resultados da pesquisa ainda podem mostrar contagens de visualização.
+• Esta função não funciona com o layout para automóvel."</string>
   <string name="morphe_hide_upload_time_title">Ocultar tempo de upload</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Limitações:
-• As prateleiras de Shorts, páginas de canal e resultados da pesquisa ainda podem mostrar tempos de upload
-• Este recurso não funciona com o fator de forma automotivo."</string>
+• As prateleiras de Shorts, páginas de canal e resultados de pesquisa ainda podem mostrar tempos de carregamento
+• Esta função não funciona com o layout para automóvel."</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtro de palavra-chave</string>
   <string name="morphe_hide_keyword_content_screen_summary">Escolha palavras ou frases específicas para ocultar vídeos em feeds e pesquisas</string>
   <string name="morphe_hide_keyword_content_home_title">Esconder vídeos de ecrã inicial com palavras-chave</string>
@@ -284,7 +284,7 @@ Limitações:
   <string name="morphe_external_downloader_title">Mostrar botão externo de transferir</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Substituir botão de ação de download</string>
-  <string name="morphe_external_downloader_action_button_summary">Redireciona o botão \'Download\' para seu gerenciador de downloads externo em vez do gerenciador interno do aplicativo</string>
+  <string name="morphe_external_downloader_action_button_summary">Substitui a função de transferência integrada no YouTube pela tua aplicação externa de transferência escolhida.</string>
   <string name="morphe_external_downloader_name_title">Nome do pacote do downloader</string>
   <string name="morphe_external_downloader_name_summary">Nome do pacote do seu aplicativo de download externo instalado</string>
   <string name="morphe_external_downloader_other_item_hint">Insira o nome do pacote</string>
@@ -451,7 +451,7 @@ Info: Pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_caption_cookies_title">Cookies de legenda</string>
   <string name="morphe_caption_cookies_summary">Cookies usados para autenticar solicitações da API de Texto Cronometrado para legendas</string>
   <string name="morphe_get_caption_cookies_title">Obter cookies de legenda</string>
-  <string name="morphe_get_caption_cookies_summary">"Busca e salva cookies automaticamente se forem válidos"</string>
+  <string name="morphe_get_caption_cookies_summary">Busca e salva cookies automaticamente se forem válidos</string>
   <string name="morphe_get_caption_cookies_failed">Falha ao buscar cookies</string>
   <string name="morphe_get_caption_cookies_duplicate">Cookies já existem</string>
   <string name="morphe_get_caption_cookies_success">Cookies foram atualizados com sucesso</string>
@@ -519,7 +519,7 @@ Para acessar as configurações, habilite o botão Configurações via Geral →
           'Android Reel' and 'TV' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"O menu 'Faixa de áudio' está oculto
 
-        Para mostrar o menu 'Faixa de áudio', altere 'Spoof video streams' para 'Android Reel' ou 'TV'"</string>
+Para mostrar o menu 'Faixa de áudio', altera 'Falsificar fluxos de vídeo' para 'Android Reel' ou 'TV'."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ocultar rodapé do menu \'Faixa de áudio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ocultar menu \'Legendas\'</string>
@@ -768,7 +768,9 @@ Configurações → Reprodução (ou Reproduzir automaticamente) → Reproduzir 
   <string name="morphe_sb_settings_ie">Importar/Exportar Configurações</string>
   <string name="morphe_sb_settings_copy">Copiar</string>
   <string name="morphe_sb_settings_ie_summary">Sua configuração JSON de Patrocinador que pode ser importada/exportada para Morphe e outras plataformas de Patrocinador</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Sua configuração JSON do SponsorBlock que pode ser importada/exportada para Morphe e outras plataformas do SponsorBlock. Isso inclui seu ID de usuário privado. Certifique-se de compartilhar isso com sabedoria</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"A tua configuração JSON do SponsorBlock que pode ser importada/exportada para o Morphe e outras plataformas do SponsorBlock
+    
+Isto inclui o teu ID de utilizador privado. Tem cuidado ao partilhares isto"</string>
   <string name="morphe_sb_settings_import_successful">Configurações importadas com sucesso</string>
   <string name="morphe_sb_settings_import_failed">Falha ao importar: %s</string>
   <string name="morphe_sb_settings_export_failed">Falha ao exportar: %s</string>
@@ -916,7 +918,7 @@ Se você não estiver enviando um destaque, toque em Cancelar e marque a segunda
   <string name="morphe_sb_about_title">Sobre</string>
   <string name="morphe_sb_about_api_summary">Os dados são fornecidos pela API do SponsorBlock. Toque aqui para aprender mais e ver downloads para outras plataformas</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Fator de forma do layout</string>
+  <string name="morphe_change_form_factor_title">Layout do dispositivo</string>
   <string name="morphe_change_form_factor_entry_1">Padrão</string>
   <string name="morphe_change_form_factor_entry_2">Telemóvel</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>

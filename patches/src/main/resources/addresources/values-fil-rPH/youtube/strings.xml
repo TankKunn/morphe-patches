@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Patayin ang pag-play ng Shorts sa likuran</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Itala ang protocol buffer</string>
-  <string name="morphe_debug_protobuffer_summary">Kasama ang raw protocol buffer data sa debug log upang makatulong na matukoy ang mga UI component</string>
+  <string name="morphe_debug_protobuffer_summary">Nagdaragdag ng karagdagang impormasyon sa pag-log para sa mga developer upang matukoy ang mga bahagi ng app</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Magtatala ng karagdagang datos ng layout ang pagpapagana sa pagpipiliang ito, kabilang ang on-screen na teksto para sa ilang bahagi ng UI. 
 
 Makakatulong ito na matukoy ang mga komponente kapag gumagawa ng mga pasadyang filter. 
@@ -216,13 +216,13 @@ Ang pagpapakita ng mga YouTube Doodle ay maaaring pigilan ang pagpapakita ng mga
   <string name="morphe_custom_filter_toast_invalid_syntax">Imbalido na pasadyang filter: %s</string>
   <string name="morphe_hide_view_count_title">Itago ang bilang ng panonood</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Mga Limitasyon: 
-• Maaari pa ring magpakita ng mga bilang ng panonood ang mga Short shelf, mga pahina ng channel, at mga resulta sa paghahanap. 
-• Ang tampok na ito ay hindi gumagana sa automotive form factor."</string>
+  <string name="morphe_hide_view_count_user_dialog_message">"Mga Limitasyon:
+• Maaari pa ring magpakita ng mga bilang ng panonood ang mga Short shelf, mga pahina ng channel, at mga resulta sa paghahanap.
+• Ang tampok na ito ay hindi gumagana sa automotive layout."</string>
   <string name="morphe_hide_upload_time_title">Itago ang oras ng pag-upload</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Mga Limitasyon:
-• Maaari pa ring magpakita ng mga oras ng pag-upload ang mga Short shelf, mga pahina ng channel, at mga resulta ng paghahanap. 
+• Maaari pa ring magpakita ng mga oras ng pag-upload ang mga Short shelf, mga pahina ng channel, at mga resulta ng paghahanap.
 • Ang tampok na ito ay hindi gumagana sa automotive form factor."</string>
   <string name="morphe_hide_keyword_content_screen_title">Filter ng keyword</string>
   <string name="morphe_hide_keyword_content_screen_summary">Pumili ng mga partikular na salita o parirala upang itago ang mga video sa feed at paghahanap</string>
@@ -284,7 +284,7 @@ Mga Limitasyon:
   <string name="morphe_external_downloader_title">Ipakita ang button ng panlabas na pag-download</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">I-override ang Download action button</string>
-  <string name="morphe_external_downloader_action_button_summary">Iriruta nito ang Download button sa iyong panlabas na downloader sa halip na ang native in-app downloader</string>
+  <string name="morphe_external_downloader_action_button_summary">Pinapalitan ang built-in na function ng pag-download ng YouTube ng iyong napiling third-party downloading app</string>
   <string name="morphe_external_downloader_name_title">Pangalan ng package ng downloader</string>
   <string name="morphe_external_downloader_name_summary">Pangalan ng package ng iyong naka-install na panlabas na downloader app</string>
   <string name="morphe_external_downloader_other_item_hint">Ilagay ang pangalan ng package</string>
@@ -451,7 +451,7 @@ Paalala: Maaaring hindi gumana sa mga live stream"</string>
   <string name="morphe_caption_cookies_title">Pamagat ng mga cookie</string>
   <string name="morphe_caption_cookies_summary">Cookies na ginamit upang i-authenticate ang Timed Text API request para sa mga caption</string>
   <string name="morphe_get_caption_cookies_title">Kumuha ng caption cookies</string>
-  <string name="morphe_get_caption_cookies_summary">"Awtomatikong kinukuha at sine-save ang cookies kung ang mga ito ay valid"</string>
+  <string name="morphe_get_caption_cookies_summary">Awtomatikong kinukuha at sine-save ang cookies kung ang mga ito ay valid</string>
   <string name="morphe_get_caption_cookies_failed">Hindi nakakuha ng cookies</string>
   <string name="morphe_get_caption_cookies_duplicate">Mayroon nang cookies</string>
   <string name="morphe_get_caption_cookies_success">Matagumpay na na-update ang cookies</string>
@@ -517,7 +517,9 @@ Upang ma-access ang Settings, i-enable ang Settings button sa pamamagitan ng Gen
   <string name="morphe_hide_player_flyout_audio_track_title">Itago ang \'Audio Track\' na menu</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Ito ay dapat panatilihing pribado. Ito ay parang password at hindi dapat ibahagi sa kahit sino. Kung mayroon nito, maaari ka nilang gayahin"</string>
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Nakatago ang menu ng 'Audio Track'
+
+Upang ipakita ang menu ng 'Audio Track', palitan ang 'Spoof video streams' sa 'Android Reel' o 'TV'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ang address na ginagamit ng SponsorBlock para gumawa ng mga tawag sa server</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ang iyong configuration ng SponsorBlock JSON na maaaring i-import / i-export sa Morphe at iba pang mga platform ng SponsorBlock</string>
@@ -766,7 +768,9 @@ Settings → Playback (o Autoplay) → Autoplay next video"</string>
   <string name="morphe_sb_settings_ie">I-import / I-export ang mga setting</string>
   <string name="morphe_sb_settings_copy">Kopyahin</string>
   <string name="morphe_sb_settings_ie_summary">Ang iyong JSON configuration ng SponsorBlock na maaaring i-import / i-export sa Morphe at iba pang mga platform ng SponsorBlock</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Ang iyong SponsorBlock JSON configuration na maaaring i-import / i-export sa Morphe at iba pang mga platform ng SponsorBlock. Kasama dito ang iyong pribadong user ID. Tiyaking ibahagi ito nang may pag-iingat</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Ang iyong configuration ng JSON ng SponsorBlock na maaaring i-import / export sa Morphe at iba pang mga platform ng SponsorBlock
+    
+Kasama dito ang iyong pribadong user ID. Siguraduhing ibahagi ito nang may pag-iingat"</string>
   <string name="morphe_sb_settings_import_successful">Matagumpay na na-import ang mga setting</string>
   <string name="morphe_sb_settings_import_failed">Nabigong i-import: %s</string>
   <string name="morphe_sb_settings_export_failed">Nabigong i-export: %s</string>
@@ -914,7 +918,7 @@ Kung hindi ka nagsumite ng highlight, pindutin ang Kanselahin at markahan ang pa
   <string name="morphe_sb_about_title">Tungkol</string>
   <string name="morphe_sb_about_api_summary">Ang data ay ibinibigay ng SponsorBlock API. I-tap dito para malaman pa at makita ang mga downloads para sa ibang plataporma</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Layout form factor</string>
+  <string name="morphe_change_form_factor_title">Layout ng device</string>
   <string name="morphe_change_form_factor_entry_1">Panimula</string>
   <string name="morphe_change_form_factor_entry_2">Telepono</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>

@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Απενεργοποίηση αναπαραγωγής παρασκηνίου για τα Shorts</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Εντοπισμός καταγραφής σφαλμάτων για πρωτόκολλα buffer</string>
-  <string name="morphe_debug_protobuffer_summary">Περιλαμβάνει δεδομένα πρωτόκολλου buffer σε ακατέργαστη μορφή στο αρχείο καταγραφής εντοπισμού σφαλμάτων για να βοηθήσει στον εντοπισμό στοιχείων διεπαφής χρήστη</string>
+  <string name="morphe_debug_protobuffer_summary">Προσθέτει επιπλέον πληροφορίες καταγραφής για τους προγραμματιστές για να εντοπίσουν τα στοιχεία της εφαρμογής</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Η ενεργοποίηση αυτής της ρύθμισης θα καταγράψει επιπλέον δεδομένα διάταξης, συμπεριλαμβανομένου του κειμένου στην οθόνη για ορισμένα στοιχεία διεπαφής χρήστη.
 
 Αυτό μπορεί να βοηθήσει στον εντοπισμό στοιχείων κατά τη δημιουργία προσαρμοσμένων φίλτρων.
@@ -217,13 +217,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_count_title">Αριθμός προβολών στη ροή και στα αποτελέσματα αναζήτησης</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Περιορισμοί:
-• Οι ενότητες Shorts, οι σελίδες καναλιών και τα αποτελέσματα αναζήτησης ενδέχονται να εξακολουθούν να εμφανίζουν τους αριθμούς προβολών
-• Αυτή η λειτουργία δεν λειτουργεί με την διάταξη αυτοκινήτου."</string>
+• Οι ενότητες Shorts, οι σελίδες καναλιών και τα αποτελέσματα αναζήτησης ενδέχεται να εξακολουθούν να εμφανίζουν τους αριθμούς προβολών.
+• Αυτή η λειτουργία δεν λειτουργεί με τη διάταξη αυτοκινήτου"</string>
   <string name="morphe_hide_upload_time_title">Χρόνος μεταμόρφωσης στη ροή και στα αποτελέσματα αναζήτησης</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Περιορισμοί:
-• Οι ενότητες Shorts, οι σελίδες καναλιών και τα αποτελέσματα αναζήτησης ενδέχονται να εξακολουθούν να εμφανίζουν τον χρόνο μεταφόρτωση
-• Αυτή η λειτουργία δεν λειτουργεί με την διάταξη αυτοκινήτου."</string>
+• Οι ενότητες Shorts, οι σελίδες καναλιών και τα αποτελέσματα αναζήτησης ενδέχεται να εξακολουθούν να εμφανίζουν τον χρόνο μεταφόρτωσης.
+• Αυτή η λειτουργία δεν λειτουργεί με τη διάταξη αυτοκινήτου."</string>
   <string name="morphe_hide_keyword_content_screen_title">Φίλτρο λέξεων-κλειδιών</string>
   <string name="morphe_hide_keyword_content_screen_summary">Επιλέξτε συγκεκριμένες λέξεις ή φράσεις για να αποκρύψετε βίντεο στις ροές και στην αναζήτηση</string>
   <string name="morphe_hide_keyword_content_home_title">Φιλτράρισμα αρχικής ροής</string>
@@ -284,7 +284,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_title">Εμφάνιση κουμπιού εξωτερικής λήψης</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Αλλαγή λειτουργίας κουμπιού ενέργειας «Λήψη»</string>
-  <string name="morphe_external_downloader_action_button_summary">Σύρετε κάθετα στην αριστερή πλευρά της οθόνης πλήρους προβολής για να ρυθμίσετε τη φωτεινότητα</string>
+  <string name="morphe_external_downloader_action_button_summary">Αντικαθιστά την ενσωματωμένη λειτουργία λήψης του YouTube με την εφαρμογή λήψης τρίτου κατασκευαστή της επιλογής σας.</string>
   <string name="morphe_external_downloader_name_title">Όνομα πακέτου εφαρμογής λήψης</string>
   <string name="morphe_external_downloader_name_summary">Το όνομα πακέτου της εγκατεστημένης σας εξωτερικής εφαρμογής λήψης</string>
   <string name="morphe_external_downloader_other_item_hint">Εισάγετε το όνομα πακέτου</string>
@@ -449,7 +449,7 @@ Second \"item\" text"</string>
   <string name="morphe_caption_cookies_title">Κουκί για την κεφαλίδα</string>
   <string name="morphe_caption_cookies_summary">Επιλέξτε ποια στοιχεία εμφανίζονται στη γραμμή εργαλείων</string>
   <string name="morphe_get_caption_cookies_title">Λήψη κουκί για την κεφαλίδα</string>
-  <string name="morphe_get_caption_cookies_summary">"Απόκρυψη κουμπιού Μικροφώνου"</string>
+  <string name="morphe_get_caption_cookies_summary">Απόκρυψη κουμπιού Μικροφώνου</string>
   <string name="morphe_get_caption_cookies_failed">Αποτυχία λήψης κουκί</string>
   <string name="morphe_get_caption_cookies_duplicate">Κουκί ήδη υπάρχουν</string>
   <string name="morphe_get_caption_cookies_success">Κουκί ενημερώθηκαν με επιτυχία</string>
@@ -515,9 +515,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_title">Κρύψτε το μενού \'Ήχος\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Το μενού 'Ήχος' είναι κρυφό
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Το μενού 'Audio Track' είναι κρυφό
 
-        Για να εμφανίσετε το μενού 'Ήχος', αλλάξτε το 'Spoof video streams' σε 'Android Reel' ή 'TV'"</string>
+Για να εμφανίσετε το μενού 'Audio Track', αλλάξτε το 'Spoof video streams' σε 'Android Reel' ή 'TV'."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Κρύψτε την υποσημείωση του μενού \'Ήχος\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Κρύψτε το μενού \'Υπότιτλοι\'</string>
@@ -766,7 +766,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_settings_ie">Εισαγωγή/Εξαγωγή ρυθμίσεων</string>
   <string name="morphe_sb_settings_copy">Αντιγραφή</string>
   <string name="morphe_sb_settings_ie_summary">Οι ρυθμίσεις SponsorBlock σας σε μορφή JSON που μπορούν να εισαχθούν/εξαχθούν στο Morphe και σε άλλες πλατφόρμες SponsorBlock</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Η διαμόρφωση JSON του SponsorBlock σας που μπορεί να εισαχθεί/εξαχθεί στο Morphe και σε άλλες πλατφόρμες SponsorBlock. Αυτό περιλαμβάνει το ιδιωτικό σας αναγνωριστικό χρήστη. Φροντίστε να το μοιραστείτε με σύνεση</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Οι ρυθμίσεις SponsorBlock σας σε μορφή JSON που μπορούν να εισαχθούν/εξαχθούν στο Morphe και σε άλλες πλατφόρμες SponsorBlock. Αυτό περιλαμβάνει το ιδιωτικό σας αναγνωριστικό χρήστη. Φροντίστε να το μοιραστείτε με σύνεση."</string>
   <string name="morphe_sb_settings_import_successful">Οι ρυθμίσεις εισήχθησαν επιτυχώς</string>
   <string name="morphe_sb_settings_import_failed">Η εισαγωγή απέτυχε: %s</string>
   <string name="morphe_sb_settings_export_failed">Η εξαγωγή απέτυχε: %s</string>
@@ -914,7 +914,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_about_title">Σχετικά με</string>
   <string name="morphe_sb_about_api_summary">Τα δεδομένα παρέχονται από το SponsorBlock API. Πατήστε για να μάθετε περισσότερα και να δείτε λήψεις για άλλες πλατφόρμες</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Αλλαγή μορφής διάταξης</string>
+  <string name="morphe_change_form_factor_title">Διάταξη συσκευής</string>
   <string name="morphe_change_form_factor_entry_1">Προεπιλογή</string>
   <string name="morphe_change_form_factor_entry_2">Τηλέφωνο</string>
   <string name="morphe_change_form_factor_entry_3">Ταμπλετ</string>

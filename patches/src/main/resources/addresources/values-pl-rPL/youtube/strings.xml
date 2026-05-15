@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Wyłącz odtwarzanie w tle</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Logi debugowania buforów protokołu</string>
-  <string name="morphe_debug_protobuffer_summary">Dołącza surowe dane buforów protokołu do logów debugowania, co ułatwia identyfikację elementów interfejsu</string>
+  <string name="morphe_debug_protobuffer_summary">Dodaje szczegółowe informacje do logów, aby ułatwić programistom identyfikację elementów aplikacji</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Włączenie tej opcji spowoduje rejestrowanie dodatkowych informacji o układzie, w tym tekstu wyświetlanego w niektórych elementach interfejsu.
 
 Może to pomóc w identyfikacji elementów podczas tworzenia własnych filtrów.
@@ -284,7 +284,7 @@ Ograniczenia:
   <string name="morphe_external_downloader_title">Pokaż przycisk zewnętrznego pobierania</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Nadpisz działanie przycisku Pobierz</string>
-  <string name="morphe_external_downloader_action_button_summary">Przekierowuje działanie przycisku pobierania do zewnętrznej aplikacji zamiast wbudowanego narzędzia do pobierania</string>
+  <string name="morphe_external_downloader_action_button_summary">Zastępuje wbudowaną w YouTube funkcję pobierania wybraną zewnętrzną aplikacją do pobierania</string>
   <string name="morphe_external_downloader_name_title">Nazwa pakietu aplikacji do pobierania filmów</string>
   <string name="morphe_external_downloader_name_summary">Nazwa pakietu zainstalowanej zewnętrznej aplikacji do pobierania filmów</string>
   <string name="morphe_external_downloader_other_item_hint">Wprowadź nazwę pakietu aplikacji</string>
@@ -351,7 +351,7 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_swipe_volume_summary">Przesuń pionowo po prawej stronie ekranu w trybie pełnoekranowym, aby dostosować głośność</string>
   <string name="morphe_swipe_press_to_engage_title">Włącz wymóg przytrzymania dla gestów</string>
   <string name="morphe_swipe_press_to_engage_summary">Wymaga przytrzymania, zanim gest przesunięcia zostanie rozpoznany</string>
-  <string name="morphe_swipe_haptic_feedback_title">Wibracje</string>
+  <string name="morphe_swipe_haptic_feedback_title">Włącz wibracje</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">Zapisuj i przywracaj jasność</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">Zapamiętuje poziom jasności podczas wchodzenia do trybu pełnoekranowego i wychodzenia z niego</string>
   <string name="morphe_swipe_lowest_value_enable_auto_brightness_title">Włącz gest automatycznej jasności</string>
@@ -451,7 +451,7 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_caption_cookies_title">Pliki cookie napisów</string>
   <string name="morphe_caption_cookies_summary">Pliki cookie używane do uwierzytelniania żądań API Timed Text dla napisów</string>
   <string name="morphe_get_caption_cookies_title">Pobierz pliki cookie napisów</string>
-  <string name="morphe_get_caption_cookies_summary">"Automatycznie pobiera i zapisuje pliki cookie, jeśli są prawidłowe"</string>
+  <string name="morphe_get_caption_cookies_summary">Automatycznie pobiera i zapisuje pliki cookie, jeśli są prawidłowe</string>
   <string name="morphe_get_caption_cookies_failed">Nie udało się pobrać plików cookie</string>
   <string name="morphe_get_caption_cookies_duplicate">Pliki cookie już istnieją</string>
   <string name="morphe_get_caption_cookies_success">Pliki cookie zostały pomyślnie zaktualizowane</string>
@@ -768,7 +768,9 @@ Ustawienia → Odtwarzanie (lub Autoodtwarzanie) → Autoodtwarzanie następnego
   <string name="morphe_sb_settings_ie">Importuj / Eksportuj ustawienia</string>
   <string name="morphe_sb_settings_copy">Kopiuj</string>
   <string name="morphe_sb_settings_ie_summary">Twoja konfiguracja JSON SponsorBlock, którą można importować / eksportować między Morphe a innymi platformami</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Twoja konfiguracja JSON SponsorBlock, którą można importować / eksportować między Morphe a innymi platformami. Zawiera ona Twój prywatny identyfikator użytkownika. Udostępniaj ją ostrożnie</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Twoja konfiguracja JSON SponsorBlock, którą można importować / eksportować między Morphe a innymi platformami
+
+Zawiera ona Twój prywatny identyfikator użytkownika. Udostępniaj ją ostrożnie"</string>
   <string name="morphe_sb_settings_import_successful">Ustawienia zaimportowane pomyślnie</string>
   <string name="morphe_sb_settings_import_failed">Nie udało się zaimportować: %s</string>
   <string name="morphe_sb_settings_export_failed">Nie udało się wyeksportować: %s</string>
@@ -916,7 +918,7 @@ Jeśli nie wysyłasz wyróżnienia, stuknij Anuluj i zaznacz drugi punkt"</strin
   <string name="morphe_sb_about_title">Informacje</string>
   <string name="morphe_sb_about_api_summary">Dane są dostarczane przez API SponsorBlock. Stuknij tutaj, aby dowiedzieć się więcej i pobrać na inne platformy</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Układ interfejsu</string>
+  <string name="morphe_change_form_factor_title">Układ urządzenia</string>
   <string name="morphe_change_form_factor_entry_1">Domyślny</string>
   <string name="morphe_change_form_factor_entry_2">Telefonowy</string>
   <string name="morphe_change_form_factor_entry_3">Tabletowy</string>
@@ -1114,7 +1116,7 @@ Stuknij tutaj, aby dowiedzieć się więcej o DeArrow"</string>
   <string name="morphe_bypass_url_redirects_summary">Otwiera docelowe adresy bezpośrednio, pomijając linki śledzące przekierowania</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Otwieraj linki w przeglądarce</string>
-  <string name="morphe_external_browser_summary">Otwiera linki w domyślnej przeglądarce zamiast w przeglądarce wbudowanej w aplikacji</string>
+  <string name="morphe_external_browser_summary">Otwiera linki w zewnętrznej przeglądarce zamiast we wbudowanej</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatyczna</string>
@@ -1147,7 +1149,7 @@ Stuknij tutaj, aby dowiedzieć się więcej o DeArrow"</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Nieprawidłowe niestandardowe prędkości odtwarzania</string>
   <string name="morphe_custom_playback_speeds_auto">Automatyczna</string>
   <string name="morphe_speed_tap_and_hold_title">Prędkość po przytrzymaniu</string>
-  <string name="morphe_speed_tap_and_hold_summary">Ustaw mnożnik prędkości podczas przytrzymania ekranu. Ustaw na 0, aby wyłączyć</string>
+  <string name="morphe_speed_tap_and_hold_summary">Ustaw mnożnik prędkości podczas przytrzymania ekranu. Wartość 0 wyłącza funkcję</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Zapamiętaj prędkość odtwarzania</string>
   <string name="morphe_remember_playback_speed_last_selected_summary">Stosuje ręcznie wybraną prędkość do wszystkich kolejnych filmów</string>

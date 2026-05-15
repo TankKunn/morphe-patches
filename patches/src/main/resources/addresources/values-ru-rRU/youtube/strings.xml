@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Отключить воспроизведение Shorts в фоновом режиме</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Буфер протокола журнала отладки</string>
-  <string name="morphe_debug_protobuffer_summary">Включает необработанные данные протокола буфера в отладочный лог, чтобы помочь идентифицировать компоненты пользовательского интерфейса</string>
+  <string name="morphe_debug_protobuffer_summary">Добавляет дополнительную информацию для ведения журнала для разработчиков, чтобы определить компоненты приложения</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Включение этой настройки позволит регистрировать дополнительные данные макета, включая текст на экране для некоторых компонентов пользовательского интерфейса.
 
 Это может помочь определить компоненты при создании пользовательских фильтров.
@@ -218,12 +218,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_count_title">Скрыть количество просмотров</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Ограничения:
-• Секции Shorts, страницы каналов и результаты поиска все еще могут показывать счетчики просмотров
-• Эта функция не работает с автомобильным форм-фактором."</string>
+• Короткие полки, страницы каналов и результаты поиска все еще могут показывать количество просмотров.
+• Эта функция не работает с автомобильной компоновкой."</string>
   <string name="morphe_hide_upload_time_title">Скрыть время загрузки</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Ограничения:
-• Секции Shorts, страницы каналов и результаты поиска все еще могут показывать время загрузки
+• Секции Shorts, страницы каналов и результаты поиска все еще могут показывать время загрузки.
 • Эта функция не работает с автомобильным форм-фактором."</string>
   <string name="morphe_hide_keyword_content_screen_title">Фильтр по ключевым словам</string>
   <string name="morphe_hide_keyword_content_screen_summary">Выберите определенные слова или фразы для скрытия видео в лентах и результатах поиска</string>
@@ -285,7 +285,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_title">Показать кнопку внешнего загрузчика</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Действие кнопки \"Скачать\"</string>
-  <string name="morphe_external_downloader_action_button_summary">Перенаправляет кнопку «Загрузить» во внешнюю программу загрузки, а не во встроенную программу загрузки</string>
+  <string name="morphe_external_downloader_action_button_summary">Заменяет встроенную функцию скачивания YouTube на выбранное вами стороннее приложение для скачивания.</string>
   <string name="morphe_external_downloader_name_title">Имя пакета загрузчика</string>
   <string name="morphe_external_downloader_name_summary">Имя пакета установленного Вами приложения внешнего загрузчика</string>
   <string name="morphe_external_downloader_other_item_hint">Введите имя пакета</string>
@@ -452,7 +452,7 @@ Second \"item\" text"</string>
   <string name="morphe_caption_cookies_title">Субтитры cookies</string>
   <string name="morphe_caption_cookies_summary">Cookie-файлы, используемые для аутентификации запросов API Timed Text для субтитров</string>
   <string name="morphe_get_caption_cookies_title">Получить субтитры cookies</string>
-  <string name="morphe_get_caption_cookies_summary">"Извлекает и сохраняет cookie-файлы автоматически, если они действительны"</string>
+  <string name="morphe_get_caption_cookies_summary">Извлекает и сохраняет cookie-файлы автоматически, если они действительны</string>
   <string name="morphe_get_caption_cookies_failed">Не удалось получить cookies</string>
   <string name="morphe_get_caption_cookies_duplicate">Cookies уже существуют</string>
   <string name="morphe_get_caption_cookies_success">Cookies успешно обновлены</string>
@@ -518,9 +518,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_title">Скрыть меню \"Аудиотреки\"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Меню \"Аудиотреки\" скрыто
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Меню «Аудио дорожка» скрыто
 
-        Чтобы показать меню «Аудиотреки», измените «Поддельные видеопотоки» на «Android Reel» или «TV»"</string>
+Чтобы отобразить меню «Аудио дорожка», измените «Поддельные видео потоки» на «Android Reel» или «TV»."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Скрыть нижний колонтитул меню «Аудиотреки»</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Скрыть меню \"Субтитры\"</string>
@@ -769,7 +769,9 @@ Second \"item\" text"</string>
   <string name="morphe_sb_settings_ie">Резервное копирование настроек</string>
   <string name="morphe_sb_settings_copy">Копировать</string>
   <string name="morphe_sb_settings_ie_summary">Ваша JSON конфигурация SponsorBlock, которая может быть импортирована или экспортирована в Morphe и другие платформы SponsorBlock</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Ваша конфигурация JSON SponsorBlock, которую можно импортировать/экспортировать в Morphe и другие платформы SponsorBlock. Она включает в себя ваш личный идентификатор пользователя. Будьте осторожны при ее публикации</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Ваша конфигурация JSON SponsorBlock, которую можно импортировать / экспортировать в Morphe и другие платформы SponsorBlock.
+    
+Это включает в себя Ваш личный идентификатор пользователя. Подумайте дважды перед тем, как делиться ею с кем-либо."</string>
   <string name="morphe_sb_settings_import_successful">Настройки успешно импортированы</string>
   <string name="morphe_sb_settings_import_failed">Не удалось импортировать: %s</string>
   <string name="morphe_sb_settings_export_failed">Не удалось экспортировать: %s</string>
@@ -918,7 +920,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_about_title">Об интеграции</string>
   <string name="morphe_sb_about_api_summary">Данные предоставлены SponsorBlock API. Нажмите для дополнительной информации и просмотра загрузок для других платформ</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Макет интерфейса</string>
+  <string name="morphe_change_form_factor_title">Макет устройства</string>
   <string name="morphe_change_form_factor_entry_1">По умолчанию</string>
   <string name="morphe_change_form_factor_entry_2">Телефонный</string>
   <string name="morphe_change_form_factor_entry_3">Планшетный</string>

@@ -40,7 +40,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_screen_title">Falsifier les flux vidéo</string>
   <string name="morphe_spoof_video_streams_screen_summary">Configurer la falsification du client afin d’éviter les problèmes de lecture</string>
   <string name="morphe_spoof_video_streams_title">Falsifier les flux vidéo</string>
-  <string name="morphe_spoof_video_streams_summary">"Trompe YouTube pour qu’il envoie un flux vidéo compatible, ce qui corrige la lecture pour la plupart des utilisateurs
+  <string name="morphe_spoof_video_streams_summary">"Fait croire à YouTube qu’il envoie un flux vidéo compatible, ce qui corrige la lecture pour la plupart des utilisateurs.
 
 Si vous êtes un utilisateur de YouTube Premium, ce paramètre peut ne pas être nécessaire"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Impossible de récupérer les flux du client.</string>

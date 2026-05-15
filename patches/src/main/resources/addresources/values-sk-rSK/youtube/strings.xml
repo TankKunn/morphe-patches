@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Zakázať prehrávanie Shorts na pozadí</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Debugovací protokol buffer</string>
-  <string name="morphe_debug_protobuffer_summary">Zahŕňa surové dáta protokolu bufferu v debug logu, aby pomohol identifikovať UI komponenty</string>
+  <string name="morphe_debug_protobuffer_summary">Pridáva dodatočné informácie o zaznamenávaní pre vývojárov na identifikáciu komponentov aplikácie</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Povoľením tohto nastavenia sa zaznamenávajú dodatočné údaje o rozložení, vrátane textu na obrazovke pre niektoré komponenty používateľského rozhrania.
 
 To môže pomôcť identifikovať komponenty pri vytváraní vlastných filtrov.
@@ -217,13 +217,13 @@ Zobrazenie YouTube Doodle môže zabrániť zobrazeniu vlastných hlavičiek."</
   <string name="morphe_hide_view_count_title">Skryť počet zhliadnutí</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Obmedzenia:
-• Šelfy Shorts, stránky kanálov a výsledky vyhľadávania stále môžu zobrazovať počty zhliadnutí.
-• Táto funkcia nefunguje s automobilovým formátom."</string>
+• Krátke police, stránky kanálov a výsledky vyhľadávania môžu stále zobrazovať počty zobrazení.
+• Táto funkcia nefunguje s automoblovým rozložením."</string>
   <string name="morphe_hide_upload_time_title">Skryť čas nahrania</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Obmedzenia:
-• Šelfy Shorts, stránky kanálov a výsledky vyhľadávania stále môžu zobrazovať čas nahrávania.
-• Táto funkcia nefunguje s automobilovým formátom."</string>
+• Krátke videá, stránky kanálov a výsledky vyhľadávania môžu stále zobrazovať čas nahrávania.
+• Táto funkcia nefunguje s rozložením pre automobily."</string>
   <string name="morphe_hide_keyword_content_screen_title">Filter kľúčových slov</string>
   <string name="morphe_hide_keyword_content_screen_summary">Vyberte konkrétne slová alebo frázy na skrytie videí v zdrojoch a pri vyhľadávaní</string>
   <string name="morphe_hide_keyword_content_home_title">Skryť videá na domovskej stránke pomocou kľúčových slov</string>
@@ -284,7 +284,7 @@ Obmedzenia:
   <string name="morphe_external_downloader_title">Zobraziť tlačidlo na externé stiahnutie</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Prepísať tlačidlo akcie na stiahnutie</string>
-  <string name="morphe_external_downloader_action_button_summary">Presmeruje tlačidlo Stiahnuť na sťahovač tretích strán namiesto natívneho sťahovača v aplikácii</string>
+  <string name="morphe_external_downloader_action_button_summary">Nahrádza vstavanú funkciu na stiahnutie YouTube vašou vybranou aplikáciou na stiahnutie tretích strán</string>
   <string name="morphe_external_downloader_name_title">Názov balíka sťahovača</string>
   <string name="morphe_external_downloader_name_summary">Názov balíka nainštalovanej aplikácie na externé sťahovanie</string>
   <string name="morphe_external_downloader_other_item_hint">Zadajte názov balíka</string>
@@ -450,7 +450,7 @@ Poznámka: Nemusí fungovať na živých prenosoch"</string>
   <string name="morphe_caption_cookies_title">Súbory cookie titulkov</string>
   <string name="morphe_caption_cookies_summary">Súbory cookie použité na autentifikáciu požiadaviek Timed Text API pre titulky</string>
   <string name="morphe_get_caption_cookies_title">Získať súbory cookie s titulkami</string>
-  <string name="morphe_get_caption_cookies_summary">"Automaticky získa a ukladá súbory cookie, ak sú platné"</string>
+  <string name="morphe_get_caption_cookies_summary">Automaticky získa a ukladá súbory cookie, ak sú platné</string>
   <string name="morphe_get_caption_cookies_failed">Nepodarilo sa získať súbory cookie</string>
   <string name="morphe_get_caption_cookies_duplicate">Súbory cookie už existujú</string>
   <string name="morphe_get_caption_cookies_success">Súbory cookie boli úspešne aktualizované</string>
@@ -516,9 +516,9 @@ Na prístup k nastaveniam povoľte tlačidlo Nastavenia v časti Všeobecné →
   <string name="morphe_hide_player_flyout_audio_track_title">Skryť ponuku \'Zvuková stopa\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Ponuka 'Zvuková stopa' je skrytá
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu 'Zvuková stopa' je skryté
 
-        Ak chcete zobraziť ponuku 'Zvuková stopa', zmeňte 'Spoof video streams' na 'Android Reel' alebo 'TV'"</string>
+Ak chcete zobraziť menu 'Zvuková stopa', zmeňte 'Maskovať streamy videí' na 'Android Reel' alebo 'TV'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skryť pätičku ponuky \'Zvuková stopa\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skryť ponuku \'Titulky\'</string>
@@ -767,7 +767,9 @@ Nastavenia → Prehrávanie (alebo Automatické prehrávanie) → Automaticky pr
   <string name="morphe_sb_settings_ie">Importovať / Exportovať nastavenia</string>
   <string name="morphe_sb_settings_copy">Kopírovať</string>
   <string name="morphe_sb_settings_ie_summary">JSON konfigurácia SponsorBlocku, ktorú je možné importovať / exportovať do Morphe a iných SponsorBlock platforiem</string>
-  <string name="morphe_sb_settings_ie_summary_warning">JSON konfigurácia SponsorBlocku, ktorú je možné importovať / exportovať do Morphe a iných platforiem SponsorBlock. Zahŕňa aj vaše súkromné používateľské ID. Buďte opatrní pri jej zdieľaní</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Konfigurácia JSON pre SponsorBlock, ktorú je možné importovať / exportovať do Morphe a iných platforiem SponsorBlock.
+    
+Táto konfigurácia zahŕňa vaše súkromné používateľské ID. Buďte opatrní pri jej zdieľaní."</string>
   <string name="morphe_sb_settings_import_successful">Nastavenia boli úspešne importované</string>
   <string name="morphe_sb_settings_import_failed">Import zlyhal: %s</string>
   <string name="morphe_sb_settings_export_failed">Export zlyhal: %s</string>
@@ -915,7 +917,7 @@ Ak neodosielate zvýraznenie, klepnite na Zrušiť a označte druhú polohu"</st
   <string name="morphe_sb_about_title">O aplikácii</string>
   <string name="morphe_sb_about_api_summary">Údaje poskytuje API služby SponsorBlock. Klepnite sem a dozviete sa viac a pozrite si sťahovanie pre iné platformy</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Formát rozloženia</string>
+  <string name="morphe_change_form_factor_title">Rozloženie zariadenia</string>
   <string name="morphe_change_form_factor_entry_1">Predvolený</string>
   <string name="morphe_change_form_factor_entry_2">Telefón</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>

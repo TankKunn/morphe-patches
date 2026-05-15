@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Poista Shortsien taustatoisto käytöstä</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Virheenkorjauksen lokiprotokollapuskuri</string>
-  <string name="morphe_debug_protobuffer_summary">Sisältää raakapaketintiedot virheenkorjauslokiin UI-komponenttien tunnistamisen helpottamiseksi</string>
+  <string name="morphe_debug_protobuffer_summary">Lisää kehittäjille tarkoitettuja lisätietoja lokitiedostoihin sovelluksen komponenttien tunnistamista varten</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Tämän asetuksen käyttöönotto kirjaa lisätietoja asettelusta, mm. joidenkin käyttöliittymän osien näyttötekstiä.
 
 Tämä voi auttaa komponenttien tunnistamisessa, kun luot mukautettuja suodattimia.
@@ -218,12 +218,12 @@ YouTube Doodlen näyttäminen saattaa estää mukautettujen otsikoiden näyttäm
   <string name="morphe_hide_view_count_title">Piilota katselukerrat</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Rajoitukset:
-• Shorts-hyllyt, kanavasivut ja hakutulokset saattavat edelleen näyttää katselukertoja
-• Tämä ominaisuus ei toimi ajoneuvo-käyttöliittymäasettelussa."</string>
+• Shorts-hyllyt, kanavasivut ja hakutulokset saattavat edelleen näyttää katselukertoja.
+• Tämä ominaisuus ei toimi ajoneuvo-käyttöliittymäasettelussa"</string>
   <string name="morphe_hide_upload_time_title">Piilota julkaisuaika</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Rajoitukset:
-• Shorts-hyllyt, kanavasivut ja hakutulokset saattavat edelleen näyttää julkaisuaikoja
+• Shorts-hyllyt, kanavasivut ja hakutulokset saattavat edelleen näyttää julkaisuaikoja.
 • Tämä ominaisuus ei toimi ajoneuvo-käyttöliittymäasettelussa."</string>
   <string name="morphe_hide_keyword_content_screen_title">Avainsanasuodatin</string>
   <string name="morphe_hide_keyword_content_screen_summary">Valitse tietyt videot piilotettavaksi syötteissä ja hauissa käyttämällä avainsanoja</string>
@@ -285,7 +285,7 @@ Rajoitukset:
   <string name="morphe_external_downloader_title">Näytä ulkoinen lataus -painike</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Korvaa Lataa-toimintopainike</string>
-  <string name="morphe_external_downloader_action_button_summary">Näytä Toista video jatkuvasti -painike</string>
+  <string name="morphe_external_downloader_action_button_summary">Korvaa YouTuben sisäänrakennetun lataustoiminnon valitsemallasi kolmannen osapuolen lataussovelluksella.</string>
   <string name="morphe_external_downloader_name_title">Lataussovelluksen paketin nimi</string>
   <string name="morphe_external_downloader_name_summary">Asennetun ulkoisen lataussovelluksen paketin nimi</string>
   <string name="morphe_external_downloader_other_item_hint">Anna paketin nimi</string>
@@ -450,7 +450,7 @@ Tarkista, että paketin nimi on oikein ja sovellus on asennettu"</string>
   <string name="morphe_caption_cookies_title">Tekstitysevästeet</string>
   <string name="morphe_caption_cookies_summary">Hakee ja tallentaa evästeet automaattisesti, jos ne ovat kelvollisia</string>
   <string name="morphe_get_caption_cookies_title">Hae tekstitysevästeet</string>
-  <string name="morphe_get_caption_cookies_summary">"Ratkaisee esiehtojen tarkistusvirheen, joka voi estää tekstityksen latautumisen"</string>
+  <string name="morphe_get_caption_cookies_summary">Ratkaisee esiehtojen tarkistusvirheen, joka voi estää tekstityksen latautumisen</string>
   <string name="morphe_get_caption_cookies_failed">Evästeiden noutaminen epäonnistui</string>
   <string name="morphe_get_caption_cookies_duplicate">Evästeet ovat jo olemassa</string>
   <string name="morphe_get_caption_cookies_success">Evästeet päivitettiin onnistuneesti</string>
@@ -518,7 +518,7 @@ Saadaksesi asetukset, ota Asetukset-painike käyttöön kohdasta Yleiset → Ty�
           'Android Reel' and 'TV' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Ääniraitavalikko on piilotettu
 
-Jos haluat näyttää ääniraitavalikon, vaihda \"Naamioi videovirrat\" -asetukseksi \"Android Reel\" tai \"TV\""</string>
+Näyttääksesi Ääniraitavalikon, vaihda \"Naamioi videovirrat\" -asetukseksi \"Android Reel\" tai \"TV\"."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Piilota \'Ääniraita\'-valikon alatunniste</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Piilota Tekstitykset-valikko</string>
@@ -767,7 +767,7 @@ Asetukset → Toisto (tai Autoplay) → Toista seuraava video"</string>
   <string name="morphe_sb_settings_ie">Tuo/Vie asetukset</string>
   <string name="morphe_sb_settings_copy">Kopioi</string>
   <string name="morphe_sb_settings_ie_summary">SponsorBlockin JSON-konfiguraatiosi, joka voidaan tuoda/viedä Morpheiin ja muihin SponsorBlock-alustoihin</string>
-  <string name="morphe_sb_settings_ie_summary_warning">SponsorBlockin JSON-konfiguraatiosi, joka voidaan tuoda/viedä Morpheen ja muihin SponsorBlock-alustoihin. Tämä sisältää yksityisen UserID:si. Jaa tämä harkiten</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"SponsorBlockin JSON-konfiguraatiosi, joka voidaan tuoda/viedä Morpheiin ja muihin SponsorBlock-alustoihin. Tämä sisältää yksityisen UserID:si. Jaa tämä harkiten"</string>
   <string name="morphe_sb_settings_import_successful">Asetusten tuonti onnistui</string>
   <string name="morphe_sb_settings_import_failed">Tuonti epäonnistui: %s</string>
   <string name="morphe_sb_settings_export_failed">Vienti epäonnistui: %s</string>
@@ -916,7 +916,7 @@ Jos et lähetä korostusta, napauta Peruuta ja merkitse toinen sijainti"</string
   <string name="morphe_sb_about_title">Tietoja</string>
   <string name="morphe_sb_about_api_summary">Tiedot tarjoaa SponsorBlock API. Napauta tätä saadaksesi lisätietoja ja nähdäksesi lataukset muille alustoille</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Käyttöliittymän asettelu</string>
+  <string name="morphe_change_form_factor_title">Laitteen asettelu</string>
   <string name="morphe_change_form_factor_entry_1">Oletus</string>
   <string name="morphe_change_form_factor_entry_2">Puhelin</string>
   <string name="morphe_change_form_factor_entry_3">Tabletti</string>

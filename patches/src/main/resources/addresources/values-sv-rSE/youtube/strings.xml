@@ -154,14 +154,8 @@ Om YouTube-doodles visas kan det hindra anpassade sidhuvuden från att visas."</
   <string name="morphe_custom_filter_toast_invalid_syntax">Det anpassade filtret är ogiltigt: %s</string>
   <string name="morphe_hide_view_count_title">Dölj antal visningar</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Begränsningar:
-• Shorts-hyllor, kanalsidor och sökresultat kan fortfarande visa antalet visningar.
-• Det här funktionen fungerar inte med bilformfaktorn."</string>
   <string name="morphe_hide_upload_time_title">Dölj uppladdningstid</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Begränsningar:
-• Shorts-hyllor, kanalsidor och sökresultat kan fortfarande visa uppladdningstider.
-• Det här funktionen fungerar inte med bilformfaktorn."</string>
   <string name="morphe_hide_keyword_content_screen_title">Nyckelordsfilter</string>
   <string name="morphe_hide_keyword_content_home_title">Dölj videor i Hem med nyckelord</string>
   <string name="morphe_hide_keyword_content_search_title">Dölj sökresultat med nyckelord</string>
@@ -564,7 +558,6 @@ Inställningar → Uppspelning (eller Automatisk uppspelning) → Spela upp näs
   <string name="morphe_sb_settings_ie">Importera/exportera inställningar</string>
   <string name="morphe_sb_settings_copy">Kopiera</string>
   <string name="morphe_sb_settings_ie_summary">Din JSON-konfiguration för SponsorBlock som kan importeras/exporteras till Morphe och andra SponsorBlock-plattformar</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Din JSON-konfiguration för SponsorBlock som kan importeras/exporteras till Morphe och andra SponsorBlock-plattformar. Detta inkluderar ditt privata användar-id. Se till att dela detta klokt</string>
   <string name="morphe_sb_settings_import_successful">Inställningar har importerats</string>
   <string name="morphe_sb_settings_import_failed">Det gick inte att importera: %s</string>
   <string name="morphe_sb_settings_export_failed">Det gick inte att exportera: %s</string>
@@ -712,7 +705,6 @@ Om du inte vill skicka in en höjdpunkt trycker du på Avbryt och markerar den a
   <string name="morphe_sb_about_title">Om</string>
   <string name="morphe_sb_about_api_summary">Data tillhandahålls av SponsorBlock-API:et. Tryck här för att läsa mer och se nedladdningar för andra plattformar</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Layoutformfaktor</string>
   <string name="morphe_change_form_factor_entry_1">Standard</string>
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Surfplatta</string>

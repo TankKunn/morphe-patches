@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Arka plandaki oynatımı devre dışı bırak</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Hata ayıklama protokol arabelleği</string>
-  <string name="morphe_debug_protobuffer_summary">Hata ayıklama günlüğüne ham protokol arabelleği verilerini ekler, kullanıcı arabirimi bileşenlerini belirlemeye yardımcı olur</string>
+  <string name="morphe_debug_protobuffer_summary">Geliştiricilerin uygulamadaki bileşenleri tanımlamasına yardımcı olacak ek günlük bilgileri ekler</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Bu ayarı etkinleştirmek, bazı kullanıcı arayüzü bileşenleri için ekrandaki metin de dahil olmak üzere ek düzen verilerini günlüğe kaydeder.
 
 Bu, özel filtreler oluştururken bileşenleri tanımlamaya yardımcı olabilir.
@@ -217,13 +217,13 @@ YouTube Doodles göstermek, özel başlıkların görüntülenmesini engelleyebi
   <string name="morphe_hide_view_count_title">İzlenme sayısını gizle</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Sınırlamalar:
-• Shorts rafları, kanal sayfaları ve arama sonuçları yine de izlenme sayılarını gösterebilir
-• Bu özellik otomotiv form faktörüyle çalışmaz."</string>
+• Shorts rafları, kanal sayfaları ve arama sonuçları hala görüntüleme sayılarını gösterebilir.
+• Bu özellik otomotiv düzeniyle çalışmaz."</string>
   <string name="morphe_hide_upload_time_title">Yüklenme zamanını gizle</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Sınırlamalar:
-• Shorts rafları, kanal sayfaları ve arama sonuçları yine de yüklenme zamanlarını gösterebilir
-• Bu özellik otomotiv form faktörü ile çalışmaz."</string>
+• Shorts rafları, kanal sayfaları ve arama sonuçları yine de yüklenme zamanlarını gösterebilir.
+• Bu özellik otomotiv düzeniyle çalışmaz."</string>
   <string name="morphe_hide_keyword_content_screen_title">Anahtar kelime filtresi</string>
   <string name="morphe_hide_keyword_content_screen_summary">Akışlarda ve aramada videoyu gizlemek için belirli anahtar kelimeleri veya ifadeleri seçin</string>
   <string name="morphe_hide_keyword_content_home_title">Ana sayfadaki videoları anahtar kelimelerle gizle</string>
@@ -284,7 +284,7 @@ Sınırlamalar
   <string name="morphe_external_downloader_title">Harici indirme düğmesini göster</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">İndirme eylem düğmesini kullan</string>
-  <string name="morphe_external_downloader_action_button_summary">Videoyu döngüye al düğmesini göster</string>
+  <string name="morphe_external_downloader_action_button_summary">YouTube\'ın yerleşik indirme işlevini, seçtiğiniz üçüncü taraf indirme uygulamasıyla değiştirir</string>
   <string name="morphe_external_downloader_name_title">İndirici paket adı</string>
   <string name="morphe_external_downloader_name_summary">Yüklü harici indirme uygulamanızın paket adı</string>
   <string name="morphe_external_downloader_other_item_hint">Paket adını girin</string>
@@ -449,7 +449,7 @@ Paket adının doğru olduğunu ve uygulamanın yüklü olduğunu doğrulayın"<
   <string name="morphe_caption_cookies_title">Altyazı çerezleri</string>
   <string name="morphe_caption_cookies_summary">Altyazılar için Zamanlı Metin API isteklerini kimlik doğrulamak için kullanılan çerezler</string>
   <string name="morphe_get_caption_cookies_title">Altyazı çerezlerini al</string>
-  <string name="morphe_get_caption_cookies_summary">"Geçerliyse çerezleri otomatik olarak alır ve kaydeder"</string>
+  <string name="morphe_get_caption_cookies_summary">Geçerliyse çerezleri otomatik olarak alır ve kaydeder</string>
   <string name="morphe_get_caption_cookies_failed">Çerezleri almak için başarısız oldu</string>
   <string name="morphe_get_caption_cookies_duplicate">Çerezler zaten var</string>
   <string name="morphe_get_caption_cookies_success">Çerezler başarıyla güncellendi</string>
@@ -515,7 +515,9 @@ Ayarlara erişmek için, Genel → Araç Çubuğu → Ayarları Göster yoluyla 
   <string name="morphe_hide_player_flyout_audio_track_title">\'Ses Parçası\' menüsünü gizle</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Ses Parçası' menüsü gizli. 'Video akışlarını taklit et'i 'Android Reel' veya 'TV' olarak değiştirmek için 'Video akışlarını taklit et'i değiştirerek 'Ses Parçası' menüsünü görüntüleyin."</string>
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Ses Parçası' menüsü gizli
+
+'Ses Parçası' menüsünü göstermek için, 'Video akışlarını taklit et'i 'Android Reel' veya 'TV' olarak değiştirin"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">\'Ses Parçası\' menüsü alt bilgisini gizle</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Altyazılar menüsünü gizle</string>
@@ -764,7 +766,9 @@ Ayarlar → Oynatma (veya Otomatik oynat) → Sonraki video otomatik oynat"</str
   <string name="morphe_sb_settings_ie">Ayarları içe/dışa aktar</string>
   <string name="morphe_sb_settings_copy">Kopyala</string>
   <string name="morphe_sb_settings_ie_summary">Morphe\'e ve diğer SponsorBlock platformlarına aktarılabilecek SponsorBlock JSON yapılandırmanız</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Özel kullanıcı kimliğiniz dahil olmak üzere Morphe ve diğer SponsorBlock platformlarına aktarılabilen SponsorBlock JSON yapılandırmanız. Bunu dikkatli paylaştığınızdan emin olun</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Morphe'e ve diğer SponsorBlock platformlarına aktarılabilecek SponsorBlock JSON yapılandırmanız.
+    
+Bu, özel kullanıcı kimliğinizi içerir. Bunu dikkatli paylaştığınızdan emin olun"</string>
   <string name="morphe_sb_settings_import_successful">Ayarlar başarıyla içe aktarıldı</string>
   <string name="morphe_sb_settings_import_failed">İçe aktarılamadı: %s</string>
   <string name="morphe_sb_settings_export_failed">Dışa aktarılamadı: %s</string>
@@ -912,7 +916,7 @@ Bir vurgu göndermiyorsanız, İptal'e dokunun ve ikinci konumu işaretleyin"</s
   <string name="morphe_sb_about_title">Hakkında</string>
   <string name="morphe_sb_about_api_summary">Veri, SponsorBlock API\'sinden sağlanır. Daha fazla bilgi ve diğer platformlar için indirmeleri görmek için dokunun</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Düzen form faktörü</string>
+  <string name="morphe_change_form_factor_title">Cihaz düzeni</string>
   <string name="morphe_change_form_factor_entry_1">Varsayılan</string>
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>

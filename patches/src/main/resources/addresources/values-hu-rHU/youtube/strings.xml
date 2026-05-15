@@ -29,55 +29,55 @@ Second \"item\" text"</string>
   <string name="morphe_settings_screen_08_swipe_controls_title">Csúsztatási vezérlők</string>
   <string name="morphe_settings_screen_11_misc_title">Egyéb</string>
   <string name="morphe_settings_screen_12_video_title">Videó</string>
-  <string name="morphe_restore_old_settings_menus_title">Régi beállítási menük visszaállítása</string>
+  <string name="morphe_restore_old_settings_menus_title">Régi beállítás menük visszaállítása</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
-  <string name="morphe_remove_background_playback_restrictions_title">A háttérlejátszás korlátozásainak eltávolítása</string>
-  <string name="morphe_shorts_disable_background_playback_title">A Shorts háttérben történő lejátszásának letiltása</string>
+  <string name="morphe_remove_background_playback_restrictions_title">Háttérben lejátszás korlátozásainak feloldása</string>
+  <string name="morphe_shorts_disable_background_playback_title">Háttérben történő lejátszás kikapcsolása</string>
   <!-- misc.debugging.enableDebuggingPatch -->
-  <string name="morphe_debug_protobuffer_title">Hibakeresési naplózási protokoll puffer</string>
-  <string name="morphe_debug_protobuffer_summary">Debug naplóban a nyers protokollpuffertartalom szerepeltetése az UI komponensek azonosításának segítése érdekében</string>
-  <string name="morphe_debug_protobuffer_user_dialog_message">"Ennek a beállításnak az engedélyezése további elrendezési adatokat fog naplózni, beleértve néhány felhasználói felületi komponens képernyőn megjelenő szövegét.
+  <string name="morphe_debug_protobuffer_title">Hibakeresési napló protokollpuffer</string>
+  <string name="morphe_debug_protobuffer_summary">További naplózási információkat ad a fejlesztőknek az alkalmazás komponenseinek azonosításához.</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"​A beállítás engedélyezése további elrendezési adatokat naplóz, beleértve egyes felületi elemek képernyőn megjelenő szövegeit is.
 
-Ez segíthet azonosítani az összetevőket egyedi szűrők létrehozásakor.
+​Ez segíthet az összetevők beazonosításában egyedi szűrők készítésekor.
 
-Ez a funkció azonban néhány felhasználói adatot is naplóz, például az IP-címét."</string>
+​Azonban a funkció bekapcsolása bizonyos felhasználói adatokat, például az IP-címedet is naplózni fogja."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
-  <string name="morphe_disable_layout_updates_title">Minta frissítés letiltása</string>
-  <string name="morphe_disable_layout_updates_summary">Megakadályozza az alkalmazás elrendezésének frissítését a szerverről</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Az alkalmazás felépítése visszakerül az első telepítéskor használt felépítéshez.
+  <string name="morphe_disable_layout_updates_title">Megjelenés frissítések letiltása</string>
+  <string name="morphe_disable_layout_updates_summary">Megakadályozza, hogy a szerver frissítse az alkalmazás megjelenését</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Az alkalmazás megjelenése visszaáll a legelső telepítéskori állapotra.
 
-Néhány szerveroldali felépítés nem visszakerül.
+Néhány szerveroldali elrendezés esetében előfordulhat, hogy a visszaállítás nem történik meg.
 
-Változások:
-• A lejátszó repülőmenüben található összetevők (vagy kapcsolódó beállítások) nem működhetnek.
-• A forgó számok nem animálva.
-• A könyvtár tab is látható.
-• A videóleírásban található zene szakasz nem működhet.
-• A lejátszó repülőmenü pontjait nem lehet elrejtni.
-• A könyvtár tab-on a fiókváltó gomb nem jelenhet meg."</string>
+A változások a következőket tartalmazzák:
+• A lejátszó felugró menüjének elemei (vagy a kapcsolódó beállítások)  nem működhetnek.
+• A pörgő számok animációja megszűnik.
+• Megjelenik a Könyvtár lap.
+• A videóleírások zenei szekciója nem működhet.
+• A lejátszó felugró menüjének elemeit nem lehet elrejteni.
+• A fiókváltó gomb nem jelenhet meg a Könyvtár lapon."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
-  <string name="morphe_hide_feed_flyout_menu_title">Engedélyezze a táplálkozó hurokmenü szűrőjét</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Táplálkozó hurokmenü szűrő</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Új sorokkal elválasztva adja meg a felugró menü nevek szűréséhez használt neveket</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Felugró menü szűrő engedélyezése a Feedben</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Feed felugró menü szűrő </string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Add meg a szűrni kívánt felugró menüpontok nevét, soronként elválasztva</string>
   <string name="morphe_hide_album_cards_title">Albumkártyák elrejtése</string>
-  <string name="morphe_hide_album_cards_summary">Elrejti az albumkártyákat a művészleírás alatt</string>
+  <string name="morphe_hide_album_cards_summary">Elrejti az albumkártyákat az előadó leírása alatt</string>
   <string name="morphe_hide_artist_cards_title">Előadó kártyák elrejtése</string>
-  <string name="morphe_hide_artist_cards_summary">Elrejti a művészkártyát a keresési eredmények tetején</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Rejtse el a \"Automatikus szinkron\" feliratot</string>
+  <string name="morphe_hide_artist_cards_summary">Elrejti az előadói kártyát a keresési találatok tetején</string>
+  <string name="morphe_hide_auto_dubbed_label_title">​„Automatikus szinkron” címke elrejtése</string>
   <string name="morphe_hide_community_posts_title">Közösségi posztok elrejtése</string>
-  <string name="morphe_hide_compact_banner_title">Kompakt szalagképek elrejtése</string>
-  <string name="morphe_hide_compact_banner_summary">Elrejti a kompakt bannereket és a komponensek közötti elválasztást</string>
-  <string name="morphe_hide_expandable_card_title">A videók alatti kibontható kártyák</string>
-  <string name="morphe_hide_expandable_card_entry_1">Mindent megjelenít</string>
-  <string name="morphe_hide_expandable_card_entry_2">Csak a termékkártyát rejti el</string>
-  <string name="morphe_hide_expandable_card_entry_3">Csak az összefoglaló kártyát rejti el</string>
-  <string name="morphe_hide_expandable_card_entry_4">Elrejti a termék- és az összefoglaló kártyákat</string>
-  <string name="morphe_hide_expandable_card_entry_5">Mindent elrejti</string>
+  <string name="morphe_hide_compact_banner_title">Kompakt szalaghirdetések elrejtése</string>
+  <string name="morphe_hide_compact_banner_summary">Kompakt szalagképek és az egyes összetevők közötti térköz elrejtése</string>
+  <string name="morphe_hide_expandable_card_title">Kibontható kártyák a videók alatt</string>
+  <string name="morphe_hide_expandable_card_entry_1">Az összes megjelenítése</string>
+  <string name="morphe_hide_expandable_card_entry_2">Csak a termékkártya elrejtése</string>
+  <string name="morphe_hide_expandable_card_entry_3">Csak az összefoglaló kártya elrejtése</string>
+  <string name="morphe_hide_expandable_card_entry_4">Termék- és összefoglaló kártyák elrejtése</string>
+  <string name="morphe_hide_expandable_card_entry_5">Az összes elrejtése</string>
   <string name="morphe_hide_floating_microphone_button_title">Lebegő mikrofon gomb elrejtése</string>
-  <string name="morphe_hide_floating_microphone_button_summary">Elrejti a lebegő mikrofon gombot a keresési javaslatok képernyőjének jobb alsó sarkában</string>
+  <string name="morphe_hide_floating_microphone_button_summary">A keresési javaslatok képernyő jobb alsó sarkában lévő lebegő mikrofon gomb elrejtése</string>
   <string name="morphe_hide_horizontal_shelves_title">Vízszintes polcok elrejtése</string>
-  <string name="morphe_hide_horizontal_shelves_summary">Elrejti a vízszintes polcokat, például a Legfrissebb hírek, A közösségből ajánlott bejegyzések, Folytassa a nézést, További csatornák felfedezése, További témák felfedezése, Az Ön számára, Legújabb videók, A legrelevánsabbak, Bejegyzések a Létrehozó közösségéből, Vásárlás és Nézze meg újra</string>
-  <string name="morphe_hide_hyped_label_title">Rejtsd el a népszerű feliratot</string>
+  <string name="morphe_hide_horizontal_shelves_summary">Olyan vízszintes polcok elrejtése, mint a Friss hírek, Közösségi bejegyzések, amik érdekelhetnek, Megtekintés folytatása, További csatornák felfedezése, További témák felfedezése, Neked, Legújabb videók, Legrelevánsabb, Bejegyzések az alkotói közösségtől, Vásárlás és Megtekintés újra</string>
+  <string name="morphe_hide_hyped_label_title">Hájpolt címke elrejtése</string>
   <string name="morphe_hide_image_shelf_title">Képpolc elrejtése</string>
   <string name="morphe_hide_image_shelf_summary">Elrejti a képes polcokat a keresési eredményekben</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
@@ -217,13 +217,13 @@ A YouTube Doodles megjelenítése megakadályozhatja egyéni fejléc megjelenít
   <string name="morphe_hide_view_count_title">Megtekintések számának elrejtése</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Korlátozások:
-• A Shorts polcok, csatornaoldalak és a keresési eredmények továbbra is mutathatják a megtekintések számát
-• Ez a funkció nem működik az autós formátummal."</string>
+• A Shorts polcok, csatornaoldalak és a keresési eredmények továbbra is mutathatják a megtekintések számát.
+• Ez a funkció nem működik autóipari elrendezéssel."</string>
   <string name="morphe_hide_upload_time_title">Feltöltési idő elrejtése</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Korlátozások:
-• A Shorts polcokon, csatornaoldalakon és keresési eredményekben továbbra is megjelenhetnek a feltöltési idők
-• Ez a funkció nem működik az autós formátummal."</string>
+• A Shorts polcokon, csatornaoldalakon és a keresési eredményekben továbbra is megjelenhetnek a feltöltési időpontok.
+• Ez a funkció nem működik az autóban való használat esetén."</string>
   <string name="morphe_hide_keyword_content_screen_title">Kulcsszó szűrő</string>
   <string name="morphe_hide_keyword_content_screen_summary">Válassza ki a videókat a hírekben és a keresésben elrejteni kívánt szavakat vagy kifejezéseket</string>
   <string name="morphe_hide_keyword_content_home_title">Videók elrejtése a kezdőlapon kulcsszavak alapján</string>
@@ -284,7 +284,7 @@ Korlátozások
   <string name="morphe_external_downloader_title">Külső letöltés gomb megjelenítése</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">A Letöltés művelet gomb felülírása</string>
-  <string name="morphe_external_downloader_action_button_summary">A Letöltés gombot a natív alkalmazáson belüli letöltő helyett a külső letöltőre irányítja</string>
+  <string name="morphe_external_downloader_action_button_summary">A YouTube alapértelmezett letöltési funkcióját helyettesíti a választott harmadik fél letöltő alkalmazással.</string>
   <string name="morphe_external_downloader_name_title">Letöltő csomagneve</string>
   <string name="morphe_external_downloader_name_summary">A telepített külső letöltő alkalmazása csomagneve</string>
   <string name="morphe_external_downloader_other_item_hint">Adja meg a csomagnevet</string>
@@ -451,7 +451,7 @@ Információ: Lehet, hogy az élő közvetítéseknél nem működik"</string>
   <string name="morphe_caption_cookies_title">Megjelenítés cookies</string>
   <string name="morphe_caption_cookies_summary">A feliratok hitelesítéséhez használt cookie-k</string>
   <string name="morphe_get_caption_cookies_title">Megjelenítés cookies megvásárlása</string>
-  <string name="morphe_get_caption_cookies_summary">"A cookie-k automatikusan letöltik és mentik, ha érvényesek"</string>
+  <string name="morphe_get_caption_cookies_summary">A cookie-k automatikusan letöltik és mentik, ha érvényesek</string>
   <string name="morphe_get_caption_cookies_failed">Sikertelen cookies lekérése</string>
   <string name="morphe_get_caption_cookies_duplicate">Már létező cookies</string>
   <string name="morphe_get_caption_cookies_success">Cookies sikeresen frissítve</string>
@@ -517,9 +517,9 @@ A Beállítások eléréséhez engedje a Beállítások gombot a Általános →
   <string name="morphe_hide_player_flyout_audio_track_title">Hangszám menü elrejtése</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"A „Hangszám” menü elrejtve van
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Az \"Audio Track\" menü el van rejtve
 
-A „Hangszám” menü megjelenítéséhez kapcsolja a „Videós streamemulációt” Android tekercsre vagy TV-re"</string>
+Az \"Audio Track\" menü megjelenítéséhez módosítsa a \"Spoof video streams\" beállítást \"Android Reel\" vagy \"TV\" értékre."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Hangszám menü lábléc elrejtése</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Feliratok menü elrejtése</string>
@@ -767,7 +767,9 @@ Beállítások → Lejátszás (vagy Autoplay) → Autoplay next video"</string>
   <string name="morphe_sb_settings_ie">Beállítások importálása/exportálása</string>
   <string name="morphe_sb_settings_copy">Másolás</string>
   <string name="morphe_sb_settings_ie_summary">Az Ön SponsorBlock JSON-konfigurációja, amely importálható/exportálható Morphe és más SponsorBlock platformokra</string>
-  <string name="morphe_sb_settings_ie_summary_warning">A SponsorBlock JSON-konfigurációja, amely importálható/exportálható a Morphe és más SponsorBlock platformokra. Ez magában foglalja a privát felhasználói azonosítóját is. Ügyeljen arra, hogy ezt bölcsen ossza meg</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"A SponsorBlock JSON konfigurációja, amely importálható/exportálható a Morphe és más SponsorBlock platformokra.
+    
+Ez magában foglalja a privát felhasználói azonosítóját is. Ügyeljen arra, hogy bölcsen ossza meg."</string>
   <string name="morphe_sb_settings_import_successful">A beállítások sikeresen importálva</string>
   <string name="morphe_sb_settings_import_failed">Nem sikerült importálni ezt: %s</string>
   <string name="morphe_sb_settings_export_failed">Nem sikerült exportálni ezt: %s</string>
@@ -914,7 +916,7 @@ Ha nem szeretne kiemelést küldeni, nyomja meg a Mégse gombot, és jelölje me
   <string name="morphe_sb_about_title">Rólunk</string>
   <string name="morphe_sb_about_api_summary">Az adatokat a SponsorBlock API biztosítja. Koppintson ide, ha többet szeretne megtudni és megtekintené a letöltéseket más platformokra</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Elrendezési űrlap faktor</string>
+  <string name="morphe_change_form_factor_title">Eszköz elrendezés</string>
   <string name="morphe_change_form_factor_entry_1">Alapértelmezett</string>
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Táblagép</string>

@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Забраняване на възпроизвеждането във фонов режим</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Протоколен буфер за отстраняване на грешки</string>
-  <string name="morphe_debug_protobuffer_summary">Включва необработени данни от протокола buffer в debug log, за да помогне за идентифицирането на UI компонентите</string>
+  <string name="morphe_debug_protobuffer_summary">Добавя допълнителна информация за журналиране за разработчиците, за да идентифицират компонентите на приложението</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Активирането на тази настройка ще регистрира допълнителни данни за оформлението, включително текст на екрана за някои компоненти на потребителския интерфейс.
 
 Това може да помогне за идентифициране на компоненти при създаване на персонализирани филтри.
@@ -217,13 +217,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_count_title">Добавете кавички за да използвате ключовото: %s</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Ограничения:
-• Полетата с кратки видеоклипове, страниците на каналите и резултатите от търсенето все още могат да показват броя на прегледите.
-• Тази функционалност не работи с форм-фактора за автомобили."</string>
+• Кратък списък, страници с канали и резултати от търсенето все още могат да показват броя на преглежданията.
+• Тази функция не работи с автомобилен режим на оформление."</string>
   <string name="morphe_hide_upload_time_title">Скрийте информационни карти</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Ограничения:
-• Полетата с кратки видеоклипове, страниците на каналите и резултатите от търсенето все още могат да показват времето на качване.
-• Тази функционалност не работи с форм-фактора за автомобили."</string>
+• Късите клипове, страниците на каналите и резултатите от търсенето все още могат да показват времето на качване.
+• Тази функция не работи с автомобилен режим на оформление."</string>
   <string name="morphe_hide_keyword_content_screen_title">Филтър по ключова дума</string>
   <string name="morphe_hide_keyword_content_screen_summary">Изберете конкретни думи или фрази за скриване на видеа в емисиите и търсенето</string>
   <string name="morphe_hide_keyword_content_home_title">Скрийте видеоклипове в домакинството по ключови</string>
@@ -284,7 +284,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_title">Покажи бутон за външен свалик</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Презапиши действие за свалик</string>
-  <string name="morphe_external_downloader_action_button_summary">Плъзнете вертикално от лявата страна на режима на цял екран, за да регулирате яркостта</string>
+  <string name="morphe_external_downloader_action_button_summary">Заменя вградената функция за изтегляне на YouTube с избраното от вас приложение за изтегляне на трети страни.</string>
   <string name="morphe_external_downloader_name_title">Име на име пакета на приложението за външен свалик</string>
   <string name="morphe_external_downloader_name_summary">Пакетът на приложението за външен свалик не е инсталиран. Инсталирайте го.</string>
   <string name="morphe_external_downloader_other_item_hint">Въведете името на пакета</string>
@@ -447,7 +447,7 @@ Second \"item\" text"</string>
   <string name="morphe_caption_cookies_title">Капшъни куки</string>
   <string name="morphe_caption_cookies_summary">Изберете кои компоненти да се показват в изскачащото меню</string>
   <string name="morphe_get_caption_cookies_title">Получи капшъни куки</string>
-  <string name="morphe_get_caption_cookies_summary">"Скрий менюто „Аудио писта“"</string>
+  <string name="morphe_get_caption_cookies_summary">Скрий менюто „Аудио писта“</string>
   <string name="morphe_get_caption_cookies_failed">Неуспешно получаване на куки</string>
   <string name="morphe_get_caption_cookies_duplicate">Куките вече съществуват</string>
   <string name="morphe_get_caption_cookies_success">Куките бяха успешно обновени</string>
@@ -515,7 +515,7 @@ Second \"item\" text"</string>
           'Android Reel' and 'TV' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Менюто за аудио пистите е скрито
 
-За да покажете менюто за аудио писти, променете 'Подправяне на видео потоци' на 'Android Reel' или 'ТВ'"</string>
+За да покажете менюто за аудио писти, променете 'Подправяне на видео потоци' на 'Android Reel' или 'ТВ'."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Скриване на футера на менюто \'Аудио писта\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Скриване на менюто \'Субтитри\'</string>
@@ -764,7 +764,9 @@ Second \"item\" text"</string>
   <string name="morphe_sb_settings_ie">Дублирането на видеа е скрито</string>
   <string name="morphe_sb_settings_copy">Дублирането на видеа се показва</string>
   <string name="morphe_sb_settings_ie_summary">Вашата конфигурация на SponsorBlock JSON, която може да бъде импортирана/експортирана в Morphe и други платформи на SponsorBlock</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Вашата конфигурация на SponsorBlock JSON, която може да бъде импортирана/експортирана в Morphe и други платформи на SponsorBlock. Това включва вашето лично потребителско ID. Уверете се, че споделяте това разумно</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Вашата конфигурация на SponsorBlock JSON, която може да бъде импортирана / експортирана към Morphe и други платформи на SponsorBlock
+    
+Това включва вашия частен потребителски идентификатор. Уверете се, че споделяте това разумно."</string>
   <string name="morphe_sb_settings_import_successful">Дублирането на видеа се показва</string>
   <string name="morphe_sb_settings_import_failed">Скрий дублиране на видеа</string>
   <string name="morphe_sb_settings_export_failed">Дублирането на видеа е скрито</string>
@@ -912,7 +914,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_about_title">Отношение</string>
   <string name="morphe_sb_about_api_summary">Информацията е предоставена от API на SponsorBlock. Натиснете тук, за да научите повече и вижте други платформи</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Формат на екрана</string>
+  <string name="morphe_change_form_factor_title">Оформление на устройството</string>
   <string name="morphe_change_form_factor_entry_1">По подразбиране</string>
   <string name="morphe_change_form_factor_entry_2">Телефон</string>
   <string name="morphe_change_form_factor_entry_3">Таблет</string>

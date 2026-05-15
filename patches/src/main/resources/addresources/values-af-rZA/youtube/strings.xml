@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Deaktiveer agtergrondweergawe</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Debug log protobuffer</string>
-  <string name="morphe_debug_protobuffer_summary">Sluit ruwe protokol buffer data in debug log in om UI-komponente te help identifiseer</string>
+  <string name="morphe_debug_protobuffer_summary">Voeg bykomende logboekinligting vir ontwikkelaars by om toepassingskomponente te identifiseer</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Deur hierdie instelling te aktiveer, sal bykomende uitlegdata gelog word, insluitend teks op die skerm vir sommige UI-komponente.
 
 Dit kan help om komponente te identifiseer wanneer pasgemaakte filters geskep word.
@@ -217,13 +217,13 @@ Die vertoon van YouTube Doodles kan verhoed dat pasgemaakte headers vertoon word
   <string name="morphe_hide_view_count_title">Verberg bekykingsaantal</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Beperkings:
-• Kort skuilplanke, kanaalblaaie en soekresultate kan steeds besigtellingsaantalle vertoon.
-• Hierdie funksie werk nie met motorvormfaktor nie."</string>
+• Kort kortbroekies, kanaalblaaie en soekresultate kan steeds besigtellingsaantalle wys.
+• Hierdie funksie werk nie met motoruitleg nie."</string>
   <string name="morphe_hide_upload_time_title">Verberg opylaaibody</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Beperkings:
-• Kort skuilplanke, kanaalblaaie en soekresultate kan steeds oplaai-tye vertoon.
-• Hierdie funksie werk nie met motorvormfaktor nie."</string>
+• Kort strome, kanaalblaaie en soekresultate kan steeds op laai tyd wys.
+• Hierdie kenmerk werk nie met motor uitleg nie."</string>
   <string name="morphe_hide_keyword_content_screen_title">Sleutelwoord filter</string>
   <string name="morphe_hide_keyword_content_screen_summary">Kies spesifieke woorde of frases om video\'s in feeds en soek te verberg</string>
   <string name="morphe_hide_keyword_content_home_title">Verberg Tuisfideo\'s met sleutelwoorde</string>
@@ -284,7 +284,7 @@ Beperkings:
   <string name="morphe_external_downloader_title">Wys eksterne aflaaiknoppie</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Oorheers aflaai aksie knoppie</string>
-  <string name="morphe_external_downloader_action_button_summary">Wys Loop video knoppie</string>
+  <string name="morphe_external_downloader_action_button_summary">Vervang YouTube se ingeboude aflaai funksie met jou gekose derdeparty aflaai app</string>
   <string name="morphe_external_downloader_name_title">Downloader pakketnaam</string>
   <string name="morphe_external_downloader_name_summary">Pakketnaam van jou geïnstalleerde eksterne downloader app</string>
   <string name="morphe_external_downloader_other_item_hint">Voer die pakketnaam in</string>
@@ -449,7 +449,7 @@ Vind die pakketnaam en maak seker dat die app geïnstalleer is"</string>
   <string name="morphe_caption_cookies_title">Ondertitelkoekies</string>
   <string name="morphe_caption_cookies_summary">Cookies used to authenticate Timed Text API requests for captions</string>
   <string name="morphe_get_caption_cookies_title">Kry ondertitelkoekies</string>
-  <string name="morphe_get_caption_cookies_summary">"Fetches and saves cookies automatically if they are valid"</string>
+  <string name="morphe_get_caption_cookies_summary">Fetches and saves cookies automatically if they are valid</string>
   <string name="morphe_get_caption_cookies_failed">Kon nie koekies aflaai nie</string>
   <string name="morphe_get_caption_cookies_duplicate">Koekies bestaan reeds</string>
   <string name="morphe_get_caption_cookies_success">Koekies is suksesvol opgedateer</string>
@@ -515,7 +515,9 @@ Om Instellings te open, aktiveer die Instellings-knoppie via Algemeen → Toolba
   <string name="morphe_hide_player_flyout_audio_track_title">Hide \'Stable volume\' menu</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Hide 'Help &amp; feedback' menu"</string>
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track' menu is weggesteek
+
+Om die 'Audio Track' menu te wys, verander 'Spoof video streams' na 'Android Reel' of 'TV'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Hide \'Playback speed\' menu</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Hide \'Lock screen\' menu</string>
@@ -764,7 +766,9 @@ Instellings → Speel (of outo speel) → Speel volgende video outomaties"</stri
   <string name="morphe_sb_settings_ie">Importeer / Eksporteer instellings</string>
   <string name="morphe_sb_settings_copy">Kopieer</string>
   <string name="morphe_sb_settings_ie_summary">Jou SponsorBlock JSON-konfigurasie wat geïmporteer/uitgevoer kan word na Morphe en ander SponsorBlock-platforms</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Jou SponsorBlock JSON-konfigurasie wat geïmporteer/uitgevoer kan word na Morphe en ander SponsorBlock-platforms. Dit sluit jou privaat gebruikers-ID in. Wees seker om dit verstandig te deel</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Jou SponsorBlock JSON konfigurasie wat in Morphe en ander SponsorBlock platforms geïmporteer / uitgevoer kan word
+    
+Dit sluit jou private gebruikers ID in. Wees seker om dit verstandig te deel"</string>
   <string name="morphe_sb_settings_import_successful">Instellings suksesvol geïmporteer</string>
   <string name="morphe_sb_settings_import_failed">Kon nie invoer nie: %s</string>
   <string name="morphe_sb_settings_export_failed">Kon nie uitvoer nie: %s</string>
@@ -912,7 +916,7 @@ As jy nie 'n hoogtepunt indien nie, tik Kanselleer en merk die tweede plek"</str
   <string name="morphe_sb_about_title">Oor</string>
   <string name="morphe_sb_about_api_summary">Data word verskaf deur die SponsorBlock API. Tik hier om meer te leer en aflaaie vir ander platforms te sien</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Verander vormfaktor</string>
+  <string name="morphe_change_form_factor_title">Toestel uitleg</string>
   <string name="morphe_change_form_factor_entry_1">Verstek</string>
   <string name="morphe_change_form_factor_entry_2">Foon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>

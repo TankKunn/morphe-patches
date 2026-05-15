@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">停用背景播放 Shorts</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">除錯記錄檔協定緩衝區</string>
-  <string name="morphe_debug_protobuffer_summary">包含原始協定緩衝區資料在偵錯記錄中，以協助識別 UI 元件</string>
+  <string name="morphe_debug_protobuffer_summary">為開發人員新增額外的記錄資訊，以識別應用程式元件</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"啟用這項設定將會記錄額外的版面配置資料，包括部分使用者介面元件上的螢幕文字。
 
 這有助於在建立自訂篩選器時識別元件。
@@ -217,12 +217,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_view_count_title">隱藏觀看次數</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"限制：
-• Shorts 專區、頻道頁面和搜尋結果可能仍會顯示觀看次數
+• Shorts 專區、頻道頁面和搜尋結果可能仍會顯示觀看次數。
 • 這項功能不適用於車載模式。"</string>
   <string name="morphe_hide_upload_time_title">隱藏「上傳時間」</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"限制：
-• Shorts 專區、頻道頁面和搜尋結果可能仍會顯示上傳時間
+• Shorts 專區、頻道頁面和搜尋結果可能仍會顯示上傳時間。
 • 這項功能不適用於車載模式。"</string>
   <string name="morphe_hide_keyword_content_screen_title">關鍵字篩選</string>
   <string name="morphe_hide_keyword_content_screen_summary">選擇要根據關鍵字或頻道名稱在動態消息和搜尋中隱藏影片</string>
@@ -284,7 +284,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_title">顯示外部下載按鈕</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">覆蓋「下載」動作按鈕</string>
-  <string name="morphe_external_downloader_action_button_summary">將「下載」按鈕導向到外部下載程式，而不是原生應用程式內下載程式</string>
+  <string name="morphe_external_downloader_action_button_summary">將您選擇的第三方下載應用程式取代 YouTube 内建的下載功能。</string>
   <string name="morphe_external_downloader_name_title">下載器套件名稱</string>
   <string name="morphe_external_downloader_name_summary">您已安裝的外部下載器應用程式的套件名稱</string>
   <string name="morphe_external_downloader_other_item_hint">輸入套件名稱</string>
@@ -451,7 +451,7 @@ Second \"item\" text"</string>
   <string name="morphe_caption_cookies_title">字幕 Cookie</string>
   <string name="morphe_caption_cookies_summary">用於驗證字幕計時文字 API 要求的 Cookie</string>
   <string name="morphe_get_caption_cookies_title">取得字幕 Cookie</string>
-  <string name="morphe_get_caption_cookies_summary">"自動取得並儲存有效的 Cookie"</string>
+  <string name="morphe_get_caption_cookies_summary">自動取得並儲存有效的 Cookie</string>
   <string name="morphe_get_caption_cookies_failed">無法取得 Cookie</string>
   <string name="morphe_get_caption_cookies_duplicate">已存在 Cookie</string>
   <string name="morphe_get_caption_cookies_success">已成功更新 Cookie</string>
@@ -517,9 +517,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_title">隱藏「音訊軌道」選單</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"已隱藏「音訊軌道」選單
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"「音訊軌道」選單已隱藏
 
-如要顯示「音訊軌道」選單，請將「偽裝視訊串流」變更為「Android Reel」或「電視」"</string>
+如要顯示「音軌」選單，請將「偽裝視訊串流」變更為「Android Reel」或「TV」。"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">隱藏「音訊軌道」選單頁尾</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">隱藏「字幕」選單</string>
@@ -768,7 +768,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_settings_ie">匯入/匯出設定</string>
   <string name="morphe_sb_settings_copy">複製</string>
   <string name="morphe_sb_settings_ie_summary">這是你的 SponsorBlock JSON 設定檔，可以匯入/匯出到 Morphe 和其他 SponsorBlock 平台</string>
-  <string name="morphe_sb_settings_ie_summary_warning">您的 SponsorBlock JSON 設定檔可以匯入/匯出到 Morphe 和其他 SponsorBlock 平台。這包含您的私人使用者 ID。請務必謹慎分享。</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"這是你的 SponsorBlock JSON 設定檔，可以匯入/匯出到 Morphe 和其他 SponsorBlock 平台。這包含你的私人使用者 ID。請務必謹慎分享。"</string>
   <string name="morphe_sb_settings_import_successful">設定匯入成功</string>
   <string name="morphe_sb_settings_import_failed">無法匯入：%s</string>
   <string name="morphe_sb_settings_export_failed">無法匯出：%s</string>
@@ -917,7 +917,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_about_title">關於</string>
   <string name="morphe_sb_about_api_summary">資料由 SponsorBlock API 提供。輕觸這裡來了解更多資訊和查看其他平台的下載</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">版面配置形式</string>
+  <string name="morphe_change_form_factor_title">裝置版面配置</string>
   <string name="morphe_change_form_factor_entry_1">預設</string>
   <string name="morphe_change_form_factor_entry_2">手機</string>
   <string name="morphe_change_form_factor_entry_3">平板電腦</string>

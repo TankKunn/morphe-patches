@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Onemogući puštanje Shorts videa u pozadini</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Debug log bafer protokola</string>
-  <string name="morphe_debug_protobuffer_summary">Uključuje sirove podatke protokola tampona u debug log kako bi se identifikovale komponente korisničkog interfejsa</string>
+  <string name="morphe_debug_protobuffer_summary">Dodaje dodatne informacije o evidentiranju za programere kako bi se identifikovale komponente aplikacije</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Omogućavanjem ove opcije evidentiraće se dodatni podaci o izgledu, uključujući tekst na ekranu za neke komponente korisničkog interfejsa.
 
 Ovo može pomoći u identifikaciji komponenti prilikom pravljenja prilagođenih filtera.
@@ -217,13 +217,13 @@ Prikazivanje YouTube Doodles može sprečiti prikazivanje korisničkih zaglavlja
   <string name="morphe_hide_view_count_title">Sakrij broj pregleda</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Ograničenja:
-• Police Shorts, stranice kanala i rezultati pretrage mogu i dalje prikazivati broj pregleda
-• Ova funkcija ne radi sa automobilskim faktorom forme."</string>
+• Kratke police, stranice kanala i rezultati pretrage i dalje mogu prikazivati broj pregleda.
+• Ova funkcija ne radi sa automobilskim rasporedom."</string>
   <string name="morphe_hide_upload_time_title">Sakrij vreme otpremanja</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Ograničenja:
-• Police Shorts, stranice kanala i rezultati pretrage mogu i dalje prikazivati vreme otpremanja
-• Ova funkcija ne radi sa automobilskim faktorom forme."</string>
+• Police Shorts, stranice kanala i rezultati pretrage mogu i dalje prikazivati vreme otpremanja.
+• Ova funkcija ne radi sa automobilskim rasporedom."</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtriranje po ključnim rečima</string>
   <string name="morphe_hide_keyword_content_screen_summary">Izaberite određene reči ili fraze da sakrijete video zapise u feedovima i pretrazi</string>
   <string name="morphe_hide_keyword_content_home_title">Sakrij videe na kartici „Početna” prema ključnim rečima</string>
@@ -284,7 +284,7 @@ Ograničenja:
   <string name="morphe_external_downloader_title">Prikaži dugme za spoljno preuzimanje</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Zameni dugme radnje „Preuzmi”</string>
-  <string name="morphe_external_downloader_action_button_summary">Usmerava dugme za preuzimanje na vašu spoljašnju aplikaciju za preuzimanje umesto na ugrađeni preuzimač u aplikaciji</string>
+  <string name="morphe_external_downloader_action_button_summary">Zamenjuje ugrađenu funkciju za preuzimanje programa YouTube sa aplikacijom za preuzimanje treće strane koju ste odabrali</string>
   <string name="morphe_external_downloader_name_title">Naziv paketa programa za preuzimanje</string>
   <string name="morphe_external_downloader_name_summary">Naziv paketa vašeg instaliranog spoljnog programa za preuzimanje</string>
   <string name="morphe_external_downloader_other_item_hint">Unesite naziv paketa</string>
@@ -451,7 +451,7 @@ Info: Možda ne radi na direktnim prenosima"</string>
   <string name="morphe_caption_cookies_title">Caption cookies</string>
   <string name="morphe_caption_cookies_summary">Kolačići koji se koriste za autentifikaciju zahteva Timed Text API za titlove</string>
   <string name="morphe_get_caption_cookies_title">Dohvati caption cookies</string>
-  <string name="morphe_get_caption_cookies_summary">"Automatski preuzima i čuva kolačiće ako su validni"</string>
+  <string name="morphe_get_caption_cookies_summary">Automatski preuzima i čuva kolačiće ako su validni</string>
   <string name="morphe_get_caption_cookies_failed">Neuspešno dohvatanje cookies</string>
   <string name="morphe_get_caption_cookies_duplicate">Cookies već postoje</string>
   <string name="morphe_get_caption_cookies_success">Cookies uspešno ažurirani</string>
@@ -517,7 +517,9 @@ Da biste pristupili Podešavanjima, omogućite dugme Podešavanja preko Opšte �
   <string name="morphe_hide_player_flyout_audio_track_title">Sakrij meni „Audio snimak”</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Sakrij podnožje menija „Traka zvuka”"</string>
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meni 'Audio Track' je sakriven
+
+Da biste prikazali meni 'Audio Track', promenite 'Spoof video streams' u 'Android Reel' ili 'TV'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Sakrij meni „Titlovi”</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Sakrij podnožje menija „Titlovi”</string>
@@ -766,7 +768,9 @@ Postavke → Prikaz (ili Autoplay) → Autoplay next video"</string>
   <string name="morphe_sb_settings_ie">Uvoz/Izvoz podešavanja</string>
   <string name="morphe_sb_settings_copy">Kopiraj</string>
   <string name="morphe_sb_settings_ie_summary">Vaša SponsorBlock JSON konfiguracija koja može da se uveze/izveze u Morphe i druge SponsorBlock platforme</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Tvoja SponsorBlock JSON konfiguracija koja se može uvesti / izvesti u Morphe i druge platforme SponsorBlock. Ovo uključuje tvoj privatni ID korisnika. Obrati pažnju na deljenje ovoga</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Vaša SponsorBlock JSON konfiguracija koja može da se uveze/izveze u Morphe i druge SponsorBlock platforme.
+    
+Ovo uključuje vaš privatni korisnički ID. Budite pažljivi pri deljenju ovoga"</string>
   <string name="morphe_sb_settings_import_successful">Podešavanja su uspešno uvezena</string>
   <string name="morphe_sb_settings_import_failed">Neuspešan uvoz: %s</string>
   <string name="morphe_sb_settings_export_failed">Neuspešan izvoz: %s</string>
@@ -914,7 +918,7 @@ Ako ne šaljete isticanje, dodirnite Otkaži i označite drugu lokaciju."</strin
   <string name="morphe_sb_about_title">O programu</string>
   <string name="morphe_sb_about_api_summary">Podatke obezbeđuje SponsorBlock API. Dodirnite ovde da saznate više i vidite preuzimanja za druge platforme</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Faktor forme izgleda</string>
+  <string name="morphe_change_form_factor_title">Raspored uređaja</string>
   <string name="morphe_change_form_factor_entry_1">Podrazumevani</string>
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>

@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Désactiver la lecture en arrière-plan</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Journal de débogage du protocol buffer</string>
-  <string name="morphe_debug_protobuffer_summary">Inclut les données brutes du protocol buffer dans le journal de débogage afin d’aider à identifier les composants de l’interface utilisateur</string>
+  <string name="morphe_debug_protobuffer_summary">Ajoute des informations de journalisation supplémentaires pour les développeurs afin d\'identifier les composants de l\'application</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"L’activation de ce paramètre enregistrera des données supplémentaires sur la mise en page, y compris le texte affiché à l’écran pour certains composants de l’interface.
 
 Cela peut aider à identifier les composants lors de la création de filtres personnalisés.
@@ -141,7 +141,7 @@ L’affichage des YouTube Doodles peut empêcher l’affichage des en-têtes per
   <string name="morphe_hide_chapters_section_title">Masquer la section \'Chapitres\'</string>
   <string name="morphe_hide_corrections_section_title">Masquer la section \'Corrections\'</string>
   <string name="morphe_hide_course_progress_section_title">Masquer la section \'Progression dans le cours\'</string>
-  <string name="morphe_hide_explore_section_title">Masquer la section \'Explorer\'</string>
+  <string name="morphe_hide_explore_section_title">Masquer la section \'Découvrir\'</string>
   <string name="morphe_hide_explore_section_summary">Masque les sections \'Découvrir ce cours\' et \'Découvrir le podcast\'</string>
   <string name="morphe_hide_explore_course_section_title">Masquer la section \'Découvrir ce cours\'</string>
   <string name="morphe_hide_explore_podcast_section_title">Masquer la section \'Découvrir le podcast\'</string>
@@ -226,9 +226,9 @@ L’affichage des YouTube Doodles peut empêcher l’affichage des en-têtes per
 • Cette fonctionnalité ne fonctionne pas avec le format automobile."</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtre par mots clés</string>
   <string name="morphe_hide_keyword_content_screen_summary">Choisissez les mots ou expressions spécifiques pour masquer les vidéos dans les flux et les résultats de recherche</string>
-  <string name="morphe_hide_keyword_content_home_title">Filtrer les vidéos dans l\'onglet \'Accueil\' par mot-clé</string>
-  <string name="morphe_hide_keyword_content_search_title">Filtrer les résultats de recherche par mot-clé</string>
-  <string name="morphe_hide_keyword_content_subscriptions_title">Filtrer les vidéos dans les abonnements par mot-clés</string>
+  <string name="morphe_hide_keyword_content_home_title">Masquer les vidéos de \'Accueil\' par mot-clé</string>
+  <string name="morphe_hide_keyword_content_search_title">Masquer les résultats de recherche par mot-clé</string>
+  <string name="morphe_hide_keyword_content_subscriptions_title">Masquer les vidéos de \'Abonnements\' par mots-clés</string>
   <string name="morphe_hide_keyword_content_phrases_title">Mots-clés à masquer</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -242,7 +242,7 @@ Limitations :
 • La recherche d’un mot-clé peut n’afficher aucun résultat"</string>
   <string name="morphe_hide_keyword_content_about_whole_words_title">Correspondance aux mots entiers</string>
   <!-- Translations must use a localized example. For languages that do not use spaces between words (Chinese, Japanese, etc.) the English AI example should be used since no localized examples exist. Or if using machine translations, or if nobody wants to think of a localized example, then the English 'ai' example should be left as-is. -->
-  <string name="morphe_hide_keyword_content_about_whole_words_summary">Mettre un mot-clé ou une expression entre guillemets permet d’éviter les correspondances partielles avec le titre des vidéos et le nom des chaînes&lt;br&gt;&lt;br&gt;Par exemple,&lt;br&gt;&lt;b&gt;\"ia\"&lt;/b&gt; masquera la vidéo : &lt;b&gt;Comment fonctionnent les IA ?&lt;/b&gt;&lt;br&gt;mais ne masquera pas : &lt;b&gt;Quelles études pour devenir commercial ?&lt;/b&gt;</string>
+  <string name="morphe_hide_keyword_content_about_whole_words_summary">Mettre un mot-clé ou une expression entre guillemets permet d’éviter les correspondances partielles avec le titre des vidéos et le nom des chaîne&lt;br&gt;&lt;br&gt;Par exemple,&lt;br&gt;&lt;b&gt;\"ia\"&lt;/b&gt; masquera la vidéo : &lt;b&gt;Comment fonctionnent les IA ?&lt;/b&gt;&lt;br&gt;mais ne masquera pas : &lt;b&gt;Quelles études pour devenir commercial ?&lt;/b&gt;</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_hide_keyword_toast_invalid_common">Impossible d\'utiliser ce mot-clé : %s</string>
   <string name="morphe_hide_keyword_toast_invalid_common_whole_word_required">Ajoutez des guillemets pour utiliser : %s</string>
@@ -281,10 +281,10 @@ Limitations :
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Téléchargeurs externe</string>
   <string name="morphe_external_downloader_screen_summary">Choisissez quelle application externe gère vos téléchargements</string>
-  <string name="morphe_external_downloader_title">Afficher le bouton de téléchargeur externe</string>
+  <string name="morphe_external_downloader_title">Afficher un bouton de téléchargeur externe</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Remplacer l\'action du bouton \'Télécharger\'</string>
-  <string name="morphe_external_downloader_action_button_summary">Redirige le bouton de \'Télécharger\' vers votre téléchargeur externe au lieu du téléchargeur natif de l’application</string>
+  <string name="morphe_external_downloader_action_button_summary">Remplace la fonction de téléchargement intégrée de YouTube par votre application de téléchargement tierce préférée</string>
   <string name="morphe_external_downloader_name_title">Nom de package du téléchargeur</string>
   <string name="morphe_external_downloader_name_summary">Nom du package de votre application de téléchargeur externe installée</string>
   <string name="morphe_external_downloader_other_item_hint">Entrez le nom du package</string>
@@ -370,7 +370,7 @@ Info : peut ne pas fonctionner sur les diffusions en direct"</string>
   <string name="morphe_swipe_text_overlay_size_summary">Ajustez la taille du texte à l’écran (1-30)</string>
   <string name="morphe_swipe_text_overlay_size_invalid_toast">La taille du texte doit être comprise entre 1 et 30</string>
   <string name="morphe_swipe_threshold_title">Seuil de magnitude du balayage</string>
-  <string name="morphe_swipe_threshold_summary">Définissez la distance de balayage nécessaire avant le qu\'un ajustement ne soit déclenché</string>
+  <string name="morphe_swipe_threshold_summary">Définissez la distance de balayage nécessaire avant qu\'un ajustement ne soit déclenché</string>
   <string name="morphe_swipe_volume_sensitivity_title">Sensibilité du balayage de volume</string>
   <string name="morphe_swipe_volume_sensitivity_summary">Ajustez la façon dont le volume change lors d’un balayage</string>
   <string name="morphe_swipe_overlay_style_title">Style de l’overlay de balayage</string>
@@ -451,7 +451,7 @@ Info : peut ne pas fonctionner sur les diffusions en direct"</string>
   <string name="morphe_caption_cookies_title">Cookies de sous-titres</string>
   <string name="morphe_caption_cookies_summary">Cookies utilisés pour authentifier les requêtes de l’API Timed Text pour les sous-titres</string>
   <string name="morphe_get_caption_cookies_title">Obtenir les cookies de sous-titres</string>
-  <string name="morphe_get_caption_cookies_summary">"Récupère et enregistre automatiquement les cookies s’ils sont valides"</string>
+  <string name="morphe_get_caption_cookies_summary">Récupère et enregistre automatiquement les cookies s’ils sont valides</string>
   <string name="morphe_get_caption_cookies_failed">Échec de la récupération des cookies</string>
   <string name="morphe_get_caption_cookies_duplicate">Les cookies existent déjà</string>
   <string name="morphe_get_caption_cookies_success">Les cookies ont été mis à jour avec succès</string>
@@ -517,9 +517,9 @@ Pour accéder aux paramètres, activez le bouton 'Paramètres' via Général →
   <string name="morphe_hide_player_flyout_audio_track_title">Masquer le menu \'Piste audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Le menu 'Piste audio' est masqué
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Le menu 'Piste audio' est masqué
 
-        Pour afficher le menu 'Piste audio', changez 'Falsifier les flux vidéo' en 'Android Reel' ou 'TV'"</string>
+Pour afficher le menu 'Piste audio', modifier 'Falsifier les flux vidéo' en 'Android Reel' ou en 'TV'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Masquer le pied de page du menu \'Piste audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Masquer le menu \'Sous-titres\'</string>
@@ -583,7 +583,7 @@ Pour accéder aux paramètres, activez le bouton 'Paramètres' via Général →
   <!-- layout.hide.seekbar.hideSeekbarPatch -->
   <string name="morphe_hide_seekbar_title">Masquer la barre de progression du lecteur vidéo</string>
   <!-- Seekbar shown inside video thumbnails found on the Home / Subscriptions / Search / History.  The seekbar shows the prior watch progress from when the video was last opened. -->
-  <string name="morphe_hide_seekbar_thumbnail_title">Masquer les miniatures de barre de progression</string>
+  <string name="morphe_hide_seekbar_thumbnail_title">Masquer la barre de progression sur les miniatures</string>
   <string name="morphe_hide_seekbar_thumbnail_summary">Masque la barre de progression de lecture affichée sur les miniatures des vidéos dans les flux et les résultats de recherche</string>
   <string name="morphe_fullscreen_large_seekbar_title">Activer la barre de progression large en plein écran</string>
   <!-- layout.hide.shorts.hideShortsComponentsPatch -->
@@ -710,7 +710,7 @@ Paramètres → Lecture (ou Lecture automatique) → Lecture automatique de vid�
   <string name="morphe_sb_enable_sb">Activer SponsorBlock</string>
   <string name="morphe_sb_enable_sb_summary">SponsorBlock est un service d\'entraide permettant de passer des parties gênantes des vidéos YouTube</string>
   <string name="morphe_sb_appearance_category">Apparence</string>
-  <string name="morphe_sb_enable_voting">Afficher le bouton de vote</string>
+  <string name="morphe_sb_enable_voting">Afficher un bouton de vote</string>
   <string name="morphe_sb_enable_voting_summary">Ajoute un bouton pour voter positivement ou négativement sur les segments</string>
   <string name="morphe_sb_square_layout">Utiliser la disposition carrée</string>
   <string name="morphe_sb_square_layout_summary">Utilise des coins arrondis pour les boutons et les commandes SponsorBlock</string>
@@ -768,7 +768,7 @@ Paramètres → Lecture (ou Lecture automatique) → Lecture automatique de vid�
   <string name="morphe_sb_settings_ie">Importer / Exporter les paramètres</string>
   <string name="morphe_sb_settings_copy">Copier</string>
   <string name="morphe_sb_settings_ie_summary">Votre configuration JSON SponsorBlock, pouvant être importée / exportée vers Morphe et d’autres plateformes SponsorBlock</string>
-  <string name="morphe_sb_settings_ie_summary_warning">Votre configuration JSON SponsorBlock, pouvant être importée / exportée vers Morphe et d’autres plateformes SponsorBlock. Cela inclut votre ID utilisateur privé. Veillez à le partager avec précaution</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Votre configuration JSON SponsorBlock, pouvant être importée / exportée vers Morphe et d’autres plateformes SponsorBlock. Cela inclut votre ID utilisateur privé. Veillez à le partager avec précaution"</string>
   <string name="morphe_sb_settings_import_successful">Paramètres importés avec succès</string>
   <string name="morphe_sb_settings_import_failed">Échec de l\'importation : %s</string>
   <string name="morphe_sb_settings_export_failed">Échec de l\'exportation : %s</string>
@@ -916,7 +916,7 @@ Si vous ne soumettez pas de point clé, appuyez sur 'Annuler' et marquez le deux
   <string name="morphe_sb_about_title">À propos</string>
   <string name="morphe_sb_about_api_summary">Les données sont fournies par l’API SponsorBlock. Appuyez ici pour en savoir plus et découvrir les téléchargements pour d’autres plateformes</string>
   <!-- layout.formfactor.changeFormFactorPatch -->
-  <string name="morphe_change_form_factor_title">Format de mise en page</string>
+  <string name="morphe_change_form_factor_title">Disposition de l\'appareil</string>
   <string name="morphe_change_form_factor_entry_1">Par défaut</string>
   <string name="morphe_change_form_factor_entry_2">Téléphone</string>
   <string name="morphe_change_form_factor_entry_3">Tablette</string>
