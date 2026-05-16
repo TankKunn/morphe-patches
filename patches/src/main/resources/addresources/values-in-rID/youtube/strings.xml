@@ -239,7 +239,6 @@ Keterbatasan
   <string name="morphe_hide_player_popup_ads_title">Sembunyikan iklan pesan timbul pemutar</string>
   <string name="morphe_hide_self_sponsor_ads_title">Sembunyikan kartu bersponsor pribadi</string>
   <string name="morphe_hide_shopping_links_title">Sembunyikan tautan belanja</string>
-  <string name="morphe_hide_view_products_banner_title">Sembunyikan spanduk \'Lihat produk\'</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Sembunyikan promosi YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Sembunyikan iklan video</string>
@@ -588,7 +587,6 @@ Untuk menampilkan 'Menu Trek Audio', ubah 'Palsukan aliran video' menjadi 'Andro
   <string name="morphe_hide_shorts_save_sound_button_title">Sembunyikan tombol \'Simpan musik\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Sembunyikan saran pencarian</string>
   <string name="morphe_hide_shorts_shop_button_title">Sembunyikan tombol Belanja</string>
-  <string name="morphe_hide_shorts_stickers_title">Sembunyikan stiker</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Sembunyikan tombol Berlangganan</string>
   <string name="morphe_hide_shorts_tagged_products_title">Sembunyikan produk yang ditandai</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Sembunyikan tombol Mendatang</string>

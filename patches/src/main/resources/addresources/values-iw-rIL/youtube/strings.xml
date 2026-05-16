@@ -258,7 +258,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_popup_ads_title">הסתר פרסומות פופאפ של שחקן</string>
   <string name="morphe_hide_self_sponsor_ads_title">הסתר כרטיסים בחסות עצמית</string>
   <string name="morphe_hide_shopping_links_title">הסתר קישורי קניות</string>
-  <string name="morphe_hide_view_products_banner_title">הסתר באנר צפייה במוצרים</string>
   <string name="morphe_hide_youtube_premium_promotions_title">הסתר קידומי YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">הסתר מודעות סרטון</string>
@@ -611,7 +610,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_save_sound_button_title">הסתר את הלחצן \'שמור מוזיקה\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">הסתר הצעות חיפוש</string>
   <string name="morphe_hide_shorts_shop_button_title">הסתר לחצן חנות</string>
-  <string name="morphe_hide_shorts_stickers_title">הסתר סטיקרים</string>
   <string name="morphe_hide_shorts_subscribe_button_title">הסתר לחצן הרשמה למינוי</string>
   <string name="morphe_hide_shorts_tagged_products_title">הסתר מוצרים מתויגים</string>
   <string name="morphe_hide_shorts_upcoming_button_title">הסתר לחצן \'בקרוב\'</string>

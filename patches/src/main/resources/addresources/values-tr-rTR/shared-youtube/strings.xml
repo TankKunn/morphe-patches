@@ -31,7 +31,7 @@ Second \"item\" text"</string>
   <!-- Translations of this should be identical to morphe_custom_branding_name_entry_5 -->
   <string name="morphe_custom_branding_icon_entry_6">Özel</string>
   <string name="morphe_custom_branding_notification_icon_title">Bildirim simgesi</string>
-  <string name="morphe_custom_branding_notification_icon_entry_1">Uygulama simgesini eşleştir</string>
+  <string name="morphe_custom_branding_notification_icon_entry_1">Uygulama simgesini takip et</string>
   <!-- misc.dns.checkWatchHistoryDomainNameResolutionPatch -->
   <string name="morphe_check_watch_history_domain_name_dialog_title">Morphe Bildirimi</string>
   <string name="morphe_check_watch_history_domain_name_dialog_message">İzleme geçmişiniz kaydedilmiyor.&lt;br&gt;&lt;br&gt;Bu büyük ihtimalle bir reklam engelleyici DNS\'den veya proxy\'den kaynaklanıyor.&lt;br&gt;&lt;br&gt;Bunu düzeltmek için, &lt;b&gt;s.youtube.com&lt;/b&gt; adresini beyaz listeye ekleyin veya bütün engelleyici DNSleri ve proxy\'leri kapatın.</string>
@@ -40,7 +40,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_screen_title">Video akışlarını taklit et</string>
   <string name="morphe_spoof_video_streams_screen_summary">Oynatma sorunlarını önlemek için istemci video akışlarını taklit et</string>
   <string name="morphe_spoof_video_streams_title">Video akışlarını taklit et</string>
-  <string name="morphe_spoof_video_streams_summary">"YouTube'u uyumlu bir video akışı göndermeye ikna eder, bu da çoğu kullanıcı için oynatmayı düzeltir
+  <string name="morphe_spoof_video_streams_summary">"YouTube'u uyumlu bir video akışı göndermesi için kandırır, bu da çoğu kullanıcı için oynatmayı düzeltir
 
 YouTube Premium kullanıcısıysanız, bu ayar gerekli olmayabilir"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Hiçbir istemci akışı alınamadı</string>
@@ -88,7 +88,7 @@ Oturum açmak için, devam et butonuna basın."</string>
   <string name="morphe_oauth2_toast_reset">Android VR oturumu kapatıldı</string>
   <string name="morphe_oauth2_toast_invalid">Geçersiz VR oturum açma belirteci, VR\'da tekrar oturum açmayı deneyin</string>
   <string name="morphe_spoof_video_streams_disable_player_js_update_title">Oynatıcı JavaScript güncellemesini devre dışı bırak</string>
-  <string name="morphe_spoof_video_streams_disable_player_js_update_summary">"Oynatıcı JavaScript'ini yerel bir hash'e kilitler, güncellemeleri almaz
+  <string name="morphe_spoof_video_streams_disable_player_js_update_summary">"Oynatıcının JavaScript kodunu güncellemeleri almak yerine bir yerel hash'e kilitler
 
 • Geçerli bir oynatıcı JavaScript hash'i gereklidir
 • Oynatıcı JavaScript hash'i GVS'de geçersiz kılınırsa oynatma başarısız olur"</string>
@@ -101,7 +101,7 @@ Oturum açmak için, devam et butonuna basın."</string>
   <string name="morphe_disable_drc_audio_title">DRC sesi devre dışı bırak</string>
   <!-- misc.audio.tracks.forceOriginalAudioPatch -->
   <string name="morphe_force_original_audio_title">Orijinal ses dilini zorla</string>
-  <string name="morphe_force_original_audio_summary">Orijinal video ses parçasını her zaman oynatır, dublajlı bir sürüm yerine</string>
+  <string name="morphe_force_original_audio_summary">Videoda dublajlı versiyon yerine her zaman orijinal ses parçasını oynatır</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Tam ekran reklamları gizle</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->

@@ -258,7 +258,6 @@ Ograničenja:
   <string name="morphe_hide_player_popup_ads_title">Sakrij oglasne popupe u plejeru</string>
   <string name="morphe_hide_self_sponsor_ads_title">Sakrij kartice samosponzorstva</string>
   <string name="morphe_hide_shopping_links_title">Sakrij linkove za kupovinu</string>
-  <string name="morphe_hide_view_products_banner_title">Sakrij baner „Pogledajte proizvode”</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Sakrij promocije za YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Sakrij video oglase</string>
@@ -613,7 +612,6 @@ Da biste prikazali meni 'Audio Track', promenite 'Spoof video streams' u 'Androi
   <string name="morphe_hide_shorts_save_sound_button_title">Sakri dugme \'Sačuvaj muziku\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Sakrij predloge za pretragu</string>
   <string name="morphe_hide_shorts_shop_button_title">Sakrij dugme „Prodavnica”</string>
-  <string name="morphe_hide_shorts_stickers_title">Sakrij nalepnice</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Sakrij dugme „Zaprati”</string>
   <string name="morphe_hide_shorts_tagged_products_title">Sakrij označene proizvode</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Sakrij dugme „Predstojeće”</string>

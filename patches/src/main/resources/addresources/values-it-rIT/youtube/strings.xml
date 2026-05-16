@@ -258,7 +258,6 @@ Limitazioni:
   <string name="morphe_hide_player_popup_ads_title">Nascondi gli annunci popup del giocatore</string>
   <string name="morphe_hide_self_sponsor_ads_title">Nascondi le schede autopromozionali</string>
   <string name="morphe_hide_shopping_links_title">Nascondi link shopping</string>
-  <string name="morphe_hide_view_products_banner_title">Nascondi il banner \'Visualizza prodotti\'</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Nascondi la promozione di YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Nascondi le pubblicità del video</string>
@@ -328,8 +327,8 @@ Verifica che il nome del pacchetto sia corretto e che l'app sia installata"</str
   <string name="morphe_save_to_watch_later_already_exists_toast">Questo video è già stato salvato nella playlist \"Guardalo dopo\"</string>
   <string name="morphe_save_to_watch_later_error_toast">Impossibile salvare questo video nella playlist \"Guardalo dopo\"</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
-  <string name="morphe_open_channel_of_live_avatar_title">Imposta il colore della barra di avanzamento dei controlli di luminosità</string>
-  <string name="morphe_open_channel_of_live_avatar_summary">Imposta il colore della barra di avanzamento dei controlli del volume</string>
+  <string name="morphe_open_channel_of_live_avatar_title">Tocca l\'avatar live per interagire</string>
+  <string name="morphe_open_channel_of_live_avatar_summary">Apre la pagina del canale quando abilitato, oppure lo streaming in diretta quando disabilitato</string>
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
   <string name="morphe_disable_precise_seeking_gesture_title">Disabilita il gesto di ricerca preciso</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Regola la dimensione del testo sullo schermo (da 1 a 30)</string>
@@ -611,7 +610,6 @@ Per visualizzare il menu 'Traccia audio', modifica 'Spoof video streams' in 'And
   <string name="morphe_hide_shorts_save_sound_button_title">Nascondi il pulsante Salva Musica</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Nascondi i suggerimenti di ricerca</string>
   <string name="morphe_hide_shorts_shop_button_title">Nascondi il pulsante Negozio</string>
-  <string name="morphe_hide_shorts_stickers_title">Nascondi adesivi</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Nascondi il pulsante Iscriviti</string>
   <string name="morphe_hide_shorts_tagged_products_title">Nascondi i prodotti etichettati</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Nascondi il pulsante Prossimamente</string>

@@ -188,7 +188,6 @@ YouTube डूडलहरू देखाउनुले अनुकूलन 
   <string name="morphe_hide_player_popup_ads_title">प्लेयर पपअप विज्ञापनहरू लुकाउनुहोस्</string>
   <string name="morphe_hide_self_sponsor_ads_title">स्व-प्रायोजित कार्ड छिपाएं</string>
   <string name="morphe_hide_shopping_links_title">शॉपिंग लिंक छिपाएं</string>
-  <string name="morphe_hide_view_products_banner_title">व्यू प्रोडक्ट्स बैनर छिपाएं</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium प्रमोशन छिपाइ</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">वीडियो विज्ञापन छिपाएं</string>
@@ -411,7 +410,6 @@ YouTube डूडलहरू देखाउनुले अनुकूलन 
   <string name="morphe_hide_shorts_save_sound_button_title">\'संगीत सहेज\' बटन छिपाइ</string>
   <string name="morphe_hide_shorts_search_suggestions_title">साउंड बटन देखाइएको छ</string>
   <string name="morphe_hide_shorts_shop_button_title">सर्च सुझावहरू देखाइका छन्</string>
-  <string name="morphe_hide_shorts_stickers_title">शप बटन देखाइएको छ</string>
   <string name="morphe_hide_shorts_subscribe_button_title">स्टिकरहरू देखाइका छन्</string>
   <string name="morphe_hide_shorts_tagged_products_title">सब्सक्राइब बटन देखाइएको छ</string>
   <string name="morphe_hide_shorts_upcoming_button_title">ट्याग्ड उत्पादनहरू देखाइका छन्</string>

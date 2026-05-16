@@ -259,7 +259,6 @@ Omezení:
   <string name="morphe_hide_player_popup_ads_title">Skrýt vyskakovací reklamy hráče</string>
   <string name="morphe_hide_self_sponsor_ads_title">Skrýt karty se sponzorovanými produkty</string>
   <string name="morphe_hide_shopping_links_title">Skrýt nákupní odkazy</string>
-  <string name="morphe_hide_view_products_banner_title">Skrýt banner „Zobrazit produkty“</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Skrýt nabídky YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Skrýt reklamy ve videu</string>
@@ -614,7 +613,6 @@ Chcete-li zobrazit menu \"Audio Track\", změňte \"Spoof video streams\" na \"A
   <string name="morphe_hide_shorts_save_sound_button_title">Skrýt tlačítko \'Uložit hudbu\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Skrýt návrhy vyhledávání</string>
   <string name="morphe_hide_shorts_shop_button_title">Skrýt tlačítko Obchod</string>
-  <string name="morphe_hide_shorts_stickers_title">Skrýt nálepky</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Skrýt tlačítko Odebírat</string>
   <string name="morphe_hide_shorts_tagged_products_title">Skrýt označené produkty</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Skrýt tlačítko Nadcházející</string>

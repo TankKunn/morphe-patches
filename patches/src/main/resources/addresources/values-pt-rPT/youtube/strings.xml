@@ -258,7 +258,6 @@ Limitações:
   <string name="morphe_hide_player_popup_ads_title">Esconder anúncios popup do jogador</string>
   <string name="morphe_hide_self_sponsor_ads_title">Esconder cartões autopatrocinados</string>
   <string name="morphe_hide_shopping_links_title">Ocultar links de compras</string>
-  <string name="morphe_hide_view_products_banner_title">Ocultar banner \'Ver produtos\'</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Esconder promoções Premium do YouTube</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Esconder anúncios do vídeo</string>
@@ -613,7 +612,6 @@ Para mostrar o menu 'Faixa de áudio', altera 'Falsificar fluxos de vídeo' para
   <string name="morphe_hide_shorts_save_sound_button_title">Ocultar botão \'Salvar música\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Ocultar sugestões de busca</string>
   <string name="morphe_hide_shorts_shop_button_title">Ocultar botão de compras</string>
-  <string name="morphe_hide_shorts_stickers_title">Ocultar stickers</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Ocultar botão de inscrição</string>
   <string name="morphe_hide_shorts_tagged_products_title">Ocultar produtos marcados</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Ocultar botão de próximos</string>

@@ -258,7 +258,6 @@ Begrænsninger:
   <string name="morphe_hide_player_popup_ads_title">Skjul afspiller pop-up reklamer</string>
   <string name="morphe_hide_self_sponsor_ads_title">Skjul selvsponsorerede kort</string>
   <string name="morphe_hide_shopping_links_title">Skjul shoppinglinks</string>
-  <string name="morphe_hide_view_products_banner_title">Skjul banneret \"Se produkter\"</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Skjul YouTube Premium reklamer</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Skjul videoannoncer</string>
@@ -611,7 +610,6 @@ For at vise 'Audio Track'-menuen skal du ændre 'Spoof video streams' til 'Andro
   <string name="morphe_hide_shorts_save_sound_button_title">Skjul \'Gem musik\' knap</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Skjul søgeforslag</string>
   <string name="morphe_hide_shorts_shop_button_title">Skjul knappen Butik</string>
-  <string name="morphe_hide_shorts_stickers_title">Skjul stickers</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Skjul knappen Abonner</string>
   <string name="morphe_hide_shorts_tagged_products_title">Skjul taggede produkter</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Skjul knappen Kommende</string>

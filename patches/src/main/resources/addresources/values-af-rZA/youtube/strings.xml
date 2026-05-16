@@ -258,7 +258,6 @@ Beperkings:
   <string name="morphe_hide_player_popup_ads_title">Versteek speler pop-up advertensies</string>
   <string name="morphe_hide_self_sponsor_ads_title">Verberg selfgesponsorde kaarte</string>
   <string name="morphe_hide_shopping_links_title">Verberg winkel skakels</string>
-  <string name="morphe_hide_view_products_banner_title">Verberg sien produkte banier</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Verberg YouTube Premium-promosies</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Verberg video advertensies</string>
@@ -611,7 +610,6 @@ Om die 'Audio Track' menu te wys, verander 'Spoof video streams' na 'Android Ree
   <string name="morphe_hide_shorts_save_sound_button_title">Verberg \'Bewaar musiek\' knoppie</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Wegspring soekvoorstelle</string>
   <string name="morphe_hide_shorts_shop_button_title">Wegspring winkel knoppie</string>
-  <string name="morphe_hide_shorts_stickers_title">Wegspring plakkers</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Wegspring Subskribeer knoppie</string>
   <string name="morphe_hide_shorts_tagged_products_title">Wegspring gekodeerde produkte</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Wegspring komende knoppie</string>

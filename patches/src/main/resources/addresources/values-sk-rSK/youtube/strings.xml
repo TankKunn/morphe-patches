@@ -258,7 +258,6 @@ Obmedzenia:
   <string name="morphe_hide_player_popup_ads_title">Skryť vyskakovacie reklamy v prehrávači</string>
   <string name="morphe_hide_self_sponsor_ads_title">Skryť karty vlastnej reklamy</string>
   <string name="morphe_hide_shopping_links_title">Skryť odkazy na nákupy</string>
-  <string name="morphe_hide_view_products_banner_title">Skryť banner odporúčaných produktov</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Skryť YouTube Premium promo</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Skryť videoreklamy</string>
@@ -612,7 +611,6 @@ Ak chcete zobraziť menu 'Zvuková stopa', zmeňte 'Maskovať streamy videí' na
   <string name="morphe_hide_shorts_save_sound_button_title">Skryť tlačidlo \'Uložiť hudbu\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Skryť tlačidlo vyhľadávania</string>
   <string name="morphe_hide_shorts_shop_button_title">Skryť tlačidlo \'Shop\'</string>
-  <string name="morphe_hide_shorts_stickers_title">Skryť nálepky</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Skryť tlačidlo \'Odoberať\'</string>
   <string name="morphe_hide_shorts_tagged_products_title">Skryť označené produkty</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Skryť tlačidlo \'Čoskoro\'</string>

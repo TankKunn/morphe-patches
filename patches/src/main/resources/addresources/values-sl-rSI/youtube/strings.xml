@@ -258,7 +258,6 @@ Omejitve:
   <string name="morphe_hide_player_popup_ads_title">Skrij reklamne vstavke v predvajalniku</string>
   <string name="morphe_hide_self_sponsor_ads_title">Skrij kartice samozainteresiranih oglasov</string>
   <string name="morphe_hide_shopping_links_title">Skrij povezanih izdelkov</string>
-  <string name="morphe_hide_view_products_banner_title">Skrij vrstico z izdelki</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Skrij promocije YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Skrij video oglase</string>
@@ -613,7 +612,6 @@ Za prikaz menija 'Zvočna pot' spremenite možnost 'Ponarejanje videoposnetkov' 
   <string name="morphe_hide_shorts_save_sound_button_title">Skrij gumb \'Shrani glasbo\'.</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Skrij predloge za iskanje</string>
   <string name="morphe_hide_shorts_shop_button_title">Skrij gumb Trgovina</string>
-  <string name="morphe_hide_shorts_stickers_title">Skrij nalepke</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Skrij gumb Prijavi se</string>
   <string name="morphe_hide_shorts_tagged_products_title">Skrij označene izdelke</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Skrij gumb Prihodnji dogodki</string>

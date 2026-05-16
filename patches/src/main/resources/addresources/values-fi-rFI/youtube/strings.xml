@@ -259,7 +259,6 @@ Rajoitukset:
   <string name="morphe_hide_player_popup_ads_title">Piilota soittimen ponnahdusmainokset</string>
   <string name="morphe_hide_self_sponsor_ads_title">Piilota tekijän omat mainoskortit</string>
   <string name="morphe_hide_shopping_links_title">Piilota ostoslinkit</string>
-  <string name="morphe_hide_view_products_banner_title">Piilota \"Näytä tuotteet\" -banneri</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Piilota YouTube Premium -mainokset</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Piilota videomainokset</string>
@@ -612,7 +611,6 @@ Näyttääksesi Ääniraitavalikon, vaihda \"Naamioi videovirrat\" -asetukseksi 
   <string name="morphe_hide_shorts_save_sound_button_title">Piilota \'Tallenna musiikki\' -nappi</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Piilota hakuehdotukset</string>
   <string name="morphe_hide_shorts_shop_button_title">Piilota Kauppa-painike</string>
-  <string name="morphe_hide_shorts_stickers_title">Piilota tarrat</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Piilota Tilaa-painike</string>
   <string name="morphe_hide_shorts_tagged_products_title">Piilota tagatut tuotteet</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Piilota Tulossa-painike</string>

@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Hintergrundwiedergabe von Shorts deaktivieren</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Debug-Protokollpuffer</string>
-  <string name="morphe_debug_protobuffer_summary">Fügt zusätzliche Protokollierungsinformationen für Entwickler hinzu, um App-Komponenten zu identifizieren</string>
+  <string name="morphe_debug_protobuffer_summary">Fügt zusätzliche Protokollierung Informationen für Entwickler hinzu, um App-Komponenten zu identifizieren</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Wenn diese Einstellung aktiv ist werden zusätzliche Layoutdaten protokolliert, einschließlich Text auf dem Bildschirm für einige UI-Komponenten.
 
 Dies kann helfen, Komponenten bei der Erstellung benutzerdefinierter Filter zu identifizieren.
@@ -218,12 +218,13 @@ Das Anzeigen von YouTube Doodles kann verhindern, dass benutzerdefinierte Header
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Einschränkungen:
 • Shorts Reihen, Kanalseiten und Suchergebnisse können weiterhin Aufrufe anzeigen
-• Diese Funktion funktioniert nicht mit dem Automotive-Formfaktor"</string>
+• Diese Funktion funktioniert nicht mit dem Automotive-Formfaktor
+"</string>
   <string name="morphe_hide_upload_time_title">Upload-Zeit ausblenden</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Einschränkungen:
-• Shorts-Reihen, Kanalseiten und Suchergebnisse können weiterhin Upload-Zeiten anzeigen.
-• Diese Funktion funktioniert nicht mit dem Automobil-Formfaktor."</string>
+• Shorts-Regale, Kanalseiten und Suchergebnisse können weiterhin Aufrufe anzeigen
+• Diese Funktion funktioniert nicht mit dem Automotive-Formfaktor"</string>
   <string name="morphe_hide_keyword_content_screen_title">Keyword-Filter</string>
   <string name="morphe_hide_keyword_content_screen_summary">Wählen Sie bestimmte Wörter oder Phrasen aus, um Videos in Feeds und Suchergebnissen auszublenden</string>
   <string name="morphe_hide_keyword_content_home_title">Home-Videos nach Schlüsselwörtern ausblenden</string>
@@ -258,7 +259,6 @@ Einschränkungen:
   <string name="morphe_hide_player_popup_ads_title">Anzeigen im Spieler-Popup ausblenden</string>
   <string name="morphe_hide_self_sponsor_ads_title">Selbst gesponserte Karten ausblenden</string>
   <string name="morphe_hide_shopping_links_title">Shopping-Links ausblenden</string>
-  <string name="morphe_hide_view_products_banner_title">„Produkte ansehen“-Banner ausblenden</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium-Aktionen ausblenden</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Videowerbung ausblenden</string>
@@ -613,7 +613,6 @@ Um das Menü anzuzeigen, ändern Sie \"Video-Streams fälschen\" in \"Android Re
   <string name="morphe_hide_shorts_save_sound_button_title">\'Musik speichern\'-Button ausblenden</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Suchvorschläge ausblenden</string>
   <string name="morphe_hide_shorts_shop_button_title">Shop-Button ausblenden</string>
-  <string name="morphe_hide_shorts_stickers_title">Sticker ausblenden</string>
   <string name="morphe_hide_shorts_subscribe_button_title">\'Abonnieren\'-Button ausblenden</string>
   <string name="morphe_hide_shorts_tagged_products_title">Markierte Artikel ausblenden</string>
   <string name="morphe_hide_shorts_upcoming_button_title">\'Demnächst\'-Button ausblenden</string>

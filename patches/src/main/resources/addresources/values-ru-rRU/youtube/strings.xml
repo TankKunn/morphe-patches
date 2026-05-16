@@ -259,7 +259,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_popup_ads_title">Скрыть всплывающие окна плеера</string>
   <string name="morphe_hide_self_sponsor_ads_title">Скрыть заставки саморекламы</string>
   <string name="morphe_hide_shopping_links_title">Скрыть ссылки на товары</string>
-  <string name="morphe_hide_view_products_banner_title">Скрыть баннер просмотра товаров</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Скрыть рекламу YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Скрыть видеорекламу</string>
@@ -614,7 +613,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_save_sound_button_title">Скрыть кнопку \"Сохранить музыку\"</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Скрыть поисковые предложения</string>
   <string name="morphe_hide_shorts_shop_button_title">Скрыть кнопку \"Магазин\"</string>
-  <string name="morphe_hide_shorts_stickers_title">Скрыть стикеры</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Скрыть кнопку \"Подписаться\"</string>
   <string name="morphe_hide_shorts_tagged_products_title">Скрыть товары с тегом</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Скрыть кнопку \"Предстоящие события\"</string>

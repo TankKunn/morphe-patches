@@ -175,7 +175,6 @@ Ograničenja:
   <string name="morphe_hide_player_popup_ads_title">Sakrij skočne oglase igrača</string>
   <string name="morphe_hide_self_sponsor_ads_title">Sakrij samostalne oglase</string>
   <string name="morphe_hide_shopping_links_title">Sakrij poveznice</string>
-  <string name="morphe_hide_view_products_banner_title">Sakrij dugme za pretraživanje</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Sakrij YouTube Premium oglase</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Sakrij video oglase</string>
@@ -367,7 +366,6 @@ Potvrdite da naziv paketa je tačan i da je aplikacija instalirana."</string>
   <string name="morphe_hide_shorts_save_sound_button_title">Sakrij tipku \'Spremi glazbu\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Tipka za Cast je prikazana</string>
   <string name="morphe_hide_shorts_shop_button_title">Tipka za Cast je skrivena</string>
-  <string name="morphe_hide_shorts_stickers_title">Tipka za Cast je prikazana</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Tipka za Cast je skrivena</string>
   <string name="morphe_hide_shorts_tagged_products_title">Tipka za Cast je prikazana</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Sakrij dugmice za nadogradnju</string>

@@ -21,7 +21,7 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">Назва застосунку</string>
   <!-- Translations of this should be identical to morphe_custom_branding_icon_entry_6 -->
-  <string name="morphe_custom_branding_name_entry_5">Користувацька</string>
+  <string name="morphe_custom_branding_name_entry_5">Власна</string>
   <string name="morphe_custom_branding_icon_title">Значок застосунку</string>
   <string name="morphe_custom_branding_icon_entry_1">Оригінальна</string>
   <string name="morphe_custom_branding_icon_entry_2">Morphe чорна</string>
@@ -29,7 +29,7 @@ Second \"item\" text"</string>
   <string name="morphe_custom_branding_icon_entry_4">Morphe світла</string>
   <string name="morphe_custom_branding_icon_entry_5">Morphe Play</string>
   <!-- Translations of this should be identical to morphe_custom_branding_name_entry_5 -->
-  <string name="morphe_custom_branding_icon_entry_6">Користувацька</string>
+  <string name="morphe_custom_branding_icon_entry_6">Власна</string>
   <string name="morphe_custom_branding_notification_icon_title">Іконка сповіщення</string>
   <string name="morphe_custom_branding_notification_icon_entry_1">Відповідати іконці застосунку</string>
   <!-- misc.dns.checkWatchHistoryDomainNameResolutionPatch -->
@@ -48,13 +48,13 @@ Second \"item\" text"</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
   <string name="morphe_spoof_video_streams_no_clients_suggest_vr_toast">Спробуйте увімкнути: Підміна відеопотоків > Android VR з входом</string>
-  <string name="morphe_spoof_video_streams_client_type_title">Клієнт за замовчуванням</string>
+  <string name="morphe_spoof_video_streams_client_type_title">Типовий клієнт</string>
   <!-- Ensure this translation matches the translation of morphe_spoof_video_streams_no_clients_suggest_vr_toast -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_about_title">Android VR з входом</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary">Ви не ввійшли в Android VR. Натисніть тут, щоб увійти</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary_signed_in">Наразі ви ввійшли в Android VR</string>
   <!-- "Default client" must be the same translated text as morphe_spoof_video_streams_client_type_title -->
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary_disabled">Щоб використовувати цю функцію, змініть \"Клієнт за замовчуванням\" на Android VR</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary_disabled">Щоб використовувати цю функцію, змініть \"Типовий клієнт\" на Android VR</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_title">Увійти в Android VR</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Вхід в Android VR може виправити проблеми з відтворенням для деяких користувачів
 
@@ -76,9 +76,9 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">Вхід виконано успішно</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_message">"Автентифікацію збережено
 
-• Ваші налаштування Morphe не імпортуватимуть/експортуватимуть автентифікацію Android VR
-• Якщо цей застосунок не використовуватиметься протягом 6 місяців, Google видалить цю автентифікацію
-• Вам потрібно буде знову ввійти, якщо ви зміните пароль Google або скасуєте реєстрацію цього пристрою в налаштуваннях Google"</string>
+• Налаштування Morphe не імпортують/експортують автентифікацію Android VR
+• Якщо застосунок не використовується 6 місяців, Google видалить цю автентифікацію
+• Вам потрібно буде увійти знову, якщо ви зміните пароль Google або скасуєте реєстрацію цього пристрою в налаштуваннях Google"</string>
   <string name="morphe_oauth2_connection_failure_timeout">OAuth2 тимчасово недоступний (тайм-аут API)</string>
   <string name="morphe_oauth2_connection_failure_status_400">Термін дії входу в Android VR закінчився. Спробуйте ввійти у VR ще раз</string>
   <string name="morphe_oauth2_connection_failure_status">OAuth2 тимчасово недоступний (статус %d)</string>

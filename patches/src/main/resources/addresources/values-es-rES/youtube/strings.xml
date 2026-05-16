@@ -258,7 +258,6 @@ Limitaciones:
   <string name="morphe_hide_player_popup_ads_title">Ocultar anuncios emergentes del reproductor</string>
   <string name="morphe_hide_self_sponsor_ads_title">Ocultar tarjetas autopatrocinadas</string>
   <string name="morphe_hide_shopping_links_title">Ocultar enlaces de compras</string>
-  <string name="morphe_hide_view_products_banner_title">Ocultar banner \"Ver productos\"</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Ocultar promociones de YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Ocultar anuncios de vídeo</string>
@@ -613,7 +612,6 @@ Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de v
   <string name="morphe_hide_shorts_save_sound_button_title">Ocultar botón \"Guardar música\"</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Ocultar sugerencias de búsqueda</string>
   <string name="morphe_hide_shorts_shop_button_title">Ocultar botón \"Tienda\"</string>
-  <string name="morphe_hide_shorts_stickers_title">Ocultar stickers</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Ocultar botón \"Suscribirme\"</string>
   <string name="morphe_hide_shorts_tagged_products_title">Ocultar productos etiquetados</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Ocultar botón \"Próximos\"</string>

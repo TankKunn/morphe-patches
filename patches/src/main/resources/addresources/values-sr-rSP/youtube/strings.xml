@@ -258,7 +258,6 @@ Promene uključuju:
   <string name="morphe_hide_player_popup_ads_title">Сакриј рекламе у плејеру</string>
   <string name="morphe_hide_self_sponsor_ads_title">Сакриј картице самоспонзорства</string>
   <string name="morphe_hide_shopping_links_title">Сакриј линкове за куповину</string>
-  <string name="morphe_hide_view_products_banner_title">Сакриј банер „Погледајте производе”</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Сакриј промоције за YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Сакриј видео огласе</string>
@@ -613,7 +612,6 @@ Promene uključuju:
   <string name="morphe_hide_shorts_save_sound_button_title">Сакриј дугме \'Сачувај музику\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Сакриј предлоге за претрагу</string>
   <string name="morphe_hide_shorts_shop_button_title">Сакриј дугме „Продавница”</string>
-  <string name="morphe_hide_shorts_stickers_title">Сакриј налепнице</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Сакриј дугме „Запрати”</string>
   <string name="morphe_hide_shorts_tagged_products_title">Сакриј означене производе</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Сакриј дугме „Предстојеће”</string>

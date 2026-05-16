@@ -258,7 +258,6 @@ YouTube Doodles दिखाने से कस्टम हेडर प्र
   <string name="morphe_hide_player_popup_ads_title">प्लेयर पॉपअप विज्ञापन छिपाएं</string>
   <string name="morphe_hide_self_sponsor_ads_title">छुपाएं स्वयं प्रायोजित कार्ड</string>
   <string name="morphe_hide_shopping_links_title">쇼핑 링크 숨기기</string>
-  <string name="morphe_hide_view_products_banner_title">छुपाएं मॉर्फे देखें उत्पादों बैनर</string>
   <string name="morphe_hide_youtube_premium_promotions_title">छुपाएं YouTube प्रीमियम प्रोमोशन</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">छुपाएं वीडियो विज्ञापन</string>
@@ -613,7 +612,6 @@ YouTube Doodles दिखाने से कस्टम हेडर प्र
   <string name="morphe_hide_shorts_save_sound_button_title">छुपाएं \'साउंड सहेजें\' बटन</string>
   <string name="morphe_hide_shorts_search_suggestions_title">सर्च सुझीशन को छुपाएं</string>
   <string name="morphe_hide_shorts_shop_button_title">छुपाएं \'संलग्न होना\' बटन</string>
-  <string name="morphe_hide_shorts_stickers_title">छिपाएं अध्याय</string>
   <string name="morphe_hide_shorts_subscribe_button_title">समुदाय बटन छुपाएं</string>
   <string name="morphe_hide_shorts_tagged_products_title">टैग किए गए उत्पादों को छिपाएँ</string>
   <string name="morphe_hide_shorts_upcoming_button_title">छुपाएं \'संलग्न होना\' बटन</string>

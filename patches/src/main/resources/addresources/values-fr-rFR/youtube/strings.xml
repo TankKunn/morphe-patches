@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Désactiver la lecture en arrière-plan</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Journal de débogage du protocol buffer</string>
-  <string name="morphe_debug_protobuffer_summary">Ajoute des informations de journalisation supplémentaires pour les développeurs afin d\'identifier les composants de l\'application</string>
+  <string name="morphe_debug_protobuffer_summary">Ajoute des informations de journalisation supplémentaires pour permettre aux développeurs d’identifier les composants de l’application</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"L’activation de ce paramètre enregistrera des données supplémentaires sur la mise en page, y compris le texte affiché à l’écran pour certains composants de l’interface.
 
 Cela peut aider à identifier les composants lors de la création de filtres personnalisés.
@@ -217,13 +217,13 @@ L’affichage des YouTube Doodles peut empêcher l’affichage des en-têtes per
   <string name="morphe_hide_view_count_title">Masquer le nombre de vues</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
   <string name="morphe_hide_view_count_user_dialog_message">"Limitations :
-• Les étagères Shorts, les pages de chaînes et les résultats de recherche peuvent encore afficher le nombre de vues
-• Cette fonctionnalité ne fonctionne pas avec le format automobile."</string>
+• Les étagères Shorts, les pages de chaîne et les résultats de recherche peuvent toujours afficher le nombre de vues.
+• Cette fonctionnalité ne fonctionne pas avec la disposition automobile."</string>
   <string name="morphe_hide_upload_time_title">Masquer l\'heure de mise en ligne</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Limitations :
-• Les étagères Shorts, les pages de chaînes et les résultats de recherche peuvent encore afficher les heures de mise en ligne
-• Cette fonctionnalité ne fonctionne pas avec le format automobile."</string>
+• Les étagères Shorts, les pages de chaîne et les résultats de recherche peuvent toujours afficher les heures de mise en ligne.
+• Cette fonctionnalité ne fonctionne pas avec la disposition automobile."</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtre par mots clés</string>
   <string name="morphe_hide_keyword_content_screen_summary">Choisissez les mots ou expressions spécifiques pour masquer les vidéos dans les flux et les résultats de recherche</string>
   <string name="morphe_hide_keyword_content_home_title">Masquer les vidéos de \'Accueil\' par mot-clé</string>
@@ -258,7 +258,6 @@ Limitations :
   <string name="morphe_hide_player_popup_ads_title">Masquer les pop-up publicitaires du lecteur</string>
   <string name="morphe_hide_self_sponsor_ads_title">Masquer les cartes d\'autopromotion</string>
   <string name="morphe_hide_shopping_links_title">Masquer les liens de shopping</string>
-  <string name="morphe_hide_view_products_banner_title">Masquer la bannière \'Afficher les produits\'</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Masquer les promotions YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Masquer les publicités vidéo</string>
@@ -284,7 +283,7 @@ Limitations :
   <string name="morphe_external_downloader_title">Afficher un bouton de téléchargeur externe</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Remplacer l\'action du bouton \'Télécharger\'</string>
-  <string name="morphe_external_downloader_action_button_summary">Remplace la fonction de téléchargement intégrée de YouTube par votre application de téléchargement tierce préférée</string>
+  <string name="morphe_external_downloader_action_button_summary">Remplace la fonction de téléchargement intégrée de YouTube par l’application de téléchargement tierce de votre choix</string>
   <string name="morphe_external_downloader_name_title">Nom de package du téléchargeur</string>
   <string name="morphe_external_downloader_name_summary">Nom du package de votre application de téléchargeur externe installée</string>
   <string name="morphe_external_downloader_other_item_hint">Entrez le nom du package</string>
@@ -517,7 +516,7 @@ Pour accéder aux paramètres, activez le bouton 'Paramètres' via Général →
   <string name="morphe_hide_player_flyout_audio_track_title">Masquer le menu \'Piste audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Le menu 'Piste audio' est masqué
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Le menu 'Piste audio' est masqué
 
 Pour afficher le menu 'Piste audio', modifier 'Falsifier les flux vidéo' en 'Android Reel' ou en 'TV'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Masquer le pied de page du menu \'Piste audio\'</string>
@@ -613,7 +612,6 @@ Pour afficher le menu 'Piste audio', modifier 'Falsifier les flux vidéo' en 'An
   <string name="morphe_hide_shorts_save_sound_button_title">Masquer le bouton \'Enregistrer la musique\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Masquer les suggestions de recherche</string>
   <string name="morphe_hide_shorts_shop_button_title">Masquer le bouton \'Magasin\'</string>
-  <string name="morphe_hide_shorts_stickers_title">Masquer les autocollants</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Masquer le bouton \'S\'abonner\'</string>
   <string name="morphe_hide_shorts_tagged_products_title">Masquer les produits associés</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Masquer le bouton \'Diffusion prévue\'</string>
@@ -768,7 +766,9 @@ Paramètres → Lecture (ou Lecture automatique) → Lecture automatique de vid�
   <string name="morphe_sb_settings_ie">Importer / Exporter les paramètres</string>
   <string name="morphe_sb_settings_copy">Copier</string>
   <string name="morphe_sb_settings_ie_summary">Votre configuration JSON SponsorBlock, pouvant être importée / exportée vers Morphe et d’autres plateformes SponsorBlock</string>
-  <string name="morphe_sb_settings_ie_summary_warning">"Votre configuration JSON SponsorBlock, pouvant être importée / exportée vers Morphe et d’autres plateformes SponsorBlock. Cela inclut votre ID utilisateur privé. Veillez à le partager avec précaution"</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"Votre configuration JSON SponsorBlock, pouvant être importée / exportée vers Morphe et d’autres plateformes SponsorBlock
+    
+Cela inclut votre ID utilisateur privé. Veillez à le partager avec précaution"</string>
   <string name="morphe_sb_settings_import_successful">Paramètres importés avec succès</string>
   <string name="morphe_sb_settings_import_failed">Échec de l\'importation : %s</string>
   <string name="morphe_sb_settings_export_failed">Échec de l\'exportation : %s</string>

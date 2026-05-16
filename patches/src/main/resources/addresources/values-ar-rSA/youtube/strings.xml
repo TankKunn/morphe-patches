@@ -258,7 +258,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_popup_ads_title">إخفاء إعلانات المشغل المنبثقة</string>
   <string name="morphe_hide_self_sponsor_ads_title">إخفاء بطاقات الرعاية الذاتية</string>
   <string name="morphe_hide_shopping_links_title">إخفاء روابط التسوق</string>
-  <string name="morphe_hide_view_products_banner_title">إخفاء لافتة \'عرض المنتجات\'</string>
   <string name="morphe_hide_youtube_premium_promotions_title">إخفاء عروض ترقية YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">إخفاء إعلانات الفيديو</string>
@@ -614,7 +613,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_save_sound_button_title">إخفاء زر \'حفظ الموسيقى\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">إخفاء اقتراحات البحث</string>
   <string name="morphe_hide_shorts_shop_button_title">إخفاء زر المتجر</string>
-  <string name="morphe_hide_shorts_stickers_title">إخفاء الملصقات</string>
   <string name="morphe_hide_shorts_subscribe_button_title">إخفاء زر اشتراك</string>
   <string name="morphe_hide_shorts_tagged_products_title">إخفاء المنتجات الموسومة</string>
   <string name="morphe_hide_shorts_upcoming_button_title">إخفاء زر الفيديوهات القادمة</string>

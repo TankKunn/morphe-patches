@@ -258,7 +258,6 @@ YouTube Doodles দেখানো কাস্টম হেডার প্র�
   <string name="morphe_hide_player_popup_ads_title">প্লেয়ার পপআপ বিজ্ঞাপন লুকান</string>
   <string name="morphe_hide_self_sponsor_ads_title">স্ব-স্পন্সর কার্ড লুকান</string>
   <string name="morphe_hide_shopping_links_title">কেনাকাটার লিঙ্ক লুকান</string>
-  <string name="morphe_hide_view_products_banner_title">\'পণ্য দেখুন\' ব্যানার লুকান</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube প্রিমিয়াম প্রচারণা লুকান</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">ভিডিও বিজ্ঞাপন লুকান</string>
@@ -613,7 +612,6 @@ YouTube Doodles দেখানো কাস্টম হেডার প্র�
   <string name="morphe_hide_shorts_save_sound_button_title">লুকান \'মিউজিক সেভ\' বোতাম</string>
   <string name="morphe_hide_shorts_search_suggestions_title">অনুসন্ধান পরামর্শগুলি লুকান</string>
   <string name="morphe_hide_shorts_shop_button_title">শপ বোতামটি লুকান</string>
-  <string name="morphe_hide_shorts_stickers_title">স্টিকার লুকান</string>
   <string name="morphe_hide_shorts_subscribe_button_title">সাবস্ক্রাইব  বোতামটি লুকান</string>
   <string name="morphe_hide_shorts_tagged_products_title">ট্যাগ করা প্রোডাক্টগুলি লুকান</string>
   <string name="morphe_hide_shorts_upcoming_button_title">আসন্ন বোতামটি লুকান</string>

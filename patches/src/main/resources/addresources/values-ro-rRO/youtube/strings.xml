@@ -256,7 +256,6 @@ Limitări:
   <string name="morphe_hide_player_popup_ads_title">Ascunde anunțurile pop-up ale jucătorului</string>
   <string name="morphe_hide_self_sponsor_ads_title">Ascunde cardurile auto-sponsorizate</string>
   <string name="morphe_hide_shopping_links_title">Ascunde linkurile de cumpărături</string>
-  <string name="morphe_hide_view_products_banner_title">Ascunde bannerul \"Vezi produse\"</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Ascunde promoțiile YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Ascunde reclamele video</string>
@@ -609,7 +608,6 @@ Pentru a afișa meniul 'Audio Track', schimbați 'Spoof video streams' în 'Andr
   <string name="morphe_hide_shorts_save_sound_button_title">Ascunde butonul \'Salvează melodia\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Ascunde sugestiile de căutare</string>
   <string name="morphe_hide_shorts_shop_button_title">Ascunde butonul Cumpără</string>
-  <string name="morphe_hide_shorts_stickers_title">Ascunde autocolante</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Ascunde butonul Abonează-te</string>
   <string name="morphe_hide_shorts_tagged_products_title">Ascunde produsele etichetate</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Ascunde butonul Următor</string>

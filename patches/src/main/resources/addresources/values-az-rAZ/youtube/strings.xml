@@ -188,7 +188,6 @@ Məhdudiyyətlər
   <string name="morphe_hide_player_popup_ads_title">Oynadıcı ani açılan reklamlarını gizlət</string>
   <string name="morphe_hide_self_sponsor_ads_title">Öz-sponsorlu kartları gizlət</string>
   <string name="morphe_hide_shopping_links_title">Alış-veriş linklərini gizlət</string>
-  <string name="morphe_hide_view_products_banner_title">“Məhsullara baxın” afişasın gizlət</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium reklamlarını gizlət</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Video reklamlarını gizlət</string>
@@ -422,7 +421,6 @@ Tənzimləmələrə daxil olmaq üçün Ümumi → Alətlər Cərgəsi→ Tənzi
   <string name="morphe_hide_shorts_save_sound_button_title">Musiqini saxla düyməsini gizlət</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Axtarış təkliflərini gizlət</string>
   <string name="morphe_hide_shorts_shop_button_title">Mağaza düyməsini gizlət</string>
-  <string name="morphe_hide_shorts_stickers_title">Stikerləri gizlət</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Abunə ol düyməsini gizlət</string>
   <string name="morphe_hide_shorts_tagged_products_title">Etiketlənmiş məhsulları gizlət</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Yaxınlaşan düyməsini gizlət</string>

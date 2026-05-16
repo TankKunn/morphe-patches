@@ -258,7 +258,6 @@ Sınırlamalar
   <string name="morphe_hide_player_popup_ads_title">Oynatıcı açılır reklamları gizle</string>
   <string name="morphe_hide_self_sponsor_ads_title">Kendine sponsor kartları gizle</string>
   <string name="morphe_hide_shopping_links_title">Alışveriş bağlantılarını gizle</string>
-  <string name="morphe_hide_view_products_banner_title">\'Ürünleri görüntüle\' afişini gizle</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium promosyonlarını gizle</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Video reklamlarını gizle</string>
@@ -328,8 +327,8 @@ Paket adının doğru olduğunu ve uygulamanın yüklü olduğunu doğrulayın"<
   <string name="morphe_save_to_watch_later_already_exists_toast">Bu video daha sonra izle listesinde zaten kayıtlı</string>
   <string name="morphe_save_to_watch_later_error_toast">Bu video daha sonra izle listesine kaydedilemiyor</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
-  <string name="morphe_open_channel_of_live_avatar_title">Etkinleştirildiğinde kanal sayfasına, devre dışı bırakıldığında ise canlı yayına açar</string>
-  <string name="morphe_open_channel_of_live_avatar_summary">Konum tutma sırasında etkinleşen hassas arama modunu devre dışı bırakır</string>
+  <string name="morphe_open_channel_of_live_avatar_title">Canlı avatar dokunma eylemi</string>
+  <string name="morphe_open_channel_of_live_avatar_summary">Etkinleştirildiğinde kanal sayfasını, devre dışı bırakıldığında canlı yayını açar</string>
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
   <string name="morphe_disable_precise_seeking_gesture_title">Hassas sardırma hareketini devre dışı bırak</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Normalde bunu kısıtlayan canlı yayınlarda bile tüm canlı yayınlarda aramaya izin verir</string>
@@ -611,7 +610,6 @@ Ayarlara erişmek için, Genel → Araç Çubuğu → Ayarları Göster yoluyla 
   <string name="morphe_hide_shorts_save_sound_button_title">Müziği kaydet düğmesini gizle</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Arama önerilerini gizle</string>
   <string name="morphe_hide_shorts_shop_button_title">Alışveriş düğmesini gizle</string>
-  <string name="morphe_hide_shorts_stickers_title">Çıkartmaları gizle</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Abone ol düğmesini gizle</string>
   <string name="morphe_hide_shorts_tagged_products_title">Etiketli ürünleri gizle</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Gelecek düğmesini gizle</string>

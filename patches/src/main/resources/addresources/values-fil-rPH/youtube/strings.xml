@@ -258,7 +258,6 @@ Mga Limitasyon:
   <string name="morphe_hide_player_popup_ads_title">Itago ang mga patalastas sa player popup</string>
   <string name="morphe_hide_self_sponsor_ads_title">Itago ang mga self sponsored card</string>
   <string name="morphe_hide_shopping_links_title">Itago ang mga link ng pagbili</string>
-  <string name="morphe_hide_view_products_banner_title">Itago ang banner na tingnan ang produkto</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Itago ang mga promosyon sa YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Itago ang mga patalastas sa video</string>
@@ -613,7 +612,6 @@ Upang ipakita ang menu ng 'Audio Track', palitan ang 'Spoof video streams' sa 'A
   <string name="morphe_hide_shorts_save_sound_button_title">Itago ang button ng \'I-save ang musika\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Itago ang paghahanap na button</string>
   <string name="morphe_hide_shorts_shop_button_title">Itago ang button na Tindahan</string>
-  <string name="morphe_hide_shorts_stickers_title">Itago ang mga sticker</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Itago ang button na Mag-subscribe</string>
   <string name="morphe_hide_shorts_tagged_products_title">Itago ang mga naka-tag na produkto</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Itago ang button na Paparating</string>

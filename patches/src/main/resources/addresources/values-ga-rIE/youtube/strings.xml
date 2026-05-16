@@ -258,7 +258,6 @@ Teorainneacha:
   <string name="morphe_hide_player_popup_ads_title">Folaigh fógraí aníos an imreora</string>
   <string name="morphe_hide_self_sponsor_ads_title">Folaigh cártaí féinurraithe</string>
   <string name="morphe_hide_shopping_links_title">Folaigh naisc siopadóireachta</string>
-  <string name="morphe_hide_view_products_banner_title">Folaigh meirge táirgí</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Folaigh ardú céime YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Folaigh fógraí físe</string>
@@ -613,7 +612,6 @@ Chun an roghchlár rianta fuaime a thaispeáint, athraigh 'Sruthanna físe bréi
   <string name="morphe_hide_shorts_save_sound_button_title">Folaigh cnaipe \'Sábháil Ceoil\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Folaigh moltaí cuardaigh</string>
   <string name="morphe_hide_shorts_shop_button_title">Folaigh cnaipe Siopa</string>
-  <string name="morphe_hide_shorts_stickers_title">Folaigh greamáin</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Folaigh cnaipe Liostáil</string>
   <string name="morphe_hide_shorts_tagged_products_title">Folaigh táirgí clibeáilte</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Folaigh an cnaipe \'at le teacht\'</string>

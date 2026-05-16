@@ -258,7 +258,6 @@ Sînorgertî:
   <string name="morphe_hide_player_popup_ads_title">Ragihîştina reklamên popup-a lîstikvanê veşêre</string>
   <string name="morphe_hide_self_sponsor_ads_title">Kartên xîzetkaran veşêrin</string>
   <string name="morphe_hide_shopping_links_title">Girêkên firotinê veşêrin</string>
-  <string name="morphe_hide_view_products_banner_title">Bannerê pêşandanê meşandinê veşêrin</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Promosyonên YouTube Premium veşêre</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Reklamên vîdyoyê veşêrin</string>
@@ -614,7 +613,6 @@ Ji bo nîşandana menûya 'Şêwaza Deng', 'Şêwazên vîdyoyê yên sexnetî' 
   <string name="morphe_hide_shorts_save_sound_button_title">\'Mûzîka veşêre\' veşêre</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Dane pêşniyaran seriyên lêgerînê veşartin</string>
   <string name="morphe_hide_shorts_shop_button_title">Dane şikilê bazareyê</string>
-  <string name="morphe_hide_shorts_stickers_title">Dane stikrikan veşartin</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Dane şikilê bişînê</string>
   <string name="morphe_hide_shorts_tagged_products_title">Dane hilberên nirxandinî veşartin</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Şertekên pêşiyê veşêre</string>

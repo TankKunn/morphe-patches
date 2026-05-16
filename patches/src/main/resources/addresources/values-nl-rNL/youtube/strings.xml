@@ -259,7 +259,6 @@ Beperkingen:
   <string name="morphe_hide_player_popup_ads_title">Verberg speler pop-up reclames</string>
   <string name="morphe_hide_self_sponsor_ads_title">Zelf gesponsorde kaarten verbergen</string>
   <string name="morphe_hide_shopping_links_title">Winkellinks verbergen</string>
-  <string name="morphe_hide_view_products_banner_title">Banner \'Producten bekijken\' verbergen</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium promoties verbergen</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Video-advertenties verbergen</string>
@@ -614,7 +613,6 @@ Om het menu 'Audiotrack' weer te geven, wijzig je 'Video streams spoofen' naar '
   <string name="morphe_hide_shorts_save_sound_button_title">Verberg \'Muziek opslaan\' knop</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Verberg zoeksuggesties</string>
   <string name="morphe_hide_shorts_shop_button_title">Verberg Winkelknop</string>
-  <string name="morphe_hide_shorts_stickers_title">Verberg stickers</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Verberg de knop \"Abonneren\"</string>
   <string name="morphe_hide_shorts_tagged_products_title">Verberg getagde producten</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Verberg de knop \"Aanstaande\"</string>

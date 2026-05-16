@@ -258,7 +258,6 @@ Ograniczenia:
   <string name="morphe_hide_player_popup_ads_title">Ukryj wyskakujące reklamy w odtwarzaczu</string>
   <string name="morphe_hide_self_sponsor_ads_title">Ukryj karty autopromocji</string>
   <string name="morphe_hide_shopping_links_title">Ukryj linki do sklepów</string>
-  <string name="morphe_hide_view_products_banner_title">Ukryj banery produktów</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Ukryj promocje YouTube Premium</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Ukryj reklamy filmu</string>
@@ -613,7 +612,6 @@ Aby je wyświetlić, zmień \"Fałszowanie strumieni filmów\" na \"Android Reel
   <string name="morphe_hide_shorts_save_sound_button_title">Ukryj przycisk \"Zapisz muzykę\"</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Ukryj sugestie wyszukiwania</string>
   <string name="morphe_hide_shorts_shop_button_title">Ukryj przycisk Sklep</string>
-  <string name="morphe_hide_shorts_stickers_title">Ukryj naklejki</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Ukryj przycisk Subskrybuj</string>
   <string name="morphe_hide_shorts_tagged_products_title">Ukryj oznaczone produkty</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Ukryj przycisk Nadchodzące</string>

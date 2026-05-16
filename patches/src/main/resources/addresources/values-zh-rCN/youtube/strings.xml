@@ -74,7 +74,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_expandable_card_entry_4">隐藏产品和摘要卡片</string>
   <string name="morphe_hide_expandable_card_entry_5">隐藏全部</string>
   <string name="morphe_hide_floating_microphone_button_title">隐藏浮动麦克风按钮</string>
-  <string name="morphe_hide_floating_microphone_button_summary">隐藏搜索建议屏幕右下角的浮动麦克风按钮</string>
+  <string name="morphe_hide_floating_microphone_button_summary">隐藏在搜索建议屏幕右下角的悬浮麦克风按钮</string>
   <string name="morphe_hide_horizontal_shelves_title">隐藏横排展示架</string>
   <string name="morphe_hide_horizontal_shelves_summary">隐藏横向滚动架，例如最新消息、你可能喜欢的社区帖子、继续观看、探索更多频道、探索更多主题、为你推荐、最新视频、最相关、创作者的社区帖子、购物和再次观看</string>
   <string name="morphe_hide_hyped_label_title">隐藏热门标签</string>
@@ -108,7 +108,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_you_may_like_section_title">隐藏“您可能喜欢”的部分</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_youtube_doodles_title">隐藏 YouTube 涂鸦</string>
-  <string name="morphe_hide_youtube_doodles_summary">隐藏 YouTube 徽标上的季节性和基于事件的动画</string>
+  <string name="morphe_hide_youtube_doodles_summary">隐藏 YouTube logo上的季节性和活动相关的动画</string>
   <string name="morphe_hide_youtube_doodles_user_dialog_message">"YouTube Doodles 每年在世界各地的一些天数内会显示。
 
 显示 YouTube Doodles 可能会阻止自定义标头显示。"</string>
@@ -259,7 +259,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_popup_ads_title">隐藏播放器弹出广告</string>
   <string name="morphe_hide_self_sponsor_ads_title">隐藏自我推广卡片</string>
   <string name="morphe_hide_shopping_links_title">隐藏购物链接</string>
-  <string name="morphe_hide_view_products_banner_title">隐藏“查看商品”横幅</string>
   <string name="morphe_hide_youtube_premium_promotions_title">隐藏 YouTube Premium 促销推广</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">隐藏视频广告</string>
@@ -352,9 +351,9 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_press_to_engage_summary">减少按钮之间的水平间距</string>
   <string name="morphe_swipe_haptic_feedback_title">使用触感反馈</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">保存并恢复亮度</string>
-  <string name="morphe_swipe_save_and_restore_brightness_summary">在切换选项卡时使过渡动画生效</string>
+  <string name="morphe_swipe_save_and_restore_brightness_summary">进入/退出全屏模式时记住亮度级别</string>
   <string name="morphe_swipe_lowest_value_enable_auto_brightness_title">启用自动亮度手势</string>
-  <string name="morphe_swipe_lowest_value_enable_auto_brightness_summary">在滚动时保持导航栏可见</string>
+  <string name="morphe_swipe_lowest_value_enable_auto_brightness_summary">将亮度滑动到最低值时，使用系统自动亮度</string>
   <string name="morphe_swipe_lowest_value_enable_auto_brightness_overlay_text">自动</string>
   <string name="morphe_swipe_overlay_timeout_title">滑动提示层显示时长</string>
   <string name="morphe_swipe_overlay_timeout_summary">覆盖层可见的毫秒数</string>
@@ -362,9 +361,9 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">使状态栏完全不透明</string>
   <string name="morphe_swipe_overlay_background_opacity_invalid_toast">滑动不透明度必须介于 0-100 之间</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">滑动提示层亮度颜色</string>
-  <string name="morphe_swipe_overlay_progress_brightness_color_summary">使浅色模式下的导航栏完全不透明</string>
+  <string name="morphe_swipe_overlay_progress_brightness_color_summary">设置亮度控制进度条的颜色</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">滑动提示层音量颜色</string>
-  <string name="morphe_swipe_overlay_progress_volume_color_summary">使深色模式下的导航栏完全不透明</string>
+  <string name="morphe_swipe_overlay_progress_volume_color_summary">设置音量控制进度条的颜色</string>
   <string name="morphe_swipe_text_overlay_size_title">滑动提示层文字大小</string>
   <string name="morphe_swipe_text_overlay_size_summary">选择要在工具栏中显示的组件</string>
   <string name="morphe_swipe_text_overlay_size_invalid_toast">文字大小必须在 1-30 之间</string>
@@ -393,7 +392,7 @@ Second \"item\" text"</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_share_button_title">隐藏分享按钮</string>
   <!-- 'Stop ads' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_stop_ads_button_title">隐藏“提问”按钮</string>
+  <string name="morphe_hide_stop_ads_button_title">隐藏“停止广告”按钮</string>
   <!-- Button does not have any text and is only shown as an icon, and only when the video information area is collapsed to a compact state. -->
   <string name="morphe_hide_comments_button_title">隐藏评论按钮</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
@@ -407,7 +406,7 @@ Second \"item\" text"</string>
           This button usually appears on videos uploaded by the logged-in user. -->
   <string name="morphe_hide_hype_button_title">隐藏混剪按钮</string>
   <!-- 'Promote' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_promote_button_title">隐藏更多按钮</string>
+  <string name="morphe_hide_promote_button_title">隐藏推广按钮</string>
   <!-- 'Thanks' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_thanks_button_title">隐藏感谢按钮</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
@@ -428,7 +427,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_quick_actions_like_button_title">隐藏点赞按钮</string>
   <string name="morphe_hide_quick_actions_live_chat_button_title">如果它们有效，则自动获取和保存 Cookie</string>
   <string name="morphe_hide_quick_actions_mix_button_title">解决可能阻止字幕加载的前提条件检查失败</string>
-  <string name="morphe_hide_quick_actions_more_button_title">选择要在底部导航栏上显示的按钮</string>
+  <string name="morphe_hide_quick_actions_more_button_title">隐藏更多按钮</string>
   <string name="morphe_hide_quick_actions_more_videos_button_title">隐藏主页按钮</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">隐藏 Shorts 按钮</string>
   <string name="morphe_hide_quick_actions_save_button_title">隐藏订阅按钮</string>
@@ -450,7 +449,7 @@ Second \"item\" text"</string>
   <string name="morphe_caption_cookies_title">字幕cookie</string>
   <string name="morphe_caption_cookies_summary">减少按钮之间的水平间距</string>
   <string name="morphe_get_caption_cookies_title">获取字幕cookie</string>
-  <string name="morphe_get_caption_cookies_summary">使导航栏动画生效</string>
+  <string name="morphe_get_caption_cookies_summary">如果 cookie 有效，则自动获取并保存 cookie</string>
   <string name="morphe_get_caption_cookies_failed">无法获取cookie</string>
   <string name="morphe_get_caption_cookies_duplicate">cookie已存在</string>
   <string name="morphe_get_caption_cookies_success">cookie已成功更新</string>
@@ -461,9 +460,9 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_buttons_screen_title">导航栏按钮</string>
   <string name="morphe_navigation_buttons_screen_summary">使状态栏完全不透明</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_hide_home_button_title">使浅色模式下的导航栏完全不透明</string>
+  <string name="morphe_hide_home_button_title">隐藏首页按钮</string>
   <!-- 'Shorts' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_hide_shorts_button_title">使深色模式下的导航栏完全不透明</string>
+  <string name="morphe_hide_shorts_button_title">隐藏 Shorts 按钮</string>
   <!-- 'Create' has no display name. Translate normally. -->
   <string name="morphe_hide_create_button_title">隐藏创建按钮</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -497,7 +496,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">禁用浅色半透明导航栏</string>
   <string name="morphe_disable_translucent_navigation_bar_light_summary">隐藏“字幕”菜单页脚</string>
   <string name="morphe_disable_translucent_navigation_bar_dark_title">禁用深色半透明导航栏</string>
-  <string name="morphe_disable_translucent_navigation_bar_dark_summary">在暗色模式下使导航栏完全不透明</string>
+  <string name="morphe_disable_translucent_navigation_bar_dark_summary">在深色模式下使导航栏完全不透明</string>
   <string name="morphe_toolbar_screen_title">工具栏</string>
   <string name="morphe_toolbar_screen_summary">选择工具栏中显示哪些组件</string>
   <string name="morphe_hide_toolbar_cast_button_title">隐藏「投屏」按钮</string>
@@ -545,9 +544,9 @@ Second \"item\" text"</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">隐藏“在 VR 模式下观看”菜单</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_quality_title">隐藏质量菜单</string>
-  <string name="morphe_hide_player_flyout_quality_footer_title">隐藏质量菜单页脚</string>
-  <string name="morphe_hide_player_flyout_quality_header_title">隐藏质量菜单标题</string>
+  <string name="morphe_hide_player_flyout_quality_title">隐藏画质菜单</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">隐藏画质菜单页脚</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">隐藏画质菜单标题</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">隐藏自动播放预览</string>
   <string name="morphe_hide_autoplay_preview_summary">隐藏即将播放的视频预览，在自动播放开始前</string>
@@ -612,7 +611,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_save_sound_button_title">隐藏“保存音乐”按钮</string>
   <string name="morphe_hide_shorts_search_suggestions_title">隐藏搜索建议</string>
   <string name="morphe_hide_shorts_shop_button_title">隐藏商店按钮</string>
-  <string name="morphe_hide_shorts_stickers_title">隐藏贴纸</string>
   <string name="morphe_hide_shorts_subscribe_button_title">隐藏「订阅」按钮</string>
   <string name="morphe_hide_shorts_tagged_products_title">隐藏标记的商品</string>
   <string name="morphe_hide_shorts_upcoming_button_title">隐藏「即将发布」按钮</string>
@@ -636,7 +634,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_shorts_double_tap_to_like_title">禁用双击点赞</string>
   <string name="morphe_hide_shorts_navigation_bar_title">隐藏导航栏</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
-  <string name="morphe_hide_end_screen_suggested_video_title">隐藏片尾画面推荐视频</string>
+  <string name="morphe_hide_end_screen_suggested_video_title">隐藏片尾推荐视频</string>
   <string name="morphe_hide_end_screen_suggested_video_user_dialog_message">"此设置仅在关闭\"自动播放下一个视频\"时有效。
 
 您可以在YouTube中更改此设置：
@@ -968,7 +966,7 @@ Second \"item\" text"</string>
   <string name="morphe_change_start_page_entry_fashion">时尚 &amp; 美妆</string>
   <string name="morphe_change_start_page_entry_gaming">游戏</string>
   <string name="morphe_change_start_page_entry_history">历史记录</string>
-  <string name="morphe_change_start_page_entry_library">库</string>
+  <string name="morphe_change_start_page_entry_library">媒体库</string>
   <string name="morphe_change_start_page_entry_liked_videos">已点赞的视频</string>
   <string name="morphe_change_start_page_entry_live">直播</string>
   <string name="morphe_change_start_page_entry_movies">电影</string>
@@ -1032,9 +1030,9 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_opacity_summary">调整透明度 (0 为透明，100 为不透明)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">小型播放器叠加层的透明度必须介于 0-100 之间</string>
   <!-- layout.theme.themePatch -->
-  <string name="morphe_gradient_loading_screen_title">启用渐变加载屏幕</string>
-  <string name="morphe_gradient_loading_screen_summary">显示加载屏幕上的渐变背景，而不是纯色</string>
-  <string name="morphe_splash_screen_animation_style_title">启动画面样式</string>
+  <string name="morphe_gradient_loading_screen_title">启用渐变的加载屏幕</string>
+  <string name="morphe_gradient_loading_screen_summary">在加载屏幕上显示渐变背景，而不是纯色</string>
+  <string name="morphe_splash_screen_animation_style_title">启动画面的样式</string>
   <string name="morphe_splash_screen_animation_style_entry_1">已禁用</string>
   <string name="morphe_splash_screen_animation_style_entry_2">颜色</string>
   <string name="morphe_splash_screen_animation_style_entry_3">单色</string>
@@ -1046,7 +1044,7 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_invalid">无效的进度条颜色值</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
-  <string name="morphe_header_logo_title">标题徽标</string>
+  <string name="morphe_header_logo_title">标题logo</string>
   <string name="morphe_header_logo_entry_1">默认</string>
   <string name="morphe_header_logo_entry_2">常规</string>
   <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
@@ -1121,26 +1119,26 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">自动</string>
-  <string name="morphe_remember_video_quality_last_selected_title">记住视频质量</string>
-  <string name="morphe_remember_video_quality_last_selected_summary">将您的手动质量选择应用于所有未来的视频</string>
-  <string name="morphe_remember_video_quality_last_selected_toast_title">质量更改通知</string>
-  <string name="morphe_remember_video_quality_last_selected_toast_summary">当默认视频质量发生更改时显示通知</string>
-  <string name="morphe_video_quality_default_wifi_title">Wi-Fi 网络上的默认视频质量</string>
-  <string name="morphe_video_quality_default_mobile_title">移动网络上的默认视频质量</string>
-  <string name="morphe_remember_shorts_quality_last_selected_title">记住 Shorts 质量</string>
-  <string name="morphe_remember_shorts_quality_last_selected_summary">将您的手动质量选择应用于所有未来的 Shorts</string>
+  <string name="morphe_remember_video_quality_last_selected_title">记住视频画质</string>
+  <string name="morphe_remember_video_quality_last_selected_summary">将您的手动画质选择应用于所有未来的视频</string>
+  <string name="morphe_remember_video_quality_last_selected_toast_title">画质更改通知</string>
+  <string name="morphe_remember_video_quality_last_selected_toast_summary">当默认视频画质发生更改时显示通知</string>
+  <string name="morphe_video_quality_default_wifi_title">WiFi网络的默认视频画质</string>
+  <string name="morphe_video_quality_default_mobile_title">移动网络的默认视频画质</string>
+  <string name="morphe_remember_shorts_quality_last_selected_title">记住 Shorts 画质</string>
+  <string name="morphe_remember_shorts_quality_last_selected_summary">将您的手动画质选择应用于所有未来的 Shorts</string>
   <string name="morphe_shorts_quality_default_wifi_title">Wi-Fi 网络上的默认 Shorts 画质</string>
   <string name="morphe_shorts_quality_default_mobile_title">移动网络上的默认 Shorts 画质</string>
   <string name="morphe_remember_video_quality_mobile">移动网络</string>
   <string name="morphe_remember_video_quality_wifi">无线网络</string>
-  <string name="morphe_remember_video_quality_toast">已将默认 %1$s 质量更改为：%2$s</string>
+  <string name="morphe_remember_video_quality_toast">已更改默认%1$s画质：%2$s。</string>
   <string name="morphe_remember_video_quality_toast_shorts">已将 Shorts %1$s 的画质更改为：%2$s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">显示播放速度按钮</string>
   <string name="morphe_playback_speed_dialog_button_summary">轻按并按住以重置为默认速度</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
-  <string name="morphe_video_quality_dialog_button_title">显示视频质量按钮</string>
-  <string name="morphe_video_quality_dialog_button_summary">轻按并按住以重置为默认质量</string>
+  <string name="morphe_video_quality_dialog_button_title">显示视频画质按钮</string>
+  <string name="morphe_video_quality_dialog_button_summary">点按并按住以将画质重置为默认值</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">自定义播放速度菜单</string>
   <string name="morphe_restore_old_speed_menu_title">恢复旧版播放速度菜单</string>
@@ -1178,12 +1176,12 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">如果未启用“欺骗视频流”，此设置可能会导致意外行为。</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">显示高级视频质量菜单</string>
+  <string name="morphe_advanced_video_quality_menu_title">显示高级视频画质菜单</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
-  <string name="morphe_hide_premium_video_quality_title">隐藏高级质量选项</string>
+  <string name="morphe_hide_premium_video_quality_title">隐藏 Premium 画质选项</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
-  <string name="morphe_prioritize_video_quality_title">优先视频质量</string>
-  <string name="morphe_prioritize_video_quality_summary">优先考虑最高视频质量而不是编解码器效率</string>
+  <string name="morphe_prioritize_video_quality_title">优先视频画质</string>
+  <string name="morphe_prioritize_video_quality_summary">优先考虑最高视频画质而不是编解码器效率</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">允许 Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary">允许在使用 Android VR 客户端时进行软件 AV1 解码</string>

@@ -252,7 +252,6 @@ YouTube डूडल्स दर्शविल्याने कस्टम 
   <string name="morphe_hide_player_popup_ads_title">प्लेअर पॉपअप जाहिराती लपवा</string>
   <string name="morphe_hide_self_sponsor_ads_title">स्वयं-प्रायोजित कार्ड्स लपवा</string>
   <string name="morphe_hide_shopping_links_title">शॉपिंग लिंक्स लपवा</string>
-  <string name="morphe_hide_view_products_banner_title">व्ह्यू प्रॉडक्ट्स बॅनर लपवा</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium जाहिरात वृत्तपत्रे लपवा</string>
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">व्हिडिओ जाहिराती लपवा</string>
@@ -604,7 +603,6 @@ YouTube डूडल्स दर्शविल्याने कस्टम 
   <string name="morphe_hide_shorts_save_sound_button_title">\'म्युझिक सेव्ह\' बटन लपवा</string>
   <string name="morphe_hide_shorts_search_suggestions_title">सर्च सूचना लपवा</string>
   <string name="morphe_hide_shorts_shop_button_title">शॉप बटण लपवा</string>
-  <string name="morphe_hide_shorts_stickers_title">स्टिकर्स लपवा</string>
   <string name="morphe_hide_shorts_subscribe_button_title">सबस्क्राईब बटण लपवा</string>
   <string name="morphe_hide_shorts_tagged_products_title">टॅग केलेले प्रोडक्ट लपवा</string>
   <string name="morphe_hide_shorts_upcoming_button_title">येणारी पोस्ट्सचे बटण लपवा</string>
