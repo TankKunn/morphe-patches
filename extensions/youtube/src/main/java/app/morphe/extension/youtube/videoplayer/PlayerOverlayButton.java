@@ -32,6 +32,7 @@ import app.morphe.extension.youtube.patches.VersionCheckPatch;
 import app.morphe.extension.youtube.settings.Settings;
 
 public class PlayerOverlayButton {
+    private static boolean skipFirstCall = true;
 
     /**
      * Tracks a single container view whose end margin must be kept clear of overlay buttons.
@@ -65,6 +66,7 @@ public class PlayerOverlayButton {
                     View found = parent.findViewById(id);
                     if (found != null) {
                         containerRef = new WeakReference<>(found);
+                        skipFirstCall = true;
                         return;
                     }
                 }
@@ -237,7 +239,6 @@ public class PlayerOverlayButton {
         videoHeadingContainer.updateMargin(LegacyPlayerControlButton.buttonWidth, getTotalUpperButtonCount());
     }
 
-    private static boolean skipFirstCall = true;
     /**
      * Called from each {@link LegacyPlayerControlButton} constructor so that the
      * video-heading end margin is initialized and kept correct even when no lower
