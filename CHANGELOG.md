@@ -1,3 +1,10 @@
+## [1.28.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.28.0-dev.3...v1.28.0-dev.4) (2026-05-16)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide ads:** Hide new type of product sticker ([#1484](https://github.com/MorpheApp/morphe-patches/issues/1484)) ([aa3637d](https://github.com/MorpheApp/morphe-patches/commit/aa3637ddb2470ad5147ebb1ccad10311d366571a)), closes [#1481](https://github.com/MorpheApp/morphe-patches/issues/1481)
+* **YouTube - PlayerOverlayButton:** reset skipFirstCall for next updateRef attempts ([9d12346](https://github.com/MorpheApp/morphe-patches/commit/9d12346c17a11fd9c4452ba14ee5e96312b760e8))
+
 # [1.28.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.28.0-dev.2...v1.28.0-dev.3) (2026-05-15)
 
 
