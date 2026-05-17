@@ -95,8 +95,7 @@ public final class OpenChannelOfLiveAvatarPatch {
                 return false;
             }
 
-            PlayerType currentPlayer = PlayerType.getCurrent();
-            if (CreatorChannelState.isOpen() == (currentPlayer == PlayerType.WATCH_WHILE_MAXIMIZED)) {
+            if (!CreatorChannelState.isOpen() || PlayerType.getCurrent() == PlayerType.WATCH_WHILE_MAXIMIZED) {
                     final boolean containsMatch;
 
                     if (!ShortsPlayerState.isOpen()) {
