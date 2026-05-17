@@ -38,11 +38,11 @@ Second \"item\" text"</string>
   <string name="morphe_check_watch_history_domain_name_dialog_ignore">今後表示しない</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_screen_title">動画ストリームを偽装</string>
-  <string name="morphe_spoof_video_streams_screen_summary">動画再生の失敗を回避するために、クライアントの動画ストリームを偽装します</string>
+  <string name="morphe_spoof_video_streams_screen_summary">動画再生の失敗を回避するために、偽装するクライアントを設定します</string>
   <string name="morphe_spoof_video_streams_title">動画ストリームを偽装</string>
-  <string name="morphe_spoof_video_streams_summary">"Tricks YouTube into sending a compatible video stream, which fixes playback for most users
+  <string name="morphe_spoof_video_streams_summary">"クライアントを偽装することにより YouTube から互換性のある動画ストリームを取得し、多くの環境で再生不能問題を解消します
 
-If you are a YouTube Premium user, this setting may not be required"</string>
+YouTube Premium ユーザーの場合、この設定が必要ない場合があります"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">クライアントの動画ストリームを取得できませんでした</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">この設定をオフにすると、動画の再生に失敗するようになる可能性があります。</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_title.
@@ -88,7 +88,7 @@ If you are a YouTube Premium user, this setting may not be required"</string>
   <string name="morphe_oauth2_toast_reset">Android VR からログアウトしました</string>
   <string name="morphe_oauth2_toast_invalid">無効な VR ログイン トークンです。再度ログインしてください</string>
   <string name="morphe_spoof_video_streams_disable_player_js_update_title">JavaScript 版プレーヤーの更新を無効化</string>
-  <string name="morphe_spoof_video_streams_disable_player_js_update_summary">"JavaScript 版プレーヤーのハッシュの更新が無効になっています
+  <string name="morphe_spoof_video_streams_disable_player_js_update_summary">"JavaScript 版プレーヤーのハッシュの更新を停止し、ローカルのハッシュを使用します
 
 • 有効な「JavaScript 版プレーヤーのハッシュ」を設定する必要がある
 • 設定した「JavaScript 版プレーヤーのハッシュ」が GVS 側で無効にされた場合、再生に失敗する"</string>
@@ -101,15 +101,15 @@ If you are a YouTube Premium user, this setting may not be required"</string>
   <string name="morphe_disable_drc_audio_title">オーディオ DRC を無効化</string>
   <!-- misc.audio.tracks.forceOriginalAudioPatch -->
   <string name="morphe_force_original_audio_title">オリジナルの音声を強制的に使用</string>
-  <string name="morphe_force_original_audio_summary">常に動画の元の音声トラックを再生し、吹き替えバージョンは再生しません</string>
+  <string name="morphe_force_original_audio_summary">常にオリジナルのオリジナルの音声トラック (言語) を再生します。オートダビングを含む吹き替えの音声トラックは再生されなくなります</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">全画面広告を非表示</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_original_audio_not_available">この機能を使用するには、[動画ストリームを偽装] のクライアントを Android Reel または TV に変更してください</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">共有リンクを無害化</string>
-  <string name="morphe_sanitize_sharing_links_summary">共有リンクから追跡パラメータが削除されます</string>
+  <string name="morphe_sanitize_sharing_links_summary">共有リンクから追跡パラメータを削除します</string>
   <string name="morphe_replace_music_with_youtube_title">共有リンクを youtube.com に変更</string>
   <string name="morphe_replace_links_with_shortener_title">共有リンクを youtu.be に変更</string>
-  <string name="morphe_replace_links_with_shortener_summary">ライブストリームとShortsでは、短縮された youtu.be URL形式が常に使用されます</string>
+  <string name="morphe_replace_links_with_shortener_summary">ライブ配信とショート動画の共有リンクを、短縮 URL である youtu.be に変更します</string>
 </resources>

@@ -61,7 +61,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">自動再生時のクロスフェード</string>
   <string name="morphe_music_crossfade_on_auto_advance_summary">トラックが自動で切り替わるときにクロスフェードを適用します</string>
   <string name="morphe_music_crossfade_session_control_title">クロスフェードのセッション制御</string>
-  <string name="morphe_music_crossfade_session_control_summary">再生中のセッション (プレイリストなど) 内でのクロスフェードの一時的な停止 / 再開をシャッフル ボタンの長押しによって切り替える機能を有効にします</string>
+  <string name="morphe_music_crossfade_session_control_summary">シャッフル ボタンを長押しすると、再生中のセッション (プレイリストなど) 内でのクロスフェードを一時的に停止 / 再開します</string>
   <string name="morphe_music_crossfade_paused_toast">このセッションでのクロスフェードを一時停止します</string>
   <string name="morphe_music_crossfade_resumed_toast">クロスフェードを再開しました</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">クロスフェードが有効になっている間は、動画モードは利用できません</string>

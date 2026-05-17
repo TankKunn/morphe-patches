@@ -38,7 +38,7 @@ Second \"item\" text"</string>
   <string name="morphe_check_watch_history_domain_name_dialog_ignore">Jangan tampilkan lagi</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_screen_title">Palsukan aliran video</string>
-  <string name="morphe_spoof_video_streams_screen_summary">Konfigurasikan peniruan klien untuk mencegah masalah pemutaran</string>
+  <string name="morphe_spoof_video_streams_screen_summary">Konfigurasikan pemalsuan klien untuk mencegah masalah pemutaran</string>
   <string name="morphe_spoof_video_streams_title">Palsukan aliran video</string>
   <string name="morphe_spoof_video_streams_summary">"Menipu YouTube untuk mengirim aliran video yang kompatibel, yang memperbaiki pemutaran bagi sebagian besar pengguna
 
@@ -88,9 +88,9 @@ Untuk masuk, tekan lanjutkan di bawah ini"</string>
   <string name="morphe_oauth2_toast_reset">Keluar dari Android VR</string>
   <string name="morphe_oauth2_toast_invalid">Token masuk VR tidak sah, coba masuk ke VR lagi</string>
   <string name="morphe_spoof_video_streams_disable_player_js_update_title">Nonaktifkan pembaruan pemutar JavaScript</string>
-  <string name="morphe_spoof_video_streams_disable_player_js_update_summary">"Mengunci JavaScript pemutar ke hash lokal alih-alih mengambil pembaruan
+  <string name="morphe_spoof_video_streams_disable_player_js_update_summary">"Mengunci JavaScript pemutar ke hash lokal daripada mengambil pembaruan
 
-• Diperlukan hash JavaScript pemutar yang valid
+• Diperlukan hash JavaScript pemutar yang sah
 • Pemutaran gagal jika hash JavaScript pemutar dicabut di GVS"</string>
   <string name="morphe_spoof_video_streams_disable_player_js_update_user_dialog_message">Pemutar hash JavaScript berlaku selama kurang lebih satu bulan, dan hash yang kedaluwarsa mungkin dicabut oleh GVS.</string>
   <string name="morphe_spoof_video_streams_player_js_hash_value_title">Hash pemutar JavaScript</string>
@@ -101,7 +101,7 @@ Untuk masuk, tekan lanjutkan di bawah ini"</string>
   <string name="morphe_disable_drc_audio_title">Nonaktifkan audio DRC</string>
   <!-- misc.audio.tracks.forceOriginalAudioPatch -->
   <string name="morphe_force_original_audio_title">Paksa bahasa audio asli</string>
-  <string name="morphe_force_original_audio_summary">Selalu memutar trek audio asli video, bukan versi dubbing</string>
+  <string name="morphe_force_original_audio_summary">Selalu memutar trek audio asli video tersebut daripada versi sulih suara</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Sembunyikan iklan layar penuh</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
@@ -111,5 +111,5 @@ Untuk masuk, tekan lanjutkan di bawah ini"</string>
   <string name="morphe_sanitize_sharing_links_summary">Menghapus parameter kueri pelacakan dari tautan yang dibagikan</string>
   <string name="morphe_replace_music_with_youtube_title">Ubah tautan berbagi ke youtube.com</string>
   <string name="morphe_replace_links_with_shortener_title">Ubah tautan berbagi ke youtu.be</string>
-  <string name="morphe_replace_links_with_shortener_summary">Memaksa streaming langsung dan Shorts untuk menggunakan format URL pendek youtu.be</string>
+  <string name="morphe_replace_links_with_shortener_summary">Memaksa siaran langsung dan Shorts untuk menggunakan format URL pendek youtu.be</string>
 </resources>

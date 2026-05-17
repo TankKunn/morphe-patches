@@ -84,10 +84,10 @@ Untuk menerjemahkan bahasa baru atau meningkatkan terjemahan yang sudah ada, kun
   <string name="morphe_settings_about_licenses_loading">Memuat...</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Debug</string>
-  <string name="morphe_debug_screen_summary">Konfigurasikan opsi pengembang dan log diagnostik tingkat lanjut</string>
+  <string name="morphe_debug_screen_summary">Konfigurasikan pilihan pengembang lanjutan dan catatan diagnostik</string>
   <string name="morphe_debug_title">Aktifkan pencatatan debug</string>
   <string name="morphe_debug_stacktrace_title">Jejak stack catatan debug</string>
-  <string name="morphe_debug_stacktrace_summary">Sertakan jejak tumpukan dalam log debug untuk membantu mengidentifikasi kesalahan</string>
+  <string name="morphe_debug_stacktrace_summary">Menyertakan jejak stack dalam catatan debug untuk membantu mengidentifikasi kesalahan</string>
   <string name="morphe_debug_toast_on_error_title">Tampilkan pesan timbul pada kesalahan Morphe</string>
   <string name="morphe_debug_toast_on_error_user_dialog_message">"Mematikan pesan timbul kesalahan menyembunyikan semua pemberitahuan kesalahan Morphe.
 

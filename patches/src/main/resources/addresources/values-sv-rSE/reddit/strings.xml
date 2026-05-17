@@ -55,7 +55,7 @@ Second \"item\" text"</string>
 
 Begränsning: Visuella avstånd kan inte döljas"</string>
   <string name="morphe_remove_notification_dialog_title">Ta bort dialogruta för aviseringsförslag</string>
-  <string name="morphe_remove_nsfw_dialog_title">Ta bort varningsdialogruta för 18+-innehåll</string>
+  <string name="morphe_remove_nsfw_dialog_title">Ta bort NSFW-varningsdialogrutan</string>
   <string name="morphe_screen_miscellaneous_title">Övrigt</string>
   <string name="morphe_about_title">Om</string>
   <string name="morphe_about_summary">Tilläggsversion och officiella länkar</string>

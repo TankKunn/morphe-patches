@@ -32,6 +32,7 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_settings_menus_title">Köhnə tənzimləmələr bölmələrin bərpa et</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Fon oynatma məhdudiyyətlərini təmizlə</string>
+  <string name="morphe_shorts_disable_background_playback_title">Arxa plan oynatmanı qapat</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Sazlanma qeydi protokol buferi</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Bu seçimi aktivləşdirmə bəzi UI quruluşları üçün ekran mətni də olmaqla əlavə tərtibat bazasını daxil edəcək.
@@ -60,6 +61,8 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_auto_dubbed_label_title">\'Avtomatik dublyaj\' etiketini gizlət</string>
   <string name="morphe_hide_community_posts_title">İcma elanların gizlət</string>
   <string name="morphe_hide_compact_banner_title">Yığcam afişaları gizlət</string>
+  <string name="morphe_hide_expandable_card_entry_1">Hamısını göstər</string>
+  <string name="morphe_hide_expandable_card_entry_5">Hamısını gizlət</string>
   <string name="morphe_hide_floating_microphone_button_title">Üzən mikrofon düyməsini gizlət</string>
   <string name="morphe_hide_horizontal_shelves_title">Üfüqi hissələri gizlət</string>
   <string name="morphe_hide_hyped_label_title">Reklam olunub etiketin gizlət</string>

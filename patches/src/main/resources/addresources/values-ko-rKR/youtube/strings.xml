@@ -76,7 +76,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_title">플로팅 마이크 버튼 숨기기</string>
   <string name="morphe_hide_floating_microphone_button_summary">검색 추천 화면 오른쪽 하단에 있는 플로팅 마이크 버튼을 숨깁니다</string>
   <string name="morphe_hide_horizontal_shelves_title">좌우 슬라이드형 선반 숨기기</string>
-  <string name="morphe_hide_horizontal_shelves_summary">다음 선반이 숨겨집니다:\n뉴스 속보, 내가 좋아할 만한 커뮤니티 게시물, 이어서 시청하기, 채널 더 보기, 다른 주제 더 살펴보기, 추천, 최신 동영상, 관련성, 크리에이터 커뮤니티 게시물, 라이브 쇼핑, 다시 시청하기, etc.</string>
+  <string name="morphe_hide_horizontal_shelves_summary">다음 선반을 숨깁니다:\n뉴스 속보, 내가 좋아할 만한 커뮤니티 게시물, 이어서 시청하기, 채널 더 보기, 다른 주제 더 살펴보기, 추천, 최신 동영상, 관련성, 크리에이터 커뮤니티 게시물, 라이브 쇼핑, 다시 시청하기, etc.</string>
   <string name="morphe_hide_hyped_label_title">Hype 라벨 숨기기</string>
   <string name="morphe_hide_image_shelf_title">이미지 선반 숨기기</string>
   <string name="morphe_hide_image_shelf_summary">검색 결과에서 이미지 선반을 숨깁니다</string>
@@ -1107,7 +1107,7 @@ DeArrow에 대해 자세히 알아보려면 여기를 탭하세요"</string>
   <string name="morphe_hide_notification_media_prev_next_title">이전 &amp; 다음 버튼 숨기기</string>
   <string name="morphe_hide_notification_media_prev_next_summary">미디어 알림, 잠금 화면 그리고 헤드폰 컨트롤에서 이전 및 다음 버튼을 숨깁니다</string>
   <string name="morphe_disable_notification_media_seekbar_title">재생바 비활성화하기</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">잠금 화면과 알림 패널에서 재생바를 드래그하지 못하도록 합니다</string>
+  <string name="morphe_disable_notification_media_seekbar_summary">잠금 화면 및 알림 패널에서 재생바를 드래그하지 못하도록 합니다</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">최근에 계정 로그인 정보를 변경했다면 MicroG를 제거하고 다시 설치하세요.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->

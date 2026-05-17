@@ -764,9 +764,9 @@ Ayarlar → Oynatma (veya Otomatik oynat) → Sonraki video otomatik oynat"</str
   <string name="morphe_sb_settings_ie">Ayarları içe/dışa aktar</string>
   <string name="morphe_sb_settings_copy">Kopyala</string>
   <string name="morphe_sb_settings_ie_summary">Morphe\'e ve diğer SponsorBlock platformlarına aktarılabilecek SponsorBlock JSON yapılandırmanız</string>
-  <string name="morphe_sb_settings_ie_summary_warning">"Morphe'e ve diğer SponsorBlock platformlarına aktarılabilecek SponsorBlock JSON yapılandırmanız.
+  <string name="morphe_sb_settings_ie_summary_warning">"Morphe ve diğer SponsorBlock platformlarına aktarılabilecek SponsorBlock JSON yapılandırmanız
     
-Bu, özel kullanıcı kimliğinizi içerir. Bunu dikkatli paylaştığınızdan emin olun"</string>
+Bu, özel kullanıcı kimliğinizi içerir. Bunu paylaşırken dikkatli olun"</string>
   <string name="morphe_sb_settings_import_successful">Ayarlar başarıyla içe aktarıldı</string>
   <string name="morphe_sb_settings_import_failed">İçe aktarılamadı: %s</string>
   <string name="morphe_sb_settings_export_failed">Dışa aktarılamadı: %s</string>
