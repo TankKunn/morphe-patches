@@ -4,9 +4,14 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patches.all.misc.resources.AppLocale
+import app.morphe.patches.all.misc.resources.addResourcesPatch
+import app.morphe.patches.all.misc.resources.createResourceDestinationDirectoryIfNeeded
 import app.morphe.patches.all.misc.resources.localesYouTube
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.layout.shortsplayer.ShortsPlaybackIntentFingerprint
+import app.morphe.patches.youtube.layout.shortsplayer.ShortsPlaybackIntentFingerprintLegacy
+import app.morphe.patches.youtube.misc.playservice.is_21_20_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
@@ -18,14 +23,21 @@ import app.morphe.util.copyXmlNode
 import app.morphe.util.getFreeRegisterProvider
 import app.morphe.util.inputStreamFromBundledResource
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import java.util.logging.Logger
 
 private val openChannelOfLiveAvatarResourcePatch = resourcePatch(
     description = "openChannelOfLiveAvatarResourcePatch"
 ) {
     execute {
+        val logger = Logger.getLogger(AppLocale.Companion::class.java.name)
+
         localesYouTube.filter { it.isBuiltInLanguage }.forEach { locale ->
             val directory = locale.getDestLocaleFolderName()
             val targetResource = "$directory/strings.xml"
+            val destinationPath = "res/$targetResource"
+            val destFile = this[destinationPath]
+
+            createResourceDestinationDirectoryIfNeeded(locale, logger, destinationPath, destFile)
 
             inputStreamFromBundledResource(
                 "livering/host",
@@ -33,7 +45,7 @@ private val openChannelOfLiveAvatarResourcePatch = resourcePatch(
             )!!.let { inputStream ->
                 "resources".copyXmlNode(
                     document(inputStream),
-                    document("res/$targetResource")
+                    document(destinationPath)
                 ).close()
             }
         }
@@ -51,8 +63,9 @@ val openChannelOfLiveAvatarPatch = bytecodePatch(
     compatibleWith(COMPATIBILITY_YOUTUBE)
 
     dependsOn(
-        settingsPatch,
         openChannelOfLiveAvatarResourcePatch,
+        addResourcesPatch,
+        settingsPatch,
         versionCheckPatch,
     )
 
@@ -70,8 +83,28 @@ val openChannelOfLiveAvatarPatch = bytecodePatch(
 
         val playbackStartVideoIdMethod = PlaybackStartDescriptorToStringFingerprint
             .instructionMatches[1].getMethodCalled()
-        val playbackStartVideoIdMethodName = playbackStartVideoIdMethod.name
-        val playbackStartVideoIdMethodClass = playbackStartVideoIdMethod.definingClass
+        fun patchLogic(mapRegister: String, playerDescriptorClassRegister: String, free1: String, free2: String): String {
+            val methodParameter = playerDescriptorClassRegister.startsWith("p")
+
+            return """
+                move-object/from16 $free1, $mapRegister
+                ${
+                    if (methodParameter) "move-object/from16 $free2, $playerDescriptorClassRegister"
+                    else ""
+                }
+                invoke-virtual { ${
+                    if (methodParameter) free2
+                    else playerDescriptorClassRegister
+                } }, ${playbackStartVideoIdMethod.definingClass}->${playbackStartVideoIdMethod.name}()Ljava/lang/String;
+                move-result-object $free2
+                invoke-static { $free1, $free2 }, $EXTENSION_CLASS->openChannel(Ljava/util/Map;Ljava/lang/String;)Z
+                move-result $free1
+                if-eqz $free1, :ignore
+                return-void
+                :ignore
+                nop
+            """
+        }
 
         clientSettingEndpointFingerprint.let {
             it.method.apply {
@@ -84,37 +117,17 @@ val openChannelOfLiveAvatarPatch = bytecodePatch(
 
                 addInstructionsAtControlFlowLabel(
                     insertIndex,
-                    """
-                        move-object/from16 v$free1, p2
-                        invoke-virtual { v$moveResultRegister }, $playbackStartVideoIdMethodClass->$playbackStartVideoIdMethodName()Ljava/lang/String;
-                        move-result-object v$free2
-                        invoke-static { v$free1, v$free2 }, $EXTENSION_CLASS->openChannel(Ljava/util/Map;Ljava/lang/String;)Z
-                        move-result v$free1
-                        if-eqz v$free1, :ignore
-                        return-void
-                        :ignore
-                        nop
-                    """
+                    patchLogic("p2", "v$moveResultRegister", "v$free1", "v$free2")
                 )
             }
         }
 
         // Same method is modified by openShortsInRegularPlayerPatch,
         // and by coincidence that patch runs before this patch which is critical.
-        ShortsPlaybackIntentFingerprint.method.addInstructionsWithLabels(
+        (if (is_21_20_or_greater) ShortsPlaybackIntentFingerprint
+        else ShortsPlaybackIntentFingerprintLegacy).method.addInstructionsWithLabels(
             0,
-            """
-                move-object/from16 v0, p1
-                invoke-virtual { v0 }, $playbackStartVideoIdMethodClass->$playbackStartVideoIdMethodName()Ljava/lang/String;
-                move-result-object v1
-                move-object/from16 v0, p2
-                invoke-static { v0, v1 }, $EXTENSION_CLASS->openChannel(Ljava/util/Map;Ljava/lang/String;)Z
-                move-result v0
-                if-eqz v0, :ignore
-                return-void
-                :ignore
-                nop
-            """
+            patchLogic("p2", "p1", "v0", "v1")
         )
     }
 }

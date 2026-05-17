@@ -121,6 +121,7 @@ public final class LayoutComponentsFilter extends Filter {
                 "images_post_root.e",
                 "images_post_root_slim.e",
                 "images_post_slim.e", // may be obsolete and no longer needed.
+                "options_post_root.e",
                 "poll_post_responsive_root.e",
                 "poll_post_root.e",
                 "post_base_wrapper", // may be obsolete and no longer needed.
@@ -180,11 +181,6 @@ public final class LayoutComponentsFilter extends Filter {
         final var medicalPanel = new StringFilterGroup(
                 Settings.HIDE_MEDICAL_PANELS,
                 "medical_panel"
-        );
-
-        final var paidPromotion = new StringFilterGroup(
-                Settings.HIDE_PAID_PROMOTION_LABEL,
-                "paid_content_overlay"
         );
 
         final var infoPanel = new StringFilterGroup(
@@ -340,7 +336,8 @@ public final class LayoutComponentsFilter extends Filter {
                 "page_header.e"
         );
         channelProfileGroupList = new StringFilterGroupList();
-        channelProfileGroupList.addAll(new StringFilterGroup(
+        channelProfileGroupList.addAll(
+                new StringFilterGroup(
                         Settings.HIDE_COMMUNITY_BUTTON,
                         "community_button"
                 ),
@@ -378,7 +375,6 @@ public final class LayoutComponentsFilter extends Filter {
                 infoPanel,
                 medicalPanel,
                 notifyMe,
-                paidPromotion,
                 playables,
                 postsShelf,
                 searchFriction,
