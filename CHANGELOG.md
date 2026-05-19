@@ -1,3 +1,10 @@
+## [1.29.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.29.0-dev.1...v1.29.0-dev.2) (2026-05-19)
+
+### 🐛 Bug Fixes
+
+* **YouTube - PlayerOverlayButton:** Improved containers handling ([1580f02](https://github.com/MorpheApp/morphe-patches/commit/1580f02a0dfe0a75f9f636229bc6d77cab4b3699))
+* **YouTube - Remove background playback restrictions:** Disable client flag that interferes with player overlay buttons ([f24cae5](https://github.com/MorpheApp/morphe-patches/commit/f24cae55007dd00bc061dadcaeb2c2f74baf3816))
+
 ## [1.29.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.28.0...v1.29.0-dev.1) (2026-05-18)
 
 ### 🐛 Bug Fixes
