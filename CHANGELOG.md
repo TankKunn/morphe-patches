@@ -1,3 +1,9 @@
+## [1.29.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.29.0-dev.2...v1.29.0-dev.3) (2026-05-20)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Open channel of live avatar:** deprecate match with translations ([#1511](https://github.com/MorpheApp/morphe-patches/issues/1511)) ([4264071](https://github.com/MorpheApp/morphe-patches/commit/42640710c8be1b173984a0d052891006960bcbcc))
+
 ## [1.29.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.29.0-dev.1...v1.29.0-dev.2) (2026-05-19)
 
 ### 🐛 Bug Fixes
