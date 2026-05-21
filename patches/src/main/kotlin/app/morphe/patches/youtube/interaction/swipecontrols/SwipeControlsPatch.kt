@@ -75,7 +75,7 @@ private val swipeControlsResourcePatch = resourcePatch {
                 "morphe_ic_sc_volume_low.xml",
                 "morphe_ic_sc_volume_mute.xml",
                 "morphe_ic_sc_volume_normal.xml",
-            ),
+            )
         )
     }
 }
@@ -118,8 +118,6 @@ val swipeControlsPatch = bytecodePatch(
             }
         }
 
-        // region patch to enable/disable swipe to change video.
-
         if (!is_20_34_or_greater) {
             SwipeChangeVideoFingerprint.let {
                 it.method.insertLiteralOverride(
@@ -128,7 +126,5 @@ val swipeControlsPatch = bytecodePatch(
                 )
             }
         }
-
-        // endregion
     }
 }

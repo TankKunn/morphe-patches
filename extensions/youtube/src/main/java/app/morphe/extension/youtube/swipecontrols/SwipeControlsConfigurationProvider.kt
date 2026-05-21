@@ -84,15 +84,17 @@ class SwipeControlsConfigurationProvider {
      * The sensitivity of volume swipe gestures, determining how much volume changes per swipe.
      * Resets to default if set to 0, as it would disable swiping.
      */
-    val volumeSwipeSensitivity: Int by lazy {
-        val sensitivity = Settings.SWIPE_VOLUME_SENSITIVITY.get()
+    val volumeSwipeSensitivity: Int
+        get() {
+            val sensitivity = Settings.SWIPE_VOLUME_SENSITIVITY.get()
 
-        if (sensitivity < 1) {
-            return@lazy Settings.SWIPE_VOLUME_SENSITIVITY.resetToDefault()
+            if (sensitivity < 1) {
+                return Settings.SWIPE_VOLUME_SENSITIVITY.resetToDefault()
+            }
+
+            return sensitivity
         }
 
-        sensitivity
-    }
     //endregion
 
     //region overlay adjustments
@@ -110,35 +112,32 @@ class SwipeControlsConfigurationProvider {
      * The background opacity of the overlay, converted from a percentage (0-100) to an alpha value (0-255).
      * Resets to default and shows a toast if the value is out of range.
      */
-    val overlayBackgroundOpacity: Int by lazy {
-        var opacity = Settings.SWIPE_OVERLAY_OPACITY.get()
+    val overlayBackgroundOpacity: Int
+        get() {
+            var opacity = Settings.SWIPE_OVERLAY_OPACITY.get()
 
-        if (opacity !in 0..100) {
-            Utils.showToastLong(str("morphe_swipe_overlay_background_opacity_invalid_toast"))
-            opacity = Settings.SWIPE_OVERLAY_OPACITY.resetToDefault()
+            if (opacity !in 0..100) {
+                Utils.showToastLong(str("morphe_swipe_overlay_background_opacity_invalid_toast"))
+                opacity = Settings.SWIPE_OVERLAY_OPACITY.resetToDefault()
+            }
+
+            opacity = opacity * 255 / 100
+            return Color.argb(opacity, 0, 0, 0)
         }
-
-        opacity = opacity * 255 / 100
-        Color.argb(opacity, 0, 0, 0)
-    }
 
     /**
      * The color of the progress bar in the overlay for brightness.
      * Resets to default and shows a toast if the color string is invalid or empty.
      */
-    val overlayBrightnessProgressColor: Int by lazy {
-        // Use lazy to avoid repeat parsing. Changing color requires app restart.
-        getSettingColor(Settings.SWIPE_OVERLAY_BRIGHTNESS_COLOR)
-    }
+    val overlayBrightnessProgressColor: Int
+        get() = getSettingColor(Settings.SWIPE_OVERLAY_BRIGHTNESS_COLOR)
 
     /**
      * The color of the progress bar in the overlay for volume.
      * Resets to default and shows a toast if the color string is invalid or empty.
      */
-    val overlayVolumeProgressColor: Int by lazy {
-        // Use lazy to avoid repeat parsing. Changing color requires app restart.
-        getSettingColor(Settings.SWIPE_OVERLAY_VOLUME_COLOR)
-    }
+    val overlayVolumeProgressColor: Int
+        get() = getSettingColor(Settings.SWIPE_OVERLAY_VOLUME_COLOR)
 
     private fun getSettingColor(setting: StringSetting): Int {
         return try {
@@ -169,14 +168,15 @@ class SwipeControlsConfigurationProvider {
      * The text size in the overlay, in density-independent pixels (dp).
      * Must be between 1 and 30 dp; resets to default and shows a toast if invalid.
      */
-    val overlayTextSize: Int by lazy {
-        val size = Settings.SWIPE_OVERLAY_TEXT_SIZE.get()
-        if (size !in 1..30) {
-            Utils.showToastLong(str("morphe_swipe_text_overlay_size_invalid_toast"))
-            return@lazy Settings.SWIPE_OVERLAY_TEXT_SIZE.resetToDefault()
+    val overlayTextSize: Int
+        get() {
+            val size = Settings.SWIPE_OVERLAY_TEXT_SIZE.get()
+            if (size !in 1..30) {
+                Utils.showToastLong(str("morphe_swipe_text_overlay_size_invalid_toast"))
+                return Settings.SWIPE_OVERLAY_TEXT_SIZE.resetToDefault()
+            }
+            return size
         }
-        size
-    }
 
     /**
      * Defines the style of the swipe controls overlay, determining its layout and appearance.

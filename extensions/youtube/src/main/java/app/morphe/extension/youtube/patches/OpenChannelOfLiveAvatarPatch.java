@@ -23,6 +23,7 @@ import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.spoof.SpoofVideoStreamsPatch;
 import app.morphe.extension.shared.spoof.requests.PlayerRoutes;
 import app.morphe.extension.shared.spoof.requests.StreamOrDetailsDataRequest;
+import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.youtube.shared.CreatorChannelState;
 import app.morphe.extension.youtube.shared.PlayerType;
 import app.morphe.extension.youtube.shared.ShortsPlayerState;
@@ -69,11 +70,9 @@ public final class OpenChannelOfLiveAvatarPatch {
             // The Live ring object takes up a small portion of the screen
             // and an equivalent height and width, compared to thumbnails.
             // This check will avoid any false positives.
-            int width = componentHost.getWidth();
-            int height = componentHost.getHeight();
-            if (width == 0 ||
-                width != height ||
-                width > componentHost.getContext().getResources().getDisplayMetrics().widthPixels / 4) {
+            final int width = componentHost.getWidth();
+            final int height = componentHost.getHeight();
+            if (width == 0 || width != height || width > Dim.SCREEN_WIDTH / 4) {
                     return false;
             }
 

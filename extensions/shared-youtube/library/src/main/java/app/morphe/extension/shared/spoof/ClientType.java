@@ -50,7 +50,7 @@ public enum ClientType {
             // This means that the GVS server can strengthen its validation of the ANDROID_REEL client.
             // For this reason, ANDROID_REEL is used as a logout client.
             IS_YOUTUBE,
-            false,
+            IS_YOUTUBE,
             true,
             false,
             false,
