@@ -195,7 +195,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_channel_guidelines_title">إخفاء إرشادات القناة</string>
   <string name="morphe_hide_comments_prompts_title">إخفاء تلميحات التعليقات</string>
   <string name="morphe_hide_comments_prompts_summary">يخفي رسائل المعلومات السياقية في قسم التعليقات</string>
-  <string name="morphe_hide_comments_by_members_header_title">إخفاء علامة \'تعليقات بواسطة الأعضاء\'</string>
+  <string name="morphe_hide_comments_by_members_header_title">إخفاء علامة \'تعليقات الأعضاء\'</string>
   <string name="morphe_hide_comments_section_title">إخفاء قسم التعليقات</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">إخفاء قسم التعليقات في خلاصة الصفحة الرئيسية</string>
   <string name="morphe_hide_comments_community_guidelines_title">إخفاء إرشادات المجتمع</string>
