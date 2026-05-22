@@ -1,3 +1,9 @@
+## [1.29.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.29.1-dev.1...v1.29.1-dev.2) (2026-05-22)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide ads:** Fix player crash ([d67d1e1](https://github.com/MorpheApp/morphe-patches/commit/d67d1e1fddcada5ca5310294b6be03a32ba636d3))
+
 ## [1.29.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.29.0...v1.29.1-dev.1) (2026-05-22)
 
 ### 🐛 Bug Fixes
