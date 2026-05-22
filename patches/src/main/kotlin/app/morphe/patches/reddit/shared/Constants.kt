@@ -1,9 +1,3 @@
-/*
- * Copyright 2026 Morphe.
- * https://github.com/MorpheApp/morphe-patches
- *
- * See the included NOTICE file for GPLv3 §7(b) and §7(c) terms that apply to this code.
- */
 package app.morphe.patches.reddit.shared
 
 import app.morphe.patcher.patch.ApkFileType
@@ -20,6 +14,11 @@ internal object Constants {
             "970b91143813b4c9d5f3634f672c9fcaa5621b4efaaedafd6c235cbbb869736f"
         ),
         targets = listOf(
+            AppTarget(
+                version = "2026.21.0",
+                minSdk = 28,
+                isExperimental = true,
+            ),
             AppTarget(
                 version = "2026.20.0",
                 minSdk = 28,
