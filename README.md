@@ -28,7 +28,7 @@ Morphe Patches
 
 ## ❓ About
 
-Morphe Patches are based off the prior work of [ReVanced](https://github.com/ReVanced/revanced-patches).
+Morphe Patches are based off the prior work of [ReVanced](https://github.com/ReVanced).
 All modifications made by Morphe, along with their dates, can be found in the Git history.
 
 &nbsp;
@@ -202,7 +202,12 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 <!-- PATCHES_END -->
 
-&nbsp;
+## Contributing
+
+We currently accept pull requests for fixes/improvements to YouTube, YT Music, and Reddit.
+If you have developed patches for other apps, you are encouraged to release your patches in a third party repository.
+See the [Patches template])https://github.com/morpheapp/morphe-patches-template) for more information.  
+
 ## 📜 License
 
 Morphe Patches are licensed under the [GNU General Public License v3.0](LICENSE), with additional conditions under GPLv3 Section 7:
