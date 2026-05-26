@@ -1,3 +1,13 @@
+## [1.30.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.30.0-dev.3...v1.30.0-dev.4) (2026-05-26)
+
+### ✨ New Features
+
+* **YouTube - Swipe controls:** Add configurable zones and speed gesture ([#1527](https://github.com/MorpheApp/morphe-patches/issues/1527)) ([92e6d06](https://github.com/MorpheApp/morphe-patches/commit/92e6d065e254f4c31f17baf0cce4dc45c0c43362))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add support for `20.51.39` ([d8033a8](https://github.com/MorpheApp/morphe-patches/commit/d8033a817e57fce5cc19f4f46694a099dda4606d))
+
 ## [1.30.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.30.0-dev.2...v1.30.0-dev.3) (2026-05-25)
 
 ### 🐛 Bug Fixes
