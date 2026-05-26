@@ -141,7 +141,7 @@ Mura n-athraítear na hoptamuithe ceallraí, d’fhéadfadh na nithe seo a leana
 • B’fhéidir nach n-oibreoidh athsheinm sa chúlra"</string>
   <!-- misc.gms.linkHandlingPatch -->
   <string name="morphe_link_handling_title">Láimhseáil nasc aip</string>
-  <string name="morphe_link_handling_summary">Cumraigh naisc chun oscailt san app seo</string>
+  <string name="morphe_link_handling_summary">Cumraigh naisc le hoscailt san aip seo</string>
   <string name="morphe_link_handling_step1_title">Céim 1: Díchumasaigh naisc bhunaidh an aip</string>
   <string name="morphe_link_handling_step1_message">Oscail socruithe an aip bhunaidh agus díchumasaigh naisc fearainn go léir</string>
   <string name="morphe_link_handling_step2_title">Céim 2: Cumasaigh naisc aipeanna paisteáilte</string>

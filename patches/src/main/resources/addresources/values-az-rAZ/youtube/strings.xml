@@ -332,6 +332,7 @@ Paket adının düzgün olduğun yoxla və tətbiqi quraşdırın"</string>
   <string name="morphe_swipe_brightness_summary">Parlaqlığı nizamlamaq üçün tam ekran rejiminin sol tərəfində şaquli sürüşdür</string>
   <string name="morphe_swipe_volume_title">Səs səviyyəsi jestini aktivləşdir</string>
   <string name="morphe_swipe_volume_summary">Səsi nizamlamaq üçün tam ekran rejiminin sağ tərəfində şaquli sürüşdür</string>
+  <string name="morphe_swipe_zone_label_native">Yerli</string>
   <string name="morphe_swipe_press_to_engage_title">Sürüşdürmə jesti üçün sıxmanı aktiv et</string>
   <string name="morphe_swipe_press_to_engage_summary">Sürüşdürmə jesti aşkarlanmazdan öncə basıb saxlamaq lazım olur</string>
   <string name="morphe_swipe_haptic_feedback_title">Əks-əlaqə reaksiyasını aktivləşdir</string>

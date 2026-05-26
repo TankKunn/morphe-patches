@@ -103,7 +103,7 @@ Feature-Implementierung von VazerOG"</string>
   <string name="morphe_music_enable_forced_miniplayer_summary">Verhindert, dass der Player automatisch in den Vollbildmodus wechselt, wenn ein neuer Titel startet</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Navigationsleiste</string>
-  <string name="morphe_music_navigation_bar_screen_summary">Wählen Sie, welche Schaltflächen in der unteren Navigationsleiste angezeigt werden sollen.</string>
+  <string name="morphe_music_navigation_bar_screen_summary">Wählen Sie, welche Schaltflächen in der unteren Navigationsleiste angezeigt werden sollen</string>
   <!-- 'Home' should be translated using the same localized wording YouTube Music displays for the tab. -->
   <string name="morphe_music_hide_navigation_bar_home_button_title">Startseite-Button ausblenden</string>
   <!-- 'Samples' should be translated using the same localized wording YouTube Music displays for the tab. -->

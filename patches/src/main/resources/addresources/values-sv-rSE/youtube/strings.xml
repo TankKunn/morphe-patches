@@ -332,6 +332,7 @@ Kontrollera att paketnamnet är korrekt och att appen är installerad"</string>
   <string name="morphe_swipe_brightness_summary">Svep vertikalt till vänster i helskärmsläget för att justera ljusstyrkan</string>
   <string name="morphe_swipe_volume_title">Aktivera volymgest</string>
   <string name="morphe_swipe_volume_summary">Svep vertikalt till höger i helskärmsläget för att justera volymen</string>
+  <string name="morphe_swipe_zone_label_native">Inbyggd</string>
   <string name="morphe_swipe_press_to_engage_title">Aktivera gesten Tryck för att svepa</string>
   <string name="morphe_swipe_press_to_engage_summary">Kräver att du trycker länge innan svepgesten känns igen</string>
   <string name="morphe_swipe_haptic_feedback_title">Aktivera haptisk återkoppling</string>

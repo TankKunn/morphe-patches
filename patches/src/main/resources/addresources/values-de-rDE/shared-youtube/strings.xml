@@ -27,9 +27,9 @@ Second \"item\" text"</string>
   <string name="morphe_custom_branding_icon_entry_2">Morphe Schwarz</string>
   <string name="morphe_custom_branding_icon_entry_3">Morphe dunkel</string>
   <!-- Translation should match morphe_custom_branding_notification_icon_entry_3 -->
-  <string name="morphe_custom_branding_icon_entry_5">Morphe Spiellicht </string>
+  <string name="morphe_custom_branding_icon_entry_5">Morphe Play hell</string>
   <!-- Translation should match morphe_custom_branding_notification_icon_entry_3 -->
-  <string name="morphe_custom_branding_icon_entry_6">Morphe Schwarz spielen </string>
+  <string name="morphe_custom_branding_icon_entry_6">Morphe Play schwarz</string>
   <!-- Translations of this should be identical to morphe_custom_branding_name_entry_5 -->
   <string name="morphe_custom_branding_icon_entry_7">Benutzerdefiniert</string>
   <string name="morphe_custom_branding_notification_icon_title">Benachrichtigungsicon</string>
@@ -43,9 +43,9 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_screen_title">Fälsche Video-Streams</string>
   <string name="morphe_spoof_video_streams_screen_summary">Fälsche die Client-Video-Streams, um Wiedergabeprobleme zu verhindern</string>
   <string name="morphe_spoof_video_streams_title">Fälsche Video-Streams</string>
-  <string name="morphe_spoof_video_streams_summary">"Behebt Wiedergabeprobleme für die meisten Nutzer, indem ein kompatibler Videostream angefordert wird.
+  <string name="morphe_spoof_video_streams_summary">"Behebt Wiedergabeprobleme für die meisten Nutzer, indem ein kompatibler Videostream angefordert wird
 
-Wenn Sie ein YouTube Premium-Nutzer sind, ist diese Einstellung möglicherweise nicht erforderlich."</string>
+Wenn Sie ein YouTube Premium-Nutzer sind, ist diese Einstellung möglicherweise nicht erforderlich"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Es konnten keine Client-Streams abgerufen werden</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Das Deaktivieren dieser Einstellung kann Wiedergabeprobleme verursachen.</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_title.

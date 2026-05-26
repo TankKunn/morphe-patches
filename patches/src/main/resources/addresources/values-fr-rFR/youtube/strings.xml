@@ -358,6 +358,11 @@ Info : Peut ne pas fonctionner sur les diffusions en direct"</string>
   <string name="morphe_swipe_brightness_summary">Faites glisser verticalement sur le côté gauche du mode plein écran pour régler la luminosité</string>
   <string name="morphe_swipe_volume_title">Activer les gestes de volume</string>
   <string name="morphe_swipe_volume_summary">Faites glisser verticalement sur le côté droit du mode plein écran pour régler le volume</string>
+  <string name="morphe_swipe_zone_width_title">Largeur de la zone de luminosité/volume</string>
+  <string name="morphe_swipe_zone_width_summary">Pourcentage de chaque bord de l’écran réservé aux gestes de luminosité et de volume (5-50)</string>
+  <string name="morphe_swipe_zone_label_brightness">Luminosité</string>
+  <string name="morphe_swipe_zone_label_volume">Volume</string>
+  <string name="morphe_swipe_zone_label_native">Natif</string>
   <string name="morphe_swipe_press_to_engage_title">Activer les gestes de balayage</string>
   <string name="morphe_swipe_press_to_engage_summary">Nécessite un appui long avant que le geste de balayage ne soit pris en compte</string>
   <string name="morphe_swipe_haptic_feedback_title">Activer le retour haptique</string>
@@ -375,13 +380,24 @@ Info : Peut ne pas fonctionner sur les diffusions en direct"</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Définissez la couleur de la barre de progression des contrôles de luminosité</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Couleur de l’overlay du balayage du volume</string>
   <string name="morphe_swipe_overlay_progress_volume_color_summary">Définissez la couleur de la barre de progression des contrôles de volume</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_title">Couleur de l’overlay de la vitesse de balayage</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_summary">Définissez la couleur de la barre de progression des contrôles de vitesse de lecture</string>
   <string name="morphe_swipe_text_overlay_size_title">Taille du texte de l’overlay de balayage</string>
   <string name="morphe_swipe_text_overlay_size_summary">Ajustez la taille du texte à l’écran (1-30)</string>
   <string name="morphe_swipe_text_overlay_size_invalid_toast">La taille du texte doit être comprise entre 1 et 30</string>
   <string name="morphe_swipe_threshold_title">Seuil de magnitude du balayage</string>
   <string name="morphe_swipe_threshold_summary">Définissez la distance de balayage nécessaire avant qu\'un ajustement ne soit déclenché</string>
   <string name="morphe_swipe_volume_sensitivity_title">Sensibilité du balayage de volume</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Ajuste l’ampleur du changement de volume à chaque glissement</string>
+  <string name="morphe_swipe_volume_sensitivity_summary">Des valeurs plus élevées augmentent le changement de volume par balayage</string>
+  <string name="morphe_swipe_brightness_sensitivity_title">Sensibilité du balayage de luminosité</string>
+  <string name="morphe_swipe_brightness_sensitivity_summary">Des valeurs plus élevées nécessitent plus de balayages par pas de luminosité</string>
+  <string name="morphe_swipe_speed_title">Activer le geste de vitesse</string>
+  <string name="morphe_swipe_speed_summary">Faites glisser horizontalement dans la zone supérieure du mode plein écran pour modifier la vitesse de lecture</string>
+  <string name="morphe_swipe_speed_sensitivity_title">Sensibilité du balayage de vitesse</string>
+  <string name="morphe_swipe_speed_sensitivity_summary">Des valeurs plus élevées nécessitent plus de balayages par pas de vitesse</string>
+  <string name="morphe_swipe_speed_zone_height_title">Hauteur de la zone de vitesse</string>
+  <string name="morphe_swipe_speed_zone_height_summary">Hauteur de la zone de geste de vitesse en pourcentage de la hauteur du lecteur (5-75)</string>
+  <string name="morphe_swipe_zone_label_speed">Vitesse</string>
   <string name="morphe_swipe_overlay_style_title">Style de l’overlay de balayage</string>
   <string name="morphe_swipe_overlay_style_entry_1">Overlay horizontal</string>
   <string name="morphe_swipe_overlay_style_entry_2">Overlay horizontal (minimal - en haut)</string>
@@ -459,7 +475,7 @@ Info : Peut ne pas fonctionner sur les diffusions en direct"</string>
   <string name="morphe_set_caption_cookies_summary">"Corrige un bug de YouTube où les sous-titres traduits automatiquement peuvent ne pas être disponible en raison de cookies manquants
 
 Les 'Cookies des sous-titres' doivent être fournis"</string>
-  <string name="morphe_caption_cookies_title">Cookies de sous-titres</string>
+  <string name="morphe_caption_cookies_title">Cookies des sous-titres</string>
   <string name="morphe_caption_cookies_summary">Cookies à définir dans les requêtes de l’API Timed Text (API des données de sous-titres)</string>
   <string name="morphe_get_caption_cookies_title">Obtenir les cookies de sous-titres</string>
   <string name="morphe_get_caption_cookies_summary">Cliquez ici pour récupérer les cookies</string>
@@ -950,7 +966,7 @@ Mise en page Automobile
 • La barre d’actions de la vidéo n’est pas réduite"</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Falsifier la version de l\'application</string>
-  <string name="morphe_spoof_app_version_summary">Fait croire au serveur que vous utilisez une ancienne version de l’application afin de rétablir des fonctionnalités d’interface héritées</string>
+  <string name="morphe_spoof_app_version_summary">Fait croire au serveur que vous utilisez une ancienne version de l’application afin de restaurer des fonctionnalités d’interface héritées</string>
   <string name="morphe_spoof_app_version_user_dialog_message">"La version de l'application sera falsifiée par une ancienne version de YouTube.
 
 Cela modifie l'apparence et les fonctionnalités de l'application, mais des effets inconnus peuvent se produire.

@@ -194,6 +194,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <!-- interaction.swipecontrols.swipeControlsPatch -->
   <string name="morphe_swipe_brightness_title">ئاماژەی ڕووناکی چالاک بکە</string>
   <string name="morphe_swipe_volume_title">ئاماژەی دەنگ چالاک بکە</string>
+  <string name="morphe_swipe_zone_label_native">ڕەسەن</string>
   <string name="morphe_swipe_press_to_engage_title">پەستان چالاک بکە بۆ ئاماژەدان بە لێدان</string>
   <string name="morphe_swipe_haptic_feedback_title">ئامۆژگاری هاپتیک چالاک بکە</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">پاشەکەوتکردن و گەڕاندنەوەی ڕووناکی</string>

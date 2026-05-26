@@ -44,9 +44,9 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_screen_title">Spoof Video Streams</string>
   <string name="morphe_spoof_video_streams_screen_summary">ضبط خاصية تمويه هوية العميل لمنع مشاكل التشغيل</string>
   <string name="morphe_spoof_video_streams_title">Spoof Video Streams</string>
-  <string name="morphe_spoof_video_streams_summary">"يصلح مشاكل التشغيل لمعظم المستخدمين عن طريق طلب تدفق فيديو متوافق
+  <string name="morphe_spoof_video_streams_summary">"يُصلح مشاكل التشغيل لدى معظم المستخدمين عبر طلب تدفق فيديو متوافق
 
-إذا كنت مستخدمًا لـ YouTube Premium، فقد لا يكون هذا الإعداد مطلوبًا."</string>
+إذا كنت من مستخدمي YouTube Premium، فقد لا تحتاج إلى هذا الإعداد"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">تعذر جلب أي تدفقات عميل</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">قد يؤدي إيقاف تشغيل هذا الإعداد إلى مشكلات في التشغيل.</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_title.
@@ -114,7 +114,7 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_sharing_links_title">تنظيف روابط المشاركة</string>
   <string name="morphe_sanitize_sharing_links_summary">يزيل وسيط التتبع من الروابط المُشاركة</string>
   <string name="morphe_replace_music_with_youtube_title">تغيير روابط المشاركة إلى youtube.com</string>
-  <string name="morphe_replace_music_with_youtube_summary">يستبدل music.youtube.com بـ youtube.com في الروابط المشتركة</string>
+  <string name="morphe_replace_music_with_youtube_summary">يستبدل music.youtube.com بـ youtube.com في الروابط المُشاركة</string>
   <string name="morphe_replace_links_with_shortener_title">تغيير روابط المشاركة إلى youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">يُلزم استخدام تنسيق رابط youtu.be المختصر للفيديوهات</string>
 </resources>

@@ -330,6 +330,7 @@ Potvrdite da naziv paketa je tačan i da je aplikacija instalirana."</string>
   <!-- interaction.swipecontrols.swipeControlsPatch -->
   <string name="morphe_swipe_brightness_title">Omogu kontrolu jakosti</string>
   <string name="morphe_swipe_volume_title">Omogu kontrolu zvuka</string>
+  <string name="morphe_swipe_zone_label_native">Izvorno</string>
   <string name="morphe_swipe_press_to_engage_title">Omogu pritisak za otvaranje</string>
   <string name="morphe_swipe_haptic_feedback_title">Omogu haptiku</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">Spremite i obnovi jakost</string>

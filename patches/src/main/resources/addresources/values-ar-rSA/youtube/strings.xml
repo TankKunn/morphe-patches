@@ -286,9 +286,9 @@ Second \"item\" text"</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">يعطّل إيماءة النقر المزدوج بإصبعين التي تتخطى الفصول، والتي قد يتم تشغيلها عن طريق الخطأ بإصبع واحد</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">التنزيلات الخارجية</string>
-  <string name="morphe_external_downloader_screen_summary">تنزيل مقاطع الفيديو باستخدام تطبيقات تنزيل خارجية</string>
+  <string name="morphe_external_downloader_screen_summary">تنزيل الفيديوهات باستخدام تطبيقات تنزيل خارجية</string>
   <string name="morphe_external_downloader_title">عرض زر التنزيل الخارجي</string>
-  <string name="morphe_external_downloader_summary">يعرض زرًا مُتراكبًا في مشغل الفيديو يفتح أداة التنزيل الخارجية الخاصة بك</string>
+  <string name="morphe_external_downloader_summary">يعرض زرًا على مشغل الفيديو يفتح أداة التنزيل الخارجية الخاصة بك</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">وظيفة زر إجراء التنزيل</string>
   <string name="morphe_external_downloader_action_button_summary">يستبدل وظيفة التنزيل المدمجة في YouTube بتطبيق التنزيل الخارجي الذي تختاره</string>
@@ -359,6 +359,11 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_brightness_summary">مرِّر عموديًا على الجانب الأيسر من وضع ملء الشاشة لضبط مستوى السطوع</string>
   <string name="morphe_swipe_volume_title">تمكين إيماءة الصوت</string>
   <string name="morphe_swipe_volume_summary">مرِّر عموديًا على الجانب الأيمن من وضع ملء الشاشة لضبط مستوى الصوت</string>
+  <string name="morphe_swipe_zone_width_title">عرض منطقة السطوع/الصوت</string>
+  <string name="morphe_swipe_zone_width_summary">نسبة كل حافة من حواف الشاشة المخصصة لإيماءات السطوع و الصوت (5-50)</string>
+  <string name="morphe_swipe_zone_label_brightness">السطوع</string>
+  <string name="morphe_swipe_zone_label_volume">الصوت</string>
+  <string name="morphe_swipe_zone_label_native">الأصل</string>
   <string name="morphe_swipe_press_to_engage_title">تمكين الضغط لتمرير الإيماءة</string>
   <string name="morphe_swipe_press_to_engage_summary">يتطلب الضغط مع الاستمرار قبل التعرف على إيماءة التمرير</string>
   <string name="morphe_swipe_haptic_feedback_title">الاهتزاز عند الضغط</string>
@@ -376,13 +381,24 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">تعيين لون شريط تقدم عناصر التحكم في مستوى السطوع</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">لون نمط إيماءة الصوت</string>
   <string name="morphe_swipe_overlay_progress_volume_color_summary">تعيين لون شريط تقدم عناصر التحكم في مستوى الصوت</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_title">لون نمط إيماءة السرعة</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_summary">تعيين لون شريط تقدم عناصر التحكم في السرعة</string>
   <string name="morphe_swipe_text_overlay_size_title">حجم نص نمط إيماءة التمرير</string>
   <string name="morphe_swipe_text_overlay_size_summary">ضبط حجم النص على الشاشة (1-30)</string>
   <string name="morphe_swipe_text_overlay_size_invalid_toast">يجب أن يكون حجم النص بين 1-30</string>
   <string name="morphe_swipe_threshold_title">مقدار حد التمرير</string>
   <string name="morphe_swipe_threshold_summary">تعيين مسافة التمرير المطلوبة قبل بدء التعديل</string>
   <string name="morphe_swipe_volume_sensitivity_title">حساسية تمرير مستوى الصوت</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">مقدار تغير مستوى الصوت لكل تمريرة</string>
+  <string name="morphe_swipe_volume_sensitivity_summary">القيم الأعلى تزيد من تغيُّر مستوى الصوت مع كل تمريرة</string>
+  <string name="morphe_swipe_brightness_sensitivity_title">حساسية تمرير مستوى السطوع</string>
+  <string name="morphe_swipe_brightness_sensitivity_summary">القيم الأعلى تتطلب التمرير أكثر لكل مستوى سطوع</string>
+  <string name="morphe_swipe_speed_title">تمكين إيماءة السرعة</string>
+  <string name="morphe_swipe_speed_summary">مرِّر أفقيًا في المنطقة العلوية بوضع ملء الشاشة لتغيير سرعة التشغيل</string>
+  <string name="morphe_swipe_speed_sensitivity_title">حساسية تمرير السرعة</string>
+  <string name="morphe_swipe_speed_sensitivity_summary">القيم الأعلى تتطلب التمرير أكثر لكل درجة سرعة</string>
+  <string name="morphe_swipe_speed_zone_height_title">ارتفاع منطقة السرعة</string>
+  <string name="morphe_swipe_speed_zone_height_summary">ارتفاع منطقة إيماءة السرعة كنسبة مئوية من ارتفاع المشغل (5-75)</string>
+  <string name="morphe_swipe_zone_label_speed">السرعة</string>
   <string name="morphe_swipe_overlay_style_title">نمط واجهة التمرير</string>
   <string name="morphe_swipe_overlay_style_entry_1">النمط الافقي</string>
   <string name="morphe_swipe_overlay_style_entry_2">النمط الأفقي (بسيط - أعلى الشاشة)</string>
@@ -461,7 +477,7 @@ Second \"item\" text"</string>
 
 'ملفات تعريف ارتباط الترجمة' يجب توفيرها"</string>
   <string name="morphe_caption_cookies_title">ملفات تعريف ارتباط الترجمة</string>
-  <string name="morphe_caption_cookies_summary">يتم تعيين ملفات تعريف الارتباط في طلبات واجهة برمجة النصوص الموقوتة (Caption Data API)</string>
+  <string name="morphe_caption_cookies_summary">ملفات تعريف الارتباط المطلوب تعيينها في طلبات واجهة برمجة النصوص الموقوتة (Caption Data API)</string>
   <string name="morphe_get_caption_cookies_title">احصل على ملفات تعريف ارتباط الترجمة</string>
   <string name="morphe_get_caption_cookies_summary">انقر هنا لجلب ملفات تعريف الارتباط</string>
   <string name="morphe_get_caption_cookies_failed">فشل في جلب ملفات تعريف الارتباط</string>
@@ -753,13 +769,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_create_segment_category">إنشاء مقاطع جديدة</string>
   <string name="morphe_sb_enable_create_segment">عرض زر \'إنشاء مقطع جديد\'</string>
   <string name="morphe_sb_enable_create_segment_summary">يضيف زرًا إلى مشغل الفيديو يسمح لك بإرسال مقاطع SponsorBlock جديدة</string>
-  <string name="morphe_sb_general_adjusting">خطوة تعديل الوقت</string>
-  <string name="morphe_sb_general_adjusting_summary">مقدار البحث عن أزرار التعديل للوقت (بالمللي ثانية)</string>
+  <string name="morphe_sb_general_adjusting">مقدار تعديل الوقت</string>
+  <string name="morphe_sb_general_adjusting_summary">مقدار تقديم أو تأخير أزرار ضبط الوقت (بجزء الثانية)</string>
   <string name="morphe_sb_general_adjusting_invalid">يجب أن تكون القيمة رقمًا موجبًا</string>
   <string name="morphe_sb_guidelines_preference_title">إرشادات الإرسال</string>
   <string name="morphe_sb_guidelines_preference_summary">الإرشادات تتضمن قواعد ونصائح لإنشاء مقاطع جديدة</string>
   <string name="morphe_sb_guidelines_popup_title">اتبع الإرشادات</string>
-  <string name="morphe_sb_guidelines_popup_content">من المستحسن قراءة الإرشادات لـ SponsorBlock قبل تقديم أي مقطع</string>
+  <string name="morphe_sb_guidelines_popup_content">اقرأ إرشادات SponsorBlock قبل إضافة مقاطع جديدة</string>
   <string name="morphe_sb_guidelines_popup_already_read">تمت قراءتها</string>
   <string name="morphe_sb_guidelines_popup_open">اعرضها لي</string>
   <string name="morphe_sb_general">عام</string>
@@ -781,7 +797,10 @@ Second \"item\" text"</string>
   <string name="morphe_sb_settings_ie">إستيراد/تصدير الإعدادات</string>
   <string name="morphe_sb_settings_copy">نسخ</string>
   <string name="morphe_sb_settings_ie_summary">تكوين SponsorBlock JSON الخاص بك والذي يمكن استيراده/تصديره إلى Morphe ومنصات SponsorBlock الأخرى</string>
-  <string name="morphe_sb_settings_ie_summary_warning">"تكوين SponsorBlock الخاص بك كتنسيق JSON والذي يمكن استيراده / تصديره إلى Morphe وغيره من منصات SponsorBlock الأخرى. يتضمن هذا معرف المستخدم الفريد الخاص بك. تأكد من مشاركته بحكمة"</string>
+  <string name="morphe_sb_settings_ie_summary_warning">"تكوين SponsorBlock الخاص بك كتنسيق JSON والذي يمكن استيراده / تصديره إلى Morphe وغيره من منصات SponsorBlock الأخرى
+
+يتضمن هذا معرف المستخدم الفريد الخاص بك User ID.
+تأكد من مشاركته بحكمة"</string>
   <string name="morphe_sb_settings_import_successful">تم استيراد الإعدادات بنجاح</string>
   <string name="morphe_sb_settings_import_failed">فشل استيراد: %s</string>
   <string name="morphe_sb_settings_export_failed">فشل تصدير: %s</string>
@@ -1125,17 +1144,17 @@ Second \"item\" text"</string>
   <string name="microg_offline_account_login_error">إذا قمت مؤخرًا بتغيير تفاصيل تسجيل الدخول إلى حسابك، فقم بإلغاء تثبيت MicroG وإعادة تثبيته.</string>
   <!-- misc.links.bypassURLRedirectsPatch -->
   <string name="morphe_bypass_url_redirects_title">تجاوز إعادة توجيه URL</string>
-  <string name="morphe_bypass_url_redirects_summary">يفتح عنوان URL الأصلي مباشرة، متجاوزًا ارتباط التتبع (youtube.com/redirect)</string>
+  <string name="morphe_bypass_url_redirects_summary">يفتح عنوان URL الأصلي مباشرة، متجاوزًا رابط التتبع (youtube.com/redirect)</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">فتح الروابط في المتصفح</string>
-  <string name="morphe_external_browser_summary">يفتح الروابط في متصفحك بدلًا من المتصفح داخل التطبيق</string>
+  <string name="morphe_external_browser_summary">يفتح الروابط في متصفح خارجي بدلًا من المتصفح داخل التطبيق</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">تلقائي</string>
   <string name="morphe_remember_video_quality_last_selected_title">تذكر جودة الفيديو</string>
   <string name="morphe_remember_video_quality_last_selected_summary">يطبق تحديد الجودة اليدوي على جميع الفيديوهات المستقبلية</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">إشعارات تغيير الجودة</string>
-  <string name="morphe_remember_video_quality_last_selected_toast_summary">يعرض إشعارًا عند تغيير جودة الفيديو الافتراضية</string>
+  <string name="morphe_remember_video_quality_last_selected_toast_summary">يعرض إشعارًا عند حفظ جودة افتراضية جديدة</string>
   <string name="morphe_video_quality_default_wifi_title">جودة الفيديو الافتراضية على شبكة Wi-Fi</string>
   <string name="morphe_video_quality_default_mobile_title">جودة الفيديو الافتراضية على شبكة الجوَّال</string>
   <string name="morphe_remember_shorts_quality_last_selected_title">تذكر جودة Shorts</string>
@@ -1166,7 +1185,7 @@ Second \"item\" text"</string>
   <string name="morphe_remember_playback_speed_last_selected_title">تذكر سرعة التشغيل</string>
   <string name="morphe_remember_playback_speed_last_selected_summary">يطبق تحديد السرعة اليدوي على جميع الفيديوهات المستقبلية</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_title">إشعارات تغيير السرعة</string>
-  <string name="morphe_remember_playback_speed_last_selected_toast_summary">يعرض إشعارًا عند تغيير سرعة التشغيل الافتراضية</string>
+  <string name="morphe_remember_playback_speed_last_selected_toast_summary">يعرض إشعارًا عند حفظ سرعة تشغيل افتراضية جديدة</string>
   <string name="morphe_playback_speed_default_title">سرعة التشغيل الافتراضية</string>
   <string name="morphe_remember_playback_speed_toast">تم تغيير سرعة التشغيل الافتراضية إلى: %s</string>
   <!-- video.codecs.disableVideoCodecsPatch -->

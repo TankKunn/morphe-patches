@@ -20,8 +20,8 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">За Morphe</string>
   <string name="morphe_settings_screen_01_ads_title">Реклами</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Алтернативни слички</string>
-  <string name="morphe_settings_screen_03_feed_title">Почетна</string>
+  <string name="morphe_settings_screen_02_alt_thumbnails_title">Алтернативни сликички</string>
+  <string name="morphe_settings_screen_03_feed_title">Содржини</string>
   <string name="morphe_settings_screen_04_general_title">Општи</string>
   <string name="morphe_settings_screen_05_player_title">Плеер</string>
   <string name="morphe_settings_screen_06_shorts_title">Shorts</string>
@@ -29,13 +29,13 @@ Second \"item\" text"</string>
   <string name="morphe_settings_screen_08_swipe_controls_title">Контроли со превлекување</string>
   <string name="morphe_settings_screen_11_misc_title">Разно</string>
   <string name="morphe_settings_screen_12_video_title">Видео</string>
-  <string name="morphe_restore_old_settings_menus_title">Враќање на стариот екран со поставки за YouTube</string>
+  <string name="morphe_restore_old_settings_menus_title">Врати го стариот екран за поставки на YouTube</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
-  <string name="morphe_remove_background_playback_restrictions_title">Откажи ги ограничувањата за репродукција во позадина</string>
-  <string name="morphe_shorts_disable_background_playback_title">Исклучи репродукција во позадина</string>
+  <string name="morphe_remove_background_playback_restrictions_title">Отстрани го оганичувањето за пуштање видеа во позадина</string>
+  <string name="morphe_shorts_disable_background_playback_title">Исклучи пуштање видеа во позадина</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Дебагирај протоколски бафер</string>
-  <string name="morphe_debug_protobuffer_summary">Додава дополнителни информации за евидентирање за програмери за да ги идентификуваат компонентите на апликацијата</string>
+  <string name="morphe_debug_protobuffer_summary">Додава дополнителни информации за евидентира ње за програмери за да ги идентификуваат компонентите на апликацијата</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Вклучувањето на оваа поставка ќе зачува дополнителни податоци за поставката, вклучувајќи текст на екранот за некои компоненти на корисничкиот интерфејс.
 
 Ова може да помогне во идентификување на компонентите при креирање прилагодени филтри.
@@ -351,6 +351,11 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_brightness_summary">Кликнете вертикално на левата страна на полноекранскиот режим за да ја прилагодите осветленоста</string>
   <string name="morphe_swipe_volume_title">Овозможете гест за јачина на звук</string>
   <string name="morphe_swipe_volume_summary">Кликнете вертикално на десната страна на полноекранскиот режим за да ја прилагодите јачината на звукот</string>
+  <string name="morphe_swipe_zone_width_title">Ширина на зоната за прилагодување на осветлувањето/јачината на звукот</string>
+  <string name="morphe_swipe_zone_width_summary">Процент од секоја ивица на екранот резервиран за гестови за прилагодување на осветлувањето и јачината на звукот (5-50)</string>
+  <string name="morphe_swipe_zone_label_brightness">Осветленост</string>
+  <string name="morphe_swipe_zone_label_volume">Волумен</string>
+  <string name="morphe_swipe_zone_label_native">Оригинален</string>
   <string name="morphe_swipe_press_to_engage_title">Овозможете гест за притискање и повлекување</string>
   <string name="morphe_swipe_press_to_engage_summary">Потребно е да се притисне и задржи пред гестот со кликнување да биде препознаен</string>
   <string name="morphe_swipe_haptic_feedback_title">Овозможете хаптичен поврат</string>
@@ -368,13 +373,24 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Поставете ја бојата на лентата за напредок на контролите за осветленост</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Боја на напредокот на прекривката за јачина на звук</string>
   <string name="morphe_swipe_overlay_progress_volume_color_summary">Поставете ја бојата на лентата за напредок на контролите за јачина на звукот</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_title">Боја на брзината на преклопувањето при движење</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_summary">Поставете ја бојата на лентата за напредок на контролите за брзина на репродукција</string>
   <string name="morphe_swipe_text_overlay_size_title">Големина на текстот на прекривката</string>
   <string name="morphe_swipe_text_overlay_size_summary">Прилагодете ја големината на текстот на екранот (1-30)</string>
   <string name="morphe_swipe_text_overlay_size_invalid_toast">Големината на текстот мора да биде меѓу 1-30</string>
   <string name="morphe_swipe_threshold_title">Праг на гестот за повлекување</string>
   <string name="morphe_swipe_threshold_summary">Поставете ја потребната оддалеченост на кликнување пред да се активира прилагодувањето</string>
   <string name="morphe_swipe_volume_sensitivity_title">Осетливост на повлекување за јачина на звук</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Прилагодете ја количината на промена на гласноста при секое лизгање</string>
+  <string name="morphe_swipe_volume_sensitivity_summary">Поголемите вредност ги зголемуваат промените во волуменот при секое движење</string>
+  <string name="morphe_swipe_brightness_sensitivity_title">Чуствителност на движење за осветленост</string>
+  <string name="morphe_swipe_brightness_sensitivity_summary">Поголемите вредности бараат повеќе движења за секое ниво на осветленост</string>
+  <string name="morphe_swipe_speed_title">Овозможи гест за брзина</string>
+  <string name="morphe_swipe_speed_summary">Лизнете хоризонтално во горниот дел од екранот во целосен режим за да ја промените брзината на репродукција</string>
+  <string name="morphe_swipe_speed_sensitivity_title">Чуствителност на движење за брзина</string>
+  <string name="morphe_swipe_speed_sensitivity_summary">Поголемите вредности бараат повеќе движења за секое ниво на брзина</string>
+  <string name="morphe_swipe_speed_zone_height_title">Висина на зоната за брзина</string>
+  <string name="morphe_swipe_speed_zone_height_summary">Висина на зоната за гест за брзина како процент од висината на плеер (5-75)</string>
+  <string name="morphe_swipe_zone_label_speed">Брзина</string>
   <string name="morphe_swipe_overlay_style_title">Стил на прекривката за повлекување</string>
   <string name="morphe_swipe_overlay_style_entry_1">Хоризонтална прекривка</string>
   <string name="morphe_swipe_overlay_style_entry_2">Хоризонтална прекривка (минимална - горе)</string>

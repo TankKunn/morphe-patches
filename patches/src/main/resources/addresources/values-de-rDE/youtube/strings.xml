@@ -35,7 +35,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_disable_background_playback_title">Hintergrundwiedergabe von Shorts deaktivieren</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_protobuffer_title">Debug-Protokollpuffer</string>
-  <string name="morphe_debug_protobuffer_summary">Fügt zusätzliche Protokollierung Informationen für Entwickler hinzu, um App-Komponenten zu identifizieren</string>
+  <string name="morphe_debug_protobuffer_summary">Fügt zusätzliche Protokollierungsinformationen für Entwickler hinzu, um App-Komponenten zu identifizieren</string>
   <string name="morphe_debug_protobuffer_user_dialog_message">"Wenn diese Einstellung aktiv ist werden zusätzliche Layoutdaten protokolliert, einschließlich Text auf dem Bildschirm für einige UI-Komponenten.
 
 Dies kann helfen, Komponenten bei der Erstellung benutzerdefinierter Filter zu identifizieren.
@@ -63,7 +63,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_album_cards_summary">Verbirgt die Albumkarten unter der Künstlerbeschreibung</string>
   <string name="morphe_hide_artist_cards_title">Interpretenkarten ausblenden</string>
   <string name="morphe_hide_artist_cards_summary">Verbirgt die Künstlerkarte oben in den Suchergebnissen</string>
-  <string name="morphe_hide_auto_dubbed_label_title">\'Auto-Dubbing\'-Beschriftung ausblenden</string>
+  <string name="morphe_hide_auto_dubbed_label_title">\'Auto-Dubbed\'-Beschriftung ausblenden</string>
   <string name="morphe_hide_community_posts_title">Communitybeiträge ausblenden</string>
   <string name="morphe_hide_compact_banner_title">Kompakte Banner ausblenden</string>
   <string name="morphe_hide_compact_banner_summary">Verbirgt kompakte Banner und Abstände zwischen einigen Komponenten</string>
@@ -76,8 +76,8 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_floating_microphone_button_title">Schwebende Mikrofon-Schaltfläche ausblenden</string>
   <string name="morphe_hide_floating_microphone_button_summary">Verbirgt die schwebende Mikrofontaste in der unteren rechten Ecke des Suchvorschlagbildschirms</string>
   <string name="morphe_hide_horizontal_shelves_title">Horizontale Reihen ausblenden</string>
-  <string name="morphe_hide_horizontal_shelves_summary">Horizontale Bereiche sind ausgeblendet, wie z. B.:• Eilmeldungen• Community-Beiträge, die Ihnen gefallen könnten• Wiedergabe fortsetzen • Mehr Kanäle entdecken• Mehr Themen entdecken• Für Sie• Neueste Videos• Relevanteste• Beiträge aus der Creators Community• Einkaufen• Noch einmal ansehen</string>
-  <string name="morphe_hide_hyped_label_title">Verstecke Hervorgehobene Bezeichnung</string>
+  <string name="morphe_hide_horizontal_shelves_summary">Horizontale Bereiche sind ausgeblendet, wie z. B.: Eilmeldungen, Community-Beiträge, die Ihnen gefallen könnten, Wiedergabe fortsetzen, Mehr Kanäle entdecken, Mehr Themen entdecken, Für Sie, Neueste Videos, Relevanteste Beiträge aus der Creators Community, Einkaufen und Noch einmal ansehen</string>
+  <string name="morphe_hide_hyped_label_title">Verstecke Hyped Label</string>
   <string name="morphe_hide_image_shelf_title">Bild-Reihe ausblenden</string>
   <string name="morphe_hide_image_shelf_summary">Verbirgt Bildbereiche in den Suchergebnissen</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
@@ -225,8 +225,8 @@ Das Anzeigen von YouTube Doodles kann verhindern, dass benutzerdefinierte Header
   <string name="morphe_hide_upload_time_title">Upload-Zeit ausblenden</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
   <string name="morphe_hide_upload_time_user_dialog_message">"Einschränkungen:
-• Shorts-Regale, Kanalseiten und Suchergebnisse können weiterhin Aufrufe anzeigen
-• Diese Funktion funktioniert nicht mit dem Automotive-Formfaktor"</string>
+• Shorts-Reihen, Kanalseiten und Suchergebnisse können weiterhin Upload-Zeiten anzeigen.
+• Diese Funktion funktioniert nicht mit dem Automotive-Formfaktor."</string>
   <string name="morphe_hide_keyword_content_screen_title">Keyword-Filter</string>
   <string name="morphe_hide_keyword_content_screen_summary">Wählen Sie bestimmte Wörter oder Phrasen aus, um Videos in Feeds und Suchergebnissen auszublenden</string>
   <string name="morphe_hide_keyword_content_home_title">Home-Videos nach Schlüsselwörtern ausblenden</string>
@@ -311,7 +311,7 @@ Stellen Sie sicher, dass der Paketname korrekt ist und die App installiert ist"<
   <string name="morphe_loop_video_button_toast_off">Loop-Video ist deaktiviert</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Alle abspielen-Schaltfläche anzeigen</string>
-  <string name="morphe_play_all_button_summary">"Tippen Sie, um eine Wiedergabeliste aller Videos aus dem Kanal zu erstellen, tippen und halten Sie gedrückt, um dies zu rückgängig zu machen
+  <string name="morphe_play_all_button_summary">"Tippen Sie, um eine Wiedergabeliste aller Videos aus dem Kanal zu erstellen, tippen und halten Sie gedrückt, um dies rückgängig zu machen
 
 Info: Funktioniert möglicherweise nicht bei Live-Streams"</string>
   <string name="morphe_play_all_button_type_title">Playliste erstellen Modus</string>
@@ -350,7 +350,7 @@ Info: Funktioniert möglicherweise nicht bei Live-Streams"</string>
   <string name="morphe_livestream_dvr_user_dialog_message">Das Aktivieren kann zu unerwartetem Suchtverhalten von Livestreams führen, wenn \'Videostreams fälschen\' nicht aktiviert ist.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Slide zum Suchen aktivieren</string>
-  <string name="morphe_slide_to_seek_summary">Aktiviert das Wischen zum Suchen anstelle des Abspielens mit doppelter Geschwindigkeit, wenn Sie die Videoplayer-Taste gedrückt halten</string>
+  <string name="morphe_slide_to_seek_summary">Aktiviert das Wischen zum Suchen anstelle des Abspielens mit 2x Geschwindigkeit, wenn Sie die Videoplayer-Taste gedrückt halten</string>
   <!-- interaction.seekbar.enableTapToSeekPatch -->
   <string name="morphe_tap_to_seek_title">Tippen zum Suchen aktivieren</string>
   <string name="morphe_tap_to_seek_summary">Tippen Sie einfach auf die Suchleiste, um zu dieser Position zu springen, ohne sie zu ziehen</string>
@@ -359,6 +359,11 @@ Info: Funktioniert möglicherweise nicht bei Live-Streams"</string>
   <string name="morphe_swipe_brightness_summary">Wischen Sie auf der linken Seite des Vollbildmodus nach oben oder unten, um die Helligkeit anzupassen</string>
   <string name="morphe_swipe_volume_title">Lautstärke-Geste aktivieren</string>
   <string name="morphe_swipe_volume_summary">Wischen Sie auf der rechten Seite des Vollbildmodus nach oben oder unten, um die Lautstärke anzupassen</string>
+  <string name="morphe_swipe_zone_width_title">Helligkeits-/Lautstärkezonenbreite</string>
+  <string name="morphe_swipe_zone_width_summary">Prozentsatz des Bildschirmrands, der für Gesten zur Steuerung von Helligkeit und Lautstärke reserviert ist (5-50)</string>
+  <string name="morphe_swipe_zone_label_brightness">Helligkeit</string>
+  <string name="morphe_swipe_zone_label_volume">Lautstärke</string>
+  <string name="morphe_swipe_zone_label_native">Nativ</string>
   <string name="morphe_swipe_press_to_engage_title">Wischen durch Drücken aktivieren</string>
   <string name="morphe_swipe_press_to_engage_summary">Erfordert ein Gedrückthalten, bevor eine Wischgeste erkannt wird</string>
   <string name="morphe_swipe_haptic_feedback_title">Haptisches Feedback aktivieren</string>
@@ -376,13 +381,24 @@ Info: Funktioniert möglicherweise nicht bei Live-Streams"</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Legen Sie die Farbe des Fortschrittsbalkens der Helligkeitsregelung fest</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Farbe der Lautstärke des Wisch-Overlays</string>
   <string name="morphe_swipe_overlay_progress_volume_color_summary">Legen Sie die Farbe des Fortschrittsbalkens der Lautstärkeregelung fest</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_title">Farbe der Wisch-Overlay-Geschwindigkeitsanzeige</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_summary">Legen Sie die Farbe des Fortschrittsbalkens der Wiedergabegeschwindigkeitsregler fest</string>
   <string name="morphe_swipe_text_overlay_size_title">Textgröße der Wischgesten-Überlagerung</string>
   <string name="morphe_swipe_text_overlay_size_summary">Passen Sie die Größe des Textes auf dem Bildschirm an (1-30)</string>
   <string name="morphe_swipe_text_overlay_size_invalid_toast">Die Textgröße muss zwischen 1 und 30 liegen</string>
   <string name="morphe_swipe_threshold_title">Wischgrößenschwelle</string>
   <string name="morphe_swipe_threshold_summary">Legen Sie die erforderliche Wischdistanz fest, bevor eine Anpassung ausgelöst wird</string>
   <string name="morphe_swipe_volume_sensitivity_title">Lautstärke-Wischgestenempfindlichkeit</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Passen Sie an, wie stark sich die Lautstärke pro Wisch ändert</string>
+  <string name="morphe_swipe_volume_sensitivity_summary">Höhere Werte erhöhen die Lautstärkeveränderung pro Wischbewegung</string>
+  <string name="morphe_swipe_brightness_sensitivity_title">Empfindlichkeit der Wischbewegung für die Helligkeit</string>
+  <string name="morphe_swipe_brightness_sensitivity_summary">Höhere Werte erfordern mehr Wischbewegungen pro Helligkeitsstufe</string>
+  <string name="morphe_swipe_speed_title">Geschwindigkeitsgeste aktivieren</string>
+  <string name="morphe_swipe_speed_summary">Wischen Sie horizontal im oberen Bereich des Vollbildmodus, um die Wiedergabegeschwindigkeit zu ändern.</string>
+  <string name="morphe_swipe_speed_sensitivity_title">Empfindlichkeit der Wischbewegung für die Geschwindigkeit</string>
+  <string name="morphe_swipe_speed_sensitivity_summary">Höhere Werte erfordern mehr Wischbewegungen pro Geschwindigkeitsstufe</string>
+  <string name="morphe_swipe_speed_zone_height_title">Höhe der Geschwindigkeitszone</string>
+  <string name="morphe_swipe_speed_zone_height_summary">Höhe der Geschwindigkeitsgestenzone als Prozentsatz der Player-Höhe (5-75)</string>
+  <string name="morphe_swipe_zone_label_speed">Geschwindigkeit</string>
   <string name="morphe_swipe_overlay_style_title">Design des Wisch-Overlays</string>
   <string name="morphe_swipe_overlay_style_entry_1">Horizontales Overlay</string>
   <string name="morphe_swipe_overlay_style_entry_2">Horizontales Overlay (minimal - oben)</string>
@@ -531,7 +547,7 @@ Um auf Einstellungen zuzugreifen, aktivieren Sie die Einstellungen Schaltfläche
           'Android Reel' and 'TV' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Das Menü \"Audio-Track\" ist ausgeblendet
 
-Um das Menü anzuzeigen, ändern Sie \"Video-Streams fälschen\" in \"Android Reel\" oder \"TV\"."</string>
+Um das Menü anzuzeigen, ändern Sie \"Video-Streams fälschen\" in \"Android Reel\" oder \"TV\""</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Verbirgt den dunklen Schatten um die Bedienelemente des Videoplayers</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Wählen Sie aus, welche Komponenten im Ambient-Modus angezeigt werden sollen</string>
@@ -758,7 +774,7 @@ Einstellungen → Wiedergabe (oder Automatisch abspielen) → Automatisch nächs
   <string name="morphe_sb_guidelines_preference_title">Richtlinien</string>
   <string name="morphe_sb_guidelines_preference_summary">Richtlinien enthalten Regeln und Tipps zum Erstellen neuer Segmente</string>
   <string name="morphe_sb_guidelines_popup_title">Den Richtlinien folgen</string>
-  <string name="morphe_sb_guidelines_popup_content">Lies die SponsorBlock Richtlinien bevor du neue Segmente erstellst</string>
+  <string name="morphe_sb_guidelines_popup_content">Lesen Sie die SponsorBlock Richtlinien bevor Sie neue Segmente erstellen</string>
   <string name="morphe_sb_guidelines_popup_already_read">Bereits gelesen</string>
   <string name="morphe_sb_guidelines_popup_open">Zeig sie mir</string>
   <string name="morphe_sb_general">Allgemein</string>
