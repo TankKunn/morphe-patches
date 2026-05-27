@@ -1,3 +1,13 @@
+## [1.30.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.30.0-dev.4...v1.30.0-dev.5) (2026-05-27)
+
+### 🐛 Bug Fixes
+
+* **YouTube - DRC audio patch:** Add support for 21.19 and higher ([#1561](https://github.com/MorpheApp/morphe-patches/issues/1561)) ([8608270](https://github.com/MorpheApp/morphe-patches/commit/8608270c1b7a517b1f863ee5f3471153b2ad3574))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide Featured channels section" setting ([#1567](https://github.com/MorpheApp/morphe-patches/issues/1567)) ([47cd714](https://github.com/MorpheApp/morphe-patches/commit/47cd7148685966e602e91687ea5297603d13d431))
+
 ## [1.30.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.30.0-dev.3...v1.30.0-dev.4) (2026-05-26)
 
 ### ✨ New Features
