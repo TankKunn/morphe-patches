@@ -12,6 +12,9 @@ package app.morphe.extension.youtube.videoplayer;
 
 import static app.morphe.extension.shared.StringRef.str;
 import static app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS;
+import static app.morphe.extension.youtube.settings.Settings.DO_NOT_REMEMBER_LOOP_VIDEO;
+import static app.morphe.extension.youtube.settings.Settings.LOOP_VIDEO;
+import static app.morphe.extension.youtube.settings.Settings.LOOP_VIDEO_BUTTON;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -89,6 +92,15 @@ public class LoopVideoButton {
             updateButtonIcon();
         } catch (Exception ex) {
             Logger.printException(() -> "initializeButton failure", ex);
+        }
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void resetLoopButton() {
+        if (LOOP_VIDEO_BUTTON.get() && DO_NOT_REMEMBER_LOOP_VIDEO.get()) {
+            LOOP_VIDEO.save(false);
         }
     }
 

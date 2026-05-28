@@ -41,6 +41,7 @@ val loopVideoPatch = bytecodePatch(
     execute {
         PreferenceScreen.PLAYER.addPreferences(
             SwitchPreference("morphe_loop_video", summaryKey = null),
+            SwitchPreference("morphe_do_not_remember_loop_video")
         )
 
         videoTimeHook(EXTENSION_CLASS, "videoTimeChanged")

@@ -334,6 +334,8 @@ Verify the package name is correct and the app is installed"</string>
 
     <!-- interaction.loop.loopVideoPatch -->
     <string name="morphe_loop_video_title">Enable loop video</string>
+    <string name="morphe_do_not_remember_loop_video_title">Don\'t remember loop video</string>
+    <string name="morphe_do_not_remember_loop_video_summary">Prevent loop video current state from being saved for subsequent videos</string>
 
     <!-- interaction.loop.loopVideoButtonPatch -->
     <string name="morphe_loop_video_button_title">Show Loop video button</string>
