@@ -52,7 +52,7 @@ Second \"item\" text"</string>
 • Компоненти у спливаючому меню плеєра (або пов’язаних налаштуваннях) можуть не працювати.
 • Анімовані лічильники не анімуються.
 • Відображається вкладка \"Бібліотека\".
-• Розділ \"Музика\" в описі відео може не працювати.
+• Секція \"Музика\" в описі відео може не працювати.
 • Елементи спливаючого меню плеєра не можна приховати.
 • Кнопка перемикання облікового запису може не відображатися на вкладці \"Бібліотека\"."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
@@ -106,7 +106,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_recommendation_labels_title">Приховати мітки відеорекомендацій</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Приховує мітки \"Інші користувачі також переглядали це відео\" та \"Вам також може сподобатися\" у результатах пошуку</string>
   <string name="morphe_hide_web_search_results_title">Приховати результати вебпошуку</string>
-  <string name="morphe_hide_web_search_results_summary">Приховує розділ \"Результати з інтернету\" у результатах пошуку</string>
+  <string name="morphe_hide_web_search_results_summary">Приховує секцію \"Результати з інтернету\" у результатах пошуку</string>
   <string name="morphe_hide_you_may_like_section_title">Приховати секцію \"Вам може сподобатися\"</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_youtube_doodles_title">Приховати YouTube Doodles</string>
@@ -131,7 +131,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_medical_panels_title">Приховати медичні панелі</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Приховати правила спільноти підписок</string>
   <string name="morphe_hide_timed_reactions_title">Приховати тимчасові реакції</string>
-  <string name="morphe_hide_timed_reactions_summary">Приховує функцію реакцій емодзі в коментарях і чаті трансляцій</string>
+  <string name="morphe_hide_timed_reactions_summary">Приховує функцію реакцій емодзі в секції коментарів і чаті трансляцій</string>
   <string name="morphe_hide_video_title_title">Приховати назву відео</string>
   <string name="morphe_hide_video_title_summary">Приховує назву відео в повноекранному режимі</string>
   <string name="morphe_hide_description_components_screen_title">Опис відео</string>
@@ -147,6 +147,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_explore_section_summary">Приховує секції \"Послухайте цей курс\" та \"Послухайте подкаст\"</string>
   <string name="morphe_hide_explore_course_section_title">Приховати секцію \"Послухайте цей курс\"</string>
   <string name="morphe_hide_explore_podcast_section_title">Приховати секцію \"Послухайте подкаст\"</string>
+  <string name="morphe_hide_featured_channels_section_title">Приховати секцію \"Рекомендовані канали\"</string>
   <string name="morphe_hide_featured_links_section_title">Приховати секцію \"Рекомендований контент\"</string>
   <string name="morphe_hide_featured_places_section_title">Приховати секцію \"Рекомендовані місця\"</string>
   <string name="morphe_hide_featured_videos_section_title">Приховати секцію \"Рекомендовані відео\"</string>
@@ -185,12 +186,12 @@ Second \"item\" text"</string>
   <!-- 'Subscribe' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_subscribe_button_in_channel_page_title">Приховати кнопку \"Підписатися\"</string>
   <string name="morphe_comments_screen_title">Коментарі</string>
-  <string name="morphe_comments_screen_summary">Виберіть, які компоненти будуть показуватися в розділі коментарів</string>
+  <string name="morphe_comments_screen_summary">Виберіть, які компоненти будуть показуватися в секції коментарів</string>
   <string name="morphe_hide_comments_carousel_title">Увімкнути фільтр каруселі коментарів</string>
   <string name="morphe_hide_comments_carousel_user_dialog_message">"Примітка:
 • Обов’язково введіть точну назву елемента каруселі (наприклад, Запитати, Розрекламувати це відео, Слухати на YouTube Music тощо).
 • Приховування елементів каруселі може мати небажані побічні ефекти.
-• Якщо всі елементи каруселі приховані, весь розділ коментарів також буде прихований."</string>
+• Якщо всі елементи каруселі приховані, вся секція коментарів також буде прихована."</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Фільтр каруселі коментарів</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">Введіть назви елементів каруселі коментарів, які потрібно приховати, кожну з нового рядка</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Приховати \"Огляд чату від ШІ\"</string>
@@ -199,13 +200,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_prompts_summary">Приховує контекстні інформаційні повідомлення в коментарях</string>
   <string name="morphe_hide_comments_by_members_header_title">Приховати \"Коментарі від спонсорів\"</string>
   <string name="morphe_hide_comments_section_title">Приховати секцію коментарів</string>
-  <string name="morphe_hide_comments_section_in_home_feed_title">Приховати розділ коментарів у стрічці</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Приховати секцію коментарів у стрічці</string>
   <string name="morphe_hide_comments_community_guidelines_title">Приховати правила спільноти</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Приховати кнопку \"Створити Short\"</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Приховати кнопки емодзі та позначки часу</string>
   <string name="morphe_hide_comments_info_button_title">Приховати кнопку \"Інфо\"</string>
   <string name="morphe_hide_comments_preview_comment_title">Приховати прев\'ю коментар</string>
-  <string name="morphe_hide_comments_preview_comment_summary">Приховує попередній перегляд коментаря під відео до відкриття повного розділу коментарів</string>
+  <string name="morphe_hide_comments_preview_comment_summary">Приховує попередній перегляд коментаря під відео до повного відкриття секції коментарів</string>
   <string name="morphe_hide_comments_thanks_button_title">Приховати кнопку \"Дякую\"</string>
   <string name="morphe_sanitize_comments_category_bar_title">Очистити панель категорій</string>
   <string name="morphe_sanitize_comments_category_bar_summary">Приховує всі варіанти сортування коментарів, окрім  \"Найпопулярніші\" та \"Найновіші\"</string>
@@ -304,10 +305,21 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_empty_warning">Ім\'я пакета не може бути порожнім</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Увімкнути повторення відео</string>
+  <string name="morphe_do_not_remember_loop_video_title">Не запам\'ятовувати повтор відео</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Запобігає збереженню поточного стану повтору відео для наступних відео</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Показати кнопку \"Повторювати відео\"</string>
   <string name="morphe_loop_video_button_toast_on">Повторення відео ввімкнено</string>
   <string name="morphe_loop_video_button_toast_off">Повторення відео вимкнено</string>
+  <string name="morphe_loop_video_range_dialog_title">Діапазон повтору</string>
+  <string name="morphe_loop_video_range_label_start">Початок</string>
+  <string name="morphe_loop_video_range_label_end">Кінець</string>
+  <string name="morphe_loop_video_range_hint_start">[год:]хв:сек</string>
+  <string name="morphe_loop_video_range_hint_end">[год:]хв:сек (порожньо = кінець відео)</string>
+  <string name="morphe_loop_video_range_set">Встановити</string>
+  <string name="morphe_loop_video_range_clear">Очистити</string>
+  <string name="morphe_loop_video_range_toast_on">Повтор %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Недійсний діапазон часу</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Показати кнопку \"Відтворити все\"</string>
   <string name="morphe_play_all_button_summary">"Натисніть, щоб створити список відтворення з усіх відео каналу, утримуйте, щоб скасувати
@@ -459,6 +471,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Приховати кнопку \"Список відтворення\"</string>
   <string name="morphe_hide_quick_actions_save_button_title">Приховати кнопку \"Зберегти\"</string>
   <string name="morphe_hide_quick_actions_share_button_title">Приховати кнопку \"Поділитися\"</string>
+  <string name="morphe_quick_actions_top_margin_title">Верхній відступ швидких дій</string>
+  <string name="morphe_quick_actions_top_margin_summary">Встановіть верхній відступ панелі швидких дій (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Субтитри</string>
   <string name="morphe_captions_screen_summary">Керування автоматичними субтитрами та cookies субтитрів</string>
@@ -1192,7 +1206,7 @@ Second \"item\" text"</string>
 • Може відновити відсутні роздільні здатності відео на старіших пристроях
 
 Обмеження:
-• Максимальна роздільна здатність — 1080p
+• Максимальна роздільна здатність - 1080p
 • Під час відтворення відео буде витрачатися більше інтернет-трафіку, ніж із VP9 чи AV1
 • HDR-відео не використовуватимуть AVC
 • Деякі пристрої не можуть примусово використовувати AVC"</string>

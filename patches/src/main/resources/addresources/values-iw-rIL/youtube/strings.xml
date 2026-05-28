@@ -147,6 +147,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_explore_section_summary">מסתיר את הסעיפים \'גלה את הקורס הזה\' ו\'גלה את הפודקאסט\'</string>
   <string name="morphe_hide_explore_course_section_title">הסתר את סעיף \'גלה את הקורס הזה\'</string>
   <string name="morphe_hide_explore_podcast_section_title">הסתר את סעיף \'גלה את הפודקאסט\'</string>
+  <string name="morphe_hide_featured_channels_section_title">הסתר סעיף הערוצים המומלצים</string>
   <string name="morphe_hide_featured_links_section_title">הסתר סעיף \'קישורים מומלצים\'</string>
   <string name="morphe_hide_featured_places_section_title">הסתר את סעיף \'מקומות מומלצים\'</string>
   <string name="morphe_hide_featured_videos_section_title">הסתר סעיף \'סרטונים מומלצים\'</string>
@@ -304,10 +305,21 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_empty_warning">שם החבילה אינו יכול להיות ריק</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">הפעל סרטון בלולאה</string>
+  <string name="morphe_do_not_remember_loop_video_title">אל תזכור את סרטון הלולאה</string>
+  <string name="morphe_do_not_remember_loop_video_summary">מנע שמירת מצב הלולאה הנוכחי עבור סרטונים עוקבים</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">דורש לחיצה והחזקה לפני זיהוי תנועת החלקה</string>
   <string name="morphe_loop_video_button_toast_on">הפעלת סרטון בלולאה מופעלת</string>
   <string name="morphe_loop_video_button_toast_off">הפעלת סרטון בלולאה כבויה</string>
+  <string name="morphe_loop_video_range_dialog_title">טווח לולאה</string>
+  <string name="morphe_loop_video_range_label_start">התחלה</string>
+  <string name="morphe_loop_video_range_label_end">סיום</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (empty = סוף הסרטון)</string>
+  <string name="morphe_loop_video_range_set">הגדר</string>
+  <string name="morphe_loop_video_range_clear">נקה</string>
+  <string name="morphe_loop_video_range_toast_on">חזרה על %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">ניתן זמן לא חוקי</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">זוכר את רמת הבהירות בעת כניסה או יציאה ממצב מסך מלא</string>
   <string name="morphe_play_all_button_summary">"הקש כדי ליצור רשימת השמעה של כל הסרטונים מהערוץ, הקש והחזק כדי לבטל
@@ -459,6 +471,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">הסתר תפריט \'האזן עם YouTube Music\'</string>
   <string name="morphe_hide_quick_actions_save_button_title">הסתר תפריט \'ראה ב-VR\'</string>
   <string name="morphe_hide_quick_actions_share_button_title">הסתר לחצן שיתוף</string>
+  <string name="morphe_quick_actions_top_margin_title">שוליים עליונים לפעולות מהירות</string>
+  <string name="morphe_quick_actions_top_margin_summary">הגדר את השוליים העליונים של סרגל הפעולות המהירות (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">כותבים</string>
   <string name="morphe_captions_screen_summary">הסתר את הכותרת התחתונה של תפריט \'איכות\'</string>

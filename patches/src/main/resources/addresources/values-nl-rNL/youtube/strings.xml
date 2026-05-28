@@ -147,6 +147,7 @@ Het tonen van YouTube Doodles kan voorkomen dat aangepaste headers worden weerge
   <string name="morphe_hide_explore_section_summary">Verbergt de Explore this course en Explore the podcast secties</string>
   <string name="morphe_hide_explore_course_section_title">Verberg \'Explore this course\'-sectie</string>
   <string name="morphe_hide_explore_podcast_section_title">Verberg \'Explore the podcast\'-sectie</string>
+  <string name="morphe_hide_featured_channels_section_title">Verberg Uitgelichte kanalen sectie</string>
   <string name="morphe_hide_featured_links_section_title">Verberg Uitgelichte links sectie</string>
   <string name="morphe_hide_featured_places_section_title">Verberg \'Uitgelichte plaatsen\' sectie</string>
   <string name="morphe_hide_featured_videos_section_title">Verberg Uitgelichte video\'s sectie</string>
@@ -305,10 +306,21 @@ Controleer of de pakketnaam correct is en de app is geïnstalleerd"</string>
   <string name="morphe_external_downloader_empty_warning">De pakketnaam kan niet leeg zijn</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Loopvideo inschakelen</string>
+  <string name="morphe_do_not_remember_loop_video_title">Loop video niet onthouden</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Voorkom dat de huidige status van loop video wordt opgeslagen voor volgende video\'s</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Toon Loop video-knop</string>
   <string name="morphe_loop_video_button_toast_on">Loopvideo is ingeschakeld</string>
   <string name="morphe_loop_video_button_toast_off">Loopvideo is uitgeschakeld</string>
+  <string name="morphe_loop_video_range_dialog_title">Bereik</string>
+  <string name="morphe_loop_video_range_label_start">Start</string>
+  <string name="morphe_loop_video_range_label_end">Einde</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (leeg = einde video)</string>
+  <string name="morphe_loop_video_range_set">Instellen</string>
+  <string name="morphe_loop_video_range_clear">Wissen</string>
+  <string name="morphe_loop_video_range_toast_on">Herhalen %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Ongeldige tijd opgegeven</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Toon Speel alles-knop</string>
   <string name="morphe_play_all_button_summary">"Tik om een afspeellijst van alle video's van het kanaal te genereren, houd ingedrukt om ongedaan te maken
@@ -460,6 +472,8 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Verberg Afspeellijst-knop</string>
   <string name="morphe_hide_quick_actions_save_button_title">Verberg Opslaan-knop</string>
   <string name="morphe_hide_quick_actions_share_button_title">Verberg de knop \"Delen\"</string>
+  <string name="morphe_quick_actions_top_margin_title">Snelle acties bovenmarge</string>
+  <string name="morphe_quick_actions_top_margin_summary">Stel de bovenmarge van de balk met snelle acties in (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Ondertitels</string>
   <string name="morphe_captions_screen_summary">Beheer automatische ondertitels en ondertitelcookies</string>

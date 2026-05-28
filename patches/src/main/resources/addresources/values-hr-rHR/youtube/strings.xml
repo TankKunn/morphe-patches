@@ -292,6 +292,7 @@ Potvrdite da naziv paketa je tačan i da je aplikacija instalirana."</string>
   <string name="morphe_loop_video_button_title">Prikaži tipku za prikaz video petlje</string>
   <string name="morphe_loop_video_button_toast_on">Petljati video je uključen</string>
   <string name="morphe_loop_video_button_toast_off">Petljati video je isključen</string>
+  <string name="morphe_loop_video_range_clear">Izbriši</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Prikaži tipku Reproduciraj sve</string>
   <string name="morphe_play_all_button_type_title">Generiranje načina reprodukcije</string>

@@ -290,6 +290,9 @@ Paket adının düzgün olduğun yoxla və tətbiqi quraşdırın"</string>
   <string name="morphe_loop_video_button_title">Video Təkrarlama düyməsini göstər</string>
   <string name="morphe_loop_video_button_toast_on">Video təkrarlama açıqdır</string>
   <string name="morphe_loop_video_button_toast_off">Video təkrarlama qapalıdır</string>
+  <string name="morphe_loop_video_range_label_start">Başlanğıc</string>
+  <string name="morphe_loop_video_range_label_end">Bitmə</string>
+  <string name="morphe_loop_video_range_clear">Təmizlə</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Hamısını oynat düyməsini göstər</string>
   <string name="morphe_play_all_button_type_title">Pleylist yaratma rejimi</string>

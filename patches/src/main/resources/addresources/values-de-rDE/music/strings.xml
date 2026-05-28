@@ -57,7 +57,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_9000ms">9 Sekunden</string>
   <string name="morphe_crossfade_duration_10000ms">10 Sekunden</string>
   <string name="morphe_music_crossfade_on_skip_title">Nahtlose Wiedergabe bei manuellem Überspringen</string>
-  <string name="morphe_music_crossfade_on_skip_summary">Wendet den Crossfade-Effekt an, wenn du manuell zum nächsten Titel springst</string>
+  <string name="morphe_music_crossfade_on_skip_summary">Wendet den Crossfade-Effekt an, wenn Sie manuell zum nächsten Titel springen</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Nahtlose Wiedergabe bei automatischer Wiedergabe</string>
   <string name="morphe_music_crossfade_on_auto_advance_summary">Wendet den Crossfade-Effekt an, wenn ein Titel natürlich endet</string>
   <string name="morphe_music_crossfade_session_control_title">Sitzungssteuerung</string>

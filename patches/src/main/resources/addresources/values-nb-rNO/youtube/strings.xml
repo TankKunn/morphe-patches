@@ -147,6 +147,7 @@ Visning av YouTube-doodles kan hindre egendefinerte headere fra å vises."</stri
   <string name="morphe_hide_explore_section_summary">Skjuler «Utforsk dette kurset»- og «Utforsk podkasten»-seksjonene</string>
   <string name="morphe_hide_explore_course_section_title">Skjul «Utforsk dette kurset»-seksjon</string>
   <string name="morphe_hide_explore_podcast_section_title">Skjul «Utforsk podkasten»-seksjon</string>
+  <string name="morphe_hide_featured_channels_section_title">Skjul seksjonen med utvalgte kanaler</string>
   <string name="morphe_hide_featured_links_section_title">Skjul Utvalgte lenker-seksjon</string>
   <string name="morphe_hide_featured_places_section_title">Skjul «Utvalgte steder»-seksjon</string>
   <string name="morphe_hide_featured_videos_section_title">Skjul Utvalgte videoer-seksjon</string>
@@ -304,10 +305,21 @@ Vennligst sjekk at pakkenavnet er riktig og at appen er installert"</string>
   <string name="morphe_external_downloader_empty_warning">Pakkenavnet kan ikke være tomt</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Aktiver video i sløyfe</string>
+  <string name="morphe_do_not_remember_loop_video_title">Husk ikke løkkevideo</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Forhindre at gjeldende status for løkkevideoen lagres for påfølgende videoer</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Vis gjenta video-knapp</string>
   <string name="morphe_loop_video_button_toast_on">Video i sløyfe er aktivert</string>
   <string name="morphe_loop_video_button_toast_off">Video i sløyfe er deaktivert</string>
+  <string name="morphe_loop_video_range_dialog_title">Repetisjonsområde</string>
+  <string name="morphe_loop_video_range_label_start">Start</string>
+  <string name="morphe_loop_video_range_label_end">Slutt</string>
+  <string name="morphe_loop_video_range_hint_start">[tt:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[tt:]mm:ss (tom = videoslutt)</string>
+  <string name="morphe_loop_video_range_set">Sett</string>
+  <string name="morphe_loop_video_range_clear">Tøm</string>
+  <string name="morphe_loop_video_range_toast_on">Looper %1$s – %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Ugyldig tidsperiode</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Vis Spill alle-knapp</string>
   <string name="morphe_play_all_button_summary">"Trykk for å generere en spilleliste over alle videoer fra kanalen, trykk og hold for å angre
@@ -459,6 +471,8 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Skjul Spillelisteknapp</string>
   <string name="morphe_hide_quick_actions_save_button_title">Skjul Lagre-knapp</string>
   <string name="morphe_hide_quick_actions_share_button_title">Skjul Del-knappen</string>
+  <string name="morphe_quick_actions_top_margin_title">Rask handling-toppmargin</string>
+  <string name="morphe_quick_actions_top_margin_summary">Angi toppmargen for hurtighandlingslinjen (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Teksting</string>
   <string name="morphe_captions_screen_summary">Administrer automatisk teksting og informasjonskapsler for teksting</string>

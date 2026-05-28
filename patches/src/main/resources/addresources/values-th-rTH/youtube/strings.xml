@@ -147,6 +147,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_explore_section_summary">ซ่อนส่วน \'สำรวจหลักสูตรนี้\' และ \'สำรวจพอดแคสต์\'</string>
   <string name="morphe_hide_explore_course_section_title">ซ่อนส่วน \'สำรวจหลักสูตรนี้\'</string>
   <string name="morphe_hide_explore_podcast_section_title">ซ่อนส่วน \'สำรวจพอดแคสต์\'</string>
+  <string name="morphe_hide_featured_channels_section_title">ซ่อนช่องแนะนำ</string>
   <string name="morphe_hide_featured_links_section_title">ซ่อนส่วน Featured links</string>
   <string name="morphe_hide_featured_places_section_title">ซ่อนส่วน \'สถานที่แนะนำ\'</string>
   <string name="morphe_hide_featured_videos_section_title">ซ่อนส่วนวิดีโอแนะนำ</string>
@@ -305,10 +306,21 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_empty_warning">ชื่อแพ็กเกจต้องไม่ว่างเปล่า</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">เปิดใช้งานการเล่นวิดีโอซ้ำ</string>
+  <string name="morphe_do_not_remember_loop_video_title">จำการเล่นวิดีโอซ้ำไม่ได้</string>
+  <string name="morphe_do_not_remember_loop_video_summary">ป้องกันการบันทึกสถานะการเล่นวิดีโอซ้ำปัจจุบันสำหรับวิดีโอถัดไป</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">แสดงปุ่มเล่นวิดีโอซ้ำ</string>
   <string name="morphe_loop_video_button_toast_on">เปิดใช้งานการเล่นวิดีโอซ้ำแล้ว</string>
   <string name="morphe_loop_video_button_toast_off">ปิดใช้งานการเล่นวิดีโอซ้ำแล้ว</string>
+  <string name="morphe_loop_video_range_dialog_title">ช่วงการวนซ้ำ</string>
+  <string name="morphe_loop_video_range_label_start">เริ่มต้น</string>
+  <string name="morphe_loop_video_range_label_end">สิ้นสุด</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (empty = video end)</string>
+  <string name="morphe_loop_video_range_set">ตั้งค่า</string>
+  <string name="morphe_loop_video_range_clear">ล้าง</string>
+  <string name="morphe_loop_video_range_toast_on">กำลังทำซ้ำ %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">ช่วงเวลาไม่ถูกต้อง</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">แสดงปุ่มเล่นทั้งหมด</string>
   <string name="morphe_play_all_button_summary">"แตะเพื่อสร้างเพลย์ลิสต์ของวิดีโอทั้งหมดจากช่อง แตะค้างเพื่อยกเลิก
@@ -460,6 +472,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">ซ่อนปุ่ม Playlist</string>
   <string name="morphe_hide_quick_actions_save_button_title">ซ่อนปุ่มบันทึก</string>
   <string name="morphe_hide_quick_actions_share_button_title">ซ่อนปุ่มแชร์</string>
+  <string name="morphe_quick_actions_top_margin_title">ระยะขอบด้านบนของการดำเนินการอย่างรวดเร็ว</string>
+  <string name="morphe_quick_actions_top_margin_summary">ตั้งค่าระยะขอบด้านบนของแถบการดำเนินการอย่างรวดเร็ว (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">คำบรรยาย</string>
   <string name="morphe_captions_screen_summary">จัดการคำบรรยายอัตโนมัติและคุกกี้คำบรรยาย</string>

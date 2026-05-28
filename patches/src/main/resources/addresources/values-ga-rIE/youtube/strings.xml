@@ -147,6 +147,7 @@ D’fhéadfadh sé go gcuirfí cosc ​​ar cheanntásca saincheaptha a thaispe
   <string name="morphe_hide_explore_section_summary">Folaíonn sé na rannóga Iniúchadh a dhéanamh ar an gcúrsa seo agus Iniúchadh a dhéanamh ar na podchraoltaí</string>
   <string name="morphe_hide_explore_course_section_title">Folaigh an chuid \'Iniúchadh a dhéanamh ar an gcúrsa seo\'</string>
   <string name="morphe_hide_explore_podcast_section_title">Folaigh an chuid \'Iniúchadh a dhéanamh ar an bpodchraoladh\'</string>
+  <string name="morphe_hide_featured_channels_section_title">Folaigh rannán cainéil Réadmhaoine</string>
   <string name="morphe_hide_featured_links_section_title">Folaigh an chuid Naisc Réadmhaoine</string>
   <string name="morphe_hide_featured_places_section_title">Folaigh an chuid \'Áiteanna Réadmhaoine\'</string>
   <string name="morphe_hide_featured_videos_section_title">Folaigh an rannóg Físeáin Réadmhaoine</string>
@@ -304,10 +305,21 @@ Fíoraigh go bhfuil ainm an phacáiste ceart agus go bhfuil an aip suiteáilte"<
   <string name="morphe_external_downloader_empty_warning">Ní féidir ainm an phacáiste a fhágáil folamh</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Cumasaigh físeán lúbtha</string>
+  <string name="morphe_do_not_remember_loop_video_title">Ná cuir i gcuimhne físeán lúpa</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Coscaíonn sé go seachnfar an stát reatha físeáin lúpa a shábháil le haghaidh físeáin ina dhiaidh sin</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Taispeáin cnaipe físe Lúb</string>
   <string name="morphe_loop_video_button_toast_on">Tá físeán lúbtha ar siúl</string>
   <string name="morphe_loop_video_button_toast_off">Tá físeán lúbtha as siúl</string>
+  <string name="morphe_loop_video_range_dialog_title">Raon lúpa</string>
+  <string name="morphe_loop_video_range_label_start">Tosaigh</string>
+  <string name="morphe_loop_video_range_label_end">Deireadh</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (folamh = deireadh físeáin)</string>
+  <string name="morphe_loop_video_range_set">Socraigh</string>
+  <string name="morphe_loop_video_range_clear">Glan</string>
+  <string name="morphe_loop_video_range_toast_on">Ag lúbáil %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Raon ama neamhbhailí</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Taispeáin an cnaipe Seinn Uile</string>
   <string name="morphe_play_all_button_summary">"Tapáil chun seinmliosta de na físeáin go léir ón gcainéal a ghiniúint, tapáil agus coinnigh síos chun cealú
@@ -358,8 +370,8 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_swipe_brightness_summary">Svaidhpeáil go hingearach ar thaobh na láimhe clé den mhodh lánscáileáin chun an gile a choigeartú</string>
   <string name="morphe_swipe_volume_title">Cumasaigh gotha ​​toirte</string>
   <string name="morphe_swipe_volume_summary">Svaidhpeáil go hingearach ar thaobh na láimhe deise den mhodh lánscáileáin chun an toirt a choigeartú</string>
-  <string name="morphe_swipe_zone_width_title">Leithead/toilleadh laethanta</string>
-  <string name="morphe_swipe_zone_width_summary">Céatadán gach imeall scáirne a thartaimsítear do gothaí gealchais agus toilleadh (5-50)</string>
+  <string name="morphe_swipe_zone_width_title">Leithead crios gile/toirte</string>
+  <string name="morphe_swipe_zone_width_summary">Céatadán de gach imeall scáileáin atá curtha in áirithe do ghluaiseachtaí gile agus toirte (5-50)</string>
   <string name="morphe_swipe_zone_label_brightness">Gile</string>
   <string name="morphe_swipe_zone_label_volume">Toirt</string>
   <string name="morphe_swipe_zone_label_native">Dúchasach</string>
@@ -380,23 +392,23 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Socraigh dath an bharra dul chun cinn rialuithe gile</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Dath toirte forleagan svaidhpeála</string>
   <string name="morphe_swipe_overlay_progress_volume_color_summary">Socraigh dath an bharra dul chun cinn rialuithe toirte</string>
-  <string name="morphe_swipe_overlay_progress_speed_color_title">Dath forleagan luais phróiseachta</string>
-  <string name="morphe_swipe_overlay_progress_speed_color_summary">Socraigh dath barra dul chun cinn rialuithe luais</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_title">Dath luas forleagan svaidhpeála</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_summary">Socraigh dath an bharra dul chun cinn maidir le rialuithe luas athsheinm</string>
   <string name="morphe_swipe_text_overlay_size_title">Méid téacs forleagan svaidhpeála</string>
   <string name="morphe_swipe_text_overlay_size_summary">Coigeartaigh méid an téacs ar an scáileán (1-30)</string>
   <string name="morphe_swipe_text_overlay_size_invalid_toast">Caithfidh méid an téacs a bheith idir 1-30</string>
   <string name="morphe_swipe_threshold_title">Tairseach méide svaidhpeála</string>
   <string name="morphe_swipe_threshold_summary">Socraigh an fad svaidhpeála riachtanach sula ngníomhaítear coigeartú</string>
   <string name="morphe_swipe_volume_sensitivity_title">Íogaireacht svaidhpeáil toirte</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Is mó na luachanna, is mó an toirt a athraíonn in aghaidh an svaidhpeála</string>
-  <string name="morphe_swipe_brightness_sensitivity_title">Íogaireacht svaidhpeáil gile</string>
-  <string name="morphe_swipe_brightness_sensitivity_summary">Is mó na luachanna, is éigeas níos mó svaidhpeáil in aghaidh gach céim gile</string>
-  <string name="morphe_swipe_speed_title">Cumasaithe gotha luais</string>
-  <string name="morphe_swipe_speed_summary">Sáiligh go horizontally sa chuid uachtarach den mód lánscáileen chun dlúthchaighdeadh an athsheinme a athrú</string>
-  <string name="morphe_swipe_speed_sensitivity_title">Íogaireacht svaidhpeáil luais</string>
-  <string name="morphe_swipe_speed_sensitivity_summary">Is mó na luachanna, is éigeas níos mó svaidhpeáil in aghaidh gach céim luais</string>
-  <string name="morphe_swipe_speed_zone_height_title">Airde chrios luais</string>
-  <string name="morphe_swipe_speed_zone_height_summary">Airde chrios gotha luais mar céatadán d’airde an imreora (5-75)</string>
+  <string name="morphe_swipe_volume_sensitivity_summary">Méadaíonn luachanna níos airde an t-athrú toirte in aghaidh an svaidhpeála.</string>
+  <string name="morphe_swipe_brightness_sensitivity_title">Íogaireacht gile svaidhpeála</string>
+  <string name="morphe_swipe_brightness_sensitivity_summary">Éilíonn luachanna níos airde níos mó svaidhpeála in aghaidh gach céim gile</string>
+  <string name="morphe_swipe_speed_title">Cumasaigh gotha ​​luais</string>
+  <string name="morphe_swipe_speed_summary">Svaidhpeáil go cothrománach sa chrios uachtarach den mhodh lánscáileáin chun luas athsheinm a athrú</string>
+  <string name="morphe_swipe_speed_sensitivity_title">Íogaireacht luas-swipeála</string>
+  <string name="morphe_swipe_speed_sensitivity_summary">Éilíonn luachanna níos airde níos mó svaidhpeála in aghaidh gach céim luais</string>
+  <string name="morphe_swipe_speed_zone_height_title">Airde crios luas</string>
+  <string name="morphe_swipe_speed_zone_height_summary">Airde an chrios gotha ​​luais mar chéatadán d\'airde an imreora (5-75)</string>
   <string name="morphe_swipe_zone_label_speed">Luas</string>
   <string name="morphe_swipe_overlay_style_title">Stíl forleagan svaidhpeála</string>
   <string name="morphe_swipe_overlay_style_entry_1">Forleagan cothrománach</string>
@@ -459,6 +471,8 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Folaigh Cnaipe Seinmliosta</string>
   <string name="morphe_hide_quick_actions_save_button_title">Folaigh an cnaipe Sábháil</string>
   <string name="morphe_hide_quick_actions_share_button_title">Folaigh an cnaipe Comhroinnte</string>
+  <string name="morphe_quick_actions_top_margin_title">Gníomhartha tapa corrlach barr</string>
+  <string name="morphe_quick_actions_top_margin_summary">Socraigh corrlach barr an bharra gníomhartha tapa (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Fotheidil</string>
   <string name="morphe_captions_screen_summary">Bainistigh fotheidil uathoibríocha agus fianáin fotheidil</string>

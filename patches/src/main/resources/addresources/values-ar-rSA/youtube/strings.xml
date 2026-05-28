@@ -76,7 +76,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_title">إخفاء زر الميكروفون العائم</string>
   <string name="morphe_hide_floating_microphone_button_summary">يخفي زر الميكروفون العائم في الزاوية اليمنى السفلية من شاشة اقتراحات البحث</string>
   <string name="morphe_hide_horizontal_shelves_title">إخفاء الرفوف الأفقية</string>
-  <string name="morphe_hide_horizontal_shelves_summary">يخفي الرفوف الأفقية مثل الأخبار العاجلة، منشورات المجتمع التي قد تعجبك، متابعة المشاهدة، استكشف المزيد من القنوات، استكشف المزيد من المواضيع، من أجلك، أحدث الفيديوهات، الأكثر صلة، منشورات من مجتمع صنّاع المحتوى، التسوق وشاهدها مرة أخرى</string>
+  <string name="morphe_hide_horizontal_shelves_summary">يخفي الرفوف الأفقية مثل أخبار عاجلة، منشورات المجتمع التي قد تعجبك، متابعة المشاهدة، استكشاف المزيد من القنوات، استكشاف المزيد من المواضيع، من أجلك، أحدث الفيديوهات، الأكثر صلة، منشورات من مجتمع صنّاع المحتوى، التسوّق وشاهدها مرة أخرى</string>
   <string name="morphe_hide_hyped_label_title">إخفاء علامة أكبر تشجيع</string>
   <string name="morphe_hide_image_shelf_title">إخفاء رف الصور</string>
   <string name="morphe_hide_image_shelf_summary">يخفي رفوف الصور في نتائج البحث</string>
@@ -96,7 +96,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_search_term_thumbnails_summary">يخفي عرض المصغرات في قائمة الإكمال التلقائي للبحث</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
-  <string name="morphe_hide_show_more_button_title">إخفاء زر \'عرض المزيد\'</string>
+  <string name="morphe_hide_show_more_button_title">إخفاء زر \'عرض عناصر أكثر\'</string>
   <string name="morphe_hide_show_more_button_summary">يخفي زر التوسيع أسفل الفيديوهات في نتائج البحث</string>
   <string name="morphe_hide_subscribed_channels_bar_title">إخفاء شريط القنوات المشترك بها</string>
   <string name="morphe_hide_surveys_title">إخفاء الاستطلاعات</string>
@@ -147,6 +147,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_explore_section_summary">يخفي أقسام استكشاف هذه الدورة التدريبية و استكشاف البودكاست</string>
   <string name="morphe_hide_explore_course_section_title">إخفاء قسم \'استكشاف هذه الدورة التدريبية\'</string>
   <string name="morphe_hide_explore_podcast_section_title">إخفاء قسم \'استكشاف البودكاست\'</string>
+  <string name="morphe_hide_featured_channels_section_title">إخفاء قسم القنوات المميّزة</string>
   <string name="morphe_hide_featured_links_section_title">إخفاء قسم الروابط المميزة</string>
   <string name="morphe_hide_featured_places_section_title">إخفاء قسم \'الأماكن المميزة\'</string>
   <string name="morphe_hide_featured_videos_section_title">إخفاء قسم الفيديوهات المميزة</string>
@@ -304,10 +305,21 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_empty_warning">لا يمكن أن يكون اسم الحزمة فارغًا</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">تمكين تكرار الفيديو</string>
+  <string name="morphe_do_not_remember_loop_video_title">لا تتذكر حالة تكرار الفيديو</string>
+  <string name="morphe_do_not_remember_loop_video_summary">منع حفظ حالة تكرار الفيديو الحالية للفيديوهات اللاحقة</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">عرض زر تكرار الفيديو</string>
   <string name="morphe_loop_video_button_toast_on">تكرار الفيديو قيد التشغيل</string>
   <string name="morphe_loop_video_button_toast_off">تكرار الفيديو متوقف</string>
+  <string name="morphe_loop_video_range_dialog_title">نطاق التكرار</string>
+  <string name="morphe_loop_video_range_label_start">البداية</string>
+  <string name="morphe_loop_video_range_label_end">النهاية</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (فارغ = نهاية الفيديو)</string>
+  <string name="morphe_loop_video_range_set">تعيين</string>
+  <string name="morphe_loop_video_range_clear">مسح</string>
+  <string name="morphe_loop_video_range_toast_on">تكرار ‎%1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">الوقت المحدد غير صحيح</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">عرض زر تشغيل الكل</string>
   <string name="morphe_play_all_button_summary">"انقر لإنشاء قائمة تشغيل لجميع فيديوهات القناة
@@ -460,6 +472,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">إخفاء زر قائمة التشغيل</string>
   <string name="morphe_hide_quick_actions_save_button_title">إخفاء زر حفظ</string>
   <string name="morphe_hide_quick_actions_share_button_title">إخفاء زر مشاركة</string>
+  <string name="morphe_quick_actions_top_margin_title">إزاحة الإجراءات السريعة للأعلى</string>
+  <string name="morphe_quick_actions_top_margin_summary">ضبط إزاحة شريط الإجراءات السريعة للأعلى (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">الترجمة</string>
   <string name="morphe_captions_screen_summary">التحكم في الترجمة التلقائية وملفات تعريف ارتباط الترجمة</string>

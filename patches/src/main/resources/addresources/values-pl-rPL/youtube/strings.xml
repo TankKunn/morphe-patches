@@ -147,6 +147,7 @@ Ich obecność może blokować widoczność własnych logo w nagłówku."</strin
   <string name="morphe_hide_explore_section_summary">Ukrywa sekcje Poznaj ten kurs oraz Poznaj podcast</string>
   <string name="morphe_hide_explore_course_section_title">Ukryj sekcję \"Poznaj ten kurs\"</string>
   <string name="morphe_hide_explore_podcast_section_title">Ukryj sekcję \"Poznaj podcast\"</string>
+  <string name="morphe_hide_featured_channels_section_title">Ukryj sekcję Polecane kanały</string>
   <string name="morphe_hide_featured_links_section_title">Ukryj sekcję Polecane linki</string>
   <string name="morphe_hide_featured_places_section_title">Ukryj sekcję \"Wspomniane miejsca\"</string>
   <string name="morphe_hide_featured_videos_section_title">Ukryj sekcję Polecane filmy</string>
@@ -297,17 +298,28 @@ Ograniczenia:
   <string name="morphe_external_downloader_other_item_hint">Wprowadź nazwę pakietu aplikacji</string>
   <string name="morphe_external_downloader_other_item">Inna</string>
   <string name="morphe_external_downloader_not_found_title">Aplikacja nie jest zainstalowana</string>
-  <string name="morphe_external_downloader_not_installed_warning">Aplikacja %s nie jest zainstalowana. Zainstaluj ją.</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"Nie znaleziono zainstalowanej aplikacji o nazwie pakietu: %s
+  <string name="morphe_external_downloader_not_installed_warning">%s nie jest zainstalowany. Zainstaluj go.</string>
+  <string name="morphe_external_downloader_package_not_found_warning">"Nie można znaleźć zainstalowanej aplikacji o nazwie pakietu: %s
 
-Sprawdź, czy nazwa pakietu jest prawidłowa i czy aplikacja jest zainstalowana"</string>
+Upewnij się, że nazwa pakietu jest poprawna, a aplikacja została zainstalowana"</string>
   <string name="morphe_external_downloader_empty_warning">Nazwa pakietu nie może być pusta</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Włącz zapętlanie filmu</string>
+  <string name="morphe_do_not_remember_loop_video_title">Nie zapamiętuj zapętlania</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Zapobiega zapisywaniu stanu zapętlania dla kolejnych filmów</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Pokaż przycisk Odtwarzaj w pętli</string>
   <string name="morphe_loop_video_button_toast_on">Zapętlanie filmu jest włączone</string>
   <string name="morphe_loop_video_button_toast_off">Zapętlanie filmu jest wyłączone</string>
+  <string name="morphe_loop_video_range_dialog_title">Zakres pętli</string>
+  <string name="morphe_loop_video_range_label_start">Początek</string>
+  <string name="morphe_loop_video_range_label_end">Koniec</string>
+  <string name="morphe_loop_video_range_hint_start">[gg:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[gg:]mm:ss (puste = do końca)</string>
+  <string name="morphe_loop_video_range_set">Ustaw</string>
+  <string name="morphe_loop_video_range_clear">Wyczyść</string>
+  <string name="morphe_loop_video_range_toast_on">Zapętlanie %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Nieprawidłowy zakres czasu</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Pokaż przycisk Odtwórz wszystko</string>
   <string name="morphe_play_all_button_summary">"Dotknij, aby wygenerować playlistę wszystkich filmów z kanału, przytrzymaj, aby cofnąć
@@ -441,7 +453,7 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_hide_ask_button_title">Ukryj przycisk Zapytaj</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Ukryj przycisk Klip</string>
-  <string name="morphe_hide_clip_button_user_dialog_message">Ta funkcja ukrywania może nie działać na niektórych kontach</string>
+  <string name="morphe_hide_clip_button_user_dialog_message">Ta funkcja ukrywania może nie działać na niektórych kontach.</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shop_button_title">Ukryj przycisk Sklep</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
@@ -459,6 +471,8 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Ukryj przycisk Playlisty</string>
   <string name="morphe_hide_quick_actions_save_button_title">Ukryj przycisk Zapisz</string>
   <string name="morphe_hide_quick_actions_share_button_title">Ukryj przycisk Udostępnij</string>
+  <string name="morphe_quick_actions_top_margin_title">Górny margines paska akcji</string>
+  <string name="morphe_quick_actions_top_margin_summary">Ustaw górny margines paska akcji (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Napisy</string>
   <string name="morphe_captions_screen_summary">Zarządzaj automatycznymi napisami i plikami cookie napisów</string>
@@ -479,9 +493,9 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_caption_cookies_summary">Ciasteczka do ustawienia w żądaniach Timed Text API (Caption Data API)</string>
   <string name="morphe_get_caption_cookies_title">Pobierz ciasteczka napisów</string>
   <string name="morphe_get_caption_cookies_summary">Kliknij tutaj, aby pobrać ciasteczka</string>
-  <string name="morphe_get_caption_cookies_failed">Nie udało się pobrać plików cookie</string>
-  <string name="morphe_get_caption_cookies_duplicate">Pliki cookie już istnieją</string>
-  <string name="morphe_get_caption_cookies_success">Pliki cookie zostały pomyślnie zaktualizowane</string>
+  <string name="morphe_get_caption_cookies_failed">Nie udało się pobrać ciasteczek</string>
+  <string name="morphe_get_caption_cookies_duplicate">Ciasteczka już istnieją</string>
+  <string name="morphe_get_caption_cookies_success">Ciasteczka zostały pomyślnie zaktualizowane</string>
   <!-- layout.captions.transcriptPatch -->
   <string name="morphe_fix_transcript_title">Napraw transkrypcję</string>
   <string name="morphe_fix_transcript_summary">Rozwiązuje błąd weryfikacji warunków wstępnych, który może uniemożliwiać wczytanie transkrypcji</string>

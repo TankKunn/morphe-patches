@@ -44,9 +44,9 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_screen_title">Giả mạo luồng phát video</string>
   <string name="morphe_spoof_video_streams_screen_summary">Cấu hình giả mạo client nhằm tránh lỗi khi phát</string>
   <string name="morphe_spoof_video_streams_title">Giả mạo luồng phát video</string>
-  <string name="morphe_spoof_video_streams_summary">"Khắc phục sự cố phát lại cho hầu hết người dùng bằng cách yêu cầu một luồng video tương thích
+  <string name="morphe_spoof_video_streams_summary">"Sửa lỗi phát cho hầu hết người dùng bằng cách đổi luồng video tương thích.
 
-Nếu bạn là người dùng YouTube Premium, cài đặt này có thể không cần thiết."</string>
+Nếu bạn đã mua gói Premium, có thể không cần phải bật cài đặt này."</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Không thể lấy bất kỳ luồng phát nào</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Tắt cài đặt này có thể gây ra lỗi khi phát.</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_title.
@@ -114,7 +114,7 @@ Bấm tiếp tục bên dưới để đăng nhập"</string>
   <string name="morphe_sanitize_sharing_links_title">Rút gọn liên kết chia sẻ</string>
   <string name="morphe_sanitize_sharing_links_summary">Xóa các tham số theo dõi khỏi liên kết được chia sẻ</string>
   <string name="morphe_replace_music_with_youtube_title">Đổi liên kết chia sẻ thành youtube.com</string>
-  <string name="morphe_replace_music_with_youtube_summary">Thay thế music.youtube.com bằng youtube.com trong các liên kết được chia sẻ</string>
+  <string name="morphe_replace_music_with_youtube_summary">Thay music.youtube.com bằng youtube.com khi chia sẻ liên kết</string>
   <string name="morphe_replace_links_with_shortener_title">Đổi liên kết chia sẻ thành youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Buộc các video dùng định dạng youtu.be</string>
 </resources>

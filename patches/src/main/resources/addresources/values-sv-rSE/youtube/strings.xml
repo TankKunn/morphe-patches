@@ -290,6 +290,8 @@ Kontrollera att paketnamnet är korrekt och att appen är installerad"</string>
   <string name="morphe_loop_video_button_title">Visa knappen Videoslinga</string>
   <string name="morphe_loop_video_button_toast_on">Videoslinga är aktiverad</string>
   <string name="morphe_loop_video_button_toast_off">Videoslinga är inaktiverad</string>
+  <string name="morphe_loop_video_range_label_end">Slut</string>
+  <string name="morphe_loop_video_range_clear">Rensa</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Visa knappen Spela upp alla</string>
   <string name="morphe_play_all_button_type_title">Läget för generering av spellistor</string>

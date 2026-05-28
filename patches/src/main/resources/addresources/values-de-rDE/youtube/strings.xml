@@ -58,7 +58,7 @@ Folgende Änderungen werden vorgenommen:
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_feed_flyout_menu_title">Aktiviere Filtermenü Flyout</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtermenü Flyout</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Geben Sie die Namen des Flyout-Menüs ein, die durch neue Zeilen getrennt werden sollen, um danach zu filtern</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Geben Sie die Namen des Flyout-Menüs ein, getrennt durch Zeilenumbrüche, um danach zu filtern</string>
   <string name="morphe_hide_album_cards_title">Albumkarten ausblenden</string>
   <string name="morphe_hide_album_cards_summary">Verbirgt die Albumkarten unter der Künstlerbeschreibung</string>
   <string name="morphe_hide_artist_cards_title">Interpretenkarten ausblenden</string>
@@ -74,7 +74,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_expandable_card_entry_4">Produkt- und Zusammenfassungskarten ausblenden</string>
   <string name="morphe_hide_expandable_card_entry_5">Alle ausblenden</string>
   <string name="morphe_hide_floating_microphone_button_title">Schwebende Mikrofon-Schaltfläche ausblenden</string>
-  <string name="morphe_hide_floating_microphone_button_summary">Verbirgt die schwebende Mikrofontaste in der unteren rechten Ecke des Suchvorschlagbildschirms</string>
+  <string name="morphe_hide_floating_microphone_button_summary">Verbirgt den schwebenden Mikrofon-Button in der unteren rechten Ecke des Suchvorschlagbildschirms</string>
   <string name="morphe_hide_horizontal_shelves_title">Horizontale Reihen ausblenden</string>
   <string name="morphe_hide_horizontal_shelves_summary">Horizontale Bereiche sind ausgeblendet, wie z. B.: Eilmeldungen, Community-Beiträge, die Ihnen gefallen könnten, Wiedergabe fortsetzen, Mehr Kanäle entdecken, Mehr Themen entdecken, Für Sie, Neueste Videos, Relevanteste Beiträge aus der Creators Community, Einkaufen und Noch einmal ansehen</string>
   <string name="morphe_hide_hyped_label_title">Verstecke Hyped Label</string>
@@ -110,7 +110,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_you_may_like_section_title">Verbergen Sie den Abschnitt ‘Sie könnten auch gefallen’</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_youtube_doodles_title">YouTube Doodles ausblenden</string>
-  <string name="morphe_hide_youtube_doodles_summary">Verbirgt saisonale und ereignisbezogene Animationen auf dem YouTube-Logo</string>
+  <string name="morphe_hide_youtube_doodles_summary">Verbirgt saisonale und ereignisbezogene Animationen des YouTube-Logos</string>
   <string name="morphe_hide_youtube_doodles_user_dialog_message">"YouTube Doodles werden einige Tage im Jahr in verschiedenen Teilen der Welt angezeigt.
 
 Das Anzeigen von YouTube Doodles kann verhindern, dass benutzerdefinierte Header angezeigt werden."</string>
@@ -135,7 +135,7 @@ Das Anzeigen von YouTube Doodles kann verhindern, dass benutzerdefinierte Header
   <string name="morphe_hide_video_title_title">Videotitel ausblenden</string>
   <string name="morphe_hide_video_title_summary">Verbirgt den Videotitel im Vollbildmodus</string>
   <string name="morphe_hide_description_components_screen_title">Videobeschreibung</string>
-  <string name="morphe_hide_description_components_screen_summary">Wählen Sie aus, welche Komponenten unter der Videobeschreibung angezeigt werden sollen</string>
+  <string name="morphe_hide_description_components_screen_summary">Wählen Sie aus, welche Komponenten in der Videobeschreibung angezeigt werden sollen</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">KI-generierte Videozusammenfassungs-Bereich ausblenden</string>
   <string name="morphe_hide_ask_section_title">Ask-Bereich ausblenden</string>
   <string name="morphe_hide_attributes_section_title">Attributes-Bereich ausblenden</string>
@@ -143,10 +143,11 @@ Das Anzeigen von YouTube Doodles kann verhindern, dass benutzerdefinierte Header
   <string name="morphe_hide_chapters_section_title">Chapters-Bereich ausblenden</string>
   <string name="morphe_hide_corrections_section_title">Corrections-Bereich ausblenden</string>
   <string name="morphe_hide_course_progress_section_title">Kursfortschritt-Bereich ausblenden</string>
-  <string name="morphe_hide_explore_section_title">Explore-Bereich ausblenden</string>
+  <string name="morphe_hide_explore_section_title">Entdecken-Bereich ausblenden</string>
   <string name="morphe_hide_explore_section_summary">Verbirgt die Bereiche „Kurs erkunden“ und „Podcast erkunden“</string>
   <string name="morphe_hide_explore_course_section_title">Kurs erkunden-Bereich ausblenden</string>
   <string name="morphe_hide_explore_podcast_section_title">Podcast erkunden-Bereich ausblenden</string>
+  <string name="morphe_hide_featured_channels_section_title">Ausblenden des Bereichs „Empfohlene Kanäle“</string>
   <string name="morphe_hide_featured_links_section_title">Empfohlene Links-Bereich ausblenden</string>
   <string name="morphe_hide_featured_places_section_title">Empfohlene Orte-Bereich ausblenden</string>
   <string name="morphe_hide_featured_videos_section_title">Empfohlene Videos-Bereich ausblenden</string>
@@ -305,10 +306,21 @@ Stellen Sie sicher, dass der Paketname korrekt ist und die App installiert ist"<
   <string name="morphe_external_downloader_empty_warning">Der Paketname darf nicht leer sein</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Loop-Video aktivieren</string>
+  <string name="morphe_do_not_remember_loop_video_title">Schleifenwiedergabe nicht merken</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Verhindern, dass der aktuelle Schleifenstatus für nachfolgende Videos gespeichert wird</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Loop-Video-Schaltfläche anzeigen</string>
   <string name="morphe_loop_video_button_toast_on">Loop-Video ist aktiviert</string>
   <string name="morphe_loop_video_button_toast_off">Loop-Video ist deaktiviert</string>
+  <string name="morphe_loop_video_range_dialog_title">Wiederholungsbereich</string>
+  <string name="morphe_loop_video_range_label_start">Start</string>
+  <string name="morphe_loop_video_range_label_end">Ende</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (leer = Videoende)</string>
+  <string name="morphe_loop_video_range_set">Festlegen</string>
+  <string name="morphe_loop_video_range_clear">Löschen</string>
+  <string name="morphe_loop_video_range_toast_on">Wiederholung von %1$s bis %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Ungültiger Zeitbereich</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Alle abspielen-Schaltfläche anzeigen</string>
   <string name="morphe_play_all_button_summary">"Tippen Sie, um eine Wiedergabeliste aller Videos aus dem Kanal zu erstellen, tippen und halten Sie gedrückt, um dies rückgängig zu machen
@@ -460,6 +472,8 @@ Info: Funktioniert möglicherweise nicht bei Live-Streams"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Verbirgt die automatischen Untertitel und Cookie-Einstellungen</string>
   <string name="morphe_hide_quick_actions_save_button_title">Immer anzeigen</string>
   <string name="morphe_hide_quick_actions_share_button_title">\'Teilen\'-Button ausblenden</string>
+  <string name="morphe_quick_actions_top_margin_title">Oberer Rand für Schnellaktionen</string>
+  <string name="morphe_quick_actions_top_margin_summary">Legen Sie den oberen Rand der Schnellaktionsleiste fest (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Untertitel</string>
   <string name="morphe_captions_screen_summary">Cookie aktivieren für Untertitel</string>

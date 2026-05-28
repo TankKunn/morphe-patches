@@ -147,6 +147,7 @@ Afisarea Doodle-urilor YouTube poate împiedica afișarea header-elor personaliz
   <string name="morphe_hide_explore_section_summary">Ascunde secțiunile Explore acest curs și Explorează podcastul</string>
   <string name="morphe_hide_explore_course_section_title">Ascunde secțiunea \"Explorează acest curs\"</string>
   <string name="morphe_hide_explore_podcast_section_title">Ascunde secțiunea \"Explorează podcastul\"</string>
+  <string name="morphe_hide_featured_channels_section_title">Ascunde secțiunea canale recomandate</string>
   <string name="morphe_hide_featured_links_section_title">Ascunde secțiunea Linkuri recomandate</string>
   <string name="morphe_hide_featured_places_section_title">Ascunde secțiunea \"Locuri recomandate\"</string>
   <string name="morphe_hide_featured_videos_section_title">Ascunde secțiunea Videoclipuri recomandate</string>
@@ -302,10 +303,21 @@ Verificați dacă numele pachetului este corect și dacă aplicația este instal
   <string name="morphe_external_downloader_empty_warning">Numele pachetului nu poate fi gol</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Activează bucla video</string>
+  <string name="morphe_do_not_remember_loop_video_title">Nu-ți aminti video în buclă</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Împiedică salvarea stării curente a videoclipului în buclă pentru videoclipurile ulterioare</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Necesită apăsarea și menținerea apăsată înainte ca o gestuă de glisare să fie recunoscută</string>
   <string name="morphe_loop_video_button_toast_on">Bucla video este activată</string>
   <string name="morphe_loop_video_button_toast_off">Bucla video este dezactivată</string>
+  <string name="morphe_loop_video_range_dialog_title">Interval de buclă</string>
+  <string name="morphe_loop_video_range_label_start">Start</string>
+  <string name="morphe_loop_video_range_label_end">Sfârșit</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (gol = sfârșitul videoclipului)</string>
+  <string name="morphe_loop_video_range_set">Setare</string>
+  <string name="morphe_loop_video_range_clear">Golește</string>
+  <string name="morphe_loop_video_range_toast_on">Buclează %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Interval de timp invalid</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Reține nivelul luminozității la intrarea/ieșirea din modul ecran complet</string>
   <string name="morphe_play_all_button_summary">"Atinge pentru a genera o listă de redare a tuturor videoclipurilor dintr-un canal, atinge și menține apăsat pentru a anula
@@ -457,6 +469,8 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Poziția butonului Setări</string>
   <string name="morphe_hide_quick_actions_save_button_title">Când este activat, atingerea deschide setările Morphe și menținerea apăsată deschide setările YouTube, dezactivează pentru a schimba</string>
   <string name="morphe_hide_quick_actions_share_button_title">Ascunde butonul Distribuie</string>
+  <string name="morphe_quick_actions_top_margin_title">Marginea superioară a acțiunilor rapide</string>
+  <string name="morphe_quick_actions_top_margin_summary">Stabiliți marginea superioară a barei de acțiuni rapide (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Subtitrare</string>
   <string name="morphe_captions_screen_summary">Animații de tranziție când se schimbă între file</string>

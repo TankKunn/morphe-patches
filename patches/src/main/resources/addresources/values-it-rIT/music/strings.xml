@@ -34,7 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">Nascondi annunci video</string>
   <!-- interaction.crossfade.crossfadePatch -->
   <string name="morphe_music_crossfade_screen_title">Dissolvenza incrociata</string>
-  <string name="morphe_music_crossfade_screen_summary">UnisciFluidamente le tracce tra loro</string>
+  <string name="morphe_music_crossfade_screen_summary">Unisci fluidamente le tracce tra loro</string>
   <string name="morphe_music_crossfade_enabled_title">Abilita dissolvenza incrociata</string>
   <string name="morphe_music_crossfade_curve_title">Curva della dissolvenza</string>
   <string name="morphe_music_crossfade_curve_entry_equal_power">Uguale potenza</string>

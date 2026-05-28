@@ -147,6 +147,7 @@ Mostrar los Doodles de YouTube puede impedir que se muestren encabezados persona
   <string name="morphe_hide_explore_section_summary">Oculta las secciones \"Explorar este curso\" y \"Explorar el podcast\"</string>
   <string name="morphe_hide_explore_course_section_title">Ocultar sección \"Explorar este curso\"</string>
   <string name="morphe_hide_explore_podcast_section_title">Ocultar sección \'Explorar el podcast\'</string>
+  <string name="morphe_hide_featured_channels_section_title">Ocultar sección \"Canales destacados\"</string>
   <string name="morphe_hide_featured_links_section_title">Ocultar sección \'Enlaces destacados\'</string>
   <string name="morphe_hide_featured_places_section_title">Ocultar sección \'Lugares destacados\'</string>
   <string name="morphe_hide_featured_videos_section_title">Ocultar sección \"Vídeos destacados\"</string>
@@ -304,10 +305,21 @@ Verifica que el nombre del paquete sea correcto y que la aplicación esté insta
   <string name="morphe_external_downloader_empty_warning">El nombre del paquete no puede estar vacío</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Activar vídeo en bucle</string>
+  <string name="morphe_do_not_remember_loop_video_title">No recordar video en bucle</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Evitar que el estado de bucle del video actual se guarde para videos posteriores</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Mostrar botón de vídeo en bucle</string>
   <string name="morphe_loop_video_button_toast_on">El vídeo en bucle está activado</string>
   <string name="morphe_loop_video_button_toast_off">El vídeo en bucle está desactivado</string>
+  <string name="morphe_loop_video_range_dialog_title">Rango de repetición</string>
+  <string name="morphe_loop_video_range_label_start">Inicio</string>
+  <string name="morphe_loop_video_range_label_end">Final</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (vacío = fin del video)</string>
+  <string name="morphe_loop_video_range_set">Establecer</string>
+  <string name="morphe_loop_video_range_clear">Borrar</string>
+  <string name="morphe_loop_video_range_toast_on">Repetición de %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Tiempo no válido</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Mostrar botón \'Reproducir todo\'</string>
   <string name="morphe_play_all_button_summary">"El botón \"Reproducir todo\" está visible
@@ -461,6 +473,8 @@ Información: Es posible que no funcione en transmisiones en directo"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Ocultar botón \'Guardar\'</string>
   <string name="morphe_hide_quick_actions_save_button_title">Gestione las subtítulos automáticos y las cookies de subtítulos</string>
   <string name="morphe_hide_quick_actions_share_button_title">Ocultar botón \"Compartir\"</string>
+  <string name="morphe_quick_actions_top_margin_title">Margen superior de acciones rápidas</string>
+  <string name="morphe_quick_actions_top_margin_summary">Establecer el margen superior de la barra de acciones rápidas (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Subtítulos</string>
   <string name="morphe_captions_screen_summary">Siempre mostrar</string>

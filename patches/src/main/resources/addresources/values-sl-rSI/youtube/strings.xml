@@ -145,6 +145,7 @@ Prikaz YouTube Doodles lahko prepreči prikazovanje izbirnih zavihkov."</string>
   <string name="morphe_hide_explore_section_summary">Skrije odseka \'Razišči ta tečaj\' in \'Razišči podcast\'</string>
   <string name="morphe_hide_explore_course_section_title">Skrij odsek \'Razišči ta tečaj\'</string>
   <string name="morphe_hide_explore_podcast_section_title">Skrij odsek \'Razišči podcast\'</string>
+  <string name="morphe_hide_featured_channels_section_title">Skrij odsek s priljubljenimi kanali</string>
   <string name="morphe_hide_featured_links_section_title">Skrij odsek \'Predstavljeni povezave\'</string>
   <string name="morphe_hide_featured_places_section_title">Skrij odsek \'Predstavljeni kraji\'</string>
   <string name="morphe_hide_featured_videos_section_title">Skrij odsek \'Predstavljeni videoposnetki\'</string>
@@ -302,10 +303,21 @@ Preverite, ali je ime paketa pravilno in ali je aplikacija nameščena"</string>
   <string name="morphe_external_downloader_empty_warning">Ime paketa ne sme biti prazno</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Omogoči zanko videa</string>
+  <string name="morphe_do_not_remember_loop_video_title">Ne zapomni ponavljajoæi videoposnetek</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Prepreči shranjevanje trenutnega stanja ponavljajoæega videoposnetka za naslednje videoposnetke</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Prikaži gumb za \'Zanko videoposnetka\'</string>
   <string name="morphe_loop_video_button_toast_on">Zanko videa je vklopljeno</string>
   <string name="morphe_loop_video_button_toast_off">Zanko videa je izklopljeno</string>
+  <string name="morphe_loop_video_range_dialog_title">Obseg zanke</string>
+  <string name="morphe_loop_video_range_label_start">Začetek</string>
+  <string name="morphe_loop_video_range_label_end">Konec</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (prazno = konec videa)</string>
+  <string name="morphe_loop_video_range_set">Nastavi</string>
+  <string name="morphe_loop_video_range_clear">Počisti</string>
+  <string name="morphe_loop_video_range_toast_on">Zanka %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Neveljaven časovni razpon</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Prikaži gumb \'Predvajaj vse\'</string>
   <string name="morphe_play_all_button_summary">"Tapnite, da ustvarite seznam vseh videoposnetkov kanala, tapnite in pridržite, da to razveljavite
@@ -378,8 +390,8 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Nastavite barvo vrstice napredka nadzora svetlosti</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Barva vidne indikacije glasnosti</string>
   <string name="morphe_swipe_overlay_progress_volume_color_summary">Nastavite barvo vrstice napredka nadzora glasnosti</string>
-  <string name="morphe_swipe_overlay_progress_speed_color_title">Barva hitrosti nadgradnje</string>
-  <string name="morphe_swipe_overlay_progress_speed_color_summary">Nastavite barvo vrstice napredka za nadzor hitrosti predvajanja</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_title">Barva hitrosti geste</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_summary">Nastavi barvo vrstice napredka za nadzor hitrosti predvajanja</string>
   <string name="morphe_swipe_text_overlay_size_title">Velikost pisave pojavnega okna</string>
   <string name="morphe_swipe_text_overlay_size_summary">Prilagodite velikost besedila na zaslonu (1-30)</string>
   <string name="morphe_swipe_text_overlay_size_invalid_toast">Velikost pisave mora biti med 1-30</string>
@@ -387,14 +399,14 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_swipe_threshold_summary">Nastavite zahtevano razdaljo drsenja, preden se sproži prilagoditev</string>
   <string name="morphe_swipe_volume_sensitivity_title">Občutljivost drsenja glasnosti</string>
   <string name="morphe_swipe_volume_sensitivity_summary">Višje vrednosti povečajo spremembo glasnosti na pomik</string>
-  <string name="morphe_swipe_brightness_sensitivity_title">Občutljivost pomika svetlosti</string>
+  <string name="morphe_swipe_brightness_sensitivity_title">Občutljivost geste za svetlost</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Višje vrednosti zahtevajo več pomikov za vsako stopnjo svetlosti</string>
-  <string name="morphe_swipe_speed_title">Omogoči gesto hitrosti</string>
+  <string name="morphe_swipe_speed_title">Omogoči gesto za hitrost</string>
   <string name="morphe_swipe_speed_summary">Podrsajte vodoravno v zgornjem delu celozaslonskega načina za spremembo hitrosti predvajanja</string>
-  <string name="morphe_swipe_speed_sensitivity_title">Občutljivost pomika hitrosti</string>
+  <string name="morphe_swipe_speed_sensitivity_title">Občutljivost geste za hitrost</string>
   <string name="morphe_swipe_speed_sensitivity_summary">Višje vrednosti zahtevajo več pomikov za vsako stopnjo hitrosti</string>
   <string name="morphe_swipe_speed_zone_height_title">Višina cone hitrosti</string>
-  <string name="morphe_swipe_speed_zone_height_summary">Višina cone gest hitrosti kot odstotek višine predajalnika (5-75)</string>
+  <string name="morphe_swipe_speed_zone_height_summary">Višina gest za hitrost kot odstotek višine predvajalnika (5-75)</string>
   <string name="morphe_swipe_zone_label_speed">Hitrost</string>
   <string name="morphe_swipe_overlay_style_title">Slog pojavnega okna</string>
   <string name="morphe_swipe_overlay_style_entry_1">Vodoravno pojavno okno</string>
@@ -457,6 +469,8 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Skrij gumb \'Predvajalni seznam\'</string>
   <string name="morphe_hide_quick_actions_save_button_title">Skrij gumb \'Shrani\'</string>
   <string name="morphe_hide_quick_actions_share_button_title">Skrij gumb za deljenje</string>
+  <string name="morphe_quick_actions_top_margin_title">Zgornji rob hitrih dejanj</string>
+  <string name="morphe_quick_actions_top_margin_summary">Nastavite zgornji rob vrstice hitrih dejanj (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Napiski</string>
   <string name="morphe_captions_screen_summary">Upravljaj samodejne podnapisovanje in piškotke podnapisov</string>

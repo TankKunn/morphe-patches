@@ -147,6 +147,7 @@ YouTube डूडल्स दर्शविल्याने कस्टम 
   <string name="morphe_hide_explore_section_summary">\'अभ्यासक्रम एक्सप्लोर करा\' आणि \'पॉडकास्ट एक्सप्लोर करा\' विभाग लपवते</string>
   <string name="morphe_hide_explore_course_section_title">\'अभ्यासक्रम एक्सप्लोर करा\' विभाग लपवा</string>
   <string name="morphe_hide_explore_podcast_section_title">\'पॉडकास्ट एक्सप्लोर करा\' विभाग लपवा</string>
+  <string name="morphe_hide_featured_channels_section_title">ठळक चॅनेल विभाग लपवा</string>
   <string name="morphe_hide_featured_links_section_title">\'ठरलेल्या लिंक्स\' विभाग लपवा</string>
   <string name="morphe_hide_featured_places_section_title">\'ठरलेल्या ठिकाणांचा\' विभाग लपवा</string>
   <string name="morphe_hide_featured_videos_section_title">\'ठरलेल्या व्हिडिओंचा\' विभाग लपवा</string>
@@ -298,10 +299,21 @@ YouTube डूडल्स दर्शविल्याने कस्टम 
   <string name="morphe_external_downloader_empty_warning">पॅकेजचे नाव रिकामे असू शकत नाही</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">व्हिडिओ लूप करा</string>
+  <string name="morphe_do_not_remember_loop_video_title">लूप व्हिडिओ लक्षात ठेवू नका</string>
+  <string name="morphe_do_not_remember_loop_video_summary">पुढील व्हिडिओसाठी लूप व्हिडिओची वर्तमान स्थिती जतन करणे टाळा</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">\'व्हिडिओ लूप\' बटण दर्शवा</string>
   <string name="morphe_loop_video_button_toast_on">व्हिडिओ लूप चालू आहे</string>
   <string name="morphe_loop_video_button_toast_off">व्हिडिओ लूप बंद आहे</string>
+  <string name="morphe_loop_video_range_dialog_title">लूप श्रेणी</string>
+  <string name="morphe_loop_video_range_label_start">सुरुवात</string>
+  <string name="morphe_loop_video_range_label_end">समाप्त करा</string>
+  <string name="morphe_loop_video_range_hint_start">[तास:]मिनिट:सेकंद</string>
+  <string name="morphe_loop_video_range_hint_end">[तास:]मिनिट:सेकंद (रिकामे = व्हिडिओ शेवट)</string>
+  <string name="morphe_loop_video_range_set">सेट करा</string>
+  <string name="morphe_loop_video_range_clear">क्लिअर करा</string>
+  <string name="morphe_loop_video_range_toast_on">%1$s ते %2$s दरम्यान लूपिंग</string>
+  <string name="morphe_loop_video_range_invalid_time">अवैध वेळ श्रेणी</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">\'प्ले ऑल\' बटण दर्शवा</string>
   <string name="morphe_play_all_button_summary">"चॅनेलवरील सर्व व्हिडिओंची प्लेलिस्ट तयार करण्यासाठी टॅप करा, पूर्ववत करण्यासाठी टॅप आणि होल्ड करा
@@ -452,6 +464,8 @@ YouTube डूडल्स दर्शविल्याने कस्टम 
   <string name="morphe_hide_quick_actions_playlist_button_title">\'प्लेलिस्ट\' बटण लपवा</string>
   <string name="morphe_hide_quick_actions_save_button_title">\'सेव्ह\' बटण लपवा</string>
   <string name="morphe_hide_quick_actions_share_button_title">\'शेअर\' बटण लपवा</string>
+  <string name="morphe_quick_actions_top_margin_title">क्विक ॲक्शन टॉप मार्जिन</string>
+  <string name="morphe_quick_actions_top_margin_summary">क्विक ॲक्शन बारच्या टॉप मार्जिन सेट करा (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">लेबल्स</string>
   <string name="morphe_captions_screen_summary">स्वयंचलित कॅप्शन आणि कॅप्शन कुकीज व्यवस्थापित करा</string>

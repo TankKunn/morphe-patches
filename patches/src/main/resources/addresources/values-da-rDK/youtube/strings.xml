@@ -147,6 +147,7 @@ Visning af YouTube Doodles kan forhindre brugerdefinerede overskrifter i at bliv
   <string name="morphe_hide_explore_section_summary">Skjuler sektionerne Udforsk dette kursus og Udforsk podcasten</string>
   <string name="morphe_hide_explore_course_section_title">Skjul sektionen \'Udforsk dette kursus\'</string>
   <string name="morphe_hide_explore_podcast_section_title">Skjul sektionen \'Udforsk podcasten\'</string>
+  <string name="morphe_hide_featured_channels_section_title">Skjul fremhævede kanaler</string>
   <string name="morphe_hide_featured_links_section_title">Skjul Fremhævede links sektionen</string>
   <string name="morphe_hide_featured_places_section_title">Skjul sektionen \'Fremhævede steder\'</string>
   <string name="morphe_hide_featured_videos_section_title">Skjul Fremhævede videoer sektionen</string>
@@ -304,10 +305,21 @@ Kontrollér at pakkenavnet er korrekt og at appen er installeret"</string>
   <string name="morphe_external_downloader_empty_warning">Pakkenavnet må ikke være tomt</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Aktiver loop-video</string>
+  <string name="morphe_do_not_remember_loop_video_title">Husk ikke loop-video</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Forhindr at den aktuelle loop-video-tilstand gemmes for efterfølgende videoer</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Stryg lodret på højre side af fuldskærmstilstand for at justere lydstyrken</string>
   <string name="morphe_loop_video_button_toast_on">Loop video er slået til</string>
   <string name="morphe_loop_video_button_toast_off">Loop video er slået fra</string>
+  <string name="morphe_loop_video_range_dialog_title">Sløjfeinterval</string>
+  <string name="morphe_loop_video_range_label_start">Start</string>
+  <string name="morphe_loop_video_range_label_end">Slut</string>
+  <string name="morphe_loop_video_range_hint_start">[tt:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[tt:]mm:ss (tom = video slut)</string>
+  <string name="morphe_loop_video_range_set">Angiv</string>
+  <string name="morphe_loop_video_range_clear">Ryd</string>
+  <string name="morphe_loop_video_range_toast_on">Looping %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Ugyldigt tidsinterval</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Kræver tryk og hold, før en strygebevægelse genkendes</string>
   <string name="morphe_play_all_button_summary">"Tryk for at generere en playliste over alle videoer fra kanalen, tryk og hold for at fortryde
@@ -459,6 +471,8 @@ Info: Virker muligvis ikke på live streams"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Indstillinger knap position</string>
   <string name="morphe_hide_quick_actions_save_button_title">Når den er aktiveret, åbner tryk Morphe-indstillinger og langt tryk åbner YouTube-indstillinger, deaktiver for at bytte</string>
   <string name="morphe_hide_quick_actions_share_button_title">Skjul knappen Del</string>
+  <string name="morphe_quick_actions_top_margin_title">Hurtig handlingers øverste margen</string>
+  <string name="morphe_quick_actions_top_margin_summary">Indstil den øverste margen for værktøjslinjen med hurtige handlinger (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Undertekster</string>
   <string name="morphe_captions_screen_summary">Animer overgange, når du skifter mellem faner</string>

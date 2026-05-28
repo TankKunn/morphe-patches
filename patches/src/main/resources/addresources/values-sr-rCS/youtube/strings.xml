@@ -147,6 +147,7 @@ Prikazivanje YouTube Doodles može sprečiti prikazivanje korisničkih zaglavlja
   <string name="morphe_hide_explore_section_summary">Sakriva odeljke „Istraži ovaj kurs” i „Istraži podcast”</string>
   <string name="morphe_hide_explore_course_section_title">Sakrij odeljak „Istraži ovaj kurs”</string>
   <string name="morphe_hide_explore_podcast_section_title">Sakrij odeljak „Istraži podcast”</string>
+  <string name="morphe_hide_featured_channels_section_title">Sakrij odeljke sa istaknutim kanalima</string>
   <string name="morphe_hide_featured_links_section_title">Sakrij odeljak „Istaknuti linkovi”</string>
   <string name="morphe_hide_featured_places_section_title">Sakrij odeljak „Istaknuta mesta”</string>
   <string name="morphe_hide_featured_videos_section_title">Sakrij odeljak „Istaknuti video zapisi”</string>
@@ -304,10 +305,21 @@ Proverite da li je naziv paketa ispravan i da li je aplikacija instalirana"</str
   <string name="morphe_external_downloader_empty_warning">Naziv paketa ne može biti prazan</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Omogući ponavljanje videa</string>
+  <string name="morphe_do_not_remember_loop_video_title">Ne pamti petlju videa</string>
+  <string name="morphe_do_not_remember_loop_video_summary">Spreči čuvanje trenutnog stanja petlje videa za naredne video zapise</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_title">Prikaži dugme za ponavljanje videa</string>
   <string name="morphe_loop_video_button_toast_on">Ponavljanje videa je uključeno</string>
   <string name="morphe_loop_video_button_toast_off">Ponavljanje videa je isključeno</string>
+  <string name="morphe_loop_video_range_dialog_title">Opseg petlje</string>
+  <string name="morphe_loop_video_range_label_start">Početak</string>
+  <string name="morphe_loop_video_range_label_end">Kraj</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (prazno = kraj videa)</string>
+  <string name="morphe_loop_video_range_set">Podešavanje</string>
+  <string name="morphe_loop_video_range_clear">Obriši</string>
+  <string name="morphe_loop_video_range_toast_on">Petlja %1$s - %2$s</string>
+  <string name="morphe_loop_video_range_invalid_time">Nevažeći vremenski opseg</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Prikaži dugme za reprodukciju svih</string>
   <string name="morphe_play_all_button_summary">"Dodirni da bi kreirao listu reprodukcije svih video snimaka sa kanala, dodirni i zadrži da poništiš
@@ -459,6 +471,8 @@ Napomena: Možda neće raditi na direktnim prenosima"</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Sakrij dugme „Plejlista”</string>
   <string name="morphe_hide_quick_actions_save_button_title">Sakrij dugme „Čuvaj”</string>
   <string name="morphe_hide_quick_actions_share_button_title">Sakrij dugme „Deli”</string>
+  <string name="morphe_quick_actions_top_margin_title">Gornja margina brzih akcija</string>
+  <string name="morphe_quick_actions_top_margin_summary">Podesite gornju marginu trake brzih akcija (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Titlovi</string>
   <string name="morphe_captions_screen_summary">Upravljajte automatskim titlovima i kolačićima za titlove</string>
