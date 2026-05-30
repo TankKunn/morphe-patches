@@ -101,6 +101,7 @@ public class LoopVideoButton {
     public static void resetLoopButton() {
         if (LOOP_VIDEO_BUTTON.get() && DO_NOT_REMEMBER_LOOP_VIDEO.get()) {
             LOOP_VIDEO.save(false);
+            LoopVideoPatch.clearRange();
         }
     }
 
