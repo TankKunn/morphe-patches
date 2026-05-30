@@ -49,15 +49,15 @@ Namun, mengaktifkan ini juga akan mencatat beberapa data pengguna seperti alamat
 Beberapa tata letak sisi server mungkin tidak kembali.
 
 Perubahan termasuk:
-• Komponen di menu flyout pemutar (atau pengaturan terkait) mungkin tidak berfungsi.
+• Komponen di menu pemutar yang melayang (atau pengaturan terkait) mungkin tidak berfungsi.
 • Angka yang bergulir tidak dianimasi.
 • Tab pustaka ditampilkan.
 • Bagian musik dari deskripsi video mungkin tidak berfungsi.
 • Tombol beralih akun mungkin tidak muncul di tab Pustaka."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
-  <string name="morphe_hide_feed_flyout_menu_title">Aktifkan penyaring menu feed flyout</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Penyaring menu feed flyout</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Masukkan nama menu flyout untuk disaring, dipisahkan oleh baris baru</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Aktifkan penyaring menu feed melayang</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Penyaring menu feed melayang</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Masukkan nama menu melayang untuk disaring, dipisahkan oleh baris baru</string>
   <string name="morphe_hide_album_cards_title">Sembunyikan kartu album</string>
   <string name="morphe_hide_album_cards_summary">Menyembunyikan kartu album di bawah deskripsi artis</string>
   <string name="morphe_hide_artist_cards_title">Sembunyikan kartu artis</string>
@@ -551,8 +551,8 @@ Untuk mengakses Pengaturan, aktifkan tombol Pengaturan melalui Umum → Bilah Al
   <string name="morphe_show_toolbar_settings_button_type_title">Tindakan tombol Pengaturan</string>
   <string name="morphe_show_toolbar_settings_button_type_summary">Saat diaktifkan, ketuk membuka pengaturan Morphe dan tahan membuka pengaturan YouTube, nonaktifkan untuk menukarnya</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
-  <string name="morphe_hide_player_flyout_title">Menu flyout</string>
-  <string name="morphe_hide_player_flyout_summary">Pilih komponen mana yang akan ditampilkan di menu flyout</string>
+  <string name="morphe_hide_player_flyout_title">Menu melayang</string>
+  <string name="morphe_hide_player_flyout_summary">Pilih komponen mana yang akan ditampilkan di menu melayang</string>
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Sembunyikan menu \'Trek Audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.

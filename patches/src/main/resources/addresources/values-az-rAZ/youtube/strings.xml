@@ -635,6 +635,7 @@ Ayarlar → Oxunuş (yaxud Avtomatik oxutma) → Növbəti videonu avtomatik oxu
   <string name="morphe_open_videos_fullscreen_portrait_title">Videoları şaquli tam ekranda aç</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Oynadıcı örtüyünün qeyri-şəffaflığı</string>
+  <string name="morphe_player_overlay_opacity_summary">Şəffaflıq səviyyəsini tənzimlə (0 şəffafdır, 100 qeyri-şəffafdır)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Oynadıcı örtüyü qeyri-şəffaflığı 0-100 arası olmalıdır</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
@@ -861,6 +862,7 @@ Sonradan qapadılarsa, UI səhvlərin önləmək üçün tətbiq məlumatların 
   <string name="morphe_open_system_share_sheet_title">Sistem paylaşım səhifəsin aç</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <!-- layout.startpage.changeStartPagePatch -->
+  <string name="morphe_change_start_page_title">Başlanğıc səhifəsi</string>
   <string name="morphe_change_start_page_entry_default">İlkin</string>
   <string name="morphe_change_start_page_entry_all_subscriptions">Bütün abunəliklər</string>
   <string name="morphe_change_start_page_entry_browse">Kanallara nəzər yetir</string>
@@ -914,12 +916,14 @@ Sonradan qapadılarsa, UI səhvlərin önləmək üçün tətbiq məlumatların 
   <string name="morphe_miniplayer_hide_rewind_forward_title">İrəli və geri ötür düymələrini gizlət</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Piksel ölçüsü, %1$s - %2$s arası olmalıdır</string>
   <string name="morphe_miniplayer_opacity_title">Örtük qeyri-şəffaflığı</string>
+  <string name="morphe_miniplayer_opacity_summary">Şəffaflıq səviyyəsini tənzimlə (0 şəffafdır, 100 qeyri-şəffafdır)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Kiçik Oynadıcı örtük qeyri-şəffaflığı 0-100 arası olmalıdır</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Dəyişkən yükləmə ekranını aktivləşdir</string>
   <string name="morphe_splash_screen_animation_style_title">Sıçrama ekran üslubu</string>
   <string name="morphe_splash_screen_animation_style_entry_1">Qapalıdı</string>
   <string name="morphe_splash_screen_animation_style_entry_2">Rəng</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Saya</string>
   <string name="morphe_seekbar_custom_color_title">Fərdi çevirmə cizgisi rəngini aktivləşdir</string>
   <string name="morphe_seekbar_custom_color_invalid">Etibarsız çevirmə cizgisi rəng dəyəri</string>
   <!-- layout.branding.customBrandingPatch -->

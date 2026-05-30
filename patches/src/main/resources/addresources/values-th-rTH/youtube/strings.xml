@@ -538,6 +538,7 @@ Second \"item\" text"</string>
 • บาร์สีดำอาจปรากฏขึ้นด้านบนของตัวเล่นวิดีโอ
 • บาร์นำทางระบบอาจเปลี่ยนเป็นโปร่งใส และไม่สามารถแสดงความคิดเห็นในวิดีโอได้"</string>
   <string name="morphe_disable_translucent_navigation_bar_light_title">ปิดใช้งานแถบนำทางแบบโปร่งแสงสีอ่อน</string>
+  <string name="morphe_disable_translucent_navigation_bar_light_summary">ทำให้แถบนำทางทึบแสงอย่างสมบูรณ์ในโหมดสว่าง</string>
   <string name="morphe_disable_translucent_navigation_bar_dark_title">ปิดใช้แถบโปร่งแสงสีเข้ม</string>
   <string name="morphe_disable_translucent_navigation_bar_dark_summary">ซ่อนส่วนท้ายเมนู \'แทร็กเสียง\'</string>
   <string name="morphe_toolbar_screen_title">แถบเครื่องมือ</string>

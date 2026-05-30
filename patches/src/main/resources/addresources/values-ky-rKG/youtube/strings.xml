@@ -117,8 +117,10 @@ Second \"item\" text"</string>
   <string name="morphe_show_search_button_index_title">Издөө баскычынын оорду</string>
   <string name="morphe_show_settings_button_title">Оңдоолор баскычын көрсөтүү</string>
   <string name="morphe_show_settings_button_index_title">Оңдоолор баскычынын оорду</string>
+  <string name="morphe_hide_toolbar_create_button_title">Жасоо баскычын жашыруу</string>
   <string name="morphe_hide_toolbar_search_button_title">Издөө баскычын жашыруу</string>
   <string name="morphe_show_toolbar_settings_button_title">Оңдоолор баскычын көрсөтүү</string>
+  <string name="morphe_show_toolbar_settings_button_index_title">Оңдоолор баскычынын оорду</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
@@ -175,11 +177,13 @@ Second \"item\" text"</string>
   <!-- misc.sharesheet.openSystemShareSheetPatch -->
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <!-- layout.startpage.changeStartPagePatch -->
+  <string name="morphe_change_start_page_entry_shorts">Шортстор</string>
   <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
   <!-- layout.shortsautoplay.shortsAutoplayPatch -->
   <!-- layout.miniplayer.miniplayerPatch -->
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_animation_style_entry_1">Иштен чыгарылган</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->

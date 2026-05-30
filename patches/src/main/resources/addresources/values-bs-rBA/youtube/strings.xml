@@ -157,6 +157,7 @@ Second \"item\" text"</string>
   <!-- misc.sharesheet.openSystemShareSheetPatch -->
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <!-- layout.startpage.changeStartPagePatch -->
+  <string name="morphe_change_start_page_entry_shorts">Shorts</string>
   <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
   <!-- layout.shortsautoplay.shortsAutoplayPatch -->

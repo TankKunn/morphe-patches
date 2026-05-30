@@ -205,6 +205,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_swipe_overlay_timeout_title">ئەگەر شاشە دەربازە، کاتی کۆتایی دەگات</string>
   <string name="morphe_swipe_overlay_timeout_summary">خۆڵە دەقەکانی میلیلزە کە پۆشێنیكە زەمان دەربخە</string>
   <string name="morphe_swipe_overlay_background_opacity_title">ناڕوونی لێدانی سەرپۆشی پاشخانی</string>
+  <string name="morphe_swipe_overlay_background_opacity_summary">Adjust the transparency level (0 is transparent, 100 is opaque)</string>
   <string name="morphe_swipe_overlay_background_opacity_invalid_toast">ناڕوونی لێدان دەبێت لە نێوان 0-100 بێت</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">شۆڕکەرەوە ڕەنگی زادە</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">شۆڕکەرەوە ڕەنگی دەربەست</string>
@@ -225,8 +226,10 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_disable_like_subscribe_glow_title">چۆنەکردنی ڕەهەق و نوسین</string>
   <string name="morphe_hide_action_bar_title">شاردنەوەی باری کردار</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_share_button_title">Hide Share button</string>
   <!-- 'Stop ads' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- Button does not have any text and is only shown as an icon, and only when the video information area is collapsed to a compact state. -->
+  <string name="morphe_hide_comments_button_title">Hide Comments button</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears on live streamed videos. -->
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
@@ -241,7 +244,12 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_save_button_title">Hide Save button</string>
+  <string name="morphe_hide_quick_actions_title">شاردنەوەی باری کردار</string>
   <string name="morphe_hide_quick_actions_ask_button_title">دۆزینەوەی پەیامگە دەربخۆ</string>
+  <string name="morphe_hide_quick_actions_comments_button_title">Hide Comments button</string>
+  <string name="morphe_hide_quick_actions_save_button_title">Hide Save button</string>
+  <string name="morphe_hide_quick_actions_share_button_title">Hide Share button</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">زیرەکان</string>
   <!-- layout.captions.autoCaptionsPatch -->
@@ -261,10 +269,15 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <!-- layout.buttons.navigation.navigationButtonsPatch -->
   <string name="morphe_navigation_buttons_screen_title">دووگمەکانی گەشتکردن</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_home_button_title">دوگمەی ماڵەوە بشارەوە</string>
   <!-- 'Shorts' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Create' has no display name. Translate normally. -->
+  <string name="morphe_hide_create_button_title">Hide Create button</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_notifications_button_title">Hide Notifications button</string>
+  <string name="morphe_show_settings_button_title">Show Settings button</string>
+  <string name="morphe_show_settings_button_index_title">Settings button position</string>
   <string name="morphe_show_settings_button_type_title">کرداری دوگمەی ڕێکخستن\"</string>
   <string name="morphe_swap_create_with_notifications_button_user_dialog_message">ئەگەر گۆڕینی ئەم ڕێکخستنە کاریگەری نەبوو، هەوڵبدە بگۆڕیت بۆ دۆخی نادیار.</string>
   <string name="morphe_hide_navigation_button_labels_title">شاردنەوەی ناوەکانی دوگمەی گەشتکردن</string>
@@ -278,6 +291,11 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_disable_translucent_navigation_bar_light_title">خۆپیشاندانی بارەگەی ڕوونی خێرای ڕەتکردنەوە</string>
   <string name="morphe_disable_translucent_navigation_bar_dark_title">خۆپیشاندانی بارەگەی ڕوونی خێرای ڕەتکردنەوە</string>
   <string name="morphe_toolbar_screen_title">بەڵتە</string>
+  <string name="morphe_hide_toolbar_cast_button_title">Hide Cast button</string>
+  <string name="morphe_hide_toolbar_create_button_title">Hide Create button</string>
+  <string name="morphe_hide_toolbar_notification_button_title">Hide Notifications button</string>
+  <string name="morphe_show_toolbar_settings_button_title">Show Settings button</string>
+  <string name="morphe_show_toolbar_settings_button_index_title">Settings button position</string>
   <string name="morphe_show_toolbar_settings_button_type_title">کرداری دوگمەی ڕێکخستنەکان</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">خەڵەتە ڕیزكارییەكە</string>
@@ -300,6 +318,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_hide_autoplay_preview_title">پیشۆخێزیی خۆکار قایم بێت</string>
   <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
+  <string name="morphe_hide_cast_button_title">Hide Cast button</string>
   <string name="morphe_hide_player_control_buttons_background_title">شاردنەوەی کۆنتڕۆڵەکانی پاشخانی پەخش</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
   <string name="morphe_hide_end_screen_cards_title">کارتەکانی کۆتایی دەمۆڵە دەخرێنە پاڵ</string>
@@ -317,6 +336,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <!-- layout.hide.shorts.hideShortsComponentsPatch -->
   <string name="morphe_shorts_player_screen_title">خەڵکەواتە</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_shorts_search_title">شاردنەوە لە ئەنجامی گەڕان</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_auto_dubbed_label_title">نشانەدانی ناونیشانی \'كۆتاییكراو\' قایم بكات</string>
   <string name="morphe_hide_shorts_super_thanks_button_title">كڵاوە \'دابخستنی سوپەر تەكە\' قایم بكات</string>
@@ -369,6 +389,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_open_videos_fullscreen_portrait_title">ڤیدێۆکان لە شاشە گەورەکەدا بە ڕووت و دەستەقەڵەو بکە</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">زینەی دەربانەی خەڵاتکار</string>
+  <string name="morphe_player_overlay_opacity_summary">Adjust the transparency level (0 is transparent, 100 is opaque)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">زینەی دەربانەی خەڵاتکار دەبێت لە نێوان 0-100-دا بێت</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
@@ -382,6 +403,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_ryd_shorts_title">نەخشەکانی شوۆرن پیش بکە</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
   <string name="morphe_ryd_estimated_like_title">خۆشەکانی لێکدان کەڤم وەشاندن</string>
+  <string name="morphe_ryd_toast_on_connection_error_title">Show connection error alerts</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_getFetchCallCount_title">وەڕگێڕانی دەنگیان، ژمارەی بانگەشە</string>
   <string name="morphe_ryd_statistics_getFetchCallCount_zero_summary">هیچ بانگەشەیەك نەكرێتەوە</string>
@@ -417,6 +439,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_sb_guidelines_popup_already_read">خۆم پێشتر خوێندرۆتە</string>
   <string name="morphe_sb_guidelines_popup_open">نێشانم بده</string>
   <string name="morphe_sb_general">ئاسماني</string>
+  <string name="morphe_sb_toast_on_connection_error">Show connection error alerts</string>
   <string name="morphe_sb_general_skipcount">بەدواداچوونی ژمارەی پەڕینەوە چالاک بکە</string>
   <string name="morphe_sb_general_min_duration">ئاستی خوولي خاك</string>
   <string name="morphe_sb_general_min_duration_summary">خۆڵەکان کەمتر لەم ڕێژەیە (لە چاوسێکدانە) نمایش ناکەین یان نادەین بەربەست</string>
@@ -531,6 +554,8 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_sb_new_segment_edit_by_hand_title">ئه‌گه‌ر به‌ به‌سته‌ش واستێكی زانه‌وانه‌</string>
   <string name="morphe_sb_new_segment_edit_by_hand_content">ئه‌گه‌ر ده‌وته‌كه‌ چۆنه‌وێ بەرێ بۆ سەردا؟</string>
   <string name="morphe_sb_new_segment_edit_by_hand_parse_error">به‌شێوه‌یه‌كی به‌راوه‌ستى گه‌ر به‌رهه‌م نه‌هات</string>
+  <string name="morphe_sb_new_segment_highlight_title">Submit highlight</string>
+  <string name="morphe_sb_new_segment_highlight_submit">Submit highlight</string>
   <string name="morphe_sb_stats_title">دۆخ</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">ئه‌حڤال هه‌تاوه‌ به‌شێوه‌یه‌كی موقه‌تیر ناتوانێت به‌ره‌وه‌ بێت (API هه‌تایه‌)</string>
@@ -579,6 +604,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_open_system_share_sheet_title">كرنەوەی لۆمەی بەڵگە پێشكێش كردنی سیستەم</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <!-- layout.startpage.changeStartPagePatch -->
+  <string name="morphe_change_start_page_title">پەڕەی سەرەتا</string>
   <string name="morphe_change_start_page_entry_default">بونیاد</string>
   <string name="morphe_change_start_page_entry_all_subscriptions">بۆ هەموو پێشنیارەکان</string>
   <string name="morphe_change_start_page_entry_browse">گەڕان بە نێو کەناڵەکان</string>
@@ -632,6 +658,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_miniplayer_hide_rewind_forward_title">خۆگرتنەوەی پەخشرکانی ڕاستەقینە و گەڕانەوە \"بەڵ</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">قەرەبایی دەبێت لە نێۆ %1$s و %2$s بێت</string>
   <string name="morphe_miniplayer_opacity_title">شفافی پشتخاڵ</string>
+  <string name="morphe_miniplayer_opacity_summary">Adjust the transparency level (0 is transparent, 100 is opaque)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">زینەی سەرپۆشەکەی مینیپڵەیەر پێویستە لە نێوان 0-100 بێت</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">سکرینی بارکردنێکی فڕکێنەرەوە سازشە</string>
@@ -659,11 +686,13 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_alt_thumbnail_dearrow_about_summary">"DeArrow ثومب‌نەییلەکان بۆ سەرکه‌وتووییەکانی یوتیوب به‌رپرسیار دەبێت. ئەم ثومب‌نەییلان زۆر جار به‌و مەبەستە زۆر پێوه‌سته‌ له‌وه‌ی یوتیوب پێشنیار ده‌کات
 
 به‌کاردانی ئەمشه‌و، به‌سته‌ره‌کانی ڤیدۆ دەناێردرێنه‌ کۆیله‌کانی API و تێكه‌ڵه‌کان نایه‌ن. که‌ ڕێکه‌خستنێک به‌لاوه‌شه‌وه‌ ره‌ت ده‌کرێت, هه‌رگیز نه‌بێت ڕوونی بۆ ڕۆڵی به‌ڵێزێت."</string>
+  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Show connection error alerts</string>
   <string name="morphe_alt_thumbnail_dearrow_api_url_title">بڕی سه‌رێزه‌که‌ی کۆیله‌ی DeArrow</string>
   <string name="morphe_alt_thumbnail_dearrow_api_url_summary">URLی کۆیله‌کانی DeArrow ڕه‌هه‌ه‌ه‌</string>
   <string name="morphe_alt_thumbnail_stills_about_title">پێگه‌شبونه‌وه‌کانی ڤیدۆ</string>
   <string name="morphe_alt_thumbnail_stills_about_summary">اموا قجأة دقت اموان من اولفي الويديو أها أوالياتية أوالياتية. إن من المسودة دقاقسانة ءياوتوب والياتية السوانة ومورفية الإسميدية</string>
   <string name="morphe_alt_thumbnail_stills_fast_title">سازشە به‌شیکردنێکی خێرای پێوه‌ بکه‌</string>
+  <string name="morphe_alt_thumbnail_stills_time_entry_3">كۆتایـی</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->

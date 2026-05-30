@@ -331,6 +331,7 @@ YouTube डूडल्स दर्शविल्याने कस्टम 
   <string name="morphe_play_all_button_type_entry_8">स्ट्रीम केलेले व्हिडिओ फक्त (लोकप्रियतेनुसार क्रमवारी)</string>
   <string name="morphe_play_all_button_type_entry_9">सर्व सदस्यांच्या सामग्री फक्त</string>
   <string name="morphe_play_all_button_type_entry_10">सदस्यांचे फक्त व्हिडिओ</string>
+  <string name="morphe_play_all_button_type_entry_11">फक्त सदस्यांसाठी शॉर्ट्स</string>
   <string name="morphe_play_all_button_type_entry_12">सदस्यांचे फक्त थेट प्रवाह</string>
   <string name="morphe_play_all_button_not_available_toast">चॅनेल आयडी जुळत नसल्यामुळे प्लेलिस्ट तयार करणे शक्य नाही</string>
   <!-- interaction.reload.reloadVideoPatch -->

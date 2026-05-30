@@ -18,6 +18,17 @@ Second \"item\" text"</string>
 <resources>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
+  <string name="morphe_settings_screen_00_about_title">Apie</string>
+  <string name="morphe_settings_screen_01_ads_title">Reklamos</string>
+  <string name="morphe_settings_screen_02_alt_thumbnails_title">Alternatyvios miniatiūros</string>
+  <string name="morphe_settings_screen_03_feed_title">Tiekimas</string>
+  <string name="morphe_settings_screen_04_general_title">Bendras</string>
+  <string name="morphe_settings_screen_05_player_title">Leistuvas</string>
+  <string name="morphe_settings_screen_06_shorts_title">Shorts</string>
+  <string name="morphe_settings_screen_07_seekbar_title">Paieškos juosta</string>
+  <string name="morphe_settings_screen_08_swipe_controls_title">Braukimo valdikliai</string>
+  <string name="morphe_settings_screen_11_misc_title">Įvairūs</string>
+  <string name="morphe_settings_screen_12_video_title">Vaizdo įrašai</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <!-- misc.debugging.enableDebuggingPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->

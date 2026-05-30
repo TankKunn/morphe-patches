@@ -64,7 +64,7 @@ Second \"item\" text"</string>
   <string name="morphe_about_title">このアプリについて</string>
   <string name="morphe_about_summary">バージョンと公式リンク</string>
   <string name="morphe_sanitize_sharing_links_title">共有リンクを無害化</string>
-  <string name="morphe_sanitize_sharing_links_summary">共有リンクから追跡クエリパラメータを削除します</string>
+  <string name="morphe_sanitize_sharing_links_summary">共有リンクからトラッキング用のパラメータを削除します</string>
   <string name="morphe_open_links_directly_title">リンクを直接開く</string>
   <string name="morphe_open_links_directly_summary">外部リンクを開く際に、リダイレクト URL を回避します</string>
   <string name="morphe_open_links_externally_title">外部ブラウザでリンクを開く</string>

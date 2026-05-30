@@ -396,6 +396,7 @@ Potvrdite da naziv paketa je tačan i da je aplikacija instalirana."</string>
   <!-- layout.buttons.navigation.navigationButtonsPatch -->
   <string name="morphe_navigation_buttons_screen_title">Traka navigacije</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_home_button_title">Sakrij tipku Početna</string>
   <!-- 'Shorts' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Create' has no display name. Translate normally. -->
   <string name="morphe_hide_create_button_title">Sakrij tipku Izradi</string>
@@ -745,6 +746,7 @@ Ako se kasnije isključi, preporuke za UI mogu se izbjeći čišćenjem podataka
   <string name="morphe_open_system_share_sheet_title">Otvori tablicu dijeljenja sustava</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <!-- layout.startpage.changeStartPagePatch -->
+  <string name="morphe_change_start_page_title">Početna stranica</string>
   <string name="morphe_change_start_page_entry_default">Zadano</string>
   <string name="morphe_change_start_page_entry_all_subscriptions">Sve pretplate</string>
   <string name="morphe_change_start_page_entry_browse">Pretraživanje kanala</string>
@@ -804,6 +806,7 @@ Ako se kasnije isključi, preporuke za UI mogu se izbjeći čišćenjem podataka
   <string name="morphe_splash_screen_animation_style_title">Omogu gradientno zaslonsko pozadina</string>
   <string name="morphe_splash_screen_animation_style_entry_1">Onemogućeno</string>
   <string name="morphe_splash_screen_animation_style_entry_2">Pozadina će imati gradientni zadnji</string>
+  <string name="morphe_splash_screen_animation_style_entry_3">Monokromatski</string>
   <string name="morphe_seekbar_custom_color_title">Omogu oboj za obični seekbar</string>
   <string name="morphe_seekbar_custom_color_invalid">Nevažeća vrijednost obojskog seekbara</string>
   <!-- layout.branding.customBrandingPatch -->

@@ -311,11 +311,11 @@ Fíoraigh go bhfuil ainm an phacáiste ceart agus go bhfuil an aip suiteáilte"<
   <string name="morphe_loop_video_button_title">Taispeáin cnaipe físe Lúb</string>
   <string name="morphe_loop_video_button_toast_on">Tá físeán lúbtha ar siúl</string>
   <string name="morphe_loop_video_button_toast_off">Tá físeán lúbtha as siúl</string>
-  <string name="morphe_loop_video_range_dialog_title">Raon lúpa</string>
+  <string name="morphe_loop_video_range_dialog_title">Raon lúb</string>
   <string name="morphe_loop_video_range_label_start">Tosaigh</string>
   <string name="morphe_loop_video_range_label_end">Deireadh</string>
   <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
-  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (folamh = deireadh físeáin)</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (folamh = deireadh an fhíseáin)</string>
   <string name="morphe_loop_video_range_set">Socraigh</string>
   <string name="morphe_loop_video_range_clear">Glan</string>
   <string name="morphe_loop_video_range_toast_on">Ag lúbáil %1$s - %2$s</string>

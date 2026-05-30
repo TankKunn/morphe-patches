@@ -315,7 +315,7 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_label_start">Початок</string>
   <string name="morphe_loop_video_range_label_end">Кінець</string>
   <string name="morphe_loop_video_range_hint_start">[год:]хв:сек</string>
-  <string name="morphe_loop_video_range_hint_end">[год:]хв:сек (порожньо = кінець відео)</string>
+  <string name="morphe_loop_video_range_hint_end">[год:]хв:сек (порожньо = кінець)</string>
   <string name="morphe_loop_video_range_set">Встановити</string>
   <string name="morphe_loop_video_range_clear">Очистити</string>
   <string name="morphe_loop_video_range_toast_on">Повтор %1$s - %2$s</string>

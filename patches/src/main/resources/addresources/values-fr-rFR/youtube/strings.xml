@@ -293,16 +293,16 @@ Limitations :
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Remplacer l\'action du bouton \'Télécharger\'</string>
   <string name="morphe_external_downloader_action_button_summary">Remplace la fonction de téléchargement intégrée de YouTube par votre téléchargeur externe</string>
-  <string name="morphe_external_downloader_name_title">Nom de package du téléchargeur</string>
-  <string name="morphe_external_downloader_name_summary">Nom du package de votre application de téléchargeur externe installée</string>
-  <string name="morphe_external_downloader_other_item_hint">Entrez le nom du package</string>
+  <string name="morphe_external_downloader_name_title">Nom de paquet du téléchargeur</string>
+  <string name="morphe_external_downloader_name_summary">Nom de paquet de votre application de téléchargement externe installée</string>
+  <string name="morphe_external_downloader_other_item_hint">Saisir le nom du paquet</string>
   <string name="morphe_external_downloader_other_item">Autre</string>
   <string name="morphe_external_downloader_not_found_title">Application non installée</string>
   <string name="morphe_external_downloader_not_installed_warning">%s n\'est pas installé. Veuillez l\'installer.</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"Impossible de trouver l’application installée avec le nom de package : %s
+  <string name="morphe_external_downloader_package_not_found_warning">"Impossible de trouver l’application installée avec le nom de paquet : %s
 
-Vérifiez que le nom du package est correct et que l’application est bien installée."</string>
-  <string name="morphe_external_downloader_empty_warning">Le nom du package ne peut pas être vide</string>
+Vérifiez que le nom de paquet est correct et que l’application est bien installée."</string>
+  <string name="morphe_external_downloader_empty_warning">Le nom du paquet ne peut pas être vide</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">Activer la lecture en boucle</string>
   <string name="morphe_do_not_remember_loop_video_title">Ne pas mémoriser la vidéo en boucle</string>
@@ -996,8 +996,8 @@ Si cette option est désactivée ultérieurement, il est recommandé de vider le
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Remplacer les boutons \'YouTube Music\'</string>
   <string name="morphe_override_youtube_music_buttons_summary">Ouvre votre application musicale préférée au lieu de YouTube Music lorsque vous appuyez sur les boutons de musique</string>
-  <string name="morphe_music_package_name_title">Nom du package de l’application musicale cible</string>
-  <string name="morphe_music_package_name_summary">Nom du package de votre application musicale cible installée</string>
+  <string name="morphe_music_package_name_title">Nom du paquet de l’application musicale cible</string>
+  <string name="morphe_music_package_name_summary">Nom de paquet de votre application musicale cible installée</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Page de démarrage</string>
   <string name="morphe_change_start_page_entry_default">Par défaut</string>

@@ -101,4 +101,10 @@ Second \"item\" text"</string>
  • ڕەنگە پەخشکردنی پاشبنەما کار نەکات"</string>
   <!-- misc.gms.linkHandlingPatch -->
   <!-- misc.checks.experimentalAppNoticePatch -->
+  <string name="morphe_experimental_app_version_dialog_message">"ئةوه
+ئەپى وერსۆنى تاقیكەرەوەى ⚠️ &lt;b&gt;%1$s&lt;/b&gt; دةربخۆیت.
+&lt;br/&gt;&lt;br/&gt;
+🔧 ڕاهێنانی سەرنجدان: ئەپى بەرهەڵەكان یان خۆتێکزارى نادیار دەربخۆیت چونكە خەڵاتەكان دابةزین بۆ ئەم وერსۆنەى ئەپە.
+&lt;br/&gt;&lt;br/&gt;
+ئەگەر تؤیترین توشی هەر كێشەیەك نةبوونى، ئەوا &lt;b&gt;راكړه‌تەر&lt;/b&gt; و بؤ وერსۆنى مسه‌تەبی &lt;b&gt;%2$s&lt;/b&gt;✅ په‌چۆكه"</string>
 </resources>
