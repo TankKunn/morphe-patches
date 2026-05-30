@@ -1,3 +1,18 @@
+## [1.31.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.30.0...v1.31.0-dev.1) (2026-05-30)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Loop range patch:** correctly reset range if preferences are not saved ([a328ed8](https://github.com/MorpheApp/morphe-patches/commit/a328ed872f64a9fd6f3d4100d573dc3ca8a8ff2e))
+* **YouTube - Loop range patch:** reset loop range before set a new one ([7aa767a](https://github.com/MorpheApp/morphe-patches/commit/7aa767ab256e0ef9da9238ffc68f4ec8263f416f))
+
+### ✨ New Features
+
+* **YouTube - SponsorBlock:** Add fade animation to the new segment panel ([#1577](https://github.com/MorpheApp/morphe-patches/issues/1577)) ([771f7fb](https://github.com/MorpheApp/morphe-patches/commit/771f7fbde1808c4129b01c0c95f0f0d08ff4ed4f))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for `21.22.164` ([b88b9ca](https://github.com/MorpheApp/morphe-patches/commit/b88b9cacc2af040fb2643a350d6b5caeaf19eea5))
+
 ## [1.30.0](https://github.com/MorpheApp/morphe-patches/compare/v1.29.0...v1.30.0) (2026-05-29)
 
 ### 🐛 Bug Fixes
