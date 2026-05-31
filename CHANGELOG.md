@@ -1,3 +1,13 @@
+## [1.31.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.1...v1.31.0-dev.2) (2026-05-31)
+
+### 🐛 Bug Fixes
+
+* **Reddit:** Resolve rare app startup crash when `Show view count` is enabled ([6cd6af1](https://github.com/MorpheApp/morphe-patches/commit/6cd6af147ec56eb4e9ba07b5b4ea6d54271669ae))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.22.0` ([3f443e2](https://github.com/MorpheApp/morphe-patches/commit/3f443e22ec39c3efdf98a562a0db376704212e4b))
+
 ## [1.31.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.30.0...v1.31.0-dev.1) (2026-05-30)
 
 ### 🐛 Bug Fixes
