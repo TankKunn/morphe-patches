@@ -55,16 +55,20 @@ internal fun sanitizeSharingLinksPatch(
             }
         )
 
+        fun patchLogic(urlStringRegister: Int): String {
+            return """
+                invoke-static { v$urlStringRegister }, $EXTENSION_CLASS->sanitize(Ljava/lang/String;)Ljava/lang/String;
+                move-result-object v$urlStringRegister
+            """
+        }
+
         fun Fingerprint.hookUrlString(matchIndex: Int) {
             val index = instructionMatches[matchIndex].index
             val urlRegister = method.getInstruction<OneRegisterInstruction>(index).registerA
 
             method.addInstructions(
                 index + 1,
-                """
-                    invoke-static { v$urlRegister }, $EXTENSION_CLASS->sanitize(Ljava/lang/String;)Ljava/lang/String;
-                    move-result-object v$urlRegister
-                """
+                patchLogic(urlRegister)
             )
         }
 
@@ -74,10 +78,7 @@ internal fun sanitizeSharingLinksPatch(
 
             method.addInstructionsAtControlFlowLabel(
                 index,
-                """
-                    invoke-static { v$urlRegister }, $EXTENSION_CLASS->sanitize(Ljava/lang/String;)Ljava/lang/String;
-                    move-result-object v$urlRegister
-                """
+                patchLogic(urlRegister)
             )
         }
 

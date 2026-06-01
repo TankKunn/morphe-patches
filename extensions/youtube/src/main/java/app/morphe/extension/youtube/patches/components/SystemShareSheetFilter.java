@@ -13,14 +13,11 @@ import static app.morphe.extension.youtube.patches.OpenSystemShareSheetPatch.raw
 import static app.morphe.extension.youtube.patches.OpenSystemShareSheetPatch.systemSheetOpened;
 import static app.morphe.extension.youtube.settings.Settings.OPEN_SYSTEM_SHARE_SHEET;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.SystemClock;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
 
 import java.util.regex.Matcher;
 
@@ -83,7 +80,7 @@ public final class SystemShareSheetFilter extends Filter {
         return true;
     }
 
-    // Useful to send a touch event to close the YouTube sharing panel.
+    // To close the Share sheet panel, a touch event sent through decorView is needed.
     private void performClickOutsidePanel(View shareSheetDecorView) {
         MotionEvent outsidePanelTap = MotionEvent.obtain(
                 SystemClock.uptimeMillis(),
