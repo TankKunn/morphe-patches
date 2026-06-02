@@ -59,6 +59,9 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_feed_flyout_menu_title">Paganahin ang feed flyout menu filter</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Feed flyout menu filter</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Ilagay ang mga pangalan ng flyout menu na ifi-filter by, na pinaghihiwalay ng mga bagong linya</string>
+  <string name="morphe_hide_account_menu_title">Paganahin ang Library / Filter ng iyong menu sa ibaba</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Library / Filter ng iyong menu sa ibaba</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Ilagay ang mga pangalan ng Library / filter ng iyong menu sa ibaba, na pinaghihiwalay ng mga bagong linya</string>
   <string name="morphe_hide_album_cards_title">Itago ang mga album card</string>
   <string name="morphe_hide_album_cards_summary">Itinatago ang mga album card sa ilalim ng paglalarawan ng artist</string>
   <string name="morphe_hide_artist_cards_title">Itago ang mga artist card</string>
@@ -123,7 +126,6 @@ Ang pagpapakita ng mga YouTube Doodle ay maaaring pigilan ang pagpapakita ng mga
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Itago ang button na Sumali</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Itago ang live chat donators bar</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Itago ang button na \'Live chat replay\'</string>
@@ -205,6 +207,7 @@ Ang pagpapakita ng mga YouTube Doodle ay maaaring pigilan ang pagpapakita ng mga
   <string name="morphe_hide_comments_create_a_short_button_title">Itago ang button na \'Gumawa ng Short\'</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Itago ang mga button na Emoji at Timestamp</string>
   <string name="morphe_hide_comments_info_button_title">Itago ang button na Impormasyon</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Itago ang live chat donators bar</string>
   <string name="morphe_hide_comments_preview_comment_title">Itago ang pasilip na komento</string>
   <string name="morphe_hide_comments_preview_comment_summary">Itinatago ang preview ng komento sa ilalim ng video bago buksan ang buong seksyon ng mga komento</string>
   <string name="morphe_hide_comments_thanks_button_title">Itago ang button na Salamat</string>

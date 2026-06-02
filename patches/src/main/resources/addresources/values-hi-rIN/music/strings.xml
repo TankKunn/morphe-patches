@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 सेकंड</string>
   <string name="morphe_crossfade_duration_9000ms">9 सेकंड</string>
   <string name="morphe_crossfade_duration_10000ms">10 सेकंड</string>
+  <string name="morphe_crossfade_duration_12000ms">12 सेकंड</string>
   <string name="morphe_music_crossfade_on_skip_title">मैनुअल स्किप पर क्रॉसफ़ेड</string>
   <string name="morphe_music_crossfade_on_skip_summary">जब आप मैन्युअल रूप से अगले ट्रैक पर जाते हैं तो क्रॉसफ़ेड प्रभाव लागू करें</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">ऑटो-एडवांस पर क्रॉसफ़ेड</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">क्रॉसफ़ेड फिर से शुरू हुआ</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">क्रॉसफ़ेड सक्षम होने पर वीडियो मोड उपलब्ध नहीं है</string>
   <string name="morphe_music_crossfade_about_title">इसके बारे में</string>
-  <string name="morphe_music_crossfade_about_summary">"YouTube Music 8.x के साथ क्रॉसफ़ेड उपलब्ध है
+  <string name="morphe_music_crossfade_about_summary">"शफल बटन को लंबा दबाकर अक्षम/सक्षम करें
 
-शफल बटन को लंबे समय तक दबाकर क्रॉसफ़ेड को अक्षम/सक्षम करें 
-
-VazerOG द्वारा फीचर कार्यान्वयन"</string>
+फ़ीचर कार्यान्वयन VazerOG द्वारा"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">स्थायी पुनरावृत्ति सक्षम करें</string>
   <!-- layout.buttons.hideButtons -->

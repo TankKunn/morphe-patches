@@ -59,6 +59,9 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_feed_flyout_menu_title">Felugró menü szűrő engedélyezése a Feedben</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Feed felugró menü szűrő </string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Add meg a szűrni kívánt felugró menüpontok nevét, soronként elválasztva</string>
+  <string name="morphe_hide_account_menu_title">Könyvtár / Az alsó menü szűrője</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Könyvtár / Az alsó menü szűrője</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Add meg a szűrni kívánt felugró menüpontok nevét, soronként elválasztva</string>
   <string name="morphe_hide_album_cards_title">Albumkártyák elrejtése</string>
   <string name="morphe_hide_album_cards_summary">Elrejti az albumkártyákat az előadó leírása alatt</string>
   <string name="morphe_hide_artist_cards_title">Előadó kártyák elrejtése</string>
@@ -123,7 +126,6 @@ A logóanimációk miatt előfordulhat, hogy a saját fejlécek nem látszódnak
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">„Csatlakozás” gomb elrejtése</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Élő csevegés támogatói sávjának elrejtése</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">„Élő csevegés ismétlése” gomb elrejtése</string>
@@ -205,6 +207,7 @@ Ha a sáv összes elemét elrejted, a teljes megjegyzések szakasz is rejtve mar
   <string name="morphe_hide_comments_create_a_short_button_title">Shorts létrehozása gomb elrejtése</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Hangulatjel- és időbélyegző-gombok elrejtése</string>
   <string name="morphe_hide_comments_info_button_title">Információ gomb elrejtése</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Élő csevegés támogatói sávjának elrejtése</string>
   <string name="morphe_hide_comments_preview_comment_title">Megjegyzés előnézet elrejtése</string>
   <string name="morphe_hide_comments_preview_comment_summary">Megjegyzések előnézetének elrejtése a teljes megjegyzések szekció megnyitása előtt</string>
   <string name="morphe_hide_comments_thanks_button_title">Köszönet gomb elrejtése</string>

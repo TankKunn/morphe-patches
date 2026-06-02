@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekundės</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekundės</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekundžių</string>
+  <string name="morphe_crossfade_duration_12000ms">12 sekundės</string>
   <string name="morphe_music_crossfade_on_skip_title">Perėjimas tarp takelių rankiniu praleidimu</string>
   <string name="morphe_music_crossfade_on_skip_summary">Taiko kryžminio perdėjimo efektą, kai rankiniu būdu pereinate į kitą takelę</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Perėjimo tarp takelių efektas automatinio perėjimo metu</string>
@@ -68,11 +69,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Kryžminis išnykimas atnaujintas</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Vaizdo režimas neprieinamas, kai įjungtas kryžminis išnykimas</string>
   <string name="morphe_music_crossfade_about_title">Apie</string>
-  <string name="morphe_music_crossfade_about_summary">"Crossfade yra prieinama su YouTube Music 8.x
-
-Ilgai paspauskite mišinimo mygtuką, kad išjungtumėte/įjungtumėte
-
-Funkciją įgyvendino VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Įjungti kartoti viam laikui</string>
   <!-- layout.buttons.hideButtons -->

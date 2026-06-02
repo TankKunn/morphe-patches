@@ -59,6 +59,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_title">เปิดตัวกรองเมนูฟลายเอาท์ฟีด</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">ตัวกรองเมนูฟลายเอาท์ฟีด</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">ป้อนชื่อเมนู flyout เพื่อกรอง โดยคั่นด้วยบรรทัดใหม่</string>
+  <string name="morphe_hide_account_menu_title">เปิดใช้งานคลัง / ตัวกรองเมนูด้านล่างของคุณ</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">เปิดใช้งานคลัง / ตัวกรองเมนูด้านล่างของคุณ</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">ป้อนชื่อเมนูคลัง / คุณด้านล่างที่คุณต้องการกรอง คั่นด้วยบรรทัดใหม่</string>
   <string name="morphe_hide_album_cards_title">ซ่อนการ์ดอัลบั้ม</string>
   <string name="morphe_hide_album_cards_summary">ซ่อนการ์ดอัลบั้มภายใต้คำอธิบายของศิลปิน</string>
   <string name="morphe_hide_artist_cards_title">ซ่อนบัตรศิลปิน</string>
@@ -123,7 +126,6 @@ Second \"item\" text"</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">ซ่อนปุ่มเข้าร่วม</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">ซ่อนแถบผู้สนับสนุนแชทสด</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">ซ่อนปุ่ม \'เล่นซ้ำชาต์สด\'</string>
@@ -206,6 +208,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_create_a_short_button_title">ซ่อนปุ่ม \'สร้าง Shorts\'</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">ซ่อนปุ่มอีโมจิและปุ่มการประทับเวลา</string>
   <string name="morphe_hide_comments_info_button_title">ซ่อนปุ่มข้อมูล</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">ซ่อนแถบผู้บริจาคแชทสด</string>
   <string name="morphe_hide_comments_preview_comment_title">ซ่อนความคิดเห็นตัวอย่าง</string>
   <string name="morphe_hide_comments_preview_comment_summary">ซ่อนตัวอย่างความคิดเห็นใต้คลิปวิดีโอ ก่อนที่จะเปิดส่วนความคิดเห็นทั้งหมด</string>
   <string name="morphe_hide_comments_thanks_button_title">ซ่อนปุ่มขอบคุณ</string>

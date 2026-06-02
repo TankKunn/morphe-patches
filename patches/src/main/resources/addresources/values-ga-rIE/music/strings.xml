@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 soicind</string>
   <string name="morphe_crossfade_duration_9000ms">9 soicind</string>
   <string name="morphe_crossfade_duration_10000ms">10 soicind</string>
+  <string name="morphe_crossfade_duration_12000ms">12 soicind</string>
   <string name="morphe_music_crossfade_on_skip_title">Traschéimniú ar scipeáil láimhe</string>
   <string name="morphe_music_crossfade_on_skip_summary">Cuireann sé an éifeacht traschéimnithe i bhfeidhm nuair a léimeann tú go dtí an chéad rian eile de láimh</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Traschéimniú ar uath-dhul chun cinn</string>
@@ -68,9 +69,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Atosaíodh traschéimniú</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Níl mód físe ar fáil agus traschéimniú cumasaithe</string>
   <string name="morphe_music_crossfade_about_title">Maidir</string>
-  <string name="morphe_music_crossfade_about_summary">"Tá traschéimniú ar fáil le YouTube Music 8.x
-
-Brúigh an cnaipe suaitheadh ​​​​fada chun é a dhíchumasú/a chumasú
+  <string name="morphe_music_crossfade_about_summary">"Brúigh an cnaipe suaitheadh ​​​​fada chun traschéimniú a dhíchumasú/a chumasú
 
 Cur i bhfeidhm gné ag VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->

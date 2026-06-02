@@ -68,11 +68,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Преминувањето е продолжено</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Режим на видео не е достапен додека е вклучено преминувањето</string>
   <string name="morphe_music_crossfade_about_title">За апликацијата</string>
-  <string name="morphe_music_crossfade_about_summary">"Преминување е достапно со YouTube Music 8.x
-
-Долго притиснете го копчето за мешање за да го оневозможите/овозможите
-
-Имплементација на функцијата од VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Вклучи перманентно повторување</string>
   <!-- layout.buttons.hideButtons -->

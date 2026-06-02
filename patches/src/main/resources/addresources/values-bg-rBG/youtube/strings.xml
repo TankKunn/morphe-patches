@@ -59,6 +59,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_title">Включете филтър за излизане на лентата</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Филтър за излизане на лентата</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Въведете имената на менютата flyout, за да филтрирате, разделени с нови редове</string>
+  <string name="morphe_hide_account_menu_title">Активиране на библиотека / Филтър от долното меню</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Активиране на библиотека / Филтър от долното меню</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Въведете имената на библиотеките / Филтър от долното меню, разделени с нови редове</string>
   <string name="morphe_hide_album_cards_title">\"Карти на албумите\"</string>
   <string name="morphe_hide_album_cards_summary">Скрива картите на албумите под описанието на изпълнителя</string>
   <string name="morphe_hide_artist_cards_title">Скриване на картите на изпълнителите</string>
@@ -123,7 +126,6 @@ Second \"item\" text"</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Скриване на бутона \"Присъединете се\"</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Скрий лентата на дарителите от чата на живо</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Скрий бутона \"Live chat replay\"</string>
@@ -205,6 +207,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Скрийте или покажете бутона \'Създай краток видеоклип\'</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Скрийте бутони за емоджи и времевамки</string>
   <string name="morphe_hide_comments_info_button_title">Скрий бутона Информация</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Скрий лентата с дарители в чата на живо</string>
   <string name="morphe_hide_comments_preview_comment_title">Скрийте предварителен коментар</string>
   <string name="morphe_hide_comments_preview_comment_summary">Скрива предварителния преглед на коментара под видеото, преди да се отвори пълната секция с коментари</string>
   <string name="morphe_hide_comments_thanks_button_title">Скрийте бутона \'Благодаряне\'</string>

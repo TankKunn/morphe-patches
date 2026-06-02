@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">৮ সেকেন্ড</string>
   <string name="morphe_crossfade_duration_9000ms">৯ সেকেন্ড</string>
   <string name="morphe_crossfade_duration_10000ms">১০ সেকেন্ড</string>
+  <string name="morphe_crossfade_duration_12000ms">১২ সেকেন্ড</string>
   <string name="morphe_music_crossfade_on_skip_title">ম্যানুয়াল স্কিপে ক্রসফেড</string>
   <string name="morphe_music_crossfade_on_skip_summary">আপনি যখন ম্যানুয়ালি পরবর্তী ট্র্যাকে যান তখন ক্রসফেড প্রভাব প্রয়োগ করে।</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">অটো-অ্যাডভান্সে ক্রসফেড</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">ক্রসফেড পুনরায় শুরু করা হয়েছে</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">ক্রসফেড চালু থাকা অবস্থায় ভিডিও মোড উপলব্ধ নয়</string>
   <string name="morphe_music_crossfade_about_title">মর্ফ সম্পর্কে</string>
-  <string name="morphe_music_crossfade_about_summary">"ইউটিউব মিউজিক ৮.x এর সাথে ক্রসফেড পাওয়া যাচ্ছে।
+  <string name="morphe_music_crossfade_about_summary">"shuffle বোতামটি দীর্ঘক্ষণ চেপে ধরে shuffle বন্ধ/চালু করুন
 
-ডিসেবেল/ইনেবল করার জন্য শাফেল বোতামটি দীর্ঘক্ষণ চাপুন।
-
-VazerOG কর্তৃক ফিচার বাস্তবায়ন।"</string>
+বৈশিষ্ট্যটি VazerOG দ্বারা প্রয়োগ করা হয়েছে।"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">স্থায়ী পুনরাবৃত্তি সক্ষম করুন</string>
   <!-- layout.buttons.hideButtons -->

@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 segundo</string>
   <string name="morphe_crossfade_duration_9000ms">9 segundo</string>
   <string name="morphe_crossfade_duration_10000ms">10 segundo</string>
+  <string name="morphe_crossfade_duration_12000ms">12 segundo</string>
   <string name="morphe_music_crossfade_on_skip_title">Kontrol sa sesyon</string>
   <string name="morphe_music_crossfade_on_skip_summary">Ina-apply ang crossfade effect kapag mano-mano kang lumipat sa susunod na track</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Crossfade on auto-advance</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Ipinagpatuloy ang crossfade</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Hindi magagamit ang video mode habang naka-enable ang crossfade</string>
   <string name="morphe_music_crossfade_about_title">Tungkol</string>
-  <string name="morphe_music_crossfade_about_summary">"Available ang Crossfade sa YouTube Music 8.x
+  <string name="morphe_music_crossfade_about_summary">"Pindutin nang matagal ang pindutan ng shuffle upang i-disable/i-enable
 
- Pindutin nang matagal ang button ng shuffle para i-disable/i-enable
-
-Feature implementation by VazerOG"</string>
+Pagpapatupad ng feature ni VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Paganahin ang permanenteng paulit-ulit</string>
   <!-- layout.buttons.hideButtons -->

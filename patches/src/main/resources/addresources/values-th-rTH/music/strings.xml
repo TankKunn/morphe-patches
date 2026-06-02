@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 วินาที</string>
   <string name="morphe_crossfade_duration_9000ms">9 วินาที</string>
   <string name="morphe_crossfade_duration_10000ms">10 วินาที</string>
+  <string name="morphe_crossfade_duration_12000ms">12 วินาที</string>
   <string name="morphe_music_crossfade_on_skip_title">Fade เมื่อข้ามเพลงด้วยตนเอง</string>
   <string name="morphe_music_crossfade_on_skip_summary">ใช้เอฟเฟกต์การผสมผสานเสียงเมื่อคุณข้ามไปยังแทร็กถัดไปด้วยตนเอง</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Fade เมื่อเปิดใช้งาน Auto-Advance</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">การเปลี่ยนเพลงแบบค่อยๆ จางหายกลับมาทำงานต่อ</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">โหมดวิดีโอไม่สามารถใช้ได้ขณะเปิดใช้งานการเปลี่ยนเพลงแบบค่อยๆ จางหาย</string>
   <string name="morphe_music_crossfade_about_title">เกี่ยวกับ</string>
-  <string name="morphe_music_crossfade_about_summary">"Fade พร้อมใช้งานกับ YouTube Music 8.x
+  <string name="morphe_music_crossfade_about_summary">"กดแบบยาวที่ปุ่มสุ่มเพื่อปิด/เปิด
 
-กดค้างที่ปุ่ม Shuffle เพื่อปิด/เปิดใช้งาน
-
-Feature implementation by VazerOG"</string>
+การพัฒนาคุณสมบัตินี้โดย VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">เปิดใช้งานเล่นซ้ำถาวร</string>
   <!-- layout.buttons.hideButtons -->

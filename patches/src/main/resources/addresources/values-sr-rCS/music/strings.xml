@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekundi</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekundi</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekundi</string>
+  <string name="morphe_crossfade_duration_12000ms">12 sekunde</string>
   <string name="morphe_music_crossfade_on_skip_title">Прелаз при ручном прескакивању</string>
   <string name="morphe_music_crossfade_on_skip_summary">Primeni efekat preklapanja kada ručno preskočiš na sledeću numeru</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Прелаз при аутоматском прескакивању</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Prelazni efekat nastavljen</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Video režim nije dostupan dok je omogućen prelazni efekat</string>
   <string name="morphe_music_crossfade_about_title">O programu</string>
-  <string name="morphe_music_crossfade_about_summary">"Прелаз је доступан са YouTube Music 8.x
+  <string name="morphe_music_crossfade_about_summary">"Pritisnite i zadržite dugme za nasumično puštanje kako biste onemogućili/omogućili
 
-Дугачак притисак на дугме за прескакање да бисте искључили/укључили
-
-Имплементација функције од ВazerOG"</string>
+Implementacija funkcije od strane VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Omogući trajno ponavljanje</string>
   <!-- layout.buttons.hideButtons -->

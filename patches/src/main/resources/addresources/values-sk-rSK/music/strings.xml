@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekúnd</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekúnd</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekúnd</string>
+  <string name="morphe_crossfade_duration_12000ms">12 sekúnd</string>
   <string name="morphe_music_crossfade_on_skip_title">Prechod pri manuálnom preskočení</string>
   <string name="morphe_music_crossfade_on_skip_summary">Aplikuje efekt prechodu medzi skladbami, keď manuálne preskočíte na ďalšiu skladbu</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Prechod pri automatickom postupe</string>
@@ -68,9 +69,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Prechodové zmiznutie zvuku obnovené</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Režim videa nie je dostupný, keď je zapnuté prechodové zmiznutie zvuku</string>
   <string name="morphe_music_crossfade_about_title">O aplikácii</string>
-  <string name="morphe_music_crossfade_about_summary">"Prechod je dostupný s YouTube Music 8.x
-
-Dlhým stlačením tlačidla náhodného výberu ho vypnete/zapnete
+  <string name="morphe_music_crossfade_about_summary">"Dlhým stlačením tlačidla náhodného výberu zapnete/vypnete funkciu.
 
 Implementácia funkcie od VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->

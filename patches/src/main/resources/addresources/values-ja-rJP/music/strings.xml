@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 秒</string>
   <string name="morphe_crossfade_duration_9000ms">9 秒</string>
   <string name="morphe_crossfade_duration_10000ms">10 秒</string>
+  <string name="morphe_crossfade_duration_12000ms">12 秒</string>
   <string name="morphe_music_crossfade_on_skip_title">手動スキップ時のクロスフェード</string>
   <string name="morphe_music_crossfade_on_skip_summary">手動で次のトラックにスキップしたときにクロスフェードを適用します</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">自動再生時のクロスフェード</string>
@@ -68,9 +69,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">クロスフェードを再開しました</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">クロスフェードが有効になっている間は、動画モードは利用できません</string>
   <string name="morphe_music_crossfade_about_title">クロスフェードについて</string>
-  <string name="morphe_music_crossfade_about_summary">"クロスフェードは YouTube Music 8.x で利用可能です。
-
-シャッフル ボタンを長押しすると、一時的にオフ / オンを切り替えることができます。
+  <string name="morphe_music_crossfade_about_summary">"シャッフルボタンを長押しすると、一時的にオフ / オンを切り替えることができます。
 
 機能実装: VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->

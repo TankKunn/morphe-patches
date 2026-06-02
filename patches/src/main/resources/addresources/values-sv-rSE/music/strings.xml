@@ -56,6 +56,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekunder</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekunder</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekunder</string>
+  <string name="morphe_crossfade_duration_12000ms">12 sekunder</string>
   <string name="morphe_music_crossfade_on_skip_title">Övertoning vid manuell överhoppning</string>
   <string name="morphe_music_crossfade_on_skip_summary">Tillämpar övertoningseffekten när du hoppar till nästa spår manuellt</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Övertoning vid automatisk fortsättning</string>
@@ -66,11 +67,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Övertoningar återupptogs</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Videoläge är inte tillgängligt när övertoningar är aktiverade</string>
   <string name="morphe_music_crossfade_about_title">Om</string>
-  <string name="morphe_music_crossfade_about_summary">"Övertoningar är tillgängliga med YouTube Music 8.x
-
-Tryck länge på knappen Shuffla för att inaktivera/aktivera
-
-Funktionen implementerades av VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Aktivera permanent upprepning</string>
   <!-- layout.buttons.hideButtons -->

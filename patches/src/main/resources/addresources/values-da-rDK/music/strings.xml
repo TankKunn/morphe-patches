@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekunder</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekunder</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekunder</string>
+  <string name="morphe_crossfade_duration_12000ms">12 sekunder</string>
   <string name="morphe_music_crossfade_on_skip_title">Crossfade ved manuelt spring</string>
   <string name="morphe_music_crossfade_on_skip_summary">Anvender krydsfade-effekten, når du manuelt springer til næste nummer</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Crossfade ved automatisk afspilning</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Crossfade genoptaget</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Videotilstand er ikke tilgængelig, når crossfade er aktiveret</string>
   <string name="morphe_music_crossfade_about_title">Om</string>
-  <string name="morphe_music_crossfade_about_summary">"Crossfade er tilgængelig med YouTube Music 8.x
+  <string name="morphe_music_crossfade_about_summary">"Tryk og hold på knappen til tilfældig afspilning for at deaktivere/aktivere
 
-Langt tryk på shuffle-knappen for at deaktivere/aktivere
-
-Feature implementering af VazerOG"</string>
+Funktionen er implementeret af VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Aktiver permanent gentagelse</string>
   <!-- layout.buttons.hideButtons -->

@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 ثوانٍ</string>
   <string name="morphe_crossfade_duration_9000ms">9 ثوانٍ</string>
   <string name="morphe_crossfade_duration_10000ms">10 ثوانٍ</string>
+  <string name="morphe_crossfade_duration_12000ms">12 ثوانٍ</string>
   <string name="morphe_music_crossfade_on_skip_title">التعتيم عند تخطي يدوي</string>
   <string name="morphe_music_crossfade_on_skip_summary">يطبّق تأثير التلاشي التدريجي عند الانتقال يدويًا إلى المسار التالي</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">التعتيم أثناء التقديم التلقائي</string>
@@ -68,9 +69,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">تم استئناف التلاشي التدريجي</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">وضع الفيديو غير متاح أثناء تمكين التلاشي التدريجي</string>
   <string name="morphe_music_crossfade_about_title">لمحة</string>
-  <string name="morphe_music_crossfade_about_summary">"التعتيم متاح مع YouTube Music 8.x
-
-اضغط مع الاستمرار على زر التشغيل العشوائي لتعطيل/تمكين
+  <string name="morphe_music_crossfade_about_summary">"اضغط مع الاستمرار على زر التشغيل العشوائي لتعطيل/تمكين الميزة
 
 تنفيذ الميزة بواسطة VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->

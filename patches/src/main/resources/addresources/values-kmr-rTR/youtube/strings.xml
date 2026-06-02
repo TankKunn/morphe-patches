@@ -61,6 +61,9 @@ Guherînan têne xistine:
   <string name="morphe_hide_feed_flyout_menu_title">Filtira menuya flyout-a xurekê çêbike</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtira menuya flyout-a xurekê</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Navê menuya vekirinê ku hûn bi rêzên nû veqetînin da ku bi wan fîltre bikin</string>
+  <string name="morphe_hide_account_menu_title">Mîze Bike / Fîlterê menuya jorîn</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Mîze Bike / Fîlterê menuya jorîn</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Navên menuya jorîn ku bi rêyên nû veqetandî ne, têxin da ku bi wan veqetînin</string>
   <string name="morphe_hide_album_cards_title">Kartên album hidin</string>
   <string name="morphe_hide_album_cards_summary">Kartên albûmê di bin nivîsa hunermend de veşêrin</string>
   <string name="morphe_hide_artist_cards_title">Kartên hunermend hidin</string>
@@ -123,7 +126,6 @@ Guherînan têne xistine:
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Bi kurtahiya \'Teşîfê bike\' veşêrin</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Barê xwerasên chatê veşêre</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">\'Nuşeyên Çatê\' قایپە</string>
@@ -205,6 +207,7 @@ Guherînan têne xistine:
   <string name="morphe_hide_comments_create_a_short_button_title">Bişkoka \'Kurîna Short\' veşêrin</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Bişkoka Emoji û Demreya veşêrin</string>
   <string name="morphe_hide_comments_info_button_title">Dîmena Butona Agahî</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Barê xwerasên chatê veşêre</string>
   <string name="morphe_hide_comments_preview_comment_title">Pêşbîna şîroveyê veşêrin</string>
   <string name="morphe_hide_comments_preview_comment_summary">Hemû vebijarkên sortkirina şîroveyan ji bilî \'Herî jor\' û \'Nûjen\' veşêrin</string>
   <string name="morphe_hide_comments_thanks_button_title">Bişkoka \'Spas\' veşêrin</string>

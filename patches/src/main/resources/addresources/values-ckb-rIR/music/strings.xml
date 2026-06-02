@@ -55,6 +55,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 چرکه</string>
   <string name="morphe_crossfade_duration_9000ms">9 چرکە</string>
   <string name="morphe_crossfade_duration_10000ms">10 چرکە</string>
+  <string name="morphe_crossfade_duration_12000ms">12 چرکە</string>
   <string name="morphe_music_crossfade_on_skip_title">پەڕینەوە لەسەر پەڕاندنی بەدەستی</string>
   <string name="morphe_music_crossfade_on_skip_summary">کاریگەری پەڕینەوە بەکاردەهێنێت کاتێک بە دەستی دەچیتە ڕێڕەوی دواتر</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">پەڕینەوە لە بەرەوپێشچوونی-خۆکار</string>
@@ -65,11 +66,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">پەڕینەوە دەستی پێکردەوە</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">دۆخی ڤیدیۆ بەردەست نیە کاتێک پەڕینەوە چالاک کراوە</string>
   <string name="morphe_music_crossfade_about_title">دەربارە</string>
-  <string name="morphe_music_crossfade_about_summary">"پەڕینەوە لەگەڵ YouTube Music  8.x بەردەستە
-
-دوگمەی تێکەڵکردن بۆ ماوەیەکی درێژ دابگرە بۆ ناچالاککردن/چالاککردن
-
-جێبەجێکردنی تایبەتمەندی لەلایەن VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">چالاککردنی دووبارەبوونی هەمیشەیی</string>
   <!-- layout.buttons.hideButtons -->

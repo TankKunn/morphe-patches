@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekund</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekund</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekund</string>
+  <string name="morphe_crossfade_duration_12000ms">12 sekundy</string>
   <string name="morphe_music_crossfade_on_skip_title">Vyhlazování při ručním přeskoku</string>
   <string name="morphe_music_crossfade_on_skip_summary">Aplikuje efekt crossfade, když ručně přeskočíte na další skladbu</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Vyhlazování při automatickém přechodu</string>
@@ -68,9 +69,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Přechod mezi skladbami obnoven</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Režim videa není dostupný při zapnutém přechodu mezi skladbami</string>
   <string name="morphe_music_crossfade_about_title">O aplikaci</string>
-  <string name="morphe_music_crossfade_about_summary">"Vyhlazování je k dispozici s YouTube Music 8.x
-
-Dlouze podržte tlačítko pro náhodné přehrávání, abyste jej vypnuli/zapnuli
+  <string name="morphe_music_crossfade_about_summary">"Dlouhé stisknutí tlačítka přehrávání náhodně zapne/vypne
 
 Implementace funkce VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->

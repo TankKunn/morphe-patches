@@ -59,6 +59,9 @@ Los cambios incluyen:
   <string name="morphe_hide_feed_flyout_menu_title">Activar filtro del menú desplegable del feed</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtro del menú desplegable del feed</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Introduce los nombres de los menús desplegables por los que filtrar, separados por nuevas líneas</string>
+  <string name="morphe_hide_account_menu_title">Activar filtro del menú inferior Biblioteca / Tú</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Filtro del menú inferior Biblioteca / Tú</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Introduce los nombres del menú inferior Biblioteca / Tú para filtrar, separados por nuevas líneas</string>
   <string name="morphe_hide_album_cards_title">Ocultar tarjetas de álbum</string>
   <string name="morphe_hide_album_cards_summary">Oculta las tarjetas del álbum debajo de la descripción del artista</string>
   <string name="morphe_hide_artist_cards_title">Ocultar tarjetas de artista</string>
@@ -123,7 +126,6 @@ Mostrar los Doodles de YouTube puede impedir que se muestren encabezados persona
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Ocultar botón \"Unirme\"</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Ocultar barra de donantes del chat en directo</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Ocultar botón \"Repetición del chat en directo\"</string>
@@ -205,6 +207,7 @@ Mostrar los Doodles de YouTube puede impedir que se muestren encabezados persona
   <string name="morphe_hide_comments_create_a_short_button_title">Ocultar botón \"Crear un Short\"</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Ocultar botones de emoji y marca de tiempo</string>
   <string name="morphe_hide_comments_info_button_title">Ocultar botón de información</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Ocultar barra de donantes del chat en directo</string>
   <string name="morphe_hide_comments_preview_comment_title">Ocultar vista previa de comentarios</string>
   <string name="morphe_hide_comments_preview_comment_summary">Oculta la vista previa de comentarios debajo del vídeo antes de abrir la sección de comentarios completa</string>
   <string name="morphe_hide_comments_thanks_button_title">Ocultar botón \"Gracias\"</string>
@@ -511,9 +514,9 @@ Deben proporcionarse 'Cookies de subtítulos'"</string>
   <!-- 'Create' has no display name. Translate normally. -->
   <string name="morphe_hide_create_button_title">Ocultar botón \"Crear\"</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_hide_subscriptions_button_title">Cuando está activado, pulsar abre los ajustes de Morphe y mantener pulsado abre los ajustes de YouTube, desactivar para intercambiar</string>
+  <string name="morphe_hide_subscriptions_button_title">Ocultar botón \"Suscribirme\"</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_hide_notifications_button_title">Desactiva el sombreado oscuro que rodea los controles del reproductor de vídeo</string>
+  <string name="morphe_hide_notifications_button_title">Ocultar el botón de notificación</string>
   <string name="morphe_show_search_button_title">Ocultar botón Ajustes</string>
   <string name="morphe_show_search_button_index_title">Gestione la visibilidad del modo Ambiente y las restricciones de energía</string>
   <string name="morphe_show_settings_button_title">Permite que el modo Ambiente permanezca activo en el modo de ahorro de batería</string>

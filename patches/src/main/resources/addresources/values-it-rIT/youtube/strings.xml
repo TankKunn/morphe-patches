@@ -59,6 +59,9 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_feed_flyout_menu_title">Abilita filtro per l\'elenco del menù a comparsa</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtro dell\'elenco del menù a comparsa</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Inserisci i nomi degli elementi del menù a comparsa da filtrare, separati da nuove righe</string>
+  <string name="morphe_hide_account_menu_title">Abilita filtraggio Libreria/You</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Abilita filtraggio Libreria/Menù inferiore scheda You</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Inserisci i nomi degli elementi del menu da filtrare, separati da nuove righe</string>
   <string name="morphe_hide_album_cards_title">Nascondi le schede degli album</string>
   <string name="morphe_hide_album_cards_summary">Nasconde le schede degli album sotto la descrizione dell\'artista</string>
   <string name="morphe_hide_artist_cards_title">Nascondi le schede artista</string>
@@ -123,7 +126,6 @@ La visualizzazione dei Doodle di YouTube potrebbe impedire la visualizzazione de
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Nascondi il pulsante Abbonati</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Nascondi la barra dei donatori della chat live</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Nascondi il pulsante \"Riproduci chat live\"</string>
@@ -205,6 +207,7 @@ La visualizzazione dei Doodle di YouTube potrebbe impedire la visualizzazione de
   <string name="morphe_hide_comments_create_a_short_button_title">Nascondi il pulsante \'Crea uno Short\'</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Nascondi i pulsanti Emoji e Timestamp</string>
   <string name="morphe_hide_comments_info_button_title">Nascondi il pulsante Info</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Nascondi la barra dei donatori della chat live</string>
   <string name="morphe_hide_comments_preview_comment_title">Nascondi il commento di anteprima</string>
   <string name="morphe_hide_comments_preview_comment_summary">Nasconde l\'anteprima del commento sotto il video prima di aprire la sezione commenti completa</string>
   <string name="morphe_hide_comments_thanks_button_title">Nascondi il pulsante Grazie</string>

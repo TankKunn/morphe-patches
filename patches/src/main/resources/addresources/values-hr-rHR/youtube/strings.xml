@@ -120,7 +120,6 @@ Prikaz YouTube Doodlesa može spriječiti prikazivanje prilagođenih zaglavlja."
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Sakrij tipku za pridruživanje</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Skriva traku donatora izravnog chata</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Sakrij tipku \'Live chat replay\'</string>
@@ -201,6 +200,7 @@ Prikaz YouTube Doodlesa može spriječiti prikazivanje prilagođenih zaglavlja."
   <string name="morphe_hide_comments_create_a_short_button_title">Sakrij \'Prikaži\' odjel</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Sakrij \'Prikaži\' odjel</string>
   <string name="morphe_hide_comments_info_button_title">Sakrij tipku Info</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Skriva traku donatora izravnog chata</string>
   <string name="morphe_hide_comments_preview_comment_title">Emoji i Vremenska oznaka tipke su skrivene</string>
   <string name="morphe_hide_comments_preview_comment_summary">Sakriva pregled komentara ispod videa prije otvaranja cijelog odjeljka s komentarima</string>
   <string name="morphe_hide_comments_thanks_button_title">Sakrij dugme za pretraživanje</string>

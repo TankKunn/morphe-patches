@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 seconden</string>
   <string name="morphe_crossfade_duration_9000ms">9 seconden</string>
   <string name="morphe_crossfade_duration_10000ms">10 seconden</string>
+  <string name="morphe_crossfade_duration_12000ms">12 seconden</string>
   <string name="morphe_music_crossfade_on_skip_title">Crossfade bij handmatig overslaan</string>
   <string name="morphe_music_crossfade_on_skip_summary">Past het crossfade-effect toe wanneer je handmatig naar het volgende nummer springt</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Crossfade bij automatisch doorspoelen</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Crossfade hervat</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Videomodus is niet beschikbaar wanneer crossfade is ingeschakeld</string>
   <string name="morphe_music_crossfade_about_title">Over</string>
-  <string name="morphe_music_crossfade_about_summary">"Crossfade beschikbaar met YouTube Music 8.x
+  <string name="morphe_music_crossfade_about_summary">"Houd de shuffle-knop ingedrukt om in/uit te schakelen
 
-Lang indrukken op de shuffle-knop om crossfade uit/aan te zetten.
-
-Feature implementatie door VazerOG"</string>
+Functie-implementatie door VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Permanent herhalen inschakelen</string>
   <!-- layout.buttons.hideButtons -->

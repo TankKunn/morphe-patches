@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 secunde</string>
   <string name="morphe_crossfade_duration_9000ms">9 secunde</string>
   <string name="morphe_crossfade_duration_10000ms">10 secunde</string>
+  <string name="morphe_crossfade_duration_12000ms">12 secunde</string>
   <string name="morphe_music_crossfade_on_skip_title">Estompare la salt manual</string>
   <string name="morphe_music_crossfade_on_skip_summary">Aplică efectul de crossfade când sari manual la piesa următoare</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Estompare la avansare automată</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Estomparea încrucișată reluată</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Modul video nu este disponibil când estomparea încrucișată este activată</string>
   <string name="morphe_music_crossfade_about_title">Despre</string>
-  <string name="morphe_music_crossfade_about_summary">"Estomparea este disponibilă cu YouTube Music 8.x
+  <string name="morphe_music_crossfade_about_summary">"Apăsați lung butonul de amestecare pentru a dezactiva/activa
 
-Apăsați lung butonul shuffle pentru a dezactiva/activa
-
-Implementare a funcționalității de către VazerOG"</string>
+Implementare funcționalitate de VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Activează repetarea permanentă</string>
   <!-- layout.buttons.hideButtons -->

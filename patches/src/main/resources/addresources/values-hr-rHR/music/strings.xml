@@ -55,6 +55,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekundi</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekundi</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekundi</string>
+  <string name="morphe_crossfade_duration_12000ms">12 sekundi</string>
   <string name="morphe_music_crossfade_on_skip_title">Izblijedi pri ručnom preskakanju</string>
   <string name="morphe_music_crossfade_on_skip_summary">Primjenjuje efekt preklapanja kada ručno prelazite na sljedeću skladbu</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Crossfade na automatskom prelasku</string>
@@ -65,11 +66,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Crossfade nastavljen</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Video mod nije dostupan dok je omogućeno preklapanje</string>
   <string name="morphe_music_crossfade_about_title">O aplikaciji</string>
-  <string name="morphe_music_crossfade_about_summary">"Crossfade je dostupan s YouTube Music 8.x
-
-Dužim pritiskom na tipku za izmjenu redoslijeda isključite/uključite
-
-Implementacija značajke od VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Omogući stalno ponavljanje</string>
   <!-- layout.buttons.hideButtons -->

@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 secondi</string>
   <string name="morphe_crossfade_duration_9000ms">9 secondi</string>
   <string name="morphe_crossfade_duration_10000ms">10 secondi</string>
+  <string name="morphe_crossfade_duration_12000ms">12 secondi</string>
   <string name="morphe_music_crossfade_on_skip_title">Dissolvenza incrociata con salto manuale</string>
   <string name="morphe_music_crossfade_on_skip_summary">Applica la dissolvenza incrociata quando si salta manuale al brano successivo</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Dissolvenza incrociata durante l\'avanzamento automatico</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Dissolvenza incrociata ripresa</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">La modalità video non è disponibile quando la dissolvenza incrociata è abilitata</string>
   <string name="morphe_music_crossfade_about_title">A proposito di</string>
-  <string name="morphe_music_crossfade_about_summary">"La dissolvenza incrociata è disponibile per YouTube Music 8.x
+  <string name="morphe_music_crossfade_about_summary">"Tieni premuto il pulsante di riproduzione casuale per disabilitare/abilitare
 
-Premi a lungo il pulsante di mescolanento per disabilitare/abilitare questa funzionalità
-
-Implementazione della funzione eseguita da VazerOG"</string>
+Implementazione della funzionalità eseguita da VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Abilita ripetizione permanente</string>
   <!-- layout.buttons.hideButtons -->

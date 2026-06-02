@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 segundos</string>
   <string name="morphe_crossfade_duration_9000ms">9 segundos</string>
   <string name="morphe_crossfade_duration_10000ms">10 segundos</string>
+  <string name="morphe_crossfade_duration_12000ms">12 segundos</string>
   <string name="morphe_music_crossfade_on_skip_title">Desvanecimiento al saltar manualmente</string>
   <string name="morphe_music_crossfade_on_skip_summary">Aplica el efecto de fundido cruzado cuando saltas manualmente a la siguiente pista</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Desvanecimiento al avanzar automáticamente</string>
@@ -68,9 +69,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Desvanecimiento cruzado reanudado</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">El modo de vídeo no está disponible mientras el desvanecimiento cruzado está activado</string>
   <string name="morphe_music_crossfade_about_title">Información</string>
-  <string name="morphe_music_crossfade_about_summary">"El desvanecimiento está disponible con YouTube Music 8.x
-
-Mantén pulsado el botón de aleatorización para desactivar/activar
+  <string name="morphe_music_crossfade_about_summary">"Mantenga pulsado el botón de reproducción aleatoria para desactivar/activar
 
 Implementación de la función por VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->

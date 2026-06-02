@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 Sekunden</string>
   <string name="morphe_crossfade_duration_9000ms">9 Sekunden</string>
   <string name="morphe_crossfade_duration_10000ms">10 Sekunden</string>
+  <string name="morphe_crossfade_duration_12000ms">12 Sekunden</string>
   <string name="morphe_music_crossfade_on_skip_title">Nahtlose Wiedergabe bei manuellem Überspringen</string>
   <string name="morphe_music_crossfade_on_skip_summary">Wendet den Crossfade-Effekt an, wenn Sie manuell zum nächsten Titel springen</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Nahtlose Wiedergabe bei automatischer Wiedergabe</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Nahtlose Wiedergabe fortgesetzt</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Der Videomodus ist nicht verfügbar, während die nahtlose Wiedergabe aktiviert ist</string>
   <string name="morphe_music_crossfade_about_title">Über</string>
-  <string name="morphe_music_crossfade_about_summary">"Nahtlose Wiedergabe ist mit YouTube Music 8.x verfügbar
+  <string name="morphe_music_crossfade_about_summary">"Halten Sie die Shuffle-Taste gedrückt, um die Funktion zu deaktivieren/aktivieren.
 
-Wischen Sie lange über die Shuffle-Taste zum deaktivieren/aktivieren
-
-Feature-Implementierung von VazerOG"</string>
+Funktionsimplementierung von VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Dauerwiederholung aktivieren</string>
   <!-- layout.buttons.hideButtons -->

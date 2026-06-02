@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 секунди</string>
   <string name="morphe_crossfade_duration_9000ms">9 секунди</string>
   <string name="morphe_crossfade_duration_10000ms">10 секунди</string>
+  <string name="morphe_crossfade_duration_12000ms">12 секунди</string>
   <string name="morphe_music_crossfade_on_skip_title">Избледняване при ръчно прескачане</string>
   <string name="morphe_music_crossfade_on_skip_summary">Прилага ефекта на кръстосаното избледняване, когато ръчно прескочите към следващата песен.</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Избледняване при автоматично превъртане</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Преливането е възобновено</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Видео режимът не е достъпен, докато преливането е активирано</string>
   <string name="morphe_music_crossfade_about_title">Относно</string>
-  <string name="morphe_music_crossfade_about_summary">"Избледняването е налично с YouTube Music 8.x.
+  <string name="morphe_music_crossfade_about_summary">"Натиснете и задръжте бутона за разбъркване, за да деактивирате/активирате
 
-Натиснете продължително бутона за разбъркване, за да го деактивирате/активирате
-
-Реализация на функцията от VazerOG"</string>
+Изпълнение на функцията от VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Включи постоянно повтаряне</string>
   <!-- layout.buttons.hideButtons -->

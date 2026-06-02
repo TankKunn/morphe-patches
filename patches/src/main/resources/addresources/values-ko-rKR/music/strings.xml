@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 초</string>
   <string name="morphe_crossfade_duration_9000ms">9 초</string>
   <string name="morphe_crossfade_duration_10000ms">10 초</string>
+  <string name="morphe_crossfade_duration_12000ms">12 초</string>
   <string name="morphe_music_crossfade_on_skip_title">수동 트랙 넘김 시 크로스페이드</string>
   <string name="morphe_music_crossfade_on_skip_summary">다음 트랙으로 수동으로 넘길 경우에 크로스페이드 효과를 적용합니다</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">자동 트랙 넘김 시 크로스페이드</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">크로스페이드를 다시 시작하였습니다</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">크로스페이드가 활성화된 동안에는 동영상 모드를 사용할 수 없습니다</string>
   <string name="morphe_music_crossfade_about_title">정보</string>
-  <string name="morphe_music_crossfade_about_summary">"크로스페이드는 YouTube Music 8.x에서 사용할 수 있습니다
+  <string name="morphe_music_crossfade_about_summary">"셔플 버튼을 길게 탭하여 크로스페이드를 비활성화하거나 활성화할 수 있습니다
 
-셔플 버튼을 길게 탭하여 활성화 또는 비활성화할 수 있습니다
-
-VazerOG에 의해 기능이 구현되었습니다"</string>
+VazerOG에 의해 이 기능이 구현되었습니다"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">영구적인 반복 활성화하기</string>
   <!-- layout.buttons.hideButtons -->

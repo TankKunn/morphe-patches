@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 senîye</string>
   <string name="morphe_crossfade_duration_9000ms">9 senîye</string>
   <string name="morphe_crossfade_duration_10000ms">10 senîye</string>
+  <string name="morphe_crossfade_duration_12000ms">12 saniye</string>
   <string name="morphe_music_crossfade_on_skip_title">Veşartinê ser dîmenê destûrî</string>
   <string name="morphe_music_crossfade_on_skip_summary">Efêkta veguherîna hûrgulî dema ku hûn bi destan berê xwe bidin strana dinê çêdike</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Veşartinê ser pêşandanê otomatîk</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Navkirin dubare hat destpêkirin</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Moda vîdyoyê dema navkirinê çalak e, nayê xebitîn</string>
   <string name="morphe_music_crossfade_about_title">Derbarê</string>
-  <string name="morphe_music_crossfade_about_summary">"Girtina firqeyî bi YouTube Music 8.x re heye
+  <string name="morphe_music_crossfade_about_summary">"Karıştırma düğmesine uzun basarak devre dışı bırakın/etkinleştirin
 
-Dirêja şilikeki dirêj ser butona pêşveçûyî da tu pêştirîne/veşartinê bikin
-
-Birkirina taybetî bi VazerOG"</string>
+VazerOG tarafından özellik uygulaması"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Tekrar davim berdewam bike</string>
   <!-- layout.buttons.hideButtons -->

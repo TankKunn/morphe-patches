@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 שניות</string>
   <string name="morphe_crossfade_duration_9000ms">9 שניות</string>
   <string name="morphe_crossfade_duration_10000ms">10 שניות</string>
+  <string name="morphe_crossfade_duration_12000ms">12 שניות</string>
   <string name="morphe_music_crossfade_on_skip_title">דעיכה בעת דילוג ידני</string>
   <string name="morphe_music_crossfade_on_skip_summary">מפעיל את אפקט ה-crossfade כשאתה מדלג באופן ידני לרצועה הבאה</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">דעיכה בעת מעבר אוטומטי</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">המעבר בין השירים התחדש</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">מצב וידאו אינו זמין כאשר מעבר בין השירים מופעל</string>
   <string name="morphe_music_crossfade_about_title">אודות</string>
-  <string name="morphe_music_crossfade_about_summary">"דעיכה זמינה עם YouTube Music 8.x
+  <string name="morphe_music_crossfade_about_summary">"לחץ לחיצה ארוכה על כפתור הערבוב כדי לבטל/להפעיל
 
-לחיצה ארוכה על כפתור ה-shuffle כדי לבטל/להפעיל
-
-יישום התכונה על ידי VazerOG"</string>
+מימוש תכונה על ידי VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">אפשר חזרה קבועה</string>
   <!-- layout.buttons.hideButtons -->

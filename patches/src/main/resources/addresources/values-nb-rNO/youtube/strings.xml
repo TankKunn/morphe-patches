@@ -59,6 +59,9 @@ Endringer inkluderer:
   <string name="morphe_hide_feed_flyout_menu_title">Aktiver feed flyout-menufilter</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Feed flyout-menufilter</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Skriv inn navnene på flyut-menyen du vil filtrere etter, atskilt med nye linjer</string>
+  <string name="morphe_hide_account_menu_title">Aktiver bibliotek / Du bunnmenyfilter</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Aktiver bibliotek / Du bunnmenyfilter</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Skriv inn bibliotek / Du bunnmenynavnene du vil filtrere etter, atskilt med nye linjer</string>
   <string name="morphe_hide_album_cards_title">Skjul albumkort</string>
   <string name="morphe_hide_album_cards_summary">Skjuler albumkortene under artistbeskrivelsen</string>
   <string name="morphe_hide_artist_cards_title">Skjul artistkort</string>
@@ -123,7 +126,6 @@ Visning av YouTube-doodles kan hindre egendefinerte headere fra å vises."</stri
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Skjul \'Bli med\'-knapp</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Skjul live chat donator bar</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Skjul \'Direktestrøm-chat-gjennomgang\'-knappen</string>
@@ -205,6 +207,7 @@ Visning av YouTube-doodles kan hindre egendefinerte headere fra å vises."</stri
   <string name="morphe_hide_comments_create_a_short_button_title">Skjul \'Opprett en Short\'-knapp</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Skjul emoji- og tidsstempelknapper</string>
   <string name="morphe_hide_comments_info_button_title">Skjul info-knapp</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Skjul donatorfeltet for livechat</string>
   <string name="morphe_hide_comments_preview_comment_title">Skjul forhåndsvisningskommentar</string>
   <string name="morphe_hide_comments_preview_comment_summary">Skjuler kommentarforslag under videoen før du åpner hele kommentarfeltet</string>
   <string name="morphe_hide_comments_thanks_button_title">Skjul takkeknapp</string>

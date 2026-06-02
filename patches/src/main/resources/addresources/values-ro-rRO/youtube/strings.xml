@@ -59,6 +59,9 @@ Schimbari incluse:
   <string name="morphe_hide_feed_flyout_menu_title">Activează filtrele meniului lateral al fluxului</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtrele meniului lateral al fluxului</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Introduceți numele meniurilor flyout pentru a filtra, separate prin linii noi</string>
+  <string name="morphe_hide_account_menu_title">Activează Biblioteca / Filtrul din meniul de jos</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Activează Biblioteca / Filtrul din meniul de jos</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Introdu numele meniurilor din Bibliotecă / din meniul de jos, pe care vrei să le filtrezi, separate prin linii noi</string>
   <string name="morphe_hide_album_cards_title">Ascundeți cardurile de album</string>
   <string name="morphe_hide_album_cards_summary">Ascunde cardurile de albume de sub descrierea artistului</string>
   <string name="morphe_hide_artist_cards_title">Ascunde cărțile artistului</string>
@@ -123,7 +126,6 @@ Afisarea Doodle-urilor YouTube poate împiedica afișarea header-elor personaliz
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Ascunde butonul Alătură-te</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Ascunde bara donatorilor chat live</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Ascunde butonul \'Rejucătează conversație în direct\'</string>
@@ -205,6 +207,7 @@ Afisarea Doodle-urilor YouTube poate împiedica afișarea header-elor personaliz
   <string name="morphe_hide_comments_create_a_short_button_title">Ascunde butonul \'Creare Short\'</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Ascunde butoanele Emoji și Marcaj temporal</string>
   <string name="morphe_hide_comments_info_button_title">Ascunde butonul Info</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Ascunde bara cu donatori în chat-ul live</string>
   <string name="morphe_hide_comments_preview_comment_title">Ascunde previzualizarea comentariului</string>
   <string name="morphe_hide_comments_preview_comment_summary">Ascunde previzualizarea comentariului de sub videoclip înainte de a deschide secțiunea completă de comentarii</string>
   <string name="morphe_hide_comments_thanks_button_title">Ascunde butonul „Mulțumesc”</string>

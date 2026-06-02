@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 másodperc</string>
   <string name="morphe_crossfade_duration_9000ms">9 másodperc</string>
   <string name="morphe_crossfade_duration_10000ms">10 másodperc</string>
+  <string name="morphe_crossfade_duration_12000ms">12 másodperc</string>
   <string name="morphe_music_crossfade_on_skip_title">Áttűnés kézi léptetéskor</string>
   <string name="morphe_music_crossfade_on_skip_summary">Alkalmazza az áttűnés effektust, amikor kézzel léptetsz a következő számra</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Áttűnés automatikus léptetéskor</string>
@@ -68,9 +69,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Áttűnés folytatva</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Bekapcsolt áttűnés mellett a videómód nem használható</string>
   <string name="morphe_music_crossfade_about_title">Névjegy</string>
-  <string name="morphe_music_crossfade_about_summary">"Az áttűnés a YouTube Music 8.x verziójától érhető el.
-
-Az áttűnés ki- és bekapcsolásához tartsd nyomva a véletlenszerű lejátszás gombot.
+  <string name="morphe_music_crossfade_about_summary">"Tartsd lenyomva a keverés gombot a funkció letiltásához/engedélyezéséhez.
 
 A funkciót készítette: VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->

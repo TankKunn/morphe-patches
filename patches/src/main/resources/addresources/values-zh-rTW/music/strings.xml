@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 秒</string>
   <string name="morphe_crossfade_duration_9000ms">9 秒</string>
   <string name="morphe_crossfade_duration_10000ms">10 秒</string>
+  <string name="morphe_crossfade_duration_12000ms">12 秒</string>
   <string name="morphe_music_crossfade_on_skip_title">手動跳過時淡出</string>
   <string name="morphe_music_crossfade_on_skip_summary">手動跳到下一首曲目時適用淡入淡出效果</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">自動循環時淡出</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">淡入淡出效果已恢復</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">啟用淡入淡出效果時，視訊模式不可用</string>
   <string name="morphe_music_crossfade_about_title">關於</string>
-  <string name="morphe_music_crossfade_about_summary">"YouTube Music 8.x可用於淡出
+  <string name="morphe_music_crossfade_about_summary">"長按隨機播放按鈕可停用/啟用
 
-長按隨機播放按鈕以禁用/啟用
-
-VazerOG實作此功能"</string>
+功能實作由 VazerOG 提供"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">啟用永久重複播放</string>
   <!-- layout.buttons.hideButtons -->

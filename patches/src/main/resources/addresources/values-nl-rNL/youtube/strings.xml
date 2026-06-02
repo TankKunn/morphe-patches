@@ -59,6 +59,9 @@ Wijzigingen zijn:
   <string name="morphe_hide_feed_flyout_menu_title">Schakel filter voor het uitvouwmenu van de feed in</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filter voor het uitvouwmenu van de feed</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Voer de namen van de flyoutmenu\'s in om op te filteren, gescheiden door nieuwe regels</string>
+  <string name="morphe_hide_account_menu_title">Bibliotheek / U onderste menufilter</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Bibliotheek / U onderste menufilter</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Voer de bibliotheek-/U onderste menunamen in om op te filteren, gescheiden door nieuwe regels</string>
   <string name="morphe_hide_album_cards_title">Verberg albumkaarten</string>
   <string name="morphe_hide_album_cards_summary">Verbergt de albumkaarten onder de artiestbeschrijving</string>
   <string name="morphe_hide_artist_cards_title">Verberg artistkaarten</string>
@@ -123,7 +126,6 @@ Het tonen van YouTube Doodles kan voorkomen dat aangepaste headers worden weerge
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Verberg knop \"Lid worden\"</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Verberg de donatiebalk voor live chat</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Verberg \'Live chat replay\' knop</string>
@@ -206,6 +208,7 @@ Het tonen van YouTube Doodles kan voorkomen dat aangepaste headers worden weerge
   <string name="morphe_hide_comments_create_a_short_button_title">Verberg \'Create a Short\' knop</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Emoji- en tijdstempelknoppen verbergen</string>
   <string name="morphe_hide_comments_info_button_title">Verberg Info-knop</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Verberg de donateur balk van live chat</string>
   <string name="morphe_hide_comments_preview_comment_title">Reactie in preview verbergen</string>
   <string name="morphe_hide_comments_preview_comment_summary">Verbergt het commentaarvoorbeeldunder de video voordat de volledige commentaarsectie wordt geopend</string>
   <string name="morphe_hide_comments_thanks_button_title">Verberg de knop \'Bedankt\'</string>

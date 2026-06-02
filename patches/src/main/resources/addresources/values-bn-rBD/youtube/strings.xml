@@ -59,6 +59,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_title">ফিড ফ্লাইটমেন্যু ফিল্টার চালু করুন</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">ফিড ফ্লাইটমেন্যু ফিল্টার</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">নতুন লাইন দ্বারা পৃথক করা ফিল্টার করতে ফ্লাইআউট মেনু নামগুলি প্রবেশ করুন</string>
+  <string name="morphe_hide_account_menu_title">লাইব্রেরি সক্ষম করুন / আপনি নিচের মেনু ফিল্টার</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">লাইব্রেরি সক্ষম করুন / আপনি নিচের মেনু ফিল্টার</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">নতুন লাইন দ্বারা পৃথক করা লাইব্রেরি / আপনি নিচের মেনু নাম লিখুন</string>
   <string name="morphe_hide_album_cards_title">অ্যালবাম কার্ড লুকান</string>
   <string name="morphe_hide_album_cards_summary">শিল্পীর বিবরণের নীচে অ্যালবাম কার্ডগুলি লুকিয়ে রাখে</string>
   <string name="morphe_hide_artist_cards_title">আর্টিস্ট কার্ড লুকান</string>
@@ -123,7 +126,6 @@ YouTube Doodles দেখানো কাস্টম হেডার প্র�
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">যোগদান বোতাম লুকান</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">লাইভ চ্যাট ডোনেটরস বার লুকানো</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">লুকান \'লাইভ চ্যাট রিপ্লে\' বোতাম</string>
@@ -205,6 +207,7 @@ YouTube Doodles দেখানো কাস্টম হেডার প্র�
   <string name="morphe_hide_comments_create_a_short_button_title">\'Short তৈরি করুন\' বোতাম লুকান</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">ইমোজি এবং টাইমস্ট্যাম্প বোতামগুলি লুকান</string>
   <string name="morphe_hide_comments_info_button_title">লুকান তথ্য বোতাম</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">লাইভ চ্যাট দাতা বারটি লুকান</string>
   <string name="morphe_hide_comments_preview_comment_title">মন্তব্যের পূর্বরূপ লুকান</string>
   <string name="morphe_hide_comments_preview_comment_summary">পুরো মন্তব্য বিভাগ খোলার আগে ভিডিওর নিচে মন্তব্য প্রিভিউ লুকায়</string>
   <string name="morphe_hide_comments_thanks_button_title">ধন্যবাদ বাটন লুকান</string>

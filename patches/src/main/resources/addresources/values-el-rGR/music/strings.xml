@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 δευτερόλεπτα</string>
   <string name="morphe_crossfade_duration_9000ms">9 δευτερόλεπτα</string>
   <string name="morphe_crossfade_duration_10000ms">10 δευτερόλεπτα</string>
+  <string name="morphe_crossfade_duration_12000ms">12 δευτερόλεπτα</string>
   <string name="morphe_music_crossfade_on_skip_title">Εξασθένιση κατά τη χειροκίνητη παράλειψη</string>
   <string name="morphe_music_crossfade_on_skip_summary">Εφαρμόζει το εφέ crossfade όταν παραλείπετε χειροκίνητα το επόμενο κομμάτι</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Εξασθένιση κατά την αυτόματη αναπαραγωγή</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Συνέχιση της σταδιακής μετάβασης ήχου</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Η λειτουργία βίντεο δεν είναι διαθέσιμη όταν είναι ενεργοποιημένη η σταδιακή μετάβαση ήχου</string>
   <string name="morphe_music_crossfade_about_title">Σχετικά με</string>
-  <string name="morphe_music_crossfade_about_summary">"Η εξασθένιση είναι διαθέσιμη με το YouTube Music 8.x.
+  <string name="morphe_music_crossfade_about_summary">"Πατήστε παρατεταμένα το κουμπί ανακατέματος για να απενεργοποιήσετε/ενεργοποιήσετε
 
-Παρατεταμένο πάτημα στο κουμπί αναδιάταξης για απενεργοποίηση/ενεργοποίηση
-
-Υλοποίηση λειτουργίας από τον VazerOG"</string>
+Υλοποίηση λειτουργίας από VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Ενεργοποίηση μόνιμης επανάληψης</string>
   <!-- layout.buttons.hideButtons -->

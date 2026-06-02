@@ -58,6 +58,9 @@ Perubahan termasuk:
   <string name="morphe_hide_feed_flyout_menu_title">Aktifkan penyaring menu feed melayang</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Penyaring menu feed melayang</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Masukkan nama menu melayang untuk disaring, dipisahkan oleh baris baru</string>
+  <string name="morphe_hide_account_menu_title">Aktifkan Library / Filter menu bawah Anda</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Library / Filter menu bawah Anda</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Masukkan nama menu Library / Anda yang ingin difilter, dipisahkan oleh baris baru</string>
   <string name="morphe_hide_album_cards_title">Sembunyikan kartu album</string>
   <string name="morphe_hide_album_cards_summary">Menyembunyikan kartu album di bawah deskripsi artis</string>
   <string name="morphe_hide_artist_cards_title">Sembunyikan kartu artis</string>
@@ -122,7 +125,6 @@ Menampilkan YouTube Doodles mungkin mencegah menampilkan header khusus."</string
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Sembunyikan tombol Gabung</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Sembunyikan bilah donatur obrolan langsung</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Sembunyikan tombol \'Putar ulang obrolan langsung\'</string>
@@ -204,6 +206,7 @@ Menampilkan YouTube Doodles mungkin mencegah menampilkan header khusus."</string
   <string name="morphe_hide_comments_create_a_short_button_title">Sembunyikan tombol \'Buat Short\'</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Sembunyikan tombol Emoji dan Stempel waktu</string>
   <string name="morphe_hide_comments_info_button_title">Sembunyikan tombol Info</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Sembunyikan bilah donatur obrolan langsung</string>
   <string name="morphe_hide_comments_preview_comment_title">Sembunyikan pratinjau komentar</string>
   <string name="morphe_hide_comments_preview_comment_summary">Menyembunyikan pratinjau komentar di bawah video sebelum membuka bagian komentar penuh</string>
   <string name="morphe_hide_comments_thanks_button_title">Sembunyikan tombol Terima Kasih</string>

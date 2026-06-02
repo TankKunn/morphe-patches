@@ -59,6 +59,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_title">अ‍ॅक्टिव्ह फीड फ्लाईआउट मेनू फिल्टर</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">फीड फ्लाईआउट मेनू फिल्टर</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">फिल्टर करण्यासाठी फ्लायआउट मेनूचे नाव प्रविष्ट करा, प्रत्येक ओळ नवीन ओळीने विभाजित करा</string>
+  <string name="morphe_hide_account_menu_title">लायब्ररी सक्षम करा / तुम्ही तळाशी मेनू फिल्टर करा</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">लायब्ररी सक्षम करा / तुम्ही तळाशी मेनू फिल्टर करा</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">नवीन ओळींनी विभक्त केलेल्या फिल्टरसाठी लायब्ररी / तुम्ही तळाशी मेनू नावे प्रविष्ट करा</string>
   <string name="morphe_hide_album_cards_title">अल्बम कार्ड्स लपवा</string>
   <string name="morphe_hide_album_cards_summary">कलाकाराच्या वर्णनाखालील अल्बम कार्ड लपवते</string>
   <string name="morphe_hide_artist_cards_title">कलाकार कार्ड्स लपवा</string>
@@ -123,7 +126,6 @@ YouTube डूडल्स दर्शविल्याने कस्टम 
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">\'जवळपास सामील व्हा\' बटण लपवा</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">लाइव्ह चॅट देणगीदारांचा बार लपवा</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">\'लाइव्ह चॅट रीप्ले\' बटण लपवा</string>
@@ -205,6 +207,7 @@ YouTube डूडल्स दर्शविल्याने कस्टम 
   <string name="morphe_hide_comments_create_a_short_button_title">\'शॉर्ट तयार करा\' बटण लपवा</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">इमोजी आणि टाइमस्टॅम्प बटणे लपवा</string>
   <string name="morphe_hide_comments_info_button_title">माहिती बटण लपवा</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">लाइव्ह चॅट देणगीदारांचा बार लपवा</string>
   <string name="morphe_hide_comments_preview_comment_title">पूर्वावलोकन टिप्पणी लपवा</string>
   <string name="morphe_hide_comments_preview_comment_summary">पूर्ण टिप्पणी विभाग उघडण्यापूर्वी व्हिडिओच्या खाली टिप्पणी पूर्वावलोकन लपवते</string>
   <string name="morphe_hide_comments_thanks_button_title">धन्यवाद बटण लपवा</string>

@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 секунд</string>
   <string name="morphe_crossfade_duration_9000ms">9 секунд</string>
   <string name="morphe_crossfade_duration_10000ms">10 секунд</string>
+  <string name="morphe_crossfade_duration_12000ms">12 секунды</string>
   <string name="morphe_music_crossfade_on_skip_title">Плавный переход при ручном пропуске</string>
   <string name="morphe_music_crossfade_on_skip_summary">Применяет эффект кроссфейда при ручном переходе к следующему треку</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Плавный переход при автоматическом переходе</string>
@@ -68,9 +69,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Воспроизведение с переходом возобновлено</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Видеорежим недоступен при включенном плавном переходе</string>
   <string name="morphe_music_crossfade_about_title">Информация</string>
-  <string name="morphe_music_crossfade_about_summary">"Плавный переход доступен с YouTube Music 8.x
-
-Долгое нажатие на кнопку перемешивания позволяет отключить/включить функцию
+  <string name="morphe_music_crossfade_about_summary">"Длительное нажатие на кнопку перемешивания позволяет отключить/включить функцию
 
 Реализация функции VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->

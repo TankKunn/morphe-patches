@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 secondes</string>
   <string name="morphe_crossfade_duration_9000ms">9 secondes</string>
   <string name="morphe_crossfade_duration_10000ms">10 secondes</string>
+  <string name="morphe_crossfade_duration_12000ms">12 secondes</string>
   <string name="morphe_music_crossfade_on_skip_title">Fondu enchaîné lors des passages manuels</string>
   <string name="morphe_music_crossfade_on_skip_summary">Applique l\'effet de fondu enchaîné lorsque vous passez manuellement au morceau suivant</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Fondu enchaîné lors des passages automatiques</string>
@@ -68,9 +69,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Fondu enchaîné repris</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Le mode vidéo n\'est pas disponible lorsque le fondu enchaîné est activé</string>
   <string name="morphe_music_crossfade_about_title">À propos</string>
-  <string name="morphe_music_crossfade_about_summary">"Le fondu enchaîné est disponible avec YouTube Music 8.x
-
-Appuyez longuement sur le bouton 'Lecture aléatoire' pour le désactiver/l’activer
+  <string name="morphe_music_crossfade_about_summary">"Appuyez longuement sur le bouton de lecture aléatoire pour désactiver/activer
 
 Implémentation de la fonctionnalité par VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->

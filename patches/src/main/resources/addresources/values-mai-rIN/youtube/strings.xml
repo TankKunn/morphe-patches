@@ -96,7 +96,6 @@ YouTube डूडलहरू देखाउनुले अनुकूलन 
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">\'जुड़ें\' बटन छिपाएं</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">लाइभ च्याट दाताहरू बार लुकाउनुहोस्</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">“लाइभ च्याट रिप्ले” बटन लुकाउनुहोस्</string>

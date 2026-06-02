@@ -59,6 +59,9 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_feed_flyout_menu_title">Akış açılır menü filtresini etkinleştir</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Akış açılır menü filtresi</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Filtrelemek istediğiniz açılır menü adlarını yeni satırlarla ayırarak girin</string>
+  <string name="morphe_hide_account_menu_title">Kütüphane / Siz alt menü filtresini etkinleştir</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Kütüphane / Siz alt menü filtresi</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Filtrelemek istediğiniz Kütüphane / Siz alt menü adlarını yeni satırlarla ayırarak girin</string>
   <string name="morphe_hide_album_cards_title">Albüm kartlarını gizle</string>
   <string name="morphe_hide_album_cards_summary">Sanatçı açıklamasının altındaki albüm kartlarını gizler</string>
   <string name="morphe_hide_artist_cards_title">Sanatçı kartlarını gizle</string>
@@ -123,7 +126,6 @@ YouTube Doodles göstermek, özel başlıkların görüntülenmesini engelleyebi
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Katıl düğmesini gizle</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">Canlı sohbet bağışçıları çubuğunu gizle</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">\'Canlı sohbeti tekrar oynat\' düğmesini gizle</string>
@@ -205,6 +207,7 @@ YouTube Doodles göstermek, özel başlıkların görüntülenmesini engelleyebi
   <string name="morphe_hide_comments_create_a_short_button_title">\'Short oluştur\' düğmesini gizle</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Emoji ve Zaman damgası düğmelerini gizle</string>
   <string name="morphe_hide_comments_info_button_title">Bilgi düğmesini gizle</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Canlı sohbet bağışçıları çubuğunu gizle</string>
   <string name="morphe_hide_comments_preview_comment_title">Ön izlenen yorumu gizle</string>
   <string name="morphe_hide_comments_preview_comment_summary">Tam yorumlar bölümünü açmadan önce videonun altındaki yorum ön izlemesini gizler</string>
   <string name="morphe_hide_comments_thanks_button_title">Teşekkürler düğmesini gizle</string>
@@ -361,7 +364,7 @@ Bilgi: Canlı yayınlarda çalışmayabilir"</string>
   <string name="morphe_livestream_dvr_user_dialog_message">Bunu etkinleştirmek, \'Video akışlarını taklit et\' etkinleştirilmediyse beklenmedik canlı yayın sardırma davranışlarına neden olabilir.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Kaydırarak sardırmayı etkinleştir</string>
-  <string name="morphe_slide_to_seek_summary">Video oynatıcıya basılı tutulduğunda 2x hızda oynatmak yerine kaydırma ile aramayı etkinleştirir</string>
+  <string name="morphe_slide_to_seek_summary">Video oynatıcıya basılı tutulduğunda 2x hızda oynatmak yerine kaydırarak sardırmayı etkinleştirir</string>
   <!-- interaction.seekbar.enableTapToSeekPatch -->
   <string name="morphe_tap_to_seek_title">Dokunarak sardırmayı etkinleştir</string>
   <string name="morphe_tap_to_seek_summary">Sürüklemeden o konuma atlamak için zaman çubuğuna dokunun</string>
@@ -472,7 +475,7 @@ Bilgi: Canlı yayınlarda çalışmayabilir"</string>
   <string name="morphe_hide_quick_actions_save_button_title">Kaydet düğmesini gizle</string>
   <string name="morphe_hide_quick_actions_share_button_title">Paylaş düğmesini gizle</string>
   <string name="morphe_quick_actions_top_margin_title">Hızlı eylemler üst boşluğu</string>
-  <string name="morphe_quick_actions_top_margin_summary">Hızlı işlem çubuğunun üst boşluğunu ayarlayın (0-32 dp)</string>
+  <string name="morphe_quick_actions_top_margin_summary">Hızlı eylemler çubuğunun üst boşluğunu ayarlayın (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">Altyazılar</string>
   <string name="morphe_captions_screen_summary">Otomatik altyazıları ve altyazı çerezlerini yönetin</string>
@@ -777,12 +780,12 @@ Ayarlar → Oynatma (veya Otomatik oynat) → Sonraki video otomatik oynat"</str
   <string name="morphe_sb_duration_9s">9 saniye</string>
   <string name="morphe_sb_duration_10s">10 saniye</string>
   <string name="morphe_sb_general_time_without">Kısımlar olmadan video süresini göster</string>
-  <string name="morphe_sb_general_time_without_summary">Video ilerleme çubuğunda görüntülenen toplam video süresinden tüm segmentleri çıkarır</string>
+  <string name="morphe_sb_general_time_without_summary">Zaman çubuğunda görünen toplam video süresinden tüm segmentleri çıkarır</string>
   <string name="morphe_sb_create_segment_category">Yeni kısım oluşturma</string>
   <string name="morphe_sb_enable_create_segment">\'Yeni bölüm oluştur\' düğmesini göster</string>
   <string name="morphe_sb_enable_create_segment_summary">Video oynatıcıya yeni SponsorBlock bölümleri göndermenizi sağlayan bir düğme ekler</string>
   <string name="morphe_sb_general_adjusting">Zaman ayarlama adımı</string>
-  <string name="morphe_sb_general_adjusting_summary">Zaman ayarlama düğmelerinin miktarını (milisaniye cinsinden) ara</string>
+  <string name="morphe_sb_general_adjusting_summary">Zaman ayarlama düğmelerinin sardırma miktarı (milisaniye cinsinden)</string>
   <string name="morphe_sb_general_adjusting_invalid">Değer pozitif bir sayı olmalıdır</string>
   <string name="morphe_sb_guidelines_preference_title">Gönderi yönergeleri</string>
   <string name="morphe_sb_guidelines_preference_summary">Yönergeler, yeni kısım oluşturma kurallarını ve ipuçlarını içerir</string>

@@ -59,6 +59,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_title">启用信息流弹出菜单过滤器</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">信息流弹出菜单过滤器</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">输入要过滤的弹出菜单名称，以换行符分隔，每行一个</string>
+  <string name="morphe_hide_account_menu_title">启用资料库/您底部的菜单筛选</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">启用资料库/您底部的菜单筛选</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">输入要筛选的资料库/您底部菜单名称，用换行符分隔</string>
   <string name="morphe_hide_album_cards_title">隐藏专辑卡片</string>
   <string name="morphe_hide_album_cards_summary">隐藏艺术家描述下方的专辑卡片</string>
   <string name="morphe_hide_artist_cards_title">隐藏艺人卡片</string>
@@ -123,7 +126,6 @@ Second \"item\" text"</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">隐藏“加入”按钮</string>
-  <string name="morphe_hide_live_chat_donators_bar_title">隐藏直播捐赠者栏</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">隐藏“直播聊天回放”按钮</string>
@@ -206,6 +208,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_create_a_short_button_title">隐藏“创建 Short”按钮</string>
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">隐藏表情符号和时间戳按钮</string>
   <string name="morphe_hide_comments_info_button_title">隐藏信息按钮</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">隐藏直播捐赠者栏</string>
   <string name="morphe_hide_comments_preview_comment_title">隐藏评论预览</string>
   <string name="morphe_hide_comments_preview_comment_summary">隐藏在打开完整评论部分之前，视频下方的评论预览</string>
   <string name="morphe_hide_comments_thanks_button_title">隐藏感谢按钮</string>
@@ -437,7 +440,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_button_title">隐藏评论按钮</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears on live streamed videos. -->
-  <string name="morphe_hide_report_button_title">隐藏保存按钮</string>
+  <string name="morphe_hide_report_button_title">隐藏举报按钮</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">隐藏混剪按钮</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -451,9 +454,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_thanks_button_title">隐藏感谢按钮</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
-  <string name="morphe_hide_ask_button_title">隐藏播放列表按钮</string>
+  <string name="morphe_hide_ask_button_title">隐藏询问按钮</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_clip_button_title">隐藏保存按钮</string>
+  <string name="morphe_hide_clip_button_title">隐藏混剪按钮</string>
   <string name="morphe_hide_clip_button_user_dialog_message">此隐藏功能可能无法适用于某些用户帐户。</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shop_button_title">隐藏商店按钮</string>
@@ -468,9 +471,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_quick_actions_live_chat_button_title">隐藏“实时聊天”按钮</string>
   <string name="morphe_hide_quick_actions_mix_button_title">隐藏混剪按钮</string>
   <string name="morphe_hide_quick_actions_more_button_title">隐藏更多按钮</string>
-  <string name="morphe_hide_quick_actions_more_videos_button_title">隐藏主页按钮</string>
-  <string name="morphe_hide_quick_actions_playlist_button_title">隐藏 Shorts 按钮</string>
-  <string name="morphe_hide_quick_actions_save_button_title">隐藏订阅按钮</string>
+  <string name="morphe_hide_quick_actions_more_videos_button_title">隐藏“更多视频”按钮</string>
+  <string name="morphe_hide_quick_actions_playlist_button_title">隐藏播放列表按钮</string>
+  <string name="morphe_hide_quick_actions_save_button_title">隐藏保存按钮</string>
   <string name="morphe_hide_quick_actions_share_button_title">隐藏分享按钮</string>
   <string name="morphe_quick_actions_top_margin_title">快速操作顶部外边距</string>
   <string name="morphe_quick_actions_top_margin_summary">设置快速操作栏的顶部外边距（0-32 dp）</string>

@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 секунд</string>
   <string name="morphe_crossfade_duration_9000ms">9 секунд</string>
   <string name="morphe_crossfade_duration_10000ms">10 секунд</string>
+  <string name="morphe_crossfade_duration_12000ms">12 секунд</string>
   <string name="morphe_music_crossfade_on_skip_title">Плавний перехід при ручному перемиканні</string>
   <string name="morphe_music_crossfade_on_skip_summary">Застосовує плавний перехід при ручному перемиканні треку</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Плавний перехід при автоматичному переході</string>
@@ -68,11 +69,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Плавний перехід відновлено</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Режим відео недоступний, коли ввімкнено плавний перехід</string>
   <string name="morphe_music_crossfade_about_title">Інформація</string>
-  <string name="morphe_music_crossfade_about_summary">"Плавний перехід доступний з YouTube Music 8.x
+  <string name="morphe_music_crossfade_about_summary">"Натисніть і утримуйте кнопку перемішування, щоб вимкнути/увімкнути
 
-Тривале натискання кнопки перемішування вмикає або вимикає цю функцію
-
-Автор реалізації функції: VazerOG"</string>
+Реалізація функції: VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Увімкнути постійний повтор</string>
   <!-- layout.buttons.hideButtons -->

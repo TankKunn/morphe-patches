@@ -56,6 +56,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 saniyə</string>
   <string name="morphe_crossfade_duration_9000ms">9 saniyə</string>
   <string name="morphe_crossfade_duration_10000ms">10 saniyə</string>
+  <string name="morphe_crossfade_duration_12000ms">12 saniyə</string>
   <string name="morphe_music_crossfade_on_skip_title">Əl ilə ötürmədə çarpaz soldurma</string>
   <string name="morphe_music_crossfade_on_skip_summary">Növbəti trekə əl ilə keçdiyinizdə çarpaz solma effektin tətbiq edir</string>
   <string name="morphe_music_crossfade_on_auto_advance_title">Birbaşa irəliləmədə çarpaz soldurma</string>
@@ -66,12 +67,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_resumed_toast">Çarpaz Soldurma yenidən başladı</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Çarpaz Soldurma işlək olduqda video rejimi əlçatan deyil</string>
   <string name="morphe_music_crossfade_about_title">Haqqında</string>
-  <string name="morphe_music_crossfade_about_summary">"Çarpaz soldurma YouTube Music 8.x ilə əlçatandır.
-
-Qapatmaq/aktivləşdirmək üçün qarışdırma düyməsini uzun basın
-
-VazerOG tərəfindən xüsusiyyətin tətbiqi
-"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Daimi təkrarlamanı aktivləşdir</string>
   <!-- layout.buttons.hideButtons -->
