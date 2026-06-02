@@ -1,3 +1,17 @@
+## [1.31.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.2...v1.31.0-dev.3) (2026-06-02)
+
+### 🐛 Bug Fixes
+
+* **Reddit - Hide Ask button:** Update patch to support experimental app targets ([#1623](https://github.com/MorpheApp/morphe-patches/issues/1623)) ([7c4a9fb](https://github.com/MorpheApp/morphe-patches/commit/7c4a9fbfccd6c3bd80b06f67d49404cd1ddc7019))
+* **Reddit - Hide Trending Today shelf:** Hide "Trending" header ([#1622](https://github.com/MorpheApp/morphe-patches/issues/1622)) ([00e1587](https://github.com/MorpheApp/morphe-patches/commit/00e1587633aea8cf5856dd89a951ced5be75da0a))
+* **YouTube - Remove background playback restrictions:** Fix Shorts background playback not working ([#1629](https://github.com/MorpheApp/morphe-patches/issues/1629)) ([250f85e](https://github.com/MorpheApp/morphe-patches/commit/250f85e2a740197e6aaeff2acb24b2aad086cf51))
+* **YouTube - Sanitize sharing links:** Resolve "Open system share sheet" not working ([#1599](https://github.com/MorpheApp/morphe-patches/issues/1599)) ([24c319a](https://github.com/MorpheApp/morphe-patches/commit/24c319a78593b8cd2def3cd98146dee1f2c09a0a))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide Library / You bottom menu filter" setting ([#1583](https://github.com/MorpheApp/morphe-patches/issues/1583)) ([c093b60](https://github.com/MorpheApp/morphe-patches/commit/c093b60965e439e7a1b5b7cdf34717e6b159beb4))
+* **YouTube Music:** Add support for Track Crossfade in 9.x ([#1582](https://github.com/MorpheApp/morphe-patches/issues/1582)) ([7150d06](https://github.com/MorpheApp/morphe-patches/commit/7150d06167b4a6ba699bbd48a4c5d1055d8d2789))
+
 ## [1.31.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.1...v1.31.0-dev.2) (2026-05-31)
 
 ### 🐛 Bug Fixes

@@ -1,5 +1,5 @@
 {
-  "version": "1.31.0-dev.2",
+  "version": "1.31.0-dev.3",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -7667,7 +7667,7 @@
     },
     {
       "name": "Track crossfade",
-      "description": "Adds a true dual-player crossfade between consecutive tracks. This patch currently requires YouTube 8.x",
+      "description": "Adds a true dual-player crossfade between consecutive tracks.",
       "default": true,
       "dependencies": [
         "BytecodePatch",
