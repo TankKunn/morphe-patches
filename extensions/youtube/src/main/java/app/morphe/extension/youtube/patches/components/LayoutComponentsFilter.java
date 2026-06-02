@@ -14,13 +14,12 @@ import static app.morphe.extension.shared.Utils.getFilterStrings;
 import static app.morphe.extension.youtube.shared.NavigationBar.NavigationButton;
 
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
+import android.view.ViewParent;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -534,26 +533,6 @@ public final class LayoutComponentsFilter extends Filter {
     /**
      * Injection point.
      */
-    public static void hideLiveChatDonatorsBar(View view) {
-        if (view == null || !Settings.HIDE_LIVE_CHAT_DONATORS_BAR.get()) {
-            return;
-        }
-
-        view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                view.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-
-                if (view.getParent() instanceof RecyclerView shelfContainerRecycleView) {
-                    shelfContainerRecycleView.setVisibility(RecyclerView.GONE);
-                }
-            }
-        });
-    }
-
-    /**
-     * Injection point.
-     */
     public static boolean hideFloatingMicrophoneButton(final boolean original) {
         return original || Settings.HIDE_FLOATING_MICROPHONE_BUTTON.get();
     }
@@ -897,5 +876,52 @@ public final class LayoutComponentsFilter extends Filter {
             Logger.printDebug(() -> "Remove search suggestion: " + searchTerm);
         }
         return isSearchHistory;
+    }
+
+    private static final List<String> accountMenuFilterStrings = getFilterStrings(Settings.HIDE_ACCOUNT_MENU_FILTER_STRINGS);
+
+    /**
+     * Injection point.
+     */
+    public static void hideAccountTopItem(View view, CharSequence menuTitleCharSequence) {
+        hideAccountItem(view, menuTitleCharSequence, 3);
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void hideAccountBottomItemModern(View view, CharSequence menuTitleCharSequence) {
+        hideAccountItem(view, menuTitleCharSequence, 5);
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void hideAccountBottomItemLegacy(View view, CharSequence menuTitleCharSequence) {
+        hideAccountItem(view, menuTitleCharSequence, 3);
+    }
+
+    private static void hideAccountItem(View textView, CharSequence menuTitleCharSequence, int depth) {
+        if (!Settings.HIDE_ACCOUNT_MENU.get() || menuTitleCharSequence == null) return;
+        if (accountMenuFilterStrings.isEmpty()) return;
+        String menuTitleString = menuTitleCharSequence.toString();
+        boolean matches = false;
+        for (String filter : accountMenuFilterStrings) {
+            if (menuTitleString.equalsIgnoreCase(filter)) {
+                matches = true;
+                break;
+            }
+        }
+
+        if (!matches) return;
+        ViewParent parent = Utils.getParentView(textView, depth);
+        if (parent instanceof View current) {
+            Utils.hideViewByLayoutParams(current);
+            current.setVisibility(View.GONE);
+            if (current.getLayoutParams() instanceof ViewGroup.MarginLayoutParams marginParams) {
+                marginParams.setMargins(0, 0, 0, 0);
+                current.setLayoutParams(marginParams);
+            }
+        }
     }
 }
