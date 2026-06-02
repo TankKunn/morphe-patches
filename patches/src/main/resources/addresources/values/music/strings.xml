@@ -68,6 +68,7 @@ Second \"item\" text"</string>
     <string name="morphe_crossfade_duration_8000ms">8 seconds</string>
     <string name="morphe_crossfade_duration_9000ms">9 seconds</string>
     <string name="morphe_crossfade_duration_10000ms">10 seconds</string>
+    <string name="morphe_crossfade_duration_11000ms">11 seconds</string>
     <string name="morphe_crossfade_duration_12000ms">12 seconds</string>
     <string name="morphe_music_crossfade_on_skip_title">Crossfade on manual skip</string>
     <string name="morphe_music_crossfade_on_skip_summary">Applies the crossfade effect when you manually skip to the next track</string>

@@ -91,6 +91,7 @@ public class CrossfadeManager {
         MILLISECONDS_8000(8_000),
         MILLISECONDS_9000(9_000),
         MILLISECONDS_10000(10_000),
+        MILLISECONDS_11000(11_000),
         MILLISECONDS_12000(12_000);
 
         public final int milliseconds;

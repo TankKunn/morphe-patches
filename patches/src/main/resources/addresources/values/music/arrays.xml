@@ -103,6 +103,7 @@
         <item>@string/morphe_crossfade_duration_8000ms</item>
         <item>@string/morphe_crossfade_duration_9000ms</item>
         <item>@string/morphe_crossfade_duration_10000ms</item>
+        <item>@string/morphe_crossfade_duration_11000ms</item>
         <item>@string/morphe_crossfade_duration_12000ms</item>
     </string-array>
     <string-array name="morphe_music_crossfade_duration_entry_values">
@@ -119,6 +120,7 @@
         <item>MILLISECONDS_8000</item>
         <item>MILLISECONDS_9000</item>
         <item>MILLISECONDS_10000</item>
+        <item>MILLISECONDS_11000</item>
         <item>MILLISECONDS_12000</item>
     </string-array>
 
