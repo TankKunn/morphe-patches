@@ -884,27 +884,29 @@ public final class LayoutComponentsFilter extends Filter {
      * Injection point.
      */
     public static void hideAccountTopItem(View view, CharSequence menuTitleCharSequence) {
-        hideAccountItem(view, menuTitleCharSequence, 3);
+        hideAccountItem(view, menuTitleCharSequence, 2);
     }
 
     /**
      * Injection point.
      */
     public static void hideAccountBottomItemModern(View view, CharSequence menuTitleCharSequence) {
-        hideAccountItem(view, menuTitleCharSequence, 5);
+        hideAccountItem(view, menuTitleCharSequence, 4);
     }
 
     /**
      * Injection point.
      */
     public static void hideAccountBottomItemLegacy(View view, CharSequence menuTitleCharSequence) {
-        hideAccountItem(view, menuTitleCharSequence, 3);
+        hideAccountItem(view, menuTitleCharSequence, 2);
     }
 
     private static void hideAccountItem(View textView, CharSequence menuTitleCharSequence, int depth) {
         if (!Settings.HIDE_ACCOUNT_MENU.get() || menuTitleCharSequence == null) return;
         if (accountMenuFilterStrings.isEmpty()) return;
+
         String menuTitleString = menuTitleCharSequence.toString();
+
         boolean matches = false;
         for (String filter : accountMenuFilterStrings) {
             if (menuTitleString.equalsIgnoreCase(filter)) {
@@ -912,8 +914,8 @@ public final class LayoutComponentsFilter extends Filter {
                 break;
             }
         }
-
         if (!matches) return;
+
         ViewParent parent = Utils.getParentView(textView, depth);
         if (parent instanceof View current) {
             Utils.hideViewByLayoutParams(current);
