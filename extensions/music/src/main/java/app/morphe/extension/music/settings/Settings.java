@@ -12,6 +12,7 @@ import app.morphe.extension.music.patches.CrossfadeManager.FadeCurve;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.settings.BooleanSetting;
 import app.morphe.extension.shared.settings.EnumSetting;
+import app.morphe.extension.shared.settings.IntegerSetting;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
 import app.morphe.extension.shared.spoof.ClientType;
 
