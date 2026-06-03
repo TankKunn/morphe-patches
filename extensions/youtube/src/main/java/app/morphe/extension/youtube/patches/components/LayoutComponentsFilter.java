@@ -879,29 +879,32 @@ public final class LayoutComponentsFilter extends Filter {
     }
 
     private static final List<String> accountMenuFilterStrings = getFilterStrings(Settings.HIDE_ACCOUNT_MENU_FILTER_STRINGS);
+    private static final int[] accountTopItemDepths = new int[]{3, 2}; // Start from the highest depth to avoid hiding the wrong parent first
+    private static final int[] accountBottomItemModernDepths = new int[]{4, 3}; // Start from the highest depth to avoid hiding the wrong parent first
+    private static final int[] accountBottomItemLegacyDepths = new int[]{3, 2}; // Start from the highest depth to avoid hiding the wrong parent first
 
     /**
      * Injection point.
      */
     public static void hideAccountTopItem(View view, CharSequence menuTitleCharSequence) {
-        hideAccountItem(view, menuTitleCharSequence, 2);
+        hideAccountItem(view, menuTitleCharSequence, accountTopItemDepths);
     }
 
     /**
      * Injection point.
      */
     public static void hideAccountBottomItemModern(View view, CharSequence menuTitleCharSequence) {
-        hideAccountItem(view, menuTitleCharSequence, 4);
+        hideAccountItem(view, menuTitleCharSequence, accountBottomItemModernDepths);
     }
 
     /**
      * Injection point.
      */
     public static void hideAccountBottomItemLegacy(View view, CharSequence menuTitleCharSequence) {
-        hideAccountItem(view, menuTitleCharSequence, 2);
+        hideAccountItem(view, menuTitleCharSequence, accountBottomItemLegacyDepths);
     }
 
-    private static void hideAccountItem(View textView, CharSequence menuTitleCharSequence, int depth) {
+    private static void hideAccountItem(View textView, CharSequence menuTitleCharSequence, int[] depths) {
         if (!Settings.HIDE_ACCOUNT_MENU.get() || menuTitleCharSequence == null) return;
         if (accountMenuFilterStrings.isEmpty()) return;
 
@@ -916,13 +919,17 @@ public final class LayoutComponentsFilter extends Filter {
         }
         if (!matches) return;
 
-        ViewParent parent = Utils.getParentView(textView, depth);
-        if (parent instanceof View current) {
-            Utils.hideViewByLayoutParams(current);
-            current.setVisibility(View.GONE);
-            if (current.getLayoutParams() instanceof ViewGroup.MarginLayoutParams marginParams) {
-                marginParams.setMargins(0, 0, 0, 0);
-                current.setLayoutParams(marginParams);
+        // Not all versions have the same depth. So perform a scan
+        // along all available depths, to find the right one.
+        for (int depth : depths) {
+            ViewParent parent = Utils.getParentView(textView, depth);
+            if (parent instanceof View current) {
+                Utils.hideViewByLayoutParams(current);
+                current.setVisibility(View.GONE);
+                if (current.getLayoutParams() instanceof ViewGroup.MarginLayoutParams marginParams) {
+                    marginParams.setMargins(0, 0, 0, 0);
+                    current.setLayoutParams(marginParams);
+                }
             }
         }
     }
