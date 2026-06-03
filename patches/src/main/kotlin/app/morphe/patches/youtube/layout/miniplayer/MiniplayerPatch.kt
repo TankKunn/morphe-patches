@@ -299,26 +299,41 @@ val miniplayerPatch = bytecodePatch(
 
         // region fix minimal miniplayer using the wrong pause/play bold icons.
 
-        if (is_20_31_or_greater && !is_21_17_or_greater) {
-            // 21.17+ removed the code to set the non-bold miniplayer pause/play icon,
-            // and removed the non bold yt_fill_pause_white_36 icons.
-            MiniplayerSetIconsFingerprint.method.apply {
-                findInstructionIndicesReversedOrThrow(
-                    methodCall(
-                        opcode = Opcode.INVOKE_INTERFACE,
-                        returnType = "Z",
-                        parameters = listOf()
-                    )
-                ).forEach { index ->
-                    val register = getInstruction<OneRegisterInstruction>(index + 1).registerA
+        if (is_20_31_or_greater) {
+            if (is_21_17_or_greater) {
+                // 21.17+ removed the code to set the non-bold miniplayer pause/play icon,
+                // and removed the non bold yt_fill_pause_white_36 icons.
+                MiniplayerSetIconsFingerprint.let {
+                    it.method.apply {
+                        val setImageDrawableIndex = it.instructionMatches.first().index
 
-                    addInstructions(
-                        index + 2,
-                        """
-                            invoke-static { v$register }, $EXTENSION_CLASS->allowBoldIcons(Z)Z
-                            move-result v$register
-                        """
-                    )
+                        addInstruction(
+                            setImageDrawableIndex + 1,
+                            "invoke-static { p0, p2 }, $EXTENSION_CLASS->" +
+                                    "overrideMiniplayerActionButtonDrawable(Landroid/widget/ImageView;I)V",
+                        )
+                    }
+                }
+            } else {
+                // Fix bold icons always shown for 20.31 to 21.16
+                MiniplayerSetIconsLegacyFingerprint.method.apply {
+                    findInstructionIndicesReversedOrThrow(
+                        methodCall(
+                            opcode = Opcode.INVOKE_INTERFACE,
+                            returnType = "Z",
+                            parameters = listOf()
+                        )
+                    ).forEach { index ->
+                        val register = getInstruction<OneRegisterInstruction>(index + 1).registerA
+
+                        addInstructions(
+                            index + 2,
+                            """
+                                invoke-static { v$register }, $EXTENSION_CLASS->allowBoldIcons(Z)Z
+                                move-result v$register
+                            """
+                        )
+                    }
                 }
             }
         }

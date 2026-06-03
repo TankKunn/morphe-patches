@@ -10,6 +10,7 @@ import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerTyp
 import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerType.MODERN_4;
 
 import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,9 +19,11 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.youtube.settings.Settings;
@@ -38,12 +41,6 @@ public final class MiniplayerPatch {
         DISABLED(false, null),
         /** Unmodified type, and same as un-patched. */
         DEFAULT(null, null),
-        /**
-         * Exactly the same as MINIMAL and only here for migration of user settings.
-         * Eventually this should be deleted.
-         */
-        @Deprecated
-        PHONE(false, null),
         MINIMAL(false, null),
         TABLET(true, null),
         MODERN_1(null, 1),
@@ -148,6 +145,15 @@ public final class MiniplayerPatch {
 
     private static final boolean MINIPLAYER_HORIZONTAL_DRAG_ENABLED =
             DRAG_AND_DROP_ENABLED && !Settings.MINIPLAYER_DISABLE_HORIZONTAL_DRAG.get();
+
+    private static final Map<Integer, String> MINIMAL_PLAYER_DRAWABLES = Map.of(
+            ResourceUtils.getStringIdentifier("accessibility_pause"),
+            "yt_fill_pause_vd_theme_24",
+            ResourceUtils.getStringIdentifier("accessibility_play"),
+            "yt_fill_play_arrow_vd_theme_24",
+            ResourceUtils.getStringIdentifier("accessibility_replay"),
+            "yt_outline_replay_arrow_vd_theme_24"
+    );
 
     private static final int OPACITY_LEVEL;
 
@@ -419,6 +425,23 @@ public final class MiniplayerPatch {
     public static void hideMiniplayerActionButton(View view) {
         if (CURRENT_TYPE == MODERN_4) {
             Utils.hideViewByRemovingFromParentUnderCondition(HIDE_OVERLAY_BUTTONS_ENABLED, view);
+        }
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void overrideMiniplayerActionButtonDrawable(ImageView view, int contentDescriptionId) {
+        if (!VersionCheckPatch.IS_21_17_OR_GREATER || CURRENT_TYPE != MINIMAL) {
+            return;
+        }
+
+        String drawableName = MINIMAL_PLAYER_DRAWABLES.get(contentDescriptionId);
+        if (drawableName != null) {
+            Drawable drawable = ResourceUtils.getDrawable(drawableName);
+            if (drawable != null) {
+                view.setImageDrawable(drawable);
+            }
         }
     }
 
