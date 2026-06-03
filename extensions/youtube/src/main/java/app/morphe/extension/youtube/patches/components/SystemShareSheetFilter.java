@@ -24,6 +24,7 @@ import java.util.regex.Matcher;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.patches.SanitizeSharingLinksPatch;
+import app.morphe.extension.youtube.patches.components.LithoFilterPatch.BufferAsciiStrings;
 import app.morphe.extension.youtube.shared.ConversionContext.ContextInterface;
 
 @SuppressWarnings("unused")
@@ -45,19 +46,20 @@ public final class SystemShareSheetFilter extends Filter {
                        String accessibility,
                        String path,
                        byte[] buffer,
-                       String clearlyBuffer,
+                       BufferAsciiStrings asciiStrings,
                        StringFilterGroup matchedGroup,
                        FilterContentType contentType,
                        int contentIndex) {
-        if (!systemSheetOpened && openSystemShareSheet(clearlyBuffer)) {
+        if (!systemSheetOpened && openSystemShareSheet(asciiStrings.getStrings())) {
             systemSheetOpened = false;
         }
         return true;
     }
 
-    private boolean openSystemShareSheet(String clearlyBuffer) {
-        if (clearlyBuffer.startsWith("Eshare_sheet_share_targets_third_party_segment.e")) {
-            Matcher matcher = rawVideoURLRegex.matcher(clearlyBuffer);
+    private boolean openSystemShareSheet(String asciiBuffer) {
+        if (asciiBuffer.startsWith("Eshare_sheet_share_targets_third_party_segment.e")) {
+            Matcher matcher = rawVideoURLRegex.matcher(asciiBuffer);
+
             if (matcher.find()) {
                 systemSheetOpened = true;
                 RecyclerView shareSheetRecyclerView = flyoutMenuRecyclerView.get();
@@ -66,9 +68,9 @@ public final class SystemShareSheetFilter extends Filter {
                     final String rawVideoURL = matcher.group(1);
                     if (!TextUtils.isEmpty(rawVideoURL)) {
                         int urlIndex = rawVideoURL.indexOf("http");
-                        if (urlIndex > -1) {
-                            final String sanitizedVideoURL =
-                                    SanitizeSharingLinksPatch.sanitize(rawVideoURL.substring(urlIndex));
+                        if (urlIndex >= 0) {
+                            final String sanitizedVideoURL = SanitizeSharingLinksPatch
+                                    .sanitize(rawVideoURL.substring(urlIndex));
                             Intent shareIntent = new Intent(Intent.ACTION_SEND);
                             shareIntent.setType("text/plain");
                             shareIntent.putExtra(Intent.EXTRA_TEXT, sanitizedVideoURL);
@@ -85,6 +87,7 @@ public final class SystemShareSheetFilter extends Filter {
                 }
             }
         }
+
         return false;
     }
 
@@ -94,18 +97,17 @@ public final class SystemShareSheetFilter extends Filter {
         float clickY = decorView.getHeight() * 0.25f;
 
         if (clickX <= 0 || clickY <= 0) {
-            clickX = 200.0f;
-            clickY = 200.0f;
+            clickX = clickY = 200.0f;
         }
 
-        long downTime = SystemClock.uptimeMillis();
-        long eventTime = SystemClock.uptimeMillis();
+        final long eventTime = SystemClock.uptimeMillis();
 
         for (int i = 0; i < 2; i++) {
+            final boolean firstIteration = i == 0;
             MotionEvent touchEvent = MotionEvent.obtain(
-                    downTime,
-                    i == 0 ? eventTime : eventTime + 10,
-                    i == 0 ? MotionEvent.ACTION_DOWN : MotionEvent.ACTION_UP,
+                    eventTime,
+                    firstIteration ? eventTime : eventTime + 10,
+                    firstIteration ? MotionEvent.ACTION_DOWN : MotionEvent.ACTION_UP,
                     clickX,
                     clickY,
                     0

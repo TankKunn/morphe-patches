@@ -15,12 +15,11 @@ import java.util.regex.Pattern;
 @SuppressWarnings("unused")
 public final class OpenSystemShareSheetPatch {
 
-    public static boolean systemSheetOpened = false;
-    public static final Pattern rawVideoURLRegex =
-            Pattern.compile(
-                    "ANDROID_SYSTEM_SHARE_DIALOG.*?android\\.intent\\.extra\\.TEXT.*?❙([^❙]+)❙"
-            );
-    public static WeakReference<RecyclerView> flyoutMenuRecyclerView;
+    public static final Pattern rawVideoURLRegex = Pattern.compile(
+            "ANDROID_SYSTEM_SHARE_DIALOG.*?android\\.intent\\.extra\\.TEXT.*?❙([^❙]+)❙"
+    );
+    public static boolean systemSheetOpened;
+    public static WeakReference<RecyclerView> flyoutMenuRecyclerView = new WeakReference<>(null);
 
     /**
      * Injection point.

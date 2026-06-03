@@ -33,6 +33,7 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.StringTrieSearch;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.ChangeHeaderPatch;
+import app.morphe.extension.youtube.patches.components.LithoFilterPatch.BufferAsciiStrings;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.ConversionContext.ContextInterface;
 
@@ -397,7 +398,7 @@ public final class LayoutComponentsFilter extends Filter {
                        String accessibility,
                        String path,
                        byte[] buffer,
-                       String clearlyBuffer,
+                       BufferAsciiStrings asciiStrings,
                        StringFilterGroup matchedGroup,
                        FilterContentType contentType,
                        int contentIndex) {
@@ -447,7 +448,8 @@ public final class LayoutComponentsFilter extends Filter {
                     return summaryCardBuffer.check(buffer).isFiltered();
                 }
                 case HIDE_PRODUCT_AND_SUMMARY -> {
-                    return summaryCardBuffer.check(buffer).isFiltered() || productCardBuffer.check(buffer).isFiltered();
+                    return summaryCardBuffer.check(buffer).isFiltered()
+                            || productCardBuffer.check(buffer).isFiltered();
                 }
                 default -> {
                     return false;

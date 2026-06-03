@@ -23,10 +23,11 @@ import androidx.annotation.NonNull;
 import java.util.List;
 
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.youtube.innertube.NextResponseOuterClass.NewElement;
+import app.morphe.extension.youtube.patches.components.LithoFilterPatch.BufferAsciiStrings;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.ConversionContext.ContextInterface;
 import app.morphe.extension.youtube.shared.PlayerType;
-import app.morphe.extension.youtube.innertube.NextResponseOuterClass.NewElement;
 
 @SuppressWarnings("unused")
 public class CommentsFilter extends Filter {
@@ -126,7 +127,7 @@ public class CommentsFilter extends Filter {
                        String accessibility,
                        String path,
                        byte[] buffer,
-                       String clearlyBuffer,
+                       BufferAsciiStrings asciiStrings,
                        StringFilterGroup matchedGroup,
                        FilterContentType contentType,
                        int contentIndex) {

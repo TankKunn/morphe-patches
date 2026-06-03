@@ -1,5 +1,6 @@
 package app.morphe.extension.youtube.patches.components;
 
+import app.morphe.extension.youtube.patches.components.LithoFilterPatch.BufferAsciiStrings;
 import app.morphe.extension.youtube.patches.playback.quality.AdvancedVideoQualityMenuPatch;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.ConversionContext.ContextInterface;
@@ -25,7 +26,7 @@ public final class AdvancedVideoQualityMenuFilter extends Filter {
                        String accessibility,
                        String path,
                        byte[] buffer,
-                       String clearlyBuffer,
+                       BufferAsciiStrings asciiStrings,
                        StringFilterGroup matchedGroup,
                        FilterContentType contentType,
                        int contentIndex) {
