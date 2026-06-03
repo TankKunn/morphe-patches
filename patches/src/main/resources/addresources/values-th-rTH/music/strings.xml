@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 วินาที</string>
   <string name="morphe_crossfade_duration_9000ms">9 วินาที</string>
   <string name="morphe_crossfade_duration_10000ms">10 วินาที</string>
+  <string name="morphe_crossfade_duration_11000ms">11 วินาที</string>
   <string name="morphe_crossfade_duration_12000ms">12 วินาที</string>
   <string name="morphe_music_crossfade_on_skip_title">Fade เมื่อข้ามเพลงด้วยตนเอง</string>
   <string name="morphe_music_crossfade_on_skip_summary">ใช้เอฟเฟกต์การผสมผสานเสียงเมื่อคุณข้ามไปยังแทร็กถัดไปด้วยตนเอง</string>

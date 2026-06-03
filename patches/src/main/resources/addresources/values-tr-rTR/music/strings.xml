@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 saniye</string>
   <string name="morphe_crossfade_duration_9000ms">9 saniye</string>
   <string name="morphe_crossfade_duration_10000ms">10 saniye</string>
+  <string name="morphe_crossfade_duration_11000ms">11 saniye</string>
   <string name="morphe_crossfade_duration_12000ms">12 saniye</string>
   <string name="morphe_music_crossfade_on_skip_title">Manuel atlamada geçiş</string>
   <string name="morphe_music_crossfade_on_skip_summary">Sonraki parçaya manuel olarak atladığınızda geçiş efekti uygular</string>

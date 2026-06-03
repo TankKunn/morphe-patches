@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">৮ সেকেন্ড</string>
   <string name="morphe_crossfade_duration_9000ms">৯ সেকেন্ড</string>
   <string name="morphe_crossfade_duration_10000ms">১০ সেকেন্ড</string>
+  <string name="morphe_crossfade_duration_11000ms">১১ সেকেন্ড</string>
   <string name="morphe_crossfade_duration_12000ms">১২ সেকেন্ড</string>
   <string name="morphe_music_crossfade_on_skip_title">ম্যানুয়াল স্কিপে ক্রসফেড</string>
   <string name="morphe_music_crossfade_on_skip_summary">আপনি যখন ম্যানুয়ালি পরবর্তী ট্র্যাকে যান তখন ক্রসফেড প্রভাব প্রয়োগ করে।</string>

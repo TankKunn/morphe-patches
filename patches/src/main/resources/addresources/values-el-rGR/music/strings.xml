@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 δευτερόλεπτα</string>
   <string name="morphe_crossfade_duration_9000ms">9 δευτερόλεπτα</string>
   <string name="morphe_crossfade_duration_10000ms">10 δευτερόλεπτα</string>
+  <string name="morphe_crossfade_duration_11000ms">11 δευτερόλεπτα</string>
   <string name="morphe_crossfade_duration_12000ms">12 δευτερόλεπτα</string>
   <string name="morphe_music_crossfade_on_skip_title">Εξασθένιση κατά τη χειροκίνητη παράλειψη</string>
   <string name="morphe_music_crossfade_on_skip_summary">Εφαρμόζει το εφέ crossfade όταν παραλείπετε χειροκίνητα το επόμενο κομμάτι</string>

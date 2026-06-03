@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 सेकंड</string>
   <string name="morphe_crossfade_duration_9000ms">9 सेकंड</string>
   <string name="morphe_crossfade_duration_10000ms">10 सेकंड</string>
+  <string name="morphe_crossfade_duration_11000ms">11 सेकंड</string>
   <string name="morphe_crossfade_duration_12000ms">12 सेकंड</string>
   <string name="morphe_music_crossfade_on_skip_title">मैनुअल स्किप पर क्रॉसफ़ेड</string>
   <string name="morphe_music_crossfade_on_skip_summary">जब आप मैन्युअल रूप से अगले ट्रैक पर जाते हैं तो क्रॉसफ़ेड प्रभाव लागू करें</string>

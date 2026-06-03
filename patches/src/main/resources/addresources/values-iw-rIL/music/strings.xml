@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 שניות</string>
   <string name="morphe_crossfade_duration_9000ms">9 שניות</string>
   <string name="morphe_crossfade_duration_10000ms">10 שניות</string>
+  <string name="morphe_crossfade_duration_11000ms">11 שניות</string>
   <string name="morphe_crossfade_duration_12000ms">12 שניות</string>
   <string name="morphe_music_crossfade_on_skip_title">דעיכה בעת דילוג ידני</string>
   <string name="morphe_music_crossfade_on_skip_summary">מפעיל את אפקט ה-crossfade כשאתה מדלג באופן ידני לרצועה הבאה</string>

@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 giây</string>
   <string name="morphe_crossfade_duration_9000ms">9 giây</string>
   <string name="morphe_crossfade_duration_10000ms">10 giây</string>
+  <string name="morphe_crossfade_duration_11000ms">11 giây</string>
   <string name="morphe_crossfade_duration_12000ms">12 giây</string>
   <string name="morphe_music_crossfade_on_skip_title">Hiệu ứng khi chuyển bài thủ công</string>
   <string name="morphe_music_crossfade_on_skip_summary">Áp dụng hiệu ứng khi bạn tự chuyển bài</string>

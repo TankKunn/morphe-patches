@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekund</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekund</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekund</string>
+  <string name="morphe_crossfade_duration_11000ms">11 sekund</string>
   <string name="morphe_crossfade_duration_12000ms">12 sekund</string>
   <string name="morphe_music_crossfade_on_skip_title">Przenikanie przy ręcznym pominięciu</string>
   <string name="morphe_music_crossfade_on_skip_summary">Stosuje efekt przenikania podczas ręcznego przejścia do następnego utworu</string>

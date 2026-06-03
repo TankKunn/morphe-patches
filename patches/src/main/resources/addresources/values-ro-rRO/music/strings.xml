@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 secunde</string>
   <string name="morphe_crossfade_duration_9000ms">9 secunde</string>
   <string name="morphe_crossfade_duration_10000ms">10 secunde</string>
+  <string name="morphe_crossfade_duration_11000ms">11 secunde</string>
   <string name="morphe_crossfade_duration_12000ms">12 secunde</string>
   <string name="morphe_music_crossfade_on_skip_title">Estompare la salt manual</string>
   <string name="morphe_music_crossfade_on_skip_summary">Aplică efectul de crossfade când sari manual la piesa următoare</string>

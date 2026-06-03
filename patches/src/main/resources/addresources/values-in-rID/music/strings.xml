@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 detik</string>
   <string name="morphe_crossfade_duration_9000ms">9 detik</string>
   <string name="morphe_crossfade_duration_10000ms">10 detik</string>
+  <string name="morphe_crossfade_duration_11000ms">11 detik</string>
   <string name="morphe_crossfade_duration_12000ms">12 detik</string>
   <string name="morphe_music_crossfade_on_skip_title">Pudar silang saat melewatkan manual</string>
   <string name="morphe_music_crossfade_on_skip_summary">Menerapkan efek pudar silang saat Anda melewati trek berikutnya secara manual</string>

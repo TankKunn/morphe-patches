@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekund</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekund</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekund</string>
+  <string name="morphe_crossfade_duration_11000ms">11 sekundy</string>
   <string name="morphe_crossfade_duration_12000ms">12 sekundy</string>
   <string name="morphe_music_crossfade_on_skip_title">Vyhlazování při ručním přeskoku</string>
   <string name="morphe_music_crossfade_on_skip_summary">Aplikuje efekt crossfade, když ručně přeskočíte na další skladbu</string>

@@ -59,7 +59,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_title">تمكين تصفية قائمة الخلاصة المنبثقة</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">تصفية قائمة الخلاصة المنبثقة</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">أدخل أسماء قوائم القائمة المنبثقة المراد تصفيتها، مفصولة بأسطر جديدة</string>
-  <string name="morphe_hide_account_menu_title">تمكين المكتبة / فلتر قائمة أنت السفلية</string>
+  <string name="morphe_hide_account_menu_title">تمكين تصفية قائمة المكتبة / أنت السفلية</string>
   <string name="morphe_hide_account_menu_filter_strings_title">تصفية قائمة المكتبة / أنت السفلية</string>
   <string name="morphe_hide_account_menu_filter_strings_summary">أدخل أسماء قائمة المكتبة / أنت السفلية التي تريد تصفية النتائج بناءً عليها، مفصولة بأسطر جديدة</string>
   <string name="morphe_hide_album_cards_title">إخفاء بطاقات الألبوم</string>

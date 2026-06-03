@@ -59,9 +59,9 @@ Les changements incluent :
   <string name="morphe_hide_feed_flyout_menu_title">Activer le filtre du menu déroulant</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtre du menu déroulant</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Entrez les noms du menu déroulant à filtrer, séparés par des sauts de ligne</string>
-  <string name="morphe_hide_account_menu_title">Activer la bibliothèque / Filtre du menu inférieur</string>
-  <string name="morphe_hide_account_menu_filter_strings_title">Bibliothèque / Filtre du menu inférieur</string>
-  <string name="morphe_hide_account_menu_filter_strings_summary">Entrez les noms des menus de la bibliothèque / du menu inférieur à filtrer, séparés par des sauts de ligne</string>
+  <string name="morphe_hide_account_menu_title">Activer le filtre des menus \'Bibliothèque\' / \'Vous\'</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Filtre des menus inférieurs \'Bibliothèque\' / \'Vous\'</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Entrez les noms des menus inférieurs \'Bibliothèque\' ou \'Vous\' à filtrer, séparés par des sauts de ligne</string>
   <string name="morphe_hide_album_cards_title">Masquer les fiches d\'album</string>
   <string name="morphe_hide_album_cards_summary">Masque les cartes d\'album sous la description de l\'artiste</string>
   <string name="morphe_hide_artist_cards_title">Masquer les fiches d\'artiste</string>

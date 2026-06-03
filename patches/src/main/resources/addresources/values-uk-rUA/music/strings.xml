@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 секунд</string>
   <string name="morphe_crossfade_duration_9000ms">9 секунд</string>
   <string name="morphe_crossfade_duration_10000ms">10 секунд</string>
+  <string name="morphe_crossfade_duration_11000ms">11 секунд</string>
   <string name="morphe_crossfade_duration_12000ms">12 секунд</string>
   <string name="morphe_music_crossfade_on_skip_title">Плавний перехід при ручному перемиканні</string>
   <string name="morphe_music_crossfade_on_skip_summary">Застосовує плавний перехід при ручному перемиканні треку</string>

@@ -58,6 +58,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekuntia</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekuntia</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekuntia</string>
+  <string name="morphe_crossfade_duration_11000ms">11 sekuntia</string>
   <string name="morphe_crossfade_duration_12000ms">12 sekuntia</string>
   <string name="morphe_music_crossfade_on_skip_title">Himmennys manuaalisella ohituksella</string>
   <string name="morphe_music_crossfade_on_skip_summary">Käyttää yhdistämistehostetta, kun siirryt manuaalisesti seuraavaan kappaleeseen</string>

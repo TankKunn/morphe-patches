@@ -56,6 +56,7 @@ Second \"item\" text"</string>
   <string name="morphe_crossfade_duration_8000ms">8 sekunder</string>
   <string name="morphe_crossfade_duration_9000ms">9 sekunder</string>
   <string name="morphe_crossfade_duration_10000ms">10 sekunder</string>
+  <string name="morphe_crossfade_duration_11000ms">11 sekunder</string>
   <string name="morphe_crossfade_duration_12000ms">12 sekunder</string>
   <string name="morphe_music_crossfade_on_skip_title">Övertoning vid manuell överhoppning</string>
   <string name="morphe_music_crossfade_on_skip_summary">Tillämpar övertoningseffekten när du hoppar till nästa spår manuellt</string>

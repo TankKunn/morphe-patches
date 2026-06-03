@@ -59,9 +59,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_title">フィードのフライアウト メニューのフィルタを有効化</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">フィードのフライアウト メニューのフィルタ</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">非表示にするフライアウト メニューのメニュー名を改行区切りで入力してください</string>
-  <string name="morphe_hide_account_menu_title">ライブラリ / 下部メニューのフィルター</string>
-  <string name="morphe_hide_account_menu_filter_strings_title">ライブラリ / 下部メニューのフィルター</string>
-  <string name="morphe_hide_account_menu_filter_strings_summary">フィルターするメニュー名を改行区切りで入力してください</string>
+  <string name="morphe_hide_account_menu_title">ライブラリ / マイページの最下部メニューのフィルタを有効化</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">ライブラリ / マイページの最下部メニューのフィルタ</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">非表示にする、ライブラリ / マイページの最下部メニューのメニュー名を改行区切りで入力してください</string>
   <string name="morphe_hide_album_cards_title">アルバムカードを非表示</string>
   <string name="morphe_hide_album_cards_summary">アーティストの概要欄の下のアルバムカードを非表示にします</string>
   <string name="morphe_hide_artist_cards_title">アーティスト カードを非表示</string>
