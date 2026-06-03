@@ -42,7 +42,7 @@ public final class LithoFilterPatch {
         public String getStrings() {
             String ascii = strings;
             if (ascii == null) {
-                strings = ascii = findAsciiStrings(bytes);
+                ascii = strings = findAsciiStrings(bytes);
             }
             return ascii;
         }
@@ -132,7 +132,6 @@ public final class LithoFilterPatch {
                     builder.append(" BufferStrings: ");
                     builder.append(asciiStrings.getStrings());
                 }
-                Logger.printDebug(() -> "buffer: " + buffer.length + " builder: " + builder.toString().length());
 
                 return builder.toString();
             }
