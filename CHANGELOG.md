@@ -1,3 +1,10 @@
+## [1.31.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.4...v1.31.0-dev.5) (2026-06-04)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Miniplayer:** Restore play/pause icons for minimal miniplayer on 21.17+ ([#1644](https://github.com/MorpheApp/morphe-patches/issues/1644)) ([9f4624f](https://github.com/MorpheApp/morphe-patches/commit/9f4624f64b701d7610c34d78a41f2288cf2fcc74))
+* **YouTube - URL sanitized:** copy url button sanitize doesn't work ([23fa3b0](https://github.com/MorpheApp/morphe-patches/commit/23fa3b01f56e282a1dc6d171e2b936bd5020d27e))
+
 ## [1.31.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.3...v1.31.0-dev.4) (2026-06-03)
 
 ### 🐛 Bug Fixes
