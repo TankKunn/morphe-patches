@@ -1,3 +1,13 @@
+## [1.31.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.5...v1.31.0-dev.6) (2026-06-05)
+
+### ✨ New Features
+
+* **YouTube - Save to watch later:** Add playlist queue manager ([#1648](https://github.com/MorpheApp/morphe-patches/issues/1648)) ([a5265ac](https://github.com/MorpheApp/morphe-patches/commit/a5265ac85cd758afc68172b6d073fc8e0ca4fba6))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for 21.23.480 ([9e0d0dd](https://github.com/MorpheApp/morphe-patches/commit/9e0d0dd66e73b4d361926637f2906237d1d0ad1d))
+
 ## [1.31.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.4...v1.31.0-dev.5) (2026-06-04)
 
 ### 🐛 Bug Fixes
