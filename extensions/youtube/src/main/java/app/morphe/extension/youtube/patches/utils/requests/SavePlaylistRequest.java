@@ -87,7 +87,7 @@ public class SavePlaylistRequest {
         long startTime = System.currentTimeMillis();
         Logger.printDebug(() -> "Fetching save playlist request, playlistId: " + playlistId + ", libraryId: " + libraryId);
         try {
-            byte[] requestBody = PlaylistRoutes.savePlaylistBody(playlistId, libraryId);
+            byte[] requestBody = PlaylistRoutes.savePlaylistBody(libraryId, playlistId);
             HttpURLConnection connection = PlaylistRoutes.getConnection(PlaylistRoutes.EDIT_PLAYLIST, requestHeader);
             connection.setFixedLengthStreamingMode(requestBody.length);
             connection.getOutputStream().write(requestBody);
