@@ -6,14 +6,14 @@
 
 ### 🚀 Updated App Support
 
-* **YouTube:** Add experimental support for 21.23.480 ([9e0d0dd](https://github.com/MorpheApp/morphe-patches/commit/9e0d0dd66e73b4d361926637f2906237d1d0ad1d))
+* **YouTube:** Add experimental support for `21.23.480` ([9e0d0dd](https://github.com/MorpheApp/morphe-patches/commit/9e0d0dd66e73b4d361926637f2906237d1d0ad1d))
 
 ## [1.31.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.4...v1.31.0-dev.5) (2026-06-04)
 
 ### 🐛 Bug Fixes
 
-* **YouTube - Miniplayer:** Restore play/pause icons for minimal miniplayer on 21.17+ ([#1644](https://github.com/MorpheApp/morphe-patches/issues/1644)) ([9f4624f](https://github.com/MorpheApp/morphe-patches/commit/9f4624f64b701d7610c34d78a41f2288cf2fcc74))
-* **YouTube - Sanitize sharing links:** Fix Copy video URL button having tracking query parameters ([23fa3b0](https://github.com/MorpheApp/morphe-patches/commit/23fa3b01f56e282a1dc6d171e2b936bd5020d27e))
+* **YouTube - Miniplayer:** Restore play/pause icons for minimal miniplayer on `21.17+` ([#1644](https://github.com/MorpheApp/morphe-patches/issues/1644)) ([9f4624f](https://github.com/MorpheApp/morphe-patches/commit/9f4624f64b701d7610c34d78a41f2288cf2fcc74))
+* **YouTube - Sanitize sharing links:** Fix "Copy video URL button" having tracking query parameters ([23fa3b0](https://github.com/MorpheApp/morphe-patches/commit/23fa3b01f56e282a1dc6d171e2b936bd5020d27e))
 
 ## [1.31.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.3...v1.31.0-dev.4) (2026-06-03)
 
