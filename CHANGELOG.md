@@ -1,3 +1,15 @@
+## [1.31.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.6...v1.31.0-dev.7) (2026-06-06)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Exit fullscreen mode:** Shorts regular player does not exit fullscreen mode ([2fb96a6](https://github.com/MorpheApp/morphe-patches/commit/2fb96a6918775d344c3208871e98a4c87805493c))
+* **YouTube - Save to watch later:** Correctly save queue into selected playlist ([a8d1732](https://github.com/MorpheApp/morphe-patches/commit/a8d1732d41d4e7f007e8d1d6f95dc67d8ccdb6b5))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide snackbar" setting ([#1658](https://github.com/MorpheApp/morphe-patches/issues/1658)) ([0e27c61](https://github.com/MorpheApp/morphe-patches/commit/0e27c611042dd75cf9c8c730df091eb440ea815b))
+* **YouTube - Save to watch later:** Add option to swap Save and Queue actions ([#1664](https://github.com/MorpheApp/morphe-patches/issues/1664)) ([db7cc5b](https://github.com/MorpheApp/morphe-patches/commit/db7cc5becce5a4893faef9f95deb4134114b213c))
+
 ## [1.31.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.5...v1.31.0-dev.6) (2026-06-05)
 
 ### ✨ New Features
