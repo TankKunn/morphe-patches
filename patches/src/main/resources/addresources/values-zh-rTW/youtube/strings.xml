@@ -131,6 +131,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_live_chat_replay_button_title">隱藏「直播聊天重播」按鈕</string>
   <string name="morphe_hide_live_chat_replay_button_summary">隱藏全螢幕模式下的聊天重播按鈕</string>
   <string name="morphe_hide_medical_panels_title">隱藏醫療資訊面板</string>
+  <string name="morphe_hide_snackbar_title">隱藏小訊息</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">隱藏訂閱者規範</string>
   <string name="morphe_hide_timed_reactions_title">隱藏直播即時反應</string>
   <string name="morphe_hide_timed_reactions_summary">隱藏評論區和直播聊天中以表情符號回覆的功能</string>
@@ -354,6 +355,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_error_toast">無法將此影片儲存至稍後觀看播放清單</string>
   <string name="morphe_queue_restore_title">在不同工作階段中保留佇列</string>
   <string name="morphe_queue_restore_summary">重新啟動應用程式後，佇列會保留</string>
+  <string name="morphe_swap_save_and_queue_actions_title">交換「儲存」和「加入佇列」動作</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">點一下即可查看佇列選項，輕按並長按可儲存以便稍後觀看</string>
   <string name="morphe_queue_manager_check_failed_auth">未登入</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">沒有播放列表 ID</string>
   <string name="morphe_queue_manager_check_failed_queue">佇列是空的</string>

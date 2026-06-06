@@ -129,6 +129,7 @@ Prikaz YouTube Doodles lahko prepreči prikazovanje izbirnih zavihkov."</string>
   <string name="morphe_hide_live_chat_replay_button_title">Skrij gumb \'Ponovitev klepetalnice\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Skrije gumb za predvajanje ponovitve klepeta v celozaslonskem načinu</string>
   <string name="morphe_hide_medical_panels_title">Skrij zdravstvene plošče</string>
+  <string name="morphe_hide_snackbar_title">Skrij oglasno vrstico</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Skrij smernice za naročnike</string>
   <string name="morphe_hide_timed_reactions_title">Skrij časovne reakcije</string>
   <string name="morphe_hide_timed_reactions_summary">Skrije funkcijo, ki uporabnikom omogoča reakcije z emojiji v oddelku za komentarje in klepetu v živo</string>
@@ -352,6 +353,8 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_save_to_watch_later_error_toast">Težava pri shranjevanju videoposnetka na seznam za kasnejši ogled</string>
   <string name="morphe_queue_restore_title">Ohranite vrsto med sejami</string>
   <string name="morphe_queue_restore_summary">Vrsta se shrani tudi po ponovnem zagonu aplikacije</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Zamenjaj shranjevanje in možnosti vrste v čakalnico</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Dotaknite se za možnosti vrste v čakalnico, dotaknite se in pridržite za shranjevanje za ogled pozneje</string>
   <string name="morphe_queue_manager_check_failed_auth">Ni prijavljen</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Manjkajoč ID predvajalnega seznama</string>
   <string name="morphe_queue_manager_check_failed_queue">Vrsta je prazna</string>

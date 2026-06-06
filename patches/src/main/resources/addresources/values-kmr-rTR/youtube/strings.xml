@@ -131,6 +131,7 @@ Guherînan têne xistine:
   <string name="morphe_hide_live_chat_replay_button_title">\'Nuşeyên Çatê\' قایپە</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Dugmeya dubarekirina chatê di moda tîkêldîtinê de veşêrin</string>
   <string name="morphe_hide_medical_panels_title">Panelên tibbî veşêrin</string>
+  <string name="morphe_hide_snackbar_title">Liê hejîkirina navnîşê</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Hêbûna rêberiyên nermalina internetê ve nebînîne.</string>
   <string name="morphe_hide_timed_reactions_title">Reaksiyonên demdirêj ve nebînîne.</string>
   <string name="morphe_hide_timed_reactions_summary">Taybeta ku dihêle bavêjan emojiyan di beşa şîroveyan de û di chatê de bersîv bidin veşêrin</string>
@@ -354,6 +355,8 @@ Info: May not work on live streams"</string>
   <string name="morphe_save_to_watch_later_error_toast">Nikare vî vîdyoyê di lîsteya tomar kirina ji bo paşê dîtinê de tomar bike</string>
   <string name="morphe_queue_restore_title">Lîsteyê di nav beşan de bidomîne</string>
   <string name="morphe_queue_restore_summary">Lîste piştî destkirina serî lêve tê parastin</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Veguherîneya kirina tomarkirinê û kirina rêzê</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Bikîne bo vebijarkên rêzê, bikîne û bidin girtin da ku paşê li serê şîret bike</string>
   <string name="morphe_queue_manager_check_failed_auth">Tewrê nîşanî dayî ne</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Îd-a lîsteyê tune ye</string>
   <string name="morphe_queue_manager_check_failed_queue">Lîste vala ye</string>

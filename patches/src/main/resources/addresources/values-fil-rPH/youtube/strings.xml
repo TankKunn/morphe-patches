@@ -131,6 +131,7 @@ Ang pagpapakita ng mga YouTube Doodle ay maaaring pigilan ang pagpapakita ng mga
   <string name="morphe_hide_live_chat_replay_button_title">Itago ang button na \'Live chat replay\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Itinatago ang button ng pag-replay ng chat sa fullscreen mode</string>
   <string name="morphe_hide_medical_panels_title">Itago ang mga panel ng medikal</string>
+  <string name="morphe_hide_snackbar_title">Itago ang snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Itago ang mga alituntunin ng mga subscriber</string>
   <string name="morphe_hide_timed_reactions_title">Itago ang mga nakatakdang reaksyon</string>
   <string name="morphe_hide_timed_reactions_summary">Itinatago ang feature na nagbibigay-daan sa mga user na mag-react gamit ang mga emoji sa seksyon ng mga komento at live chat</string>
@@ -354,6 +355,8 @@ Impormasyon: Maaaring hindi gumana sa mga live stream"</string>
   <string name="morphe_save_to_watch_later_error_toast">Hindi ma-save ang videong ito sa playlist na I-save para manood mamaya</string>
   <string name="morphe_queue_restore_title">Panatilihin ang pila sa pagitan ng mga sesyon</string>
   <string name="morphe_queue_restore_summary">Ang pila ay nananatili kahit i-restart ang app</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Palitan ang Save at Queue na aksyon</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">I-tap para sa mga opsyon sa queue, i-tap at pindutin nang matagal para i-save para mapanood mamaya</string>
   <string name="morphe_queue_manager_check_failed_auth">Hindi naka-log in</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Walang ID ng playlist</string>
   <string name="morphe_queue_manager_check_failed_queue">Walang laman ang queue</string>

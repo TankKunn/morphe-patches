@@ -131,6 +131,7 @@ Visning av YouTube-doodles kan hindre egendefinerte headere fra å vises."</stri
   <string name="morphe_hide_live_chat_replay_button_title">Skjul \'Direktestrøm-chat-gjennomgang\'-knappen</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Skjuler chat-avspillingsknappen i fullskjermmodus</string>
   <string name="morphe_hide_medical_panels_title">Skjul medisinske paneler</string>
+  <string name="morphe_hide_snackbar_title">Skjul snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Skjul abonnentretningslinjer</string>
   <string name="morphe_hide_timed_reactions_title">Skjul tidsstyrte reaksjoner</string>
   <string name="morphe_hide_timed_reactions_summary">Skjuler funksjonen som lar brukere reagere med emojier i kommentarfeltet og direktekamp-chatten</string>
@@ -354,6 +355,8 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <string name="morphe_save_to_watch_later_error_toast">Kunne ikke lagre denne videoen i Se senere-listen</string>
   <string name="morphe_queue_restore_title">Behold køen mellom øktene</string>
   <string name="morphe_queue_restore_summary">Køen beholdes etter omstart av appen</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Bytt om «Lagre» og «Kø»-handlinger</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Trykk for køalternativer, trykk og hold for å lagre til «Se senere»</string>
   <string name="morphe_queue_manager_check_failed_auth">Ikke logget inn</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Ingen spillelist-ID</string>
   <string name="morphe_queue_manager_check_failed_queue">Køen er tom</string>

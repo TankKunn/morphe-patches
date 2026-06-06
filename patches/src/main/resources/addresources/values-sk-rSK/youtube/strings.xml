@@ -131,6 +131,7 @@ Zobrazenie YouTube Doodle môže zabrániť zobrazeniu vlastných hlavičiek."</
   <string name="morphe_hide_live_chat_replay_button_title">Skryť tlačidlo \'Zopakovať živý chat\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Skryje tlačidlo na opätovné prehrávanie chatu v režime na celú obrazovku</string>
   <string name="morphe_hide_medical_panels_title">Skryť lekárske panely</string>
+  <string name="morphe_hide_snackbar_title">Skryť snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Skryť pravidlá pre odberateľov</string>
   <string name="morphe_hide_timed_reactions_title">Skryť časované reakcie</string>
   <string name="morphe_hide_timed_reactions_summary">Skryje funkciu, ktorá umožňuje používateľom reagovať emodži v sekcii komentárov a živom chate</string>
@@ -354,6 +355,8 @@ Poznámka: Možno nebude fungovať na živých prenosoch"</string>
   <string name="morphe_save_to_watch_later_error_toast">Toto video sa nedá uložiť do zoznamu Sledovať neskôr</string>
   <string name="morphe_queue_restore_title">Uchovajte si rad medzi reláciami</string>
   <string name="morphe_queue_restore_summary">Rad zostane zachovaný aj po reštarte aplikácie</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Zameniť akcie Uložiť a Zaradiť do fronty</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Ťuknite pre možnosti fronty, ťuknite a podržte pre uloženie na neskôr</string>
   <string name="morphe_queue_manager_check_failed_auth">Prihlásený</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Chýbajúce ID zoznamu skladieb</string>
   <string name="morphe_queue_manager_check_failed_queue">Fronta je prázdna</string>

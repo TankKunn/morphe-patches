@@ -131,6 +131,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_live_chat_replay_button_title">ซ่อนปุ่ม \'เล่นซ้ำชาต์สด\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">ซ่อนปุ่มเล่นซ้ำแชทในโหมดเต็มหน้าจอ</string>
   <string name="morphe_hide_medical_panels_title">ซ่อนแผงทางการแพทย์</string>
+  <string name="morphe_hide_snackbar_title">ซ่อนสแน็กบาร์</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">ซ่อนหลักเกณฑ์สำหรับผู้ติดตาม</string>
   <string name="morphe_hide_timed_reactions_title">ซ่อนปฏิกิริยาตามเวลา</string>
   <string name="morphe_hide_timed_reactions_summary">ซ่อนคุณสมบัติที่ช่วยให้ผู้ใช้แสดงความรู้สึกด้วยอิโมจิในส่วนความคิดเห็นและแชทสด</string>
@@ -355,6 +356,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_error_toast">ไม่สามารถบันทึกวิดีโอนี้ลงในรายการดูภายหลังได้</string>
   <string name="morphe_queue_restore_title">คงคิวไว้ระหว่างการใช้งาน</string>
   <string name="morphe_queue_restore_summary">คิวจะถูกเก็บไว้หลังจากการปิดและเปิดแอปอีกครั้ง</string>
+  <string name="morphe_swap_save_and_queue_actions_title">สลับการดำเนินการบันทึกและคิว</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">แตะเพื่อดูตัวเลือกคิว แตะค้างเพื่อบันทึกเพื่อดูในภายหลัง</string>
   <string name="morphe_queue_manager_check_failed_auth">ยังไม่ได้เข้าสู่ระบบ</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">ไม่มี ID เพลย์ลิสต์</string>
   <string name="morphe_queue_manager_check_failed_queue">คิวว่างเปล่า</string>

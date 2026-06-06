@@ -131,6 +131,7 @@ A exibição de Doodles do YouTube pode impedir a exibição de cabeçalhos pers
   <string name="morphe_hide_live_chat_replay_button_title">Ocultar o botão \"Reprodução ao vivo\"</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Oculta o botão de repetição do chat no modo de tela cheia</string>
   <string name="morphe_hide_medical_panels_title">Esconder painéis médicos</string>
+  <string name="morphe_hide_snackbar_title">Ocultar snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Ocultar as diretrizes para subscritores</string>
   <string name="morphe_hide_timed_reactions_title">Esconder reações cronometradas</string>
   <string name="morphe_hide_timed_reactions_summary">Oculta o recurso que permite aos usuários reagir com emojis na seção de comentários e no chat ao vivo</string>
@@ -354,6 +355,8 @@ Informação: Pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_save_to_watch_later_error_toast">Não foi possível salvar este vídeo na playlist Assistir depois</string>
   <string name="morphe_queue_restore_title">Manter fila entre as sessões</string>
   <string name="morphe_queue_restore_summary">A fila é mantida após reiniciar o aplicativo</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Trocar ações de Salvar e Fila</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Toque para opções de fila, toque e segure para salvar para assistir mais tarde</string>
   <string name="morphe_queue_manager_check_failed_auth">Não conectado</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">ID de playlist não encontrado</string>
   <string name="morphe_queue_manager_check_failed_queue">Fila vazia</string>

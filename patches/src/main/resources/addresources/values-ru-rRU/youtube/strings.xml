@@ -131,6 +131,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_live_chat_replay_button_title">Скрыть кнопку \"Повтор живого чата\"</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Скрывает кнопку повтора чата в полноэкранном режиме</string>
   <string name="morphe_hide_medical_panels_title">Скрыть медицинские панели</string>
+  <string name="morphe_hide_snackbar_title">Скрыть всплывающие сообщения</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Скрыть правила сообщества подписчиков</string>
   <string name="morphe_hide_timed_reactions_title">Скрыть временные реакции</string>
   <string name="morphe_hide_timed_reactions_summary">Скрывает функцию, позволяющую пользователям реагировать смайликами в разделе комментариев и в прямом чате</string>
@@ -357,6 +358,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_error_toast">Не удалось сохранить это видео в плейлист \"Смотреть позже\"</string>
   <string name="morphe_queue_restore_title">Сохранять очередь между сеансами</string>
   <string name="morphe_queue_restore_summary">Очередь сохраняется после перезапуска приложения</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Поменять местами действия \"Сохранить\" и \"В очередь\"</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Нажмите для опций очереди, нажмите и удерживайте, чтобы сохранить для просмотра позже</string>
   <string name="morphe_queue_manager_check_failed_auth">Не вошел в систему</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">ID плейлиста не указан</string>
   <string name="morphe_queue_manager_check_failed_queue">Очередь пуста</string>

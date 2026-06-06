@@ -131,6 +131,7 @@ Afisarea Doodle-urilor YouTube poate împiedica afișarea header-elor personaliz
   <string name="morphe_hide_live_chat_replay_button_title">Ascunde butonul \'Rejucătează conversație în direct\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Ascunde butonul de redare a chat-ului în modul ecran complet</string>
   <string name="morphe_hide_medical_panels_title">Ascunde panourile medicale</string>
+  <string name="morphe_hide_snackbar_title">Ascunde bara de gustări</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Ascunde ghidurile comunității abonaților</string>
   <string name="morphe_hide_timed_reactions_title">Ascunde reacţiile cronologie </string>
   <string name="morphe_hide_timed_reactions_summary">Ascunde funcția care permite utilizatorilor să reacționeze cu emoji-uri în secțiunea de comentarii și chat live</string>
@@ -352,6 +353,8 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_save_to_watch_later_error_toast">Nu se poate salva acest video în lista de vizionare ulterioară</string>
   <string name="morphe_queue_restore_title">Menține coada între sesiuni</string>
   <string name="morphe_queue_restore_summary">Coada este păstrată după repornirea aplicației</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Schimbă acțiunile Salvare și Coadă</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Atingeți pentru opțiunile cozii, atingeți și mențineți apăsat pentru a salva pentru a urmări mai târziu</string>
   <string name="morphe_queue_manager_check_failed_auth">Nu ești autentificat</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">ID playlistă inexistent</string>
   <string name="morphe_queue_manager_check_failed_queue">Coada este goală</string>

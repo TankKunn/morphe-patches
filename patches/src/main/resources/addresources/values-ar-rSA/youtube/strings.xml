@@ -131,6 +131,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_live_chat_replay_button_title">إخفاء زر \'إعادة عرض المحادثة المباشرة\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">يخفي زر إعادة تشغيل المحادثة المباشرة في وضع ملء الشاشة</string>
   <string name="morphe_hide_medical_panels_title">إخفاء اللوحات الطبية</string>
+  <string name="morphe_hide_snackbar_title">إخفاء شريط التنبيهات السريعة</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">إخفاء إرشادات المشتركين</string>
   <string name="morphe_hide_timed_reactions_title">إخفاء ردود الفعل المؤقتة</string>
   <string name="morphe_hide_timed_reactions_summary">يخفي الميزة التي تسمح للمستخدمين بالتفاعل باستخدام الرموز التعبيرية في قسم التعليقات والمحادثة المباشرة</string>
@@ -355,6 +356,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_error_toast">لا يمكن حفظ هذا الفيديو في قائمة المشاهدة لاحقًا</string>
   <string name="morphe_queue_restore_title">احتفظ بقائمة الانتظار بين الجلسات</string>
   <string name="morphe_queue_restore_summary">تبقى قائمة الانتظار محفوظة بعد إعادة تشغيل التطبيق</string>
+  <string name="morphe_swap_save_and_queue_actions_title">تبديل إجراءات حفظ وإضافة إلى قائمة الانتظار</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">انقر لخيارات قائمة الانتظار، واضغط مع الاستمرار للحفظ في المشاهدة لاحقًا</string>
   <string name="morphe_queue_manager_check_failed_auth">تسجيل الدخول غير ممكن</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">لا يوجد معرّف قائمة تشغيل</string>
   <string name="morphe_queue_manager_check_failed_queue">قائمة الانتظار فارغة</string>

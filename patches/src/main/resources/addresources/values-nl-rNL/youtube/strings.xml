@@ -131,6 +131,7 @@ Het tonen van YouTube Doodles kan voorkomen dat aangepaste headers worden weerge
   <string name="morphe_hide_live_chat_replay_button_title">Verberg \'Live chat replay\' knop</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Verbergt de knop voor het afspelen van de chat in de volledig schermmodus</string>
   <string name="morphe_hide_medical_panels_title">Medische panelen verbergen</string>
+  <string name="morphe_hide_snackbar_title">Verberg snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Richtlijnen voor abonnees verbergen</string>
   <string name="morphe_hide_timed_reactions_title">Verberg getimede reacties</string>
   <string name="morphe_hide_timed_reactions_summary">Verbergt de functie waarmee gebruikers kunnen reageren met emoji\'s in de commentaarsectie en livechat</string>
@@ -355,6 +356,8 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_save_to_watch_later_error_toast">Kan deze video niet opslaan in de afspeellijst \'Bekijk later\'</string>
   <string name="morphe_queue_restore_title">Wachtrij behouden tussen sessies</string>
   <string name="morphe_queue_restore_summary">Wachtrij blijft behouden na het opnieuw starten van de app</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Verwissel de acties Opslaan en Wachtrij</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Tik voor wachtrijopties, tik en houd ingedrukt om later te bekijken</string>
   <string name="morphe_queue_manager_check_failed_auth">Niet ingelogd</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Geen afspeellijst-ID</string>
   <string name="morphe_queue_manager_check_failed_queue">De wachtrij is leeg</string>

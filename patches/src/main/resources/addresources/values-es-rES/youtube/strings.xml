@@ -131,6 +131,7 @@ Mostrar los Doodles de YouTube puede impedir que se muestren encabezados persona
   <string name="morphe_hide_live_chat_replay_button_title">Ocultar botón \"Repetición del chat en directo\"</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Oculta el botón de reproducción del chat en el modo de pantalla completa</string>
   <string name="morphe_hide_medical_panels_title">Ocultar paneles médicos</string>
+  <string name="morphe_hide_snackbar_title">Ocultar barra de notificaciones</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Ocultar normas para suscriptores</string>
   <string name="morphe_hide_timed_reactions_title">Ocultar reacciones en tiempo</string>
   <string name="morphe_hide_timed_reactions_summary">Oculta la función que permite a los usuarios reaccionar con emojis en la sección de comentarios y el chat en directo</string>
@@ -356,6 +357,8 @@ Información: Es posible que no funcione en transmisiones en directo"</string>
   <string name="morphe_save_to_watch_later_error_toast">No se puede guardar este video en la lista de reproducción Ver más tarde</string>
   <string name="morphe_queue_restore_title">Mantener la cola entre sesiones</string>
   <string name="morphe_queue_restore_summary">La cola se mantiene después de reiniciar la aplicación</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Intercambiar las acciones Guardar y Añadir a la cola</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Pulsa para opciones de la cola, mantén pulsado para guardar para ver más tarde</string>
   <string name="morphe_queue_manager_check_failed_auth">No ha iniciado sesión</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">No hay ID de lista de reproducción</string>
   <string name="morphe_queue_manager_check_failed_queue">La cola está vacía</string>

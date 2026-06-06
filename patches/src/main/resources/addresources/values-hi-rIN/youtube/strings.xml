@@ -131,6 +131,7 @@ YouTube Doodles दिखाने से कस्टम हेडर प्र
   <string name="morphe_hide_live_chat_replay_button_title">छुपाएं \'लाइव चैट रिप्ले\' बटन</string>
   <string name="morphe_hide_live_chat_replay_button_summary">फुलस्क्रीन मोड में चैट रीप्ले बटन को छुपाता है</string>
   <string name="morphe_hide_medical_panels_title">इन्फो पैनल्स को छुपाएं</string>
+  <string name="morphe_hide_snackbar_title">स्नैकबार छिपाएं</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">छुपाएं सदस्यगणितों की निदेशिका</string>
   <string name="morphe_hide_timed_reactions_title">छुपाएं समयबद्ध प्रतिक्रियाएं</string>
   <string name="morphe_hide_timed_reactions_summary">टिप्पणी अनुभाग और लाइव चैट में इमोजी के साथ प्रतिक्रिया देने की अनुमति देने वाली सुविधा को छुपाता है</string>
@@ -354,6 +355,8 @@ YouTube Doodles दिखाने से कस्टम हेडर प्र
   <string name="morphe_save_to_watch_later_error_toast">इस वीडियो को बाद में देखने की प्लेलिस्ट में सहेजा नहीं जा सकता</string>
   <string name="morphe_queue_restore_title">सत्रों के बीच कतार बनाए रखें</string>
   <string name="morphe_queue_restore_summary">ऐप को पुनरारंभ करने के बाद कतार बनी रहती है</string>
+  <string name="morphe_swap_save_and_queue_actions_title">स्वैप सेव और क्यू क्रियाएँ</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">क्यू विकल्पों के लिए टैप करें, बाद में देखने के लिए सेव करने के लिए टैप करके दबाएँ</string>
   <string name="morphe_queue_manager_check_failed_auth">लॉग इन नहीं किया गया</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">प्लेलिस्ट आईडी नहीं</string>
   <string name="morphe_queue_manager_check_failed_queue">क्यू खाली है</string>

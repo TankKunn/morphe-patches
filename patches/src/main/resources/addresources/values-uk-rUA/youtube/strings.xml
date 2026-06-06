@@ -131,6 +131,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_live_chat_replay_button_title">Приховати кнопку \"Переглянути запис чату\"</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Приховує кнопку повтору чату в повноекранному режимі</string>
   <string name="morphe_hide_medical_panels_title">Приховати медичні панелі</string>
+  <string name="morphe_hide_snackbar_title">Приховати спливаюче повідомлення</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Приховати правила спільноти підписок</string>
   <string name="morphe_hide_timed_reactions_title">Приховати тимчасові реакції</string>
   <string name="morphe_hide_timed_reactions_summary">Приховує функцію реакцій емодзі в секції коментарів і чаті трансляцій</string>
@@ -354,6 +355,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_error_toast">Не вдалося зберегти це відео у списку відтворення \"Подивитися пізніше\"</string>
   <string name="morphe_queue_restore_title">Зберігати чергу між сесіями</string>
   <string name="morphe_queue_restore_summary">Черга зберігається після перезапуску застосунку</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Поміняти місцями кнопки \"Зберегти\" та \"Додати в чергу\"</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Натисніть для опцій черги, натисніть і утримуйте, щоб зберегти для перегляду пізніше</string>
   <string name="morphe_queue_manager_check_failed_auth">Не увійшли в систему</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Немає ID списку відтворення</string>
   <string name="morphe_queue_manager_check_failed_queue">Черга порожня</string>

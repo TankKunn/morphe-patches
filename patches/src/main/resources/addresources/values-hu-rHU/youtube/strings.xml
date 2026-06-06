@@ -131,6 +131,7 @@ A logóanimációk miatt előfordulhat, hogy a saját fejlécek nem látszódnak
   <string name="morphe_hide_live_chat_replay_button_title">„Élő csevegés ismétlése” gomb elrejtése</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Az élő csevegés ismétlése gomb elrejtése teljes képernyős módban</string>
   <string name="morphe_hide_medical_panels_title">Egészségügyi információs panelek elrejtése</string>
+  <string name="morphe_hide_snackbar_title">Snack bár elrejtése</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Csatorna-irányelvek elrejtése</string>
   <string name="morphe_hide_timed_reactions_title">Időzített reakciók elrejtése</string>
   <string name="morphe_hide_timed_reactions_summary">Kikapcsolja az emojikkal való reagálást a kommenteknél és az élő chaten</string>
@@ -354,6 +355,8 @@ Figyelem: Lehet, hogy az élő közvetítéseknél nem működik"</string>
   <string name="morphe_save_to_watch_later_error_toast">A videó nem menthető a „Később megnézem” lejátszási listára</string>
   <string name="morphe_queue_restore_title">Tartsa fenn a sorát a munkamenetek között</string>
   <string name="morphe_queue_restore_summary">A sor az alkalmazás újraindítása után is megőrizhető</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Csere a Mentés és a Sorba rendezés műveletekhez</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Érintse meg a sorba rendezési lehetőségekért, vagy tartsa lenyomva a későbbi megtekintéshez való mentéshez</string>
   <string name="morphe_queue_manager_check_failed_auth">Nem jelentkezett be</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Nincs lejálistázás azonosító</string>
   <string name="morphe_queue_manager_check_failed_queue">A sor üres</string>

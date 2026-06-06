@@ -131,6 +131,7 @@ Prikazivanje YouTube Doodles može sprečiti prikazivanje korisničkih zaglavlja
   <string name="morphe_hide_live_chat_replay_button_title">Sakrij dugme \"Prikaži ponovni prenos chat-a\"</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Sakriva dugme za reprodukciju ponovnog četa u režimu punog ekrana</string>
   <string name="morphe_hide_medical_panels_title">Sakrij okna sa medicinskim informacijama</string>
+  <string name="morphe_hide_snackbar_title">Sakrij notifikaciju</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Sakrij smernice pratilaca</string>
   <string name="morphe_hide_timed_reactions_title">Sakrij vremenske reakcije</string>
   <string name="morphe_hide_timed_reactions_summary">Sakriva funkciju koja omogućava korisnicima da reaguju emojijima u odeljku za komentare i chatu uživo</string>
@@ -354,6 +355,8 @@ Napomena: Možda neće raditi na direktnim prenosima"</string>
   <string name="morphe_save_to_watch_later_error_toast">Nije moguće sačuvati ovaj video na listi za gledanje kasnije</string>
   <string name="morphe_queue_restore_title">Zadrži red čekanja između sesija</string>
   <string name="morphe_queue_restore_summary">Red čekanja je sačuvan nakon ponovnog pokretanja aplikacije</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Zameni akcije Štednje i stavljanja u red</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Dodirnite za opcije reda, dodirnite i zadržite da biste sačavali za gledanje kasnije</string>
   <string name="morphe_queue_manager_check_failed_auth">Nije prijavljen</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">ID liste za reprodukciju nije naveden</string>
   <string name="morphe_queue_manager_check_failed_queue">Red je prazan</string>

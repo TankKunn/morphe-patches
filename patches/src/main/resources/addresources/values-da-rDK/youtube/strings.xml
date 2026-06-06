@@ -131,6 +131,7 @@ Visning af YouTube Doodles kan forhindre brugerdefinerede overskrifter i at bliv
   <string name="morphe_hide_live_chat_replay_button_title">Skjul \'Live chat genafspilning\' knappen</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Skjuler chat replay-knappen i fuldskærmstilstand</string>
   <string name="morphe_hide_medical_panels_title">Skjul medicinske paneler</string>
+  <string name="morphe_hide_snackbar_title">Skjul snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Skjul retningslinjer for abonnenter</string>
   <string name="morphe_hide_timed_reactions_title">Skjul tidsreaktioner</string>
   <string name="morphe_hide_timed_reactions_summary">Skjuler funktionen, der giver brugerne mulighed for at reagere med emojis i kommentarsektionen og livechatten</string>
@@ -354,6 +355,8 @@ Info: Virker muligvis ikke på live streams"</string>
   <string name="morphe_save_to_watch_later_error_toast">Kunne ikke gemme denne video i afspilningslisten til senere</string>
   <string name="morphe_queue_restore_title">Behold køen mellem sessioner</string>
   <string name="morphe_queue_restore_summary">Køen bevares efter genstart af appen</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Byt rundt på Gem og Kø-handlinger</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Tryk for køindstillinger, tryk og hold for at gemme til senere</string>
   <string name="morphe_queue_manager_check_failed_auth">Ikke logget ind</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Intet afspilningslist-id</string>
   <string name="morphe_queue_manager_check_failed_queue">Køen er tom</string>

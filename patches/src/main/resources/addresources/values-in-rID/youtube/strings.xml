@@ -130,6 +130,7 @@ Menampilkan YouTube Doodles mungkin mencegah menampilkan header khusus."</string
   <string name="morphe_hide_live_chat_replay_button_title">Sembunyikan tombol \'Putar ulang obrolan langsung\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Menyembunyikan tombol putar ulang obrolan dalam mode layar penuh</string>
   <string name="morphe_hide_medical_panels_title">Sembunyikan panel medis</string>
+  <string name="morphe_hide_snackbar_title">Sembunyikan snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Sembunyikan panduan pelanggan</string>
   <string name="morphe_hide_timed_reactions_title">Sembunyikan reaksi terjadwal</string>
   <string name="morphe_hide_timed_reactions_summary">Menyembunyikan fitur yang memungkinkan pengguna memberikan reaksi dengan emoji di bagian komentar dan obrolan langsung</string>
@@ -353,6 +354,8 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_save_to_watch_later_error_toast">Tidak dapat menyimpan video ini di daftar tonton nanti</string>
   <string name="morphe_queue_restore_title">Simpan antrean antar sesi</string>
   <string name="morphe_queue_restore_summary">Antrean disimpan setelah memulai ulang aplikasi</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Tukar Tindakan Simpan dan Antrean</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Ketuk untuk opsi antrean, ketuk dan tahan untuk menyimpan untuk ditonton nanti</string>
   <string name="morphe_queue_manager_check_failed_auth">Belum masuk</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">ID daftar putar tidak ditemukan</string>
   <string name="morphe_queue_manager_check_failed_queue">Antrean kosong</string>

@@ -131,6 +131,7 @@ Zobrazování YouTube Doodles může zabránit zobrazení vlastních záhlaví."
   <string name="morphe_hide_live_chat_replay_button_title">Skrýt tlačítko \"Zobrazit záznam live chatu\"</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Skrývá tlačítko přehrávání záznamu chatu v režimu na celou obrazovku</string>
   <string name="morphe_hide_medical_panels_title">Skrýt informační panely o zdravotnictví</string>
+  <string name="morphe_hide_snackbar_title">Skrýt snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Skrýt pokyny pro odběratele</string>
   <string name="morphe_hide_timed_reactions_title">Skrýt reakce zobrazené po čase</string>
   <string name="morphe_hide_timed_reactions_summary">Skrývá funkci, která umožňuje uživatelům reagovat emotikony v sekci komentářů a živém chatu</string>
@@ -355,6 +356,8 @@ Upozornění: Možná nebude fungovat u živých přenosů"</string>
   <string name="morphe_save_to_watch_later_error_toast">Nelze uložit toto video do seznamu pro pozdější zhlédnutí</string>
   <string name="morphe_queue_restore_title">Udržet frontu mezi relacemi</string>
   <string name="morphe_queue_restore_summary">Fronta je zachována i po restartu aplikace</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Prohoďte akce Uložit a Zařadit do fronty</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Klepnutím zobrazíte možnosti fronty, podržením uložíte pro pozdější zhlédnutí</string>
   <string name="morphe_queue_manager_check_failed_auth">Není přihlášen</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Není ID seznamu přehrávání</string>
   <string name="morphe_queue_manager_check_failed_queue">Fronta je prázdná</string>

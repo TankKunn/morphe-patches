@@ -131,6 +131,7 @@ Die vertoon van YouTube Doodles kan verhoed dat pasgemaakte headers vertoon word
   <string name="morphe_hide_live_chat_replay_button_title">Versteek \'Regstreekse klets-herhaling\' knoppie</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Verberg die kletsherhalingsknoppie in die volskermmodus</string>
   <string name="morphe_hide_medical_panels_title">Verberg mediese panele</string>
+  <string name="morphe_hide_snackbar_title">Verberg snackbalk</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Verberg lede riglyne</string>
   <string name="morphe_hide_timed_reactions_title">Verberg tydelike reaksies</string>
   <string name="morphe_hide_timed_reactions_summary">Verberg die funksie wat gebruikers toelaat om met emojis in die kommentaar afdeling en lewendige klets te reageer</string>
@@ -354,6 +355,8 @@ Info: Werk moontlik nie op regstreekse uitsendings nie"</string>
   <string name="morphe_save_to_watch_later_error_toast">Kan hierdie video nie in spaar om later te kyk snitlys stoor nie</string>
   <string name="morphe_queue_restore_title">Behou tou tussen sessies</string>
   <string name="morphe_queue_restore_summary">Tou word behou na die herbegin van die app</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Ruil die Spaar en Waglys-aksies</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Tik vir waglys-opsies, tik en hou vas om later te kyk</string>
   <string name="morphe_queue_manager_check_failed_auth">Nie aangemeld</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Geen spyskaart-ID</string>
   <string name="morphe_queue_manager_check_failed_queue">Waglys is leeg</string>

@@ -131,6 +131,7 @@ YouTube Doodles göstermek, özel başlıkların görüntülenmesini engelleyebi
   <string name="morphe_hide_live_chat_replay_button_title">\'Canlı sohbeti tekrar oynat\' düğmesini gizle</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Tam ekran modunda sohbeti tekrar oynatma düğmesini gizler</string>
   <string name="morphe_hide_medical_panels_title">Tıbbi bilgi panellerini gizle</string>
+  <string name="morphe_hide_snackbar_title">Snackbar\'ı gizle</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Abone kurallarını gizle</string>
   <string name="morphe_hide_timed_reactions_title">Süreli tepkileri gizle</string>
   <string name="morphe_hide_timed_reactions_summary">Kullanıcıların yorum bölümünde ve canlı sohbette emojilerle tepki vermesini sağlayan özelliği gizler</string>
@@ -354,6 +355,8 @@ Bilgi: Canlı yayınlarda çalışmayabilir"</string>
   <string name="morphe_save_to_watch_later_error_toast">Bu video daha sonra izle listesine kaydedilemiyor</string>
   <string name="morphe_queue_restore_title">Sırayı oturumlar arasında koru</string>
   <string name="morphe_queue_restore_summary">Uygulama yeniden başlatıldığında sıra korunur</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Kaydet ve Kuyruk eylemlerini değiştir</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Kuyruk seçenekleri için dokunun, daha sonra izlemek için dokunup basılı tutun</string>
   <string name="morphe_queue_manager_check_failed_auth">Giriş yapılmadı</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Oynatma listesi kimliği yok</string>
   <string name="morphe_queue_manager_check_failed_queue">Sıra boş</string>

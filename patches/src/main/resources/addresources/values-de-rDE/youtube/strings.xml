@@ -59,9 +59,9 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_feed_flyout_menu_title">Aktiviere Filtermenü Flyout</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtermenü Flyout</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Geben Sie die Namen des Flyout-Menüs ein, getrennt durch Zeilenumbrüche, um danach zu filtern</string>
-  <string name="morphe_hide_account_menu_title">Bibliothek / Filter im unteren Menü</string>
-  <string name="morphe_hide_account_menu_filter_strings_title">Bibliothek / Filter im unteren Menü</string>
-  <string name="morphe_hide_account_menu_filter_strings_summary">Geben Sie die Namen des Flyout-Menüs ein, getrennt durch Zeilenumbrüche, um danach zu filtern</string>
+  <string name="morphe_hide_account_menu_title">Aktiviere Bibliothek- / You-Filter im unteren Menü</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Bibliothek- / You-Filter im unteren Menü</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Geben Sie die unteren Menünamen des Bereichs Bibliothek / You ein, getrennt durch Zeilenumbrüche, um danach zu filtern</string>
   <string name="morphe_hide_album_cards_title">Albumkarten ausblenden</string>
   <string name="morphe_hide_album_cards_summary">Verbirgt die Albumkarten unter der Künstlerbeschreibung</string>
   <string name="morphe_hide_artist_cards_title">Interpretenkarten ausblenden</string>
@@ -131,6 +131,7 @@ Das Anzeigen von YouTube Doodles kann verhindern, dass benutzerdefinierte Header
   <string name="morphe_hide_live_chat_replay_button_title">Verbergen der Schaltfläche \'Live-Chat-Wiedergabe\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Verbirgt die Schaltfläche zum Abspielen von Chatwiederholungen im Vollbildmodus</string>
   <string name="morphe_hide_medical_panels_title">Verstecke medizinische Panels</string>
+  <string name="morphe_hide_snackbar_title">Snackbar ausblenden</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Abonnentenrichtlinien ausblenden</string>
   <string name="morphe_hide_timed_reactions_title">Zeitliche Reaktionen ausblenden</string>
   <string name="morphe_hide_timed_reactions_summary">Verbirgt die Funktion, mit der Nutzer mit Emojis im Kommentarbereich und im Live-Chat reagieren können</string>
@@ -355,6 +356,8 @@ Info: Funktioniert möglicherweise nicht bei Live-Streams"</string>
   <string name="morphe_save_to_watch_later_error_toast">Dieses Video kann nicht zur Wiedergabeliste \"Später ansehen\" hinzugefügt werden</string>
   <string name="morphe_queue_restore_title">Warteschlange zwischen Sitzungen beibehalten</string>
   <string name="morphe_queue_restore_summary">Warteschlange wird nach Neustart der App beibehalten</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Tauschen Sie die Funktionen \"Speichern\" und \"Warteschlange\"</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Tippen Sie für Optionen zur Warteschlange, tippen und halten Sie gedrückt, um später anzusehen</string>
   <string name="morphe_queue_manager_check_failed_auth">Nicht angemeldet</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Keine Wiedergabelisten-ID</string>
   <string name="morphe_queue_manager_check_failed_queue">Warteschlange ist leer</string>

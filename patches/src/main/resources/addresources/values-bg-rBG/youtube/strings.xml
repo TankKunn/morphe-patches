@@ -131,6 +131,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_live_chat_replay_button_title">Скрий бутона \"Live chat replay\"</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Скрива бутона за повторно гледане на чата в режим на цял екран</string>
   <string name="morphe_hide_medical_panels_title">Скриване на медицинските панели</string>
+  <string name="morphe_hide_snackbar_title">Скрий лентата за известия</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Скриване на указанията за абонатори</string>
   <string name="morphe_hide_timed_reactions_title">Списъка на общността за абонати е скрита</string>
   <string name="morphe_hide_timed_reactions_summary">Скрива функцията, която позволява на потребителите да реагират с емотикони в секцията с коментари и чата на живо</string>
@@ -352,6 +353,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_error_toast">Не може да се запази този видеоклип в плейлиста Гледай по-късно</string>
   <string name="morphe_queue_restore_title">Запазване на опашката между сесиите</string>
   <string name="morphe_queue_restore_summary">Опашката се запазва след рестартиране на приложението</string>
+  <string name="morphe_swap_save_and_queue_actions_title">Размяна на действията Запази и Опашка</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Натиснете за опции за опашка, натиснете и задръжте, за да запазите за гледане по-късно</string>
   <string name="morphe_queue_manager_check_failed_auth">Невход в системата</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Няма ID на плейлист</string>
   <string name="morphe_queue_manager_check_failed_queue">Опашката е празна</string>
