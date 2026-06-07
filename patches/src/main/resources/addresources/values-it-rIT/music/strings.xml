@@ -75,7 +75,7 @@ Second \"item\" text"</string>
 Implementazione della funzionalità eseguita da VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Abilita ripetizione permanente</string>
-  <!-- layout.buttons.hideButtons -->
+  <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Nascondi pulsante trasmetti</string>
   <string name="morphe_music_hide_history_button_title">Nascondi pulsante cronologia</string>
   <string name="morphe_music_hide_notification_button_title">Nascondi pulsante notifica</string>
@@ -92,17 +92,20 @@ Implementazione della funzionalità eseguita da VazerOG"</string>
   <string name="morphe_change_start_page_entry_playlists">Playlist</string>
   <string name="morphe_change_start_page_entry_search">Cerca</string>
   <string name="morphe_change_start_page_entry_subscriptions">Iscrizioni</string>
-  <!-- layout.compactheader.hideCategoryBar -->
+  <!-- layout.compactheader.hideCategoryBarPatch -->
   <string name="morphe_music_hide_category_bar_title">Nascondi barra delle categorie</string>
-  <!-- layout.miniplayer.changeMiniplayerColor -->
+  <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Modifica il colore del Lettore minimizzato</string>
   <string name="morphe_music_change_miniplayer_color_summary">Il colore del lettore minimizzato corrisponde a quello del lettore a schermo intero</string>
-  <!-- layout.miniplayer.miniplayerNextPreviousButtons -->
+  <!-- layout.miniplayer.miniplayerNextPreviousButtonsPatch -->
   <string name="morphe_music_miniplayer_next_button_title">Mostra il pulsante successivo nel lettore minimizzato</string>
   <string name="morphe_music_miniplayer_previous_button_title">Mostra il pulsante precedente nel lettore minimizzato</string>
-  <!-- layout.miniplayer.enableForcedMiniplayer -->
+  <!-- layout.miniplayer.enableForcedMiniplayerPatch -->
   <string name="morphe_music_enable_forced_miniplayer_title">Abilita forzatamente il lettore minimizzato</string>
   <string name="morphe_music_enable_forced_miniplayer_summary">Impedisce al lettore di espandersi automaticamente a schermo intero quando inizia un nuovo brano</string>
+  <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Abilita lo scorrimento per chiudere il miniplayer</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Consente di chiudere il miniplayer scorrendo verso il basso su di esso</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Barra di navigazione</string>
   <string name="morphe_music_navigation_bar_screen_summary">Scegli quali pulsanti visualizzare nella barra di navigazione inferiore</string>

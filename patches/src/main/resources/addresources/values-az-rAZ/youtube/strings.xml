@@ -29,7 +29,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_screen_08_swipe_controls_title">Sürüşdürmə nəzarətçiləri</string>
   <string name="morphe_settings_screen_11_misc_title">Çoxvariantlı</string>
   <string name="morphe_settings_screen_12_video_title">Video</string>
-  <string name="morphe_restore_old_settings_menus_title">Köhnə Youtube ayarları ekranını geri gətir</string>
+  <string name="morphe_restore_old_settings_menus_title">Köhnə YouTube ayarları görünüşün bərpa et</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Fon oynatma məhdudiyyətlərini təmizlə</string>
   <string name="morphe_shorts_disable_background_playback_title">Arxa plan oynatmanı qapat</string>
@@ -709,6 +709,7 @@ Ayarlar → Oxunuş (yaxud Avtomatik oxutma) → Növbəti videonu avtomatik oxu
   <string name="morphe_sb_general_uuid_summary">Bu gizli saxlanılmalıdır. Bu, parol kimidir və heç kimlə paylaşılmamalıdır. Kimsə bunu bilsə, onlar sizi təqlid edə bilər</string>
   <string name="morphe_sb_general_api_url">API URL-ni dəyişdirin</string>
   <string name="morphe_sb_general_api_url_summary">SponsorBlock\'un serverə bağlanması üçün istifadə etdiyi ünvan</string>
+  <string name="morphe_sb_channel_whitelist_remove">Sil</string>
   <string name="morphe_sb_api_url_reset">API URL sıfırlaması</string>
   <string name="morphe_sb_api_url_invalid">API URL etibarsızdır</string>
   <string name="morphe_sb_api_url_changed">API URL dəyişdirildi</string>

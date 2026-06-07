@@ -75,7 +75,7 @@ Second \"item\" text"</string>
 VazerOG tərəfindən xüsusiyyətin tətbiqi"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Daimi təkrarlamanı aktivləşdir</string>
-  <!-- layout.buttons.hideButtons -->
+  <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Yayım düyməsini gizlət</string>
   <string name="morphe_music_hide_history_button_title">Tarixçə düyməsini gizlət</string>
   <string name="morphe_music_hide_notification_button_title">Bildiriş düyməsini gizlət</string>
@@ -92,17 +92,18 @@ VazerOG tərəfindən xüsusiyyətin tətbiqi"</string>
   <string name="morphe_change_start_page_entry_playlists">Pleylistlər</string>
   <string name="morphe_change_start_page_entry_search">Axtarış</string>
   <string name="morphe_change_start_page_entry_subscriptions">Abunəliklər</string>
-  <!-- layout.compactheader.hideCategoryBar -->
+  <!-- layout.compactheader.hideCategoryBarPatch -->
   <string name="morphe_music_hide_category_bar_title">Kateqoriya cizgisin gizlət</string>
-  <!-- layout.miniplayer.changeMiniplayerColor -->
+  <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Kiçik səsləndirici rəngini dəyişdir</string>
   <string name="morphe_music_change_miniplayer_color_summary">Kiçik səsləndirici rəngini tam ekran səsləndiriciyə uyuşdurur</string>
-  <!-- layout.miniplayer.miniplayerNextPreviousButtons -->
+  <!-- layout.miniplayer.miniplayerNextPreviousButtonsPatch -->
   <string name="morphe_music_miniplayer_next_button_title">Kiçik səsləndiricidə növbəti düyməsin göstər</string>
   <string name="morphe_music_miniplayer_previous_button_title">Kiçik səsləndiricidə əvvəlki düyməsin göstər</string>
-  <!-- layout.miniplayer.enableForcedMiniplayer -->
+  <!-- layout.miniplayer.enableForcedMiniplayerPatch -->
   <string name="morphe_music_enable_forced_miniplayer_title">Məcburi kiçik səsləndiricini aktivləşdir</string>
   <string name="morphe_music_enable_forced_miniplayer_summary">Yeni trek başlayanda səsləndiricini birbaşa tam ekrana genişləndirməsin əngəlləyir</string>
+  <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Fəaliyyət cizgisi</string>
   <string name="morphe_music_navigation_bar_screen_summary">Aşağı fəaliyyət cərgəsində hansı düymələr görünür seç</string>

@@ -737,6 +737,7 @@ Inställningar → Uppspelning (eller Automatisk uppspelning) → Spela upp näs
   <string name="morphe_sb_general_uuid_invalid">Privat användar-id måste vara minst 30 tecken långt</string>
   <string name="morphe_sb_general_api_url">Ändra API-webbadress</string>
   <string name="morphe_sb_general_api_url_summary">Adressen SponsorBlock använder för att göra anrop till servern</string>
+  <string name="morphe_sb_channel_whitelist_remove">Ta bort</string>
   <string name="morphe_sb_api_url_reset">API-webbadress återställdes</string>
   <string name="morphe_sb_api_url_invalid">API-webbadress är ogiltig</string>
   <string name="morphe_sb_api_url_changed">API-webbadress ändrades</string>

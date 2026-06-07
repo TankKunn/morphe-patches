@@ -75,7 +75,7 @@ Second \"item\" text"</string>
 Tính năng được phát triển bởi VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Bật lặp lại vĩnh viễn</string>
-  <!-- layout.buttons.hideButtons -->
+  <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Ẩn nút truyền</string>
   <string name="morphe_music_hide_history_button_title">Ẩn nút lịch sử</string>
   <string name="morphe_music_hide_notification_button_title">Ẩn nút thông báo</string>
@@ -92,17 +92,20 @@ Tính năng được phát triển bởi VazerOG"</string>
   <string name="morphe_change_start_page_entry_playlists">Danh sách phát</string>
   <string name="morphe_change_start_page_entry_search">Tìm kiếm</string>
   <string name="morphe_change_start_page_entry_subscriptions">Kênh đăng ký</string>
-  <!-- layout.compactheader.hideCategoryBar -->
+  <!-- layout.compactheader.hideCategoryBarPatch -->
   <string name="morphe_music_hide_category_bar_title">Ẩn thanh danh mục</string>
-  <!-- layout.miniplayer.changeMiniplayerColor -->
+  <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Đổi màu trình phát thu nhỏ</string>
   <string name="morphe_music_change_miniplayer_color_summary">Màu trình phát thu nhỏ khớp với trình phát toàn màn hình</string>
-  <!-- layout.miniplayer.miniplayerNextPreviousButtons -->
+  <!-- layout.miniplayer.miniplayerNextPreviousButtonsPatch -->
   <string name="morphe_music_miniplayer_next_button_title">Hiện nút tiếp theo trong trình phát thu nhỏ</string>
   <string name="morphe_music_miniplayer_previous_button_title">Hiện nút quay lại trong trình phát thu nhỏ</string>
-  <!-- layout.miniplayer.enableForcedMiniplayer -->
+  <!-- layout.miniplayer.enableForcedMiniplayerPatch -->
   <string name="morphe_music_enable_forced_miniplayer_title">Bật trình phát thu nhỏ bắt buộc</string>
   <string name="morphe_music_enable_forced_miniplayer_summary">Không tự động chuyển sang chế độ toàn màn hình khi phát bài hát mới</string>
+  <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Bật vuốt để đóng trình phát thu nhỏ</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Cho phép vuốt xuống để đóng trình phát thu nhỏ</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Thanh điều hướng</string>
   <string name="morphe_music_navigation_bar_screen_summary">Chọn các nút sẽ hiển thị trong thanh điều hướng dưới cùng</string>

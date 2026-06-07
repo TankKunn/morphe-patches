@@ -795,6 +795,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_general_uuid_invalid">Приватниот ID на корисник мора да биде долг најмалку 30 знаци</string>
   <string name="morphe_sb_general_api_url">Промени URL на API</string>
   <string name="morphe_sb_general_api_url_summary">Адресата што ја користи SponsorBlock за да направи повици кон срвро</string>
+  <string name="morphe_sb_channel_whitelist_remove">Отстрани</string>
   <string name="morphe_sb_api_url_reset">URL на API ресетиран</string>
   <string name="morphe_sb_api_url_invalid">URL на API е невалиден</string>
   <string name="morphe_sb_api_url_changed">URL на API променет</string>

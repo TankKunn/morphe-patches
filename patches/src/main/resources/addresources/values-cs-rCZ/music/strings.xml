@@ -75,7 +75,7 @@ Second \"item\" text"</string>
 Implementace funkce VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Povolit trvalé opakování</string>
-  <!-- layout.buttons.hideButtons -->
+  <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Skrýt tlačítko Odesílat</string>
   <string name="morphe_music_hide_history_button_title">Skrýt tlačítko historie</string>
   <string name="morphe_music_hide_notification_button_title">Skrýt tlačítko oznámení</string>
@@ -92,17 +92,20 @@ Implementace funkce VazerOG"</string>
   <string name="morphe_change_start_page_entry_playlists">Playlisty</string>
   <string name="morphe_change_start_page_entry_search">Hledat</string>
   <string name="morphe_change_start_page_entry_subscriptions">Odběry</string>
-  <!-- layout.compactheader.hideCategoryBar -->
+  <!-- layout.compactheader.hideCategoryBarPatch -->
   <string name="morphe_music_hide_category_bar_title">Skrýt panel kategorií</string>
-  <!-- layout.miniplayer.changeMiniplayerColor -->
+  <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Změnit barvu minipřehrávače</string>
   <string name="morphe_music_change_miniplayer_color_summary">Barva minipřehrávače odpovídá přehrávači na celou obrazovku</string>
-  <!-- layout.miniplayer.miniplayerNextPreviousButtons -->
+  <!-- layout.miniplayer.miniplayerNextPreviousButtonsPatch -->
   <string name="morphe_music_miniplayer_next_button_title">Zobrazit tlačítko Další v mini přehrávači</string>
   <string name="morphe_music_miniplayer_previous_button_title">Zobrazit předchozí tlačítko v mini přehrávači</string>
-  <!-- layout.miniplayer.enableForcedMiniplayer -->
+  <!-- layout.miniplayer.enableForcedMiniplayerPatch -->
   <string name="morphe_music_enable_forced_miniplayer_title">Povolit vynucený mini přehrávač</string>
   <string name="morphe_music_enable_forced_miniplayer_summary">Zabraňuje automatickému rozšíření přehrávače na celou obrazovku při spuštění nové skladby</string>
+  <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Povolit gestem dolů zavření miniplayeru</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Umožňuje zavřít miniplayer přejetím prstu dolů</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Navigační panel</string>
   <string name="morphe_music_navigation_bar_screen_summary">Vyberte, které tlačítka se zobrazí v navigační liště ve spodní části.</string>

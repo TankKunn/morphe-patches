@@ -69,7 +69,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_about_title">دەربارە</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">چالاککردنی دووبارەبوونی هەمیشەیی</string>
-  <!-- layout.buttons.hideButtons -->
+  <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">دوگمەی پەخشکردن بشارەوە</string>
   <string name="morphe_music_hide_history_button_title">دوگمەی مێژوو بشارەوە</string>
   <string name="morphe_music_hide_notification_button_title">دوگمەی ئاگاداری بشارەوە</string>
@@ -86,17 +86,18 @@ Second \"item\" text"</string>
   <string name="morphe_change_start_page_entry_playlists">لیستەکانی پەخشکردن</string>
   <string name="morphe_change_start_page_entry_search">گەڕان</string>
   <string name="morphe_change_start_page_entry_subscriptions">بەشداربوون</string>
-  <!-- layout.compactheader.hideCategoryBar -->
+  <!-- layout.compactheader.hideCategoryBarPatch -->
   <string name="morphe_music_hide_category_bar_title">شریتی بابەت بشارەوە</string>
-  <!-- layout.miniplayer.changeMiniplayerColor -->
+  <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">گۆڕینی ڕەنگی miniplayer</string>
   <string name="morphe_music_change_miniplayer_color_summary">ڕەنگی miniplayer لەگەڵ لێدەری پڕ شاشە دەگونجێنێت</string>
-  <!-- layout.miniplayer.miniplayerNextPreviousButtons -->
+  <!-- layout.miniplayer.miniplayerNextPreviousButtonsPatch -->
   <string name="morphe_music_miniplayer_next_button_title">پیشاندانی دوگمەی داهاتوو لە miniplayer</string>
   <string name="morphe_music_miniplayer_previous_button_title">پیشاندانی دوگمەی پێشوو لە miniplayer</string>
-  <!-- layout.miniplayer.enableForcedMiniplayer -->
+  <!-- layout.miniplayer.enableForcedMiniplayerPatch -->
   <string name="morphe_music_enable_forced_miniplayer_title">چالاککردنی زۆرەمڵێی miniplayer</string>
   <string name="morphe_music_enable_forced_miniplayer_summary">ناهێڵێت لێدەر بە شێوەیەکی ئۆتۆماتیکی فراوان ببێت بۆ پڕ شاشە کاتێک تراکێکی نوێ دەست پێدەکات</string>
+  <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">شریتی گەشتکردن</string>
   <string name="morphe_music_navigation_bar_screen_summary">Choose which buttons appear in the bottom navigation bar</string>

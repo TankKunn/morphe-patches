@@ -583,6 +583,7 @@ Postavke → Reprodukcija (ili Automatska reprodukcija) → Automatska reprodukc
   <string name="morphe_sb_general_uuid">Vaš privatni korisnički ID</string>
   <string name="morphe_sb_general_uuid_invalid">Privatni korisnički ID mora imati najmanje 30 znakova</string>
   <string name="morphe_sb_general_api_url">Promijenite API URL</string>
+  <string name="morphe_sb_channel_whitelist_remove">Ukloni</string>
   <string name="morphe_sb_api_url_reset">Reset API URL-a</string>
   <string name="morphe_sb_api_url_invalid">API URL je nevaže</string>
   <string name="morphe_sb_api_url_changed">API URL promijenjen</string>

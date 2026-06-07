@@ -75,7 +75,7 @@ Second \"item\" text"</string>
 Pagpapatupad ng feature ni VazerOG"</string>
   <!-- interaction.permanentrepeat.permanentRepeatPatch -->
   <string name="morphe_music_play_permanent_repeat_title">Paganahin ang permanenteng paulit-ulit</string>
-  <!-- layout.buttons.hideButtons -->
+  <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Itago ang Cast button</string>
   <string name="morphe_music_hide_history_button_title">Itago ang kasaysayan na button</string>
   <string name="morphe_music_hide_notification_button_title">Itago ang notipikasyon na button</string>
@@ -92,17 +92,20 @@ Pagpapatupad ng feature ni VazerOG"</string>
   <string name="morphe_change_start_page_entry_playlists">Talatugtugin</string>
   <string name="morphe_change_start_page_entry_search">Hanapin</string>
   <string name="morphe_change_start_page_entry_subscriptions">Subkripsyon</string>
-  <!-- layout.compactheader.hideCategoryBar -->
+  <!-- layout.compactheader.hideCategoryBarPatch -->
   <string name="morphe_music_hide_category_bar_title">Itago ang category bar</string>
-  <!-- layout.miniplayer.changeMiniplayerColor -->
+  <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Baguhin ang kulay ng miniplayer</string>
   <string name="morphe_music_change_miniplayer_color_summary">Tumutugma sa fullscreen na manlalaro ang kulay ng miniplayer</string>
-  <!-- layout.miniplayer.miniplayerNextPreviousButtons -->
+  <!-- layout.miniplayer.miniplayerNextPreviousButtonsPatch -->
   <string name="morphe_music_miniplayer_next_button_title">Ipakita ang susunod na button sa miniplayer</string>
   <string name="morphe_music_miniplayer_previous_button_title">Ipakita ang nakaraang button sa miniplayer</string>
-  <!-- layout.miniplayer.enableForcedMiniplayer -->
+  <!-- layout.miniplayer.enableForcedMiniplayerPatch -->
   <string name="morphe_music_enable_forced_miniplayer_title">Paganahin ang pinilit na miniplayer</string>
   <string name="morphe_music_enable_forced_miniplayer_summary">Pinipigilan ang player na awtomatikong lumawak sa fullscreen kapag nagsimula ang isang bagong track</string>
+  <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Paganahin ang pag-swipe para isara ang miniplayer</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Pinapayagan kang isara ang miniplayer sa pamamagitan ng pag-swipe pababa dito</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Navigation bar</string>
   <string name="morphe_music_navigation_bar_screen_summary">Piliin kung aling mga button ang lalabas sa ibabang navigation bar</string>

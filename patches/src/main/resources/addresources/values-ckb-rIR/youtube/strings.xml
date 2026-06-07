@@ -448,6 +448,7 @@ Lêbelê, zavtana vê dê dane yên bikarhêner jî log bike, wek IP-a we."</str
   <string name="morphe_sb_general_uuid">ناسنامەی تایبەتی تۆ</string>
   <string name="morphe_sb_general_uuid_invalid">ناسنامەی بەکارهێنەری تایبەت دەبێت لانیکەم ٣٠ پیت بێت</string>
   <string name="morphe_sb_general_api_url">گۆرینواری ئادرس</string>
+  <string name="morphe_sb_channel_whitelist_remove">سڕینەوە</string>
   <string name="morphe_sb_api_url_reset">هاوخراپی ئادرس ئاسانکارە</string>
   <string name="morphe_sb_api_url_invalid">ئادرس نامەی ڕاست نەكرا</string>
   <string name="morphe_sb_api_url_changed">ئادرس ڕێكەش كرێ</string>
