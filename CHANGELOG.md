@@ -1,3 +1,19 @@
+## [1.31.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.7...v1.31.0-dev.8) (2026-06-07)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Save to watch later:** Error toast is shown if app is minimized then resumed before adding to playlist ([#1670](https://github.com/MorpheApp/morphe-patches/issues/1670)) ([18ac572](https://github.com/MorpheApp/morphe-patches/commit/18ac572c8c56f3eeac1849b31c0204bc76cdc901))
+* **YouTube Music - Theme:** Apply "Material You" to notification dot ([#1657](https://github.com/MorpheApp/morphe-patches/issues/1657)) ([0355a17](https://github.com/MorpheApp/morphe-patches/commit/0355a17ac8ed19b161572ec2ea2b62d86bdb6803))
+
+### ✨ New Features
+
+* **YouTube - SponsorBlock:** Add channel whitelist ([#1661](https://github.com/MorpheApp/morphe-patches/issues/1661)) ([6d96cee](https://github.com/MorpheApp/morphe-patches/commit/6d96ceecb82c290b2d2545212bb7b80762fc98dc))
+* **YouTube Music:** Add `Enable swipe to dismiss miniplayer` patch ([#1420](https://github.com/MorpheApp/morphe-patches/issues/1420)) ([4795cc4](https://github.com/MorpheApp/morphe-patches/commit/4795cc4803cee0dc8aeefb0c0b6e968fff14698c))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.23.0` ([2d24e8d](https://github.com/MorpheApp/morphe-patches/commit/2d24e8d9ee109a83ac4ed774de5848aca38db952))
+
 ## [1.31.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.6...v1.31.0-dev.7) (2026-06-06)
 
 ### 🐛 Bug Fixes

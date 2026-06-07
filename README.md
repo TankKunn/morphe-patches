@@ -35,7 +35,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.31.0-dev.7](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.7)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;113 patches total
+> **[v1.31.0-dev.8](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.31.0-dev.8)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;114 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;69 patches</summary>
 <br>
@@ -113,14 +113,14 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Spoof device dimensions](#spoof-device-dimensions) | Adds an option to spoof the device dimensions which can unlock higher video qualities. |  |
 | [Spoof video streams](#spoof-video-streams) | Adds options to spoof the client video streams to fix playback. |  |
 | [Swipe controls](#swipe-controls) | Adds options to enable and configure volume and brightness swipe controls. |  |
-| [Theme](#theme) | Adds options for theming and applies a custom background theme (dark background theme defaults to pure black). | • Dark theme background color<br>• Light theme background color |
+| [Theme](#theme) | Adds options for theming and applies a custom background theme (dark background theme defaults to pure black). | • Dark theme background color |
 | [Video ads](#video-ads) | Adds an option to remove ads in the video player. |  |
 | [Video quality](#video-quality) | Adds options to set default video qualities and always use the advanced video quality menu. |  |
 
 </details>
 
 <details>
-<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;25 patches</summary>
+<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;26 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -141,6 +141,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Enable debugging](#enable-debugging) | Adds options for debugging and exporting Morphe logs to the clipboard. |  |
 | [Enable exclusive audio playback](#enable-exclusive-audio-playback) | Enables the option to play audio without video. |  |
 | [Enable forced miniplayer](#enable-forced-miniplayer) | Adds an option to enable forced miniplayer when switching between music videos, podcasts, or songs. |  |
+| [Enable swipe to dismiss miniplayer](#enable-swipe-to-dismiss-miniplayer) | Adds an option to enable dismissing the miniplayer by swiping down on it. |  |
 | [Force original audio](#force-original-audio) | Adds an option to always use the original audio track. |  |
 | [GmsCore support](#gmscore-support) | Allows the app to work without root by using a different package name when patched using a GmsCore instead of Google Play Services. |  |
 | [Hide ads](#hide-ads) | Adds options to hide ads such as the fullscreen Premium popup and "Get Music Premium" label. |  |
@@ -164,8 +165,8 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;2026.22.0 | 🧪&nbsp;2026.21.0 | 🧪&nbsp;2026.20.0 | 2026.14.0 | 2026.10.0 | 2026.04.0 |
-| :---: | :---: | :---: | :---: | :---: | :---: |
+| 🧪&nbsp;2026.23.0 | 🧪&nbsp;2026.22.0 | 🧪&nbsp;2026.21.0 | 2026.14.0 | 2026.04.0 |
+| :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
