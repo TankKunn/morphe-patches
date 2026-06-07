@@ -908,7 +908,6 @@ Settings → Playback (or Autoplay) → Autoplay next video"</string>
     <string name="morphe_sb_general_api_url_summary">The address SponsorBlock uses to make calls to the server</string>
     <string name="morphe_sb_channel_whitelist">Channel whitelist</string>
     <string name="morphe_sb_channel_whitelist_summary">SponsorBlock is disabled for whitelisted channels</string>
-    <string name="morphe_sb_channel_whitelist_dialog_title">Channel whitelist</string>
     <string name="morphe_sb_channel_whitelist_current_channel">Current channel:</string>
     <string name="morphe_sb_channel_whitelist_add">Add to whitelist</string>
     <string name="morphe_sb_channel_whitelist_remove">Remove</string>
