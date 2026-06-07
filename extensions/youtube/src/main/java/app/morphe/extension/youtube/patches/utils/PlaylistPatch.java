@@ -9,6 +9,8 @@ package app.morphe.extension.youtube.patches.utils;
 
 import static app.morphe.extension.shared.StringRef.str;
 import static app.morphe.extension.shared.Utils.runOnMainThreadDelayed;
+import static app.morphe.extension.shared.innertube.utils.AuthUtils.getRequestHeader;
+import static app.morphe.extension.shared.innertube.utils.AuthUtils.isNotLoggedIn;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -40,7 +42,6 @@ import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.shared.ui.SheetBottomDialog;
-import app.morphe.extension.youtube.innertube.utils.AuthUtils;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.patches.utils.requests.CreatePlaylistRequest;
 import app.morphe.extension.youtube.patches.utils.requests.EditPlaylistRequest;
@@ -112,7 +113,7 @@ public class PlaylistPatch {
      * Invoked by extension.
      */
     public static void prepareDialogBuilder(Context context, @NonNull String currentVideoId) {
-        if (AuthUtils.isNotLoggedIn()) {
+        if (isNotLoggedIn()) {
             handleCheckError(checkFailedAuth);
             return;
         }
@@ -142,7 +143,7 @@ public class PlaylistPatch {
      * Invoked by extension.
      */
     public static void syncIfNeeded() {
-        if (!playlistId.isEmpty() && !syncStarted && !AuthUtils.isNotLoggedIn()) {
+        if (!playlistId.isEmpty() && !syncStarted && !isNotLoggedIn()) {
             syncStarted = true;
             syncPlaylistItems();
         }
@@ -150,7 +151,7 @@ public class PlaylistPatch {
 
     private static void syncPlaylistItems() {
         Utils.submitOnBackgroundThread(() -> {
-            Map<String, String> items = GetPlaylistItemsRequest.fetch(playlistId, AuthUtils.getRequestHeader());
+            Map<String, String> items = GetPlaylistItemsRequest.fetch(playlistId, getRequestHeader());
             if (items != null && !items.isEmpty()) {
                 synchronized (lastVideoIds) {
                     for (Map.Entry<String, String> entry : items.entrySet()) {
@@ -231,7 +232,7 @@ public class PlaylistPatch {
             String currentVideoId = videoId;
             synchronized (lastVideoIds) {
                 if (currentPlaylistId.isEmpty()) {
-                    CreatePlaylistRequest.fetchRequestIfNeeded(currentVideoId, AuthUtils.getRequestHeader());
+                    CreatePlaylistRequest.fetchRequestIfNeeded(currentVideoId, getRequestHeader());
                     runOnMainThreadDelayed(() -> {
                         CreatePlaylistRequest request = CreatePlaylistRequest.getRequestForVideoId(currentVideoId);
                         if (request != null) {
@@ -258,7 +259,7 @@ public class PlaylistPatch {
                     }, DELAY_MILLISECONDS);
                 } else {
                     String setVideoId = lastVideoIds.get(currentVideoId);
-                    EditPlaylistRequest.fetchRequestIfNeeded(currentVideoId, currentPlaylistId, setVideoId, AuthUtils.getRequestHeader());
+                    EditPlaylistRequest.fetchRequestIfNeeded(currentVideoId, currentPlaylistId, setVideoId, getRequestHeader());
 
                     runOnMainThreadDelayed(() -> {
                         EditPlaylistRequest request = EditPlaylistRequest.getRequestForVideoId(currentVideoId);
@@ -305,7 +306,7 @@ public class PlaylistPatch {
             return;
         }
         try {
-            GetPlaylistsRequest.fetchRequestIfNeeded(currentPlaylistId, AuthUtils.getRequestHeader());
+            GetPlaylistsRequest.fetchRequestIfNeeded(currentPlaylistId, getRequestHeader());
             runOnMainThreadDelayed(() -> {
                 GetPlaylistsRequest request = GetPlaylistsRequest.getRequestForPlaylistId(currentPlaylistId);
                 if (request == null) {
@@ -353,7 +354,7 @@ public class PlaylistPatch {
                 handleCheckError(checkFailedPlaylistId);
                 return;
             }
-            SavePlaylistRequest.fetchRequestIfNeeded(playlistId, libraryId, AuthUtils.getRequestHeader());
+            SavePlaylistRequest.fetchRequestIfNeeded(playlistId, libraryId, getRequestHeader());
 
             runOnMainThreadDelayed(() -> {
                 SavePlaylistRequest request = SavePlaylistRequest.getRequestForLibraryId(libraryId);
