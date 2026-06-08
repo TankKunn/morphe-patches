@@ -1,3 +1,9 @@
+## [1.31.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.8...v1.31.0-dev.9) (2026-06-08)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Queue Manager:** Add `ScrollView` to playlist selection dialog ([#1692](https://github.com/MorpheApp/morphe-patches/issues/1692)) ([acf2326](https://github.com/MorpheApp/morphe-patches/commit/acf2326366c403bfca16c277bf2efd721d411bc2))
+
 ## [1.31.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.7...v1.31.0-dev.8) (2026-06-07)
 
 ### 🐛 Bug Fixes
