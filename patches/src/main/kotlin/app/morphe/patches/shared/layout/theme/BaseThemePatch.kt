@@ -103,7 +103,7 @@ internal fun validateColorName(colorString: String): Boolean {
 }
 
 /**
- * Dark theme color option for YouTube and YT Music Theme patches.
+ * Dark theme color options for YouTube and YT Music Theme patch.
  */
 internal val darkThemeBackgroundColorOption = stringOption(
     key = "darkThemeBackgroundColor",
@@ -128,11 +128,35 @@ internal val darkThemeBackgroundColorOption = stringOption(
 )
 
 /**
+ * Light theme color options for YouTube Theme patch.
+ */
+internal val lightThemeBackgroundColorOption = stringOption(
+    key = "lightThemeBackgroundColor",
+    default = "@android:color/white",
+    values =  mapOf(
+        "White" to "@android:color/white",
+        "Material You (Neutral)" to "@android:color/system_neutral1_100",
+        "Material You - Primary" to "@android:color/system_accent1_200",
+        "Material You - Secondary" to "@android:color/system_accent2_200",
+        "Material You - Tertiary" to "@android:color/system_accent3_200",
+        "Catppuccin (Latte)" to "#E6E9EF",
+        "Light pink" to "#FCCFF3",
+        "Light blue" to "#D1E0FF",
+        "Light green" to "#CCFFCC",
+        "Light yellow" to "#FDFFCC",
+        "Light orange" to "#FFE6CC",
+        "Light red" to "#FFD6D6",
+    ),
+    title = "Light theme background color",
+    description = THEME_COLOR_OPTION_DESCRIPTION
+)
+
+/**
  * Shared theme patch for YouTube and YT Music.
  */
 internal fun baseThemePatch(
     extensionClassDescriptor: String,
-    resolvedLightColor: (() -> String?) = { null },
+    includeLightThemeOption: Boolean = false,
     block: BytecodePatchBuilder.() -> Unit,
     executeBlock: BytecodePatchContext.() -> Unit = {}
 ) = bytecodePatch(
@@ -142,12 +166,20 @@ internal fun baseThemePatch(
 ) {
     darkThemeBackgroundColorOption()
 
+    if (includeLightThemeOption) {
+        lightThemeBackgroundColorOption()
+    }
+
     block()
 
     dependsOn(lithoColorHookPatch)
 
     execute {
-        overrideThemeColors(resolvedLightColor(), darkThemeBackgroundColorOption.value!!)
+        overrideThemeColors(
+            if (includeLightThemeOption)
+                lightThemeBackgroundColorOption.value!! else null,
+            darkThemeBackgroundColorOption.value!!
+        )
 
         executeBlock()
 
@@ -160,35 +192,36 @@ internal fun baseThemeResourcePatch(
     lightColorNames: (() -> Set<String>) = { THEME_DEFAULT_LIGHT_COLOR_NAMES },
     lightColorReplacement: (() -> String)? = null
 ) = resourcePatch {
+    darkThemeBackgroundColorOption()
 
     execute {
         // Patch validators don't work here for unknown reason.
         // This should be changed to a patch option validator.
-        val darkColor = darkThemeBackgroundColorOption.value
-        if (!validateColorName(darkColor!!)) {
-            throw PatchException("Invalid dark theme color: $darkColor")
+        val darkThemeBackgroundColor = darkThemeBackgroundColorOption.value!!
+        if (!validateColorName(darkThemeBackgroundColor)) {
+            throw PatchException("Invalid dark theme color: $darkThemeBackgroundColor")
         }
 
-        val lightColor = lightColorReplacement?.invoke()
-        if (lightColor != null && !validateColorName(lightColor)) {
-            throw PatchException("Invalid light theme color: $lightColor")
+        val lightThemeBackgroundColor = lightColorReplacement?.invoke()
+        if (lightThemeBackgroundColor != null && !validateColorName(lightThemeBackgroundColor)) {
+            throw PatchException("Invalid light theme color: $lightThemeBackgroundColor")
         }
 
         document("res/values/colors.xml").use { document ->
-            val resourcesNode = document.getElementsByTagName("resources").item(0)
-            val darkColorNames = darkColorNames()
-            val lightColorNames = lightColorNames()
+            val resourcesNode = document.getElementsByTagName("resources").item(0) as Element
+            val resolvedDarkNames = darkColorNames()
+            val resolvedLightNames = lightColorNames()
 
             resourcesNode.childElementsSequence().forEach { node ->
                 val name = node.getAttribute("name")
                 when {
-                    name in darkColorNames -> node.textContent = darkColor
-                    lightColor != null && name in lightColorNames -> node.textContent = lightColor
+                    name in resolvedDarkNames -> node.textContent = darkThemeBackgroundColor
+                    lightThemeBackgroundColor != null && name in resolvedLightNames -> node.textContent = lightThemeBackgroundColor
                 }
             }
         }
 
-        val isMaterialYouDark = darkColor.startsWith("@android:color/system_")
+        val isMaterialYouDark = darkThemeBackgroundColor.startsWith("@android:color/system_")
 
         if (isMaterialYouDark) {
             val resDir = get("res")
@@ -212,12 +245,11 @@ internal fun baseThemeResourcePatch(
                 ytmDrawableDirs.forEach { dirName ->
                     val file = resDir.resolve("$dirName/$fileName")
                     if (file.exists()) {
-                        var xml = file.readText()
-                        xml = xml.replace(
+                        val patchedXml = file.readText().replace(
                             Regex("""<solid\s+android:color="[^"]+""""),
                             """<solid android:color="$darkDotColor""""
                         )
-                        file.writeText(xml)
+                        file.writeText(patchedXml)
                     }
                 }
             }
@@ -226,19 +258,18 @@ internal fun baseThemeResourcePatch(
             ytmLayoutDirs.forEach { dirName ->
                 val file = resDir.resolve("$dirName/new_content_count.xml")
                 if (file.exists()) {
-                    var xml = file.readText()
-                    xml = xml.replace(
+                    val patchedXml = file.readText().replace(
                         Regex("""android:textColor="[^"]+""""),
                         """android:textColor="$darkCountTextColor""""
                     )
-                    file.writeText(xml)
+                    file.writeText(patchedXml)
                 }
             }
 
             val stylesFile = "res/values/styles.xml"
             if (get(stylesFile).exists()) {
-                document(stylesFile).use { doc ->
-                    val resources = doc.getElementsByTagName("resources").item(0) as? Element ?: return@use
+                document(stylesFile).use { document ->
+                    val resources = document.getElementsByTagName("resources").item(0) as? Element ?: return@use
 
                     resources.forEachChildElement { style ->
                         if (style.nodeName != "style") return@forEachChildElement
@@ -263,7 +294,7 @@ internal fun baseThemeResourcePatch(
                                 }
                             }
                             if (!found) {
-                                style.appendChild(doc.createElement("item").apply {
+                                style.appendChild(document.createElement("item").apply {
                                     setAttribute("name", attrName)
                                     textContent = attrValue
                                 })

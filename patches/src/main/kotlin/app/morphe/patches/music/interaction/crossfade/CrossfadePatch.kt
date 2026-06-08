@@ -44,27 +44,27 @@ private const val EXTENSION_CLASS =
     "Lapp/morphe/extension/music/patches/CrossfadeManager;"
 
 private const val COORDINATOR_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$PlayerCoordinatorAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$PlayerCoordinatorAccess;"
 private const val EXO_PLAYER_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$ExoPlayerAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$ExoPlayerAccess;"
 private const val SESSION_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$SessionAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$SessionAccess;"
 private const val FACTORY_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$PlayerFactoryAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$PlayerFactoryAccess;"
 private const val SHARED_STATE_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$SharedStateAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$SharedStateAccess;"
 private const val SHARED_CALLBACK_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$SharedCallbackAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$SharedCallbackAccess;"
 private const val VIDEO_SURFACE_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$VideoSurfaceAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$VideoSurfaceAccess;"
 private const val MEDIALIB_PLAYER_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$MedialibPlayerAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$MedialibPlayerAccess;"
 private const val VIDEO_TOGGLE_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$VideoToggleAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$VideoToggleAccess;"
 private const val DELEGATE_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$DelegateAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$DelegateAccess;"
 private const val LISTENER_WRAPPER_INTERFACE =
-    "Lapp/morphe/extension/music/patches/CrossfadeManager\$ListenerWrapperAccess;"
+    $$"Lapp/morphe/extension/music/patches/CrossfadeManager$ListenerWrapperAccess;"
 
 private const val EXO_PLAYER_TYPE = "Landroidx/media3/exoplayer/ExoPlayer;"
 
@@ -199,10 +199,6 @@ val crossfadePatch = bytecodePatch(
             return result
         }
 
-        // -------------------------------------------------------------- //
-        //  Settings UI                                                    //
-        // -------------------------------------------------------------- //
-
         PreferenceScreen.PLAYER.addPreferences(
             PreferenceScreenPreference(
                 key = "morphe_music_crossfade_screen",
@@ -223,10 +219,6 @@ val crossfadePatch = bytecodePatch(
                 )
             )
         )
-
-        // -------------------------------------------------------------- //
-        //  Hook injection                                                 //
-        // -------------------------------------------------------------- //
 
         StopVideoFingerprint.method.addInstructions(
             0,
@@ -267,12 +259,7 @@ val crossfadePatch = bytecodePatch(
         PauseVideoFingerprint.method.addInstructions(
             0,
             """
-                invoke-static {}, $EXTENSION_CLASS->onPauseVideo()Z
-                move-result v0
-                if-eqz v0, :allow_pause
-                return-void
-                :allow_pause
-                nop
+                invoke-static {}, $EXTENSION_CLASS->onPauseVideo()V
             """
         )
 
@@ -319,10 +306,6 @@ val crossfadePatch = bytecodePatch(
                     invoke-static {}, $EXTENSION_CLASS->onActivityDestroy()V
                 """,
             )
-
-        // -------------------------------------------------------------- //
-        //  Discover obfuscated classes and fields                         //
-        // -------------------------------------------------------------- //
 
         val coordinatorClass = PlayNextInQueueFingerprint.classDef
         val coordinatorType = coordinatorClass.type
@@ -394,11 +377,13 @@ val crossfadePatch = bytecodePatch(
 
         // Shared state / shared callback - find from factory method body.
         val factoryBodyCoordinatorFields = factoryMethod.implementation!!.instructions
+            .asSequence()
             .filterIsInstance<ReferenceInstruction>()
             .filter { it.opcode == Opcode.IGET_OBJECT }
             .map { it.reference }
             .filterIsInstance<FieldReference>()
             .filter { it.definingClass == coordinatorType }
+            .toList()
 
         val knownFieldTypes = setOf(
             sessionFieldRef.type, exoPlayerField.type, loadControlField.type,
@@ -877,10 +862,6 @@ val crossfadePatch = bytecodePatch(
             it.type == "Ljava/lang/Object;"
         }
 
-        // -------------------------------------------------------------- //
-        //  Patch-time discovery summary                                   //
-        // -------------------------------------------------------------- //
-
         log.fine {
             """
                 CrossfadePatch discovery:
@@ -905,10 +886,6 @@ val crossfadePatch = bytecodePatch(
                 guardField     = ${guardField?.let { "$guardAbstractType->${it.name}:${it.type}" } ?: "n/a (8.x)"}
             """.trimIndent()
         }
-
-        // -------------------------------------------------------------- //
-        //  Add interfaces and bridge methods                              //
-        // -------------------------------------------------------------- //
 
         // --- PlayerCoordinatorAccess on athu ---
         coordinatorClass.interfaces.add(COORDINATOR_INTERFACE)
@@ -1399,8 +1376,8 @@ val crossfadePatch = bytecodePatch(
         // calling patch_release() and false in a finally block — synchronously blocking
         // the Runnable from ever being posted, leaving cwh.b intact.
         if (is_9_00_or_greater && eventDispatchField9x != null && forwardingPlayerField9x != null) {
-            val cgdType = eventDispatchField9x!!.type
-            val cwhLctrType = forwardingPlayerField9x!!.type  // = Lctr interface type
+            val cgdType = eventDispatchField9x.type
+            val cwhLctrType = forwardingPlayerField9x.type  // = Lctr interface type
             try {
                 // Find cwh.U()V: the method named "U" with no params/void return on the concrete
                 // class that (a) implements the Lctr interface and (b) has a non-static Lcgd field.
@@ -1411,11 +1388,9 @@ val crossfadePatch = bytecodePatch(
                     returnType = "V",
                     parameters = emptyList(),
                     custom = { _, classDef ->
-                        classDef != null &&
-                            cwhLctrType in classDef.interfaces &&
-                            classDef.fields.any { f ->
-                                f.type == cgdType && !AccessFlags.STATIC.isSet(f.accessFlags)
-                            }
+                        cwhLctrType in classDef.interfaces && classDef.fields.any { f ->
+                            f.type == cgdType && !AccessFlags.STATIC.isSet(f.accessFlags)
+                        }
                     }
                 ).method.addInstructions(
                     0,
@@ -1443,7 +1418,7 @@ val crossfadePatch = bytecodePatch(
         // set. We clear it before calling the factory so the new player can attach.
         // On 8.x no guard exists — simple 4-register bridge.
         factoryClass.interfaces.add(FACTORY_INTERFACE)
-        val needsGuardClear = guardField != null && guardAbstractType != null
+        val needsGuardClear = guardField != null
         val guardClearSmali = if (needsGuardClear) {
             """
                 iget-object v0, p1, $sharedStateFieldRef

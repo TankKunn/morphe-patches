@@ -4,15 +4,14 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.resourcePatch
-import app.morphe.patcher.patch.stringOption
 import app.morphe.patches.all.misc.resources.resourceMappingPatch
-import app.morphe.patches.shared.layout.theme.THEME_COLOR_OPTION_DESCRIPTION
 import app.morphe.patches.shared.layout.theme.THEME_DEFAULT_DARK_COLOR_NAMES
 import app.morphe.patches.shared.layout.theme.THEME_DEFAULT_LIGHT_COLOR_NAMES
 import app.morphe.patches.shared.layout.theme.baseThemePatch
 import app.morphe.patches.shared.layout.theme.baseThemeResourcePatch
 import app.morphe.patches.shared.layout.theme.createNotifDrawable
 import app.morphe.patches.shared.layout.theme.darkThemeBackgroundColorOption
+import app.morphe.patches.shared.layout.theme.lightThemeBackgroundColorOption
 import app.morphe.patches.shared.layout.theme.patchCountTextColor
 import app.morphe.patches.shared.misc.settings.preference.InputType
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
@@ -36,43 +35,26 @@ import org.w3c.dom.Element
 
 private const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/theme/ThemePatch;"
 
-val lightThemeBackgroundColor by stringOption(
-    key = "lightThemeBackgroundColor",
-    default = "@android:color/white",
-    values =  mapOf(
-        "White" to "@android:color/white",
-        "Material You (Neutral)" to "@android:color/system_neutral1_100",
-        "Material You - Primary" to "@android:color/system_accent1_200",
-        "Material You - Secondary" to "@android:color/system_accent2_200",
-        "Material You - Tertiary" to "@android:color/system_accent3_200",
-        "Catppuccin (Latte)" to "#E6E9EF",
-        "Light pink" to "#FCCFF3",
-        "Light blue" to "#D1E0FF",
-        "Light green" to "#CCFFCC",
-        "Light yellow" to "#FDFFCC",
-        "Light orange" to "#FFE6CC",
-        "Light red" to "#FFD6D6",
-    ),
-    title = "Light theme background color",
-    description = THEME_COLOR_OPTION_DESCRIPTION
-)
-
 val themePatch = baseThemePatch(
     extensionClassDescriptor = EXTENSION_CLASS,
-    resolvedLightColor = { lightThemeBackgroundColor },
+    includeLightThemeOption = true,
     block = {
         val themeResourcePatch = resourcePatch {
+            lightThemeBackgroundColorOption()
+            darkThemeBackgroundColorOption()
             dependsOn(resourceMappingPatch)
 
             execute {
+                val lightThemeBackgroundColor = lightThemeBackgroundColorOption.value!!
+                val darkThemeBackgroundColor = darkThemeBackgroundColorOption.value!!
+
                 fun addColorResource(
                     resourceFile: String,
                     colorName: String,
                     colorValue: String,
                 ) {
                     document(resourceFile).use { document ->
-                        val resourcesNode =
-                            document.getElementsByTagName("resources").item(0) as Element
+                        val resourcesNode = document.getElementsByTagName("resources").item(0) as Element
 
                         resourcesNode.appendChild(
                             document.createElement("color").apply {
@@ -89,12 +71,12 @@ val themePatch = baseThemePatch(
                 addColorResource(
                     "res/values/colors.xml",
                     splashBackgroundColorKey,
-                    lightThemeBackgroundColor!!
+                    lightThemeBackgroundColor
                 )
                 addColorResource(
                     "res/values-night/colors.xml",
                     splashBackgroundColorKey,
-                    darkThemeBackgroundColorOption.value!!
+                    darkThemeBackgroundColor
                 )
 
                 // Edit splash screen files and change the background color.
@@ -103,9 +85,7 @@ val themePatch = baseThemePatch(
                     "res/drawable-sw600dp/quantum_launchscreen_youtube.xml",
                 ).forEach editSplashScreen@{ resourceFileName ->
                     document(resourceFileName).use { document ->
-                        document.getElementsByTagName(
-                            "layer-list"
-                        ).item(0).forEachChildElement { node ->
+                        document.getElementsByTagName("layer-list").item(0).forEachChildElement { node ->
                             if (node.hasAttribute("android:drawable")) {
                                 node.setAttribute(
                                     "android:drawable",
@@ -143,8 +123,7 @@ val themePatch = baseThemePatch(
                         style.appendChild(styleItem)
                     }
 
-                    val resourcesNode =
-                        document.getElementsByTagName("resources").item(0) as Element
+                    val resourcesNode = document.getElementsByTagName("resources").item(0) as Element
                     resourcesNode.appendChild(style)
                 }
 
@@ -191,7 +170,7 @@ val themePatch = baseThemePatch(
                     }
                 }
 
-                val isMaterialYouLight = lightThemeBackgroundColor!!.startsWith("@android:color/system_")
+                val isMaterialYouLight = lightThemeBackgroundColor.startsWith("@android:color/system_")
 
                 if (isMaterialYouLight) {
                     val resDir = get("res")
@@ -205,8 +184,8 @@ val themePatch = baseThemePatch(
 
                     val stylesFile = "res/values/styles.xml"
                     if (get(stylesFile).exists()) {
-                        document(stylesFile).use { doc ->
-                            val resources = doc.getElementsByTagName("resources").item(0) as? Element ?: return@use
+                        document(stylesFile).use { document ->
+                            val resources = document.getElementsByTagName("resources").item(0) as? Element ?: return@use
 
                             resources.forEachChildElement { style ->
                                 if (style.nodeName != "style") return@forEachChildElement
@@ -231,7 +210,7 @@ val themePatch = baseThemePatch(
                                         }
                                     }
                                     if (!found) {
-                                        style.appendChild(doc.createElement("item").apply {
+                                        style.appendChild(document.createElement("item").apply {
                                             setAttribute("name", attrName)
                                             textContent = attrValue
                                         })
@@ -250,7 +229,7 @@ val themePatch = baseThemePatch(
             seekbarColorPatch,
             versionCheckPatch,
             baseThemeResourcePatch(
-                lightColorReplacement = { lightThemeBackgroundColor!! },
+                lightColorReplacement = { lightThemeBackgroundColorOption.value!! },
                 darkColorNames = {
                     THEME_DEFAULT_DARK_COLOR_NAMES + if (is_21_06_or_greater)
                         setOf(
