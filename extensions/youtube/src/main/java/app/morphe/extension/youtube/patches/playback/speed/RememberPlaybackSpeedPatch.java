@@ -2,15 +2,22 @@ package app.morphe.extension.youtube.patches.playback.speed;
 
 import static app.morphe.extension.shared.StringRef.str;
 
+import java.util.Collections;
+
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.VideoInformation;
+import app.morphe.extension.youtube.patches.utils.requests.GetMixPlaylistRequest;
 import app.morphe.extension.youtube.settings.Settings;
 
 @SuppressWarnings("unused")
 public final class RememberPlaybackSpeedPatch {
 
+    private static final boolean DISABLE_PLAYBACK_SPEED_MUSIC = Settings.DISABLE_PLAYBACK_SPEED_MUSIC.get();
+
     private static final long TOAST_DELAY_MILLISECONDS = 750;
+
+    private static volatile String lastFetchedVideoId = "";
 
     private static volatile boolean newVideoStarted;
 
@@ -76,6 +83,20 @@ public final class RememberPlaybackSpeedPatch {
             newVideoStarted = false;
 
             final float defaultSpeed = Settings.PLAYBACK_SPEED_DEFAULT.get();
+
+            if (DISABLE_PLAYBACK_SPEED_MUSIC) {
+                if (defaultSpeed == 1.0f) {
+                    return 1.0f;
+                }
+
+                String videoId = VideoInformation.getVideoId();
+                GetMixPlaylistRequest request = GetMixPlaylistRequest.getRequestForVideoId(videoId);
+                boolean isMusic = request != null && Boolean.TRUE.equals(request.getResult());
+                if (isMusic) {
+                    return 1.0f;
+                }
+            }
+
             if (defaultSpeed > 0) {
                 return defaultSpeed;
             }
@@ -84,4 +105,11 @@ public final class RememberPlaybackSpeedPatch {
         return -2.0f;
     }
 
+    public static void newVideoStarted(String videoId, boolean isShortAndOpeningOrPlaying) {
+        if (DISABLE_PLAYBACK_SPEED_MUSIC && !VideoInformation.lastPlayerResponseIsShort() &&
+                !lastFetchedVideoId.equals(videoId)) {
+            lastFetchedVideoId = videoId;
+            GetMixPlaylistRequest.fetchRequestIfNeeded(videoId, Collections.emptyMap());
+        }
+    }
 }
