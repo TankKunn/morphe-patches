@@ -15,4 +15,8 @@
 Second \"item\" text"</string>
 
 -->
-<resources></resources>
+<resources>
+  <string name="morphe_screen_navigation_bar_title">Bar pandu arah</string>
+  <string name="morphe_screen_sidebar_title">Bar sisi</string>
+  <string name="morphe_disable_modern_home_title">Lumpuhkan antara muka laman utama moden</string>
+</resources>

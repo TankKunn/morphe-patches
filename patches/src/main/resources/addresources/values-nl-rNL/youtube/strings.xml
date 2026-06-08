@@ -114,9 +114,7 @@ Wijzigingen zijn:
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_youtube_doodles_title">YouTube Doodles verbergen</string>
   <string name="morphe_hide_youtube_doodles_summary">Verbergt seizoensgebonden en evenementgerelateerde animaties op het YouTube-logo</string>
-  <string name="morphe_hide_youtube_doodles_user_dialog_message">"YouTube Doodles worden een paar dagen per jaar in verschillende delen van de wereld getoond.
-
-Het tonen van YouTube Doodles kan voorkomen dat aangepaste headers worden weergegeven."</string>
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">Het tonen van YouTube Doodles kan voorkomen dat aangepaste headers worden weergegeven.</string>
   <string name="morphe_hide_channel_bar_title">Kanaalbalk verbergen</string>
   <string name="morphe_hide_channel_watermark_title">Verberg kanaal watermerk</string>
   <string name="morphe_hide_crowdfunding_box_title">Crowdfunding box verbergen</string>
@@ -191,9 +189,7 @@ Het tonen van YouTube Doodles kan voorkomen dat aangepaste headers worden weerge
   <string name="morphe_comments_screen_title">Reacties</string>
   <string name="morphe_comments_screen_summary">Kies welke componenten verschijnen in de commentaarsectie</string>
   <string name="morphe_hide_comments_carousel_title">Schakel filter voor commentaarcarrousel in</string>
-  <string name="morphe_hide_comments_carousel_user_dialog_message">"Let op:
-
-• Zorg ervoor dat u de exacte naam van het carrouselitem invoert (bijv. Vraag, Like deze video, Luister op YouTube Music, enz.).
+  <string name="morphe_hide_comments_carousel_summary">"• Zorg ervoor dat u de exacte naam van het carrouselitem invoert (bijv. Vraag, Like deze video, Luister op YouTube Music, enz.).
 • Het verbergen van carrouselitems kan onbedoelde gevolgen hebben.
 • Als alle carrouselitems verborgen zijn, wordt de gehele commentaarsectie ook verborgen."</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Commenten carrousel filter</string>
@@ -223,15 +219,15 @@ Het tonen van YouTube Doodles kan voorkomen dat aangepaste headers worden weerge
   <string name="morphe_custom_filter_strings_summary">Lijst met componentpad builder-strings om te filteren, gescheiden door nieuwe regels</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">Ongeldig aangepast filter: %s</string>
   <string name="morphe_hide_view_count_title">Aantal weergaven verbergen</string>
-  <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Beperkingen:
-• Shorts-planken, kanaalpagina's en zoekresultaten kunnen nog steeds het aantal weergaven tonen
-• Deze functie werkt niet met de automotive vormfactor"</string>
+  <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
+  <string name="morphe_hide_view_count_summary">"Beperkingen:
+• Shorts-planken, kanaalpagina's en zoekresultaten kunnen nog steeds het aantal weergaven tonen.
+• Deze functie werkt niet met de automotive lay-out."</string>
   <string name="morphe_hide_upload_time_title">Verberg uploadtijd</string>
-  <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Beperkingen:
-• Shorts-schappen, kanaalpagina's en zoekresultaten kunnen nog steeds uploadtijden tonen.
-• Deze functie werkt niet met de automotive vormfactor."</string>
+  <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
+  <string name="morphe_hide_upload_time_summary">"Beperkingen:
+• Shorts-schappen, kanaalpagina's en zoekresultaten kunnen nog steeds uploadtijden tonen
+• Deze functie werkt niet met de automotive vormfactor"</string>
   <string name="morphe_hide_keyword_content_screen_title">Trefwoordfilter</string>
   <string name="morphe_hide_keyword_content_screen_summary">Kies specifieke woorden of zinsdelen om video\'s in feeds en zoekopdrachten te verbergen</string>
   <string name="morphe_hide_keyword_content_home_title">Home-video\'s verbergen door keywords</string>
@@ -284,7 +280,7 @@ Beperkingen:
   <string name="morphe_copy_video_url_button_timestamp_summary">Keert de tik- en ingedrukte acties van de knop \'Video-URL kopiëren\' om</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Dialog van kijker discretie verwijderen</string>
-  <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Dit omzeilt de leeftijdsbeperking niet. Het accepteert het alleen automatisch.</string>
+  <string name="morphe_remove_viewer_discretion_dialog_summary">Dit omzeilt de leeftijdsbeperking niet. Het accepteert het alleen automatisch</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Pop-up \'Inloggen op tv\' uitschakelen</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
@@ -388,9 +384,15 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Schakelt de nauwkeurige zoekmodus uit die wordt geactiveerd wanneer je de schuifbalk omhoog trekt</string>
   <!-- interaction.seekbar.livestreamDvrPatch -->
   <string name="morphe_livestream_dvr_title">Livestream DVR inschakelen</string>
-  <string name="morphe_livestream_dvr_summary">Hiermee kun je zoeken op alle livestreams, zelfs diegene die dit normaal gesproken beperken</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_user_dialog_message">Het inschakelen ervan kan onverwacht livestream-zoeken veroorzaken als \'Video streams vervalsen\' niet is ingeschakeld.</string>
+  <string name="morphe_livestream_dvr_summary">"Hiermee kun je in alle livestreams zoeken, zelfs in de livestreams die dit normaal gesproken beperken
+
+Let op: als 'Video streams spoofen' niet is ingeschakeld, kan het inschakelen hiervan leiden tot onverwacht zoekgedrag in livestreams."</string>
+  <string name="morphe_expand_livestream_dvr_duration_title">Livestream DVR-duur uitbreiden</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_summary">"Hiermee kun je live-uitzendingen tot 7 dagen terugspoelen
+
+Let op: als 'Video streams spoofen' niet is ingeschakeld, kan het inschakelen hiervan leiden tot onverwacht zoekgedrag in livestreams."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Schuiven om te zoeken inschakelen</string>
   <string name="morphe_slide_to_seek_summary">Schakelt \'Schuif om te zoeken\' in in plaats van af te spelen op 2x snelheid wanneer je op de videospeler drukt en vasthoudt</string>
@@ -485,7 +487,7 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_hide_ask_button_title">Verberg Vraag-knop</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Verberg Clip-knop</string>
-  <string name="morphe_hide_clip_button_user_dialog_message">Deze verbergfunctie werkt mogelijk niet voor sommige gebruikersaccounts.</string>
+  <string name="morphe_hide_clip_button_summary">Dit werkt mogelijk niet voor sommige gebruikersaccounts</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shop_button_title">Verberg Winkelknop</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
@@ -551,7 +553,7 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_show_settings_button_type_title">Actie van de instellingenknop</string>
   <string name="morphe_show_settings_button_type_summary">Houdt de navigatiebalk zichtbaar tijdens het scrollen</string>
   <string name="morphe_swap_create_with_notifications_button_title">Wissel de knop \'Maken\' om met de knop \'Meldingen\'</string>
-  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Als het veranderen van deze instelling geen effect heeft, probeer dan om te schakelen naar Incognito-modus.</string>
+  <string name="morphe_swap_create_with_notifications_button_summary">Als het wijzigen van deze instelling geen effect heeft, probeer dan over te schakelen naar de Incognitomodus</string>
   <string name="morphe_hide_navigation_button_labels_title">Navigatieknoppenlabels verbergen</string>
   <string name="morphe_hide_navigation_bar_title">Verberg de navigatiebalk</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Dit verbergt de navigatiebalk volledig, inclusief het tabblad 'Jij'.
@@ -645,7 +647,6 @@ Om het menu 'Audiotrack' weer te geven, wijzig je 'Video streams spoofen' naar '
   <string name="morphe_ambient_mode_screen_summary">Beheer de zichtbaarheid en stroombeperkingen van de omgevingsmodus</string>
   <string name="morphe_bypass_ambient_mode_restrictions_title">Omzeil beperkingen voor de sfeervolle modus</string>
   <string name="morphe_bypass_ambient_mode_restrictions_summary">Hiermee kan de omgevingsmodus actief blijven in de energiebesparingsmodus</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Het inschakelen hiervan kan slechtere batterijleven veroorzaken.</string>
   <string name="morphe_disable_ambient_mode_title">Omgevingsmodus uitschakelen</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Schakel de ambientmodus in volledig scherm uit</string>
   <!-- layout.hide.infocards.hideInfocardsPatch -->
@@ -710,11 +711,10 @@ Om het menu 'Audiotrack' weer te geven, wijzig je 'Video streams spoofen' naar '
   <string name="morphe_hide_shorts_navigation_bar_title">Verberg de navigatiebalk</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_hide_end_screen_suggested_video_title">Voorgestelde video op eindscherm verbergen</string>
-  <string name="morphe_hide_end_screen_suggested_video_summary">Verbergt de voorgestelde video-overlay die verschijnt nadat de video is afgelopen</string>
-  <string name="morphe_hide_end_screen_suggested_video_user_dialog_message">" Deze instelling werkt alleen als 'Automatisch volgende video afspelen' is uitgeschakeld.
+  <string name="morphe_hide_end_screen_suggested_video_summary">"Verbergt de suggestievideo-overlay die verschijnt na het einde van de video
 
-Je kunt dit in YouTube veranderen:
-Instellingen → Afspelen (of Automatisch) → Automatisch volgende video afspelen"</string>
+Deze instelling werkt alleen als automatisch afspelen is uitgeschakeld. Je kunt dit wijzigen in YouTube:
+Instellingen → Weergave (of automatisch afspelen) → Volgende video automatisch afspelen"</string>
   <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->
   <string name="morphe_hide_player_related_videos_title">Gerelateerde video\'s verbergen</string>
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
@@ -837,7 +837,6 @@ Instellingen → Afspelen (of Automatisch) → Automatisch volgende video afspel
   <string name="morphe_sb_general_api_url_summary">Het adres dat SponsorBlock gebruikt om oproepen naar de server te doen</string>
   <string name="morphe_sb_channel_whitelist">Kanaallijst met uitzonderingen</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock is uitgeschakeld voor kanalen op de uitzonderingslijst</string>
-  <string name="morphe_sb_channel_whitelist_dialog_title">Kanaallijst met uitzonderingen</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Huidig kanaal:</string>
   <string name="morphe_sb_channel_whitelist_add">Toevoegen aan de witte lijst</string>
   <string name="morphe_sb_channel_whitelist_remove">Verwijderen</string>
@@ -1086,9 +1085,7 @@ Als het later wordt uitgeschakeld, wordt aanbevolen om de app-gegevens te wissen
   <string name="morphe_shorts_autoplay_background_summary">Schakelt automatisch naar de volgende Short in tijdens het afspelen op de achtergrond</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Schakel het hervatten van de miniplayer uit</string>
-  <string name="morphe_miniplayer_disable_resuming_summary">Voorkomt dat de ‘Vervolg kijken’ minispeler verschijnt bij het opstarten van de app</string>
-  <string name="morphe_miniplayer_disable_resuming_user_dialog_message">"• 'Continue watching' is een YouTube Premium functie
-• Deze instelling kan deze Premium functie niet activeren"</string>
+  <string name="morphe_miniplayer_disable_resuming_summary">Schakelt de \'Doorgaan met kijken\'-minispeler uit, een functie van YouTube Premium die verschijnt bij het opstarten van de app</string>
   <string name="morphe_miniplayer_screen_title">Minispeler</string>
   <string name="morphe_miniplayer_screen_summary">Pas het uiterlijk en het gedrag van de geminimaliseerde videospeler aan</string>
   <string name="morphe_miniplayer_type_title">\"miniplayer\"-type</string>
@@ -1255,11 +1252,6 @@ Beperkingen:
 • Sommige apparaten kunnen AVC niet forceren"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Om deze functie te gebruiken, stel \'Videostreams spoofen\' in op Android VR of Android Studio</string>
-  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
-  <string name="morphe_expand_livestream_dvr_duration_title">Livestream DVR-duur uitbreiden</string>
-  <string name="morphe_expand_livestream_dvr_duration_summary">Toont een melding wanneer de RateLimitError optreedt</string>
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Deze instelling kan onverwacht gedrag veroorzaken als \'Videostreams vervalsen\' niet is ingeschakeld.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Geavanceerd menu voor videokwaliteit weergeven</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->

@@ -79,14 +79,28 @@ Perubahan termasuk:
   <string name="morphe_hide_floating_microphone_button_title">Sorokkan butang mikrofon terapung</string>
   <string name="morphe_hide_floating_microphone_button_summary">Sorokkan butang mikrofon terapung di sudut kanan bawah skrin cadangan hasil</string>
   <string name="morphe_hide_horizontal_shelves_title">Sorokkan laci mengufuk</string>
+  <string name="morphe_hide_hyped_label_title">Sorokkan label \'Naikkan\'</string>
+  <string name="morphe_hide_image_shelf_title">Sorokkan laci imej</string>
+  <string name="morphe_hide_image_shelf_summary">Menyorokkan laci imej di hasil carian</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
+  <string name="morphe_hide_latest_videos_button_title">Sorokkan butang \'Video terkini\'</string>
+  <string name="morphe_hide_latest_videos_button_summary">Menyorokkan sepanduk \'Video terkini\' biru yang muncul di bahagian atas suapan Laman Utama</string>
+  <string name="morphe_hide_mix_playlists_title">Sorokkan senarai main adun</string>
+  <string name="morphe_hide_movies_section_title">Sorokkan bahagian filem</string>
   <!-- 'Notify me' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Subscriptions feed for future livestreams or unreleased videos. -->
+  <string name="morphe_hide_notify_me_button_title">Sorokkan butang \'Beritahu saya\'</string>
+  <string name="morphe_hide_notify_me_button_summary">Menyorokkan butang peringatan bagi penstriman langsung dan tayangan perdana yang dijadualkan</string>
+  <string name="morphe_hide_playables_title">Sorokkan \'Boleh main\'</string>
+  <string name="morphe_hide_playables_summary">Menyorokkan ciri yang membenarkan anda bermain permainan</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Menyorokkan lakaran kecil istilah carian</string>
+  <string name="morphe_hide_search_term_thumbnails_summary">Menyorokkan pratayang lakaran kecil di senarai autolengkap carian</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">Menunjukkan Doodles YouTube mungkin mengelakkan pengepala tersuai daripada dipaparkan.</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
@@ -95,9 +109,18 @@ Perubahan termasuk:
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Subscribe' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_comments_carousel_summary">"• Sila pastikan nama yang tepat dimasukkan untuk item karusel (contohnya Tanya, Naikkan video ini, Dengarkan di YouTube Music dan sebagainya)
+• Menyorokkan item karusel mungkin mempunyai kesan sampingan yang tidak diingini
+• Jika semua item karusel disorokkan, keseluruhan bahagian komen juga akan disembunyikan"</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
-  <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
+  <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
+  <string name="morphe_hide_view_count_summary">"Batasan:
+• Laci Shorts, laman saluran dan hasil carian mungkin masih menunjukkan kiraan tontonan
+• Ciri ini tidak berfungsi dengan tataletak automotif"</string>
+  <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
+  <string name="morphe_hide_upload_time_summary">"Batasan:
+• Laci Shorts, laman saluran dan hasil carian mungkin masih menunjukkan masa muat naik
+• Ciri ini tidak berfungsi dengan tataletak automotif"</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
   <!-- Translations must use a localized example. For languages that do not use spaces between words (Chinese, Japanese, etc.) the English AI example should be used since no localized examples exist. Or if using machine translations, or if nobody wants to think of a localized example, then the English 'ai' example should be left as-is. -->
@@ -108,6 +131,7 @@ Perubahan termasuk:
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.copyvideourlbutton.copyVideoURLButtonPatch -->
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
+  <string name="morphe_remove_viewer_discretion_dialog_summary">Ini tidak akan memirau sekatan umur dan hanya menerimanya secara automatik</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <!-- interaction.downloads.downloadsPatch -->
@@ -121,6 +145,13 @@ Perubahan termasuk:
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
   <!-- interaction.seekbar.livestreamDvrPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_summary">"Membenarkan pencarian pada semua penstriman langsung, walaupun biasanya menyekat
+
+Catatan: Jika 'Perdaya strim video' dilumpuhkan, mendayakannya mungkin menyebabkan tingkah laku pencarian penstriman langsung yang tidak dijangka"</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_summary">"Membenarkan anda untuk mengulang semula siaran langsung sehingga 7 hari yang lalu
+
+Catatan: Jika 'Perdaya strim video' dilumpuhkan, mendayakannya mungkin menyebabkan tingkah laku penstriman langsung yang tidak dijangka"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <!-- interaction.seekbar.enableTapToSeekPatch -->
   <!-- interaction.swipecontrols.swipeControlsPatch -->
@@ -164,6 +195,7 @@ Perubahan termasuk:
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_clip_button_summary">Ini mungkin tidak berfungsi untuk sesetengah akaun pengguna</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- layout.captions.captionsPatch -->
@@ -176,6 +208,7 @@ Perubahan termasuk:
   <!-- 'Create' has no display name. Translate normally. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_swap_create_with_notifications_button_summary">Jika mengubah tetapan ini tidak berkesan, cuba tukar ke mod penyamaran</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
@@ -226,7 +259,6 @@ Perubahan termasuk:
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
   <string name="morphe_sb_channel_whitelist">Senarai putih saluran</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock dilumpuhkan untuk saluran di dalam senarai putih</string>
-  <string name="morphe_sb_channel_whitelist_dialog_title">Senarai putih saluran</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Saluran semasa:</string>
   <string name="morphe_sb_channel_whitelist_add">Tambahkan ke senarai putih</string>
   <string name="morphe_sb_channel_whitelist_remove">Keluarkan</string>
@@ -275,8 +307,6 @@ Perubahan termasuk:
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <!-- video.codecs.disableVideoCodecsPatch -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <!-- video.quality.hidePremiumVideoQualityPatch -->

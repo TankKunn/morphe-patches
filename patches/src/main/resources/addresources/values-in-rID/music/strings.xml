@@ -104,8 +104,8 @@ Implementasi fitur oleh VazerOG"</string>
   <string name="morphe_music_enable_forced_miniplayer_title">Aktifkan paksa pemutar mini</string>
   <string name="morphe_music_enable_forced_miniplayer_summary">Mencegah pemutar otomatis membesar ke layar penuh saat trek baru dimulai</string>
   <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
-  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Aktifkan geser untuk menutup mini player</string>
-  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Memungkinkan menutup mini player dengan menggesernya ke bawah</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Aktifkan usap untuk menutup pemutar mini</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Mengizinkan untuk menutup pemutar mini dengan mengusapnya ke bawah</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Bilah navigasi</string>
   <string name="morphe_music_navigation_bar_screen_summary">Pilih tombol mana yang akan ditampilkan di bilah navigasi bawah</string>

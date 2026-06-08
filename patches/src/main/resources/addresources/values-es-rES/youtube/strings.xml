@@ -114,9 +114,7 @@ Los cambios incluyen:
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_youtube_doodles_title">Ocultar Doodles de YouTube</string>
   <string name="morphe_hide_youtube_doodles_summary">Oculta las animaciones de temporada y basadas en eventos en el logotipo de YouTube</string>
-  <string name="morphe_hide_youtube_doodles_user_dialog_message">"Los Doodles de YouTube se muestran unos pocos días cada año en varias partes del mundo.
-
-Mostrar los Doodles de YouTube puede impedir que se muestren encabezados personalizados."</string>
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">Mostrar los Doodles de YouTube puede impedir que se muestren encabezados personalizados.</string>
   <string name="morphe_hide_channel_bar_title">Ocultar barra de canales</string>
   <string name="morphe_hide_channel_watermark_title">Ocultar marca de agua del canal</string>
   <string name="morphe_hide_crowdfunding_box_title">Ocultar caja de Crowdfunding</string>
@@ -191,8 +189,7 @@ Mostrar los Doodles de YouTube puede impedir que se muestren encabezados persona
   <string name="morphe_comments_screen_title">Comentarios</string>
   <string name="morphe_comments_screen_summary">Elija qué componentes aparecen en la sección de comentarios</string>
   <string name="morphe_hide_comments_carousel_title">Activar filtro de carrusel de comentarios</string>
-  <string name="morphe_hide_comments_carousel_user_dialog_message">"Nota:
-• Asegúrate de introducir el nombre exacto del elemento del carrusel (p. ej., Preguntar, Promocionar este vídeo, Escuchar en YouTube Music, etc.).
+  <string name="morphe_hide_comments_carousel_summary">"• Asegúrate de introducir el nombre exacto del elemento del carrusel (p. ej., Preguntar, Promocionar este vídeo, Escuchar en YouTube Music, etc.)
 • Ocultar elementos del carrusel puede tener efectos secundarios no deseados.
 • Si se ocultan todos los elementos del carrusel, también se ocultará toda la sección de comentarios."</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Filtro de carrusel de comentarios</string>
@@ -222,13 +219,13 @@ Mostrar los Doodles de YouTube puede impedir que se muestren encabezados persona
   <string name="morphe_custom_filter_strings_summary">Lista de cadenas del constructor de rutas de componentes a filtrar separadas por una nueva línea</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">Filtro personalizado no válido: %s</string>
   <string name="morphe_hide_view_count_title">Ocultar recuento de visualizaciones</string>
-  <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Limitaciones:
+  <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
+  <string name="morphe_hide_view_count_summary">"Limitaciones:
 • Los estantes de Shorts, las páginas de los canales y los resultados de búsqueda pueden seguir mostrando el número de visualizaciones.
 • Esta función no es compatible con el diseño para automóviles."</string>
   <string name="morphe_hide_upload_time_title">Ocultar hora de subida</string>
-  <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Limitaciones:
+  <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
+  <string name="morphe_hide_upload_time_summary">"Limitaciones:
 • Los estantes de Shorts, las páginas de los canales y los resultados de búsqueda pueden seguir mostrando los tiempos de subida.
 • Esta función no es compatible con el diseño para automóviles."</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtro de palabras clave</string>
@@ -283,7 +280,7 @@ Limitaciones:
   <string name="morphe_copy_video_url_button_timestamp_summary">Invierte las acciones de pulsar y pulsar y mantener pulsado del botón \'Copiar URL del vídeo\'</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Eliminar diálogo de discreción del espectador</string>
-  <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Esto no evita la restricción de edad. Solo la acepta automáticamente.</string>
+  <string name="morphe_remove_viewer_discretion_dialog_summary">Esto no evita la restricción de edad. Solo la acepta automáticamente</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Desactivar ventana emergente \"Iniciar sesión en TV\"</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
@@ -389,9 +386,15 @@ Información: Es posible que no funcione en transmisiones en directo"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Desactiva el modo de búsqueda precisa que se activa al desplegar la barra de búsqueda</string>
   <!-- interaction.seekbar.livestreamDvrPatch -->
   <string name="morphe_livestream_dvr_title">Activar DVR de transmisión en vivo</string>
-  <string name="morphe_livestream_dvr_summary">Permite buscar en todas las retransmisiones en directo, incluso en las que normalmente lo restringen</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_user_dialog_message">Activar esto puede causar un comportamiento inesperado al buscar transmisiones en directo si \"Falsificar transmisiones de vídeo\" no está activado.</string>
+  <string name="morphe_livestream_dvr_summary">"Permite buscar en todas las transmisiones en directo, incluso en aquellas que normalmente restringen esta función.
+
+Nota: Si no se ha activado \"Falsificar transmisiones de vídeo\", activar esta opción puede provocar un comportamiento inesperado al buscar en las transmisiones en directo."</string>
+  <string name="morphe_expand_livestream_dvr_duration_title">Expandir duración del DVR de transmisión en directo</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_summary">"Te permite rebobinar las transmisiones en directo hasta 7 días en el pasado.
+
+Nota: Si no se ha activado \"Falsificar transmisiones de vídeo\", activar esta opción puede provocar un comportamiento inesperado al buscar en las transmisiones en directo."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activar deslizar para buscar</string>
   <string name="morphe_slide_to_seek_summary">Habilita el deslizamiento para buscar en lugar de reproducir a 2x velocidad al pulsar y mantener presionado el reproductor de vídeo</string>
@@ -486,7 +489,7 @@ Información: Es posible que no funcione en transmisiones en directo"</string>
   <string name="morphe_hide_ask_button_title">Ocultar botón \'Recortar\'</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Ocultar botón \'Guardar\'</string>
-  <string name="morphe_hide_clip_button_user_dialog_message">Esta función de ocultar puede no funcionar para algunas cuentas de usuario.</string>
+  <string name="morphe_hide_clip_button_summary">Es posible que esto no funcione para algunas cuentas de usuario.</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shop_button_title">Ocultar botón \"Tienda\"</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
@@ -552,7 +555,7 @@ Deben proporcionarse 'Cookies de subtítulos'"</string>
   <string name="morphe_show_settings_button_type_title">Acción del botón de ajustes</string>
   <string name="morphe_show_settings_button_type_summary">Oculta la barra de progreso que se muestra en las miniaturas de los vídeos en los feeds y en los resultados de búsqueda</string>
   <string name="morphe_swap_create_with_notifications_button_title">Cambia el botón Crear por el botón Notificaciones</string>
-  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Si cambiar este ajuste no tiene efecto, intenta cambiar al modo incógnito.</string>
+  <string name="morphe_swap_create_with_notifications_button_summary">Si cambiar este ajuste no tiene efecto, intenta cambiar al modo incógnito</string>
   <string name="morphe_hide_navigation_button_labels_title">Ocultar etiquetas de botones de navegación</string>
   <string name="morphe_hide_navigation_bar_title">Ocultar barra de navegación</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Esto oculta por completo la barra de navegación, incluida la pestaña \"Tú\".
@@ -646,7 +649,6 @@ Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de v
   <string name="morphe_ambient_mode_screen_summary">Administre la visibilidad del modo ambiental y las restricciones de energía</string>
   <string name="morphe_bypass_ambient_mode_restrictions_title">Omitir restricciones del modo ambiente</string>
   <string name="morphe_bypass_ambient_mode_restrictions_summary">Permite que el modo ambiental permanezca activo en modo de ahorro de batería</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Activar esto puede causar una peor vida de la batería.</string>
   <string name="morphe_disable_ambient_mode_title">Desactivar modo ambiente</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Desactivar modo ambiente en pantalla completa</string>
   <!-- layout.hide.infocards.hideInfocardsPatch -->
@@ -711,11 +713,10 @@ Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de v
   <string name="morphe_hide_shorts_navigation_bar_title">Ocultar barra de navegación</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_hide_end_screen_suggested_video_title">Ocultar vídeo sugerido en pantalla final</string>
-  <string name="morphe_hide_end_screen_suggested_video_summary">Oculta la superposición de vídeos sugeridos que aparece después de que finaliza el vídeo</string>
-  <string name="morphe_hide_end_screen_suggested_video_user_dialog_message">"Este ajuste solo funciona si \"Reproducción automática del siguiente vídeo\" está desactivada.
+  <string name="morphe_hide_end_screen_suggested_video_summary">"Oculta la superposición de vídeo sugerido que aparece después de que termina el vídeo.
 
-Puedes cambiar esto en YouTube: 
-Configuración → Reproducción → Reproducción automática del siguiente vídeo"</string>
+Esta configuración solo funciona si la reproducción automática está desactivada. Puedes cambiarla en YouTube:
+Configuración → Reproducción (o Reproducción automática) → Reproducción automática del siguiente vídeo."</string>
   <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->
   <string name="morphe_hide_player_related_videos_title">Ocultar vídeos relacionados</string>
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
@@ -838,7 +839,6 @@ Configuración → Reproducción → Reproducción automática del siguiente ví
   <string name="morphe_sb_general_api_url_summary">La dirección que SponsorBlock utiliza para hacer llamadas al servidor</string>
   <string name="morphe_sb_channel_whitelist">Lista blanca de canales</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock está desactivado para los canales de la lista blanca</string>
-  <string name="morphe_sb_channel_whitelist_dialog_title">Lista blanca de canales</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Canal actual:</string>
   <string name="morphe_sb_channel_whitelist_add">Agregar a la lista blanca</string>
   <string name="morphe_sb_channel_whitelist_remove">Quitar</string>
@@ -1089,9 +1089,7 @@ Limitación: Usar el botón de retroceso en la barra de herramientas puede que n
   <string name="morphe_shorts_autoplay_background_summary">Avanza al siguiente Short automáticamente durante la reproducción en segundo plano</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Desactivar reanudación del reproductor en miniatura</string>
-  <string name="morphe_miniplayer_disable_resuming_summary">Evita que aparezca el reproductor en miniatura de \'Continuar viendo\' al iniciar la aplicación</string>
-  <string name="morphe_miniplayer_disable_resuming_user_dialog_message">"• \"Seguir viendo\" es una función de YouTube Premium
-• Este ajuste no puede forzar esta función Premium"</string>
+  <string name="morphe_miniplayer_disable_resuming_summary">Desactiva el reproductor en miniatura de \'Seguir viendo\', una función de YouTube Premium que aparece al iniciar la aplicación.</string>
   <string name="morphe_miniplayer_screen_title">Reproductor en miniatura</string>
   <string name="morphe_miniplayer_screen_summary">Personaliza la apariencia y el comportamiento del reproductor de vídeo minimizado</string>
   <string name="morphe_miniplayer_type_title">Tipo de reproductor en miniatura</string>
@@ -1258,11 +1256,6 @@ Limitaciones:
 • Algunos dispositivos no pueden forzar AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Para usar esta función, establece \'Manipular transmisiones de vídeo\' a Android VR o Android Studio</string>
-  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
-  <string name="morphe_expand_livestream_dvr_duration_title">Expandir duración del DVR de transmisión en directo</string>
-  <string name="morphe_expand_livestream_dvr_duration_summary">Permite rebobinar transmisiones en vivo hasta 7 días en el pasado</string>
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Este ajuste puede causar un comportamiento inesperado si \"Falsificar transmisiones de vídeo\" no está activado.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Mostrar menú avanzado de calidad de vídeo</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->

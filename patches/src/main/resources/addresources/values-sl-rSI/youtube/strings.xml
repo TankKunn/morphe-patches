@@ -112,9 +112,7 @@ Spremembe vključujejo:
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_youtube_doodles_title">Skrij YouTube Doodle</string>
   <string name="morphe_hide_youtube_doodles_summary">Skrije animacije logotipa YouTube, ki se pojavljajo sezonsko in ob posebnih dogodkih</string>
-  <string name="morphe_hide_youtube_doodles_user_dialog_message">"YouTube Doodles so prikazani nekaj dni na leto v različnih delih sveta.
-
-Prikaz YouTube Doodles lahko prepreči prikazovanje izbirnih zavihkov."</string>
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">Prikazovanje YouTube Doodles lahko prepreči prikazovanje po meri glave.</string>
   <string name="morphe_hide_channel_bar_title">Skrij kanalno vrstico</string>
   <string name="morphe_hide_channel_watermark_title">Skrij vodni žig kanala</string>
   <string name="morphe_hide_crowdfunding_box_title">Skrij škatlo za zbiranje sredstev</string>
@@ -189,10 +187,9 @@ Prikaz YouTube Doodles lahko prepreči prikazovanje izbirnih zavihkov."</string>
   <string name="morphe_comments_screen_title">Komentarji</string>
   <string name="morphe_comments_screen_summary">Izberite, kateri elementi se pojavljajo v oddelku za komentarje</string>
   <string name="morphe_hide_comments_carousel_title">Omogoči filter za vrstico s komentarji</string>
-  <string name="morphe_hide_comments_carousel_user_dialog_message">"Opomba:
-• Poskrbite, da vnesete točno ime elementa vrstice (npr. Vprašanje, Ponavadi ta videoposnetek, Poslušajte na YouTube Music itd.).
-• Skrivanje elementov vrstice lahko povzroči nepredvidene stranske učinke.
-• Če so skriti vsi elementi vrstice, bo skrit tudi celotni razdelek komentarjev."</string>
+  <string name="morphe_hide_comments_carousel_summary">"• Prepričajte se, da vnesete natančno ime elementa vrtiljaka (npr. Vprašaj, Promoviraj ta videoposnetek, Poslušaj na YouTube Music itd.)
+• Skrivanje elementov vrtiljaka lahko ima neželene stranske učinke
+• Če skrijete vse elemente vrtiljaka, bo tudi celoten odsek s komentarji skrit."</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Filter za vrstico s komentarji</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">Vnesite imena drsnikov komentarjev, po katerih želite filtrirati, ločena z novimi vrsticami</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Skrij povzetek umetne inteligence (AI) klepeta</string>
@@ -220,15 +217,15 @@ Prikaz YouTube Doodles lahko prepreči prikazovanje izbirnih zavihkov."</string>
   <string name="morphe_custom_filter_strings_summary">Seznam nizov za gradnik poti komponent, po katerih želite filtrirati, ločenih z novimi vrsticami</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">Neveljaven prilagodljiv filter: %s</string>
   <string name="morphe_hide_view_count_title">Skrij prikazovalec</string>
-  <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Omejitve:
-• Števci ogledov se lahko še vedno prikazujejo na straneh s kratkimi videoposnetki, kanalih in v rezultatih iskanja.
-• Ta funkcija ne deluje s postavitvijo za avtomobile."</string>
+  <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
+  <string name="morphe_hide_view_count_summary">"Omejitve:
+• Polja Shorts, strani kanalov in rezultati iskanja lahko še vedno prikazujejo število ogledov
+• Ta funkcija ne deluje s samodejnim prikazom"</string>
   <string name="morphe_hide_upload_time_title">Skrij čas nalaganja</string>
-  <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Omejitve:
-• Kratke police, strani kanalov in rezultati iskanja lahko še vedno prikazujejo čas nalaganja.
-• Ta funkcija ne deluje s postavitvijo za avtomobile."</string>
+  <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
+  <string name="morphe_hide_upload_time_summary">"Omejitve:
+• Kratke kratke hlače, strani kanalov in rezultati iskanja lahko še vedno prikazujejo čas nalaganja
+• Ta funkcija ne deluje s postavitvijo za avtomobile"</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtr ključnih besed</string>
   <string name="morphe_hide_keyword_content_screen_summary">Izberite določene besede ali fraze za skrivanje videoposnetkov v virih in iskanju</string>
   <string name="morphe_hide_keyword_content_home_title">Skrij video posnetke na začetnem zaslonu s ključnimi besedami</string>
@@ -281,7 +278,7 @@ Omejitve:
   <string name="morphe_copy_video_url_button_timestamp_summary">Obrne potezo tap in dotakni-in-drži za gumb \'Kopiraj URL videoposnetka\'</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Odstrani dialog o diskretni opozorilni napovedi</string>
-  <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">To ne izmika omejitve starosti. Samodejno jo le potrdi.</string>
+  <string name="morphe_remove_viewer_discretion_dialog_summary">To ne obide starostne omejitve. Samo samodejno jo sprejme.</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Onemogoči pojavni gumb \'Prijava na TV\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
@@ -385,9 +382,15 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Onemogoči način natančnega iskanja, ki se aktivira, ko povlečete drsnik</string>
   <!-- interaction.seekbar.livestreamDvrPatch -->
   <string name="morphe_livestream_dvr_title">Omogoči DVR za pretočni video</string>
-  <string name="morphe_livestream_dvr_summary">Omogoča iskanje na vseh prenosih v živo, tudi tistih, ki ga običajno omejujejo</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_user_dialog_message">To lahko povzroči nepričakovano vedenje pri iskanju v pretočnem prenosu, če funkcija \'Ponavljanje video posnetkov\' ni omogočena.</string>
+  <string name="morphe_livestream_dvr_summary">"Omogoča iskanje v vseh prenosih v živo, tudi tistih, ki ga običajno omejujejo
+
+Opomba: Če »Ponarejanje video tokov« ni omogočeno, lahko omogočenje tega povzroči nepričakovano vedenje pri iskanju prenosov v živo."</string>
+  <string name="morphe_expand_livestream_dvr_duration_title">Razširi trajanje DVR za pretočni prenos</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_summary">"Omogoča vam ponovni pregled prenosov v živo do 7 dni v preteklost
+
+Opomba: Če »Ponarejanje video tokov« ni omogočeno, lahko omogočenje tega povzroči nepričakovano vedenje pri iskanju prenosov v živo."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Omogoči drsenje za iskanje</string>
   <string name="morphe_slide_to_seek_summary">Omogoči drsanje za iskanje namesto predvajanja pri 2-kratni hitrosti, ko pritisnete in držite predvajalnik videa</string>
@@ -482,7 +485,7 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_hide_ask_button_title">Skrij gumb \'Vprašaj\'</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Skrij gumb \'Posnetek\'</string>
-  <string name="morphe_hide_clip_button_user_dialog_message">Ta funkcija skritja morda ne bo delovala za nekatere uporabniške račune.</string>
+  <string name="morphe_hide_clip_button_summary">To morda ne bo delovalo za nekatere uporabniške račune.</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shop_button_title">Skrij gumb za trgovino</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
@@ -548,7 +551,7 @@ Potrebno je vnesti 'piškotke za podnapise'"</string>
   <string name="morphe_show_settings_button_type_title">Akcija gumba Nastavitve</string>
   <string name="morphe_show_settings_button_type_summary">Ohrani vrstico za navigacijo vidno med pomikanjem</string>
   <string name="morphe_swap_create_with_notifications_button_title">Zamenjaj gumb Ustvari z gumbom Obvestila</string>
-  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Če se ta nastavitev ne začne uporabljati, poskusite preiti v način zasebnosti.</string>
+  <string name="morphe_swap_create_with_notifications_button_summary">Če sprememba te nastavitve ne ucinkuje, poskusite prekljuciti v incognito nacina.</string>
   <string name="morphe_hide_navigation_button_labels_title">Skrij oznake gumbov navigacije</string>
   <string name="morphe_hide_navigation_bar_title">Skrij navigacijsko vrstico</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"To popolnoma skrije navigacijsko vrstico, vključno z zavihtkom 'You'.
@@ -642,7 +645,6 @@ Za prikaz menija 'Zvočna pot' spremenite možnost 'Ponarejanje videoposnetkov' 
   <string name="morphe_ambient_mode_screen_summary">Upravljanje vidnosti ambientnega načina in omejitev porabe energije</string>
   <string name="morphe_bypass_ambient_mode_restrictions_title">Izogibajte se omejitvam načina okolice</string>
   <string name="morphe_bypass_ambient_mode_restrictions_summary">Omogoči ambientnemu načinu, da ostane aktiven v načinu varčevanja z baterijo</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Aktiviranje te funkcije lahko pripelje do slabše življenjske dobe baterije.</string>
   <string name="morphe_disable_ambient_mode_title">Onemogoči način Ambient</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Onemogočite način Ambient v polnem zaslonu</string>
   <!-- layout.hide.infocards.hideInfocardsPatch -->
@@ -707,11 +709,10 @@ Za prikaz menija 'Zvočna pot' spremenite možnost 'Ponarejanje videoposnetkov' 
   <string name="morphe_hide_shorts_navigation_bar_title">Skrij navigacijsko vrstico</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_hide_end_screen_suggested_video_title">Skrij predlagani video na koncu</string>
-  <string name="morphe_hide_end_screen_suggested_video_summary">Skrije namigovano video prevleko, ki se pojavi po koncu videoposnetka</string>
-  <string name="morphe_hide_end_screen_suggested_video_user_dialog_message">"Ta nastavitev velja samo, če je vključena možnost 'Avtopreigraj naslednjo videoposnetko'.
+  <string name="morphe_hide_end_screen_suggested_video_summary">"Skrije predlagano videoposnetje, ki se pojavi po koncu videoposnetka
 
-To lahko spremenite v YouTube:
-Nastavitve → Predvajanje (ali Avtopreigravanje) → Avtopreigraj naslednjo videoposnetko"</string>
+Ta nastavitev deluje samo, če je samodejno predvajanje izklopljeno. Lahko ga spremenite v YouTubu:
+Nastavitve → Predvajanje (ali Samodejno predvajanje) → Samodejno predvajanje naslednjega videoposnetka"</string>
   <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->
   <string name="morphe_hide_player_related_videos_title">Skrij povezane videoposnetke</string>
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
@@ -834,7 +835,6 @@ Nastavitve → Predvajanje (ali Avtopreigravanje) → Avtopreigraj naslednjo vid
   <string name="morphe_sb_general_api_url_summary">Naslov, ki ga SponsorBlock uporablja za klic strežnika</string>
   <string name="morphe_sb_channel_whitelist">Seznam dovoljenih kanalov</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock je onemogočen za kanale na seznamu dovoljenih</string>
-  <string name="morphe_sb_channel_whitelist_dialog_title">Seznam dovoljenih kanalov</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Trenutni kanal:</string>
   <string name="morphe_sb_channel_whitelist_add">Dodaj na belo listo</string>
   <string name="morphe_sb_channel_whitelist_remove">Odstrani</string>
@@ -1085,9 +1085,7 @@ Omejitev: Uporaba gumba za vrnitev v orodni vrstici morda ne bo delovala"</strin
   <string name="morphe_shorts_autoplay_background_summary">Samodejno napreduje k naslednjemu Shortu med predvajanjem v ozadju</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Onemogoči nadaljevanje predvajanja v mini predajalniku</string>
-  <string name="morphe_miniplayer_disable_resuming_summary">Preprečuje prikaz mini predajalnika za nadaljevanje ob zagonu aplikacije</string>
-  <string name="morphe_miniplayer_disable_resuming_user_dialog_message">"• \"Nadaljuj z gledanjem\" je funkcija YouTube Premium
-• Te nastavitve ne morejo vključiti te funkcije Premium"</string>
+  <string name="morphe_miniplayer_disable_resuming_summary">Onemogoči mini predvajalnik »Nadaljuj z gledanjem«, funkcijo YouTube Premium, ki se prikaže ob zagonu aplikacije</string>
   <string name="morphe_miniplayer_screen_title">Mini predvajalnik</string>
   <string name="morphe_miniplayer_screen_summary">Prilagodite videz in obnašanje minimiziranega predajalnika videa</string>
   <string name="morphe_miniplayer_type_title">Vrsta predvajalnika</string>
@@ -1254,11 +1252,6 @@ Omejitve:
 • Nekatere naprave ne morejo prisiliti AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Za uporabo te funkcije nastavite »Ponarejanje video tokov« na Android VR ali Android Studio</string>
-  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
-  <string name="morphe_expand_livestream_dvr_duration_title">Razširi trajanje DVR za pretočni prenos</string>
-  <string name="morphe_expand_livestream_dvr_duration_summary">Podaljšajte trajanje snemanja v živo do 7 dni</string>
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">To lahko povzroči nepričakovano vedenje, če funkcija \'Ponavljanje video posnetkov\' ni omogočena.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Pokaži napredno video meniji za kakovost</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->

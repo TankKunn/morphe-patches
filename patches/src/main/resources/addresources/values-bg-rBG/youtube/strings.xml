@@ -114,9 +114,7 @@ Second \"item\" text"</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_youtube_doodles_title">YouTube Doodles</string>
   <string name="morphe_hide_youtube_doodles_summary">Скрива сезонните и тематични анимации на логото на YouTube</string>
-  <string name="morphe_hide_youtube_doodles_user_dialog_message">"YouTube Doodles се показват няколко дни всяка година в различни части на света.
-
-Показването на YouTube Doodles може да попречи на показването на потребителски заглавки."</string>
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">Показването на Doodles от YouTube може да попречи на показването на персонализирани заглавки.</string>
   <string name="morphe_hide_channel_bar_title">Скриване на лентата на канала</string>
   <string name="morphe_hide_channel_watermark_title">Скриване на водния знак на канала</string>
   <string name="morphe_hide_crowdfunding_box_title">Дарителска кутия</string>
@@ -191,8 +189,7 @@ Second \"item\" text"</string>
   <string name="morphe_comments_screen_title">Коментари</string>
   <string name="morphe_comments_screen_summary">Изберете кои компоненти да се показват в секцията с коментари</string>
   <string name="morphe_hide_comments_carousel_title">Активиране на филтър за кръгли прегледи на коментари</string>
-  <string name="morphe_hide_comments_carousel_user_dialog_message">"Забележка:
-• Уверете се, че въвеждате точното име на елемента на карусела (напр. Попитай, Харесай това видео, Слушай в YouTube Music и т.н.).
+  <string name="morphe_hide_comments_carousel_summary">"• Уверете се, че въвеждате точното име на елемента на карусела (напр. Попитай, Харесай това видео, Слушай в YouTube Music и т.н.)
 • Скриването на елементи от карусела може да има непредвидени странични ефекти.
 • Ако всички елементи от карусела са скрити, цялата секция с коментари също ще бъде скрита."</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Активиране на филтър за кръгли прегледи на коментари</string>
@@ -222,15 +219,15 @@ Second \"item\" text"</string>
   <string name="morphe_custom_filter_strings_summary">Списък с низ от пътя на компонента за филтриране, разделени с нови редове</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">Списък на компонентите за филтри е невалиден: %s</string>
   <string name="morphe_hide_view_count_title">Добавете кавички за да използвате ключовото: %s</string>
-  <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Ограничения:
-• Кратък списък, страници с канали и резултати от търсенето все още могат да показват броя на преглежданията.
-• Тази функция не работи с автомобилен режим на оформление."</string>
+  <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
+  <string name="morphe_hide_view_count_summary">"Ограничения:
+• Рафтове с Shorts, страници на канали и резултати от търсене все още могат да показват броя на гледанията
+• Тази функция не работи с автомобилен режим."</string>
   <string name="morphe_hide_upload_time_title">Скрийте информационни карти</string>
-  <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Ограничения:
-• Късите клипове, страниците на каналите и резултатите от търсенето все още могат да показват времето на качване.
-• Тази функция не работи с автомобилен режим на оформление."</string>
+  <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
+  <string name="morphe_hide_upload_time_summary">"Ограничения:
+• Къси рафтове, страници на канали и резултати от търсене все още може да показват времето на качване
+• Тази функция не работи с автомобилен изглед"</string>
   <string name="morphe_hide_keyword_content_screen_title">Филтър по ключова дума</string>
   <string name="morphe_hide_keyword_content_screen_summary">Изберете конкретни думи или фрази за скриване на видеа в емисиите и търсенето</string>
   <string name="morphe_hide_keyword_content_home_title">Скрийте видеоклипове в домакинството по ключови</string>
@@ -283,7 +280,7 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_url_button_timestamp_summary">Обръща действията на докосване и задържане на бутона \"Копиране на URL адреса на видеото\"</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Скриване на диалог за възраст</string>
-  <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Това не обмишлява възрастните ограничения. То само ги приема автоматично.</string>
+  <string name="morphe_remove_viewer_discretion_dialog_summary">Това не заобикаля възрастовите ограничения. Просто ги приема автоматично</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Изключване на попъпа \'Въведете се в ТВ\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
@@ -385,9 +382,15 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Деактивира прецизния режим на търсене, който се активира при издърпване на лентата за търсене</string>
   <!-- interaction.seekbar.livestreamDvrPatch -->
   <string name="morphe_livestream_dvr_title">Активиране на livestream DVR</string>
-  <string name="morphe_livestream_dvr_summary">Задайте необходимото разстояние на плъзгане, преди да се задейства настройка</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_user_dialog_message">Активирането на тази опция може да доведе до неочаквано търсене на живо предаване, ако не е активирана опцията \'Имитиране на видео потоци\'.</string>
+  <string name="morphe_livestream_dvr_summary">"Позволява превъртане на всички предавания на живо, дори на тези, които обикновено го ограничават
+
+Забележка: Ако „Подменяне на видео потоци“ не е активирано, активирането на тази опция може да доведе до неочаквано поведение при превъртане на предаване на живо"</string>
+  <string name="morphe_expand_livestream_dvr_duration_title">Разширете продължителността на livestream DVR</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_summary">"Позволява ви да връщате предавания на живо до 7 дни назад
+
+Забележка: Ако „Подменяне на видео потоци“ не е активирано, активирането на тази опция може да доведе до неочаквано поведение при превъртане на предаване на живо"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Зареждаването ще има твърд фон</string>
   <string name="morphe_slide_to_seek_summary">Активира плъзгане за търсене вместо възпроизвеждане със скорост 2x при натискане и задържане на видео плейъра</string>
@@ -482,7 +485,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_button_title">Активиране на бисквитки за надписи</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Необходими са за правилното функциониране на автоматичния превод на надписи</string>
-  <string name="morphe_hide_clip_button_user_dialog_message">Тази скриване функция може да не работи за някои потребителски акаунти.</string>
+  <string name="morphe_hide_clip_button_summary">Възможно е това да не работи за някои потребителски акаунти</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shop_button_title">Бисквитки, използвани за удостоверяване на заявки за Timed Text API за надписи</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
@@ -548,7 +551,7 @@ Second \"item\" text"</string>
   <string name="morphe_show_settings_button_type_title">Действие на бутона за Настройки</string>
   <string name="morphe_show_settings_button_type_summary">Скрий менюто „Скорост на възпроизвеждане“</string>
   <string name="morphe_swap_create_with_notifications_button_title">Разменя бутона \"Създаване\" с бутона \"Известия\"</string>
-  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Ако промяната на това настройка не заработи, опитайте да превключите в Инкогнито режим.</string>
+  <string name="morphe_swap_create_with_notifications_button_summary">Ако промяната на тази настройка не влезе в сила, опитайте да превключите в режим на инкогнито</string>
   <string name="morphe_hide_navigation_button_labels_title">Етикетите са скрити</string>
   <string name="morphe_hide_navigation_bar_title">Скриване на лентата за навигация</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Това напълно скрива навигационната лента, включително раздела 'You'.
@@ -642,7 +645,6 @@ Second \"item\" text"</string>
   <string name="morphe_ambient_mode_screen_summary">Управлявайте видимостта и ограниченията за енергоспестяване в режим на околната среда</string>
   <string name="morphe_bypass_ambient_mode_restrictions_title">Избягване на ограниченията за режим на окружение</string>
   <string name="morphe_bypass_ambient_mode_restrictions_summary">Позволява на режим на околната среда да остане активен в режим на пестене на батерия</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Активирането на това може да причини по-лоша батарейка.</string>
   <string name="morphe_disable_ambient_mode_title">Изключете режима Ambient</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Дублирането на видеа се показва</string>
   <!-- layout.hide.infocards.hideInfocardsPatch -->
@@ -707,11 +709,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shorts_navigation_bar_title">Дублирането на видеа е скрито</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_hide_end_screen_suggested_video_title">Дублирането на видеа е скрито</string>
-  <string name="morphe_hide_end_screen_suggested_video_summary">Скрива предложеното видео наслагване, което се появява след края на видеото</string>
-  <string name="morphe_hide_end_screen_suggested_video_user_dialog_message">"Това настройка работи само ако 'Автоматично следващо видео' е изключено.
+  <string name="morphe_hide_end_screen_suggested_video_summary">"Скрива наслагването с предложени видеоклипове, което се появява след края на видеоклипа
 
-Можете да промените това в YouTube:
-Настройки → Воспроизведение (или Автоматично) → Автоматично следващо видео"</string>
+Тази настройка работи само ако автоматичното пускане е изключено. Можете да го промените в YouTube:
+Настройки → Възпроизвеждане (или Автоматично пускане) → Автоматично пускане на следващото видео"</string>
   <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->
   <string name="morphe_hide_player_related_videos_title">Скриване в сродни видеоклипове</string>
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
@@ -834,7 +835,6 @@ Second \"item\" text"</string>
   <string name="morphe_sb_general_api_url_summary">Адресът, който SponsorBlock използва за извършване на повиквания към сървъра</string>
   <string name="morphe_sb_channel_whitelist">Бял списък на канали</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock е деактивиран за каналите в белия списък</string>
-  <string name="morphe_sb_channel_whitelist_dialog_title">Бял списък на канали</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Текущ канал:</string>
   <string name="morphe_sb_channel_whitelist_add">Добавяне към списъка с разрешени канали</string>
   <string name="morphe_sb_channel_whitelist_remove">Премахване</string>
@@ -1085,9 +1085,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_autoplay_background_summary">Автоматично преминава към следващото Short по време на възпроизвеждане във фонов режим</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Изключване на продължаването на мини-плеъра</string>
-  <string name="morphe_miniplayer_disable_resuming_summary">Предотвратява появата на минииграч „Продължи гледането“ при стартиране на приложението</string>
-  <string name="morphe_miniplayer_disable_resuming_user_dialog_message">"• „Продължаване на гледането“ е функция на YouTube Premium
-• Тази настройка не може да активира принудително тази Premium функция"</string>
+  <string name="morphe_miniplayer_disable_resuming_summary">Деактивира мини плейъра „Продължи да гледаш“, функция на YouTube Premium, която се появява при стартиране на приложението</string>
   <string name="morphe_miniplayer_screen_title">Миниплеер</string>
   <string name="morphe_miniplayer_screen_summary">Персонализирайте външния вид и поведението на минимизирания видео плейър</string>
   <string name="morphe_miniplayer_type_title">Тип на миниплеера</string>
@@ -1254,11 +1252,6 @@ Second \"item\" text"</string>
 • Някои устройства не могат да принудят AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">За да използвате тази функция, задайте „Заблуда на видео потоци“ на Android VR или Android Studio</string>
-  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
-  <string name="morphe_expand_livestream_dvr_duration_title">Разширете продължителността на livestream DVR</string>
-  <string name="morphe_expand_livestream_dvr_duration_summary">Позволява ви да превъртате на живо излъчвания до 7 дни назад</string>
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Тази настройка може да доведе до неочаквано поведение, ако \'Имитиране на видео потоци\' не е активирано.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Непрозрачност на миниплеера трябва да бъде между 0-100</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->

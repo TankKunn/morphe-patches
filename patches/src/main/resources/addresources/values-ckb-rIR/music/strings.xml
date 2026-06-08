@@ -100,7 +100,7 @@ Second \"item\" text"</string>
   <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">شریتی گەشتکردن</string>
-  <string name="morphe_music_navigation_bar_screen_summary">Choose which buttons appear in the bottom navigation bar</string>
+  <string name="morphe_music_navigation_bar_screen_summary">هەڵبژێرە کام دوگمەیە دەردەکەوێت لە شریتی گەشتکردن</string>
   <!-- 'Home' should be translated using the same localized wording YouTube Music displays for the tab. -->
   <string name="morphe_music_hide_navigation_bar_home_button_title">دوگمەی ماڵەوە بشارەوە</string>
   <!-- 'Samples' should be translated using the same localized wording YouTube Music displays for the tab. -->

@@ -104,8 +104,8 @@ Second \"item\" text"</string>
   <string name="morphe_music_enable_forced_miniplayer_title">Увімкнути примусово мініплеєр</string>
   <string name="morphe_music_enable_forced_miniplayer_summary">Запобігає автоматичному розгортанню плеєра на весь екран при запуску нового треку</string>
   <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
-  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Увімкнути жест для закриття міні-плеєра</string>
-  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Дозволяє закрити міні-плеєр, свайпнувши вниз по ньому</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Увімкнути закриття мініплеєра свайпом</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Дозволяє закрити мініплеєр, провівши по ньому вниз</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Панель навігації</string>
   <string name="morphe_music_navigation_bar_screen_summary">Виберіть кнопки, що будуть показуватися на нижній навігаційній панелі</string>

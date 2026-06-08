@@ -107,9 +107,6 @@ Dəyişikliklər ehtiva edir:
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <string name="morphe_hide_youtube_doodles_title">YouTube Doodle-ları gizlət</string>
   <string name="morphe_hide_youtube_doodles_summary">YouTube simvolunda mövsümi və hadisə əsaslı animasiyaları gizlədir</string>
-  <string name="morphe_hide_youtube_doodles_user_dialog_message">"YouTube Doodles hər il dünyanın müxtəlif yerlərində bir neçə gün görünür.
-
-YouTube Doodles görünməsi xüsusi sərlövhələrin göstərilməsinə mane ola bilər."</string>
   <string name="morphe_hide_channel_bar_title">Kanal çubuğunu gizlət</string>
   <string name="morphe_hide_channel_watermark_title">Kanal filiqranını gizlət</string>
   <string name="morphe_hide_crowdfunding_box_title">İanə qutusunu gizlət</string>
@@ -182,10 +179,6 @@ YouTube Doodles görünməsi xüsusi sərlövhələrin göstərilməsinə mane o
   <string name="morphe_comments_screen_title">Şərhlər</string>
   <string name="morphe_comments_screen_summary">Şərhlər bölməsində hansı elementlər görünür seç</string>
   <string name="morphe_hide_comments_carousel_title">Şərhləri sürüşdürmə filtrini aktivləşdir</string>
-  <string name="morphe_hide_comments_carousel_user_dialog_message">"Qeyd:
-• Sürüşdürmə elementinin dəqiq adını qeyd etdiyinə əmin ol (məsələn, Soruş, Bu videonu hayp et, YouTube Music-də dinlə və s.).
-• Sürüşdürmə elementlərin gizlətmə gözlənilməz yan təsirlərə malik olmalıdır.
-• Bütün sürüşdürmə elementləri gizlədilibsə, bütün şərhlər bölməsi də gizlədiləcək."</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Şərhləri sürüşdürmə filtri</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">Yeni cərgələrlə ayrılan, çeşidləmək üçün şərhləri sürüşdürmə adlarını qeyd et</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Sİ söhbət xülasəsini gizlət</string>
@@ -212,15 +205,9 @@ YouTube Doodles görünməsi xüsusi sərlövhələrin göstərilməsinə mane o
   <string name="morphe_custom_filter_strings_summary">Yeni cərgələrlə ayrılan, filtr üçün element yol qurucusu sətirlərinin siyahısı</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">Etibarsız fərdi filtr: %s</string>
   <string name="morphe_hide_view_count_title">Baxış sayını gizlət</string>
-  <!-- Translations should match the language used in 'morphe_hide_upload_time_user_dialog_message'. -->
-  <string name="morphe_hide_view_count_user_dialog_message">"Məhdudiyyətlər:
-• Shorts cərgələri, kanal səhifələri və axtarış nəticələri baxış sayını yenə də göstərə bilər.
-• Bu xüsusiyyət avtomobil tərtibatı ilə işləmir."</string>
+  <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_upload_time_title">Yüklənilmə vaxtını gizlət</string>
-  <!-- Translations should match the language used in 'morphe_hide_view_count_user_dialog_message'. -->
-  <string name="morphe_hide_upload_time_user_dialog_message">"Məhdudiyyətlər:
-• Shorts cərgələri, kanal səhifələri və axtarış nəticələri yüklənmə vaxtlarını hələ də göstərə bilər.
-• Bu xüsusiyyət avtomobil tərtibatı ilə işləmir."</string>
+  <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <string name="morphe_hide_keyword_content_screen_title">Açar söz çeşidləyici</string>
   <string name="morphe_hide_keyword_content_screen_summary">Videoları axınlarda və axtarışda gizlətmək üçün xüsusi sözlər və ya ifadələr seç</string>
   <string name="morphe_hide_keyword_content_home_title">Ev videolarını açar sözlərə görə gizlət</string>
@@ -265,7 +252,7 @@ Məhdudiyyətlər
   <string name="morphe_copy_video_url_button_summary">Video URL-ni köçürmək üçün toxun, vaxt möhürü ilə köçürmək üçün toxun və saxla</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">İzləyici mülahizə dialoqun sil</string>
-  <string name="morphe_remove_viewer_discretion_dialog_user_dialog_message">Bu, yaş məhdudiyyətini ötürmür. Sadəcə birbaşa qəbul edir.</string>
+  <string name="morphe_remove_viewer_discretion_dialog_summary">Bu, yaş məhdudiyyətini ötürmür. Sadəcə birbaşa qəbul edir</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">TV ani görüntüsü girişin qapat</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
@@ -324,9 +311,8 @@ Paket adının düzgün olduğun yoxla və tətbiqi quraşdırın"</string>
   <string name="morphe_disable_precise_seeking_gesture_title">Dəqiq irəli-geri çəkmə jestini qapat</string>
   <!-- interaction.seekbar.livestreamDvrPatch -->
   <string name="morphe_livestream_dvr_title">Canlı yayım DVR-ni aktivləşdir</string>
-  <string name="morphe_livestream_dvr_summary">Bütün canlı yayımlarda, hətta adətən məhdudiyyət qoyulanları belə irəli-geri çəkməyə icazə verir</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_user_dialog_message">\"Video yayımları saxtalaşdır\" işlək deyilsə, bunu aktivləşdirmə gözlənilməz canlı yayım axtarış hərəkətinə səbəb ola bilər.</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Çevirmək üçün sürüşdürməni aktivləşdir</string>
   <!-- interaction.seekbar.enableTapToSeekPatch -->
@@ -403,7 +389,6 @@ Paket adının düzgün olduğun yoxla və tətbiqi quraşdırın"</string>
   <string name="morphe_hide_ask_button_title">Soruş düyməsini gizlət</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Kəsmə düyməsini gizlət</string>
-  <string name="morphe_hide_clip_button_user_dialog_message">Bu gizlətmə funksiyası bəzi istifadəçi hesabları üçün işləməyə bilər.</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shop_button_title">Mağaza düyməsini gizlət</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
@@ -461,7 +446,6 @@ Paket adının düzgün olduğun yoxla və tətbiqi quraşdırın"</string>
   <string name="morphe_show_settings_button_index_title">Ayarlar düyməsi mövqeyi</string>
   <string name="morphe_show_settings_button_type_title">Ayarlar düyməsi fəaliyyəti</string>
   <string name="morphe_show_settings_button_type_summary">İşlək olduqda Morphe tənzimləmələrin, qapadılanda YouTube tənzimləmələrin açır</string>
-  <string name="morphe_swap_create_with_notifications_button_user_dialog_message">Əgər bu parametri dəyişdirmə effektiv deyil olsa, Gizli Modda sınamaq cəhd edin.</string>
   <string name="morphe_hide_navigation_button_labels_title">Fəaliyyət düymə etiketlərini gizlət</string>
   <string name="morphe_hide_navigation_bar_title">Fəaliyyət çubuğunu gizlət</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Bu, \"Siz\" tabeli də daxil olmaqla fəaliyyət cərgəsin tamamilə gizlədir.
@@ -555,7 +539,6 @@ Tənzimləmələrə daxil olmaq üçün Ümumi → Alətlər Cərgəsi→ Tənzi
   <string name="morphe_ambient_mode_screen_summary">Ambient rejimi görünüşün və enerji məhdudiyyətlərin idarə et</string>
   <string name="morphe_bypass_ambient_mode_restrictions_title">Ambient rejimi məhdudiyyətlərini yan keç</string>
   <string name="morphe_bypass_ambient_mode_restrictions_summary">Ambient rejimini batareya qənaətçisi rejimində işlək saxlamağa icazə verir</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_user_dialog_message">Bunu aktivləşdirmə daha pis batareya ömrünə səbəb ola bilər.</string>
   <string name="morphe_disable_ambient_mode_title">Ambient rejimini qapat</string>
   <string name="morphe_disable_fullscreen_ambient_mode_title">Tam ekranda Ambient rejimini qapat</string>
   <!-- layout.hide.infocards.hideInfocardsPatch -->
@@ -619,10 +602,6 @@ Tənzimləmələrə daxil olmaq üçün Ümumi → Alətlər Cərgəsi→ Tənzi
   <string name="morphe_hide_shorts_navigation_bar_title">Fəaliyyət çubuğunu gizlət</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_hide_end_screen_suggested_video_title">Son ekran bildirilən videonu gizlət</string>
-  <string name="morphe_hide_end_screen_suggested_video_user_dialog_message">"Bu tənzimləmə yalnız \"Növbəti videonu avtomatik oxudun\" bağladılsa işləyir.
-
-Bunu YouTube-da dəyişə bilərsiniz:
-Ayarlar → Oxunuş (yaxud Avtomatik oxutma) → Növbəti videonu avtomatik oxudun"</string>
   <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->
   <string name="morphe_hide_player_related_videos_title">Əlaqəli videoları gizlət</string>
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
@@ -1016,8 +995,6 @@ Məhdudiyyətlər:
 • Video oynatma VP9 və ya AV1-dən daha çox internet məlumatı işlədəcək
 • HDR videoları AVC istifadə etməyəcək
 • Bəzi cihazlar AVC-ni zorlaya bilməz"</string>
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Qabaqcıl video keyfiyyət siyahısın göstər</string>
