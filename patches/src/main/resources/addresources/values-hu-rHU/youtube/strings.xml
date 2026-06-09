@@ -271,13 +271,13 @@ Korlátok:
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Videóhirdetések elrejtése</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
-  <!-- interaction.copyvideourlbutton.copyVideoURLButtonPatch -->
-  <string name="morphe_share_copy_url_button_success">URL a vágólapra másolva</string>
-  <string name="morphe_share_copy_url_button_timestamp_success">Az időbélyeggel ellátott URL másolva a vágólapra</string>
-  <string name="morphe_copy_video_url_button_title">Videó URL-másolási gomb megjelenítése</string>
-  <string name="morphe_copy_video_url_button_summary">Koppintson a videó URL-jének másolásához, nyomja meg és tartsa lenyomva az időbélyeggel való másoláshoz</string>
-  <string name="morphe_copy_video_url_button_timestamp_title">Alapértelmezés szerint másolja a videó URL-jét az időbélyeggel</string>
-  <string name="morphe_copy_video_url_button_timestamp_summary">Megfordítja a „Videó URL másolása” gomb megnyomásának és hosszan tartó megnyomásának funkcióját</string>
+  <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
+  <string name="morphe_share_copy_link_button_success">Link másolva a vágólapra</string>
+  <string name="morphe_share_copy_link_with_timestamp_button_success">A videó időbélyeggel ellátott linkje másolva a vágólapra</string>
+  <string name="morphe_copy_video_link_button_title">Videó URL másolása gomb megjelenítése</string>
+  <string name="morphe_copy_video_link_button_summary">Érintse meg a videolink másolásához, hosszan nyomva tartva az időbélyeggel együtt</string>
+  <string name="morphe_copy_video_link_with_timestamp_button_title">Alapértelmezés szerint másolja a videó URL-jét az időbélyeggel</string>
+  <string name="morphe_copy_video_link_with_timestamp_button_summary">Megfordítja a \"Videolink másolása\" gomb megérintésének és hosszan nyomva tartásának funkcióit</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Távolítsa el a nézői diszkréciós párbeszédpanelt</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Ez nem kerüli meg a korhatárt, csak automatikusan elfogadja</string>
@@ -1103,7 +1103,6 @@ Ha később kikapcsolja, akkor ajánlott az alkalmazás adatait törölni, hogy 
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Megakadályozza a minilejátszó vízszintes elhúzásával történő bezárását</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Fedőgomb elrejtése</string>
   <string name="morphe_miniplayer_hide_subtext_title">Alszövegek elrejtése</string>
-  <string name="morphe_miniplayer_hide_rewind_forward_title">Az előre és vissza ugrás gombok elrejtése</string>
   <string name="morphe_miniplayer_width_dip_title">Alapértelmezett méret</string>
   <string name="morphe_miniplayer_width_dip_summary">Beállítja a kezdeti képernyőméretet, pixelben</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">A képpont méretének %1$s és %2$s között kell lennie</string>
@@ -1191,9 +1190,9 @@ Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálóna
   <string name="morphe_disable_notification_media_seekbar_summary">Megakadályozza a keresősáv áthúzását a lezárt képernyőn és az értesítési panelen</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Ha nemrég módosította a fiókja bejelentkezési adatait, távolítsa el, majd telepítse újra a MicroG-t.</string>
-  <!-- misc.links.bypassURLRedirectsPatch -->
-  <string name="morphe_bypass_url_redirects_title">URL átirányítások kikerülése</string>
-  <string name="morphe_bypass_url_redirects_summary">A kísérő URL-t közvetlenül megnyitja, megkerülve a követési linket (youtube.com/redirect)</string>
+  <!-- misc.links.bypassLinkRedirectsPatch -->
+  <string name="morphe_bypass_link_redirects_title">A linkek átirányításainak megkerülése</string>
+  <string name="morphe_bypass_link_redirects_summary">Közvetlenül nyitja meg az eredeti linket, kihagyva a követő linket (youtube.com/redirect)</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Hivatkozások megnyitása a böngészőben</string>
   <string name="morphe_external_browser_summary">A linkeket külső böngészőben nyitja meg az alkalmazáson belüli böngésző helyett</string>
@@ -1237,6 +1236,8 @@ Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálóna
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Értesítést jelenít meg, amikor egy új alapértelmezett lejátszási sebesség kerül mentésre</string>
   <string name="morphe_playback_speed_default_title">Alapértelmezett lejátszási sebesség</string>
   <string name="morphe_remember_playback_speed_toast">A lejátszási sebesség alapértelmezett értékre módosítva: %s</string>
+  <string name="morphe_disable_playback_speed_music_title">Használj normál sebességet a zenéhez</string>
+  <string name="morphe_disable_playback_speed_music_summary">A zenei videók mindig 1,0-s sebességgel legyenek lejátszva</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Az HDR videó letiltása</string>
   <string name="morphe_force_avc_codec_title">A funkció használatához állítsa be a \'Videóstreamek hamisítását\' Android VR-re vagy Android Studióra</string>

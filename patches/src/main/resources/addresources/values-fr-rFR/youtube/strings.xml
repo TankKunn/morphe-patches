@@ -271,13 +271,13 @@ Limitations :
   <!-- ad.video.videoAdsPatch -->
   <string name="morphe_hide_video_ads_title">Masquer les publicités vidéo</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
-  <!-- interaction.copyvideourlbutton.copyVideoURLButtonPatch -->
-  <string name="morphe_share_copy_url_button_success">URL copiée dans le presse-papiers</string>
-  <string name="morphe_share_copy_url_button_timestamp_success">URL avec horodatage copiée dans le presse-papiers</string>
-  <string name="morphe_copy_video_url_button_title">Afficher un bouton \'Copier l\'URL de la vidéo\'</string>
-  <string name="morphe_copy_video_url_button_summary">Appuyez pour copier l’URL de la vidéo, appuyez longuement pour copier avec l’horodatage</string>
-  <string name="morphe_copy_video_url_button_timestamp_title">Copier l’horodatage par défaut</string>
-  <string name="morphe_copy_video_url_button_timestamp_summary">Inverse les actions d’appui et d’appui long du bouton \'Copier l’URL de la vidéo\'</string>
+  <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
+  <string name="morphe_share_copy_link_button_success">Lien copié dans le presse-papiers</string>
+  <string name="morphe_share_copy_link_with_timestamp_button_success">Lien avec horodatage copié dans le presse-papiers</string>
+  <string name="morphe_copy_video_link_button_title">Afficher un bouton \'Copier le lien de la vidéo\'</string>
+  <string name="morphe_copy_video_link_button_summary">Appuyez pour copier le lien de la vidéo, appuyez longuement pour copier avec l’horodatage</string>
+  <string name="morphe_copy_video_link_with_timestamp_button_title">Copier l’horodatage par défaut</string>
+  <string name="morphe_copy_video_link_with_timestamp_button_summary">Inverse les actions d’appui et d’appui long du bouton \'Copier le lien de la vidéo\'</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Supprimer le message \'Confirmer votre âge\'</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Cela ne contourne pas la restriction d’âge. Elle est simplement acceptée automatiquement</string>
@@ -1107,7 +1107,6 @@ Limitation : L'utilisation du bouton retour dans la barre d’outils peut ne pas
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Empêche la fermeture du mini-lecteur en le faisant glisser horizontalement hors de l\'écran</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Masquer l\'overlay des boutons</string>
   <string name="morphe_miniplayer_hide_subtext_title">Masquer les sous-textes</string>
-  <string name="morphe_miniplayer_hide_rewind_forward_title">Masquer les boutons \'Avancer\' et \'Reculer\'</string>
   <string name="morphe_miniplayer_width_dip_title">Taille par défaut</string>
   <string name="morphe_miniplayer_width_dip_summary">Définir la taille initiale à l\'écran, en pixels</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">La taille en pixels doit être comprise entre %1$s et %2$s</string>
@@ -1195,9 +1194,9 @@ Appuyez ici pour en savoir plus sur DeArrow"</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Empêche le déplacement de la barre de progression sur l’écran de verrouillage et le panneau de notifications</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Si vous avez récemment modifié les identifiants de connexion de votre compte, désinstallez et réinstallez MicroG.</string>
-  <!-- misc.links.bypassURLRedirectsPatch -->
-  <string name="morphe_bypass_url_redirects_title">Contourner les redirections d\'URL</string>
-  <string name="morphe_bypass_url_redirects_summary">Ouvre directement l’URL d’origine, en contournant le lien de suivi (youtube.com/redirect)</string>
+  <!-- misc.links.bypassLinkRedirectsPatch -->
+  <string name="morphe_bypass_link_redirects_title">Contourner les redirections de liens</string>
+  <string name="morphe_bypass_link_redirects_summary">Ouvre directement le lien d’origine, en contournant le lien de suivi (youtube.com/redirect)</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Ouvrir les liens dans le navigateur</string>
   <string name="morphe_external_browser_summary">Ouvre les liens dans un navigateur externe au lieu du navigateur intégré à l’application</string>
@@ -1241,6 +1240,8 @@ Appuyez ici pour en savoir plus sur DeArrow"</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Affiche une notification lorsqu’une nouvelle vitesse de lecture par défaut est enregistrée</string>
   <string name="morphe_playback_speed_default_title">Vitesse de lecture par défaut</string>
   <string name="morphe_remember_playback_speed_toast">Vitesse de lecture par défaut modifiée en : %s</string>
+  <string name="morphe_disable_playback_speed_music_title">Utiliser la vitesse normale pour la musique</string>
+  <string name="morphe_disable_playback_speed_music_summary">Toujours lire les clips musicaux à une vitesse de 1,0×</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Désactiver les vidéos HDR</string>
   <string name="morphe_force_avc_codec_title">Forcer le codec AVC (H.264)</string>
