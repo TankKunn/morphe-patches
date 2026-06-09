@@ -1,3 +1,14 @@
+## [1.31.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.9...v1.31.0-dev.10) (2026-06-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Theme:** Light color theme is not applied ([#1689](https://github.com/MorpheApp/morphe-patches/issues/1689)) ([5925a8e](https://github.com/MorpheApp/morphe-patches/commit/5925a8eb84c2c77903ffba5151730f61c38cd899))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add path `&` syntax to custom filters ([#1693](https://github.com/MorpheApp/morphe-patches/issues/1693)) ([2ab0366](https://github.com/MorpheApp/morphe-patches/commit/2ab0366c8ae9dc6de3f361ed5a5d7ce446b4e8cd))
+* **YouTube - Playback speed:** Add `Disable playback speed for music` setting ([#1691](https://github.com/MorpheApp/morphe-patches/issues/1691)) ([81c8f50](https://github.com/MorpheApp/morphe-patches/commit/81c8f50f408750e0d8434310d786c1e5fab59872))
+
 ## [1.31.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.8...v1.31.0-dev.9) (2026-06-08)
 
 ### 🐛 Bug Fixes
