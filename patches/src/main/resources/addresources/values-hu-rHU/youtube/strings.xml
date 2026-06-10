@@ -131,6 +131,7 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_medical_panels_title">Egészségügyi információs panelek elrejtése</string>
   <string name="morphe_hide_snackbar_title">Snack bár elrejtése</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Csatorna-irányelvek elrejtése</string>
+  <string name="morphe_hide_sync_button_title">„Szinkronizálás videóval” gomb elrejtése</string>
   <string name="morphe_hide_timed_reactions_title">Időzített reakciók elrejtése</string>
   <string name="morphe_hide_timed_reactions_summary">Kikapcsolja az emojikkal való reagálást a kommenteknél és az élő chaten</string>
   <string name="morphe_hide_video_title_title">Videócímek elrejtése</string>

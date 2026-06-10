@@ -131,6 +131,7 @@ Wijzigingen zijn:
   <string name="morphe_hide_medical_panels_title">Medische panelen verbergen</string>
   <string name="morphe_hide_snackbar_title">Verberg snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Richtlijnen voor abonnees verbergen</string>
+  <string name="morphe_hide_sync_button_title">Verberg knop \'Synchroniseren met video\'</string>
   <string name="morphe_hide_timed_reactions_title">Verberg getimede reacties</string>
   <string name="morphe_hide_timed_reactions_summary">Verbergt de functie waarmee gebruikers kunnen reageren met emoji\'s in de commentaarsectie en livechat</string>
   <string name="morphe_hide_video_title_title">Verberg de videotitel</string>

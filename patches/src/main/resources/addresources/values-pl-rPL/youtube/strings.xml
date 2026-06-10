@@ -131,6 +131,7 @@ Zmiany obejmują:
   <string name="morphe_hide_medical_panels_title">Ukryj panele medyczne</string>
   <string name="morphe_hide_snackbar_title">Ukryj dolne komunikaty</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Ukryj wytyczne dla subskrybentów</string>
+  <string name="morphe_hide_sync_button_title">Ukryj przycisk \"Zsynchronizuj z filmem\"</string>
   <string name="morphe_hide_timed_reactions_title">Ukryj reakcje czasowe</string>
   <string name="morphe_hide_timed_reactions_summary">Ukrywa funkcję umożliwiającą reagowanie emotikonami w sekcji komentarzy i na czacie na żywo</string>
   <string name="morphe_hide_video_title_title">Ukryj tytuł filmu</string>

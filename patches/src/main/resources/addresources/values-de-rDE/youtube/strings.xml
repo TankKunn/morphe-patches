@@ -131,6 +131,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_medical_panels_title">Verstecke medizinische Panels</string>
   <string name="morphe_hide_snackbar_title">Snackbar ausblenden</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Abonnentenrichtlinien ausblenden</string>
+  <string name="morphe_hide_sync_button_title">\"Synchronisieren mit Video\" Knopf ausblenden</string>
   <string name="morphe_hide_timed_reactions_title">Zeitliche Reaktionen ausblenden</string>
   <string name="morphe_hide_timed_reactions_summary">Verbirgt die Funktion, mit der Nutzer mit Emojis im Kommentarbereich und im Live-Chat reagieren können</string>
   <string name="morphe_hide_video_title_title">Videotitel ausblenden</string>

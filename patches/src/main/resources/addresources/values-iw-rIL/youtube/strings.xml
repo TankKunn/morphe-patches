@@ -131,6 +131,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_medical_panels_title">הסתר לוחות רפואיים</string>
   <string name="morphe_hide_snackbar_title">הסתר סנאקבר</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">הסתר את הנחיות המנויים</string>
+  <string name="morphe_hide_sync_button_title">הסתר כפתור \'סנכרן לסרטון\'</string>
   <string name="morphe_hide_timed_reactions_title">הסתר תגובות באמוג\'י מתוזמנות</string>
   <string name="morphe_hide_timed_reactions_summary">מסתיר את התכונה המאפשרת למשתמשים להגיב באמצעות אימוג\'ים בסעיף התגובות ובצ\'אט החי</string>
   <string name="morphe_hide_video_title_title">הסתר כותרת סרטון</string>

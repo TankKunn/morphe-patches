@@ -131,6 +131,7 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_medical_panels_title">Nascondi i pannelli medici</string>
   <string name="morphe_hide_snackbar_title">Nascondi snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Nascondi le linee guida per gli iscritti</string>
+  <string name="morphe_hide_sync_button_title">Nascondi il pulsante \'Sincronizza con video\'</string>
   <string name="morphe_hide_timed_reactions_title">Nascondi le reazioni a tempo</string>
   <string name="morphe_hide_timed_reactions_summary">Nasconde la funzionalità che consente agli utenti di reagire con emoji nella sezione commenti e nella chat live</string>
   <string name="morphe_hide_video_title_title">Nascondi il titolo del video</string>

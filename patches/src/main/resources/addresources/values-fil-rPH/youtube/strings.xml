@@ -131,6 +131,7 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_medical_panels_title">Itago ang mga panel ng medikal</string>
   <string name="morphe_hide_snackbar_title">Itago ang snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Itago ang mga alituntunin ng mga subscriber</string>
+  <string name="morphe_hide_sync_button_title">Itago ang button na \'I-sync sa video\'</string>
   <string name="morphe_hide_timed_reactions_title">Itago ang mga nakatakdang reaksyon</string>
   <string name="morphe_hide_timed_reactions_summary">Itinatago ang feature na nagbibigay-daan sa mga user na mag-react gamit ang mga emoji sa seksyon ng mga komento at live chat</string>
   <string name="morphe_hide_video_title_title">Itago ang pamagat ng video</string>

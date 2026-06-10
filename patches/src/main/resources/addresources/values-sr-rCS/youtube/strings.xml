@@ -131,6 +131,7 @@ Promene uključuju:
   <string name="morphe_hide_medical_panels_title">Sakrij okna sa medicinskim informacijama</string>
   <string name="morphe_hide_snackbar_title">Sakrij notifikaciju</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Sakrij smernice pratilaca</string>
+  <string name="morphe_hide_sync_button_title">Sakrij dugme „Sinhronizuj sa videom“</string>
   <string name="morphe_hide_timed_reactions_title">Sakrij vremenske reakcije</string>
   <string name="morphe_hide_timed_reactions_summary">Sakriva funkciju koja omogućava korisnicima da reaguju emojijima u odeljku za komentare i chatu uživo</string>
   <string name="morphe_hide_video_title_title">Sakrij naslov Shorts videa</string>

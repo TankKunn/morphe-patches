@@ -131,6 +131,7 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_medical_panels_title">Skjul medicinske paneler</string>
   <string name="morphe_hide_snackbar_title">Skjul snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Skjul retningslinjer for abonnenter</string>
+  <string name="morphe_hide_sync_button_title">Skjul knappen \'Synkroniser til video\'</string>
   <string name="morphe_hide_timed_reactions_title">Skjul tidsreaktioner</string>
   <string name="morphe_hide_timed_reactions_summary">Skjuler funktionen, der giver brugerne mulighed for at reagere med emojis i kommentarsektionen og livechatten</string>
   <string name="morphe_hide_video_title_title">Skjul videotitel</string>

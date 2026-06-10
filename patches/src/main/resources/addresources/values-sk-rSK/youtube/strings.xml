@@ -131,6 +131,7 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_medical_panels_title">Skryť lekárske panely</string>
   <string name="morphe_hide_snackbar_title">Skryť snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Skryť pravidlá pre odberateľov</string>
+  <string name="morphe_hide_sync_button_title">Skryť tlačidlo \'Synchronizovať s videom\'</string>
   <string name="morphe_hide_timed_reactions_title">Skryť časované reakcie</string>
   <string name="morphe_hide_timed_reactions_summary">Skryje funkciu, ktorá umožňuje používateľom reagovať emodži v sekcii komentárov a živom chate</string>
   <string name="morphe_hide_video_title_title">Skryť názov videa</string>
