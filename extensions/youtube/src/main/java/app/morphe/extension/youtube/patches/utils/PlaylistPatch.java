@@ -290,6 +290,7 @@ public class PlaylistPatch {
             }
             Utils.runOnBackgroundThread(() ->  {
                 Pair<String, String>[] playlists = request.getPlaylists();
+                if (playlists == null || playlists.length == 0) return;
                 Utils.runOnMainThread(() -> {
                     SheetBottomDialog.DraggableLinearLayout mainLayout = SheetBottomDialog
                             .createMainLayout(context, null);
