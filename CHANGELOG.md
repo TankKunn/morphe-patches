@@ -1,3 +1,13 @@
+## [1.31.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.10...v1.31.0-dev.11) (2026-06-10)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Save to watch later:** Handle saved playlist is no longer available ([#1701](https://github.com/MorpheApp/morphe-patches/issues/1701)) ([bf04fb7](https://github.com/MorpheApp/morphe-patches/commit/bf04fb7c1d5c7e570bb62162066470bbaf6c388a))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide 'Sync to video' button" setting ([#1694](https://github.com/MorpheApp/morphe-patches/issues/1694)) ([e870d1e](https://github.com/MorpheApp/morphe-patches/commit/e870d1eb3d008065e4700030e2a4c51f6cf4a8a4))
+
 ## [1.31.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.9...v1.31.0-dev.10) (2026-06-09)
 
 ### 🐛 Bug Fixes
