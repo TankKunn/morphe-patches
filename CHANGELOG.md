@@ -1,3 +1,14 @@
+## [1.31.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.11...v1.31.0-dev.12) (2026-06-11)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Queue Manager:** Fix black queue icon in legacy player ([7416c24](https://github.com/MorpheApp/morphe-patches/commit/7416c240ca9412b50fd7a26bb638f3ce5fd375cd))
+* **YouTube - Remove viewer discretion dialog:** Dialog cannot be dismissed ([#1710](https://github.com/MorpheApp/morphe-patches/issues/1710)) ([b962bd0](https://github.com/MorpheApp/morphe-patches/commit/b962bd0c485a5bea1b46bd55fee5943aefd797bd))
+
+### ✨ New Features
+
+* **YouTube - Change form factor:** Add `Enable tablet layout in player` setting ([#1695](https://github.com/MorpheApp/morphe-patches/issues/1695)) ([6376142](https://github.com/MorpheApp/morphe-patches/commit/6376142395508e76e64ce8188e4477bb181842ed))
+
 ## [1.31.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.10...v1.31.0-dev.11) (2026-06-10)
 
 ### 🐛 Bug Fixes
