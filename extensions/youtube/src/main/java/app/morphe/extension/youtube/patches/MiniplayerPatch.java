@@ -14,7 +14,6 @@ import android.graphics.drawable.Drawable;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
@@ -131,10 +130,6 @@ public final class MiniplayerPatch {
             Settings.MINIPLAYER_HIDE_OVERLAY_BUTTONS.get()
                     && Settings.MINIPLAYER_HIDE_OVERLAY_BUTTONS.isAvailable();
 
-    private static final boolean HIDE_SUBTEXT_ENABLED =
-            (CURRENT_TYPE == MODERN_1 || CURRENT_TYPE == MODERN_3 || CURRENT_TYPE == MODERN_4)
-                    && Settings.MINIPLAYER_HIDE_SUBTEXT.get();
-
     private static final boolean MINIPLAYER_ROUNDED_CORNERS_ENABLED =
             CURRENT_TYPE.isModern() && !Settings.MINIPLAYER_DISABLE_ROUNDED_CORNERS.get();
 
@@ -199,19 +194,6 @@ public final class MiniplayerPatch {
         public boolean isAvailable() {
             MiniplayerType type = Settings.MINIPLAYER_TYPE.get();
             return type == MODERN_1 || type == MODERN_2 || type == MODERN_3 || type == MODERN_4;
-        }
-
-        @Override
-        public List<Setting<?>> getParentSettings() {
-            return List.of(Settings.MINIPLAYER_TYPE);
-        }
-    }
-
-    public static final class MiniplayerHideSubtextsAvailability implements Setting.Availability {
-        @Override
-        public boolean isAvailable() {
-            MiniplayerType type = Settings.MINIPLAYER_TYPE.get();
-            return type == MODERN_3 || type == MODERN_4;
         }
 
         @Override
@@ -437,21 +419,6 @@ public final class MiniplayerPatch {
             if (drawable != null) {
                 view.setImageDrawable(drawable);
             }
-        }
-    }
-
-    /**
-     * Injection point.
-     */
-    public static void hideMiniplayerSubTexts(View view) {
-        try {
-            // Different subviews are passed in, but only TextView is of interest here.
-            if (HIDE_SUBTEXT_ENABLED && view instanceof TextView) {
-                Logger.printDebug(() -> "Hiding subtext view");
-                Utils.hideViewByRemovingFromParentUnderCondition(true, view);
-            }
-        } catch (Exception ex) {
-            Logger.printException(() -> "hideMiniplayerSubTexts failure", ex);
         }
     }
 }

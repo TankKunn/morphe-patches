@@ -62,3 +62,9 @@ internal object PlayerOverlayTimelyShelfFingerprint : Fingerprint(
     )
 )
 
+internal object MiniplayerPaidPromotionLabelFingerprint : Fingerprint(
+    filters = listOf(
+        resourceLiteral(ResourceType.ID, "modern_miniplayer_subtitle_text"),
+        opcode(Opcode.INVOKE_VIRTUAL, MatchAfterImmediately())
+    )
+)
