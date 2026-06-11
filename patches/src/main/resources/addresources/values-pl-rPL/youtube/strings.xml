@@ -1022,6 +1022,8 @@ Układ samochodowy
 • Przyciski Remiks i Dźwięk nie są dostępne w Shortsach
 • Shortsy otwierają się w zwykłym odtwarzaczu
 • Pasek akcji filmu nie jest zwinięty"</string>
+  <string name="morphe_tablet_layout_in_player_title">Włącz układ tabletowy w odtwarzaczu</string>
+  <string name="morphe_tablet_layout_in_player_summary">Przywraca stary układ odtwarzacza</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Fałszuj wersję aplikacji</string>
   <string name="morphe_spoof_app_version_summary">Oszukuje serwer, że używasz starszej wersji aplikacji, aby przywrócić klasyczne elementy interfejsu</string>

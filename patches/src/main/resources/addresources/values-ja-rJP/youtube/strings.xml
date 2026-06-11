@@ -1024,6 +1024,8 @@ Automotive レイアウト
 • ショート動画のリミックス ボタンとサウンドボタンが利用できない
 • ショート動画が通常のプレーヤーで再生される
 • アクション ボタンにボタン名が表示される"</string>
+  <string name="morphe_tablet_layout_in_player_title">プレイヤーでタブレットレイアウトを有効にする</string>
+  <string name="morphe_tablet_layout_in_player_summary">古いプレーヤーレイアウトを復元します</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">アプリのバージョンを偽装</string>
   <string name="morphe_spoof_app_version_summary">古いバージョンのアプリを使用しているとサーバーに認識させて、以前の UI 機能を復元します</string>

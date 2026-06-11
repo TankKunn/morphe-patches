@@ -1023,6 +1023,8 @@ Automobilski raspored
 • Taster za miksanje i taster za zvuk nisu dostupni u Shorts
 • Shorts se otvaraju u redovnom plejeru
 • Traka sa akcijama za video nije uzeta."</string>
+  <string name="morphe_tablet_layout_in_player_title">Omogući izgled za tablet u plejeru</string>
+  <string name="morphe_tablet_layout_in_player_summary">Vraća stari izgled plejera</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Lažirana verzija aplikacije</string>
   <string name="morphe_spoof_app_version_summary">Prevara server da misli da koristiš stariju verziju aplikacije kako bi povratio legacy UI funkcije</string>

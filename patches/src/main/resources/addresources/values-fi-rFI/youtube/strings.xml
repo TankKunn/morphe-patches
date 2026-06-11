@@ -1022,6 +1022,8 @@ Automaattiasettelun
 • Remix-painiketta ja Äänen painiketta ei ole saatavilla Shorts-videossa
 • Shorts-videot avautuvat tavallisessa soittimessa
 • Videotoimintopalkki ei ole piilotettu"</string>
+  <string name="morphe_tablet_layout_in_player_title">Ota tablettiasettelun käyttöön soittimessa</string>
+  <string name="morphe_tablet_layout_in_player_summary">Palauttaa vanhan soittimen asettelun</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Naamioi sovellusversio</string>
   <string name="morphe_spoof_app_version_summary">Huulet palvelimen luulemaan käyttäväsi vanhempaa sovellusversiota palauttaaksesi vanhat UI-ominaisuudet</string>

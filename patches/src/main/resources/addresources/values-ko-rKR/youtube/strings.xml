@@ -1025,6 +1025,8 @@ Second \"item\" text"</string>
 • Shorts에서 믹스 버튼과 사운드 버튼은 사용할 수 없습니다
 • Shorts가 일반 플레이어에서 열립니다
 • 플레이어 동작 버튼바가 접히지 않습니다"</string>
+  <string name="morphe_tablet_layout_in_player_title">플레이어에서 태블릿 레이아웃 활성화하기</string>
+  <string name="morphe_tablet_layout_in_player_summary">이전 플레이어 레이아웃으로 복원합니다</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">앱 버전 속이기</string>
   <string name="morphe_spoof_app_version_summary">서버가 사용 중인 앱 버전을 더 오래된 버전으로 인식하도록 속여, 이전 레이아웃 기능을 다시 복원합니다</string>

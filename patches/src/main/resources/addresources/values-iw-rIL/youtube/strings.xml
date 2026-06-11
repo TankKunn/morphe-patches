@@ -1021,6 +1021,8 @@ Second \"item\" text"</string>
 • כפתור 'מיזוג' וכפתור 'סאונד' אינם זמינים ב-Shorts
 • Shorts נפתחים בנגן הרגיל
 • שורת הפעולות של הווידאו אינה מקופלת"</string>
+  <string name="morphe_tablet_layout_in_player_title">הפעל פריסת טאבלט בנגן</string>
+  <string name="morphe_tablet_layout_in_player_summary">משחזר את פריסת הנגן הישנה</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">זייף גרסת יישום</string>
   <string name="morphe_spoof_app_version_summary">מרמה את השרת לחשוב שאתה משתמש בגרסת אפליקציה ישנה יותר כדי לשחזר תכונות ממשק משתמש מדור קודם</string>

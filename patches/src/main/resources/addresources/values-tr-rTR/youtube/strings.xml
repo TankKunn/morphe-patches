@@ -1023,6 +1023,8 @@ Otomotiv düzeni
 • Remix düğmesi ve Ses düğmesi Shorts'ta kullanılamıyor
 • Shorts normal oynatıcıda açılıyor
 • Video hareket çubuğu katlanmıyor"</string>
+  <string name="morphe_tablet_layout_in_player_title">Oynatıcıda tablet düzenini etkinleştir</string>
+  <string name="morphe_tablet_layout_in_player_summary">Eski oynatıcı düzenini geri yükler</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Uygulama sürümünü taklit et</string>
   <string name="morphe_spoof_app_version_summary">Sunucuya daha eski bir uygulama sürümü kullandığınızı düşündürerek eski arayüz özelliklerini geri yükler</string>

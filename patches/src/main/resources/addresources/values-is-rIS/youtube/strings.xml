@@ -1019,6 +1019,8 @@ Akstur
 • Remix hnappurinn og Hljóðhnappurinn eru ekki er í Boði í Shorts
 • Shorts opnast í reglulegum spilaranum
 • Vídeóáhrifastjórnstikurinn er ekki Brottfallinn"</string>
+  <string name="morphe_tablet_layout_in_player_title">Virkja taflalýsing í spilara</string>
+  <string name="morphe_tablet_layout_in_player_summary">Endurheimtir gamla útlit spilarans</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Spofta útgáfu forritsins</string>
   <string name="morphe_spoof_app_version_summary">Breytir netþjóninum til að halda í hugan það að þú ert að nota eldri útgáfu af forritinu til að endurheimta gamla notendaviðmóti</string>

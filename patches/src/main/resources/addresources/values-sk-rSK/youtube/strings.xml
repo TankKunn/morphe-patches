@@ -1023,6 +1023,8 @@ Rozloženie pre automobil
 • Tlačidlá Remixovať a Zvuk nie sú dostupné v Shorts
 • Shorts sa prehrávajú v obyčajnom prehrávači
 • Panel akcií videa je rozbalený"</string>
+  <string name="morphe_tablet_layout_in_player_title">Povoliť rozloženie tabletu v prehrávači</string>
+  <string name="morphe_tablet_layout_in_player_summary">Obnoví staré rozloženie prehrávača</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Sfalšovať verziu aplikácie</string>
   <string name="morphe_spoof_app_version_summary">Oklame server, aby si myslel, že používate staršiu verziu aplikácie na obnovenie starších funkcií používateľského rozhrania</string>

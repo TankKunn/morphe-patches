@@ -1023,6 +1023,8 @@ Layout per auto
 • Il pulsante Remix e il pulsante Audio non sono disponibili sugli Shorts
 • Gli Shorts si aprono nel lettore video normale
 • La barra delle azioni video non è collassata"</string>
+  <string name="morphe_tablet_layout_in_player_title">Abilita layout per tablet nel lettore</string>
+  <string name="morphe_tablet_layout_in_player_summary">Ripristina il layout precedente del lettore</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Simula la versione dell\'app</string>
   <string name="morphe_spoof_app_version_summary">Inganna il server facendogli pensare di stare utilizzando una versione precedente dell\'app, per ripristinare le funzionalità dell\'interfaccia utente precedente</string>

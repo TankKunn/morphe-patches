@@ -1012,6 +1012,8 @@ Second \"item\" text"</string>
 • शॉर्ट्समध्ये रीमिक्स बटण आणि ध्वनी बटण उपलब्ध नाहीत
 • शॉर्ट्स नियमित प्लेयरमध्ये उघडतात
 • व्हिडिओ ॲक्शन बार कोसळलेला नाही"</string>
+  <string name="morphe_tablet_layout_in_player_title">प्लेअरमध्ये टॅबलेट लेआउट सक्षम करा</string>
+  <string name="morphe_tablet_layout_in_player_summary">जुना प्लेअर लेआउट पुनर्संचयित करते</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">ॲप आवृत्तीSpoof करा</string>
   <string name="morphe_spoof_app_version_summary">ॲप (App) आवृत्तीमध्ये बदल करा</string>

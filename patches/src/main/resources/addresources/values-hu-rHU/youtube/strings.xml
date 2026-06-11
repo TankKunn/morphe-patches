@@ -1022,6 +1022,8 @@ Autóelrendezés
 • A Remix gomb és a Hang gomb nem érhető el a Shortsban
 • A Shorts a hagyományos lejátszóban nyílnak meg
 • A videó műveleti sáv nem omlik össze"</string>
+  <string name="morphe_tablet_layout_in_player_title">Tablet elrendezés engedélyezése a lejátszóban</string>
+  <string name="morphe_tablet_layout_in_player_summary">Visszaállítja a régi lejátszó elrendezést</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Alkalmazásverzió hamisítása</string>
   <string name="morphe_spoof_app_version_summary">A szervert becsapja, hogy úgy gondolja, egy régebbi alkalmazásverziót használ a korábbi UI funkciók helyreállításához</string>

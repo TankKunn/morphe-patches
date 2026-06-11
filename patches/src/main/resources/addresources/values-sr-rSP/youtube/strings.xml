@@ -1021,6 +1021,8 @@ Vaš korisnički ID je kao lozinka i nikada ga ne treba deliti."</string>
 • Дугме за ремикс и дугме за звук нису доступна у Shorts
 • Shorts се отварају у редовном плејеру
 • Видео трака акција није савијена"</string>
+  <string name="morphe_tablet_layout_in_player_title">Укључи таблет распоред у плејеру</string>
+  <string name="morphe_tablet_layout_in_player_summary">Враћа стари изглед плејера</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Лажирана верзија апликације</string>
   <string name="morphe_spoof_app_version_summary">Триковање сервера да мисли да користите старију верзију апликације како би се обновиле старије визуелне функције</string>

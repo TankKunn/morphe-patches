@@ -1023,6 +1023,8 @@ Aspectul pentru Automotive
 • Butonul Remix și Butonul Sunet nu sunt disponibile în Shorts
 • Shorts se deschid în playerul normal
 • Bara de acțiuni video nu este pliată"</string>
+  <string name="morphe_tablet_layout_in_player_title">Activează aspectul tabletă în player</string>
+  <string name="morphe_tablet_layout_in_player_summary">Restabilește aspectul vechi al playerului</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Falsifică versiunea aplicației</string>
   <string name="morphe_spoof_app_version_summary">Păcălește serverul să creadă că utilizezi o versiune mai veche a aplicației pentru a restabili funcțiile UI moștenite</string>

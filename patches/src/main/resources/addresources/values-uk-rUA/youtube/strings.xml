@@ -1022,6 +1022,8 @@ Second \"item\" text"</string>
 • Кнопки \"Ремікс\" та \"Звук\" недоступні в Short
 • Short відкриваються у звичайному плеєрі
 • Панель дій відео не згорнуто"</string>
+  <string name="morphe_tablet_layout_in_player_title">Увімкнути макет планшета в програвачі</string>
+  <string name="morphe_tablet_layout_in_player_summary">Відновлює попереднє розташування елементів керування програвача</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Підміна версії застосунку</string>
   <string name="morphe_spoof_app_version_summary">Змушує сервер вважати, що використовується старіша версія застосунку, щоб відновити елементи старого інтерфейсу</string>

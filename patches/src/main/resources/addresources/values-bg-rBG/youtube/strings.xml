@@ -1021,6 +1021,8 @@ Second \"item\" text"</string>
 • Бутонът за ремикс и бутонът за звук не са налични в Shorts
 • Shorts се отварят в стандартния плейър
 • Видео лентата с действия не е сгъната"</string>
+  <string name="morphe_tablet_layout_in_player_title">Активиране на оформление за таблет в плейъра</string>
+  <string name="morphe_tablet_layout_in_player_summary">Възстановява стария вид на плейъра</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Фалшира версия на приложението</string>
   <string name="morphe_spoof_app_version_summary">Използва трикове, за да заблуди сървъра, че използвате по-стара версия на приложението, за да възстановите стари UI функции</string>

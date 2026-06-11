@@ -1023,6 +1023,8 @@ Automobil-Layout
 • Remix-Taste und Sound-Taste sind in Shorts nicht verfügbar
 • Shorts öffnen im regulären Player
 • Video-Aktionenleiste ist nicht zusammengeklappt"</string>
+  <string name="morphe_tablet_layout_in_player_title">Tablet-Layout im Player aktivieren</string>
+  <string name="morphe_tablet_layout_in_player_summary">Stellt das alte Player-Layout wieder her</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Spoof-App-Version</string>
   <string name="morphe_spoof_app_version_summary">Täuscht den Server dazu, dass Sie eine ältere App-Version verwenden, um Legacy-UI-Funktionen wiederherzustellen</string>

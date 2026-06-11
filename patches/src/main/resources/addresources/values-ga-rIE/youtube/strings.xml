@@ -1023,6 +1023,8 @@ Leagan amach na ngluaisteán
 • Níl an cnaipe athmheasctha ná an cnaipe fuaime ar fáil i Shorts
 • Oscail Shorts sa ghnáthimreoir
 • Níl an barra gníomhaíochta físe fillte"</string>
+  <string name="morphe_tablet_layout_in_player_title">Comhghabháil le leagan clár tablet sa pheileoir</string>
+  <string name="morphe_tablet_layout_in_player_summary">Athchóirnaíonn an leabaillín imreoir seanbhunú</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Leagan aip bréige</string>
   <string name="morphe_spoof_app_version_summary">Meallann sé an freastalaí le go gceapfá go bhfuil tú ag úsáid seanleagan den aip chun gnéithe oidhreachta den chomhéadan úsáideora a athbhunú.</string>

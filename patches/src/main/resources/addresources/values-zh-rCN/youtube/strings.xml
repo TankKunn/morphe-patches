@@ -1025,6 +1025,8 @@ Second \"item\" text"</string>
 • Shorts 中未提供 Remix 按钮和 Sound 按钮
 • Shorts 在常规播放器中打开
 • 视频操作栏未折叠"</string>
+  <string name="morphe_tablet_layout_in_player_title">在播放器中启用平板电脑布局</string>
+  <string name="morphe_tablet_layout_in_player_summary">恢复旧版播放器布局</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">伪装应用程序版本</string>
   <string name="morphe_spoof_app_version_summary">欺骗服务器，使其认为您正在使用较旧的应用程序版本以恢复旧版 UI 功能</string>

@@ -1021,6 +1021,8 @@ Razporeditev za avto
 • Gumb za mešanje in gumb za zvok nista na voljo v Shorts.
 • Shorts se odpirajo v običajnem predvajalniku.
 • Vidna vrstica z dejanji videa ni zamrznjena"</string>
+  <string name="morphe_tablet_layout_in_player_title">Omogoči postavitev za tablične računalnike v predvajalniku</string>
+  <string name="morphe_tablet_layout_in_player_summary">Obnovi prejšnjo postavitev predvajalnika</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Posnami različico aplikacije</string>
   <string name="morphe_spoof_app_version_summary">Triki strežnika, da misli, da uporabljate starejšo različico aplikacije, da obnovite funkcije starejše uporabniške izkušnje</string>

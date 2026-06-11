@@ -1019,6 +1019,8 @@ Second \"item\" text"</string>
 • शॉर्ट्स में रीमिक्स बटन और साउंड बटन उपलब्ध नहीं हैं
 • शॉर्ट्स नियमित प्लेयर में खुलते हैं
 • वीडियो एक्शन बार संकुचित नहीं होता है"</string>
+  <string name="morphe_tablet_layout_in_player_title">प्लेयर में टैबलेट लेआउट सक्षम करें</string>
+  <string name="morphe_tablet_layout_in_player_summary">पुराने प्लेयर लेआउट को पुनर्स्थापित करता है</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Spoof ऐप संस्करण</string>
   <string name="morphe_spoof_app_version_summary">सर्वर को यह सोचने में धोखा देता है कि आप पुराने ऐप संस्करण का उपयोग कर रहे हैं ताकि विरासत UI सुविधाओं को बहाल किया जा सके</string>

@@ -1023,6 +1023,8 @@ Bil layout
 • Remix-knap og lydknap er ikke tilgængelige i Shorts
 • Shorts åbnes i den almindelige afspiller
 • Videohandlingslinjen er ikke foldet sammen"</string>
+  <string name="morphe_tablet_layout_in_player_title">Aktivér tabletlayout i afspilleren</string>
+  <string name="morphe_tablet_layout_in_player_summary">Gendanner det gamle layout for afspilleren</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Spoof app-version</string>
   <string name="morphe_spoof_app_version_summary">Snyder serveren til at tro, at du bruger en ældre appversion for at genoprette brugergrænsefladen, som den så ud tidligere</string>

@@ -1022,6 +1022,8 @@ Second \"item\" text"</string>
 • Shorts 中無法使用「混音」按鈕和「音效」按鈕
 • Shorts 在常規播放器中開啟
 • 影片動作欄未摺疊"</string>
+  <string name="morphe_tablet_layout_in_player_title">在播放器中啟用平板版面配置</string>
+  <string name="morphe_tablet_layout_in_player_summary">還原舊版播放器版面配置</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">偽裝應用程式版本</string>
   <string name="morphe_spoof_app_version_summary">欺騙伺服器，讓它以為您正在使用較舊的應用程式版本，以還原舊版 UI 功能</string>

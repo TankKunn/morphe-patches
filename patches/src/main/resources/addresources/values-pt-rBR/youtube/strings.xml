@@ -1020,6 +1020,8 @@ Layout para automóvel
 • Botão Remix e Botão de Som não estão disponíveis em Shorts
 • Shorts abrem no player normal
 • Barra de ações de vídeo não está recolhida"</string>
+  <string name="morphe_tablet_layout_in_player_title">Ativar layout de tablet no player</string>
+  <string name="morphe_tablet_layout_in_player_summary">Restaura o layout antigo do player</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Spoofing da versão do aplicativo</string>
   <string name="morphe_spoof_app_version_summary">Truques no servidor para fazer você pensar que está usando uma versão mais antiga do aplicativo para restaurar recursos de interface do usuário legados</string>

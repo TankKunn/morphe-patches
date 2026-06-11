@@ -1021,6 +1021,8 @@ Giao diện màn hình ô tô
 • Không có nút Phối lại và nút Âm thanh trong Shorts
 • Mở Shorts bằng trình phát thường
 • Thanh thao tác video không thu gọn được"</string>
+  <string name="morphe_tablet_layout_in_player_title">Bật bố cục máy tính bảng trong trình phát</string>
+  <string name="morphe_tablet_layout_in_player_summary">Khôi phục giao diện trình phát cũ</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Giả mạo phiên bản ứng dụng</string>
   <string name="morphe_spoof_app_version_summary">Khiến server nghĩ rằng bạn đang sử dụng phiên bản cũ để khôi phục giao diện cũ</string>
@@ -1238,7 +1240,7 @@ Bấm vào đây để tìm hiểu thêm về DeArrow"</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Hiển thị thông báo khi lưu tốc độ phát mặc định mới</string>
   <string name="morphe_playback_speed_default_title">Tốc độ phát mặc định</string>
   <string name="morphe_remember_playback_speed_toast">Đã đổi tốc độ phát mặc định thành: %s</string>
-  <string name="morphe_disable_playback_speed_music_title">Sử dụng tốc độ bình thường cho nhạc</string>
+  <string name="morphe_disable_playback_speed_music_title">Sử dụng tốc độ phát bình thường đối với nhạc</string>
   <string name="morphe_disable_playback_speed_music_summary">Luôn phát video nhạc với tốc độ 1.0x</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Vô hiệu hóa video HDR</string>

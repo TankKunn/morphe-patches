@@ -1023,6 +1023,8 @@ Bilformfaktor
 • Remiks-knappen og Lyd-knappen er ikke tilgjengelig i Shorts
 • Shorts åpnes i den vanlige spilleren
 • Videoaksjonslinjen er ikke sammenfoldet"</string>
+  <string name="morphe_tablet_layout_in_player_title">Aktiver nettbrettlayout i spilleren</string>
+  <string name="morphe_tablet_layout_in_player_summary">Gjenoppretter det gamle spillerlayoutet</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Spoof appversjon</string>
   <string name="morphe_spoof_app_version_summary">Lurer serveren til å tro at du bruker en eldre appversjon for å gjenopprette gamle brukergrensesnittfunksjoner</string>

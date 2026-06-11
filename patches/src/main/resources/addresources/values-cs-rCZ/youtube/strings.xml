@@ -1023,6 +1023,8 @@ Rozložení pro automobil
 • Tlačítko Remix a tlačítko Zvuk nejsou k dispozici ve Shorts
 • Shorts se otevírají v běžném přehrávači
 • Akční lišta videa není složená"</string>
+  <string name="morphe_tablet_layout_in_player_title">Povolit rozložení tabletu v přehrávači</string>
+  <string name="morphe_tablet_layout_in_player_summary">Obnoví původní rozložení přehrávače</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Napodobit verzi aplikace</string>
   <string name="morphe_spoof_app_version_summary">Triky serveru podvede, aby si myslel, že používáte starší verzi aplikace, a obnovil tak dědictví UI funkcí</string>

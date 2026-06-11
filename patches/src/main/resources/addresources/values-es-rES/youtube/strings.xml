@@ -1025,6 +1025,8 @@ Diseño para automóviles
 • El botón de Remix y el botón de Sonido no están disponibles en Shorts
 • Shorts se abre en el reproductor regular
 • La barra de acción del video no se contrae"</string>
+  <string name="morphe_tablet_layout_in_player_title">Habilitar diseño para tablet en el reproductor</string>
+  <string name="morphe_tablet_layout_in_player_summary">Restaura el diseño anterior del reproductor</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Falsificar versión de la app</string>
   <string name="morphe_spoof_app_version_summary">Engaña al servidor para que piense que estás usando una versión más antigua de la aplicación para restaurar funciones de la IU heredadas</string>

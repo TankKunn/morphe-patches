@@ -1023,6 +1023,8 @@ Second \"item\" text"</string>
 • Το κουμπί Remix και το κουμπί Ήχου δεν είναι διαθέσιμα στο Shorts
 • Τα Shorts ανοίγουν στον κανονικό αναπαραγωγέ
 • Η γραμμή ενεργειών βίντεο δεν έχει καταρρεύσει"</string>
+  <string name="morphe_tablet_layout_in_player_title">Ενεργοποίηση διάταξης για tablet στον παίκτη</string>
+  <string name="morphe_tablet_layout_in_player_summary">Επαναφέρει τη παλιά διάταξη του player</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Παραποίηση έκδοσης εφαρμογής</string>
   <string name="morphe_spoof_app_version_summary">Εξαπατά τον διακομιστή ώστε να νομίζει ότι χρησιμοποιείτε μια παλαιότερη έκδοση εφαρμογής για να επαναφέρετε τις παλιότερες λειτουργίες UI</string>

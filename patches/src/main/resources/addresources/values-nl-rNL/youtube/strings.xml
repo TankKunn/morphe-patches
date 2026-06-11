@@ -1023,6 +1023,8 @@ Auto lay-out
 • Remix-knop en Geluidsknop zijn niet beschikbaar in Shorts
 • Shorts openen in de reguliere speler
 • Videobalk is niet ingeklapt"</string>
+  <string name="morphe_tablet_layout_in_player_title">Schakel tabletindeling in de speler in</string>
+  <string name="morphe_tablet_layout_in_player_summary">Herstelt de oude spelerlay-out</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">App-versie vervalsen</string>
   <string name="morphe_spoof_app_version_summary">Misleidt de server om te denken dat je een oudere app-versie gebruikt om verouderde visuele functies terug te zetten</string>

@@ -1027,6 +1027,8 @@ Qeşeyê otomotîvê
 • Dema bi Shortsê re, rêzika lîstinê û konteynerek Dengê nîn in
 • Shorts di xîlstokê asayî de vekirin
 • Barê çalakiyê ya vîdyoyê pêşîne nedin"</string>
+  <string name="morphe_tablet_layout_in_player_title">Rêvekirina sêwirana tabletê di lîstikvan de</string>
+  <string name="morphe_tablet_layout_in_player_summary">Mîzegeha layouta lîstikvanê yê kevnar vegerîne</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Versona asayî</string>
   <string name="morphe_spoof_app_version_summary">Serverê qedexe dike ku bi hesinkirina guhertoyek kevnertirîn ya app-ê, taybetmendiyên berê yên UI-yê vegerîne</string>
