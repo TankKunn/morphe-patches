@@ -7,6 +7,8 @@
 
 package app.morphe.extension.youtube.patches.utils.requests;
 
+import static app.morphe.extension.shared.StringRef.str;
+
 import androidx.annotation.Nullable;
 
 import org.json.JSONException;
@@ -91,7 +93,7 @@ public class CreatePlaylistRequest {
         Logger.printDebug(() -> "Fetching create playlist request for: " + videoId);
 
         try {
-            byte[] requestBody = PlaylistRoutes.createPlaylistBody(videoId, "Morphe Queue");
+            byte[] requestBody = PlaylistRoutes.createPlaylistBody(videoId, str("morphe_queue_manager_playlist_title"));
             HttpURLConnection connection = PlaylistRoutes.getConnection(PlaylistRoutes.CREATE_PLAYLIST, requestHeader);
             connection.setFixedLengthStreamingMode(requestBody.length);
             connection.getOutputStream().write(requestBody);

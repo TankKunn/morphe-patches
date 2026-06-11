@@ -402,6 +402,7 @@ Info: May not work on live streams"</string>
     <string name="morphe_queue_manager_fetch_succeeded_create">Queue created</string>
     <string name="morphe_queue_manager_fetch_succeeded_remove">Removed from queue</string>
     <string name="morphe_queue_manager_fetch_succeeded_save">Queue saved to %s</string>
+    <string name="morphe_queue_manager_playlist_title">Morphe Queue</string>
     <string name="morphe_queue_manager_add_to_queue">Add to queue</string>
     <string name="morphe_queue_manager_add_to_queue_and_open_queue">Add to queue and open</string>
     <string name="morphe_queue_manager_add_to_queue_and_play_video">Add to queue and play</string>
