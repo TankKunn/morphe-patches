@@ -913,8 +913,9 @@ public final class LayoutComponentsFilter extends Filter {
         String menuTitleString = menuTitleCharSequence.toString();
 
         boolean matches = false;
+        String menuTitleLower = menuTitleString.toLowerCase();
         for (String filter : accountMenuFilterStrings) {
-            if (menuTitleString.equalsIgnoreCase(filter)) {
+            if (menuTitleLower.contains(filter.toLowerCase())) {
                 matches = true;
                 break;
             }
