@@ -18,6 +18,7 @@ import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
+import app.morphe.patches.shared.misc.settings.preference.noTitleUnsortedPreferenceCategory
 import app.morphe.patches.youtube.misc.contexthook.Endpoint
 import app.morphe.patches.youtube.misc.contexthook.addClientFormFactorHook
 import app.morphe.patches.youtube.misc.contexthook.clientContextHookPatch
@@ -48,8 +49,10 @@ val changeFormFactorPatch = bytecodePatch(
 
     execute {
         PreferenceScreen.GENERAL.addPreferences(
-            ListPreference("morphe_change_form_factor"),
-            SwitchPreference("morphe_tablet_layout_in_player", summary = true)
+            noTitleUnsortedPreferenceCategory(
+                ListPreference("morphe_change_form_factor"),
+                SwitchPreference("morphe_tablet_layout_in_player", summary = true)
+            )
         )
 
         val createPlayerRequestBodyWithModelFingerprint = Fingerprint(
