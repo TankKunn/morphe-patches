@@ -201,16 +201,16 @@ val hideAdsPatch = bytecodePatch(
             }
         }
 
-        // Hide paid promotion label in modern miniplayer
+        // Hide paid promotion label in miniplayer
 
         MiniplayerPaidPromotionLabelFingerprint.let {
             it.method.apply {
                 val insertIndex = it.instructionMatches.last().index
-                val targetInstruction = getInstruction<Instruction35c>(insertIndex)
-                val viewRegister = targetInstruction.registerC
+                val targetInstruction = getInstruction<OneRegisterInstruction>(insertIndex)
+                val viewRegister = targetInstruction.registerA
 
                 injectHideViewCall(
-                    insertIndex,
+                    insertIndex + 1,
                     viewRegister,
                     EXTENSION_CLASS,
                     "hideMiniplayerPaidPromotionLabelView"
