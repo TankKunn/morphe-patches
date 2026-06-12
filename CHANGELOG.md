@@ -3,11 +3,11 @@
 ### 🐛 Bug Fixes
 
 * **YouTube - Hide layout components:** Allow partial matches for "Enable Library / You bottom menu filter" setting ([59ea065](https://github.com/MorpheApp/morphe-patches/commit/59ea06565cfbd55a69be4494f42d6734a7c25668))
-* **YouTube - Links shortening:** Exclude post links from shortening ([ce1dd46](https://github.com/MorpheApp/morphe-patches/commit/ce1dd46276e3cd830d8644774819b3395c355abb))
+* **YouTube - Sanitize sharing links:** Exclude post links from shortening ([ce1dd46](https://github.com/MorpheApp/morphe-patches/commit/ce1dd46276e3cd830d8644774819b3395c355abb))
 
 ### ✨ New Features
 
-* **YouTube - Hide ads:** Hide "Includes paid promotion" label in miniplayer ([#1699](https://github.com/MorpheApp/morphe-patches/issues/1699)) ([c9ce526](https://github.com/MorpheApp/morphe-patches/commit/c9ce5269d1e205e84e6e4160712463b86966714d))
+* **YouTube - Hide ads:** Hide 'Includes paid promotion' label in miniplayer ([#1699](https://github.com/MorpheApp/morphe-patches/issues/1699)) ([c9ce526](https://github.com/MorpheApp/morphe-patches/commit/c9ce5269d1e205e84e6e4160712463b86966714d))
 
 ### 🚀 Updated App Support
 
@@ -17,12 +17,12 @@
 
 ### 🐛 Bug Fixes
 
-* **YouTube - Queue Manager:** Fix black queue icon in legacy player ([7416c24](https://github.com/MorpheApp/morphe-patches/commit/7416c240ca9412b50fd7a26bb638f3ce5fd375cd))
+* **YouTube - Save to watch later:** Fix black queue icon in legacy player ([7416c24](https://github.com/MorpheApp/morphe-patches/commit/7416c240ca9412b50fd7a26bb638f3ce5fd375cd))
 * **YouTube - Remove viewer discretion dialog:** Dialog cannot be dismissed ([#1710](https://github.com/MorpheApp/morphe-patches/issues/1710)) ([b962bd0](https://github.com/MorpheApp/morphe-patches/commit/b962bd0c485a5bea1b46bd55fee5943aefd797bd))
 
 ### ✨ New Features
 
-* **YouTube - Change form factor:** Add `Enable tablet layout in player` setting ([#1695](https://github.com/MorpheApp/morphe-patches/issues/1695)) ([6376142](https://github.com/MorpheApp/morphe-patches/commit/6376142395508e76e64ce8188e4477bb181842ed))
+* **YouTube - Change form factor:** Add "Enable tablet layout in player" setting ([#1695](https://github.com/MorpheApp/morphe-patches/issues/1695)) ([6376142](https://github.com/MorpheApp/morphe-patches/commit/6376142395508e76e64ce8188e4477bb181842ed))
 
 ## [1.31.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.10...v1.31.0-dev.11) (2026-06-10)
 
@@ -43,13 +43,13 @@
 ### ✨ New Features
 
 * **YouTube - Hide layout components:** Add path `&` syntax to custom filters ([#1693](https://github.com/MorpheApp/morphe-patches/issues/1693)) ([2ab0366](https://github.com/MorpheApp/morphe-patches/commit/2ab0366c8ae9dc6de3f361ed5a5d7ce446b4e8cd))
-* **YouTube - Playback speed:** Add `Disable playback speed for music` setting ([#1691](https://github.com/MorpheApp/morphe-patches/issues/1691)) ([81c8f50](https://github.com/MorpheApp/morphe-patches/commit/81c8f50f408750e0d8434310d786c1e5fab59872))
+* **YouTube - Playback speed:** Add "Disable playback speed for music" setting ([#1691](https://github.com/MorpheApp/morphe-patches/issues/1691)) ([81c8f50](https://github.com/MorpheApp/morphe-patches/commit/81c8f50f408750e0d8434310d786c1e5fab59872))
 
 ## [1.31.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.8...v1.31.0-dev.9) (2026-06-08)
 
 ### 🐛 Bug Fixes
 
-* **YouTube - Queue Manager:** Add `ScrollView` to playlist selection dialog ([#1692](https://github.com/MorpheApp/morphe-patches/issues/1692)) ([acf2326](https://github.com/MorpheApp/morphe-patches/commit/acf2326366c403bfca16c277bf2efd721d411bc2))
+* **YouTube - Save to watch later:** Add `ScrollView` to playlist selection dialog ([#1692](https://github.com/MorpheApp/morphe-patches/issues/1692)) ([acf2326](https://github.com/MorpheApp/morphe-patches/commit/acf2326366c403bfca16c277bf2efd721d411bc2))
 
 ## [1.31.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.7...v1.31.0-dev.8) (2026-06-07)
 
@@ -160,7 +160,7 @@
 * **YouTube - Hide ads:** Fix player crash ([d67d1e1](https://github.com/MorpheApp/morphe-patches/commit/d67d1e1fddcada5ca5310294b6be03a32ba636d3))
 * **YouTube - Hide layout components:** Resolve "Hide mix playlists" leaving empty space ([#1526](https://github.com/MorpheApp/morphe-patches/issues/1526)) ([d2eabee](https://github.com/MorpheApp/morphe-patches/commit/d2eabeec1728bd0666e6ec611e5dbeb4062b8960))
 * **YouTube - Hide Shorts components:** Hide new type of Shorts in search results ([893f2bd](https://github.com/MorpheApp/morphe-patches/commit/893f2bd68adffb5f9e8b82b4781670c16e61ff2b))
-* **YouTube - Open channel of live avatar:** Deprecated old `WEB_REMIX` client in favour of `ANDROID_REELS` ([#1519](https://github.com/MorpheApp/morphe-patches/issues/1519)) ([e45b769](https://github.com/MorpheApp/morphe-patches/commit/e45b7693e43f8182c84b2b5093c37c2b381cbb2d))
+* **YouTube - Open channel of live avatar:** Deprecated old `WEB_REMIX` client in favor of `ANDROID_REELS` ([#1519](https://github.com/MorpheApp/morphe-patches/issues/1519)) ([e45b769](https://github.com/MorpheApp/morphe-patches/commit/e45b7693e43f8182c84b2b5093c37c2b381cbb2d))
 * **YouTube - Open channel of live avatar:** Improved check to exclude the live avatar in the channel header ([#1544](https://github.com/MorpheApp/morphe-patches/issues/1544)) ([2b4d5b7](https://github.com/MorpheApp/morphe-patches/commit/2b4d5b79416b9da4408e3d6de2eac463335b1fef))
 * **YouTube - Hide player flyout menu components:** Hide the divider in flyout menu ([#1576](https://github.com/MorpheApp/morphe-patches/issues/1576)) ([d2c53d5](https://github.com/MorpheApp/morphe-patches/commit/d2c53d508198162a1c69dc011e167dea1b233406))
 * **YouTube - Reload video:** Allow reloading video that has not finished starting ([8318079](https://github.com/MorpheApp/morphe-patches/commit/8318079f1b7ec256ba7a738c0cb247ea78567135))
@@ -265,7 +265,7 @@
 ### 🐛 Bug Fixes
 
 * **YouTube - Hide layout components:** Resolve "Hide mix playlists" leaving empty space ([#1526](https://github.com/MorpheApp/morphe-patches/issues/1526)) ([d2eabee](https://github.com/MorpheApp/morphe-patches/commit/d2eabeec1728bd0666e6ec611e5dbeb4062b8960))
-* **YouTube - Open channel of live avatar:** Deprecated old `WEB_REMIX` client in favour of `ANDROID_REELS` ([#1519](https://github.com/MorpheApp/morphe-patches/issues/1519)) ([e45b769](https://github.com/MorpheApp/morphe-patches/commit/e45b7693e43f8182c84b2b5093c37c2b381cbb2d))
+* **YouTube - Open channel of live avatar:** Deprecated old `WEB_REMIX` client in favor of `ANDROID_REELS` ([#1519](https://github.com/MorpheApp/morphe-patches/issues/1519)) ([e45b769](https://github.com/MorpheApp/morphe-patches/commit/e45b7693e43f8182c84b2b5093c37c2b381cbb2d))
 
 ### 🚀 Updated App Support
 
