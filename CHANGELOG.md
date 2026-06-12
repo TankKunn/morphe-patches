@@ -1,3 +1,18 @@
+## [1.31.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.12...v1.31.0-dev.13) (2026-06-12)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Allow partial matches for "Enable Library / You bottom menu filter" setting ([59ea065](https://github.com/MorpheApp/morphe-patches/commit/59ea06565cfbd55a69be4494f42d6734a7c25668))
+* **YouTube - Links shortening:** Exclude post links from shortening ([ce1dd46](https://github.com/MorpheApp/morphe-patches/commit/ce1dd46276e3cd830d8644774819b3395c355abb))
+
+### ✨ New Features
+
+* **YouTube - Hide ads:** Hide "Includes paid promotion" label in miniplayer ([#1699](https://github.com/MorpheApp/morphe-patches/issues/1699)) ([c9ce526](https://github.com/MorpheApp/morphe-patches/commit/c9ce5269d1e205e84e6e4160712463b86966714d))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for `21.24.360` ([93f3acd](https://github.com/MorpheApp/morphe-patches/commit/93f3acd3af902edf1a5e063e4699d0471a0ef67d))
+
 ## [1.31.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.31.0-dev.11...v1.31.0-dev.12) (2026-06-11)
 
 ### 🐛 Bug Fixes
