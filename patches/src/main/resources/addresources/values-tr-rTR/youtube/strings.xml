@@ -42,11 +42,11 @@ Bu, özel filtreler oluştururken bileşenleri tanımlamaya yardımcı olabilir.
 
 Ancak, bunun etkinleştirilmesi IP adresiniz gibi bazı kullanıcı verilerini de günlüğe kaydeder."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
-  <string name="morphe_disable_layout_updates_title">Arayüz güncellemelerini devre dışı bırak</string>
+  <string name="morphe_disable_layout_updates_title">Düzen güncellemelerini devre dışı bırak</string>
   <string name="morphe_disable_layout_updates_summary">Sunucunun uygulama düzenini güncellemesini engeller</string>
   <string name="morphe_disable_layout_updates_user_dialog_message">"Uygulama düzeni, ilk yüklendiğinde kullanılan düzene geri döner.
 
-Bazı sunucu tarafı düzenlemeleri geri alınamayabilir.
+Bazı sunucu tarafı düzenlemeler geri alınamayabilir.
 
 Değişiklikler şunları içerir:
 • Oynatıcı açılır menüsündeki (veya ilgili ayarlardaki) bileşenler çalışmayabilir.
@@ -283,7 +283,7 @@ Sınırlamalar
   <string name="morphe_remove_viewer_discretion_dialog_title">İzleyici takdiri iletişim kutusunu kaldır</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Bu, yaş kısıtlamasını kaldırmaz. Sadece otomatik olarak kabul eder</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
-  <string name="morphe_disable_sign_in_to_tv_popup_title">TV\'de Oturum Açma Penceresi Devre Dışı Bırak</string>
+  <string name="morphe_disable_sign_in_to_tv_popup_title">\"TV\'ye oturum aç\" penceresini devre dışı bırak</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Çift dokunma ile bölüm atlamayı devre dışı bırak</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Bölümleri atlayan ve tek parmakla yanlışlıkla tetiklenebilecek iki parmakla çift dokunma hareketini devre dışı bırakır</string>
@@ -368,6 +368,7 @@ Bilgi: Canlı yayınlarda çalışmayabilir"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Sıra oluşturuldu</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Sıradan kaldırıldı</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Sıra %s\'ye kaydedildi</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe Sırası</string>
   <string name="morphe_queue_manager_add_to_queue">Sıraya ekle</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Sıraya ekle ve aç</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Sıraya ekle ve oynat</string>
@@ -724,7 +725,7 @@ Ayarlar → Oynatma (veya Otomatik Oynatma) → Sonraki videoyu otomatik oynat"<
   <!-- layout.hide.time.hideTimestampPatch -->
   <string name="morphe_hide_timestamp_title">Video zaman damgasını gizle</string>
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
-  <string name="morphe_disable_player_popup_panels_title">Oynatıcı açılır panelleri devre dışı bırak</string>
+  <string name="morphe_disable_player_popup_panels_title">Oynatıcı açılır panellerini devre dışı bırak</string>
   <string name="morphe_disable_player_popup_panels_summary">Oynatma listesi ve canlı sohbet panellerinin otomatik olarak açılmasını devre dışı bırakır</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Video bittiğinde tam ekran modundan çıkar</string>
@@ -789,7 +790,7 @@ Ayarlar → Oynatma (veya Otomatik Oynatma) → Sonraki videoyu otomatik oynat"<
   <string name="morphe_sb_square_layout">Kare düzen kullan</string>
   <string name="morphe_sb_square_layout_summary">SponsorBlock düğmelerinin ve denetimlerinin daha köşeli görünümünü kullanır</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Ufak atlama düğmesi kullan</string>
+  <string name="morphe_sb_enable_compact_skip_button">Ufak Atlama düğmesi kullan</string>
   <string name="morphe_sb_enable_compact_skip_button_summary">Yer kazanmak için Atlama düğmesinin genişliğini azaltır</string>
   <string name="morphe_sb_enable_auto_hide_skip_segment_button">Atlama düğmesini otomatik olarak gizle</string>
   <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">Kısmın tamamı boyunca görünür kalmak yerine birkaç saniye sonra Atlama düğmesini gizler</string>
@@ -1013,16 +1014,16 @@ Bir vurgu göndermiyorsanız, İptal'e dokunun ve ikinci konumu işaretleyin"</s
 
 Tablet düzeni
 • Topluluk gönderileri gizlenmiştir
-• Feed'deki oynatma ayarı kullanılamıyor
-• Remix düğmesi ve Ses düğmesi Shorts'ta kullanılamıyor
-• Video hareket çubuğu katlanmıyor
+• Akış ayarlarında oynatma mevcut değildir
+• Remix düğmesi ve Ses düğmesi Shorts'ta mevcut değildir
+• Video eylem çubuğu daraltılmamıştır
 
 Otomotiv düzeni
-• Feed konulara ve kanallara göre düzenlenmiştir
-• Feed'deki oynatma ayarı kullanılamıyor
-• Remix düğmesi ve Ses düğmesi Shorts'ta kullanılamıyor
-• Shorts normal oynatıcıda açılıyor
-• Video hareket çubuğu katlanmıyor"</string>
+• Akış konulara ve kanallara göre düzenlenmiştir
+• Akış ayarlarında oynatma mevcut değildir
+• Remix düğmesi ve Ses düğmesi Shorts'ta mevcut değildir
+• Shorts normal oynatıcıda açılır
+• Video eylem çubuğu daraltılmamıştır"</string>
   <string name="morphe_tablet_layout_in_player_title">Oynatıcıda tablet düzenini etkinleştir</string>
   <string name="morphe_tablet_layout_in_player_summary">Eski oynatıcı düzenini geri yükler</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
@@ -1108,7 +1109,6 @@ Sınırlama: Araç çubuğundaki geri düğmesini kullanmak işe yaramayabilir"<
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Yatay sürükleme hareketini devre dışı bırak</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Mini oynatıcının yatay olarak ekran dışına kaydırılarak kapatılmasını engeller</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Katman düğmelerini gizle</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Alt metinleri gizle</string>
   <string name="morphe_miniplayer_width_dip_title">Varsayılan boyut</string>
   <string name="morphe_miniplayer_width_dip_summary">Başlangıç ekran boyutunu piksel cinsinden ayarlayın</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Piksel boyutu %1$s ve %2$s arasında olmalıdır</string>
@@ -1136,7 +1136,7 @@ Sınırlama: Araç çubuğundaki geri düğmesini kullanmak işe yaramayabilir"<
   <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
   <string name="morphe_header_logo_entry_5">Özel</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
-  <string name="morphe_bypass_image_region_restrictions_title">Resimlerin bölge kısıtlamalarını atla</string>
+  <string name="morphe_bypass_image_region_restrictions_title">Resim bölge kısıtlamalarını atla</string>
   <string name="morphe_bypass_image_region_restrictions_summary">Kısıtlı ülkelerdeki eksik resimleri düzeltmek için istekleri alternatif bir sunucuya yönlendirir</string>
   <!-- layout.thumbnails.alternativeThumbnailsPatch -->
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->

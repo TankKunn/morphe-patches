@@ -368,6 +368,7 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Δημιουργήθηκε η ουρά</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Αφαιρέθηκε από την ουρά</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Η ουρά αποθηκεύτηκε στο %s</string>
+  <string name="morphe_queue_manager_playlist_title">Ουρά Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Προσθήκη στην ουρά</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Προσθήκη στην ουρά και άνοιγμα</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Προσθήκη στην ουρά και αναπαραγωγή</string>
@@ -1108,7 +1109,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Απενεργοποίηση χειρονομίας οριζόντιας σύρσης</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Αποτρέπει το κλείσιμο του μίνι αναπαραγωγέα με οριζόντια κύλιση από την οθόνη</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Κουμπιά επικάλυψης οθόνης αναπαραγωγής</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Κείμενα οθόνης αναπαραγωγής</string>
   <string name="morphe_miniplayer_width_dip_title">Προεπιλεγμένο μέγεθος</string>
   <string name="morphe_miniplayer_width_dip_summary">Ορίστε το αρχικό μέγεθος στην οθόνη, σε pixel</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Τα pixel πρέπει να είναι μεταξύ %1$s και %2$s</string>

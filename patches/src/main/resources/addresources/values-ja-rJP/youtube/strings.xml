@@ -368,6 +368,7 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">キューを作成しました</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">キューから削除しました</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">キューを %s に保存しました</string>
+  <string name="morphe_queue_manager_playlist_title">キュー (Morphe)</string>
   <string name="morphe_queue_manager_add_to_queue">キューに追加</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">キューに追加して開く</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">キューに追加して再生</string>
@@ -1024,8 +1025,8 @@ Automotive レイアウト
 • ショート動画のリミックス ボタンとサウンドボタンが利用できない
 • ショート動画が通常のプレーヤーで再生される
 • アクション ボタンにボタン名が表示される"</string>
-  <string name="morphe_tablet_layout_in_player_title">プレイヤーでタブレットレイアウトを有効にする</string>
-  <string name="morphe_tablet_layout_in_player_summary">古いプレーヤーレイアウトを復元します</string>
+  <string name="morphe_tablet_layout_in_player_title">プレーヤーにのみタブレット レイアウトを適用</string>
+  <string name="morphe_tablet_layout_in_player_summary">プレーヤーのレイアウトを以前のものに戻します</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">アプリのバージョンを偽装</string>
   <string name="morphe_spoof_app_version_summary">古いバージョンのアプリを使用しているとサーバーに認識させて、以前の UI 機能を復元します</string>
@@ -1109,7 +1110,6 @@ Automotive レイアウト
   <string name="morphe_miniplayer_disable_horizontal_drag_title">横方向ドラッグ ジェスチャーを無効化</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">画面の左端または右端でミニプレーヤーを画面外の横方向にスワイプして最小化する機能を無効にします</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">オーバーレイ ボタンを非表示</string>
-  <string name="morphe_miniplayer_hide_subtext_title">サブテキストを非表示</string>
   <string name="morphe_miniplayer_width_dip_title">デフォルトのサイズ</string>
   <string name="morphe_miniplayer_width_dip_summary">画面に表示される際の大きさを設定します (ピクセル)</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">ピクセルサイズの範囲は %1$s-%2$s です</string>

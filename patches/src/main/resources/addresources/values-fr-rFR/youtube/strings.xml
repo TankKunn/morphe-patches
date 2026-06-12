@@ -368,6 +368,7 @@ Info : Peut ne pas fonctionner sur les diffusions en direct"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">File d\'attente créée</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Supprimé de la file d\'attente</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">File d’attente enregistrée dans %s</string>
+  <string name="morphe_queue_manager_playlist_title">File d\'attente Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Ajouter à la file d\'attente</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Ajouter à la file d\'attente et ouvrir</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Ajouter à la file d\'attente et lire</string>
@@ -1109,7 +1110,6 @@ Limitation : L'utilisation du bouton retour dans la barre d'outils peut ne pas f
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Désactiver le geste de glissement horizontal</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Empêche la fermeture du mini-lecteur en le faisant glisser horizontalement hors de l\'écran</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Masquer l\'overlay des boutons</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Masquer les sous-textes</string>
   <string name="morphe_miniplayer_width_dip_title">Taille par défaut</string>
   <string name="morphe_miniplayer_width_dip_summary">Définir la taille initiale à l\'écran, en pixels</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">La taille en pixels doit être comprise entre %1$s et %2$s</string>

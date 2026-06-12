@@ -368,6 +368,7 @@ Figyelem: Lehet, hogy az élő közvetítéseknél nem működik"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Sor létrehozva</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Eltávolítva a sorból</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">A sor mentve lett a(z) %s helyre</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe sor</string>
   <string name="morphe_queue_manager_add_to_queue">Hozzáadás a sorhoz</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Hozzáadás a sorhoz és megnyitás</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Hozzáadás a sorhoz és lejátszás</string>
@@ -1105,7 +1106,6 @@ Ha később kikapcsolja, akkor ajánlott az alkalmazás adatait törölni, hogy 
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Vízszintes húzás letiltása</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Megakadályozza a minilejátszó vízszintes elhúzásával történő bezárását</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Fedőgomb elrejtése</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Alszövegek elrejtése</string>
   <string name="morphe_miniplayer_width_dip_title">Alapértelmezett méret</string>
   <string name="morphe_miniplayer_width_dip_summary">Beállítja a kezdeti képernyőméretet, pixelben</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">A képpont méretének %1$s és %2$s között kell lennie</string>

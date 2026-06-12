@@ -368,6 +368,7 @@ Impormasyon: Maaaring hindi gumana sa mga live stream"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Nagawa ang queue</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Inalis sa queue</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Na-save ang queue sa %s</string>
+  <string name="morphe_queue_manager_playlist_title">Pilang Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Idagdag sa queue</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Idagdag sa queue at buksan</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Idagdag sa queue at i-play</string>
@@ -1108,7 +1109,6 @@ Limitasyon: Maaaring hindi gumana ang paggamit ng back button sa toolbar"</strin
   <string name="morphe_miniplayer_disable_horizontal_drag_title">I-disable ang horizontal drag gesture</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Pinipigilan ang pagsasara ng miniplayer sa pamamagitan ng pag-swipe nito pahalang sa screen</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Itago ang mga overlay button</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Itago ang mga subtext</string>
   <string name="morphe_miniplayer_width_dip_title">Default size</string>
   <string name="morphe_miniplayer_width_dip_summary">Itakda ang panimulang on-screen size, sa pixels</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Dapat nasa pagitan ng %1$s at %2$s ang sukat ng pixel</string>

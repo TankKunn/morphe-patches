@@ -368,6 +368,7 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Wachtrij gemaakt</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Verwijderd uit de wachtrij</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Wachtrij opgeslagen naar %s</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe Queue</string>
   <string name="morphe_queue_manager_add_to_queue">Toevoegen aan wachtrij</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Toevoegen aan wachtrij en openen</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Toevoegen aan wachtrij en afspelen</string>
@@ -1106,7 +1107,6 @@ Als het later wordt uitgeschakeld, wordt aanbevolen om de app-gegevens te wissen
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Horizontale sleepbeweging uitschakelen</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Voorkomt dat de minispeler horizontaal van het scherm wordt weggeveegd</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Overlayknoppen verbergen</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Verberg subteksten</string>
   <string name="morphe_miniplayer_width_dip_title">Standaardgrootte</string>
   <string name="morphe_miniplayer_width_dip_summary">Stel de begin afmeting op het scherm in, in pixels</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pixelgrootte moet tussen %1$s en %2$s zijn</string>

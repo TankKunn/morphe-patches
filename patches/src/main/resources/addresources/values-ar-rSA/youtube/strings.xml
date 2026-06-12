@@ -369,6 +369,7 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">تم إنشاء قائمة الانتظار</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">تمت الإزالة من قائمة الانتظار</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">تم حفظ قائمة الانتظار في %s</string>
+  <string name="morphe_queue_manager_playlist_title">قائمة تشغيل Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">إضافة إلى قائمة الانتظار</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">إضافة إلى قائمة الانتظار وفتح</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">إضافة إلى قائمة الانتظار وتشغيل</string>
@@ -1112,7 +1113,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">تعطيل إيماءة السحب الأفقي</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">يمنع إغلاق المشغل المصغر عن طريق سحبه أفقيًا خارج الشاشة</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">إخفاء أزرار الواجهة</string>
-  <string name="morphe_miniplayer_hide_subtext_title">إخفاء النصوص الفرعية</string>
   <string name="morphe_miniplayer_width_dip_title">الحجم الافتراضي</string>
   <string name="morphe_miniplayer_width_dip_summary">تعيين الحجم الأولي على الشاشة، بالبكسل</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">حجم البكسل يجب أن يكون بين %1$s و %2$s</string>

@@ -368,6 +368,7 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Cruthaíodh an scuaine</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Bainte den scuaine</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Sábháilte an scuaine chuig %s</string>
+  <string name="morphe_queue_manager_playlist_title">Ciú Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Cuir leis an scuaine</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Cuir leis an scuaine agus oscail</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Cuir leis an scuaine agus seinn</string>
@@ -1023,8 +1024,8 @@ Leagan amach na ngluaisteán
 • Níl an cnaipe athmheasctha ná an cnaipe fuaime ar fáil i Shorts
 • Oscail Shorts sa ghnáthimreoir
 • Níl an barra gníomhaíochta físe fillte"</string>
-  <string name="morphe_tablet_layout_in_player_title">Comhghabháil le leagan clár tablet sa pheileoir</string>
-  <string name="morphe_tablet_layout_in_player_summary">Athchóirnaíonn an leabaillín imreoir seanbhunú</string>
+  <string name="morphe_tablet_layout_in_player_title">Cumasaigh leagan amach táibléid sa seinnteoir</string>
+  <string name="morphe_tablet_layout_in_player_summary">Athchóiríonn sé leagan amach an imreoir sean</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Leagan aip bréige</string>
   <string name="morphe_spoof_app_version_summary">Meallann sé an freastalaí le go gceapfá go bhfuil tú ag úsáid seanleagan den aip chun gnéithe oidhreachta den chomhéadan úsáideora a athbhunú.</string>
@@ -1108,7 +1109,6 @@ Teorainn: B’fhéidir nach n-oibreoidh an cnaipe ar ais ar an mbarra uirlisí a
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Díchumasaigh gotha tarraingthe cothrománach</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Coscann sé seo dúnadh an mhionimreoir trína shlaodadh go cothrománach as an scáileán.</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Folaigh cnaipí forleagan</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Folaigh fo-théacsanna</string>
   <string name="morphe_miniplayer_width_dip_title">Méid réamhshocraithe</string>
   <string name="morphe_miniplayer_width_dip_summary">Socraigh an méid tosaigh ar an scáileán, i bpicteilíní</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Ní mór méid na bpicteilíní a bheith idir %1$s agus %2$s</string>

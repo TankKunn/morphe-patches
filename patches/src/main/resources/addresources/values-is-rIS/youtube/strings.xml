@@ -20,74 +20,74 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">Um Morphe</string>
   <string name="morphe_settings_screen_01_ads_title">Auglýsingar</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Valmyndir</string>
-  <string name="morphe_settings_screen_03_feed_title">Fóður</string>
-  <string name="morphe_settings_screen_04_general_title">Alhliða</string>
+  <string name="morphe_settings_screen_02_alt_thumbnails_title">Aðrar smámyndir</string>
+  <string name="morphe_settings_screen_03_feed_title">Straumur</string>
+  <string name="morphe_settings_screen_04_general_title">Almennt</string>
   <string name="morphe_settings_screen_05_player_title">Spilari</string>
   <string name="morphe_settings_screen_06_shorts_title">Shorts</string>
-  <string name="morphe_settings_screen_07_seekbar_title">Leitarstika</string>
+  <string name="morphe_settings_screen_07_seekbar_title">Staðsetningarstika</string>
   <string name="morphe_settings_screen_08_swipe_controls_title">Stýringar með sveipum</string>
   <string name="morphe_settings_screen_11_misc_title">Ýmislegt</string>
-  <string name="morphe_settings_screen_12_video_title">Vídeo</string>
-  <string name="morphe_restore_old_settings_menus_title">Endurheimtu gömlu stillingarstillingar YouTube</string>
+  <string name="morphe_settings_screen_12_video_title">Myndband</string>
+  <string name="morphe_restore_old_settings_menus_title">Endurheimta gamla stillingaskjá YouTube</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
-  <string name="morphe_remove_background_playback_restrictions_title">Fjarlægðu bakvið rekstur</string>
-  <string name="morphe_shorts_disable_background_playback_title">Lokað bakgrundatólar</string>
+  <string name="morphe_remove_background_playback_restrictions_title">Fjarlægja takmarkanir á spilun í bakgrunni</string>
+  <string name="morphe_shorts_disable_background_playback_title">Slökkva á spilun í bakgrunni</string>
   <!-- misc.debugging.enableDebuggingPatch -->
-  <string name="morphe_debug_protobuffer_title">Kembulist við plástur</string>
-  <string name="morphe_debug_protobuffer_summary">Bætir við aukatölfræðilegum upplýsingum fyrir upprælsur til að bera kennsl á innbyrt forritsþætti</string>
-  <string name="morphe_debug_protobuffer_user_dialog_message">"Ef þú virkar þennan stillingu mun auka upplýsingum um útlagsstærð, þar á meðal texta á skjánum fyrir suma viðmóðahluti.
+  <string name="morphe_debug_protobuffer_title">Kembiskrá fyrir Protocol Buffer</string>
+  <string name="morphe_debug_protobuffer_summary">Bætir við viðbótarskráningarupplýsingum til að hjálpa forriturum að bera kennsl á hluta forritsins</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Ef þessi stilling er virkjuð verða skráðar viðbótarupplýsingar um uppsetningu viðmótsins, þar á meðal texti á skjánum fyrir suma viðmótshluta.
 
-Þetta getur hjálpað til með að auðkenna hluta þegar þú býrð til sérsniðna síu.
+Þetta getur hjálpað við að bera kennsl á hluta þegar sérsniðnar síur eru búnar til.
 
-Samt sem áður, ef þú virkar þetta mun einnig skrá nokkur notendagögn svo sem IP tölu þína."</string>
+Athugaðu að einnig kunna að vera skráð ákveðin notendagögn, svo sem IP-talan þín."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
-  <string name="morphe_disable_layout_updates_title">Lokað uppfærslu</string>
-  <string name="morphe_disable_layout_updates_summary">Þetta kemur í stað þess að netþjónurinn uppfæri útlagnina</string>
-  <string name="morphe_disable_layout_updates_user_dialog_message">"Forritalag vinnslu hneysu á mörgum háttum.
+  <string name="morphe_disable_layout_updates_title">Slökkva á uppfærslum á viðmóti</string>
+  <string name="morphe_disable_layout_updates_summary">Kemur í veg fyrir að þjónninn uppfæri uppsetningu forritsins</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"Forritið notar aftur þá uppsetningu sem var virk við fyrstu uppsetningu.
 
-Sumir netþjónhlutur munust ekki snúa til baka.
+Sumar uppsetningar sem stjórnað er af þjóninum kunna þó ekki að endurstillast.
 
-Breytningar felast í:
-• Hlutir í spilunavalmyndinni (eða tengdar stillingar) gætu virkað ekki.
-• Tölumyndir eru ekki hreyfanlegar.
-• Safn vinstri flipa sýnir
-• Tónlistarhluti lýsingsins gæti ekki virkað.
-• Hlutir spilunavalmyndarinnar geta ekki verið felldir.
-• Reikningsskiptihnappurinn er ekki í boði á vinstri flipa."</string>
+Breytingarnar fela í sér:
+• Atriði í fellivalmynd spilarans (eða tengdar stillingar) kunna að hætta að virka.
+• Talningarhreyfingar talna eru ekki sýndar.
+• Safn-flipinn birtist.
+• Tónlistarhluti myndbandslýsingar gæti ekki virkað.
+• Ekki er hægt að fela atriði í fellivalmynd spilarans.
+• Hnappur til að skipta um reikning gæti ekki birst á Safn-flipanum."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
-  <string name="morphe_hide_feed_flyout_menu_title">Vírúð fljótlegra valmynda síunar</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Fljótleg valmynd síunar</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Sláðu inn hænsleikur á spillilegum línum</string>
-  <string name="morphe_hide_account_menu_title">Virka fyrirtæki tilvalíkt löggildarliður</string>
-  <string name="morphe_hide_account_menu_filter_strings_title">Fyrirtæki Stillingslöggildarlíkur</string>
-  <string name="morphe_hide_account_menu_filter_strings_summary">Sláðu inn fyrirtæki löggildalíd fyrir hlut í hækkunum, aðskiljum með nýjum línur</string>
-  <string name="morphe_hide_album_cards_title">Fela albúm kort</string>
-  <string name="morphe_hide_album_cards_summary">Hyl samhæfa súnar</string>
-  <string name="morphe_hide_artist_cards_title">Fela listamannakort</string>
-  <string name="morphe_hide_artist_cards_summary">Hyl listilmiðar</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Fela sjálfræsta drikkamál</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Virkja síu fyrir fellivalmynd straumsins</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Sía fyrir fellivalmynd straumsins</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Sláðu inn nöfn fellivalmynda sem á að sía eftir, eitt nafn í hverri línu</string>
+  <string name="morphe_hide_account_menu_title">Virkja síu fyrir neðri valmynd „Safn / Þú“</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Sía fyrir neðri valmynd „Safn / Þú“</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">Sláðu inn nöfn atriða í neðri valmynd „Safn / Þú“ sem á að sía eftir, eitt nafn í hverri línu</string>
+  <string name="morphe_hide_album_cards_title">Fela albúmspjöld</string>
+  <string name="morphe_hide_album_cards_summary">Felur albúmspjöld undir lýsingu listamannsins</string>
+  <string name="morphe_hide_artist_cards_title">Fela listamannaspjöld</string>
+  <string name="morphe_hide_artist_cards_summary">Felur listamannaspjaldið efst í leitarniðurstöðum</string>
+  <string name="morphe_hide_auto_dubbed_label_title">Fela merkið „Sjálfvirkt talsett“</string>
   <string name="morphe_hide_community_posts_title">Fela samfélagsfærslur</string>
-  <string name="morphe_hide_compact_banner_title">Fela samningaskjáborð</string>
-  <string name="morphe_hide_compact_banner_summary">Hyl samstillig borði</string>
-  <string name="morphe_hide_expandable_card_title">Hyl útlögn vaktar</string>
+  <string name="morphe_hide_compact_banner_title">Fela þétta borða</string>
+  <string name="morphe_hide_compact_banner_summary">Felur þétta borða og bil á milli sumra viðmótshluta</string>
+  <string name="morphe_hide_expandable_card_title">Útvíkkanleg spjöld undir myndböndum</string>
   <string name="morphe_hide_expandable_card_entry_1">Sýna allt</string>
-  <string name="morphe_hide_expandable_card_entry_2">Hyl vörulist</string>
-  <string name="morphe_hide_expandable_card_entry_3">Hyl samstilligarlist</string>
-  <string name="morphe_hide_expandable_card_entry_4">Hyl vörulist og samstilligarlist</string>
-  <string name="morphe_hide_expandable_card_entry_5">Hyl allt</string>
-  <string name="morphe_hide_floating_microphone_button_title">Fela fljótandi hljóðnemabjalla</string>
-  <string name="morphe_hide_floating_microphone_button_summary">Hyl fljótlegur hnekkir</string>
-  <string name="morphe_hide_horizontal_shelves_title">Fela lárétta hillur</string>
-  <string name="morphe_hide_horizontal_shelves_summary">Hylur lárétta hillur svo sem Fréttir, Félagsfélagar sem gætu þrátt, Halda áfram að horfa, Skoða fleiri rásir, Skoða fleiri efni, Til þín, Nýjustu vídeó, Viðeigandi, Félagsfélagar höfundar, Innkaup og Horfa það aftur</string>
-  <string name="morphe_hide_hyped_label_title">Fela Hýrð táknan</string>
-  <string name="morphe_hide_image_shelf_title">Fela myndahilla</string>
-  <string name="morphe_hide_image_shelf_summary">Hyl myndir</string>
+  <string name="morphe_hide_expandable_card_entry_2">Fela aðeins vöruspjald</string>
+  <string name="morphe_hide_expandable_card_entry_3">Fela aðeins samantektarspjald</string>
+  <string name="morphe_hide_expandable_card_entry_4">Fela vöru- og samantektarspjöld</string>
+  <string name="morphe_hide_expandable_card_entry_5">Fela allt</string>
+  <string name="morphe_hide_floating_microphone_button_title">Fela fljótandi hljóðnemahnapp</string>
+  <string name="morphe_hide_floating_microphone_button_summary">Felur fljótandi hljóðnemahnapp neðst í hægra horninu á skjá leitaruppástungna</string>
+  <string name="morphe_hide_horizontal_shelves_title">Fela láréttar raðir</string>
+  <string name="morphe_hide_horizontal_shelves_summary">Felur láréttar raðir eins og Fréttir, Samfélagsfærslur sem þú gætir haft áhuga á, Halda áfram að horfa, Fleiri rásir, Fleiri efni, Fyrir þig, Nýjustu myndbönd, Mest viðeigandi, Samfélagsfærslur höfunda, Verslun og Horfa aftur</string>
+  <string name="morphe_hide_hyped_label_title">Fela „Hyped“ merkið</string>
+  <string name="morphe_hide_image_shelf_title">Fela myndaröð</string>
+  <string name="morphe_hide_image_shelf_summary">Felur myndaraðir í leitarniðurstöðum</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
-  <string name="morphe_hide_latest_videos_button_title">Húfa \'Nýjustu myndböðin\' hnappinn</string>
-  <string name="morphe_hide_latest_videos_button_summary">Hyl blaðið</string>
-  <string name="morphe_hide_mix_playlists_title">Fela blönduðar spilalistar</string>
+  <string name="morphe_hide_latest_videos_button_title">Fela hnappinn „Nýjustu myndbönd“</string>
+  <string name="morphe_hide_latest_videos_button_summary">Felur bláa borðann „Nýjustu myndbönd“ sem birtist efst í heimastreymi</string>
+  <string name="morphe_hide_mix_playlists_title">Fela blandaða spilunarlista</string>
   <string name="morphe_hide_movies_section_title">Fela kvikmyndadeild</string>
   <!-- 'Notify me' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Subscriptions feed for future livestreams or unreleased videos. -->
@@ -366,6 +366,7 @@ Staðfestu að pakkanafnið er rétt og að appið er uppsett"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Biðlisti búinn til</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Fjarlægt úr biðlista</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Biðlisti vistaður í %s</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe biðröð</string>
   <string name="morphe_queue_manager_add_to_queue">Bæta við í biðlista</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Bæta við í biðlista og opna</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Bæta við í biðlista og spila</string>
@@ -1104,7 +1105,6 @@ Takmörkun: Notkun afturhnappsins á tólaborðinu virkar kannski ekki"</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Lokað láréttri dragningu</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Kemur í veg fyrir að loka minnkaðan spilarann með því að draga hann láréttur úr sjónarsviðinu</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Fela yfirborðs hnappa</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Fela undirtexta</string>
   <string name="morphe_miniplayer_width_dip_title">Sjálfgengið stærð</string>
   <string name="morphe_miniplayer_width_dip_summary">Stilltu upphaflegu stærðina á skjánum, í pixlum</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pixel stærð verður að vera á milli %1$s og %2$s</string>

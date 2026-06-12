@@ -368,6 +368,7 @@ Poznámka: Možno nebude fungovať na živých prenosoch"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Fronta vytvorená</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Odstránené z fronty</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Fronta uložená do %s</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe fronta</string>
   <string name="morphe_queue_manager_add_to_queue">Pridať do fronty</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Pridať do fronty a otvoriť</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Pridať do fronty a prehrať</string>
@@ -1108,7 +1109,6 @@ Obmedzenie: Používanie tlačidla späť na paneli nástrojov nemusí fungovať
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Zakázať horizontálne gesto ťahania</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Zabráni ťahaniu časovej osy na obrazovke uzamknutia a v paneloch upozornení</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Skryť prekryvné tlačidlá</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Skryť podtexty</string>
   <string name="morphe_miniplayer_width_dip_title">Predvolená veľkosť</string>
   <string name="morphe_miniplayer_width_dip_summary">Nastavte počiatočnú veľkosť na obrazovke, v pixeloch</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Veľkosť v pixeloch musí byť medzi %1$s a %2$s</string>

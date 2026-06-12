@@ -366,6 +366,7 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Vrsta je ustvarjena</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Odstranjeno iz vrste</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Vrsta je shranjena v %s</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe vrstica</string>
   <string name="morphe_queue_manager_add_to_queue">Dodaj v vrsto</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Dodaj v vrsto in odpri</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Dodaj v vrsto in predvajaj</string>
@@ -1106,7 +1107,6 @@ Omejitev: Uporaba gumba za vrnitev v orodni vrstici morda ne bo delovala"</strin
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Onemogočite vodoravno povlečenjem gesta</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Preprečuje zaprtje mini predajalnika z drsenjem vodoravno po zaslonu</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Skrijite gumbe prekrivnega okna</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Skrijte podnapise</string>
   <string name="morphe_miniplayer_width_dip_title">Privzeta velikost</string>
   <string name="morphe_miniplayer_width_dip_summary">Nastavite začetno velikost na zaslonu, v pikah</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Velikost v pikslih mora biti med %1$s in %2$s</string>

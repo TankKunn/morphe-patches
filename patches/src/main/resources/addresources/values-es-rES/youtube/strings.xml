@@ -370,6 +370,7 @@ Información: Es posible que no funcione en transmisiones en directo"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Cola creada</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Eliminado de la cola</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Cola guardada en %s</string>
+  <string name="morphe_queue_manager_playlist_title">Cola de Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Agregar a la cola</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Agregar a la cola y abrir</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Agregar a la cola y reproducir</string>
@@ -1110,7 +1111,6 @@ Limitación: Usar el botón de retroceso en la barra de herramientas puede que n
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Desactivar gesto de arrastre horizontal</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Evita cerrar el reproductor en miniatura deslizando horizontalmente la pantalla</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Ocultar botones de superposición</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Ocultar subtextos</string>
   <string name="morphe_miniplayer_width_dip_title">Tamaño predeterminado</string>
   <string name="morphe_miniplayer_width_dip_summary">Establece el tamaño inicial en pantalla, en píxeles</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">El tamaño del píxel debe ser entre %1$s y %2$s</string>

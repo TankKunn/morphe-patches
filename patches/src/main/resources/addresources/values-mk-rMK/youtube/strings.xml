@@ -1024,7 +1024,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Исклучи хоризонтално превлекување</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Спречува затворање на мини-плеер со хоризонтално лизгање надвор од екранот</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Скриј наслаги</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Скриј поттекст</string>
   <string name="morphe_miniplayer_width_dip_title">Стандардна големина</string>
   <string name="morphe_miniplayer_width_dip_summary">Поставете ја почетната големина на екранот, во пиксели</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Големината на пикселите мора да биде помеѓу %1$s и %2$s</string>

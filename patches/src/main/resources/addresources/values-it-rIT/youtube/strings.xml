@@ -368,6 +368,7 @@ Avviso: Potrebbe non funzionare sui video in diretta"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Coda creata</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Rimosso dalla coda</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Coda salvata in %s</string>
+  <string name="morphe_queue_manager_playlist_title">Coda di Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Aggiungi alla coda</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Aggiungi alla coda e apri</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Aggiungi alla coda e riproduci</string>
@@ -1108,7 +1109,6 @@ Limitazione: l'uso del pulsante indietro sulla barra degli strumenti potrebbe no
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Disabilita gesto di trascinamento orizzontale</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Impedisce la chiusura del lettore minimizzato scorrendolo orizzontalmente fuori dallo schermo</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Nascondi i pulsanti in sovrapposizione</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Nascondi sottotesti</string>
   <string name="morphe_miniplayer_width_dip_title">Dimensione predefinita</string>
   <string name="morphe_miniplayer_width_dip_summary">Imposta la dimensione sullo schermo iniziale, in pixel</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">La dimensione del pixel deve essere compresa tra %1$s e %2$s</string>

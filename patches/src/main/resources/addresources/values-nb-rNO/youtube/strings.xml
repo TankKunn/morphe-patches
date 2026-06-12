@@ -368,6 +368,7 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Køen er opprettet</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Fjernet fra køen</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Køen er lagret til %s</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe-k%C3%B8</string>
   <string name="morphe_queue_manager_add_to_queue">Legg til i køen</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Legg til i køen og åpne</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Legg til i køen og spill</string>
@@ -1108,7 +1109,6 @@ Begrensning: Bruk av tilbake-knappen på verktøylinjen fungerer kanskje ikke"</
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Deaktiver horisontal dra-gest</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Forhindrer at du lukker minispilleren ved å sveipe den horisontalt av skjermen</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Skjul overlegg-knapper</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Skjul undertitler</string>
   <string name="morphe_miniplayer_width_dip_title">Standardstørrelse</string>
   <string name="morphe_miniplayer_width_dip_summary">Angi startstørrelsen på skjermen, i piksler</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pikselstørrelsen må være mellom %1$s og %2$s</string>

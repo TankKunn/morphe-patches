@@ -370,6 +370,7 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Очередь создана</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Удалено из очереди</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Очередь сохранена в %s</string>
+  <string name="morphe_queue_manager_playlist_title">Очередь Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Добавить в очередь</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Добавить в очередь и открыть</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Добавить в очередь и воспроизвести</string>
@@ -1111,7 +1112,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Отключить жест горизонтального перетаскивания</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Предотвращает закрытие миниплеера горизонтальным свайпом</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Скрыть кнопки миниплеера</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Скрыть подтексты</string>
   <string name="morphe_miniplayer_width_dip_title">Размер по умолчанию</string>
   <string name="morphe_miniplayer_width_dip_summary">Установите начальный размер на экране, в пикселях</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Размер в пикселях должен быть между %1$s и %2$s</string>

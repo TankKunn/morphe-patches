@@ -362,6 +362,7 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">क्यू तयार केली</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">क्यू मधून काढले</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">क्यू %s वर जतन केली</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe Queue</string>
   <string name="morphe_queue_manager_add_to_queue">क्यू मध्ये जोडा</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">क्यू मध्ये जोडा आणि उघडा</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">क्यू मध्ये जोडा आणि प्ले करा</string>
@@ -1097,7 +1098,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title"> horizontal ड्रॅग gesture अक्षम करा</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">मिनीप्लेअरला (Miniplayer) क्षैतिजरित्या (Horizontally) स्वाइप (Swipe) करून बंद करण्यापासून प्रतिबंधित (Prevent) करते</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">ओव्हरले बटणे लपवा</string>
-  <string name="morphe_miniplayer_hide_subtext_title">सबटेक्स्ट लपवा</string>
   <string name="morphe_miniplayer_width_dip_title">डीआयपी (DIP) मध्ये डीफॉल्ट (Default) आकार</string>
   <string name="morphe_miniplayer_width_dip_summary">सुरुवातीचा आकार सेट करा, पिक्सेलमध्ये (Pixels)</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">पिक्सेल आकार %1$s आणि %2$s दरम्यान असणे आवश्यक आहे</string>

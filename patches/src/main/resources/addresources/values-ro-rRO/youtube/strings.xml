@@ -368,6 +368,7 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Coada a fost creată</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Înlăturat din coadă</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Coada a fost salvată în %s</string>
+  <string name="morphe_queue_manager_playlist_title">Coada Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Adaugă în coadă</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Adaugă în coadă și deschide</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Adaugă în coadă și redă</string>
@@ -1108,7 +1109,6 @@ Limitare: Utilizarea butonului Înapoi de pe bara de instrumente s-ar putea să 
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Dezactivează gestul de glisare orizontală</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Împiedică închiderea miniplayerului prin glisarea lui orizontală în afara ecranului</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Ascunde butoanele suprapuse</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Ascunde subtexte</string>
   <string name="morphe_miniplayer_width_dip_title">Dimensiune implicită</string>
   <string name="morphe_miniplayer_width_dip_summary">Stabilește dimensiunea inițială a ecranului, în pixeli</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Dimensiunea pixelului trebuie să fie între %1$s și %2$s</string>

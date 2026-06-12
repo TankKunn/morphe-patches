@@ -969,7 +969,6 @@ Begränsning: Bakåtknappen i verktygsfältet kanske inte fungerar"</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Inaktivera horisontell draggest</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Förhindrar att minispelaren kan stängas genom att svepa den horisontellt bort från skärmen</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Dölj överläggsknappar</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Dölj undertexter</string>
   <string name="morphe_miniplayer_width_dip_title">Standardstorlek</string>
   <string name="morphe_miniplayer_width_dip_summary">Ange startstorleken på skärmen i pixlar</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pixelstorlek måste vara mellan %1$s och %2$s</string>

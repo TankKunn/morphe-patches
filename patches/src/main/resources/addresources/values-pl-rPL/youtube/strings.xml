@@ -368,6 +368,7 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Utworzono kolejkę</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Usunięto z kolejki</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Zapisano kolejkę na playliście %s</string>
+  <string name="morphe_queue_manager_playlist_title">Kolejka Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Dodaj do kolejki</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Dodaj do kolejki i otwórz</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Dodaj do kolejki i odtwórz</string>
@@ -1107,7 +1108,6 @@ Ograniczenie: Użycie przycisku wstecz na pasku narzędzi może nie działać"</
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Wyłącz gest przeciągania w poziomie</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Zapobiega zamykaniu miniodtwarzacza poprzez przesunięcie go w poziomie poza ekran</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Ukryj przyciski w miniodtwarzaczu</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Ukryj dodatkowe teksty</string>
   <string name="morphe_miniplayer_width_dip_title">Domyślny rozmiar</string>
   <string name="morphe_miniplayer_width_dip_summary">Ustaw początkowy rozmiar na ekranie w pikselach</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Rozmiar musi mieścić się w przedziale od %1$s do %2$s pikseli</string>

@@ -368,6 +368,7 @@ Info: Virker muligvis ikke på live streams"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Kø oprettet</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Fjernet fra køen</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Kø gemt til %s</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe-kø</string>
   <string name="morphe_queue_manager_add_to_queue">Tilføj til køen</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Tilføj til køen og åbn</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Tilføj til køen og afspil</string>
@@ -1108,7 +1109,6 @@ Begrænsning: Brug af tilbage-knappen på værktøjslinjen fungerer muligvis ikk
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Deaktiver vandret trækbevægelse</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Forhindrer lukning af miniafspilleren ved at svajpe den vandret af skærmen</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Skjul overlay-knapper</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Skjul undertekster</string>
   <string name="morphe_miniplayer_width_dip_title">Standardstørrelse</string>
   <string name="morphe_miniplayer_width_dip_summary">Indstil den indledende størrelse på skærmen i pixels</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pixel størrelse skal være mellem %1$s og %2$s</string>

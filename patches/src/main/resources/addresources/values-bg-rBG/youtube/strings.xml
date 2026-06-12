@@ -366,6 +366,7 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Опашката е създадена</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Премахнато от опашката</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Опашката е запазена в %s</string>
+  <string name="morphe_queue_manager_playlist_title">Опашка на Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Добавяне към опашката</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Добавяне към опашката и отваряне</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Добавяне към опашката и възпроизвеждане</string>
@@ -1106,7 +1107,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Изключете хоризонтално влачене движение</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Предотвратява затварянето на минииграча чрез плъзгане хоризонтално през екрана</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Скрийте бутоните за надграждане</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Скрийте бутоните за ускоро и назад</string>
   <string name="morphe_miniplayer_width_dip_title">Размер по подразбиране</string>
   <string name="morphe_miniplayer_width_dip_summary">Задайте началния размер на екрана, в пиксели</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Непрозрачност на миниплеера трябва да бъде между 0-100</string>

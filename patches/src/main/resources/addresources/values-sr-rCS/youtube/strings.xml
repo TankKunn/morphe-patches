@@ -368,6 +368,7 @@ Napomena: Možda neće raditi na direktnim prenosima"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Red je kreiran</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Uklonjeno iz reda</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Red je sačuvan u %s</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe red</string>
   <string name="morphe_queue_manager_add_to_queue">Dodaj u red</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Dodaj u red i otvori</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Dodaj u red i reprodukuj</string>
@@ -1108,7 +1109,6 @@ Ograničenje: Korišćenje dugmeta „Nazad” na traci sa alatkama možda neće
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Onemogući pokret horizontalnog prevlačenja</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Sprečava zatvaranje mini plejera horizontalnim prevlačenjem sa ekrana</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Sakrij dugmad preklopa</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Sakrij podtekstove</string>
   <string name="morphe_miniplayer_width_dip_title">Podrazumevana veličina</string>
   <string name="morphe_miniplayer_width_dip_summary">Postavi početnu veličinu na ekranu, u pikselima</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Veličina piksela mora biti između %1$s i %2$s</string>

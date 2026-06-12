@@ -367,6 +367,7 @@ Informação: pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Fila criada</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Removido(a) da fila</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Fila salva em %s</string>
+  <string name="morphe_queue_manager_playlist_title">Fila do Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Adicionar à fila</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Adicionar à fila e abrir</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Adicionar à fila e reproduzir</string>
@@ -1105,7 +1106,6 @@ Limitação: Usar o botão Voltar na barra de ferramentas pode não funcionar"</
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Desativar gesto de arrastar horizontal</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Impede o fechamento do mini player deslizando-o horizontalmente para fora da tela</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Ocultar botões de sobreposição</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Ocultar subtextos</string>
   <string name="morphe_miniplayer_width_dip_title">Tamanho padrão</string>
   <string name="morphe_miniplayer_width_dip_summary">Defina o tamanho inicial na tela, em pixels</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">O tamanho do pixel deve estar entre %1$s e %2$s</string>

@@ -370,6 +370,7 @@ Info: May not work on live streams"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Lîste çêkirin</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Derxistina ji lîsteyê kirin</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Lîste li %s hatî parastin</string>
+  <string name="morphe_queue_manager_playlist_title">Girîsekê Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Ket lîsteyê kirin</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Ket lîsteyê kirin û vekirin</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Ket lîsteyê kirin û vîdyoyê bidarxin</string>
@@ -1112,7 +1113,6 @@ Sînordarî: Bikaranîna Butona paşve li ser Toolbarê dibe ku kar neke"</strin
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Çekana mane ya serê horizontal astîne</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Tekreng</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Dane serlêdanên dorpelê</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Dane metinên kêm</string>
   <string name="morphe_miniplayer_width_dip_title">Rengê Sebarê</string>
   <string name="morphe_miniplayer_width_dip_summary">Destbîne ranga sereke ya barkê pêşkeftina vîdeoyê</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Mezinahiya pîksele divê di navbera %1$s û %2$s de be</string>

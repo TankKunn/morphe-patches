@@ -368,6 +368,7 @@ Info: Funktioniert möglicherweise nicht bei Live-Streams"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Warteschlange erstellt</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Aus der Warteschlange entfernt</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Warteschlange gespeichert unter %s</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe-Warteschlange</string>
   <string name="morphe_queue_manager_add_to_queue">Zur Warteschlange hinzufügen</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Zur Warteschlange hinzufügen und öffnen</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Zur Warteschlange hinzufügen und Video abspielen</string>
@@ -1108,7 +1109,6 @@ Einschränkung: Die Verwendung der Zurück-Taste auf der Symbolleiste funktionie
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Horizontale Ziehgeste deaktivieren</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Verhindert das Schließen des Miniplayers, indem Sie ihn horizontal vom Bildschirm wischen</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Overlay-Buttons ausblenden</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Untertexte ausblenden</string>
   <string name="morphe_miniplayer_width_dip_title">Standardgröße</string>
   <string name="morphe_miniplayer_width_dip_summary">Legen Sie die Anfangsgröße auf dem Bildschirm in Pixeln fest</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pixelgröße muss zwischen %1$s und %2$s liegen</string>

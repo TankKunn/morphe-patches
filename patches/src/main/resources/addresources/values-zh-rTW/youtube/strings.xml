@@ -368,6 +368,7 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">已建立佇列</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">已從佇列移除</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">佇列已儲存至 %s</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe 佇列</string>
   <string name="morphe_queue_manager_add_to_queue">加入佇列</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">加入佇列並開啟</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">加入佇列並播放</string>
@@ -1107,7 +1108,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">停用水平拖曳手勢</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">防止通過水平滑動迷你播放器關閉螢幕</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">隱藏暫停時顯示的按鈕</string>
-  <string name="morphe_miniplayer_hide_subtext_title">隱藏字幕</string>
   <string name="morphe_miniplayer_width_dip_title">預設大小</string>
   <string name="morphe_miniplayer_width_dip_summary">設定開始的螢幕大小（以像素為單位）</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">像素大小必須介於 %1$s 和 %2$s 之間</string>

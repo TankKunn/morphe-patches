@@ -104,6 +104,8 @@ VazerOG tərəfindən xüsusiyyətin tətbiqi"</string>
   <string name="morphe_music_enable_forced_miniplayer_title">Məcburi kiçik səsləndiricini aktivləşdir</string>
   <string name="morphe_music_enable_forced_miniplayer_summary">Yeni trek başlayanda səsləndiricini birbaşa tam ekrana genişləndirməsin əngəlləyir</string>
   <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Kiçik səsləndiricini ləğv etmək üçün sürüşdürməni aktivləşdir</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Kiçik səsləndirici üzərində aşağı sürüşdürərək onu ləğv etməyə imkan verir</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Fəaliyyət cizgisi</string>
   <string name="morphe_music_navigation_bar_screen_summary">Aşağı fəaliyyət cərgəsində hansı düymələr görünür seç</string>

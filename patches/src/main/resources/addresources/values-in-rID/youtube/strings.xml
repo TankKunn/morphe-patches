@@ -367,6 +367,7 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Antrean dibuat</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Dihapus dari antrean</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Antrean disimpan ke %s</string>
+  <string name="morphe_queue_manager_playlist_title">Antrean Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Tambahkan ke antrean</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Tambahkan ke antrean dan buka</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Tambahkan ke antrean dan putar</string>
@@ -1107,7 +1108,6 @@ Batasan: Menggunakan tombol kembali pada toolbar mungkin tidak berfungsi"</strin
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Nonaktifkan gerakan seret horizontal</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Mencegah penutupan pemutar mini dengan menggesernya secara horizontal dari layar</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Sembunyikan tombol hamparan</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Sembunyikan subteks</string>
   <string name="morphe_miniplayer_width_dip_title">Ukuran default</string>
   <string name="morphe_miniplayer_width_dip_summary">Atur ukuran awal di layar, dalam piksel</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Ukuran piksel harus antara %1$s dan %2$s</string>

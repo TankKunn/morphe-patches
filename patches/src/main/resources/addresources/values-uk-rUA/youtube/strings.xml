@@ -368,6 +368,7 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Чергу створено</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Видалено з черги</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Чергу збережено до %s</string>
+  <string name="morphe_queue_manager_playlist_title">Черга Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Додати до черги</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Додати до черги та відкрити</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Додати до черги та відтворити</string>
@@ -1022,8 +1023,8 @@ Second \"item\" text"</string>
 • Кнопки \"Ремікс\" та \"Звук\" недоступні в Short
 • Short відкриваються у звичайному плеєрі
 • Панель дій відео не згорнуто"</string>
-  <string name="morphe_tablet_layout_in_player_title">Увімкнути макет планшета в програвачі</string>
-  <string name="morphe_tablet_layout_in_player_summary">Відновлює попереднє розташування елементів керування програвача</string>
+  <string name="morphe_tablet_layout_in_player_title">Увімкнути планшетний макет у плеєрі</string>
+  <string name="morphe_tablet_layout_in_player_summary">Відновлює старий макет плеєра</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Підміна версії застосунку</string>
   <string name="morphe_spoof_app_version_summary">Змушує сервер вважати, що використовується старіша версія застосунку, щоб відновити елементи старого інтерфейсу</string>
@@ -1107,7 +1108,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Вимкнути жест горизонтального перетягування</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Запобігає закривати мінiплеєр горизонтальним свайпом за межі екрана</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Приховати кнопки мініплеєра</string>
-  <string name="morphe_miniplayer_hide_subtext_title">Приховати підтексти</string>
   <string name="morphe_miniplayer_width_dip_title">Розмір за замовчуванням</string>
   <string name="morphe_miniplayer_width_dip_summary">Встановлює початковий розмір на екрані в пікселях</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Розмір у пікселях повинен бути від %1$s до %2$s</string>
