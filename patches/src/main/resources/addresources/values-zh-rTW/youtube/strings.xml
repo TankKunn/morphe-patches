@@ -223,12 +223,12 @@ Second \"item\" text"</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"限制：
 • Shorts 專區、頻道頁面和搜尋結果可能仍會顯示觀看次數
-• 此功能不適用於汽車外型規格"</string>
+• 此功能不適用於汽車版面配置"</string>
   <string name="morphe_hide_upload_time_title">隱藏「上傳時間」</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <string name="morphe_hide_upload_time_summary">"限制：
 • Shorts 專區、頻道頁面和搜尋結果可能仍會顯示上傳時間
-• 此功能不適用於車載模式"</string>
+• 此功能不適用於汽車版面配置"</string>
   <string name="morphe_hide_keyword_content_screen_title">關鍵字篩選</string>
   <string name="morphe_hide_keyword_content_screen_summary">選擇要根據關鍵字或頻道名稱在動態消息和搜尋中隱藏影片</string>
   <string name="morphe_hide_keyword_content_home_title">依關鍵字隱藏首頁影片</string>
@@ -1017,7 +1017,7 @@ Second \"item\" text"</string>
 • Shorts 中無法使用「混音」按鈕和「音效」按鈕
 • 影片動作欄未摺疊
 
-車用版面配置
+汽車版面配置
 • 資訊流依主題和頻道分類
 • 播放設定中無法使用「在資訊流中播放」選項
 • Shorts 中無法使用「混音」按鈕和「音效」按鈕

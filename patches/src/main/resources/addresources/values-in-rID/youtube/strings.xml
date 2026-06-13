@@ -1024,7 +1024,7 @@ Tata letak Otomotif
 • Shorts terbuka di pemutar reguler
 • Bilah tindakan video tidak diciutkan"</string>
   <string name="morphe_tablet_layout_in_player_title">Aktifkan tata letak tablet di pemutar</string>
-  <string name="morphe_tablet_layout_in_player_summary">Mengembalikan tampilan pemain lama</string>
+  <string name="morphe_tablet_layout_in_player_summary">Mengembalikan tampilan pemutar lama</string>
   <!-- layout.spoofappversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Palsukan versi app</string>
   <string name="morphe_spoof_app_version_summary">Menipu server agar menganggap Anda menggunakan versi aplikasi yang lebih lama untuk memulihkan fitur UI lama</string>

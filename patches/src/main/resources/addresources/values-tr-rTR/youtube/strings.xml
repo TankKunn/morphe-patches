@@ -29,7 +29,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_screen_08_swipe_controls_title">Kaydırma denetimleri</string>
   <string name="morphe_settings_screen_11_misc_title">Çeşitli</string>
   <string name="morphe_settings_screen_12_video_title">Video</string>
-  <string name="morphe_restore_old_settings_menus_title">Eski YouTube ayarları ekranını geri yükle</string>
+  <string name="morphe_restore_old_settings_menus_title">Eski YouTube ayarlar ekranını geri yükle</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Arka planda oynatma kısıtlamalarını kaldır</string>
   <string name="morphe_shorts_disable_background_playback_title">Arka planda oynatmayı devre dışı bırak</string>

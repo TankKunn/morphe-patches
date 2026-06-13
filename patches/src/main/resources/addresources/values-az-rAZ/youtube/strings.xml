@@ -59,6 +59,8 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_feed_flyout_menu_title">Axın açılan menyu filtrini aktivləşdir</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Axın açılan menyu filtri</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Yeni cərgələrlə ayrılan, çeşidləmək üçün açılan menyu adlarını qeyd et</string>
+  <string name="morphe_hide_account_menu_title">Kitabxananı / Aşağı menyu filtrinizi aktivləşdirin</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Kitabxananı / Aşağı menyu filtriniz</string>
   <string name="morphe_hide_album_cards_title">Albom kartlarını gizlət</string>
   <string name="morphe_hide_album_cards_summary">Albom kartlarını sənətkar təsviri altında gizlədir</string>
   <string name="morphe_hide_artist_cards_title">Sənətçi kartlarını gizlət</string>
