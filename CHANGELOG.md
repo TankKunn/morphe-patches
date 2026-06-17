@@ -9,7 +9,7 @@
 
 ### ✨ New Features
 
-* **YouTube - Hide layout components:** Add "Hide video comments by keywords" setting ([#1759](https://github.com/MorpheApp/morphe-patches/issues/1759)) ([d076c2b](https://github.com/MorpheApp/morphe-patches/commit/d076c2b3b7c561952fa2ae94be5d4de3119439af))
+* **YouTube - Hide layout components:** Add "Hide comments by keywords" setting ([#1759](https://github.com/MorpheApp/morphe-patches/issues/1759)) ([d076c2b](https://github.com/MorpheApp/morphe-patches/commit/d076c2b3b7c561952fa2ae94be5d4de3119439af))
 * **YouTube - Navigation bar:** Restore "Hide Cast button" setting in toolbar ([c27e63e](https://github.com/MorpheApp/morphe-patches/commit/c27e63ecb464b1e85e6ff97f13e21cc641a99fe7))
 * **YouTube - Navigation bar:** Add "Hide Chat button" setting in toolbar ([32ee079](https://github.com/MorpheApp/morphe-patches/commit/32ee07910d9d80a8f3eac3b6f0dd0968a6c6c81d))
 
