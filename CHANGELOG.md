@@ -1,3 +1,13 @@
+## [1.32.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.32.0-dev.2...v1.32.0-dev.3) (2026-06-18)
+
+### 🐛 Bug Fixes
+
+* **YouTube Music - Track crossfade:** Dismissing the queue does not stop playback, fix songs incorrectly skipped ([#1773](https://github.com/MorpheApp/morphe-patches/issues/1773)) ([206b84e](https://github.com/MorpheApp/morphe-patches/commit/206b84eb6b20f873edee53253fd8460a993a30ab))
+
+### ✨ New Features
+
+* **YouTube Music:** Add experimental support for `9.24.51` ([d30738a](https://github.com/MorpheApp/morphe-patches/commit/d30738a771222c8181623371a2f3b27b442dc478))
+
 ## [1.32.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.32.0-dev.1...v1.32.0-dev.2) (2026-06-17)
 
 ### 🐛 Bug Fixes
