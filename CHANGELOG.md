@@ -1,3 +1,10 @@
+## [1.32.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.32.0-dev.5...v1.32.0-dev.6) (2026-06-22)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Disable player popup panels:** Patch doesn't work in some circumstances ([6d6018c](https://github.com/MorpheApp/morphe-patches/commit/6d6018cf4a4ee6f79a283001aebe5b9d21767741))
+* **YouTube - Spoof video streams:** Always allow details fetching ([6bc0eee](https://github.com/MorpheApp/morphe-patches/commit/6bc0eeefe02fa89a5d0669698ceb2fffc5bc51c7))
+
 ## [1.32.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.32.0-dev.4...v1.32.0-dev.5) (2026-06-21)
 
 ### 🐛 Bug Fixes
