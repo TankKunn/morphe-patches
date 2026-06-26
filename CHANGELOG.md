@@ -1,3 +1,13 @@
+## [1.33.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.1...v1.33.0-dev.2) (2026-06-26)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:**  Match `RD` playlist URLs to improve "Hide mix playlists" filter ([#1835](https://github.com/MorpheApp/morphe-patches/issues/1835)) ([1172ce0](https://github.com/MorpheApp/morphe-patches/commit/1172ce044f14cc842eb6390d997d7793f8e2b4c3))
+
+### ✨ New Features
+
+* **YouTube:** Add `Voice over translation` patch ([#1685](https://github.com/MorpheApp/morphe-patches/issues/1685)) ([d811a32](https://github.com/MorpheApp/morphe-patches/commit/d811a3264878d01697eb75bd05185d9359603a4a))
+
 ## [1.33.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.32.0...v1.33.0-dev.1) (2026-06-25)
 
 ### 🐛 Bug Fixes
