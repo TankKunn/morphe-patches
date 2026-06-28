@@ -69,13 +69,16 @@ private val settingsResourcePatch = resourcePatch {
                 "morphe_settings_screen_04_general_bold.xml",
                 "morphe_settings_screen_05_player.xml",
                 "morphe_settings_screen_05_player_bold.xml",
+                "morphe_settings_screen_10_sponsorblock.xml",
+                "morphe_settings_screen_10_sponsorblock_bold.xml",
                 "morphe_settings_screen_11_misc.xml",
                 "morphe_settings_screen_11_misc_bold.xml",
-                "morphe_settings_music_screen_05_scrobbling.xml",
-                "morphe_settings_music_screen_05_scrobbling_bold.xml"
+                "morphe_settings_screen_13_scrobbling.xml",
+                "morphe_settings_screen_13_scrobbling_bold.xml"
             ),
             ResourceGroup("layout",
-                "morphe_preference_with_icon.xml"
+                "morphe_preference_with_icon.xml",
+                "morphe_color_dot_widget.xml"
             )
         )
 
@@ -215,13 +218,21 @@ object PreferenceScreen : BasePreferenceScreen() {
     val SCROBBLING = Screen(
         key = "morphe_settings_music_screen_4_scrobbling",
         summaryKey = null,
-        icon = "@drawable/morphe_settings_music_screen_05_scrobbling",
-        iconBold = "@drawable/morphe_settings_music_screen_05_scrobbling_bold",
+        icon = "@drawable/morphe_settings_screen_13_scrobbling",
+        iconBold = "@drawable/morphe_settings_screen_13_scrobbling_bold",
         layout = "@layout/morphe_preference_with_icon",
         sorting = Sorting.UNSORTED
     )
+    val SPONSORBLOCK = Screen(
+        key = "morphe_settings_music_screen_5_sponsorblock",
+        summaryKey = null,
+        icon = "@drawable/morphe_settings_screen_10_sponsorblock",
+        iconBold = "@drawable/morphe_settings_screen_10_sponsorblock_bold",
+        layout = "@layout/morphe_preference_with_icon",
+        sorting = Sorting.UNSORTED,
+    )
     val MISC = Screen(
-        key = "morphe_settings_music_screen_5_misc",
+        key = "morphe_settings_music_screen_6_misc",
         summaryKey = null,
         icon = "@drawable/morphe_settings_screen_11_misc",
         iconBold = "@drawable/morphe_settings_screen_11_misc_bold",
