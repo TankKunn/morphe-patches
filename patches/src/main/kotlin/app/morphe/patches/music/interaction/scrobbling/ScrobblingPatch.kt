@@ -17,6 +17,7 @@ import app.morphe.patches.music.misc.settings.settingsPatch
 import app.morphe.patches.music.shared.Constants.COMPATIBILITY_YOUTUBE_MUSIC
 import app.morphe.patches.shared.misc.settings.preference.NonInteractivePreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceCategory
+import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
 import app.morphe.patches.youtube.layout.returnyoutubedislike.DislikeFingerprint
@@ -34,7 +35,7 @@ private const val EXTENSION_CLASS = "Lapp/morphe/extension/music/patches/scrobbl
 @Suppress("unused")
 val scrobblingPatch = bytecodePatch(
     name = "Scrobbling",
-    description = "Adds options to add played tracks to Last.fm and ListenBrainz.",
+    description = "Adds options to add played tracks to Last.fm and ListenBrainz."
 ) {
     dependsOn(
         sharedExtensionPatch,
@@ -48,6 +49,10 @@ val scrobblingPatch = bytecodePatch(
             PreferenceCategory(
                 key = "morphe_music_listenbrainz",
                 preferences = setOf(
+                    SwitchPreference(
+                        key = "morphe_music_listenbrainz_enabled",
+                        titleKey = "morphe_music_scrobbling_enabled_title"
+                    ),
                     NonInteractivePreference(
                         key = "morphe_music_listenbrainz_token_ui",
                         titleKey = "morphe_music_listenbrainz_token_title",
@@ -55,8 +60,10 @@ val scrobblingPatch = bytecodePatch(
                         tag = "app.morphe.extension.music.settings.preference.ListenBrainzTokenPreference",
                         selectable = true
                     ),
-                    SwitchPreference("morphe_music_listenbrainz_enabled", titleKey = "morphe_music_scrobbling_enabled_title"),
-                    SwitchPreference("morphe_music_listenbrainz_now_playing", titleKey = "morphe_music_scrobbling_now_playing_title"),
+                    SwitchPreference(
+                        key = "morphe_music_listenbrainz_now_playing",
+                        titleKey = "morphe_music_scrobbling_now_playing_title"
+                    ),
                     NonInteractivePreference(
                         key = "morphe_music_listenbrainz_min_song_duration",
                         titleKey = "morphe_music_scrobbling_min_song_duration_title",
@@ -78,11 +85,16 @@ val scrobblingPatch = bytecodePatch(
                         tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
                         selectable = true
                     )
-                )
+                ),
+                sorting = Sorting.UNSORTED
             ),
             PreferenceCategory(
                 key = "morphe_music_lastfm",
                 preferences = setOf(
+                    SwitchPreference(
+                        key = "morphe_music_lastfm_enabled",
+                        titleKey = "morphe_music_scrobbling_enabled_title"
+                    ),
                     NonInteractivePreference(
                         key = "morphe_music_lastfm_token_ui",
                         titleKey = "morphe_music_lastfm_token_title",
@@ -90,8 +102,10 @@ val scrobblingPatch = bytecodePatch(
                         tag = "app.morphe.extension.music.settings.preference.LastFMTokenPreference",
                         selectable = true
                     ),
-                    SwitchPreference("morphe_music_lastfm_enabled", titleKey = "morphe_music_scrobbling_enabled_title"),
-                    SwitchPreference("morphe_music_lastfm_now_playing", titleKey = "morphe_music_scrobbling_now_playing_title"),
+                    SwitchPreference(
+                        key = "morphe_music_lastfm_now_playing",
+                        titleKey = "morphe_music_scrobbling_now_playing_title"
+                    ),
                     SwitchPreference("morphe_music_lastfm_love_on_like", summary = true),
                     NonInteractivePreference(
                         key = "morphe_music_lastfm_min_song_duration",
@@ -114,7 +128,8 @@ val scrobblingPatch = bytecodePatch(
                         tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
                         selectable = true
                     )
-                )
+                ),
+                sorting = Sorting.UNSORTED
             ),
             PreferenceCategory(
                 key = "morphe_settings_music_scrobbling_metadata",
@@ -154,7 +169,7 @@ val scrobblingPatch = bytecodePatch(
             }
         }
 
-        // Hook like/dislike/remove like button clicks
+        // Hook like/dislike/remove like button clicks.
         val endPointServiceNameField = EndpointServiceNameFingerprint
             .instructionMatches.last().instruction.getReference<FieldReference>()!!
         val likeEndpointParserClass = DislikeFingerprint.classDef.superclass!!
