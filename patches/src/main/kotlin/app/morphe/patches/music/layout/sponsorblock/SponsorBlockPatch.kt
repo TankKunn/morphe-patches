@@ -114,7 +114,7 @@ val musicSponsorBlockPatch = bytecodePatch(
                 sorting = PreferenceScreenPreference.Sorting.UNSORTED,
                 preferences = setOf(
                     SwitchPreference("morphe_sb_toast_on_connection_error", summary = true),
-                    TextPreference("morphe_sb_api_url"),
+                    TextPreference("morphe_sb_api_url")
                 )
             ),
 

@@ -87,11 +87,11 @@ private val settingsResourcePatch = resourcePatch {
         val targetResource = "values/styles.xml"
         inputStreamFromBundledResource(
             "settings/music",
-            targetResource,
+            targetResource
         )!!.let { inputStream ->
             "resources".copyXmlNode(
                 document(inputStream),
-                document("res/$targetResource"),
+                document("res/$targetResource")
             ).close()
         }
 
@@ -111,7 +111,7 @@ private val settingsResourcePatch = resourcePatch {
 }
 
 val settingsPatch = bytecodePatch(
-    description = "Adds settings for Morphe to YouTube Music.",
+    description = "Adds settings for Morphe to YouTube Music."
 ) {
     dependsOn(
         checkPatcherUpToDatePatch,
@@ -156,7 +156,7 @@ val settingsPatch = bytecodePatch(
                 titleKey = "morphe_pref_import_export_title",
                 summaryKey = "morphe_pref_import_export_summary",
                 inputType = InputType.TEXT_MULTI_LINE,
-                tag = "app.morphe.extension.shared.settings.preference.ImportExportPreference",
+                tag = "app.morphe.extension.shared.settings.preference.ImportExportPreference"
             )
         )
 
@@ -229,7 +229,7 @@ object PreferenceScreen : BasePreferenceScreen() {
         icon = "@drawable/morphe_settings_screen_10_sponsorblock",
         iconBold = "@drawable/morphe_settings_screen_10_sponsorblock_bold",
         layout = "@layout/morphe_preference_with_icon",
-        sorting = Sorting.UNSORTED,
+        sorting = Sorting.UNSORTED
     )
     val MISC = Screen(
         key = "morphe_settings_music_screen_6_misc",

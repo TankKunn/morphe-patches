@@ -174,7 +174,7 @@ private val sponsorBlockResourcePatch = resourcePatch {
                 "layout",
                 "morphe_sb_inline_sponsor_overlay.xml",
                 "morphe_sb_new_segment.xml",
-                "morphe_sb_skip_sponsor_button.xml",
+                "morphe_sb_skip_sponsor_button.xml"
             ),
             ResourceGroup(
                 "drawable",
@@ -237,12 +237,12 @@ val sponsorBlockPatch = bytecodePatch(
         // Hook the video time methods.
         videoTimeHook(
             EXTENSION_SEGMENT_PLAYBACK_CONTROLLER_CLASS,
-            "setVideoTime",
+            "setVideoTime"
         )
 
         hookBackgroundPlayVideoId(
             EXTENSION_SEGMENT_PLAYBACK_CONTROLLER_CLASS +
-                "->setCurrentVideoId(Ljava/lang/String;)V",
+                "->setCurrentVideoId(Ljava/lang/String;)V"
         )
 
         // Set seekbar draw rectangle.
@@ -272,7 +272,7 @@ val sponsorBlockPatch = bytecodePatch(
                 addInstruction(
                     thicknessIndex + 1,
                     "invoke-static { v$thicknessRegister }, " +
-                            "$EXTENSION_SEGMENT_PLAYBACK_CONTROLLER_CLASS->setSeekbarThickness(I)V",
+                            "$EXTENSION_SEGMENT_PLAYBACK_CONTROLLER_CLASS->setSeekbarThickness(I)V"
                 )
 
                 // Find the drawCircle call and draw the segment before it.
@@ -287,7 +287,7 @@ val sponsorBlockPatch = bytecodePatch(
                     drawCircleIndex,
                     "invoke-static { v$canvasInstanceRegister, v$centerYRegister }, " +
                             "$EXTENSION_SEGMENT_PLAYBACK_CONTROLLER_CLASS->" +
-                            "drawSegmentTimeBars(Landroid/graphics/Canvas;F)V",
+                            "drawSegmentTimeBars(Landroid/graphics/Canvas;F)V"
                 )
 
                 // Set seekbar bounds.
@@ -338,7 +338,7 @@ val sponsorBlockPatch = bytecodePatch(
                 val frameLayoutRegister = getInstruction<OneRegisterInstruction>(checkCastIndex).registerA
                 addInstruction(
                     checkCastIndex + 1,
-                    "invoke-static {v$frameLayoutRegister}, $EXTENSION_SPONSORBLOCK_VIEW_CONTROLLER_CLASS->initialize(Landroid/view/ViewGroup;)V",
+                    "invoke-static {v$frameLayoutRegister}, $EXTENSION_SPONSORBLOCK_VIEW_CONTROLLER_CLASS->initialize(Landroid/view/ViewGroup;)V"
                 )
             }
         }

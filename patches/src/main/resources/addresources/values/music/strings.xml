@@ -180,19 +180,19 @@ YouTube Music 8.x — crossfade only runs on 9.x and newer"</string>
 
     <string name="morphe_music_listenbrainz_title" translatable="false">ListenBrainz</string>
     <!-- 'scrobbling' must be kept untranslated -->
-    <string name="morphe_music_listenbrainz_enabled_title">Enable scrobbling</string>
-    <string name="morphe_music_listenbrainz_now_playing_title">Submit \"Now Playing\" status</string>
-    <string name="morphe_music_listenbrainz_min_song_duration_title">Minimum song duration</string>
+    <string name="morphe_music_scrobbling_enabled_title">Enable scrobbling</string>
+    <string name="morphe_music_scrobbling_now_playing_title">Submit \"Now Playing\" status</string>
+    <string name="morphe_music_scrobbling_min_song_duration_title">Minimum song duration</string>
     <!-- 'scrobbled' must be kept untranslated -->
-    <string name="morphe_music_listenbrainz_min_song_duration_summary">Songs shorter than this will not be scrobbled</string>
+    <string name="morphe_music_scrobbling_min_song_duration_summary">Songs shorter than this will not be scrobbled</string>
     <!-- 'scrobble' must be kept untranslated -->
-    <string name="morphe_music_listenbrainz_delay_percent_title">Scrobble delay percent</string>
+    <string name="morphe_music_scrobbling_delay_percent_title">Scrobble delay percent</string>
     <!-- 'scrobble' must be kept untranslated -->
-    <string name="morphe_music_listenbrainz_delay_percent_summary">Trigger scrobble after listening to this percentage of the song</string>
+    <string name="morphe_music_scrobbling_delay_percent_summary">Trigger scrobble after listening to this percentage of the song</string>
     <!-- 'scrobble' must be kept untranslated -->
-    <string name="morphe_music_listenbrainz_delay_seconds_title">Scrobble delay seconds</string>
+    <string name="morphe_music_scrobbling_delay_seconds_title">Scrobble delay seconds</string>
     <!-- 'scrobble' must be kept untranslated -->
-    <string name="morphe_music_listenbrainz_delay_seconds_summary">Trigger scrobble after listening for this many seconds</string>
+    <string name="morphe_music_scrobbling_delay_seconds_summary">Trigger scrobble after listening for this many seconds</string>
     <string name="morphe_music_listenbrainz_token_title">ListenBrainz Account</string>
     <string name="morphe_music_listenbrainz_token_summary_logged_in">Logged in. Tap to manage account</string>
     <!-- 'scrobbling' must be kept untranslated -->
@@ -211,22 +211,8 @@ YouTube Music 8.x — crossfade only runs on 9.x and newer"</string>
     <string name="morphe_music_listenbrainz_token_toast_invalid_warning">Warning: Saved token is invalid!</string>
 
     <string name="morphe_music_lastfm_title" translatable="false">Last.fm</string>
-    <!-- 'scrobbling' must be kept untranslated -->
-    <string name="morphe_music_lastfm_enabled_title">Enable scrobbling</string>
-    <string name="morphe_music_lastfm_now_playing_title">Submit \"Now Playing\" status</string>
     <string name="morphe_music_lastfm_love_on_like_title">Love liked tracks</string>
     <string name="morphe_music_lastfm_love_on_like_summary">Automatically love tracks on Last.fm when you like them on YouTube Music (and remove love when unliked or disliked)</string>
-    <string name="morphe_music_lastfm_min_song_duration_title">Minimum song duration</string>
-    <!-- 'scrobbled' must be kept untranslated -->
-    <string name="morphe_music_lastfm_min_song_duration_summary">Songs shorter than this will not be scrobbled</string>
-    <!-- 'scrobble' must be kept untranslated -->
-    <string name="morphe_music_lastfm_delay_percent_title">Scrobble delay percent</string>
-    <!-- 'scrobble' must be kept untranslated -->
-    <string name="morphe_music_lastfm_delay_percent_summary">Trigger scrobble after listening to this percentage of the song</string>
-    <!-- 'scrobble' must be kept untranslated -->
-    <string name="morphe_music_lastfm_delay_seconds_title">Scrobble delay seconds</string>
-    <!-- 'scrobble' must be kept untranslated -->
-    <string name="morphe_music_lastfm_delay_seconds_summary">Trigger scrobble after listening for this many seconds</string>
     <string name="morphe_music_lastfm_token_title">Last.fm Account</string>
     <string name="morphe_music_lastfm_token_summary_logged_in">Logged in as %s. Tap to manage account</string>
     <string name="morphe_music_lastfm_token_dialog_instruction">Enter your Last.fm credentials to log in</string>
@@ -246,7 +232,9 @@ YouTube Music 8.x — crossfade only runs on 9.x and newer"</string>
     <string name="morphe_music_scrobbling_custom_regex_title">Custom regex cleanup</string>
     <string name="morphe_music_scrobbling_custom_regex_summary">Enter a custom regular expression to remove additional text from song titles, artists, or albums. Example: (?i)\\s*\\((clean|explicit)\\)</string>
 
+    <!-- 'scrobbling' must be kept untranslated -->
     <string name="morphe_music_scrobbling_about_title">About scrobbling</string>
+    <!-- 'scrobbling' must be kept untranslated -->
     <string name="morphe_music_scrobbling_about_summary">"Scrobbling automatically syncs your YouTube Music usage with your Last.fm or ListenBrainz profile
 
 To ensure scrobbling is synced during background playback, ensure that YouTube Music's app battery usage is set to \"Unrestricted\""</string>

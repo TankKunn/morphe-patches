@@ -202,7 +202,7 @@ private val settingsResourcePatch = resourcePatch {
 }
 
 val settingsPatch = bytecodePatch(
-    description = "Adds settings for Morphe to YouTube.",
+    description = "Adds settings for Morphe to YouTube."
 ) {
     dependsOn(
         checkPatcherUpToDatePatch,
@@ -263,7 +263,7 @@ val settingsPatch = bytecodePatch(
                 titleKey = "morphe_pref_import_export_title",
                 summaryKey = "morphe_pref_import_export_summary",
                 inputType = InputType.TEXT_MULTI_LINE,
-                tag = "app.morphe.extension.shared.settings.preference.ImportExportPreference",
+                tag = "app.morphe.extension.shared.settings.preference.ImportExportPreference"
             ),
             ListPreference(
                 key = "morphe_language",
@@ -351,7 +351,7 @@ internal fun modifyActivityForSettingsInjection(
         AccessFlags.PROTECTED.value,
         null,
         null,
-        MutableMethodImplementation(3),
+        MutableMethodImplementation(3)
     ).toMutable().apply {
         addInstructions(
             0,
@@ -373,7 +373,7 @@ internal fun modifyActivityForSettingsInjection(
         AccessFlags.PUBLIC.value,
         null,
         null,
-        MutableMethodImplementation(3),
+        MutableMethodImplementation(3)
     ).toMutable().apply {
         // Slightly different hooks are needed, otherwise the back button can behave wrong.
         val extensionMethodName = if (isYouTubeMusic) "handleFinish" else "handleBackPress"
@@ -398,7 +398,7 @@ internal fun modifyActivityForSettingsInjection(
  */
 fun newIntent(settingsName: String) = IntentPreference.Intent(
     data = settingsName,
-    targetClass = "com.google.android.gms.common.api.GoogleApiActivity",
+    targetClass = "com.google.android.gms.common.api.GoogleApiActivity"
 ) {
     // The package name change has to be reflected in the intent.
     setOrGetFallbackPackageName("com.google.android.youtube")

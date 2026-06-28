@@ -11,23 +11,18 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.patch.resourcePatch
 import app.morphe.patches.music.misc.extension.sharedExtensionPatch
 import app.morphe.patches.music.misc.settings.PreferenceScreen
 import app.morphe.patches.music.misc.settings.settingsPatch
 import app.morphe.patches.music.shared.Constants.COMPATIBILITY_YOUTUBE_MUSIC
 import app.morphe.patches.shared.misc.settings.preference.NonInteractivePreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceCategory
-import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
-import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
 import app.morphe.patches.youtube.layout.returnyoutubedislike.DislikeFingerprint
 import app.morphe.patches.youtube.layout.returnyoutubedislike.EndpointServiceNameFingerprint
 import app.morphe.patches.youtube.layout.returnyoutubedislike.likeEndpointParserFingerprint
 import app.morphe.patches.youtube.layout.returnyoutubedislike.requestParameterCheckFingerprint
-import app.morphe.util.ResourceGroup
-import app.morphe.util.copyResources
 import app.morphe.util.getFreeRegisterProvider
 import app.morphe.util.getReference
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
@@ -60,23 +55,26 @@ val scrobblingPatch = bytecodePatch(
                         tag = "app.morphe.extension.music.settings.preference.ListenBrainzTokenPreference",
                         selectable = true
                     ),
-                    SwitchPreference("morphe_music_listenbrainz_enabled"),
-                    SwitchPreference("morphe_music_listenbrainz_now_playing"),
+                    SwitchPreference("morphe_music_listenbrainz_enabled", titleKey = "morphe_music_scrobbling_enabled_title"),
+                    SwitchPreference("morphe_music_listenbrainz_now_playing", titleKey = "morphe_music_scrobbling_now_playing_title"),
                     NonInteractivePreference(
                         key = "morphe_music_listenbrainz_min_song_duration",
-                        summaryKey = "morphe_music_listenbrainz_min_song_duration_summary",
+                        titleKey = "morphe_music_scrobbling_min_song_duration_title",
+                        summaryKey = "morphe_music_scrobbling_min_song_duration_summary",
                         tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
                         selectable = true
                     ),
                     NonInteractivePreference(
                         key = "morphe_music_listenbrainz_delay_percent",
-                        summaryKey = "morphe_music_listenbrainz_delay_percent_summary",
+                        titleKey = "morphe_music_scrobbling_delay_percent_title",
+                        summaryKey = "morphe_music_scrobbling_delay_percent_summary",
                         tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
                         selectable = true
                     ),
                     NonInteractivePreference(
                         key = "morphe_music_listenbrainz_delay_seconds",
-                        summaryKey = "morphe_music_listenbrainz_delay_seconds_summary",
+                        titleKey = "morphe_music_scrobbling_delay_seconds_title",
+                        summaryKey = "morphe_music_scrobbling_delay_seconds_summary",
                         tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
                         selectable = true
                     )
@@ -92,24 +90,27 @@ val scrobblingPatch = bytecodePatch(
                         tag = "app.morphe.extension.music.settings.preference.LastFMTokenPreference",
                         selectable = true
                     ),
-                    SwitchPreference("morphe_music_lastfm_enabled"),
-                    SwitchPreference("morphe_music_lastfm_now_playing"),
+                    SwitchPreference("morphe_music_lastfm_enabled", titleKey = "morphe_music_scrobbling_enabled_title"),
+                    SwitchPreference("morphe_music_lastfm_now_playing", titleKey = "morphe_music_scrobbling_now_playing_title"),
                     SwitchPreference("morphe_music_lastfm_love_on_like", summary = true),
                     NonInteractivePreference(
                         key = "morphe_music_lastfm_min_song_duration",
-                        summaryKey = "morphe_music_lastfm_min_song_duration_summary",
+                        titleKey = "morphe_music_scrobbling_min_song_duration_title",
+                        summaryKey = "morphe_music_scrobbling_min_song_duration_summary",
                         tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
                         selectable = true
                     ),
                     NonInteractivePreference(
                         key = "morphe_music_lastfm_delay_percent",
-                        summaryKey = "morphe_music_lastfm_delay_percent_summary",
+                        titleKey = "morphe_music_scrobbling_delay_percent_title",
+                        summaryKey = "morphe_music_scrobbling_delay_percent_summary",
                         tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
                         selectable = true
                     ),
                     NonInteractivePreference(
                         key = "morphe_music_lastfm_delay_seconds",
-                        summaryKey = "morphe_music_lastfm_delay_seconds_summary",
+                        titleKey = "morphe_music_scrobbling_delay_seconds_title",
+                        summaryKey = "morphe_music_scrobbling_delay_seconds_summary",
                         tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
                         selectable = true
                     )
