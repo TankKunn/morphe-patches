@@ -1,3 +1,9 @@
+## [1.33.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.4...v1.33.0-dev.5) (2026-06-28)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Add to queue:** Use app activity for dialog to open dialog ([f3e2b2b](https://github.com/MorpheApp/morphe-patches/commit/f3e2b2b3f3350ff6bea937f9eb81da10aab14c34))
+
 ## [1.33.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.3...v1.33.0-dev.4) (2026-06-28)
 
 ### ✨ New Features
