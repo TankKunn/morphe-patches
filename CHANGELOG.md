@@ -1,3 +1,16 @@
+## [1.33.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.5...v1.33.0-dev.6) (2026-06-29)
+
+### 🐛 Bug Fixes
+
+* **YouTube - SponsorBlock:** Resolve missing resource dependency when patch is excluded ([3721511](https://github.com/MorpheApp/morphe-patches/commit/3721511a7e89124fe92d529399f58f3ec39b26f3))
+* **YouTube - System Share:** Increased the opening speed of the system share sheet ([9cacff8](https://github.com/MorpheApp/morphe-patches/commit/9cacff89172fb05760bdae2dbbae275c0db5934c))
+* **YouTube - Video queue:** A video from a playlist does not opened or reloaded within the playlist. ([fbca3e7](https://github.com/MorpheApp/morphe-patches/commit/fbca3e755a67d89026064a6c04dfbaf1bb676caf))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Sanitize video subtitle" setting ([#1277](https://github.com/MorpheApp/morphe-patches/issues/1277)) ([0cb4bc5](https://github.com/MorpheApp/morphe-patches/commit/0cb4bc5d59c18b3df9037914db2002942db127be))
+* **YouTube Music:** Add `SponsorBlock` patch ([#1842](https://github.com/MorpheApp/morphe-patches/issues/1842)) ([0e6e8f1](https://github.com/MorpheApp/morphe-patches/commit/0e6e8f1c0d53df205be8cf12f365224293128f1f))
+
 ## [1.33.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.4...v1.33.0-dev.5) (2026-06-28)
 
 ### 🐛 Bug Fixes
