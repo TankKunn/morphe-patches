@@ -8,6 +8,7 @@
 package app.morphe.patches.music.video.information
 
 import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.parametersMatch
 import app.morphe.patcher.string
 import com.android.tools.smali.dexlib2.AccessFlags
 
@@ -28,8 +29,17 @@ internal object VideoEndFingerprint : Fingerprint(
  * Parameters are (playerResponseModel, videoId).
  */
 internal object VideoIdFingerprint : Fingerprint(
-    returnType = "V",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
-    parameters = listOf("L", "Ljava/lang/String;"),
-    strings = listOf("Null initialPlayabilityStatus")
+    filters = listOf(
+      string("Null initialPlayabilityStatus")
+    ),
+    custom = { method, _ ->
+        parametersMatch(
+            method.parameters,
+            listOf("L", "Ljava/lang/String;")
+        ) || parametersMatch(
+            method.parameters,
+            listOf("L", "Ljava/lang/String;", "Z") // 9.24 only
+        )
+    },
 )
