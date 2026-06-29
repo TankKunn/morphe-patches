@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">SponsorBlock सक्षम करें</string>
+  <string name="morphe_sb_enabled_summary">SponsorBlock YouTube वीडियो के कष्टप्रद भागों को छोड़ने के लिए एक क्राउडसोर्स्ड प्रणाली है</string>
+  <string name="morphe_sb_appearance_category_title">स्वरूप</string>
+  <string name="morphe_sb_voting_button_title">वोटिंग बटन दिखाएं</string>
+  <string name="morphe_sb_voting_button_summary">सेगमेंट को ऊपर या नीचे वोट करने के लिए एक बटन जोड़ता है</string>
+  <string name="morphe_sb_square_layout_title">स्क्वायर लेआउट का उपयोग करें</string>
+  <string name="morphe_sb_square_layout_summary">SponsorBlock बटन और नियंत्रणों के लिए गोल किनारे का उपयोग करता है</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">संपीड़ित छोड़ें बटन का उपयोग करें</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">जगह बचाने के लिए स्किप बटन की चौड़ाई कम करता है</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">छोड़ें बटन को स्वचालित रूप से छिपाएं</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">पूरे सेगमेंट के लिए दिखाई देने के बजाय स्किप बटन को कुछ सेकंड के बाद छुपाता है</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">छोड़ें बटन अवधि</string>
+  <string name="morphe_sb_compact_skip_button_title">कॉम्पैक्ट स्किप बटन का उपयोग करें</string>
+  <string name="morphe_sb_compact_skip_button_summary">जगह बचाने के लिए स्किप बटन की चौड़ाई कम करता है</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">स्किप बटन को स्वचालित रूप से छिपाएं</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">सेगमेंट के लिए पूरे समय के लिए इसे दृश्यमान रखने के बजाय कुछ सेकंड के बाद स्किप बटन को छिपा देता है</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">स्किप बटन अवधि</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">सेट करें कि स्किप बटन कितने समय तक दिखाई देता है</string>
-  <string name="morphe_sb_general_skiptoast">अनडू स्किप अधिसूचना दिखाएं</string>
-  <string name="morphe_sb_general_skiptoast_summary">आपको स्वचालित स्किप को पूर्ववत करने के लिए टैप करने की अनुमति देने वाली एक सूचना दिखाता है</string>
-  <string name="morphe_sb_toast_on_skip_duration">छोड़ें अधिसूचना अवधि</string>
+  <string name="morphe_sb_toast_on_skip_title">स्किप सूचना दिखाएं</string>
+  <string name="morphe_sb_toast_on_skip_summary">जब किसी सेगमेंट को स्वचालित रूप से छोड़ दिया जाता है तो एक सूचना दिखाता है</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">स्किप सूचना अवधि</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">स्किप करने पर सूचना कितने समय तक दिखाई देती है, इसे सेट करें</string>
   <string name="morphe_sb_duration_1s">1 सेकंड</string>
   <string name="morphe_sb_duration_2s">2 सेकंड</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 सेकंड</string>
   <string name="morphe_sb_duration_9s">9 सेकंड</string>
   <string name="morphe_sb_duration_10s">10 सेकंड</string>
-  <string name="morphe_sb_general_time_without">सेगमेंट के बिना वीडियो की लंबाई दिखाएं</string>
-  <string name="morphe_sb_general_time_without_summary">कुल वीडियो अवधि में सभी सेगमेंट घटाता है जो सीकबार पर दिखाई देता है</string>
-  <string name="morphe_sb_create_segment_category">नई सेगमेंट बनाना</string>
-  <string name="morphe_sb_enable_create_segment">नया सेगमेंट बनाने के लिए \'नया सेगमेंट बनाएं\' बटन दिखाएं</string>
-  <string name="morphe_sb_enable_create_segment_summary">वीडियो प्लेयर में एक बटन जोड़ता है जो आपको नए स्पोंसरब्लॉक सेगमेंट सबमिट करने की अनुमति देता है</string>
-  <string name="morphe_sb_general_adjusting">समय समायोजन चरण</string>
-  <string name="morphe_sb_general_adjusting_summary">समय समायोजन बटनों की तलाश की मात्रा (मिलीसेकंड में)</string>
-  <string name="morphe_sb_general_adjusting_invalid">मान एक सकारात्मक संख्या होनी चाहिए</string>
-  <string name="morphe_sb_guidelines_preference_title">सबमिशन दिशानिर्देश</string>
-  <string name="morphe_sb_guidelines_preference_summary">मार्गदर्शिकाएं नए खंडों के निर्माण के लिए नियम और युक्तियाँ प्रदान करती हैं</string>
+  <string name="morphe_sb_video_length_without_segments_title">सेगमेंट के बिना वीडियो लंबाई दिखाएं</string>
+  <string name="morphe_sb_video_length_without_segments_summary">सीकबार पर दिखाए गए कुल वीडियो अवधि में सभी सेगमेंट घटाता है</string>
+  <string name="morphe_sb_create_segment_category_title">नए सेगमेंट बनाना</string>
+  <string name="morphe_sb_create_new_segment_title">\'नया सेगमेंट बनाएं\' बटन दिखाएं</string>
+  <string name="morphe_sb_create_new_segment_summary">वीडियो प्लेयर में एक बटन जोड़ता है जो आपको नए SponsorBlock सेगमेंट सबमिट करने की अनुमति देता है</string>
+  <string name="morphe_sb_create_new_segment_step_title">समय समायोजन चरण</string>
+  <string name="morphe_sb_create_new_segment_step_summary">समय समायोजन बटन की मात्रा (मिलीसेकंड में)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">मान एक धनात्मक संख्या होनी चाहिए</string>
+  <string name="morphe_sb_guidelines_title">सबमिशन दिशानिर्देश</string>
+  <string name="morphe_sb_guidelines_summary">दिशानिर्देशों में नए सेगमेंट बनाने के नियम और सुझाव शामिल हैं</string>
   <string name="morphe_sb_guidelines_popup_title">मार्गदर्शिकाओं का अनुसरण करें</string>
   <string name="morphe_sb_guidelines_popup_content">नया सेगमेंट बनाने से पहले स्पोंसरब्लॉक दिशानिर्देश पढ़ें</string>
   <string name="morphe_sb_guidelines_popup_already_read">पढ़ी जा चुकी है</string>
   <string name="morphe_sb_guidelines_popup_open">मुझे दिखाएँ</string>
-  <string name="morphe_sb_general">सामान्य</string>
-  <string name="morphe_sb_toast_on_connection_error">कनेक्शन त्रुटि अलर्ट दिखाएं</string>
+  <string name="morphe_sb_general_title">सामान्य</string>
+  <string name="morphe_sb_toast_on_connection_error_title">कनेक्शन त्रुटि अलर्ट दिखाएं</string>
   <string name="morphe_sb_toast_on_connection_error_summary">जब स्पॉन्सरब्लॉक सर्वर अनुपलब्ध हो तो एक सूचना दिखाता है</string>
-  <string name="morphe_sb_general_skipcount">स्किप काउंट ट्रैकिंग सक्षम करें</string>
-  <string name="morphe_sb_general_skipcount_summary">स्किप काउंट को स्पॉन्सरब्लॉक लीडरबोर्ड पर भेजता है ताकि यह ट्रैक किया जा सके कि कितना समय बचाया गया है</string>
-  <string name="morphe_sb_general_min_duration">न्यूनतम सेगमेंट अवधि</string>
-  <string name="morphe_sb_general_min_duration_summary">इस मान (सेकंड में) से कम समय के सेगमेंट नहीं दिखाए जाएंगे और छोड़ दिए जाएंगे</string>
-  <string name="morphe_sb_general_min_duration_invalid">अमान्य समय अवधि</string>
-  <string name="morphe_sb_general_uuid">आपका निजी उपयोगकर्ता आईडी</string>
-  <string name="morphe_sb_general_uuid_summary">इसे निजी रखा जाना चाहिए। यह पासवर्ड की तरह है और इसे किसी के साथ साझा नहीं किया जाना चाहिए। यदि किसी के पास यह है, तो वे आपका प्रतिरूपण कर सकते हैं</string>
-  <string name="morphe_sb_general_uuid_invalid">निजी उपयोगकर्ता आईडी कम से कम 30 अक्षर लंबी होनी चाहिए</string>
-  <string name="morphe_sb_general_api_url">एपीआई यूआरएल बदलें</string>
-  <string name="morphe_sb_general_api_url_summary">वह पता जिसका उपयोग SponsorBlock सर्वर से कॉल करने के लिए करता है</string>
-  <string name="morphe_sb_channel_whitelist">चैनल व्हाइटलिस्ट</string>
+  <string name="morphe_sb_track_skip_count_title">स्किप गणना ट्रैकिंग सक्षम करें</string>
+  <string name="morphe_sb_track_skip_count_summary">कितनी समय बचाया गया है, यह ट्रैक करने के लिए SponsorBlock लीडरबोर्ड पर स्किप गणना भेजता है</string>
+  <string name="morphe_sb_min_segment_duration_title">न्यूनतम सेगमेंट अवधि</string>
+  <string name="morphe_sb_min_segment_duration_summary">इस मान (सेकंड में) से कम सेगमेंट नहीं दिखाए जाएंगे या छोड़ दिए जाएंगे</string>
+  <string name="morphe_sb_min_segment_duration_invalid">अमान्य समय अवधि</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">आपका निजी उपयोगकर्ता आईडी</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">इसे निजी रखा जाना चाहिए। यह एक पासवर्ड की तरह है और इसे किसी के साथ साझा नहीं किया जाना चाहिए। यदि किसी के पास यह है, तो वे आपका प्रतिरूपण कर सकते हैं</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">निजी उपयोगकर्ता आईडी कम से कम 30 वर्णों का होना चाहिए</string>
+  <string name="morphe_sb_api_url_title">API URL बदलें</string>
+  <string name="morphe_sb_api_url_summary">यह वह पता है जिसका SponsorBlock सर्वर पर कॉल करने के लिए उपयोग करता है</string>
+  <string name="morphe_sb_channel_whitelist_title">चैनल व्हाइटलिस्ट</string>
   <string name="morphe_sb_channel_whitelist_summary">व्हाइटलिस्टेड चैनलों के लिए SponsorBlock अक्षम है।</string>
   <string name="morphe_sb_channel_whitelist_current_channel">वर्तमान चैनल:</string>
   <string name="morphe_sb_channel_whitelist_add">व्हाइटलिस्ट में जोड़ें</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">कोई भी चैनल व्हाइटलिस्ट नहीं किया गया</string>
   <string name="morphe_sb_channel_whitelist_channel_added">चैनल को व्हाइटलिस्ट में जोड़ा गया</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">चैनल को व्हाइटलिस्ट से हटा दिया गया</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">व्हाइटलिस्टेड चैनल पर सूचित करें</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">व्हाइटलिस्टेड चैनल पर सूचित करें</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">जब व्हाइटलिस्ट किए गए चैनल के लिए SponsorBlock अक्षम किया जाता है तो एक सूचना दिखाता है</string>
   <string name="morphe_sb_channel_whitelisted_toast">इस चैनल के लिए SponsorBlock अक्षम किया गया</string>
   <string name="morphe_sb_api_url_reset">एपीआई यूआरएल रीसेट करें</string>
   <string name="morphe_sb_api_url_invalid">एपीआई यूआरएल अमान्य है</string>
   <string name="morphe_sb_api_url_changed">एपीआई यूआरएल बदला गया</string>
-  <string name="morphe_sb_settings_ie">आयात / निर्यात सेटिंग्स</string>
+  <string name="morphe_sb_settings_ie_title">सेटिंग आयात / निर्यात करें</string>
   <string name="morphe_sb_settings_copy">कॉपी</string>
   <string name="morphe_sb_settings_ie_summary">आपका SponsorBlock JSON कॉन्फ़िगरेशन जिसे Morphe और अन्य SponsorBlock प्लेटफ़ॉर्म पर आयात / निर्यात किया जा सकता है</string>
   <string name="morphe_sb_settings_ie_summary_warning">"आपका स्पोंसरब्लॉक JSON कॉन्फ़िगरेशन जिसे मोर्फे और अन्य स्पोंसरब्लॉक प्लेटफॉर्म पर आयात / निर्यात किया जा सकता है
@@ -92,7 +98,7 @@ Second \"item\" text"</string>
 
 आपका आईडी एक पासवर्ड की तरह है, और कभी भी साझा नहीं किया जाना चाहिए।"</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">फिर से न दिखाएँ</string>
-  <string name="morphe_sb_diff_segments">सेगमेंट व्यवहार बदलें</string>
+  <string name="morphe_sb_diff_segments_title">सेगमेंट व्यवहार बदलें</string>
   <string name="morphe_sb_segments_sponsor">प्रायोजक</string>
   <string name="morphe_sb_segments_sponsor_summary">पेड प्रमोशन, पेड रेफ़रल और डायरेक्ट एडवरटाइजमेंट। स्व-प्रमोशन या उन कारणों / क्रिएटर / वेबसाइटों / उत्पादों को मुफ्त शआउटआउट के लिए नहीं</string>
   <string name="morphe_sb_segments_selfpromo">अवैतनिक / स्वयं प्रचार</string>

@@ -139,4 +139,12 @@ Afspilningen vil mislykkes, hvis hashen for afspiller JavaScript er forældet."<
   <string name="morphe_replace_music_with_youtube_summary">Erstatter music.youtube.com med youtube.com i delte links.</string>
   <string name="morphe_replace_links_with_shortener_title">Skift delingslinks til youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Tvinger videoer til at bruge det forkortede youtu.be URL-format</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Debug log protokolbuffer</string>
+  <string name="morphe_debug_protobuffer_summary">Tilføjer yderligere logningsinformation til udviklere for at identificere app-komponenter</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Aktivering af denne indstilling logger yderligere layoutdata, bl.a. skærmtekst for visse UI-komponenter.
+
+Det kan hjælpe med at finde komponenter til egne filtre.
+
+Det logger dog også brugerdata som din IP-adresse."</string>
 </resources>

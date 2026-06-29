@@ -104,4 +104,5 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_sharing_links_title">शेयरिंग लिंकसके सेनिटाइज करू</string>
   <string name="morphe_replace_music_with_youtube_title">शेयर लिंकके youtube.com में बदलू</string>
   <string name="morphe_replace_links_with_shortener_title">शेअर लिंकके youtu.be में बदलू</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
 </resources>

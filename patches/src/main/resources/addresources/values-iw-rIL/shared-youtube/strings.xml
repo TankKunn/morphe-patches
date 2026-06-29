@@ -139,4 +139,12 @@ Second \"item\" text"</string>
   <string name="morphe_replace_music_with_youtube_summary">מחליף את music.youtube.com ל-youtube.com בקישורים משותפים</string>
   <string name="morphe_replace_links_with_shortener_title">שנה קישורי שיתוף ל-youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">כופה על סרטונים להשתמש בפורמט הקיצור youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">רשום פרוטוקול חוצץ</string>
+  <string name="morphe_debug_protobuffer_summary">מוסיף מידע נוסף של רישום עבור מפתחים כדי לזהות רכיבי אפליקציה</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"הפעלת הגדרה זו תתעד נתוני פריסה נוספים, כולל טקסט שעל המסך עבור רכיבי ממשק משתמש מסוימים.
+
+זה יכול לעזור לזהות רכיבים בעת יצירת מסננים מותאמים אישית.
+
+עם זאת, הפעלת הגדרה זו תתעד גם כמה נתוני משתמש כמו כתובת ה-IP שלך."</string>
 </resources>

@@ -139,4 +139,12 @@ Second \"item\" text"</string>
   <string name="morphe_replace_music_with_youtube_summary">يستبدل music.youtube.com بـ youtube.com في الروابط المُشاركة</string>
   <string name="morphe_replace_links_with_shortener_title">تغيير روابط المشاركة إلى youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">يُلزم استخدام تنسيق رابط youtu.be المختصر للفيديوهات</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">سجل تصحيح الأخطاء لـ Protocol Buffer</string>
+  <string name="morphe_debug_protobuffer_summary">يضيف معلومات تسجيل إضافية للمطورين لتحديد مكونات التطبيق</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"يؤدي تمكين هذا الإعداد إلى تسجيل بيانات تخطيط إضافية، بما في ذلك النص الظاهر على الشاشة لبعض مكونات الواجهة.
+
+يمكن أن يساعد ذلك في تحديد المكونات عند إنشاء عوامل تصفية مخصصة.
+
+ومع ذلك، سيؤدي تمكين هذا الخيار أيضًا إلى تسجيل بعض بيانات المستخدم مثل عنوان IP الخاص بك."</string>
 </resources>

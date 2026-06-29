@@ -139,4 +139,12 @@ A reprodução falhará se o hash do JavaScript do player estiver desatualizado.
   <string name="morphe_replace_music_with_youtube_summary">Substitui music.youtube.com por youtube.com em links compartilhados</string>
   <string name="morphe_replace_links_with_shortener_title">Alterar links de compartilhamento para youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Força os vídeos a usar o formato de URL abreviado youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Registro de buffer de protocolo</string>
+  <string name="morphe_debug_protobuffer_summary">Adiciona informações de registro adicionais para que os desenvolvedores identifiquem os componentes do app</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Ativar esta configuração registrará dados de layout adicionais, incluindo texto na tela para alguns componentes da IU.
+
+Isso pode ajudar a identificar componentes ao criar filtros personalizados.
+
+No entanto, ativar isso também registrará alguns dados do usuário, como seu endereço IP."</string>
 </resources>

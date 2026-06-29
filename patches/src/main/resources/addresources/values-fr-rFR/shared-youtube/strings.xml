@@ -139,4 +139,12 @@ La lecture échouera si le hachage JavaScript du lecteur est obsolète."</string
   <string name="morphe_replace_music_with_youtube_summary">Remplace music.youtube.com par youtube.com dans les liens partagés</string>
   <string name="morphe_replace_links_with_shortener_title">Modifier les liens de partage vers youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Force les vidéos à utiliser le format d’URL raccourcie youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Journal de débogage du protocol buffer</string>
+  <string name="morphe_debug_protobuffer_summary">Ajoute des informations de journalisation supplémentaires pour permettre aux développeurs d’identifier les composants de l\'application</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"L'activation de ce paramètre enregistrera des données supplémentaires sur la mise en page, y compris le texte affiché à l'écran pour certains composants de l'interface.
+
+Cela peut aider à identifier les composants lors de la création de filtres personnalisés.
+
+Cependant, activer cette option entraînera également l'enregistrement de certaines données utilisateur, telles que votre adresse IP."</string>
 </resources>

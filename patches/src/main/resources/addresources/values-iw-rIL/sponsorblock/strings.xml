@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">הפעל את SponsorBlock</string>
+  <string name="morphe_sb_enabled_summary">המערכת SponsorBlock היא מערכת מיקור המונים לדילוג על חלקים מעצבנים של סרטוני YouTube</string>
+  <string name="morphe_sb_appearance_category_title">מראה</string>
+  <string name="morphe_sb_voting_button_title">הצג לחצן הצבעה</string>
+  <string name="morphe_sb_voting_button_summary">מוסיף כפתור להצבעה בעד או נגד קטעים</string>
+  <string name="morphe_sb_square_layout_title">השתמש בפריסה מרובעת</string>
+  <string name="morphe_sb_square_layout_summary">משתמש בקצוות מעוגלים עבור כפתורים ופקדים של SponsorBlock</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">השתמש בלחצן דילוג קומפקטי</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">מפחית את רוחב לחצן הדילוג כדי לחסוך מקום</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">הסתר לחצן דילוג באופן אוטומטי</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">מסתיר את לחצן הדילוג לאחר מספר שניות במקום להציג אותו לאורך כל הקטע</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">משך לחצן הדילוג</string>
+  <string name="morphe_sb_compact_skip_button_title">השתמש בלחצן דילוג קומפקטי</string>
+  <string name="morphe_sb_compact_skip_button_summary">מקטין את רוחב כפתור \'דילוג\' כדי לחסוך במקום</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">הסתר לחצן דילוג באופן אוטומטי</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">מסתיר את כפתור \'דילוג\' לאחר מספר שניות במקום להשאיר אותו גלוי לאורך כל הקטע</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">משך לחצן הדילוג</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">קבע כמה זמן לחצני הדילוג יישארו גלויים</string>
-  <string name="morphe_sb_general_skiptoast">הצג הודעה קופצת לביטול דילוג</string>
-  <string name="morphe_sb_general_skiptoast_summary">מציג התראה המאפשרת לך להקיש כדי לבטל דילוג אוטומטי</string>
-  <string name="morphe_sb_toast_on_skip_duration">משך הודעת דילוג קופצת</string>
+  <string name="morphe_sb_toast_on_skip_title">הצג הודעת דילוג</string>
+  <string name="morphe_sb_toast_on_skip_summary">מציג התראה כאשר קטע מדולג באופן אוטומטי</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">משך הודעת דילוג קופצת</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">קבע כמה זמן ההתראה לביטול תישאר גלויה</string>
   <string name="morphe_sb_duration_1s">שנייה אחת</string>
   <string name="morphe_sb_duration_2s">2 שניות</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 שניות</string>
   <string name="morphe_sb_duration_9s">9 שניות</string>
   <string name="morphe_sb_duration_10s">10 שניות</string>
-  <string name="morphe_sb_general_time_without">הצג אורך סרטון ללא מקטעים</string>
-  <string name="morphe_sb_general_time_without_summary">מחסר את כל הקטעים ממשך הסרטון הכולל המוצג בסרגל החיפוש</string>
-  <string name="morphe_sb_create_segment_category">יוצר מקטעים חדשים</string>
-  <string name="morphe_sb_enable_create_segment">הצג לחצן \'צור קטע חדש\'</string>
-  <string name="morphe_sb_enable_create_segment_summary">מוסיף לחצן לנגן הווידאו המאפשר לך לשלוח קטעי SponsorBlock חדשים</string>
-  <string name="morphe_sb_general_adjusting">צעד להתאמת זמן</string>
-  <string name="morphe_sb_general_adjusting_summary">סכום החיפוש של כפתורי ההתאמה של הזמן (במילישניות)</string>
-  <string name="morphe_sb_general_adjusting_invalid">ערך חייב להיות מספר חיובי</string>
-  <string name="morphe_sb_guidelines_preference_title">הנחיות</string>
-  <string name="morphe_sb_guidelines_preference_summary">הנחיות כוללות חוקים וטיפים ליצירת מקטעים חדשים</string>
+  <string name="morphe_sb_video_length_without_segments_title">הצג אורך סרטון ללא מקטעים</string>
+  <string name="morphe_sb_video_length_without_segments_summary">מחסיר את כל הקטעים ממשך הסרטון הכולל המוצג בסרגל החיפוש</string>
+  <string name="morphe_sb_create_segment_category_title">יוצר מקטעים חדשים</string>
+  <string name="morphe_sb_create_new_segment_title">הצג כפתור \'צור קטע חדש\'</string>
+  <string name="morphe_sb_create_new_segment_summary">מוסיף כפתור לנגן הווידאו המאפשר לך לשלוח קטעי SponsorBlock חדשים</string>
+  <string name="morphe_sb_create_new_segment_step_title">צעד התאמת זמן</string>
+  <string name="morphe_sb_create_new_segment_step_summary">כמות החיפוש של כפתורי התאמת הזמן (במילישניות)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">ערך חייב להיות מספר חיובי</string>
+  <string name="morphe_sb_guidelines_title">הנחיות לשליחה</string>
+  <string name="morphe_sb_guidelines_summary">הנחיות כוללות חוקים וטיפים ליצירת מקטעים חדשים</string>
   <string name="morphe_sb_guidelines_popup_title">עקוב אחר ההנחיות</string>
   <string name="morphe_sb_guidelines_popup_content">קרא את ההנחיות של SponsorBlock לפני יצירת מקטעים חדשים</string>
   <string name="morphe_sb_guidelines_popup_already_read">כבר קראתי</string>
   <string name="morphe_sb_guidelines_popup_open">תראה לי</string>
-  <string name="morphe_sb_general">כללי</string>
-  <string name="morphe_sb_toast_on_connection_error">הצג התראות שגיאת חיבור</string>
+  <string name="morphe_sb_general_title">כללי</string>
+  <string name="morphe_sb_toast_on_connection_error_title">הצג התראות שגיאת חיבור</string>
   <string name="morphe_sb_toast_on_connection_error_summary">מציג התראה כאשר שרת SponsorBlock אינו זמין</string>
-  <string name="morphe_sb_general_skipcount">הפעל מעקב ספירת דילוגים</string>
-  <string name="morphe_sb_general_skipcount_summary">שולח ספירות דילוג לטבלת המובילים של SponsorBlock כדי לעקוב אחר הזמן שנחסך</string>
-  <string name="morphe_sb_general_min_duration">משך מקטע מינימלי</string>
-  <string name="morphe_sb_general_min_duration_summary">מקטעים קצרים יותר מערך זה (בשניות) לא יוצגו או ידולגו</string>
-  <string name="morphe_sb_general_min_duration_invalid">משך זמן לא חוקי</string>
-  <string name="morphe_sb_general_uuid">מזהה משתמש פרטי</string>
-  <string name="morphe_sb_general_uuid_summary">זה צריך להישמר פרטי. זה כמו סיסמה ולא צריך להיות משותף עם אף אחד. אם למישהו יש את זה, הוא יכול להתחזות אליך</string>
-  <string name="morphe_sb_general_uuid_invalid">מזהה משתמש פרטי חייב להיות באורך של לפחות 30 תווים</string>
-  <string name="morphe_sb_general_api_url">שנה כתובת API</string>
-  <string name="morphe_sb_general_api_url_summary">הכתובת שבה SponsorBlock משתמש כדי לבצע קריאות לשרת</string>
-  <string name="morphe_sb_channel_whitelist">רשימת היתרים לערוצים</string>
+  <string name="morphe_sb_track_skip_count_title">הפעל מעקב ספירת דילוגים</string>
+  <string name="morphe_sb_track_skip_count_summary">שולח ספירות דילוג לטבלת המיצבים של SponsorBlock כדי לעקוב אחר הזמן שנחסך</string>
+  <string name="morphe_sb_min_segment_duration_title">משך מקטע מינימלי</string>
+  <string name="morphe_sb_min_segment_duration_summary">מקטעים קצרים יותר מערך זה (בשניות) לא יוצגו או ידולגו</string>
+  <string name="morphe_sb_min_segment_duration_invalid">משך זמן לא חוקי</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">מזהה המשתמש הפרטי שלך</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">זה צריך להישמר פרטי. זה כמו סיסמה ולא צריך להיות משותף עם אף אחד. אם למישהו יש את זה, הוא יכול להתחזות אליך</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">מזהה משתמש פרטי חייב להיות באורך של לפחות 30 תווים</string>
+  <string name="morphe_sb_api_url_title">שנה כתובת API</string>
+  <string name="morphe_sb_api_url_summary">הכתובת שבה SponsorBlock משתמש כדי לבצע קריאות לשרת</string>
+  <string name="morphe_sb_channel_whitelist_title">רשימת הלבנה של ערוצים</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock מושבת עבור ערוצים ברשימת ההיתרים</string>
   <string name="morphe_sb_channel_whitelist_current_channel">ערוץ נוכחי:</string>
   <string name="morphe_sb_channel_whitelist_add">הוסף לרשימה הלבנה</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">אין ערוצים ברשימה הלבנה</string>
   <string name="morphe_sb_channel_whitelist_channel_added">הערוץ נוסף לרשימה הלבנה</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">הערוץ הוסר מהרשימה הלבנה</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">הודעה בעת ערוץ ברשימה הלבנה</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">התראה בערוץ ברשימת הלבנה</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">מציג התראה כאשר SponsorBlock מושבת עבור ערוץ ברשימה הלבנה</string>
   <string name="morphe_sb_channel_whitelisted_toast">SponsorBlock מושבת עבור ערוץ זה</string>
   <string name="morphe_sb_api_url_reset">כתובת API אופסה</string>
   <string name="morphe_sb_api_url_invalid">כתובת ה-URL של ה-API אינה חוקית</string>
   <string name="morphe_sb_api_url_changed">כתובת API שונתה</string>
-  <string name="morphe_sb_settings_ie">ייבוא/ייצוא הגדרות</string>
+  <string name="morphe_sb_settings_ie_title">ייבוא/ייצוא הגדרות</string>
   <string name="morphe_sb_settings_copy">העתק</string>
   <string name="morphe_sb_settings_ie_summary">תצורת JSON של ה-SponsorBlock שלך שניתן לייבא/לייצא אל Morphe ופלטפורמות SponsorBlock אחרות</string>
   <string name="morphe_sb_settings_ie_summary_warning">"תצורת JSON של ה-SponsorBlock שלך שניתן לייבא/לייצא ל-Morphe ופלטפורמות SponsorBlock אחרות. זה כולל את מזהה המשתמש הפרטי שלך. הקפד לשתף את זה בתבונה"</string>
@@ -90,7 +96,7 @@ Second \"item\" text"</string>
 
 מזהה המשתמש שלך הוא כמו סיסמה ואסור לשתף אותו לעולם."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">אל תציג שוב</string>
-  <string name="morphe_sb_diff_segments">שנה התנהגות מקטע</string>
+  <string name="morphe_sb_diff_segments_title">שנה התנהגות מקטע</string>
   <string name="morphe_sb_segments_sponsor">נותן חסות</string>
   <string name="morphe_sb_segments_sponsor_summary">קידום בתשלום, הפניות בתשלום ופרסומות ישירות. לא בשביל מימון עצמי או הכרות תודה בחינם לגורמים/יוצרים/אתרים/מוצרים שהם אוהבים</string>
   <string name="morphe_sb_segments_selfpromo">קידום ללא תשלום/עצמי</string>

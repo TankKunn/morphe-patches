@@ -139,4 +139,12 @@ Second \"item\" text"</string>
   <string name="morphe_replace_music_with_youtube_summary">Αντικαθιστά το music.youtube.com με το youtube.com σε κοινόχρηστους συνδέσμους.</string>
   <string name="morphe_replace_links_with_shortener_title">Αλλαγή συνδέσμων κοινοποίησης σε youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Επιβάλλει τη χρήση της συντομευμένης μορφής URL youtu.be για τα βίντεο</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Καταγραφή buffer πρωτοκόλλου</string>
+  <string name="morphe_debug_protobuffer_summary">Προσθέτει επιπλέον πληροφορίες καταγραφής για τους προγραμματιστές για να εντοπίσουν τα στοιχεία της εφαρμογής</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Η ενεργοποίηση αυτής της ρύθμισης θα καταγράψει επιπλέον δεδομένα διάταξης, συμπεριλαμβανομένου του κειμένου στην οθόνη για ορισμένα στοιχεία διεπαφής χρήστη.
+
+Αυτό μπορεί να βοηθήσει στον εντοπισμό στοιχείων κατά τη δημιουργία προσαρμοσμένων φίλτρων.
+
+Ωστόσο, η ενεργοποίηση αυτής της ρύθμισης θα καταγράψει επίσης ορισμένα δεδομένα χρήστη, όπως τη διεύθυνση IP σας."</string>
 </resources>

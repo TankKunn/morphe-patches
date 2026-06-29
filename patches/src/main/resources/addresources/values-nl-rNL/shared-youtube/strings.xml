@@ -133,4 +133,12 @@ Het afspelen mislukt als de Player JavaScript hash verouderd is."</string>
   <string name="morphe_replace_music_with_youtube_summary">Vervangt music.youtube.com door youtube.com in gedeelde links</string>
   <string name="morphe_replace_links_with_shortener_title">Deelkoppelingen wijzigen naar youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Dwingt video\'s om het verkorte youtu.be URL-formaat te gebruiken</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Debuglogprotocolbuffer</string>
+  <string name="morphe_debug_protobuffer_summary">Voegt extra logboekinformatie toe voor ontwikkelaars om app-componenten te identificeren</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Als u deze instelling inschakelt, worden extra lay-outgegevens geregistreerd, waaronder tekst op het scherm voor sommige UI-componenten.
+
+Dit kan helpen bij het identificeren van componenten bij het maken van aangepaste filters.
+
+Als u dit inschakelt, worden echter ook bepaalde gebruikersgegevens, zoals uw IP-adres, vastgelegd."</string>
 </resources>

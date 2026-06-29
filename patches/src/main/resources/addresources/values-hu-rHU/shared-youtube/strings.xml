@@ -139,4 +139,12 @@ A lejátszás meghiúsul, ha a lejátszó JavaScript hash elavult."</string>
   <string name="morphe_replace_music_with_youtube_summary">A megosztott linkekben lecseréli a music.youtube.com-ot a youtube.com-ra</string>
   <string name="morphe_replace_links_with_shortener_title">Módosítsa a megosztási linkeket youtu.be-ra</string>
   <string name="morphe_replace_links_with_shortener_summary">Erősíti a videók használatát a rövidített youtu.be URL formátummal</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Naplózási protokoll puffer</string>
+  <string name="morphe_debug_protobuffer_summary">További naplózási információkat ad a fejlesztőknek az alkalmazás komponenseinek azonosításához.</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"​A beállítás engedélyezése további elrendezési adatokat naplóz, beleértve egyes felületi elemek képernyőn megjelenő szövegeit is.
+
+​Ez segíthet az összetevők beazonosításában egyedi szűrők készítésekor.
+
+​Azonban a funkció bekapcsolása bizonyos felhasználói adatokat, például az IP-címedet is naplózni fogja."</string>
 </resources>

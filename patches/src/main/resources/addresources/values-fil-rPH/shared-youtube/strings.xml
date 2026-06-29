@@ -139,4 +139,12 @@ Ang playback ay mabibigo kung ang Player JavaScript hash ay outdated."</string>
   <string name="morphe_replace_music_with_youtube_summary">Pinapalitan ang music.youtube.com sa youtube.com sa mga ibinahaging link</string>
   <string name="morphe_replace_links_with_shortener_title">Baguhin ang mga nakabahaging link sa youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Pinipilit ang mga video na gamitin ang pinaikling format ng URL na youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Itala ang protocol buffer</string>
+  <string name="morphe_debug_protobuffer_summary">Nagdaragdag ng karagdagang impormasyon sa pag-log para sa mga developer upang matukoy ang mga bahagi ng app</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Magtatala ng karagdagang datos ng layout ang pagpapagana sa pagpipiliang ito, kabilang ang on-screen na teksto para sa ilang bahagi ng UI. 
+
+Makakatulong ito na matukoy ang mga komponente kapag gumagawa ng mga pasadyang filter. 
+
+Gayunpaman, magtatala din ng ilang datos ng tagagamit ang pagpapagana nito kagaya ng iyong IP address."</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">Aktiveer SponsorBlock</string>
+  <string name="morphe_sb_enabled_summary">SponsorBlock is \'n stelsel wat deur die gemeenskap aangedryf word om irriterende dele van YouTube-video\'s oor te slaan</string>
+  <string name="morphe_sb_appearance_category_title">Voorkoms</string>
+  <string name="morphe_sb_voting_button_title">Wys \'n Oorslaan-knoppie</string>
+  <string name="morphe_sb_voting_button_summary">Voeg \'n knoppie by om segmentte te stem</string>
+  <string name="morphe_sb_square_layout_title">Gebruik vierkantige uitleg</string>
+  <string name="morphe_sb_square_layout_summary">Gebruik afgeronde hoeke vir SponsorBlock-knoppies en -beheer</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Gebruik kompakte Skip-knoppie</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">Verminder die breedte van die Skip-knoppie om spasie te bespaar</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">Outomaties Skip-knoppie versteek</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">Verberg die Skip-knoppie na \'n paar sekondes in plaas daarvan om dit vir die hele segment sigbaar te hou</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">Skip-knoppie duur</string>
+  <string name="morphe_sb_compact_skip_button_title">Gebruik kompakte Oorslaan-knoppie</string>
+  <string name="morphe_sb_compact_skip_button_summary">Verminder die wydte van die Oorslaan-knoppie om spasie te bespaar</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">Verberg Oorslaan-knoppie outomaties</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">Verberg die Oorslaan-knoppie na \'n paar sekondes in plaas daarvan om dit vir die hele segment sigbaar te hou</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">Oorslaan-knoppie duur</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">Stel hoe lank die Skip-knoppie sigbaar bly</string>
-  <string name="morphe_sb_general_skiptoast">Wys ongedaanmaak skip kennisgewing</string>
-  <string name="morphe_sb_general_skiptoast_summary">Wys \'n kennisgewing wat jou toelaat om \'n outomatiese oorslae ongedaan te maak</string>
-  <string name="morphe_sb_toast_on_skip_duration">Skip kennisgewing duur</string>
+  <string name="morphe_sb_toast_on_skip_title">Wys oorslaan kennisgewing</string>
+  <string name="morphe_sb_toast_on_skip_summary">Wys \'n kennisgewing wanneer \'n segment outomaties oorgeslaan word</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">Oorslaan kennisgewing duur</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">Stel hoe lank die ongedaankmaak-kennisgewing sigbaar bly</string>
   <string name="morphe_sb_duration_1s">1 sekonde</string>
   <string name="morphe_sb_duration_2s">2 sekondes</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 sekondes</string>
   <string name="morphe_sb_duration_9s">9 sekondes</string>
   <string name="morphe_sb_duration_10s">10 sekondes</string>
-  <string name="morphe_sb_general_time_without">Wys video lengte sonder segmente</string>
-  <string name="morphe_sb_general_time_without_summary">Trek alle segmente in totale videotyduur wat op die seekbar gewys word, af</string>
-  <string name="morphe_sb_create_segment_category">Skep nuwe segmente</string>
-  <string name="morphe_sb_enable_create_segment">Wys \'Skep nuwe segment\'-knoppie</string>
-  <string name="morphe_sb_enable_create_segment_summary">Voeg \'n knoppie by aan die videospeler wat jou toelaat om nuwe SponsorBlock-segmente te indien</string>
-  <string name="morphe_sb_general_adjusting">Tyd aanpassingsstap</string>
-  <string name="morphe_sb_general_adjusting_summary">Soek bedrag van die tyd aanpassingsknoppies (in millisekondes)</string>
-  <string name="morphe_sb_general_adjusting_invalid">Waarde moet \'n positiewe getal wees</string>
-  <string name="morphe_sb_guidelines_preference_title">Indieningsriglyne</string>
-  <string name="morphe_sb_guidelines_preference_summary">Riglyne bevat reëls en wenke vir die skep van nuwe segmente</string>
+  <string name="morphe_sb_video_length_without_segments_title">Wys videolengte sonder segmente</string>
+  <string name="morphe_sb_video_length_without_segments_summary">Trek alle segmente af van die totale videolengte wat op die seekbar gewys word</string>
+  <string name="morphe_sb_create_segment_category_title">Nuwe segmente skep</string>
+  <string name="morphe_sb_create_new_segment_title">Wys \'Nuwe segment skep\'-knoppie</string>
+  <string name="morphe_sb_create_new_segment_summary">Voeg \'n knoppie by die videospeler wat jou toelaat om nuwe SponsorBlock-segmente te stuur</string>
+  <string name="morphe_sb_create_new_segment_step_title">Tyd aanpassingsstap</string>
+  <string name="morphe_sb_create_new_segment_step_summary">Soek hoeveelheid van die tyd aanpassingsknoppies (in millisekondes)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">Waarde moet \'n positiewe getal wees</string>
+  <string name="morphe_sb_guidelines_title">Indieningsriglyne</string>
+  <string name="morphe_sb_guidelines_summary">Riglyne bevat reëls en wenke vir die skep van nuwe segmente</string>
   <string name="morphe_sb_guidelines_popup_title">Volg die riglyne</string>
   <string name="morphe_sb_guidelines_popup_content">Lees die SponsorBlock riglyne voordat jy nuwe segmente skep</string>
   <string name="morphe_sb_guidelines_popup_already_read">Reeds gelees</string>
   <string name="morphe_sb_guidelines_popup_open">Wys my</string>
-  <string name="morphe_sb_general">Algemeen</string>
-  <string name="morphe_sb_toast_on_connection_error">Wys konneksiefoutwaarskuwings</string>
+  <string name="morphe_sb_general_title">Algemeen</string>
+  <string name="morphe_sb_toast_on_connection_error_title">Wys konneksiefoutwaarskuwings</string>
   <string name="morphe_sb_toast_on_connection_error_summary">Wys \'n kennisgewing wanneer die SponsorBlock-bediener nie beskikbaar is nie</string>
-  <string name="morphe_sb_general_skipcount">Aktiveer skip telling dop</string>
-  <string name="morphe_sb_general_skipcount_summary">Stuur oorslaaktellings aan die SponsorBlock-ranglys om te volg hoeveel tyd gespaar word</string>
-  <string name="morphe_sb_general_min_duration">Minimum segment duur</string>
-  <string name="morphe_sb_general_min_duration_summary">Segmente korter as hierdie waarde (in sekondes) sal nie gewys of oorgeslaan word nie</string>
-  <string name="morphe_sb_general_min_duration_invalid">Ongeldige tyd duur</string>
-  <string name="morphe_sb_general_uuid">Jou privaat gebruikers ID</string>
-  <string name="morphe_sb_general_uuid_summary">Dit moet privaat gehou word. Dit is soos \'n wagwoord en moet met niemand gedeel word nie. As iemand dit het, kan hulle jou namaak</string>
-  <string name="morphe_sb_general_uuid_invalid">Private gebruikers ID moet ten minste 30 karakters lank wees</string>
-  <string name="morphe_sb_general_api_url">Verander API URL</string>
-  <string name="morphe_sb_general_api_url_summary">Die adres wat SponsorBlock gebruik om oproepe na die bediener te maak</string>
-  <string name="morphe_sb_channel_whitelist">Kanal witlys</string>
+  <string name="morphe_sb_track_skip_count_title">Aktiveer oorslaan telling dop</string>
+  <string name="morphe_sb_track_skip_count_summary">Stuur oorslaan tellings na die SponsorBlock-ranglys om te volg hoeveel tyd gered word</string>
+  <string name="morphe_sb_min_segment_duration_title">Minimum segment duur</string>
+  <string name="morphe_sb_min_segment_duration_summary">Segmente wat korter is as hierdie waarde (in sekondes) sal nie gewys of oorgeslaan word nie</string>
+  <string name="morphe_sb_min_segment_duration_invalid">Ongeldige tyd duur</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">Jou privaat gebruikers ID</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">Dit moet privaat gehou word. Dit is soos \'n wagwoord en moet nie met enigiemand gedeel word nie. As iemand dit het, kan hulle jou naboots</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">Privaat gebruikers ID moet ten minste 30 karakters lank wees</string>
+  <string name="morphe_sb_api_url_title">Verander API URL</string>
+  <string name="morphe_sb_api_url_summary">Die adres wat SponsorBlock gebruik om oproepe na die bediener te maak</string>
+  <string name="morphe_sb_channel_whitelist_title">Kanaliewitlys</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock is afgeskakel vir gekanaliseerde kanale op die witlys</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Huidige kanaal:</string>
   <string name="morphe_sb_channel_whitelist_add">Voeg toe aan witlys</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">Geen kanale op die witlys</string>
   <string name="morphe_sb_channel_whitelist_channel_added">Kanaal by witlys gevoeg</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">Kanaal van witlys verwyder</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">Kennisgewing op witgelyste kanaal</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">Kennisgewing op witgelys kanaal</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">Wys \'n kennisgewing wanneer SponsorBlock vir \'n witgelyste kanaal afgeskakel is</string>
   <string name="morphe_sb_channel_whitelisted_toast">SponsorBlock afgeskakel vir hierdie kanaal</string>
   <string name="morphe_sb_api_url_reset">API URL teruggestel</string>
   <string name="morphe_sb_api_url_invalid">API URL is ongeldig</string>
   <string name="morphe_sb_api_url_changed">API URL verander</string>
-  <string name="morphe_sb_settings_ie">Importeer / Eksporteer instellings</string>
+  <string name="morphe_sb_settings_ie_title">Importeer / Eksporteer instellings</string>
   <string name="morphe_sb_settings_copy">Kopieer</string>
   <string name="morphe_sb_settings_ie_summary">Jou SponsorBlock JSON-konfigurasie wat geïmporteer/uitgevoer kan word na Morphe en ander SponsorBlock-platforms</string>
   <string name="morphe_sb_settings_ie_summary_warning">"Jou SponsorBlock JSON konfigurasie wat na Morphe en ander SponsorBlock platforms geïmporteer / uitgevoer kan word
@@ -92,8 +98,8 @@ Dit sluit jou privaat gebruikers-ID in. Wees seker om dit verstandig te deel"</s
 
 Jou gebruikers ID is soos 'n wagwoord, en dit moet nooit gedeel word nie."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Moet nie weer wys nie</string>
-  <string name="morphe_sb_diff_segments">Verander segment gedrag</string>
-  <string name="morphe_sb_segments_sponsor">Sponsor</string>
+  <string name="morphe_sb_diff_segments_title">Verander segment gedrag</string>
+  <string name="morphe_sb_segments_sponsor">Borg</string>
   <string name="morphe_sb_segments_sponsor_summary">Betaalde promosie, betaalde verwysings en direkte advertensies. Nie vir selfpromosie of gratis skreeusnaa vir sake / skeppers / webwerwe / produkte wat hulle graag wil hê nie</string>
   <string name="morphe_sb_segments_selfpromo">Onbetaalde / Selfpromosie</string>
   <string name="morphe_sb_segments_selfpromo_summary">Soortgelyk aan Sponsor, maar vir onbetaalde / selfpromosie. Sluit afdelings in oor handelsware, donasies of inligting oor met wie hulle saamgewerk het</string>

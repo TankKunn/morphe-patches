@@ -139,4 +139,12 @@ Bạn sẽ không còn xem được video nếu mã băm hết hạn."</string>
   <string name="morphe_replace_music_with_youtube_summary">Thay music.youtube.com bằng youtube.com khi chia sẻ liên kết</string>
   <string name="morphe_replace_links_with_shortener_title">Đổi liên kết chia sẻ thành youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Buộc các video dùng định dạng youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Bộ đệm giao thức nhật ký gỡ lỗi</string>
+  <string name="morphe_debug_protobuffer_summary">Bổ sung thông tin chi tiết hơn giúp nhà phát triển xác định các thành phần trong ứng dụng</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Bật cài đặt này sẽ ghi lại dữ liệu bố cục bổ sung, bao gồm cả văn bản trên màn hình cho một số thành phần giao diện người dùng.
+
+Điều này có thể giúp xác định các thành phần khi tạo bộ lọc tùy chỉnh.
+
+Tuy nhiên, bật tính năng này cũng sẽ ghi lại một số dữ liệu người dùng, chẳng hạn như địa chỉ IP của bạn."</string>
 </resources>

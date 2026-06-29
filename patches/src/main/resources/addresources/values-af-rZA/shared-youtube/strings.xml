@@ -139,4 +139,12 @@ Voorstelling sal misluk as die speler JavaScript hash verouder is."</string>
   <string name="morphe_replace_music_with_youtube_summary">Vervang music.youtube.com met youtube.com in gedeelde skakels</string>
   <string name="morphe_replace_links_with_shortener_title">Verander deel skakels na youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Dwing video\'s om die verkorte youtu.be URL-formaat te gebruik</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Ontwikkelingslogprotokol buffer</string>
+  <string name="morphe_debug_protobuffer_summary">Voeg bykomende loginligting by vir ontwikkelaars om app-komponente te identifiseer</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Deur hierdie instelling in te skakel, sal bykomende uitlegdata gelog word, insluitend teks op die skerm vir sommige UI-komponente.
+
+Dit kan help om komponente te identifiseer wanneer pasgemaakte filters geskep word.
+
+Let wel, deur dit in te skakel, sal ook sekere gebruikerdata soos jou IP-adres gelog word."</string>
 </resources>

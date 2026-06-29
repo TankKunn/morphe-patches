@@ -139,4 +139,12 @@ Spilun mun bregðast ef Player JavaScript hash er úrelt."</string>
   <string name="morphe_replace_music_with_youtube_summary">Breyta music.youtube.com í youtube.com í deilingshlökkum</string>
   <string name="morphe_replace_links_with_shortener_title">Breyta deilingshlökkum í youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Neysla myndbanda til að nota styttri youtu.be URL snið</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Kembiskrá fyrir Protocol Buffer</string>
+  <string name="morphe_debug_protobuffer_summary">Bætir við viðbótarskráningarupplýsingum til að hjálpa forriturum að bera kennsl á hluta forritsins</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Ef þessi stilling er virkjuð verða skráðar viðbótarupplýsingar um uppsetningu viðmótsins, þar á meðal texti á skjánum fyrir suma viðmótshluta.
+
+Þetta getur hjálpað við að bera kennsl á hluta þegar sérsniðnar síur eru búnar til.
+
+Athugaðu að einnig kunna að vera skráð ákveðin notendagögn, svo sem IP-talan þín."</string>
 </resources>

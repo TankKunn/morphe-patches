@@ -139,4 +139,12 @@ Reprodukcija će neće uspeti ako je heš kőd JavaScript plejera zastareo."</st
   <string name="morphe_replace_music_with_youtube_summary">Замењује music.youtube.com са youtube.com у дељеним линковима</string>
   <string name="morphe_replace_links_with_shortener_title">Promeni linkove za deljenje na youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Forsira video zapise da koriste skraćeni format URL-a youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Evidentiranje protokola bafera</string>
+  <string name="morphe_debug_protobuffer_summary">Dodaje dodatne informacije o evidentiranju za programere kako bi se identifikovali elementi aplikacije</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Omogućavanjem ove opcije evidentiraće se dodatni podaci o izgledu, uključujući tekst na ekranu za neke komponente korisničkog interfejsa.
+
+Ovo može pomoći u identifikaciji komponenti prilikom pravljenja prilagođenih filtera.
+
+Međutim, omogućavanje ovoga će takođe evidentirati neke korisničke podatke, kao što je vaša IP adresa."</string>
 </resources>

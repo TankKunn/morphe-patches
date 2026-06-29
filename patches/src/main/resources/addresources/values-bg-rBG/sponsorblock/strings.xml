@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">Активиране на SponsorBlock</string>
+  <string name="morphe_sb_enabled_summary">SponsorBlock е система, създадена от общността, за прескачане на досадните части от YouTube видеата</string>
+  <string name="morphe_sb_appearance_category_title">Външен вид</string>
+  <string name="morphe_sb_voting_button_title">Покажи бутон за гласуване</string>
+  <string name="morphe_sb_voting_button_summary">Добавя бутон за одобряване или отхвърляне на сегменти</string>
+  <string name="morphe_sb_square_layout_title">Използвай квадратен дизайн</string>
+  <string name="morphe_sb_square_layout_summary">Използва заоблени ъгли за бутоните и контролите на SponsorBlock</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Дублирането на видеа е скрито</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">Намалява ширината на бутона „Прескочи“, за да спести място</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">Дублирането на видеа е скрито</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">Скрива бутона „Прескочи“ след няколко секунди, вместо да го показва през целия сегмент</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">Дублирането на видеа е скрито</string>
+  <string name="morphe_sb_compact_skip_button_title">Използвай компактен бутон за прескачане</string>
+  <string name="morphe_sb_compact_skip_button_summary">Намалява ширината на бутона за прескачане, за да спести място</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">Автоматично скриване на бутона за прескачане</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">Скрива бутона за прескачане след няколко секунди, вместо да го оставя видим за целия сегмент</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">Продължителност на бутона за прескачане</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">Задайте за колко време бутонът „Прескочи“ остава видим</string>
-  <string name="morphe_sb_general_skiptoast">Скрий дублиране на видеа</string>
-  <string name="morphe_sb_general_skiptoast_summary">Показва известие, което ви позволява да докоснете, за да отмените автоматично прескачане</string>
-  <string name="morphe_sb_toast_on_skip_duration">Скрий дублиране на видеа</string>
+  <string name="morphe_sb_toast_on_skip_title">Покажи известие при прескачане</string>
+  <string name="morphe_sb_toast_on_skip_summary">Показва известие, когато сегментът е прескочен автоматично</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">Продължителност на известието при прескачане</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">Задайте за колко време остава видимо известието за отмяна</string>
   <string name="morphe_sb_duration_1s">Дублирането на видеа се показва</string>
   <string name="morphe_sb_duration_2s">Скрий дублиране на видеа</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">Скрий дублиране на видеа</string>
   <string name="morphe_sb_duration_9s">Дублирането на видеа е скрито</string>
   <string name="morphe_sb_duration_10s">Дублирането на видеа се показва</string>
-  <string name="morphe_sb_general_time_without">Скрий дублиране на видеа</string>
-  <string name="morphe_sb_general_time_without_summary">Изчислява общата продължителност на видеото, като изважда всички сегменти</string>
-  <string name="morphe_sb_create_segment_category">Скрий дублиране на видеа</string>
-  <string name="morphe_sb_enable_create_segment">Покажи бутон „Създай нов сегмент“</string>
-  <string name="morphe_sb_enable_create_segment_summary">Добавя бутон към видео плейъра, който ви позволява да изпращате нови сегменти на SponsorBlock</string>
-  <string name="morphe_sb_general_adjusting">Стъпка за регулиране на времето</string>
-  <string name="morphe_sb_general_adjusting_summary">Сума на търсене на бутоните за регулиране (в милисекунди)</string>
-  <string name="morphe_sb_general_adjusting_invalid">Скрий дублиране на видеа</string>
-  <string name="morphe_sb_guidelines_preference_title">Насоки за изпращане</string>
-  <string name="morphe_sb_guidelines_preference_summary">Насоките съдържат правила и съвети за създаване на нови сегменти</string>
+  <string name="morphe_sb_video_length_without_segments_title">Покажи дължината на видеото без сегменти</string>
+  <string name="morphe_sb_video_length_without_segments_summary">Изважда всички сегменти от общата продължителност на видеото, показана на лентата за търсене</string>
+  <string name="morphe_sb_create_segment_category_title">Създаване на нови сегменти</string>
+  <string name="morphe_sb_create_new_segment_title">Покажи бутон \"Създай нов сегмент\"</string>
+  <string name="morphe_sb_create_new_segment_summary">Добавя бутон към видео плейъра, който ви позволява да изпращате нови сегменти на SponsorBlock</string>
+  <string name="morphe_sb_create_new_segment_step_title">Стъпка за коригиране на времето</string>
+  <string name="morphe_sb_create_new_segment_step_summary">Сума за преместване на времето с бутоните за настройка (в милисекунди)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">Стойността трябва да бъде положително число</string>
+  <string name="morphe_sb_guidelines_title">Правила за изпращане</string>
+  <string name="morphe_sb_guidelines_summary">Правилата съдържат правила и съвети за създаване на нови сегменти</string>
   <string name="morphe_sb_guidelines_popup_title">Скрий дублиране на видеа</string>
   <string name="morphe_sb_guidelines_popup_content">Прочетете указанията на SponsorBlock, преди да създавате нови сегменти</string>
   <string name="morphe_sb_guidelines_popup_already_read">Дублирането на видеа се показва</string>
   <string name="morphe_sb_guidelines_popup_open">Скрий дублиране на видеа</string>
-  <string name="morphe_sb_general">Дублирането на видеа е скрито</string>
-  <string name="morphe_sb_toast_on_connection_error">Показвай предупреждения за грешки в връзката</string>
+  <string name="morphe_sb_general_title">Основни</string>
+  <string name="morphe_sb_toast_on_connection_error_title">Покажи предупреждения за грешка в свързването</string>
   <string name="morphe_sb_toast_on_connection_error_summary">Показва известие, когато сървърът на SponsorBlock не е достъпен</string>
-  <string name="morphe_sb_general_skipcount">Дублирането на видеа се показва</string>
-  <string name="morphe_sb_general_skipcount_summary">Изпраща броя на прескачанията към класацията на SponsorBlock, за да проследи колко време е спестено</string>
-  <string name="morphe_sb_general_min_duration">Дублирането на видеа се показва</string>
-  <string name="morphe_sb_general_min_duration_summary">Сегменти, по-кратки от тази стойност (в секунди), няма да бъдат показани или прескочени</string>
-  <string name="morphe_sb_general_min_duration_invalid">Дублирането на видеа е скрито</string>
-  <string name="morphe_sb_general_uuid">Ваш личен потребителски ID</string>
-  <string name="morphe_sb_general_uuid_summary">Това трябва да остане поверително. Това е като парола и не трябва да се споделя с никого. Ако някой има това, той може да се представя за вас</string>
-  <string name="morphe_sb_general_uuid_invalid">Личният потребителски ID трябва да бъде минимум 30 знака дълго</string>
-  <string name="morphe_sb_general_api_url">Дублирането на видеа се показва</string>
-  <string name="morphe_sb_general_api_url_summary">Адресът, който SponsorBlock използва за извършване на повиквания към сървъра</string>
-  <string name="morphe_sb_channel_whitelist">Бял списък на канали</string>
+  <string name="morphe_sb_track_skip_count_title">Активиране на проследяването на броя на прескачанията</string>
+  <string name="morphe_sb_track_skip_count_summary">Изпраща броя на прескачанията към класацията на SponsorBlock, за да се проследи колко време е спестено</string>
+  <string name="morphe_sb_min_segment_duration_title">Минимална продължителност на сегмента</string>
+  <string name="morphe_sb_min_segment_duration_summary">Сегменти, по-кратки от тази стойност (в секунди), няма да бъдат показани или прескочени</string>
+  <string name="morphe_sb_min_segment_duration_invalid">Невалидна продължителност на времето</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">Вашият частен потребителски идентификатор</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">Това трябва да се пази в тайна. Това е като парола и не трябва да се споделя с никого. Ако някой има това, той може да се представи за вас.</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">Частният потребителски идентификатор трябва да бъде с дължина поне 30 знака</string>
+  <string name="morphe_sb_api_url_title">Промяна на URL адреса на API</string>
+  <string name="morphe_sb_api_url_summary">Адресът, който SponsorBlock използва, за да прави заявки към сървъра</string>
+  <string name="morphe_sb_channel_whitelist_title">Бял списък на канали</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock е деактивиран за каналите в белия списък</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Текущ канал:</string>
   <string name="morphe_sb_channel_whitelist_add">Добавяне към списъка с разрешени канали</string>
@@ -73,26 +79,26 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">Няма добавени канали в списъка с разрешени канали</string>
   <string name="morphe_sb_channel_whitelist_channel_added">Каналът е добавен към списъка с разрешени канали</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">Каналът е премахнат от списъка с разрешени канали</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">Уведомяване при канал, добавен в списъка с разрешени канали</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">Уведомяване при канал в белия списък</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">Показва известие, когато SponsorBlock е деактивиран за канал, който е в списъка с разрешени канали</string>
   <string name="morphe_sb_channel_whitelisted_toast">SponsorBlock е деактивиран за този канал</string>
   <string name="morphe_sb_api_url_reset">Дублирането на видеа е скрито</string>
   <string name="morphe_sb_api_url_invalid">Дублирането на видеа се показва</string>
   <string name="morphe_sb_api_url_changed">Скрий дублиране на видеа</string>
-  <string name="morphe_sb_settings_ie">Дублирането на видеа е скрито</string>
+  <string name="morphe_sb_settings_ie_title">Импортиране / Експортиране на настройки</string>
   <string name="morphe_sb_settings_copy">Дублирането на видеа се показва</string>
   <string name="morphe_sb_settings_ie_summary">Вашата конфигурация на SponsorBlock JSON, която може да бъде импортирана/експортирана в Morphe и други платформи на SponsorBlock</string>
   <string name="morphe_sb_settings_ie_summary_warning">"Вашата JSON конфигурация на SponsorBlock, която може да бъде импортирана / експортирана в Morphe и други платформи на SponsorBlock
 
 Това включва вашия частен потребителски идентификатор. Уверете се, че споделяте това разумно"</string>
   <string name="morphe_sb_settings_import_successful">Дублирането на видеа се показва</string>
-  <string name="morphe_sb_settings_import_failed">Скрий дублиране на видеа</string>
-  <string name="morphe_sb_settings_export_failed">Дублирането на видеа е скрито</string>
+  <string name="morphe_sb_settings_import_failed">Импортирането не успя: %s</string>
+  <string name="morphe_sb_settings_export_failed">Експортирането не успя: %s</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning">"Настройките ви съдържат личен SponsorBlock потребителски ID.
 
 Вашият потребителски ID е като парола и не трябва да се споделя."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Скрий дублиране на видеа</string>
-  <string name="morphe_sb_diff_segments">Дублирането на видеа е скрито</string>
+  <string name="morphe_sb_diff_segments_title">Промяна на поведението на сегментите</string>
   <string name="morphe_sb_segments_sponsor">Дублирането на видеа се показва</string>
   <string name="morphe_sb_segments_sponsor_summary">Платена промоция, платени препоръки и директна реклама. Не е за самореклама или безплатни призиви към каузи/създатели/уебсайтове/продукти, които харесват</string>
   <string name="morphe_sb_segments_selfpromo">Дублирането на видеа е скрито</string>

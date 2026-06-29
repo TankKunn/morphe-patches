@@ -137,4 +137,12 @@ Lêkirin têk diçe eger hash-a JavaScriptê ya lîstikvanê kevn be."</string>
   <string name="morphe_replace_music_with_youtube_summary">Lînkên parvekirî de music.youtube.com bi youtube.com veguherîne</string>
   <string name="morphe_replace_links_with_shortener_title">Lînkên parvekirinê biguherîne youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Vîdyoyê neçar dike ku biçîna forma URL\'ê ya kurt a youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Protokola buffer-a logê çepkirin</string>
+  <string name="morphe_debug_protobuffer_summary">Agahiyên din ên logê ji bo pêşdebiran da ku pêkhêleyên app-ê nas bikin zêde dike</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Çalak kirina vê mîhengê dê agahiyên lêkirinê yên din, tevî nivîsa li ser ekranê ji bo hin pêkhêleyên UI-yê, log bike.
+
+Ew dikare alîkar bike ku pêkhêleyan dema çêkirina fîlterên xwerû nas bikin.
+
+Lê belê, çalak kirina wê dê hin agahiyên bikarhêner wekî navnîşana IP-ya we jî log bike."</string>
 </resources>

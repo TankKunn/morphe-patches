@@ -139,4 +139,12 @@ Second \"item\" text"</string>
   <string name="morphe_replace_music_with_youtube_summary">将共享链接中的music.youtube.com替换为youtube.com</string>
   <string name="morphe_replace_links_with_shortener_title">将分享链接更改为 youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">强制视频使用缩短的 youtu.be URL 格式</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">记录协议缓冲区</string>
+  <string name="morphe_debug_protobuffer_summary">为开发者添加额外的日志记录信息，以识别应用组件</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"启用此设置将记录额外的布局数据，包括某些 UI 组件的屏幕文本。
+
+这有助于在创建自定义过滤器时识别组件。
+
+但是，启用此设置也会记录一些用户数据，例如您的 IP 地址。"</string>
 </resources>

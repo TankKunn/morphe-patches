@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">啟用 SponsorBlock</string>
+  <string name="morphe_sb_enabled_summary">SponsorBlock 是一個眾包系統，用於跳過 YouTube 影片中惱人的部分</string>
+  <string name="morphe_sb_appearance_category_title">外觀</string>
+  <string name="morphe_sb_voting_button_title">顯示「投票」按鈕</string>
+  <string name="morphe_sb_voting_button_summary">新增按鈕以對影片片段投下贊成或反對票</string>
+  <string name="morphe_sb_square_layout_title">使用方形版面配置</string>
+  <string name="morphe_sb_square_layout_summary">為 SponsorBlock 按鈕和控制項使用圓角</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">使用精簡「跳過」按鈕</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">減少「跳過」按鈕的寬度，以節省空間</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">自動隱藏「略過」按鈕</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">隱藏片段結束後幾秒鐘的「跳過」按鈕，而不是在整個片段期間保持顯示</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">跳過按鈕顯示時間</string>
+  <string name="morphe_sb_compact_skip_button_title">使用精簡「跳過」按鈕</string>
+  <string name="morphe_sb_compact_skip_button_summary">縮小「跳過」按鈕的寬度以節省空間</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">自動隱藏「略過」按鈕</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">在片段結束後幾秒隱藏「跳過」按鈕，而不是在整個片段期間顯示它</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">跳過按鈕顯示時間</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">設定「跳過」按鈕可見時間</string>
-  <string name="morphe_sb_general_skiptoast">顯示「取消跳過」提示</string>
-  <string name="morphe_sb_general_skiptoast_summary">顯示通知，允許您點一下以撤銷自動跳過</string>
-  <string name="morphe_sb_toast_on_skip_duration">跳過提示時長</string>
+  <string name="morphe_sb_toast_on_skip_title">顯示跳過通知</string>
+  <string name="morphe_sb_toast_on_skip_summary">在自動跳過片段時顯示通知</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">跳過提示時長</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">設定通知撤銷跳過可見時間</string>
   <string name="morphe_sb_duration_1s">1 秒</string>
   <string name="morphe_sb_duration_2s">2 秒</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 秒</string>
   <string name="morphe_sb_duration_9s">9 秒</string>
   <string name="morphe_sb_duration_10s">10 秒</string>
-  <string name="morphe_sb_general_time_without">顯示不包含被跳過片段的時間戳記</string>
-  <string name="morphe_sb_general_time_without_summary">從跳轉列中扣除影片總時長</string>
-  <string name="morphe_sb_create_segment_category">建立新片段</string>
-  <string name="morphe_sb_enable_create_segment">顯示「建立新片段」按鈕</string>
-  <string name="morphe_sb_enable_create_segment_summary">新增按鈕至影片播放器，讓您可以提交新的 SponsorBlock 片段</string>
-  <string name="morphe_sb_general_adjusting">時間調整步幅</string>
-  <string name="morphe_sb_general_adjusting_summary">時間調整按鈕的尋找量（以毫秒為單位）</string>
-  <string name="morphe_sb_general_adjusting_invalid">值必須為正數</string>
-  <string name="morphe_sb_guidelines_preference_title">提交指南</string>
-  <string name="morphe_sb_guidelines_preference_summary">規範包含有關送出片段的提示和規則</string>
+  <string name="morphe_sb_video_length_without_segments_title">顯示不包含被跳過片段的時間戳記</string>
+  <string name="morphe_sb_video_length_without_segments_summary">從尋找條上減去影片總長度中的所有片段</string>
+  <string name="morphe_sb_create_segment_category_title">建立新片段</string>
+  <string name="morphe_sb_create_new_segment_title">顯示「建立新片段」按鈕</string>
+  <string name="morphe_sb_create_new_segment_summary">在影片播放器中新增按鈕，讓您可以提交新的 SponsorBlock 片段</string>
+  <string name="morphe_sb_create_new_segment_step_title">時間調整步驟</string>
+  <string name="morphe_sb_create_new_segment_step_summary">時間調整按鈕的尋找量（以毫秒為單位）</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">值必須為正數</string>
+  <string name="morphe_sb_guidelines_title">提交指南</string>
+  <string name="morphe_sb_guidelines_summary">規範包含有關送出片段的提示和規則</string>
   <string name="morphe_sb_guidelines_popup_title">跟隨規範</string>
   <string name="morphe_sb_guidelines_popup_content">建議在送出任何片段前先閱讀 SponsorBlock 指南</string>
   <string name="morphe_sb_guidelines_popup_already_read">已閱讀</string>
   <string name="morphe_sb_guidelines_popup_open">顯示</string>
-  <string name="morphe_sb_general">一般</string>
-  <string name="morphe_sb_toast_on_connection_error">顯示連線錯誤警示</string>
+  <string name="morphe_sb_general_title">一般</string>
+  <string name="morphe_sb_toast_on_connection_error_title">顯示連線錯誤警示</string>
   <string name="morphe_sb_toast_on_connection_error_summary">在 SponsorBlock 伺服器無法使用時顯示通知</string>
-  <string name="morphe_sb_general_skipcount">啟用跳過次數追蹤</string>
-  <string name="morphe_sb_general_skipcount_summary">將跳過次數傳送到 SponsorBlock 排行榜，以追蹤省下的時間</string>
-  <string name="morphe_sb_general_min_duration">最短片段時長</string>
-  <string name="morphe_sb_general_min_duration_summary">小於設定值（以秒為單位）的片段不會被跳過或在播放器中顯示</string>
-  <string name="morphe_sb_general_min_duration_invalid">無效的時間長度</string>
-  <string name="morphe_sb_general_uuid">您的個人使用者 ID</string>
-  <string name="morphe_sb_general_uuid_summary">這應該被保密。這就像一個密碼，不應該與他人分享。如果有人擁有它，他們就可以冒充您</string>
-  <string name="morphe_sb_general_uuid_invalid">個人使用者 ID 必須至少有 30 字元長</string>
-  <string name="morphe_sb_general_api_url">變更 API URL</string>
-  <string name="morphe_sb_general_api_url_summary">SponsorBlock 用來和伺服器互動的位址</string>
-  <string name="morphe_sb_channel_whitelist">頻道白名單</string>
+  <string name="morphe_sb_track_skip_count_title">啟用跳過次數追蹤</string>
+  <string name="morphe_sb_track_skip_count_summary">將跳過次數傳送到 SponsorBlock 排行榜，以追蹤節省的時間</string>
+  <string name="morphe_sb_min_segment_duration_title">最短片段時長</string>
+  <string name="morphe_sb_min_segment_duration_summary">小於設定值（以秒為單位）的片段不會被跳過或在播放器中顯示</string>
+  <string name="morphe_sb_min_segment_duration_invalid">無效的時間長度</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">您的私人使用者 ID</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">這應該被保密。這就像一個密碼，不應該與他人分享。如果有人擁有它，他們就可以冒充您</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">私人使用者 ID 必須至少有 30 個字元長</string>
+  <string name="morphe_sb_api_url_title">變更 API URL</string>
+  <string name="morphe_sb_api_url_summary">SponsorBlock 用來和伺服器互動的位址</string>
+  <string name="morphe_sb_channel_whitelist_title">頻道白名單</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock 已為白名單頻道停用</string>
   <string name="morphe_sb_channel_whitelist_current_channel">目前頻道：</string>
   <string name="morphe_sb_channel_whitelist_add">加入白名單</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">沒有已加入白名單的頻道</string>
   <string name="morphe_sb_channel_whitelist_channel_added">頻道已加入白名單</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">頻道已從白名單中移除</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">在白名單頻道上發出通知</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">在白名單頻道上發出通知</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">當為已加入白名單的頻道停用 SponsorBlock 時顯示通知</string>
   <string name="morphe_sb_channel_whitelisted_toast">SponsorBlock 已為此頻道停用</string>
   <string name="morphe_sb_api_url_reset">重設 API URL</string>
   <string name="morphe_sb_api_url_invalid">無效的 API URL</string>
   <string name="morphe_sb_api_url_changed">已變更 API URL</string>
-  <string name="morphe_sb_settings_ie">匯入/匯出設定</string>
+  <string name="morphe_sb_settings_ie_title">匯入/匯出設定</string>
   <string name="morphe_sb_settings_copy">複製</string>
   <string name="morphe_sb_settings_ie_summary">這是你的 SponsorBlock JSON 設定檔，可以匯入/匯出到 Morphe 和其他 SponsorBlock 平台</string>
   <string name="morphe_sb_settings_ie_summary_warning">"這是你的 SponsorBlock JSON 設定檔，可以匯入/匯出到 Morphe 和其他 SponsorBlock 平台。這包含你的私人使用者 ID。請務必謹慎分享。"</string>
@@ -90,7 +96,7 @@ Second \"item\" text"</string>
 
 您的使用者 ID 就像密碼一樣，絕對不應該分享出去。"</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">不再顯示</string>
-  <string name="morphe_sb_diff_segments">變更片段操作</string>
+  <string name="morphe_sb_diff_segments_title">變更片段操作</string>
   <string name="morphe_sb_segments_sponsor">贊助商廣告</string>
   <string name="morphe_sb_segments_sponsor_summary">付費宣傳、付費推薦和直接廣告。不適用於自我推銷或為個人喜愛的公益活動/創作者/網站/產品提供免費宣傳。</string>
   <string name="morphe_sb_segments_selfpromo">非付費/自我推廣</string>

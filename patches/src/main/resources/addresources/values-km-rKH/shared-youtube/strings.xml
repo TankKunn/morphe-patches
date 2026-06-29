@@ -46,4 +46,5 @@ Second \"item\" text"</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
+  <!-- misc.debugging.enableDebuggingPatch -->
 </resources>

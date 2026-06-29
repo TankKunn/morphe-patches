@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">Habilitar Patrocínio</string>
+  <string name="morphe_sb_enabled_summary">SponsorBlock é um sistema de crowdsourcing para saltar partes irritantes de vídeos do YouTube</string>
+  <string name="morphe_sb_appearance_category_title">Aparência</string>
+  <string name="morphe_sb_voting_button_title">Mostrar o botão de votação</string>
+  <string name="morphe_sb_voting_button_summary">Adiciona um botão para avaliar segmentos positivamente ou negativamente</string>
+  <string name="morphe_sb_square_layout_title">Usar layout quadrado</string>
+  <string name="morphe_sb_square_layout_summary">Usa cantos arredondados para os botões e controles do SponsorBlock</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Usar botão \"Ignorar\" compacto</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">Reduz a largura do botão Ignorar para economizar espaço</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">Ocultar automaticamente o botão \"Ignorar\"</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">Oculta o botão Ignorar após alguns segundos, em vez de mantê-lo visível durante todo o segmento</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">Duração do botão de pular</string>
+  <string name="morphe_sb_compact_skip_button_title">Usar botão \"Ignorar\" compacto</string>
+  <string name="morphe_sb_compact_skip_button_summary">Reduz a largura do botão Pular para economizar espaço</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">Ocultar automaticamente o botão \"Ignorar\"</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">Oculta o botão Pular após alguns segundos, em vez de mantê-lo visível durante todo o segmento</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">Duração do botão de pular</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">Defina por quanto tempo o botão Ignorar permanece visível</string>
-  <string name="morphe_sb_general_skiptoast">Mostrar notificação de desfazer pular</string>
-  <string name="morphe_sb_general_skiptoast_summary">Mostra uma notificação permitindo que você toque para desfazer uma ignorada automática</string>
-  <string name="morphe_sb_toast_on_skip_duration">Duração da notificação de pular</string>
+  <string name="morphe_sb_toast_on_skip_title">Mostrar notificação de desfazer pular</string>
+  <string name="morphe_sb_toast_on_skip_summary">Mostra uma notificação quando um segmento é pulado automaticamente</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">Duração da notificação de pular</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">Defina por quanto tempo a notificação de desfazer permanece visível</string>
   <string name="morphe_sb_duration_1s">1 segundo</string>
   <string name="morphe_sb_duration_2s">2 segundos</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 segundos</string>
   <string name="morphe_sb_duration_9s">9 segundos</string>
   <string name="morphe_sb_duration_10s">10 segundos</string>
-  <string name="morphe_sb_general_time_without">Mostrar duração do vídeo sem segmentos</string>
-  <string name="morphe_sb_general_time_without_summary">Subtrai todos os segmentos da duração total do vídeo mostrada na barra de pesquisa</string>
-  <string name="morphe_sb_create_segment_category">Criando novos segmentos</string>
-  <string name="morphe_sb_enable_create_segment">Mostrar botão \"Criar novo segmento\"</string>
-  <string name="morphe_sb_enable_create_segment_summary">Adiciona um botão ao reprodutor de vídeo permitindo que você envie novos segmentos do SponsorBlock</string>
-  <string name="morphe_sb_general_adjusting">Passo de ajuste de tempo</string>
-  <string name="morphe_sb_general_adjusting_summary">Quantidade de busca dos botões de ajuste de tempo (em milissegundos)</string>
-  <string name="morphe_sb_general_adjusting_invalid">Valor deve ser um número positivo</string>
-  <string name="morphe_sb_guidelines_preference_title">Diretrizes de envio</string>
-  <string name="morphe_sb_guidelines_preference_summary">Diretrizes contêm regras e dicas para criar novos segmentos</string>
+  <string name="morphe_sb_video_length_without_segments_title">Mostrar duração do vídeo sem segmentos</string>
+  <string name="morphe_sb_video_length_without_segments_summary">Subtrai todos os segmentos da duração total do vídeo mostrada na barra de busca</string>
+  <string name="morphe_sb_create_segment_category_title">Criando novos segmentos</string>
+  <string name="morphe_sb_create_new_segment_title">Mostrar o botão \'Criar novo segmento\'</string>
+  <string name="morphe_sb_create_new_segment_summary">Adiciona um botão ao reprodutor de vídeo que permite enviar novos segmentos do SponsorBlock</string>
+  <string name="morphe_sb_create_new_segment_step_title">Passo de ajuste de tempo</string>
+  <string name="morphe_sb_create_new_segment_step_summary">Quantidade de avanço do tempo dos botões de ajuste (em milissegundos)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">Valor deve ser um número positivo</string>
+  <string name="morphe_sb_guidelines_title">Diretrizes de envio</string>
+  <string name="morphe_sb_guidelines_summary">Diretrizes contêm regras e dicas para criar novos segmentos</string>
   <string name="morphe_sb_guidelines_popup_title">Siga as instruções</string>
   <string name="morphe_sb_guidelines_popup_content">Leia as diretrizes do Patrocinador antes de criar novos segmentos</string>
   <string name="morphe_sb_guidelines_popup_already_read">Já lido</string>
   <string name="morphe_sb_guidelines_popup_open">Mostre-me</string>
-  <string name="morphe_sb_general">Geral</string>
-  <string name="morphe_sb_toast_on_connection_error">Mostrar alertas de erro de conexão</string>
+  <string name="morphe_sb_general_title">Geral</string>
+  <string name="morphe_sb_toast_on_connection_error_title">Mostrar alertas de erro de conexão</string>
   <string name="morphe_sb_toast_on_connection_error_summary">Mostra uma notificação quando o servidor SponsorBlock não estiver disponível</string>
-  <string name="morphe_sb_general_skipcount">Ativar rastreamento de ignorar contagem</string>
-  <string name="morphe_sb_general_skipcount_summary">Envia contagens de ignoradas para a tabela de classificação do SponsorBlock para rastrear quanto tempo é economizado</string>
-  <string name="morphe_sb_general_min_duration">Duração mínima do segmento</string>
-  <string name="morphe_sb_general_min_duration_summary">Segmentos menores que este valor (em segundos) não serão visíveis ou ignorados</string>
-  <string name="morphe_sb_general_min_duration_invalid">Duração inválida</string>
-  <string name="morphe_sb_general_uuid">Seu ID de usuário privado</string>
-  <string name="morphe_sb_general_uuid_summary">Isso deve ser mantido em particular. Isto é como uma senha e não deve ser compartilhado com ninguém. Se alguém tiver isso, ele pode representar você</string>
-  <string name="morphe_sb_general_uuid_invalid">ID do usuário privado deve ter pelo menos 30 caracteres</string>
-  <string name="morphe_sb_general_api_url">Alterar URL da API</string>
-  <string name="morphe_sb_general_api_url_summary">O Patrocinador usa o endereço para fazer chamadas ao servidor</string>
-  <string name="morphe_sb_channel_whitelist">Lista de canais permitidos</string>
+  <string name="morphe_sb_track_skip_count_title">Ativar rastreamento de ignorar contagem</string>
+  <string name="morphe_sb_track_skip_count_summary">Envia as contagens de pular para a tabela de classificação do SponsorBlock para rastrear quanto tempo é economizado</string>
+  <string name="morphe_sb_min_segment_duration_title">Duração mínima do segmento</string>
+  <string name="morphe_sb_min_segment_duration_summary">Segmentos menores que este valor (em segundos) não serão visíveis ou ignorados</string>
+  <string name="morphe_sb_min_segment_duration_invalid">Duração inválida</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">Seu ID de usuário privado</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">Isso deve ser mantido em particular. Isto é como uma senha e não deve ser compartilhado com ninguém. Se alguém tiver isso, ele pode representar você</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">O ID do usuário privado deve ter pelo menos 30 caracteres</string>
+  <string name="morphe_sb_api_url_title">Alterar URL da API</string>
+  <string name="morphe_sb_api_url_summary">O Patrocinador usa o endereço para fazer chamadas ao servidor</string>
+  <string name="morphe_sb_channel_whitelist_title">Lista de permissões de canais</string>
   <string name="morphe_sb_channel_whitelist_summary">O SponsorBlock está desativado para canais na lista de permissões</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Canal atual:</string>
   <string name="morphe_sb_channel_whitelist_add">Adicionar à lista de permissões</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">Nenhum canal permitido</string>
   <string name="morphe_sb_channel_whitelist_channel_added">Canal adicionado à lista de permissões</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">Canal removido da lista de permissões</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">Notificar em canal permitido</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">Notificar em canal da lista de permissões</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">Exibe uma notificação quando o SponsorBlock é desativado para um canal permitido</string>
   <string name="morphe_sb_channel_whitelisted_toast">SponsorBlock desativado para este canal</string>
   <string name="morphe_sb_api_url_reset">URL da API redefinida</string>
   <string name="morphe_sb_api_url_invalid">URL da API inválida</string>
   <string name="morphe_sb_api_url_changed">URL da API alterada</string>
-  <string name="morphe_sb_settings_ie">Importar/Exportar Configurações</string>
+  <string name="morphe_sb_settings_ie_title">Importar/Exportar Configurações</string>
   <string name="morphe_sb_settings_copy">Copiar</string>
   <string name="morphe_sb_settings_ie_summary">Sua configuração JSON de Patrocinador que pode ser importada/exportada para Morphe e outras plataformas de Patrocinador</string>
   <string name="morphe_sb_settings_ie_summary_warning">"A sua configuração JSON do SponsorBlock que pode ser importada/exportada para o Morphe e outras plataformas do SponsorBlock
@@ -92,7 +98,7 @@ Isto inclui o seu ID de utilizador privado. Tenha cuidado ao partilhar isto"</st
 
 Seu ID de usuário é como uma senha e nunca deve ser compartilhado."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Não mostrar novamente</string>
-  <string name="morphe_sb_diff_segments">Alterar comportamento do segmento</string>
+  <string name="morphe_sb_diff_segments_title">Alterar comportamento do segmento</string>
   <string name="morphe_sb_segments_sponsor">Patrocinador</string>
   <string name="morphe_sb_segments_sponsor_summary">Promoção paga, indicações pagas e anúncios diretos. Não para autopromoção ou gritos gratuitos para causas / criadores / sites / produtos de que gostam</string>
   <string name="morphe_sb_segments_selfpromo">Promover Despaid/Auto</string>

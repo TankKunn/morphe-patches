@@ -139,4 +139,12 @@ Toisto epäonnistuu, jos pelaajan JavaScript-hash on vanhentunut."</string>
   <string name="morphe_replace_music_with_youtube_summary">Korvaa music.youtube.com osoitteella youtube.com jaetuissa linkeissä</string>
   <string name="morphe_replace_links_with_shortener_title">Muuta jakolinkit youtu.be-sivustoksi</string>
   <string name="morphe_replace_links_with_shortener_summary">Pakottaa videot käyttämään lyhennettyä youtu.be-URL-muotoa</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Virheenkorjauslokin protokollapuskuri</string>
+  <string name="morphe_debug_protobuffer_summary">Lisää kehittäjille lisätietoja sovelluksen komponenttien tunnistamiseksi</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Tämän asetuksen käyttöönotto kirjaa lisätietoja asettelusta, mm. joidenkin käyttöliittymän osien näyttötekstiä.
+
+Tämä voi auttaa komponenttien tunnistamisessa, kun luot mukautettuja suodattimia.
+
+Tämän käyttöönotto kirjaa myös joitakin käyttäjätietoja, kuten IP-osoitteesi."</string>
 </resources>

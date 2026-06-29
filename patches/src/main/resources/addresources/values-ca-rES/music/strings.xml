@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
-  <string name="morphe_settings_music_screen_5_misc_title">Miscel·lània</string>
   <!-- ad.general.hideAdsPatch -->
   <!-- ad.video.hideVideoAdsPatch -->
   <!-- interaction.crossfade.crossfadePatch -->
@@ -52,9 +51,5 @@ Second \"item\" text"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">desconegut</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <!-- 'scrobbled' must be kept untranslated -->
-  <!-- 'scrobble' must be kept untranslated -->
-  <!-- 'scrobble' must be kept untranslated -->
-  <!-- 'scrobble' must be kept untranslated -->
-  <!-- 'scrobble' must be kept untranslated -->
+  <!-- 'scrobbling' must be kept untranslated -->
 </resources>

@@ -38,4 +38,5 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_summary">Pašalina sekimo užklausos parametrus iš bendrinamų nuorodų</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
 </resources>

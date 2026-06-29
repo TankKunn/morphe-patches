@@ -27,8 +27,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_music_screen_1_ads_title">Reklam</string>
   <string name="morphe_settings_music_screen_2_general_title">Sazî</string>
   <string name="morphe_settings_music_screen_3_player_title">Lîstikvan</string>
-  <string name="morphe_settings_music_screen_4_scrobbling_title">Lêkirin</string>
-  <string name="morphe_settings_music_screen_5_misc_title">Cûda</string>
+  <string name="morphe_settings_music_screen_6_misc_title">Mixc</string>
   <!-- ad.general.hideAdsPatch -->
   <string name="morphe_music_hide_get_premium_label_title">\'Get Music Premium\' etîketê veşêre</string>
   <!-- ad.video.hideVideoAdsPatch -->
@@ -154,19 +153,19 @@ YouTube Music 8.x — crossfade tenê li 9.x û nûjenertirîn de dimeşe"</stri
   <string name="morphe_music_scrobbling_log_out">Derkeve</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Derketin</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_enabled_title">Lêkirinê çalak bike</string>
-  <string name="morphe_music_listenbrainz_now_playing_title">Statûsa \"Niha lîstikê\" bigihîne</string>
-  <string name="morphe_music_listenbrainz_min_song_duration_title">Mîqdara herî kêm a durasiya stranê</string>
+  <string name="morphe_music_scrobbling_enabled_title">Scrobbling etkin bike</string>
+  <string name="morphe_music_scrobbling_now_playing_title">Statusê \"Niha Dilîze\" bişîne</string>
+  <string name="morphe_music_scrobbling_min_song_duration_title">Dirêjiya herî kêm a stranê</string>
   <!-- 'scrobbled' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_min_song_duration_summary">Stranên ku ji vê kêmtir in, nayên lêkirin</string>
+  <string name="morphe_music_scrobbling_min_song_duration_summary">Stranên ji vê kurtir nayên scrobble kirin</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_delay_percent_title">Sedîya derengkirina lêkirinê</string>
+  <string name="morphe_music_scrobbling_delay_percent_title">دراستانيا scrobble ya ji rêsî%</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_delay_percent_summary">Lêkirinê piştî guhdarîkirina vê sedîya stranê bişopîne</string>
+  <string name="morphe_music_scrobbling_delay_percent_summary">Piştî guhdarîya vê rêjeya stranê scrobble bide</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_delay_seconds_title">Çend saniyeyên derengkirina lêkirinê</string>
+  <string name="morphe_music_scrobbling_delay_seconds_title">Saniyeyên scrobble ya ji rêsî</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_delay_seconds_summary">Lêkirinê piştî guhdarîkirina vê hejmara saniyetan bişopîne</string>
+  <string name="morphe_music_scrobbling_delay_seconds_summary">Piştî guhdarîya vê qas saniyan scrobble bide</string>
   <string name="morphe_music_listenbrainz_token_title">Hesaba ListenBrainz</string>
   <string name="morphe_music_listenbrainz_token_summary_logged_in">Têkeve. Têke da ku hesabê birêve bike</string>
   <!-- 'scrobbling' must be kept untranslated -->
@@ -183,22 +182,8 @@ YouTube Music 8.x — crossfade tenê li 9.x û nûjenertirîn de dimeşe"</stri
   <string name="morphe_music_listenbrainz_token_toast_cleared">Token paqij kirin</string>
   <string name="morphe_music_listenbrainz_token_toast_saved">Token ji nû ve hat tomarkirin</string>
   <string name="morphe_music_listenbrainz_token_toast_invalid_warning">Hişyarî: Tokena hat tomarkirin ne valide ye!</string>
-  <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_lastfm_enabled_title">Lêkirinê çalak bike</string>
-  <string name="morphe_music_lastfm_now_playing_title">Statûsa \"Niha lîstikê\" bigihîne</string>
   <string name="morphe_music_lastfm_love_on_like_title">Stranên hezkirî hez bike</string>
   <string name="morphe_music_lastfm_love_on_like_summary">Bi otomatîkî stranên Last.fm de hez kirin dema ku hûn wan li YouTube Music de hez dikin (û hezkirina we winda bikin dema ku ne hezkirî an na hes xwe li wan dikin)</string>
-  <string name="morphe_music_lastfm_min_song_duration_title">Mîqdara herî kêm a durasiya stranê</string>
-  <!-- 'scrobbled' must be kept untranslated -->
-  <string name="morphe_music_lastfm_min_song_duration_summary">Stranên ku ji vê kêmtir in, nayên lêkirin</string>
-  <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_lastfm_delay_percent_title">Sedîya derengkirina lêkirinê</string>
-  <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_lastfm_delay_percent_summary">Lêkirinê piştî guhdarîkirina vê sedîya stranê bişopîne</string>
-  <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_lastfm_delay_seconds_title">Çend saniyeyên derengkirina lêkirinê</string>
-  <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_lastfm_delay_seconds_summary">Lêkirinê piştî guhdarîkirina vê hejmara saniyetan bişopîne</string>
   <string name="morphe_music_lastfm_token_title">Hesaba Last.fm</string>
   <string name="morphe_music_lastfm_token_summary_logged_in">Têkeve wek %s. Têke da ku hesabê birêve bike</string>
   <string name="morphe_music_lastfm_token_dialog_instruction">Navê bikarînerê Last.fm-ê têkevin da ku têkevin</string>
@@ -215,9 +200,11 @@ YouTube Music 8.x — crossfade tenê li 9.x û nûjenertirîn de dimeşe"</stri
   <string name="morphe_music_scrobbling_metadata_cleanup_title">Metadata paqij bike</string>
   <string name="morphe_music_scrobbling_metadata_cleanup_summary">Bi otomatîkî metadata-ya hevpar (wek \"Vîdeoya fermî\", \"Remaster\", \"Zindî\") ji sernavan, hunerîstan, û albuman paqij bike berî lêkirinê</string>
   <string name="morphe_music_scrobbling_custom_regex_title">Paqijkirina regex-a xwerû</string>
-  <string name="morphe_music_scrobbling_custom_regex_summary">"Hinek regex-a xwerû têkevin da ku texta zêde ji sernavan, hunerîstan, an albuman pêvekirî hebe. Mînak: (?i)\s*\((clean|explicit)\)"</string>
+  <string name="morphe_music_scrobbling_custom_regex_summary">Bi rêzekê ya pêşniyazkirî bikar bîne da ku nivîsa zêde ji sernavên stran, hunermend an albûman were hildan. Mînak: (?i)\\s*\\((clean|explicit)\\)</string>
+  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_title">Derbarê lêkirinê</string>
-  <string name="morphe_music_scrobbling_about_summary">"Lêkirin bi otomatîkî muzîka ku hûn li YouTube Music de lê dikin şopîne û wê bi profîla Last.fm an ListenBrainz-ê re senk bike.
+  <!-- 'scrobbling' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_about_summary">"Scrobbling bi xwezayî karanîna YouTube Music ya we bi profîla we ya Last.fm an ListenBrainz re hevdeng dike.
 
-Da ku lêkirin bi pêbawerî di paşnavê de xebitîne, ji kerem verast bike ku bikarîna pîvana pîvanê ya YouTube Music wekî \"Nerêvekirî\" hatî saz kirin."</string>
+Ji bo ku bêyî astengiyê scrobbling li ser lîstikên paşnavê were hevdengkirin, pê ewle bibin ku karanîna pîlê ya YouTube Music wek \"Nerêkûkirî\" hatî destnîşankirin."</string>
 </resources>

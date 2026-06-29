@@ -139,4 +139,12 @@ Prehrávanie zlyhá, ak je hash JavaScript prehrávača zastaraný."</string>
   <string name="morphe_replace_music_with_youtube_summary">Nahrádza music.youtube.com na youtube.com v zdieľaných odkazoch.</string>
   <string name="morphe_replace_links_with_shortener_title">Zmeniť odkazy na zdieľanie na youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Prinúti videá používať skrátený formát URL youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Debugovací protokol</string>
+  <string name="morphe_debug_protobuffer_summary">Pridáva dodatočné informácie o protokolovaní pre vývojárov na identifikáciu komponentov aplikácie</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Zapnutie tohto nastavenia zaznamená dodatočné údaje o rozložení, vrátane textu na obrazovke pre niektoré komponenty UI.
+
+To môže pomôcť pri identifikácii komponentov pri vytváraní vlastných filtrov.
+
+Zapnutie tohto nastavenia však zaznamená aj niektoré údaje o používateľovi, ako napríklad vašu IP adresu."</string>
 </resources>

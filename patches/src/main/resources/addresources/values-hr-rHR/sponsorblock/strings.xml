@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,12 +15,8 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_appearance_category_title">Izgled</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Omoguši kompaktnu tipku za preskakanje</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">Automatski sakrij tipku za preskakanje</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">Trajanje trajanja tipke za preskakanje</string>
-  <string name="morphe_sb_general_skiptoast">Prikaži obavijest o automatskom preskakanju</string>
-  <string name="morphe_sb_toast_on_skip_duration">Trajanje trajanja obavijesti o automatskom preskakanju</string>
   <string name="morphe_sb_duration_1s">1 sekunda</string>
   <string name="morphe_sb_duration_2s">2 sekunde</string>
   <string name="morphe_sb_duration_3s">3 sekunde</string>
@@ -32,24 +27,16 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 sekunde</string>
   <string name="morphe_sb_duration_9s">9 sekunde</string>
   <string name="morphe_sb_duration_10s">%s sekunde</string>
-  <string name="morphe_sb_general_time_without">Prikaži trajanje videa bez segmenata</string>
-  <string name="morphe_sb_create_segment_category">Stvaranje segmenata</string>
-  <string name="morphe_sb_general_adjusting_invalid">Nevaže vrijednost</string>
   <string name="morphe_sb_guidelines_popup_title">Prikaži upute korisnika</string>
   <string name="morphe_sb_guidelines_popup_already_read">Već upute korisnika</string>
   <string name="morphe_sb_guidelines_popup_open">Prikaži</string>
-  <string name="morphe_sb_general">Općenito</string>
-  <string name="morphe_sb_general_skipcount">Omoguši praćenje broja preskačanja</string>
-  <string name="morphe_sb_general_min_duration">Minimalno trajanje segmenata</string>
-  <string name="morphe_sb_general_min_duration_invalid">Nevaže vrijednost trajanja</string>
-  <string name="morphe_sb_general_uuid">Vaš privatni korisnički ID</string>
-  <string name="morphe_sb_general_uuid_invalid">Privatni korisnički ID mora imati najmanje 30 znakova</string>
-  <string name="morphe_sb_general_api_url">Promijenite API URL</string>
+  <string name="morphe_sb_general_title">Općenito</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">Vaš privatni korisnički ID</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">Privatni korisnički ID mora imati najmanje 30 znakova</string>
   <string name="morphe_sb_channel_whitelist_remove">Ukloni</string>
   <string name="morphe_sb_api_url_reset">Reset API URL-a</string>
   <string name="morphe_sb_api_url_invalid">API URL je nevaže</string>
   <string name="morphe_sb_api_url_changed">API URL promijenjen</string>
-  <string name="morphe_sb_settings_ie">Uvezi postavke upravitelja</string>
   <string name="morphe_sb_settings_copy">Kopirajte</string>
   <string name="morphe_sb_settings_import_successful">Postavke uspješno uvezeno</string>
   <string name="morphe_sb_settings_import_failed">Nije moguće uvesti: %s</string>
@@ -58,8 +45,6 @@ Second \"item\" text"</string>
 
 Vaš korisnički ID je poput lozinke i nikada se ne smije dijeliti."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Nije moguće podesati segment: %1$d %2$s</string>
-  <string name="morphe_sb_diff_segments">SponsorBlock je privremeno nedostupan</string>
-  <string name="morphe_sb_segments_sponsor">Sponsor</string>
   <string name="morphe_sb_segments_selfpromo">Neplaćeno / Samopromoc</string>
   <string name="morphe_sb_segments_interaction">Povratna opomenica (pretplatite se) (API je isteklo)</string>
   <string name="morphe_sb_segments_highlight">Izgled</string>

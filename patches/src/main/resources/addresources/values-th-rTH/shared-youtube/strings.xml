@@ -139,4 +139,12 @@ Second \"item\" text"</string>
   <string name="morphe_replace_music_with_youtube_summary">แทนที่ music.youtube.com ด้วย youtube.com ในลิงก์ที่แชร์</string>
   <string name="morphe_replace_links_with_shortener_title">เปลี่ยนลิงก์การแชร์เป็น youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">บังคับให้วิดีโอใช้รูปแบบ URL แบบสั้น youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">บันทึกโปรโตคอลบัฟเฟอร์</string>
+  <string name="morphe_debug_protobuffer_summary">เพิ่มข้อมูลการบันทึกเพิ่มเติมสำหรับนักพัฒนาเพื่อระบุส่วนประกอบของแอป</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"การเปิดใช้งานการตั้งค่านี้จะบันทึกข้อมูลเค้าโครงเพิ่มเติม รวมถึงข้อความบนหน้าจอสำหรับส่วนประกอบ UI บางส่วน
+
+ซึ่งจะช่วยระบุส่วนประกอบเมื่อสร้างตัวกรองที่กำหนดเองได้
+
+อย่างไรก็ตาม การเปิดใช้งานนี้จะบันทึกข้อมูลผู้ใช้บางอย่าง เช่น ที่อยู่ IP ของคุณด้วย"</string>
 </resources>

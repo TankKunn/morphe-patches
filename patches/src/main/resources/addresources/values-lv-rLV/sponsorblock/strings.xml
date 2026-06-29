@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,6 +15,8 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_appearance_category_title">Izskats</string>
+  <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
   <string name="morphe_sb_channel_whitelist_remove">Noņemt</string>
   <string name="morphe_sb_settings_copy">Kopēt</string>
   <string name="morphe_sb_segments_sponsor">Sponsoru reklāma</string>

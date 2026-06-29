@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -17,15 +16,7 @@ Second \"item\" text"</string>
 -->
 <resources>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Користи компактно копче за прескокнување</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">Го намалува ширината на копчето Skip за да заштедите простор</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">Автоматски скриј копче за прескокнување</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">Прикрива го копчето Skip по неколку секунди наместо да го прикажува постојано за целиот сегмент</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">Времетраење на копчето за прескокнување</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">Поставете ја времетраењето за кое копчето Skip ќе остане видливо</string>
-  <string name="morphe_sb_general_skiptoast">Прикажи известување за откажување на прескокнувањето</string>
-  <string name="morphe_sb_general_skiptoast_summary">Прикажува известување што ви овозможува да допрете за да го поништите автоматското прескокнување</string>
-  <string name="morphe_sb_toast_on_skip_duration">Времетраење на известувањето за прескокнување</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">Поставете го времетраењето за кое зачувувањето на известување ќе биде видливо</string>
   <string name="morphe_sb_duration_1s">1 секунда</string>
   <string name="morphe_sb_duration_2s">2 секунди</string>
@@ -37,38 +28,15 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 секунди</string>
   <string name="morphe_sb_duration_9s">9 секунди</string>
   <string name="morphe_sb_duration_10s">10 секунди</string>
-  <string name="morphe_sb_general_time_without">Прикажи должина на видеото без сегменти</string>
-  <string name="morphe_sb_general_time_without_summary">Одзема ги сите сегменти во вкупната времетраење на видеото прикажана на лентата за прогрес</string>
-  <string name="morphe_sb_create_segment_category">Креирање нови сегменти</string>
-  <string name="morphe_sb_enable_create_segment">Прикажи копче \'Create new segment\'</string>
-  <string name="morphe_sb_enable_create_segment_summary">Додава конопче во видео плејерот што ви овозможува да пријавите нови SponsorBlock сегменти</string>
-  <string name="morphe_sb_general_adjusting">Корак за прилагодување на времето</string>
-  <string name="morphe_sb_general_adjusting_summary">Количина на прилагодување на времето на копчињата за прилагодување (во милисекунди)</string>
-  <string name="morphe_sb_general_adjusting_invalid">Вредноста мора да биде позитивен број</string>
-  <string name="morphe_sb_guidelines_preference_title">Правила за пријавување</string>
-  <string name="morphe_sb_guidelines_preference_summary">Во правилата се содржани правила и совети за креирање нови сегменти</string>
   <string name="morphe_sb_guidelines_popup_title">Следете ги упатствата</string>
   <string name="morphe_sb_guidelines_popup_content">Пред да креирате нови сегменти, прочитајте ги упатствата за SponsorBlock</string>
   <string name="morphe_sb_guidelines_popup_already_read">Веќе прочитано</string>
   <string name="morphe_sb_guidelines_popup_open">Покажи ми</string>
-  <string name="morphe_sb_general">Општо</string>
-  <string name="morphe_sb_toast_on_connection_error">Прикажи известувања за грешки во поврзувањето</string>
   <string name="morphe_sb_toast_on_connection_error_summary">Прикажува известување кога серверот SponsorBlock не е достапен</string>
-  <string name="morphe_sb_general_skipcount">Овозможи следење на бројот на прескокнувања</string>
-  <string name="morphe_sb_general_skipcount_summary">Испечатени се брои ракувања до серверот SponsorBlock за да се забележи достаан простор</string>
-  <string name="morphe_sb_general_min_duration">Минимално времетраење на сегментот</string>
-  <string name="morphe_sb_general_min_duration_summary">Сегментите пократки од оваа вредност (во секунди) нема да бидат прикажани или прескокнати</string>
-  <string name="morphe_sb_general_min_duration_invalid">Невалидно времетраење</string>
-  <string name="morphe_sb_general_uuid">Твој приватен ID на корисник</string>
-  <string name="morphe_sb_general_uuid_summary">Ова мора да остане приватно. Како пасврд и никогаш не неговуваат казиста со никој. Ако имаат васто е, то се измаме во спонзерство</string>
-  <string name="morphe_sb_general_uuid_invalid">Приватниот ID на корисник мора да биде долг најмалку 30 знаци</string>
-  <string name="morphe_sb_general_api_url">Промени URL на API</string>
-  <string name="morphe_sb_general_api_url_summary">Адресата што ја користи SponsorBlock за да направи повици кон срвро</string>
   <string name="morphe_sb_channel_whitelist_remove">Отстрани</string>
   <string name="morphe_sb_api_url_reset">URL на API ресетиран</string>
   <string name="morphe_sb_api_url_invalid">URL на API е невалиден</string>
   <string name="morphe_sb_api_url_changed">URL на API променет</string>
-  <string name="morphe_sb_settings_ie">Увезување / Извоз на поставки</string>
   <string name="morphe_sb_settings_copy">Копирај</string>
   <string name="morphe_sb_settings_ie_summary">Вашата конфигурација во JSON на спонзор зашто и што можере со чино техеничи кчуро од перина со спонзор и овие платформи</string>
   <string name="morphe_sb_settings_ie_summary_warning">"Вашата конфигурација на JSON на SponsorBlock што може да се увезе / изнесе во Morphe и други платформи на SponsorBlock
@@ -81,7 +49,6 @@ Second \"item\" text"</string>
 
 Твојот ID на корисник е како лозинка и никогаш не треба да биде споделен."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Не ме прашувај повторно</string>
-  <string name="morphe_sb_diff_segments">Промени го однесувањето на сегментот</string>
   <string name="morphe_sb_segments_sponsor">Спонзор</string>
   <string name="morphe_sb_segments_sponsor_summary">Платена промоција, платени препораки и директно рекламирање. Не е за самопромоција или бесплатни повици за лица / креатори / веб страници / производи што им се допаѓаат</string>
   <string name="morphe_sb_segments_selfpromo">Неплатена / Самопромоција</string>

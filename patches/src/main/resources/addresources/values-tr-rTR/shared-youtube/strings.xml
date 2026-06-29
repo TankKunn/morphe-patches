@@ -139,4 +139,12 @@ Oynatıcı JavaScript hash'i güncel değilse oynatma başarısız olur."</strin
   <string name="morphe_replace_music_with_youtube_summary">Paylaşılan bağlantılarda music.youtube.com adresini youtube.com ile değiştirir</string>
   <string name="morphe_replace_links_with_shortener_title">Paylaşım bağlantılarını youtu.be olarak değiştir</string>
   <string name="morphe_replace_links_with_shortener_summary">Videoları kısaltılmış youtu.be URL formatını kullanmaya zorlar</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Hata ayıklama günlük protokol arabelleği</string>
+  <string name="morphe_debug_protobuffer_summary">Geliştiricilerin uygulama bileşenlerini belirlemesine yardımcı olacak ek günlük bilgileri ekler</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Bu ayarı etkinleştirmek, bazı kullanıcı arayüzü bileşenleri için ekrandaki metin de dahil olmak üzere ek düzen verilerini günlüğe kaydeder.
+
+Bu, özel filtreler oluştururken bileşenleri tanımlamaya yardımcı olabilir.
+
+Ancak, bunun etkinleştirilmesi IP adresiniz gibi bazı kullanıcı verilerini de günlüğe kaydeder."</string>
 </resources>

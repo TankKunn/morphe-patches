@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">Ενεργοποίηση του SponsorBlock</string>
+  <string name="morphe_sb_enabled_summary">Το SponsorBlock είναι ένα σύστημα που προέρχεται από το κοινό για παράλειψη ενοχλητικών τμημάτων σε βίντεο YouTube</string>
+  <string name="morphe_sb_appearance_category_title">Εμφάνιση</string>
+  <string name="morphe_sb_voting_button_title">Κουμπί ψηφοφορίας τμημάτων</string>
+  <string name="morphe_sb_voting_button_summary">Προσθέτει ένα κουμπί για να ψηφίσετε θετικά ή αρνητικά τα τμήματα</string>
+  <string name="morphe_sb_square_layout_title">Χρήση τετράγωνης διάταξης</string>
+  <string name="morphe_sb_square_layout_summary">Χρησιμοποιεί στρογγυλεμένες γωνίες για τα κουμπιά και τα στοιχεία ελέγχου του SponsorBlock</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Κουμπί παράλειψης μικρότερου στυλ</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">Μειώνει το πλάτος του κουμπιού Παράλειψη για εξοικονόμηση χώρου</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">Αυτόματη απόκρυψη κουμπιού παράλειψης</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">Κρύβει το κουμπί Παράλειψη μετά από λίγα δευτερόλεπτα αντί να το κρατάει ορατό για ολόκληρο το τμήμα</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">Διάρκεια κουμπιού παράλειψης</string>
+  <string name="morphe_sb_compact_skip_button_title">Κουμπί παράλειψης μικρότερου στυλ</string>
+  <string name="morphe_sb_compact_skip_button_summary">Μειώνει το πλάτος του κουμπιού \"Παράλειψη\" για εξοικονόμηση χώρου</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">Αυτόματη απόκρυψη κουμπιού παράλειψης</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">Απόκρυψη του κουμπιού \"Παράλειψη\" μετά από λίγα δευτερόλεπτα αντί να παραμένει ορατό για όλη τη διάρκεια του τμήματος</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">Διάρκεια κουμπιού παράλειψης</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">Ορίστε τη διάρκεια εμφάνισης των κουμπιών Παράλειψη</string>
-  <string name="morphe_sb_general_skiptoast">Εμφάνιση μηνύματος αναίρεσης παράλειψης</string>
-  <string name="morphe_sb_general_skiptoast_summary">Εμφανίζει μια ειδοποίηση που σας επιτρέπει να πατήσετε για να αναιρέσετε μια αυτόματη παράλειψη</string>
-  <string name="morphe_sb_toast_on_skip_duration">Διάρκεια μηνύματος παράλειψης</string>
+  <string name="morphe_sb_toast_on_skip_title">Εμφάνιση ειδοποίησης παράλειψης</string>
+  <string name="morphe_sb_toast_on_skip_summary">Εμφανίζει μια ειδοποίηση όταν ένα τμήμα παραλείπεται αυτόματα</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">Διάρκεια μηνύματος παράλειψης</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">Ορίστε τη διάρκεια εμφάνισης της ειδοποίησης ανάκλησης</string>
   <string name="morphe_sb_duration_1s">1 δευτερόλεπτο</string>
   <string name="morphe_sb_duration_2s">2 δευτερόλεπτα</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 δευτερόλεπτα</string>
   <string name="morphe_sb_duration_9s">9 δευτερόλεπτα</string>
   <string name="morphe_sb_duration_10s">10 δευτερόλεπτα</string>
-  <string name="morphe_sb_general_time_without">Εμφάνιση μήκους βίντεο χωρίς τα τμήματα</string>
-  <string name="morphe_sb_general_time_without_summary">Αφαιρεί όλα τα τμήματα από τη συνολική διάρκεια του βίντεο που εμφανίζεται στη γραμμή προόδου</string>
-  <string name="morphe_sb_create_segment_category">Δημιουργία νέων τμημάτων</string>
-  <string name="morphe_sb_enable_create_segment">Εμφάνιση κουμπιού \'Δημιουργία νέου τμήματος\'</string>
-  <string name="morphe_sb_enable_create_segment_summary">Προσθέτει ένα κουμπί στον αναπαραγωγέα βίντεο που σας επιτρέπει να υποβάλετε νέα τμήματα SponsorBlock</string>
-  <string name="morphe_sb_general_adjusting">Βήμα προσαρμογής χρόνου</string>
-  <string name="morphe_sb_general_adjusting_summary">Ποσό αναζήτησης των κουμπιών προσαρμογής χρόνου (σε χιλιοστά του δευτερολέπτου)</string>
-  <string name="morphe_sb_general_adjusting_invalid">Η τιμή πρέπει να είναι θετικός αριθμός</string>
-  <string name="morphe_sb_guidelines_preference_title">Οδηγίες υποβολής</string>
-  <string name="morphe_sb_guidelines_preference_summary">Οι οδηγίες περιέχουν κανόνες και συμβουλές σχετικά με την υποβολή τμημάτων</string>
+  <string name="morphe_sb_video_length_without_segments_title">Εμφάνιση μήκους βίντεο χωρίς τα τμήματα</string>
+  <string name="morphe_sb_video_length_without_segments_summary">Αφαιρεί όλα τα τμήματα από τη συνολική διάρκεια του βίντεο που εμφανίζεται στη γραμμή αναζήτησης</string>
+  <string name="morphe_sb_create_segment_category_title">Δημιουργία νέων τμημάτων</string>
+  <string name="morphe_sb_create_new_segment_title">Εμφάνιση κουμπιού \"Δημιουργία νέου τμήματος\"</string>
+  <string name="morphe_sb_create_new_segment_summary">Προσθέτει ένα κουμπί στον media player που σας επιτρέπει να υποβάλετε νέα τμήματα SponsorBlock</string>
+  <string name="morphe_sb_create_new_segment_step_title">Βήμα ρύθμισης χρόνου</string>
+  <string name="morphe_sb_create_new_segment_step_summary">Ποσό αναζήτησης των κουμπιών ρύθμισης χρόνου (σε χιλιοστά του δευτερολέπτου)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">Η τιμή πρέπει να είναι θετικός αριθμός</string>
+  <string name="morphe_sb_guidelines_title">Οδηγίες υποβολής</string>
+  <string name="morphe_sb_guidelines_summary">Οι οδηγίες περιέχουν κανόνες και συμβουλές σχετικά με την υποβολή τμημάτων</string>
   <string name="morphe_sb_guidelines_popup_title">Ακολουθήστε τις οδηγίες</string>
   <string name="morphe_sb_guidelines_popup_content">Διαβάστε τις οδηγίες του SponsorBlock πριν δημιουργήσετε νέα τμήματα</string>
   <string name="morphe_sb_guidelines_popup_already_read">Τις έχω διαβάσει</string>
   <string name="morphe_sb_guidelines_popup_open">Δείξτε μου</string>
-  <string name="morphe_sb_general">Γενικά</string>
-  <string name="morphe_sb_toast_on_connection_error">Εμφάνιση ειδοποιήσεων σφάλματος σύνδεσης</string>
+  <string name="morphe_sb_general_title">Γενικά</string>
+  <string name="morphe_sb_toast_on_connection_error_title">Εμφάνιση ειδοποιήσεων σφάλματος σύνδεσης</string>
   <string name="morphe_sb_toast_on_connection_error_summary">Εμφανίζει μια ειδοποίηση όταν ο διακομιστής SponsorBlock δεν είναι διαθέσιμος</string>
-  <string name="morphe_sb_general_skipcount">Mετρητής παραλείψεων τμημάτων</string>
-  <string name="morphe_sb_general_skipcount_summary">Αποστολή καταμετρήσεων παραλείψεων στον πίνακα κατάταξης SponsorBlock για να παρακολουθείτε πόσος χρόνος εξοικονομείται</string>
-  <string name="morphe_sb_general_min_duration">Ελάχιστη διάρκεια τμήματος</string>
-  <string name="morphe_sb_general_min_duration_summary">Τμήματα μικρότερα από την καθορισμένη τιμή (σε δευτερόλεπτα) δεν θα εμφανίζονται ούτε θα παραλείπονται</string>
-  <string name="morphe_sb_general_min_duration_invalid">Μη έγκυρη διάρκεια χρόνου</string>
-  <string name="morphe_sb_general_uuid">Το ιδιωτικό αναγνωριστικό χρήστη σου</string>
-  <string name="morphe_sb_general_uuid_summary">Αυτό πρέπει να μείνει μυστικό. Είναι σαν έναν κωδικό που δεν πρέπει να μοιραστείτε με κανέναν. Εάν κάποιος αποκτήσει αυτόν τον κωδικό, μπορεί να σας υποδυθεί</string>
-  <string name="morphe_sb_general_uuid_invalid">Το ιδιωτικό αναγνωριστικό χρήστη πρέπει να είναι τουλάχιστον 30 χαρακτήρες</string>
-  <string name="morphe_sb_general_api_url">Αλλαγή διεύθυνσης API</string>
-  <string name="morphe_sb_general_api_url_summary">Η διεύθυνση που χρησιμοποιεί το SponsorBlock για να κάνει κλήσεις στο διακομιστή</string>
-  <string name="morphe_sb_channel_whitelist">Λίστα επιτρεπόμενων καναλιών</string>
+  <string name="morphe_sb_track_skip_count_title">Mετρητής παραλείψεων τμημάτων</string>
+  <string name="morphe_sb_track_skip_count_summary">Στέλνει τις μετρήσεις παράλειψης στον πίνακα κατάταξης του SponsorBlock για να παρακολουθεί πόσος χρόνος εξοικονομείται</string>
+  <string name="morphe_sb_min_segment_duration_title">Ελάχιστη διάρκεια τμήματος</string>
+  <string name="morphe_sb_min_segment_duration_summary">Τμήματα μικρότερα από την καθορισμένη τιμή (σε δευτερόλεπτα) δεν θα εμφανίζονται ούτε θα παραλείπονται</string>
+  <string name="morphe_sb_min_segment_duration_invalid">Μη έγκυρη διάρκεια χρόνου</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">Το ιδιωτικό σας αναγνωριστικό χρήστη</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">Αυτό πρέπει να μείνει μυστικό. Είναι σαν έναν κωδικό που δεν πρέπει να μοιραστείτε με κανέναν. Εάν κάποιος αποκτήσει αυτόν τον κωδικό, μπορεί να σας υποδυθεί</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">Το ιδιωτικό αναγνωριστικό χρήστη πρέπει να είναι τουλάχιστον 30 χαρακτήρες</string>
+  <string name="morphe_sb_api_url_title">Αλλαγή διεύθυνσης API</string>
+  <string name="morphe_sb_api_url_summary">Η διεύθυνση που χρησιμοποιεί το SponsorBlock για να κάνει κλήσεις στο διακομιστή</string>
+  <string name="morphe_sb_channel_whitelist_title">Λίστα επιτρεπόμενων καναλιών</string>
   <string name="morphe_sb_channel_whitelist_summary">Το SponsorBlock είναι απενεργοποιημένο για τα κανάλια στη λίστα επιτρεπόμενων</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Τρέχον κανάλι:</string>
   <string name="morphe_sb_channel_whitelist_add">Προσθήκη στη λίστα επιτρεπόμενων</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">Δεν υπάρχουν κανάλια στη λίστα επιτρεπόμενων</string>
   <string name="morphe_sb_channel_whitelist_channel_added">Το κανάλι προστέθηκε στη λίστα επιτρεπόμενων</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">Το κανάλι αφαιρέθηκε από τη λίστα επιτρεπόμενων</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">Ειδοποίηση για κανάλι στη λίστα επιτρεπόμενων</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">Ειδοποίηση για κανάλι στη λίστα επιτρεπόμενων</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">Εμφανίζει μια ειδοποίηση όταν το SponsorBlock είναι απενεργοποιημένο για ένα κανάλι στη λίστα επιτρεπόμενων</string>
   <string name="morphe_sb_channel_whitelisted_toast">Το SponsorBlock είναι απενεργοποιημένο για αυτό το κανάλι</string>
   <string name="morphe_sb_api_url_reset">Η διεύθυνση URL του API επαναφέρθηκε</string>
   <string name="morphe_sb_api_url_invalid">Η διεύθυνση URL του API δεν είναι έγκυρη</string>
   <string name="morphe_sb_api_url_changed">Η διεύθυνση URL του API άλλαξε</string>
-  <string name="morphe_sb_settings_ie">Εισαγωγή/Εξαγωγή ρυθμίσεων</string>
+  <string name="morphe_sb_settings_ie_title">Εισαγωγή/Εξαγωγή ρυθμίσεων</string>
   <string name="morphe_sb_settings_copy">Αντιγραφή</string>
   <string name="morphe_sb_settings_ie_summary">Οι ρυθμίσεις SponsorBlock σας σε μορφή JSON που μπορούν να εισαχθούν/εξαχθούν στο Morphe και σε άλλες πλατφόρμες SponsorBlock</string>
   <string name="morphe_sb_settings_ie_summary_warning">"Η διαμόρφωση JSON του SponsorBlock σας που μπορεί να εισαχθεί / εξαχθεί στο Morphe και σε άλλες πλατφόρμες SponsorBlock
@@ -92,7 +98,7 @@ Second \"item\" text"</string>
 
 Το αναγνωριστικό χρήστη σου είναι σαν κωδικός πρόσβασης και δεν πρέπει ποτέ να μοιράζεται."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Να μην εμφανιστεί ξανά</string>
-  <string name="morphe_sb_diff_segments">Αλλαγή συμπεριφοράς τμημάτων</string>
+  <string name="morphe_sb_diff_segments_title">Αλλαγή συμπεριφοράς τμημάτων</string>
   <string name="morphe_sb_segments_sponsor">Χορηγός</string>
   <string name="morphe_sb_segments_sponsor_summary">Προωθητική καμπάνια επί πληρωμή, παραπομπές επί πληρωμή και άμεσες διαφημίσεις. Όχι για αυτοπροώθηση ή δωρεάν αναφορές σε σκοπούς/δημιουργούς/ιστοσελίδες/προϊόντα που τους αρέσουν</string>
   <string name="morphe_sb_segments_selfpromo">Αυτοπροώθηση Αφιλοκερδώς</string>

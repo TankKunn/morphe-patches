@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">I-enable ang SponsorBlock</string>
+  <string name="morphe_sb_enabled_summary">Ang SponsorBlock ay isang sistemang batay sa kontribusyon ng mga gumagamit para laktawan ang mga nakakainis na bahagi ng mga video sa YouTube</string>
+  <string name="morphe_sb_appearance_category_title">Hitsura</string>
+  <string name="morphe_sb_voting_button_title">Ipakita ang button na bumoto</string>
+  <string name="morphe_sb_voting_button_summary">Nagdaragdag ng button para bumoto ng pabor o hindi pabor sa mga segment</string>
+  <string name="morphe_sb_square_layout_title">Gumamit ng square layout</string>
+  <string name="morphe_sb_square_layout_summary">Gumagamit ng rounded corners para sa mga button at kontrol ng SponsorBlock</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Gamitin ang compact Skip button</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">Binabawasan ang lapad ng Skip button para makatipid ng espasyo</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">Awtomatikong itago ang Skip button</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">Itinatago ang Skip button pagkatapos ng ilang segundo sa halip na panatilihing nakikita ito sa buong segment</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">Tagal ng Skip button</string>
+  <string name="morphe_sb_compact_skip_button_title">Gumamit ng compact Skip button</string>
+  <string name="morphe_sb_compact_skip_button_summary">Binabawasan ang lapad ng Skip button para makatipid ng espasyo</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">Awtomatikong itago ang Skip button</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">Itinatago ang Skip button pagkalipas ng ilang segundo sa halip na panatilihing nakikita ito para sa buong segment</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">Tagal ng Skip button</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">Itakda kung gaano katagal mananatiling nakikita ang mga Skip button</string>
-  <string name="morphe_sb_general_skiptoast">Ipakita ang notipikasyon ng undo skip</string>
-  <string name="morphe_sb_general_skiptoast_summary">Ipinapakita ang isang notification na nagbibigay-daan sa iyo na i-tap upang kanselahin ang awtomatikong paglaktaw</string>
-  <string name="morphe_sb_toast_on_skip_duration">Tagal ng notipikasyon</string>
+  <string name="morphe_sb_toast_on_skip_title">Ipakita ang skip notification</string>
+  <string name="morphe_sb_toast_on_skip_summary">Nagpapakita ng notification kapag awtomatikong nilaktawan ang isang segment</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">Tagal ng skip notification</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">Itakda kung gaano katagal mananatiling nakikita ang notification ng pag-undo</string>
   <string name="morphe_sb_duration_1s">1 segundo</string>
   <string name="morphe_sb_duration_2s">2 segundo</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 segundo</string>
   <string name="morphe_sb_duration_9s">9 segundo</string>
   <string name="morphe_sb_duration_10s">10 segundo</string>
-  <string name="morphe_sb_general_time_without">Ipakita ang haba ng video nang walang segment</string>
-  <string name="morphe_sb_general_time_without_summary">Binabawas ang lahat ng segment sa kabuuang tagal ng video na ipinapakita sa seekbar</string>
-  <string name="morphe_sb_create_segment_category">Paglikha ng bagong segment</string>
-  <string name="morphe_sb_enable_create_segment">Ipakita ang \'Create new segment\' button</string>
-  <string name="morphe_sb_enable_create_segment_summary">Nagdaragdag ng button sa video player na nagbibigay-daan sa iyo na magsumite ng mga bagong segment ng SponsorBlock</string>
-  <string name="morphe_sb_general_adjusting">Hakbang ng pagsasaayos ng oras</string>
-  <string name="morphe_sb_general_adjusting_summary">Halaga ng paghahanap ng oras ng mga button ng pagsasaayos (sa milliseconds)</string>
-  <string name="morphe_sb_general_adjusting_invalid">Dapat maging positibong numero</string>
-  <string name="morphe_sb_guidelines_preference_title">Mga alituntunin sa pagsusumite</string>
-  <string name="morphe_sb_guidelines_preference_summary">Naglalaman ang mga alituntunin ng mga patakaran at tip para sa paggawa ng mga bagong segment</string>
+  <string name="morphe_sb_video_length_without_segments_title">Ipakita ang haba ng video nang walang mga segment</string>
+  <string name="morphe_sb_video_length_without_segments_summary">Binabawas ang lahat ng segment sa kabuuang haba ng video na ipinapakita sa seekbar</string>
+  <string name="morphe_sb_create_segment_category_title">Lumilikha ng mga bagong segment</string>
+  <string name="morphe_sb_create_new_segment_title">Ipakita ang \'Lumikha ng bagong segment\' button</string>
+  <string name="morphe_sb_create_new_segment_summary">Nagdaragdag ng button sa video player na nagbibigay-daan sa iyong magsumite ng mga bagong segment ng SponsorBlock</string>
+  <string name="morphe_sb_create_new_segment_step_title">Hakbang ng pagsasaayos ng oras</string>
+  <string name="morphe_sb_create_new_segment_step_summary">Hanapin ang halaga ng mga button para sa pagsasaayos ng oras (sa milliseconds)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">Dapat positive ang halaga</string>
+  <string name="morphe_sb_guidelines_title">Mga alituntunin sa pagsusumite</string>
+  <string name="morphe_sb_guidelines_summary">Naglalaman ang mga alituntunin ng mga patakaran at tip para sa paglikha ng mga bagong segment</string>
   <string name="morphe_sb_guidelines_popup_title">Sundin ang guidelines</string>
   <string name="morphe_sb_guidelines_popup_content">Basahin ang mga alituntunin ng SponsorBlock bago gumawa ng mga bagong segment</string>
   <string name="morphe_sb_guidelines_popup_already_read">Nabasa ko na</string>
   <string name="morphe_sb_guidelines_popup_open">Ipakita sa akin</string>
-  <string name="morphe_sb_general">Pangkalahatan</string>
-  <string name="morphe_sb_toast_on_connection_error">Ipakita ang mga alerto ng error sa koneksyon</string>
+  <string name="morphe_sb_general_title">Pangkalahatan</string>
+  <string name="morphe_sb_toast_on_connection_error_title">Ipakita ang mga alerto ng pagkonekta</string>
   <string name="morphe_sb_toast_on_connection_error_summary">Ipinapakita ang isang notification kapag ang SponsorBlock server ay hindi magagamit</string>
-  <string name="morphe_sb_general_skipcount">I-enable ang skip count tracking</string>
-  <string name="morphe_sb_general_skipcount_summary">Nagpapadala ng mga bilang ng paglaktaw sa SponsorBlock leaderboard upang subaybayan kung gaano karaming oras ang natipid</string>
-  <string name="morphe_sb_general_min_duration">Minimum na tagal ng segment</string>
-  <string name="morphe_sb_general_min_duration_summary">Ang mga segment na mas maikli kaysa sa halagang ito (sa segundo) ay hindi ipapakita o lalaktawan</string>
-  <string name="morphe_sb_general_min_duration_invalid">Hindi wastong tagal ng oras</string>
-  <string name="morphe_sb_general_uuid">Ang iyong pribadong user ID</string>
-  <string name="morphe_sb_general_uuid_summary">Dapat itong panatilihing pribado. Ito ay tulad ng isang password at hindi dapat ibahagi sa sinuman. Kung mayroon nito, maaari ka nilang gayahin</string>
-  <string name="morphe_sb_general_uuid_invalid">Ang pribadong user ID ay dapat na hindi bababa sa 30 karakter ang haba</string>
-  <string name="morphe_sb_general_api_url">Baguhin ang URL ng API</string>
-  <string name="morphe_sb_general_api_url_summary">Ang address na ginagamit ng SponsorBlock para gumawa ng mga tawag sa server</string>
-  <string name="morphe_sb_channel_whitelist">Listahan ng mga pinahihintulutang channel</string>
+  <string name="morphe_sb_track_skip_count_title">I-enable ang pagsubaybay sa bilang ng skip</string>
+  <string name="morphe_sb_track_skip_count_summary">Nagpapadala ng mga bilang ng skip sa SponsorBlock leaderboard upang masubaybayan kung gaano karaming oras ang natitipid</string>
+  <string name="morphe_sb_min_segment_duration_title">Pinakamababang tagal ng segment</string>
+  <string name="morphe_sb_min_segment_duration_summary">Ang mga segment na mas maikli kaysa sa halagang ito (sa segundo) ay hindi ipapakita o lalaktawan</string>
+  <string name="morphe_sb_min_segment_duration_invalid">Hindi wastong tagal ng oras</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">Ang iyong pribadong ID ng user</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">Dapat itong panatilihing pribado. Ito ay parang isang password at hindi dapat ibahagi sa kahit sino. Kung mayroon nito ang isang tao, maaari ka nilang gayahin</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">Ang pribadong ID ng user ay dapat na hindi bababa sa 30 character ang haba</string>
+  <string name="morphe_sb_api_url_title">Baguhin ang URL ng API</string>
+  <string name="morphe_sb_api_url_summary">Ito ang address na ginagamit ng SponsorBlock upang gumawa ng mga tawag sa server</string>
+  <string name="morphe_sb_channel_whitelist_title">Listahan ng mga pinahintulutang channel</string>
   <string name="morphe_sb_channel_whitelist_summary">Hindi pinagana ang SponsorBlock para sa mga pinahihintulutang channel</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Kasalukuyang channel:</string>
   <string name="morphe_sb_channel_whitelist_add">Idagdag sa whitelist</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">Walang channel na nasa whitelist</string>
   <string name="morphe_sb_channel_whitelist_channel_added">Idinagdag ang channel sa whitelist</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">Tinanggal ang channel sa whitelist</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">Magpadala ng notification kapag nasa whitelisted channel</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">Mag-notify sa pinahintulutang channel</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">Nagpapakita ng notification kapag ang SponsorBlock ay hindi pinagana para sa isang whitelisted channel</string>
   <string name="morphe_sb_channel_whitelisted_toast">Hindi pinagana ang SponsorBlock para sa channel na ito</string>
   <string name="morphe_sb_api_url_reset">I-reset ang API URL</string>
   <string name="morphe_sb_api_url_invalid">Ang API URL ay hindi balido</string>
   <string name="morphe_sb_api_url_changed">Nabago ang API URL</string>
-  <string name="morphe_sb_settings_ie">I-import / I-export ang mga setting</string>
+  <string name="morphe_sb_settings_ie_title">I-import / I-export ang mga setting</string>
   <string name="morphe_sb_settings_copy">Kopyahin</string>
   <string name="morphe_sb_settings_ie_summary">Ang iyong JSON configuration ng SponsorBlock na maaaring i-import / i-export sa Morphe at iba pang mga platform ng SponsorBlock</string>
   <string name="morphe_sb_settings_ie_summary_warning">"Ang iyong configuration ng JSON ng SponsorBlock na maaaring i-import / i-export sa Morphe at iba pang mga platform ng SponsorBlock
@@ -92,7 +98,7 @@ Kabilang dito ang iyong pribadong user ID. Siguraduhing ibahagi ito nang may pag
 
 Ang iyong user ID ay tulad ng isang password, at hindi ito dapat ibahagi."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Huwag nang ipakita muli</string>
-  <string name="morphe_sb_diff_segments">Baguhin ang pag-uugali ng segment</string>
+  <string name="morphe_sb_diff_segments_title">Baguhin ang pag-uugali ng segment</string>
   <string name="morphe_sb_segments_sponsor">Sponsor</string>
   <string name="morphe_sb_segments_sponsor_summary">Paid promotion, paid referrals at direct advertisements. Hindi para sa self-promotion o libreng shout-outs sa mga sanhi / creator / website / produkto na gusto nila</string>
   <string name="morphe_sb_segments_selfpromo">Hindi Bayad / Pagpapa-promote sa Sarili</string>
@@ -103,13 +109,13 @@ Ang iyong user ID ay tulad ng isang password, at hindi ito dapat ibahagi."</stri
   <string name="morphe_sb_segments_highlight_summary">Ang bahagi ng video na karamihan sa mga tao ang hinahanap</string>
   <string name="morphe_sb_segments_intro">Pagitan / Animasyon ng Intro</string>
   <string name="morphe_sb_segments_intro_summary">Isang pagitan na walang aktwal na content. Maaaring ito ay isang paghinto, static na frame, o paulit-ulit na animation. Hindi kasama ang mga paglipat na naglalaman ng impormasyon</string>
-  <string name="morphe_sb_segments_outro">Endcards / Credits</string>
+  <string name="morphe_sb_segments_outro">Mga endcard / Credits</string>
   <string name="morphe_sb_segments_outro_summary">Mga kredito o kapag lumalabas ang mga endcard ng YouTube. Hindi para sa mga konklusyon na may impormasyon.</string>
   <string name="morphe_sb_segments_hook">Hook / Pagbati</string>
   <string name="morphe_sb_segments_hook_summary">Mga trailer na may salaysay para sa paparating na video, pagbati at pamamaalam. Hindi kasama ang mga seksyon na nagdaragdag ng karagdagang nilalaman.</string>
-  <string name="morphe_sb_segments_preview">Preview / Recap</string>
+  <string name="morphe_sb_segments_preview">Sulyap / Buod</string>
   <string name="morphe_sb_segments_preview_summary">Koleksyon ng mga clip na nagpapakita kung ano ang darating o kung ano ang nangyari sa video o sa iba pang mga video ng isang serye, kung saan ang lahat ng impormasyon ay inuulit sa ibang lugar.</string>
-  <string name="morphe_sb_segments_filler">Tangent / Jokes</string>
+  <string name="morphe_sb_segments_filler">Paglihis / Biro</string>
   <string name="morphe_sb_segments_filler_summary">Mga eksena o biro na hindi kinakailangan upang maunawaan ang pangunahing nilalaman ng video. Hindi kasama ang mga seksyon na nagbibigay ng konteksto o background na detalye.</string>
   <string name="morphe_sb_segments_nomusic">Musika: Seksyon na Walang Musika</string>
   <string name="morphe_sb_segments_nomusic_summary">Para lamang gamitin sa mga music video. Mga seksyon ng mga music video na walang musika na hindi pa nasasakop ng ibang kategorya</string>
@@ -217,7 +223,7 @@ Kung hindi ka nagsumite ng highlight, pindutin ang Kanselahin at markahan ang pa
   <string name="morphe_sb_stats_reputation">Ang iyong reputasyon ay <b>%.2f</b></string>
   <string name="morphe_sb_stats_submissions">Gumawa ka na ng <b>%s</b> segments</string>
   <string name="morphe_sb_stats_submissions_summary">I-tap dito upang tingnan ang iyong mga segment.</string>
-  <string name="morphe_sb_stats_saved_zero">SponsorBlock leaderboard</string>
+  <string name="morphe_sb_stats_saved_zero">Leaderboard ng SponsorBlock</string>
   <string name="morphe_sb_stats_saved">Nakapagligtas ka ng mga tao mula sa <b>%s</b> segments</string>
   <string name="morphe_sb_stats_saved_summary_zero">I-tap dito upang makita ang pandaigdigang istatistika at mga nangungunang nag-aambag.</string>
   <string name="morphe_sb_stats_saved_summary">Iyan ay &lt;b&gt;%s&lt;/b&gt; ng kanilang buhay.&lt;br&gt;I-tap dito upang makita ang leaderboard.</string>

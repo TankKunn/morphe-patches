@@ -139,4 +139,12 @@ Da bi se prijavili, pritisnite nastavak ispod"</string>
   <string name="morphe_replace_music_with_youtube_summary">Замењује music.youtube.com са youtube.com у дељеним линковима</string>
   <string name="morphe_replace_links_with_shortener_title">Промени линкове за дељење на youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Форсира видео записе да користе скраћену URL формулу youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Протоколски бафер за евидентирање</string>
+  <string name="morphe_debug_protobuffer_summary">Додаје додатне информације за евидентирање за програмере како би се идентификовали делови апликације</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Омогућавањем ове опције ће се евидентирати додатни подаци о изгледу, укључујући текст на екрану за неке компоненте корисничког интерфејса.
+
+Ово може помоћи у идентификацији компоненти приликом прављења прилагођених филтера.
+
+Међутим, омогућавање овога ће такође евидентирати неке корисничке податке, као што је ваша IP адреса."</string>
 </resources>

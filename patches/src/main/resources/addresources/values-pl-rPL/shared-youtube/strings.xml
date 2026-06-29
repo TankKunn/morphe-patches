@@ -139,4 +139,12 @@ Aby się zalogować, naciśnij \"Kontynuuj\" poniżej"</string>
   <string name="morphe_replace_music_with_youtube_summary">Zamienia music.youtube.com na youtube.com w udostępnianych linkach</string>
   <string name="morphe_replace_links_with_shortener_title">Zmień linki udostępniania na youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Wymusza używanie skróconych linków youtu.be dla filmów</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Logi debugowania buforów protokołu</string>
+  <string name="morphe_debug_protobuffer_summary">Dodaje szczegółowe informacje do logów, aby ułatwić programistom identyfikację elementów aplikacji</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Włączenie tej opcji spowoduje rejestrowanie dodatkowych informacji o układzie, w tym tekstu wyświetlanego w niektórych elementach interfejsu.
+
+Może to pomóc w identyfikacji elementów podczas tworzenia własnych filtrów.
+
+Pamiętaj jednak, że rejestrowane będą również niektóre dane użytkownika, takie jak adres IP."</string>
 </resources>

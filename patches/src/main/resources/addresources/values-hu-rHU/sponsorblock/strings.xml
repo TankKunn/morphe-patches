@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">SponsorBlock bekapcsolása</string>
+  <string name="morphe_sb_enabled_summary">A SponsorBlock egy közösségi finanszírozású rendszer, amellyel kihagyhatod a YouTube videók idegesítő részeit</string>
+  <string name="morphe_sb_appearance_category_title">Megjelenés</string>
+  <string name="morphe_sb_voting_button_title">Szavazás gomb megjelenítése</string>
+  <string name="morphe_sb_voting_button_summary">Szavazógombok hozzáadása szegmensek értékeléséhez (fel- vagy le)</string>
+  <string name="morphe_sb_square_layout_title">Négyzetes elrendezés használata</string>
+  <string name="morphe_sb_square_layout_summary">Kerekített sarkokat használ a SponsorBlock gombokhoz és vezérlőelemekhez</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Kompakt Átugrás gomb használata</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">Csökkenti a \'Léptetés\' gomb szélességét a hely megtakarítása érdekében</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">Az Átugrás gomb automatikus elrejtése</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">Elrejti a \'Léptetés\' gombot néhány másodperc múlva a szegmens teljes időtartama alatt</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">Átugrás gomb időtartama</string>
+  <string name="morphe_sb_compact_skip_button_title">Kompakt Átugrás gomb használata</string>
+  <string name="morphe_sb_compact_skip_button_summary">Csökkenti a Skip gomb szélességét a hely megtakarítása érdekében</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">Az Átugrás gomb automatikus elrejtése</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">Elrejti a Skip gombot néhány másodperc után a szegmens teljes időtartama során való megjelenítés helyett</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">Átugrás gomb időtartama</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">Beállítja, hogy a \'Léptetés\' gombok meddig maradjanak láthatóak</string>
-  <string name="morphe_sb_general_skiptoast">Ugrás visszavonása felugró értesítés megjelenítése</string>
-  <string name="morphe_sb_general_skiptoast_summary">Értesítést jelenít meg, amely lehetővé teszi az automatikus ugrás visszavonását</string>
-  <string name="morphe_sb_toast_on_skip_duration">Átugrási felugró üzenet időtartama</string>
+  <string name="morphe_sb_toast_on_skip_title">Ugrás visszavonása felugró értesítés megjelenítése</string>
+  <string name="morphe_sb_toast_on_skip_summary">Értesítést jelenít meg, ha egy szegmens automatikusan átugorásra kerül</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">Átugrási felugró üzenet időtartama</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">Beállítja, hogy az ugrás visszavonó értesítés meddig maradjon látható</string>
   <string name="morphe_sb_duration_1s">1 másodperc</string>
   <string name="morphe_sb_duration_2s">2 másodperc</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 másodperc</string>
   <string name="morphe_sb_duration_9s">9 másodperc</string>
   <string name="morphe_sb_duration_10s">10 másodperc</string>
-  <string name="morphe_sb_general_time_without">A videó hosszának megjelenítése szegmensek nélkül</string>
-  <string name="morphe_sb_general_time_without_summary">A szegmensek által elhasznált idő levonása a keresősávon megjelenő teljes videó időtartamából</string>
-  <string name="morphe_sb_create_segment_category">Új szegmensek létrehozása</string>
-  <string name="morphe_sb_enable_create_segment">\'Új szegmens létrehozása\' gomb megjelenítése</string>
-  <string name="morphe_sb_enable_create_segment_summary">Gomb hozzáadása a videólejátszóhoz új SponsorBlock szegmensek beküldéséhez</string>
-  <string name="morphe_sb_general_adjusting">Időbeállítási lépés</string>
-  <string name="morphe_sb_general_adjusting_summary">Az időbeállítási gombok mennyisége (ms-ben)</string>
-  <string name="morphe_sb_general_adjusting_invalid">Az értéknek pozitív számnak kell lennie</string>
-  <string name="morphe_sb_guidelines_preference_title">Beküldési útmutató</string>
-  <string name="morphe_sb_guidelines_preference_summary">Az irányelvek tippeket és szabályokat tartalmaznak a szegmensek beküldésével kapcsolatban</string>
+  <string name="morphe_sb_video_length_without_segments_title">A videó hosszának megjelenítése szegmensek nélkül</string>
+  <string name="morphe_sb_video_length_without_segments_summary">A videó teljes időtartamából kivonja az összes szegmens idejét, amit a csúszkán mutattunk</string>
+  <string name="morphe_sb_create_segment_category_title">Új szegmensek létrehozása</string>
+  <string name="morphe_sb_create_new_segment_title">Új szegmens létrehozása gomb megjelenítése</string>
+  <string name="morphe_sb_create_new_segment_summary">Gomb hozzáadása a videólejátszóhoz, amely lehetővé teszi új SponsorBlock szegmensek beküldését</string>
+  <string name="morphe_sb_create_new_segment_step_title">Időbeállítás lépése</string>
+  <string name="morphe_sb_create_new_segment_step_summary">Az időbeállítás gombok eltolásának mennyisége (millimásodpercben)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">Az értéknek pozitív számnak kell lennie</string>
+  <string name="morphe_sb_guidelines_title">Beküldési irányelvek</string>
+  <string name="morphe_sb_guidelines_summary">Az irányelvek tippeket és szabályokat tartalmaznak a szegmensek beküldésével kapcsolatban</string>
   <string name="morphe_sb_guidelines_popup_title">Kövesse az irányelveket</string>
   <string name="morphe_sb_guidelines_popup_content">Olvassa el a SponsorBlock irányelveket szegmensek beküldése előtt</string>
   <string name="morphe_sb_guidelines_popup_already_read">Már elolvastam</string>
   <string name="morphe_sb_guidelines_popup_open">Mutasd</string>
-  <string name="morphe_sb_general">Általános</string>
-  <string name="morphe_sb_toast_on_connection_error">Kapcsolati hibaüzenetek megjelenítése</string>
+  <string name="morphe_sb_general_title">Általános</string>
+  <string name="morphe_sb_toast_on_connection_error_title">Hálózati hibaüzenetek megjelenítése</string>
   <string name="morphe_sb_toast_on_connection_error_summary">Értesítést jelenít meg, ha a SponsorBlock szerver nem érhető el</string>
-  <string name="morphe_sb_general_skipcount">Átugrásszámláló bekapcsolása</string>
-  <string name="morphe_sb_general_skipcount_summary">A kimaradt szegmensek számának küldése a SponsorBlock ranglistájára a megtakarított idő nyomon követése érdekében</string>
-  <string name="morphe_sb_general_min_duration">Minimális szegmens időtartam</string>
-  <string name="morphe_sb_general_min_duration_summary">A beállított értéknél (másodpercben) rövidebb szakaszokat nem hagyja ki vagy nem jeleníti meg</string>
-  <string name="morphe_sb_general_min_duration_invalid">Érvénytelen időtartam</string>
-  <string name="morphe_sb_general_uuid">Privát felhasználói azonosítója</string>
-  <string name="morphe_sb_general_uuid_summary">Ezt bizalmasan kell kezelni. Olyan mint egy jelszó és senkivel sem ajánlott megosztani. Ha valaki megszerzi, meg tudja személyesíteni önt</string>
-  <string name="morphe_sb_general_uuid_invalid">A privát felhasználói azonosítónak legalább 30 karakter hosszúnak kell lennie</string>
-  <string name="morphe_sb_general_api_url">API URL módosítása</string>
-  <string name="morphe_sb_general_api_url_summary">Az a cím, amelyet a SponsorBlock a szervere eléréséhez használ</string>
-  <string name="morphe_sb_channel_whitelist">Csatorna fehérlista</string>
+  <string name="morphe_sb_track_skip_count_title">Átugrásszámláló bekapcsolása</string>
+  <string name="morphe_sb_track_skip_count_summary">Az átugrások számát elküldi a SponsorBlock ranglistájára, hogy nyomon kövesse a megtakarított időt</string>
+  <string name="morphe_sb_min_segment_duration_title">Minimális szegmens időtartam</string>
+  <string name="morphe_sb_min_segment_duration_summary">A beállított értéknél (másodpercben) rövidebb szakaszokat nem hagyja ki vagy nem jeleníti meg</string>
+  <string name="morphe_sb_min_segment_duration_invalid">Érvénytelen időtartam</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">Az Ön privát felhasználói azonosítója</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">Ezt bizalmasan kell kezelni. Olyan mint egy jelszó és senkivel sem ajánlott megosztani. Ha valaki megszerzi, meg tudja személyesíteni önt</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">A privát felhasználói azonosítónak legalább 30 karakter hosszúnak kell lennie</string>
+  <string name="morphe_sb_api_url_title">API URL módosítása</string>
+  <string name="morphe_sb_api_url_summary">Az a cím, amelyet a SponsorBlock a szervere eléréséhez használ</string>
+  <string name="morphe_sb_channel_whitelist_title">Csatorna fehérlista</string>
   <string name="morphe_sb_channel_whitelist_summary">A SponsorBlock le van tiltva a fehérlistázott csatornákhoz.</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Jelenlegi csatorna:</string>
   <string name="morphe_sb_channel_whitelist_add">Hozzáadás a fehérlistához</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">Nincs fehérlistázott csatorna</string>
   <string name="morphe_sb_channel_whitelist_channel_added">A csatorna hozzáadva a fehérlistához</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">A csatorna eltávolítva a fehérlistáról</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">Értesítés a fehérlistázott csatornán</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">Értesítés bekapcsolása fehérlistázott csatornán</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">Értesítést jelenít meg, amikor a SponsorBlock deaktiválva van egy fehérlistázott csatornán</string>
   <string name="morphe_sb_channel_whitelisted_toast">A SponsorBlock le van tiltva ezen a csatornán</string>
   <string name="morphe_sb_api_url_reset">API URL alaphelyzetbe állítása</string>
   <string name="morphe_sb_api_url_invalid">API URL érvénytelen</string>
   <string name="morphe_sb_api_url_changed">API URL megváltoztatva</string>
-  <string name="morphe_sb_settings_ie">Beállítások importálása/exportálása</string>
+  <string name="morphe_sb_settings_ie_title">Beállítások importálása/exportálása</string>
   <string name="morphe_sb_settings_copy">Másolás</string>
   <string name="morphe_sb_settings_ie_summary">Az Ön SponsorBlock JSON-konfigurációja, amely importálható/exportálható Morphe és más SponsorBlock platformokra</string>
   <string name="morphe_sb_settings_ie_summary_warning">"A SponsorBlock JSON konfigurációja, amely importálható / exportálható a Morphe és más SponsorBlock platformokra
@@ -92,7 +98,7 @@ Ez magában foglalja a privát felhasználói azonosítóját. Ügyeljen arra, h
 
 A felhasználói azonosítója olyan, mint egy jelszó, és soha nem szabad megosztani."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Ne jelenjen meg többet</string>
-  <string name="morphe_sb_diff_segments">A szegmens viselkedésének módosítása</string>
+  <string name="morphe_sb_diff_segments_title">A szegmens viselkedésének módosítása</string>
   <string name="morphe_sb_segments_sponsor">Szponzor</string>
   <string name="morphe_sb_segments_sponsor_summary">Fizetett promóció, fizetett ajánlások és közvetlen hirdetések. Nem önreklámozás vagy ingyenes említések ügyeknek/alkotóknak/weboldalaknak/termékeknek, amelyeket szeretnek</string>
   <string name="morphe_sb_segments_selfpromo">Nem fizetett hirdetés/önpromóció</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">Включить SponsorBlock</string>
+  <string name="morphe_sb_enabled_summary">SponsorBlock – это краудсорсинговая система для пропуска раздражающих фрагментов видео YouTube</string>
+  <string name="morphe_sb_appearance_category_title">Внешний вид</string>
+  <string name="morphe_sb_voting_button_title">Показать кнопку голосования за сегмент</string>
+  <string name="morphe_sb_voting_button_summary">Добавляет кнопку для голосования за или против сегментов</string>
+  <string name="morphe_sb_square_layout_title">Использовать квадратный макет</string>
+  <string name="morphe_sb_square_layout_summary">Использует скругленные углы для кнопок и элементов управления SponsorBlock</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Стиль кнопки пропуска</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">Уменьшает ширину кнопки пропуска, чтобы сэкономить место</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">Автоскрытие кнопки пропуска</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">Скрывает кнопку пропуска через несколько секунд вместо того, чтобы показывать ее в течение всего сегмента</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">Длительность показа кнопки пропуска</string>
+  <string name="morphe_sb_compact_skip_button_title">Стиль кнопки пропуска</string>
+  <string name="morphe_sb_compact_skip_button_summary">Уменьшает ширину кнопки «Пропустить», чтобы сэкономить место</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">Автоскрытие кнопки пропуска</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">Скрывает кнопку «Пропустить» через несколько секунд, вместо того чтобы отображать ее на протяжении всего сегмента</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">Длительность показа кнопки пропуска</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">Установите, как долго кнопка пропуска остается видимой</string>
-  <string name="morphe_sb_general_skiptoast">Показывать уведомление отмены пропуска</string>
-  <string name="morphe_sb_general_skiptoast_summary">Показывает уведомление, позволяющее отменить автоматический пропуск одним нажатием</string>
-  <string name="morphe_sb_toast_on_skip_duration">Длительность всплывающего уведомления при пропуске</string>
+  <string name="morphe_sb_toast_on_skip_title">Показывать уведомление об отмене пропуска</string>
+  <string name="morphe_sb_toast_on_skip_summary">Отображает уведомление, когда сегмент пропускается автоматически</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">Длительность всплывающего уведомления при пропуске</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">Установите, как долго остается видимым уведомление об отмене</string>
   <string name="morphe_sb_duration_1s">1 секунда</string>
   <string name="morphe_sb_duration_2s">2 секунды</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 секунд</string>
   <string name="morphe_sb_duration_9s">9 секунд</string>
   <string name="morphe_sb_duration_10s">10 секунд</string>
-  <string name="morphe_sb_general_time_without">Показать длительность видео без сегментов</string>
-  <string name="morphe_sb_general_time_without_summary">Вычитает все сегменты из общей продолжительности видео, отображаемой на шкале прогресса</string>
-  <string name="morphe_sb_create_segment_category">Создание новых сегментов</string>
-  <string name="morphe_sb_enable_create_segment">Показать кнопку «Создать новый сегмент»</string>
-  <string name="morphe_sb_enable_create_segment_summary">Добавляет кнопку к видеоплееру, позволяющую отправлять новые сегменты SponsorBlock</string>
-  <string name="morphe_sb_general_adjusting">Шаг регулировки времени</string>
-  <string name="morphe_sb_general_adjusting_summary">Величина перемотки кнопок регулировки времени (в миллисекундах)</string>
-  <string name="morphe_sb_general_adjusting_invalid">Значение должно быть положительным числом</string>
-  <string name="morphe_sb_guidelines_preference_title">Рекомендации по отправке</string>
-  <string name="morphe_sb_guidelines_preference_summary">Инструкция содержит правила и советы по созданию новых сегментов</string>
+  <string name="morphe_sb_video_length_without_segments_title">Показать длительность видео без сегментов</string>
+  <string name="morphe_sb_video_length_without_segments_summary">Вычитает все сегменты из общей продолжительности видео, отображаемой на индикаторе выполнения</string>
+  <string name="morphe_sb_create_segment_category_title">Создание новых сегментов</string>
+  <string name="morphe_sb_create_new_segment_title">Показать кнопку «Создать новый сегмент»</string>
+  <string name="morphe_sb_create_new_segment_summary">Добавляет кнопку к видеоплееру, позволяющую отправлять новые сегменты SponsorBlock</string>
+  <string name="morphe_sb_create_new_segment_step_title">Шаг изменения времени</string>
+  <string name="morphe_sb_create_new_segment_step_summary">Значение шага изменения времени (в миллисекундах)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">Значение должно быть положительным числом</string>
+  <string name="morphe_sb_guidelines_title">Рекомендации по отправке</string>
+  <string name="morphe_sb_guidelines_summary">Инструкция содержит правила и советы по созданию новых сегментов</string>
   <string name="morphe_sb_guidelines_popup_title">Следуйте инструкциям</string>
   <string name="morphe_sb_guidelines_popup_content">Перед созданием новых сегментов прочтите инструкции SponsorBlock</string>
   <string name="morphe_sb_guidelines_popup_already_read">Уже прочитано</string>
   <string name="morphe_sb_guidelines_popup_open">Показать</string>
-  <string name="morphe_sb_general">Общие настройки</string>
-  <string name="morphe_sb_toast_on_connection_error">Показывать оповещения об ошибках подключения</string>
+  <string name="morphe_sb_general_title">Общие настройки</string>
+  <string name="morphe_sb_toast_on_connection_error_title">Показывать оповещения об ошибках подключения</string>
   <string name="morphe_sb_toast_on_connection_error_summary">Показывает уведомление, когда сервер SponsorBlock недоступен</string>
-  <string name="morphe_sb_general_skipcount">Включить подсчет количества пропусков</string>
-  <string name="morphe_sb_general_skipcount_summary">Отправляет количество пропусков на таблицу лидеров SponsorBlock, чтобы отслеживать, сколько времени экономятся</string>
-  <string name="morphe_sb_general_min_duration">Минимальная продолжительность сегмента</string>
-  <string name="morphe_sb_general_min_duration_summary">Сегменты короче данного значения (в секундах) не будут показаны или пропущены</string>
-  <string name="morphe_sb_general_min_duration_invalid">Недопустимая длительность</string>
-  <string name="morphe_sb_general_uuid">Ваш идентификатор пользователя</string>
-  <string name="morphe_sb_general_uuid_summary">Уникальный идентификатор пользователя должен быть конфиденциальным. Он как пароль - не должен никому передаваться. Имеющий доступ к нему может выдать себя за Вас</string>
-  <string name="morphe_sb_general_uuid_invalid">Уникальный идентификатор пользователя должен содержать не менее 30 символов</string>
-  <string name="morphe_sb_general_api_url">Изменить URL-адрес API</string>
-  <string name="morphe_sb_general_api_url_summary">Адрес, используемый SponsorBlock для вызовов на сервер</string>
-  <string name="morphe_sb_channel_whitelist">Белый список каналов</string>
+  <string name="morphe_sb_track_skip_count_title">Включить подсчет количества пропусков</string>
+  <string name="morphe_sb_track_skip_count_summary">Отправляет количество пропусков в таблицу лидеров SponsorBlock для отслеживания сэкономленного времени</string>
+  <string name="morphe_sb_min_segment_duration_title">Минимальная продолжительность сегмента</string>
+  <string name="morphe_sb_min_segment_duration_summary">Сегменты короче данного значения (в секундах) не будут показаны или пропущены</string>
+  <string name="morphe_sb_min_segment_duration_invalid">Недопустимая длительность</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">Ваш личный идентификатор пользователя</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">Уникальный идентификатор пользователя должен быть конфиденциальным. Он как пароль - не должен никому передаваться. Имеющий доступ к нему может выдать себя за Вас</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">Личный идентификатор пользователя должен содержать не менее 30 символов</string>
+  <string name="morphe_sb_api_url_title">Изменить URL-адрес API</string>
+  <string name="morphe_sb_api_url_summary">Адрес, используемый SponsorBlock для вызовов на сервер</string>
+  <string name="morphe_sb_channel_whitelist_title">Белый список каналов</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock отключен для каналов из белого списка</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Текущий канал:</string>
   <string name="morphe_sb_channel_whitelist_add">Добавить в список разрешенных</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">Нет каналов в списке разрешенных</string>
   <string name="morphe_sb_channel_whitelist_channel_added">Канал добавлен в список разрешенных</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">Канал удален из списка разрешенных</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">Уведомлять о каналах в списке разрешенных</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">Уведомлять о каналах из белого списка</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">Показывать уведомление, когда SponsorBlock отключен для канала в списке разрешенных</string>
   <string name="morphe_sb_channel_whitelisted_toast">SponsorBlock отключен для этого канала</string>
   <string name="morphe_sb_api_url_reset">URL-адрес API сброшен</string>
   <string name="morphe_sb_api_url_invalid">URL-адрес API недействителен</string>
   <string name="morphe_sb_api_url_changed">URL-адрес API изменен</string>
-  <string name="morphe_sb_settings_ie">Резервное копирование настроек</string>
+  <string name="morphe_sb_settings_ie_title">Резервное копирование настроек</string>
   <string name="morphe_sb_settings_copy">Копировать</string>
   <string name="morphe_sb_settings_ie_summary">Ваша JSON конфигурация SponsorBlock, которая может быть импортирована или экспортирована в Morphe и другие платформы SponsorBlock</string>
   <string name="morphe_sb_settings_ie_summary_warning">"Ваша конфигурация JSON SponsorBlock, которую можно импортировать/экспортировать в Morphe и другие платформы SponsorBlock.
@@ -93,7 +99,7 @@ Second \"item\" text"</string>
 Ваш идентификатор пользователя как пароль, им не стоит ни с кем делиться.
 "</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Не показывать снова</string>
-  <string name="morphe_sb_diff_segments">Изменить поведение сегмента</string>
+  <string name="morphe_sb_diff_segments_title">Изменить поведение сегмента</string>
   <string name="morphe_sb_segments_sponsor">Спонсорская реклама</string>
   <string name="morphe_sb_segments_sponsor_summary">Платное продвижение, платные реферальные ссылки и прямая реклама. Не для саморекламы или бесплатных рекомендаций тем/авторам/сайтам/продуктам, которые им нравятся</string>
   <string name="morphe_sb_segments_selfpromo">Бесплатная реклама/самореклама</string>

@@ -139,4 +139,12 @@ Redarea va eșua dacă hash-ul scriptului JavaScript al playerului este depăși
   <string name="morphe_replace_music_with_youtube_summary">Înlocuiește music.youtube.com cu youtube.com în link-urile partajate</string>
   <string name="morphe_replace_links_with_shortener_title">Schimbați linkurile de partajare la youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Forțează clipurile video să utilizeze formatul URL scurtat youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Jurnal protocol buffer</string>
+  <string name="morphe_debug_protobuffer_summary">Adaugă informații suplimentare de înregistrare pentru dezvoltatori pentru a identifica componentele aplicației</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Activarea acestei setări va înregistra date suplimentare despre aspect, inclusiv textul de pe ecran pentru unele componente UI.
+
+Acest lucru poate ajuta la identificarea componentelor atunci când creați filtre personalizate.
+
+Cu toate acestea, activarea acestei opțiuni va înregistra și unele date ale utilizatorului, cum ar fi adresa dvs. IP."</string>
 </resources>

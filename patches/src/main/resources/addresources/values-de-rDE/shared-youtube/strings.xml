@@ -139,4 +139,12 @@ Die Wiedergabe schlägt fehl, wenn der Player JavaScript Hash veraltet ist."</st
   <string name="morphe_replace_music_with_youtube_summary">Ersetzt music.youtube.com durch youtube.com in geteilten Links</string>
   <string name="morphe_replace_links_with_shortener_title">Freigabe-Links zu youtu.be ändern</string>
   <string name="morphe_replace_links_with_shortener_summary">Erzwingt die Verwendung des gekürzten URL-Formats youtu.be für Videos</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Debug-Protokollpuffer</string>
+  <string name="morphe_debug_protobuffer_summary">Fügt zusätzliche Protokollierungsinformationen für Entwickler hinzu, um App-Komponenten zu identifizieren</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Wenn diese Einstellung aktiv ist werden zusätzliche Layoutdaten protokolliert, einschließlich Text auf dem Bildschirm für einige UI-Komponenten.
+
+Dies kann helfen, Komponenten bei der Erstellung benutzerdefinierter Filter zu identifizieren.
+
+Dadurch werden jedoch auch einige Benutzerdaten wie deine IP-Adresse protokolliert."</string>
 </resources>

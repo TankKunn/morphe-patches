@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,16 +15,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">Virka á SponsorBlock</string>
+  <string name="morphe_sb_enabled_summary">SponsorBlock er kerfisnotendum búið til til að sleppa áhugaverðum köflum í YouTube myndum</string>
+  <string name="morphe_sb_appearance_category_title">Útlíðun</string>
+  <string name="morphe_sb_voting_button_title">Sýna atkvæðis hnapp</string>
+  <string name="morphe_sb_voting_button_summary">Bætir við hnappi til að gefa atkvæði á eða niður á hluta</string>
+  <string name="morphe_sb_square_layout_title">Notaðu ferkantað útlit</string>
+  <string name="morphe_sb_square_layout_summary">Notaðu hringlaga horn fyrir SponsorBlock hnappa og stjórntæki</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">Nota samningsfullan hnapp til að sleppa</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">Minnkar breiddina á hnappinum „Hleypa yfir“ til að spara pláss</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">Sjálfkrafa fela hnapp til að sleppa</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">Felur hnappinn „Hleypa yfir“ eftir nokkrar sekúndur, frekar en að láta hann vera sýnilegan allan tímabilið</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">Lengd hnapps til að sleppa</string>
+  <string name="morphe_sb_compact_skip_button_title">Notaðu þéttan sleppa hnapp</string>
+  <string name="morphe_sb_compact_skip_button_summary">Minnkar breidd sleppa hnapps til að spara pláss</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">Sjálfvirklega felja sleppa hnapp</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">Felur sleppa hnappinn eftir nokkrar sekúndur frekar en að láta hann sýnan allan hlutanum</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">Lengd sleppa hnapps</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">Stilltu hversu lengi hnapparnir „Hleypa yfir“ eru sýnilegir</string>
-  <string name="morphe_sb_general_skiptoast">Sýna aftur sæta</string>
-  <string name="morphe_sb_general_skiptoast_summary">Sýnir tilkynningu sem gerir þér kleift að snerta til að afturræsa sjálfvirka hleyping</string>
-  <string name="morphe_sb_toast_on_skip_duration">Lengd aftur sætar</string>
+  <string name="morphe_sb_toast_on_skip_title">Sýna sleppa tilkynningu</string>
+  <string name="morphe_sb_toast_on_skip_summary">Sýnir tilkynningu þegar hluti er sleppt sjálfvirkt</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">Lengd sleppa tilkynningar</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">Stilltu hversu lengi afturráðningartilkynningin er sýnileg</string>
   <string name="morphe_sb_duration_1s">1 sekúnda</string>
   <string name="morphe_sb_duration_2s">2 sekúndur</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 sekúndur</string>
   <string name="morphe_sb_duration_9s">9 sekúndur</string>
   <string name="morphe_sb_duration_10s">10 sekúndur</string>
-  <string name="morphe_sb_general_time_without">Sýna lengd myndbandsins án hluta</string>
-  <string name="morphe_sb_general_time_without_summary">Dregur frá öllum brotum í heildarlengd vídeó sem sýnt er á leitarstikunni</string>
-  <string name="morphe_sb_create_segment_category">Búa til nýja hluta</string>
-  <string name="morphe_sb_enable_create_segment">Sýnir „Búa til nýjan brot“ hnapp</string>
-  <string name="morphe_sb_enable_create_segment_summary">Bætir við hnappi við myndavörpunina sem gerir þér kleift að leggja fram nýja brot frá SponsorBlock</string>
-  <string name="morphe_sb_general_adjusting">Láttu virkt kort</string>
-  <string name="morphe_sb_general_adjusting_summary">Umfangi minna en þetta er ekki sýnt eða leyst</string>
-  <string name="morphe_sb_general_adjusting_invalid">Gildið verður jákvæð tala</string>
-  <string name="morphe_sb_guidelines_preference_title">Leiðbeiningar um framsögn</string>
-  <string name="morphe_sb_guidelines_preference_summary">Leiðbeiningar innihalda reglur og ráð um hvernig á að búa til nýja brot</string>
+  <string name="morphe_sb_video_length_without_segments_title">Sýna myndarlengd án hluta</string>
+  <string name="morphe_sb_video_length_without_segments_summary">Dregur frá öllum hlutum í heildarmyndarlengd sýnd á leitastiku</string>
+  <string name="morphe_sb_create_segment_category_title">Búa til nýja hluta</string>
+  <string name="morphe_sb_create_new_segment_title">Sýna \'Búa til nýjan hluta\' hnapp</string>
+  <string name="morphe_sb_create_new_segment_summary">Bætir við hnappi við myndaspreiðarann sem gerir þér kleift að senda nýja SponsorBlock hluta</string>
+  <string name="morphe_sb_create_new_segment_step_title">Tímastillingar skref</string>
+  <string name="morphe_sb_create_new_segment_step_summary">Leitarsmagn tímastillinga hnappa (í millisekúndum)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">Gildið verður jákvæð tala</string>
+  <string name="morphe_sb_guidelines_title">Sendingarleiðbeiningar</string>
+  <string name="morphe_sb_guidelines_summary">Leiðbeiningar innihalda reglur og ábendingar um að búa til nýja hluta</string>
   <string name="morphe_sb_guidelines_popup_title">Fylgdu leiðbeiningunum</string>
   <string name="morphe_sb_guidelines_popup_content">Lestu SponsorBlock góðvild áður en þú bjarga nýjum umfangi</string>
   <string name="morphe_sb_guidelines_popup_already_read">Þegar búið</string>
   <string name="morphe_sb_guidelines_popup_open">Sýndu mér</string>
-  <string name="morphe_sb_general">Alhliða</string>
-  <string name="morphe_sb_toast_on_connection_error">Sýnir tilkynningar um tengslatruflanir</string>
+  <string name="morphe_sb_general_title">Almennt</string>
+  <string name="morphe_sb_toast_on_connection_error_title">Sýna villuskilaboð um tengingu</string>
   <string name="morphe_sb_toast_on_connection_error_summary">Sýnir tilkynningu þegar SponsorBlock netþjónninn er óskár</string>
-  <string name="morphe_sb_general_skipcount">Virkja eftir fylgja möguleika</string>
-  <string name="morphe_sb_general_skipcount_summary">Sendir skipatölur til leiðaratöflunnar SponsorBlock til að fylgjast með hversu mikill tími er sparaður</string>
-  <string name="morphe_sb_general_min_duration">Lágmarks lengd hluta</string>
-  <string name="morphe_sb_general_min_duration_summary">Umfangi minna en þetta er ekki sýnt eða leyst</string>
-  <string name="morphe_sb_general_min_duration_invalid">Ógild tímalengd</string>
-  <string name="morphe_sb_general_uuid">Persónulegar notendakennilausnir</string>
-  <string name="morphe_sb_general_uuid_summary">Þetta á að halda leyndarmálum. Þetta er eins og lykilorð og á ekki að deila því við neinn. Ef einhver hefur þetta getur hann gefið sig út sem þú</string>
-  <string name="morphe_sb_general_uuid_invalid">Persónulega notendakennin þarf að vera a.m.k. 30 stafir á löng</string>
-  <string name="morphe_sb_general_api_url">Breyta API URL</string>
-  <string name="morphe_sb_general_api_url_summary">Heimilifang SponsorBlock sem notað er til að gera símtöl til netþjónsins</string>
-  <string name="morphe_sb_channel_whitelist">Hvílisti rásanna</string>
+  <string name="morphe_sb_track_skip_count_title">Virkja fylgdarhald á sleppatali</string>
+  <string name="morphe_sb_track_skip_count_summary">Sendir sleppatala til SponsorBlock leiðaratöflunnar til að fylgjast með hversu mikil tími er sparaður</string>
+  <string name="morphe_sb_min_segment_duration_title">Lágmarks hlutastilling</string>
+  <string name="morphe_sb_min_segment_duration_summary">Hlutir sem eru styttri en þetta gildi (í sekúndum) verða hvorki sýndir né sleppt</string>
+  <string name="morphe_sb_min_segment_duration_invalid">Ógildur tími</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">Notenda ID þitt</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">Þetta á að halda leyndu. Þetta er eins og lykilorð og á ekki að deila með neinum. Ef einhver á þetta getur hann/hún uppgötvað þig</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">Notenda ID þitt verður að vera að minnst 30 stafir að lengd</string>
+  <string name="morphe_sb_api_url_title">Breyta API URL</string>
+  <string name="morphe_sb_api_url_summary">Heitið sem SponsorBlock notar til að gera köll til netþjónsins</string>
+  <string name="morphe_sb_channel_whitelist_title">Rásarhvíttlisti</string>
   <string name="morphe_sb_channel_whitelist_summary">SponsorBlock er óvirkur fyrir hvítlistaða rásir</string>
   <string name="morphe_sb_channel_whitelist_current_channel">Núverandi rás:</string>
   <string name="morphe_sb_channel_whitelist_add">Bæta við á hvítlista</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">Engar rásir á hvítlista</string>
   <string name="morphe_sb_channel_whitelist_channel_added">Rás bætt við á hvítlista</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">Rás fjarlægð úr hvítlista</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">Láta vita um hvítlistaða rás</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">Láta vita um hvíttlistu rás</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">Sýnir tilkynningu þegar SponsorBlock er óvirkur fyrir hvítlistaða rás</string>
   <string name="morphe_sb_channel_whitelisted_toast">SponsorBlock óvirkur fyrir þessa rás</string>
   <string name="morphe_sb_api_url_reset">API URL endurræst</string>
   <string name="morphe_sb_api_url_invalid">Ógild API URL</string>
   <string name="morphe_sb_api_url_changed">API URL breytt</string>
-  <string name="morphe_sb_settings_ie">Innflutningur / Útflutningur stillingar</string>
+  <string name="morphe_sb_settings_ie_title">Innflutningur / Útflutningur stillingar</string>
   <string name="morphe_sb_settings_copy">Afrita</string>
   <string name="morphe_sb_settings_ie_summary">JSON stillingar þínar frá SponsorBlock sem hægt er að flytja / flytja út til Morphe og annarra vébandrása SponsorBlock</string>
   <string name="morphe_sb_settings_ie_summary_warning">"JSON stillingurnar þínar frá SponsorBlock sem hægt er nota til að flytja/flytja til þín og annarra SponsorBlock borða.
@@ -92,7 +98,7 @@ Second \"item\" text"</string>
 
 Notendakennilausn þín er eins og lykilhnappur og ætti ekki að deila með öðrum."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">Ekki sýna aftur</string>
-  <string name="morphe_sb_diff_segments">Breyta flokkum</string>
+  <string name="morphe_sb_diff_segments_title">Breyta hlutum</string>
   <string name="morphe_sb_segments_sponsor">Kostur</string>
   <string name="morphe_sb_segments_sponsor_summary">Borgað kynningu, greidd vísa og beina auglýsingu. Ekki til sjálfsboðs eða ókeypis kveðja til málefna / sköppara / vefsvæða / vara sem þeir líka við</string>
   <string name="morphe_sb_segments_selfpromo">Ólaust / Sjálf kynning</string>
@@ -176,8 +182,8 @@ Notendakennilausn þín er eins og lykilhnappur og ætti ekki að deila með ö�
   <string name="morphe_sb_new_segment_disabled_category">Flokkur er óvirkur í stillingum. Virkja flokk til að sæta.</string>
   <string name="morphe_sb_new_segment_title">Nýr SponsorBlock hluti</string>
   <string name="morphe_sb_new_segment_mark_time_as_question">Stilltu %s sem start eða endi nýs hluta?</string>
-  <string name="morphe_sb_new_segment_mark_start">Start</string>
-  <string name="morphe_sb_new_segment_mark_end">End</string>
+  <string name="morphe_sb_new_segment_mark_start">Byrja</string>
+  <string name="morphe_sb_new_segment_mark_end">Endi</string>
   <string name="morphe_sb_new_segment_now">Núna</string>
   <string name="morphe_sb_new_segment_time_start">Tími þegar hluti byrjar</string>
   <string name="morphe_sb_new_segment_time_end">Tími þegar hluti endar</string>
@@ -205,7 +211,7 @@ Tilbúinn að sæta?"</string>
 
 Ef þú ert ekki að senda dull, bancrið og mörkið dulirð"</string>
   <string name="morphe_sb_new_segment_highlight_submit">Senda dull</string>
-  <string name="morphe_sb_stats_title">Stats</string>
+  <string name="morphe_sb_stats_title">Tölfræði</string>
   <!-- Shown in the settings preferences, and translations can be any text length. -->
   <string name="morphe_sb_stats_connection_failure">Stats eru tímabundið óþægileg (API er niður)</string>
   <string name="morphe_sb_stats_loading">Hlaða...</string>

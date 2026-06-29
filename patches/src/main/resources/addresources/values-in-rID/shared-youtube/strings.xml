@@ -139,4 +139,12 @@ Pemutaran akan gagal jika hash pemutar JavaScript sudah kedaluwarsa."</string>
   <string name="morphe_replace_music_with_youtube_summary">Mengganti music.youtube.com dengan youtube.com di tautan yang dibagikan</string>
   <string name="morphe_replace_links_with_shortener_title">Ubah tautan berbagi ke youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Memaksa video untuk menggunakan format pemendek URL youtu.be</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Buffer protokol log</string>
+  <string name="morphe_debug_protobuffer_summary">Menambahkan informasi catatan tambahan untuk pengembang guna mengidentifikasi komponen aplikasi</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Mengaktifkan pengaturan ini akan mencatat data tata letak tambahan, termasuk teks pada layar untuk beberapa komponen UI.
+
+Ini dapat membantu mengidentifikasi komponen saat membuat penyaring khusus.
+
+Namun, mengaktifkan ini juga akan mencatat beberapa data pengguna seperti alamat IP Anda."</string>
 </resources>

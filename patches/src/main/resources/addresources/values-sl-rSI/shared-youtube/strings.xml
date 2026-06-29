@@ -139,4 +139,10 @@ Predvajanje se bo izvedlo neuspešno, če je hash JavaScript predvajalnika zasta
   <string name="morphe_replace_music_with_youtube_summary">Nadomešča music.youtube.com z youtube.com v skupnih povezavah.</string>
   <string name="morphe_replace_links_with_shortener_title">Spremenite povezave za deljenje v youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Prisilno uporablja skrajšano obliko URL-jev youtu.be za videe</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Debug protokol protokola</string>
+  <string name="morphe_debug_protobuffer_summary">Dodaja dodatne informacije za razvojarje za prepoznavanje komponent aplikacije</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Ta nastavitev bo omogočila beleženje dodatnih podatkov o razmerju med elementi, vključno z besedilom na zaslonu za nekatere UI komponente.
+
+To lahko pomaga pri prepoznavanju komponent pri ustvarjanju prilagojenih filtrov, vendar bo omogočanje te možnosti tudi beležilo nekaj uporabniških podatkov, kot je vaš IP naslov."</string>
 </resources>

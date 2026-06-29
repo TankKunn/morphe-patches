@@ -137,4 +137,12 @@ Second \"item\" text"</string>
   <string name="morphe_replace_music_with_youtube_summary">Заменяет music.youtube.com на youtube.com в общих ссылках.</string>
   <string name="morphe_replace_links_with_shortener_title">Изменить ссылки для обмена на youtu.be</string>
   <string name="morphe_replace_links_with_shortener_summary">Принудительно использует сокращенный формат URL youtu.be для видео</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Журнал буфера протоколов</string>
+  <string name="morphe_debug_protobuffer_summary">Добавляет дополнительную информацию для отладки, чтобы разработчики могли идентифицировать компоненты приложения</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"Включение этой настройки позволит регистрировать дополнительные данные макета, включая текст на экране для некоторых компонентов пользовательского интерфейса.
+
+Это может помочь определить компоненты при создании пользовательских фильтров.
+
+Однако включение этой функции также приведет к регистрации некоторых пользовательских данных, таких как ваш IP-адрес."</string>
 </resources>

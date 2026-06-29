@@ -33,14 +33,6 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Eliminar restricciones de reproducción en segundo plano</string>
   <string name="morphe_shorts_disable_background_playback_title">Desactivar reproducción en segundo plano</string>
-  <!-- misc.debugging.enableDebuggingPatch -->
-  <string name="morphe_debug_protobuffer_title">Registro de depuración de búfer de protocolo</string>
-  <string name="morphe_debug_protobuffer_summary">Agrega información de registro adicional para que los desarrolladores identifiquen los componentes de la app</string>
-  <string name="morphe_debug_protobuffer_user_dialog_message">"Si activas este ajuste, se registrarán datos de diseño adicionales, incluido el texto en pantalla de algunos componentes de la interfaz de usuario.
-
-Esto puede ayudar a identificar componentes al crear filtros personalizados.
-
-Sin embargo, si activas esto, también se registrarán algunos datos del usuario, como tu dirección IP."</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Desactivar actualizaciones de diseño</string>
   <string name="morphe_disable_layout_updates_summary">Evita que el servidor actualice el diseño de la aplicación</string>
@@ -136,6 +128,8 @@ Los cambios incluyen:
   <string name="morphe_hide_timed_reactions_summary">Oculta la función que permite a los usuarios reaccionar con emojis en la sección de comentarios y el chat en directo</string>
   <string name="morphe_hide_video_title_title">Ocultar título de vídeo</string>
   <string name="morphe_hide_video_title_summary">Oculta el título del vídeo en el modo de pantalla completa</string>
+  <string name="morphe_sanitize_video_subtitle_title">Desinfectar subtítulos de vídeo</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Desinfecta frases como \"#\", \"Recaudación de fondos\", \"Tienda\" y \"productos\" de los subtítulos de los vídeos</string>
   <string name="morphe_hide_description_components_screen_title">Descripción del vídeo</string>
   <string name="morphe_hide_description_components_screen_summary">Elija qué componentes aparecen en la descripción del vídeo</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Ocultar sección \"Resumen de vídeo generado por IA\"</string>
@@ -411,7 +405,7 @@ Información: Es posible que no funcione en transmisiones en directo"</string>
   <string name="morphe_queue_restore_summary">La cola se mantiene después de reiniciar la aplicación</string>
   <string name="morphe_swap_save_and_queue_actions_title">Intercambiar las acciones Guardar y Añadir a la cola</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Pulsa para opciones de la cola, mantén pulsado para guardar para ver más tarde</string>
-  <string name="morphe_queue_override_flyout_menu_title">Botón para anular la cola de la transmisión</string>
+  <string name="morphe_queue_override_flyout_menu_title">Sustituir botón flotante de cola en el feed</string>
   <string name="morphe_queue_override_flyout_menu_summary">Abre la cola de Morphe en lugar de la cola de YouTube</string>
   <string name="morphe_queue_manager_check_failed_auth">No ha iniciado sesión</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">No hay ID de lista de reproducción</string>
@@ -854,7 +848,7 @@ Toca aquí para abrir ReturnYouTubeDislike.com"</string>
   <string name="morphe_ryd_statistics_millisecond_text">%d milisegundos</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_wide_searchbar_title">Activar barra de búsqueda amplia</string>
-
+  <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Diseño del dispositivo</string>
   <string name="morphe_change_form_factor_entry_1">Predeterminado</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,19 +15,26 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_title">تمكين SponsorBlock</string>
+  <string name="morphe_sb_enabled_summary">مانع الرُعَاة هو نظام جماعي لتخطي الأجزاء المزعجة من فيديوهات YouTube</string>
+  <string name="morphe_sb_appearance_category_title">المظهر</string>
+  <string name="morphe_sb_voting_button_title">عرض زر التصويت</string>
+  <string name="morphe_sb_voting_button_summary">يضيف زرًا للتصويت على المقاطع بـ موافقة أو رفض</string>
+  <string name="morphe_sb_square_layout_title">استخدام التخطيط المربع</string>
+  <string name="morphe_sb_square_layout_summary">يستخدم زوايا مستديرة لأزرار وعناصر تحكم SponsorBlock</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">استخدام زر التخطي المُصَغَّر</string>
-  <string name="morphe_sb_enable_compact_skip_button_summary">يقلل من عرض زر التخطي لتوفير المساحة</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">إخفاء زر التخطي تلقائيًا</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button_summary">يخفي زر التخطي بعد بضع ثوانٍ بدلًا من إبقائه ظاهرًا طوال المقطع</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">مدة زر التخطي</string>
+  <string name="morphe_sb_compact_skip_button_title">استخدام زر التخطي المُصَغَّر</string>
+  <string name="morphe_sb_compact_skip_button_summary">يقلل من عرض زر التخطي لتوفير المساحة</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">إخفاء زر التخطي تلقائيًا</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">يخفي زر التخطي بعد بضع ثوانٍ بدلًا من إبقائه ظاهرًا طوال المقطع</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">مدة زر التخطي</string>
   <string name="morphe_sb_auto_hide_skip_button_duration_summary">تعيين المدة التي يبقى فيها زر التخطي ظاهرًا</string>
-  <string name="morphe_sb_general_skiptoast">عرض التراجع عن التخطي</string>
-  <string name="morphe_sb_general_skiptoast_summary">يعرض إشعارًا يسمح لك بالنقر للتراجع عن التخطي التلقائي</string>
-  <string name="morphe_sb_toast_on_skip_duration">مدة ملاحظة التخطي</string>
+  <string name="morphe_sb_toast_on_skip_title">عرض إشعار التخطي</string>
+  <string name="morphe_sb_toast_on_skip_summary">يعرض إشعارًا عند تخطي مقطع تلقائيًا</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">مدة ملاحظة التخطي</string>
   <string name="morphe_sb_toast_on_skip_duration_summary">تعيين المدة التي يبقى فيها إشعار التراجع ظاهرًا</string>
-  <string name="morphe_sb_duration_1s">ثانية واحدة</string>
-  <string name="morphe_sb_duration_2s">ثانيتان</string>
+  <string name="morphe_sb_duration_1s">1 ثانية</string>
+  <string name="morphe_sb_duration_2s">2 ثانية</string>
   <string name="morphe_sb_duration_3s">3 ثوانٍ</string>
   <string name="morphe_sb_duration_4s">4 ثوانٍ</string>
   <string name="morphe_sb_duration_5s">5 ثوانٍ</string>
@@ -37,34 +43,34 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 ثوانٍ</string>
   <string name="morphe_sb_duration_9s">9 ثوانٍ</string>
   <string name="morphe_sb_duration_10s">10 ثوانٍ</string>
-  <string name="morphe_sb_general_time_without">عرض مدة الفيديو بدون المقاطع</string>
-  <string name="morphe_sb_general_time_without_summary">يطرح مدة جميع المقاطع من إجمالي مدة الفيديو المعروض على شريط التقدم</string>
-  <string name="morphe_sb_create_segment_category">إنشاء مقاطع جديدة</string>
-  <string name="morphe_sb_enable_create_segment">عرض زر \'إنشاء مقطع جديد\'</string>
-  <string name="morphe_sb_enable_create_segment_summary">يضيف زرًا إلى مشغل الفيديو يسمح لك بإرسال مقاطع SponsorBlock جديدة</string>
-  <string name="morphe_sb_general_adjusting">مقدار تعديل الوقت</string>
-  <string name="morphe_sb_general_adjusting_summary">مقدار تقديم أو تأخير أزرار ضبط الوقت (بجزء الثانية)</string>
-  <string name="morphe_sb_general_adjusting_invalid">يجب أن تكون القيمة رقمًا موجبًا</string>
-  <string name="morphe_sb_guidelines_preference_title">إرشادات الإرسال</string>
-  <string name="morphe_sb_guidelines_preference_summary">الإرشادات تتضمن قواعد ونصائح لإنشاء مقاطع جديدة</string>
+  <string name="morphe_sb_video_length_without_segments_title">عرض مدة الفيديو بدون المقاطع</string>
+  <string name="morphe_sb_video_length_without_segments_summary">يطرح مدة جميع المقاطع من إجمالي مدة الفيديو المعروض على شريط التقدم</string>
+  <string name="morphe_sb_create_segment_category_title">إنشاء مقاطع جديدة</string>
+  <string name="morphe_sb_create_new_segment_title">عرض زر \'إنشاء مقطع جديد\'</string>
+  <string name="morphe_sb_create_new_segment_summary">يضيف زرًا إلى مشغل الفيديو يسمح لك بإرسال مقاطع SponsorBlock جديدة</string>
+  <string name="morphe_sb_create_new_segment_step_title">مقدار تعديل الوقت</string>
+  <string name="morphe_sb_create_new_segment_step_summary">مقدار تقديم أو تأخير أزرار ضبط الوقت (بجزء الثانية)</string>
+  <string name="morphe_sb_create_new_segment_step_invalid">يجب أن تكون القيمة رقمًا موجبًا</string>
+  <string name="morphe_sb_guidelines_title">إرشادات الإرسال</string>
+  <string name="morphe_sb_guidelines_summary">الإرشادات تتضمن قواعد ونصائح لإنشاء مقاطع جديدة</string>
   <string name="morphe_sb_guidelines_popup_title">اتبع الإرشادات</string>
   <string name="morphe_sb_guidelines_popup_content">اقرأ إرشادات SponsorBlock قبل إضافة مقاطع جديدة</string>
   <string name="morphe_sb_guidelines_popup_already_read">تمت قراءتها</string>
   <string name="morphe_sb_guidelines_popup_open">اعرضها لي</string>
-  <string name="morphe_sb_general">عام</string>
-  <string name="morphe_sb_toast_on_connection_error">عرض تنبيهات خطأ الاتصال</string>
+  <string name="morphe_sb_general_title">عام</string>
+  <string name="morphe_sb_toast_on_connection_error_title">عرض تنبيهات خطأ الاتصال</string>
   <string name="morphe_sb_toast_on_connection_error_summary">يعرض إشعارًا عند تعذر توفر خادم SponsorBlock</string>
-  <string name="morphe_sb_general_skipcount">تمكين تتبع مرات التخطي</string>
-  <string name="morphe_sb_general_skipcount_summary">إرسال عدد مرات التخطي إلى لوحة متصدري SponsorBlock لتتبع مقدار الوقت المُوفَّر</string>
-  <string name="morphe_sb_general_min_duration">الحد الأدنى لمدة المقطع</string>
-  <string name="morphe_sb_general_min_duration_summary">لن يتم عرض المقاطع الأقصر من هذه القيمة (بالثواني) أو تخطيها</string>
-  <string name="morphe_sb_general_min_duration_invalid">المدة الزمنية غير صالحة</string>
-  <string name="morphe_sb_general_uuid">معرف المستخدم الخاص بك User ID</string>
-  <string name="morphe_sb_general_uuid_summary">يجب أن يبقى هذا خاصًا. انه مثل كلمة المرور ولا ينبغي مشاركته مع أي شخص. إذا كان شخص ما يملك هذا، فيمكنه انتحال شخصيتك</string>
-  <string name="morphe_sb_general_uuid_invalid">يجب أن يكون معرف المستخدم الخاص 30 حرفًا على الأقل</string>
-  <string name="morphe_sb_general_api_url">تغيير عنوان API</string>
-  <string name="morphe_sb_general_api_url_summary">العنوان الذي يستخدمه SponsorBlock لإجراء اتصالات إلى الخادم</string>
-  <string name="morphe_sb_channel_whitelist">قائمة القنوات المسموح بها</string>
+  <string name="morphe_sb_track_skip_count_title">تمكين تتبع مرات التخطي</string>
+  <string name="morphe_sb_track_skip_count_summary">إرسال عدد مرات التخطي إلى لوحة متصدري SponsorBlock لتتبع مقدار الوقت المُوفَّر</string>
+  <string name="morphe_sb_min_segment_duration_title">الحد الأدنى لمدة المقطع</string>
+  <string name="morphe_sb_min_segment_duration_summary">لن يتم عرض المقاطع الأقصر من هذه القيمة (بالثواني) أو تخطيها</string>
+  <string name="morphe_sb_min_segment_duration_invalid">المدة الزمنية غير صالحة</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">معرف المستخدم User ID الفريد الخاص بك</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">يجب أن يبقى هذا خاصًا. انه مثل كلمة المرور ولا ينبغي مشاركته مع أي شخص. إذا كان شخص ما يملك هذا، فيمكنه انتحال شخصيتك</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">يجب أن يكون معرف المستخدم الخاص 30 حرفًا على الأقل</string>
+  <string name="morphe_sb_api_url_title">تغيير عنوان API</string>
+  <string name="morphe_sb_api_url_summary">العنوان الذي يستخدمه SponsorBlock لإجراء اتصالات إلى الخادم</string>
+  <string name="morphe_sb_channel_whitelist_title">قائمة القنوات المسموح بها</string>
   <string name="morphe_sb_channel_whitelist_summary">تم تعطيل SponsorBlock للقنوات الموجودة في القائمة المسموح بها</string>
   <string name="morphe_sb_channel_whitelist_current_channel">القناة الحالية:</string>
   <string name="morphe_sb_channel_whitelist_add">إضافة إلى القائمة المسموح بها</string>
@@ -73,13 +79,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_channel_whitelist_empty">لا توجد قنوات في القائمة المسموح بها</string>
   <string name="morphe_sb_channel_whitelist_channel_added">تمت إضافة القناة إلى القائمة المسموح بها</string>
   <string name="morphe_sb_channel_whitelist_channel_removed">تم إزالة القناة من القائمة المسموح بها</string>
-  <string name="morphe_sb_toast_on_whitelisted_channel">إشعار عند وجود قناة في القائمة المسموح بها</string>
+  <string name="morphe_sb_toast_on_whitelisted_channel_title">إشعار عند وجود قناة في القائمة المسموح بها</string>
   <string name="morphe_sb_toast_on_whitelisted_channel_summary">يعرض إشعارًا عندما يتم تعطيل SponsorBlock لقناة في القائمة المسموح بها</string>
   <string name="morphe_sb_channel_whitelisted_toast">تم تعطيل SponsorBlock لهذه القناة</string>
   <string name="morphe_sb_api_url_reset">إعادة تعيين رابط API</string>
   <string name="morphe_sb_api_url_invalid">رابط API غير صالح</string>
   <string name="morphe_sb_api_url_changed">تم تغيير رابط API</string>
-  <string name="morphe_sb_settings_ie">إستيراد/تصدير الإعدادات</string>
+  <string name="morphe_sb_settings_ie_title">إستيراد/تصدير الإعدادات</string>
   <string name="morphe_sb_settings_copy">نسخ</string>
   <string name="morphe_sb_settings_ie_summary">تكوين SponsorBlock JSON الخاص بك والذي يمكن استيراده/تصديره إلى Morphe ومنصات SponsorBlock الأخرى</string>
   <string name="morphe_sb_settings_ie_summary_warning">"تكوين SponsorBlock الخاص بك كتنسيق JSON والذي يمكن استيراده / تصديره إلى Morphe وغيره من منصات SponsorBlock الأخرى
@@ -91,16 +97,16 @@ Second \"item\" text"</string>
   <string name="morphe_sb_settings_export_failed">فشل تصدير: %s</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning">"تحتوي إعداداتك على معرف مستخدم خاص لـ SponsorBlock.
 
-معرف المستخدم الخاص بك يشبه كلمة المرور ويجب عدم مشاركته أبدًا.
+معرف المستخدم الخاص بك يشبه كلمة المرور، ويجب عدم مشاركته أبدًا.
 "</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">لا تعرض مرة أخرى</string>
-  <string name="morphe_sb_diff_segments">تغيير سلوك المقطع</string>
+  <string name="morphe_sb_diff_segments_title">تغيير سلوك المقطع</string>
   <string name="morphe_sb_segments_sponsor">الراعي</string>
-  <string name="morphe_sb_segments_sponsor_summary">الترويج المدفوع، والإحالات المدفوعة، والإعلانات المباشرة. ليس للترويج الذاتي أو الترويج المجاني للقضايا/المبدعين/المواقع الإلكترونية/المنتجات التي يفضلونها</string>
+  <string name="morphe_sb_segments_sponsor_summary">الترويج المدفوع، الإحالات المدفوعة والإعلانات المباشرة. ليس للترويج الذاتي أو الترويج المجاني للقضايا/المبدعين/المواقع الإلكترونية/المنتجات التي يفضلونها</string>
   <string name="morphe_sb_segments_selfpromo">ترويج شخصي/غير مدفوع الأجر</string>
   <string name="morphe_sb_segments_selfpromo_summary">مشابهة لـ \'الراعي\' باستثناء ما يتعلق بالإعلانات غير المدفوعة الأجر أو الذاتية. ويشمل ذلك أقسام عن السلع أو التبرعات أو المعلومات المتعلقة بمن تعاونوا مع ناشر المحتوى</string>
   <string name="morphe_sb_segments_interaction">تذكير بالتفاعل (اشتراك)</string>
-  <string name="morphe_sb_segments_interaction_summary">تذكير قصير للإعجاب أو الاشتراك أو المتابعة في منتصف المحتوى. إذا كانت طويلة أو تتعلق بشيء محدد، فيجب أن تكون خاضعة للترويج الشخصي بدلًا من ذلك</string>
+  <string name="morphe_sb_segments_interaction_summary">تذكير قصير للإعجاب، أو الاشتراك أو المتابعة في منتصف المحتوى. إذا كانت طويلة أو تتعلق بشيء محدد، فيجب أن تكون خاضعة للترويج الشخصي بدلًا من ذلك</string>
   <string name="morphe_sb_segments_highlight">الأبرز</string>
   <string name="morphe_sb_segments_highlight_summary">الجزء من الفيديو الذي يبحث عنه معظم الناس</string>
   <string name="morphe_sb_segments_intro">المقدمة/فاصل</string>
@@ -114,7 +120,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_segments_filler">خارج الموضوع / نكات</string>
   <string name="morphe_sb_segments_filler_summary">مشاهد أو نكات جانبية غير ضرورية لفهم المحتوى الرئيسي للفيديو. لا تشمل الأقسام التي توفر سياقًا أو تفاصيل خلفية</string>
   <string name="morphe_sb_segments_nomusic">الموسيقى: مقطع غير موسيقي</string>
-  <string name="morphe_sb_segments_nomusic_summary">فقط للاستخدام في المقاطع الموسيقية. أقسام المقاطع الموسيقية بدون موسيقى، والتي لم يتم تغطيتها بالفعل من قبل فئة أخرى</string>
+  <string name="morphe_sb_segments_nomusic_summary">فقط للاستخدام في المقاطع الموسيقية. أقسام المقاطع الموسيقية بدون موسيقى والتي لم يتم تغطيتها بالفعل من قبل فئة أخرى</string>
   <string name="morphe_sb_skip_button_compact">تخطي</string>
   <string name="morphe_sb_skip_button_compact_highlight">الأبرز</string>
   <string name="morphe_sb_skip_button_sponsor">تخطي الراعي</string>
@@ -232,7 +238,7 @@ Second \"item\" text"</string>
   <string name="morphe_sb_color_opacity_label">الشفافية:</string>
   <string name="morphe_sb_color_dot_label">اللون:</string>
   <string name="morphe_sb_about_title">لمحة</string>
-  <string name="morphe_sb_about_api_summary">"يتم توفير البيانات بواسطة SponsorBlock API.
+  <string name="morphe_sb_about_api_summary">"يتم توفير البيانات بواسطة SponsorBlock API
 
 انقر هنا لفتح Sponsor.ajay.app والاطلاع على التنزيلات المتاحة للمنصات الأخرى"</string>
 </resources>

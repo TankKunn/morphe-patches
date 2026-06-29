@@ -138,4 +138,12 @@ Second \"item\" text"</string>
   <string name="morphe_replace_music_with_youtube_summary">साझा लिंक में music.youtube.com को youtube.com से बदलता है।</string>
   <string name="morphe_replace_links_with_shortener_title">youtu.be के साथ शेयर लिंक बदलें</string>
   <string name="morphe_replace_links_with_shortener_summary">वीडियो को संक्षिप्त youtu.be URL प्रारूप का उपयोग करने के लिए बाध्य करता है</string>
+  <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">डीबग लॉग प्रोटोकॉल बफर</string>
+  <string name="morphe_debug_protobuffer_summary">डेवलपर्स को ऐप घटकों की पहचान करने के लिए अतिरिक्त लॉगिंग जानकारी जोड़ता है</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"इस सेटिंग को सक्षम करने से अतिरिक्त लेआउट डेटा रिकॉर्ड होगा, जिसमें कुछ यूआई घटकों के स्क्रीन पर पाठ शामिल होंगे।
+
+यह कस्टम फ़िल्टर बनाने के लिए घटकों को पहचानने में मदद करेगा।
+
+लेकिन, इसका सक्षम करना भी कुछ उपयोगकर्ता डेटा जैसे आपके आईपी पता को रिकॉर्ड करेगा।"</string>
 </resources>

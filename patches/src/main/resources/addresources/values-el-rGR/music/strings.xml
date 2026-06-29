@@ -27,8 +27,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_music_screen_1_ads_title">Διαφημίσεις</string>
   <string name="morphe_settings_music_screen_2_general_title">Γενικά</string>
   <string name="morphe_settings_music_screen_3_player_title">Πρόγραμμα αναπαραγωγής</string>
-  <string name="morphe_settings_music_screen_4_scrobbling_title">Αναφορά</string>
-  <string name="morphe_settings_music_screen_5_misc_title">Διάφορα</string>
+  <string name="morphe_settings_music_screen_6_misc_title">Διάφορα</string>
   <!-- ad.general.hideAdsPatch -->
   <string name="morphe_music_hide_get_premium_label_title">Απόκρυψη ετικέτας \'Get Music Premium\'</string>
   <!-- ad.video.hideVideoAdsPatch -->
@@ -154,19 +153,19 @@ YouTube Music 8.x — το crossfade λειτουργεί μόνο στις εκ
   <string name="morphe_music_scrobbling_log_out">Αποσύνδεση</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Αποσυνδέθηκατε</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_enabled_title">Ενεργοποίηση scrobbling</string>
-  <string name="morphe_music_listenbrainz_now_playing_title">Υποβολή κατάστασης \"Playing\"</string>
-  <string name="morphe_music_listenbrainz_min_song_duration_title">Ελάχιστη διάρκεια τραγουδιού</string>
+  <string name="morphe_music_scrobbling_enabled_title">Ενεργοποίηση scrobbling</string>
+  <string name="morphe_music_scrobbling_now_playing_title">Υποβολή κατάστασης \"Τώρα ακούγεται\"</string>
+  <string name="morphe_music_scrobbling_min_song_duration_title">Ελάχιστη διάρκεια τραγουδιού</string>
   <!-- 'scrobbled' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_min_song_duration_summary">Τα τραγούδια με διάρκεια μικρότερη από αυτή δεν θα αναφέρονται</string>
+  <string name="morphe_music_scrobbling_min_song_duration_summary">Τα τραγούδια με διάρκεια μικρότερη από αυτή δεν θα καταγραφούν</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_delay_percent_title">Ποσοστό καθυστέρησης scrobble</string>
+  <string name="morphe_music_scrobbling_delay_percent_title">Ποσοστό καθυστέρησης scrobble</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_delay_percent_summary">Ενεργοποίηση scrobble μετά την ακρόαση αυτού του ποσοστού του τραγουδιού</string>
+  <string name="morphe_music_scrobbling_delay_percent_summary">Εκτέλεση scrobble μετά την ακρόαση του συγκεκριμένου ποσοστού του τραγουδιού</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_delay_seconds_title">Δευτερόλεπτα καθυστέρησης scrobble</string>
+  <string name="morphe_music_scrobbling_delay_seconds_title">Καθυστέρηση scrobble σε δευτερόλεπτα</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_delay_seconds_summary">Ενεργοποίηση scrobble μετά την ακρόαση για αυτόν τον αριθμό δευτερολέπτων</string>
+  <string name="morphe_music_scrobbling_delay_seconds_summary">Εκτέλεση scrobble μετά την ακρόαση για συγκεκριμένο αριθμό δευτερολέπτων</string>
   <string name="morphe_music_listenbrainz_token_title">Λογαριασμός ListenBrainz</string>
   <string name="morphe_music_listenbrainz_token_summary_logged_in">Συνδεθήκατε. Πατήστε για να διαχειριστείτε τον λογαριασμό</string>
   <!-- 'scrobbling' must be kept untranslated -->
@@ -183,22 +182,8 @@ YouTube Music 8.x — το crossfade λειτουργεί μόνο στις εκ
   <string name="morphe_music_listenbrainz_token_toast_cleared">Token διαγράφηκε</string>
   <string name="morphe_music_listenbrainz_token_toast_saved">Token αποθηκεύτηκε</string>
   <string name="morphe_music_listenbrainz_token_toast_invalid_warning">Προσοχή: Το αποθηκευμένο token είναι άκυρο!</string>
-  <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_lastfm_enabled_title">Ενεργοποίηση scrobbling</string>
-  <string name="morphe_music_lastfm_now_playing_title">Υποβολή κατάστασης \"Playing\"</string>
   <string name="morphe_music_lastfm_love_on_like_title">Αγαπήστε τα κομμάτια που σας αρέσουν</string>
   <string name="morphe_music_lastfm_love_on_like_summary">Αγαπήστε αυτόματα τα κομμάτια στο Last.fm όταν σας αρέσουν στο YouTube Music (και αφαιρέστε την αγάπη όταν δεν σας αρέσουν ή δεν σας αρέσουν)</string>
-  <string name="morphe_music_lastfm_min_song_duration_title">Ελάχιστη διάρκεια τραγουδιού</string>
-  <!-- 'scrobbled' must be kept untranslated -->
-  <string name="morphe_music_lastfm_min_song_duration_summary">Τα τραγούδια με διάρκεια μικρότερη από αυτή δεν θα αναφέρονται</string>
-  <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_lastfm_delay_percent_title">Ποσοστό καθυστέρησης scrobble</string>
-  <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_lastfm_delay_percent_summary">Ενεργοποίηση scrobble μετά την ακρόαση αυτού του ποσοστού του τραγουδιού</string>
-  <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_lastfm_delay_seconds_title">Δευτερόλεπτα καθυστέρησης scrobble</string>
-  <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_lastfm_delay_seconds_summary">Ενεργοποίηση scrobble μετά την ακρόαση για αυτόν τον αριθμό δευτερολέπτων</string>
   <string name="morphe_music_lastfm_token_title">Λογαριασμός Last.fm</string>
   <string name="morphe_music_lastfm_token_summary_logged_in">Συνδεθήκατε ως %s. Πατήστε για να διαχειριστείτε τον λογαριασμό</string>
   <string name="morphe_music_lastfm_token_dialog_instruction">Εισαγάγετε τα διαπιστευτήρια Last.fm για να συνδεθείτε</string>
@@ -215,10 +200,11 @@ YouTube Music 8.x — το crossfade λειτουργεί μόνο στις εκ
   <string name="morphe_music_scrobbling_metadata_cleanup_title">Καθαρισμός μεταδεδομένων</string>
   <string name="morphe_music_scrobbling_metadata_cleanup_summary">Αυτόματος καθαρισμός κοινής ακαταστασίας (όπως \"Επίσημο Βίντεο\", \"Remaster\", \"Live\") από τίτλους, καλλιτέχνες και άλμπουμ πριν από την αναφορά</string>
   <string name="morphe_music_scrobbling_custom_regex_title">Προσαρμοσμένος καθαρισμός regex</string>
-  <string name="morphe_music_scrobbling_custom_regex_summary">"Εισαγάγετε μια προσαρμοσμένη κανονική έκφραση (regex) για να ταιριάξετε και να αφαιρέσετε επιπλέον κείμενο από τίτλους τραγουδιών, καλλιτέχνες ή άλμπουμ.
-Παράδειγμα: (?i)\s*\((clean|explicit)\)"</string>
+  <string name="morphe_music_scrobbling_custom_regex_summary">Εισαγάγετε μια προσαρμοσμένη κανονική έκφραση για να αφαιρέσετε επιπλέον κείμενο από τους τίτλους τραγουδιών, τους καλλιτέχνες ή τα άλμπουμ. Παράδειγμα: (?i)\\s*\\((clean|explicit)\\)</string>
+  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_title">Σχετικά με την αναφορά</string>
-  <string name="morphe_music_scrobbling_about_summary">"Η αναφορά καταγράφει αυτόματα τη μουσική που ακούτε στο YouTube Music και τη συγχρονίζει με το προφίλ σας στο Last.fm ή ListenBrainz.
+  <!-- 'scrobbling' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_about_summary">"Το scrobbling συγχρονίζει αυτόματα τη χρήση του YouTube Music με το προφίλ σας στο Last.fm ή ListenBrainz.
 
-Για να διασφαλίσετε ότι η αναφορά εκτελείται αξιόπιστα στο παρασκήνιο, βεβαιωθείτε ότι η χρήση μπαταρίας συστήματος του YouTube Music είναι ρυθμισμένη στο \"Μη περιορισμένο\"."</string>
+Για να διασφαλίσετε ότι το scrobbling συγχρονίζεται κατά την αναπαραγωγή στο παρασκήνιο, βεβαιωθείτε ότι η χρήση μπαταρίας της εφαρμογής YouTube Music έχει ρυθμιστεί σε \"Μη περιορισμένη\"."</string>
 </resources>

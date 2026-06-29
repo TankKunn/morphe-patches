@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
     Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
 
@@ -16,12 +15,17 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_sb_enabled_summary">SponsorBlock سیستمێکی بەشداریی خەڵکییە بۆ پտەکردنی بەشە بێزارکەرەکانی ڤیدیۆکانی YouTube</string>
+  <string name="morphe_sb_appearance_category_title">دەرکەوتن</string>
+  <string name="morphe_sb_voting_button_summary">Adds a button to upvote or downvote segments</string>
+  <string name="morphe_sb_square_layout_title">شێوازی چوارگۆشە بەکاربهێنە</string>
+  <string name="morphe_sb_square_layout_summary">Uses rounded corners for SponsorBlock buttons and controls</string>
   <!-- Translations should match the language used in 'morphe_ryd_compact_layout_title'. -->
-  <string name="morphe_sb_enable_compact_skip_button">بۆ شێوازێک هێشتیار</string>
-  <string name="morphe_sb_enable_auto_hide_skip_segment_button">به‌گشتی دکۆی نه‌شه‌وه‌ قایپ بکه</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration">ماوەی یاخی</string>
-  <string name="morphe_sb_general_skiptoast">نشانەدانی ڕاگەیاندنی هەڵواسین و هەڵگزانی</string>
-  <string name="morphe_sb_toast_on_skip_duration">ماوەي دەربانەی دەلطة</string>
+  <string name="morphe_sb_compact_skip_button_summary">Reduces the width of the Skip button to save space</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">به‌گشتی دکۆی نه‌شه‌وه‌ قایپ بکه</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">Hides the Skip button after a few seconds instead of keeping it visible for the entire segment</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_summary">Set how long the Skip buttons remains visible</string>
+  <string name="morphe_sb_toast_on_skip_duration_summary">Set how long the undo notification remains visible</string>
   <string name="morphe_sb_duration_1s">1 سكاكەت</string>
   <string name="morphe_sb_duration_2s">2 سكاكەت</string>
   <string name="morphe_sb_duration_3s">3 سكاكەت</string>
@@ -32,27 +36,31 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 سكاكەت</string>
   <string name="morphe_sb_duration_9s">9 سكاكەت</string>
   <string name="morphe_sb_duration_10s">10 سكاكەت</string>
-  <string name="morphe_sb_general_time_without">شێوەزاری ڤیديۆ دەربخۆیتەوە بێ ئەندامان</string>
-  <string name="morphe_sb_create_segment_category">درووشتین سێگمنتی نوێ</string>
-  <string name="morphe_sb_general_adjusting_invalid">هۆكاری ئەبێتە جۆرێك ژمارەیە</string>
+  <string name="morphe_sb_video_length_without_segments_title">شێوەزاری ڤیديۆ دەربخۆیتەوە بێ ئەندامان</string>
+  <string name="morphe_sb_video_length_without_segments_summary">Subtracts all segments in total video duration shown on the seekbar</string>
+  <string name="morphe_sb_create_new_segment_title">Show \'Create new segment\' button</string>
+  <string name="morphe_sb_create_new_segment_summary">Adds a button to the video player allowing you to submit new SponsorBlock segments</string>
+  <string name="morphe_sb_guidelines_title">Submission guidelines</string>
+  <string name="morphe_sb_guidelines_summary">Guidelines contain rules and tips for creating new segments</string>
   <string name="morphe_sb_guidelines_popup_title">ڕێنماییەكان ڕاكوێب</string>
   <string name="morphe_sb_guidelines_popup_already_read">خۆم پێشتر خوێندرۆتە</string>
   <string name="morphe_sb_guidelines_popup_open">نێشانم بده</string>
-  <string name="morphe_sb_general">ئاسماني</string>
-  <string name="morphe_sb_toast_on_connection_error">نشان دادن ڕێنمایەکانی هەڵە یەکباری پەیوەندیمان</string>
-  <string name="morphe_sb_general_skipcount">بەدواداچوونی ژمارەی پەڕینەوە چالاک بکە</string>
-  <string name="morphe_sb_general_min_duration">ئاستی خوولي خاك</string>
-  <string name="morphe_sb_general_min_duration_summary">خۆڵەکان کەمتر لەم ڕێژەیە (لە چاوسێکدانە) نمایش ناکەین یان نادەین بەربەست</string>
-  <string name="morphe_sb_general_min_duration_invalid">هۆكار لە پێشكەش كردن</string>
-  <string name="morphe_sb_general_uuid">ناسنامەی تایبەتی تۆ</string>
-  <string name="morphe_sb_general_uuid_invalid">ناسنامەی بەکارهێنەری تایبەت دەبێت لانیکەم ٣٠ پیت بێت</string>
-  <string name="morphe_sb_general_api_url">گۆرینواری ئادرس</string>
+  <string name="morphe_sb_general_title">گشتی</string>
+  <string name="morphe_sb_toast_on_connection_error_title">نشان دادن ڕێنمایەکانی هەڵە یەکباری پەیوەندیمان</string>
+  <string name="morphe_sb_toast_on_connection_error_summary">Shows a notification when the SponsorBlock server is unavailable</string>
+  <string name="morphe_sb_track_skip_count_title">بەدواداچوونی ژمارەی پەڕینەوە چالاک بکە</string>
+  <string name="morphe_sb_track_skip_count_summary">Sends skip counts to the SponsorBlock leaderboard to track how much time is saved</string>
+  <string name="morphe_sb_min_segment_duration_summary">خۆڵەکان کەمتر لەم ڕێژەیە (لە چاوسێکدانە) نمایش ناکەین یان نادەین بەربەست</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_title">ناسنامەی تایبەتی تۆ</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_summary">This should be kept private. This is like a password and should not be shared with anyone. If someone has this, they can impersonate you</string>
+  <string name="morphe_sb_private_user_id_Do_Not_Share_invalid">ناسنامەی بەکارهێنەری تایبەت دەبێت لانیکەم ٣٠ پیت بێت</string>
+  <string name="morphe_sb_api_url_summary">The address SponsorBlock uses to make calls to the server</string>
   <string name="morphe_sb_channel_whitelist_remove">سڕینەوە</string>
   <string name="morphe_sb_api_url_reset">هاوخراپی ئادرس ئاسانکارە</string>
   <string name="morphe_sb_api_url_invalid">ئادرس نامەی ڕاست نەكرا</string>
   <string name="morphe_sb_api_url_changed">ئادرس ڕێكەش كرێ</string>
-  <string name="morphe_sb_settings_ie">گۆرتنە-بەسەرهاتە دەسوێستدان</string>
   <string name="morphe_sb_settings_copy">وێنەلەمەر</string>
+  <string name="morphe_sb_settings_ie_summary">Your SponsorBlock JSON configuration that can be imported / exported to Morphe and other SponsorBlock platforms</string>
   <string name="morphe_sb_settings_import_successful">ڕێکخستنەکان بە سەرکەوتوویی هاوردەکران</string>
   <string name="morphe_sb_settings_import_failed">هەڵنەتە: %s</string>
   <string name="morphe_sb_settings_export_failed">هەڵنەتە دەخورا: %s</string>
@@ -60,11 +68,14 @@ Second \"item\" text"</string>
 
  ناسنامەی بەکارهێنەرەکەت وەک وشەی نهێنی وایە، هەرگیز نابێت هاوبەشی بکرێت."</string>
   <string name="morphe_sb_settings_morphe_export_user_id_warning_dismiss">دوباره نەكریبنەوە</string>
-  <string name="morphe_sb_diff_segments">گۆرینهی ڕیشی خاكی</string>
   <string name="morphe_sb_segments_sponsor">هاوکار</string>
+  <string name="morphe_sb_segments_sponsor_summary">Paid promotion, paid referrals and direct advertisements. Not for self-promotion or free shout-outs to causes / creators / websites / products they like</string>
   <string name="morphe_sb_segments_selfpromo">بێتەش به غەرەزی/ خۆ دەدگەی</string>
+  <string name="morphe_sb_segments_selfpromo_summary">Similar to Sponsor except for unpaid / self promotion. Includes sections about merchandise, donations, or information about who they collaborated with</string>
   <string name="morphe_sb_segments_interaction">ئەتیای ڕاست (نیگنن)</string>
+  <string name="morphe_sb_segments_interaction_summary">A short reminder to like, subscribe or follow them in the middle of content. If it is long or about something specific, it should instead be under self promotion</string>
   <string name="morphe_sb_segments_highlight">خارا</string>
+  <string name="morphe_sb_segments_highlight_summary">The part of the video that most people are looking for</string>
   <string name="morphe_sb_segments_intro">پشوودان / ئەنیمەیشنی پێشەکی</string>
   <string name="morphe_sb_segments_intro_summary">نێوانێک کە ناوەڕۆکی ڕاستەقینەی تێدا نەبێت.  دەتوانێت وەستان، چوارچێوەی جێگیر، یان دووبارەبوونەوەی ئەنیمەیشن بێت.  ئەو گواستنەوەیانە ناگرێتەوە کە زانیارییان تێدایە</string>
   <string name="morphe_sb_segments_outro">کارتی کۆتایی / کرێدت</string>
@@ -74,7 +85,9 @@ Second \"item\" text"</string>
   <string name="morphe_sb_segments_preview">پیشاندانی / کۆکردنەوە</string>
   <string name="morphe_sb_segments_preview_summary"> کۆلێکنەی بەشە کلیپەکان کە ئەو شتانە دەربارەی نمایش دەکەن کە دەربکەون یان لە ڕاستی ڤیدۆکە یاخود لە ڤیدۆکانی تری زنجۆرەکەدا ڕویدا، کە هەموو زانیارییەکە لە شوێنەکانی تردا دووبارە دەکرێتەوە</string>
   <string name="morphe_sb_segments_filler">ئەلگاری / شوێنی خەیاڵی</string>
+  <string name="morphe_sb_segments_filler_summary">Tangential scenes or jokes that are not required to understand the main content of the video. Does not include sections providing context or background details</string>
   <string name="morphe_sb_segments_nomusic">موزیک: بەشی نەموزیکی</string>
+  <string name="morphe_sb_segments_nomusic_summary">Only for use in music videos. Sections of music videos without music that are not already covered by another category</string>
   <string name="morphe_sb_skip_button_compact">لەوەشدا بجە</string>
   <string name="morphe_sb_skip_button_compact_highlight">خۆراگرتن</string>
   <string name="morphe_sb_skip_button_sponsor">لەوەشدا بێ دەستخۆ سپۆنسۆر بجە</string>
@@ -166,9 +179,13 @@ Second \"item\" text"</string>
   <string name="morphe_sb_stats_username_changed">ناوی بەکارهێنە بەسەرکەوتوویی گۆڕدرا</string>
   <string name="morphe_sb_stats_reputation">ناوبانگی تۆ &lt;b&gt;%.2f&lt;/b&gt;</string>
   <string name="morphe_sb_stats_submissions">&lt;b&gt;%s&lt;/b&gt; پارچەگەشكاری دروستكراون</string>
+  <string name="morphe_sb_stats_submissions_summary">Tap here to view your segments</string>
   <string name="morphe_sb_stats_saved_zero">ته‌سه‌رێ SponsorBlock</string>
   <string name="morphe_sb_stats_saved">تۊ ئه‌هنه‌ك به‌ ڤه‌نه‌تانه‌ کە هەستن &lt;b&gt;%s&lt;/b&gt;</string>
+  <string name="morphe_sb_stats_saved_summary_zero">Tap here to see the global stats and top contributors</string>
+  <string name="morphe_sb_stats_saved_summary">That\'s &lt;b&gt;%s&lt;/b&gt; of their lives.&lt;br&gt;Tap here to see the leaderboard</string>
   <string name="morphe_sb_stats_self_saved">تۊ ڤه‌ره سكی ده‌شکه‌ن &lt;b&gt;%s&lt;/b&gt;</string>
+  <string name="morphe_sb_stats_self_saved_summary">That\'s &lt;b&gt;%s&lt;/b&gt;</string>
   <string name="morphe_sb_stats_self_saved_reset_title">مره‌هه‌م به‌ شه‌ڤه‌ت ڕه‌ز كه‌ سكی ده‌به‌ست؟</string>
   <string name="morphe_sb_stats_saved_hour_format">%1$s سەعات %2$s خولەك</string>
   <string name="morphe_sb_stats_saved_minute_format">%1$s خولەک %2$s چرکە</string>
