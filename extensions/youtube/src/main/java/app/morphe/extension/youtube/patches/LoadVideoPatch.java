@@ -8,11 +8,13 @@
 package app.morphe.extension.youtube.patches;
 
 import static app.morphe.extension.shared.StringRef.str;
+import static app.morphe.extension.shared.Utils.getContext;
 
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
@@ -90,16 +92,17 @@ public final class LoadVideoPatch {
                 builder.append(videoTime / 1000);
                 builder.append('s');
             }
-            String builderString = builder.toString();
-            Logger.printDebug(() -> "Opening: https://www.youtube.com/watch?v=" + builderString);
+            String builderString = "https://www.youtube.com/watch?v=" + builder;
+            Logger.printDebug(() -> "Opening: " + builderString);
 
-            reloadVideo(builderString, true);
+            openIntent(builderString, true);
         } catch (Exception ex) {
             Logger.printException(() -> "Failed to reload video", ex);
         }
     }
 
-    private static PlayerInterface checkedPlayerInterfaceInstance(PlayerInterface playerInterface) {
+    public static PlayerInterface getPlayerInterface() {
+        PlayerInterface playerInterface = playerInterfaceRef.get();
         if (playerInterface == null) {
             Utils.showToastShort(str("morphe_dismiss_player_not_available_toast"));
             return null;
@@ -107,34 +110,36 @@ public final class LoadVideoPatch {
         return playerInterface;
     }
 
-    public static void closeVideo() {
-        PlayerInterface checkedPlayerInterface =
-                checkedPlayerInterfaceInstance(playerInterfaceRef.get());
-
-        if (checkedPlayerInterface != null) {
-            checkedPlayerInterface.patch_dismissPlayer();
-        }
-    }
-
-    // This method opens a video based on hardcoded parameters found in an obfuscated class.
-    public static void reloadVideo(String videoIDWithParams, boolean closeCurrentPlayerInstance) {
-        PlayerInterface playerInterface = playerInterfaceRef.get();
-        if (playerInterface == null) {
-            Utils.showToastShort(str("morphe_dismiss_player_not_available_toast"));
-            return;
-        }
-
+    public static void openIntent(String url, boolean closeCurrentPlayerInstance) {
         int loadVideoDelay = 0;
 
         // Close the current player instance.
-        if (closeCurrentPlayerInstance) {
-            closeVideo();
+        PlayerInterface playerInterface;
+        if (closeCurrentPlayerInstance && (playerInterface = getPlayerInterface()) != null) {
+            playerInterface.patch_dismissPlayer();
 
             loadVideoDelay = 500;
         }
 
         // Reopens the video after 0ms or 500ms.
         Utils.runOnMainThreadDelayed(() -> {
+            Context context = getContext();
+
+            if (context == null) {
+                return;
+            }
+
+            Intent intent = new Intent("android.intent.action.VIEW", Uri.parse(url));
+            intent.setPackage(context.getPackageName());
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
+        }, loadVideoDelay);
+    }
+
+    // This method opens a video based on hardcoded parameters found in an obfuscated class.
+    public static void openVideoWithInternalIntent(String videoIDWithParams) {
+        PlayerInterface playerInterface;
+        if ((playerInterface = getPlayerInterface()) != null) {
             Context context = mainActivityRef.get();
             // No videoID is needed to put inside the Intent initialization.
             Intent reloadVideoIntent = new Intent();
@@ -154,7 +159,7 @@ public final class LoadVideoPatch {
             reloadVideoIntent.putExtra("watch", playerInterface.patch_getIntentParcelable(reloadVideoIntent));
 
             context.startActivity(reloadVideoIntent);
-        }, loadVideoDelay);
+        }
     }
 
     private static boolean checkDismissPlayerAvailability(PlayerInterface playerInterface) {
