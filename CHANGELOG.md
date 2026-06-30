@@ -1,3 +1,13 @@
+## [1.33.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.7...v1.33.0-dev.8) (2026-06-30)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Add to queue:** Show reload options when player is minimized ([#1879](https://github.com/MorpheApp/morphe-patches/issues/1879)) ([95c4ecf](https://github.com/MorpheApp/morphe-patches/commit/95c4ecfb4525ca0964a223fdf2c0f51a9d8d6da0))
+* **YouTube - Bypass link redirects:** Fix potential crash and cleanup ([6a0b518](https://github.com/MorpheApp/morphe-patches/commit/6a0b518403228c5575f80abf1c3cf48159454563))
+* **YouTube - Reload video button:** Use the correct URL query parameters ([9b399ec](https://github.com/MorpheApp/morphe-patches/commit/9b399ec5d240f84d7a9f2d2ffc3cb7877df1d0da))
+* **YouTube - System share sheet:** Support older app versions ([d1ccae8](https://github.com/MorpheApp/morphe-patches/commit/d1ccae8dc396322d406134122e90fb13c6c3ae0c))
+* **YouTube Music - Scrobbling:** Parse artist and track from video title ([#1885](https://github.com/MorpheApp/morphe-patches/issues/1885)) ([29c8d02](https://github.com/MorpheApp/morphe-patches/commit/29c8d021426abc5d04c9cea0ae7aa9139374b38e))
+
 ## [1.33.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.6...v1.33.0-dev.7) (2026-06-29)
 
 ### 🐛 Bug Fixes
