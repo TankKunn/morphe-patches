@@ -168,9 +168,9 @@ public final class AddToQueuePatch {
     /**
      * Injection point.
      */
-    public static void extractVideoId(Object bufferObject) {
+    public static void extractVideoId(@Nullable Object bufferObject) {
         try {
-            Logger.printDebug(() -> "FlyoutBuffer class: " + bufferObject.getClass());
+            Logger.printDebug(() -> "FlyoutBuffer class: " + ((bufferObject == null) ? null : bufferObject.getClass()));
 
             if (bufferObject instanceof FlyoutMenuVideoIdInterface videoIdInterface) {
                 String videoId = videoIdInterface.patch_getVideoId();
