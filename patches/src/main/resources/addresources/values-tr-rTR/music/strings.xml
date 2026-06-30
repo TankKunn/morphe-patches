@@ -201,6 +201,8 @@ YouTube Music 8.x — geçiş yalnızca 9.x ve sonraki sürümlerde çalışır"
   <string name="morphe_music_scrobbling_metadata_cleanup_summary">Şarkı başlıklarından, sanatçılardan ve albümlerden \"Resmi Video\", \"Yeniden Düzenleme\", \"Canlı\" gibi yaygın karmaşaları otomatik olarak temizleyin scrobble yapmadan önce</string>
   <string name="morphe_music_scrobbling_custom_regex_title">Özel düzenli ifade temizleme</string>
   <string name="morphe_music_scrobbling_custom_regex_summary">Şarkı adlarından, sanatçılardan veya albümlerden ek metni kaldırmak için özel bir düzenli ifade girin. Örnek: (?i)\\s*\\((clean|explicit)\\)</string>
+  <string name="morphe_music_scrobbling_parse_title_title">Başlığı ayrıştırarak sanatçı ve parçayı bul</string>
+  <string name="morphe_music_scrobbling_parse_title_summary">\" - \" ayıracını kullanarak video başlığından sanatçı ve parça adını çıkar. Kanal adı sanatçı olarak kullanılmış yeniden yüklenmiş içerik için kullanışlıdır.</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_title">scrobbling hakkında</string>
   <!-- 'scrobbling' must be kept untranslated -->

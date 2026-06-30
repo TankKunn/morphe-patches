@@ -694,7 +694,6 @@ Sonradan qapadılarsa, UI səhvlərin önləmək üçün tətbiq məlumatların 
   <string name="morphe_change_start_page_entry_virtual_reality">Faktiki Həyat</string>
   <string name="morphe_change_start_page_entry_watch_later">Sonra izlə</string>
   <string name="morphe_change_start_page_entry_your_clips">Klipləriniz</string>
-  <string name="morphe_change_start_page_always_title"> Başlatma səhifəsini həmişə dəyişdir</string>
   <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
   <string name="morphe_shorts_player_type_title">Shorts-u bununla aç</string>

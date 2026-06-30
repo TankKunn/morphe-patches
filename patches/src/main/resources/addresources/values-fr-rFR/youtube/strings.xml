@@ -920,10 +920,6 @@ Si cette option est désactivée ultérieurement, il est recommandé de vider le
   <string name="morphe_change_start_page_entry_virtual_reality">Réalité virtuelle</string>
   <string name="morphe_change_start_page_entry_watch_later">À regarder plus tard</string>
   <string name="morphe_change_start_page_entry_your_clips">Vos clips</string>
-  <string name="morphe_change_start_page_always_title">Toujours changer la page de démarrage</string>
-  <string name="morphe_change_start_page_always_summary">"Redirige toujours vers la page de démarrage choisie, et pas uniquement démarrage de l'application
-
-Limitation : L'utilisation du bouton retour dans la barre d'outils peut ne pas fonctionner"</string>
   <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
   <string name="morphe_disable_shorts_resuming_on_startup_title">Désactiver la reprise au démarrage</string>
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->

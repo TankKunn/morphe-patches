@@ -200,7 +200,9 @@ YouTube Music 8.x — le fondu enchaîné ne fonctionne que sur les versions 9.x
   <string name="morphe_music_scrobbling_metadata_cleanup_title">Nettoyer les métadonnées</string>
   <string name="morphe_music_scrobbling_metadata_cleanup_summary">Supprime automatiquement les mentions courantes (comme \"Official Video\", \"Remaster\" ou \"Live\") des titres, des noms d\'artistes et des albums avant le scrobbling.</string>
   <string name="morphe_music_scrobbling_custom_regex_title">Nettoyage par regex personnalisée</string>
-  <string name="morphe_music_scrobbling_custom_regex_summary">Entrez une expression régulière personnalisée pour supprimer du texte supplémentaire des titres de morceaux, des noms d\'artistes ou des albums.\nExemple : (?i)\\s*\\((clean|explicit)\\)</string>
+  <string name="morphe_music_scrobbling_custom_regex_summary">Entrez une expression régulière personnalisée pour supprimer le texte supplémentaire des titres de morceaux, des noms d\'artistes ou des albums. Exemple : (?i)\\s*\\((clean|explicit)\\)</string>
+  <string name="morphe_music_scrobbling_parse_title_title">Analyser l\'artiste et le titre à partir du titre</string>
+  <string name="morphe_music_scrobbling_parse_title_summary">Extraire le nom de l\'artiste et le titre de la vidéo à partir du titre en utilisant le séparateur \" - \". Utile pour le contenu republié où le nom de la chaîne peut être utilisé comme artiste.</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_title">À propos du scrobbling</string>
   <!-- 'scrobbling' must be kept untranslated -->

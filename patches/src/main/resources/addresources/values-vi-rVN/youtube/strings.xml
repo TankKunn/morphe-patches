@@ -301,37 +301,37 @@ Vui lòng kiểm tra lại tên gói và đảm bảo ứng dụng đã được
   <string name="morphe_external_downloader_empty_warning">Tên gói không được để trống</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Dịch giọng nói</string>
-  <string name="morphe_vot_screen_summary">Đọc to phụ đề video bằng tính năng chuyển văn bản thành giọng nói trên thiết bị, đồng bộ với quá trình phát lại</string>
+  <string name="morphe_vot_screen_summary">Đọc to phụ đề video bằng tính năng chuyển văn bản thành giọng nói trên thiết bị, đồng bộ với video</string>
   <string name="morphe_vot_enabled_title">Dịch giọng nói</string>
   <string name="morphe_vot_caption_language_title">Ngôn ngữ</string>
-  <string name="morphe_vot_translation_service_title">Nhà cung cấp dịch thuật</string>
+  <string name="morphe_vot_translation_service_title">Dịch vụ dịch thuật</string>
   <string name="morphe_vot_original_audio_volume_title">Âm lượng âm thanh gốc</string>
-  <string name="morphe_vot_original_audio_volume_summary">Âm lượng của âm thanh YouTube gốc khi bản dịch đang phát</string>
+  <string name="morphe_vot_original_audio_volume_summary">Âm lượng của âm thanh gốc trên YouTube khi bản dịch đang phát</string>
   <string name="morphe_vot_translation_volume_title">Âm lượng bản dịch</string>
-  <string name="morphe_vot_translation_volume_summary">Âm lượng của giọng nói dịch lồng tiếng</string>
-  <string name="morphe_vot_max_speech_rate_title">Tốc độ nói tối đa</string>
-  <string name="morphe_vot_max_speech_rate_summary">Hệ số nhân tốc độ tối đa khi điều chỉnh lời nói cho vừa với một ô phụ đề</string>
-  <string name="morphe_vot_mymemory_info_summary">"API dịch thuật miễn phí, không yêu cầu khóa API. Tối đa 5.000 ký tự mỗi ngày ở gói miễn phí, hoặc tối đa 50.000 ký tự mỗi ngày nếu có địa chỉ email.
+  <string name="morphe_vot_translation_volume_summary">Âm lượng của giọng lồng tiếng bản dịch</string>
+  <string name="morphe_vot_max_speech_rate_title">Tốc độ đọc tối đa</string>
+  <string name="morphe_vot_max_speech_rate_summary">Hệ số tốc độ tối đa khi điều chỉnh giọng nói để khớp thời lượng phụ đề</string>
+  <string name="morphe_vot_mymemory_info_summary">"API dịch miễn phí, không cần khóa API. Tối đa 5.000 ký tự mỗi ngày ở gói miễn phí, hoặc lên tới 50.000 ký tự mỗi ngày nếu có địa chỉ email.
 
-Nhấn vào đây để mở MyMemory.translated.net"</string>
+Bấm vào đây để truy cập MyMemory.translated.net"</string>
   <string name="morphe_vot_mymemory_email_title">Email MyMemory</string>
-  <string name="morphe_vot_mymemory_email_summary">Tùy chọn. Nhập địa chỉ email MyMemory của bạn để tăng giới hạn hàng ngày từ 5.000 lên 50.000 ký tự. Để trống để sử dụng giới hạn ẩn danh</string>
-  <string name="morphe_vot_openrouter_info_summary">"Dịch thuật AI trả phí qua OpenRouter. Nạp tiền một lần và dịch hàng nghìn video. Mistral Nemo là tùy chọn rẻ nhất, Gemma 4 cung cấp chất lượng cao nhất.
+  <string name="morphe_vot_mymemory_email_summary">Không bắt buộc. Nhập địa chỉ email MyMemory để tăng giới hạn hàng ngày từ 5.000 lên 50.000 ký tự. Để trống nếu bạn muốn sử dụng giới hạn cho người dùng ẩn danh</string>
+  <string name="morphe_vot_openrouter_info_summary">"Dịch thuật AI trả phí qua OpenRouter. Chỉ cần nạp tiền một lần và dịch hàng nghìn video. Mistral Nemo là tùy chọn tiết kiệm nhất, trong khi Gemma 4 mang lại chất lượng tốt nhất.
 
-Nhấn vào đây để mở OpenRouter.ai"</string>
+Bấm vào đây để truy cập OpenRouter.ai"</string>
   <string name="morphe_vot_openrouter_api_key_title">Khóa API OpenRouter</string>
-  <string name="morphe_vot_openrouter_api_key_summary">Khóa API OpenRouter của bạn. Tạo khóa tại OpenRouter.ai &gt; Workspace &gt; API Keys</string>
+  <string name="morphe_vot_openrouter_api_key_summary">Nhập khóa API OpenRouter.\nTạo khóa tại OpenRouter.ai &gt; Workspace &gt; API Keys</string>
   <string name="morphe_vot_openrouter_model_title">Mô hình OpenRouter</string>
   <string name="morphe_vot_openrouter_model_custom">Tùy chỉnh</string>
   <string name="morphe_vot_openrouter_not_configured_title">OpenRouter chưa được cấu hình</string>
-  <string name="morphe_vot_openrouter_not_configured_message">Nhập khóa API OpenRouter của bạn trong cài đặt trước khi chọn nhà cung cấp này</string>
+  <string name="morphe_vot_openrouter_not_configured_message">Nhập khóa API OpenRouter trong cài đặt trước khi chọn dịch vụ này</string>
   <string name="morphe_vot_cost_free">Miễn phí</string>
   <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">%s cho mỗi 100 giờ video</string>
-  <string name="morphe_vot_tts_voice_type">Giọng nói</string>
+  <string name="morphe_vot_tts_voice_type">Giọng đọc</string>
   <string name="morphe_vot_tts_system">Hệ thống</string>
-  <string name="morphe_vot_voice_gender_male_multilingual">Nam đa ngôn ngữ</string>
-  <string name="morphe_vot_voice_gender_female_multilingual">Nữ đa ngôn ngữ</string>
+  <string name="morphe_vot_voice_gender_male_multilingual">Giọng nam đa ngôn ngữ</string>
+  <string name="morphe_vot_voice_gender_female_multilingual">Giọng nữ đa ngôn ngữ</string>
   <string name="morphe_vot_voice_gender_male">Nam</string>
   <string name="morphe_vot_voice_gender_female">Nữ</string>
   <string name="morphe_vot_tts_sample">Đã đến lúc biến hình!</string>
@@ -823,6 +823,9 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <string name="morphe_ryd_estimated_like_summary">Hiển thị số lượt thích ước tính trên các video mà người sáng tạo đã ẩn lượt thích</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Hiện cảnh báo lỗi kết nối</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Hiển thị thông báo khi máy chủ Return YouTube Dislike không khả dụng</string>
+  <string name="morphe_ryd_attribution_summary">"Dữ liệu được cung cấp bởi API Return YouTube Dislike
+
+Nhấn vào đây để mở ReturnYouTubeDislike.com"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Thống kê API ReturnYouTubeDislike của thiết bị này</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Thời gian phản hồi API, trung binh</string>
@@ -915,10 +918,6 @@ Nếu tắt đi sau đó, bạn nên xóa dữ liệu ứng dụng để tránh 
   <string name="morphe_change_start_page_entry_virtual_reality">Thực tế ảo</string>
   <string name="morphe_change_start_page_entry_watch_later">Xem sau</string>
   <string name="morphe_change_start_page_entry_your_clips">Clip của bạn</string>
-  <string name="morphe_change_start_page_always_title">Luôn thay đổi trang bắt đầu</string>
-  <string name="morphe_change_start_page_always_summary">"Luôn chuyển hướng đến trang bắt đầu đã chọn, không chỉ khi mở ứng dụng
-
-Hạn chế: Nút quay lại trên thanh công cụ có thể không hoạt động"</string>
   <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
   <string name="morphe_disable_shorts_resuming_on_startup_title">Tắt tiếp tục xem khi mở ứng dụng</string>
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->

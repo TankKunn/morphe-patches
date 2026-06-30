@@ -23,10 +23,10 @@ Second \"item\" text"</string>
   <string name="morphe_settings_screen_02_alt_thumbnails_title">Miniaturas alternativas</string>
   <string name="morphe_settings_screen_03_feed_title">Feed</string>
   <string name="morphe_settings_screen_04_general_title">Geral</string>
-  <string name="morphe_settings_screen_05_player_title">Player</string>
+  <string name="morphe_settings_screen_05_player_title">Reprodutor</string>
   <string name="morphe_settings_screen_06_shorts_title">Shorts</string>
   <string name="morphe_settings_screen_07_seekbar_title">Barra de busca</string>
-  <string name="morphe_settings_screen_08_swipe_controls_title">Controles deslizantes</string>
+  <string name="morphe_settings_screen_08_swipe_controls_title">Controles por gestos</string>
   <string name="morphe_settings_screen_11_misc_title">Diversos</string>
   <string name="morphe_settings_screen_12_video_title">Vídeo</string>
   <string name="morphe_restore_old_settings_menus_title">Restaurar menus de configurações antigos</string>
@@ -34,7 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_remove_background_playback_restrictions_title">Remover restrições de reprodução em segundo plano</string>
   <string name="morphe_shorts_disable_background_playback_title">Desativar reprodução de fundo dos Shorts</string>
   <!-- layout.disableLayoutUpdatesPatch -->
-  <string name="morphe_disable_layout_updates_title">Desativar atualizações de layout</string>
+  <string name="morphe_disable_layout_updates_title">Desativar atualizações de interface</string>
   <string name="morphe_disable_layout_updates_summary">Impede que o servidor atualize o layout do aplicativo</string>
   <string name="morphe_disable_layout_updates_user_dialog_message">"O layout do app volta para o layout utilizado quando foi instalado pela primeira vez.
 
@@ -47,8 +47,8 @@ As mudanças incluem:
 • A seção de música da descrição do vídeo pode não funcionar.
 • O botão de alternância de conta pode não aparecer na guia da biblioteca."</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
-  <string name="morphe_hide_feed_flyout_menu_title">Habilitar filtro do menu de voo do feed</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtro do menu de voo do feed</string>
+  <string name="morphe_hide_feed_flyout_menu_title">Ativar filtros no menu flutuante do feed</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtros no menu flutuante do feed</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Insira os nomes do menu flyout para filtrar, separados por novas linhas</string>
   <string name="morphe_hide_account_menu_title">Ativar Biblioteca / Filtro do menu inferior</string>
   <string name="morphe_hide_account_menu_filter_strings_title">Ativar Biblioteca / Filtro do menu inferior</string>
@@ -918,10 +918,6 @@ Se posteriormente desativado, é recomendável limpar os dados do aplicativo par
   <string name="morphe_change_start_page_entry_virtual_reality">Realidade virtual</string>
   <string name="morphe_change_start_page_entry_watch_later">Assistir mais tarde</string>
   <string name="morphe_change_start_page_entry_your_clips">Seus clipes</string>
-  <string name="morphe_change_start_page_always_title">Sempre alterar a página inicial</string>
-  <string name="morphe_change_start_page_always_summary">"Sempre redireciona para a página inicial escolhida, não apenas na inicialização do aplicativo
-
-Limitação: Usar o botão Voltar na barra de ferramentas pode não funcionar"</string>
   <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
   <string name="morphe_disable_shorts_resuming_on_startup_title">Desativar retomada na inicialização</string>
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
