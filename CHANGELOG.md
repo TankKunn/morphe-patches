@@ -1,3 +1,9 @@
+## [1.33.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.8...v1.33.0-dev.9) (2026-07-01)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Add to queue:** Support tablet form factor ([#1891](https://github.com/MorpheApp/morphe-patches/issues/1891)) ([f55b720](https://github.com/MorpheApp/morphe-patches/commit/f55b7206f78e6b5dbe063e6f9e39093929047f34))
+
 ## [1.33.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.7...v1.33.0-dev.8) (2026-06-30)
 
 ### 🐛 Bug Fixes
