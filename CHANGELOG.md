@@ -1,3 +1,13 @@
+## [1.33.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.9...v1.33.0-dev.10) (2026-07-02)
+
+### 🐛 Bug Fixes
+
+* **YouTube - System share sheet:** Added full link format along with shortener setting check ([0259b4c](https://github.com/MorpheApp/morphe-patches/commit/0259b4c50ea5502f8c7f2457a9d8522cbee4915a))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.26.51` ([0be25a1](https://github.com/MorpheApp/morphe-patches/commit/0be25a10bfe1afbcb8bbdc5ff25b0272ba468ab4))
+
 ## [1.33.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0-dev.8...v1.33.0-dev.9) (2026-07-01)
 
 ### 🐛 Bug Fixes
