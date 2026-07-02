@@ -2,7 +2,7 @@
 
 ### 🐛 Bug Fixes
 
-* **YouTube - System share sheet:** Added full link format along with shortener setting check ([0259b4c](https://github.com/MorpheApp/morphe-patches/commit/0259b4c50ea5502f8c7f2457a9d8522cbee4915a))
+* **YouTube - Open system share sheet:** Added full link format along with shortener setting check ([0259b4c](https://github.com/MorpheApp/morphe-patches/commit/0259b4c50ea5502f8c7f2457a9d8522cbee4915a))
 
 ### 🚀 Updated App Support
 
