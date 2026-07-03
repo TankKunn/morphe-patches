@@ -1,3 +1,10 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ *
+ * See the included NOTICE file for GPLv3 §7(b) and §7(c) terms that apply to this code.
+ */
+
 @file:Suppress("SpellCheckingInspection")
 
 package app.morphe.patches.youtube.layout.miniplayer
@@ -5,6 +12,7 @@ package app.morphe.patches.youtube.layout.miniplayer
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
+import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.methodCall
@@ -68,6 +76,7 @@ val miniplayerPatch = bytecodePatch(
         preferences += SwitchPreference("morphe_miniplayer_disable_resuming", summary = true)
         preferences += SwitchPreference("morphe_miniplayer_disable_drag_and_drop", summary = true)
         preferences += SwitchPreference("morphe_miniplayer_disable_horizontal_drag", summary = true)
+        preferences += SwitchPreference("morphe_miniplayer_disable_horizontal_drag_playback", summary = true)
         preferences += SwitchPreference("morphe_miniplayer_disable_rounded_corners")
         preferences += SwitchPreference("morphe_miniplayer_hide_overlay_buttons")
         preferences += TextPreference("morphe_miniplayer_width_dip", inputType = InputType.NUMBER)
@@ -279,6 +288,22 @@ val miniplayerPatch = bytecodePatch(
         MiniplayerModernConstructorFingerprint.insertMiniplayerFeatureFlagBooleanOverride(
             MINIPLAYER_HORIZONTAL_DRAG_FEATURE_KEY,
             "getHorizontalDrag",
+        )
+
+        Fingerprint(
+            definingClass = MiniplayerHorizontalDragPlaybackFingerprint
+                .instructionMatches[2].getMethodCalled().definingClass,
+            name = "onAnimationEnd",
+        ).method.addInstructionsWithLabels(
+            0,
+            """
+                invoke-static { }, $EXTENSION_CLASS->pausePlaybackWithHorizontalDrag()Z
+                move-result v0
+                if-eqz v0, :allow_horizontal_drag_playback
+                return-void
+                :allow_horizontal_drag_playback
+                nop
+            """
         )
 
         MiniplayerModernConstructorFingerprint.insertMiniplayerFeatureFlagBooleanOverride(

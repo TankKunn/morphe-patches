@@ -1,3 +1,10 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ *
+ * See the included NOTICE file for GPLv3 §7(b) and §7(c) terms that apply to this code.
+ */
+
 package app.morphe.extension.youtube.patches;
 
 import static app.morphe.extension.shared.StringRef.str;
@@ -8,6 +15,8 @@ import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerTyp
 import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerType.MODERN_2;
 import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerType.MODERN_3;
 import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerType.MODERN_4;
+import static app.morphe.extension.youtube.settings.Settings.MINIPLAYER_DISABLE_HORIZONTAL_DRAG;
+import static app.morphe.extension.youtube.settings.Settings.MINIPLAYER_DISABLE_HORIZONTAL_DRAG_PLAYBACK;
 
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
@@ -134,7 +143,7 @@ public final class MiniplayerPatch {
             CURRENT_TYPE.isModern() && !Settings.MINIPLAYER_DISABLE_ROUNDED_CORNERS.get();
 
     private static final boolean MINIPLAYER_HORIZONTAL_DRAG_ENABLED =
-            DRAG_AND_DROP_ENABLED && !Settings.MINIPLAYER_DISABLE_HORIZONTAL_DRAG.get();
+            DRAG_AND_DROP_ENABLED && !MINIPLAYER_DISABLE_HORIZONTAL_DRAG.get();
 
     private static final Map<Integer, String> MINIMAL_PLAYER_DRAWABLES = Map.of(
             ResourceUtils.getStringIdentifier("accessibility_pause"),
@@ -161,7 +170,8 @@ public final class MiniplayerPatch {
     public static final class MiniplayerHorizontalDragAvailability implements Setting.Availability {
         @Override
         public boolean isAvailable() {
-            return Settings.MINIPLAYER_TYPE.get().isModern() && !Settings.MINIPLAYER_DISABLE_DRAG_AND_DROP.get();
+            return Settings.MINIPLAYER_TYPE.get().isModern()
+                    && !Settings.MINIPLAYER_DISABLE_DRAG_AND_DROP.get();
         }
 
         @Override
@@ -169,6 +179,24 @@ public final class MiniplayerPatch {
             return List.of(
                     Settings.MINIPLAYER_TYPE,
                     Settings.MINIPLAYER_DISABLE_DRAG_AND_DROP
+            );
+        }
+    }
+
+    public static final class MiniplayerHorizontalDragPlaybackAvailability implements Setting.Availability {
+        @Override
+        public boolean isAvailable() {
+            return Settings.MINIPLAYER_TYPE.get().isModern()
+                    && !Settings.MINIPLAYER_DISABLE_DRAG_AND_DROP.get()
+                    && !Settings.MINIPLAYER_DISABLE_HORIZONTAL_DRAG.get();
+        }
+
+        @Override
+        public List<Setting<?>> getParentSettings() {
+            return List.of(
+                    Settings.MINIPLAYER_TYPE,
+                    Settings.MINIPLAYER_DISABLE_DRAG_AND_DROP,
+                    Settings.MINIPLAYER_DISABLE_HORIZONTAL_DRAG
             );
         }
     }
@@ -335,6 +363,13 @@ public final class MiniplayerPatch {
         }
 
         return MINIPLAYER_HORIZONTAL_DRAG_ENABLED;
+    }
+
+    /**
+     * Injection point.
+     */
+    public static boolean pausePlaybackWithHorizontalDrag() {
+        return MINIPLAYER_HORIZONTAL_DRAG_ENABLED && !MINIPLAYER_DISABLE_HORIZONTAL_DRAG_PLAYBACK.get();
     }
 
     /**
