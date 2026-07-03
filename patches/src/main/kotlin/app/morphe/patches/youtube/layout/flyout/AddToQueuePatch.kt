@@ -217,66 +217,66 @@ val addToQueuePatch = bytecodePatch(
                 )
             }
 
-            if (!is_21_05_or_greater) {
-                ContextualMenuItemBuilderFingerprint.let {
-                    it.method.cloneParameters().apply {
-                        val filterIndexClonedOffset = numberOfParameterRegisters
-                        val targetInstructionIndex = it.instructionMatches[3].index + filterIndexClonedOffset
-                        val targetInstructionRegister = getInstruction<FiveRegisterInstruction>(
-                            targetInstructionIndex
-                        ).registerC
-                        val secondButtonInfoParameterRegister = getInstruction<FiveRegisterInstruction>(
-                            it.instructionMatches[2].index + filterIndexClonedOffset
-                        ).registerC
+            ContextualMenuItemBuilderFingerprint.let {
+                it.method.cloneParameters().apply {
+                    val filterIndexClonedOffset = numberOfParameterRegisters
+                    val targetInstructionIndex = it.instructionMatches[3].index + filterIndexClonedOffset
+                    val targetInstructionRegister = getInstruction<FiveRegisterInstruction>(
+                        targetInstructionIndex
+                    ).registerC
+                    val secondButtonInfoParameterRegister = getInstruction<FiveRegisterInstruction>(
+                        it.instructionMatches[2].index + filterIndexClonedOffset
+                    ).registerC
 
-                        addInstructions(
-                            targetInstructionIndex,
-                                """
-                                invoke-static { v$targetInstructionRegister }, $getCharSequenceReference
-                                move-result-object p0
-                                iget p0, p0, $enumIntField
-                                invoke-static { p0 }, $enumMethodCall
-                                move-result-object p0
-                                invoke-static { p0, v$secondButtonInfoParameterRegister }, $EXTENSION_CLASS->setCurrentButtonInfo(Ljava/lang/Enum;Ljava/lang/Object;)V
+                    addInstructions(
+                        targetInstructionIndex,
                             """
-                        )
-                    }
-                }
-
-                fun getReplaceOnItemClickPatch(
-                    targetInstructionRegister: String,
-                    freeRegister: String
-                ): String = """
-                    invoke-static { $targetInstructionRegister }, $EXTENSION_CLASS->replaceOnItemClick(Ljava/lang/Object;)Z
-                    move-result $freeRegister
-                    if-eqz $freeRegister, :block_item_click
-                    return-void
-                    :block_item_click
-                    nop
-                """
-
-                ContextualMenuItemBuilderOnClickFingerprint.let {
-                    val enumMethodParameterClassReference = it.instructionMatches.first()
-                        .getInstruction<ReferenceInstruction>().reference
-                    val enumMethodParameterClassName = it.instructionMatches[1]
-                        .getInstruction<ReferenceInstruction>().reference
-
-                    it.method.addInstructions(
-                        0,
+                            invoke-static { v$targetInstructionRegister }, $getCharSequenceReference
+                            move-result-object p0
+                            iget p0, p0, $enumIntField
+                            invoke-static { p0 }, $enumMethodCall
+                            move-result-object p0
+                            invoke-static { p0, v$secondButtonInfoParameterRegister }, $EXTENSION_CLASS->setCurrentButtonInfo(Ljava/lang/Enum;Ljava/lang/Object;)V
                         """
-                            iget-object v0, p0, $enumMethodParameterClassReference
-                            check-cast v0, $enumMethodParameterClassName
-                            invoke-static { v0 }, $getCharSequenceReference
-                            move-result-object v0
-                            iget v0, v0, $enumIntField
-                            invoke-static { v0 }, $enumMethodCall
-                            move-result-object v0
-                            invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-                            move-result-object v0
-                        """ + getReplaceOnItemClickPatch("v0", "v0")
                     )
                 }
+            }
 
+            fun getReplaceOnItemClickPatch(
+                targetInstructionRegister: String,
+                freeRegister: String
+            ): String = """
+                invoke-static { $targetInstructionRegister }, $EXTENSION_CLASS->replaceOnItemClick(Ljava/lang/Object;)Z
+                move-result $freeRegister
+                if-eqz $freeRegister, :block_item_click
+                return-void
+                :block_item_click
+                nop
+            """
+
+            ContextualMenuItemBuilderOnClickFingerprint.let {
+                val enumMethodParameterClassReference = it.instructionMatches.first()
+                    .getInstruction<ReferenceInstruction>().reference
+                val enumMethodParameterClassName = it.instructionMatches[1]
+                    .getInstruction<ReferenceInstruction>().reference
+
+                it.method.addInstructions(
+                    0,
+                    """
+                        iget-object v0, p0, $enumMethodParameterClassReference
+                        check-cast v0, $enumMethodParameterClassName
+                        invoke-static { v0 }, $getCharSequenceReference
+                        move-result-object v0
+                        iget v0, v0, $enumIntField
+                        invoke-static { v0 }, $enumMethodCall
+                        move-result-object v0
+                        invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+                        move-result-object v0
+                    """ + getReplaceOnItemClickPatch("v0", "v0")
+                )
+            }
+
+            if (!is_21_05_or_greater) {
                 FeedFlyoutButtonsInitializerOnItemClickFingerprint.method.addInstructionsWithLabels(
                     0,
                     """
