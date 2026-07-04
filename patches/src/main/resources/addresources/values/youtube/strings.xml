@@ -1220,14 +1220,15 @@ Limitations:
     <string name="morphe_force_avc_codec_not_available">To use this feature, set \'Spoof video streams\' to Android VR or Android Studio</string>
 
     <!-- video.quality.advancedVideoQualityMenuPatch -->
-    <string name="morphe_advanced_video_quality_menu_title">Show advanced video quality menu</string>
+    <string name="morphe_advanced_video_quality_menu_title">Open \'Advanced\' quality menu</string>
+    <string name="morphe_advanced_video_quality_menu_summary">Skips the quality selection menu and opens the Advanced quality menu directly</string>
 
     <!-- video.quality.hidePremiumVideoQualityPatch -->
     <string name="morphe_hide_premium_video_quality_title">Hide Premium quality options</string>
 
     <!-- video.quality.prioritizeVideoQualityPatch -->
     <string name="morphe_prioritize_video_quality_title">Prioritize video quality</string>
-    <string name="morphe_prioritize_video_quality_summary">Prioritizes the highest quality video over codec efficiency</string>
+    <string name="morphe_prioritize_video_quality_summary">Prioritizes the highest available video quality over codec efficiency</string>
 
     <!-- misc.fix.playback.spoofVideoStreamsPatch -->
     <string name="morphe_spoof_video_streams_av1_title">Allow Android VR AV1</string>
