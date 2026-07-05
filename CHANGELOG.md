@@ -1,3 +1,10 @@
+## [1.34.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.34.0-dev.1...v1.34.0-dev.2) (2026-07-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Return YouTube Dislike:** Remove RYD Shorts due to YT removing Shorts dislike and RYD API no longer providing reliable Shorts dislikes data ([#1924](https://github.com/MorpheApp/morphe-patches/issues/1924)) ([fcb613a](https://github.com/MorpheApp/morphe-patches/commit/fcb613aacb28ccd319f7211282305d0c6a912874))
+* **YouTube Music - Downloads:** Add "Override feed/search flyout button" setting ([#1931](https://github.com/MorpheApp/morphe-patches/issues/1931)) ([af7cf55](https://github.com/MorpheApp/morphe-patches/commit/af7cf55a99c9ebf8e42649af4b931bb74cedf086))
+
 ## [1.34.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0...v1.34.0-dev.1) (2026-07-05)
 
 ### 🐛 Bug Fixes
