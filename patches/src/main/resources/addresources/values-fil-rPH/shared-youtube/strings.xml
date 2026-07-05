@@ -21,8 +21,10 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">Pangalan ng aplikasyon</string>
   <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_screen_title">Mga panlabas na pag-download</string>
   <string name="morphe_external_downloader_name_title">Pangalan ng pakete ng tagapag-download</string>
   <string name="morphe_external_downloader_name_summary">Pangalan ng pakete ng iyong naka-install na panlabas na app ng tagapag-download</string>
+  <string name="morphe_external_downloader_flyout_button_title">Palitan ang button ng feed/search flyout</string>
   <string name="morphe_external_downloader_other_item_hint">Ilagay ang pangalan ng pakete</string>
   <string name="morphe_external_downloader_other_item">Iba pa</string>
   <string name="morphe_external_downloader_not_found_title">Hindi naka-install ang app</string>

@@ -284,12 +284,12 @@ Ograniczenia:
   <string name="morphe_disable_chapter_skip_double_tap_summary">Wyłącza gest podwójnego dotknięcia dwoma palcami do pomijania rozdziałów, który bywa przypadkowo wywoływany jednym palcem</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Zewnętrzne pobieranie</string>
-  <string name="morphe_external_downloader_screen_summary">Pobieraj filmy, podcasty lub utwory za pomocą aplikacji innych firm</string>
+  <string name="morphe_external_downloader_screen_summary">Pobieraj filmy, podcasty lub utwory za pomocą zewnętrznych aplikacji do pobierania</string>
   <string name="morphe_external_downloader_title">Pokaż przycisk zewnętrznego pobierania</string>
   <string name="morphe_external_downloader_summary">Wyświetla w odtwarzaczu przycisk otwierający zewnętrzną aplikację do pobierania</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Nadpisz działanie przycisku Pobierz</string>
-  <string name="morphe_external_downloader_action_button_summary">Zastępuje wbudowaną funkcję pobierania YouTube zewnętrzną aplikacją</string>
+  <string name="morphe_external_downloader_action_button_summary">Zastępuje wbudowaną funkcję pobierania YouTube zewnętrzną aplikacją do pobierania</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Tłumaczenie głosowe</string>
   <string name="morphe_vot_screen_summary">Czyta napisy na głos przy użyciu wbudowanego syntezatora mowy, synchronizując je z odtwarzaniem obrazu</string>
@@ -741,7 +741,6 @@ Aby je wyświetlić, zmień \"Fałszowanie strumieni filmów\" na \"Android Reel
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Ukryj animację przycisku Lubię</string>
   <string name="morphe_hide_shorts_like_button_title">Ukryj przycisk Lubię</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Ukryj przycisk Nie lubię</string>
   <string name="morphe_hide_shorts_comments_button_title">Ukryj przycisk Komentarze</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Ukryj przycisk Udostępnij</string>
@@ -802,8 +801,6 @@ To ustawienie działa tylko wtedy, gdy autoodtwarzanie jest wyłączone. Możesz
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Ukryte przez właściciela</string>
   <string name="morphe_ryd_enabled_title">Włącz Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Pokaż liczbę łapek w dół w filmach Short</string>
-  <string name="morphe_ryd_shorts_summary">Ograniczenie: Łapki w dół mogą nie być widoczne w trybie incognito</string>
   <string name="morphe_ryd_dislike_percentage_title">Pokaż łapki w dół jako procent</string>
   <string name="morphe_ryd_dislike_percentage_summary">Wyświetla łapki w dół jako procent polubień zamiast konkretnej liczby</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1048,10 +1045,10 @@ Dotknij tutaj, aby otworzyć DeArrow.ajay.app"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Stosuje ręcznie wybraną jakość do wszystkich kolejnych filmów Short</string>
   <string name="morphe_shorts_quality_default_wifi_title">Domyślna jakość filmów Short w sieci Wi-Fi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Domyślna jakość filmów Short w sieci komórkowej</string>
-  <string name="morphe_remember_video_quality_mobile">sieci komórkowej</string>
-  <string name="morphe_remember_video_quality_wifi">sieci Wi-Fi</string>
-  <string name="morphe_remember_video_quality_toast">Zmieniono domyślną jakość %1$s na: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Zmieniono jakość filmów Short w %1$s na: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Zmieniono domyślną jakość (kom.) na: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Zmieniono domyślną jakość (Wi-Fi) na: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Zmieniono jakość filmów Short (kom.) na: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Zmieniono jakość filmów Short (Wi-Fi) na: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Pokaż przycisk Prędkość odtwarzania</string>
   <string name="morphe_playback_speed_dialog_button_summary">Przytrzymaj, aby zresetować prędkość do domyślnej</string>

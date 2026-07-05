@@ -284,7 +284,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Απενεργοποιεί τη χειρονομία διπλού αγγίγματος με δύο δάχτυλα που παραλείπει κεφάλαια, η οποία μπορεί να ενεργοποιηθεί κατά λάθος με ένα δάχτυλο</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Εξωτερικές λήψεις</string>
-  <string name="morphe_external_downloader_screen_summary">Κατεβάστε βίντεο, podcast ή τραγούδια με εφαρμογές λήψης τρίτων</string>
+  <string name="morphe_external_downloader_screen_summary">Κάντε λήψη βίντεο, podcast ή τραγούδια με εφαρμογές λήψης τρίτων</string>
   <string name="morphe_external_downloader_title">Εμφάνιση κουμπιού εξωτερικής λήψης</string>
   <string name="morphe_external_downloader_summary">Εμφανίζει ένα κουμπί επικάλυψης στον πρόγραμμα αναπαραγωγής βίντεο που ανοίγει την εφαρμογή λήψης τρίτων</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
@@ -741,7 +741,6 @@ Second \"item\" text"</string>
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Εφέ κουμπιού «Μου αρέσει»</string>
   <string name="morphe_hide_shorts_like_button_title">Κουμπί «Μου αρέσει»</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Κουμπί «Δεν μου αρέσει»</string>
   <string name="morphe_hide_shorts_comments_button_title">Κουμπί σχολίων</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Κουμπί «Κοινοποίηση»</string>
@@ -803,8 +802,6 @@ Second \"item\" text"</string>
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Κρυμμένα από τον ιδιοκτήτη</string>
   <string name="morphe_ryd_enabled_title">Ενεργοποίηση Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Εμφάνιση στα Shorts</string>
-  <string name="morphe_ryd_shorts_summary">Περιορισμός: Τα dislikes ενδέχεται να μην εμφανίζονται στη λειτουργία ανώνυμης περιήγησης</string>
   <string name="morphe_ryd_dislike_percentage_title">Εμφάνιση των dislikes ως ποσοστό</string>
   <string name="morphe_ryd_dislike_percentage_summary">Εμφανίζει τα dislikes ως ποσοστό των likes αντί για έναν αριθμό</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1049,10 +1046,10 @@ Second \"item\" text"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Εφαρμόζει την μη αυτόματη επιλογή ποιότητας σε όλα τα μελλοντικά Shorts</string>
   <string name="morphe_shorts_quality_default_wifi_title">Προεπιλεγμένη ποιότητα Shorts σε δίκτυο Wi-Fi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Προεπιλεγμένη ποιότητα Shorts σε δίκτυο κινητής τηλεφωνίας</string>
-  <string name="morphe_remember_video_quality_mobile">δεδομένων</string>
-  <string name="morphe_remember_video_quality_wifi">Wi-Fi</string>
-  <string name="morphe_remember_video_quality_toast">Η προεπιλεγμένη ποιότητα %1$s άλλαξε σε: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Η ποιότητα Shorts με %1$s άλλαξε σε: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Η προεπιλεγμένη ποιότητα κινητού άλλαξε σε: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Η προεπιλεγμένη ποιότητα Wi-Fi άλλαξε σε: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Η ποιότητα Shorts με κινητό άλλαξε σε: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Η ποιότητα Shorts με Wi-Fi άλλαξε σε: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Εμφάνιση κουμπιού ταχύτητας αναπαραγωγής</string>
   <string name="morphe_playback_speed_dialog_button_summary">Πατήστε και κρατήστε για επαναφορά στην προεπιλεγμένη ταχύτητα</string>

@@ -21,8 +21,10 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">Numele aplicației</string>
   <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_screen_title">Descărcări externe</string>
   <string name="morphe_external_downloader_name_title">Numele pachetului aplicației de descărcare</string>
   <string name="morphe_external_downloader_name_summary">Numele pachetului aplicației externe de descărcare instalate</string>
+  <string name="morphe_external_downloader_flyout_button_title">Înlocuiește butonul flyout feed/căutare</string>
   <string name="morphe_external_downloader_other_item_hint">Introduceți numele pachetului</string>
   <string name="morphe_external_downloader_other_item">Altele</string>
   <string name="morphe_external_downloader_not_found_title">Aplicația nu este instalată</string>

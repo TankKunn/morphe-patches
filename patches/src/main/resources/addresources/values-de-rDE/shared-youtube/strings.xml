@@ -21,8 +21,10 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">App-Name</string>
   <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_screen_title">Externe Downloads</string>
   <string name="morphe_external_downloader_name_title">Paketname des Downloaders</string>
   <string name="morphe_external_downloader_name_summary">Paketname Ihrer installierten externen Downloader-App</string>
+  <string name="morphe_external_downloader_flyout_button_title">Überschreiben-Button für Feed-/Such-Flyout</string>
   <string name="morphe_external_downloader_other_item_hint">Geben Sie zuerst einen Paketnamen ein</string>
   <string name="morphe_external_downloader_other_item">Andere</string>
   <string name="morphe_external_downloader_not_found_title">App nicht installiert</string>

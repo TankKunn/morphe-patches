@@ -740,7 +740,6 @@ Untuk menampilkan 'Menu Trek Audio', ubah 'Palsukan aliran video' menjadi 'Andro
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Sembunyikan tombol Suka yang memancar</string>
   <string name="morphe_hide_shorts_like_button_title">Sembunyikan tombol Suka</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Sembunyikan tombol Tidak Suka</string>
   <string name="morphe_hide_shorts_comments_button_title">Sembunyikan tombol Komentar</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Sembunyikan tombol Bagikan</string>
@@ -802,8 +801,6 @@ Pengaturan → Pemutaran (atau Pemutaran Otomatis) → Putar video berikutnya se
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Disembunyikan oleh pemilik</string>
   <string name="morphe_ryd_enabled_title">Aktifkan Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Tampilkan dislike di Shorts</string>
-  <string name="morphe_ryd_shorts_summary">Batasan: Dislike mungkin tidak muncul dalam mode Penyamaran</string>
   <string name="morphe_ryd_dislike_percentage_title">Tampilkan dislike sebagai persentase</string>
   <string name="morphe_ryd_dislike_percentage_summary">Menampilkan jumlah tidak suka sebagai persentase dari jumlah suka, bukan sebagai angka</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1048,10 +1045,10 @@ Ketuk di sini untuk membuka DeArrow.ajay.app"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Menerapkan pilihan kualitas manual Anda ke semua Shorts mendatang</string>
   <string name="morphe_shorts_quality_default_wifi_title">Kualitas Shorts bawaan di jaringan Wi-Fi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Kualitas Shorts bawaan di jaringan seluler</string>
-  <string name="morphe_remember_video_quality_mobile">seluler</string>
-  <string name="morphe_remember_video_quality_wifi">wifi</string>
-  <string name="morphe_remember_video_quality_toast">Kualitas bawaan %1$s diubah ke: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Kualitas Shorts %1$s diubah menjadi: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Kualitas seluler bawaan diubah menjadi: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Kualitas Wi-Fi bawaan diubah menjadi: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Kualitas Shorts seluler diubah menjadi: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Kualitas Shorts Wi-Fi diubah menjadi: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Tampilkan tombol kecepatan Pemutaran</string>
   <string name="morphe_playback_speed_dialog_button_summary">Ketuk dan tahan untuk mereset kecepatan ke bawaan</string>

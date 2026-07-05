@@ -22,7 +22,6 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_entry_1">Standard</string>
   <string name="morphe_header_logo_entry_3">Benutzerdefiniert</string>
   <!-- interaction.downloads.downloadsPatch -->
-  <string name="morphe_external_downloader_screen_title">Externe Downloads</string>
   <string name="morphe_external_downloader_screen_summary">Laden Sie Musikvideos, Podcasts oder Songs mit Anwendungen von Drittanbietern herunter</string>
   <string name="morphe_external_downloader_action_button_title">Download-Aktionsknopf überschreiben</string>
   <string name="morphe_external_downloader_action_button_summary">Ersetzt die integrierte Download-Funktion von YouTube durch Ihren externen Downloader</string>

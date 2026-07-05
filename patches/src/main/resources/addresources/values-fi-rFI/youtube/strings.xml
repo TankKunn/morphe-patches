@@ -741,7 +741,6 @@ Näyttääksesi Ääniraitavalikon, vaihda \"Naamioi videovirrat\" -asetukseksi 
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Piilota Tykkää-painikkeen suihkulähdeanimaatio</string>
   <string name="morphe_hide_shorts_like_button_title">Piilota Tykkää-painike</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Piilota En tykkää -painike</string>
   <string name="morphe_hide_shorts_comments_button_title">Piilota Kommentit-painike</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Piilota Jaa-painike</string>
@@ -803,8 +802,6 @@ Asetukset → Toisto (tai Automaattinen toisto) → Toista seuraava video"</stri
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Omistajan piilottama</string>
   <string name="morphe_ryd_enabled_title">Ota Return YouTube Dislike käyttöön</string>
-  <string name="morphe_ryd_shorts_title">Näytä ei-tykkykset Shortseissa</string>
-  <string name="morphe_ryd_shorts_summary">Rajoitus: Ei-tykkäykset eivät välttämättä näy peitetilassa</string>
   <string name="morphe_ryd_dislike_percentage_title">Näytä ei-tykkäykset prosentteina</string>
   <string name="morphe_ryd_dislike_percentage_summary">Näyttää ei-tykkäykset tykkäysten prosenttiosuutena numeron sijaan</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1049,10 +1046,10 @@ Napauta tästä saadaksesi lisätietoja DeArrowista"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Käyttää manuaalista laatuvalintaasi kaikkiin tuleviin Shortseihin</string>
   <string name="morphe_shorts_quality_default_wifi_title">Shorts-oletuslaatu Wi-Fi-verkossa</string>
   <string name="morphe_shorts_quality_default_mobile_title">Shorts-oletuslaatu mobiiliverkossa</string>
-  <string name="morphe_remember_video_quality_mobile">mobiili</string>
-  <string name="morphe_remember_video_quality_wifi">Wi-Fi</string>
-  <string name="morphe_remember_video_quality_toast">%1$s-oletuslaatu muutettiin: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Shortsien %1$s-laatu muutettiin: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Oletusmatkapuhelinten laatu muutettiin: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Oletus-Wi-Fi-laatu muutettiin: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Shortsien matkapuhelinten laatu muutettiin: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Shortsien Wi-Fi-laatu muutettiin: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Näytä toistonopeuden painike</string>
   <string name="morphe_playback_speed_dialog_button_summary">Napauta ja pidä painettuna nollataksesi nopeus oletusarvoon</string>

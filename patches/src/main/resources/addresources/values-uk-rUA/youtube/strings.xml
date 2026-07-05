@@ -741,7 +741,6 @@ Second \"item\" text"</string>
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Приховати анімацію фонтану кнопки \"Лайк\"</string>
   <string name="morphe_hide_shorts_like_button_title">Приховати кнопку \"Лайк\"</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Приховати кнопку \"Дизлайк\"</string>
   <string name="morphe_hide_shorts_comments_button_title">Приховати кнопку \"Коментарі\"</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Приховати кнопку \"Поділитися\"</string>
@@ -802,8 +801,6 @@ Second \"item\" text"</string>
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Приховано власником</string>
   <string name="morphe_ryd_enabled_title">Увімкнути Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Показувати дизлайки в Shorts</string>
-  <string name="morphe_ryd_shorts_summary">Обмеження: Дизлайки можуть не показуватися в анонімному режимі</string>
   <string name="morphe_ryd_dislike_percentage_title">Показувати дизлайки у відсотках</string>
   <string name="morphe_ryd_dislike_percentage_summary">Показує дизлайки у відсотках від вподобань замість числа</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1048,10 +1045,10 @@ Second \"item\" text"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Застосовує обраний рівень якості до всіх наступних Shorts</string>
   <string name="morphe_shorts_quality_default_wifi_title">Типова якість Shorts у мережі Wi-Fi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Типова якість Shorts у мобільній мережі</string>
-  <string name="morphe_remember_video_quality_mobile">в мобільній мережі</string>
-  <string name="morphe_remember_video_quality_wifi">в Wi-Fi мережі</string>
-  <string name="morphe_remember_video_quality_toast">Типову якість %1$s змінено на %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Якість Shorts %1$s змінено на %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Змінено типову якість мобільного зв’язку на: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Змінено типову якість Wi-Fi на: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Якість Shorts на мобільному зв’язку змінено на: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Якість Shorts через Wi-Fi змінено на: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Показати кнопку \"Швидкість відтворення\"</string>
   <string name="morphe_playback_speed_dialog_button_summary">Натисніть і утримуйте для скидання швидкості до типової</string>

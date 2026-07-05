@@ -22,7 +22,6 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_entry_1">Par défaut</string>
   <string name="morphe_header_logo_entry_3">Personnalisé</string>
   <!-- interaction.downloads.downloadsPatch -->
-  <string name="morphe_external_downloader_screen_title">Téléchargeurs externe</string>
   <string name="morphe_external_downloader_screen_summary">Téléchargez des vidéos, des podcasts ou des chansons avec des applications de téléchargement tierces</string>
   <string name="morphe_external_downloader_action_button_title">Remplacer l\'action du bouton \'Télécharger\'</string>
   <string name="morphe_external_downloader_action_button_summary">Remplace la fonction de téléchargement intégrée de YouTube Music par votre téléchargeur externe</string>

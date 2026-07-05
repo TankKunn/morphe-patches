@@ -22,10 +22,9 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_entry_1">Mặc định</string>
   <string name="morphe_header_logo_entry_3">Tùy chỉnh</string>
   <!-- interaction.downloads.downloadsPatch -->
-  <string name="morphe_external_downloader_screen_title">Tải xuống bên ngoài</string>
   <string name="morphe_external_downloader_screen_summary">Tải xuống video nhạc, podcast hoặc bài hát bằng các ứng dụng tải xuống của bên thứ ba</string>
   <string name="morphe_external_downloader_action_button_title">Ghi đè nút Tải xuống</string>
-  <string name="morphe_external_downloader_action_button_summary">Thay thế chức năng tải xuống được tích hợp trong YouTube Music bằng ứng dụng tải xuống bên ngoài của bạn</string>
+  <string name="morphe_external_downloader_action_button_summary">Thay thế chức năng tải xuống được tích hợp trong YouTube bằng ứng dụng tải xuống bên ngoài của bạn</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">Giới thiệu</string>
@@ -168,9 +167,9 @@ YouTube Music 8.x – hiệu ứng chuyển tiếp chỉ chạy trên 9.x trở 
   <!-- 'scrobble' must be kept untranslated -->
   <string name="morphe_music_scrobbling_delay_percent_summary">Kích hoạt scrobble sau khi nghe đến phần trăm này của bài hát</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_delay_seconds_title">Độ trễ scrobble theo giây</string>
+  <string name="morphe_music_scrobbling_delay_seconds_title">Thời lượng nghe trước khi scrobble</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_delay_seconds_summary">Kích hoạt scrobble sau khi nghe trong bao nhiêu giây</string>
+  <string name="morphe_music_scrobbling_delay_seconds_summary">Kích hoạt scrobble sau khi nghe hết số giây này</string>
   <string name="morphe_music_listenbrainz_token_title">Tài khoản ListenBrainz</string>
   <string name="morphe_music_listenbrainz_token_summary_logged_in">Đã đăng nhập. Chạm để quản lý tài khoản</string>
   <!-- 'scrobbling' must be kept untranslated -->
@@ -205,13 +204,13 @@ YouTube Music 8.x – hiệu ứng chuyển tiếp chỉ chạy trên 9.x trở 
   <string name="morphe_music_scrobbling_metadata_cleanup_title">Dọn sạch metadata</string>
   <string name="morphe_music_scrobbling_metadata_cleanup_summary">Tự động loại bỏ các thông tin thừa thường gặp (như \"Official Video\", \"Remaster\", \"Live\") khỏi tiêu đề, nghệ sĩ và đĩa nhạc trước khi scrobble</string>
   <string name="morphe_music_scrobbling_custom_regex_title">Dọn sạch bằng regex tùy chỉnh</string>
-  <string name="morphe_music_scrobbling_custom_regex_summary">Nhập một biểu thức chính quy tùy chỉnh để loại bỏ văn bản bổ sung khỏi tiêu đề bài hát, nghệ sĩ hoặc album. Ví dụ: (?i)\\s*\\((clean|explicit)\\)</string>
+  <string name="morphe_music_scrobbling_custom_regex_summary">Nhập regex tùy chỉnh để loại bỏ văn bản không cần thiết khỏi tiêu đề bài hát, nghệ sĩ hoặc đĩa nhạc. Ví dụ: (?i)\\s*\\((clean|explicit)\\)</string>
   <string name="morphe_music_scrobbling_parse_title_title">Phân tích nghệ sĩ và bài hát từ tiêu đề</string>
   <string name="morphe_music_scrobbling_parse_title_summary">Trích xuất tên nghệ sĩ và bài hát từ tiêu đề video bằng dấu phân cách \" - \". Hữu ích cho nội dung đã tải lại, nơi tên kênh có thể được sử dụng làm nghệ sĩ.</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_title">Giới thiệu về scrobbling</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_summary">"Tính năng scrobbling tự động đồng bộ hóa việc sử dụng YouTube Music của bạn với hồ sơ Last.fm hoặc ListenBrainz
+  <string name="morphe_music_scrobbling_about_summary">"Scrobble giúp tự động đồng bộ lịch sử nghe nhạc từ YouTube Music lên Last.fm hoặc ListenBrainz
 
-Để đảm bảo scrobbling được đồng bộ hóa trong quá trình phát lại nền, hãy đảm bảo rằng mức sử dụng pin của ứng dụng YouTube Music được đặt thành \"Không hạn chế\""</string>
+Để đảm bảo scrobbling vẫn được đồng bộ hóa khi phát nhạc trong nền, hãy đặt mức sử dụng pin của YouTube Music thành \"Không hạn chế\""</string>
 </resources>

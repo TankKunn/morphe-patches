@@ -741,7 +741,6 @@ Ayarlara erişmek için, Genel → Araç Çubuğu → Ayarları Göster yoluyla 
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Beğeni düğmesi çeşme animasyonunu gizle</string>
   <string name="morphe_hide_shorts_like_button_title">Beğen düğmesini gizle</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Beğenmeme düğmesini gizle</string>
   <string name="morphe_hide_shorts_comments_button_title">Yorumlar düğmesini gizle</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Paylaş düğmesini gizle</string>
@@ -803,8 +802,6 @@ Ayarlar → Oynatma (veya Otomatik Oynatma) → Sonraki videoyu otomatik oynat"<
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Sahibi tarafından gizlendi</string>
   <string name="morphe_ryd_enabled_title">Return YouTube Dislike\'ı etkinleştir</string>
-  <string name="morphe_ryd_shorts_title">Shorts\'ta beğenilmeme sayılarını göster</string>
-  <string name="morphe_ryd_shorts_summary">Kısıtlama: Beğenmeme sayıları Gizli modda görünmeyebilir</string>
   <string name="morphe_ryd_dislike_percentage_title">Beğenmemeyi yüzde olarak göster</string>
   <string name="morphe_ryd_dislike_percentage_summary">Beğenmemeleri sayı yerine beğenilere kıyasla yüzde olarak gösterir</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1049,10 +1046,10 @@ DeArrow hakkında daha fazla bilgi edinmek için buraya dokunun"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Manuel kalite seçiminizi gelecekteki tüm Shorts\'lara uygular</string>
   <string name="morphe_shorts_quality_default_wifi_title">Wi-Fi ağındaki varsayılan Shorts kalitesi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Mobil ağdaki varsayılan Shorts kalitesi</string>
-  <string name="morphe_remember_video_quality_mobile">mobil ağ</string>
-  <string name="morphe_remember_video_quality_wifi">Wi-Fi</string>
-  <string name="morphe_remember_video_quality_toast">Varsayılan %1$s kalitesi, %2$s olarak ayarlandı</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Shorts %1$s kalitesi, %2$s olarak ayarlandı</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Varsayılan mobil kalite şuna değiştirildi: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Varsayılan Wi-Fi kalitesi şuna değiştirildi: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Shorts mobil kalite şuna değiştirildi: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Shorts Wi-Fi kalitesi şuna değiştirildi: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Oynatma hızı düğmesini göster</string>
   <string name="morphe_playback_speed_dialog_button_summary">Hızı varsayılana sıfırlamak için dokunup basılı tutun</string>
@@ -1094,7 +1091,7 @@ Sınırlamalar:
   <string name="morphe_force_avc_codec_not_available">Bu özelliği kullanmak için \'Video akışlarını taklit et\'i Android VR veya Android Studio olarak ayarlayın</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">\'Gelişmiş\' kalite menüsünü aç</string>
-  <string name="morphe_advanced_video_quality_menu_summary">Kalite seçim menüsünü atlar ve doğrudan \'Gelişmiş\' kalite menüsünü açar</string>
+  <string name="morphe_advanced_video_quality_menu_summary">Kalite seçim menüsünü atlar ve doğrudan Gelişmiş kalite menüsünü açar</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Premium kalite seçeneklerini gizle</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->

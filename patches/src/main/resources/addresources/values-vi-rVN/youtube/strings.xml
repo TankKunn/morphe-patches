@@ -740,7 +740,6 @@ Cần cung cấp \"Cookie phụ đề\""</string>
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Ẩn hiệu ứng đài phun nút Thích</string>
   <string name="morphe_hide_shorts_like_button_title">Ẩn nút Thích</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Ẩn nút Không thích</string>
   <string name="morphe_hide_shorts_comments_button_title">Ẩn nút Bình luận</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Ẩn nút Chia sẻ</string>
@@ -802,8 +801,6 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Đã ẩn bởi chủ sở hữu</string>
   <string name="morphe_ryd_enabled_title">Bật Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Hiện số lượt không thích trong Shorts</string>
-  <string name="morphe_ryd_shorts_summary">Hạn chế: Số lượt không thích có thể không hiển thị trong Chế độ ẩn danh</string>
   <string name="morphe_ryd_dislike_percentage_title">Hiện số lượt không thích dưới dạng phần trăm</string>
   <string name="morphe_ryd_dislike_percentage_summary">Hiển thị số lượt không thích dưới dạng phần trăm thay vì một con số</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -939,8 +936,8 @@ Nếu tắt đi sau đó, bạn nên xóa dữ liệu ứng dụng để tránh 
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">Ngăn không cho kéo trình phát thu nhỏ tới các góc của màn hình</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Tắt cử chỉ kéo ngang</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Ngăn không đóng trình phát thu nhỏ bằng cách vuốt sang bên bên màn hình</string>
-  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">Tắt phát lại bằng cách kéo ngang</string>
-  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">Phát lại sẽ tạm dừng khi miniplayer bị kéo ra khỏi màn hình</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">Ngừng phát khi vuốt ngang</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">Tạm dừng video khi trình phát thu nhỏ bị kéo ra rìa màn hình</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Ẩn nút lớp phủ</string>
   <string name="morphe_miniplayer_width_dip_title">Kích thước mặc định</string>
   <string name="morphe_miniplayer_width_dip_summary">Đặt kích thước ban đầu của màn hình, tính bằng pixel</string>
@@ -1048,10 +1045,10 @@ Nhấn vào đây để truy cập DeArrow.ajay.app"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Áp dụng chất lượng mà bạn đã chọn cho tất cả Shorts trong tương lai</string>
   <string name="morphe_shorts_quality_default_wifi_title">Chất lượng Shorts mặc định trên mạng Wi-Fi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Chất lượng Shorts mặc định trên mạng di động</string>
-  <string name="morphe_remember_video_quality_mobile">di động</string>
-  <string name="morphe_remember_video_quality_wifi">wifi</string>
-  <string name="morphe_remember_video_quality_toast">Đã thay đổi chất lượng mặc định %1$s: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Đã thay đổi chất lượng Shorts %1$s: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Đã thay đổi chất lượng mặc định trên mạng di động thành: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Đã thay đổi chất lượng mặc định trên Wi-Fi thành: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Đã thay đổi chất lượng Shorts trên mạng di động thành: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Đã thay đổi chất lượng Shorts trên Wi-Fi thành: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Hiện nút Tốc độ phát</string>
   <string name="morphe_playback_speed_dialog_button_summary">Chạm và giữ để đặt lại tốc độ về mặc định</string>
@@ -1098,7 +1095,7 @@ Hạn chế:
   <string name="morphe_hide_premium_video_quality_title">Ẩn tùy chọn chất lượng Premium</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">Ưu tiên chất lượng video</string>
-  <string name="morphe_prioritize_video_quality_summary">Ưu tiên chất lượng video cao nhất hơn là hiệu quả codec</string>
+  <string name="morphe_prioritize_video_quality_summary">Ưu tiên chất lượng video cao nhất hơn là tối ưu codec</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Cho phép AV1 trên Android VR</string>
   <string name="morphe_spoof_video_streams_av1_summary">Cho phép giải mã AV1 bằng phần mềm khi sử dụng client Android VR</string>

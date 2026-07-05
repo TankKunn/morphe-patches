@@ -741,7 +741,6 @@ Da biste prikazali meni 'Audio Track', promenite 'Spoof video streams' u 'Androi
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Sakrij animaciju dugmeta „Sviđanje”</string>
   <string name="morphe_hide_shorts_like_button_title">Sakrij dugme „Sviđanje”</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Sakrij dugme „Nesviđanje”</string>
   <string name="morphe_hide_shorts_comments_button_title">Sakrij dugme „Komentari”</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Sakrij dugme „Deli”</string>
@@ -803,8 +802,6 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Skriveno od strane vlasnika</string>
   <string name="morphe_ryd_enabled_title">Omogući Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Prikaži nesviđanja na Shorts videima</string>
-  <string name="morphe_ryd_shorts_summary">Ograničenje: Lajkovi možda neće biti prikazani u načinu rada bez identiteta</string>
   <string name="morphe_ryd_dislike_percentage_title">Prikaži lajkove kao procenat</string>
   <string name="morphe_ryd_dislike_percentage_summary">Prikazuje lajkove kao procenat lajkova umesto broja</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1049,10 +1046,10 @@ Ako se kasnije isključi, preporučuje se da izbrišete podatke aplikacije da bi
   <string name="morphe_remember_shorts_quality_last_selected_summary">Primena ručne selekcije kvaliteta na sve buduće Shorts</string>
   <string name="morphe_shorts_quality_default_wifi_title">Podrazumevani kvalitet Shorts videa na Wi-Fi mreži</string>
   <string name="morphe_shorts_quality_default_mobile_title">Podrazumevani kvalitet Shorts videa na mobilnoj mreži</string>
-  <string name="morphe_remember_video_quality_mobile">mobilnoj mreži</string>
-  <string name="morphe_remember_video_quality_wifi">Wi-Fi mreži</string>
-  <string name="morphe_remember_video_quality_toast">Kvalitet na %1$s promenjen na: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Kvalitet Shorts videa na %1$s promenjen na: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Kvalitet na mobilnom je promenjen na: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Kvalitet na Wi-Fi mreži je promenjen na: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Kvalitet Shorts videa na mobilnom je promenjen na: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Kvalitet Shorts videa na Wi-Fi mreži je promenjen na: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Prikaži dugme za brzinu reprodukcije</string>
   <string name="morphe_playback_speed_dialog_button_summary">Dodirnite i zadržite da biste vratili brzinu na podrazumevanu</string>

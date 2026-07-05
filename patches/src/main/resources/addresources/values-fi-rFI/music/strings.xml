@@ -22,7 +22,6 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_entry_1">Oletus</string>
   <string name="morphe_header_logo_entry_3">Mukautettu</string>
   <!-- interaction.downloads.downloadsPatch -->
-  <string name="morphe_external_downloader_screen_title">Ulkoiset lataukset</string>
   <string name="morphe_external_downloader_screen_summary">Lataa musiikkivideoita, podcasteja tai kappaleita kolmannen osapuolen lataussovelluksilla</string>
   <string name="morphe_external_downloader_action_button_title">Korvaa Lataa-toimintopainike</string>
   <string name="morphe_external_downloader_action_button_summary">Korvaa YouTuben sisäänrakennettu lataustoiminto ulkoisella latausohjelmallasi</string>

@@ -22,7 +22,6 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_entry_1">Стандартний</string>
   <string name="morphe_header_logo_entry_3">Власний</string>
   <!-- interaction.downloads.downloadsPatch -->
-  <string name="morphe_external_downloader_screen_title">Зовнішні завантаження</string>
   <string name="morphe_external_downloader_screen_summary">Завантажуйте музичні відео, подкасти або пісні за допомогою сторонніх програм для завантаження</string>
   <string name="morphe_external_downloader_action_button_title">Замінити кнопку \"Завантажити\"</string>
   <string name="morphe_external_downloader_action_button_summary">Замінює вбудовану функцію завантаження YouTube на ваш зовнішній завантажувач</string>

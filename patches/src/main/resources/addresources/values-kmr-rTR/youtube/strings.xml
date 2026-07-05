@@ -743,7 +743,6 @@ Ji bo nîşandana menûya 'Şêwaza Deng', 'Şêwazên vîdyoyê yên sexnetî' 
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Şertekên pêşiyê veşêre animasyona çavkaniyê</string>
   <string name="morphe_hide_shorts_like_button_title">Şertekê bi lêzger veşêre</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Şertekê bi nehezd veşêre</string>
   <string name="morphe_hide_shorts_comments_button_title">Şertekê komentar veşêre</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Şertekê parvekirin veşêre</string>
@@ -805,8 +804,6 @@ Settings → Playback (an Autoplay) → Autoplay next video"</string>
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Ji aliyê xwediyê videoyê ve veşêra.</string>
   <string name="morphe_ryd_enabled_title">Return YouTube Dislike bidar bike</string>
-  <string name="morphe_ryd_shorts_title">Nexweşîyên li ser Shorts nîşan tê.</string>
-  <string name="morphe_ryd_shorts_summary">Sînordarî: Dislike dibe ku di moda veşartî de xuya nebin</string>
   <string name="morphe_ryd_dislike_percentage_title">Dislike wekî ji sedî nîşan bide</string>
   <string name="morphe_ryd_dislike_percentage_summary">Dislike wekî ji sedîya hezkirinê nîşan dide, ne wekî hejmarê</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1051,10 +1048,10 @@ Bike li vir da vekirina DeArrow.ajay.app"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Hilbijartên kalîteya we yên destan li ser hemû Shorts-an pêk bîne</string>
   <string name="morphe_shorts_quality_default_wifi_title">Kalîteya Shorts-a ya pêşdideya li ser torika Wi-Fi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Kalîteya Shorts-a ya pêşdideya li ser torika mobîl</string>
-  <string name="morphe_remember_video_quality_mobile">mobîl</string>
-  <string name="morphe_remember_video_quality_wifi">wifi</string>
-  <string name="morphe_remember_video_quality_toast">Kalîteya serbixwe ya %1$s heta: %2$s guherîye</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Kalîteya Shorts %1$s heta: %2$s guherîye</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Kalîteya mobîl a pêşîn hat guherandin: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Kalîteya Wi-Fi ya pêşîn hat guherandin: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Kalîteya mobîl a Shorts hat guherandin: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Kalîteya Wi-Fi ya Shorts hat guherandin: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Şîroveka rêzika bilindê nîşan bide</string>
   <string name="morphe_playback_speed_dialog_button_summary">Tap bike û nişê bibe ji bo vegerandina leza pêşîn</string>

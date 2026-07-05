@@ -21,8 +21,10 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">ชื่อแอป</string>
   <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_screen_title">การดาวน์โหลดภายนอก</string>
   <string name="morphe_external_downloader_name_title">ชื่อแพ็คเกจโปรแกรมดาวน์โหลด</string>
   <string name="morphe_external_downloader_name_summary">ชื่อแพ็คเกจของแอปดาวน์โหลดภายนอกที่คุณติดตั้งไว้</string>
+  <string name="morphe_external_downloader_flyout_button_title">แทนที่ปุ่มการเปิด/ปิดฟีด/การค้นหา</string>
   <string name="morphe_external_downloader_other_item_hint">ป้อนชื่อแพ็คเกจ</string>
   <string name="morphe_external_downloader_other_item">อื่น ๆ</string>
   <string name="morphe_external_downloader_not_found_title">ไม่พบแอป</string>

@@ -743,7 +743,6 @@ Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de v
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Ocultar animación de fuente del botón \"Me gusta\"</string>
   <string name="morphe_hide_shorts_like_button_title">Ocultar botón \"Me gusta\"</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Ocultar botón \"No me gusta\"</string>
   <string name="morphe_hide_shorts_comments_button_title">Ocultar botón \"Comentarios\"</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Ocultar botón \"Compartir\"</string>
@@ -805,8 +804,6 @@ Configuración → Reproducción (o Reproducción automática) → Reproducción
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Oculto por el propietario</string>
   <string name="morphe_ryd_enabled_title">Activar Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Mostrar \"No me gusta\" en Shorts</string>
-  <string name="morphe_ryd_shorts_summary">Limitación: Es posible que los \"No me gusta\" no aparezcan en el modo incógnito</string>
   <string name="morphe_ryd_dislike_percentage_title">Mostrar los \"No me gusta\" como porcentaje</string>
   <string name="morphe_ryd_dislike_percentage_summary">Muestra los \"No me gusta\" como un porcentaje de los me gusta en lugar de un número</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1051,10 +1048,10 @@ Pulsa aquí para saber más sobre DeArrow"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Aplica tu selección de calidad manual a todos los Shorts futuros</string>
   <string name="morphe_shorts_quality_default_wifi_title">Calidad predeterminada de Shorts en la red Wi-Fi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Calidad predeterminada de Shorts en la red móvil</string>
-  <string name="morphe_remember_video_quality_mobile">móvil</string>
-  <string name="morphe_remember_video_quality_wifi">wifi</string>
-  <string name="morphe_remember_video_quality_toast">Se ha cambiado la calidad %1$s predeterminada a: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Se ha cambiado la calidad %1$s de los Shorts a: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Se ha cambiado la calidad predeterminada de datos móviles a: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Se ha cambiado la calidad predeterminada de Wi-Fi a: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Se ha cambiado la calidad de datos móviles de los Shorts a: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Se ha cambiado la calidad de Wi-Fi de los Shorts a: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Mostrar botón de velocidad de reproducción</string>
   <string name="morphe_playback_speed_dialog_button_summary">Toca y mantén para restablecer la velocidad a la predeterminada</string>

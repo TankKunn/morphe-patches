@@ -617,7 +617,6 @@ Second \"item\" text"</string>
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Скриј анимација на фонтаната „Допада ми се“</string>
   <string name="morphe_hide_shorts_like_button_title">Скриј копче „Допада ми се“</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Скриј копче „Не ми се допаѓа“</string>
   <string name="morphe_hide_shorts_comments_button_title">Скриј копче „Коментари“</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Скриј копче „Сподели“</string>
@@ -667,8 +666,6 @@ Second \"item\" text"</string>
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Скриено од сопственикот</string>
   <string name="morphe_ryd_enabled_title">Овозможи Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Прикажи непотфалувања на Shorts</string>
-  <string name="morphe_ryd_shorts_summary">Ограничување: Dislike можеби нема да се појавува во Incognito режим</string>
   <string name="morphe_ryd_dislike_percentage_title">Прикажи го процентот на Dislike</string>
   <string name="morphe_ryd_dislike_percentage_summary">Прикажува го процентот на Dislike наместо број</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -882,10 +879,6 @@ Second \"item\" text"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Ги применува вашите мануелни избори за квалитет до сите идни Shorts</string>
   <string name="morphe_shorts_quality_default_wifi_title">Стандарден квалитет на Shorts на Wi-Fi мрежа</string>
   <string name="morphe_shorts_quality_default_mobile_title">Стандарден квалитет на Shorts на мобилна мрежа</string>
-  <string name="morphe_remember_video_quality_mobile">мобилен</string>
-  <string name="morphe_remember_video_quality_wifi">wifi</string>
-  <string name="morphe_remember_video_quality_toast">Променет стандарден квалитет на %1$s на: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Променет Shorts квалитет на %1$s на: %2$s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Прикажи копче за брзина на репродукција</string>
   <string name="morphe_playback_speed_dialog_button_summary">Допрете и задржете за да ја вратите брзината на стандардна</string>

@@ -741,7 +741,6 @@ Second \"item\" text"</string>
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Дублирането на видеа е скрито</string>
   <string name="morphe_hide_shorts_like_button_title">Дублирането на видеа е скрито</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Дублирането на видеа е скрито</string>
   <string name="morphe_hide_shorts_comments_button_title">Дублирането на видеа е скрито</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Дублирането на видеа е скрито</string>
@@ -803,8 +802,6 @@ Second \"item\" text"</string>
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Дублирането на видеа се показва</string>
   <string name="morphe_ryd_enabled_title">Активирай Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Скрий дублиране на видеа</string>
-  <string name="morphe_ryd_shorts_summary">Ограничение: Нехаресванията може да не се показват в режим на инкогнито</string>
   <string name="morphe_ryd_dislike_percentage_title">Показвай нехаресванията като процент</string>
   <string name="morphe_ryd_dislike_percentage_summary">Показва нехаресванията като процент от харесванията вместо като число</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1049,10 +1046,10 @@ Second \"item\" text"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Прилага вашата ръчна селекция на качество към всички бъдещи Shorts</string>
   <string name="morphe_shorts_quality_default_wifi_title">Автоматично възпроизвеждане на Коротки видеа в фонови режим</string>
   <string name="morphe_shorts_quality_default_mobile_title">Коротките видеа ще се възпроизвеждат в фонови режим</string>
-  <string name="morphe_remember_video_quality_mobile">Коротките видеа ще се повтаряват в фонови режим</string>
-  <string name="morphe_remember_video_quality_wifi">Миниплеер</string>
-  <string name="morphe_remember_video_quality_toast">Променяване на стила на вграденния плеер</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Тип на миниплеера</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Променено качеството на мобилната мрежа по подразбиране на: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Променено качеството на Wi-Fi по подразбиране на: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Променено качеството на мобилната мрежа за Shorts на: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Променено качеството на Wi-Fi за Shorts на: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Покажи бутон „Скорост на възпроизвеждане“</string>
   <string name="morphe_playback_speed_dialog_button_summary">Докоснете и задръжте, за да възстановите скоростта до стойността по подразбиране</string>

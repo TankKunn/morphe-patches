@@ -22,7 +22,6 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_entry_1">Standaard</string>
   <string name="morphe_header_logo_entry_3">Aangepast</string>
   <!-- interaction.downloads.downloadsPatch -->
-  <string name="morphe_external_downloader_screen_title">Externe downloads</string>
   <string name="morphe_external_downloader_screen_summary">Download muziekvideo\'s, podcasts of nummers met apps van derden</string>
   <string name="morphe_external_downloader_action_button_title">Downloadactieknop overschrijven</string>
   <string name="morphe_external_downloader_action_button_summary">Vervangt de ingebouwde downloadfunctie van YouTube Music door je externe downloader</string>

@@ -22,10 +22,9 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_entry_1">Réamhshocrú</string>
   <string name="morphe_header_logo_entry_3">Saincheaptha</string>
   <!-- interaction.downloads.downloadsPatch -->
-  <string name="morphe_external_downloader_screen_title">Íoslódálacha seachtracha</string>
-  <string name="morphe_external_downloader_screen_summary">Íoslódáil físeáin ceoil, podchraolacha, nó amhráin le haipeanna íoslódála tríú páirtí</string>
+  <string name="morphe_external_downloader_screen_summary">Íoslódáil físeáin ceoil, podchraoltaí, nó amhráin le haipeanna íoslódála tríú páirtí</string>
   <string name="morphe_external_downloader_action_button_title">Sáraigh an cnaipe Íosluchtaigh gníomh</string>
-  <string name="morphe_external_downloader_action_button_summary">Cuireann sé feidhm íoslódála ionsuite YouTube in ionad d’íoslódálaí seachtrach</string>
+  <string name="morphe_external_downloader_action_button_summary">Cuirtear d\'íoslódálaí seachtrach in ionad fheidhm íoslódála ionsuite YouTube Music</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">Maidir</string>

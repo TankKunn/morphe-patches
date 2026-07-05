@@ -741,7 +741,6 @@ For at vise 'Audio Track'-menuen skal du ændre 'Spoof video streams' til 'Andro
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Skjul knap for springvand-animation af like-knap</string>
   <string name="morphe_hide_shorts_like_button_title">Skjul knappen Like</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Skjul knappen Dislike</string>
   <string name="morphe_hide_shorts_comments_button_title">Skjul knappen Kommentarer</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Skjul knappen Del</string>
@@ -803,8 +802,6 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Skjult af ejer</string>
   <string name="morphe_ryd_enabled_title">Aktivér Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Vis Dislikes i Shorts</string>
-  <string name="morphe_ryd_shorts_summary">Begrænsning: Dislikes vises muligvis ikke i inkognitotilstand</string>
   <string name="morphe_ryd_dislike_percentage_title">Vis dislikes som procent</string>
   <string name="morphe_ryd_dislike_percentage_summary">Viser dislikes som en procentdel af likes i stedet for et antal</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1049,10 +1046,10 @@ Tryk her for at lære mere om DeArrow"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Anvender din manuelle kvalitetsvalg på alle fremtidige Shorts</string>
   <string name="morphe_shorts_quality_default_wifi_title">Standard Shorts-kvalitet på Wi-Fi-netværk</string>
   <string name="morphe_shorts_quality_default_mobile_title">Standard Shorts-kvalitet på mobilnetværk</string>
-  <string name="morphe_remember_video_quality_mobile">mobil</string>
-  <string name="morphe_remember_video_quality_wifi">Wi-Fi</string>
-  <string name="morphe_remember_video_quality_toast">Ændrede standard %1$s kvalitet til: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Ændrede Shorts %1$s kvalitet til: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Ændrede standard mobilkvalitet til: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Ændrede standard Wi-Fi-kvalitet til: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Ændrede Shorts mobilitetskvalitet til: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Ændrede Shorts Wi-Fi-kvalitet til: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Vis afspilningshastighedsknap</string>
   <string name="morphe_playback_speed_dialog_button_summary">Tryk og hold for at nulstille hastigheden til standard</string>

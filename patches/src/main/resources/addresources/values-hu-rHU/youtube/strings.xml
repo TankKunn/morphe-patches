@@ -741,7 +741,6 @@ Az \"Audio Track\" menü megjelenítéséhez módosítsa a \"Spoof video streams
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Tetszik gomb szökőkút animációjának elrejtése</string>
   <string name="morphe_hide_shorts_like_button_title">Tetszik gomb elrejtése</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Nem tetszik gomb elrejtése</string>
   <string name="morphe_hide_shorts_comments_button_title">Hozzászólások gomb elrejtése</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Megosztás gomb elrejtése</string>
@@ -803,8 +802,6 @@ Beállítások → Lejátszás (vagy Automatikus lejátszás) → Következő vi
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">A tulajdonos elrejtette</string>
   <string name="morphe_ryd_enabled_title">Engedélyezze a Return YouTube Dislike funkciót</string>
-  <string name="morphe_ryd_shorts_title">A nem tetszések megjelenítése a Shorts videóknál</string>
-  <string name="morphe_ryd_shorts_summary">Korlátozás: A nem tetszések nem jelenhetnek meg titkos üzemmódban</string>
   <string name="morphe_ryd_dislike_percentage_title">A lájkok százalékos arányban megjelenítése</string>
   <string name="morphe_ryd_dislike_percentage_summary">A nem tetszéseket a lájkok százalékos arányaként mutatja a szám helyett</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1049,10 +1046,10 @@ Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálóna
   <string name="morphe_remember_shorts_quality_last_selected_summary">Az egyéni minőségválasztás alkalmazása minden jövőbeli Shortsra</string>
   <string name="morphe_shorts_quality_default_wifi_title">Alapértelmezett Shorts minőség Wi-Fi hálózaton</string>
   <string name="morphe_shorts_quality_default_mobile_title">Alapértelmezett Shorts minőség mobilhálózaton</string>
-  <string name="morphe_remember_video_quality_mobile">mobil</string>
-  <string name="morphe_remember_video_quality_wifi">wi-fi</string>
-  <string name="morphe_remember_video_quality_toast">Az alapértelmezett %1$s minőség a következőre változott: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">A Shorts %1$s minősége megváltozott: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Az alapértelmezett mobilminőséget %s-re módosítva</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Az alapértelmezett Wi-Fi minőséget %s-re módosítva</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">A Shorts mobilminősége %s-re módosítva</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">A Shorts Wi-Fi minősége %s-re módosítva</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Lejátszási sebesség gomb megjelenítése</string>
   <string name="morphe_playback_speed_dialog_button_summary">Érintse meg és tartsa lenyomva a sebesség alaphelyzetbe állításához</string>

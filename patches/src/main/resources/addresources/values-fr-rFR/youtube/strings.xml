@@ -741,7 +741,6 @@ Pour afficher le menu 'Piste audio', modifier 'Falsifier les flux vidéo' en 'An
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Masquer l\'animation du bouton \'J\'aime\'</string>
   <string name="morphe_hide_shorts_like_button_title">Masquer le bouton \'J\'aime\'</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Masquer le bouton \'Je n\'aime pas\'</string>
   <string name="morphe_hide_shorts_comments_button_title">Masquer le bouton \'Commentaires\'</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Masquer le bouton \'Partager\'</string>
@@ -804,8 +803,6 @@ Paramètres → Lecture (ou Lecture automatique) → Lecture automatique de la v
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Masqué par le propriétaire</string>
   <string name="morphe_ryd_enabled_title">Activer Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Afficher les \'Je n\'aime pas\' sur les Shorts</string>
-  <string name="morphe_ryd_shorts_summary">Limitation : Les \'Je n\'aime pas\' peuvent ne pas apparaître en mode navigation privée</string>
   <string name="morphe_ryd_dislike_percentage_title">Afficher les \'Je n\'aime pas\' en pourcentage</string>
   <string name="morphe_ryd_dislike_percentage_summary">Affiche les \'Je n\'aime pas\' en pourcentage du nombre de \'J\'aime\' au lieu d\'un nombre</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1050,10 +1047,10 @@ Appuyez ici pour ouvrir DeArrow.ajay.app"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Applique votre sélection de qualité manuelle à tous les Shorts futurs</string>
   <string name="morphe_shorts_quality_default_wifi_title">Qualité par défaut des Shorts sur le réseau Wi-Fi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Qualité par défaut des Shorts sur le réseau mobile</string>
-  <string name="morphe_remember_video_quality_mobile">mobile</string>
-  <string name="morphe_remember_video_quality_wifi">wifi</string>
-  <string name="morphe_remember_video_quality_toast">Qualité par défaut %1$s modifiée en : %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Qualité des Shorts %1$s modifiée en : %2$s.</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Qualité mobile par défaut modifiée en : %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Qualité Wi-Fi par défaut modifiée en : %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Qualité mobile des Shorts modifiée en : %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Qualité Wi-Fi des Shorts modifiée en : %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Afficher un bouton de \'Vitesse de lecture\'</string>
   <string name="morphe_playback_speed_dialog_button_summary">Appuyez longuement pour réinitialiser la vitesse par défaut</string>

@@ -21,8 +21,10 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">ॲपचे नाव</string>
   <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_screen_title">बाह्य डाउनलोड्स</string>
   <string name="morphe_external_downloader_name_title">डाउनलोडर ॲपचे पॅकेज नाव</string>
   <string name="morphe_external_downloader_name_summary">आपल्या इन्स्टॉल केलेल्या बाह्य डाउनलोडर ॲपचे पॅकेज नाव</string>
+  <string name="morphe_external_downloader_flyout_button_title">फीड/शोध फ्लाईआउट बटण ओव्हरराइड करा</string>
   <string name="morphe_external_downloader_other_item_hint">पॅकेज नाव प्रविष्ट करा</string>
   <string name="morphe_external_downloader_other_item">इतर</string>
   <string name="morphe_external_downloader_not_found_title">ॲप इन्स्टॉल केलेले नाही</string>

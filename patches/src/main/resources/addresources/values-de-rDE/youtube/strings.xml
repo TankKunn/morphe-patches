@@ -741,7 +741,6 @@ Um das Menü anzuzeigen, ändern Sie \"Video-Streams fälschen\" in \"Android Re
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">\'Like\'-Button-Fontäne ausblenden</string>
   <string name="morphe_hide_shorts_like_button_title">\'Like\'-Button ausblenden</string>
-  <string name="morphe_hide_shorts_dislike_button_title">\'Dislike\'-Button ausblenden</string>
   <string name="morphe_hide_shorts_comments_button_title">Kommentar-Button ausblenden</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">\'Teilen\'-Button ausblenden</string>
@@ -803,8 +802,6 @@ Einstellungen → Wiedergabe (oder Automatische Wiedergabe) → Nächstes Video 
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Vom Eigentümer verborgen</string>
   <string name="morphe_ryd_enabled_title">Return YouTube Dislike aktivieren</string>
-  <string name="morphe_ryd_shorts_title">Dislikes auf Shorts anzeigen</string>
-  <string name="morphe_ryd_shorts_summary">Einschränkung: Dislikes werden möglicherweise nicht im Inkognito-Modus angezeigt</string>
   <string name="morphe_ryd_dislike_percentage_title">Dislikes als Prozentsatz anzeigen</string>
   <string name="morphe_ryd_dislike_percentage_summary">Zeigt Dislikes als Prozentsatz der Likes anstelle einer Zahl an</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1049,10 +1046,10 @@ Tippen Sie hier, um mehr über DeArrow zu erfahren"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Wendet Ihre manuelle Qualitätsauswahl auf alle zukünftigen Shorts an</string>
   <string name="morphe_shorts_quality_default_wifi_title">Standardmäßige Shorts-Qualität im WLAN</string>
   <string name="morphe_shorts_quality_default_mobile_title">Standard-Shorts-Qualität im Mobilfunknetz</string>
-  <string name="morphe_remember_video_quality_mobile">Mobile</string>
-  <string name="morphe_remember_video_quality_wifi">WLAN</string>
-  <string name="morphe_remember_video_quality_toast">Standard %1$s Qualität geändert zu: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Shorts-Qualität von %1$s geändert in: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Standard mobile Qualität geändert zu: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Standard Wi-Fi Qualität geändert zu: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Shorts-Mobilqualität geändert auf: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Shorts-WLAN-Qualität geändert auf: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Play-Button anzeigen</string>
   <string name="morphe_playback_speed_dialog_button_summary">Tippen und gedrückt halten, um die Geschwindigkeit auf den Standard zurückzusetzen</string>

@@ -21,8 +21,10 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">Назив апликације</string>
   <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_screen_title">Спољна преузимања</string>
   <string name="morphe_external_downloader_name_title">Назив пакета програма за преузимање</string>
   <string name="morphe_external_downloader_name_summary">Назив пакета инсталиране апликације за преузимање</string>
+  <string name="morphe_external_downloader_flyout_button_title">Прекид пребацивања/претраживачког падајућег менија</string>
   <string name="morphe_external_downloader_other_item_hint">Унесите назив пакета</string>
   <string name="morphe_external_downloader_other_item">Остало</string>
   <string name="morphe_external_downloader_not_found_title">Апликација није инсталирана</string>

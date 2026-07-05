@@ -741,7 +741,6 @@ Chcete-li zobrazit menu \"Audio Track\", změňte \"Spoof video streams\" na \"A
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Skrýt animaci s fontánou u tlačítka To se mi líbí</string>
   <string name="morphe_hide_shorts_like_button_title">Skrýt tlačítko To se mi líbí</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Skrýt tlačítko Nelíbí se mi to</string>
   <string name="morphe_hide_shorts_comments_button_title">Skrýt tlačítko Komentáře</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Skrýt tlačítko Sdílet</string>
@@ -803,8 +802,6 @@ Nastavení → Přehrávání (nebo Automatické přehrávání) → Automaticky
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Skryto vlastníkem</string>
   <string name="morphe_ryd_enabled_title">Povolit Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Zobrazit nelíbí se mi v Shorts</string>
-  <string name="morphe_ryd_shorts_summary">Omezení: Lajky se nemusí zobrazit v režimu anonymního prohlížení</string>
   <string name="morphe_ryd_dislike_percentage_title">Zobrazovat lajky v procentech</string>
   <string name="morphe_ryd_dislike_percentage_summary">Zobrazuje lajky jako procento lajků místo čísla</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1049,10 +1046,10 @@ Klepnutím sem se dozvíte více o DeArrow"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Aplikuje vaši ruční volbu kvality na všechny budoucí Shorts</string>
   <string name="morphe_shorts_quality_default_wifi_title">Výchozí kvalita Shorts v síti Wi-Fi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Výchozí kvalita Shorts v mobilní síti</string>
-  <string name="morphe_remember_video_quality_mobile">mobilní</string>
-  <string name="morphe_remember_video_quality_wifi">Wi-Fi</string>
-  <string name="morphe_remember_video_quality_toast">Výchozí kvalita %1$s změněna na: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Změněna kvalita Shorts %1$s na: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Výchozí kvalita mobilního připojení změněna na: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Výchozí kvalita Wi-Fi změněna na: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Změněna kvalita Shorts pro mobilní připojení na: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Změněna kvalita Shorts pro Wi-Fi na: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Zobrazit tlačítko Rychlost přehrávání</string>
   <string name="morphe_playback_speed_dialog_button_summary">Klepněte a podržte pro reset rychlosti na výchozí</string>

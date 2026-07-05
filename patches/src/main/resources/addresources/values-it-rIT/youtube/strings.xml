@@ -741,7 +741,6 @@ Per visualizzare il menù 'Traccia audio', seleziona il client 'Android Reel' o 
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
   <string name="morphe_hide_shorts_like_fountain_title">Nascondi animazione fontana Mi piace</string>
   <string name="morphe_hide_shorts_like_button_title">Nascondi il pulsante Mi piace</string>
-  <string name="morphe_hide_shorts_dislike_button_title">Nascondi il pulsante Non mi piace</string>
   <string name="morphe_hide_shorts_comments_button_title">Nascondi il pulsante Commenti</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_share_button_title">Nascondi il pulsante Condividi</string>
@@ -803,8 +802,6 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <!-- Video likes have been set to hidden by the video uploader. -->
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Nascosto dal proprietario</string>
   <string name="morphe_ryd_enabled_title">Abilita Return YouTube Dislike</string>
-  <string name="morphe_ryd_shorts_title">Mostra i Non Mi Piace degli Shorts</string>
-  <string name="morphe_ryd_shorts_summary">Limitazione: i Non mi piace potrebbero non essere visualizzati in modalità incognito</string>
   <string name="morphe_ryd_dislike_percentage_title">Mostra i Non mi piace in percentuale</string>
   <string name="morphe_ryd_dislike_percentage_summary">Mostra i Non mi piace come percentuale di Mi piace anziché come numero</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
@@ -1049,10 +1046,10 @@ Tocca qui per saperne di più su DeArrow"</string>
   <string name="morphe_remember_shorts_quality_last_selected_summary">Applica la tua selezione manuale della qualità a tutti gli Shorts futuri</string>
   <string name="morphe_shorts_quality_default_wifi_title">Qualità predefinita degli Shorts sulla rete Wi-Fi</string>
   <string name="morphe_shorts_quality_default_mobile_title">Qualità predefinita degli Shorts sulla rete mobile</string>
-  <string name="morphe_remember_video_quality_mobile">cellulare</string>
-  <string name="morphe_remember_video_quality_wifi">Wi-Fi</string>
-  <string name="morphe_remember_video_quality_toast">Qualità predefinita %1$s modificata in: %2$s</string>
-  <string name="morphe_remember_video_quality_toast_shorts">Qualità Shorts %1$s modificata in: %2$s</string>
+  <string name="morphe_remember_video_quality_toast_mobile">Qualità predefinita mobile modificata in: %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Qualità predefinita Wi-Fi modificata in: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Qualità Shorts mobile modificata in: %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Qualità Shorts Wi-Fi modificata in: %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">Mostra il pulsante Velocità di riproduzione</string>
   <string name="morphe_playback_speed_dialog_button_summary">Tocca e tieni premuto per reimpostare la velocità predefinita</string>
