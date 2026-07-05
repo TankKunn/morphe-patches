@@ -311,7 +311,6 @@ Limitations:
     <string name="morphe_disable_chapter_skip_double_tap_summary">Disables the two-finger double-tap gesture that skips chapters, which may be accidentally triggered with one finger</string>
 
     <!-- interaction.downloads.downloadsPatch -->
-    <string name="morphe_external_downloader_screen_title">External downloads</string>
     <string name="morphe_external_downloader_screen_summary">Download videos, podcasts, or songs with third-party downloading apps</string>
     <string name="morphe_external_downloader_title">Show external download button</string>
     <string name="morphe_external_downloader_summary">Shows an overlay button in video player that opens your external downloader</string>
