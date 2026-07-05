@@ -253,22 +253,11 @@ Second \"item\" text"</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Ја исклучува двојната допренска гестикулација со два прста што ги прескокнува поглавјата, која може случајно да се активира со еден прст</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Преземања од надворешни извори</string>
-  <string name="morphe_external_downloader_screen_summary">Преземајте видеа со апликации за преземање од трети страни</string>
   <string name="morphe_external_downloader_title">Прикажи копче за преземање од надворешен извор</string>
   <string name="morphe_external_downloader_summary">Покажува копче на преклоп во видео плеер што ја отвора вашата апликација за преземање од трета страна</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Заменете го копчето за преземање</string>
   <string name="morphe_external_downloader_action_button_summary">Ја заменува вградената функција за преземање на YouTube со вашата апликација за преземање од трета страна</string>
-  <string name="morphe_external_downloader_name_title">Име на пакетот на преземачот</string>
-  <string name="morphe_external_downloader_name_summary">Име на пакет на инсталирана апликација за преземање</string>
-  <string name="morphe_external_downloader_other_item_hint">Внесете го името на пакетот</string>
-  <string name="morphe_external_downloader_other_item">Други</string>
-  <string name="morphe_external_downloader_not_found_title">Апликација не е инсталирана</string>
-  <string name="morphe_external_downloader_not_installed_warning">%s не е инсталирана. Ве молиме инсталирајте ја.</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"Не може да се пронајде инсталирана апликација со име на пакет: %s
-
-Проверете дали името на пакетот е правилно и дали апликацијата е инсталирана"</string>
-  <string name="morphe_external_downloader_empty_warning">Името на пакетот не може да биде празно</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_openrouter_model_custom">По нарачка</string>
   <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
@@ -928,12 +917,10 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">За да ја користите оваа функција, поставете го „Лажирање на видео потоци“ на Android VR или Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">Прикажи напредно мени за квалитет на видео</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Скриј опции за квалитет на Premium</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">Дајте приоритет на квалитетот на видеото</string>
-  <string name="morphe_prioritize_video_quality_summary">Приоритет на најдобар квалитет на видео наместо ефикасност на кодек</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Овозможи AV1 за Android VR</string>
   <string name="morphe_spoof_video_streams_av1_summary">Овозможува софтверско декодирање AV1 кога се користи клиентот Android VR</string>

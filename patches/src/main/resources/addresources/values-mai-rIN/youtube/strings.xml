@@ -181,16 +181,6 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_title">बाहरी डाउनलोड बटन दिखाएं</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">डाउनलोड क्रिया बटन ओवरराइड करें</string>
-  <string name="morphe_external_downloader_name_title">डाउनलोडर पैकेज नाम</string>
-  <string name="morphe_external_downloader_name_summary">आपके इंस्टॉल किए गए बाहरी डाउनलोडर ऐप का पैकेज नाम</string>
-  <string name="morphe_external_downloader_other_item_hint">पैकेज नाम दर्ज करें</string>
-  <string name="morphe_external_downloader_other_item">अन्य</string>
-  <string name="morphe_external_downloader_not_found_title">ऐप इंस्टॉल नहीं है</string>
-  <string name="morphe_external_downloader_not_installed_warning">%s इंस्टॉल छैन। कृपया यसलाई इंस्टाल गर्नुहोस्।</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"पैकेज नाम के साथ इंस्टॉल किए गए ऐप नहीं मिल सका: %s
-
-कृपया सत्यापित करें कि पैकेज नाम सही है और ऐप इंस्टॉल है"</string>
-  <string name="morphe_external_downloader_empty_warning">पैकेज नाम खाली नहीं हो सकता</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
   <!-- interaction.loop.loopVideoPatch -->
@@ -618,7 +608,6 @@ Second \"item\" text"</string>
 • कुछ डिवाइस AVC क जबरदस्ती नहि क सकैत।"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">उन्नत वीडियो गुणवत्ता मेनू दिखाओ</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">प्रीमियम गुणस्तर विकल्पहरू लुकाउनुहोस्</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->

@@ -20,6 +20,17 @@ Second \"item\" text"</string>
   <string name="morphe_restart_first_run">설정을 완료하려면 다시 시작하세요</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">앱 이름</string>
+  <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_name_title">다운로더 앱 패키지 이름</string>
+  <string name="morphe_external_downloader_name_summary">설치된 외부 다운로더 앱의 패키지 이름</string>
+  <string name="morphe_external_downloader_other_item_hint">패키지 이름을 입력하세요.</string>
+  <string name="morphe_external_downloader_other_item">기타</string>
+  <string name="morphe_external_downloader_not_found_title">앱이 설치되지 않음</string>
+  <string name="morphe_external_downloader_not_installed_warning">%s가 설치되어 있지 않습니다. 설치해 주세요.</string>
+  <string name="morphe_external_downloader_package_not_found_warning">"패키지 이름 %s로 설치된 앱을 찾을 수 없습니다.
+
+패키지 이름이 정확하고 앱이 설치되어 있는지 확인하세요."</string>
+  <string name="morphe_external_downloader_empty_warning">패키지 이름을 비워둘 수 없습니다.</string>
   <!-- Translations of this should be identical to morphe_custom_branding_icon_entry_7 -->
   <string name="morphe_custom_branding_name_entry_5">사용자 정의</string>
   <string name="morphe_custom_branding_icon_title">앱 아이콘</string>

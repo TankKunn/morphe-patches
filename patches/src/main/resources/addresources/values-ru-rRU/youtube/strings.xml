@@ -284,22 +284,12 @@ Second \"item\" text"</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Отключает жест двойного нажатия двумя пальцами, который пропускает главы, который может быть случайно вызван одним пальцем</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Внешний загрузчик</string>
-  <string name="morphe_external_downloader_screen_summary">Загружайте видео с помощью сторонних приложений для загрузки</string>
+  <string name="morphe_external_downloader_screen_summary">Скачивайте видео, подкасты или песни с помощью сторонних приложений для скачивания</string>
   <string name="morphe_external_downloader_title">Показать кнопку внешнего загрузчика</string>
   <string name="morphe_external_downloader_summary">Отображает кнопку наложения в видеоплеере, которая открывает ваш внешний загрузчик</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Действие кнопки \"Скачать\"</string>
   <string name="morphe_external_downloader_action_button_summary">Заменяет встроенную функцию загрузки YouTube вашим внешним загрузчиком</string>
-  <string name="morphe_external_downloader_name_title">Имя пакета загрузчика</string>
-  <string name="morphe_external_downloader_name_summary">Имя пакета установленного Вами приложения внешнего загрузчика</string>
-  <string name="morphe_external_downloader_other_item_hint">Введите имя пакета</string>
-  <string name="morphe_external_downloader_other_item">Другое</string>
-  <string name="morphe_external_downloader_not_found_title">Приложение не установлено</string>
-  <string name="morphe_external_downloader_not_installed_warning">%s не установлен. Пожалуйста, установите его.</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"Не удалось найти установленное приложение с именем пакета: %s
-
-Убедитесь, что имя пакета указано правильно и приложение установлено"</string>
-  <string name="morphe_external_downloader_empty_warning">Имя пакета не может быть пустым</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Перевод озвучивания</string>
   <string name="morphe_vot_screen_summary">Читайте субтитры видео вслух с помощью встроенного преобразования текста в речь, синхронизированного с воспроизведением</string>
@@ -952,6 +942,8 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">Предотвращает перетаскивание миниплеера в разные углы экрана</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Отключить жест горизонтального перетаскивания</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Предотвращает закрытие миниплеера горизонтальным свайпом</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">Отключить воспроизведение при горизонтальном перемещении</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">Воспроизведение будет приостановлено, когда мини-плеер будет перемещен за пределы экрана</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Скрыть кнопки миниплеера</string>
   <string name="morphe_miniplayer_width_dip_title">Размер по умолчанию</string>
   <string name="morphe_miniplayer_width_dip_summary">Установите начальный размер на экране, в пикселях</string>
@@ -1103,12 +1095,13 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Чтобы использовать эту функцию, установите «Подмена видеопотоков» на Android VR или Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">Показать расширенное меню качества видео</string>
+  <string name="morphe_advanced_video_quality_menu_title">Открыть меню настройки качества \"Расширенные\"</string>
+  <string name="morphe_advanced_video_quality_menu_summary">Пропускает меню выбора качества и сразу открывает меню расширенных настроек качества</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Скрыть параметры Premium качества</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">Приоритет видео</string>
-  <string name="morphe_prioritize_video_quality_summary">Приоритет отдается видео самого высокого качества по сравнению с эффективностью кодека</string>
+  <string name="morphe_prioritize_video_quality_summary">Приоритезирует максимально доступное качество видео над эффективностью кодека</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Разрешить Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary">Разрешает программную расшифровку AV1 при использовании клиента Android VR</string>

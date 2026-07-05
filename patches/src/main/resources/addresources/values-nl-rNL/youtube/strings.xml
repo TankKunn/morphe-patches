@@ -284,22 +284,12 @@ Beperkingen:
   <string name="morphe_disable_chapter_skip_double_tap_summary">Schakelt de dubbele tik met twee vingers uit die hoofdstukken overslaat, wat per ongeluk met één vinger kan worden geactiveerd</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Externe downloads</string>
-  <string name="morphe_external_downloader_screen_summary">Download video\'s met apps voor het downloaden van derden</string>
+  <string name="morphe_external_downloader_screen_summary">Download video\'s, podcasts of liedjes met apps van derden</string>
   <string name="morphe_external_downloader_title">Externe downloadknop weergeven</string>
   <string name="morphe_external_downloader_summary">Toont een overlay-knop in de videospeler die je externe downloader opent</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Downloadactieknop overschrijven</string>
   <string name="morphe_external_downloader_action_button_summary">Vervangt de ingebouwde downloadfunctie van YouTube door je externe downloader</string>
-  <string name="morphe_external_downloader_name_title">Downloader pakketnaam</string>
-  <string name="morphe_external_downloader_name_summary">Pakketnaam van uw geïnstalleerde externe downloader-app</string>
-  <string name="morphe_external_downloader_other_item_hint">Voer de pakketnaam in</string>
-  <string name="morphe_external_downloader_other_item">Overige</string>
-  <string name="morphe_external_downloader_not_found_title">App niet geïnstalleerd</string>
-  <string name="morphe_external_downloader_not_installed_warning">%s is niet geïnstalleerd. Installeer het.</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"Kon geïnstalleerde app met pakketnaam niet vinden: %s
-
-Controleer of de pakketnaam correct is en de app is geïnstalleerd"</string>
-  <string name="morphe_external_downloader_empty_warning">De pakketnaam kan niet leeg zijn</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Spraakvertaling</string>
   <string name="morphe_vot_screen_summary">Lees ondertitels hardop voor met behulp van tekst-naar-spraak op het apparaat, gesynchroniseerd met het afspelen</string>
@@ -950,6 +940,8 @@ Als het later wordt uitgeschakeld, wordt aanbevolen om de app-gegevens te wissen
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">Voorkomt dat de geminimaliseerde speler naar verschillende hoeken van het scherm wordt gesleept</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Horizontale sleepbeweging uitschakelen</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Voorkomt dat de minispeler horizontaal van het scherm wordt weggeveegd</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">Schakel afspelen uit met horizontale sleepbeweging</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">Het afspelen wordt gepauzeerd wanneer de miniplayer van het scherm wordt gesleept</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Overlayknoppen verbergen</string>
   <string name="morphe_miniplayer_width_dip_title">Standaardgrootte</string>
   <string name="morphe_miniplayer_width_dip_summary">Stel de begin afmeting op het scherm in, in pixels</string>
@@ -1101,12 +1093,13 @@ Beperkingen:
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Om deze functie te gebruiken, stel \'Videostreams spoofen\' in op Android VR of Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">Geavanceerd menu voor videokwaliteit weergeven</string>
+  <string name="morphe_advanced_video_quality_menu_title">Open \"Geavanceerd\" kwaliteitsmenu</string>
+  <string name="morphe_advanced_video_quality_menu_summary">Slaat het kwaliteitsselectiemenu over en opent het Geavanceerde kwaliteitsmenu direct</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Verberg Premiumkwaliteitopties</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">Videokwaliteit wordt prioriteit gegeven</string>
-  <string name="morphe_prioritize_video_quality_summary">Prioriteert de hoogste videokwaliteit boven codec efficiëntie</string>
+  <string name="morphe_prioritize_video_quality_summary">Prioriteert de hoogst beschikbare video kwaliteit boven codecefficiëntie</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Sta Android VR AV1 toe</string>
   <string name="morphe_spoof_video_streams_av1_summary">Toestaat software AV1 decodering bij gebruik van de Android VR client</string>

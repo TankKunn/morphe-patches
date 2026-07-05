@@ -284,22 +284,12 @@ Limitări:
   <string name="morphe_disable_chapter_skip_double_tap_summary">Dezactivează gestul de dublă atingere cu două degete care sare peste capitole, care poate fi declanșat accidental cu un singur deget</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Descărcări externe</string>
-  <string name="morphe_external_downloader_screen_summary">Descarcă videoclipuri cu aplicații de descărcare terțe</string>
+  <string name="morphe_external_downloader_screen_summary">Descărcă videoclipuri, podcasturi sau melodii folosind aplicaţii de descărcare terţe</string>
   <string name="morphe_external_downloader_title">Arată butonul extern de descărcare</string>
   <string name="morphe_external_downloader_summary">Afișează un buton de suprapunere în playerul video care deschide aplicația ta de descărcare externă</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Suprascrie butonul de acțiune Descarcă</string>
   <string name="morphe_external_downloader_action_button_summary">Înlocuiește funcția de descărcare încorporată a YouTube cu aplicația ta de descărcare externă</string>
-  <string name="morphe_external_downloader_name_title">Descărcător nume pachet</string>
-  <string name="morphe_external_downloader_name_summary">Numele pachetului aplicației dvs. de descărcare externă instalate</string>
-  <string name="morphe_external_downloader_other_item_hint">Introduceți numele pachetului</string>
-  <string name="morphe_external_downloader_other_item">Altele</string>
-  <string name="morphe_external_downloader_not_found_title">Aplicația nu este instalată</string>
-  <string name="morphe_external_downloader_not_installed_warning">%s nu este instalat. Vă rugăm să-l instalaţi.</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"Nu s-a găsit aplicația instalată cu numele pachetului: %s
-
-Verificați dacă numele pachetului este corect și dacă aplicația este instalată"</string>
-  <string name="morphe_external_downloader_empty_warning">Numele pachetului nu poate fi gol</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Traducere cu voce peste</string>
   <string name="morphe_vot_screen_summary">Citește cu voce tare subtitrările video folosind text-to-speech pe dispozitiv, sincronizat cu redarea</string>
@@ -950,6 +940,8 @@ Dacă este dezactivat ulterior, se recomandă să ștergeți datele aplicației 
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">Împiedică tragerea miniplayerului în diferite colțuri ale ecranului</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Dezactivează gestul de glisare orizontală</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Împiedică închiderea miniplayerului prin glisarea lui orizontală în afara ecranului</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">Dezactivează redarea cu glisare orizontală</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">Redarea se va pune în pauză când miniplayerul este glisat în afara ecranului</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Ascunde butoanele suprapuse</string>
   <string name="morphe_miniplayer_width_dip_title">Dimensiune implicită</string>
   <string name="morphe_miniplayer_width_dip_summary">Stabilește dimensiunea inițială a ecranului, în pixeli</string>
@@ -1101,12 +1093,13 @@ Limitări:
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Pentru a utiliza această funcție, setează „Falsifică stream-uri video” la Android VR sau Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">Afișează meniul avansat de calitate video</string>
+  <string name="morphe_advanced_video_quality_menu_title">Deschide meniul de calitate \"Avansat\"</string>
+  <string name="morphe_advanced_video_quality_menu_summary">Sare peste meniul de selecție a calității și deschide direct meniul de calitate avansat.</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Ascunde opţiunile calitătă premium</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">Priorize calitatea video-ului</string>
-  <string name="morphe_prioritize_video_quality_summary">Afișează falsificarea în Statistici pentru pasionați</string>
+  <string name="morphe_prioritize_video_quality_summary">Prioritizează cea mai mare calitate video disponibilă față de eficiența codec-ului.</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Permite Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary">Prioritizează calitatea video superioară față de eficiența codec-ului</string>

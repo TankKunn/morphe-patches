@@ -284,22 +284,12 @@ Second \"item\" text"</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">두 손가락으로 두 번 탭하여 챕터를 건너뛰는 제스처를 비활성화하여, 한 손가락으로 실수로 작동되는 것을 방지할 수 있습니다</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">외부 다운로드</string>
-  <string name="morphe_external_downloader_screen_summary">서드파티 다운로드 앱으로 동영상을 다운로드할 수 있습니다</string>
+  <string name="morphe_external_downloader_screen_summary">타사 다운로드 앱으로 동영상, 팟캐스트 또는 노래를 다운로드하세요.</string>
   <string name="morphe_external_downloader_title">외부 다운로드 버튼 표시하기</string>
   <string name="morphe_external_downloader_summary">외부 다운로드 앱을 실행할 수 있는 오버레이 버튼을 동영상 플레이어에 표시합니다</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">오프라인 저장 버튼 재정의하기</string>
   <string name="morphe_external_downloader_action_button_summary">YouTube의 기본 다운로드 기능을 사용자가 설정한 외부 다운로더 앱으로 대체합니다</string>
-  <string name="morphe_external_downloader_name_title">외부 다운로더 앱 패키지명</string>
-  <string name="morphe_external_downloader_name_summary">설치된 외부 다운로더 앱 패키지명을 설정하세요</string>
-  <string name="morphe_external_downloader_other_item_hint">앱 패키지명을 입력하세요</string>
-  <string name="morphe_external_downloader_other_item">기타</string>
-  <string name="morphe_external_downloader_not_found_title">앱이 설치되지 않습니다</string>
-  <string name="morphe_external_downloader_not_installed_warning">\'%s\'가 설치되어 있지 않습니다. 설치하세요</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"패키지 이름이 '%s'인 설치된 앱을 찾을 수 없습니다
-
-패키지 이름이 올바르고 앱이 설치되어 있는지 확인하세요"</string>
-  <string name="morphe_external_downloader_empty_warning">패키지명은 비워둘 수 없습니다</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">음성 번역</string>
   <string name="morphe_vot_screen_summary">기기의 텍스트 음성 변환(TTS)을 사용하여 재생에 맞춰 동기화된 동영상 자막을 읽어줍니다</string>
@@ -406,7 +396,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_swap_save_and_queue_actions_title">저장과 현재 재생목록 작업 교환하기</string>
   <string name="morphe_swap_save_and_queue_actions_summary">버튼을 탭하여 현재 재생목록 옵션을 실행할 수 있고, 길게 탭하면 나중에 볼 동영상에 저장됩니다</string>
   <string name="morphe_queue_override_flyout_menu_title">피드 메뉴 현재 재생목록 버튼 재정의하기</string>
-  <string name="morphe_queue_override_flyout_menu_summary">YouTube 현재 재생목록이 아닌 Morphe 현재 재생목록을 실행합니다</string>
+  <string name="morphe_queue_override_flyout_menu_summary">\'현재 재생목록에서 다음 순서로 재생\' 메뉴를 탭하면 YouTube 현재 재생목록이 아닌 Morphe 현재 재생목록을 실행됩니다</string>
   <string name="morphe_queue_manager_check_failed_auth">로그인하지 않았습니다</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">재생목록 ID가 없습니다</string>
   <string name="morphe_queue_manager_check_failed_queue">현재 재생목록이 비어 있습니다</string>
@@ -952,6 +942,8 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">최소화된 플레이어를 화면의 다른 모서리로 드래그하는 것을 방지할 수 있습니다</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">수평 드래그 제스처 비활성화하기</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">미니 플레이어를 화면 밖으로 가로로 스와이프하여 닫는 것을 방지할 수 있습니다</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">수평 드래그로 동영상 재생 비활성화하기</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">미니 플레이어를 화면 밖으로 드래그하면 동영상 재생이 일시 중지됩니다</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">오버레이 버튼 숨기기</string>
   <string name="morphe_miniplayer_width_dip_title">기본 크기</string>
   <string name="morphe_miniplayer_width_dip_summary">초기 화면 크기를 설정할 수 있습니다 (픽셀)</string>
@@ -1103,12 +1095,13 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">이 기능을 사용하려면, \'동영상 스트림 속이기\'에서 \'기본 클라이언트\'를 \'Android VR\' 또는 \'Android Studio\'로 변경하세요</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">고급 동영상 화질 설정 메뉴 표시하기</string>
+  <string name="morphe_advanced_video_quality_menu_title">\'고급\' 화질 메뉴 열기</string>
+  <string name="morphe_advanced_video_quality_menu_summary">화질 선택 메뉴를 건너뛰고 고급 화질 메뉴를 바로 엽니다</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Premium 화질 옵션 숨기기</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">동영상 우선순위를 화질로 지정하기</string>
-  <string name="morphe_prioritize_video_quality_summary">코덱 효율성보다 최고 화질의 동영상을 우선시합니다</string>
+  <string name="morphe_prioritize_video_quality_summary">코덱 효율성보다 사용 가능한 최고 화질을 우선합니다</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Android VR AV1 허용하기</string>
   <string name="morphe_spoof_video_streams_av1_summary">Android VR 클라이언트를 사용할 경우에 소프트웨어 AV1 디코딩을 허용합니다</string>

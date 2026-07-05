@@ -20,6 +20,17 @@ Second \"item\" text"</string>
   <string name="morphe_restart_first_run">設定を完了するには再起動してください</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">アプリ名</string>
+  <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_name_title">外部ダウンローダーのパッケージ名</string>
+  <string name="morphe_external_downloader_name_summary">インストールされている外部ダウンローダーアプリのパッケージ名</string>
+  <string name="morphe_external_downloader_other_item_hint">パッケージ名を入力してください</string>
+  <string name="morphe_external_downloader_other_item">その他</string>
+  <string name="morphe_external_downloader_not_found_title">アプリがインストールされていません</string>
+  <string name="morphe_external_downloader_not_installed_warning">%s はインストールされていません。インストールしてください。</string>
+  <string name="morphe_external_downloader_package_not_found_warning">"パッケージ名 %s を持つインストール済みのアプリが見つかりませんでした。
+
+パッケージ名が正しいか、アプリがインストールされているかを確認してください"</string>
+  <string name="morphe_external_downloader_empty_warning">パッケージ名を空にすることはできません</string>
   <!-- Translations of this should be identical to morphe_custom_branding_icon_entry_7 -->
   <string name="morphe_custom_branding_name_entry_5">カスタム</string>
   <string name="morphe_custom_branding_icon_title">アプリアイコン</string>

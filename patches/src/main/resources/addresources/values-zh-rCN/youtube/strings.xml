@@ -284,22 +284,12 @@ Second \"item\" text"</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">禁用双指双击跳过章节的势势，这可能会在使用单根手指时被意外触发</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">外部下载</string>
-  <string name="morphe_external_downloader_screen_summary">使用第三方下载应用下载视频</string>
+  <string name="morphe_external_downloader_screen_summary">使用第三方下载应用程序下载视频、播客或歌曲</string>
   <string name="morphe_external_downloader_title">显示外部下载按钮</string>
   <string name="morphe_external_downloader_summary">在视频播放器中显示一个浮动按钮，用于打开您的外部下载器</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">覆盖“下载”按钮</string>
   <string name="morphe_external_downloader_action_button_summary">将 YouTube 的内置下载功能替换为你的外部下载器</string>
-  <string name="morphe_external_downloader_name_title">下载器的应用包名</string>
-  <string name="morphe_external_downloader_name_summary">您已安装的外部下载器应用的包名</string>
-  <string name="morphe_external_downloader_other_item_hint">输入包名</string>
-  <string name="morphe_external_downloader_other_item">其他</string>
-  <string name="morphe_external_downloader_not_found_title">应用未安装</string>
-  <string name="morphe_external_downloader_not_installed_warning">%s 未安装，请安装。</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"找不到包名为 %s 的已安装应用
-
-请验证包名是否正确且应用已安装"</string>
-  <string name="morphe_external_downloader_empty_warning">包名不能为空</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">语音旁白翻译</string>
   <string name="morphe_vot_screen_summary">使用设备上的文本转语音功能朗读视频字幕，并与播放同步</string>
@@ -950,6 +940,8 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">防止将最小化的播放器拖动到屏幕的不同角落</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">禁用水平拖动手势</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">防止通过水平滑动离开屏幕来关闭迷你播放器</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">禁用水平拖动时的播放</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">当迷你播放器被拖离屏幕时，播放将暂停</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">隐藏悬浮窗按钮</string>
   <string name="morphe_miniplayer_width_dip_title">默认大小</string>
   <string name="morphe_miniplayer_width_dip_summary">设置启动时屏幕上的大小，以像素为单位</string>
@@ -1101,12 +1093,13 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">使用此功能时，将“欺骗视频流”设置为 Android VR 或 Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">显示高级视频画质菜单</string>
+  <string name="morphe_advanced_video_quality_menu_title">打开“高级”画质菜单</string>
+  <string name="morphe_advanced_video_quality_menu_summary">跳过画质选择菜单，直接打开高级画质菜单</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">隐藏 Premium 画质选项</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">优先视频画质</string>
-  <string name="morphe_prioritize_video_quality_summary">优先考虑最高视频画质而不是编解码器效率</string>
+  <string name="morphe_prioritize_video_quality_summary">优先考虑最高的视频画质而不是编解码器效率</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">允许 Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary">允许在使用 Android VR 客户端时进行软件 AV1 解码</string>

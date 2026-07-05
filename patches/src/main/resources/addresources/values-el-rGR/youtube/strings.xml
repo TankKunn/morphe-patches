@@ -284,22 +284,12 @@ Second \"item\" text"</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Απενεργοποιεί τη χειρονομία διπλού αγγίγματος με δύο δάχτυλα που παραλείπει κεφάλαια, η οποία μπορεί να ενεργοποιηθεί κατά λάθος με ένα δάχτυλο</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Εξωτερικές λήψεις</string>
-  <string name="morphe_external_downloader_screen_summary">Λήψη βίντεο με εφαρμογές λήψης τρίτων</string>
+  <string name="morphe_external_downloader_screen_summary">Κατεβάστε βίντεο, podcast ή τραγούδια με εφαρμογές λήψης τρίτων</string>
   <string name="morphe_external_downloader_title">Εμφάνιση κουμπιού εξωτερικής λήψης</string>
   <string name="morphe_external_downloader_summary">Εμφανίζει ένα κουμπί επικάλυψης στον πρόγραμμα αναπαραγωγής βίντεο που ανοίγει την εφαρμογή λήψης τρίτων</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Αλλαγή λειτουργίας κουμπιού ενέργειας «Λήψη»</string>
   <string name="morphe_external_downloader_action_button_summary">Αντικαθιστά τη λειτουργία λήψης ενσωματωμένη στο YouTube με την εφαρμογή λήψης τρίτων</string>
-  <string name="morphe_external_downloader_name_title">Όνομα πακέτου εφαρμογής λήψης</string>
-  <string name="morphe_external_downloader_name_summary">Το όνομα πακέτου της εγκατεστημένης σας εξωτερικής εφαρμογής λήψης</string>
-  <string name="morphe_external_downloader_other_item_hint">Εισάγετε το όνομα πακέτου</string>
-  <string name="morphe_external_downloader_other_item">Άλλο</string>
-  <string name="morphe_external_downloader_not_found_title">Η εφαρμογή δεν έχει εγκατασταθεί</string>
-  <string name="morphe_external_downloader_not_installed_warning">Το %s δεν είναι εγκατεστημένο. Παρακαλούμε εγκαταστήστε το.</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"Δεν ήταν δυνατή η εύρεση εγκατεστημένης εφαρμογής με όνομα πακέτου: %s
-
-Επιβεβαιώστε ότι το όνομα πακέτου είναι σωστό και ότι η εφαρμογή είναι εγκατεστημένη"</string>
-  <string name="morphe_external_downloader_empty_warning">Το όνομα πακέτου δεν μπορεί να είναι κενό</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Μετάφραση φωνής</string>
   <string name="morphe_vot_screen_summary">Διαβάστε τις λεζάντες του βίντεο δυνατά χρησιμοποιώντας το text-to-speech της συσκευής, συγχρονισμένα με την αναπαραγωγή</string>
@@ -950,6 +940,8 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">Αποτρέπει τη μεταφορά του μικρογραφικού αναπαραγωγέα στις διαφορετικές γωνίες της οθόνης</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Απενεργοποίηση χειρονομίας οριζόντιας σύρσης</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Αποτρέπει το κλείσιμο του μίνι αναπαραγωγέα με οριζόντια κύλιση από την οθόνη</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">Απενεργοποίηση αναπαραγωγής με οριζόντια μεταφορά</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">Η αναπαραγωγή θα παύσει όταν το μίνι πλέιερ μεταφερθεί εκτός οθόνης</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Κουμπιά επικάλυψης οθόνης αναπαραγωγής</string>
   <string name="morphe_miniplayer_width_dip_title">Προεπιλεγμένο μέγεθος</string>
   <string name="morphe_miniplayer_width_dip_summary">Ορίστε το αρχικό μέγεθος στην οθόνη, σε pixel</string>
@@ -1101,12 +1093,13 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Για να χρησιμοποιήσετε αυτήν τη λειτουργία, ορίστε την \'Παραποίηση ροών βίντεο\' σε Android VR ή Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">Εμφάνιση προχωρημένου μενού ποιότητας βίντεο</string>
+  <string name="morphe_advanced_video_quality_menu_title">Άνοιγμα μενού ποιότητας \'Προχωρημένων\'</string>
+  <string name="morphe_advanced_video_quality_menu_summary">Παρακάμπτει το μενού επιλογής ποιότητας και ανοίγει απευθείας το μενού ποιότητας \'Προχωρημένων\'</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Απόκρυψη επιλογών υψηλής ποιότητας</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">Προτεραιότητα ποιότητας βίντεο</string>
-  <string name="morphe_prioritize_video_quality_summary">Δίνει προτεραιότητα στην υψηλότερη ποιότητα βίντεο έναντι της αποδοτικότητας του κωδικοποιητή</string>
+  <string name="morphe_prioritize_video_quality_summary">Δίνει προτεραιότητα στην υψηλότερη διαθέσιμη ποιότητα βίντεο έναντι της αποδοτικότητας του κωδικοποιητή</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Να επιτρέπεται ο κωδικοποιητής Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary">Επιτρέπει την αποκωδικοποίηση AV1 λογισμικού κατά τη χρήση του προγράμματος προβολής Android VR</string>

@@ -284,22 +284,12 @@ Obmedzenia:
   <string name="morphe_disable_chapter_skip_double_tap_summary">Zakáže gestá dvojitého ťuknutia dvoma prstami, ktoré preskakujú kapitoly, ktoré sa môžu neúmyselne spustiť jedným prstom</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Externé stiahnutia</string>
-  <string name="morphe_external_downloader_screen_summary">Stiahnite si videá pomocou aplikácií na sťahovanie tretích strán</string>
+  <string name="morphe_external_downloader_screen_summary">Stiahnite si videá, podcasty alebo piesne pomocou aplikácií na sťahovanie tretích strán</string>
   <string name="morphe_external_downloader_title">Zobraziť tlačidlo na externé stiahnutie</string>
   <string name="morphe_external_downloader_summary">Zobrazuje prekryvné tlačidlo v prehrávači videa, ktoré otvorí vaše sťahovanie tretích strán</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Prepísať tlačidlo akcie na stiahnutie</string>
   <string name="morphe_external_downloader_action_button_summary">Nahrádza vstavanú funkciu na sťahovanie YouTube vaším sťahovaním tretích strán</string>
-  <string name="morphe_external_downloader_name_title">Názov balíka sťahovača</string>
-  <string name="morphe_external_downloader_name_summary">Názov balíka nainštalovanej aplikácie na externé sťahovanie</string>
-  <string name="morphe_external_downloader_other_item_hint">Zadajte názov balíka</string>
-  <string name="morphe_external_downloader_other_item">Ostatné</string>
-  <string name="morphe_external_downloader_not_found_title">Aplikácia nie je nainštalovaná</string>
-  <string name="morphe_external_downloader_not_installed_warning">Aplikácia %s nie je nainštalovaná. Prosím, najskôr ju nainštalujte.</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"Nebolo možné nájsť nainštalovanú aplikáciu s názvom balíka: %s
-
-Uistite sa, že názov balíka je správny a aplikácia je nainštalovaná"</string>
-  <string name="morphe_external_downloader_empty_warning">Názov balíka nemôže byť prázdny</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Preklad hlasového komentára</string>
   <string name="morphe_vot_screen_summary">Nahlas prečítajte titulky videa pomocou text-to-speech priamo v zariadení, synchronizovane s prehrávaním</string>
@@ -950,6 +940,8 @@ Ak ju neskôr vypnete, odporúča sa vymazať dáta aplikácie, aby sa predišlo
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">Skryje tlačidlá Predchádzajúce a Nasledujúce v mini prehrávači, na obrazovke uzamknutia a v ovládacích prvkoch slúchadiel</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Zakázať horizontálne gesto ťahania</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Zabráni ťahaniu časovej osy na obrazovke uzamknutia a v paneloch upozornení</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">Zakázať prehrávanie pomocou horizontálneho potiahnutia</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">Prehrávanie sa pozastaví, keď sa miniplayer vytiahne mimo obrazovku</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Skryť prekryvné tlačidlá</string>
   <string name="morphe_miniplayer_width_dip_title">Predvolená veľkosť</string>
   <string name="morphe_miniplayer_width_dip_summary">Nastavte počiatočnú veľkosť na obrazovke, v pixeloch</string>
@@ -1101,12 +1093,13 @@ Obmedzenia:
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Na používanie tejto funkcie nastavte \'Falsifikácia streamov videa\' na Android VR alebo Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">Zobraziť rozšírenú ponuku kvality videa</string>
+  <string name="morphe_advanced_video_quality_menu_title">Otvoriť menu kvality \'Pokročilé\'</string>
+  <string name="morphe_advanced_video_quality_menu_summary">Preskočí menu výberu kvality a otvorí priamo menu kvality \'Pokročilé\'</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Skryť možnosti kvality videa Premium</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">Uprednostniť kvalitu videa</string>
-  <string name="morphe_prioritize_video_quality_summary">Umožňuje softvérové dekódovanie AV1 pri používaní klienta Android VR</string>
+  <string name="morphe_prioritize_video_quality_summary">Uprednostňuje najvyššiu dostupnú kvalitu videa pred efektivitou kodeku</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Povoliť Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary">Zobrazuje falšovanie v štatistikách pre znalcov</string>

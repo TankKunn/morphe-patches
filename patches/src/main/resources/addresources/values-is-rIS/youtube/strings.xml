@@ -284,22 +284,12 @@ Takmörk:
   <string name="morphe_disable_chapter_skip_double_tap_summary">Gerir óvirkt tví fingurgestina tví breytilegu sem hoppar um kafla, sem gæti verið sýnt með einni fingri</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Utanaðkomandi niðurhal</string>
-  <string name="morphe_external_downloader_screen_summary">Sæktu myndbönd með þriðja aðila niðurhal forrit</string>
+  <string name="morphe_external_downloader_screen_summary">Niðurhalaðu myndbönd, hlaðvarpa eða lög með niðurhalssforritum frá þriðja aðila.</string>
   <string name="morphe_external_downloader_title">Sýna utanaðkomandi niðurhalshnapp</string>
   <string name="morphe_external_downloader_summary">Sýnir hlutfalls hnatta á myndavörpun sem opnar þinn þriðja aðila niðurhal</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">Breyta niðurhalshnappi</string>
   <string name="morphe_external_downloader_action_button_summary">Býr í stað þess sem YouTube hefur innbyggt niðurhal með þinn þriðja aðila niðurhal</string>
-  <string name="morphe_external_downloader_name_title">Pakkanafn niðurhalsforrits</string>
-  <string name="morphe_external_downloader_name_summary">Pakkanafn á uppsettu niðurhalsforriti</string>
-  <string name="morphe_external_downloader_other_item_hint">Sláðu inn pakkanafn</string>
-  <string name="morphe_external_downloader_other_item">Annað</string>
-  <string name="morphe_external_downloader_not_found_title">App er ekki uppsett</string>
-  <string name="morphe_external_downloader_not_installed_warning">%s er ekki uppsett. Vinsamlegast settu það upp.</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"Gat ekki fundið uppsett app með pakkanafn: %s
-
-Staðfestu að pakkanafnið er rétt og að appið er uppsett"</string>
-  <string name="morphe_external_downloader_empty_warning">Pakkanafnið er tómt</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Þýðing á raddsegulmagni</string>
   <string name="morphe_vot_screen_summary">Les upp undirtitla myndbandsins með texta-til-tala á tækinu, samhæmt með endursendingu</string>
@@ -946,6 +936,8 @@ Ef kveikt á því síðar er mælt með því að hreinsa gögn forritsins til 
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">Kemur í veg fyrir að draga minnkaðan vörpuninn á mismunandi horn skjásins</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">Lokað láréttri dragningu</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">Kemur í veg fyrir að loka minnkaðan spilarann með því að draga hann láréttur úr sjónarsviðinu</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">Gerðu af virkni á vinstrihallu</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">Spilun mun hætta þegar mini-spilarinn er dreginn út af skjánum</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">Fela yfirborðs hnappa</string>
   <string name="morphe_miniplayer_width_dip_title">Sjálfgengið stærð</string>
   <string name="morphe_miniplayer_width_dip_summary">Stilltu upphaflegu stærðina á skjánum, í pixlum</string>
@@ -1097,12 +1089,13 @@ Takmörk:
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Til að nota þennan eiginleika þarftu að stilla „Forgeðu vídeóstreymi“ á Android VR eða Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">Sýnaðu útfærslughlutgæða valmynd</string>
+  <string name="morphe_advanced_video_quality_menu_title">Opnað \'Advanced\' gæðavalmynd</string>
+  <string name="morphe_advanced_video_quality_menu_summary">Sleppur yfir valið á gæðum og opnar \'Advanced\' gæðavalmyndina beint</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Húfa Premium gæðavalmyndir</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">Forganga vídeógæði</string>
-  <string name="morphe_prioritize_video_quality_summary">Forgangur hærri gæðar vídeós frekar en kóðaskilvirkni</string>
+  <string name="morphe_prioritize_video_quality_summary">Forgangur er gefinn hæsta mögulega vídeó gæði frekar en samræmikanlegni</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Leyfa Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary">Leyfir hugbúnaðar AV1 afkóðun þegar þú notar Android VR viðskiptavininn</string>

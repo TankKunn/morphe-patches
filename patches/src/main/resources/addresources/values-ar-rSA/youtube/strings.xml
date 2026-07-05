@@ -284,22 +284,12 @@ Second \"item\" text"</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">يعطّل إيماءة النقر المزدوج بإصبعين التي تتخطى الفصول، والتي قد يتم تشغيلها عن طريق الخطأ بإصبع واحد</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">التنزيلات الخارجية</string>
-  <string name="morphe_external_downloader_screen_summary">تنزيل الفيديوهات باستخدام تطبيقات تنزيل خارجية</string>
+  <string name="morphe_external_downloader_screen_summary">تنزيل الفيديوهات أو ملفات البودكاست أو الأغاني باستخدام تطبيقات تنزيل خارجية</string>
   <string name="morphe_external_downloader_title">عرض زر التنزيل الخارجي</string>
   <string name="morphe_external_downloader_summary">يعرض زرًا على مشغل الفيديو يفتح أداة التنزيل الخارجية الخاصة بك</string>
   <!-- 'Download action button' should match the language used in 'morphe_hide_download_button_title'. -->
   <string name="morphe_external_downloader_action_button_title">وظيفة زر إجراء التنزيل</string>
   <string name="morphe_external_downloader_action_button_summary">يستبدل وظيفة التنزيل المدمجة في YouTube بتطبيق التنزيل الخارجي الذي تختاره</string>
-  <string name="morphe_external_downloader_name_title">اسم حزمة أداة التنزيل</string>
-  <string name="morphe_external_downloader_name_summary">اسم حزمة تطبيق التنزيل الخارجي المثبت لديك</string>
-  <string name="morphe_external_downloader_other_item_hint">أدخل اسم الحزمة</string>
-  <string name="morphe_external_downloader_other_item">أخرى</string>
-  <string name="morphe_external_downloader_not_found_title">التطبيق غير مثبت</string>
-  <string name="morphe_external_downloader_not_installed_warning">لم يتم تثبيت %s . الرجاء تثبيته.</string>
-  <string name="morphe_external_downloader_package_not_found_warning">"تعذر العثور على التطبيق المثبت باسم الحزمة: %s
-
-تأكد من أن اسم الحزمة صحيح وأن التطبيق مثبت"</string>
-  <string name="morphe_external_downloader_empty_warning">لا يمكن أن يكون اسم الحزمة فارغًا</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">الترجمة الصوتية</string>
   <string name="morphe_vot_screen_summary">قراءة نصوص ترجمة الفيديو بصوت عالٍ باستخدام تحويل النص إلى كلام على الجهاز، بالتزامن مع التشغيل</string>
@@ -955,6 +945,8 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">يمنع سحب المشغل المصغر إلى زوايا مختلفة من الشاشة</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_title">تعطيل إيماءة السحب الأفقي</string>
   <string name="morphe_miniplayer_disable_horizontal_drag_summary">يمنع إغلاق المشغل المصغر عن طريق سحبه أفقيًا خارج الشاشة</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">تعطيل التشغيل بالسحب الأفقي</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">سيتوقف التشغيل عند سحب المشغّل المصغر خارج الشاشة</string>
   <string name="morphe_miniplayer_hide_overlay_buttons_title">إخفاء أزرار الواجهة</string>
   <string name="morphe_miniplayer_width_dip_title">الحجم الافتراضي</string>
   <string name="morphe_miniplayer_width_dip_summary">تعيين الحجم الأولي على الشاشة، بالبكسل</string>
@@ -1106,12 +1098,13 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">لاستخدام هذه الميزة، اضبط \'Spoof Video Streams\' على Android VR أو Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
-  <string name="morphe_advanced_video_quality_menu_title">عرض قائمة جودة الفيديو المتقدمة</string>
+  <string name="morphe_advanced_video_quality_menu_title">فتح قائمة \'الجودة المتقدمة\'</string>
+  <string name="morphe_advanced_video_quality_menu_summary">يتخطى قائمة تحديد الجودة ويفتح قائمة الجودة المتقدمة مباشرة</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">إخفاء خيارات جودة Premium</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_prioritize_video_quality_title">إعطاء الأولوية لجودة فيديو</string>
-  <string name="morphe_prioritize_video_quality_summary">يعطي الأولوية لأعلى جودة فيديو على كفاءة الترميز</string>
+  <string name="morphe_prioritize_video_quality_summary">يعطي الأولوية لأعلى جودة فيديو متاحة على كفاءة الترميز</string>
   <!-- misc.fix.playback.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">السماح بـ Android VR AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary">يسمح بفك ترميز AV1 برمجيًا عند استخدام العميل Android VR</string>
