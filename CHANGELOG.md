@@ -1,3 +1,20 @@
+## [1.34.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.33.0...v1.34.0-dev.1) (2026-07-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Add to queue:** Allows tablet patches for versions 21.xx ([6ef2a3f](https://github.com/MorpheApp/morphe-patches/commit/6ef2a3f7aadb845b0e0ec5b839773d8e68504868))
+* **YouTube - Add to queue:** Prevents the flyout video id reset blocking ([93d134f](https://github.com/MorpheApp/morphe-patches/commit/93d134f9df792e35f0b1e40ef933262bc40fa517))
+
+### ✨ New Features
+
+* **YouTube - Miniplayer:** Add "Disable playback with horizontal drag" setting ([#1916](https://github.com/MorpheApp/morphe-patches/issues/1916)) ([186f060](https://github.com/MorpheApp/morphe-patches/commit/186f0603352f26e30fdfab100fe0b77eb22496d6))
+* **YouTube - Theme:** Add "Modern YouTube" dark theme preset ([#1918](https://github.com/MorpheApp/morphe-patches/issues/1918)) ([0a381c8](https://github.com/MorpheApp/morphe-patches/commit/0a381c8c0cd80d1bd3cb1f339587e48798ced00f))
+* **YouTube Music:** Add `Downloads` patch ([#1881](https://github.com/MorpheApp/morphe-patches/issues/1881)) ([d078a37](https://github.com/MorpheApp/morphe-patches/commit/d078a37cd1a8ef93f9546efb24e783a7b826a8b8))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.27.0` ([4dabc41](https://github.com/MorpheApp/morphe-patches/commit/4dabc4142664669937d47ffad7d6f768aaa48f8e))
+
 ## [1.33.0](https://github.com/MorpheApp/morphe-patches/compare/v1.32.0...v1.33.0) (2026-07-03)
 
 ### 🐛 Bug Fixes
