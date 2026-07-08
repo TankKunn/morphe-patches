@@ -1,3 +1,16 @@
+## [1.34.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.34.0-dev.3...v1.34.0-dev.4) (2026-07-08)
+
+### 🐛 Bug Fixes
+
+* **GmsCore support:** Use custom provider package name when `Change package name` is used ([7d0d56d](https://github.com/MorpheApp/morphe-patches/commit/7d0d56d0652dbfd3bb6cd5b21dc21310e2b73e68))
+* **YouTube - Voice over translation:** Keep the user's original audio volume ratio after rewinding ([#1939](https://github.com/MorpheApp/morphe-patches/issues/1939)) ([d673d91](https://github.com/MorpheApp/morphe-patches/commit/d673d9181d7a203824bab2a83955d965d2423c3b))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide filter bar in comments" and "Sanitize highlighted search links" settings ([#1935](https://github.com/MorpheApp/morphe-patches/issues/1935)) ([1876708](https://github.com/MorpheApp/morphe-patches/commit/187670860225c5c8272a4f34d131a98448ca311c))
+* **YouTube Music:** Add `Hide flyout menu components` patch ([#1906](https://github.com/MorpheApp/morphe-patches/issues/1906)) ([dbc4ba0](https://github.com/MorpheApp/morphe-patches/commit/dbc4ba08c0e23838dafa17d7fd0cfc9d33ba6524))
+* **YouTube Music:** Add `Hide layout components` patch with `Custom filter` ([#1919](https://github.com/MorpheApp/morphe-patches/issues/1919)) ([f6e9849](https://github.com/MorpheApp/morphe-patches/commit/f6e9849331a16eebf870338e75012a529915d3b8))
+
 ## [1.34.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.34.0-dev.2...v1.34.0-dev.3) (2026-07-07)
 
 ### ✨ New Features
