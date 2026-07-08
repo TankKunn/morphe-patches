@@ -10,20 +10,16 @@ package app.morphe.patches.shared.misc.litho.context
 import app.morphe.patcher.Fingerprint
 
 internal const val IDENTIFIER_PROPERTY = ", identifierProperty="
-internal const val STRING_BUILDER_TYPE = "Ljava/lang/StringBuilder;"
-internal const val STRING_TYPE = "Ljava/lang/String;"
 
 internal object ConversionContextToStringFingerprint : Fingerprint(
     name = "toString",
     parameters = listOf(),
-    returnType = STRING_TYPE,
+    returnType = "Ljava/lang/String;",
     strings = listOf(
         "ConversionContext{", // Partial string match.
         ", widthConstraint=",
-        ", heightConstraint=",
         ", templateLoggerFactory=",
         ", rootDisposableContainer=",
         IDENTIFIER_PROPERTY
     )
 )
-
