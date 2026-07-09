@@ -13,5 +13,6 @@ import app.morphe.patches.shared.misc.litho.node.createTreeNodeElementHookPatch
 
 val treeNodeElementHookPatch = createTreeNodeElementHookPatch(
     sharedExtensionPatch,
-    conversionContextPatch
+    conversionContextPatch,
+    true
 )

@@ -1228,6 +1228,7 @@ Video playback with AV1 may stutter or drop frames."</string>
     <string name="morphe_spoof_video_streams_about_js">• If deobfuscation fails, playback may fail</string>
     <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
     <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Force original audio is not available</string>
+    <!-- Quality refers to video quality -->
     <string name="morphe_spoof_video_streams_about_720p_max">• Quality may be limited to 720p</string>
     <string name="morphe_spoof_video_streams_player_js_variant_title">Player JavaScript variant</string>
     <string name="morphe_spoof_video_streams_stats_for_nerds_title">Show spoofing in Stats for nerds</string>

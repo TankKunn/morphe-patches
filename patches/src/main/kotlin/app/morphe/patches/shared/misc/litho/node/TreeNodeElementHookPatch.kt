@@ -53,6 +53,7 @@ private lateinit var lazilyConvertedElementLoadedMethodRef: WeakReference<Mutabl
 internal fun createTreeNodeElementHookPatch(
     sharedExtensionPatchDep: BytecodePatch,
     conversionContextPatchDep: BytecodePatch,
+    addLithoContainerInterface: Boolean
 ): BytecodePatch = bytecodePatch(
     description = "Hooks the tree node element lists to the extension."
 ) {
@@ -113,20 +114,23 @@ internal fun createTreeNodeElementHookPatch(
             }
         }
 
-        TreeNodeListFingerprint.let {
-            val field = it.instructionMatches.first().getFieldAccessed()
-            addLithoContainerInterface(it.classDef, field)
-        }
-
-        TreeNodeListHelperConstructorFingerprint.let {
-            val p2 = it.method.p0Register + 2
-            val index = it.method.indexOfFirstInstructionOrThrow {
-                opcode == Opcode.IPUT_OBJECT && (this as TwoRegisterInstruction).registerA == p2
+        if (addLithoContainerInterface) {
+            TreeNodeListFingerprint.let {
+                val field = it.instructionMatches.first().getFieldAccessed()
+                addLithoContainerInterface(it.classDef, field)
             }
-            val field = it.method.getInstruction<ReferenceInstruction>(index)
-                .getReference<FieldReference>()!!
 
-            addLithoContainerInterface(it.classDef, field)
+            // FIXME: This needs an update for 20.51.39 and older.
+            TreeNodeListHelperConstructorFingerprint.let {
+                val p2 = it.method.p0Register + 2
+                val index = it.method.indexOfFirstInstructionOrThrow {
+                    opcode == Opcode.IPUT_OBJECT && (this as TwoRegisterInstruction).registerA == p2
+                }
+                val field = it.method.getInstruction<ReferenceInstruction>(index)
+                    .getReference<FieldReference>()!!
+
+                addLithoContainerInterface(it.classDef, field)
+            }
         }
     }
 }
