@@ -1,3 +1,9 @@
+## [1.34.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.34.0-dev.6...v1.34.0-dev.7) (2026-07-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Spoof video streams:** Mention Android Studio 720p limitation in settings UI ([387abbf](https://github.com/MorpheApp/morphe-patches/commit/387abbf4c543a4c5ed9b6574bf792e7ce3b1c949))
+
 ## [1.34.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.34.0-dev.5...v1.34.0-dev.6) (2026-07-09)
 
 ### 🐛 Bug Fixes
