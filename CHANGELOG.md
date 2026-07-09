@@ -1,3 +1,13 @@
+## [1.34.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.34.0-dev.5...v1.34.0-dev.6) (2026-07-09)
+
+### 🐛 Bug Fixes
+
+* **Spoof video streams:** Change default client to 'TV' ([ce3f496](https://github.com/MorpheApp/morphe-patches/commit/ce3f496f9013af2d4146dc0d0f86a629d9dd7d9d))
+
+### ✨ New Features
+
+* **YouTube Music:** Add `Hide music action buttons` patch ([#1953](https://github.com/MorpheApp/morphe-patches/issues/1953)) ([b142f87](https://github.com/MorpheApp/morphe-patches/commit/b142f87e39cbe30e046d8731fa2997d6a1523bf7))
+
 ## [1.34.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.34.0-dev.4...v1.34.0-dev.5) (2026-07-09)
 
 ### 🐛 Bug Fixes
