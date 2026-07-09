@@ -111,6 +111,22 @@ YouTube Music 8.x — geçiş yalnızca 9.x ve sonraki sürümlerde çalışır"
   <string name="morphe_music_hide_lyrics_panel_category_title">Şarkı Sözü Paneli</string>
   <string name="morphe_music_hide_lyrics_share_button_title">Paylaş düğmesini gizle</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Çevir düğmesini gizle</string>
+  <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
+  <string name="morphe_music_action_buttons_screen_title">Eylem düğmeleri</string>
+  <string name="morphe_music_action_buttons_screen_summary">Oynatıcının altında hangi işlem düğmelerinin görüneceğini seçin</string>
+  <string name="morphe_music_hide_action_bar_title">İşlem çubuğunu gizle</string>
+  <string name="morphe_music_hide_like_dislike_button_title">Beğenme ve Beğenmeme düğmesini gizle</string>
+  <string name="morphe_music_hide_comments_button_title">Yorumlar düğmesini gizle</string>
+  <!-- 'Lyrics' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_lyrics_button_title">Şarkı sözleri düğmesini gizle</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_share_button_title">Paylaş düğmesini gizle</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_save_button_title">Kaydet düğmesini gizle</string>
+  <!-- 'Download' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_download_button_title">İndir düğmesini gizle</string>
+  <!-- 'Start radio' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_radio_button_title">Radyoyu başlat düğmesini gizle</string>
   <!-- flyoutmenu.components.hideFlyoutMenuComponentsPatch -->
   <string name="morphe_music_hide_flyout_menu_components_screen_title">Açılır menü</string>
   <string name="morphe_music_hide_flyout_menu_components_screen_summary">Oyuncuda ve kuyrukta görünen bileşenleri seçin</string>

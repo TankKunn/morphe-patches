@@ -111,6 +111,22 @@ YouTube Music 8.x - מעבר הצלילים פועל רק בגרסה 9.x ומע�
   <string name="morphe_music_hide_lyrics_panel_category_title">פאנל מילים</string>
   <string name="morphe_music_hide_lyrics_share_button_title">הסתר לחצן שיתוף</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">הסתר לחצן תרגום</string>
+  <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
+  <string name="morphe_music_action_buttons_screen_title">פעולות לחצנים</string>
+  <string name="morphe_music_action_buttons_screen_summary">בחר אילו כפתורי פעולה יוצגו מתחת לנגן</string>
+  <string name="morphe_music_hide_action_bar_title">הסתר סרגל פעולות</string>
+  <string name="morphe_music_hide_like_dislike_button_title">הסתר כפתור אהבתי ודיסלייק</string>
+  <string name="morphe_music_hide_comments_button_title">הסתר כפתור תגובות</string>
+  <!-- 'Lyrics' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_lyrics_button_title">הסתר כפתור מילים</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_share_button_title">הסתר לחצן שיתוף</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_save_button_title">הסתר לחצן שמירה</string>
+  <!-- 'Download' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_download_button_title">הסתר לחצן הורדה</string>
+  <!-- 'Start radio' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_radio_button_title">הסתר התחל רדיו</string>
   <!-- flyoutmenu.components.hideFlyoutMenuComponentsPatch -->
   <string name="morphe_music_hide_flyout_menu_components_screen_title">תפריט נשלף</string>
   <string name="morphe_music_hide_flyout_menu_components_screen_summary">בחר אילו רכיבים יופיעו בתפריטים הנשלפים של הנגן והתור</string>

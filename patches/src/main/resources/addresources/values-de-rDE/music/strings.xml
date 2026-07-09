@@ -111,6 +111,22 @@ YouTube Music 8.x – der Crossfade funktioniert nur ab Version 9.x."</string>
   <string name="morphe_music_hide_lyrics_panel_category_title">Lyrics Panel</string>
   <string name="morphe_music_hide_lyrics_share_button_title">Schaltfläche „Teilen“ ausblenden</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Schaltfläche „Übersetzen“ ausblenden</string>
+  <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
+  <string name="morphe_music_action_buttons_screen_title">Aktionsschaltflächen</string>
+  <string name="morphe_music_action_buttons_screen_summary">Wähle aus, welche Aktionsschaltflächen unter dem Player angezeigt werden sollen.</string>
+  <string name="morphe_music_hide_action_bar_title">Aktionsleiste ausblenden</string>
+  <string name="morphe_music_hide_like_dislike_button_title">„Gefällt mir“- und „Gefällt mir nicht“-Schaltfläche ausblenden</string>
+  <string name="morphe_music_hide_comments_button_title">„Kommentare“-Schaltfläche ausblenden</string>
+  <!-- 'Lyrics' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_lyrics_button_title">„Songtexte“-Schaltfläche ausblenden</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_share_button_title">Schaltfläche „Teilen“ ausblenden</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_save_button_title">Schaltfläche „Speichern“ ausblenden</string>
+  <!-- 'Download' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_download_button_title">Schaltfläche „Herunterladen“ ausblenden</string>
+  <!-- 'Start radio' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_radio_button_title">„Radio starten“-Schaltfläche ausblenden</string>
   <!-- flyoutmenu.components.hideFlyoutMenuComponentsPatch -->
   <string name="morphe_music_hide_flyout_menu_components_screen_title">Einstellungs-Menü</string>
   <string name="morphe_music_hide_flyout_menu_components_screen_summary">Wähle aus, welche Komponenten im Flyout-Menü angezeigt werden</string>

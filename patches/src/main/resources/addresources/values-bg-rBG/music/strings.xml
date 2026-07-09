@@ -111,6 +111,22 @@ YouTube Music 8.x — кросфейдът работи само в 9.x и по-
   <string name="morphe_music_hide_lyrics_panel_category_title">Панел с текстове</string>
   <string name="morphe_music_hide_lyrics_share_button_title">Скрий бутона за споделяне</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Скрий бутона за превод</string>
+  <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
+  <string name="morphe_music_action_buttons_screen_title">Действия</string>
+  <string name="morphe_music_action_buttons_screen_summary">Изберете кои бутони за действия да се показват под плейъра.</string>
+  <string name="morphe_music_hide_action_bar_title">Скриване на лентата с действия</string>
+  <string name="morphe_music_hide_like_dislike_button_title">Скриване на бутона Харесвам и Не харесвам</string>
+  <string name="morphe_music_hide_comments_button_title">Скриване на бутона Коментари</string>
+  <!-- 'Lyrics' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_lyrics_button_title">Скриване на бутона Текстове</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_share_button_title">Скрий бутона Споделяне</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_save_button_title">Скрий бутона Запази</string>
+  <!-- 'Download' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_download_button_title">Скрий бутона Изтегли</string>
+  <!-- 'Start radio' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_radio_button_title">Скрий бутона Стартирай радио</string>
   <!-- flyoutmenu.components.hideFlyoutMenuComponentsPatch -->
   <string name="morphe_music_hide_flyout_menu_components_screen_title">Изскачащо меню</string>
   <string name="morphe_music_hide_flyout_menu_components_screen_summary">Изберете кои компоненти да се показват в менютата на плейъра и опашката</string>

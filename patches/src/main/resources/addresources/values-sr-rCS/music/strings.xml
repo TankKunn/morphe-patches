@@ -110,6 +110,22 @@ YouTube Music 8.x — prelazni efekat radi samo na 9.x i novijim verzijama"</str
   <string name="morphe_music_hide_lyrics_panel_category_title">Panel tekstova</string>
   <string name="morphe_music_hide_lyrics_share_button_title">Sakrij dugme „Deli”</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Sakrij dugme „Prevedi”</string>
+  <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
+  <string name="morphe_music_action_buttons_screen_title">Dugmad radnji</string>
+  <string name="morphe_music_action_buttons_screen_summary">Izaberite koji dugmići za akcije da se pojave ispod plejera</string>
+  <string name="morphe_music_hide_action_bar_title">Sakrij traku sa akcijama</string>
+  <string name="morphe_music_hide_like_dislike_button_title">Sakrij dugmad „Sviđanje” i „Ne sviđanje”</string>
+  <string name="morphe_music_hide_comments_button_title">Sakrij dugme „Komentari”</string>
+  <!-- 'Lyrics' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_lyrics_button_title">Sakrij dugme „Tekstovi”</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_share_button_title">Sakrij dugme „Deli”</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_save_button_title">Sakrij dugme „Sačuvaj”</string>
+  <!-- 'Download' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_download_button_title">Sakrij dugme „Preuzmi”</string>
+  <!-- 'Start radio' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_radio_button_title">Sakrij dugme „Pokreni radio”</string>
   <!-- flyoutmenu.components.hideFlyoutMenuComponentsPatch -->
   <string name="morphe_music_hide_flyout_menu_components_screen_title">Падајући мени</string>
   <string name="morphe_music_hide_flyout_menu_components_screen_summary">Изаберите које компоненте ће се појављивати у плејеру и редовима падајућих менија</string>

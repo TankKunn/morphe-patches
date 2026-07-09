@@ -49,7 +49,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">شاردنەوەی کارته‌کانی هونه‌رمه‌ند</string>
   <string name="morphe_hide_community_posts_title">به‌شارووشتنی بابەتەکانی كۆمەڵگە</string>
   <string name="morphe_hide_compact_banner_title">إقاده إلسأرننان</string>
-  <string name="morphe_hide_floating_microphone_button_title">        دکەمەنی مایکروفۆنی لەرخۆڵەم دەبێت</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">دوگمەی \'نەویدەیترین ڤیدیۆکان\' بشارەوە</string>

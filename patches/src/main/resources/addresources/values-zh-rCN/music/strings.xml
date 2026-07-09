@@ -111,6 +111,22 @@ YouTube Music 8.x —— 交叉淡入仅在 9.x 及更高版本上运行"</strin
   <string name="morphe_music_hide_lyrics_panel_category_title">歌词面板</string>
   <string name="morphe_music_hide_lyrics_share_button_title">隐藏分享按钮</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">隐藏翻译按钮</string>
+  <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
+  <string name="morphe_music_action_buttons_screen_title">操作按钮</string>
+  <string name="morphe_music_action_buttons_screen_summary">选择在纵向和全屏模式下显示的哪个操作按钮</string>
+  <string name="morphe_music_hide_action_bar_title">隐藏操作栏</string>
+  <string name="morphe_music_hide_like_dislike_button_title">隐藏「赞」和「踩」按钮</string>
+  <string name="morphe_music_hide_comments_button_title">隐藏评论按钮</string>
+  <!-- 'Lyrics' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_lyrics_button_title">隐藏歌词按钮</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_share_button_title">隐藏分享按钮</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_save_button_title">隐藏保存按钮</string>
+  <!-- 'Download' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_download_button_title">隐藏下载按钮</string>
+  <!-- 'Start radio' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_radio_button_title">隐藏开始电台按钮</string>
   <!-- flyoutmenu.components.hideFlyoutMenuComponentsPatch -->
   <string name="morphe_music_hide_flyout_menu_components_screen_title">弹出菜单</string>
   <string name="morphe_music_hide_flyout_menu_components_screen_summary">选择在播放器和队列的弹出菜单中显示哪些组件</string>
