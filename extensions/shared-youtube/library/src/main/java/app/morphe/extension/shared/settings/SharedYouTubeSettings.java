@@ -20,6 +20,7 @@ import app.morphe.extension.shared.spoof.js.JavaScriptVariant;
  * or reference this class.
  */
 public class SharedYouTubeSettings extends BaseSettings {
+
     public static final BooleanSetting SETTINGS_INITIALIZED = new BooleanSetting("morphe_settings_initialized", FALSE, false, false);
 
     public static final BooleanSetting SETTINGS_SEARCH_HISTORY = new BooleanSetting("morphe_settings_search_history", TRUE, true);
@@ -68,11 +69,18 @@ public class SharedYouTubeSettings extends BaseSettings {
     public static final BooleanSetting EXTERNAL_DOWNLOADER_FLYOUT_BUTTON = new BooleanSetting("morphe_external_downloader_flyout_button", FALSE);
     public static final StringSetting EXTERNAL_DOWNLOADER_PACKAGE_NAME = new StringSetting("morphe_external_downloader_name", "com.deniscerri.ytdl" /* YTDLnis */, parentsAny(EXTERNAL_DOWNLOADER, EXTERNAL_DOWNLOADER_ACTION_BUTTON));
 
+    public static final BooleanSetting SPOOF_APP_VERSION = new BooleanSetting("morphe_spoof_app_version", FALSE, true, "morphe_spoof_app_version_user_dialog_message");
+    public static final StringSetting SPOOF_APP_VERSION_TARGET = new StringSetting("morphe_spoof_app_version_target", getDefaultSpoofAppVersionTarget(), true, parent(SPOOF_APP_VERSION));
+
     // Renamed settings
     private static final BooleanSetting DEPRECATED_SANITIZE_URL_QUERY = new BooleanSetting("morphe_sanitize_url_query", TRUE);
 
     static {
         // TODO: Eventually remove these migrations
         migrateOldSettingToNew(DEPRECATED_SANITIZE_URL_QUERY, SANITIZE_SHARING_LINKS);
+    }
+
+    private static String getDefaultSpoofAppVersionTarget() {
+        return ""; // Modified during patching.
     }
 }
