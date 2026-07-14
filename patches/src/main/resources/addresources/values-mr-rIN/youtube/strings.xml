@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">कॉम्पॅक्ट बॅनर आणि काही घटकांमधील अंतर लपवते</string>
   <string name="morphe_hide_expandable_card_title">व्हिडिओंच्या खाली विस्तारण्यायोग्य कार्ड</string>
   <string name="morphe_hide_expandable_card_entry_1">सर्व दर्शवा</string>
-  <string name="morphe_hide_expandable_card_entry_2">फक्त उत्पादन कार्ड लपवा</string>
-  <string name="morphe_hide_expandable_card_entry_3">फक्त सारांश कार्ड लपवा</string>
-  <string name="morphe_hide_expandable_card_entry_4">उत्पादन आणि सारांश कार्ड लपवा</string>
-  <string name="morphe_hide_expandable_card_entry_5">सर्व लपवा</string>
+  <string name="morphe_hide_expandable_card_entry_2">सारांश कार्ड फक्त लपवा</string>
+  <string name="morphe_hide_expandable_card_entry_3">सर्व लपवा</string>
   <string name="morphe_hide_floating_microphone_button_title">फ्लोटिंग मायक्रोफोन बटण लपवा</string>
   <string name="morphe_hide_floating_microphone_button_summary">शोध सूचना स्क्रीनच्या खालच्या उजव्या कोपऱ्यातील फ्लोटिंग मायक्रोफोन बटण लपवते</string>
   <string name="morphe_hide_horizontal_shelves_title">आडव्या रांगा लपवा</string>

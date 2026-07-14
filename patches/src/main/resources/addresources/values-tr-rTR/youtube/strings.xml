@@ -64,10 +64,8 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_compact_banner_summary">Kompakt afişleri ve bazı bileşenler arasındaki boşluğu gizler</string>
   <string name="morphe_hide_expandable_card_title">Videoların altındaki genişletilebilir kart</string>
   <string name="morphe_hide_expandable_card_entry_1">Tümünü göster</string>
-  <string name="morphe_hide_expandable_card_entry_2">Sadece ürün kartını gizle</string>
-  <string name="morphe_hide_expandable_card_entry_3">Sadece özet kartını gizle</string>
-  <string name="morphe_hide_expandable_card_entry_4">Ürün ve özet kartlarını gizle</string>
-  <string name="morphe_hide_expandable_card_entry_5">Tümünü gizle</string>
+  <string name="morphe_hide_expandable_card_entry_2">Yalnızca özet kartını gizle</string>
+  <string name="morphe_hide_expandable_card_entry_3">Tümünü gizle</string>
   <string name="morphe_hide_floating_microphone_button_title">Yüzen mikrofon düğmesini gizle</string>
   <string name="morphe_hide_floating_microphone_button_summary">Arama önerileri ekranının sağ alt köşesindeki yüzen mikrofon düğmesini gizler</string>
   <string name="morphe_hide_horizontal_shelves_title">Yatay rafları gizle</string>
@@ -284,7 +282,7 @@ Sınırlamalar:
   <string name="morphe_external_downloader_title">Harici indirme düğmesini göster</string>
   <string name="morphe_external_downloader_summary">Video oynatıcınızda harici indiricinizi açan bir katman düğmesi gösterir</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_external_downloader_action_button_title">İndirme düğmesini ve menüsünü değiştir</string>
+  <string name="morphe_external_downloader_action_button_title">İndir düğmesi &amp; menüsünü değiştir</string>
   <string name="morphe_external_downloader_action_button_summary">YouTube\'un yerleşik indirme özelliğini kullanmak yerine, seçtiğiniz üçüncü taraf indirme yöneticisini kullanır</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Seslendirme çevirisi</string>
@@ -390,7 +388,7 @@ Bilgi: Canlı yayınlarda çalışmayabilir"</string>
   <string name="morphe_swap_save_and_queue_actions_title">Kaydet ve Sıra eylemlerini değiştir</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Sıra seçenekleri için dokunun, daha sonra izle\'ye kaydetmek için dokunup basılı tutun</string>
   <string name="morphe_queue_override_flyout_menu_title">Akış açılır sıra düğmesini kullan</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Morphe sırasını, YouTube sırası yerine açar</string>
+  <string name="morphe_queue_override_flyout_menu_summary">YouTube sırası yerine Morphe sırasını açar</string>
   <string name="morphe_queue_manager_check_failed_auth">Giriş yapılmadı</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Oynatma listesi kimliği yok</string>
   <string name="morphe_queue_manager_check_failed_queue">Sıra boş</string>

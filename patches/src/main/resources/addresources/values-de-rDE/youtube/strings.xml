@@ -64,10 +64,8 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_compact_banner_summary">Verbirgt kompakte Banner und Abstände zwischen einigen Komponenten</string>
   <string name="morphe_hide_expandable_card_title">Erweiterbare Karten unter Videos</string>
   <string name="morphe_hide_expandable_card_entry_1">Alle anzeigen</string>
-  <string name="morphe_hide_expandable_card_entry_2">Nur Produktkarte ausblenden</string>
-  <string name="morphe_hide_expandable_card_entry_3">Nur Zusammenfassungskarte ausblenden</string>
-  <string name="morphe_hide_expandable_card_entry_4">Produkt- und Zusammenfassungskarten ausblenden</string>
-  <string name="morphe_hide_expandable_card_entry_5">Alle ausblenden</string>
+  <string name="morphe_hide_expandable_card_entry_2">Nur Zusammenfassungskarte ausblenden</string>
+  <string name="morphe_hide_expandable_card_entry_3">Alle ausblenden</string>
   <string name="morphe_hide_floating_microphone_button_title">Schwebenden Mikrofon-Button ausblenden</string>
   <string name="morphe_hide_floating_microphone_button_summary">Blendet die schwebende Mikrofon-Schaltfläche unten rechts in den Suchvorschlägen aus.</string>
   <string name="morphe_hide_horizontal_shelves_title">Horizontale Reihen ausblenden</string>

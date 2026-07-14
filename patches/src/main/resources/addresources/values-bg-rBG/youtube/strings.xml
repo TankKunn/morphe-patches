@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">Скрива компактните банери и разстоянието между някои компоненти</string>
   <string name="morphe_hide_expandable_card_title">Разширяеми карти под видеата</string>
   <string name="morphe_hide_expandable_card_entry_1">Покажи всички</string>
-  <string name="morphe_hide_expandable_card_entry_2">Скрий само картата на продукта</string>
-  <string name="morphe_hide_expandable_card_entry_3">Скрий само картата с резюме</string>
-  <string name="morphe_hide_expandable_card_entry_4">Скрий картата на продукта и картата с резюме</string>
-  <string name="morphe_hide_expandable_card_entry_5">Скрий всичко</string>
+  <string name="morphe_hide_expandable_card_entry_2">Скрий само картата с резюме</string>
+  <string name="morphe_hide_expandable_card_entry_3">Скрий всички</string>
   <string name="morphe_hide_floating_microphone_button_title">Плаващ бутон за микрофона</string>
   <string name="morphe_hide_floating_microphone_button_summary">Скрива плаващия бутон за микрофон в долния десен ъгъл на екрана за предложения за търсене</string>
   <string name="morphe_hide_horizontal_shelves_title">Хоризонтални секции</string>

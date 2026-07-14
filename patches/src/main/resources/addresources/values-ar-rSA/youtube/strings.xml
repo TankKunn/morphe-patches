@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">يخفي اللافتات المدمجة والمسافات بين بعض المكونات</string>
   <string name="morphe_hide_expandable_card_title">بطاقات قابلة للتوسع أسفل الفيديوهات</string>
   <string name="morphe_hide_expandable_card_entry_1">عرض الكل</string>
-  <string name="morphe_hide_expandable_card_entry_2">إخفاء بطاقة المنتج فقط</string>
-  <string name="morphe_hide_expandable_card_entry_3">إخفاء بطاقة الملخص فقط</string>
-  <string name="morphe_hide_expandable_card_entry_4">إخفاء بطاقتي المنتج والملخص</string>
-  <string name="morphe_hide_expandable_card_entry_5">إخفاء الكل</string>
+  <string name="morphe_hide_expandable_card_entry_2">إخفاء بطاقة الملخص فقط</string>
+  <string name="morphe_hide_expandable_card_entry_3">إخفاء الكل</string>
   <string name="morphe_hide_floating_microphone_button_title">إخفاء زر الميكروفون العائم</string>
   <string name="morphe_hide_floating_microphone_button_summary">يخفي زر الميكروفون العائم في الزاوية اليمنى السفلية من شاشة اقتراحات البحث</string>
   <string name="morphe_hide_horizontal_shelves_title">إخفاء الرفوف الأفقية</string>

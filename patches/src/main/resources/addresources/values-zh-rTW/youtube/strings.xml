@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">隱藏精簡的橫幅和某些元件之間的間距</string>
   <string name="morphe_hide_expandable_card_title">影片下方的可展開卡片</string>
   <string name="morphe_hide_expandable_card_entry_1">顯示全部</string>
-  <string name="morphe_hide_expandable_card_entry_2">僅隱藏產品卡片</string>
-  <string name="morphe_hide_expandable_card_entry_3">僅隱藏摘要卡片</string>
-  <string name="morphe_hide_expandable_card_entry_4">隱藏產品和摘要卡片</string>
-  <string name="morphe_hide_expandable_card_entry_5">隱藏全部</string>
+  <string name="morphe_hide_expandable_card_entry_2">隱藏摘要卡片</string>
+  <string name="morphe_hide_expandable_card_entry_3">隱藏全部</string>
   <string name="morphe_hide_floating_microphone_button_title">隱藏「懸浮麥克風」按鈕</string>
   <string name="morphe_hide_floating_microphone_button_summary">隱藏搜尋建議螢幕右下角的浮動麥克風按鈕</string>
   <string name="morphe_hide_horizontal_shelves_title">隱藏橫向區塊</string>

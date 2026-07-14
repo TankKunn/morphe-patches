@@ -64,10 +64,8 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_compact_banner_summary">Sıx panelləri və bəzi elementlər arası boşluğu gizlədir</string>
   <string name="morphe_hide_expandable_card_title">Videoların aşağısında genişlənən kartlar</string>
   <string name="morphe_hide_expandable_card_entry_1">Hamısını göstər</string>
-  <string name="morphe_hide_expandable_card_entry_2">Yalnız məhsul kartını gizlət</string>
-  <string name="morphe_hide_expandable_card_entry_3">Yalnız xülasə kartını gizlət</string>
-  <string name="morphe_hide_expandable_card_entry_4">Məhsul və xülasə kartlarını gizlət</string>
-  <string name="morphe_hide_expandable_card_entry_5">Hamısını gizlət</string>
+  <string name="morphe_hide_expandable_card_entry_2">Yalnız xülasə kartını gizlət</string>
+  <string name="morphe_hide_expandable_card_entry_3">Hamısını gizlət</string>
   <string name="morphe_hide_floating_microphone_button_title">Üzən mikrofon düyməsini gizlət</string>
   <string name="morphe_hide_floating_microphone_button_summary">Axtarış təklifləri ekranının aşağı-sağ küncündəki üzən mikrofon düyməsin gizlədir</string>
   <string name="morphe_hide_horizontal_shelves_title">Üfüqi hissələri gizlət</string>
@@ -212,6 +210,8 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_comments_emoji_and_timestamp_buttons_title">Emoji və Vaxt damğası düymələrini gizlət</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Filtr cərgəsi seçimlərini gizlət</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">\"Yuxarı\" və \"Ən Yeni\" istisna olmaqla, bütün filtr cərgəsi seçimlərini gizlədir</string>
+  <string name="morphe_hide_comments_gift_animation_and_cards_title">Hədiyyə animasiyasını və kartlarını gizlət</string>
+  <string name="morphe_hide_comments_gift_button_title">Hədiyyə düyməsini gizlət</string>
   <string name="morphe_hide_comments_info_button_title">Məlumat düyməsini gizlət</string>
   <string name="morphe_hide_comments_live_chat_donators_bar_title">Canlı söhbət ianəçiləri tabelin gizlət</string>
   <string name="morphe_hide_comments_preview_comment_title">Önbaxış şərhin gizlət</string>
@@ -255,7 +255,7 @@ Məhdudiyyətlər:
   <string name="morphe_hide_general_ads_title">Ümumi reklamları gizlət</string>
   <string name="morphe_hide_merchandise_banners_title">Məhsul afişaların gizlət</string>
   <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_paid_promotion_label_title">\"Ödənişli tanıtım daxildir\" etiketini gizlət</string>
+  <string name="morphe_hide_paid_promotion_label_title">\"Ödənişli tanıtım içərir\" etiketini gizlət</string>
   <string name="morphe_hide_player_popup_ads_title">Oynadıcı ani açılan reklamlarını gizlət</string>
   <string name="morphe_hide_self_sponsor_ads_title">Öz-sponsorlu kartları gizlət</string>
   <string name="morphe_hide_shopping_links_title">Alış-veriş linklərini gizlət</string>
@@ -282,6 +282,8 @@ Məhdudiyyətlər:
   <string name="morphe_external_downloader_title">Xarici yükləmə düyməsini göstər</string>
   <string name="morphe_external_downloader_summary">Video oynadıcıda xarici yükləyicinizi açan örtük düyməsini göstərir</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_external_downloader_action_button_title">Endirin düyməsini &amp; seçimini əvəzlə</string>
+  <string name="morphe_external_downloader_action_button_summary">YouTube-un qurulmuş yükləmə xüsusiyyəti əvəzinə seçdiyiniz xarici yükləyicini istifadə edir</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Səs üstələyici tərcümə</string>
   <string name="morphe_vot_screen_summary">Cihazdakı mətni nitqə çevirməni istifadə edərək video titrlərini oynatma ilə sinxronlaşdırıb ucadan oxu</string>
@@ -414,8 +416,8 @@ Məlumat: Canlı yayımlarda işləməyə bilər"</string>
   <string name="morphe_open_channel_of_live_avatar_title">Canlı profildən kanalı aç</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Kanalın profilinə toxunduqda canlı yayımın açılmasın əngəlləyir</string>
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
-  <string name="morphe_disable_precise_seeking_gesture_title">Dəqiq irəli-geri çəkmə jestini qapat</string>
-  <string name="morphe_disable_precise_seeking_gesture_summary">Çevirmə cizgisin yuxarı çəkərkən aktivləşən dəqiq çevirmə rejimini qapadır</string>
+  <string name="morphe_disable_precise_seeking_gesture_title">Dəqiq axtarış jestini qapat</string>
+  <string name="morphe_disable_precise_seeking_gesture_summary">Çevirmə cizgisin yuxarı çəkərkən aktivləşən dəqiq axtarış rejimini qapadır</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Canlı yayım DVR-ni aktivləşdir</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
@@ -527,7 +529,7 @@ Qeyd: Əgər \"Video yayımlarını saxtalaşdır\" işlək deyilsə, bunu aktiv
   <string name="morphe_hide_clip_button_title">Kəsmə düyməsini gizlət</string>
   <string name="morphe_hide_clip_button_summary">Bu, bəzi istifadəçi hesabları üçün işləməyə bilər</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shop_button_title">Mağaza düyməsini gizlət</string>
+  <string name="morphe_hide_shop_button_title">Dükan düyməsini gizlət</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_save_button_title">Saxla düyməsini gizlət</string>
   <string name="morphe_hide_more_button_title">Daha çox düyməsini gizlət</string>
@@ -726,7 +728,7 @@ Tənzimləmələrə daxil olmaq üçün Ümumi → Alətlər Cərgəsi→ Tənzi
   <string name="morphe_hide_shorts_preview_comment_title">Öncül baxış şərhini gizlət</string>
   <string name="morphe_hide_shorts_save_sound_button_title">Musiqini saxla düyməsini gizlət</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Axtarış təkliflərini gizlət</string>
-  <string name="morphe_hide_shorts_shop_button_title">Mağaza düyməsini gizlət</string>
+  <string name="morphe_hide_shorts_shop_button_title">Dükan düyməsini gizlət</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Abunə ol düyməsini gizlət</string>
   <string name="morphe_hide_shorts_tagged_products_title">Etiketlənmiş məhsulları gizlət</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Yaxınlaşan düyməsini gizlət</string>
@@ -862,6 +864,9 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <string name="morphe_open_system_share_sheet_summary">Məzmun paylaşanda tətbiqdaxili menyu əvəzinə sistem paylaşım cildini açır</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube Music düymələrini nəzərə alma</string>
+  <string name="morphe_override_youtube_music_buttons_summary">Rəsmi YouTube Music tətbiqi əvəzinə üstünlük verdiyiniz musiqi tətbiqini açır</string>
+  <string name="morphe_music_package_name_title">Musiqi tətbiqi paketinin adı</string>
+  <string name="morphe_music_package_name_summary">Quraşdırdığınız musiqi tətbiqinin paket adı</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Başlanğıc səhifəsi</string>
   <string name="morphe_change_start_page_entry_default">İlkin</string>
@@ -881,7 +886,7 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <string name="morphe_change_start_page_entry_notifications">Bildirişlər</string>
   <string name="morphe_change_start_page_entry_playlists">Pleylistlər</string>
   <string name="morphe_change_start_page_entry_search">Axtarış</string>
-  <string name="morphe_change_start_page_entry_shopping">Mağaza</string>
+  <string name="morphe_change_start_page_entry_shopping">Alış-veriş</string>
   <string name="morphe_change_start_page_entry_shorts">Shorts</string>
   <string name="morphe_change_start_page_entry_sports">İdman</string>
   <string name="morphe_change_start_page_entry_subscriptions">Abunəliklər</string>
@@ -999,25 +1004,48 @@ DeArrow.ajay.app 'i açmaq üçün buraya toxun"</string>
   <string name="morphe_disable_haptic_feedback_title">Əks-əlaqə reaksiyası</string>
   <string name="morphe_disable_haptic_feedback_summary">Cihazın titrəməsinə səbəb olacaq əks toxunuşları seç</string>
   <string name="morphe_disable_haptic_feedback_chapters_title">Fəsillər reaksiyasın qapat</string>
-  <string name="morphe_disable_haptic_feedback_precise_seeking_title">Dəqiq irəli-geri çəkmə toxunuş hissin qapat</string>
+  <string name="morphe_disable_haptic_feedback_precise_seeking_title">Dəqiq axtarış toxunuş hissin qapat</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Geriyə çevirmə toxunuş hissini qapat</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Toxun və saxla reaksiyalarını qapat</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Yaxınlaşdırma reaksiyasın qapat</string>
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Bildiriş media nəzarətçiləri</string>
+  <string name="morphe_notification_media_screen_summary">Kilid ekranınızda və bildiriş lövhənizdə görünən oynatma nəzarətçilərini fərdiləşdirin</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Əvvəlki &amp; Növbəti düymələrini gizlət</string>
+  <string name="morphe_hide_notification_media_prev_next_summary">Media bildirişlərində, kilid ekranında və qulaqlıq idarəetmələrində Əvvəlki və Növbəti düyməsini gizlədir</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Çevirmə cizgisin qapat</string>
+  <string name="morphe_disable_notification_media_seekbar_summary">Kilid ekranında və bildiriş panelində çevirmə cizgisinin sürüklənməsinə mane olur</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Bu yaxınlarda hesabınıza giriş məlumatlarınızı dəyişmisinizsə, MicroG-ni silin və təkrar quraşdırın.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->
+  <string name="morphe_bypass_link_redirects_title">Link yönləndirmələrini yan keç</string>
+  <string name="morphe_bypass_link_redirects_summary">İzləmə linkini (youtube.com/redirect) yan keçərək birbaşa orijinal linki açır</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Bağlantıları brauzerdə aç</string>
+  <string name="morphe_external_browser_summary">Linkləri tətbiqdaxili brauzer əvəzinə, xarici brauzerdə açır</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Avtomatik</string>
+  <string name="morphe_remember_video_quality_last_selected_title">Video keyfiyyətin xatırla</string>
+  <string name="morphe_remember_video_quality_last_selected_summary">Əl ilə keyfiyyət seçiminizi bütün gələcək videolara tətbiq edir</string>
+  <string name="morphe_remember_video_quality_last_selected_toast_title">Keyfiyyət dəyişikliyi bildirişləri</string>
+  <string name="morphe_remember_video_quality_last_selected_toast_summary">Yeni ilkin keyfiyyət saxlanıldıqda bildiriş göstərir</string>
   <string name="morphe_video_quality_default_wifi_title">Wi-Fi şəbəkəsində ilkin video keyfiyyəti</string>
   <string name="morphe_video_quality_default_mobile_title">Mobil şəbəkədə ilkin video keyfiyyəti</string>
+  <string name="morphe_remember_shorts_quality_last_selected_title">Shorts keyfiyyətin xatırla</string>
+  <string name="morphe_remember_shorts_quality_last_selected_summary">Əl ilə keyfiyyət seçiminizi bütün gələcək Shorts-lara tətbiq edir</string>
   <string name="morphe_shorts_quality_default_wifi_title">Wi-Fi şəbəkəsində ilkin Shorts keyfiyyəti</string>
   <string name="morphe_shorts_quality_default_mobile_title">Mobil şəbəkədə ilkin Shorts keyfiyyəti</string>
+  <string name="morphe_remember_video_quality_toast_mobile">İlkin mobil keyfiyyət %s olaraq dəyişdirildi</string>
+  <string name="morphe_remember_video_quality_toast_wifi">İlkin Wi-Fi keyfiyyəti %s olaraq dəyişdirildi</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Shorts mobil keyfiyyəti %s olaraq dəyişdirildi</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Shorts Wi-Fi keyfiyyəti %s olaraq dəyişdirildi</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
+  <string name="morphe_playback_speed_dialog_button_title">Oynatma sürəti düyməsini göstər</string>
+  <string name="morphe_playback_speed_dialog_button_summary">Sürəti ilkin vəziyyətə qaytarmaq üçün toxun və saxla</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Keyfiyyət düyməsini göstər</string>
+  <string name="morphe_video_quality_dialog_button_summary">Keyfiyyəti ilkin vəziyyətə qaytarmaq üçün toxun və saxla</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Fərdi oynatma sürəti siyahısı</string>
   <string name="morphe_restore_old_speed_menu_title">Köhnə oynatma sürəti menyusunu bərpa et</string>
@@ -1028,6 +1056,7 @@ DeArrow.ajay.app 'i açmaq üçün buraya toxun"</string>
   <string name="morphe_remember_playback_speed_last_selected_title">Oynatma sürətin xatırla</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_title">Sürət dəyişikliyi bildirişləri</string>
   <string name="morphe_playback_speed_default_title">İlkin oynatma sürəti</string>
+  <string name="morphe_remember_playback_speed_toast">İlkin oynatma sürəti %s kimi dəyişdirildi</string>
   <string name="morphe_disable_playback_speed_music_title">Musiqi üçün normal sürət istifadə et</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">HDR Videonu Qapat</string>
@@ -1044,6 +1073,7 @@ Məhdudiyyətlər:
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Bu xüsusiyyəti istifadə etmək üçün \"Video yayımların saxtalaşdır\"-ı Android VR-a və ya Android Studio-ya təyin et</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
+  <string name="morphe_advanced_video_quality_menu_title">Təkmil keyfiyyət menyusunu aç</string>
   <string name="morphe_advanced_video_quality_menu_summary">Keyfiyyət seçimi menyusunu ötürür və birbaşa Təkmil keyfiyyət menyusunu açır</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Premium keyfiyyət seçimlərini gizlət</string>

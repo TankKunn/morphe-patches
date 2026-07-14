@@ -60,10 +60,6 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_compact_banner_summary">Döljer kompakta banners och avståndet mellan vissa komponenter</string>
   <string name="morphe_hide_expandable_card_title">Expanderbara kort under videor</string>
   <string name="morphe_hide_expandable_card_entry_1">Visa alla</string>
-  <string name="morphe_hide_expandable_card_entry_2">Dölj endast produktkort</string>
-  <string name="morphe_hide_expandable_card_entry_3">Dölj endast översiktskort</string>
-  <string name="morphe_hide_expandable_card_entry_4">Dölj produkt- och översiktskort</string>
-  <string name="morphe_hide_expandable_card_entry_5">Dölj alla</string>
   <string name="morphe_hide_floating_microphone_button_title">Dölj flytande mikrofonknapp</string>
   <string name="morphe_hide_floating_microphone_button_summary">Döljer den flytande mikrofonknappen nere till höger på skärmen för sökförslag</string>
   <string name="morphe_hide_horizontal_shelves_title">Dölj horisontella hyllor</string>

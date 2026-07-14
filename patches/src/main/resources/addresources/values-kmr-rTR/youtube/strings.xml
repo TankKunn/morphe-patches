@@ -65,10 +65,8 @@ Guherînan têne xistine:
   <string name="morphe_hide_compact_banner_summary">Bannerên kêmkirî û valahiya di navbera pêkhateyên hinekî de veşêrin</string>
   <string name="morphe_hide_expandable_card_title">Kartên fireh ên di bin vîdyoyan de</string>
   <string name="morphe_hide_expandable_card_entry_1">Hemûyan nîşan bide</string>
-  <string name="morphe_hide_expandable_card_entry_2">Tenê karta hilberê veşêrin</string>
-  <string name="morphe_hide_expandable_card_entry_3">Tenê karta kurtkirinê veşêrin</string>
-  <string name="morphe_hide_expandable_card_entry_4">Karta hilberê û kurtkirinê veşêrin</string>
-  <string name="morphe_hide_expandable_card_entry_5">Hemûyan veşêrin</string>
+  <string name="morphe_hide_expandable_card_entry_2">Tenê karta kurteyî veşere</string>
+  <string name="morphe_hide_expandable_card_entry_3">Hemû veşere</string>
   <string name="morphe_hide_floating_microphone_button_title">Bicikên dirêj ên mikrifonê bidin veqêşînin</string>
   <string name="morphe_hide_floating_microphone_button_summary">Dugmeya mikrofonê ya mayî di kûçeya jorîn-rastê de li ser ekrana pêşniyarên lêgerînê veşêrin</string>
   <string name="morphe_hide_horizontal_shelves_title">Şelfeyên qereziya nîşandinê hidin</string>

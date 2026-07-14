@@ -102,8 +102,10 @@ Second \"item\" text"</string>
 YouTube Music 8.x에서는 크로스페이드가 작동하지 않습니다. 크로스페이드는 YouTube Music 9.x 이상에서만 지원됩니다"</string>
   <string name="morphe_music_crossfade_about_credit_title">크레딧</string>
   <string name="morphe_music_crossfade_about_credit_summary">VazerOG의 크로스페이드 기능</string>
-  <!-- interaction.permanentrepeat.permanentRepeatPatch -->
-  <string name="morphe_music_play_permanent_repeat_title">반복 재생 토글 상태 저장하기</string>
+  <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->
+  <string name="morphe_music_remember_repeat_state_title">반복 재생 토글 상태 저장하기</string>
+  <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
+  <string name="morphe_music_remember_shuffle_state_title">셔플 재생 토글 상태 저장하기</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">싫어요 리다이렉션 비활성화하기</string>
   <string name="morphe_music_disable_dislike_redirection_summary">싫어요 버튼을 탭했을 경우에 다음 트랙으로 건너뛰는 것을 방지합니다</string>

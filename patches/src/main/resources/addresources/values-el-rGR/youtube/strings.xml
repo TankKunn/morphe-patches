@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">Απόκρυψη συμπυκτωμένων διαφημιστικών banners και διαστήματος μεταξύ ορισμένων στοιχείων</string>
   <string name="morphe_hide_expandable_card_title">Επεκτάσιμες κάρτες κάτω από τα βίντεο</string>
   <string name="morphe_hide_expandable_card_entry_1">Προβολή όλων</string>
-  <string name="morphe_hide_expandable_card_entry_2">Απόκρυψη μόνο της κάρτας προϊόντος</string>
-  <string name="morphe_hide_expandable_card_entry_3">Απόκρυψη μόνο της καρτέλας περίληψης</string>
-  <string name="morphe_hide_expandable_card_entry_4">Απόκρυψη καρτών προϊόντος και περίληψης</string>
-  <string name="morphe_hide_expandable_card_entry_5">Απόκρυψη όλων</string>
+  <string name="morphe_hide_expandable_card_entry_2">Απόκρυψη μόνο της κάρτας σύνοψης</string>
+  <string name="morphe_hide_expandable_card_entry_3">Απόκρυψη όλων</string>
   <string name="morphe_hide_floating_microphone_button_title">Απόκρυψη \"Αιωρούμενο Κουμπί Μικροφώνου\" στην αναζήτηση</string>
   <string name="morphe_hide_floating_microphone_button_summary">Απόκρυψη του πλωτού κουμπιού μικροφώνου στην κάτω δεξιά γωνία της οθόνης προτάσεων αναζήτησης</string>
   <string name="morphe_hide_horizontal_shelves_title">Απόκρυψη \"Οριζοντίων Ραφιών\"</string>

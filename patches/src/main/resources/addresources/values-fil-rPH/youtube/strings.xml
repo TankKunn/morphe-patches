@@ -64,10 +64,8 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_compact_banner_summary">Itinatago ang mga compact banner at espasyo sa pagitan ng ilang component</string>
   <string name="morphe_hide_expandable_card_title">Mga expandable card sa ilalim ng mga video</string>
   <string name="morphe_hide_expandable_card_entry_1">Ipakita lahat</string>
-  <string name="morphe_hide_expandable_card_entry_2">Itago lang ang product card</string>
-  <string name="morphe_hide_expandable_card_entry_3">Itago lang ang summary card</string>
-  <string name="morphe_hide_expandable_card_entry_4">Itago ang product at summary card</string>
-  <string name="morphe_hide_expandable_card_entry_5">Itago lahat</string>
+  <string name="morphe_hide_expandable_card_entry_2">Itago lamang ang summary card</string>
+  <string name="morphe_hide_expandable_card_entry_3">Itago ang lahat</string>
   <string name="morphe_hide_floating_microphone_button_title">Itago ang button ng lumulutang na mikropono</string>
   <string name="morphe_hide_floating_microphone_button_summary">Itinatago ang lumulutang na button ng microphone sa ibabang-kanang sulok ng search suggestions screen</string>
   <string name="morphe_hide_horizontal_shelves_title">Itago ang mga horizontal shelf</string>

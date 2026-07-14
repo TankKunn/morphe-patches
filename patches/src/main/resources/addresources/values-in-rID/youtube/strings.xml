@@ -63,10 +63,8 @@ Perubahan termasuk:
   <string name="morphe_hide_compact_banner_summary">Menyembunyikan banner ringkas dan spasi antara beberapa komponen</string>
   <string name="morphe_hide_expandable_card_title">Kartu yang dapat diperluas di bawah video ditampilkan</string>
   <string name="morphe_hide_expandable_card_entry_1">Tampilkan semua</string>
-  <string name="morphe_hide_expandable_card_entry_2">Sembunyikan hanya kartu produk</string>
-  <string name="morphe_hide_expandable_card_entry_3">Sembunyikan hanya kartu ringkasan</string>
-  <string name="morphe_hide_expandable_card_entry_4">Sembunyikan kartu produk dan ringkasan</string>
-  <string name="morphe_hide_expandable_card_entry_5">Sembunyikan semua</string>
+  <string name="morphe_hide_expandable_card_entry_2">Sembunyikan kartu ringkasan saja</string>
+  <string name="morphe_hide_expandable_card_entry_3">Sembunyikan semua</string>
   <string name="morphe_hide_floating_microphone_button_title">Sembunyikan tombol mikrofon mengambang</string>
   <string name="morphe_hide_floating_microphone_button_summary">Menyembunyikan tombol mikrofon yang mengambang di sudut kanan bawah layar saran pencarian</string>
   <string name="morphe_hide_horizontal_shelves_title">Sembunyikan rak-rak mendatar</string>

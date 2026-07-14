@@ -64,10 +64,8 @@ Spremembe vključujejo:
   <string name="morphe_hide_compact_banner_summary">Skrije kompaktne pasice in razmike med nekaterimi elementi</string>
   <string name="morphe_hide_expandable_card_title">Razširljive kartice pod videoposnetki</string>
   <string name="morphe_hide_expandable_card_entry_1">Prikaži vse</string>
-  <string name="morphe_hide_expandable_card_entry_2">Skrij samo kartico izdelka</string>
-  <string name="morphe_hide_expandable_card_entry_3">Skrij samo kartico s povzetkom</string>
-  <string name="morphe_hide_expandable_card_entry_4">Skrij kartici izdelka in povzetka</string>
-  <string name="morphe_hide_expandable_card_entry_5">Skrij vse</string>
+  <string name="morphe_hide_expandable_card_entry_2">Skrijј samo kartico z povzetkom</string>
+  <string name="morphe_hide_expandable_card_entry_3">Skrij vse</string>
   <string name="morphe_hide_floating_microphone_button_title">Skrij plavajoči gumb za mikrofon</string>
   <string name="morphe_hide_floating_microphone_button_summary">Skrije plavajoči gumb za mikrofon v spodnjem desnem kotu zaslona s predlogi iskanja</string>
   <string name="morphe_hide_horizontal_shelves_title">Skrij vodoravne police</string>

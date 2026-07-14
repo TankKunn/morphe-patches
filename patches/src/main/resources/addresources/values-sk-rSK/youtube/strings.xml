@@ -64,10 +64,8 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_compact_banner_summary">Skryje kompaktné bannery a medzery medzi niektorými komponentmi</string>
   <string name="morphe_hide_expandable_card_title">Rozšíriteľné karty pod videami</string>
   <string name="morphe_hide_expandable_card_entry_1">Zobraziť všetko</string>
-  <string name="morphe_hide_expandable_card_entry_2">Skryť kartu produktu iba</string>
-  <string name="morphe_hide_expandable_card_entry_3">Skryť kartu súhrnu iba</string>
-  <string name="morphe_hide_expandable_card_entry_4">Skryť kartu produktu a súhrnu</string>
-  <string name="morphe_hide_expandable_card_entry_5">Skryť všetko</string>
+  <string name="morphe_hide_expandable_card_entry_2">Skryť zhrňovaciu kartu iba</string>
+  <string name="morphe_hide_expandable_card_entry_3">Skryť všetko</string>
   <string name="morphe_hide_floating_microphone_button_title">Skryť plávajúce tlačidlo mikrofónu</string>
   <string name="morphe_hide_floating_microphone_button_summary">Skryje plávajúce tlačidlo mikrofónu v pravom dolnom rohu obrazovky návrhov vyhľadávania</string>
   <string name="morphe_hide_horizontal_shelves_title">Skryť horizontálne police</string>

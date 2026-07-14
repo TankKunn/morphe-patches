@@ -64,10 +64,8 @@ Schimbari incluse:
   <string name="morphe_hide_compact_banner_summary">Ascunde bannerele compacte și spațierea dintre unele componente</string>
   <string name="morphe_hide_expandable_card_title">Carduri extensibile sub videoclipuri</string>
   <string name="morphe_hide_expandable_card_entry_1">Afișează tot</string>
-  <string name="morphe_hide_expandable_card_entry_2">Ascunde doar cardul produsului</string>
-  <string name="morphe_hide_expandable_card_entry_3">Ascunde doar cardul de sumar</string>
-  <string name="morphe_hide_expandable_card_entry_4">Ascunde cardurile de produs și de sumar</string>
-  <string name="morphe_hide_expandable_card_entry_5">Ascunde tot</string>
+  <string name="morphe_hide_expandable_card_entry_2">Ascunde doar cardul de rezumat</string>
+  <string name="morphe_hide_expandable_card_entry_3">Ascunde tot</string>
   <string name="morphe_hide_floating_microphone_button_title">Ascunderea butonului microfon plutitor</string>
   <string name="morphe_hide_floating_microphone_button_summary">Ascunde butonul plutitor al microfonului în colțul din dreapta jos al ecranului de sugestii de căutare</string>
   <string name="morphe_hide_horizontal_shelves_title">Ascunde rafturile orizontale</string>

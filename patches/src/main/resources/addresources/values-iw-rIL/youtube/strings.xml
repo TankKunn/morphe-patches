@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">מסתיר באנרים קומפקטיים ומרווחים בין רכיבים מסוימים</string>
   <string name="morphe_hide_expandable_card_title">כרטיסים ניתנים להרחבה מתחת לסרטונים</string>
   <string name="morphe_hide_expandable_card_entry_1">הצג הכל</string>
-  <string name="morphe_hide_expandable_card_entry_2">הסתר כרטיס מוצר בלבד</string>
-  <string name="morphe_hide_expandable_card_entry_3">הסתר כרטיס סיכום בלבד</string>
-  <string name="morphe_hide_expandable_card_entry_4">הסתר כרטיסי מוצר וסיכום</string>
-  <string name="morphe_hide_expandable_card_entry_5">הסתר הכל</string>
+  <string name="morphe_hide_expandable_card_entry_2">הסתר רק את כרטיס הסיכום</string>
+  <string name="morphe_hide_expandable_card_entry_3">הסתר הכל</string>
   <string name="morphe_hide_floating_microphone_button_title">הסתר לחצן מיקרופון צף</string>
   <string name="morphe_hide_floating_microphone_button_summary">מסתיר כפתור מיקרופון צף בפינה הימנית התחתונה של מסך הצעות החיפוש</string>
   <string name="morphe_hide_horizontal_shelves_title">הסתר מדפים אופקיים</string>

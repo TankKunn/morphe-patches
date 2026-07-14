@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">কম্প্যাক্ট ব্যানার এবং কিছু উপাদানের মধ্যে স্থান লুকিয়ে রাখে</string>
   <string name="morphe_hide_expandable_card_title">ভিডিওর নিচে প্রসারিত কার্ড</string>
   <string name="morphe_hide_expandable_card_entry_1">সব দেখান</string>
-  <string name="morphe_hide_expandable_card_entry_2">শুধু পণ্যের কার্ডটি লুকান</string>
-  <string name="morphe_hide_expandable_card_entry_3">শুধু সারসংক্ষেপ কার্ডটি লুকান</string>
-  <string name="morphe_hide_expandable_card_entry_4">পণ্য এবং সারসংক্ষেপ কার্ড উভয়ই লুকান</string>
-  <string name="morphe_hide_expandable_card_entry_5">সব লুকান</string>
+  <string name="morphe_hide_expandable_card_entry_2">সামারি কার্ডটি লুকান</string>
+  <string name="morphe_hide_expandable_card_entry_3">সব লুকান</string>
   <string name="morphe_hide_floating_microphone_button_title">ভাসমান মাইক্রোফোন বোতাম লুকান</string>
   <string name="morphe_hide_floating_microphone_button_summary">অনুসন্ধান প্রস্তাবনার স্ক্রিনের নীচের-ডান কোণে ভাসমান মাইক্রোফোন বোতামটি লুকিয়ে রাখে</string>
   <string name="morphe_hide_horizontal_shelves_title">আনুভূমিক শেলফ লুকান</string>

@@ -64,10 +64,8 @@ Endringer inkluderer:
   <string name="morphe_hide_compact_banner_summary">Skjuler kompakte bannere og mellomrom mellom noen komponenter</string>
   <string name="morphe_hide_expandable_card_title">Utvidbare kort under videoer</string>
   <string name="morphe_hide_expandable_card_entry_1">Vis alle</string>
-  <string name="morphe_hide_expandable_card_entry_2">Skjul kun produktkort</string>
-  <string name="morphe_hide_expandable_card_entry_3">Skjul kun sammendragskort</string>
-  <string name="morphe_hide_expandable_card_entry_4">Skjul produkt- og sammendragskort</string>
-  <string name="morphe_hide_expandable_card_entry_5">Skjul alle</string>
+  <string name="morphe_hide_expandable_card_entry_2">Skjul sammendragskortet</string>
+  <string name="morphe_hide_expandable_card_entry_3">Skjul alle</string>
   <string name="morphe_hide_floating_microphone_button_title">Skjul flytende mikrofonknapp</string>
   <string name="morphe_hide_floating_microphone_button_summary">Skjuler flytende mikrofonknapp i nedre høyre hjørne av søkeforslags-skjermen</string>
   <string name="morphe_hide_horizontal_shelves_title">Skjul horisontale hyller</string>

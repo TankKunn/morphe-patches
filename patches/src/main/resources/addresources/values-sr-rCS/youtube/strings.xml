@@ -64,10 +64,8 @@ Promene uključuju:
   <string name="morphe_hide_compact_banner_summary">Sakriva kompaktne bannere i razmake između nekih komponenti</string>
   <string name="morphe_hide_expandable_card_title">Kartice koje se mogu proširiti ispod video zapisa</string>
   <string name="morphe_hide_expandable_card_entry_1">Pokaži sve</string>
-  <string name="morphe_hide_expandable_card_entry_2">Sakrij samo karticu proizvoda</string>
-  <string name="morphe_hide_expandable_card_entry_3">Sakrij samo karticu sažetka</string>
-  <string name="morphe_hide_expandable_card_entry_4">Sakrij kartice proizvoda i sažetka</string>
-  <string name="morphe_hide_expandable_card_entry_5">Sakrij sve</string>
+  <string name="morphe_hide_expandable_card_entry_2">Sakrij samo karticu sa sažetkom</string>
+  <string name="morphe_hide_expandable_card_entry_3">Sakrij sve</string>
   <string name="morphe_hide_floating_microphone_button_title">Sakrij plutajuće dugme mikrofona</string>
   <string name="morphe_hide_floating_microphone_button_summary">Sakriva plutajuće dugme za mikrofon u donjem desnom uglu ekrana predloga pretrage</string>
   <string name="morphe_hide_horizontal_shelves_title">Sakrij horizontalne police</string>

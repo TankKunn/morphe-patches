@@ -64,10 +64,8 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_compact_banner_summary">Skjuler kompakte bannere og afstand mellem nogle komponenter</string>
   <string name="morphe_hide_expandable_card_title">Udvidelige kort under videoer</string>
   <string name="morphe_hide_expandable_card_entry_1">Vis alle</string>
-  <string name="morphe_hide_expandable_card_entry_2">Skjul kun produktkort</string>
-  <string name="morphe_hide_expandable_card_entry_3">Skjul kun resumé kort</string>
-  <string name="morphe_hide_expandable_card_entry_4">Skjul produkt- og resumé kort</string>
-  <string name="morphe_hide_expandable_card_entry_5">Skjul alle</string>
+  <string name="morphe_hide_expandable_card_entry_2">Skjul kun oversigtskort</string>
+  <string name="morphe_hide_expandable_card_entry_3">Skjul alle</string>
   <string name="morphe_hide_floating_microphone_button_title">Skjul svævende mikrofonknap</string>
   <string name="morphe_hide_floating_microphone_button_summary">Skjuler den flydende mikrofontilføjelser i nederste højre hjørne af søgeforslagsskærmen</string>
   <string name="morphe_hide_horizontal_shelves_title">Skjul vandrette hylder</string>

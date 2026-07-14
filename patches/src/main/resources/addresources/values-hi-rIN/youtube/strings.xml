@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">कॉम्पैक्ट बैनर और कुछ घटकों के बीच दूरी को छुपाता है</string>
   <string name="morphe_hide_expandable_card_title">वीडियो के नीचे विस्तार योग्य कार्ड</string>
   <string name="morphe_hide_expandable_card_entry_1">सभी दिखाएं</string>
-  <string name="morphe_hide_expandable_card_entry_2">केवल उत्पाद कार्ड छुपाएं</string>
-  <string name="morphe_hide_expandable_card_entry_3">केवल सारांश कार्ड छुपाएं</string>
-  <string name="morphe_hide_expandable_card_entry_4">उत्पाद और सारांश कार्ड छुपाएं</string>
-  <string name="morphe_hide_expandable_card_entry_5">सभी छुपाएं</string>
+  <string name="morphe_hide_expandable_card_entry_2">सारांश कार्ड केवल छिपाएं</string>
+  <string name="morphe_hide_expandable_card_entry_3">सभी छिपाएं</string>
   <string name="morphe_hide_floating_microphone_button_title">छुपाएं तैरती माइक्रोफोन बटन</string>
   <string name="morphe_hide_floating_microphone_button_summary">खोज सुझाव स्क्रीन के निचले-दाएं कोने में फ्लोटिंग माइक्रोफ़ोन बटन को छुपाता है</string>
   <string name="morphe_hide_horizontal_shelves_title">छुपाएं क्षैतिज रैक</string>

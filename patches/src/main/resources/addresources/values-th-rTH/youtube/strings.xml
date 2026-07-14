@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">ซ่อนแบนเนอร์ขนาดเล็กและช่องว่างระหว่างส่วนประกอบบางอย่าง</string>
   <string name="morphe_hide_expandable_card_title">การ์ดที่ขยายได้ใต้คลิปวิดีโอ</string>
   <string name="morphe_hide_expandable_card_entry_1">แสดงทั้งหมด</string>
-  <string name="morphe_hide_expandable_card_entry_2">ซ่อนการ์ดผลิตภัณฑ์เท่านั้น</string>
-  <string name="morphe_hide_expandable_card_entry_3">ซ่อนการ์ดสรุปเท่านั้น</string>
-  <string name="morphe_hide_expandable_card_entry_4">ซ่อนการ์ดผลิตภัณฑ์และสรุป</string>
-  <string name="morphe_hide_expandable_card_entry_5">ซ่อนทั้งหมด</string>
+  <string name="morphe_hide_expandable_card_entry_2">ซ่อนบทสรุป</string>
+  <string name="morphe_hide_expandable_card_entry_3">ซ่อนทั้งหมด</string>
   <string name="morphe_hide_floating_microphone_button_title">ซ่อนปุ่มไมโครโฟนแบบลอย</string>
   <string name="morphe_hide_floating_microphone_button_summary">ซ่อนปุ่มไมโครโฟนลอยที่มุมล่างขวาของหน้าจอคำแนะนำการค้นหา</string>
   <string name="morphe_hide_horizontal_shelves_title">ซ่อนชั้นวางแนวนอน</string>

@@ -63,10 +63,8 @@ Ví dụ:
   <string name="morphe_hide_compact_banner_summary">Ẩn banner nhỏ gọn và khoảng cách giữa một số thành phần</string>
   <string name="morphe_hide_expandable_card_title">Các thẻ có thể mở rộng bên dưới video</string>
   <string name="morphe_hide_expandable_card_entry_1">Xem tất cả</string>
-  <string name="morphe_hide_expandable_card_entry_2">Chỉ ẩn thẻ sản phẩm</string>
-  <string name="morphe_hide_expandable_card_entry_3">Chỉ ẩn thẻ tóm tắt</string>
-  <string name="morphe_hide_expandable_card_entry_4">Ẩn cả thẻ sản phẩm và tóm tắt</string>
-  <string name="morphe_hide_expandable_card_entry_5">Ẩn tất cả</string>
+  <string name="morphe_hide_expandable_card_entry_2">Ẩn thẻ tóm tắt duy nhất</string>
+  <string name="morphe_hide_expandable_card_entry_3">Ẩn tất cả</string>
   <string name="morphe_hide_floating_microphone_button_title">Ẩn nút micrô</string>
   <string name="morphe_hide_floating_microphone_button_summary">Ẩn nút micro nổi ở góc dưới bên phải của màn hình gợi ý tìm kiếm</string>
   <string name="morphe_hide_horizontal_shelves_title">Ẩn kệ cá nhân hoá</string>

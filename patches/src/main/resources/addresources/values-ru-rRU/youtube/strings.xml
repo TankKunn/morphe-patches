@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">Скрывает компактные баннеры и интервалы между некоторыми компонентами</string>
   <string name="morphe_hide_expandable_card_title">Разворачивающиеся карточки под видеороликами скрыты</string>
   <string name="morphe_hide_expandable_card_entry_1">Показать все</string>
-  <string name="morphe_hide_expandable_card_entry_2">Скрыть только карточку продукта</string>
-  <string name="morphe_hide_expandable_card_entry_3">Скрыть только карточку с кратким обзором</string>
-  <string name="morphe_hide_expandable_card_entry_4">Скрыть карточки продукта и краткого обзора</string>
-  <string name="morphe_hide_expandable_card_entry_5">Скрыть все</string>
+  <string name="morphe_hide_expandable_card_entry_2">Скрыть сводную карточку</string>
+  <string name="morphe_hide_expandable_card_entry_3">Скрыть все</string>
   <string name="morphe_hide_floating_microphone_button_title">Скрыть плавающую кнопку микрофона</string>
   <string name="morphe_hide_floating_microphone_button_summary">Скрывает плавающую кнопку микрофона в нижнем правом углу экрана предложений поиска</string>
   <string name="morphe_hide_horizontal_shelves_title">Скрыть горизонтальные секции</string>

@@ -64,10 +64,8 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_compact_banner_summary">Kompakt szalagképek és az egyes összetevők közötti térköz elrejtése</string>
   <string name="morphe_hide_expandable_card_title">Kibontható kártyák a videók alatt</string>
   <string name="morphe_hide_expandable_card_entry_1">Az összes megjelenítése</string>
-  <string name="morphe_hide_expandable_card_entry_2">Csak a termékkártya elrejtése</string>
-  <string name="morphe_hide_expandable_card_entry_3">Csak az összefoglaló kártya elrejtése</string>
-  <string name="morphe_hide_expandable_card_entry_4">Termék- és összefoglaló kártyák elrejtése</string>
-  <string name="morphe_hide_expandable_card_entry_5">Az összes elrejtése</string>
+  <string name="morphe_hide_expandable_card_entry_2">Csak az összefoglaló kártya elrejtése</string>
+  <string name="morphe_hide_expandable_card_entry_3">Az összes elrejtése</string>
   <string name="morphe_hide_floating_microphone_button_title">Lebegő mikrofon gomb elrejtése</string>
   <string name="morphe_hide_floating_microphone_button_summary">A keresési javaslatok képernyő jobb alsó sarkában lévő lebegő mikrofon gomb elrejtése</string>
   <string name="morphe_hide_horizontal_shelves_title">Vízszintes polcok elrejtése</string>

@@ -64,10 +64,8 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_compact_banner_summary">Felur þétta borða og bil á milli sumra viðmótshluta</string>
   <string name="morphe_hide_expandable_card_title">Útvíkkanleg spjöld undir myndböndum</string>
   <string name="morphe_hide_expandable_card_entry_1">Sýna allt</string>
-  <string name="morphe_hide_expandable_card_entry_2">Fela aðeins vöruspjald</string>
-  <string name="morphe_hide_expandable_card_entry_3">Fela aðeins samantektarspjald</string>
-  <string name="morphe_hide_expandable_card_entry_4">Fela vöru- og samantektarspjöld</string>
-  <string name="morphe_hide_expandable_card_entry_5">Fela allt</string>
+  <string name="morphe_hide_expandable_card_entry_2">Fela aðeins samantektarspjald</string>
+  <string name="morphe_hide_expandable_card_entry_3">Fela allt</string>
   <string name="morphe_hide_floating_microphone_button_title">Fela fljótandi hljóðnemahnapp</string>
   <string name="morphe_hide_floating_microphone_button_summary">Felur fljótandi hljóðnemahnapp neðst í hægra horninu á skjá leitaruppástungna</string>
   <string name="morphe_hide_horizontal_shelves_title">Fela láréttar raðir</string>

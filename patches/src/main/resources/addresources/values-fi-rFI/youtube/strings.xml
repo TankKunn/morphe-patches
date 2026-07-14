@@ -63,10 +63,8 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_compact_banner_summary">Piilottaa tiivistetyn bannerin ja tilan joidenkin komponenttien välillä</string>
   <string name="morphe_hide_expandable_card_title">Laajennettavat kortit videoiden alla</string>
   <string name="morphe_hide_expandable_card_entry_1">Näytä kaikki</string>
-  <string name="morphe_hide_expandable_card_entry_2">Piilota tuotekortti vain</string>
-  <string name="morphe_hide_expandable_card_entry_3">Piilota yhteenvetokortti vain</string>
-  <string name="morphe_hide_expandable_card_entry_4">Piilota tuote- ja yhteenvetokortit</string>
-  <string name="morphe_hide_expandable_card_entry_5">Piilota kaikki</string>
+  <string name="morphe_hide_expandable_card_entry_2">Piilota vain yhteenvetokortti</string>
+  <string name="morphe_hide_expandable_card_entry_3">Piilota kaikki</string>
   <string name="morphe_hide_floating_microphone_button_title">Piilota kelluva mikrofonipainike</string>
   <string name="morphe_hide_floating_microphone_button_summary">Piilottaa kelluvan mikrofonipainikkeen hakuehdotusten näytön oikeassa alakulmassa</string>
   <string name="morphe_hide_horizontal_shelves_title">Piilota vaakasuuntaiset hyllyt</string>

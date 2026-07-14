@@ -102,8 +102,10 @@ YouTube Music 9.x 以降が必要です。"</string>
 YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されます。"</string>
   <string name="morphe_music_crossfade_about_credit_title">クレジット</string>
   <string name="morphe_music_crossfade_about_credit_summary">Crossfade機能はVazerOGによるものです</string>
-  <!-- interaction.permanentrepeat.permanentRepeatPatch -->
-  <string name="morphe_music_play_permanent_repeat_title">常時リピートを有効化</string>
+  <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->
+  <string name="morphe_music_remember_repeat_state_title">繰り返し状態を記憶する</string>
+  <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
+  <string name="morphe_music_remember_shuffle_state_title">シャッフル状態を記憶する</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">不快感リダイレクトを無効にする</string>
   <string name="morphe_music_disable_dislike_redirection_summary">「いいね」ボタンが押されたときに次のトラックへスキップするのを防ぎます</string>

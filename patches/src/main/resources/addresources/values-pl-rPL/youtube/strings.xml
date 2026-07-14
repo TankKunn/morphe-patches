@@ -64,10 +64,8 @@ Zmiany obejmują:
   <string name="morphe_hide_compact_banner_summary">Ukrywa kompaktowe banery i odstępy między niektórymi elementami</string>
   <string name="morphe_hide_expandable_card_title">Rozwijane karty pod filmami</string>
   <string name="morphe_hide_expandable_card_entry_1">Pokaż wszystkie</string>
-  <string name="morphe_hide_expandable_card_entry_2">Ukryj tylko produkty</string>
-  <string name="morphe_hide_expandable_card_entry_3">Ukryj tylko podsumowanie</string>
-  <string name="morphe_hide_expandable_card_entry_4">Ukryj produkty i podsumowanie</string>
-  <string name="morphe_hide_expandable_card_entry_5">Ukryj wszystkie</string>
+  <string name="morphe_hide_expandable_card_entry_2">Ukryj tylko kartę podsumowania</string>
+  <string name="morphe_hide_expandable_card_entry_3">Ukryj wszystkie</string>
   <string name="morphe_hide_floating_microphone_button_title">Ukryj pływający przycisk mikrofonu</string>
   <string name="morphe_hide_floating_microphone_button_summary">Ukrywa pływający przycisk mikrofonu w prawym dolnym rogu na ekranie sugestii wyszukiwania</string>
   <string name="morphe_hide_horizontal_shelves_title">Ukryj poziome sekcje</string>

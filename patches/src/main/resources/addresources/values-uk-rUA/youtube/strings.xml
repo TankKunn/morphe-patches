@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">Приховує компактні банери та відступи між деякими компонентами</string>
   <string name="morphe_hide_expandable_card_title">Розгортувані картки під відео</string>
   <string name="morphe_hide_expandable_card_entry_1">Показати всі</string>
-  <string name="morphe_hide_expandable_card_entry_2">Приховати лише картку товару</string>
-  <string name="morphe_hide_expandable_card_entry_3">Приховати лише картку підсумку</string>
-  <string name="morphe_hide_expandable_card_entry_4">Приховати картки товару та підсумку</string>
-  <string name="morphe_hide_expandable_card_entry_5">Приховати всі</string>
+  <string name="morphe_hide_expandable_card_entry_2">Приховати лише картку зі значенням</string>
+  <string name="morphe_hide_expandable_card_entry_3">Приховати всі</string>
   <string name="morphe_hide_floating_microphone_button_title">Приховати плаваючу кнопку мікрофона</string>
   <string name="morphe_hide_floating_microphone_button_summary">Приховує плаваючу кнопку мікрофона в правому нижньому куті екрана пошукових підказок</string>
   <string name="morphe_hide_horizontal_shelves_title">Приховати горизонтальні панелі</string>

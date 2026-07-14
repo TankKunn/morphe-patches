@@ -63,10 +63,8 @@ As mudanças incluem:
   <string name="morphe_hide_compact_banner_summary">Oculta banners compactos e espaçamento entre alguns componentes</string>
   <string name="morphe_hide_expandable_card_title">Cartões expansíveis sob vídeos</string>
   <string name="morphe_hide_expandable_card_entry_1">Ver tudo</string>
-  <string name="morphe_hide_expandable_card_entry_2">Ocultar apenas o cartão do produto</string>
-  <string name="morphe_hide_expandable_card_entry_3">Ocultar apenas o cartão de resumo</string>
-  <string name="morphe_hide_expandable_card_entry_4">Ocultar cartão de produto e resumo</string>
-  <string name="morphe_hide_expandable_card_entry_5">Ocultar tudo</string>
+  <string name="morphe_hide_expandable_card_entry_2">Ocultar apenas o cartão de resumo</string>
+  <string name="morphe_hide_expandable_card_entry_3">Ocultar tudo</string>
   <string name="morphe_hide_floating_microphone_button_title">Ocultar botão de microfone</string>
   <string name="morphe_hide_floating_microphone_button_summary">Oculta o botão de microfone no canto superior direito da tela de sugestões de pesquisa</string>
   <string name="morphe_hide_horizontal_shelves_title">Ocultar prateleiras horizontais</string>

@@ -64,10 +64,8 @@ Wijzigingen zijn:
   <string name="morphe_hide_compact_banner_summary">Verbergt compacte banners en spaties tussen sommige componenten</string>
   <string name="morphe_hide_expandable_card_title">Uitklapbare kaarten onder video\'s</string>
   <string name="morphe_hide_expandable_card_entry_1">Alles bekijken</string>
-  <string name="morphe_hide_expandable_card_entry_2">Alleen productkaart verbergen</string>
-  <string name="morphe_hide_expandable_card_entry_3">Alleen samenvattingskaart verbergen</string>
-  <string name="morphe_hide_expandable_card_entry_4">Product- en samenvattingskaarten verbergen</string>
-  <string name="morphe_hide_expandable_card_entry_5">Alles verbergen</string>
+  <string name="morphe_hide_expandable_card_entry_2">Alleen samenvattingskaart verbergen</string>
+  <string name="morphe_hide_expandable_card_entry_3">Alles verbergen</string>
   <string name="morphe_hide_floating_microphone_button_title">Verberg zwevende microfoonknop</string>
   <string name="morphe_hide_floating_microphone_button_summary">Verbergt de zwevende microfoonknop in de rechteronderhoek van het scherm met zoeksuggesties</string>
   <string name="morphe_hide_horizontal_shelves_title">Horizontale planken verbergen</string>

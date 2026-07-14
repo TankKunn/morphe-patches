@@ -64,10 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary">일부 구성 요소 사이에서 소형 배너 및 여백을 숨깁니다</string>
   <string name="morphe_hide_expandable_card_title">동영상 아래 펼쳐볼 수 있는 정보</string>
   <string name="morphe_hide_expandable_card_entry_1">모두 표시</string>
-  <string name="morphe_hide_expandable_card_entry_2">제품 정보만 숨기기</string>
-  <string name="morphe_hide_expandable_card_entry_3">요약 정보만 숨기기</string>
-  <string name="morphe_hide_expandable_card_entry_4">제품 및 요약 정보 숨기기</string>
-  <string name="morphe_hide_expandable_card_entry_5">모두 숨기기</string>
+  <string name="morphe_hide_expandable_card_entry_2">요약 정보만 숨기기</string>
+  <string name="morphe_hide_expandable_card_entry_3">모두 숨기기</string>
   <string name="morphe_hide_floating_microphone_button_title">플로팅 마이크 버튼 숨기기</string>
   <string name="morphe_hide_floating_microphone_button_summary">검색 추천 화면 오른쪽 하단에 있는 플로팅 마이크 버튼을 숨깁니다</string>
   <string name="morphe_hide_horizontal_shelves_title">좌우 슬라이드형 선반 숨기기</string>

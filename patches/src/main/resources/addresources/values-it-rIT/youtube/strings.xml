@@ -64,10 +64,8 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_compact_banner_summary">Nasconde banner compatti e spazi tra alcuni componenti</string>
   <string name="morphe_hide_expandable_card_title">Schede espandibili sotto i video</string>
   <string name="morphe_hide_expandable_card_entry_1">Mostra tutto</string>
-  <string name="morphe_hide_expandable_card_entry_2">Nascondi solo la scheda del prodotto</string>
-  <string name="morphe_hide_expandable_card_entry_3">Nascondi solo la scheda di riepilogo</string>
-  <string name="morphe_hide_expandable_card_entry_4">Nascondi le schede del prodotto e di riepilogo</string>
-  <string name="morphe_hide_expandable_card_entry_5">Nascondi tutto</string>
+  <string name="morphe_hide_expandable_card_entry_2">Nascondi solo la scheda riepilogativa</string>
+  <string name="morphe_hide_expandable_card_entry_3">Nascondi tutto</string>
   <string name="morphe_hide_floating_microphone_button_title">Nascondi il pulsante flottante del microfono</string>
   <string name="morphe_hide_floating_microphone_button_summary">Nasconde il pulsante mobile del microfono nell\'angolo in basso a destra dello schermo dei suggerimenti di ricerca</string>
   <string name="morphe_hide_horizontal_shelves_title">Nascondi sezioni orizzontali</string>
