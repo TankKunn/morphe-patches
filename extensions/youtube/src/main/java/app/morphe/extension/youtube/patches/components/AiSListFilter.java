@@ -41,6 +41,31 @@ public final class AiSListFilter extends BufferPhraseFilter {
 
     private final AtomicLong lastRefreshCheckMs = new AtomicLong(0);
 
+    /**
+     * @return If the start and end indexes are not surrounded by other handle characters.
+     *         YouTube handles can contain letters, numbers, underscores, hyphens, dots, and middle dots.
+     */
+    private static boolean keywordMatchIsWholeHandle(byte[] text, int keywordStartIndex, int keywordLength) {
+        // No need to check before the mathc because handles starts with @ which is always the start.
+        final Integer codePointAfter = getUtf8CodePointAt(text, keywordStartIndex + keywordLength);
+        //noinspection RedundantIfStatement
+        if (codePointAfter != null && isHandleCharacter(codePointAfter)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private static boolean isHandleCharacter(int codePoint) {
+        return Character.isLetter(codePoint) ||
+                Character.isDigit(codePoint) ||
+                codePoint == '_' ||
+                codePoint == '-' ||
+                codePoint == '.' ||
+                codePoint == '·';
+    }
+
+
     public AiSListFilter() {
         super();
         reparseIfNeeded();
@@ -98,7 +123,11 @@ public final class AiSListFilter extends BufferPhraseFilter {
 
             final String handle = line;
             TrieSearch.TriePatternMatchedCallback<byte[]> callback =
-                    (text, startIndex, matchLength, callbackParam) -> {
+                    (textSearched, startIndex, matchLength, callbackParam) -> {
+                        // Don't block on partial match so blocklist value of @alex does not filter @alex.notspam
+                        if (!keywordMatchIsWholeHandle(textSearched, startIndex, matchLength)) {
+                            return false;
+                        }
                         ((MutableReference<String>) callbackParam).value = handle;
                         return true;
                     };
