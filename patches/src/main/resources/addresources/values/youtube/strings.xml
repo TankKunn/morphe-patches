@@ -287,7 +287,7 @@ Limitations:
 Limitations:
 • Filtered AI Shorts may show as an empty space
 • Some AI videos may still show"</string>
-    <string name="morphe_hide_aislist_attribution_title">AiSList</string>
+    <string name="morphe_hide_aislist_attribution_title" translatable="false">AiSList</string>
     <string name="morphe_hide_aislist_attribution_summary">"Data is provided by AiSList
 
 Tap here to open AiSlopList.com and see downloads for other platforms"</string>
