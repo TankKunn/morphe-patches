@@ -35,7 +35,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.35.0-dev.3](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;125 patches total
+> **[v1.35.0-dev.4](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0-dev.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;126 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;72 patches</summary>
 <br>
@@ -123,7 +123,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 </details>
 
 <details>
-<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;34 patches</summary>
+<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;35 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -158,7 +158,8 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Miniplayer previous and next buttons](#miniplayer-previous-and-next-buttons) | Adds options to show previous and next track buttons in the miniplayer. |  |
 | [Navigation bar](#navigation-bar) | Adds options to hide navigation bar, labels and buttons. |  |
 | [Network proxy](#network-proxy) | Adds settings to route supported network requests through an HTTP or HTTPS proxy. |  |
-| [Permanent repeat](#permanent-repeat) | Adds an option to always repeat even if the playlist ends or another track is played. |  |
+| [Remember repeat state](#remember-repeat-state) | Adds an option to remember the repeat state when playing a new track or playlist. |  |
+| [Remember shuffle state](#remember-shuffle-state) | Adds an option to remember the shuffle state when playing a new track or playlist. |  |
 | [Remove background playback restrictions](#remove-background-playback-restrictions) | Removes restrictions on background playback, including playing kids videos in the background. |  |
 | [Sanitize sharing links](#sanitize-sharing-links) | Removes the tracking query parameters from shared links. |  |
 | [Scrobbling](#scrobbling) | Adds options to add played tracks to Last.fm and ListenBrainz. |  |

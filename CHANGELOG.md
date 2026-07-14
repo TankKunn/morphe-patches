@@ -1,3 +1,15 @@
+## [1.35.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.35.0-dev.3...v1.35.0-dev.4) (2026-07-14)
+
+### 🐛 Bug Fixes
+
+* **Network proxy:** Support HTTPS proxies for auxiliary requests ([#2022](https://github.com/MorpheApp/morphe-patches/issues/2022)) ([ee52f90](https://github.com/MorpheApp/morphe-patches/commit/ee52f9033687b6022f494f9afba4e0abb1bccba1))
+* **YouTube - Hide ads:** Hide shopping links in transcripts ([#2025](https://github.com/MorpheApp/morphe-patches/issues/2025)) ([0cf389b](https://github.com/MorpheApp/morphe-patches/commit/0cf389b921c813961f8b4d3bd12636b84e3f61d1))
+* **YouTube - Open system share sheet:** Support channelID & commentID fetching ([#1975](https://github.com/MorpheApp/morphe-patches/issues/1975)) ([34c2b58](https://github.com/MorpheApp/morphe-patches/commit/34c2b58eab29967b1fc784ae0c644297b850ca36))
+
+### ✨ New Features
+
+* **YouTube Music:** Add `Remember shuffle state` patch ([#1963](https://github.com/MorpheApp/morphe-patches/issues/1963)) ([7e8a6ba](https://github.com/MorpheApp/morphe-patches/commit/7e8a6babdbafd1dd87ac1397c088f318b89a02da))
+
 ## [1.35.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.35.0-dev.2...v1.35.0-dev.3) (2026-07-13)
 
 ### 🐛 Bug Fixes
