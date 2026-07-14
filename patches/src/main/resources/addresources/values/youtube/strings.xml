@@ -243,7 +243,6 @@ Changes include:
 Keywords can be any text shown in video titles or channel names
 
 Words with uppercase letters in the middle must match exactly (ie: iPhone, TikTok, LeBlanc)"</string>
-    <string name="morphe_hide_keyword_content_about_title">About keyword filtering</string>
     <string name="morphe_hide_keyword_content_about_summary">"Home / Subscriptions / Search / Comments are filtered to hide content that matches keyword phrases
 
 Limitations:
@@ -259,6 +258,39 @@ Limitations:
     <string name="morphe_hide_keyword_toast_invalid_conflicting">Keyword has conflicting declarations: %s</string>
     <string name="morphe_hide_keyword_toast_invalid_length">Keyword is too short and requires quotes: %s</string>
     <string name="morphe_hide_keyword_toast_invalid_broad">Keyword will hide all videos: %s</string>
+    <string name="morphe_hide_keyword_content_stats_hidden_breakdown">"• Home: %s
+• Subscriptions: %s
+• Search: %s
+• Comments: %s
+• Total: %s"</string>
+
+    <string name="morphe_hide_stats_category_title">Stats</string>
+    <string name="morphe_hide_stats_hidden_24h_title">Videos hidden, last 24 hours</string>
+    <string name="morphe_hide_stats_hidden_all_title">Videos hidden, all time</string>
+    <string name="morphe_hide_stats_hidden_24h_reset_title">Reset last 24 hours counter?</string>
+    <string name="morphe_hide_stats_hidden_all_reset_title">Reset all time counter?</string>
+    <string name="morphe_hide_about_category_title">About</string>
+
+    <string name="morphe_hide_aislist_screen_title">AI channel filter</string>
+    <string name="morphe_hide_aislist_screen_summary">Hide videos from channels flagged as AI-generated content by the AiSList community list</string>
+    <string name="morphe_hide_aislist_blocklist_category_title">Blocklist: High confidence</string>
+    <string name="morphe_hide_aislist_warnlist_category_title">Warnlist: Moderate confidence</string>
+    <string name="morphe_hide_aislist_hide_home_title">Hide videos in Home</string>
+    <string name="morphe_hide_aislist_hide_search_title">Hide videos in search</string>
+    <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Home: %s
+• Search: %s
+• Total: %s"</string>
+    <string name="morphe_hide_aislist_stats_blocklist_title">Blocklist channels loaded: %s</string>
+    <string name="morphe_hide_aislist_stats_warnlist_title">Warnlist channels loaded: %s</string>
+    <string name="morphe_hide_aislist_about_summary">"Home and search results are filtered to hide videos from channels flagged by AiSList
+
+Limitations:
+• Filtered AI Shorts may show as an empty space
+• Some AI videos may still show"</string>
+    <string name="morphe_hide_aislist_attribution_title">AiSList</string>
+    <string name="morphe_hide_aislist_attribution_summary">"Data is provided by AiSList
+
+Tap here to open AiSlopList.com and see downloads for other platforms"</string>
 
     <!-- ad.hideAdsPatch -->
     <string name="morphe_hide_creator_store_shelf_title">Hide creator store shelf</string>
