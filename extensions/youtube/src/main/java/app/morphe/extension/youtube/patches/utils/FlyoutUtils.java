@@ -25,7 +25,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Objects;
 import java.util.regex.Pattern;
 
 import app.morphe.extension.shared.Logger;
@@ -64,6 +63,10 @@ public final class FlyoutUtils {
     private static PopupWindow flyoutPopupWindow;
     private static String flyoutVideoId = "";
     private static String flyoutCommentId = "";
+    private static final List<String> commentsPanelNames = List.of(
+            "comment-item-section",
+            "shorts-comments-panel"
+    );
 
     public static byte[] getAsciiBytes(String string) {
         return string.getBytes(StandardCharsets.US_ASCII);
@@ -135,7 +138,7 @@ public final class FlyoutUtils {
      * Injection point.
      */
     public static void extractIdFromLithoButton(Map<?, ?> map) {
-        if (Objects.equals(EngagementPanel.getId(), "comment-item-section")) {
+        if (commentsPanelNames.contains(EngagementPanel.getId())) {
             extractVideoId(map);
         }
     }
@@ -155,8 +158,10 @@ public final class FlyoutUtils {
      */
     public static void extractVideoId(@Nullable Object bufferObject) {
         try {
-            Logger.printDebug(() -> "FlyoutBuffer class: " + ((bufferObject == null) ? null
-                    : bufferObject.getClass()));
+            Logger.printDebug(() -> "FlyoutBuffer class: " +
+                    ((bufferObject == null)
+                            ? null
+                            : bufferObject.getClass()));
 
             if (bufferObject instanceof FlyoutMenuVideoIdInterface videoIdInterface) {
                 String videoId = videoIdInterface.patch_getVideoId();
@@ -180,8 +185,12 @@ public final class FlyoutUtils {
                 Logger.printDebug(() -> "Flyout buffer: " + new BufferAsciiStrings(flyoutBufferLog).getStrings());
             }
 
-            if (indexOf(flyoutBuffer, LIST_ITEM_BYTES) < 0) {
-                if (indexOf(flyoutBuffer, HORIZONTAL_SHELF_BYTES) >= 0) {
+            // Check whether the buffer contains the specified IDs, within a certain initial
+            // range of the buffer, to avoid matching with false positives.
+            int listItemBytesIndex = indexOf(flyoutBuffer, LIST_ITEM_BYTES);
+            if (listItemBytesIndex == -1) {
+                int horizontalShelfBytesIndex = indexOf(flyoutBuffer, HORIZONTAL_SHELF_BYTES);
+                if (horizontalShelfBytesIndex >= 0 && horizontalShelfBytesIndex <= 30) {
                     View senderView = senderViewRef.get();
                     if (senderView != null) {
                         ViewParent parent = senderView.getParent();
@@ -208,7 +217,7 @@ public final class FlyoutUtils {
                         }
                     }
                 }
-            } else {
+            } else if (listItemBytesIndex >= 0 && listItemBytesIndex <= 30) {
                 setCommentId(flyoutBuffer);
             }
         } catch (Exception ex) {
