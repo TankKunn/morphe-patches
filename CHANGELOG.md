@@ -1,3 +1,13 @@
+## [1.35.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.35.0-dev.4...v1.35.0-dev.5) (2026-07-15)
+
+### 🐛 Bug Fixes
+
+* **YouTube - StreamOrDetailsDataRequest:** Sometimes player headers is null ([#2035](https://github.com/MorpheApp/morphe-patches/issues/2035)) ([c9552c0](https://github.com/MorpheApp/morphe-patches/commit/c9552c0eee1415e290218cfe603bb4af98ed0681))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "AI channel filter" settings ([#1972](https://github.com/MorpheApp/morphe-patches/issues/1972)) ([03c0b97](https://github.com/MorpheApp/morphe-patches/commit/03c0b97f983a3bbae22bba3a5f51bd2fc09e9a25))
+
 ## [1.35.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.35.0-dev.3...v1.35.0-dev.4) (2026-07-14)
 
 ### 🐛 Bug Fixes
