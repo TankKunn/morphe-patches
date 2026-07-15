@@ -103,9 +103,9 @@ YouTube Music 8.x — плавний перехід працює лише на �
   <string name="morphe_music_crossfade_about_credit_title">Подяки</string>
   <string name="morphe_music_crossfade_about_credit_summary">Функція плавного переходу від VazerOG</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->
-  <string name="morphe_music_remember_repeat_state_title">Запам\'ятати стан повтору</string>
+  <string name="morphe_music_remember_repeat_state_title">Запам\'ятовувати стан повтору</string>
   <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
-  <string name="morphe_music_remember_shuffle_state_title">Запам\'ятати стан перемішування</string>
+  <string name="morphe_music_remember_shuffle_state_title">Запам\'ятовувати стан перемішування</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Вимкнути перенаправлення при дизлайку</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Запобігає переходу до наступного треку при натисканні кнопки дизлайку</string>

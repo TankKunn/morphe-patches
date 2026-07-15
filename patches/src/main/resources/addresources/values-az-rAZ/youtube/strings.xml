@@ -233,7 +233,6 @@ Dəyişikliklər ehtiva edir:
 Açar sözlər video başlıqlarında və ya kanal adlarında görünən hər hansı mətn ola bilər
 
 Ortada böyük hərflər olan sözlər tam uyğunlaşmalıdır (məsələn: iPhone, TikTok, LeBlanc)"</string>
-  <string name="morphe_hide_keyword_content_about_title">Açar söz filtrləməsi haqqında</string>
   <string name="morphe_hide_keyword_content_about_summary">"Ev / Abunəliklər / Axtarış / Şərhlər açar söz ifadələrinə uyğun məzmunu gizlətmək üçün filtrlənir
 
 Məhdudiyyətlər:
@@ -249,6 +248,36 @@ Məhdudiyyətlər:
   <string name="morphe_hide_keyword_toast_invalid_conflicting">Açar sözün ziddiyyətli hissəcikləri var: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_length">Açar söz çox qısadır və istinad tələb edir: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Açar söz, bütün videoları gizlədəcək: %s</string>
+  <string name="morphe_hide_keyword_content_stats_hidden_breakdown">"• Ev: %s
+• Abunəliklər: %s
+• Axtarış: %s
+• Şərhlər: %s
+• Ümumi: %s"</string>
+  <string name="morphe_hide_stats_category_title">Statistika</string>
+  <string name="morphe_hide_stats_hidden_24h_title">Son 24 saatda gizlədilən videolar</string>
+  <string name="morphe_hide_stats_hidden_all_title">Bütün zamanlar üzrə gizlədilən videolar</string>
+  <string name="morphe_hide_stats_hidden_24h_reset_title">Son 24 saatlıq sayğac sıfırlansın?</string>
+  <string name="morphe_hide_stats_hidden_all_reset_title">Bütün vaxt sayğacı sıfırlansın?</string>
+  <string name="morphe_hide_about_category_title">Haqqında</string>
+  <string name="morphe_hide_aislist_screen_title">Süni intellekt kanalı filtri</string>
+  <string name="morphe_hide_aislist_screen_summary">AiSList icma siyahısı tərəfindən süni intellekt ilə yaradılan məzmun kimi nişanlanmış kanallardan videoları gizlət</string>
+  <string name="morphe_hide_aislist_blocklist_category_title">Bloklama siyahısı: Yüksək etibarlılıq</string>
+  <string name="morphe_hide_aislist_warnlist_category_title">Xəbərdarlıq siyahısı: Orta dərəcədə etibarlılıq</string>
+  <string name="morphe_hide_aislist_hide_home_title">Videoları Ev səhifəsində gizlət</string>
+  <string name="morphe_hide_aislist_hide_search_title">Videoları axtarışda gizlət</string>
+  <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Ev: %s
+• Axtarış: %s
+• Ümumi: %s"</string>
+  <string name="morphe_hide_aislist_stats_blocklist_title">Yüklənilən bloklama siyahısı kanalları: %s</string>
+  <string name="morphe_hide_aislist_stats_warnlist_title">Yüklənilən xəbərdarlıq siyahısı kanalları: %s</string>
+  <string name="morphe_hide_aislist_about_summary">"AiSList tərəfindən nişanlanmış kanallardan videoları gizlətmək məqsədilə ev və axtarış nəticələri filtrlənir
+
+Məhdudiyyətlər:
+• Filtrlənmiş süni intellekt Shorts-ları boş yer kimi görünə bilər
+• Bəzi süni intellekt videoları hələ də görünə bilər"</string>
+  <string name="morphe_hide_aislist_attribution_summary">"Məlumatlar AiSList tərəfindən təmin edilir
+
+AiSlopList.com 'u açmaq və digər platformalar üçün yükləmələri görmək üçün buraya toxun"</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Yaradıcı mağaza bölümün gizlət</string>
   <string name="morphe_hide_end_screen_store_banner_title">Son ekran mağaza afişasın gizlət</string>
@@ -1050,14 +1079,21 @@ DeArrow.ajay.app 'i açmaq üçün buraya toxun"</string>
   <string name="morphe_custom_speed_menu_title">Fərdi oynatma sürəti siyahısı</string>
   <string name="morphe_restore_old_speed_menu_title">Köhnə oynatma sürəti menyusunu bərpa et</string>
   <string name="morphe_custom_playback_speeds_title">Fərdi oynatma sürəti</string>
+  <string name="morphe_custom_playback_speeds_summary">Üstünlük verdiyiniz oynatma sürəti seçimini qeyd edin</string>
+  <string name="morphe_custom_playback_speeds_invalid">Fərdi oynatma sürətləri %s dəyərindən az olmalıdır</string>
   <string name="morphe_custom_playback_speeds_parse_exception">Fərdi oynatma sürətləri etibarsızdır</string>
   <string name="morphe_custom_playback_speeds_auto">Avtomatik</string>
+  <string name="morphe_speed_tap_and_hold_title">Toxunub saxlamaqla oynatma sürəti</string>
+  <string name="morphe_speed_tap_and_hold_summary">Ekranı basıb saxlayarkən sürət mislini təyin et, qapatmaq üçün 0-a təyin et</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <string name="morphe_remember_playback_speed_last_selected_title">Oynatma sürətin xatırla</string>
+  <string name="morphe_remember_playback_speed_last_selected_summary">Əl ilə sürət seçiminizi bütün gələcək videolara tətbiq edir</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_title">Sürət dəyişikliyi bildirişləri</string>
+  <string name="morphe_remember_playback_speed_last_selected_toast_summary">Yeni ilkin oynatma sürəti saxlanıldıqda bildiriş göstərir</string>
   <string name="morphe_playback_speed_default_title">İlkin oynatma sürəti</string>
   <string name="morphe_remember_playback_speed_toast">İlkin oynatma sürəti %s kimi dəyişdirildi</string>
   <string name="morphe_disable_playback_speed_music_title">Musiqi üçün normal sürət istifadə et</string>
+  <string name="morphe_disable_playback_speed_music_summary">Musiqi videolarını həmişə 1.0x sürətlə oynat</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">HDR Videonu Qapat</string>
   <string name="morphe_force_avc_codec_title">AVC (H.264) kodlayıcıya zorla</string>
