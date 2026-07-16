@@ -14,6 +14,7 @@ import static app.morphe.extension.shared.Utils.getFilterStrings;
 import static app.morphe.extension.youtube.shared.NavigationBar.NavigationButton;
 
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -562,24 +563,10 @@ public final class LayoutComponentsFilter extends Filter {
     /**
      * Injection point.
      */
-    public static int hideInRelatedVideos(int height) {
-        return HIDE_FILTER_BAR_IN_RELATED_VIDEOS_ENABLED
-                ? 0
-                : height;
-    }
-
-    /**
-     * Injection point.
-     */
-    public static boolean hideInRelatedVideos(boolean original) {
-        return HIDE_FILTER_BAR_IN_RELATED_VIDEOS_ENABLED || original;
-    }
-
-    /**
-     * Injection point.
-     */
-    public static void hideInRelatedVideos(View chipView) {
-        Utils.hideViewUnderCondition(HIDE_FILTER_BAR_IN_RELATED_VIDEOS_ENABLED, chipView);
+    public static void hideInRelatedVideos(RecyclerView chipRecyclerView) {
+        if (HIDE_FILTER_BAR_IN_RELATED_VIDEOS_ENABLED) {
+            chipRecyclerView.setVisibility(RecyclerView.GONE);
+        }
     }
 
     private static final boolean HIDE_YOUTUBE_DOODLES_ENABLED = Settings.HIDE_YOUTUBE_DOODLES.get();

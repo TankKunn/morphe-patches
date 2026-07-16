@@ -688,8 +688,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
 
         arrayOf(
             FilterBarHeightFingerprint to "hideInFeed",
-            SearchResultsChipBarFingerprint to "hideInSearch",
-            RelatedChipCloudFingerprint to "hideInRelatedVideos"
+            SearchResultsChipBarFingerprint to "hideInSearch"
         ).forEach { (fingerprint, methodName) ->
             fingerprint.method.apply {
                 val moveIndex = fingerprint.instructionMatches.last().index
@@ -708,24 +707,12 @@ val hideLayoutComponentsPatch = bytecodePatch(
         RelatedChipCloudFingerprint.let {
             it.clearMatch()
             it.method.apply {
-                insertLiteralOverride(
-                    it.instructionMatches[2].index,
-                    "$LAYOUT_COMPONENTS_FILTER->hideInRelatedVideos(Z)Z"
-                )
-            }
-        }
+                val recyclerViewIndex = it.instructionMatches[2].index
+                val recyclerViewRegister = getInstruction<OneRegisterInstruction>(recyclerViewIndex).registerA
 
-        RelatedChipCloudFingerprint.let {
-            it.clearMatch()
-            it.method.apply {
-                val viewIndex = it.instructionMatches[1].index
-                val viewRegister = getInstruction<FiveRegisterInstruction>(viewIndex).registerC
-
-                injectHideViewCall(
-                    viewIndex,
-                    viewRegister,
-                    LAYOUT_COMPONENTS_FILTER,
-                    "hideInRelatedVideos"
+                addInstruction(
+                    recyclerViewIndex + 1,
+                    "invoke-static { v$recyclerViewRegister }, $LAYOUT_COMPONENTS_FILTER->hideInRelatedVideos(Landroid/support/v7/widget/RecyclerView;)V"
                 )
             }
         }
