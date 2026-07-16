@@ -409,6 +409,14 @@ public class StreamOrDetailsDataRequest {
         return null;
     }
 
+    private static boolean skipClient(ClientType client) {
+        if (client.requireJS && !supportsJavaScriptEngine()) {
+            Logger.printDebug(() -> "Skipping Js client: " + client.name());
+            return true;
+        }
+        return false;
+    }
+
     private static Object fetch(@Nullable Route.CompiledRoute videoDetailsEndpoint,
                                 String videoId, @Nullable Map<String, String> playerHeaders) {
         if (videoDetailsEndpoint == null) {
@@ -418,6 +426,9 @@ public class StreamOrDetailsDataRequest {
             // Retry with different client if empty response body is received.
             int i = 0;
             for (ClientType clientTypeStream : clientStreamOrderToUse) {
+                if (skipClient(clientTypeStream)) {
+                    continue;
+                }
                 Logger.printDebug(() -> "Fetching using endpoint: " + clientTypeStream.endpoint.getCompiledRoute());
 
                 // Show an error if the last client type fails, or if debug is enabled then show for all attempts.
@@ -454,6 +465,9 @@ public class StreamOrDetailsDataRequest {
             }
         } else {
             for (ClientType clientTypeDetails : ClientType.values()) {
+                if (skipClient(clientTypeDetails)) {
+                    continue;
+                }
                 if (clientTypeDetails.endpoint == videoDetailsEndpoint) {
                     Logger.printDebug(() -> "Fetching using endpoint: " + clientTypeDetails.endpoint.getCompiledRoute());
 
