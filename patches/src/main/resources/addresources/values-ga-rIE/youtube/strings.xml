@@ -100,6 +100,7 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_upload_time_summary">"Teorainneacha:
 • D’fhéadfadh amanna uaslódála a bheith le feiceáil fós ar sheilfeanna gearrscannán, leathanaigh chainéil, agus torthaí cuardaigh
 • Ní oibríonn sé le leagan amach feithicleach"</string>
+  <string name="morphe_hide_video_thumbnail_title">Folaigh mionsamhlacha físe</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Folaigh lipéid mholtaí físeáin</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Folaíonn sé lipéid \'Daoine a d\'fhéach freisin\' agus \'B\'fhéidir go mbeadh suim agat iontu freisin\' i dtorthaí cuardaigh</string>

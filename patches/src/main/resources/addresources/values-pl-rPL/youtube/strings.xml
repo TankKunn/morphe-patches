@@ -100,6 +100,7 @@ Zmiany obejmują:
   <string name="morphe_hide_upload_time_summary">"Ograniczenia:
 • Sekcje filmów Short, strony kanałów i wyniki wyszukiwania mogą nadal pokazywać datę publikacji
 • Nie działa z interfejsem samochodowym"</string>
+  <string name="morphe_hide_video_thumbnail_title">Ukryj miniaturkę filmu</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Ukryj etykiety rekomendacji filmów</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Ukrywa etykiety \"Ludzie też oglądali\" i \"Może Ci się spodobać\" w wynikach wyszukiwania</string>

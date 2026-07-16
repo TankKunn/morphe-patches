@@ -100,6 +100,7 @@ Spremembe vključujejo:
   <string name="morphe_hide_upload_time_summary">"Omejitve:
 • Poličice s kratkimi videoposnetki, strani kanalov in rezultati iskanja lahko še vedno prikazujejo čas nalaganja
 • Ne deluje s postavitvijo za avtomobilski zaslon"</string>
+  <string name="morphe_hide_video_thumbnail_title">Skrij sličico videoposnetka</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Skrij oznake priporočenih videoposnetkov</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Skrije oznake \'Ljudje so si ogledali tudi\' in \'Morda vam je všeč\' v rezultatih iskanja</string>

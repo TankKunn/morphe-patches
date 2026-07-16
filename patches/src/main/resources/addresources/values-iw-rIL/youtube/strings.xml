@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_upload_time_summary">"הגבלות:
 • מדפי Shorts, דפי ערוץ ותוצאות חיפוש עדיין עשויים להציג זמני העלאה
 • לא עובד עם פריסות לרכב"</string>
+  <string name="morphe_hide_video_thumbnail_title">הסתר תמונה ממוזערת של סרטון</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">הסתר תוויות המלצות סרטונים</string>
   <string name="morphe_hide_video_recommendation_labels_summary">מסתיר את התוויות \'אנשים גם צפו\' ו\'אולי תאהב גם\' בתוצאות החיפוש</string>

@@ -100,6 +100,7 @@ Promene uključuju:
   <string name="morphe_hide_upload_time_summary">"Ограничења:
 • Полице Shorts, странице канала и резултати претраге можда ће и даље приказивати време отпремања
 • Ово не функционише са аутомобилским изгледом"</string>
+  <string name="morphe_hide_video_thumbnail_title">Сакриј сличицу видеа</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Сакриј ознаке препорука видеа</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Саскрива ознаке „Људи такође гледали” и „Можда ће вам се такође допасти” у резултатима претраге</string>

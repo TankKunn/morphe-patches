@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_upload_time_summary">"القيود:
 • قد تظل أرفف Shorts، صفحات القناة، ونتائج البحث تُظهر أوقات التحميل
 • لا تعمل مع تخطيط Automotive"</string>
+  <string name="morphe_hide_video_thumbnail_title">إخفاء صورة الفيديو المصغرة</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">إخفاء تسميات توصيات الفيديو</string>
   <string name="morphe_hide_video_recommendation_labels_summary">يخفي علامات \'شاهد المستخدمون أيضًا\' و \'قد يعجبك أيضًا\' في نتائج البحث</string>

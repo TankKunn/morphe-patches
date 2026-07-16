@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_upload_time_summary">"限制：
 • Shorts 專區、頻道頁面和搜尋結果可能仍會顯示上傳時間
 • 此功能不適用於汽車版面配置"</string>
+  <string name="morphe_hide_video_thumbnail_title">隱藏影片縮圖</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">隱藏影片推薦標籤</string>
   <string name="morphe_hide_video_recommendation_labels_summary">隱藏搜尋結果中的「其他人也觀看」和「你可能也喜歡」標籤</string>

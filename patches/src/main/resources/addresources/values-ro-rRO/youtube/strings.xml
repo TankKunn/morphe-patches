@@ -100,6 +100,7 @@ Schimbari incluse:
   <string name="morphe_hide_upload_time_summary">"Limitări:
 • Secțiunile Shorts, paginile canalelor și rezultatele căutării pot afișa în continuare orele de încărcare
 • Această funcție nu funcționează cu factorul de formă auto"</string>
+  <string name="morphe_hide_video_thumbnail_title">Ascunde miniatura video</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Ascunde etichetele de recomandare video</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Ascunde etichetele \"Persoane care au urmărit, de asemenea\" și \"S-ar putea să vă placă și\" în rezultatele căutării</string>

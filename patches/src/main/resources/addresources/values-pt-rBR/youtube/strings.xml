@@ -51,7 +51,7 @@ As mudanças incluem:
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtros no menu flutuante do feed</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Insira os nomes do menu flyout para filtrar, separados por novas linhas</string>
   <string name="morphe_hide_account_menu_title">Ativar Biblioteca / Filtro do menu inferior</string>
-  <string name="morphe_hide_account_menu_filter_strings_title">Ativar Biblioteca / Filtro do menu inferior</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Filtro do menu inferior da Biblioteca / Você</string>
   <string name="morphe_hide_account_menu_filter_strings_summary">Insira os nomes dos menus da Biblioteca / Você para filtrar, separados por novas linhas</string>
   <string name="morphe_hide_album_cards_title">Ocultar cartões de álbum</string>
   <string name="morphe_hide_album_cards_summary">Oculta os cartões de álbuns abaixo da descrição do artista</string>
@@ -99,6 +99,7 @@ As mudanças incluem:
   <string name="morphe_hide_upload_time_summary">"Limitações:
 • As prateleiras de Shorts, páginas de canais e resultados da pesquisa ainda podem mostrar os tempos de upload
 • Este recurso não funciona com o layout automotivo"</string>
+  <string name="morphe_hide_video_thumbnail_title">Ocultar miniatura do vídeo</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Ocultar marcadores de recomendação de vídeo</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Oculta os rótulos \'As pessoas também assistiram\' e \'Você também pode gostar\' nos resultados da pesquisa</string>
@@ -403,7 +404,7 @@ Informação: pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_play_all_button_type_entry_12">Transmissões ao vivo apenas de membros</string>
   <string name="morphe_play_all_button_not_available_toast">Não foi possível gerar a lista de reprodução devido a uma incompatibilidade de ID de canal</string>
   <!-- interaction.reload.reloadVideoPatch -->
-  <string name="morphe_reload_video_button_title">Ajuste o nível de transparência (0 é transparente, 100 é opaco)</string>
+  <string name="morphe_reload_video_button_title">Mostrar botão Recarregar vídeo</string>
   <string name="morphe_dismiss_player_not_available_toast">ID do vídeo indisponível. Recarregue o vídeo manualmente</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
   <string name="morphe_save_to_watch_later_button_title">Defina a cor da barra de progresso dos controles de brilho</string>
@@ -428,7 +429,7 @@ Informação: pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_queue_manager_fetch_failed_save">Falha ao salvar fila</string>
   <string name="morphe_queue_manager_fetch_succeeded_add">Adicionado à fila</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Fila criada</string>
-  <string name="morphe_queue_manager_fetch_succeeded_remove">Removido(a) da fila</string>
+  <string name="morphe_queue_manager_fetch_succeeded_remove">Removido da fila</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Fila salva em %s</string>
   <string name="morphe_queue_manager_playlist_title">Fila Morphe</string>
   <string name="morphe_queue_manager_add_to_queue">Adicionar à fila</string>

@@ -100,6 +100,7 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_upload_time_summary">"Mga Limitasyon:
 • Maaari pa ring magpakita ng mga oras ng pag-upload ang mga Short shelf, mga pahina ng channel, at mga resulta ng paghahanap.
 • Hindi gumagana sa automotive layout."</string>
+  <string name="morphe_hide_video_thumbnail_title">Itago ang thumbnail ng video</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Itago ang mga tatak ng rekomendasyon ng video</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Itinatago ang mga label na \'Pinapanood din ng mga tao\' at \'Baka magustuhan mo rin\' sa mga resulta ng paghahanap</string>

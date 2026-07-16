@@ -100,6 +100,7 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_upload_time_summary">"Limitazioni:
 • Le sezioni Shorts, le pagine del canale e i risultati di ricerca potrebbero ancora mostrare gli orari di caricamento.
 • Questa funzione non funziona con il fattore di forma automotive."</string>
+  <string name="morphe_hide_video_thumbnail_title">Nascondi miniatura video</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Nascondi etichette di video consigliati</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Nasconde le etichette \'Persone che hanno guardato questo video\' e \'Potrebbe piacerti anche\' nei risultati di ricerca</string>

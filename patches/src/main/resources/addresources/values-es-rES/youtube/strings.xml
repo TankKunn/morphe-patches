@@ -100,6 +100,7 @@ Los cambios incluyen:
   <string name="morphe_hide_upload_time_summary">"Limitaciones:
 • Los estantes de Shorts, las páginas de los canales y los resultados de búsqueda pueden seguir mostrando los tiempos de subida.
 • Esta función no es compatible con el diseño para automóviles."</string>
+  <string name="morphe_hide_video_thumbnail_title">Ocultar miniatura de vídeo</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Ocultar etiquetas de recomendación de vídeo</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Oculta las etiquetas \"Otras personas también vieron\" y \"También te puede gustar\" en los resultados de búsqueda</string>

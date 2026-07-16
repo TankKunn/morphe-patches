@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_upload_time_summary">"제한 사항:
 • Shorts 선반, 채널 페이지 및 검색 결과에서 업로드 시간이 계속 표시될 수 있습니다
 • 이 기능은 오토모티브 레이아웃에서 작동하지 않습니다"</string>
+  <string name="morphe_hide_video_thumbnail_title">동영상 썸네일 숨기기</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">동영상 추천 라벨 숨기기</string>
   <string name="morphe_hide_video_recommendation_labels_summary">검색 결과에서 다음 라벨을 숨깁니다:\n• 시청자가 이 동영상도 시청함\n• 내가 좋아할 만한 동영상</string>
@@ -257,7 +258,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_stats_hidden_24h_title">지난 24시간 동안 숨겨진 동영상</string>
   <string name="morphe_hide_stats_hidden_all_title">전체 시간 동안 숨겨진 동영상</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">지난 24시간 카운터 초기화</string>
-  <string name="morphe_hide_stats_hidden_all_reset_title">모든 시간 카운터 초기화</string>
+  <string name="morphe_hide_stats_hidden_all_reset_title">전체 시간 카운터 초기화</string>
   <string name="morphe_hide_about_category_title">정보</string>
   <string name="morphe_hide_aislist_screen_title">AI 채널 필터</string>
   <string name="morphe_hide_aislist_screen_summary">AiSList 커뮤니티 목록에서 AI 생성 콘텐츠 채널로 지정된 채널의 동영상을 숨깁니다</string>
@@ -268,8 +269,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• 홈: %s
 • 검색: %s
 • 합계: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">차단 목록 채널 불러오기 완료: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">경고 목록 채널 불러오기 완료: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_title">차단 목록 채널 수: %s</string>
+  <string name="morphe_hide_aislist_stats_warnlist_title">경고 목록 채널 수: %s</string>
   <string name="morphe_hide_aislist_about_summary">"홈 및 검색 결과에서 AiSList에 의해 지정된 채널의 동영상을 숨기도록 필터링됩니다
 
 제한 사항:

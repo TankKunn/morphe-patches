@@ -100,6 +100,7 @@ Wijzigingen zijn:
   <string name="morphe_hide_upload_time_summary">"Beperkingen:
 • Shorts, kanaalpagina's en zoekresultaten kunnen nog steeds uploadtijden tonen
 • Werkt niet met de Android Auto lay-out"</string>
+  <string name="morphe_hide_video_thumbnail_title">Videominiatuur verbergen</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Videobevellabels verbergen</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Verbergt de labels \'Mensen keken ook\' en \'Misschien vind je dit ook leuk\' in zoekresultaten</string>

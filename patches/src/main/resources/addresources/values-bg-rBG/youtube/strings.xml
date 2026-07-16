@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_upload_time_summary">"Ограничения:
 • Рафтовете със Shorts, страниците на каналите и резултатите от търсенето все още могат да показват времето на качване
 • Не работи с автомобилен режим"</string>
+  <string name="morphe_hide_video_thumbnail_title">Скриване на видео миниатюрата</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Скриване на етикетите с видео препоръки</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Скрива етикетите „Хора, които също са гледали“ и „Може да ви хареса“ в резултатите от търсенето</string>

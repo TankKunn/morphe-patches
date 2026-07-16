@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_upload_time_summary">"Обмеження:
 • Панелі Shorts, сторінки каналів та результати пошуку можуть досі показувати час завантаження
 • Не працює з автомобільним макетом інтерфейсу"</string>
+  <string name="morphe_hide_video_thumbnail_title">Приховати мініатюру відео</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Приховати мітки відеорекомендацій</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Приховує мітки \"Інші користувачі також переглядали це відео\" та \"Вам також може сподобатися\" у результатах пошуку</string>

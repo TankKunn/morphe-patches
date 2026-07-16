@@ -100,6 +100,7 @@ Změny zahrnují:
   <string name="morphe_hide_upload_time_summary">"Omezení:
 • Shorts, stránky kanálů a výsledky vyhledávání mohou stále zobrazovat časy nahrání
 • Tato funkce nefunguje s automobilovým provedením"</string>
+  <string name="morphe_hide_video_thumbnail_title">Skrýt miniaturu videa</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Skrýt štítky doporučení videí</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Skrývá popisky „Lidé také sledovali“ a „Mohlo by se vám také líbit“ ve výsledcích vyhledávání</string>

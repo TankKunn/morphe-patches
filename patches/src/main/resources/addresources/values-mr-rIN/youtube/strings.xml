@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_upload_time_summary">"मर्यादा:
 • शॉर्ट्स शेल्फ, चॅनेल पृष्ठे आणि शोध परिणामांमध्ये अपलोडचे वेळ अजूनही दिसू शकतो.
 • हे ऑटोमोटिव्ह लेआउटमध्ये कार्य करत नाही."</string>
+  <string name="morphe_hide_video_thumbnail_title">व्हिडिओ थंबनेल लपवा</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">व्हिडिओ शिफारस लेबले लपवा</string>
   <string name="morphe_hide_video_recommendation_labels_summary">शोध परिणामांमध्ये \'लोक हे देखील पाहिले\' आणि \'तुम्हाला हे देखील आवडेल\' लेबल्स लपवते</string>

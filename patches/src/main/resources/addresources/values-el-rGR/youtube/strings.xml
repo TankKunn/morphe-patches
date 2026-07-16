@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_upload_time_summary">"Περιορισμοί:
 • Οι ενότητες Shorts, οι σελίδες καναλιών και τα αποτελέσματα αναζήτησης ενδέχεται να εξακολουθούν να εμφανίζουν τον χρόνο μεταφόρτωσης
 • Αυτή η λειτουργία δεν λειτουργεί με τη διάταξη αυτοκινήτου"</string>
+  <string name="morphe_hide_video_thumbnail_title">Απόκρυψη μικρογραφίας βίντεο</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Ετικέτες προτάσεων βίντεο</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Απόκρυψη των ετικετών \"Άνθρωποι παρακολούθησαν επίσης\" και \"Ενδέχεται επίσης να σας αρέσει\" στα αποτελέσματα αναζήτησης</string>

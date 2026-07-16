@@ -100,6 +100,7 @@ Endringer inkluderer:
   <string name="morphe_hide_upload_time_summary">"Begrensninger:
 • Shorts-hyller, kanalsider og søkeresultater kan fortsatt vise opplastningstidspunkter
 • Fungerer ikke med biloppsett"</string>
+  <string name="morphe_hide_video_thumbnail_title">Skjul videominiatyrbilde</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Skjul videopresentasjonsmerker</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Skjuler «Folk så også på» og «Du vil kanskje også like»-etiketter i søkeresultatene</string>

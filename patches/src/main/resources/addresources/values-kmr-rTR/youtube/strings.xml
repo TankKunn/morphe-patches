@@ -101,6 +101,7 @@ Guherînan têne xistine:
   <string name="morphe_hide_upload_time_summary">"Senetkirîn:
 • Refên Kur, rûpelên kanalê, û encamên lêgerînê dikarin demên barkirinê nîşan bidin.
 • Li ser layouta otomobîlan xebatê neke"</string>
+  <string name="morphe_hide_video_thumbnail_title">Wêneya biçîkê vîdyoyê veşêrin</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Etîketên pêşniyara vîdyoyê veşêrin</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Nîşanên \'Kesên din jî temaşe kirin\' û \'Şiyayî ku hûn jê hez bikirin\' di encamên lêgerînê de veşêrin</string>

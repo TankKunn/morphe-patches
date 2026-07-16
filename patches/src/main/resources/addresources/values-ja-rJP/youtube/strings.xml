@@ -91,7 +91,7 @@ Second \"item\" text"</string>
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">「もっと見る」ボタンを非表示</string>
   <string name="morphe_hide_show_more_button_summary">検索結果の動画の下に表示される、展開してより多くの動画を表示するボタンを非表示にします</string>
-  <string name="morphe_hide_subscribed_channels_bar_title">スクロールする横一列の登録済みチャンネルのリストを非表示</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">横スクロールする横一列の登録済みチャンネルのリストを非表示</string>
   <string name="morphe_hide_surveys_title">アンケートを非表示</string>
   <string name="morphe_hide_surveys_summary">フィードのおすすめ精度に関するアンケートやフィードバック要求を非表示にします</string>
   <string name="morphe_hide_ticket_shelf_title">チケット欄を非表示</string>
@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_upload_time_summary">"制限事項:
 • ショート欄、チャンネル ページ、検索結果では、引き続き公開からの経過時間 / 予定時間が表示される場合がある
 • Automotive レイアウトでは動作しない"</string>
+  <string name="morphe_hide_video_thumbnail_title">動画のサムネイルを非表示</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">おすすめ動画のラベルを非表示</string>
   <string name="morphe_hide_video_recommendation_labels_summary">検索結果に表示される「他の人はこの動画も視聴しています」ラベルと「あなたへのおすすめ」ラベルを非表示にします</string>
@@ -233,7 +234,7 @@ Second \"item\" text"</string>
 キーワードには、除外したい動画のチャンネル名もしくはタイトルの一部を指定することができます
 
 単語の途中に大文字が含まれる場合は、大文字のまま入力する必要があります (例: iPhone、TikTok、LeBlanc)"</string>
-  <string name="morphe_hide_keyword_content_about_summary">"ホーム / 登録チャンネル / 検索結果でキーワードに合致する動画を除外します。また、キーワードに合致する、コメント欄のコメントも除外することができます
+  <string name="morphe_hide_keyword_content_about_summary">"キーワードに合致する動画を、ホーム / 登録チャンネル / 検索結果から除外します。コメント欄では、キーワードに合致するコメントを除外します
 
 制限事項:
 • ショート動画はチャンネル名の合致では除外できない

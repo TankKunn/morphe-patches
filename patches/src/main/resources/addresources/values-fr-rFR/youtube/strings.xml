@@ -100,6 +100,7 @@ Les changements incluent :
   <string name="morphe_hide_upload_time_summary">"Limitations :
 • Les étagères Shorts, les pages de chaîne et les résultats de recherche peuvent toujours afficher les dates de mise en ligne
 • Ne fonctionne pas avec la disposition automobile"</string>
+  <string name="morphe_hide_video_thumbnail_title">Masquer la miniature de la vidéo</string>
   <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_recommendation_labels_title">Masquer les libellés de vidéos recommandées</string>
   <string name="morphe_hide_video_recommendation_labels_summary">Masque les libellés \'Les gens ont également regardé\' et \'Vous pourriez aussi aimer\' dans les résultats de recherche</string>
