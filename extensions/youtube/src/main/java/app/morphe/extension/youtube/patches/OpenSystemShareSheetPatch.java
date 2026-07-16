@@ -24,6 +24,7 @@ import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.utils.FlyoutUtils;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.PlayerType;
+import app.morphe.extension.youtube.shared.ShortsPlayerState;
 
 @SuppressWarnings("unused")
 public final class OpenSystemShareSheetPatch {
@@ -59,7 +60,8 @@ public final class OpenSystemShareSheetPatch {
         } else if (!FlyoutUtils.getFlyoutCommentId().isEmpty()) {
             String separator = (REPLACE_LINKS_WITH_SHORTENER.get() ? "?" : "&");
             intentUrl = prefixURL + VideoInformation.getVideoId() + separator + "lc=" + FlyoutUtils.getFlyoutCommentId();
-        } else if (PlayerType.getCurrent().isMaximizedOrFullscreen()) {
+        } else if (PlayerType.getCurrent().isMaximizedOrFullscreen() ||
+                ShortsPlayerState.isOpen()) {
             intentUrl = prefixURL + VideoInformation.getVideoId();
         } else if (!getFlyoutChannelId().isEmpty()) {
             intentUrl = "https://www.youtube.com/channel/" + getFlyoutChannelId();
