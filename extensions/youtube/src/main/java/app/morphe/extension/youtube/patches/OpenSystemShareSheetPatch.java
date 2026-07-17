@@ -42,7 +42,6 @@ public final class OpenSystemShareSheetPatch {
     /**
      * Injection point.
      */
-    @SuppressWarnings("ExtractMethodRecommender")
     public static void openSystemShareSheet() {
         if (!Settings.OPEN_SYSTEM_SHARE_SHEET.get()) {
             return;

@@ -33,6 +33,8 @@ import app.morphe.extension.shared.patches.components.BufferAsciiStrings;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.EngagementPanel;
+import app.morphe.extension.youtube.shared.PlayerType;
+import app.morphe.extension.youtube.shared.ShortsPlayerState;
 
 @SuppressWarnings("unused")
 public final class FlyoutUtils {
@@ -141,7 +143,8 @@ public final class FlyoutUtils {
      * Injection point.
      */
     public static void extractIdFromLithoButton(Map<?, ?> map) {
-        if (commentsPanelNames.contains(EngagementPanel.getId())) {
+        if ((PlayerType.getCurrent().isMaximizedOrFullscreen() || ShortsPlayerState.isOpen()) &&
+                EngagementPanel.checkIdsInQueue(commentsPanelNames)) {
             extractVideoId(map);
         }
     }
@@ -247,20 +250,24 @@ public final class FlyoutUtils {
     }
     public static List<Integer> indexesOf(byte[] haystack, List<byte[]> needles, int startIndex) {
         List<Integer> indices = new ArrayList<>();
-        if (haystack == null || needles == null || needles.isEmpty()) return indices;
+        if (haystack == null || needles == null) {
+            return indices;
+        }
 
-        int i = startIndex, len = haystack.length;
-        int needlesCount = needles.size();
-        int foundCount = 0;
+        int haystackLen = haystack.length;
 
-        while (i < len && foundCount < needlesCount) {
-            int step = 1;
-            for (int k = 0; k < needlesCount; k++) {
+        boolean[] found = new boolean[needles.size()];
+        for (int i = startIndex; i <= haystackLen; i++) {
+            for (int k = 0; k < needles.size(); k++) {
                 byte[] needle = needles.get(k);
-                if (needle == null) continue;
+                if (found[k] || needle == null) {
+                    continue;
+                }
 
                 int needleLen = needle.length;
-                if (needleLen == 0 || i + needleLen > len) continue;
+                if (needleLen == 0 || i + needleLen > haystackLen) {
+                    continue;
+                }
 
                 boolean match = true;
                 for (int j = 0; j < needleLen; j++) {
@@ -271,12 +278,9 @@ public final class FlyoutUtils {
                 }
                 if (match) {
                     indices.add(i);
-                    foundCount++;
-                    step = needleLen;
-                    break;
+                    found[k] = true;
                 }
             }
-            i += step;
         }
         return indices;
     }
