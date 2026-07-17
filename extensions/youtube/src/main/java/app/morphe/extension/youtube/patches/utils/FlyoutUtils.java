@@ -51,7 +51,10 @@ public final class FlyoutUtils {
             getAsciiBytes(".ytimg.com/vi/"),
             getAsciiBytes("youtube.com/watch?v="));
     private static final byte[] HORIZONTAL_SHELF_BYTES = getAsciiBytes("horizontal_shelf.e");
-    private static final byte[] LIST_ITEM_BYTES = getAsciiBytes("list_item.e");
+    private static final List<byte[]> LIST_ITEM_SHARE_BYTES = List.of(
+            getAsciiBytes("list_item.e"),
+            getAsciiBytes("yt_outline_experimental_share")
+    );
 
     private static final Pattern TITLE_CLEANUP_PATTERN = Pattern.compile("[^a-zA-Z0-9\\s]");
     private static final Pattern WHITESPACE_PATTERN = Pattern.compile("\\s+");
@@ -187,38 +190,44 @@ public final class FlyoutUtils {
 
             // Check whether the buffer contains the specified IDs, within a certain initial
             // range of the buffer, to avoid matching with false positives.
-            int listItemBytesIndex = indexOf(flyoutBuffer, LIST_ITEM_BYTES);
-            if (listItemBytesIndex == -1) {
-                int horizontalShelfBytesIndex = indexOf(flyoutBuffer, HORIZONTAL_SHELF_BYTES);
-                if (horizontalShelfBytesIndex >= 0 && horizontalShelfBytesIndex <= 30) {
-                    View senderView = senderViewRef.get();
-                    if (senderView != null) {
-                        ViewParent parent = senderView.getParent();
-                        while (parent != null) {
-                            if (parent instanceof ComponentHost componentHost) {
-                                final CharSequence description = componentHost.getContentDescription();
-                                if (description != null) {
-                                    flyoutBuffer = getTrimmedHorizontalShelfBuffer(flyoutBuffer, description.toString());
-                                }
-                            }
-                            parent = parent.getParent();
-                        }
+            List<Integer> listItemShareBytesIndexes = indexesOf(flyoutBuffer, LIST_ITEM_SHARE_BYTES);
+            if (!listItemShareBytesIndexes.isEmpty()) {
+                if (listItemShareBytesIndexes.size() == LIST_ITEM_SHARE_BYTES.size()) {
+                    int listItemShareBytesFirstIndex = listItemShareBytesIndexes.get(0);
+                    if (listItemShareBytesFirstIndex >= 0 && listItemShareBytesFirstIndex <= 30) {
+                        fetchCommentId(flyoutBuffer);
                     }
                 }
+                return;
+            }
 
-                for (byte[] VIDEO_ID_PREFIX_BYTES : VIDEO_ID_PREFIXES_BYTES) {
-                    final int index = indexOf(flyoutBuffer, VIDEO_ID_PREFIX_BYTES);
-                    if (index >= 0) {
-                        final int videoIdStart = index + VIDEO_ID_PREFIX_BYTES.length;
-                        final int videoIdEnd = videoIdStart + 11;
-                        if (videoIdEnd <= flyoutBuffer.length) {
-                            flyoutVideoId = new String(flyoutBuffer, videoIdStart, 11, StandardCharsets.US_ASCII);
-                            break;
+            int horizontalShelfBytesIndex = indexOf(flyoutBuffer, HORIZONTAL_SHELF_BYTES);
+            if (horizontalShelfBytesIndex >= 0 && horizontalShelfBytesIndex <= 30) {
+                View senderView = senderViewRef.get();
+                if (senderView != null) {
+                    ViewParent parent = senderView.getParent();
+                    while (parent != null) {
+                        if (parent instanceof ComponentHost componentHost) {
+                            final CharSequence description = componentHost.getContentDescription();
+                            if (description != null) {
+                                flyoutBuffer = getTrimmedHorizontalShelfBuffer(flyoutBuffer, description.toString());
+                            }
                         }
+                        parent = parent.getParent();
                     }
                 }
-            } else if (listItemBytesIndex >= 0 && listItemBytesIndex <= 30) {
-                setCommentId(flyoutBuffer);
+            }
+
+            for (byte[] VIDEO_ID_PREFIX_BYTES : VIDEO_ID_PREFIXES_BYTES) {
+                final int index = indexOf(flyoutBuffer, VIDEO_ID_PREFIX_BYTES);
+                if (index >= 0) {
+                    final int videoIdStart = index + VIDEO_ID_PREFIX_BYTES.length;
+                    final int videoIdEnd = videoIdStart + 11;
+                    if (videoIdEnd <= flyoutBuffer.length) {
+                        flyoutVideoId = new String(flyoutBuffer, videoIdStart, 11, StandardCharsets.US_ASCII);
+                        break;
+                    }
+                }
             }
         } catch (Exception ex) {
             Logger.printException(() -> "extractVideoId failure", ex);
@@ -229,18 +238,47 @@ public final class FlyoutUtils {
         return indexOf(haystack, needle, 0);
     }
     public static int indexOf(byte[] haystack, byte[] needle, int startIndex) {
-        final int needleLength = needle.length;
-        for (int i = startIndex, lastIndex = haystack.length - needleLength; i <= lastIndex; i++) {
-            boolean found = true;
-            for (int j = 0; j < needleLength; j++) {
-                if (haystack[i + j] != needle[j]) {
-                    found = false;
+        if (needle == null) return -1;
+        List<Integer> indices = indexesOf(haystack, List.of(needle), startIndex);
+        return indices.isEmpty() ? -1 : indices.get(0);
+    }
+    public static List<Integer> indexesOf(byte[] haystack, List<byte[]> needles) {
+        return indexesOf(haystack, needles, 0);
+    }
+    public static List<Integer> indexesOf(byte[] haystack, List<byte[]> needles, int startIndex) {
+        List<Integer> indices = new ArrayList<>();
+        if (haystack == null || needles == null || needles.isEmpty()) return indices;
+
+        int i = startIndex, len = haystack.length;
+        int needlesCount = needles.size();
+        int foundCount = 0;
+
+        while (i < len && foundCount < needlesCount) {
+            int step = 1;
+            for (int k = 0; k < needlesCount; k++) {
+                byte[] needle = needles.get(k);
+                if (needle == null) continue;
+
+                int needleLen = needle.length;
+                if (needleLen == 0 || i + needleLen > len) continue;
+
+                boolean match = true;
+                for (int j = 0; j < needleLen; j++) {
+                    if (haystack[i + j] != needle[j]) {
+                        match = false;
+                        break;
+                    }
+                }
+                if (match) {
+                    indices.add(i);
+                    foundCount++;
+                    step = needleLen;
                     break;
                 }
             }
-            if (found) return i;
+            i += step;
         }
-        return -1;
+        return indices;
     }
 
     /**
@@ -328,7 +366,7 @@ public final class FlyoutUtils {
         return buffer;
     }
 
-    private static void setCommentId(byte[] buffer) {
+    private static void fetchCommentId(byte[] buffer) {
         try {
             int bestStart = -1, bestEnd = -1, maxLen = 0, curr = 0;
             final int bufferLength = buffer.length;
