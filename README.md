@@ -35,7 +35,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.35.0](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.35.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;126 patches total
+> **[v1.36.0-dev.1](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;127 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;72 patches</summary>
 <br>
@@ -123,7 +123,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 </details>
 
 <details>
-<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;35 patches</summary>
+<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;36 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -138,6 +138,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Change miniplayer color](#change-miniplayer-color) | Adds an option to change the miniplayer background color to match the fullscreen player. |  |
 | [Change start page](#change-start-page) | Adds an option to set which page the app opens in instead of the homepage. |  |
 | [Check watch history domain name resolution](#check-watch-history-domain-name-resolution) | Checks if the device DNS server is preventing user watch history from being saved. |  |
+| [Crossfade](#crossfade) | Adds a true dual-player crossfade between consecutive tracks. Requires YouTube Music 9.00 or newer; on older versions the patch is a no-op. |  |
 | [Custom branding](#custom-branding) | Adds options to change the app icon and app name. Branding cannot be changed for mounted (root) installations. | • App name<br>• Custom icon |
 | [Disable DRC audio](#disable-drc-audio) | Adds an option to disable DRC (Dynamic Range Compression) audio. |  |
 | [Disable QUIC protocol](#disable-quic-protocol) | Adds an option to disable QUIC (Quick UDP Internet Connections) network protocol. |  |
@@ -161,13 +162,13 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Remember repeat state](#remember-repeat-state) | Adds an option to remember the repeat state when playing a new track or playlist. |  |
 | [Remember shuffle state](#remember-shuffle-state) | Adds an option to remember the shuffle state when playing a new track or playlist. |  |
 | [Remove background playback restrictions](#remove-background-playback-restrictions) | Removes restrictions on background playback, including playing kids videos in the background. |  |
+| [Return YouTube Dislike](#return-youtube-dislike) | Adds an option to show the dislike count of tracks with Return YouTube Dislike. |  |
 | [Sanitize sharing links](#sanitize-sharing-links) | Removes the tracking query parameters from shared links. |  |
 | [Scrobbling](#scrobbling) | Adds options to add played tracks to Last.fm and ListenBrainz. |  |
 | [SponsorBlock](#sponsorblock) | Adds options to enable and configure SponsorBlock, which can skip non-music segments. |  |
 | [Spoof app version](#spoof-app-version) | Adds an option to trick the app into thinking you are running an older version. |  |
 | [Spoof video streams](#spoof-video-streams) | Adds options to spoof the client video streams to fix playback. |  |
 | [Theme](#theme) | Adds options for theming and applies a custom background theme (dark background theme defaults to pure black). | • Dark theme background color |
-| [Track crossfade](#track-crossfade) | Adds a true dual-player crossfade between consecutive tracks. Requires YouTube Music 9.00 or newer; on older versions the patch is a no-op. |  |
 
 </details>
 
@@ -177,7 +178,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;2026.28.0 | 🧪&nbsp;2026.27.0 | 🧪&nbsp;2026.24.0 | 2026.14.0 | 2026.04.0 |
+| 🧪&nbsp;2026.29.0 | 🧪&nbsp;2026.28.0 | 🧪&nbsp;2026.24.0 | 2026.14.0 | 2026.04.0 |
 | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |

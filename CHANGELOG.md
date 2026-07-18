@@ -1,3 +1,22 @@
+## [1.36.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.35.0...v1.36.0-dev.1) (2026-07-18)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Engagement Panel:** Implemented a queue of open panels ([079b23f](https://github.com/MorpheApp/morphe-patches/commit/079b23f343f67554b82a8c64457ac2c19d670749))
+* **YouTube - FlyoutUtils:** Added compatibility with other video shelf types ([ce7c0b0](https://github.com/MorpheApp/morphe-patches/commit/ce7c0b070feaa5de1c865642657a5e00922c9281))
+* **YouTube - Hide filter bar:** Related videos filter bar is not correctly hidden ([0245d6b](https://github.com/MorpheApp/morphe-patches/commit/0245d6bd0b4092a2121e397002f99cd21c22e5f4))
+* **YouTube - Hide Shorts components:** Hide new type of labels ([#2069](https://github.com/MorpheApp/morphe-patches/issues/2069)) ([befe786](https://github.com/MorpheApp/morphe-patches/commit/befe786470525c7b72a1a357c4539f06496452a8))
+* **YouTube - System share sheet:** Fetch the commentId only when the share button is pressed ([ee8df69](https://github.com/MorpheApp/morphe-patches/commit/ee8df69c50c5906d635222fc1e188350eda779a5))
+* **YouTube - System share sheet:** Share sheet doesn't works in Shorts ([a8ff805](https://github.com/MorpheApp/morphe-patches/commit/a8ff80576bd94561b4a2d631e911a684022c807d))
+
+### ✨ New Features
+
+* **YouTube Music:** Add `Return YouTube Dislike` patch ([#1994](https://github.com/MorpheApp/morphe-patches/issues/1994)) ([8f58725](https://github.com/MorpheApp/morphe-patches/commit/8f587259ba8fb4dade3a44eabcdead1948c53945))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.29.0` ([e0629fc](https://github.com/MorpheApp/morphe-patches/commit/e0629fcdc4edce25db8124d279142bcfd14cb8d8))
+
 ## [1.35.0](https://github.com/MorpheApp/morphe-patches/compare/v1.34.0...v1.35.0) (2026-07-16)
 
 ### 🐛 Bug Fixes
