@@ -138,4 +138,25 @@ Men om du aktiverar detta kommer även vissa användardata, t.ex. din IP-adress,
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_summary">Lurar servern att tro att du använder en äldre appversion för att återställa äldre funktioner i användargränssnittet</string>
   <string name="morphe_spoof_app_version_target_title">Mål för Förfalska appversionen</string>
+  <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
+  <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
+  <string name="morphe_ryd_failure_connection_status_code">Ogilla-markeringar är inte tillgängliga (status %d)</string>
+  <string name="morphe_ryd_failure_client_rate_limit_requested">Ogilla-markeringar är inte tillgängliga (API-gräns för klienten)</string>
+  <string name="morphe_ryd_failure_generic">Ogilla-markeringar är inte tillgängliga (%s)</string>
+  <!-- Video likes have been set to hidden by the video uploader. -->
+  <string name="morphe_ryd_video_likes_hidden_by_video_owner">Dolda av ägaren</string>
+  <string name="morphe_ryd_enabled_title">Aktivera Return YouTube Dislike</string>
+  <string name="morphe_ryd_dislike_percentage_title">Visa ogilla-markeringar som procentandel</string>
+  <string name="morphe_ryd_dislike_percentage_summary">Visa ogilla-markeringar som procentandelen av antalet gilla-markeringar istället för som ett tal</string>
+  <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
+  <string name="morphe_ryd_compact_layout_title">Använd kompakt Gilla-knapp</string>
+  <string name="morphe_ryd_compact_layout_summary">Minskar bredden på Gilla-knappen för att spara utrymme</string>
+  <string name="morphe_ryd_estimated_like_title">Visa uppskattade gilla-markeringar</string>
+  <string name="morphe_ryd_estimated_like_summary">Visar ett uppskattat antal gilla-markeringar för videor där kreatören har inaktiverat gilla-markeringar</string>
+  <string name="morphe_ryd_toast_on_connection_error_title">Visa meddelanden om anslutningsfel</string>
+  <string name="morphe_ryd_toast_on_connection_error_summary">Visar ett meddelande när Return YouTube Dislike-servern inte är tillgänglig</string>
+  <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
+  <string name="morphe_ryd_statistics_getFetchCallCount_title">API-rösthämtning, antal anrop</string>
+  <string name="morphe_ryd_statistics_getFetchCallCount_zero_summary">Inga nätverksanrop har gjorts</string>
+  <string name="morphe_ryd_statistics_millisecond_text">%d millisekunder</string>
 </resources>

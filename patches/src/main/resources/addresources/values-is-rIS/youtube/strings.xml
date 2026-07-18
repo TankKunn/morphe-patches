@@ -813,46 +813,6 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <string name="morphe_player_overlay_opacity_title">Spilar murargyga </string>
   <string name="morphe_player_overlay_opacity_summary">Stilltu gegnsærastefnu (0 er gagnsætt, 100 er ógegnsætt)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Muragygð skal vera á bilinu 0-100 </string>
-  <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
-  <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_ryd_failure_connection_timeout">Ekkert ég get sjálfvirka niðurhal (API tímdi út)</string>
-  <string name="morphe_ryd_failure_connection_status_code">Ekki er hægt að sjálfvirkja sjálfvirka niðurhal (staða %d)</string>
-  <string name="morphe_ryd_failure_client_rate_limit_requested">Ekkert er hægt að sjálfvirkja sjálfvirka niðurhal (sjálfvirka niðurhals breytan)</string>
-  <string name="morphe_ryd_failure_generic">Ekki er hægt að sjálfvirkja sjálfvirka niðurhal (%s)</string>
-  <!-- Brief notification (Toast) shown if the user enables RYD while a video is opened, and then tries to vote for the video. -->
-  <string name="morphe_ryd_failure_ryd_enabled_while_playing_video_then_user_voted">Hlöðu vídeó til að nota Return YouTube Dislike </string>
-  <!-- Video likes have been set to hidden by the video uploader. -->
-  <string name="morphe_ryd_video_likes_hidden_by_video_owner">Hólar eru ekki virkir</string>
-  <string name="morphe_ryd_enabled_title">Virkja Return YouTube Dislike</string>
-  <string name="morphe_ryd_dislike_percentage_title">Sýna dislikes sem hlutfall</string>
-  <string name="morphe_ryd_dislike_percentage_summary">Sýnir dislikes sem hlutfall af likeum frekar en tölu</string>
-  <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
-  <string name="morphe_ryd_compact_layout_title">Nota þétt Like hnappinn</string>
-  <string name="morphe_ryd_compact_layout_summary">Minnkar breidd Like hnappsins til að spara pláss</string>
-  <string name="morphe_ryd_estimated_like_title">Sýna áætlaða líkindi</string>
-  <string name="morphe_ryd_estimated_like_summary">Sýnir áætlaðan like count á vídeóum þar sem skapari hefur afvirkjað likes</string>
-  <string name="morphe_ryd_toast_on_connection_error_title">Sýna tengingar villuboð</string>
-  <string name="morphe_ryd_toast_on_connection_error_summary">Sýnir tilkynningu þegar Return YouTube Dislike þjón er óvirkur</string>
-  <string name="morphe_ryd_attribution_summary">"Gagnagögn eru veitt af Return YouTube Dislike API
-
-Taktu hér til að opna ReturnYouTubeDislike.com"</string>
-  <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
-  <string name="morphe_ryd_statistics_category_title">Return YouTube Dislike API tölfræði fyrir þetta tæki</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Samspil niðurhal </string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeMin_title">Lágmarks svarstími API</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeMax_title">Hámarks svarstími API</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_title">Svarstími API, síðasta myndbandið</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_rate_limit_summary">Ólikes eru tímabundið óþægilegar - takmörun á API-beiðnum vinstri hliðar</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_title">API sækir atkvæði, fjöldi kallanna</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_zero_summary">Engar netkrýpur gerðar</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_non_zero_summary">%d netkrýpur gerðar</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_title">API sækir atkvæði, fjöldi tímaúts</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_zero_summary">Engar netkrýpur tímdar út</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_non_zero_summary">%d netkrýpur tímdar út</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_title">Takmörun á API-beiðnum</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_zero_summary">Engar takmarkanir á API-beiðnum</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_non_zero_summary">Takmörun á API-beiðnum komin %d sinnum</string>
-  <string name="morphe_ryd_statistics_millisecond_text">%d millisekúndur</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_wide_searchbar_title">Virkja breið leit</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->

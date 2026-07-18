@@ -818,46 +818,6 @@ Einstellungen → Wiedergabe (oder Automatische Wiedergabe) → Nächstes Video 
   <string name="morphe_player_overlay_opacity_title">Spieler-Überlagerung Deckkraft</string>
   <string name="morphe_player_overlay_opacity_summary">Passen Sie die Transparenz an (0 ist transparent, 100 ist opak)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Die Overlay-Deckkraft muss zwischen 0-100 liegen</string>
-  <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
-  <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_ryd_failure_connection_timeout">Dislikes vorläufig nicht verfügbar (API Timeout)</string>
-  <string name="morphe_ryd_failure_connection_status_code">Dislikes nicht verfügbar (Status %d)</string>
-  <string name="morphe_ryd_failure_client_rate_limit_requested">Dislikes sind nicht verfügbar (Limit der Client-API)</string>
-  <string name="morphe_ryd_failure_generic">Dislikes nicht verfügbar (%s)</string>
-  <!-- Brief notification (Toast) shown if the user enables RYD while a video is opened, and then tries to vote for the video. -->
-  <string name="morphe_ryd_failure_ryd_enabled_while_playing_video_then_user_voted">Video neu laden, um mit Return YouTube Dislike abzustimmen</string>
-  <!-- Video likes have been set to hidden by the video uploader. -->
-  <string name="morphe_ryd_video_likes_hidden_by_video_owner">Vom Eigentümer verborgen</string>
-  <string name="morphe_ryd_enabled_title">Return YouTube Dislike aktivieren</string>
-  <string name="morphe_ryd_dislike_percentage_title">Dislikes als Prozentsatz anzeigen</string>
-  <string name="morphe_ryd_dislike_percentage_summary">Zeigt Dislikes als Prozentsatz der Likes anstelle einer Zahl an</string>
-  <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
-  <string name="morphe_ryd_compact_layout_title">Schaltfläche „Like“ in kompakter Darstellung verwenden</string>
-  <string name="morphe_ryd_compact_layout_summary">Verringert die Breite der „Like“-Schaltfläche, um Platz zu sparen</string>
-  <string name="morphe_ryd_estimated_like_title">Geschätzte \"Gefällt mir\"-Angaben anzeigen</string>
-  <string name="morphe_ryd_estimated_like_summary">Zeigt bei Videos mit deaktivierten Likes eine geschätzte Like-Anzahl an.</string>
-  <string name="morphe_ryd_toast_on_connection_error_title">Verbindungsfehler-Benachrichtigungen anzeigen</string>
-  <string name="morphe_ryd_toast_on_connection_error_summary">Zeigt eine Benachrichtigung an, wenn der Return YouTube Dislike-Server nicht verfügbar ist</string>
-  <string name="morphe_ryd_attribution_summary">"Daten werden von der Return YouTube Dislike API bereitgestellt
-
-Tippen Sie hier, um ReturnYouTubeDislike.com zu öffnen"</string>
-  <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
-  <string name="morphe_ryd_statistics_category_title">Statistiken der Return YouTube Dislike API für dieses Gerät</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">API-Antwortzeit, Durchschnitt</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeMin_title">API-Antwortzeit, Minimum</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeMax_title">API-Antwortzeit, Maximum</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_title">API-Antwortzeit, letztes Video</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_rate_limit_summary">Dislikes vorübergehend nicht verfügbar - Client-API-Rate Limit in der Tat</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_title">API-Abstimmungen abrufen, Anzahl der Aufrufe</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_zero_summary">Keine Netzwerkanrufe durchgeführt</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_non_zero_summary">%d Netzwerkanrufe getätigt</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_title">API-Abstimmungen abrufen, Anzahl der Timeouts</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_zero_summary">Keine Zeitüberschreitung für Netzwerkanrufe</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_non_zero_summary">%d Netzwerkanrufe Timeout</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_title">Limit API-Client-Rate</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_zero_summary">Keine Limit für Kundenrate gefunden</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_non_zero_summary">Client-Ratenlimit %d-mal erreicht</string>
-  <string name="morphe_ryd_statistics_millisecond_text">%d Millisekunden</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_wide_searchbar_title">breite Suchleiste aktivieren</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->

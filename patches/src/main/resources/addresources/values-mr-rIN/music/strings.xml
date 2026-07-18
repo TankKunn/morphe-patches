@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_music_screen_1_ads_title">जाहिराती</string>
   <string name="morphe_settings_music_screen_2_general_title">सामान्य</string>
   <string name="morphe_settings_music_screen_3_player_title">प्लेअर</string>
+  <string name="morphe_settings_music_screen_7_misc_title">इतर</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_music_hide_get_premium_label_title">\'Get Music Premium\' लेबल लपवा</string>
   <string name="morphe_music_hide_video_ads_title">व्हिडिओ जाहिराती लपवा</string>

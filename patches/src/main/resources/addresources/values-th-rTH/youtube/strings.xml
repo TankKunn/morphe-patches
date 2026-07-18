@@ -815,46 +815,6 @@ Second \"item\" text"</string>
   <string name="morphe_player_overlay_opacity_title">ความโปร่งใสของการซ้อนทับของเครื่องเล่น</string>
   <string name="morphe_player_overlay_opacity_summary">ปรับระดับความโปร่งใส (0 คือโปร่งใส, 100 คือทึบแสง)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">ความทึบของเลเยอร์เล่นวิดีโอต้องอยู่ระหว่าง 0-100</string>
-  <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
-  <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_ryd_failure_connection_timeout">ไม่สามารถแสดงความไม่ชอบชั่วคราว (API หมดเวลา)</string>
-  <string name="morphe_ryd_failure_connection_status_code">ไม่สามารถแสดงความไม่ชอบได้ (รหัสสถานะ %d)</string>
-  <string name="morphe_ryd_failure_client_rate_limit_requested">ไม่สามารถใช้งานการไม่ถูกใจได้ (ข้อจำกัดของ Client API)</string>
-  <string name="morphe_ryd_failure_generic">ไม่สามารถใช้งาน \"ไม่ชอบ\" ได้ (%s)</string>
-  <!-- Brief notification (Toast) shown if the user enables RYD while a video is opened, and then tries to vote for the video. -->
-  <string name="morphe_ryd_failure_ryd_enabled_while_playing_video_then_user_voted">รีโหลดวิดีโอเพื่อลงคะแนนโดยใช้ Return YouTube Dislike</string>
-  <!-- Video likes have been set to hidden by the video uploader. -->
-  <string name="morphe_ryd_video_likes_hidden_by_video_owner">ซ่อนโดยเจ้าของ</string>
-  <string name="morphe_ryd_enabled_title">เปิดใช้งาน Return YouTube Dislike</string>
-  <string name="morphe_ryd_dislike_percentage_title">แสดงการไม่ถูกใจเป็นเปอร์เซ็นต์</string>
-  <string name="morphe_ryd_dislike_percentage_summary">แสดงการไม่ถูกใจเป็นเปอร์เซ็นต์ของจำนวนการถูกใจแทนที่จะเป็นตัวเลข</string>
-  <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
-  <string name="morphe_ryd_compact_layout_title">ใช้ปุ่มถูกใจขนาดกะทัดรัด</string>
-  <string name="morphe_ryd_compact_layout_summary">ลดความกว้างของปุ่มถูกใจเพื่อประหยัดพื้นที่</string>
-  <string name="morphe_ryd_estimated_like_title">แสดงจำนวนถูกใจโดยประมาณ</string>
-  <string name="morphe_ryd_estimated_like_summary">แสดงจำนวนการถูกใจโดยประมาณบนวิดีโอที่ผู้สร้างปิดใช้งานการถูกใจ</string>
-  <string name="morphe_ryd_toast_on_connection_error_title">แสดงการแจ้งเตือนข้อผิดพลาดการเชื่อมต่อ</string>
-  <string name="morphe_ryd_toast_on_connection_error_summary">แสดงการแจ้งเตือนเมื่อเซิร์ฟเวอร์ Return YouTube Dislike ไม่สามารถใช้งานได้</string>
-  <string name="morphe_ryd_attribution_summary">"ข้อมูลนี้มาจาก Return YouTube Dislike API
-
-แตะที่นี่เพื่อเปิด ReturnYouTubeDislike.com"</string>
-  <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
-  <string name="morphe_ryd_statistics_category_title">อุปกรณ์นี้</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">เฉลี่ย</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeMin_title">น้อยสุด</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeMax_title">เวลาการตอบสนอง API สูงสุด</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_title">เวลาการตอบสนอง API วิดีโอสุดท้าย</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_rate_limit_summary">การแสดงจำนวน Dislikes ไม่พร้อมใช้งานชั่วคราว - ขีดจำกัดอัตราการเรียกใช้ API ของไคลเอ็นต์มีผล</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_title">API ดึงโหวต จำนวนการเรียก</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_zero_summary">ไม่มีการเรียกเครือข่าย</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_non_zero_summary">%d การเรียกเครือข่าย</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_title">API  ดึงคะแนนเสียง จำนวนการหมดเวลา</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_zero_summary">ไม่มีการเรียกเครือข่ายหมดเวลา</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_non_zero_summary">การเรียกเครือข่าย %d ครั้งหมดเวลา</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_title">ข้อจำกัดอัตราการเรียกใช้ API</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_zero_summary">เลือนต้องกายการบางาน</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_non_zero_summary">%d คุณ ที่ซีแต่องกายการบางาน</string>
-  <string name="morphe_ryd_statistics_millisecond_text">%d มิกเวฮราธี</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_wide_searchbar_title">ทั้งหละเย้ยนตะโรกเลียด</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->

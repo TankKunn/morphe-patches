@@ -816,46 +816,6 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <string name="morphe_player_overlay_opacity_title">Speler oorlegslaag deursigtigheid</string>
   <string name="morphe_player_overlay_opacity_summary">Pas die deursigtigheidsvlak aan (0 is deursigtig, 100 is ondeursigtig)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Speler oorlegslaag deursigtigheid moet tussen 0-100 wees</string>
-  <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
-  <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_ryd_failure_connection_timeout">Nie likes is tans nie beskikbaar (API het tyd uitgeloop nie)</string>
-  <string name="morphe_ryd_failure_connection_status_code">Nie likes is nie beskikbaar (status %d)</string>
-  <string name="morphe_ryd_failure_client_rate_limit_requested">Nie likes is nie beskikbaar (kliënt API limiet)</string>
-  <string name="morphe_ryd_failure_generic">Nie likes is nie beskikbaar (%s)</string>
-  <!-- Brief notification (Toast) shown if the user enables RYD while a video is opened, and then tries to vote for the video. -->
-  <string name="morphe_ryd_failure_ryd_enabled_while_playing_video_then_user_voted">Herlaai video om te stem met Return YouTube Dislike</string>
-  <!-- Video likes have been set to hidden by the video uploader. -->
-  <string name="morphe_ryd_video_likes_hidden_by_video_owner">Versteek deur eienaar</string>
-  <string name="morphe_ryd_enabled_title">Aktiveer Return YouTube Dislike</string>
-  <string name="morphe_ryd_dislike_percentage_title">Wys dislikes as persentasie</string>
-  <string name="morphe_ryd_dislike_percentage_summary">Wys dislikes as \'n persentasie van likes in plaas van \'n getal</string>
-  <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
-  <string name="morphe_ryd_compact_layout_title">Gebruik kompakte Like-knoppie</string>
-  <string name="morphe_ryd_compact_layout_summary">Verminder die breedte van die Like-knoppie om spasie te bespaar</string>
-  <string name="morphe_ryd_estimated_like_title">Wys geskatte likes</string>
-  <string name="morphe_ryd_estimated_like_summary">Wys \'n beraamde like-telling op video\'s waar die skepper likes gedeaktiveer het</string>
-  <string name="morphe_ryd_toast_on_connection_error_title">Wys konneksiefoutwaarskuwings</string>
-  <string name="morphe_ryd_toast_on_connection_error_summary">Wys \'n kennisgewing wanneer die Return YouTube Dislike-bediener nie beskikbaar is nie</string>
-  <string name="morphe_ryd_attribution_summary">"Data word verskaf deur die Return YouTube Dislike API
-
-Tik hier om ReturnYouTubeDislike.com oop te maak"</string>
-  <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
-  <string name="morphe_ryd_statistics_category_title">Return YouTube Dislike API statistiek van hierdie toestel</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">API reaksietyd, gemiddeld</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeMin_title">API reaksietyd, minimum</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeMax_title">API reaksietyd, maksimum</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_title">API reaksietyd, laaste video</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_rate_limit_summary">Nie likes is tans nie beskikbaar - Kliënt API snelheid limiet in effek</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_title">API haal stemme, aantal oproepe</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_zero_summary">Geen netwerkoproepe uitgevoer nie</string>
-  <string name="morphe_ryd_statistics_getFetchCallCount_non_zero_summary">%d netwerkoproepe uitgevoer</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_title">API haal stemme, aantal tydperke</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_zero_summary">Geen netwerkoproepe het tyd uitgeloop nie</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_non_zero_summary">%d netwerkoproepe het tyd uitgeloop</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_title">API kliënt snelheidlimiete</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_zero_summary">Geen kliënt snelheidlimiete gekom</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_non_zero_summary">Kliënt snelheid limiet gekom %d keer</string>
-  <string name="morphe_ryd_statistics_millisecond_text">%d millisekondes</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_wide_searchbar_title">Aktiveer breë soekbalk</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
