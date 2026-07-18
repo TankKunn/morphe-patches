@@ -67,7 +67,12 @@ public final class FlyoutUtils {
     );
     private static final byte[] PLAYLIST_ID_PREFIXES_BYTES = getAsciiBytes("youtube.com/playlist?list=");
     private static final byte[] COMPACT_PLAYLIST_BYTES = getAsciiBytes("compact_playlist.e");
-    private static final byte[] HORIZONTAL_SHELF_BYTES = getAsciiBytes("horizontal_shelf.e");
+    private static final List<byte[]> SHELFS_BYTES = List.of(
+            getAsciiBytes("horizontal_shelf.e"),
+            getAsciiBytes("shorts_shelf.e"),
+            getAsciiBytes("grid_video_wrapper.e"),
+            getAsciiBytes("rich_grid_row.e")
+    );
     private static final List<byte[]> LIST_ITEM_SHARE_BYTES = List.of(
             getAsciiBytes("list_item.e"),
             getAsciiBytes("yt_outline_experimental_share")
@@ -220,7 +225,7 @@ public final class FlyoutUtils {
                 return;
             }
 
-            if (byteIndexInStartRange(byteIndexOf(flyoutBuffer, HORIZONTAL_SHELF_BYTES))) {
+            if (!byteIndexesOf(flyoutBuffer, SHELFS_BYTES).isEmpty()) {
                 final View senderView = senderViewRef.get();
                 if (senderView != null) {
                     ViewParent parent = senderView.getParent();
@@ -228,7 +233,7 @@ public final class FlyoutUtils {
                         if (parent instanceof ComponentHost componentHost) {
                             final CharSequence description = componentHost.getContentDescription();
                             if (description != null) {
-                                setHorizontalShelfFlyoutVideoId(flyoutBuffer, description.toString());
+                                setShelfFlyoutVideoId(flyoutBuffer, description.toString());
                             }
                         }
                         parent = parent.getParent();
@@ -263,7 +268,7 @@ public final class FlyoutUtils {
         }
     }
 
-    private static void setHorizontalShelfFlyoutVideoId(byte[] buffer, String description) {
+    private static void setShelfFlyoutVideoId(byte[] buffer, String description) {
         if (description == null || buffer == null || description.isEmpty()) {
             return;
         }
