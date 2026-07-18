@@ -273,7 +273,7 @@ YouTube Music 8.x — crossfade only runs on 9.x and newer"</string>
     <string name="morphe_music_listenbrainz_token_dialog_get_token">Get token</string>
     <string name="morphe_music_listenbrainz_token_dialog_verify">Verify</string>
     <string name="morphe_music_listenbrainz_token_status_empty">Please enter a token</string>
-    <string name="morphe_music_listenbrainz_token_status_validating">Validating...</string>
+    <string name="morphe_music_listenbrainz_token_status_validating">Validating…</string>
     <string name="morphe_music_listenbrainz_token_status_valid">Valid token! User: %s</string>
     <string name="morphe_music_listenbrainz_token_status_invalid">Invalid token: %s</string>
     <string name="morphe_music_listenbrainz_token_status_invalid_unknown">unknown</string>
@@ -292,7 +292,7 @@ YouTube Music 8.x — crossfade only runs on 9.x and newer"</string>
     <string name="morphe_music_lastfm_token_dialog_password_hint">Password</string>
     <string name="morphe_music_lastfm_token_dialog_login">Log in</string>
     <string name="morphe_music_lastfm_token_status_empty">Please enter username and password</string>
-    <string name="morphe_music_lastfm_token_status_logging_in">Logging in...</string>
+    <string name="morphe_music_lastfm_token_status_logging_in">Logging in…</string>
     <string name="morphe_music_lastfm_token_status_success">Logged in successfully!</string>
     <string name="morphe_music_lastfm_token_status_no_session">Failed to get session from Last.fm</string>
     <string name="morphe_music_lastfm_token_status_failed">Login failed: %s</string>

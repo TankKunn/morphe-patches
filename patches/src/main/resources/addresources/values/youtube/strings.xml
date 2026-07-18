@@ -284,7 +284,7 @@ Limitations:
     <string name="morphe_hide_aislist_stats_blocklist_channels_title">Blocklist channels</string>
     <string name="morphe_hide_aislist_stats_warnlist_channels_title">Warnlist channels</string>
     <string name="morphe_hide_aislist_stats_channels_disabled_summary">Enable a filter to load channels</string>
-    <string name="morphe_hide_aislist_stats_channels_loading_summary">Loading channels...</string>
+    <string name="morphe_hide_aislist_stats_channels_loading_summary">Loading channels…</string>
     <string name="morphe_hide_aislist_about_summary">"Home and search results are filtered to hide videos from channels flagged by AiSList
 
 Limitations:
