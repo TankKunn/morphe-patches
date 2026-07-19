@@ -111,6 +111,7 @@ public class LoopVideoButton {
         if (LOOP_VIDEO_BUTTON.get() && DO_NOT_REMEMBER_LOOP_VIDEO.get()) {
             setLoopButton(false);
         }
+        updateButtonIcon();
     }
 
 

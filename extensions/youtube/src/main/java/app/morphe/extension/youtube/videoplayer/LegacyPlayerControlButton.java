@@ -11,6 +11,7 @@
 package app.morphe.extension.youtube.videoplayer;
 
 import static app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS;
+import static app.morphe.extension.youtube.videoplayer.PlayerOverlayButton.initializeHeadingFromUpperButton;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -47,7 +48,6 @@ public class LegacyPlayerControlButton {
     }
 
     public static final int fadeInDuration = ResourceUtils.getInteger("fade_duration_fast");
-    public static final int fadeOutDuration = ResourceUtils.getInteger("fade_duration_scheduled");
 
     private static final List<ViewTreeObserver.OnPreDrawListener> pendingListeners = new ArrayList<>();
 
@@ -158,11 +158,16 @@ public class LegacyPlayerControlButton {
         };
 
         View ytButton = ytSourceButtonRef.get();
+        // This check will ensure the destruction of the old button instance after the app enters onResume() mode.
+        if (ytButton != null && !ytButton.isAttachedToWindow()) {
+            ytButton = null;
+            ytSourceButtonRef = new WeakReference<>(null);
+        }
         if (ytButton == null) {
             ytButton = Utils.getChildViewByResourceName(controlsViewGroup, "player_overflow_button");
             if (ytButton == null) {
                 // Currently only happens with SB skip button.
-                Logger.printDebug(() -> "Adding pending listener");
+                Logger.printDebug(() -> "Adding pending listener from an already initialized button");
                 pendingListeners.add(onPreDrawListener);
             } else {
                 ytSourceButtonRef = new WeakReference<>(ytButton);
@@ -221,6 +226,10 @@ public class LegacyPlayerControlButton {
             Logger.printDebug(() -> "Button views are null, source: " + source + " container: " + container);
             return;
         }
+
+        // Ensure to call this method to ensure the correct initialization of the container
+        // field, necessary for the logic that updates the fullscreen title bar margin.
+        initializeHeadingFromUpperButton(container);
 
         final float sourceButtonAlpha = source.getAlpha();
         if (container.getAlpha() != sourceButtonAlpha) {
