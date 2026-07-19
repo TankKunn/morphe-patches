@@ -269,8 +269,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• 首頁：%s
 • 搜尋：%s
 • 總計：%s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">已載入封鎖清單頻道：%s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">已載入警告清單頻道：%s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">封鎖頻道</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">警告頻道</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">啟用篩選器以載入頻道</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">正在載入頻道…</string>
   <string name="morphe_hide_aislist_about_summary">"「首頁」和搜尋結果會經過篩選，以隱藏來自 AiSList 標記的影片
 
 限制：

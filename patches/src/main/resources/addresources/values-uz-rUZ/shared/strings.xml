@@ -81,7 +81,7 @@ Yangi tillarni tarjima qilish yoki mavjud tarjimalarni yaxshilash uchun morphe.s
   <string name="morphe_settings_about_links_rv">2022 &#8209; 2025</string>
   <string name="morphe_settings_about_links_vanced">2019 &#8209; 2022</string>
   <string name="morphe_settings_about_links_licenses">Litsenziya bildirishnomalari</string>
-  <string name="morphe_settings_about_licenses_loading">Yuklanmoqda...</string>
+  <string name="morphe_settings_about_licenses_loading">Yuklanmoqda…</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Kodni tekshirish</string>
   <string name="morphe_debug_screen_summary">Kengaytirilgan ishlab chiquvchi variantlarini va diagnostika loglarini sozlang</string>
@@ -97,7 +97,7 @@ Siz hech qanday kutilmagan voqealar haqida xabardor qilinmaysiz."</string>
   <string name="morphe_debug_export_logs_file">Faylga eksport qilish</string>
   <string name="morphe_debug_export_logs_success">Debug loglari muvaffaqiyatli eksport qilindi</string>
   <string name="morphe_debug_export_logs_failed">Debug loglarini eksport qilishda xato yuz berdi</string>
-  <string name="morphe_debug_logs_search_hint">Debug loglarini qidirish...</string>
+  <string name="morphe_debug_logs_search_hint">Debug jurnallarini qidir…</string>
   <string name="morphe_debug_export_logs_clear">Tozalash</string>
   <string name="morphe_debug_logs_disabled">Debug loglari o\'chirilgan</string>
   <string name="morphe_debug_logs_none_found">Debug loglari topilmadi</string>
@@ -108,7 +108,7 @@ Siz hech qanday kutilmagan voqealar haqida xabardor qilinmaysiz."</string>
   <string name="morphe_debug_feature_flags_manager_summary">Boolean funksiya bayroqlarini boshqarish</string>
   <string name="morphe_debug_feature_flags_manager_active_header">Faol funksiya bayroqlari (%d)</string>
   <string name="morphe_debug_feature_flags_manager_blocked_header">Bloklangan funksiya bayroqlari (%d)</string>
-  <string name="morphe_debug_feature_flags_manager_search_hint">Funksiya bayroqlarini qidirish...</string>
+  <string name="morphe_debug_feature_flags_manager_search_hint">Funksionalilik xususiyatlarini qidir…</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">Funksiya bayroqlari saqlandi</string>
   <string name="morphe_debug_feature_flags_manager_toast_reset">Funksiya bayroqlari taqimlandi</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">Funksiya bayroqlari nusxalab olindi</string>

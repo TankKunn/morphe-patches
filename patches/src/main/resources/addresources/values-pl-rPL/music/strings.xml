@@ -241,7 +241,7 @@ Ekran blokady lub powiadomienie może przez chwilę pokazywać nieaktualny stan 
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Pobierz token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Zweryfikuj</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Wprowadź token</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Weryfikowanie...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Weryfikowanie…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Prawidłowy token! Użytkownik: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Nieprawidłowy token: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">nieznany</string>
@@ -258,7 +258,7 @@ Ekran blokady lub powiadomienie może przez chwilę pokazywać nieaktualny stan 
   <string name="morphe_music_lastfm_token_dialog_password_hint">Hasło</string>
   <string name="morphe_music_lastfm_token_dialog_login">Zaloguj się</string>
   <string name="morphe_music_lastfm_token_status_empty">Wprowadź nazwę użytkownika i hasło</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Logowanie...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Logowanie…</string>
   <string name="morphe_music_lastfm_token_status_success">Zalogowano pomyślnie!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Nie udało się pobrać sesji z Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Logowanie nie powiodło się: %s</string>

@@ -269,8 +269,10 @@ Məhdudiyyətlər:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Ev: %s
 • Axtarış: %s
 • Ümumi: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Yüklənilən bloklama siyahısı kanalları: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Yüklənilən xəbərdarlıq siyahısı kanalları: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Bloklanmış kanallar</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Xəbərdarlıq siyahısı kanalları</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Kanalları yükləmək üçün filtri aktivləşdir</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Kanallar yüklənilir…</string>
   <string name="morphe_hide_aislist_about_summary">"AiSList tərəfindən nişanlanmış kanallardan videoları gizlətmək məqsədilə ev və axtarış nəticələri filtrlənir
 
 Məhdudiyyətlər:
@@ -795,7 +797,7 @@ Ayarlar→ Oxunuş (və ya Avtomatik oxunuş) → Növbəti videonu avtomatik ox
   <string name="morphe_hide_timestamp_title">Video vaxt möhürünü gizlət</string>
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Oynadıcı açılan pəncərə panellərini qapat</string>
-  <string name="morphe_disable_player_popup_panels_summary">Pleylist və canlı söhbət panellərinin avtomatik açılmasını  qapadır</string>
+  <string name="morphe_disable_player_popup_panels_summary">Pleylist və canlı söhbət panellərinin avtomatik açılmasını qapadır</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Video bitdikdə tam ekran rejimini sonlandır</string>
   <string name="morphe_exit_fullscreen_entry_1">Qapalı</string>

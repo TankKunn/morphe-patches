@@ -269,8 +269,10 @@ Mga Limitasyon:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Home: %s
 • Paghahanap: %s
 • Kabuuan: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Na-load ang mga channel ng blocklist: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Na-load ang mga channel ng warnlist: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Mga channel na naka-blocklist</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Mga channel na naka-warnlist</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">I-enable ang filter upang mag-load ng mga channel</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Kinukuha ang mga channel…</string>
   <string name="morphe_hide_aislist_about_summary">"Ang mga resulta ng Home at paghahanap ay nasala upang itago ang mga video mula sa mga channel na minarkahan ng AiSList
 
 Limitasyon:

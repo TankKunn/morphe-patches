@@ -241,7 +241,7 @@ YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Tokeni əldə et</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Yoxla</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Xahiş olunur, tokeni qeyd et</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Təsdiqlənir...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Təsdiqlənir…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Etibarlı token! İstifadəçi: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Etibarsız token: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">naməlum</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir
   <string name="morphe_music_lastfm_token_dialog_password_hint">Parol</string>
   <string name="morphe_music_lastfm_token_dialog_login">Daxil ol</string>
   <string name="morphe_music_lastfm_token_status_empty">Xahiş olunur, istifadəçi adı və parolu qeyd et</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Daxil olunur...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Daxil olunur…</string>
   <string name="morphe_music_lastfm_token_status_success">Uğurla daxil olundu!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Last.fm-dən sessiya əldə etmək olmadı</string>
   <string name="morphe_music_lastfm_token_status_failed">Giriş uğursuz oldu: %s</string>

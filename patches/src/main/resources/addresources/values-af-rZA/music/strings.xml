@@ -241,7 +241,7 @@ YouTube Music 8.x — vervaag loop slegs op 9.x en nuwer"</string>
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Kry token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verifieer</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Voer asseblief \'n token in</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Valideer...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Besig met validering…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Geldige token! Gebruiker: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Ongeldige token: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">onbekend</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — vervaag loop slegs op 9.x en nuwer"</string>
   <string name="morphe_music_lastfm_token_dialog_password_hint">Wagwoord</string>
   <string name="morphe_music_lastfm_token_dialog_login">Aanmeld</string>
   <string name="morphe_music_lastfm_token_status_empty">Voer asseblief gebruikersnaam en wagwoord in</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Besig met aanmeld...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Besig met aanmeld…</string>
   <string name="morphe_music_lastfm_token_status_success">Succesvol aangemeld!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Kon nie sessie van Last.fm kry nie</string>
   <string name="morphe_music_lastfm_token_status_failed">Aanmelding misluk: %s</string>

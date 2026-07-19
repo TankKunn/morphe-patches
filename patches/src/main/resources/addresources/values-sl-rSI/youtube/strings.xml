@@ -269,8 +269,10 @@ Omejitve:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Domača stran: %s
 • Iskanje: %s
 • Skupaj: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Naloženi kanali na blokirnem seznamu: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Naloženi kanali na opozorilnem seznamu: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Kanali na črni listi</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Kanali na opozorilni listi</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Omogoči filter za nalaganje kanalov</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Nalagam kanale…</string>
   <string name="morphe_hide_aislist_about_summary">"Rezultati na domači strani in iskanja so filtrirani, da skrijejo videoposnetke iz kanalov, ki so jih označili na AiSList
 
 Omejitve:

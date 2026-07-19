@@ -241,7 +241,7 @@ YouTube Music 8.x - crossfade werkt alleen op 9.x en nieuwer"</string>
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Token ophalen</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verifiëren</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Voer een token in</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Valideren...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Bezig met valideren…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Geldig token! Gebruiker: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Ongeldig token: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">onbekend</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x - crossfade werkt alleen op 9.x en nieuwer"</string>
   <string name="morphe_music_lastfm_token_dialog_password_hint">Wachtwoord</string>
   <string name="morphe_music_lastfm_token_dialog_login">Inloggen</string>
   <string name="morphe_music_lastfm_token_status_empty">Voer gebruikersnaam en wachtwoord in</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Bezig met inloggen...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Bezig met inloggen…</string>
   <string name="morphe_music_lastfm_token_status_success">Succesvol ingelogd!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Kan geen sessie van Last.fm ophalen</string>
   <string name="morphe_music_lastfm_token_status_failed">Inloggen mislukt: %s</string>

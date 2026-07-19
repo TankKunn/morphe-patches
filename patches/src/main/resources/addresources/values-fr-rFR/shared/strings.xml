@@ -82,7 +82,7 @@ Pour traduire de nouvelles langues ou améliorer les traductions existantes, vis
   <string name="morphe_settings_about_links_rv">2022 &#8209; 2025</string>
   <string name="morphe_settings_about_links_vanced">2019 &#8209; 2022</string>
   <string name="morphe_settings_about_links_licenses">Mentions de licence</string>
-  <string name="morphe_settings_about_licenses_loading">Chargement...</string>
+  <string name="morphe_settings_about_licenses_loading">Chargement…</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Débogage</string>
   <string name="morphe_debug_screen_summary">Configurer les options avancées de développement et les journaux de diagnostic</string>
@@ -98,7 +98,7 @@ Vous ne serez plus averti en cas d’événements inattendus."</string>
   <string name="morphe_debug_export_logs_file">Exporter vers un fichier</string>
   <string name="morphe_debug_export_logs_success">Les journaux de débogage ont été exportés avec succès</string>
   <string name="morphe_debug_export_logs_failed">Échec de l\'exportation des journaux de débogage</string>
-  <string name="morphe_debug_logs_search_hint">Rechercher des journaux de débogage...</string>
+  <string name="morphe_debug_logs_search_hint">Rechercher des journaux de débogage</string>
   <string name="morphe_debug_export_logs_clear">Effacer</string>
   <string name="morphe_debug_logs_disabled">La journalisation de débogage est désactivée</string>
   <string name="morphe_debug_logs_none_found">Aucun journal de débogage trouvé</string>

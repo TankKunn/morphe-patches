@@ -241,7 +241,7 @@ YouTube Music 8.x — crossfade virkar bara á 9.x og nýrri útgáfum"</string>
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Skaffa Takkann</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Staðfestu</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Vinsamlegast sláðu inn takkann</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Staðfesting er í gangi...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Staðfesting…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Gildur takki! Notandi: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Ógildur takki: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">Óþekkt</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — crossfade virkar bara á 9.x og nýrri útgáfum"</string>
   <string name="morphe_music_lastfm_token_dialog_password_hint">Lykilorðið</string>
   <string name="morphe_music_lastfm_token_dialog_login">Skrá inn</string>
   <string name="morphe_music_lastfm_token_status_empty">Vinsamlegast sláðu inn notendanafnið og lykilorðið</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Er að skrá inn...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Innskráning…</string>
   <string name="morphe_music_lastfm_token_status_success">Tókst að skrá inn!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Tókst ekki að fá sessíu frá Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Innskráning mistókst: %s</string>

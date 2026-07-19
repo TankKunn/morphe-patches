@@ -81,7 +81,7 @@ Chun teangacha nua a aistriú nó chun na haistriúcháin atá ann cheana a fhea
   <string name="morphe_settings_about_links_rv">2022 &#8209; 2025</string>
   <string name="morphe_settings_about_links_vanced">2019 &#8209; 2022</string>
   <string name="morphe_settings_about_links_licenses">Fógraí ceadúnais</string>
-  <string name="morphe_settings_about_licenses_loading">Ag lódáil...</string>
+  <string name="morphe_settings_about_licenses_loading">Ag lódáil…</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Dífhabhtú</string>
   <string name="morphe_debug_screen_summary">Cumraigh roghanna forbróra ardleibhéil agus logaí diagnóiseacha</string>
@@ -97,7 +97,7 @@ Ní chuirfear ar an eolas thú faoi aon imeachtaí gan choinne."</string>
   <string name="morphe_debug_export_logs_file">Easpórtáil chuig comhad</string>
   <string name="morphe_debug_export_logs_success">Easpórtáladh logaí dífhabhtaithe go rathúil</string>
   <string name="morphe_debug_export_logs_failed">Theip ar logaí dífhabhtaithe a onnmhairiú</string>
-  <string name="morphe_debug_logs_search_hint">Cuardaigh logaí dífhabhtaithe...</string>
+  <string name="morphe_debug_logs_search_hint">Cuardaigh logaí dífhabhtaithe…</string>
   <string name="morphe_debug_export_logs_clear">Glan</string>
   <string name="morphe_debug_logs_disabled">Tá logáil dífhabhtaithe díchumasaithe</string>
   <string name="morphe_debug_logs_none_found">Níor aimsíodh aon logaí dífhabhtaithe</string>
@@ -108,7 +108,7 @@ Ní chuirfear ar an eolas thú faoi aon imeachtaí gan choinne."</string>
   <string name="morphe_debug_feature_flags_manager_summary">Bainistigh bratacha gné booléacha</string>
   <string name="morphe_debug_feature_flags_manager_active_header">Bratacha gné gníomhacha (%d)</string>
   <string name="morphe_debug_feature_flags_manager_blocked_header">Bratacha gné blocáilte (%d)</string>
-  <string name="morphe_debug_feature_flags_manager_search_hint">Bratacha gné cuardaigh...</string>
+  <string name="morphe_debug_feature_flags_manager_search_hint">Bratacha gné cuardaigh…</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">Bratacha gné sábháilte</string>
   <string name="morphe_debug_feature_flags_manager_toast_reset">Athshocrú bratacha gnéithe</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">Bratacha gné cóipeáilte chuig an ghearrthaisce</string>

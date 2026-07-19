@@ -269,8 +269,10 @@ Limitări:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Pagina principală: %s
 • Căutare: %s
 • Total: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Canale din lista neagră încărcate: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Canale din lista de avertizare încărcate: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Canale din lista neagră</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Canale din lista de avertizare</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Activează un filtru pentru a încărca canalele</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Se încarcă canalele…</string>
   <string name="morphe_hide_aislist_about_summary">"Rezultatele de pe pagina principală și cele din căutare sunt filtrate pentru a ascunde videoclipuri de la canalele marcate de AiSList
 
 Limitări:

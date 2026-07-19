@@ -269,8 +269,10 @@ Beperkingen:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Home: %s
 • Zoeken: %s
 • Totaal: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Blocklist-kanalen geladen: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Warnlist-kanalen geladen: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Geblokkeerde kanalen</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Waarschuwingslijst kanalen</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Schakel een filter in om kanalen te laden</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Kanalen laden…</string>
   <string name="morphe_hide_aislist_about_summary">"Home en zoekresultaten worden gefilterd om video's van kanalen die door AiSList zijn gemarkeerd te verbergen
 
 Beperkingen:

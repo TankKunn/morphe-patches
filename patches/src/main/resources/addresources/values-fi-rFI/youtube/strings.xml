@@ -268,8 +268,10 @@ Rajoitukset:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Aloitus: %s
 • Haku: %s
 • Yhteensä: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Mustalistakanavat ladattu: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Varoituslistakanavat ladattu: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Estetyt kanavat</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Varoituslistakanavat</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Ota suodatin käyttöön kanavien lataamiseksi</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Kanavia ladataan…</string>
   <string name="morphe_hide_aislist_about_summary">"Aloitus- ja hakutulokset on suodatettu piilottaaksesi AiSListin merkitsemät videot
 
 Rajoitukset:

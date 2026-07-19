@@ -269,8 +269,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• الصفحة الرئيسية: %s
 • البحث: %s
 • الإجمالي: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">قنوات القائمة السوداء التي تم تحميلها: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">قنوات قائمة التحذير التي تم تحميلها: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">قنوات القائمة المحظورة</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">قنوات قائمة التحذير</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">تمكين فلتر لتحميل القنوات</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">جارٍ تحميل القنوات…</string>
   <string name="morphe_hide_aislist_about_summary">"يتم تصفية نتائج الصفحة الرئيسية والبحث لإخفاء الفيديوهات من القنوات التي تم تصنيفها بواسطة AiSList
 
 القيود:

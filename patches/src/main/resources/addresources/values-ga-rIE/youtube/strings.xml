@@ -269,8 +269,10 @@ Teorainneacha:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Baile: %s
 • Cuardaigh: %s
 • Iomlán: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Luchtaithe bealaí blocála: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Cainéil liosta rabhaidh luchtaithe: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Cainéil blocáilte</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Cainéil liosta rabhaidh</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Cumasaigh scagaire chun bealaí a luchtú</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Ag lódáil cainéil…</string>
   <string name="morphe_hide_aislist_about_summary">"Déantar torthaí baile agus cuardaigh a scagadh chun físeáin a cheilt ó chainéil atá bratachaithe ag AiSList
 
 Teorainneacha:

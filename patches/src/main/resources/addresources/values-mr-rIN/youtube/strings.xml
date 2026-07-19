@@ -263,8 +263,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• होम: %s
 • शोध: %s
 • एकूण: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">ब्लॉकलिस्ट चॅनेल लोड झाले: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">वॉर्नलिस्ट चॅनेल लोड झाले: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">ब्लॉकलिस्ट चॅनेल</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">वॉर्नलिस्ट चॅनेल</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">चॅनेल लोड करण्यासाठी फिल्टर सक्षम करा</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">चॅनेल लोड होत आहेत…</string>
   <string name="morphe_hide_aislist_about_summary">"होम आणि शोध परिणामांमध्ये AiSList द्वारे ध्वजांकित केलेल्या चॅनेलवरून व्हिडिओ लपवण्यासाठी फिल्टर केले जातात.
 
 मर्यादा:

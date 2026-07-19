@@ -269,8 +269,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• หน้าหลัก: %s
 • การค้นหา: %s
 • รวม: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">ช่องในรายการบล็อกที่โหลดแล้ว: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">ช่องในรายการเตือนที่โหลดแล้ว: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">ช่องที่ถูกบล็อก</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">ช่องที่ถูกเตือน</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">เปิดใช้งานตัวกรองเพื่อโหลดช่อง</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">กำลังโหลดช่อง…</string>
   <string name="morphe_hide_aislist_about_summary">"ผลลัพธ์ในหน้าหลักและหน้าค้นหาจะถูกกรองเพื่อซ่อนวิดีโอจากช่องที่ถูกตั้งค่าสถานะโดย AiSList
 
 ข้อจำกัด:

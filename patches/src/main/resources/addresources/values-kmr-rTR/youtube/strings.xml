@@ -270,8 +270,10 @@ Sînorkirin:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Rûpela Sereke: %s
 • Lêgerîn: %s
 • Hemû: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Kanalên lîsteya blokkirinê bar kirin: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Kanalên lîsteya hişyarîyê bar kirin: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Kanalên di lîsteya reş de</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Kanalên di lîsteya hişyarî de</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Çalakkirina fîlterekê da ku kanal bar bike</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Kanala bar dikirin…</string>
   <string name="morphe_hide_aislist_about_summary">"Encamên ser rûpela sereke û lêgerînê hatine fîlterkirin da ku vîdyoyên ji kanalên ku ji hêla AiSListê ve hatine nîşandan veşêrin.
 
 Sînorkirin:

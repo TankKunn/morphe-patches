@@ -186,12 +186,12 @@ Second \"item\" text"</string>
   <string name="morphe_ryd_video_likes_hidden_by_video_owner">Приховано власником</string>
   <string name="morphe_ryd_enabled_title">Увімкнути Return YouTube Dislike</string>
   <string name="morphe_ryd_dislike_percentage_title">Показувати дизлайки у відсотках</string>
-  <string name="morphe_ryd_dislike_percentage_summary">Показує дизлайки у відсотках від вподобань замість числа</string>
+  <string name="morphe_ryd_dislike_percentage_summary">Показує дизлайки у відсотках від лайків замість числа</string>
   <!-- Translations should match the language used in 'morphe_sb_enable_compact_skip_button'. -->
   <string name="morphe_ryd_compact_layout_title">Використовувати компактну кнопку \"Лайк\"</string>
   <string name="morphe_ryd_compact_layout_summary">Зменшує ширину кнопки \"Лайк\", щоб заощадити місце</string>
   <string name="morphe_ryd_estimated_like_title">Показувати приблизну кількість лайків</string>
-  <string name="morphe_ryd_estimated_like_summary">Показує приблизну кількість лайків на відео, де автор вимкнув їх відображення</string>
+  <string name="morphe_ryd_estimated_like_summary">Показує приблизну кількість лайків на відео, де автор вимкнув лайки</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Показувати сповіщення про помилки з’єднання</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Показує сповіщення, коли сервер Return YouTube Dislike недоступний</string>
   <string name="morphe_ryd_attribution_summary">"Дані надаються API Return YouTube Dislike
@@ -202,16 +202,16 @@ Second \"item\" text"</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Час відповіді API, середній</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeMin_title">Час відповіді API, мінімальний</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeMax_title">Час відповіді API, максимальний</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_title">Час відповіді API, останній мультимедіа</string>
-  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_rate_limit_summary">Дизлайки тимчасово недоступні - діє обмеження швидкості клієнтського API</string>
+  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_title">Час відповіді API, останній медіафайл</string>
+  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_rate_limit_summary">Дизлайки тимчасово недоступні - діє обмеження швидкості клієнтів API</string>
   <string name="morphe_ryd_statistics_getFetchCallCount_title">Отримання голосів API, кількість запитів</string>
   <string name="morphe_ryd_statistics_getFetchCallCount_zero_summary">Мережевих запитів не здійснено </string>
   <string name="morphe_ryd_statistics_getFetchCallCount_non_zero_summary">%d мережевих запитів здійснено</string>
   <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_title">Отримання голосів API, кількість помилок</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_zero_summary">Мережевих запитів не завершилось з помилкою</string>
-  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_non_zero_summary">%d мережевих запитів завершилось з помилкою</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_title">Обмеження швидкості клієнтського API</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_zero_summary">Не було виявлено обмежень швидкості клієнта</string>
-  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_non_zero_summary">Обмеження швидкості клієнта було виявлено %d разів</string>
+  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_zero_summary">Немає мережевих викликів, що перевищили час очікування</string>
+  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_non_zero_summary">%d мережевих викликів перевищили час очікування</string>
+  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_title">Обмеження швидкості клієнтів API</string>
+  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_zero_summary">Обмежень швидкості клієнта не виявлено</string>
+  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_non_zero_summary">Обмеження швидкості клієнта виникло %d разів</string>
   <string name="morphe_ryd_statistics_millisecond_text">%d мілісекунд</string>
 </resources>

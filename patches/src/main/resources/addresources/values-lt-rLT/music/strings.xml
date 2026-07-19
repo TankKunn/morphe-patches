@@ -144,7 +144,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_listenbrainz_token_title">ListenBrainz Paskyra</string>
   <string name="morphe_music_listenbrainz_token_summary_logged_in">Prisijungta. Palieskite norėdami tvarkyti paskyrą</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_token_status_validating">Validuojama...</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">nežinoma</string>
   <string name="morphe_music_lastfm_token_title">Last.fm Paskyra</string>
   <string name="morphe_music_lastfm_token_summary_logged_in">Prisijungta kaip %s. Palieskite, kad tvarkytumėte paskyrą</string>

@@ -269,8 +269,10 @@ Obmedzenia:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Domovské stránky: %s
 • Vyhľadávanie: %s
 • Celkom: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Kanály v blockliste sú načítané: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Kanály v warnliste sú načítané: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Zablokované kanály</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Kanály na zozname varovaní</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Povoliť filter na načítanie kanálov</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Načítavam kanály…</string>
   <string name="morphe_hide_aislist_about_summary">"Domovské stránky a výsledky vyhľadávania sú filtrované, aby sa skryli videá z kanálov označených AiSList
 
 Obmedzenia:

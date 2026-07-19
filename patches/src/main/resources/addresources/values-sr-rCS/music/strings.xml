@@ -240,7 +240,7 @@ YouTube Music 8.x — prelazni efekat radi samo na 9.x i novijim verzijama"</str
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Dohvati token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Proveri</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Molimo unesite token</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Validacija u toku...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Validacija…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Važeći token! Korisnik: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Nevažeći token: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">nepoznato</string>
@@ -257,7 +257,7 @@ YouTube Music 8.x — prelazni efekat radi samo na 9.x i novijim verzijama"</str
   <string name="morphe_music_lastfm_token_dialog_password_hint">Lozinka </string>
   <string name="morphe_music_lastfm_token_dialog_login">Prijavi se</string>
   <string name="morphe_music_lastfm_token_status_empty">Molimo unesite korisničko ime i lozinku</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Prijavljivanje...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Prijava…</string>
   <string name="morphe_music_lastfm_token_status_success">Uspješno prijavljeni!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Nije uspjelo dobijanje sesije sa Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Neuspešna prijava: %s</string>

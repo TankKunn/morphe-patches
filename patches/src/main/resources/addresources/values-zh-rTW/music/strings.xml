@@ -241,7 +241,7 @@ YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
   <string name="morphe_music_listenbrainz_token_dialog_get_token">取得 Token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">驗證</string>
   <string name="morphe_music_listenbrainz_token_status_empty">請輸入 Token</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">驗證中...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">验证中…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Token 有效！使用者：%s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Token 無效：%s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">未知</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
   <string name="morphe_music_lastfm_token_dialog_password_hint">密碼</string>
   <string name="morphe_music_lastfm_token_dialog_login">登入</string>
   <string name="morphe_music_lastfm_token_status_empty">請輸入使用者名稱和密碼</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">正在登入...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">正在登录…</string>
   <string name="morphe_music_lastfm_token_status_success">登入成功！</string>
   <string name="morphe_music_lastfm_token_status_no_session">從 Last.fm 取得 Session 失敗</string>
   <string name="morphe_music_lastfm_token_status_failed">登入失敗：%s</string>

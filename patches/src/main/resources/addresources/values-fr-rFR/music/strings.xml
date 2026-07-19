@@ -241,7 +241,7 @@ YouTube Music 8.x — le fondu enchaîné ne fonctionne que sur les versions 9.x
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Obtenir un jeton</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Vérifier</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Veuillez entrer un jeton</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Validation...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Validation…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Jeton valide ! Utilisateur : %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Jeton invalide : %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">inconnu</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — le fondu enchaîné ne fonctionne que sur les versions 9.x
   <string name="morphe_music_lastfm_token_dialog_password_hint">Mot de passe</string>
   <string name="morphe_music_lastfm_token_dialog_login">Se connecter</string>
   <string name="morphe_music_lastfm_token_status_empty">Veuillez entrer votre nom d\'utilisateur et votre mot de passe</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Connexion en cours...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Connexion en cours…</string>
   <string name="morphe_music_lastfm_token_status_success">Connecté avec succès !</string>
   <string name="morphe_music_lastfm_token_status_no_session">Échec de récupération de la session depuis Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Échec de la connexion : %s</string>

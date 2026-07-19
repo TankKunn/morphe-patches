@@ -241,7 +241,7 @@ YouTube Music 8.x —— 交叉淡入仅在 9.x 及更高版本上运行"</strin
   <string name="morphe_music_listenbrainz_token_dialog_get_token">获取令牌</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">验证</string>
   <string name="morphe_music_listenbrainz_token_status_empty">请输入令牌</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">验证中...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">验证中…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">令牌有效！用户：%s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">令牌无效：%s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">未知</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x —— 交叉淡入仅在 9.x 及更高版本上运行"</strin
   <string name="morphe_music_lastfm_token_dialog_password_hint">密码</string>
   <string name="morphe_music_lastfm_token_dialog_login">登录</string>
   <string name="morphe_music_lastfm_token_status_empty">请输入用户名和密码</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">正在登录...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">正在登录…</string>
   <string name="morphe_music_lastfm_token_status_success">登录成功！</string>
   <string name="morphe_music_lastfm_token_status_no_session">未能从 Last.fm 获取会话</string>
   <string name="morphe_music_lastfm_token_status_failed">登录失败：%s</string>

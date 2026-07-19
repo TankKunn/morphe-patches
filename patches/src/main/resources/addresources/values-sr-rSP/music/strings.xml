@@ -241,7 +241,7 @@ YouTube Music 8.x — прелазак ради само на 9.x и новиј�
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Набави токен</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Верификуј</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Унесите токен</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Провера се наставља...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Провера се…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Важан токен! Корисник: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Неважећи токен: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">непознато</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — прелазак ради само на 9.x и новиј�
   <string name="morphe_music_lastfm_token_dialog_password_hint">Лозинка</string>
   <string name="morphe_music_lastfm_token_dialog_login">Пријави се</string>
   <string name="morphe_music_lastfm_token_status_empty">Унесите корисничко име и лозинку</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Пријављивање...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Пријављивање…</string>
   <string name="morphe_music_lastfm_token_status_success">Успешно пријављени!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Неуспело преузимање сесије са Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Грешка при пријављивању: %s</string>

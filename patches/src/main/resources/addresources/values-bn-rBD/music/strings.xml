@@ -241,7 +241,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_listenbrainz_token_dialog_get_token">টোকেন পান</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">যাচাই করুন</string>
   <string name="morphe_music_listenbrainz_token_status_empty">অনুগ্রহ করে একটি টোকেন লিখুন</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">যাচাই করা হচ্ছে...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">বৈধতা যাচাই করা হচ্ছে…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">বৈধ টোকেন! ব্যবহারকারী: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">অবৈধ টোকেন: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">অজানা</string>
@@ -258,7 +258,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_lastfm_token_dialog_password_hint">পাসওয়ার্ড</string>
   <string name="morphe_music_lastfm_token_dialog_login">লগ ইন করুন</string>
   <string name="morphe_music_lastfm_token_status_empty">অনুগ্রহ করে ব্যবহারকারীর নাম এবং পাসওয়ার্ড লিখুন</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">লগ ইন করা হচ্ছে...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">লগ ইন করা হচ্ছে…</string>
   <string name="morphe_music_lastfm_token_status_success">সফলভাবে লগ ইন করা হয়েছে!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Last.fm থেকে সেশন পেতে ব্যর্থ হয়েছে</string>
   <string name="morphe_music_lastfm_token_status_failed">লগইন ব্যর্থ হয়েছে: %s</string>

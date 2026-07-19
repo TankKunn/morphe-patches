@@ -268,8 +268,10 @@ Batasan:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Beranda: %s
 • Pencarian: %s
 • Total: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Saluran daftar blokir dimuat: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Saluran daftar peringatan dimuat: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Daftar blokir saluran</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Daftar peringatan saluran</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Aktifkan penyaring untuk memuat saluran</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Memuat saluran…</string>
   <string name="morphe_hide_aislist_about_summary">"Hasil beranda dan pencarian disaring untuk menyembunyikan video dari saluran yang ditandai oleh AiSList
 
 Batasan:

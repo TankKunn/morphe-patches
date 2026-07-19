@@ -81,7 +81,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_about_links_rv">2022 &#8209; 2025</string>
   <string name="morphe_settings_about_links_vanced">2019 &#8209; 2022</string>
   <string name="morphe_settings_about_links_licenses">Ліцензії відкритого коду</string>
-  <string name="morphe_settings_about_licenses_loading">Завантаження...</string>
+  <string name="morphe_settings_about_licenses_loading">Завантаження…</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Налагодження</string>
   <string name="morphe_debug_screen_summary">Налаштування розширених параметрів розробника та журналів діагностики</string>

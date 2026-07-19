@@ -241,7 +241,7 @@ YouTube Music 8.x — o crossfade só funciona na versão 9.x e mais recentes"</
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Obter token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verificar</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Por favor, insira um token</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Validando...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Validando…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Token válido! Usuário: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Token inválido: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">desconhecido</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — o crossfade só funciona na versão 9.x e mais recentes"</
   <string name="morphe_music_lastfm_token_dialog_password_hint">Palavra-passe</string>
   <string name="morphe_music_lastfm_token_dialog_login">Entrar</string>
   <string name="morphe_music_lastfm_token_status_empty">Por favor, insira o nome de usuário e a senha</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Entrando...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Entrando…</string>
   <string name="morphe_music_lastfm_token_status_success">Conexão bem-sucedida!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Falha ao obter sessão do Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Falha no login: %s</string>

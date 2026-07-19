@@ -269,8 +269,10 @@ Promene uključuju:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Почетна страница: %s
 • Претрага: %s
 • Укупно: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Учитане блокиране листе канала: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Учитане листе упозорења канала: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Канали на црној листи</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Канали на листи за упозорење</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Омогући филтер за учитавање канала</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Учитавање канала…</string>
   <string name="morphe_hide_aislist_about_summary">"Резултати са почетне странице и претраге се филтрирају како би се сакрили видео снимци са канала које је АиСЛист означио.
 
 Ограничења:

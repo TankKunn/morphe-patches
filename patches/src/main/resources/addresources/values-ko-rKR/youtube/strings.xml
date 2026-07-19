@@ -269,8 +269,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• 홈: %s
 • 검색: %s
 • 합계: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">차단 목록 채널 수: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">경고 목록 채널 수: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">차단 목록 채널</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">경고 목록 채널</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">필터를 활성화하여 채널을 불러옵니다</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">채널을 불러오는 중…</string>
   <string name="morphe_hide_aislist_about_summary">"홈 및 검색 결과에서 AiSList에 의해 지정된 채널의 동영상을 숨기도록 필터링됩니다
 
 제한 사항:

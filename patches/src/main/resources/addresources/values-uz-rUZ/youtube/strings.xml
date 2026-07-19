@@ -265,8 +265,10 @@ So'zning o'rtasida katta harflar bilan yozilgan so'zlar aniq mos kelishi kerak (
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Bosh sahifa: %s
 • Qidiruv: %s
 • Umumiy: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Bloklangan kanallar yuklandi: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Ogohlantiruvchi kanallar yuklandi: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Bloklangan kanallar</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Ogohlantirilgan kanallar</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Kanallarni yuklash uchun filtrni yoqish</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Kanallar yuklanmoqda…</string>
   <string name="morphe_hide_aislist_about_summary">"Bosh sahifa va qidiruv natijalari AiSList tomonidan belgilangan kanallardan videolarni yashirish uchun filtrlangan
 
 Cheklovlar:

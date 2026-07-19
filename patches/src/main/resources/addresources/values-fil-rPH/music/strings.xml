@@ -241,7 +241,7 @@ YouTube Music 8.x — tumatakbo lamang ang crossfade sa 9.x at mas bago"</string
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Kumuha ng token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">I-verify</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Mangyaring ipasok ang isang token</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Bine-verify...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Bineberipika…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Valid na token! User: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Hindi valid na token: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">hindi alam</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — tumatakbo lamang ang crossfade sa 9.x at mas bago"</string
   <string name="morphe_music_lastfm_token_dialog_password_hint">Password</string>
   <string name="morphe_music_lastfm_token_dialog_login">Mag-log in</string>
   <string name="morphe_music_lastfm_token_status_empty">Mangyaring ipasok ang username at password</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Nagla-log in...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Nagla-log in…</string>
   <string name="morphe_music_lastfm_token_status_success">Matagumpay na naka-log in!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Nabigo ang pagkuha ng session mula sa Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Nabigo ang pag-log in: %s</string>

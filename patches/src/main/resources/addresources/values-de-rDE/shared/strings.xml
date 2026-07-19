@@ -81,7 +81,7 @@ Um neue Sprachen zu übersetzen oder die vorhandenen Übersetzungen zu verbesser
   <string name="morphe_settings_about_links_rv">2022 &#8209; 2025</string>
   <string name="morphe_settings_about_links_vanced">2019 &#8209; 2022</string>
   <string name="morphe_settings_about_links_licenses">Lizenzhinweise</string>
-  <string name="morphe_settings_about_licenses_loading">Lädt...</string>
+  <string name="morphe_settings_about_licenses_loading">Laden…</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Debugging</string>
   <string name="morphe_debug_screen_summary">Konfigurieren Sie erweiterte Entwickleroptionen und Diagnoseprotokolle</string>
@@ -97,7 +97,7 @@ Sie werden nicht über unerwartete Ereignisse informiert."</string>
   <string name="morphe_debug_export_logs_file">In Datei exportieren</string>
   <string name="morphe_debug_export_logs_success">Debug-Logs erfolgreich exportiert</string>
   <string name="morphe_debug_export_logs_failed">Fehler beim Exportieren der Debug-Logs</string>
-  <string name="morphe_debug_logs_search_hint">Debug-Logs suchen...</string>
+  <string name="morphe_debug_logs_search_hint">Debug-Logs suchen</string>
   <string name="morphe_debug_export_logs_clear">Löschen</string>
   <string name="morphe_debug_logs_disabled">Debug-Protokollierung ist deaktiviert</string>
   <string name="morphe_debug_logs_none_found">Keine Debug-Logs gefunden</string>
@@ -108,7 +108,7 @@ Sie werden nicht über unerwartete Ereignisse informiert."</string>
   <string name="morphe_debug_feature_flags_manager_summary">Boolesche Feature-Flags verwalten</string>
   <string name="morphe_debug_feature_flags_manager_active_header">Aktive Feature-Flags (%d)</string>
   <string name="morphe_debug_feature_flags_manager_blocked_header">Blockierte Feature-Flags (%d)</string>
-  <string name="morphe_debug_feature_flags_manager_search_hint">Feature-Flags suchen...</string>
+  <string name="morphe_debug_feature_flags_manager_search_hint">Feature-Flags suchen</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">Feature-Flags gespeichert</string>
   <string name="morphe_debug_feature_flags_manager_toast_reset">Feature-Flags zurückgesetzt</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">Feature-Flags in die Zwischenablage kopiert</string>

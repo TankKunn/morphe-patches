@@ -241,7 +241,7 @@ YouTube Music 8.x – crossfade kører kun på 9.x og nyere"</string>
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Hent token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Bekræft</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Angiv venligst et token</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Validerer...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Validerer…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Gyldigt token! Bruger: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Ugyldigt token: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">ukendt</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x – crossfade kører kun på 9.x og nyere"</string>
   <string name="morphe_music_lastfm_token_dialog_password_hint">Adgangskode</string>
   <string name="morphe_music_lastfm_token_dialog_login">Log ind</string>
   <string name="morphe_music_lastfm_token_status_empty">Angiv venligst brugernavn og adgangskode</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Logger ind...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Logger ind…</string>
   <string name="morphe_music_lastfm_token_status_success">Logget ind korrekt!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Kunne ikke hente session fra Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Login mislykkedes: %s</string>

@@ -234,7 +234,7 @@ YouTube Music 8.x – क्रॉसFade फक्त 9.x आणि त्य�
   <string name="morphe_music_listenbrainz_token_dialog_get_token">टोकन मिळवा</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">सत्यापित करा</string>
   <string name="morphe_music_listenbrainz_token_status_empty">कृपया टोकन प्रविष्ट करा</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">सत्यापन करत आहे...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">पडताळणी करत आहे…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">वैध टोकन! वापरकर्ता: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">अवैध टोकन: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">अज्ञात</string>
@@ -251,7 +251,7 @@ YouTube Music 8.x – क्रॉसFade फक्त 9.x आणि त्य�
   <string name="morphe_music_lastfm_token_dialog_password_hint">पासवर्ड</string>
   <string name="morphe_music_lastfm_token_dialog_login">लॉग इन करा</string>
   <string name="morphe_music_lastfm_token_status_empty">कृपया वापरकर्तानाव आणि पासवर्ड प्रविष्ट करा</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">लॉग इन करत आहे...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">लॉग इन करत आहे…</string>
   <string name="morphe_music_lastfm_token_status_success">यशस्वीरित्या लॉग इन केले!</string>
   <string name="morphe_music_lastfm_token_status_no_session">लास्ट.एफएम कडून सत्र मिळविण्यात अयशस्वी</string>
   <string name="morphe_music_lastfm_token_status_failed">लॉग इन करण्यात अयशस्वी: %s</string>

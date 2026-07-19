@@ -81,7 +81,7 @@ Om nieuwe talen te vertalen of bestaande vertalingen te verbeteren, bezoek morph
   <string name="morphe_settings_about_links_rv">2022 – 2025</string>
   <string name="morphe_settings_about_links_vanced">2019 – 2022</string>
   <string name="morphe_settings_about_links_licenses">Licentiemeldingen</string>
-  <string name="morphe_settings_about_licenses_loading">Bezig met laden...</string>
+  <string name="morphe_settings_about_licenses_loading">Bezig met laden</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Debuggen</string>
   <string name="morphe_debug_screen_summary">Configureer geavanceerde ontwikkelaarsopties en diagnostische logs</string>
@@ -97,7 +97,7 @@ U wordt niet op de hoogte gesteld van onverwachte gebeurtenissen."</string>
   <string name="morphe_debug_export_logs_file">Exporteren naar bestand</string>
   <string name="morphe_debug_export_logs_success">Debuglogboeken succesvol geëxporteerd</string>
   <string name="morphe_debug_export_logs_failed">Mislukt om debuglogboeken te exporteren</string>
-  <string name="morphe_debug_logs_search_hint">Debuglogboeken doorzoeken...</string>
+  <string name="morphe_debug_logs_search_hint">Zoek in foutopsporingslogboeken…</string>
   <string name="morphe_debug_export_logs_clear">Wissen</string>
   <string name="morphe_debug_logs_disabled">Foutopsporing is uitgeschakeld</string>
   <string name="morphe_debug_logs_none_found">Geen debuglogboeken gevonden</string>
@@ -108,7 +108,7 @@ U wordt niet op de hoogte gesteld van onverwachte gebeurtenissen."</string>
   <string name="morphe_debug_feature_flags_manager_summary">Beheer booleaanse functievlaggen</string>
   <string name="morphe_debug_feature_flags_manager_active_header">Actieve functie-flags (%d)</string>
   <string name="morphe_debug_feature_flags_manager_blocked_header">Geblokkeerde functie-flags (%d)</string>
-  <string name="morphe_debug_feature_flags_manager_search_hint">Functie-flags zoeken...</string>
+  <string name="morphe_debug_feature_flags_manager_search_hint">Zoek in functie-vlaggen…</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">Functie-flags opgeslagen</string>
   <string name="morphe_debug_feature_flags_manager_toast_reset">Functie-flags gereset</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">Functie-flags gekopieerd naar klembord</string>

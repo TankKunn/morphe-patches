@@ -269,8 +269,10 @@ Korlátozások:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Főoldal: %s
 • Keresés: %s
 • Összesen: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Betöltött tiltólistás csatornák: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Betöltött figyelőlistás csatornák: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Blokkolt csatornák</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Figyelmeztetésre került csatornák</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Engedélyezzen egy szűrőt a csatornák betöltéséhez</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Csatornák betöltése…</string>
   <string name="morphe_hide_aislist_about_summary">"A főoldal és a keresési eredmények szűrése az AiSList által jelölt csatornák videóinak elrejtése érdekében
 
 Korlátozások:

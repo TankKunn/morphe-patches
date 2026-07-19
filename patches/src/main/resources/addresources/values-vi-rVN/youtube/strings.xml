@@ -268,8 +268,10 @@ Hạn chế:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Trang chủ: %s
 • Tìm kiếm: %s
 • Tổng: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Danh sách kênh chặn đã tải: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Danh sách kênh cảnh báo đã tải: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Các kênh bị chặn</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Các kênh bị cảnh báo</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Bật bộ lọc để tải kênh</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Đang tải kênh…</string>
   <string name="morphe_hide_aislist_about_summary">"Kết quả trên Trang chủ và tìm kiếm được lọc để ẩn video từ các kênh bị gắn cờ bởi AiSList
 
 Giới hạn:

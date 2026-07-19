@@ -269,8 +269,10 @@ Beperkings:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Home: %s
 • Soek: %s
 • Totaal: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Bloklys kanale gelaai: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Waarskuwingslys kanale gelaai: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Bloklys-kanale</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Waarskuwingslys-kanale</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Aktiveer \'n filter om kanale te laai</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Kanaal laai…</string>
   <string name="morphe_hide_aislist_about_summary">"Home- en soekresultate word gefilter om video's van kanale wat deur AiSList gemerk is, te verberg
 
 Beperkings:

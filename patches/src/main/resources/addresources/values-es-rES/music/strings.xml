@@ -242,7 +242,7 @@ YouTube Music 8.x: el fundido cruzado solo funciona en la versión 9.x o posteri
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Obtener token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verificar</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Por favor, introduce un token</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Validando...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Validando…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">¡Token válido! Usuario: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Token no válido: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">desconocido</string>
@@ -259,7 +259,7 @@ YouTube Music 8.x: el fundido cruzado solo funciona en la versión 9.x o posteri
   <string name="morphe_music_lastfm_token_dialog_password_hint">Contraseña</string>
   <string name="morphe_music_lastfm_token_dialog_login">Iniciar sesión</string>
   <string name="morphe_music_lastfm_token_status_empty">Por favor, introduce el nombre de usuario y la contraseña</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Iniciando sesión...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Iniciando sesión…</string>
   <string name="morphe_music_lastfm_token_status_success">¡Inicio de sesión exitoso!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Error al obtener la sesión de Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Error al iniciar sesión: %s</string>

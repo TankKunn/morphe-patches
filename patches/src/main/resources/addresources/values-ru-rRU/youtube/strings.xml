@@ -269,8 +269,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Главная: %s
 • Поиск: %s
 • Всего: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Загружены каналы из черного списка: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Загружены каналы из списка предупреждений: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Каналы в черном списке</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Каналы в списке предупреждений</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Включить фильтр для загрузки каналов</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Загрузка каналов…</string>
   <string name="morphe_hide_aislist_about_summary">"Результаты на главной странице и в поиске фильтруются, чтобы скрыть видео из каналов, помеченных AiSList.
 
 Ограничения:

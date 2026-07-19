@@ -241,7 +241,7 @@ YouTube Music 8.x – crossfade funguje iba vo verzii 9.x a novších"</string>
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Získať token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Overiť</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Prosím, zadajte token</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Overovanie...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Overovanie…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Platný token! Používateľ: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Neplatný token: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">neznámy</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x – crossfade funguje iba vo verzii 9.x a novších"</string>
   <string name="morphe_music_lastfm_token_dialog_password_hint">Heslo</string>
   <string name="morphe_music_lastfm_token_dialog_login">Prihlásiť sa</string>
   <string name="morphe_music_lastfm_token_status_empty">Prosím, zadajte používateľské meno a heslo</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Prihlasovanie...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Prihlasovanie…</string>
   <string name="morphe_music_lastfm_token_status_success">Prihlásenie prebehlo úspešne!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Nepodarilo sa získať reláciu z Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Prihlásenie zlyhalo: %s</string>

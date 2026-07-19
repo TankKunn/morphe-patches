@@ -241,7 +241,7 @@ YouTube Music 8.x – crossfade toimii vain versiossa 9.x ja uudemmissa."</strin
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Hae tunnus</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Vahvista</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Anna tunnus</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Validoidaan...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Validointia…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Kelvollinen tunnus! Käyttäjä: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Virheellinen tunnus: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">tuntematon</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x – crossfade toimii vain versiossa 9.x ja uudemmissa."</strin
   <string name="morphe_music_lastfm_token_dialog_password_hint">Salasana</string>
   <string name="morphe_music_lastfm_token_dialog_login">Kirjaudu sisään</string>
   <string name="morphe_music_lastfm_token_status_empty">Anna käyttäjätunnus ja salasana</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Kirjaudutaan sisään...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Kirjaudutaan sisään…</string>
   <string name="morphe_music_lastfm_token_status_success">Kirjautuminen onnistui!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Last.fm:ltä ei saatu istuntoa</string>
   <string name="morphe_music_lastfm_token_status_failed">Kirjautuminen epäonnistui: %s</string>

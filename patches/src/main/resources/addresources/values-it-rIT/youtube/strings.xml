@@ -269,8 +269,10 @@ Limitazioni:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Home: %s
 • Ricerca: %s
 • Totale: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Canali in blocklist caricati: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Canali in warnlist caricati: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Canali nella black list</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Canali nella warn list</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Abilita un filtro per caricare i canali</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Caricamento canali…</string>
   <string name="morphe_hide_aislist_about_summary">"I risultati nella Home e nella ricerca sono filtrati per nascondere i video provenienti da canali contrassegnati da AiSList
 
 Limitazioni:

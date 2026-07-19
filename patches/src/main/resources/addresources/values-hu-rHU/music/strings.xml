@@ -241,7 +241,7 @@ YouTube Music 8.x – a keresztátmenet csak a 9.x és újabb verziókon fut."</
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Azonosító beszerzése</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Ellenőrzés</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Kérjük, adjon meg egy azonosítót</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Ellenőrzés folyamatban...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Érvényesítés…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Érvényes azonosító! Felhasználó: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Érvénytelen azonosító: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">ismeretlen</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x – a keresztátmenet csak a 9.x és újabb verziókon fut."</
   <string name="morphe_music_lastfm_token_dialog_password_hint">Jelszó</string>
   <string name="morphe_music_lastfm_token_dialog_login">Bejelentkezés</string>
   <string name="morphe_music_lastfm_token_status_empty">Kérjük, adjon meg felhasználónevet és jelszót</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Bejelentkezés folyamatban...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Bejelentkezés…</string>
   <string name="morphe_music_lastfm_token_status_success">Sikeres bejelentkezés!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Sikertelen a Last.fm-től származó session lekérése</string>
   <string name="morphe_music_lastfm_token_status_failed">Sikertelen bejelentkezés: %s</string>

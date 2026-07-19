@@ -269,8 +269,10 @@ Sınırlamalar:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Ana Sayfa: %s
 • Arama: %s
 • Toplam: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Engelleme listesine yüklenen kanallar: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Uyarı listesine yüklenen kanallar: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Engellenen kanallar</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Uyarı listesindeki kanallar</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Kanalları yüklemek için bir filtre etkinleştirin</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Kanallar yükleniyor…</string>
   <string name="morphe_hide_aislist_about_summary">"Ana sayfa ve arama sonuçları, AiSList tarafından işaretlenen kanallardan gelen videoları gizlemek için filtrelenir
 
 Sınırlamalar:

@@ -269,8 +269,10 @@ Ograničenja:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Početak: %s
 • Pretraga: %s
 • Ukupno: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Učitane crne liste kanala: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Učitane liste upozorenja kanala: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Liste blokiranih kanala</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Liste upozorenja kanala</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Omogući filter za učitavanje kanala</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Učitavanje kanala…</string>
   <string name="morphe_hide_aislist_about_summary">"Početna stranica i rezultati pretrage su filtrirani da sakriju video snimke sa kanala koje je AiSList označio.
 
 Ograničenja:

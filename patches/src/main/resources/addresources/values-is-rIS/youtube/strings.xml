@@ -269,8 +269,10 @@ Takmörk:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Heim: %s
 • Leitar: %s
 • Heild: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Bannlist каналы hlaðin: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Vara list каналы hlaðin: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Lokaðar rásir</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Viðvörunarrásir</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Virkaðu síu til að hlaða rásir</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Hlaða rásir…</string>
   <string name="morphe_hide_aislist_about_summary">"Heim og leitarniðurstöður eru síðar til að fela myndbönd frá rásum sem AiSList hefur merkt.
 
 Takmarkanir:

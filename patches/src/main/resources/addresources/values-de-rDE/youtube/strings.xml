@@ -270,8 +270,10 @@ Einschränkungen:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Startseite: %s
 • Suche: %s
 • Insgesamt: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Blockierte Kanäle geladen: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Gewarnte Kanäle geladen: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Blocklist-Kanäle</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Warnlisten-Kanäle</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Filter aktivieren, um Kanäle zu laden</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Kanäle werden geladen…</string>
   <string name="morphe_hide_aislist_about_summary">"Die Startseite und die Suchergebnisse werden gefiltert, um Videos von Kanälen auszublenden, die von AiSList als KI-generiert gekennzeichnet wurden.
 
 Einschränkungen:

@@ -269,8 +269,10 @@ Begrænsninger:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Startskærm: %s
 • Søgning: %s
 • Total: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Blokeringslister over kanaler indlæst: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Advarselslister over kanaler indlæst: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Blokeringsliste-kanaler</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Advarselsliste-kanaler</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Aktivér et filter for at indlæse kanaler</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Indlæser kanaler…</string>
   <string name="morphe_hide_aislist_about_summary">"Startskærm og søgeresultater filtreres for at skjule videoer fra kanaler, der er markeret af AiSList
 
 Begrænsninger:

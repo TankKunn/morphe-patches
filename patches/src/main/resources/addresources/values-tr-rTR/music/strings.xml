@@ -241,7 +241,7 @@ YouTube Music 8.x — geçiş yalnızca 9.x ve sonraki sürümlerde çalışır"
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Token alın</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Doğrula</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Lütfen bir token girin</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Doğrulama yapılıyor...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Doğrulama yapılıyor…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Geçerli token! Kullanıcı: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Geçersiz token: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">bilinmiyor</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — geçiş yalnızca 9.x ve sonraki sürümlerde çalışır"
   <string name="morphe_music_lastfm_token_dialog_password_hint">Şifre</string>
   <string name="morphe_music_lastfm_token_dialog_login">Oturum aç</string>
   <string name="morphe_music_lastfm_token_status_empty">Lütfen kullanıcı adınızı ve şifrenizi girin</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Oturum açılıyor...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Oturum açılıyor…</string>
   <string name="morphe_music_lastfm_token_status_success">Oturum açma başarılı!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Last.fm\'den oturum alınamadı</string>
   <string name="morphe_music_lastfm_token_status_failed">Oturum açma başarısız oldu: %s</string>

@@ -269,8 +269,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• হোম: %s
 • অনুসন্ধান: %s
 • মোট: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">ব্লক লিস্ট চ্যানেল লোড হয়েছে: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">ওয়ার্ন লিস্ট চ্যানেল লোড হয়েছে: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">ব্লকlist চ্যানেল</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">ওয়ার্নlist চ্যানেল</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">চ্যানেল লোড করার জন্য একটি ফিল্টার সক্রিয় করুন</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">চ্যানেল লোড হচ্ছে…</string>
   <string name="morphe_hide_aislist_about_summary">"হোম এবং অনুসন্ধানের ফলাফলগুলি এআইএসলিস্ট দ্বারা চিহ্নিত চ্যানেল থেকে ভিডিও লুকানোর জন্য ফিল্টার করা হয়েছে।
 
 সীমাবদ্ধতা:

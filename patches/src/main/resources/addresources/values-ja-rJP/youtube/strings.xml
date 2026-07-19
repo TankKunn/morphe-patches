@@ -269,8 +269,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• ホーム: %s
 • 検索結果: %s
 • 合計: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">ブロックリストのチャンネル数: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">要注意リストのチャンネル数: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">ブロックリストに登録中のチャンネル</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">要注意リストに登録中のチャンネル</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">リストに登録されているチャンネルを読み込むには、いずれかのフィルタ機能を有効にしてください</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">チャンネルを読み込み中…</string>
   <string name="morphe_hide_aislist_about_summary">"AiSList が AI 生成コンテンツを投稿していると判断したチャンネルの動画をホームと検索結果から除外します
 
 制限事項:

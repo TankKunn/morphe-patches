@@ -241,7 +241,7 @@ YouTube Music 8.x — estomparea încrucișată funcționează doar pe 9.x și v
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Obține token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verificare</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Vă rugăm să introduceți un token</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Validare...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Se validează…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Token valid! Utilizator: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Token invalid: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">necunoscut</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — estomparea încrucișată funcționează doar pe 9.x și v
   <string name="morphe_music_lastfm_token_dialog_password_hint">Parolă</string>
   <string name="morphe_music_lastfm_token_dialog_login">Conectare</string>
   <string name="morphe_music_lastfm_token_status_empty">Vă rugăm să introduceți nume de utilizator și parolă</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Se conectează...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Se conectează…</string>
   <string name="morphe_music_lastfm_token_status_success">Conectare reușită!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Nu s-a putut obține o sesiune de la Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Conectare eșuată: %s</string>

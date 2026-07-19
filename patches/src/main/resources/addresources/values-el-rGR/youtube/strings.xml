@@ -269,8 +269,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Αρχική σελίδα: %s
 • Αναζήτηση: %s
 • Σύνολο: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Φορτώθηκαν κανάλια μαύρης λίστας: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Φορτώθηκαν κανάλια λίστας προειδοποίησης: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Κανάλια στη μαύρη λίστα</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Κανάλια στη λίστα προειδοποιήσεων</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Ενεργοποίηση φίλτρου για φόρτωση καναλιών</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Φόρτωση καναλιών…</string>
   <string name="morphe_hide_aislist_about_summary">"Τα αποτελέσματα στην Αρχική σελίδα και στην αναζήτηση φιλτράρονται για να αποκρύψουν βίντεο από κανάλια που έχουν επισημανθεί από το AiSList
 
 Περιορισμοί:

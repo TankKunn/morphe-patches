@@ -269,8 +269,10 @@ Begrensninger:
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Hjem: %s
 • Søk: %s
 • Totalt: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">Blokkeringsliste-kanaler lastet inn: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">Advarselsliste-kanaler lastet inn: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Blokkerte kanaler</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Advarselsliste-kanaler</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">Aktiver et filter for å laste inn kanaler</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">Laster inn kanaler…</string>
   <string name="morphe_hide_aislist_about_summary">"Hjem- og søkeresultater er filtrert for å skjule videoer fra kanaler som er flagget av AiSList
 
 Begrensninger:

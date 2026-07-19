@@ -81,7 +81,7 @@ Para traducir nuevos idiomas o mejorar las traducciones existentes, visita morph
   <string name="morphe_settings_about_links_rv">2022 – 2025</string>
   <string name="morphe_settings_about_links_vanced">2019 – 2022</string>
   <string name="morphe_settings_about_links_licenses">Avisos de licencia</string>
-  <string name="morphe_settings_about_licenses_loading">Cargando...</string>
+  <string name="morphe_settings_about_licenses_loading">Cargando…</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Depuración</string>
   <string name="morphe_debug_screen_summary">Configurar opciones avanzadas de desarrollador y registros de diagnóstico</string>
@@ -97,7 +97,7 @@ No se le notificará de ningún evento inesperado."</string>
   <string name="morphe_debug_export_logs_file">Exportar a archivo</string>
   <string name="morphe_debug_export_logs_success">Registros de depuración exportados correctamente</string>
   <string name="morphe_debug_export_logs_failed">Error al exportar los registros de depuración</string>
-  <string name="morphe_debug_logs_search_hint">Buscar registros de depuración...</string>
+  <string name="morphe_debug_logs_search_hint">Buscar registros de depuración…</string>
   <string name="morphe_debug_export_logs_clear">Borrar</string>
   <string name="morphe_debug_logs_disabled">El registro de depuración está desactivado</string>
   <string name="morphe_debug_logs_none_found">No se encontraron registros de depuración</string>
@@ -108,7 +108,7 @@ No se le notificará de ningún evento inesperado."</string>
   <string name="morphe_debug_feature_flags_manager_summary">Gestionar indicadores de funciones booleanos</string>
   <string name="morphe_debug_feature_flags_manager_active_header">Indicadores de funciones activas (%d)</string>
   <string name="morphe_debug_feature_flags_manager_blocked_header">Indicadores de funciones bloqueadas (%d)</string>
-  <string name="morphe_debug_feature_flags_manager_search_hint">Buscar indicadores de funciones...</string>
+  <string name="morphe_debug_feature_flags_manager_search_hint">Buscar indicadores de funciones…</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">Indicadores de funciones guardados</string>
   <string name="morphe_debug_feature_flags_manager_toast_reset">Indicadores de funciones restablecidos</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">Indicadores de funciones copiados al portapapeles</string>

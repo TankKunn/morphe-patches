@@ -241,7 +241,7 @@ YouTube Music 8.x — плавний перехід працює лише на �
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Отримати токен</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Перевірити</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Будь ласка, введіть токен</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Перевірка...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Перевірка…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Дійсний токен! Користувач: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Недійсний токен: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">невідомо</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — плавний перехід працює лише на �
   <string name="morphe_music_lastfm_token_dialog_password_hint">Пароль</string>
   <string name="morphe_music_lastfm_token_dialog_login">Увійти</string>
   <string name="morphe_music_lastfm_token_status_empty">Будь ласка, введіть ім\'я користувача та пароль</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Вхід...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Вхід…</string>
   <string name="morphe_music_lastfm_token_status_success">Успішний вхід!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Не вдалося отримати сесію від Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Вхід не вдався: %s</string>

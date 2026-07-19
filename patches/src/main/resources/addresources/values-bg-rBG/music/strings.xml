@@ -241,7 +241,7 @@ YouTube Music 8.x — кросфейдът работи само в 9.x и по-
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Вземи токен</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Провери</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Моля, въведете токен</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Проверка…</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Валидиране…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Валиден токен! Потребител: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Невалиден токен: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">неизвестен</string>

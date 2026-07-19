@@ -81,7 +81,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_about_links_rv">2022 &#8209; 2025</string>
   <string name="morphe_settings_about_links_vanced">2019 &#8209; 2022</string>
   <string name="morphe_settings_about_links_licenses">Ειδοποιήσεις αδειών</string>
-  <string name="morphe_settings_about_licenses_loading">Φόρτωση...</string>
+  <string name="morphe_settings_about_licenses_loading">Φόρτωση…</string>
   <!-- misc.debugging.enableDebuggingPatch -->
   <string name="morphe_debug_screen_title">Εντοπισμός σφαλμάτων</string>
   <string name="morphe_debug_screen_summary">Ρύθμιση προχωρημένων επιλογών προγραμματιστή και αρχείων καταγραφής διαγνωστικών στοιχείων</string>
@@ -97,7 +97,7 @@ Second \"item\" text"</string>
   <string name="morphe_debug_export_logs_file">Εξαγωγή σε αρχείο</string>
   <string name="morphe_debug_export_logs_success">Τα αρχεία καταγραφής εντοπισμού σφαλμάτων εξήχθησαν επιτυχώς</string>
   <string name="morphe_debug_export_logs_failed">Αποτυχία εξαγωγής αρχείων καταγραφής εντοπισμού σφαλμάτων</string>
-  <string name="morphe_debug_logs_search_hint">Αναζήτηση στα αρχεία καταγραφής εντοπισμού σφαλμάτων...</string>
+  <string name="morphe_debug_logs_search_hint">Αναζήτηση στα αρχεία καταγραφής εντοπισμού σφαλμάτων</string>
   <string name="morphe_debug_export_logs_clear">Εκκαθάριση</string>
   <string name="morphe_debug_logs_disabled">Η καταγραφή εντοπισμού σφαλμάτων είναι απενεργοποιημένη</string>
   <string name="morphe_debug_logs_none_found">Δε βρέθηκαν αρχεία καταγραφής εντοπισμού σφαλμάτων</string>
@@ -108,7 +108,7 @@ Second \"item\" text"</string>
   <string name="morphe_debug_feature_flags_manager_summary">Διαχείριση των boolean λειτουργιών σημαιών</string>
   <string name="morphe_debug_feature_flags_manager_active_header">Ενεργές λειτουργίες σημαιών (%d)</string>
   <string name="morphe_debug_feature_flags_manager_blocked_header">Αποκλεισμένες λειτουργίες σημαιών (%d)</string>
-  <string name="morphe_debug_feature_flags_manager_search_hint">Αναζήτηση λειτουργιών σημαιών...</string>
+  <string name="morphe_debug_feature_flags_manager_search_hint">Αναζήτηση λειτουργιών σημαιών</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">Οι λειτουργίες σημαιών αποθηκεύτηκαν</string>
   <string name="morphe_debug_feature_flags_manager_toast_reset">Οι λειτουργίες σημαιών επαναφέρθηκαν</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">Οι λειτουργίες σημαιών αντιγράφηκαν στο πρόχειρο</string>

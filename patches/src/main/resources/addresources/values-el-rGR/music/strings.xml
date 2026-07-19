@@ -241,7 +241,7 @@ YouTube Music 8.x — το crossfade λειτουργεί μόνο στις εκ
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Λήψη token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Επαλήθευση</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Παρακαλώ εισαγάγετε ένα token</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Επικύρωση...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Επικύρωση…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Έγκυρο token! Χρήστης: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Μη έγκυρο token: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">Άγνωστο</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — το crossfade λειτουργεί μόνο στις εκ
   <string name="morphe_music_lastfm_token_dialog_password_hint">Κωδικός πρόσβασης</string>
   <string name="morphe_music_lastfm_token_dialog_login">Σύνδεση</string>
   <string name="morphe_music_lastfm_token_status_empty">Παρακαλώ εισαγάγετε όνομα χρήστη και κωδικό πρόσβασης</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Συνδέομαι...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Είσοδος…</string>
   <string name="morphe_music_lastfm_token_status_success">Συνδεθήκατε επιτυχώς!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Αδυναμία λήψης συνεδρίας από το Last.fm</string>
   <string name="morphe_music_lastfm_token_status_failed">Αποτυχία σύνδεσης: %s</string>

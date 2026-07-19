@@ -269,8 +269,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• 主页：%s
 • 搜索：%s
 • 总计：%s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">已加载的阻止列表频道：%s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">已加载的警告列表频道：%s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">屏蔽频道</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">警告名单频道</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">启用过滤器以加载频道</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">正在加载频道…</string>
   <string name="morphe_hide_aislist_about_summary">"主页和搜索结果经过过滤，以隐藏AiSList标记的视频
 
 限制：

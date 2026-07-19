@@ -241,7 +241,7 @@ YouTube Music 8.x — crossfade tenê li 9.x û nûjenertirîn de dimeşe"</stri
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Token bistîne</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verastkirin</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Ji kerem tokenê têkevin</string>
-  <string name="morphe_music_listenbrainz_token_status_validating">Verastkirin...</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">Dagirxistîne…</string>
   <string name="morphe_music_listenbrainz_token_status_valid">Token valide! Bikarîner: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid">Token ne valide: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">Nezanîn</string>
@@ -258,7 +258,7 @@ YouTube Music 8.x — crossfade tenê li 9.x û nûjenertirîn de dimeşe"</stri
   <string name="morphe_music_lastfm_token_dialog_password_hint">Şîfre</string>
   <string name="morphe_music_lastfm_token_dialog_login">Têkeve</string>
   <string name="morphe_music_lastfm_token_status_empty">Ji kerem navê bikarînerê û şîfre têkevin</string>
-  <string name="morphe_music_lastfm_token_status_logging_in">Têkevin...</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">Têketin…</string>
   <string name="morphe_music_lastfm_token_status_success">Serkeftî têkeve!</string>
   <string name="morphe_music_lastfm_token_status_no_session">Ji Last.fm-ê sesyonê girtin pêk nehat</string>
   <string name="morphe_music_lastfm_token_status_failed">Têkevin pêk nehat: %s</string>

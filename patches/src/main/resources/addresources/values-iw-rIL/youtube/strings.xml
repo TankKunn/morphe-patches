@@ -269,8 +269,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_stats_hidden_breakdown">"• עמוד הבית: %s
 • חיפוש: %s
 • סה\"כ: %s"</string>
-  <string name="morphe_hide_aislist_stats_blocklist_title">ערוצי רשימה חסומה נטענו: %s</string>
-  <string name="morphe_hide_aislist_stats_warnlist_title">ערוצי רשימת אזהרה נטענו: %s</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">ערוצים חסומים</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">ערוצים ברשימת אזהרה</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">הפעל מסנן לטעינת ערוצים</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">טעינת ערוצים…</string>
   <string name="morphe_hide_aislist_about_summary">"תוצאות בעמוד הבית ובחיפוש מסוננות כדי להסתיר סרטונים מערוצים שסומנו על ידי AiSList
 
 מגבלות:
