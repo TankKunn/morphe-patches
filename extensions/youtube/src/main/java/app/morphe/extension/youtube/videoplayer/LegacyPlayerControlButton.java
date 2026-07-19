@@ -39,7 +39,6 @@ public class LegacyPlayerControlButton {
     public enum ButtonVisibility {
         ENABLED,
         DISABLED,
-        FORCE_HIDDEN,
         FORCE_SHOW
     }
 
@@ -231,16 +230,29 @@ public class LegacyPlayerControlButton {
         // field, necessary for the logic that updates the fullscreen title bar margin.
         initializeHeadingFromUpperButton(container);
 
-        final float sourceButtonAlpha = source.getAlpha();
+        final float sourceButtonAlpha;
+        final int sourceButtonVisibility;
+        switch (enabledStatus.status()) {
+            case ENABLED -> {
+                sourceButtonAlpha = source.getAlpha();
+                sourceButtonVisibility = source.getVisibility();
+            }
+            case DISABLED -> {
+                sourceButtonAlpha = 0.0f;
+                sourceButtonVisibility = View.GONE;
+            }
+            case FORCE_SHOW -> {
+                sourceButtonAlpha = 1.0f;
+                sourceButtonVisibility = View.VISIBLE;
+            }
+            default -> {
+                throw new IllegalStateException("Unknown status: " + enabledStatus.status());
+            }
+        };
+
         if (container.getAlpha() != sourceButtonAlpha) {
             container.setAlpha(sourceButtonAlpha);
         }
-
-        final int sourceButtonVisibility = switch (enabledStatus.status()) {
-            case ENABLED -> source.getVisibility();
-            case DISABLED, FORCE_HIDDEN -> View.GONE;
-            case FORCE_SHOW -> View.VISIBLE;
-        };
 
         if (container.getVisibility() != sourceButtonVisibility) {
             container.setVisibility(sourceButtonVisibility);

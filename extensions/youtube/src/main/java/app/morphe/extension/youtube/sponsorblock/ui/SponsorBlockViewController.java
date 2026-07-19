@@ -22,6 +22,7 @@ import app.morphe.extension.shared.sponsorblock.objects.SponsorSegment;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.PlayerType;
 import app.morphe.extension.youtube.videoplayer.LegacyPlayerControlButton;
+import app.morphe.extension.youtube.videoplayer.LegacyPlayerControlButton.ButtonVisibility;
 import kotlin.Unit;
 
 public class SponsorBlockViewController {
@@ -103,15 +104,15 @@ public class SponsorBlockViewController {
                     null,
                     null,
                     () -> {
-                        if (SegmentPlaybackController.shouldNotFadeOutPlayerOverlaySkipButton()) {
-                            return LegacyPlayerControlButton.ButtonVisibility.FORCE_SHOW;
+                        if (SegmentPlaybackController.forceShowSkipButton()) {
+                            return ButtonVisibility.FORCE_SHOW;
                         }
                         if (!canShowViewElements) {
-                            return LegacyPlayerControlButton.ButtonVisibility.FORCE_HIDDEN;
+                            return ButtonVisibility.DISABLED;
                         }
                         return SegmentPlaybackController.currentlyInsideSkippableSegment()
-                                ? LegacyPlayerControlButton.ButtonVisibility.ENABLED
-                                : LegacyPlayerControlButton.ButtonVisibility.DISABLED;
+                                ? ButtonVisibility.ENABLED
+                                : ButtonVisibility.DISABLED;
                     },
                     view -> {
                         SkipSponsorButton button = skipSponsorButtonRef.get();
@@ -121,6 +122,7 @@ public class SponsorBlockViewController {
                     },
                     null
             );
+            skipSponsorPlayerButton.setVisibility(View.GONE);
 
             NewSegmentLayout newSegmentLayout = Objects.requireNonNull(layout.findViewById(
                     ResourceUtils.getIdentifier(ResourceType.ID, "morphe_sb_new_segment_view")));
