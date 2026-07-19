@@ -13,11 +13,10 @@ import java.util.Map;
 import java.util.Objects;
 
 import app.morphe.extension.shared.Logger;
-import app.morphe.extension.shared.requests.Route;
 import app.morphe.extension.shared.settings.AppLanguage;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
-import app.morphe.extension.shared.spoof.requests.StreamOrDetailsDataRequest;
+import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
 
 @SuppressWarnings("unused")
 public class SpoofVideoStreamsPatch {
@@ -67,27 +66,12 @@ public class SpoofVideoStreamsPatch {
 
     private static final boolean SPOOF_VIDEO_STREAMS = SharedYouTubeSettings.SPOOF_VIDEO_STREAMS.get();
 
-    private static volatile Map<String, String> currentVideoRequestHeader;
-
-    private static boolean overrideSpoofStreamFlagsForHeaders = SPOOF_VIDEO_STREAMS;
-
     @Nullable
     private static volatile AppLanguage languageOverride;
 
     private static volatile ClientType preferredClient = ClientType.ANDROID_REEL_AUTH;
 
     private static WeakReference<Application> mainActivityRef = new WeakReference<>(null);
-
-    public static void setOverrideSpoofStreamFlagsForHeaders() {
-        if (!overrideSpoofStreamFlagsForHeaders) {
-            Logger.printDebug(() -> "Forcing override of spoof stream flags with spoofing off");
-            overrideSpoofStreamFlagsForHeaders = true;
-        }
-    }
-
-    public static void setCurrentVideoRequestHeader(Map<String, String> newlyVideoRequestHeader) {
-        currentVideoRequestHeader = newlyVideoRequestHeader;
-    }
 
     /**
      * Injection point.
@@ -121,7 +105,7 @@ public class SpoofVideoStreamsPatch {
 
     public static void setClientsToUse(List<ClientType> availableClients, ClientType client) {
         preferredClient = Objects.requireNonNull(client);
-        StreamOrDetailsDataRequest.setClientOrderToUse(availableClients, client);
+        StreamingDataRequest.setClientOrderToUse(availableClients, client);
     }
 
     public static ClientType getPreferredClient() {
@@ -265,7 +249,7 @@ public class SpoofVideoStreamsPatch {
             Logger.printDebug(() -> "useMediaFetchHotConfigReplacement is set on");
         }
 
-        if (overrideSpoofStreamFlagsForHeaders) {
+        if (SPOOF_VIDEO_STREAMS) {
             return false;
         }
         return original;
@@ -280,10 +264,10 @@ public class SpoofVideoStreamsPatch {
             Logger.printDebug(() -> "usePlaybackStartFeatureFlag is set on");
         }
 
-        if (!SPOOF_VIDEO_STREAMS) {
-            return original;
+        if (SPOOF_VIDEO_STREAMS) {
+            return false;
         }
-        return false;
+        return original;
     }
 
     /**
@@ -295,10 +279,10 @@ public class SpoofVideoStreamsPatch {
             Logger.printDebug(() -> "useReelItemWatchResponse is set on");
         }
 
-        if (!SPOOF_VIDEO_STREAMS) {
-            return original;
+        if (SPOOF_VIDEO_STREAMS) {
+            return false;
         }
-        return false;
+        return original;
     }
 
     /**
@@ -310,7 +294,7 @@ public class SpoofVideoStreamsPatch {
             Logger.printDebug(() -> "useMediaSessionFeatureFlag is set on");
         }
 
-        if (overrideSpoofStreamFlagsForHeaders) {
+        if (SPOOF_VIDEO_STREAMS) {
             return false;
         }
         return original;
@@ -344,7 +328,7 @@ public class SpoofVideoStreamsPatch {
                     return;
                 }
 
-                StreamOrDetailsDataRequest.fetchStreamRequest(id, requestHeaders);
+                StreamingDataRequest.fetchRequest(id, requestHeaders);
             } catch (Exception ex) {
                 Logger.printException(() -> "buildRequest failure", ex);
             }
@@ -360,9 +344,9 @@ public class SpoofVideoStreamsPatch {
     public static byte[] getStreamingData(String videoId) {
         if (SPOOF_VIDEO_STREAMS) {
             try {
-                StreamOrDetailsDataRequest request = StreamOrDetailsDataRequest.getStreamRequestForVideoId(videoId);
+                StreamingDataRequest request = StreamingDataRequest.getRequestForVideoId(videoId);
                 if (request != null) {
-                    var stream = (byte[]) request.getStreamDetails();
+                    var stream = request.getStream();
                     if (stream != null) {
                         Logger.printDebug(() -> "Overriding video stream: " + videoId);
                         return stream;
@@ -376,10 +360,6 @@ public class SpoofVideoStreamsPatch {
         }
 
         return null;
-    }
-
-    public static StreamOrDetailsDataRequest fetchDetails(Route.CompiledRoute videoDetailsEndpoint, String videoId) {
-        return StreamOrDetailsDataRequest.getDetailsRequest(videoDetailsEndpoint, videoId, currentVideoRequestHeader);
     }
 
     /**
@@ -414,7 +394,7 @@ public class SpoofVideoStreamsPatch {
                     && !TextUtils.isEmpty(videoFormat)) {
                 // Force LTR layout, to match the same LTR video time/length layout YouTube uses for all languages.
                 return "\u202D" + videoFormat + "\u2009(" // u202D = left to right override
-                        + StreamOrDetailsDataRequest.getLastSpoofedClientName() + ")";
+                        + StreamingDataRequest.getLastSpoofedClientName() + ")";
             }
         } catch (Exception ex) {
             Logger.printException(() -> "appendSpoofedClient failure", ex);
