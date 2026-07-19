@@ -11,7 +11,6 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.BytecodePatchBuilder
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 internal fun mediaFetchPlayerConfigPatch(
@@ -21,8 +20,6 @@ internal fun mediaFetchPlayerConfigPatch(
 ) = bytecodePatch(
     description = "Hooks media fetch player config.",
 ) {
-    dependsOn(sharedExtensionPatch)
-
     execute {
         setOf(
             Triple(
