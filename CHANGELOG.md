@@ -1,3 +1,14 @@
+## [1.36.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.1...v1.36.0-dev.2) (2026-07-19)
+
+### 🐛 Bug Fixes
+
+* **YouTube - AI channel filter:** Skip list fetch and parse while all toggles are off ([a35a429](https://github.com/MorpheApp/morphe-patches/commit/a35a429f971d97c6179af8a76c19c235bf2ca1e8))
+* **YouTube - LegacyPlayerControlButton:** Fixed some issues following the add of support for version 21.28.204 ([318d691](https://github.com/MorpheApp/morphe-patches/commit/318d691dc0ce31a92c69ac856cad7e0b1d797255))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for `21.28.204` ([#2008](https://github.com/MorpheApp/morphe-patches/issues/2008)) ([44a0e67](https://github.com/MorpheApp/morphe-patches/commit/44a0e67c9c22e6251d0786e031fdb5b16a5b9c13))
+
 ## [1.36.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.35.0...v1.36.0-dev.1) (2026-07-18)
 
 ### 🐛 Bug Fixes
