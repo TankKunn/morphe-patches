@@ -1,3 +1,18 @@
+## [1.36.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.3...v1.36.0-dev.4) (2026-07-19)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Related videos filter bar not hidden on older versions ([#2086](https://github.com/MorpheApp/morphe-patches/issues/2086)) ([21035f7](https://github.com/MorpheApp/morphe-patches/commit/21035f77e49f5c58b752b32473ba31fb86125ec4))
+* **YouTube - SponsorBlock:** Show segment when 21.28+ auto-hide is off ([bbc171c](https://github.com/MorpheApp/morphe-patches/commit/bbc171cc99c2f42390e2fdc1b4cbf1cb1aee5b1e))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide 'Search inside this video' section" setting ([#2097](https://github.com/MorpheApp/morphe-patches/issues/2097)) ([e4adb52](https://github.com/MorpheApp/morphe-patches/commit/e4adb5278a983248b0da7e1167bc4cc971332cdc))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.28.51` ([39e85de](https://github.com/MorpheApp/morphe-patches/commit/39e85de5574832e2c282f9dd6e75c1ff3fb5d616))
+
 ## [1.36.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.2...v1.36.0-dev.3) (2026-07-19)
 
 ### 🐛 Bug Fixes
