@@ -704,10 +704,12 @@ val hideLayoutComponentsPatch = bytecodePatch(
             }
         }
 
-        RelatedChipCloudFingerprint.let {
-            it.clearMatch()
-            it.method.apply {
-                val recyclerViewIndex = it.instructionMatches[2].index
+        arrayOf(
+            RelatedChipCloudFingerprint to RelatedChipCloudFingerprint.instructionMatches[2].index,
+            RelatedChipCloudMirrorClassFingerprint to RelatedChipCloudMirrorClassFingerprint.instructionMatches.last().index,
+            RelatedChipCloudMirrorClassFingerprint to RelatedChipCloudMirrorClassFingerprint.instructionMatches[2].index
+        ).forEach { (fingerprint, recyclerViewIndex) ->
+            fingerprint.method.apply {
                 val recyclerViewRegister = getInstruction<OneRegisterInstruction>(recyclerViewIndex).registerA
 
                 addInstruction(

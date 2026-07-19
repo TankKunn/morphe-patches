@@ -562,7 +562,11 @@ public final class LayoutComponentsFilter extends Filter {
     /**
      * Injection point.
      */
-    public static void hideInRelatedVideos(RecyclerView chipRecyclerView) {
+    public static void hideInRelatedVideos(@Nullable RecyclerView chipRecyclerView) {
+        if (chipRecyclerView == null) {
+            return;
+        }
+        
         if (HIDE_FILTER_BAR_IN_RELATED_VIDEOS_ENABLED) {
             chipRecyclerView.setVisibility(RecyclerView.GONE);
         }

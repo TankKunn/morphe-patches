@@ -219,6 +219,32 @@ internal object RelatedChipCloudFingerprint : Fingerprint(
         )
     )
 )
+internal object RelatedChipCloudMirrorClassFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf("Landroid/view/View;", "Landroid/view/View;"),
+    filters = listOf(
+        resourceLiteral(ResourceType.ID, "related_chip_cloud"),
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            name = "findViewById",
+            location = MatchAfterImmediately()
+        ),
+        checkCast(
+            type = "Landroid/support/v7/widget/RecyclerView;",
+            location = MatchAfterWithin(2)
+        ),
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            name = "findViewById",
+            location = MatchAfterWithin(6)
+        ),
+        checkCast(
+            type = "Landroid/support/v7/widget/RecyclerView;",
+            location = MatchAfterWithin(2)
+        )
+    )
+)
 
 internal object SearchResultsChipBarFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
