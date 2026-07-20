@@ -1,3 +1,14 @@
+## [1.36.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.4...v1.36.0-dev.5) (2026-07-20)
+
+### 🐛 Bug Fixes
+
+* **YouTube Music - Remember shuffle state:** Remove conflicting playback controls fingerprint ([f78e195](https://github.com/MorpheApp/morphe-patches/commit/f78e19576eb2c81fb9c26143d6ae611f68839b27))
+
+### ✨ New Features
+
+* **Reddit:** Add `Custom font` patch ([#2100](https://github.com/MorpheApp/morphe-patches/issues/2100)) ([b242ad9](https://github.com/MorpheApp/morphe-patches/commit/b242ad94ec560ac030f64ce602f3571d2c93a887))
+* **Spoof video streams:** Default client maintenance ([#2094](https://github.com/MorpheApp/morphe-patches/issues/2094)) ([f321bda](https://github.com/MorpheApp/morphe-patches/commit/f321bda0455b1b45334679083066474a77d35442))
+
 ## [1.36.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.3...v1.36.0-dev.4) (2026-07-19)
 
 ### 🐛 Bug Fixes
