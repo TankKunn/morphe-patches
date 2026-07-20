@@ -163,6 +163,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_key_concepts_section_title">Скрий секцията „Основни понятия“</string>
   <string name="morphe_hide_music_section_title">Скрий секцията „Музика“</string>
   <string name="morphe_hide_quizzes_section_title">Скрий секцията „Тестове“</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Скрий секцията \"Търсене в това видео\"</string>
   <string name="morphe_hide_subscribe_button_title">Скриване на бутона \'Абонамент\'</string>
   <string name="morphe_hide_transcript_section_title">Скрий секцията „Транскрипция“</string>
   <string name="morphe_hide_video_details_section_title">Скрий секцията „Подробности за видеото“</string>
@@ -452,15 +453,17 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Деактивира прецизния режим на търсене, който се активира при издърпване на лентата за търсене</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Активиране на livestream DVR</string>
+  <string name="morphe_livestream_dvr_summary">Позволява превъртане на всички потоци на живо, дори и тези, които обикновено го ограничават</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Позволява превъртане на всички предавания на живо, дори на тези, които обикновено го ограничават
+  <string name="morphe_livestream_dvr_not_available">"'Активиране на DVR за запис на живо' може да не е налично
 
-Забележка: Ако „Подменяне на видео потоци“ не е активирано, активирането на тази опция може да доведе до неочаквано поведение при превъртане на предаване на живо"</string>
+За да отстраните това, включете 'Подправяне на видео потоци' и променете 'Стандартен клиент' на 'ТВ'."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Разширете продължителността на livestream DVR</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Позволява ви да превъртате предавания на живо до 7 дни назад</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Позволява ви да връщате предавания на живо до 7 дни назад
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Разширяване на DVR за запис на живо' може да не е налично
 
-Забележка: Ако „Подменяне на видео потоци“ не е активирано, активирането на тази опция може да доведе до неочаквано поведение при превъртане на предаване на живо"</string>
+За да отстраните това, включете 'Подправяне на видео потоци' и променете 'Стандартен клиент' на 'ТВ'."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Зареждаването ще има твърд фон</string>
   <string name="morphe_slide_to_seek_summary">Активира плъзгане за търсене вместо възпроизвеждане със скорост 2x при натискане и задържане на видео плейъра</string>
@@ -665,10 +668,10 @@ Second \"item\" text"</string>
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Скриване на менюто \'Аудио писта\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
+          'Android Studio' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Менюто за аудио пистите е скрито
 
-За да покажете менюто за аудио писти, променете 'Подправяне на видео потоци' на 'Android Reel' или 'ТВ'."</string>
+За да покажете менюто за аудио писти, променете 'Подправяне на видео потоци' на клиент, различен от 'Android Studio'."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Скриване на футера на менюто \'Аудио писта\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Скриване на менюто \'Субтитри\'</string>
@@ -1086,7 +1089,6 @@ Second \"item\" text"</string>
 
 Видео преглед с AV1 може да се качне или да има падане на кадри."</string>
   <string name="morphe_spoof_video_streams_about_title">Манипулиране на ефекти на видео</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Експериментално клиент и може да престане да работи в произволно време</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Видеото може да спира на 1:00, или може да не е налично в някои региони</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Меню за аудио трак не е налично</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Отсъства AV1 кодек на видео</string>

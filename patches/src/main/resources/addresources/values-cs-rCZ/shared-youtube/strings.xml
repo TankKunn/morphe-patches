@@ -142,8 +142,9 @@ Přehrávání se nezdaří, pokud je hash JavaScriptu přehrávače zastaralý.
   <string name="morphe_proxy_allow_direct_fallback_summary">Připojit se přímo, pokud proxy selže</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Skrýt celostránkové reklamy</string>
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_original_audio_not_available">Pro použití této funkce změňte \'Zfalšovat video streamy\' na Android Reel nebo TV</string>
+  <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_force_original_audio_not_available">Chcete-li tuto funkci použít, změňte \'Zfalšovat video streamy\' na libovolného klienta kromě Android Studia\'</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">Vyčistit sdílené odkazy</string>
   <string name="morphe_sanitize_sharing_links_summary">Odstraňuje sledovací parametry dotazů ze sdílených odkazů</string>

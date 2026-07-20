@@ -163,6 +163,7 @@ Spremembe vključujejo:
   <string name="morphe_hide_key_concepts_section_title">Skrij odsek \'Ključni koncepti\'</string>
   <string name="morphe_hide_music_section_title">Skrij odsek \'Glasba\'</string>
   <string name="morphe_hide_quizzes_section_title">Skrij odsek \'Kviziji\'</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Skrij \'Iskanje v videu\' odsek</string>
   <string name="morphe_hide_subscribe_button_title">Skrij Gumb za naročanje</string>
   <string name="morphe_hide_transcript_section_title">Skrij odsek \'Transkript\'</string>
   <string name="morphe_hide_video_details_section_title">Skrij odsek \'Podrobnosti videoposnetka\'</string>
@@ -450,15 +451,17 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Onemogoči način natančnega iskanja, ki se aktivira, ko povlečete drsnik</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Omogoči DVR za pretočni video</string>
+  <string name="morphe_livestream_dvr_summary">Omogoča predvajanje v živo tudi za prenose, ki sicer to preprečujejo</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Omogoča iskanje v vseh prenosih v živo, tudi tistih, ki ga običajno omejujejo
+  <string name="morphe_livestream_dvr_not_available">"'Omogočanje snemanja v živo' morda ni na voljo
 
-Opomba: Če »Ponarejanje video tokov« ni omogočeno, lahko omogočenje tega povzroči nepričakovano vedenje pri iskanju prenosov v živo."</string>
+Če želite to rešiti, vklopite možnost 'Ponarejanje video tokov' in spremenite 'Privzeti odjemalec' na 'TV'."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Razširi trajanje DVR za pretočni prenos</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Omogoča vam povratno predvajanje v živo do 7 dni v preteklost</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Omogoča vam ponovni pregled prenosov v živo do 7 dni v preteklost
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Podaljšaj trajanje snemanja v živo' morda ni na voljo
 
-Opomba: Če »Ponarejanje video tokov« ni omogočeno, lahko omogočenje tega povzroči nepričakovano vedenje pri iskanju prenosov v živo."</string>
+Če želite to rešiti, vklopite možnost 'Ponarejanje video tokov' in spremenite 'Privzeti odjemalec' na 'TV'."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Omogoči drsenje za iskanje</string>
   <string name="morphe_slide_to_seek_summary">Omogoči drsanje za iskanje namesto predvajanja pri 2-kratni hitrosti, ko pritisnete in držite predvajalnik videa</string>
@@ -663,10 +666,10 @@ Za dostop do Nastavitev omogočite gumb Nastavitve prek Splošno → Vrstica →
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Skrij meni \'Zvočna pot\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
+          'Android Studio' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Meni 'Zvočna pot' je skrit
 
-Za prikaz menija 'Zvočna pot' spremenite možnost 'Ponarejanje videoposnetkov' v 'Android Reel' ali 'TV'."</string>
+Za prikaz menija 'Zvočna pot' spremenite 'Ponarejanje video tokov' na katerega koli odjemalca, razen 'Android Studio'."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skrij noga menija \'Zvočna pot\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skrij meni \'Napisi\'</string>
@@ -1084,7 +1087,6 @@ Omejitve:
 
 Predvajanje AV1 videa se lahko zamika ali izgublja okvirje."</string>
   <string name="morphe_spoof_video_streams_about_title">Stranski učinki navideznega pretakanja</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Eksperimentalni odjemalec in lahko se kadarkoli neha delovati</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Video se lahko ustavi ob 1:00 ali pa morda ni na voljo v nekaterih regijah</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Manjka meni za zvočno progo</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Ni kodeka AV1 videa</string>

@@ -163,6 +163,7 @@ Schimbari incluse:
   <string name="morphe_hide_key_concepts_section_title">Ascunde secțiunea \"Concepte cheie\"</string>
   <string name="morphe_hide_music_section_title">Ascunde secțiunea Muzică</string>
   <string name="morphe_hide_quizzes_section_title">Ascunde secțiunea Quiz-uri</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Ascunde secțiunea \'Caută în acest videoclip\'</string>
   <string name="morphe_hide_subscribe_button_title">Ascunde butonul Abonează-te</string>
   <string name="morphe_hide_transcript_section_title">Ascunde secțiunea Transcriere</string>
   <string name="morphe_hide_video_details_section_title">Ascunde secțiunea \"Detalii video\"</string>
@@ -452,15 +453,17 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Dezactivează modul de căutare precisă care se activează atunci când tragi de bara de căutare</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Activare DVR livestream</string>
+  <string name="morphe_livestream_dvr_summary">Permite căutarea în toate transmisiunile live, chiar și în cele care restricționează în mod normal această funcție</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Permite derularea tuturor transmisiunilor live, chiar și a celor care restricționează în mod normal această funcție
+  <string name="morphe_livestream_dvr_not_available">"'Activarea înregistrării DVR pentru fluxuri live' este posibil să nu fie disponibilă
 
-Notă: Dacă „Spoof video streams” nu este activat, activarea acesteia poate provoca un comportament neașteptat la derularea transmisiunilor live."</string>
+Pentru a remedia această problemă, activați 'Spoof video streams' și schimbați 'Clientul implicit' în 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Extinde durata DVR pentru livestream</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Vă permite să derulați înapoi emisiunile live până la 7 zile în trecut</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Vă permite să derulați înapoi transmisiunile live cu până la 7 zile în trecut
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Extinderea duratei DVR pentru transmisiuni live' nu este disponibilă
 
-Notă: Dacă „Spoof video streams” nu este activat, activarea acesteia poate provoca un comportament neașteptat la derularea transmisiunilor live."</string>
+Pentru a rezolva această problemă, activați 'Falsificare fluxuri video' și schimbați 'Clientul implicit' în 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activează diapozitivul pentru a căuta</string>
   <string name="morphe_slide_to_seek_summary">Activează glisarea pentru a căuta în loc să redă cu o viteză de 2x când apeși și menții apăsat playerul video</string>
@@ -665,10 +668,10 @@ Pentru a accesa Setări, activați butonul Setări prin General → Bara de inst
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Ascunde meniul \'Piesă audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meniul 'Audio Track' este ascuns
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meniul 'Pistă audio' este ascuns
 
-Pentru a afișa meniul 'Audio Track', schimbați 'Spoof video streams' în 'Android Reel' sau 'TV'"</string>
+Pentru a afișa meniul 'Pistă audio', schimbați 'Spoof video streams' la orice client, cu excepția 'Android Studio'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ascunde subsolul meniului \'Piesă audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ascunde meniul Subtitrări</string>
@@ -1086,7 +1089,6 @@ Limitări:
 
 Redarea video cu AV1 poate sacada sau pierde cadre."</string>
   <string name="morphe_spoof_video_streams_about_title">Efecte secundare ale simulării</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Client experimental și se poate opri din funcționare oricând</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Videoclipul se poate opri la 1:00, sau poate să nu fie disponibil în unele regiuni</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Meniul pistei audio lipsește</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Fara codec video AV1</string>

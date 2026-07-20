@@ -108,7 +108,7 @@ Second \"item\" text"</string>
   <string name="morphe_debug_feature_flags_manager_summary">管理布林功能標記</string>
   <string name="morphe_debug_feature_flags_manager_active_header">已啟用功能標籤 (%d)</string>
   <string name="morphe_debug_feature_flags_manager_blocked_header">已封鎖功能標籤 (%d)</string>
-  <string name="morphe_debug_feature_flags_manager_search_hint">搜尋功能旗標…</string>
+  <string name="morphe_debug_feature_flags_manager_search_hint">搜尋功能標籤…</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">功能標籤已儲存</string>
   <string name="morphe_debug_feature_flags_manager_toast_reset">功能標籤已重設</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">功能標籤已複製到剪貼簿</string>

@@ -163,6 +163,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_key_concepts_section_title">ซ่อนส่วน \'แนวคิดหลัก\'</string>
   <string name="morphe_hide_music_section_title">ซ่อนส่วน Music</string>
   <string name="morphe_hide_quizzes_section_title">ซ่อนส่วน Quizzes</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">ซ่อนส่วน \'ค้นหาภายในวิดีโอนี้\'</string>
   <string name="morphe_hide_subscribe_button_title">ซ่อนปุ่มสมัครใช้</string>
   <string name="morphe_hide_transcript_section_title">ซ่อนส่วน Transcript</string>
   <string name="morphe_hide_video_details_section_title">ซ่อนส่วน \'รายละเอียดวิดีโอ\'</string>
@@ -452,15 +453,17 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">ปิดใช้งานโหมดการค้นหาที่แม่นยำซึ่งเปิดใช้งานเมื่อดึงแถบความคืบหน้า</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">เปิดใช้งาน DVR สตรีมมิงสด</string>
+  <string name="morphe_livestream_dvr_summary">ช่วยให้สามารถข้ามไปยังส่วนต่างๆ ของการถ่ายทอดสดได้ทั้งหมด แม้แต่การถ่ายทอดสดที่ปกติแล้วจะจำกัดการทำงานนี้ไว้</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"ช่วยให้สามารถเลื่อนดูไลฟ์สตรีมทั้งหมดได้ แม้แต่ไลฟ์สตรีมที่ปกติจำกัดการเลื่อนดูไว้
+  <string name="morphe_livestream_dvr_not_available">"'เปิดใช้งาน DVR สำหรับถ่ายทอดสด' อาจไม่สามารถใช้งานได้
 
-หมายเหตุ: หากไม่ได้เปิดใช้งาน 'Spoof video streams' การเปิดใช้งานคุณสมบัตินี้อาจทำให้พฤติกรรมการเลื่อนดูไลฟ์สตรีมผิดปกติได้"</string>
+หากต้องการแก้ไข โปรดเปิด 'Spoof video streams' และเปลี่ยน 'Default client' เป็น 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">ขยายระยะเวลาบันทึกวิดีโอไลฟ์สตรีม</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">ช่วยให้คุณสามารถย้อนกลับการออกอากาศสดได้ถึง 7 วันย้อนหลัง</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"ช่วยให้คุณย้อนกลับการถ่ายทอดสดได้สูงสุด 7 วัน
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'ขยายระยะเวลา DVR สำหรับถ่ายทอดสด' อาจไม่สามารถใช้งานได้
 
-หมายเหตุ: หากไม่ได้เปิดใช้งาน 'Spoof video streams' การเปิดใช้งานคุณสมบัตินี้อาจทำให้พฤติกรรมการเลื่อนดูไลฟ์สตรีมผิดปกติได้"</string>
+หากต้องการแก้ไข โปรดเปิด 'Spoof video streams' และเปลี่ยน 'Default client' เป็น 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">เปิดใช้งานเลื่อนเพื่อค้นหา</string>
   <string name="morphe_slide_to_seek_summary">เปิดใช้งานการปัดเพื่อค้นหาแทนการเล่นด้วยความเร็ว 2 เท่าเมื่อกดค้างที่เครื่องเล่นวิดีโอ</string>
@@ -664,10 +667,10 @@ Second \"item\" text"</string>
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">ซ่อนเมนู \'แทร็กเสียง\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"เมนู 'Audio Track' ถูกซ่อนไว้
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'เมนู 'Audio Track' ถูกซ่อนไว้
 
-หากต้องการแสดงเมนู 'Audio Track' ให้เปลี่ยน 'Spoof video streams' เป็น 'Android Reel' หรือ 'TV'"</string>
+หากต้องการแสดงเมนู 'Audio Track' ให้เปลี่ยน 'Spoof video streams' เป็นไคลเอนต์อื่นที่ไม่ใช่ 'Android Studio'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">ซ่อนส่วนท้ายเมนู \'แทร็กเสียง\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">ซ่อนเมนูคำบรรยาย</string>
@@ -1084,7 +1087,6 @@ Second \"item\" text"</string>
 
 การเล่นวิดีโอด้วย AV1 อาจกระตุกหรือเฟรมตก"</string>
   <string name="morphe_spoof_video_streams_about_title">ผลข้างเคียงของการปลอมแปลง</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• ไคลเอนต์ทดลองและอาจหยุดทำงานได้ตลอดเวลา</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• วิดีโออาจหยุดที่ 1:00 หรืออาจไม่สามารถรับชมได้ในบางภูมิภาค</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• เมนูแทร็กเสียงหายไป</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• ไม่มีตัวแปลงสัญญาณวิดีโอ AV1</string>

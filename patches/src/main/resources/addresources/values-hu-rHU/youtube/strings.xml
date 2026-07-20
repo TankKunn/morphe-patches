@@ -163,6 +163,7 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_key_concepts_section_title">Kulcsfogalmak szekció elrejtése</string>
   <string name="morphe_hide_music_section_title">Zene szekció elrejtése</string>
   <string name="morphe_hide_quizzes_section_title">Kvízek szekció elrejtése</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Rejtse el a \"Keresés a videón belül\" szakaszt</string>
   <string name="morphe_hide_subscribe_button_title">Feliratkozás gomb elrejtése</string>
   <string name="morphe_hide_transcript_section_title">Átirat szekció elrejtése</string>
   <string name="morphe_hide_video_details_section_title">Videó részletei szekció elrejtése</string>
@@ -452,15 +453,11 @@ Figyelem: Lehet, hogy az élő közvetítéseknél nem működik"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Letiltja a pontos pozíciókeresési módot, amely a lejátszósáv felhúzásakor aktiválódik</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Engedélyezze az élsőségi DVR-t</string>
+  <string name="morphe_livestream_dvr_summary">Lehetővé teszi a keresést minden élő streamen, még azoknál is, amelyek normál esetben korlátozzák azt.</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Lehetővé teszi a minden élő közvetítés visszatekerését, még azokét is, amelyek egyébként korlátozzák azt.
-
-Megjegyzés: Ha a „Videófolyamok hamisítása” nincs engedélyezve, akkor ez a funkció váratlan élő közvetítés visszakeresési viselkedést okozhat."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Bővítsd a közvetítés DVR idejét</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Lehetővé teszi élő adások visszatekerését a múltba maximum 7 nappal</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Lehetővé teszi az élő adások visszajátszását akár 7 nappal a múltba.
-
-Megjegyzés: Ha a „Videófolyamok hamisítása” nincs engedélyezve, akkor ez a funkció váratlan élő közvetítés visszakeresési viselkedést okozhat."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Csúsztatás engedélyezése a kereséshez</string>
   <string name="morphe_slide_to_seek_summary">Engedélyezi a videólejátszó megnyomása és tartása közbeni csúsztatást a kétszeres sebességű lejátszás helyett</string>
@@ -665,10 +662,7 @@ A Beállítások eléréséhez engedje a Beállítások gombot a Általános →
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Hangszám menü elrejtése</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Az \"Audio Track\" menü el van rejtve
-
-Az \"Audio Track\" menü megjelenítéséhez módosítsa a \"Spoof video streams\" beállítást \"Android Reel\" vagy \"TV\" értékre."</string>
+          'Android Studio' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Hangszám menü lábléc elrejtése</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Feliratok menü elrejtése</string>
@@ -1086,7 +1080,6 @@ Korlátozások:
 
 Az AV1-es videólejátszás akadozhat vagy képkockákat ejthet."</string>
   <string name="morphe_spoof_video_streams_about_title">Hamisítás mellékhatásai</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Kísérleti kliens, és bármikor leállhat</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• A videó megállhat 1:00-nál, vagy előfordulhat, hogy egyes régiókban nem elérhető</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Hiányzik az hangsáv menü</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Nincs AV1 videokodek</string>

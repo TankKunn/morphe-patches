@@ -142,8 +142,9 @@ Spilun mun bregðast ef Player JavaScript hash er úrelt."</string>
   <string name="morphe_proxy_allow_direct_fallback_summary">Tengist beint ef proxy virkar ekki</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Falir auglýsingar á fullri skjánum</string>
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_original_audio_not_available">Til að nota þessa eiginleika skaltu breyta \'Spofa myndstreymi\' í Android Reel eða TV</string>
+  <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_force_original_audio_not_available">Til að nota þennan eiginleika skaltu breyta \'Spoof video streams\' í hvaða þjónustu sem er nema \'Android Studio\'</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">Hreinsa deilingshlökki</string>
   <string name="morphe_sanitize_sharing_links_summary">Fjarlægir rekja breytur úr deilingshlökkum</string>

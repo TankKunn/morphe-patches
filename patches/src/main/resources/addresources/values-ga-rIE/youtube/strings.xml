@@ -163,6 +163,7 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_key_concepts_section_title">Folaigh an chuid \'Príomhchoincheapa\'</string>
   <string name="morphe_hide_music_section_title">Folaigh an rannóg Ceoil</string>
   <string name="morphe_hide_quizzes_section_title">Folaigh an rannán Tráth na gCeist</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Ceadaigh \'Cuardaigh istigh sa físeán seo\' section</string>
   <string name="morphe_hide_subscribe_button_title">Folaigh an cnaipe Liostála</string>
   <string name="morphe_hide_transcript_section_title">Folaigh an chuid Tras-scríbhinn</string>
   <string name="morphe_hide_video_details_section_title">Folaigh an chuid \'Sonraí físe\'</string>
@@ -452,15 +453,17 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Díchumasaíonn sé an modh cuardaigh bheacht a ghníomhaítear nuair a tharraingítear an barra cuardaigh suas</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Cumasaigh DVR sruthú beo</string>
+  <string name="morphe_livestream_dvr_summary">Ceadaíonn sé cuardach a dhéanamh ar gach sruth beo, fiú iad siúd a chuireann srian air de ghnáth</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Ceadaíonn sé cuardach ar gach sruth beo, fiú iad siúd a chuireann srian air de ghnáth
+  <string name="morphe_livestream_dvr_not_available">"'Comhordaigh DVR sruth beo' ní féidir a bheith ar fáil
 
-Nóta: Mura bhfuil 'Sruthanna físe bréige' cumasaithe, d'fhéadfadh sé seo iompar gan choinne a chur faoi deara maidir le cuardach sruth beo"</string>
+Chun é seo a cheartú, cuir 'Sruthanna físe bréige' ar siúl agus athraigh an 'Cliant default' go 'Teilifís'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Leathnaigh fad an DVR sruthú beo</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Ligeann sé duit craoltaí beo a athchasadh suas le 7 lá san am atá thart</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Ligeann sé seo duit craoltaí beo a athchasadh suas le 7 lá san am atá thart
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Síntear fad DVR sruth beo' ní féidir a bheith ar fáil
 
-Nóta: Mura bhfuil 'Sruthanna físe bréige' cumasaithe, d'fhéadfadh sé seo iompar gan choinne a chur faoi deara maidir le cuardach sruth beo"</string>
+Chun é seo a cheartú, cuir 'Sruthanna físe bréige' ar siúl agus athraigh an 'Cliant default' go 'Teilifís'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Cumasaigh sleamhnán a lorg</string>
   <string name="morphe_slide_to_seek_summary">Cumasaíonn sé seo an sleamhnán chun cuardach a dhéanamh in ionad é a sheinm ag luas 2x nuair a bhrúnn tú agus a choinníonn tú an seinnteoir físe</string>
@@ -665,10 +668,10 @@ Chun rochtain a fháil ar Socruithe, cumasaigh an cnaipe Socruithe trí Ghinear�
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Folaigh an roghchlár \'Rian Fuaime\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Tá an roghchlár 'Rian Fuaime' i bhfolach
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Tá roghchlár 'Rian Fuaime' folaithe
 
-Chun an roghchlár 'Rian Fuaime' a thaispeáint, athraigh 'Sruthanna físe bréige' go 'Ríl Android' nó 'Teilifís'"</string>
+Chun an roghchlár 'Rian Fuaime' a thaispeáint, athraigh 'Sruthanna físe bréige' go aon cliant seachas 'Android Studio'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Folaigh buntásc an roghchláir \'Rian Fuaime\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Folaigh roghchlár Fotheidil</string>
@@ -1086,7 +1089,6 @@ Teorainneacha:
 
 D’fhéadfadh sé go mbeadh stad nó go gcaillfí frámaí ag athsheinm físe le AV1."</string>
   <string name="morphe_spoof_video_streams_about_title">Fo-iarsmaí spóifithe</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Cliant turgnamhach é seo agus féadfaidh sé stop a chur ag obair ag am ar bith</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Is féidir go stopfaidh an físeán ag 1:00, nó b\'fhéidir nach mbeidh sé ar fáil i réigiúin áirithe</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Tá roghchlár na rianta fuaime ar iarraidh</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Gan aon chóideic físe AV1</string>

@@ -163,6 +163,7 @@ Endringer inkluderer:
   <string name="morphe_hide_key_concepts_section_title">Skjul «Nøkkelbegreper»-seksjon</string>
   <string name="morphe_hide_music_section_title">Skjul Musikk-seksjon</string>
   <string name="morphe_hide_quizzes_section_title">Skjul Quizzer-seksjon</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Skjul seksjonen \'Søk i denne videoen\'</string>
   <string name="morphe_hide_subscribe_button_title">Skjul \'Abonner\'-knappen</string>
   <string name="morphe_hide_transcript_section_title">Skjul Transkripsjon-seksjon</string>
   <string name="morphe_hide_video_details_section_title">Skjul «Videodetaler»-seksjon</string>
@@ -452,15 +453,17 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Deaktiverer den presise søkemodusen som aktiveres når du drar opp søkefeltet</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Aktiver livestream DVR</string>
+  <string name="morphe_livestream_dvr_summary">Lar deg spole på alle direktesendinger, selv de som normalt ikke tillater det</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Tillater å spole på alle direktesendinger, selv de som normalt begrenser det
+  <string name="morphe_livestream_dvr_not_available">"Muligheten til å ta opp direktesendinger er kanskje ikke tilgjengelig
 
-Merk: Hvis «Spoof videostrømmer» ikke er aktivert, kan aktivering av dette føre til uventet spoleoppførsel for direktesendinger"</string>
+For å fikse dette, slå på 'Spoof video streams' og endre 'Standard klient' til 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Utvid livestream DVR varighet</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Lar deg spole tilbake direktesendinger opptil 7 dager</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Lar deg spole tilbake live-sendinger opptil 7 dager i fortiden
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"’Utvid DVR-varigheten til direktesendinger’ er kanskje ikke tilgjengelig
 
-Merk: Hvis «Spoof videostrømmer» ikke er aktivert, kan aktivering av dette føre til uventet spoleoppførsel for direktesendinger"</string>
+For å fikse dette, slå på ’Spoof video streams’ og endre ’Standard klient’ til ’TV’"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktiver glidekontroll for søk</string>
   <string name="morphe_slide_to_seek_summary">Aktiverer sveiping for å søke i stedet for å spille med 2x hastighet når du trykker og holder videospilleren</string>
@@ -665,10 +668,10 @@ For å få tilgang til Innstillinger, aktiver Innstillingsknappen via General �
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Skjul \"Lydspor\"-menyen</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Lydspor'-menyen er skjult
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"’Lydspor’-menyen er skjult
 
-For å vise 'Lydspor'-menyen, endre 'Spoof video streams' til 'Android Reel' eller 'TV'"</string>
+For å vise ’Lydspor’-menyen, endre ’Spoof video streams’ til en hvilken som helst klient unntatt ’Android Studio’"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skjul Undertekster-meny</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skjul Undertekster-menyen fotnote</string>
@@ -1084,7 +1087,6 @@ Begrensninger:
 
 Videospilling med AV1 kan hakke eller miste bilder."</string>
   <string name="morphe_spoof_video_streams_about_title">Bivirkninger av forfalskning</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Eksperimentell klient og kan slutte å fungere når som helst</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Videoen kan stoppe etter 1:00, eller kanskje ikke være tilgjengelig i noen regioner</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Lydspor-meny mangler</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Ingen AV1-videokodek</string>

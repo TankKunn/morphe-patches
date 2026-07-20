@@ -163,6 +163,7 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_key_concepts_section_title">Felur \'Helstu hugtök\' hluta</string>
   <string name="morphe_hide_music_section_title">Felur Tónlistar hluta</string>
   <string name="morphe_hide_quizzes_section_title">Felur Prófa hluta</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Fela \'Leit í þessu myndbandi\' hluta</string>
   <string name="morphe_hide_subscribe_button_title">Fela áskriftarhnapp</string>
   <string name="morphe_hide_transcript_section_title">Felur Aðalrit hluta</string>
   <string name="morphe_hide_video_details_section_title">Felur \'Vídeó upplýsingar\' hluta</string>
@@ -450,15 +451,17 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_disable_precise_seeking_gesture_summary">Gerir óvirkt nákvæma leit á þessu sem virkjar þegar þeir draga leitarstikuna</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Vírúð lífvídeós DVR</string>
+  <string name="morphe_livestream_dvr_summary">Leyfir að spila áfram og aftur á öllum streimum, jafnvel þeim sem venjulega takmarka það</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Leyfir að leita á öllum streymum, jafnvel þótt þeir venjulega takmarki það
+  <string name="morphe_livestream_dvr_not_available">"'Gerðu líkama DVR streymi' gæti ekki verið tiltækt
 
-Athugið: Ef 'Spoofa myndband streymi' er ekki virkjað getur þetta valkosti valdað óvæntum leitar hegðun"</string>
+Til að laga þetta, kveiktu á 'Spoof myndflæðum' og breytu 'Sjálfgefnri viðskiptavinur' í 'Sjónvarp'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Fjarlægðu lífvídeós DVR tíma</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Leyfir þér að spola áfram beina útsendingu allt að 7 daga til baka</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Leyfir þér að spola til baka á beinum útsendingum allt að 7 dögum í fortíðinni
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Stækka líkama DVR streymi' gæti ekki verið tiltækt
 
-Athugið: Ef 'Spoofa myndband streymi' er ekki virkjað getur þetta valkosti valdað óvæntum leitar hegðun"</string>
+Til að laga þetta, kveiktu á 'Spoof myndflæðum' og breytu 'Sjálfgefnri viðskiptavinur' í 'Sjónvarp'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Vírúð renna til leit</string>
   <string name="morphe_slide_to_seek_summary">Virkar að slá til breytilegrar sem þurfa að vera haldar eða halda vídeó leikmanninum</string>
@@ -661,10 +664,10 @@ Til þess að fá access til stillingarinnar skaltu koma á stillinguna í gegnu
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Felur \'Hljóðrás\' valmynd</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"’Hljómsnertistilinn’ er falinn
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Hljóðrás' valmyndin er falin
 
-Til að sýna ‚Hljómsnertistilinn‘ skaltu breyta „Forgeðu vídeóstreymi“ í „Android Reel“ eða „Sjónvarp“"</string>
+Til að sýna 'Hljóðrás' valmyndina, breytu 'Spoof myndflæðum' í hvaða þjónustuaðila sem er nema 'Android Studio'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Felur \'Hljóðrás\' valmyndar fætur</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Felur Undirrita valmynd</string>
@@ -1082,7 +1085,6 @@ Takmörk:
 
 Myndbandsspilun með AV1 getur hakka eða orðið með rammalegsfall."</string>
   <string name="morphe_spoof_video_streams_about_title">Umráðareitur áhrifa</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Tilvísanarviðskiptavinur og getur hætt að virka hvenær sem er</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Vídeó getur stoppað á 1:00, eða gæti ekki verið fáanlegt í sumum löndum</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Hljóðrásavalmynd vantar</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Enginn AV1 myndbandakód</string>

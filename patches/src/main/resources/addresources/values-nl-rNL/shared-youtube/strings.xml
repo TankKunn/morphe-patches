@@ -136,8 +136,9 @@ Het afspelen mislukt als de Player JavaScript hash verouderd is."</string>
   <string name="morphe_proxy_allow_direct_fallback_summary">Maak rechtstreeks verbinding als de proxy faalt</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Volledig scherm advertenties verbergen</string>
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_original_audio_not_available">Om deze functie te gebruiken, wijzig \'Spoof video streams\' naar Android Reel of TV</string>
+  <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_force_original_audio_not_available">Om deze functie te gebruiken, wijzig \'Videostreams spoofen\' naar elke client behalve Android Studio\'</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">Deelbare links opschonen</string>
   <string name="morphe_sanitize_sharing_links_summary">Tracking queryparameters worden verwijderd uit gedeelde links</string>

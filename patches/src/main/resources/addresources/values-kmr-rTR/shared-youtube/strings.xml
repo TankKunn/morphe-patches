@@ -140,8 +140,9 @@ Lêkirin têk diçe eger hash-a JavaScriptê ya lîstikvanê kevn be."</string>
   <string name="morphe_proxy_allow_direct_fallback_summary">Têkeve rasterast heke proxy têk bibe</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Rekel kiradên ekranê tam</string>
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_original_audio_not_available">Bo tem vêjîna vî taybetmendari, \'Qîrkirina rêgên wîdyoyê\' bibe Android Reel an TV</string>
+  <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_force_original_audio_not_available">Bi ku vê taybetmendiyê bikar bîne, guhêrîna \'Hêrîşkirina hûrbînên vîdyoyê\' bi her kûliyê ji bilî \'Android Studio\' bike.</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">Lînkên parvekirinê paqij bike</string>
   <string name="morphe_sanitize_sharing_links_summary">Parametreyên pirsîna şopandinê ji girêdên parvekirî têne çêkirin</string>

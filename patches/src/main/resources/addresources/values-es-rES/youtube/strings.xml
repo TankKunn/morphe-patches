@@ -163,6 +163,7 @@ Los cambios incluyen:
   <string name="morphe_hide_key_concepts_section_title">Ocultar sección \"Conceptos clave\"</string>
   <string name="morphe_hide_music_section_title">Ocultar sección \"Música\"</string>
   <string name="morphe_hide_quizzes_section_title">Ocultar sección \"Cuestionarios\"</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Ocultar la sección \'Buscar dentro de este vídeo\'</string>
   <string name="morphe_hide_subscribe_button_title">Ocultar botón \"Suscribirme\"</string>
   <string name="morphe_hide_transcript_section_title">Ocultar sección \"Transcripción\"</string>
   <string name="morphe_hide_video_details_section_title">Ocultar sección \'\"Detalles del vídeo\"</string>
@@ -454,15 +455,17 @@ Información: Es posible que no funcione en transmisiones en directo"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Desactiva el modo de búsqueda precisa que se activa al desplegar la barra de búsqueda</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Activar DVR de transmisión en vivo</string>
+  <string name="morphe_livestream_dvr_summary">Permite buscar en todas las transmisiones en vivo, incluso en aquellas que normalmente restringen esta función</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Permite buscar en todas las transmisiones en directo, incluso en aquellas que normalmente restringen esta función.
+  <string name="morphe_livestream_dvr_not_available">"Es posible que 'Activar DVR para transmisiones en vivo' no esté disponible
 
-Nota: Si no se ha activado \"Falsificar transmisiones de vídeo\", activar esta opción puede provocar un comportamiento inesperado al buscar en las transmisiones en directo."</string>
+Para solucionar esto, active 'Simular flujos de video' y cambie 'Cliente predeterminado' a 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Expandir duración del DVR de transmisión en directo</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Le permite rebobinar las emisiones en vivo hasta 7 días en el pasado</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Te permite rebobinar las transmisiones en directo hasta 7 días en el pasado.
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"Es posible que 'Expandir duración del DVR para transmisión en vivo' no esté disponible
 
-Nota: Si no se ha activado \"Falsificar transmisiones de vídeo\", activar esta opción puede provocar un comportamiento inesperado al buscar en las transmisiones en directo."</string>
+Para solucionar este problema, active 'Simular transmisiones de video' y cambie el 'Cliente predeterminado' a 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activar deslizar para buscar</string>
   <string name="morphe_slide_to_seek_summary">Habilita el deslizamiento para buscar en lugar de reproducir a 2x velocidad al pulsar y mantener presionado el reproductor de vídeo</string>
@@ -667,10 +670,10 @@ Para acceder a los ajustes, activa el botón de ajustes a través de General →
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Mostrar los \'No me gusta\' como porcentaje</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
+          'Android Studio' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"El menú \"Pista de audio\" está oculto
 
-Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de vídeo\" a \"Android Reel\" o \"TV\"."</string>
+Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de vídeo\" a cualquier cliente excepto \"Android Studio\""</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Usar botón compacto de \'Me gusta\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Reduce el ancho del botón \'Me gusta\' para ahorrar espacio</string>
@@ -1088,7 +1091,6 @@ Limitaciones:
 
 La reproducción de vídeo con AV1 se puede atascar o perder fotogramas."</string>
   <string name="morphe_spoof_video_streams_about_title">Efectos secundarios de la falsificación</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• El cliente es experimental y puede dejar de funcionar en cualquier momento</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• El vídeo puede detenerse en 1:00, o puede no estar disponible en algunas regiones</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Falta el menú de la pista de audio</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Sin códec de vídeo AV1</string>

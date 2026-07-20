@@ -163,6 +163,7 @@ Oʻzgarishlar:
   <string name="morphe_hide_key_concepts_section_title">\'Asosiy tushunchalar\' boʻlimini yashiring</string>
   <string name="morphe_hide_music_section_title">\'Musiqa\' boʻlimini yashiring</string>
   <string name="morphe_hide_quizzes_section_title">\'Savollar\' boʻlimini yashiring</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">\'Ushbu videodagi qidiruv\' bo\'limini yashirish</string>
   <string name="morphe_hide_subscribe_button_title">Obuna tugmasini yashirish</string>
   <string name="morphe_hide_transcript_section_title">Transkriptlar boʻlimini yashiring</string>
   <string name="morphe_hide_video_details_section_title">\'Video haqida maʼlumot\' boʻlimini yashiring</string>
@@ -446,15 +447,17 @@ Ma'lumot: Jonli efirlarda ishlamasligi mumkin"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Progress barni tortib olganda faollashtiradigan aniq izlash rejimini o\'chirish</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Jonli oqim DVR-ni yoqish</string>
+  <string name="morphe_livestream_dvr_summary">Jonli oqimlarda, odatda cheklanganlarida ham, orqa tomon sari izlash imkonini beradi</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Jonli efirlarda hatto ularni cheklovchi bo'lganlarida ham izlash imkonini beradi
+  <string name="morphe_livestream_dvr_not_available">"'Livestream DVR'ni yoqish mumkin bo'lmasligi mumkin
 
-Eslatma: 'Video oqimlarini buzurish' yoqilmagan bo'lsa, bu jonli efirlarni izlashda kutilmagan xatti-harakatlarga olib kelishi mumkin"</string>
+Buni tuzatish uchun, 'Video oqimlarini qalbakilashtirish'ni yoqing va 'Standart mijoz'ni 'TV'ga o'zgartiring'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Jonli oqim DVR davomiyligini kengaytirish</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Sizga jonli efirlarni 7 kungacha ortga aylantirish imkonini beradi</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Jonli efirlarni o'tgan 7 kungacha ortga qaytarish imkonini beradi
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Livestream DVR davomiyligini kengaytirish' mavjud bo'lmasligi mumkin
 
-Eslatma: 'Video oqimlarini buzurish' yoqilmagan bo'lsa, bu jonli efirlarni izlashda kutilmagan xatti-harakatlarga olib kelishi mumkin"</string>
+Buni tuzatish uchun, 'Video oqimlarini qalbakilashtirish'ni yoqing va 'Standart mijoz'ni 'TV'ga o'zgartiring'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Sekish harakatini yoqish</string>
   <string name="morphe_slide_to_seek_summary">Video pleerni bosib ushlab turganingizda 2 barobar tezlikda ijro qilish o\'rniga siljishni yoqish</string>
@@ -659,10 +662,10 @@ Sozlamalarga kirish uchun Umumiy → Asboblar → Sozlamalarni koʻrsatish orqal
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">\'Barqaror ovoz\' menyusini yashirish</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio treki' menyusi yashirilgan
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track' menyusi yashirilgan
 
-'Audio treki' menyusini ko'rsatish uchun 'Video oqimlarini buzish'ni 'Android Reel' yoki 'TV' ga o'zgartiring"</string>
+'Audio Track' menyusini ko'rsatish uchun, 'Video oqimlarini qalbakilashtirish'ni 'Android Studio'dan tashqari istalgan mijozga o'zgartiring'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">\'Oʻqish tezligi\' menyusini yashirish</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">\'Qulf ekran\' menyusini yashirish</string>
@@ -1082,7 +1085,6 @@ Cheklovlari:
 
 AV1 bilan video o'ynashda lag yoki to'silishlar yuzaga kelishi mumkin."</string>
   <string name="morphe_spoof_video_streams_about_title">Manipulyatsiya qilish effektlari</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Eksperimental mijoz va istalgan vaqtda ishlamay qolishi mumkin</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Video 1:00 da to\'xtab qolishi mumkin yoki ba\'zi hududlarda mavjud bo\'lmasligi mumkin</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Audio treklar menyusi mavjud emas</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 video kodeki yo\'q</string>

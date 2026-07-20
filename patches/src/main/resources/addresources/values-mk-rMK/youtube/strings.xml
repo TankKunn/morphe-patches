@@ -490,10 +490,7 @@ Second \"item\" text"</string>
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Прикријте го менито Audio Track</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Менито „Аудио тракови“ е скриено
-
-За да го прикажете менито „Аудио тракови“, променете го „Лажирање на видео потоци“ на „Android Reel“ или „TV“"</string>
+          'Android Studio' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Прикријте го подножјето на менито Audio Track</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Прикријте го менито Captions</string>
@@ -850,7 +847,6 @@ Second \"item\" text"</string>
 
 Репродукцијата на видео со AV1 може да запие и да пропушти кадри."</string>
   <string name="morphe_spoof_video_streams_about_title">Несакани ефекти од спојување</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Експериментален клиент и може да престане со работа во кое било време</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Видеото може да застане на 1:00 или можеби нема да биде достапно во некои региони</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Нема траки со звук</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Нема видео кодек AV1</string>

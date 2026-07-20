@@ -163,6 +163,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_key_concepts_section_title">隱藏「重點概念」區段</string>
   <string name="morphe_hide_music_section_title">隱藏「音樂」區段</string>
   <string name="morphe_hide_quizzes_section_title">隱藏「測驗」區段</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">隱藏「影片內搜尋」區段</string>
   <string name="morphe_hide_subscribe_button_title">隱藏「訂閱」按鈕</string>
   <string name="morphe_hide_transcript_section_title">隱藏「轉錄稿」區段</string>
   <string name="morphe_hide_video_details_section_title">隱藏「影片詳細資料」區段</string>
@@ -452,15 +453,17 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">停用向上拖曳尋找條時啟動的精確尋找模式</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">啟用直播 DVR</string>
+  <string name="morphe_livestream_dvr_summary">允許在所有直播上尋找，即使那些通常限制此功能的直播也能尋找</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"允許在所有直播中尋找，即使是那些通常限制尋找功能的直播
+  <string name="morphe_livestream_dvr_not_available">"「啟用直播錄製」可能無法使用
 
-注意：如果未啟用「偽裝影片串流」，啟用此功能可能會導致直播尋找行為出現意外情況"</string>
+如要修正此問題，請開啟「偽裝影片串流」並將「預設用戶端」變更為「電視」"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">擴展直播 DVR 錄製時長</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">可讓您將即時廣播倒退最多 7 天</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"允許您將直播倒放最多 7 天
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"「擴展直播錄製時長」可能無法使用
 
-注意：如果未啟用「偽裝影片串流」，啟用此功能可能會導致直播尋找行為出現意外情況"</string>
+如要修正此問題，請開啟「偽裝影片串流」並將「預設用戶端」變更為「電視」"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">啟用滑動預覽</string>
   <string name="morphe_slide_to_seek_summary">按住影片播放器時啟用滑動尋找，而不是以 2 倍速度播放</string>
@@ -665,10 +668,10 @@ Second \"item\" text"</string>
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">隱藏「音訊軌道」選單</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
+          'Android Studio' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"「音訊軌道」選單已隱藏
 
-如要顯示「音軌」選單，請將「偽裝視訊串流」變更為「Android Reel」或「TV」。"</string>
+如要顯示「音訊軌道」選單，請將「偽裝影片串流」變更為任何非「Android Studio」的用戶端"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">隱藏「音訊軌道」選單頁尾</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">隱藏「字幕」選單</string>
@@ -1086,7 +1089,6 @@ Second \"item\" text"</string>
 
 AV1 視訊播放可能會卡頓或丟格。"</string>
   <string name="morphe_spoof_video_streams_about_title">偽裝副作用</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• 實驗性用戶端，隨時可能停止運作</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• 影片可能會在 1:00 停止，或在某些地區無法播放</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• 音軌選單遺失</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• 沒有 AV1 影片解碼器</string>

@@ -301,7 +301,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_title">फ्लाईआउट मेनु</string>
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
+          'Android Studio' must be kept untranslated. -->
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -549,7 +549,6 @@ Second \"item\" text"</string>
 
 AV1 को साथ भिडियो प्लेब्याक स्टटर हुन सक्छ वा फ्रेमहरू छाड्न सक्छ।"</string>
   <string name="morphe_spoof_video_streams_about_title">स्पूफिंग साइड इफेक्ट</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• प्रायोगिक क्लाइंट अछि आ कभी भी काम करना बंद क सकैत अछि।</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• भिडियो १:०० मिनेटमा रोकिन सक्छ, वा केही क्षेत्रहरूमा उपलब्ध नहुन सक्छ</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• ऑडियो ट्रैक मेनू गुम अछि।</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 वीडियो कोडेक नहि अछि।</string>

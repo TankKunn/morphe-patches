@@ -163,6 +163,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_key_concepts_section_title">إخفاء قسم \'المفاهيم الرئيسية\'</string>
   <string name="morphe_hide_music_section_title">إخفاء قسم \'الموسيقى\'</string>
   <string name="morphe_hide_quizzes_section_title">إخفاء قسم الاختبارات</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">إخفاء قسم \'البحث داخل هذا الفيديو\'</string>
   <string name="morphe_hide_subscribe_button_title">إخفاء زر اشتراك</string>
   <string name="morphe_hide_transcript_section_title">إخفاء قسم النص</string>
   <string name="morphe_hide_video_details_section_title">إخفاء قسم \'تفاصيل الفيديو\'</string>
@@ -456,15 +457,17 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_disable_precise_seeking_gesture_summary">يعطّل وضع التنقل بدقّة الذي يتم تنشيطه عند سحب شريط التقدم لأعلى</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">تمكين التنقل في البث المباشر</string>
+  <string name="morphe_livestream_dvr_summary">يسمح بالتنقل في كل البثوث المباشرة، حتى تلك التي تفرض قيودًا عليها عادةً</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"يسمح بالتمرير السريع في جميع البثوث المباشرة، حتى تلك التي تفرض قيودًا عليها عادةً
+  <string name="morphe_livestream_dvr_not_available">"قد لا يكون 'تمكين التنقل في البث المباشر' متاحًا
 
-ملاحظة: إذا لم يتم تمكين 'Spoof Video Streams'، فقد يؤدي تمكين هذا إلى سلوك غير متوقع في التمرير السريع للبث المباشر"</string>
+لإصلاح ذلك، قم بتشغيل 'Spoof Video Streams' وغير 'العميل الافتراضي' إلى 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">زيادة مدة رجوع البث المباشر</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">يسمح لك بإعادة تشغيل البث المباشر لمدة تصل إلى 7 أيام مضت</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"يتيح لك إعادة تشغيل البث المباشر لمدة تصل إلى 7 أيام مضت
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"قد لا يكون 'زيادة مدة رجوع البث المباشر' متاحًا
 
-ملاحظة: إذا لم يتم تمكين 'Spoof Video Streams'، فقد يؤدي تمكين هذا إلى سلوك غير متوقع في التمرير السريع للبث المباشر"</string>
+لإصلاح ذلك، قم بتشغيل 'Spoof Video Streams' وغيّر 'العميل الافتراضي' إلى 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">تمكين التمرير للتقديم أو الترجيع</string>
   <string name="morphe_slide_to_seek_summary">تمكين التمرير للتنقل بدلًا من التشغيل بسرعة 2x عند الضغط مع الاستمرار على مشغل الفيديو</string>
@@ -670,10 +673,10 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">إخفاء قائمة \'المقطع الصوتي\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
+          'Android Studio' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"تم إخفاء قائمة 'المقطع الصوتي'
 
-لعرض قائمة المقطع الصوتي، غيّر 'Spoof Video Streams' إلى 'Android Reel' أو 'TV'"</string>
+لعرض قائمة 'المقطع الصوتي'، غيّر 'Spoof Video Streams' إلى أي عميل باستثناء 'Android Studio'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">إخفاء نص قائمة \'المقطع الصوتي\' السفلي</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">إخفاء قائمة الترجمة</string>
@@ -1091,7 +1094,6 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
 
 قد يتسبب تشغيل الفيديو باستخدام AV1 في التقطيع أو إسقاط الإطارات."</string>
   <string name="morphe_spoof_video_streams_about_title">الآثار المترتبة على التمويه</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• عميل تجريبي وقد يتوقف عن العمل في أي وقت</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• قد يتوقف الفيديو عند 1:00، أو قد لا يكون متاحًا في بعض المناطق</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• قائمة المقطع الصوتي مفقودة</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• لا يوجد ترميز الفيديو AV1</string>

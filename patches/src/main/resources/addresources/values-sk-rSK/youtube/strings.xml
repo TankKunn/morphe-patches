@@ -163,6 +163,7 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_key_concepts_section_title">Skryť sekciu \'Kľúčové pojmy\'</string>
   <string name="morphe_hide_music_section_title">Skryť sekciu Hudba</string>
   <string name="morphe_hide_quizzes_section_title">Skryť sekciu Kvízy</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Skryť časť \'Hľadanie v tomto videu\'</string>
   <string name="morphe_hide_subscribe_button_title">Skryť tlačidlo Odoberať</string>
   <string name="morphe_hide_transcript_section_title">Skryť sekciu prepis</string>
   <string name="morphe_hide_video_details_section_title">Skryť sekciu \'Podrobnosti o videu\'</string>
@@ -452,15 +453,17 @@ Poznámka: Možno nebude fungovať na živých prenosoch"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Zakáže režim presného vyhľadávania, ktorý sa aktivuje pri vyťahovaní ukazovateľa vyhľadávania</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Povoliť nahrávanie živého prenosu DVR</string>
+  <string name="morphe_livestream_dvr_summary">Umožňuje prehľadávanie vo všetkých živých prenosoch, dokonca aj v tých, ktoré to zvyčajne obmedzujú</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Umožňuje posúvať sa všetkými živými prenosmi, dokonca aj tými, ktoré to zvyčajne obmedzujú
+  <string name="morphe_livestream_dvr_not_available">"Možno nie je dostupná funkcia 'Nahrávanie živého vysielania'
 
-Poznámka: Ak nie je povolené \"Maskovanie streamov videa\", povolenie tejto funkcie môže spôsobiť neočakávané správanie posúvania živých prenosov"</string>
+Ak to chcete opraviť, zapnite možnosť 'Falsifikácia video streamov' a zmeňte 'Predvolený klient' na 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Rozšíriť trvanie DVR živého prenosu</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Umožňuje vám prehliadať živé vysielania späť až o 7 dní</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Umožňuje vám prehrávať živé vysielanie až o 7 dní späť
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"Možno nie je dostupná funkcia 'Rozšíriť nahrávanie živého vysielania'
 
-Poznámka: Ak nie je povolené \"Maskovanie streamov videa\", povolenie tejto funkcie môže spôsobiť neočakávané správanie posúvania živých prenosov"</string>
+Ak to chcete opraviť, zapnite možnosť 'Falsifikácia video streamov' a zmeňte 'Predvolený klient' na 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Povoliť posúvanie pre vyhľadávanie</string>
   <string name="morphe_slide_to_seek_summary">Zapne posúvanie na vyhľadávanie namiesto prehrávania 2x rýchlosťou pri podržaní prehrávača videa</string>
@@ -665,10 +668,10 @@ Na prístup k nastaveniam povoľte tlačidlo Nastavenia v časti Všeobecné →
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Skryť ponuku \'Zvuková stopa\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu 'Zvuková stopa' je skryté
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Ponuka 'Zvuková stopa' je skrytá
 
-Ak chcete zobraziť menu 'Zvuková stopa', zmeňte 'Maskovať streamy videí' na 'Android Reel' alebo 'TV'"</string>
+Ak chcete ponuku 'Zvuková stopa' zobraziť, zmeňte 'Falsifikácia video streamov' na akékoľvekho klienta okrem 'Android Studio'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skryť pätičku ponuky \'Zvuková stopa\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skryť ponuku \'Titulky\'</string>
@@ -1086,7 +1089,6 @@ Obmedzenia:
 
 Pri prehrávaní pomocou AV1 sa video môže zasekávať alebo vynechávať snímky."</string>
   <string name="morphe_spoof_video_streams_about_title">Možné následky falšovania</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Experimentálny klient, ktorý môže kedykoľvek prestať fungovať</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Video sa môže zastaviť na 1:00, alebo nemusí byť dostupné v niektorých oblastiach</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Chýba ponuka zvukových stôp</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Video kodek AV1 nie je podporovaný</string>

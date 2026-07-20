@@ -150,60 +150,60 @@ Krosfeyd YouTube Music'ning 8.x va 9.x undan yuqori versiyalarda ishlaydi"</stri
   <string name="morphe_music_hide_flyout_menu_edit_playlist_title">\'Pleylistni tahrirlash\' menyusini yashirish</string>
   <string name="morphe_music_hide_flyout_menu_go_to_album_title">\'Albomni ko\'rish\' menyusini yashirish</string>
   <string name="morphe_music_hide_flyout_menu_go_to_artist_title">\'Ijroni ko\'rish\' menyusini yashirish</string>
-  <string name="morphe_music_hide_flyout_menu_go_to_episode_title">\'Epizodni ko\'rish\' menyusini yashiring</string>
-  <string name="morphe_music_hide_flyout_menu_go_to_podcast_title">\'Podkastni ko\'rish\' menyusini yashiring</string>
+  <string name="morphe_music_hide_flyout_menu_go_to_episode_title">\'Epizodni ko\'rish\' menyusini yashirish</string>
+  <string name="morphe_music_hide_flyout_menu_go_to_podcast_title">\'Podkastni ko\'rish\' menyusini yashirish</string>
   <string name="morphe_music_hide_flyout_menu_help_title">Yordam menyusini yashirish</string>
-  <string name="morphe_music_hide_flyout_menu_mark_episode_as_played_title">\'Epizodni ko\'rilgan\' deb belgilash\' menyusini yashiring</string>
-  <string name="morphe_music_hide_flyout_menu_not_interested_title">\'Qiziqmaslik\' menyusini yashiring</string>
-  <string name="morphe_music_hide_flyout_menu_pin_to_speed_dial_title">\'Tez tanlashga qo\'shish\' menyusini yashiring</string>
+  <string name="morphe_music_hide_flyout_menu_mark_episode_as_played_title">\'Epizodni ko\'rilgan\' deb belgilash\' menyusini yashirish</string>
+  <string name="morphe_music_hide_flyout_menu_not_interested_title">\'Qiziq emas\' menyusini yashirish</string>
+  <string name="morphe_music_hide_flyout_menu_pin_to_speed_dial_title">\'Tez tanlashga qo\'shish\' menyusini yashirish</string>
   <string name="morphe_music_hide_flyout_menu_play_next_title">\'Keyingi navbatda ijro etish\' menyusini yashiring</string>
   <string name="morphe_music_hide_flyout_menu_quality_title">Sifat menyusini yashirish</string>
   <string name="morphe_music_hide_flyout_menu_remove_from_library_title">\'Kutubxonadan o\'chirish\' menyusini yashiring</string>
   <string name="morphe_music_hide_flyout_menu_remove_from_playlist_title">\'Pleylistdan o\'chirish\' menyusini yashiring</string>
-  <string name="morphe_music_hide_flyout_menu_report_title">Xabar menyusini yashirish</string>
+  <string name="morphe_music_hide_flyout_menu_report_title">Hisobot menyusini yashirish</string>
   <string name="morphe_music_hide_flyout_menu_save_episode_for_later_save_to_library_title">\'Keyinroq tinglash uchun saqlash\' / \'Kutubxonaga saqlash\' menyusini yashiring</string>
   <string name="morphe_music_hide_flyout_menu_save_to_playlist_title">\'Pleylistga saqlash\' menyusini yashiring</string>
-  <string name="morphe_music_hide_flyout_menu_share_title">Baham qilish menyusini yashirish</string>
+  <string name="morphe_music_hide_flyout_menu_share_title">Baham ko‘rish menyusini yashirish</string>
   <string name="morphe_music_hide_flyout_menu_shuffle_play_title">\'Tasodifiy ijro\' menyusini yashiring</string>
   <string name="morphe_music_hide_flyout_menu_sleep_timer_title">\'Uyqu taymer\' menyusini yashiring</string>
   <string name="morphe_music_hide_flyout_menu_start_radio_title">\'Radio boshlash\' menyusini yashiring</string>
-  <string name="morphe_music_hide_flyout_menu_stats_for_nerds_title">\'Stats for nerds\' menyusini yashiring</string>
+  <string name="morphe_music_hide_flyout_menu_stats_for_nerds_title">\'Texnik statistika’ menyusini yashirish</string>
   <string name="morphe_music_hide_flyout_menu_subscribe_title">Obuna menyusini yashirish</string>
   <string name="morphe_music_hide_flyout_menu_unpin_from_speed_dial_title">\'Tez tanlashdan olib tashlash\' menyusini yashiring</string>
-  <string name="morphe_music_hide_flyout_menu_view_song_credit_title">\'Qo\'shiq kreditlarini ko\'rish\' menyusini yashiring</string>
+  <string name="morphe_music_hide_flyout_menu_view_song_credit_title">\'Qo‘shiq mualliflari’ menyusini yashirish</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Bosh sahifa</string>
   <string name="morphe_change_start_page_entry_default">Standart</string>
   <string name="morphe_change_start_page_entry_charts">Jadval</string>
-  <string name="morphe_change_start_page_entry_episodes_for_later">Keyinroq episodlar</string>
+  <string name="morphe_change_start_page_entry_episodes_for_later">Keyinroq ko‘rish uchun epizodlar</string>
   <string name="morphe_change_start_page_entry_explore">Kashf qilish</string>
   <string name="morphe_change_start_page_entry_history">Tarix</string>
   <string name="morphe_change_start_page_entry_library">Kutubxona</string>
   <string name="morphe_change_start_page_entry_liked_music">Yoqtirilgan musiqa</string>
-  <string name="morphe_change_start_page_entry_playlists">Pleyro\'ylar</string>
+  <string name="morphe_change_start_page_entry_playlists">Pleylistlar</string>
   <string name="morphe_change_start_page_entry_search">Qidiruv</string>
   <string name="morphe_change_start_page_entry_subscriptions">Obunalar</string>
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">Filtr panelini yashirish</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
-  <string name="morphe_music_change_miniplayer_color_title">Mini ijrochining rangini o\'zgartirish</string>
-  <string name="morphe_music_change_miniplayer_color_summary">Mini ijrochining rangini to\'liq ekran ijrochiga moslashtiradi</string>
+  <string name="morphe_music_change_miniplayer_color_title">Miniplayerning rangini o\'zgartirish</string>
+  <string name="morphe_music_change_miniplayer_color_summary">Miniplayerning rangini to\'liq ekran ijrochiga moslashtiradi</string>
   <string name="morphe_music_change_navigation_bar_color_title">Navigatsiya panelining rangini o\'zgartirish</string>
   <string name="morphe_music_change_navigation_bar_color_summary">Navigatsiya panelining rangini to\'liq ekran ijrochiga moslashtiradi</string>
   <!-- layout.miniplayer.miniplayerNextPreviousButtonsPatch -->
-  <string name="morphe_music_miniplayer_next_button_title">Mini ijrochida keyingi tugmani ko\'rsatish</string>
-  <string name="morphe_music_miniplayer_previous_button_title">Mini ijrochida oldingi tugmani ko\'rsatish</string>
+  <string name="morphe_music_miniplayer_next_button_title">Miniplayerda keyingi tugmani ko\'rsatish</string>
+  <string name="morphe_music_miniplayer_previous_button_title">Miniplayerda oldingi tugmani ko\'rsatish</string>
   <!-- layout.miniplayer.enableForcedMiniplayerPatch -->
-  <string name="morphe_music_enable_forced_miniplayer_title">Majburiy mini ijrochini yoqish</string>
-  <string name="morphe_music_enable_forced_miniplayer_summary">Ijrochi avtomatik ravishda to\'liq ekran rejimiga o\'tmaydi, yangi trek boshlanganda</string>
+  <string name="morphe_music_enable_forced_miniplayer_title">Majburiy Miniplayerda yoqish</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary">Yangi trek boshlanganda pleyerning avtomatik to‘liq ekranga o‘tishini bloklaydi</string>
   <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
-  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Mini ijrochida iborani siljish orqali yopishni yoqish</string>
-  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Mini ijrochida pastga surish orqali yopish imkonini beradi</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Minipleyerni surish orqali yopishni yoqish</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Miniplayerda pastga surish orqali yopish imkonini beradi</string>
   <!-- layout.navigationbar.navigationBarPatch -->
   <string name="morphe_music_navigation_bar_screen_title">Navigatsiya paneli</string>
   <string name="morphe_music_navigation_bar_screen_summary">Pastki navigatsiya panelidagi tugmalarni tanlang</string>
   <!-- 'Home' should be translated using the same localized wording YouTube Music displays for the tab. -->
-  <string name="morphe_music_hide_navigation_bar_home_button_title">Uy tugmasini yashirish</string>
+  <string name="morphe_music_hide_navigation_bar_home_button_title">Uyga tugmasini yashirish</string>
   <!-- 'Samples' should be translated using the same localized wording YouTube Music displays for the tab. -->
   <string name="morphe_music_hide_navigation_bar_samples_button_title">Namunalarni ko\'rish tugmasini yashirish</string>
   <!-- 'Explore' should be translated using the same localized wording YouTube Music displays for the tab. -->
@@ -217,26 +217,26 @@ Krosfeyd YouTube Music'ning 8.x va 9.x undan yuqori versiyalarda ishlaydi"</stri
   <!-- interaction.scrobbling.scrobblingPatch -->
   <string name="morphe_music_scrobbling_summary">Last.fm va ListenBrainz integratsiyasini sozlang</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Kirish qilinmagan. Sozlash uchun bosing</string>
-  <string name="morphe_music_scrobbling_log_out">Chiqish</string>
-  <string name="morphe_music_scrobbling_logged_out_toast">Chiqish qilingan</string>
+  <string name="morphe_music_scrobbling_log_out">Profildan chiqish</string>
+  <string name="morphe_music_scrobbling_logged_out_toast">Profildan chiqilgan</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_enabled_title">Scrobblingni yoqish</string>
-  <string name="morphe_music_scrobbling_now_playing_title">\"Hozirda o\'ynayotgan\" statusini yuborish</string>
-  <string name="morphe_music_scrobbling_min_song_duration_title">Qo\'shiq davomiyligi minimum</string>
+  <string name="morphe_music_scrobbling_enabled_title">Ijro tarixini kuzatishni yoqish</string>
+  <string name="morphe_music_scrobbling_now_playing_title">\'Hozir ijro etilmoqda’ holatini yuborish</string>
+  <string name="morphe_music_scrobbling_min_song_duration_title">Minimal qo‘shiq davomiyligi</string>
   <!-- 'scrobbled' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_min_song_duration_summary">Ushbu davriyetdan qisqa qo\'shiqlar scrobble qilinmaydi</string>
+  <string name="morphe_music_scrobbling_min_song_duration_summary">Davomiyligi bundan kam bo‘lgan qo‘shiqlar ijro tarixiga yuborilmaydi</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_delay_percent_title">Scrobble kechikish foizi</string>
+  <string name="morphe_music_scrobbling_delay_percent_title">Ijro tarixiga yozishni kechiktirish foizi</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_delay_percent_summary">Qo\'shiqning bu foizini tinglaganingizdan so\'ng scrobble boshlanadi</string>
+  <string name="morphe_music_scrobbling_delay_percent_summary">Qo‘shiqning belgilangan foizi tinglangandan keyin ijroni tarixga yozish</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_delay_seconds_title">Scrobble kechikish soniyasi</string>
+  <string name="morphe_music_scrobbling_delay_seconds_title">Qo‘shiqni tarixga yozishdan oldingi kechikish</string>
   <!-- 'scrobble' must be kept untranslated -->
   <string name="morphe_music_scrobbling_delay_seconds_summary">Qo\'shiqni shu soniya davomida tinglaganingizdan so\'ng scrobble boshlanadi</string>
-  <string name="morphe_music_listenbrainz_token_title">ListenBrainz hisobi</string>
-  <string name="morphe_music_listenbrainz_token_summary_logged_in">Kirgan. Hisobingizni boshqarish uchun bosing</string>
+  <string name="morphe_music_listenbrainz_token_title">ListenBrainz akkaunti</string>
+  <string name="morphe_music_listenbrainz_token_summary_logged_in">Kirish amalga oshirildi. Hisobni boshqarish uchun bosing</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_token_dialog_instruction">Scrobblingni yoqish uchun ListenBrainz foydalanuvchi tokeningizni kiriting</string>
+  <string name="morphe_music_listenbrainz_token_dialog_instruction">Ijro tarixini qayd etishni yoqish uchun ListenBrainz foydalanuvchi tokeningizni kiriting</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Tokenni olish</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Tekshirish</string>

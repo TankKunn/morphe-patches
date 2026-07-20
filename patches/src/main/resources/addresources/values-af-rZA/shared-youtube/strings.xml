@@ -142,8 +142,9 @@ Voorstelling sal misluk as die speler JavaScript hash verouder is."</string>
   <string name="morphe_proxy_allow_direct_fallback_summary">Sluit direk aan as die proxy misluk</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Verberg volskermadvertensies</string>
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_original_audio_not_available">Om hierdie funksie te gebruik, verander \'Verfraai videostrome\' na Android Reel of TV</string>
+  <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_force_original_audio_not_available">Om hierdie funksie te gebruik, verander \'Verfraai videostrome\' na enige klient behalwe \'Android Studio\'</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">Ontsmet deel skakels</string>
   <string name="morphe_sanitize_sharing_links_summary">Verwyder dopnavraagparameters van gedeelde skakels</string>

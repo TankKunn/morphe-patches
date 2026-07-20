@@ -164,6 +164,7 @@ Guherînan têne xistine:
   <string name="morphe_hide_key_concepts_section_title">Bêjeya Muzîk veşêrin</string>
   <string name="morphe_hide_music_section_title">Bêjeya Pêşbaziyên veşêrin</string>
   <string name="morphe_hide_quizzes_section_title">Bêjeya Transkrîpsiyon veşêrin</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Vê beşa \'Li vê vîdyoyê têkeve\' veşêrin</string>
   <string name="morphe_hide_subscribe_button_title">Bişîniya butona \'Subscribe\' veşêrin</string>
   <string name="morphe_hide_transcript_section_title">Bêjeya \'Detalên Vîdyoyê\' veşêrin</string>
   <string name="morphe_hide_video_details_section_title">Hilbijêrin ku çi di çîpên kategoriyê de veşêrin</string>
@@ -453,15 +454,17 @@ Info: May not work on live streams"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Disables the precise seeking mode that activates when pulling up the seekbar</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Stêrkirina DVR-ya pêşandanê serdest bike</string>
+  <string name="morphe_livestream_dvr_summary">Hêlî dibe ku li ser hemû weşînên zindî lêgerînê bike, tewra yên ku normal têkbirinê qedexe dikin</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Hêlîkirinê li ser hemû şîrvanên zindî, tewra yên ku normalî astengî lê hene, destûr dide
+  <string name="morphe_livestream_dvr_not_available">"'Zêdekirina DVR-a livestreamek' neyê bikar anîn
 
-Not: Ger 'Herikînên vîdyoyê' nebe, vekirina vê dikare têkiliyên nehevdîtî bi şîrvanên zindî re çêbike"</string>
+Bo çareserkirina vê, vekirina 'Perçêkirina herikên vîdyoyê' û guherîna 'Serê pelaxê' bo 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Dîmendera destûra rêzê ya DVR-ê zêde bike</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Têde bi tehiye dike da ku hûn pê veşêrin înîsiyatora livestreaman heta 7 rojan paşê veguherînin</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Hêlîkirina şîrvanên zindî heta 7 rojan di paşê de destûr dide
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Zêdekirina duratiya DVR-a livestreamê' neyê bikar anîn
 
-Not: Ger 'Herikînên vîdyoyê' nebe, vekirina vê dikare têkiliyên nehevdîtî bi şîrvanên zindî re çêbike"</string>
+Bo çareserkirina vê, vekirina 'Perçêkirina herikên vîdyoyê' û guherîna 'Serê pelaxê' bo 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Slide to seek çalak bike</string>
   <string name="morphe_slide_to_seek_summary">Enables slide to seek instead of playing at 2x speed when pressing and holding the video player</string>
@@ -667,10 +670,10 @@ Ji bo ku derfetên sazkarî pêşero, rêzika 'Settings' zivirînin bi General �
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Butona nivîskê veşêre</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menûya 'Şêwaza Deng' veşartî ye
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Menuya Şêwazê Deng' veşartin e
 
-Ji bo nîşandana menûya 'Şêwaza Deng', 'Şêwazên vîdyoyê yên sexnetî' biguhezîne 'Android Reel' an 'TV'."</string>
+Bo nîşandina 'Menuya Şêwazê Deng', guherîna 'Perçêkirina herikên vîdyoyê' bo her kîşerekê ji bilî 'Android Studio'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Butona paşveveşêrî veşêre</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Butona rêjeya deng veşêre</string>
@@ -1088,7 +1091,6 @@ Sînergirên:
 
 Lêxistina video bi AV1 dikare kîzbirin an kêmuçêkî framean bike."</string>
   <string name="morphe_spoof_video_streams_about_title">Efectê spoofingê</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Klient eksperîmental e û dibe ku her demî biqewime</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Vîdyo dikare di 1:00 de raweste, an jî di hin herêmên cuda de nedibe.</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Menuya rêgirên audio kêman e </string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Kodeka vîdyoyê ya AV1 tune</string>

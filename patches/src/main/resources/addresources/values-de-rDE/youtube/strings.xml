@@ -164,6 +164,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_key_concepts_section_title">Schlüsselkonzepte-Bereich ausblenden</string>
   <string name="morphe_hide_music_section_title">Musik-Bereich ausblenden</string>
   <string name="morphe_hide_quizzes_section_title">Quiz-Bereich ausblenden</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">\"Suche innerhalb dieses Videos\"-Bereich ausblenden</string>
   <string name="morphe_hide_subscribe_button_title">Button \'Abonnieren\' ausblenden</string>
   <string name="morphe_hide_transcript_section_title">Transcript-Bereich ausblenden</string>
   <string name="morphe_hide_video_details_section_title">Videodetails-Bereich ausblenden</string>
@@ -453,15 +454,17 @@ Information: Funktioniert möglicherweise nicht bei Livestreams"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Deaktiviert den präzisen Suchmodus, der aktiviert wird, wenn Sie die Suchleiste nach oben ziehen</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Livestream-DVR aktivieren</string>
+  <string name="morphe_livestream_dvr_summary">Ermöglicht das Vorspulen bei allen Livestreams, auch bei solchen, die dies normalerweise nicht zulassen.</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Ermöglicht das Vorspringen bei allen Livestreams, auch bei solchen, die dies normalerweise einschränken.
+  <string name="morphe_livestream_dvr_not_available">"'Livestream-DVR aktivieren' ist möglicherweise nicht verfügbar
 
-Hinweis: Wenn „Videostreams spoofen“ nicht aktiviert ist, kann das Aktivieren dieser Funktion zu unerwartetem Überspringen von Livestreams führen."</string>
+Um dies zu beheben, aktivieren Sie 'Videostreams fälschen' und ändern Sie 'Standardclient' auf 'TV'."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Livestream DVR-Dauer erweitern</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Ermöglicht das Zurückspulen von Live-Sendungen um bis zu 7 Tage in der Vergangenheit</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Ermöglicht das Zurückspulen von Live-Übertragungen bis zu 7 Tage in die Vergangenheit.
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Livestream-DVR-Dauer erweitern' ist möglicherweise nicht verfügbar
 
-Hinweis: Wenn „Videostreams spoofen“ nicht aktiviert ist, kann das Aktivieren dieser Funktion zu unerwartetem Überspringen von Livestreams führen."</string>
+Um dies zu beheben, aktivieren Sie 'Videostreams fälschen' und ändern Sie 'Standardclient' auf 'TV'."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Slide zum Suchen aktivieren</string>
   <string name="morphe_slide_to_seek_summary">Aktiviert das Wischen zum Suchen anstelle des Abspielens mit 2x Geschwindigkeit, wenn Sie die Videoplayer-Taste gedrückt halten</string>
@@ -666,10 +669,10 @@ Um auf die Einstellungen zuzugreifen, aktiviere den Einstellungen-Button über A
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Menü „Audiotrack“ ausblenden</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Das Menü \"Audio-Track\" ist ausgeblendet
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Das Menü 'Audio Track' ist ausgeblendet
 
-Um das Menü anzuzeigen, ändern Sie \"Video-Streams fälschen\" in \"Android Reel\" oder \"TV\""</string>
+Um das Menü anzuzeigen, ändern Sie 'Videostreams fälschen' in einen beliebigen Client außer 'Android Studio'."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Audio Track im unteren Menübereich ausblenden</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Untertitel-Menü ausblenden</string>
@@ -1087,7 +1090,6 @@ Einschränkungen:
 
 Die Videowiedergabe mit AV1 kann stottern oder Bilder überspringen."</string>
   <string name="morphe_spoof_video_streams_about_title">Nebenwirkungen des Spoofings</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Experimenteller Client und kann jederzeit aufhören zu funktionieren</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Video kann um 1:00 Uhr stoppen oder ist möglicherweise in einigen Regionen nicht verfügbar</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Audiotrack-Menü fehlt</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Kein AV1-Videocodec</string>

@@ -163,6 +163,7 @@ As mudanças incluem:
   <string name="morphe_hide_key_concepts_section_title">Ocultar seção \'Conceitos-chave\'</string>
   <string name="morphe_hide_music_section_title">Ocultar seção \'Música\'</string>
   <string name="morphe_hide_quizzes_section_title">Ocultar seção \'Questionários\'</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Ocultar a seção \'Pesquisar dentro deste vídeo\'</string>
   <string name="morphe_hide_subscribe_button_title">Ocultar botão de inscrição</string>
   <string name="morphe_hide_transcript_section_title">Ocultar seção \'Transcrição\'</string>
   <string name="morphe_hide_video_details_section_title">Ocultar seção \'Detalhes do vídeo\'</string>
@@ -452,15 +453,17 @@ Informação: Pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Desativa o modo de busca precisa que é ativado ao puxar a barra de busca</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Habilitar DVR de livestream</string>
+  <string name="morphe_livestream_dvr_summary">Permite procurar em todas as transmissões ao vivo, mesmo naquelas que normalmente restringem isso</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Permite avançar em todas as transmissões ao vivo, mesmo naquelas que normalmente restringem isso
+  <string name="morphe_livestream_dvr_not_available">"'Ativar DVR de transmissão ao vivo' pode não estar disponível
 
-Observação: se \"Simular streams de vídeo\" não estiver ativado, ativar isso pode causar um comportamento inesperado no avanço das transmissões ao vivo."</string>
+Para corrigir isso, ative 'Falsificar fluxos de vídeo' e altere o 'Cliente padrão' para 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Expandir a duração do DVR de livestream</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Permite voltar transmissões ao vivo até 7 dias no passado</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Permite retroceder transmissões ao vivo em até 7 dias no passado
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Expandir duração do DVR de transmissão ao vivo' pode não estar disponível
 
-Observação: se \"Simular streams de vídeo\" não estiver ativado, ativar isso pode causar um comportamento inesperado no avanço das transmissões ao vivo."</string>
+Para corrigir isso, ative 'Falsificar fluxos de vídeo' e altere o 'Cliente padrão' para 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Habilitar o slide para procurar</string>
   <string name="morphe_slide_to_seek_summary">Habilita o deslize para buscar em vez de reproduzir em velocidade 2x ao pressionar e segurar o reprodutor de vídeo</string>
@@ -665,10 +668,10 @@ Para acessar as configurações, habilite o botão Configurações via Geral →
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Ocultar menu \'Faixa de áudio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
+          'Android Studio' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"O menu 'Faixa de áudio' está oculto
 
-Para mostrar o menu 'Faixa de áudio', altera 'Falsificar fluxos de vídeo' para 'Android Reel' ou 'TV'."</string>
+Para mostrar o menu 'Faixa de áudio', altere 'Falsificar fluxos de vídeo' para qualquer cliente, exceto 'Android Studio'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ocultar rodapé do menu \'Faixa de áudio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ocultar menu \'Legendas\'</string>
@@ -1086,7 +1089,6 @@ Limitações:
 
 A reprodução de vídeo com AV1 pode apresentar soluços ou perder quadros."</string>
   <string name="morphe_spoof_video_streams_about_title">Efeitos colaterais da falsificação</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Cliente experimental e pode parar de funcionar a qualquer momento</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• O vídeo pode parar em 1:00, ou pode não estar disponível em algumas regiões</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• O menu da faixa de áudio está faltando</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Nenhum codec de vídeo AV1</string>

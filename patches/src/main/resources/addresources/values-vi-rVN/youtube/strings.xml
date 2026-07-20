@@ -162,6 +162,7 @@ Ví dụ:
   <string name="morphe_hide_key_concepts_section_title">Ẩn phần \"Khái niệm chính\"</string>
   <string name="morphe_hide_music_section_title">Ẩn phần Âm nhạc</string>
   <string name="morphe_hide_quizzes_section_title">Ẩn phần Câu hỏi</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">Ẩn phần \'Tìm kiếm trong video này\'</string>
   <string name="morphe_hide_subscribe_button_title">Ẩn nút Đăng ký</string>
   <string name="morphe_hide_transcript_section_title">Ẩn phần Bản chép lời</string>
   <string name="morphe_hide_video_details_section_title">Ẩn phần \"Chi tiết video\"</string>
@@ -451,15 +452,17 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_disable_precise_seeking_gesture_summary">Tắt chế độ tua chính xác được bật khi vuốt thanh tiến trình lên</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Bật DVR phát trực tiếp</string>
+  <string name="morphe_livestream_dvr_summary">Cho phép tua trên mọi các buổi phát trực tiếp, kể cả khi bình thường không được phép</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Mở khóa tính năng tua trên tất cả các video phát trực tiếp, ngay cả khi video đó không hỗ trợ tua
+  <string name="morphe_livestream_dvr_not_available">"'Bật DVR phát trực tiếp' có thể không khả dụng
 
-Lưu ý: Nếu bạn chưa bật \"Giả mạo luồng phát video\", tính năng tua có thể không hoạt động ổn định"</string>
+Để khắc phục điều này, hãy bật 'Giả mạo luồng phát video' và thay đổi 'Khách hàng mặc định' thành 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Tăng thời lượng DVR phát trực tiếp</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Cho phép tua lại các buổi phát trực tiếp tối đa 7 ngày trước</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Xem lại các video phát trực tiếp trong tối đa 7 ngày qua
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Mở rộng thời lượng DVR phát trực tiếp' có thể không khả dụng
 
-Lưu ý: Nếu bạn chưa bật \"Giả mạo luồng phát video\", tính năng tua có thể không hoạt động ổn định"</string>
+Để khắc phục điều này, hãy bật 'Giả mạo luồng phát video' và thay đổi 'Khách hàng mặc định' thành 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Bật vuốt để tua</string>
   <string name="morphe_slide_to_seek_summary">Bật vuốt để tua thay vì phát video 2x khi bấm giữ trong trình phát</string>
@@ -664,10 +667,10 @@ Cần cung cấp \"Cookie phụ đề\""</string>
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Ẩn menu \"Bản âm thanh\"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
+          'Android Studio' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu 'Bản âm thanh' đã bị ẩn
 
-Để hiển thị menu 'Bản âm thanh', hãy chuyển 'Giả mạo luồng phát video' thành 'Android Reel' hoặc 'TV'."</string>
+Để hiển thị menu 'Bản âm thanh', hãy chuyển 'Giả mạo luồng phát video' thành bất kỳ máy khách nào ngoại trừ 'Android Studio'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ẩn chân menu \"Bản âm thanh\"</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ẩn menu Phụ đề</string>
@@ -1085,7 +1088,6 @@ Hạn chế:
 
 Phát video bằng AV1 có thể bị giật hoặc tụt khung hình."</string>
   <string name="morphe_spoof_video_streams_about_title">Hạn chế khi giả mạo</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Client đang trong giai đoạn thử nghiệm và có thể ngừng hoạt động bất cứ lúc nào</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Video có thể dừng ở 1:00, hoặc có thể không khả dụng ở một số khu vực</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Menu bản âm thanh bị thiếu</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Không có codec video AV1</string>

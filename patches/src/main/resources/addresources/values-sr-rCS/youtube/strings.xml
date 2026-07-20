@@ -452,15 +452,17 @@ Napomena: Možda neće raditi na direktnim prenosima"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Onemogućava precizan način podešavanja koji se aktivira kada povučete traku za podešavanje</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Uključi livestream DVR</string>
+  <string name="morphe_livestream_dvr_summary">Omogućava preskakanje na svim prenosima uživo, čak i na onima koji to normalno ograničavaju</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Omogućava preskakanje na svim direktnim prenosima, čak i na onima koji normalno to ograničavaju
+  <string name="morphe_livestream_dvr_not_available">"'Omogući DVR za direktan prenos' možda nije dostupno
 
-Napomena: Ako \"Lažiranje video tokova\" nije omogućeno, omogućavanje ovog može uzrokovati neočekivano ponašanje pri preskakanju direktnog prenosa"</string>
+Da biste to rešili, uključite opciju 'Lažirani video strimovi' i promenite 'Podrazumevani klijent' na 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Proširivanje trajanja DVR snimaka uživo</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Omogućava vam da se vratite unazad do 7 dana u prošlost tokom direktnih prenosa</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Omogućava vam vraćanje live broadcasta do 7 dana u prošlost
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Proširi trajanje DVR-a za direktan prenos' možda nije dostupno
 
-Napomena: Ako \"Lažiranje video tokova\" nije omogućeno, omogućavanje ovog može uzrokovati neočekivano ponašanje pri preskakanju direktnog prenosa"</string>
+Da biste to rešili, uključite 'Lažirani video strimovi' i promenite 'Podrazumevani klijent' na 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Omogući prevlačenje za premotavanje</string>
   <string name="morphe_slide_to_seek_summary">Omogućava klizanje za podešavanje umesto reprodukovanja brzinom od 2x kada pritisnete i zadržite plejer videa</string>
@@ -665,10 +667,10 @@ Da biste pristupili Podešavanjima, omogućite dugme Podešavanja preko Opšte �
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Sakrij meni „Audio snimak”</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meni 'Audio Track' je sakriven
+          'Android Studio' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Meni za audio trake' je sakriven
 
-Da biste prikazali meni 'Audio Track', promenite 'Spoof video streams' u 'Android Reel' ili 'TV'"</string>
+Da biste prikazali 'Meni za audio trake', promenite 'Lažirani video strimovi' na bilo koji klijent osim 'Android Studio'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Sakrij meni „Titlovi”</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Sakrij podnožje menija „Titlovi”</string>
@@ -1086,7 +1088,6 @@ Ograničenja:
 
 Reprodukcija videa s AV1 može zastajkivati ili preskakati kadrove."</string>
   <string name="morphe_spoof_video_streams_about_title">Neželjeni efekti lažiranja</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Eksperimentalni klijent i može prestati da radi bilo kada</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Video se može zaustaviti u 1:00 ili možda neće biti dostupan u nekim regionima</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Meni „Audio snimak” nedostaje</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Nema video kodeka AV1</string>

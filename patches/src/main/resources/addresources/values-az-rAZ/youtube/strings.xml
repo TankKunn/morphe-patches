@@ -163,6 +163,7 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_key_concepts_section_title">\'Əsas konseptlər\' bölməsini gizlət</string>
   <string name="morphe_hide_music_section_title">Musiqi bölməsini gizlət</string>
   <string name="morphe_hide_quizzes_section_title">Testlər bölməsini gizlət</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">\'Bu videoda axtarış\' bölməsini gizlət</string>
   <string name="morphe_hide_subscribe_button_title">Abunə ol düyməsini gizlət</string>
   <string name="morphe_hide_transcript_section_title">Transkript bölməsini gizlət</string>
   <string name="morphe_hide_video_details_section_title">\"Video detalları\" bölməsini gizlət</string>
@@ -179,7 +180,7 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_channel_tab_filter_strings_title">Kanal tabeli filtri</string>
   <string name="morphe_hide_channel_tab_filter_strings_summary">Yeni cərgələrlə ayrılan, çeşidləmək üçün kanal tabel adlarını qeyd et</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_community_button_title">İcma düyməsini gizlət</string>
+  <string name="morphe_hide_community_button_title">İctimai düyməsini gizlət</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_join_button_title">Qoşulun düyməsin gizlət</string>
   <string name="morphe_hide_links_preview_title">Link önizləməsini gizlət</string>
@@ -452,15 +453,17 @@ Məlumat: Canlı yayımlarda işləməyə bilər"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Çevirmə cizgisin yuxarı çəkərkən aktivləşən dəqiq axtarış rejimini qapadır</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Canlı yayım DVR-ni aktivləşdir</string>
+  <string name="morphe_livestream_dvr_summary">Bütün canlı yayımlarda, hətta adətən məhdudiyyət qoyulanları belə irəli-geri çəkməyə icazə verir</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_summary">"Normalda məhdudiyyət qoyulanlar da belə, bütün canlı yayımlarda çevirməyə imkan verir
+  <string name="morphe_livestream_dvr_not_available">"'Canlı yayım DVR-ni aktivləşdir' əlçatan olmaya bilər
 
-Qeyd: Əgər \"Video yayımlarını saxtalaşdır\" işlək deyilsə, bunu aktivləşdirmək gözlənilməz canlı yayım çevirmə davranışına səbəb ola bilər"</string>
+Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdırı' aktivləşdir və 'İlkin qəbuledicini' 'TV'-yə dəyişdir"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Canlı yayım DVR müddətini genişləndir</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary">Canlı yayımları 7 günə kimi keçmişə geri çevirməyə imkan verir</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_summary">"Sizə canlı yayımları 7 günə qədər geri çevirməyə imkan verir
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Canlı yayım DVR müddətini genişləndir' əlçatan olmaya bilər
 
-Qeyd: Əgər \"Video yayımlarını saxtalaşdır\" işlək deyilsə, bunu aktivləşdirmək gözlənilməz canlı yayım çevirmə davranışına səbəb ola bilər"</string>
+Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdırı' aktivləşdir və 'İlkin qəbuledicini' 'TV'-yə dəyişdir"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Çevirmək üçün sürüşdürməni aktivləşdir</string>
   <string name="morphe_slide_to_seek_summary">Video oynadıcıya basıb saxladıqda 2x sürətlə oynatmaq əvəzinə, sürüşdürərək çevirməni aktivləşdirir</string>
@@ -665,10 +668,10 @@ Tənzimləmələrə daxil olmaq üçün Ümumi → Alət Cərgəsi→ Tənzimlə
   <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">\'Audio Trek\' seçimin gizlət</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
+          'Android Studio' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Trek' menyusu gizlidir
 
-'Audio Trek' menyusunu göstərmək üçün 'Video yayımları saxtalaşdır'- ı 'Android Reel' yaxud 'TV'-ə dəyiş"</string>
+'Audio Trek' menyusunu göstərmək üçün 'Video yayımların saxtalaşdırı' 'Android Studio' istisna olmaqla istənilən qəbulediciyə dəyişdir"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">\'Audio Trek\' seçimi alt yazısın gizlət</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Subtitrlər seçimini gizlət</string>
@@ -1086,7 +1089,6 @@ Məhdudiyyətlər:
 
 Video oynatma AV1 ilə ilişə bilər və ya kadrlar buraxıla bilər."</string>
   <string name="morphe_spoof_video_streams_about_title">Saxtakarlıq yan təsirləri</string>
-  <string name="morphe_spoof_video_streams_about_experimental">• Təcrübi qəbuledici və hər vaxt işləməyi dayandıra bilər</string>
   <string name="morphe_spoof_video_streams_about_playback_failure">• Video 01:00-da dayana bilər və ya bəzi bölgələrdə mövcud olmaya bilər</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Audio trek menyusu çatışmır</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 video kodlayıcı yoxdur</string>
