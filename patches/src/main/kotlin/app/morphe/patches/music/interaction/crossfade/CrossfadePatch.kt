@@ -22,6 +22,7 @@ import app.morphe.patcher.util.proxy.mutableTypes.MutableClass
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patches.music.misc.extension.sharedExtensionPatch
 import app.morphe.patches.music.misc.playservice.is_9_00_or_greater
+import app.morphe.patches.music.misc.playservice.is_9_28_or_greater
 import app.morphe.patches.music.misc.playservice.versionCheckPatch
 import app.morphe.patches.music.misc.settings.PreferenceScreen
 import app.morphe.patches.music.misc.settings.settingsPatch
@@ -193,6 +194,11 @@ val crossfadePatch = bytecodePatch(
                 "Crossfade requires YouTube Music 9.00 or newer. " +
                         "The 8.x ExoPlayer listener architecture is incompatible " +
                         "with this patch.",
+            )
+        }
+        if (is_9_28_or_greater) {
+            return@execute log.warning(
+                "Crossfade does not yet support YouTube Music 9.28 or newer. Please patch 9.15 to 9.26."
             )
         }
 
