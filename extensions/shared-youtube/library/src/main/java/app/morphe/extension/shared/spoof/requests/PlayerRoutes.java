@@ -24,7 +24,6 @@ import app.morphe.extension.shared.requests.Requester;
 import app.morphe.extension.shared.requests.Route;
 import app.morphe.extension.shared.settings.AppLanguage;
 import app.morphe.extension.shared.spoof.ClientType;
-import app.morphe.extension.shared.spoof.SpoofVideoStreamsPatch;
 import app.morphe.extension.shared.spoof.js.JavaScriptManager;
 
 public final class PlayerRoutes {
@@ -32,14 +31,14 @@ public final class PlayerRoutes {
     private static final Route.CompiledRoute GET_PLAYER_STREAMING_DATA = new Route(
             Route.Method.POST,
             "player" +
-                    "?fields=playabilityStatus,streamingData" +
+                    "?fields=playabilityStatus,streamingData,playerConfig.mediaCommonConfig" +
                     "&alt=proto"
     ).compile();
 
     private static final Route.CompiledRoute GET_REEL_STREAMING_DATA = new Route(
             Route.Method.POST,
             "reel/reel_item_watch" +
-                    "?fields=playerResponse.playabilityStatus,playerResponse.streamingData" +
+                    "?fields=playerResponse.playabilityStatus,playerResponse.streamingData,playerResponse.playerConfig.mediaCommonConfig" +
                     "&alt=proto"
     ).compile();
 
@@ -53,13 +52,6 @@ public final class PlayerRoutes {
 
         try {
             JSONObject context = new JSONObject();
-
-            AppLanguage language = SpoofVideoStreamsPatch.getLanguageOverride();
-            if (language == null) {
-                // Force original audio has not overridden the language.
-                language = AppLanguage.DEFAULT;
-            }
-            Locale streamLocale = language.getLocale();
 
             JSONObject client = new JSONObject();
             client.put("deviceMake", clientType.deviceMake);
@@ -79,8 +71,9 @@ public final class PlayerRoutes {
                 client.put("platform", platform);
             }
 
-            client.put("hl", streamLocale.getLanguage());
-            client.put("gl", streamLocale.getCountry());
+            Locale locale = AppLanguage.DEFAULT.getLocale();
+            client.put("hl", locale.getLanguage());
+            client.put("gl", locale.getCountry());
             context.put("client", client);
 
             if (clientType.usePlayerEndpoint) {
@@ -146,7 +139,7 @@ public final class PlayerRoutes {
         connection.setRequestProperty("Content-Type", "application/json");
         connection.setRequestProperty("User-Agent", clientType.userAgent);
         // Not a typo. "Client-Name" uses the client type id.
-        connection.setRequestProperty("X-YouTube-Client-Name", clientType.clientName);
+        connection.setRequestProperty("X-YouTube-Client-Name", String.valueOf(clientType.id));
         connection.setRequestProperty("X-YouTube-Client-Version", clientType.clientVersion);
 
         connection.setUseCaches(false);

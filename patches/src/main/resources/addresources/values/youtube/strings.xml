@@ -499,15 +499,17 @@ Info: May not work on live streams"</string>
 
     <!-- interaction.seekbar.livestreamDVRPatch -->
     <string name="morphe_livestream_dvr_title">Enable livestream DVR</string>
+    <string name="morphe_livestream_dvr_summary">Allows seeking on all livestreams, even those that normally restrict it</string>
     <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-    <string name="morphe_livestream_dvr_summary">"Allows seeking on all livestreams, even those that normally restrict it
+    <string name="morphe_livestream_dvr_not_available">"\'Enable livestream DVR\' may not be available
 
-Note: If \'Spoof video streams\' is not enabled, enabling this may cause unexpected livestream seeking behavior"</string>
+To fix this, turn on \'Spoof video streams\' and change the \'Default client\' to \'TV\'"</string>
     <string name="morphe_expand_livestream_dvr_duration_title">Expand livestream DVR duration</string>
+    <string name="morphe_expand_livestream_dvr_duration_summary">Allows you to rewind live broadcasts up to 7 days into the past</string>
     <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-    <string name="morphe_expand_livestream_dvr_duration_summary">"Allows you to rewind live broadcasts up to 7 days into the past
+    <string name="morphe_expand_livestream_dvr_duration_not_available">"\'Expand livestream DVR duration\' may not be available
 
-Note: If \'Spoof video streams\' is not enabled, enabling this may cause unexpected livestream seeking behavior"</string>
+To fix this, turn on \'Spoof video streams\' and change the \'Default client\' to \'TV\'"</string>
 
     <!-- interaction.seekbar.enableSlideToSeekPatch -->
     <string name="morphe_slide_to_seek_title">Enable slide to seek</string>
@@ -725,10 +727,10 @@ To access Settings, enable the Settings button via General → Toolbar → Show 
     <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
     <string name="morphe_hide_player_flyout_audio_track_title">Hide \'Audio Track\' menu</string>
     <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Reel' and 'TV' must be kept untranslated. -->
+          'Android Studio' must be kept untranslated. -->
     <string name="morphe_hide_player_flyout_audio_track_not_available">"\'Audio Track\' menu is hidden
 
-To show the \'Audio Track\' menu, change \'Spoof video streams\' to \'Android Reel\' or \'TV\'"</string>
+To show the \'Audio Track\' menu, change \'Spoof video streams\' to any client except \'Android Studio\'"</string>
     <string name="morphe_hide_player_flyout_audio_track_footer_title">Hide \'Audio Track\' menu footer</string>
     <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
     <string name="morphe_hide_player_flyout_captions_title">Hide Captions menu</string>
@@ -1207,7 +1209,6 @@ Limitations:
 
 Video playback with AV1 may stutter or drop frames."</string>
     <string name="morphe_spoof_video_streams_about_title">Spoofing side effects</string>
-    <string name="morphe_spoof_video_streams_about_experimental">• Experimental client and may stop working anytime</string>
     <string name="morphe_spoof_video_streams_about_playback_failure">• Video may stop at 1:00, or may not be available in some regions</string>
     <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Audio track menu is missing</string>
     <string name="morphe_spoof_video_streams_about_no_av1">• No AV1 video codec</string>

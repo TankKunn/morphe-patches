@@ -58,6 +58,9 @@ import app.morphe.extension.shared.spoof.ClientType;
  */
 public class StreamingDataRequest {
 
+    public record StreamData(byte[] streamingData, @Nullable byte[] playerConfig) {
+    }
+
     private static volatile ClientType[] clientOrderToUse = ClientType.values();
 
     public static void setClientOrderToUse(List<ClientType> availableClients, ClientType preferredClient) {
@@ -129,9 +132,14 @@ public class StreamingDataRequest {
         }
     }
 
+    public static boolean getLastSpoofedClientUseSABR() {
+        ClientType client = lastSpoofedClientType;
+        return client != null && client.requireSABR;
+    }
+
     private final String videoId;
 
-    private final Future<byte[]> future;
+    private final Future<StreamData> future;
 
     private StreamingDataRequest(String videoId, Map<String, String> playerHeaders) {
         this.videoId = videoId;
@@ -253,8 +261,8 @@ public class StreamingDataRequest {
     }
 
     @Nullable
-    private static byte[] buildPlayerResponseBuffer(ClientType clientType,
-                                                    HttpURLConnection connection) {
+    private static StreamData buildPlayerResponseBuffer(ClientType clientType,
+                                                        HttpURLConnection connection) {
         // gzip encoding doesn't response with content length (-1),
         // but empty response body does.
         if (connection.getContentLength() == 0) {
@@ -304,7 +312,14 @@ public class StreamingDataRequest {
                 responseBuilder.setStreamingData(deobfuscatedStreamingData);
             }
 
-            return responseBuilder.build().toByteArray();
+            byte[] streamingDataBuffer = responseBuilder.build().toByteArray();
+            byte[] playerConfig = null;
+
+            if (clientType.requireSABR && playerResponse.hasPlayerConfig()) {
+                playerConfig = playerResponse.getPlayerConfig().toByteArray();
+            }
+
+            return new StreamData(streamingDataBuffer, playerConfig);
         } catch (IOException ex) {
             Logger.printException(() -> "Failed to write player response for video stream or details", ex);
             return null;
@@ -319,7 +334,7 @@ public class StreamingDataRequest {
         return false;
     }
 
-    private static byte[] fetch(String videoId, @Nullable Map<String, String> playerHeaders) {
+    private static StreamData fetch(String videoId, @Nullable Map<String, String> playerHeaders) {
         final boolean debugEnabled = BaseSettings.DEBUG.get();
         final long fetchStartTime = System.currentTimeMillis();
 
@@ -336,9 +351,9 @@ public class StreamingDataRequest {
             HttpURLConnection connection = send(clientType, videoId, playerHeaders, showErrorToast);
             Logger.printDebug(() -> "Connection result: " + connection);
             if (connection != null) {
-                byte[] playerResponseBuffer = buildPlayerResponseBuffer(clientType, connection);
+                StreamData playerResponseBuffers = buildPlayerResponseBuffer(clientType, connection);
 
-                if (playerResponseBuffer != null) {
+                if (playerResponseBuffers != null) {
                     lastSpoofedClientType = clientType;
 
                     if (clientType.requireJS) {
@@ -349,7 +364,7 @@ public class StreamingDataRequest {
                                 ", took: " + (System.currentTimeMillis() - fetchStartTime) + "ms");
                     }
 
-                    return playerResponseBuffer;
+                    return playerResponseBuffers;
                 }
             }
         }
@@ -358,8 +373,7 @@ public class StreamingDataRequest {
         handleConnectionError(str("morphe_spoof_video_streams_no_clients_toast"), null, true);
 
         var preferredClient = clientOrderToUse[0];
-        if (preferredClient != ClientType.ANDROID_VR_1_64 && preferredClient != ClientType.ANDROID_VR_1_65
-                && !SharedYouTubeSettings.OAUTH2_REFRESH_TOKEN.get().isBlank()) {
+        if (!preferredClient.supportsOAuth2 && !SharedYouTubeSettings.OAUTH2_REFRESH_TOKEN.get().isBlank()) {
             handleConnectionError(str("morphe_spoof_video_streams_no_clients_suggest_vr_toast"), null, true);
         }
 
@@ -372,7 +386,7 @@ public class StreamingDataRequest {
     }
 
     @Nullable
-    public byte[] getStream() {
+    public StreamData getStream() {
         try {
             // This hook is always called off the main thread,
             // but this can later be called for the same video ID from the main thread.

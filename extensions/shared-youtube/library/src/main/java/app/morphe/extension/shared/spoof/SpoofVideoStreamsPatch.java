@@ -1,3 +1,13 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ *
+ * Original hard forked code:
+ * https://github.com/ReVanced/revanced-patches/commit/724e6d61b2ecd868c1a9a37d465a688e83a74799
+ *
+ * See the included NOTICE file for GPLv3 Section 7 terms that apply to Morphe contributions.
+ */
+
 package app.morphe.extension.shared.spoof;
 
 import android.app.Activity;
@@ -13,7 +23,6 @@ import java.util.Map;
 import java.util.Objects;
 
 import app.morphe.extension.shared.Logger;
-import app.morphe.extension.shared.settings.AppLanguage;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
 import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
@@ -66,9 +75,6 @@ public class SpoofVideoStreamsPatch {
 
     private static final boolean SPOOF_VIDEO_STREAMS = SharedYouTubeSettings.SPOOF_VIDEO_STREAMS.get();
 
-    @Nullable
-    private static volatile AppLanguage languageOverride;
-
     private static volatile ClientType preferredClient = ClientType.ANDROID_REEL_AUTH;
 
     private static WeakReference<Application> mainActivityRef = new WeakReference<>(null);
@@ -91,18 +97,6 @@ public class SpoofVideoStreamsPatch {
         return false;  // Modified during patching.
     }
 
-    @Nullable
-    public static AppLanguage getLanguageOverride() {
-        return languageOverride;
-    }
-
-    /**
-     * @param language Language override for non-authenticated requests.
-     */
-    public static void setLanguageOverride(@Nullable AppLanguage language) {
-        languageOverride = language;
-    }
-
     public static void setClientsToUse(List<ClientType> availableClients, ClientType client) {
         preferredClient = Objects.requireNonNull(client);
         StreamingDataRequest.setClientOrderToUse(availableClients, client);
@@ -113,9 +107,12 @@ public class SpoofVideoStreamsPatch {
     }
 
     public static boolean spoofingToClientWithNoMultiAudioStreams() {
-        return isPatchIncluded()
-                && SPOOF_VIDEO_STREAMS
+        return isPatchIncluded() && SPOOF_VIDEO_STREAMS
                 && !preferredClient.supportsMultiAudioTracks;
+    }
+
+    public static boolean spoofingToClientWithSABROrSpoofingDisabled() {
+        return !isPatchIncluded() || !SPOOF_VIDEO_STREAMS || preferredClient.requireSABR;
     }
 
     /**
@@ -237,7 +234,7 @@ public class SpoofVideoStreamsPatch {
      * Fix audio stuttering in YouTube Music.
      */
     public static boolean disableSABR() {
-        return SPOOF_VIDEO_STREAMS;
+        return SPOOF_VIDEO_STREAMS && !StreamingDataRequest.getLastSpoofedClientUseSABR();
     }
 
     /**
@@ -346,8 +343,9 @@ public class SpoofVideoStreamsPatch {
             try {
                 StreamingDataRequest request = StreamingDataRequest.getRequestForVideoId(videoId);
                 if (request != null) {
-                    var stream = request.getStream();
-                    if (stream != null) {
+                    var buffers = request.getStream();
+                    if (buffers != null) {
+                        byte[] stream = buffers.streamingData();
                         Logger.printDebug(() -> "Overriding video stream: " + videoId);
                         return stream;
                     }
@@ -356,6 +354,36 @@ public class SpoofVideoStreamsPatch {
                 Logger.printDebug(() -> "Not overriding streaming data (video stream is null): " + videoId);
             } catch (Exception ex) {
                 Logger.printException(() -> "getStreamingData failure", ex);
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Injection point.
+     * Fix playback by replace the player config.
+     * Called after {@link #getStreamingData(String)}.
+     */
+    @Nullable
+    public static byte[] getPlayerConfig(String videoId) {
+        if (SPOOF_VIDEO_STREAMS) {
+            try {
+                StreamingDataRequest request = StreamingDataRequest.getRequestForVideoId(videoId);
+                if (request != null) {
+                    var buffers = request.getStream();
+                    if (buffers != null) {
+                        byte[] config = buffers.playerConfig();
+                        if (config != null) {
+                            Logger.printDebug(() -> "Overriding player config: " + videoId);
+                            return config;
+                        }
+                    }
+                }
+
+                Logger.printDebug(() -> "Not overriding player config: " + videoId);
+            } catch (Exception ex) {
+                Logger.printException(() -> "getPlayerConfig failure", ex);
             }
         }
 
