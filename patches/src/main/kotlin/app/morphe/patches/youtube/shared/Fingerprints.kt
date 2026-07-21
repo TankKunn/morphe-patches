@@ -158,14 +158,16 @@ internal object ToolBarButtonFingerprint : Fingerprint(
     filters = listOf(
         resourceLiteral(ResourceType.ID, "menu_item_view"),
         methodCall(smali = "Landroid/view/MenuItem;->setShowAsAction(I)V"),
-        fieldAccess(
-            type = "I",
-            opcode = Opcode.IGET
+        methodCall(
+            opcode = Opcode.INVOKE_STATIC,
+            returnType = "L",
+            parameters = listOf("I")
         ),
-        opcode(Opcode.SGET_OBJECT),
+        opcode(Opcode.MOVE_RESULT_OBJECT, MatchAfterImmediately()),
         methodCall(
             opcode = Opcode.INVOKE_INTERFACE,
-            returnType = "I"
+            returnType = "I",
+            parameters = listOf("L")
         ),
         opcode(Opcode.MOVE_RESULT, MatchAfterImmediately()),
         fieldAccess(

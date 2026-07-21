@@ -29,6 +29,8 @@ import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_37_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_17_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_29_or_greater
+import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
@@ -51,11 +53,13 @@ internal const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/Mini
 @Suppress("unused")
 val miniplayerPatch = bytecodePatch(
     name = "Miniplayer",
-    description = "Adds options to change the in-app minimized player."
+    description = "Adds options to change the in-app minimized player. " +
+            "Patching 21.28.206 and lower has more miniplayer types to choose from."
 ) {
     dependsOn(
         sharedExtensionPatch,
         settingsPatch,
+        versionCheckPatch
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)
@@ -63,16 +67,18 @@ val miniplayerPatch = bytecodePatch(
     execute {
         val preferences = mutableSetOf<BasePreference>()
 
-        preferences +=
-            if (is_20_37_or_greater) {
-                ListPreference("morphe_miniplayer_type")
-            } else {
-                ListPreference(
-                    key = "morphe_miniplayer_type",
-                    entriesKey = "morphe_miniplayer_type_legacy_20_03_entries",
-                    entryValuesKey = "morphe_miniplayer_type_legacy_20_03_entry_values"
-                )
-            }
+        if (is_20_37_or_greater) {
+            // 21.29 removed all modern miniplayers except modern 3
+//            if (!is_21_29_or_greater) {
+                preferences += ListPreference("morphe_miniplayer_type")
+//            }
+        } else {
+            preferences += ListPreference(
+                key = "morphe_miniplayer_type",
+                entriesKey = "morphe_miniplayer_type_legacy_20_03_entries",
+                entryValuesKey = "morphe_miniplayer_type_legacy_20_03_entry_values"
+            )
+        }
 
         preferences += SwitchPreference("morphe_miniplayer_disable_resuming", summary = true)
         preferences += SwitchPreference("morphe_miniplayer_disable_drag_and_drop", summary = true)
@@ -80,10 +86,12 @@ val miniplayerPatch = bytecodePatch(
         preferences += SwitchPreference("morphe_miniplayer_disable_rounded_corners")
         preferences += SwitchPreference("morphe_miniplayer_hide_overlay_buttons")
         preferences += TextPreference("morphe_miniplayer_width_dip", inputType = InputType.NUMBER)
-        preferences += NonInteractivePreference(
-            key = "morphe_miniplayer_opacity",
-            tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
-        )
+        if (!is_21_29_or_greater) {
+            preferences += NonInteractivePreference(
+                key = "morphe_miniplayer_opacity",
+                tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
+            )
+        }
         preferences += SwitchPreference("morphe_miniplayer_disable_horizontal_drag_playback", summary = true)
         preferences += SwitchPreference("morphe_miniplayer_disable_horizontal_reposition", summary = true)
 
@@ -115,13 +123,6 @@ val miniplayerPatch = bytecodePatch(
             insertMiniplayerBooleanOverride(index, "getLegacyTabletMiniplayerOverride")
         }
 
-        /**
-         * Adds an override to force modern miniplayer to be used or not used.
-         */
-        fun MutableMethod.insertModernMiniplayerOverride(index: Int) {
-            insertMiniplayerBooleanOverride(index, "getModernMiniplayerOverride")
-        }
-
         fun Fingerprint.insertMiniplayerFeatureFlagBooleanOverride(
             literal: Long,
             extensionMethod: String,
@@ -147,21 +148,6 @@ val miniplayerPatch = bytecodePatch(
                     """
                 )
             }
-        }
-
-        /**
-         * Adds an override to specify which modern miniplayer is used.
-         */
-        fun MutableMethod.insertModernMiniplayerTypeOverride(iPutIndex: Int) {
-            val register = getInstruction<TwoRegisterInstruction>(iPutIndex).registerA
-
-            addInstructionsAtControlFlowLabel(
-                iPutIndex,
-                """
-                    invoke-static { v$register }, $EXTENSION_CLASS->getModernMiniplayerOverrideType(I)I
-                    move-result v$register
-                """
-            )
         }
 
         // region Disable resuming miniplayer (Continue watching)
@@ -213,16 +199,27 @@ val miniplayerPatch = bytecodePatch(
 
         // region Enable modern miniplayer.
 
-        MiniplayerModernConstructorFingerprint.classDef.methods.forEach {
-            it.apply {
-                if (AccessFlags.CONSTRUCTOR.isSet(accessFlags)) {
-                    val iPutIndex = indexOfFirstInstructionOrThrow {
-                        this.opcode == Opcode.IPUT && this.getReference<FieldReference>()?.type == "I"
-                    }
+        if (!is_21_29_or_greater) {
+            MiniplayerModernConstructorFingerprint.classDef.methods.forEach {
+                it.apply {
+                    if (AccessFlags.CONSTRUCTOR.isSet(accessFlags)) {
+                        val iPutIndex = indexOfFirstInstructionOrThrow {
+                            opcode == Opcode.IPUT && getReference<FieldReference>()?.type == "I"
+                        }
 
-                    insertModernMiniplayerTypeOverride(iPutIndex)
-                } else {
-                    findReturnIndicesReversed().forEach { index -> insertModernMiniplayerOverride(index) }
+                        val register = getInstruction<TwoRegisterInstruction>(iPutIndex).registerA
+                        addInstructionsAtControlFlowLabel(
+                            iPutIndex,
+                            """
+                                invoke-static { v$register }, $EXTENSION_CLASS->getModernMiniplayerOverrideType(I)I
+                                move-result v$register
+                            """
+                        )
+                    } else {
+                        findReturnIndicesReversed().forEach { index ->
+                            insertMiniplayerBooleanOverride(index, "getModernMiniplayerOverride")
+                        }
+                    }
                 }
             }
         }
@@ -232,21 +229,24 @@ val miniplayerPatch = bytecodePatch(
             "getMiniplayerDragAndDrop",
         )
 
-
-        MiniplayerModernConstructorFingerprint.insertMiniplayerFeatureFlagBooleanOverride(
-            MINIPLAYER_MODERN_FEATURE_LEGACY_KEY,
-            "getModernMiniplayerOverride",
-        )
+        if (!is_21_29_or_greater) {
+            MiniplayerModernConstructorFingerprint.insertMiniplayerFeatureFlagBooleanOverride(
+                MINIPLAYER_MODERN_FEATURE_LEGACY_KEY,
+                "getModernMiniplayerOverride",
+            )
+        }
 
         MiniplayerModernFeatureFingerprint.insertMiniplayerFeatureFlagBooleanOverride(
             MINIPLAYER_MODERN_FEATURE_KEY,
             "getModernFeatureFlagsActiveOverride",
         )
 
-        MiniplayerModernConstructorFingerprint.insertMiniplayerFeatureFlagBooleanOverride(
-            MINIPLAYER_DOUBLE_TAP_FEATURE_KEY,
-            "getMiniplayerDoubleTapAction",
-        )
+        if (!is_21_29_or_greater) {
+            MiniplayerModernConstructorFingerprint.insertMiniplayerFeatureFlagBooleanOverride(
+                MINIPLAYER_DOUBLE_TAP_FEATURE_KEY,
+                "getMiniplayerDoubleTapAction",
+            )
+        }
 
         MiniplayerModernConstructorFingerprint.method.apply {
             val literalIndex = indexOfFirstLiteralInstructionOrThrow(
@@ -337,7 +337,7 @@ val miniplayerPatch = bytecodePatch(
 
         // region fix minimal miniplayer using the wrong pause/play bold icons.
 
-        if (is_20_31_or_greater) {
+        if (is_20_31_or_greater && !is_21_29_or_greater) {
             if (is_21_17_or_greater) {
                 // 21.17+ removed the code to set the non-bold miniplayer pause/play icon,
                 // and removed the non bold yt_fill_pause_white_36 icons.
@@ -380,12 +380,15 @@ val miniplayerPatch = bytecodePatch(
 
         // region Add hooks to hide modern miniplayer buttons.
 
-        listOf(
+        val fingerprints = mutableListOf(
             MiniplayerModernExpandButtonFingerprint to "hideMiniplayerExpandClose",
             MiniplayerModernCloseButtonFingerprint to "hideMiniplayerExpandClose",
             MiniplayerModernActionButtonFingerprint to "hideMiniplayerActionButton",
-            MiniplayerModernOverlayViewFingerprint to "adjustMiniplayerOpacity"
-        ).forEach { (fingerprint, methodName) ->
+        )
+        if (!is_21_29_or_greater) {
+            fingerprints += MiniplayerModernOverlayViewFingerprint to "adjustMiniplayerOpacity"
+        }
+        fingerprints.forEach { (fingerprint, methodName) ->
             fingerprint.method.apply {
                 val index = fingerprint.instructionMatches.last().index
                 val register = getInstruction<OneRegisterInstruction>(index).registerA
