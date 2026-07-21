@@ -161,6 +161,7 @@ Changes include:
     <string name="morphe_hide_featured_channels_section_title">Hide Featured channels section</string>
     <string name="morphe_hide_featured_links_section_title">Hide Featured links section</string>
     <string name="morphe_hide_featured_places_section_title">Hide \'Featured places\' section</string>
+    <string name="morphe_hide_featured_playlists_section_title">Hide Featured playlists section</string>
     <string name="morphe_hide_featured_videos_section_title">Hide Featured videos section</string>
     <string name="morphe_hide_gaming_section_title">Hide Gaming section</string>
     <string name="morphe_hide_how_this_was_made_section_title">Hide \'How this content was made\' section</string>

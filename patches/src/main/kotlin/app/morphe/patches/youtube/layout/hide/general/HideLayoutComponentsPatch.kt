@@ -127,6 +127,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
                     SwitchPreference("morphe_hide_featured_channels_section"),
                     SwitchPreference("morphe_hide_featured_links_section"),
                     SwitchPreference("morphe_hide_featured_places_section"),
+                    SwitchPreference("morphe_hide_featured_playlists_section"),
                     SwitchPreference("morphe_hide_featured_videos_section"),
                     SwitchPreference("morphe_hide_gaming_section"),
                     SwitchPreference("morphe_hide_how_this_was_made_section"),

@@ -66,6 +66,10 @@ public final class DescriptionComponentsFilter extends Filter {
                         "media_lockup"
                 ),
                 new ByteArrayFilterGroup(
+                        Settings.HIDE_FEATURED_PLAYLISTS_SECTION,
+                        "structured_description_playlist_lockup"
+                ),
+                new ByteArrayFilterGroup(
                         Settings.HIDE_FEATURED_VIDEOS_SECTION,
                         "structured_description_video_lockup"
                 )
