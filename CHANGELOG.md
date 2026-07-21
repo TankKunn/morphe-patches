@@ -1,3 +1,13 @@
+## [1.36.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.6...v1.36.0-dev.7) (2026-07-21)
+
+### 🐛 Bug Fixes
+
+* **YouTube:** Update compatibility version name ([ca4dd01](https://github.com/MorpheApp/morphe-patches/commit/ca4dd01fa78bdb921e701cf14267a2d787034d25))
+
+### ✨ New Features
+
+* **YouTube Music - Hide ads:** Add "Hide Music Premium promotions" setting ([#2122](https://github.com/MorpheApp/morphe-patches/issues/2122)) ([671f24c](https://github.com/MorpheApp/morphe-patches/commit/671f24cca071639deb293a740ce3a4bd79e9db3a))
+
 ## [1.36.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.5...v1.36.0-dev.6) (2026-07-21)
 
 ### 🐛 Bug Fixes
