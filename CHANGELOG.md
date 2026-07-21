@@ -1,3 +1,21 @@
+## [1.36.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.5...v1.36.0-dev.6) (2026-07-21)
+
+### 🐛 Bug Fixes
+
+* **Force original audio:** Not working in SABR playback ([#2117](https://github.com/MorpheApp/morphe-patches/issues/2117)) ([f2f73f3](https://github.com/MorpheApp/morphe-patches/commit/f2f73f358f67c69ab20be6e2b55fb4a35c934a0c))
+* **YouTube - Force original audio track:** Disable setting toggle for Android Creator only ([60ff67b](https://github.com/MorpheApp/morphe-patches/commit/60ff67b57cb83fa91cb91135bb7a30afefe0fc94))
+* **YouTube - Hide layout components:** Hide all the thumbnails when using "Hide search term thumbnails" ([#2108](https://github.com/MorpheApp/morphe-patches/issues/2108)) ([8abb927](https://github.com/MorpheApp/morphe-patches/commit/8abb927bec2e9f3c1776b4279f5a2a944586e781))
+* **YouTube - Hide layout components:** Hide new type of community post ([35ae5e9](https://github.com/MorpheApp/morphe-patches/commit/35ae5e972d353a4119954a7ffcb8fb399980b4fa))
+* **YouTube Music - Force original audio:** Patch applied to old version where SABR is not enforced ([daa9582](https://github.com/MorpheApp/morphe-patches/commit/daa95828950af97c5b3ec898e72f9c537e06daeb))
+
+### ✨ New Features
+
+* Add `Settings menu filter` patch ([#2029](https://github.com/MorpheApp/morphe-patches/issues/2029)) ([8880421](https://github.com/MorpheApp/morphe-patches/commit/88804215819b3de2bd7736047fa0b65e514c58aa))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for `21.29.363` ([#2084](https://github.com/MorpheApp/morphe-patches/issues/2084)) ([048880e](https://github.com/MorpheApp/morphe-patches/commit/048880e01b868be9280ed2cc295b4dfd42fbe60f))
+
 ## [1.36.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.4...v1.36.0-dev.5) (2026-07-20)
 
 ### 🐛 Bug Fixes
