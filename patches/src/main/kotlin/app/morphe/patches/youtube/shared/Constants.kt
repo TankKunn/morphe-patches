@@ -18,7 +18,7 @@ internal object Constants {
         ),
         targets = listOf(
             AppTarget(
-                version = "21.29.363-SECONDARY", // TODO: replace this with a non weird release.
+                version = "21.29.366",
                 minSdk = 29,
                 isExperimental = true
             ),
