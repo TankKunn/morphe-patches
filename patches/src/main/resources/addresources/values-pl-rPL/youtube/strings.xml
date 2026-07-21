@@ -343,7 +343,7 @@ Dotknij tutaj, aby otworzyć AiSlopList.com i zobaczyć wersje na inne platformy
   <string name="morphe_vot_openrouter_model_custom">Własny</string>
   <string name="morphe_vot_openrouter_not_configured_title">Brak konfiguracji OpenRouter</string>
   <string name="morphe_vot_openrouter_not_configured_message">Wprowadź klucz API OpenRouter w ustawieniach, zanim wybierzesz tego dostawcę</string>
-  <string name="morphe_vot_cost_free">Darmowe</string>
+  <string name="morphe_vot_cost_free">Za darmo</string>
   <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">%s za 100 godzin filmu</string>
   <string name="morphe_vot_tts_voice_type">Głos</string>

@@ -36,6 +36,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_music_screen_7_misc_title">বিবিধ</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_music_hide_get_premium_label_title">\'গেট মিউজিক প্রিমিয়াম\' লেবেল লুকান</string>
+  <string name="morphe_music_hide_music_premium_promotions_title">মিউজিক প্রিমিয়াম প্রচার লুকান</string>
   <string name="morphe_music_hide_video_ads_title">ভিডিও বিজ্ঞাপন লুকান</string>
   <!-- interaction.crossfade.crossfadePatch -->
   <string name="morphe_music_crossfade_screen_title">ক্রসফেইড</string>

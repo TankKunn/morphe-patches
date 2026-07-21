@@ -36,6 +36,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_music_screen_7_misc_title">Divers</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_music_hide_get_premium_label_title">Masquer le libellé \'S\'abonner à Music Premium\'</string>
+  <string name="morphe_music_hide_music_premium_promotions_title">Masquer les promotions Music Premium</string>
   <string name="morphe_music_hide_video_ads_title">Masquer les publicités vidéo</string>
   <!-- interaction.crossfade.crossfadePatch -->
   <string name="morphe_music_crossfade_screen_title">Fondu enchaîné</string>

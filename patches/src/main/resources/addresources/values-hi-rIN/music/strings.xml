@@ -36,6 +36,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_music_screen_7_misc_title">मिसलेनियस</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_music_hide_get_premium_label_title">\'गेट म्यूज़िक प्रीमियम\' लेबल छिपाएं</string>
+  <string name="morphe_music_hide_music_premium_promotions_title">संगीत प्रीमियम प्रचार छुपाएं</string>
   <string name="morphe_music_hide_video_ads_title">विडियो विज्ञापन छिपाएं</string>
   <!-- interaction.crossfade.crossfadePatch -->
   <string name="morphe_music_crossfade_screen_title">क्रॉसफ़ेड</string>

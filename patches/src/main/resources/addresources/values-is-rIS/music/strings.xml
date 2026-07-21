@@ -36,6 +36,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_music_screen_7_misc_title">Ýmisslegt</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_music_hide_get_premium_label_title">Fela merkið \'Fá Morphe Premium\'</string>
+  <string name="morphe_music_hide_music_premium_promotions_title">Fela kynningar á Music Premium</string>
   <string name="morphe_music_hide_video_ads_title">Fela myndbandsaug lýsingar</string>
   <!-- interaction.crossfade.crossfadePatch -->
   <string name="morphe_music_crossfade_screen_title">Krossfade</string>
