@@ -21,5 +21,6 @@ val forceOriginalAudioPatch = forceOriginalAudioPatch(
         compatibleWith(COMPATIBILITY_YOUTUBE_MUSIC)
     },
     fixUseLocalizedAudioTrackFlag = { is_8_05_or_greater && !is_9_26_or_greater },
+    forcedServerAdaptiveStreaming = { is_9_26_or_greater },
     preferenceScreen = PreferenceScreen.MISC,
 )

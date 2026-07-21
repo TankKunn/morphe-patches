@@ -50,6 +50,7 @@ internal fun forceOriginalAudioPatch(
     block: BytecodePatchBuilder.() -> Unit = {},
     executeBlock: BytecodePatchContext.() -> Unit = {},
     fixUseLocalizedAudioTrackFlag: BytecodePatchContext.() -> Boolean,
+    forcedServerAdaptiveStreaming: BytecodePatchContext.() -> Boolean,
     preferenceScreen: BasePreferenceScreen.Screen
 ) = bytecodePatch(
     name = "Force original audio",
@@ -148,12 +149,14 @@ internal fun forceOriginalAudioPatch(
                 SelectAudioStreamFingerprint.instructionMatches.first().index,
                 "$EXTENSION_CLASS->ignoreDefaultAudioStream(Z)Z"
             )
-        } else {
-            // If there is no feature flag, the SABR protocol parameter (proto buffer) must be overridden:
-            // https://github.com/LuanRT/googlevideo/commit/173a2b0717c19c922e5fb53b170640a9c9d58819
-            //
-            // Since mapping the proto field and finding the appropriate hooking point is very difficult,
-            // 'Default audio track' patches has been implemented (like 'Default video quality' patches).
+        }
+
+        // If there is no feature flag, the SABR protocol parameter (proto buffer) must be overridden:
+        // https://github.com/LuanRT/googlevideo/commit/173a2b0717c19c922e5fb53b170640a9c9d58819
+        //
+        // Since mapping the proto field and finding the appropriate hooking point is very difficult,
+        // 'Default audio track' patches has been implemented (like 'Default video quality' patches).
+        if (forcedServerAdaptiveStreaming()) {
             val audioTrackRecordClass = with(AudioTrackRecordToStringFingerprint) {
                 val definingClass = classDef.type
                 mapOf(
