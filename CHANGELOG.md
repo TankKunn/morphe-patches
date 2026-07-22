@@ -1,3 +1,10 @@
+## [1.36.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.8...v1.36.0-dev.9) (2026-07-22)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Remember video quality:** Default video quality may not be applied ([#2144](https://github.com/MorpheApp/morphe-patches/issues/2144)) ([dcb3cbc](https://github.com/MorpheApp/morphe-patches/commit/dcb3cbc798dbaed0739718c529e675e49cbaa764))
+* **YouTube Music - Settings menu filter:** Support version `8.51.51` ([bb733ec](https://github.com/MorpheApp/morphe-patches/commit/bb733ec297c5cffb5346cc19100a7accffb1b966))
+
 ## [1.36.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.7...v1.36.0-dev.8) (2026-07-22)
 
 ### 🐛 Bug Fixes
