@@ -1,3 +1,9 @@
+## [1.36.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.9...v1.36.0-dev.10) (2026-07-22)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide Shorts components:** "Hide video link label" not working on old layouts ([56c8292](https://github.com/MorpheApp/morphe-patches/commit/56c82923db252cf242fa2aea8a4722a64ddabd6f))
+
 ## [1.36.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.8...v1.36.0-dev.9) (2026-07-22)
 
 ### 🐛 Bug Fixes
