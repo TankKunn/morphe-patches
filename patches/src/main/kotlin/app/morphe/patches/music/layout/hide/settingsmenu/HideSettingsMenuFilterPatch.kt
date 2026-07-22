@@ -26,9 +26,6 @@ import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 private const val EXTENSION_CLASS =
     "Lapp/morphe/extension/music/patches/SettingsMenuFilterPatch;"
 
-private const val SETTINGS_HEADERS_FRAGMENT_CLASS =
-    "Lcom/google/android/apps/youtube/music/settings/fragment/SettingsHeadersFragment;"
-
 @Suppress("unused")
 val hideSettingsMenuFilterPatch = bytecodePatch(
     name = "Settings menu filter",
