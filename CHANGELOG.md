@@ -7,7 +7,7 @@
 ### ✨ New Features
 
 * **Settings:** Long-press a Morphe setting to copy its breadcrumb ([#2130](https://github.com/MorpheApp/morphe-patches/issues/2130)) ([622ef54](https://github.com/MorpheApp/morphe-patches/commit/622ef54e1dafeb1456ec6fd3616106c2592eca11))
-* **YouTube - Hide layout components:** Add "Hide featured palylists section" setting ([59d7196](https://github.com/MorpheApp/morphe-patches/commit/59d7196fa37cc26205c26405eea119ebb3c66cbb))
+* **YouTube - Hide layout components:** Add "Hide featured playlists section" setting ([59d7196](https://github.com/MorpheApp/morphe-patches/commit/59d7196fa37cc26205c26405eea119ebb3c66cbb))
 
 ## [1.36.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.6...v1.36.0-dev.7) (2026-07-21)
 
@@ -45,7 +45,7 @@
 
 ### ✨ New Features
 
-* **Reddit:** Add `Custom font` patch ([#2100](https://github.com/MorpheApp/morphe-patches/issues/2100)) ([b242ad9](https://github.com/MorpheApp/morphe-patches/commit/b242ad94ec560ac030f64ce602f3571d2c93a887))
+* **Reddit:** Add `Custom font` and `Force system font` patches ([#2100](https://github.com/MorpheApp/morphe-patches/issues/2100)) ([b242ad9](https://github.com/MorpheApp/morphe-patches/commit/b242ad94ec560ac030f64ce602f3571d2c93a887))
 * **Spoof video streams:** Default client maintenance ([#2094](https://github.com/MorpheApp/morphe-patches/issues/2094)) ([f321bda](https://github.com/MorpheApp/morphe-patches/commit/f321bda0455b1b45334679083066474a77d35442))
 
 ## [1.36.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.3...v1.36.0-dev.4) (2026-07-19)
@@ -74,7 +74,7 @@
 
 ### 🐛 Bug Fixes
 
-* **YouTube - AI channel filter:** Skip list fetch and parse while all toggles are off ([a35a429](https://github.com/MorpheApp/morphe-patches/commit/a35a429f971d97c6179af8a76c19c235bf2ca1e8))
+* **YouTube - Hide layout components:** Skip list fetch and parse while all toggles are off ([a35a429](https://github.com/MorpheApp/morphe-patches/commit/a35a429f971d97c6179af8a76c19c235bf2ca1e8))
 * **YouTube - LegacyPlayerControlButton:** Fixed some issues following the add of support for version 21.28.204 ([318d691](https://github.com/MorpheApp/morphe-patches/commit/318d691dc0ce31a92c69ac856cad7e0b1d797255))
 
 ### 🚀 Updated App Support
@@ -85,12 +85,12 @@
 
 ### 🐛 Bug Fixes
 
-* **YouTube - Engagement Panel:** Implemented a queue of open panels ([079b23f](https://github.com/MorpheApp/morphe-patches/commit/079b23f343f67554b82a8c64457ac2c19d670749))
-* **YouTube - FlyoutUtils:** Added compatibility with other video shelf types ([ce7c0b0](https://github.com/MorpheApp/morphe-patches/commit/ce7c0b070feaa5de1c865642657a5e00922c9281))
-* **YouTube - Hide filter bar:** Related videos filter bar is not correctly hidden ([0245d6b](https://github.com/MorpheApp/morphe-patches/commit/0245d6bd0b4092a2121e397002f99cd21c22e5f4))
+* **YouTube - Engagement Panel:** Implement a queue for open panels ([079b23f](https://github.com/MorpheApp/morphe-patches/commit/079b23f343f67554b82a8c64457ac2c19d670749))
+* **YouTube - FlyoutUtils:** Add compatibility with other video shelf types ([ce7c0b0](https://github.com/MorpheApp/morphe-patches/commit/ce7c0b070feaa5de1c865642657a5e00922c9281))
+* **YouTube - Hide layout components:** Related videos filter bar is not correctly hidden ([0245d6b](https://github.com/MorpheApp/morphe-patches/commit/0245d6bd0b4092a2121e397002f99cd21c22e5f4))
 * **YouTube - Hide Shorts components:** Hide new type of labels ([#2069](https://github.com/MorpheApp/morphe-patches/issues/2069)) ([befe786](https://github.com/MorpheApp/morphe-patches/commit/befe786470525c7b72a1a357c4539f06496452a8))
-* **YouTube - System share sheet:** Fetch the commentId only when the share button is pressed ([ee8df69](https://github.com/MorpheApp/morphe-patches/commit/ee8df69c50c5906d635222fc1e188350eda779a5))
-* **YouTube - System share sheet:** Share sheet doesn't works in Shorts ([a8ff805](https://github.com/MorpheApp/morphe-patches/commit/a8ff80576bd94561b4a2d631e911a684022c807d))
+* **YouTube - Open system share sheet:** Fetch the commentId only when the share button is pressed ([ee8df69](https://github.com/MorpheApp/morphe-patches/commit/ee8df69c50c5906d635222fc1e188350eda779a5))
+* **YouTube - Open system share sheet:** Share sheet doesn't works in Shorts ([a8ff805](https://github.com/MorpheApp/morphe-patches/commit/a8ff80576bd94561b4a2d631e911a684022c807d))
 
 ### ✨ New Features
 
@@ -114,7 +114,7 @@
 * **YouTube - Playback speed:** Support new native playback speed menu ([#1957](https://github.com/MorpheApp/morphe-patches/issues/1957)) ([a4641d6](https://github.com/MorpheApp/morphe-patches/commit/a4641d6731170e03b26abc4ecb37230193271673))
 * **YouTube - StreamOrDetailsDataRequest:** Sometimes player headers is null ([#2035](https://github.com/MorpheApp/morphe-patches/issues/2035)) ([c9552c0](https://github.com/MorpheApp/morphe-patches/commit/c9552c0eee1415e290218cfe603bb4af98ed0681))
 * **YouTube Music - Downloads:** Hide Premium dialog on external download ([#2009](https://github.com/MorpheApp/morphe-patches/issues/2009)) ([4cfe552](https://github.com/MorpheApp/morphe-patches/commit/4cfe552daa946c8d4ca946aeffffb63b62ad8370))
-* **YouTube Music:** Fix 9.15.51 startup ([9e2c372](https://github.com/MorpheApp/morphe-patches/commit/9e2c37218aeb601d1d05d66fba4d89255d20c01f))
+* **YouTube Music:** Fix `9.15.51` startup ([9e2c372](https://github.com/MorpheApp/morphe-patches/commit/9e2c37218aeb601d1d05d66fba4d89255d20c01f))
 
 ### ✨ New Features
 
@@ -172,7 +172,7 @@
 
 ### 🐛 Bug Fixes
 
-* **YouTube Music:** Fix 9.15.51 startup ([9e2c372](https://github.com/MorpheApp/morphe-patches/commit/9e2c37218aeb601d1d05d66fba4d89255d20c01f))
+* **YouTube Music:** Fix `9.15.51` startup ([9e2c372](https://github.com/MorpheApp/morphe-patches/commit/9e2c37218aeb601d1d05d66fba4d89255d20c01f))
 
 ## [1.35.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.35.0-dev.1...v1.35.0-dev.2) (2026-07-13)
 
