@@ -246,17 +246,18 @@ public final class ShortsFilter extends Filter {
         reelCarouselBuffer.addAll(
                 new ByteArrayFilterGroup(
                         Settings.HIDE_SHORTS_AI_BUTTON,
-                        "yt_outline_info_circle",
-                        "yt_outline_experimental_info_circle"
+                        "yt_outline_info_circle_",
+                        "yt_outline_experimental_info_circle_"
                 ),
                 new ByteArrayFilterGroup(
                         Settings.HIDE_SHORTS_FULL_VIDEO_LINK_LABEL,
-                        "yt_fill_experimental_play"
+                        "yt_fill_play_",
+                        "yt_fill_experimental_play_"
                 ),
                 new ByteArrayFilterGroup(
                         Settings.HIDE_SHORTS_SOUND_METADATA_LABEL,
-                        "yt_outline_audio", // Doesn't seem to be needed as v20.14.43 uses 'yt_outline_experimental_audio' as well. But still just in case.
-                        "yt_outline_experimental_audio"
+                        "yt_outline_audio_", // Doesn't seem to be needed as v20.14.43 uses 'yt_outline_experimental_audio' as well. But still just in case.
+                        "yt_outline_experimental_audio_"
                 )
         );
 
