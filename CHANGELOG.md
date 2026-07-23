@@ -1,3 +1,9 @@
+## [1.36.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.10...v1.36.0-dev.11) (2026-07-23)
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide hashtag section" setting ([95710b1](https://github.com/MorpheApp/morphe-patches/commit/95710b18e7a92c02e904c1ba4cc6f0c0aef87ff0))
+
 ## [1.36.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0-dev.9...v1.36.0-dev.10) (2026-07-22)
 
 ### 🐛 Bug Fixes
