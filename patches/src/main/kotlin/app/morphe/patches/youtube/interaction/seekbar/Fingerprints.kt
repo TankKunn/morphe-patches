@@ -1,3 +1,13 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ *
+ * Original hard forked code:
+ * https://github.com/ReVanced/revanced-patches/commit/724e6d61b2ecd868c1a9a37d465a688e83a74799
+ *
+ * See the included NOTICE file for GPLv3 Section 7 terms that apply to Morphe contributions.
+ */
+
 package app.morphe.patches.youtube.interaction.seekbar
 
 import app.morphe.patcher.Fingerprint
@@ -10,6 +20,7 @@ import app.morphe.patcher.methodCall
 import app.morphe.patcher.newInstance
 import app.morphe.patcher.opcode
 import app.morphe.patcher.string
+import app.morphe.patches.youtube.shared.SeekbarFingerprint
 import app.morphe.patches.youtube.video.quality.VideoStreamingDataToStringFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
@@ -158,5 +169,85 @@ internal object FormatStreamModelMaxDVRDurationFingerprint : Fingerprint(
         opcode(Opcode.IGET_OBJECT),
         fieldAccess(opcode = Opcode.IGET_WIDE, type = "D", location = MatchAfterImmediately()),
         opcode(Opcode.RETURN_WIDE, location = MatchAfterImmediately()),
+    )
+)
+
+internal object SeekbarTrackballPosXAndTimeMillisFingerprint : Fingerprint (
+    classFingerprint = SeekbarFingerprint,
+    name = "onTouchEvent",
+    filters = listOf(
+        fieldAccess(opcode = Opcode.IGET, smali = "Landroid/graphics/Point;->x:I"),
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            smali = "Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;"
+        ),
+        methodCall(
+            opcode = Opcode.INVOKE_STATIC,
+            smali = "Ljava/lang/Math;->min(II)I"
+        ),
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            parameters = listOf("I"),
+            returnType = "V",
+            location = MatchAfterWithin(5)
+        )
+    )
+)
+
+internal object SeekbarFineScrubbingBitmapFingerprint : Fingerprint (
+    classFingerprint = Fingerprint (
+        returnType = "Landroid/graphics/Bitmap;",
+        parameters = listOf("L", "I", "Landroid/graphics/Bitmap;"),
+        filters = listOf(
+            string("Storyboard regionDecoder.decodeRegion exception - ")
+        )
+    ),
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL, AccessFlags.DECLARED_SYNCHRONIZED),
+    returnType = "V",
+    parameters = listOf("Landroid/graphics/Bitmap;")
+)
+
+internal object SeekbarBigBoardsUpdateFingerprint : Fingerprint (
+    classFingerprint = Fingerprint(
+        accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+        returnType = "Ljava/lang/String;",
+        parameters = listOf(),
+        filters = listOf(
+            string("player_overlay_big_boards")
+        )
+    ),
+    accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),
+    returnType = "Z",
+    parameters = listOf(),
+    filters = listOf(
+        literal(1),
+        opcode(opcode = Opcode.IF_NEZ, location = MatchAfterImmediately()),
+        opcode(opcode = Opcode.RETURN, location = MatchAfterImmediately())
+    )
+)
+
+internal object SeekbarBigBoardsUpdateLegacyFingerprint : Fingerprint (
+    classFingerprint = Fingerprint(
+        accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+        returnType = "V",
+        parameters = listOf("Z"),
+        filters = listOf(
+            fieldAccess(
+                opcode = Opcode.SGET_OBJECT,
+                smali = $$"Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;"
+            ),
+            fieldAccess(
+                opcode = Opcode.SGET_OBJECT,
+                smali = $$"Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;"
+            )
+        )
+    ),
+    accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),
+    returnType = "Z",
+    parameters = listOf(),
+    filters = listOf(
+        literal(1),
+        opcode(opcode = Opcode.IF_NEZ, location = MatchAfterImmediately()),
+        opcode(opcode = Opcode.RETURN, location = MatchAfterImmediately())
     )
 )
