@@ -456,6 +456,7 @@ Bilgi: Canlı yayınlarda çalışmayabilir"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Canlı yayın DVR\'ı etkinleştir</string>
   <string name="morphe_livestream_dvr_summary">Normalde kısıtlama getiren canlı yayınlar da dahil olmak üzere tüm canlı yayınlarda gezinmeye izin verir</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Canlı yayın DVR'ı etkinleştir' özelliği kullanılamıyor olabilir
 

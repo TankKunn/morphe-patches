@@ -454,6 +454,7 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">すべてのライブ配信で DVR を有効化</string>
   <string name="morphe_livestream_dvr_summary">本来はシーク機能が制限される場合も含め、すべてのライブ配信でシーク機能が利用可能になります</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"[すべてのライブ配信で DVR を有効化] をオンにしたときに正常に動作しない場合があります
 

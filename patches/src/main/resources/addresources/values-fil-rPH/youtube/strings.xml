@@ -456,6 +456,7 @@ Impormasyon: Maaaring hindi gumana sa mga live stream"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">I-enable ang livestream DVR</string>
   <string name="morphe_livestream_dvr_summary">Pinapayagan ang paghahanap sa lahat ng livestream, kahit na ang mga normal na naghihigpit nito</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"Maaaring hindi magamit ang 'I-enable ang DVR ng livestream'
 

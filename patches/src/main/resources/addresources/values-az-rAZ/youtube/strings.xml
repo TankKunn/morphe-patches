@@ -456,6 +456,7 @@ Məlumat: Canlı yayımlarda işləməyə bilər"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Canlı yayım DVR-ni aktivləşdir</string>
   <string name="morphe_livestream_dvr_summary">Bütün canlı yayımlarda, hətta adətən məhdudiyyət qoyulanları belə irəli-geri çəkməyə icazə verir</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Canlı yayım DVR-ni aktivləşdir' əlçatan olmaya bilər
 

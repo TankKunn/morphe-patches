@@ -456,6 +456,7 @@ Info : Peut ne pas fonctionner sur les diffusions en direct"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Activer le DVR des diffusions en direct</string>
   <string name="morphe_livestream_dvr_summary">Permet d’afficher la barre de progression sur toutes les diffusions en directs, même ceux qui la restreignent normalement</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Activer le DVR des diffusions en direct' peut ne pas être disponible
 

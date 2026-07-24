@@ -168,6 +168,7 @@ Second \"item\" text"</string>
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_summary">Allows seeking on all livestreams, even those that normally restrict it</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_summary">Allows you to rewind live broadcasts up to 7 days into the past</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->

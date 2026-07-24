@@ -455,6 +455,7 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">লাইভস্ট্রিম ডিভিআর সক্রিয় করুন</string>
   <string name="morphe_livestream_dvr_summary">লাইভস্ট্রিমগুলিতে যেগুলি সাধারণত সীমাবদ্ধ, সেগুলিতেও সিকিং করার অনুমতি দেয়</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'লাইভস্ট্রিম ডিভিআর' উপলব্ধ নাও হতে পারে
 

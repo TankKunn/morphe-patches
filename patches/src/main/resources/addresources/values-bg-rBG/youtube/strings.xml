@@ -456,6 +456,7 @@ Second \"item\" text"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Активиране на livestream DVR</string>
   <string name="morphe_livestream_dvr_summary">Позволява превъртане на всички потоци на живо, дори и тези, които обикновено го ограничават</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Активиране на DVR за запис на живо' може да не е налично
 

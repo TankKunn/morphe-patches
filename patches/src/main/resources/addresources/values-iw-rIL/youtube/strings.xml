@@ -456,6 +456,7 @@ Second \"item\" text"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">הפעל DVR לשידור חי</string>
   <string name="morphe_livestream_dvr_summary">מאפשר חיפוש בכל הזרמות החיות, גם באלו שמגבילות זאת בדרך כלל</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'הפעלת הקלטת שידור חי' ייתכן ולא תהיה זמינה
 

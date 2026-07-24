@@ -455,6 +455,7 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Activare DVR livestream</string>
   <string name="morphe_livestream_dvr_summary">Permite căutarea în toate transmisiunile live, chiar și în cele care restricționează în mod normal această funcție</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Activarea înregistrării DVR pentru fluxuri live' este posibil să nu fie disponibilă
 

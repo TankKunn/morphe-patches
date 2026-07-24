@@ -456,6 +456,7 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Livestream DVR inschakelen</string>
   <string name="morphe_livestream_dvr_summary">Hiermee kan je op alle livestreams zoeken, zelfs op die waar dat normaal gesproken niet mogelijk is</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Livestream DVR inschakelen' is mogelijk niet beschikbaar
 

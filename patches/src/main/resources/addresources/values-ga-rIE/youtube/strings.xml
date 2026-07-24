@@ -455,6 +455,7 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Cumasaigh DVR sruthú beo</string>
   <string name="morphe_livestream_dvr_summary">Ceadaíonn sé cuardach a dhéanamh ar gach sruth beo, fiú iad siúd a chuireann srian air de ghnáth</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"B’fhéidir nach bhfuil ‘Cumasaigh DVR sruthú beo’ ar fáil
 

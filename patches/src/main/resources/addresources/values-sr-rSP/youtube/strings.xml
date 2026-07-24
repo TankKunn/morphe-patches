@@ -454,6 +454,7 @@ Promene uključuju:
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Омогућите снимање преко директног преноса</string>
   <string name="morphe_livestream_dvr_summary">Дозвољава премотавање унапред и уназад на свим преносима уживо, чак и на онима који то обично ограничавају</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Омогући снимање преноса уживо' можда неће бити доступно
 

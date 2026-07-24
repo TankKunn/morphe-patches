@@ -457,6 +457,7 @@ Info: May not work on live streams"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Stêrkirina DVR-ya pêşandanê serdest bike</string>
   <string name="morphe_livestream_dvr_summary">Hêlî dibe ku li ser hemû weşînên zindî lêgerînê bike, tewra yên ku normal têkbirinê qedexe dikin</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Zêdekirina DVR-a livestreamek' neyê bikar anîn
 

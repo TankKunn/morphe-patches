@@ -450,6 +450,7 @@ Ma'lumot: Jonli efirlarda ishlamasligi mumkin"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Jonli oqim DVR-ni yoqish</string>
   <string name="morphe_livestream_dvr_summary">Jonli oqimlarda, odatda cheklanganlarida ham, orqa tomon sari izlash imkonini beradi</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Livestream DVR'ni yoqish mumkin bo'lmasligi mumkin
 

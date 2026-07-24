@@ -456,6 +456,7 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Aktiver livestream DVR</string>
   <string name="morphe_livestream_dvr_summary">Lar deg spole på alle direktesendinger, selv de som normalt ikke tillater det</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"Muligheten til å ta opp direktesendinger er kanskje ikke tilgjengelig
 

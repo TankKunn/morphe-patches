@@ -456,6 +456,9 @@ Info: Werk moontlik nie op regstreekse uitsendings nie"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Aktiveer livestream DVR</string>
   <string name="morphe_livestream_dvr_summary">Laat soek op alle regstreekse uitsendings toe, selfs dié wat dit normaalweg beperk</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
+  <string name="morphe_seekbar_thumbnail_preview_title">Aktiveer seekbar-miniature</string>
+  <string name="morphe_seekbar_thumbnail_preview_summary">Wys \'n videominiatuur terwyl die seekbar gesleep word</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Maak livestream DVR moontlik' is moontlik nie beskikbaar nie
 
@@ -617,6 +620,7 @@ Om dit reg te stel, skakel 'Spoof video streams' aan en verander die 'Default cl
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_home_button_title">Hide Cast button</string>
   <!-- 'Shorts' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_shorts_button_title">Verberg Shorts-knoppie</string>
   <!-- 'Create' has no display name. Translate normally. -->
   <string name="morphe_hide_create_button_title">Verberg Skep-knoppie</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->

@@ -290,6 +290,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">Ја исклучува прецизната гестикулација за премотување која се активира кога ќе го повлечете лентата за премотување</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Овозможи DVR за пренос во живо</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_title">Прошири ја трајноста на DVR за пренос во живо</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->

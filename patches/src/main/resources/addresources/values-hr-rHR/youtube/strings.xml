@@ -333,6 +333,7 @@ Info: Možda neće raditi na prijenosima uživo"</string>
   <string name="morphe_disable_precise_seeking_gesture_title">Onemogu precizan pritisak</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Omogući livestream DVR</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- interaction.seekbar.enableSlideToSeekPatch -->

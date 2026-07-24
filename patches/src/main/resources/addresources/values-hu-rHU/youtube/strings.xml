@@ -456,6 +456,7 @@ Figyelem: Lehet, hogy az élő közvetítéseknél nem működik"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Engedélyezze az élsőségi DVR-t</string>
   <string name="morphe_livestream_dvr_summary">Lehetővé teszi a keresést minden élő streamen, még azoknál is, amelyek normál esetben korlátozzák azt.</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_title">Bővítsd a közvetítés DVR idejét</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Lehetővé teszi élő adások visszatekerését a múltba maximum 7 nappal</string>

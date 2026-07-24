@@ -456,6 +456,7 @@ Info: Virker muligvis ikke på live streams"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Aktivér livestream DVR</string>
   <string name="morphe_livestream_dvr_summary">Giver mulighed for at spole i alle livestreams, selv dem der normalt begrænser det</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Aktiver optagelse af livestream' er muligvis ikke tilgængelig
 

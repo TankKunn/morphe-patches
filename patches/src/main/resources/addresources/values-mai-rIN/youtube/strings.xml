@@ -197,6 +197,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_title">सटीक अनुरोध जेस्चर अक्षम करें</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">लाइभस्ट्रिम DVR सक्षम गर्नुहोस्</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_title">लाइभस्ट्रिम DVR अवधिलाई विस्तार गर्नुहोस्</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->

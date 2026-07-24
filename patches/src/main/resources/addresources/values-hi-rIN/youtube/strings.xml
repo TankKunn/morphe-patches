@@ -455,6 +455,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">लाइवस्ट्रीम DVR सक्षम करें</string>
   <string name="morphe_livestream_dvr_summary">लाइवस्ट्रीम पर सभी को तलाशने की अनुमति देता है, यहां तक कि उन लाइवस्ट्रीम को भी जो आमतौर पर इसे प्रतिबंधित करते हैं</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'लाइवस्ट्रीम DVR' सक्षम नहीं हो सकता है
 

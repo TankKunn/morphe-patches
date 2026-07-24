@@ -454,6 +454,7 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Vírúð lífvídeós DVR</string>
   <string name="morphe_livestream_dvr_summary">Leyfir að spila áfram og aftur á öllum streimum, jafnvel þeim sem venjulega takmarka það</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Gerðu líkama DVR streymi' gæti ekki verið tiltækt
 

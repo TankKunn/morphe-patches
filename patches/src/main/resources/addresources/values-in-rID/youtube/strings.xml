@@ -455,6 +455,7 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Aktifkan siaran langsung DVR</string>
   <string name="morphe_livestream_dvr_summary">Mengizinkan pencarian di semua siaran langsung, bahkan yang biasanya membatasi fitur tersebut</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Aktifkan siaran langsung DVR' mungkin tidak tersedia
 

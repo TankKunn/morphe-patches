@@ -454,6 +454,7 @@ Napomena: Možda neće raditi na direktnim prenosima"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Uključi livestream DVR</string>
   <string name="morphe_livestream_dvr_summary">Omogućava preskakanje na svim prenosima uživo, čak i na onima koji to normalno ograničavaju</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Omogući DVR za direktan prenos' možda nije dostupno
 

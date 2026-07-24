@@ -51,18 +51,18 @@ Los cambios incluyen:
   <string name="morphe_hide_feed_flyout_menu_title">Activar filtro del menú desplegable del feed</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">Filtro del menú desplegable del feed</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">Introduce los nombres de los menús desplegables por los que filtrar, separados por nuevas líneas</string>
-  <string name="morphe_hide_account_menu_title">Activar filtro del menú inferior Biblioteca / Tú</string>
-  <string name="morphe_hide_account_menu_filter_strings_title">Filtro del menú inferior Biblioteca / Tú</string>
+  <string name="morphe_hide_account_menu_title">Activar filtro del menú inferior de Biblioteca / Tú</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Filtro del menú inferior de Biblioteca / Tú</string>
   <string name="morphe_hide_account_menu_filter_strings_summary">Introduce los nombres del menú inferior Biblioteca / Tú para filtrar, separados por nuevas líneas</string>
   <string name="morphe_hide_album_cards_title">Ocultar tarjetas de álbum</string>
   <string name="morphe_hide_album_cards_summary">Oculta las tarjetas del álbum debajo de la descripción del artista</string>
   <string name="morphe_hide_artist_cards_title">Ocultar tarjetas de artista</string>
-  <string name="morphe_hide_artist_cards_summary">Oculta la tarjeta del artista en la parte superior de los resultados de búsqueda</string>
+  <string name="morphe_hide_artist_cards_summary">Oculta la tarjeta del artista sobre los resultados de búsqueda</string>
   <string name="morphe_hide_auto_dubbed_label_title">Ocultar etiqueta \"Doblaje automático\"</string>
   <string name="morphe_hide_community_posts_title">Ocultar publicaciones de comunidad</string>
   <string name="morphe_hide_compact_banner_title">Ocultar banners compactos</string>
   <string name="morphe_hide_compact_banner_summary">Oculta los banners compactos y el espaciado entre algunos componentes</string>
-  <string name="morphe_hide_expandable_card_title">Tarjetas expandibles debajo de los vídeos</string>
+  <string name="morphe_hide_expandable_card_title">Tarjetas expandibles bajo los vídeos</string>
   <string name="morphe_hide_expandable_card_entry_1">Mostrar todo</string>
   <string name="morphe_hide_expandable_card_entry_2">Ocultar solo la tarjeta de resumen</string>
   <string name="morphe_hide_expandable_card_entry_3">Ocultar todo</string>
@@ -458,6 +458,7 @@ Información: Es posible que no funcione en transmisiones en directo"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Activar DVR de transmisión en vivo</string>
   <string name="morphe_livestream_dvr_summary">Permite buscar en todas las transmisiones en vivo, incluso en aquellas que normalmente restringen esta función</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"Es posible que \"Activar DVR para transmisiones en directo\" no esté disponible
 

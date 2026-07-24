@@ -455,6 +455,7 @@ Second \"item\" text"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">啟用直播 DVR</string>
   <string name="morphe_livestream_dvr_summary">允許在所有直播上尋找，即使那些通常限制此功能的直播也能尋找</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"「啟用直播錄製」可能無法使用
 

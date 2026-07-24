@@ -457,6 +457,7 @@ Second \"item\" text"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Включить прямую трансляцию DVR</string>
   <string name="morphe_livestream_dvr_summary">Разрешает перемотку на всех прямых трансляциях, даже на тех, которые обычно это ограничивают</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"«Включить DVR для прямой трансляции» может быть недоступно
 

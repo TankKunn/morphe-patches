@@ -455,6 +455,7 @@ Tieto: Ei välttämättä toimi suoratoistoissa"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Ota suoratoistinauhoitus käyttöön</string>
   <string name="morphe_livestream_dvr_summary">Mahdollistaa etsimisen kaikista suoralähetyksistä, myös niistä, jotka yleensä rajoittavat sitä</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Livestream-tallennuksen' tallennus ei ehkä ole käytettävissä
 

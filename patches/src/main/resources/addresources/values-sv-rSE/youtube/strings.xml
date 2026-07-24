@@ -266,6 +266,7 @@ Vissa layouter på serversidan kanske inte återställs.
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Aktivera DVR för livestreamar</string>
   <string name="morphe_livestream_dvr_summary">Gör det möjligt att söka i alla livestreamar, även de som normalt sett begränsar det</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_title">Förläng varaktighet för DVR för livestreamar</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Gör det möjligt att spola tillbaka livesändningar upp till 7 dagar bakåt i tiden</string>

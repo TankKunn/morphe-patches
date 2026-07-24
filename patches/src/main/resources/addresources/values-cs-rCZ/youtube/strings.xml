@@ -455,6 +455,7 @@ Upozornění: Možná nebude fungovat u živých přenosů"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Povolit záznam přímého přenosu</string>
   <string name="morphe_livestream_dvr_summary">Umožňuje posun v živých přenosech, dokonce i v těch, které to běžně neumožňují</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Äčínení zapnutí DSLR vysílání' nemusí bõt dostupné
 

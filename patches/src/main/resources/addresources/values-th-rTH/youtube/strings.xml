@@ -454,6 +454,7 @@ Second \"item\" text"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">เปิดใช้งาน DVR สตรีมมิงสด</string>
   <string name="morphe_livestream_dvr_summary">ช่วยให้สามารถข้ามไปยังส่วนต่างๆ ของการถ่ายทอดสดได้ทั้งหมด แม้แต่การถ่ายทอดสดที่ปกติแล้วจะจำกัดการทำงานนี้ไว้</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'เปิดใช้งาน DVR สำหรับถ่ายทอดสด' อาจไม่สามารถใช้งานได้
 

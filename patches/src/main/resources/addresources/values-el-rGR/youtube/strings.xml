@@ -456,6 +456,7 @@ Second \"item\" text"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Ενεργοποίηση εγγραφής ζωντανής μετάδοσης DVR</string>
   <string name="morphe_livestream_dvr_summary">Επιτρέπει την αναζήτηση σε όλες τις ζωντανές μεταδόσεις, ακόμη και σε αυτές που συνήθως την περιορίζουν</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Η ενεργοποίηση εγγραφής ζωντανής ροής (DVR) ενδέχεται να μην είναι διαθέσιμη
 

@@ -455,6 +455,7 @@ Poznámka: Možno nebude fungovať na živých prenosoch"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Povoliť nahrávanie živého prenosu DVR</string>
   <string name="morphe_livestream_dvr_summary">Umožňuje prehľadávanie vo všetkých živých prenosoch, dokonca aj v tých, ktoré to zvyčajne obmedzujú</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"Možno nie je dostupná funkcia 'Nahrávanie živého vysielania'
 

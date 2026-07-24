@@ -26,7 +26,7 @@ Second \"item\" text"</string>
   <string name="morphe_settings_screen_05_player_title">Player</string>
   <string name="morphe_settings_screen_06_shorts_title">Shorts</string>
   <string name="morphe_settings_screen_07_seekbar_title">Fortschrittsbalken</string>
-  <string name="morphe_settings_screen_08_swipe_controls_title">Wischsteuerung</string>
+  <string name="morphe_settings_screen_08_swipe_controls_title">Gestensteuerung</string>
   <string name="morphe_settings_screen_11_misc_title">Sonstiges</string>
   <string name="morphe_settings_screen_12_video_title">Video</string>
   <string name="morphe_restore_old_settings_menus_title">Alte YouTube-Einstellungen wiederherstellen</string>
@@ -457,6 +457,7 @@ Information: Funktioniert möglicherweise nicht bei Livestreams"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Livestream-DVR aktivieren</string>
   <string name="morphe_livestream_dvr_summary">Ermöglicht das Vorspulen bei allen Livestreams, auch bei solchen, die dies normalerweise nicht zulassen.</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Livestream-DVR aktivieren' ist möglicherweise nicht verfügbar
 

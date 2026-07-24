@@ -456,6 +456,7 @@ Informação: Pode não funcionar em transmissões ao vivo"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Habilitar DVR de livestream</string>
   <string name="morphe_livestream_dvr_summary">Permite procurar em todas as transmissões ao vivo, mesmo naquelas que normalmente restringem isso</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Ativar DVR de transmissão ao vivo' pode não estar disponível
 

@@ -453,6 +453,7 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Omogoči DVR za pretočni video</string>
   <string name="morphe_livestream_dvr_summary">Omogoča predvajanje v živo tudi za prenose, ki sicer to preprečujejo</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Omogočanje snemanja v živo' morda ni na voljo
 
