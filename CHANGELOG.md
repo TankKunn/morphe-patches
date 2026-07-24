@@ -1,3 +1,14 @@
+## [1.37.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0...v1.37.0-dev.1) (2026-07-24)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Copy video link:** Use correct timestamp query delimiter when link shortener is disabled ([#2172](https://github.com/MorpheApp/morphe-patches/issues/2172)) ([c3affe2](https://github.com/MorpheApp/morphe-patches/commit/c3affe2bfaf208a267b216d2d40a9ba149a4877e))
+* **YouTube - Playback speed:** "Use normal speed for music" does not work when default playback speed is "Auto" ([#2171](https://github.com/MorpheApp/morphe-patches/issues/2171)) ([5c1538a](https://github.com/MorpheApp/morphe-patches/commit/5c1538ad2acbd3275da28b255a2aa7c906a96404))
+
+### ✨ New Features
+
+* **YouTube - Seekbar:** Add "Enable seekbar thumbnails" setting ([#2182](https://github.com/MorpheApp/morphe-patches/issues/2182)) ([32575ea](https://github.com/MorpheApp/morphe-patches/commit/32575ea9bcd6ff7b135a598799c969c15b4bfadd))
+
 ## [1.36.0](https://github.com/MorpheApp/morphe-patches/compare/v1.35.0...v1.36.0) (2026-07-23)
 
 ### 🐛 Bug Fixes
