@@ -1,3 +1,14 @@
+## [1.37.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.37.0-dev.1...v1.37.0-dev.2) (2026-07-25)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Playback speed:** Playback speed button sometimes does not update ([#2206](https://github.com/MorpheApp/morphe-patches/issues/2206)) ([e2c08fc](https://github.com/MorpheApp/morphe-patches/commit/e2c08fcfed94454f9b28138ac22627693c389287))
+* **YouTube - Remember video quality:** Improved platypus quality flag override logic ([2682d43](https://github.com/MorpheApp/morphe-patches/commit/2682d43110a03296d8f7af63dab1f8d9d73a5f11))
+
+### ✨ New Features
+
+* **Spoof video streams:** Default client maintenance ([#2208](https://github.com/MorpheApp/morphe-patches/issues/2208)) ([4e93ec9](https://github.com/MorpheApp/morphe-patches/commit/4e93ec983847ef4ab76fcfd9e52875e418fc205d))
+
 ## [1.37.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0...v1.37.0-dev.1) (2026-07-24)
 
 ### 🐛 Bug Fixes
