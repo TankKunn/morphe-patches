@@ -44,7 +44,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_enabled_title">Nahtlose Wiedergabe aktivieren</string>
   <string name="morphe_music_crossfade_curve_title">Überblendungsmodus</string>
   <string name="morphe_music_crossfade_curve_entry_equal_power">Gleiche Lautstärke</string>
-  <string name="morphe_music_crossfade_curve_entry_ease_out_cubic">Sanftes Anhalten</string>
+  <string name="morphe_music_crossfade_curve_entry_ease_out_cubic">Sanftes Halten</string>
   <string name="morphe_music_crossfade_curve_entry_ease_out_quad">Sanfter Übergang</string>
   <string name="morphe_music_crossfade_curve_entry_smoothstep">Glatte S-Kurve</string>
   <!-- Empty string because custom preference handles the title itself -->
