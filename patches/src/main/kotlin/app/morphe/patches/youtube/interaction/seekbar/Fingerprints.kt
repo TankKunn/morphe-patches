@@ -20,6 +20,8 @@ import app.morphe.patcher.methodCall
 import app.morphe.patcher.newInstance
 import app.morphe.patcher.opcode
 import app.morphe.patcher.string
+import app.morphe.patches.all.misc.resources.ResourceType
+import app.morphe.patches.all.misc.resources.resourceLiteral
 import app.morphe.patches.youtube.shared.SeekbarFingerprint
 import app.morphe.patches.youtube.shared.VideoStreamingDataToStringFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
@@ -172,25 +174,72 @@ internal object FormatStreamModelMaxDVRDurationFingerprint : Fingerprint(
     )
 )
 
-internal object SeekbarTrackballPosXAndTimeMillisFingerprint : Fingerprint (
+internal object SeekbarHandlerOnTouchFingerprint : Fingerprint (
     classFingerprint = SeekbarFingerprint,
-    name = "onTouchEvent",
+    name = "onTouchEvent"
+)
+
+internal object SeekbarUpdatePointFingerprint : Fingerprint (
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    parameters = listOf(),
+    returnType = "V",
     filters = listOf(
-        fieldAccess(opcode = Opcode.IGET, smali = "Landroid/graphics/Point;->x:I"),
-        methodCall(
-            opcode = Opcode.INVOKE_VIRTUAL,
-            smali = "Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;"
+        fieldAccess(
+            definingClass = "this",
+            type = "Landroid/graphics/Point;"
         ),
-        methodCall(
-            opcode = Opcode.INVOKE_STATIC,
-            smali = "Ljava/lang/Math;->min(II)I"
-        ),
-        methodCall(
-            opcode = Opcode.INVOKE_VIRTUAL,
-            parameters = listOf("I"),
+        methodCall( // Get seekbar point.
+            opcode = Opcode.INVOKE_INTERFACE,
+            parameters = listOf("Landroid/graphics/Point;"),
             returnType = "V",
             location = MatchAfterWithin(5)
+        ),
+        fieldAccess(
+            opcode = Opcode.IGET_OBJECT,
+            definingClass = "this",
+            type = "Landroid/graphics/Rect;",
+            location = MatchAfterWithin(10)
+        ),
+        fieldAccess(
+            opcode = Opcode.IGET,
+            smali = "Landroid/graphics/Rect;->left:I",
+            location = MatchAfterWithin(5)
         )
+    )
+)
+
+internal object SlideSeekbarHandlerOnTouchFingerprint : Fingerprint (
+    classFingerprint = Fingerprint (
+        accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
+        filters = listOf(
+            resourceLiteral(ResourceType.DIMEN, "seek_easy_horizontal_touch_offset_to_start_scrubbing")
+        )
+    ),
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "Z",
+    parameters = listOf("Landroid/view/View;", "Landroid/view/MotionEvent;")
+)
+
+internal object SlideSeekbarGetViewControllerFingerprint : Fingerprint (
+    accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf("Landroid/view/View;", "F"),
+    filters = listOf(
+        fieldAccess(
+            opcode = Opcode.IGET_OBJECT,
+            definingClass = "this",
+            location = MatchAfterWithin(10) // Match close to start of method.
+        ),
+        fieldAccess(
+            opcode = Opcode.IGET_OBJECT,
+            location = MatchAfterWithin(10)
+        ),
+        literal(124587, location = MatchAfterWithin(20)),
+        fieldAccess(
+            opcode = Opcode.IGET_OBJECT,
+            location = MatchAfterWithin(10)
+        ),
+        literal(67108864)
     )
 )
 
