@@ -1,3 +1,13 @@
+## [1.37.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.37.0-dev.2...v1.37.0-dev.3) (2026-07-26)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Remember video quality:** Added new buffering quality flag override ([3585811](https://github.com/MorpheApp/morphe-patches/commit/3585811a3ad2d5448a840d6ca52383c18e5f6800))
+
+### ✨ New Features
+
+* **YouTube - Seekbar:** Show video chapter title below seekbar thumbnail ([#2214](https://github.com/MorpheApp/morphe-patches/issues/2214)) ([bf3cde6](https://github.com/MorpheApp/morphe-patches/commit/bf3cde65389060bdf18a65525015fe56776e24cb))
+
 ## [1.37.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.37.0-dev.1...v1.37.0-dev.2) (2026-07-25)
 
 ### 🐛 Bug Fixes
