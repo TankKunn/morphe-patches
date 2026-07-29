@@ -87,7 +87,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
                 sorting = Sorting.UNSORTED,
                 preferences = setOf(
                     SwitchPreference("morphe_music_hide_comments_community_guidelines"),
-                    SwitchPreference("morphe_music_hide_comments_contexts"),
+                    SwitchPreference("morphe_music_hide_comments_context"),
                     SwitchPreference("morphe_music_hide_comments_emoji_button"),
                     SwitchPreference("morphe_music_hide_comments_info_button"),
                     SwitchPreference("morphe_music_hide_comments_timestamp_button")

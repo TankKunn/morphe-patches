@@ -33,8 +33,8 @@ public final class CommentsFilter extends Filter {
                 "community_guidelines.e"
         );
 
-        final StringFilterGroup commentsContexts = new StringFilterGroup(
-                Settings.HIDE_COMMENTS_CONTEXTS,
+        final StringFilterGroup commentsContext = new StringFilterGroup(
+                Settings.HIDE_COMMENTS_CONTEXT,
                 "comment_filter_context.e"
         );
 
@@ -50,7 +50,7 @@ public final class CommentsFilter extends Filter {
 
         addPathCallbacks(
                 commentComposer,
-                commentsContexts,
+                commentsContext,
                 communityGuidelines,
                 emojiButton,
                 timestampButton
