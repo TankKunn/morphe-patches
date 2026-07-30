@@ -1,3 +1,9 @@
+## [1.38.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.38.0-dev.2...v1.38.0-dev.3) (2026-07-30)
+
+### 🐛 Bug Fixes
+
+* **YouTube:** Resolve legacy app target crash ([1df09a5](https://github.com/MorpheApp/morphe-patches/commit/1df09a5ab9c8b95c3080edff61f52f390bfce1d3))
+
 ## [1.38.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.38.0-dev.1...v1.38.0-dev.2) (2026-07-30)
 
 ### 🐛 Bug Fixes
