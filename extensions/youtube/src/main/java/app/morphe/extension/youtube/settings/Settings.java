@@ -343,6 +343,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_FASHION_MENU = new BooleanSetting("morphe_hide_fashion_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
     public static final BooleanSetting HIDE_GAMING_MENU = new BooleanSetting("morphe_hide_gaming_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
     public static final BooleanSetting HIDE_HYPE_MENU = new BooleanSetting("morphe_hide_hype_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
+    public static final BooleanSetting HIDE_LEARNING_MENU = new BooleanSetting("morphe_hide_learning_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
     public static final BooleanSetting HIDE_LIVE_MENU = new BooleanSetting("morphe_hide_live_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
     public static final BooleanSetting HIDE_MEMBERSHIPS_MENU = new BooleanSetting("morphe_hide_memberships_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
     public static final BooleanSetting HIDE_MOVIES_MENU = new BooleanSetting("morphe_hide_movies_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
@@ -357,6 +358,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_YOUTUBE_MUSIC_MENU = new BooleanSetting("morphe_hide_youtube_music_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
     public static final BooleanSetting HIDE_YOUTUBE_KIDS_MENU = new BooleanSetting("morphe_hide_youtube_kids_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
     public static final BooleanSetting HIDE_YOUTUBE_CREATE_MENU = new BooleanSetting("morphe_hide_youtube_create_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
+    public static final BooleanSetting HIDE_YOUTUBE_WORKS_MENU = new BooleanSetting("morphe_hide_youtube_works_menu", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
     public static final BooleanSetting HIDE_PRIVACY_TOS_FOOTER = new BooleanSetting("morphe_hide_privacy_tos_footer", FALSE, parentNot(HIDE_EXPLORE_BUTTON));
 
     // Action buttons
