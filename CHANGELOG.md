@@ -1,3 +1,9 @@
+## [1.38.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.38.0...v1.38.1-dev.1) (2026-08-01)
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for `21.31.523` ([#2207](https://github.com/MorpheApp/morphe-patches/issues/2207)) ([061663b](https://github.com/MorpheApp/morphe-patches/commit/061663b85b76f0aabe9337de8d84970d4ca406b5))
+
 ## [1.38.0](https://github.com/MorpheApp/morphe-patches/compare/v1.37.0...v1.38.0) (2026-08-01)
 
 ### 🐛 Bug Fixes
