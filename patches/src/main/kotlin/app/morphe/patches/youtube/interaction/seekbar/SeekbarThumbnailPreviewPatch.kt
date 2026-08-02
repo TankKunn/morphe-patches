@@ -108,5 +108,10 @@ val seekbarThumbnailPreviewPatch = bytecodePatch(
                 nop
             """
         )
+
+        PreciseSeekingRecyclerViewFingerprint.method.addInstruction(
+            0,
+            "invoke-static { p1 }, $EXTENSION_CLASS->setPreciseSeekingVisible(Landroid/support/v7/widget/RecyclerView;)V"
+        )
     }
 }

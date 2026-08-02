@@ -16,11 +16,13 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
+import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewOutlineProvider;
+import android.view.ViewParent;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -57,6 +59,7 @@ public class SeekbarThumbnailPreviewPatch {
     private static final int THUMBNAIL_PREVIEW_BORDER_WIDTH_DP = Dim.dp2;
     private static final int THUMBNAIL_PREVIEW_BORDER_COLOR = 0xB3FFFFFF;
     private static final ColorDrawable previewPopupBackgroundDrawable = new ColorDrawable(Color.TRANSPARENT);
+    private static boolean preciseSeekingVisible = false;
 
     @SuppressLint("StaticFieldLeak")
     private static SeekbarViews seekbarViews;
@@ -66,7 +69,6 @@ public class SeekbarThumbnailPreviewPatch {
     private static Bitmap lastAppliedBitmap;
     private static int lastX = -1;
     private static float touchEventInitialX;
-    private static float touchEventInitialY = -1;
 
     /**
      * Injection point.
@@ -287,7 +289,6 @@ public class SeekbarThumbnailPreviewPatch {
             if (actionMasked == MotionEvent.ACTION_DOWN) {
                 isFineScrubbingStarted = false;
                 touchEventInitialX = trackBallMotionEvent.getX();
-                touchEventInitialY = trackBallMotionEvent.getY();
                 return;
             }
 
@@ -297,7 +298,6 @@ public class SeekbarThumbnailPreviewPatch {
                     || actionMasked == MotionEvent.ACTION_POINTER_DOWN) {
                 lastX = -1;
                 touchEventInitialX = -1;
-                touchEventInitialY = -1;
                 fineScrubbingPreviewBitmap = null;
                 isFineScrubbingStarted = false;
                 lastAppliedBitmap = null;
@@ -319,8 +319,7 @@ public class SeekbarThumbnailPreviewPatch {
 
             if (actionMasked == MotionEvent.ACTION_MOVE &&
                     views != null &&
-                    touchEventInitialX > -1 &&
-                    touchEventInitialY > -1) {
+                    touchEventInitialX > -1) {
                 if (!isFineScrubbingStarted) {
                     final float deltaTouchX = Math.abs(trackBallMotionEvent.getX() - touchEventInitialX);
 
@@ -348,8 +347,6 @@ public class SeekbarThumbnailPreviewPatch {
 
                 final int seekbarWidth = seekbarRectangle.width();
                 final long totalVideoMillis = VideoInformation.getVideoLength();
-                final float deltaTouchY = touchEventInitialY - trackBallMotionEvent.getY();
-                final boolean deltaTouchYExceeded = deltaTouchY > DIP15;
 
                 if (totalVideoMillis > 0 && seekbarWidth > 0) {
                     final int relativeTrackballPosX = trackballPosX - seekbarRectangle.left;
@@ -358,11 +355,11 @@ public class SeekbarThumbnailPreviewPatch {
 
                     views.timestampPreview.setText(formatSeekTime(totalSeconds));
                     views.timestampPreview.setVisibility(
-                            !deltaTouchYExceeded ? View.VISIBLE : View.GONE
+                            !preciseSeekingVisible ? View.VISIBLE : View.GONE
                     );
 
                     final CharSequence chapterTitle = ChaptersHookPatch.getChapterTitleAtTime(currentMillis);
-                    if (chapterTitle != null && !deltaTouchYExceeded) {
+                    if (chapterTitle != null && !preciseSeekingVisible) {
                         views.chapterPreview.setText(chapterTitle);
                         views.chapterPreview.setVisibility(View.VISIBLE);
                     } else {
@@ -385,7 +382,7 @@ public class SeekbarThumbnailPreviewPatch {
                 // Wait until the first bitmap so the previewFrame shows immediately with the correct
                 // aspect ratio and Y offset, avoiding a jump from a default 16:9 position.
                 views.previewFrame.setVisibility(
-                        lastAppliedBitmap != null && !deltaTouchYExceeded
+                        lastAppliedBitmap != null && !preciseSeekingVisible
                                 ? View.VISIBLE
                                 : View.INVISIBLE
                 );
@@ -421,5 +418,28 @@ public class SeekbarThumbnailPreviewPatch {
      */
     public static boolean disableBigBoardUpdate() {
         return Settings.THUMBNAIL_PREVIEW.get();
+    }
+
+    /**
+     * Injection point.
+     * The following method is called once, to initialize the precise seekbar container.
+     */
+    public static void setPreciseSeekingVisible(RecyclerView recyclerView) {
+        if (recyclerView != null) {
+            ViewParent recyclerViewParent = recyclerView.getParent();
+
+            while (recyclerViewParent instanceof View recyclerViewParentView) {
+                if (recyclerViewParentView.toString().contains("android.support.constraint.ConstraintLayout")) {
+                    recyclerViewParentView.getViewTreeObserver().addOnPreDrawListener(() -> {
+                        preciseSeekingVisible =
+                                recyclerView.getVisibility() == View.VISIBLE &&
+                                        recyclerViewParentView.getAlpha() > 0;
+                        return true;
+                    });
+                    break;
+                }
+                recyclerViewParent = recyclerViewParentView.getParent();
+            }
+        }
     }
 }
