@@ -772,6 +772,11 @@ public class Settings extends SharedYouTubeSettings {
             MINIPLAYER_TYPE.resetToDefault();
         }
 
+        // Force flag off 21.30+ causes many problems including app crashes
+        if (VersionCheckPatch.IS_21_30_OR_GREATER && !RESTORE_OLD_SETTINGS_MENUS.isSetToDefault()) {
+            RESTORE_OLD_SETTINGS_MENUS.resetToDefault();
+        }
+
         // Android VR 1.74 and visionOS 1.03 are not selectable in the settings and are selected by spoof stream patch if needed.
         ClientType client = SPOOF_VIDEO_STREAMS_CLIENT_TYPE.get();
         if (client == ClientType.ANDROID_VR_1_74 || client == ClientType.VISIONOS_1_03) {
