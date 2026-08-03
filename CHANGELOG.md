@@ -1,3 +1,9 @@
+## [1.39.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.2...v1.39.0-dev.3) (2026-08-03)
+
+### 🐛 Bug Fixes
+
+* **YouTube Music - Third-party lyrics:** Do not cover the comments and live chat panels ([5e3eb4c](https://github.com/MorpheApp/morphe-patches/commit/5e3eb4cf492abd7524f787ffce11f02f1803869b))
+
 ## [1.39.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.1...v1.39.0-dev.2) (2026-08-03)
 
 ### 🐛 Bug Fixes
