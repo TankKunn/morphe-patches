@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-04T13:17:52",
-  "description": "## [1.39.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.3...v1.39.0-dev.4) (2026-08-04)\n\n### 🐛 Bug Fixes\n\n* **YouTube - Disable fullscreen gestures:** Disable feature flag to restore zoom functionality ([#2292](https://github.com/MorpheApp/morphe-patches/issues/2292)) ([4413218](https://github.com/MorpheApp/morphe-patches/commit/44132182e2b148486ea72dd5d849e8dadb1520dd))\n\n### ✨ New Features\n\n* **YouTube - Hide layout components:** Add \"Hide 'Invite others to message' card\" setting ([#2304](https://github.com/MorpheApp/morphe-patches/issues/2304)) ([b582e75](https://github.com/MorpheApp/morphe-patches/commit/b582e757c5d93a4d7e68f10688a399963d0360bd))",
-  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.39.0-dev.4/patches-1.39.0-dev.4.mpp",
+  "created_at": "2026-08-05T15:14:27",
+  "description": "## [1.39.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.4...v1.39.0-dev.5) (2026-08-05)\n\n### 🐛 Bug Fixes\n\n* **YouTube - Seekbar:** Show Shorts seekbar thumbnails ([bd648dc](https://github.com/MorpheApp/morphe-patches/commit/bd648dc703685987d493c54c95524795a9faaa25))\n\n### ✨ New Features\n\n* **Spoof video streams:** Default client maintenance ([#2309](https://github.com/MorpheApp/morphe-patches/issues/2309)) ([e86d61f](https://github.com/MorpheApp/morphe-patches/commit/e86d61f5d874d57f72fac9b8c0c534a89f264ca4))\n* **YouTube - Disable sign in to TV popup:** Add \"Disable 'Connect your devices' popup\" setting ([#2325](https://github.com/MorpheApp/morphe-patches/issues/2325)) ([8b8837e](https://github.com/MorpheApp/morphe-patches/commit/8b8837eb3f0450d5c89eb59912fa1a84dd555dbf))",
+  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.39.0-dev.5/patches-1.39.0-dev.5.mpp",
   "signature_download_url": "",
-  "version": "1.39.0-dev.4"
+  "version": "1.39.0-dev.5"
 }
