@@ -1,3 +1,9 @@
+## [1.39.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.5...v1.39.0-dev.6) (2026-08-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Seekbar:** Fix patching older app targets ([0b3c42c](https://github.com/MorpheApp/morphe-patches/commit/0b3c42ce100046b0d5b99b9e110dcbeb6ad26aba))
+
 ## [1.39.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.4...v1.39.0-dev.5) (2026-08-05)
 
 ### 🐛 Bug Fixes

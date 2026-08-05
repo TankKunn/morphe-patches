@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-05T15:14:27",
-  "description": "## [1.39.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.4...v1.39.0-dev.5) (2026-08-05)\n\n### 🐛 Bug Fixes\n\n* **YouTube - Seekbar:** Show Shorts seekbar thumbnails ([bd648dc](https://github.com/MorpheApp/morphe-patches/commit/bd648dc703685987d493c54c95524795a9faaa25))\n\n### ✨ New Features\n\n* **Spoof video streams:** Default client maintenance ([#2309](https://github.com/MorpheApp/morphe-patches/issues/2309)) ([e86d61f](https://github.com/MorpheApp/morphe-patches/commit/e86d61f5d874d57f72fac9b8c0c534a89f264ca4))\n* **YouTube - Disable sign in to TV popup:** Add \"Disable 'Connect your devices' popup\" setting ([#2325](https://github.com/MorpheApp/morphe-patches/issues/2325)) ([8b8837e](https://github.com/MorpheApp/morphe-patches/commit/8b8837eb3f0450d5c89eb59912fa1a84dd555dbf))",
-  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.39.0-dev.5/patches-1.39.0-dev.5.mpp",
+  "created_at": "2026-08-05T15:43:49",
+  "description": "## [1.39.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.5...v1.39.0-dev.6) (2026-08-05)\n\n### 🐛 Bug Fixes\n\n* **YouTube - Seekbar:** Fix patching older app targets ([0b3c42c](https://github.com/MorpheApp/morphe-patches/commit/0b3c42ce100046b0d5b99b9e110dcbeb6ad26aba))",
+  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.39.0-dev.6/patches-1.39.0-dev.6.mpp",
   "signature_download_url": "",
-  "version": "1.39.0-dev.5"
+  "version": "1.39.0-dev.6"
 }
