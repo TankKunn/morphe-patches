@@ -16,6 +16,7 @@ import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.chapters.chaptersHookPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playservice.is_21_12_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_21_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
@@ -115,11 +116,13 @@ val seekbarThumbnailPreviewPatch = bytecodePatch(
             "invoke-static { p1 }, $EXTENSION_CLASS->setPreciseSeekingVisible(Landroid/support/v7/widget/RecyclerView;)V"
         )
 
-        ShortsDisableSeekbarThumbnailsFeatureFlagFingerprint.matchAll().forEach {
-            it.method.insertLiteralOverride(
-                it.instructionMatches.first().index,
-                "$EXTENSION_CLASS->disableShortsSeekbarThumbnails(Z)Z"
-            )
+        if (is_21_21_or_greater) {
+            ShortsDisableSeekbarThumbnailsFeatureFlagFingerprint.matchAll().forEach {
+                it.method.insertLiteralOverride(
+                    it.instructionMatches.first().index,
+                    "$EXTENSION_CLASS->disableShortsSeekbarThumbnails(Z)Z"
+                )
+            }
         }
     }
 }
