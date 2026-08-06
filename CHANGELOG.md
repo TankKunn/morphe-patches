@@ -1,3 +1,9 @@
+## [1.39.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.7...v1.39.0-dev.8) (2026-08-06)
+
+### 🐛 Bug Fixes
+
+* **YouTube Music - Disable DRC audio:** Fix patching experimental app versions ([04aed07](https://github.com/MorpheApp/morphe-patches/commit/04aed073ee4829fbac26c597a62ebbc1a524f588))
+
 ## [1.39.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.6...v1.39.0-dev.7) (2026-08-06)
 
 ### 🐛 Bug Fixes
