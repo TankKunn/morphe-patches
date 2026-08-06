@@ -379,7 +379,7 @@ Tap here to open AiSlopList.com and see downloads for other platforms"</string>
     <string name="morphe_external_downloader_summary">Shows an overlay button in video player that opens your external downloader</string>
     <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
     <string name="morphe_external_downloader_action_button_title">Override Download button &amp; menu</string>
-    <string name="morphe_external_downloader_action_button_summary">Uses your chosen external downloader instead of YouTube\'s built-in download feature</string>
+    <string name="morphe_external_downloader_action_button_summary">Uses your chosen external downloader instead of the stock download feature</string>
 
     <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
     <string name="morphe_vot_screen_title">Voice over translation</string>
@@ -690,7 +690,7 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
 
     <!-- layout.captions.captionCookiesPatch -->
     <string name="morphe_set_caption_cookies_title">Set caption cookies</string>
-    <string name="morphe_set_caption_cookies_summary">"Fixes a stock YouTube's bug where the auto-translate captions may not be available due to missing cookies
+    <string name="morphe_set_caption_cookies_summary">"Fixes a stock YouTube bug where the auto-translate captions may not be available due to missing cookies
 
 \'Caption cookies\' must be provided"</string>
     <string name="morphe_caption_cookies_title">Caption cookies</string>
@@ -980,7 +980,7 @@ Limitation: If 'Restore old video action bar' is turned off, 'More videos' overl
 
     <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
     <string name="morphe_override_youtube_music_buttons_title">Override YouTube Music buttons</string>
-    <string name="morphe_override_youtube_music_buttons_summary">Opens your preferred music app instead of the official YouTube Music app</string>
+    <string name="morphe_override_youtube_music_buttons_summary">Opens your preferred music app instead of the stock YouTube Music app</string>
     <string name="morphe_music_package_name_title">Music app package name</string>
     <string name="morphe_music_package_name_summary">Package name of your installed music app</string>
 
