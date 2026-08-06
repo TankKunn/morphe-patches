@@ -13,7 +13,6 @@ import app.morphe.patcher.patch.BytecodePatchBuilder
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.shared.misc.settings.preference.BasePreferenceScreen
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
-import app.morphe.patches.youtube.misc.playservice.is_21_17_or_greater
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 
@@ -38,44 +37,40 @@ internal fun disableDRCAudioPatch(
         )
 
         // Nullifying the first parameter/check will disable the normalization.
-        fun patchLogic(freeRegister: String, instructionRegister: String) =
+        fun normalizationSmali(free: String, register: String) =
             """
                 invoke-static { }, $EXTENSION_CLASS->disableDrcAudio()Z
-                move-result $freeRegister
-                if-eqz $freeRegister, :disable_drc_audio
-                const/16 $instructionRegister, 0x0
+                move-result $free
+                if-eqz $free, :disable_drc_audio
+                const/16 $register, 0x0
                 :disable_drc_audio
                 nop
             """
 
-        if (!is_21_17_or_greater) {
-            VolumeNormalizationConfigLegacyFingerprint.apply {
-                method.apply {
-                    val instructionIndex = instructionMatches[3].index
-                    val instructionRegister = getInstruction<OneRegisterInstruction>(
-                        instructionIndex
-                    ).registerA
-                    val freeRegister = getInstruction<TwoRegisterInstruction>(
-                        instructionMatches[4].index
-                    ).registerA
-
-                    addInstructionsWithLabels(
-                        instructionIndex,
-                        patchLogic(
-                            "v$freeRegister",
-                            "v$instructionRegister"
-                        )
-                    )
-                }
-            }
-        } else {
+        if (useNormalizationFlag()) {
             VolumeNormalizationConfigFingerprint.method.addInstructionsWithLabels(
                 0,
-                patchLogic(
+                normalizationSmali(
                     "v0",
                     "p1"
                 )
             )
+        } else if (useLegacyNormalizationFlag()) {
+            VolumeNormalizationConfigLegacyFingerprint.apply {
+                method.apply {
+                    val index = instructionMatches[3].index
+                    val register = getInstruction<OneRegisterInstruction>(index).registerA
+                    val free = instructionMatches[4].getInstruction<TwoRegisterInstruction>().registerA
+
+                    addInstructionsWithLabels(
+                        index,
+                        normalizationSmali(
+                            "v$free",
+                            "v$register"
+                        )
+                    )
+                }
+            }
         }
     }
 }
