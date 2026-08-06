@@ -1,7 +1,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -138,7 +138,7 @@ The lock screen or notification can briefly show a stale state mid-transition"</
 
 Pausing crossfade to watch a music video can leave some videos black (the ones whose audio comes from the video itself). Pausing crossfade before you pick the song avoids it"</string>
     <string name="morphe_music_crossfade_about_unsupported_title">Doesn\'t work at all</string>
-    <string name="morphe_music_crossfade_about_unsupported_summary">"Casting or mirroring audio (Chromecast, screen or audio mirroring) — crossfade pauses because it's unstable there and may never be fixable.
+    <string name="morphe_music_crossfade_about_unsupported_summary">"Casting or mirroring audio (Chromecast, screen or audio mirroring) — crossfade pauses because it\'s unstable there and may never be fixable.
 
 YouTube Music 8.x — crossfade only runs on 9.x and newer"</string>
     <string name="morphe_music_crossfade_about_credit_title">Credit</string>

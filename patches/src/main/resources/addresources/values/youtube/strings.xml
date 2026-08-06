@@ -1,7 +1,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -240,7 +240,7 @@ Changes include:
     <string name="morphe_comments_screen_title">Comments</string>
     <string name="morphe_comments_screen_summary">Choose which components appear in the comments section</string>
     <string name="morphe_hide_comments_carousel_title">Enable comments carousel filter</string>
-    <string name="morphe_hide_comments_carousel_summary">"• Be sure to enter the exact name of the carousel item (e.g. Ask, Hype this video, Listen on YouTube Music, etc.)
+    <string name="morphe_hide_comments_carousel_summary">"• Be sure to enter the exact name of the carousel item (e.g., Ask, Hype this video, Listen on YouTube Music)
 • Hiding carousel items may have unintended side effects
 • If all carousel items are hidden, the entire comments section will also be hidden"</string>
     <string name="morphe_hide_comments_carousel_filter_strings_title">Comments carousel filter</string>
@@ -280,7 +280,7 @@ Changes include:
 
 Keywords can be any text shown in video titles or channel names
 
-Words with uppercase letters in the middle must match exactly (ie: iPhone, TikTok, LeBlanc)"</string>
+Words with uppercase letters in the middle must match exactly (e.g., iPhone, TikTok, LeBlanc)"</string>
     <string name="morphe_hide_keyword_content_about_summary">"Home / Subscriptions / Search / Comments are filtered to hide content that matches keyword phrases
 
 Limitations:
@@ -337,7 +337,6 @@ Tap here to open AiSlopList.com and see downloads for other platforms"</string>
     <string name="morphe_hide_end_screen_store_banner_title">Hide end screen store banner</string>
     <string name="morphe_hide_general_ads_title">Hide general ads</string>
     <string name="morphe_hide_merchandise_banners_title">Hide merchandise banners</string>
-    <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
     <string name="morphe_hide_paid_promotion_labels_title">Hide paid promotion labels</string>
     <string name="morphe_hide_player_popup_ads_title">Hide player popup ads</string>
     <string name="morphe_hide_self_sponsor_ads_title">Hide self sponsored cards</string>
@@ -411,11 +410,11 @@ Tap here to open OpenRouter.ai"</string>
     <string name="morphe_vot_openrouter_model_gemma4_26b_a4b" translatable="false">Gemma 4</string>
     <string name="morphe_vot_openrouter_model_deepseek_flash_v4" translatable="false">DeepSeek V4 Flash</string>
     <string name="morphe_vot_openrouter_model_custom">Custom</string>
-    <string name="morphe_vot_openrouter_model_hint" translatable="false">e.g. qwen/qwen3.5-flash-02-23</string>
+    <string name="morphe_vot_openrouter_model_hint" translatable="false">e.g., qwen/qwen3.5-flash-02-23</string>
     <string name="morphe_vot_openrouter_not_configured_title">OpenRouter not configured</string>
     <string name="morphe_vot_openrouter_not_configured_message">Enter your OpenRouter API key in settings before selecting this provider</string>
     <string name="morphe_vot_cost_free">Free</string>
-    <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+    <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
     <string name="morphe_vot_cost_per_hour">%s per 100 video hours</string>
     <string name="morphe_vot_tts_voice_type">Voice</string>
     <string name="morphe_vot_tts_system">System</string>
@@ -570,7 +569,7 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_swipe_zone_label_volume">Volume</string>
     <string name="morphe_swipe_zone_label_native">Native</string>
     <string name="morphe_swipe_press_to_engage_title">Enable press to swipe gesture</string>
-    <string name="morphe_swipe_press_to_engage_summary">Requires pressing and holding before a swipe gesture is recognised</string>
+    <string name="morphe_swipe_press_to_engage_summary">Requires pressing and holding before a swipe gesture is recognized</string>
     <string name="morphe_swipe_haptic_feedback_title">Enable haptic feedback</string>
     <string name="morphe_swipe_save_and_restore_brightness_title">Save and restore brightness</string>
     <string name="morphe_swipe_save_and_restore_brightness_summary">Remembers brightness level when entering / exiting fullscreen mode</string>
@@ -728,7 +727,7 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_swap_create_with_notifications_button_summary">If changing this setting does not take effect, try switching to Incognito mode</string>
     <string name="morphe_hide_navigation_button_labels_title">Hide navigation button labels</string>
     <string name="morphe_hide_navigation_bar_title">Hide navigation bar</string>
-    <string name="morphe_hide_navigation_bar_user_dialog_message">"This completely hides the navigation bar, including the 'You' tab.
+    <string name="morphe_hide_navigation_bar_user_dialog_message">"This completely hides the navigation bar, including the \'You\' tab.
 
 To access Settings, enable the Settings button via General → Toolbar → Show Settings."</string>
     <string name="morphe_narrow_navigation_buttons_title">Enable narrow navigation buttons</string>
@@ -741,7 +740,7 @@ To access Settings, enable the Settings button via General → Toolbar → Show 
     <string name="morphe_disable_translucent_status_bar_summary">Makes the status bar fully opaque</string>
     <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitations:
 • A black bar may appear at the top of the video player.
-• The system navigation bar can change to transparent, and it's not possible to comment on videos."</string>
+• The system navigation bar can change to transparent, and it\'s not possible to comment on videos."</string>
     <string name="morphe_disable_translucent_navigation_bar_light_title">Disable light translucent bar</string>
     <string name="morphe_disable_translucent_navigation_bar_light_summary">Makes the navigation bar fully opaque in light mode</string>
     <string name="morphe_disable_translucent_navigation_bar_dark_title">Disable dark translucent bar</string>
@@ -763,7 +762,7 @@ To access Settings, enable the Settings button via General → Toolbar → Show 
     <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
     <string name="morphe_hide_player_flyout_title">Flyout menu</string>
     <string name="morphe_hide_player_flyout_summary">Choose which components appear in the flyout menu</string>
-    <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+    <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
     <string name="morphe_hide_player_flyout_audio_track_title">Hide \'Audio Track\' menu</string>
     <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -967,7 +966,7 @@ Automotive layout
     <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
     <string name="morphe_tablet_layout_in_player_summary">"Restores the old player layout
 
-Limitation: If 'Restore old video action bar' is turned off, 'More videos' overlay may not be available"</string>
+Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' overlay may not be available"</string>
 
     <!-- misc.spoof.appversion.spoofAppVersionPatch -->
     <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Restore old save to playlist</string>
@@ -1183,7 +1182,7 @@ Tap here to open DeArrow.ajay.app"</string>
     <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
     <string name="morphe_override_initial_video_quality_summary">"Fixes an issue where the default video quality is not applied immediately after the video starts
 
-Limitation: Playback may not work on some devices if 'Spoof video streams' is set to 'Android VR' and 'Force AVC (H.264) codec' is enabled"</string>
+Limitation: Playback may not work on some devices if \'Spoof video streams\' is set to \'Android VR\' and \'Force AVC (H.264) codec\' is enabled"</string>
     <string name="morphe_remember_video_quality_last_selected_title">Remember video quality</string>
     <string name="morphe_remember_video_quality_last_selected_summary">Applies your manual quality selection to all future videos</string>
     <string name="morphe_remember_video_quality_last_selected_toast_title">Quality change notifications</string>
@@ -1241,7 +1240,7 @@ Limitations:
 • HDR videos will not use AVC
 • Some devices cannot force AVC"</string>
     <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-    <string name="morphe_force_avc_codec_not_available">To use this feature, set \'Spoof video streams\' to \'Android VR or \'Android Studio\'</string>
+    <string name="morphe_force_avc_codec_not_available">To use this feature, set \'Spoof video streams\' to \'Android VR\' or \'Android Studio\'</string>
 
     <!-- video.quality.advancedVideoQualityMenuPatch -->
     <string name="morphe_advanced_video_quality_menu_title">Open Advanced quality menu</string>
@@ -1256,13 +1255,13 @@ Limitations:
     <string name="morphe_video_quality_prioritize_dialog">If this setting is turned off, then older videos can show no video quality options</string>
 
     <!-- misc.spoof.spoofVideoStreamsPatch -->
-    <string name="morphe_spoof_video_streams_av1_title">Allow Android VR / visionOS AV1</string>
-    <string name="morphe_spoof_video_streams_av1_summary">Permits software AV1 decoding when using the Android VR / visionOS client</string>
+    <string name="morphe_spoof_video_streams_av1_title">Allow \'Android VR\' / visionOS AV1</string>
+    <string name="morphe_spoof_video_streams_av1_summary">Permits software AV1 decoding when using the \'Android VR\' / visionOS client</string>
     <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Enabling this setting may use software AV1 decoding.
 
 Video playback with AV1 may stutter or drop frames."</string>
     <string name="morphe_spoof_video_streams_about_title">Spoofing side effects</string>
-    <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Audio track menu is missing</string>
+    <string name="morphe_spoof_video_streams_about_no_audio_tracks">• \'Audio Track\' menu is missing</string>
     <string name="morphe_spoof_video_streams_about_no_av1">• No AV1 video codec</string>
     <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR immersive mode is not available</string>
     <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stable volume is not available</string>
@@ -1272,11 +1271,11 @@ Video playback with AV1 may stutter or drop frames."</string>
     <!-- Quality refers to video quality -->
     <string name="morphe_spoof_video_streams_about_720p_max">• Quality may be limited to 720p</string>
     <string name="morphe_spoof_video_streams_player_js_variant_title">Player JavaScript variant</string>
-    <string name="morphe_spoof_video_streams_stats_for_nerds_title">Show spoofing in Stats for nerds</string>
+    <string name="morphe_spoof_video_streams_stats_for_nerds_title">Show spoofing in \'Stats for nerds\'</string>
 
     <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
     <string name="morphe_restore_old_video_action_bar_title">Restore old video action bar</string>
     <string name="morphe_restore_old_video_action_bar_summary">"Fixes dislikes not shown and video action buttons cannot be hidden
 
-Limitation: Reverts to old style 'More videos' overlay"</string>
+Limitation: Reverts to old style \'More videos\' overlay"</string>
 </resources>
