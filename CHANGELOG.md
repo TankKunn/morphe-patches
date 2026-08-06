@@ -1,3 +1,17 @@
+## [1.39.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.6...v1.39.0-dev.7) (2026-08-06)
+
+### 🐛 Bug Fixes
+
+* **YouTube - DRC audio:** Patch doesn't work on last experimental versions. ([65c5816](https://github.com/MorpheApp/morphe-patches/commit/65c581662a72ccba9f28923a9ada8564f238c310))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide player gesture hints" setting ([#2328](https://github.com/MorpheApp/morphe-patches/issues/2328)) ([588b8c0](https://github.com/MorpheApp/morphe-patches/commit/588b8c0f41bac446d1479d60bf632d88762cb057))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.31.0` ([2f3df14](https://github.com/MorpheApp/morphe-patches/commit/2f3df146415cc407220499fcc7bea60378940b5d))
+
 ## [1.39.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.5...v1.39.0-dev.6) (2026-08-05)
 
 ### 🐛 Bug Fixes
