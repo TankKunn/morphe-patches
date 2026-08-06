@@ -31,7 +31,7 @@ Second \"item\" text"</string>
     <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
     <string name="morphe_external_downloader_action_button_title">Override Download button</string>
     <string name="morphe_external_downloader_action_button_summary">Uses your chosen external downloader instead of YouTube Music\'s built-in download feature</string>
-    <string name="morphe_external_downloader_flyout_menu_title">Override Download menu</string>
+    <string name="morphe_external_downloader_flyout_menu_title">Override Download feed flyout menu</string>
 
     <!-- misc.settings.settingsPatch -->
 
