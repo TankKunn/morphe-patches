@@ -184,7 +184,7 @@ val addToQueuePatch = bytecodePatch(
         )
 
         OnClickLithoButtonBufferObjectFingerprint.let {
-            val match = it.instructionMatches[4]
+            val match = it.instructionMatches[3]
             val index = match.index
             val register = match.getInstruction<FiveRegisterInstruction>().registerC
 
