@@ -1,3 +1,20 @@
+## [1.39.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.8...v1.39.0-dev.9) (2026-08-07)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Hide trending hashtags ([7f375cc](https://github.com/MorpheApp/morphe-patches/commit/7f375ccf058f5782d0533743f5a06c6d649dbf0e))
+* **YouTube Music - Spoof app version:** Add spoof targets `8.23.51` and `9.13.51`, remove 6.x and 7.x targets that YT is shutting down support for ([74e4b1d](https://github.com/MorpheApp/morphe-patches/commit/74e4b1daae905301fc9ea9590de42637854a324e))
+* **YouTube Music:** Remove `7.29.52` app target that YouTube no longer supports ([8b453db](https://github.com/MorpheApp/morphe-patches/commit/8b453dbfe30d695458d913808c8a4bc2a6813ed4))
+
+### ✨ New Features
+
+* **YouTube - Add to queue:** Add "Add feed flyout queue menu item" setting ([#2333](https://github.com/MorpheApp/morphe-patches/issues/2333)) ([1c54df8](https://github.com/MorpheApp/morphe-patches/commit/1c54df894a7836c5c3764cef5eb5f14e8af5fcd5))
+* **YouTube - Hide layout components:** Add "Hide Chapters and 'In this video' button" setting ([#2354](https://github.com/MorpheApp/morphe-patches/issues/2354)) ([ec15b89](https://github.com/MorpheApp/morphe-patches/commit/ec15b89a9a7e33caf43f7e95a17bc771dc37ba8b))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.31.1` ([7bf92f4](https://github.com/MorpheApp/morphe-patches/commit/7bf92f4f4ead5f28d95ff06452e1d1af376628d9))
+
 ## [1.39.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.7...v1.39.0-dev.8) (2026-08-06)
 
 ### 🐛 Bug Fixes
