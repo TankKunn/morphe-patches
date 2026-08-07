@@ -1,3 +1,13 @@
+## [1.39.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.9...v1.39.0-dev.10) (2026-08-07)
+
+### 🐛 Bug Fixes
+
+* **YouTube:** Prevent chapter titles from being truncated ([#2352](https://github.com/MorpheApp/morphe-patches/issues/2352)) ([1609eb1](https://github.com/MorpheApp/morphe-patches/commit/1609eb113d5ed1081205ce58bf7ae566531dcdfe))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for `21.32.2` ([adc044b](https://github.com/MorpheApp/morphe-patches/commit/adc044bcb75ac3270cf04f778e230c2c80b24841))
+
 ## [1.39.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.8...v1.39.0-dev.9) (2026-08-07)
 
 ### 🐛 Bug Fixes
