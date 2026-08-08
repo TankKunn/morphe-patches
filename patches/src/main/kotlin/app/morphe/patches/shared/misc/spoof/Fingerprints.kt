@@ -179,6 +179,10 @@ internal fun abrStateDataFingerprint(playerConfigClass: String) = object : Finge
             definingClass = playerConfigClass,
             location = MatchAfterImmediately()
         ),
+        fieldAccess(
+            opcode = Opcode.IGET_OBJECT,
+            location = MatchAfterWithin(5)
+        ),
         string("/videoplayback"),
         string("AbrStateDataSpec: Unexpected http body.")
     )
