@@ -6,10 +6,6 @@
 * **YouTube - Add to queue:** Fixed some injected buttons related UI issues ([#2387](https://github.com/MorpheApp/morphe-patches/issues/2387)) ([eccae81](https://github.com/MorpheApp/morphe-patches/commit/eccae814937228bda12d46e20005de8533a729bd))
 * **YouTube - Miniplayer:** Remove "Default size" setting that YouTube removed in 21.32+ ([30daf1b](https://github.com/MorpheApp/morphe-patches/commit/30daf1bdb9b9e68b7dc59d06a667bd7be0bc7b25))
 
-### ✨ New Features
-
-* **YouTube:** Add "Add-on support" patch for third party patch bundles ([#2295](https://github.com/MorpheApp/morphe-patches/issues/2295)) ([ab81287](https://github.com/MorpheApp/morphe-patches/commit/ab81287f7b1cdb7af13036beba28886e4016c78a))
-
 ## [1.39.1](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0...v1.39.1) (2026-08-08)
 
 ### 🐛 Bug Fixes
