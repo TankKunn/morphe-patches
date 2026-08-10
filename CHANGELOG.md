@@ -1,3 +1,14 @@
+## [1.40.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.1...v1.40.0-dev.2) (2026-08-10)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Add to queue:** Added shorts as flyout video element ([338fc4f](https://github.com/MorpheApp/morphe-patches/commit/338fc4f6697027ada2e5eeced0b38d39c3f0732a))
+* **YouTube:** Prevent playback speed/quality UI text from wrapping at large font sizes ([#2403](https://github.com/MorpheApp/morphe-patches/issues/2403)) ([9123870](https://github.com/MorpheApp/morphe-patches/commit/912387021246c9f44312efb4900adfceb8842af4))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.31.51` ([bbd6f5b](https://github.com/MorpheApp/morphe-patches/commit/bbd6f5bde6af737adf2752b98c7ff9a9e3385bb9))
+
 ## [1.40.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.39.1...v1.40.0-dev.1) (2026-08-09)
 
 ### 🐛 Bug Fixes
