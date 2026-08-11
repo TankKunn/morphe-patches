@@ -1,3 +1,9 @@
+## [1.40.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.2...v1.40.0-dev.3) (2026-08-11)
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.32.0` ([#2405](https://github.com/MorpheApp/morphe-patches/issues/2405)) ([7149c54](https://github.com/MorpheApp/morphe-patches/commit/7149c5463e7873c3e421a99b9551ee1b8308684c))
+
 ## [1.40.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.1...v1.40.0-dev.2) (2026-08-10)
 
 ### 🐛 Bug Fixes
