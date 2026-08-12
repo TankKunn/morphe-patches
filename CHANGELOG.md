@@ -1,3 +1,10 @@
+## [1.40.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.3...v1.40.0-dev.4) (2026-08-12)
+
+### ✨ New Features
+
+* **Reddit:** Disable forced in-app update popup ([#2416](https://github.com/MorpheApp/morphe-patches/issues/2416)) ([e0616a6](https://github.com/MorpheApp/morphe-patches/commit/e0616a69b28a34bc266b338bb2973a7104d280d9))
+* **YouTube - Seekbar thumbnail:** Added most watched section marker during seeking ([5752c7e](https://github.com/MorpheApp/morphe-patches/commit/5752c7e2ab5971476155da171cea73c269a47cd2))
+
 ## [1.40.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.2...v1.40.0-dev.3) (2026-08-11)
 
 ### 🚀 Updated App Support
