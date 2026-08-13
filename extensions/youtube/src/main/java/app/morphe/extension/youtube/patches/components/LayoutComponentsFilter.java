@@ -68,6 +68,7 @@ public final class LayoutComponentsFilter extends Filter {
     private static final AtomicInteger singleItemInformationPanelIndex = new AtomicInteger(-1);
     private final StringFilterGroup expandableMetadata;
     private final ByteArrayFilterGroup summaryCardBuffer;
+    private final StringFilterGroup exploreTopicsShelf;
     private final StringFilterGroup compactChannelBarInner;
     private final StringFilterGroup compactChannelBarInnerButton;
     private final ByteArrayFilterGroup joinMembershipButton;
@@ -103,7 +104,7 @@ public final class LayoutComponentsFilter extends Filter {
                 "cell_divider"
         );
 
-        final var exploreTopicsShelf = new StringFilterGroup(
+        exploreTopicsShelf = new StringFilterGroup(
                 Settings.HIDE_HORIZONTAL_SHELVES,
                 "chips_shelf"
         );
@@ -449,6 +450,10 @@ public final class LayoutComponentsFilter extends Filter {
         // Filter them separately here.
         if (matchedGroup == notifyMe || matchedGroup == surveys) {
             return true;
+        }
+
+        if (matchedGroup == exploreTopicsShelf) {
+            return NavigationButton.getSelectedNavigationButton() != NavigationButton.LIBRARY;
         }
 
         // Exceptions are not filtered.
