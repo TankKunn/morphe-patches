@@ -81,6 +81,7 @@ public final class LayoutComponentsFilter extends Filter {
     private final ByteArrayFilterGroup getPremiumButtonBuffer;
     private final StringFilterGroup videoLabels;
     private final ByteArrayFilterGroupList videoLabelsGroupList = new ByteArrayFilterGroupList();
+    private final StringFilterGroup videoRecommendationLabels;
 
     public enum ExpandableCardStyle {
         SHOW_ALL,
@@ -387,7 +388,7 @@ public final class LayoutComponentsFilter extends Filter {
                 "player_overlay_video_heading.e"
         );
 
-        final var videoRecommendationLabels = new StringFilterGroup(
+        videoRecommendationLabels = new StringFilterGroup(
                 Settings.HIDE_VIDEO_RECOMMENDATION_LABELS,
                 "endorsement_header_footer.e"
         );
@@ -538,6 +539,10 @@ public final class LayoutComponentsFilter extends Filter {
 
         if (matchedGroup == videoLabels) {
             return videoLabelsGroupList.check(buffer).isFiltered();
+        }
+
+        if (matchedGroup == videoRecommendationLabels) {
+            return NavigationBar.isSearchBarActive();
         }
 
         return true;
