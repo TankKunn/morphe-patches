@@ -54,7 +54,7 @@ public class SeekbarThumbnailPreviewPatch {
     private static final int DIP15 = Dim.dp(15);
     private static final int THUMBNAIL_PREVIEW_LONG_SIDE = Dim.dp(160);
     private static final int THUMBNAIL_PREVIEW_DEFAULT_SHORT_SIDE = Dim.dp(160 * 9.0f / 16);
-    private static final int THUMBNAIL_PREVIEW_DISTANCE_FULLSCREEN_DP = Dim.dp10;
+    private static final int THUMBNAIL_PREVIEW_DISTANCE_FULLSCREEN_DP = DIP15;
     private static final int THUMBNAIL_PREVIEW_DISTANCE_PORTRAIT_DP = -1 * Dim.dp20;
     private static final int THUMBNAIL_PREVIEW_TEXT_ONLY_HEIGHT_DP = Dim.dp(30);
     private static final int THUMBNAIL_PREVIEW_TEXT_WITH_CHAPTER_HEIGHT_DP =
@@ -84,6 +84,7 @@ public class SeekbarThumbnailPreviewPatch {
     @SuppressLint("StaticFieldLeak")
     private static SeekbarViews seekbarViews;
     private static Bitmap fineScrubbingPreviewBitmap;
+    private static boolean scalePreviewFrame;
     private static boolean isFineScrubbingStarted;
     private static Rect seekbarRectangle;
     private static int previewWidthPx = -1;
@@ -386,6 +387,7 @@ public class SeekbarThumbnailPreviewPatch {
                 lastX = -1;
                 touchEventInitialX = -1;
                 fineScrubbingPreviewBitmap = null;
+                scalePreviewFrame = true;
                 isFineScrubbingStarted = false;
                 lastAppliedBitmap = null;
                 previewWidthPx = -1;
@@ -434,14 +436,10 @@ public class SeekbarThumbnailPreviewPatch {
                 if (currentScrubbedPreviewBitmap != null && currentScrubbedPreviewBitmap != lastAppliedBitmap) {
                     views.thumbnailPreview.setImageBitmap(currentScrubbedPreviewBitmap);
                     lastAppliedBitmap = currentScrubbedPreviewBitmap;
-                    applyBitmapAspectRatio(views.previewFrame, currentScrubbedPreviewBitmap);
 
-                    final ViewGroup.LayoutParams previewParams = views.previewFrame.getLayoutParams();
-                    if (previewWidthPx < 0) {
-                        previewWidthPx = previewParams.width;
-                    }
-                    if (previewHeightPx < 0) {
-                        previewHeightPx = previewParams.height;
+                    if (scalePreviewFrame) {
+                        applyBitmapAspectRatio(views.previewFrame, currentScrubbedPreviewBitmap);
+                        scalePreviewFrame = false;
                     }
                 }
 
@@ -479,13 +477,9 @@ public class SeekbarThumbnailPreviewPatch {
                 final int previewDistance = PlayerType.getCurrent() == PlayerType.WATCH_WHILE_FULLSCREEN
                         ? THUMBNAIL_PREVIEW_DISTANCE_FULLSCREEN_DP
                         : THUMBNAIL_PREVIEW_DISTANCE_PORTRAIT_DP;
-
-                final int textHeight;
-                if (views.chapterPreview.getVisibility() == View.VISIBLE) {
-                    textHeight = THUMBNAIL_PREVIEW_TEXT_WITH_CHAPTER_HEIGHT_DP;
-                } else {
-                    textHeight = THUMBNAIL_PREVIEW_TEXT_ONLY_HEIGHT_DP;
-                }
+                final int textHeight = views.chapterPreview.getVisibility() == View.VISIBLE
+                        ? THUMBNAIL_PREVIEW_TEXT_WITH_CHAPTER_HEIGHT_DP
+                        : THUMBNAIL_PREVIEW_TEXT_ONLY_HEIGHT_DP;
 
                 // Wait until the first bitmap so the previewFrame shows immediately with the correct
                 // aspect ratio and Y offset, avoiding a jump from a default 16:9 position.
@@ -495,10 +489,19 @@ public class SeekbarThumbnailPreviewPatch {
                                 : View.INVISIBLE
                 );
 
+                final ViewGroup.LayoutParams previewParams = views.previewFrame.getLayoutParams();
+                if (previewWidthPx < 0) {
+                    previewWidthPx = previewParams.width;
+                }
+                if (previewHeightPx < 0) {
+                    previewHeightPx = previewParams.height;
+                }
+
                 final PopupWindow thumbnailPreviewPopup = views.thumbnailPreviewPopup;
                 final View rootView = trackBall.getRootView();
                 final int targetX = trackballPosX - (previewWidthPx / 2);
-                final int targetY = trackballPosY -
+                final int targetY =
+                        trackballPosY -
                         previewHeightPx -
                         previewDistance -
                         textHeight;
