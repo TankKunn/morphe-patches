@@ -560,16 +560,16 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_tap_to_seek_summary">Just tap the seekbar to jump to that position without dragging it</string>
 
     <!-- interaction.swipecontrols.swipeControlsPatch -->
-    <string name="morphe_swipe_brightness_title">Enable brightness gesture</string>
-    <string name="morphe_swipe_brightness_summary">Swipe vertically on the left side of the fullscreen mode to adjust brightness</string>
-    <string name="morphe_swipe_volume_title">Enable volume gesture</string>
-    <string name="morphe_swipe_volume_summary">Swipe vertically on the right side of the fullscreen mode to adjust volume</string>
+    <string name="morphe_swipe_left_zone_title">Left swipe gesture</string>
+    <string name="morphe_swipe_right_zone_title">Right swipe gesture</string>
+    <string name="morphe_swipe_top_zone_title">Top swipe gesture</string>
     <string name="morphe_swipe_zone_preview_title" translatable="false"> </string>
-    <string name="morphe_swipe_zone_width_title">Brightness/volume zone width</string>
-    <string name="morphe_swipe_zone_width_summary">Percentage of each screen edge reserved for brightness and volume gestures (5-50)</string>
+    <string name="morphe_swipe_zone_width_title">Left/Right zone width</string>
+    <string name="morphe_swipe_zone_width_summary">Percentage of each screen edge reserved for left and right swipe gestures (5-50)</string>
     <string name="morphe_swipe_zone_label_brightness">Brightness</string>
     <string name="morphe_swipe_zone_label_volume">Volume</string>
     <string name="morphe_swipe_zone_label_native">Native</string>
+    <string name="morphe_swipe_zone_label_off">Off</string>
     <string name="morphe_swipe_press_to_engage_title">Enable press to swipe gesture</string>
     <string name="morphe_swipe_press_to_engage_summary">Requires pressing and holding before a swipe gesture is recognized</string>
     <string name="morphe_swipe_haptic_feedback_title">Enable haptic feedback</string>
@@ -598,12 +598,9 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_swipe_volume_sensitivity_summary">Higher values increase the volume change per swipe</string>
     <string name="morphe_swipe_brightness_sensitivity_title">Brightness swipe sensitivity</string>
     <string name="morphe_swipe_brightness_sensitivity_summary">Higher values require more swiping per brightness step</string>
-    <string name="morphe_swipe_speed_title">Enable speed gesture</string>
-    <string name="morphe_swipe_speed_summary">Swipe horizontally in the upper zone of the fullscreen mode to change playback speed</string>
     <string name="morphe_swipe_speed_sensitivity_title">Speed swipe sensitivity</string>
     <string name="morphe_swipe_speed_sensitivity_summary">Higher values require more swiping per speed step</string>
     <string name="morphe_swipe_speed_step_title">Speed step</string>
-    <string name="morphe_swipe_speed_step_summary">Amount by which the playback speed changes per tick</string>
     <string name="morphe_swipe_speed_zone_height_title">Speed zone height</string>
     <string name="morphe_swipe_speed_zone_height_summary">Height of the speed gesture zone as a percentage of the player height (5-75)</string>
     <string name="morphe_swipe_zone_label_speed">Speed</string>
