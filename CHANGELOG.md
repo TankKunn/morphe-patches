@@ -1,3 +1,13 @@
+## [1.40.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.8...v1.40.0-dev.9) (2026-08-18)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Hide hype points in description ([6a398c4](https://github.com/MorpheApp/morphe-patches/commit/6a398c40491bb7f40cb9f5acd5983df371dd051b))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.32.51` ([#2458](https://github.com/MorpheApp/morphe-patches/issues/2458)) ([9b280d0](https://github.com/MorpheApp/morphe-patches/commit/9b280d07e344944db4ae03b3a8d84c71b05d17c1))
+
 ## [1.40.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.7...v1.40.0-dev.8) (2026-08-17)
 
 ### 🐛 Bug Fixes
