@@ -1,3 +1,13 @@
+## [1.40.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.11...v1.40.0-dev.12) (2026-08-19)
+
+### 🐛 Bug Fixes
+
+* **Reddit - Hide Trending shelves:** Resolve fingerprint failure ([ea9c443](https://github.com/MorpheApp/morphe-patches/commit/ea9c443b0fd9f34d2a2f0c118564b8042901b9fe))
+
+### ✨ New Features
+
+* **Spoof video streams:** Default client maintenance ([#2479](https://github.com/MorpheApp/morphe-patches/issues/2479)) ([62c6a35](https://github.com/MorpheApp/morphe-patches/commit/62c6a351b5313ba9068c62306129ec0dfef29e5e))
+
 ## [1.40.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.10...v1.40.0-dev.11) (2026-08-19)
 
 ### 🐛 Bug Fixes
