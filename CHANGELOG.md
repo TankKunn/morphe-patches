@@ -1,3 +1,14 @@
+## [1.40.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.10...v1.40.0-dev.11) (2026-08-19)
+
+### 🐛 Bug Fixes
+
+* **SponsorBlock:** Allow SB user id with curly brackets ([8df4e08](https://github.com/MorpheApp/morphe-patches/commit/8df4e085c0d01ad2d1a16ecedf0e9ff4d5206c3e))
+* **YouTube - Playback speed:** Separate playback speed observations from commands ([#2501](https://github.com/MorpheApp/morphe-patches/issues/2501)) ([a433b29](https://github.com/MorpheApp/morphe-patches/commit/a433b29bf86d6545fc106f4c7d5e8fed7e4e91e9))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.33.52` ([2e7fe4c](https://github.com/MorpheApp/morphe-patches/commit/2e7fe4cbf8ca42a07dce812c181cc8d1a1511014))
+
 ## [1.40.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.9...v1.40.0-dev.10) (2026-08-18)
 
 ### 🐛 Bug Fixes
