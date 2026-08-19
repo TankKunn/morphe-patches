@@ -28,6 +28,7 @@ import app.morphe.patches.youtube.misc.playservice.is_20_28_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_30_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_40_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_08_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
@@ -239,11 +240,21 @@ val legacyPlayerControlsPatch = bytecodePatch(
             )
         }
 
+        if (is_21_08_or_greater) {
+            PlayerControlsModernAccessibilityFeatureFlagFingerprint.matchAll().forEach {
+                it.method.insertLiteralOverride(
+                    it.instructionMatches.first().index,
+                    "$EXTENSION_CLASS->" +
+                            "allowModernAccessibilityFeatureFlag(Z)Z"
+                )
+            }
+        }
+
         fun overrideExploderLayout(fingerprint: Fingerprint) {
-            fingerprint.matchAll().forEach { match ->
+            fingerprint.matchAll().forEach {
                 // 21.30+ inlines the flag lookup and must patch ~6 places.
-                match.method.insertLiteralOverride(
-                    match.instructionMatches.first().index,
+                it.method.insertLiteralOverride(
+                    it.instructionMatches.first().index,
                     "$EXTENSION_CLASS->" +
                             "usePlayerBottomControlsExploderLayout(Z)Z"
                 )

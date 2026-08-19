@@ -1,3 +1,10 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ *
+ * See the included NOTICE file for GPLv3 Section 7 terms that apply to Morphe contributions.
+ */
+
 package app.morphe.patches.youtube.misc.playercontrols
 
 import app.morphe.patcher.Fingerprint
@@ -86,3 +93,10 @@ internal object PlayerControlsButtonStrokeFeatureFlagFingerprint : Fingerprint(
         literal(45713296)
     )
 )
+
+internal object PlayerControlsModernAccessibilityFeatureFlagFingerprint : Fingerprint(
+    filters = listOf(
+        literal(45757309) // Not completely clear what this flag does.
+    )
+)
+
