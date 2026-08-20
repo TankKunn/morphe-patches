@@ -275,7 +275,7 @@ public class SeekbarThumbnailPreviewPatch {
 
         TextView timestampPreview = new TextView(context);
         timestampPreview.setTextColor(Color.WHITE);
-        timestampPreview.setTextSize(12);
+        timestampPreview.setTextSize(10);
         timestampPreview.setPadding(Dim.dp6, Dim.dp2, Dim.dp6, Dim.dp2);
         timestampPreview.setBackground(labelBackground());
         timestampPreview.setLayoutParams(params);
@@ -291,7 +291,7 @@ public class SeekbarThumbnailPreviewPatch {
 
         TextView chapterPreview = new TextView(context);
         chapterPreview.setTextColor(Color.WHITE);
-        chapterPreview.setTextSize(12);
+        chapterPreview.setTextSize(10);
         chapterPreview.setPadding(Dim.dp6, Dim.dp2, Dim.dp6, Dim.dp2);
         chapterPreview.setMaxWidth(THUMBNAIL_PREVIEW_LONG_SIDE);
         chapterPreview.setSingleLine(true);
