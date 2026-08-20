@@ -82,7 +82,7 @@ public class SeekbarThumbnailPreviewPatch {
             );
     private static final int THUMBNAIL_PREVIEW_DISTANCE_FULLSCREEN_DP = DIP15;
     private static final int THUMBNAIL_PREVIEW_DISTANCE_PORTRAIT_DP = -1 * Dim.dp20;
-    private static final int THUMBNAIL_PREVIEW_TEXT_ONLY_HEIGHT_DP = Dim.dp(30);
+    private static final int THUMBNAIL_PREVIEW_TEXT_ONLY_HEIGHT_DP = Dim.dp24;
     private static final int THUMBNAIL_PREVIEW_TEXT_WITH_CHAPTER_HEIGHT_DP =
             THUMBNAIL_PREVIEW_TEXT_ONLY_HEIGHT_DP * 2;
     private static final int THUMBNAIL_PREVIEW_CORNER_RADIUS_DP = Dim.dp8;
