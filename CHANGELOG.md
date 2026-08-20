@@ -1,3 +1,18 @@
+## [1.40.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.12...v1.40.0-dev.13) (2026-08-20)
+
+### 🐛 Bug Fixes
+
+* **Network proxy:** Avoid platform HTTPS fallback ([#2510](https://github.com/MorpheApp/morphe-patches/issues/2510)) ([bc6c9be](https://github.com/MorpheApp/morphe-patches/commit/bc6c9be001b3ec2aee781fdf8976d27e3cf1851a))
+* **YouTube - Captions:** Auto captions do not show when video is unmuted ([#2436](https://github.com/MorpheApp/morphe-patches/issues/2436)) ([e80ce29](https://github.com/MorpheApp/morphe-patches/commit/e80ce29de61169a1ab6b94a6cdec650b35871887))
+* **YouTube - Seekbar thumbnail:** Reduced label font size ([9117e58](https://github.com/MorpheApp/morphe-patches/commit/9117e584ff574932feefd5d1a6c5f85bd58c9607))
+* **YouTube - Seekbar thumbnail:** Reduced labels height ([96615e3](https://github.com/MorpheApp/morphe-patches/commit/96615e38c4f67ad369afef56094d02af3efc04c2))
+* **YouTube - Seekbar thumbnail:** Removed shadow layer from labels ([737db50](https://github.com/MorpheApp/morphe-patches/commit/737db50a0bb9db5726506b42ad0a36af2d155831))
+* **YouTube:** Override feature flag that interferes with "Restore old player button style" ([3ff43e5](https://github.com/MorpheApp/morphe-patches/commit/3ff43e54e2aa28311ab575018bafc16997172392))
+
+### ✨ New Features
+
+* **YouTube - Swipe controls:** Support swipe controls in split-screen ([#2503](https://github.com/MorpheApp/morphe-patches/issues/2503)) ([f2b04c2](https://github.com/MorpheApp/morphe-patches/commit/f2b04c22f3e1b7d386704db2089d2af9c3309889))
+
 ## [1.40.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.11...v1.40.0-dev.12) (2026-08-19)
 
 ### 🐛 Bug Fixes
