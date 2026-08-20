@@ -277,7 +277,6 @@ public class SeekbarThumbnailPreviewPatch {
         timestampPreview.setTextColor(Color.WHITE);
         timestampPreview.setTextSize(12);
         timestampPreview.setPadding(Dim.dp6, Dim.dp2, Dim.dp6, Dim.dp2);
-        timestampPreview.setShadowLayer(0.1f, 1.5f, 1.5f, Color.BLACK);
         timestampPreview.setBackground(labelBackground());
         timestampPreview.setLayoutParams(params);
 
@@ -295,7 +294,6 @@ public class SeekbarThumbnailPreviewPatch {
         chapterPreview.setTextSize(12);
         chapterPreview.setPadding(Dim.dp6, Dim.dp2, Dim.dp6, Dim.dp2);
         chapterPreview.setMaxWidth(THUMBNAIL_PREVIEW_LONG_SIDE);
-        chapterPreview.setShadowLayer(0.1f, 1.5f, 1.5f, Color.BLACK);
         chapterPreview.setSingleLine(true);
         chapterPreview.setEllipsize(android.text.TextUtils.TruncateAt.END);
         chapterPreview.setGravity(Gravity.CENTER_HORIZONTAL);
