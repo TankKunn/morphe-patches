@@ -100,3 +100,15 @@ internal object PlayerControlsModernAccessibilityFeatureFlagFingerprint : Finger
     )
 )
 
+internal object PlayerCommentTeaserFeatureFlagFingerprint : Fingerprint(
+    filters = listOf(
+        literal(45771730)
+    )
+)
+
+
+internal object RecycleViewScrollingFlagFingerprint : Fingerprint(
+    filters = listOf(
+        literal(45763727)
+    )
+)

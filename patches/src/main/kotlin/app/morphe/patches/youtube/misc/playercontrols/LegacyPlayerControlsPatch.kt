@@ -29,15 +29,14 @@ import app.morphe.patches.youtube.misc.playservice.is_20_30_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_40_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_08_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_15_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
-import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.copyXmlNode
 import app.morphe.util.findElementByAttributeValue
 import app.morphe.util.findElementByAttributeValueOrThrow
 import app.morphe.util.findFreeRegister
-import app.morphe.util.getReference
 import app.morphe.util.inputStreamFromBundledResource
 import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
@@ -240,13 +239,20 @@ val legacyPlayerControlsPatch = bytecodePatch(
             )
         }
 
-        if (is_21_08_or_greater) {
-            PlayerControlsModernAccessibilityFeatureFlagFingerprint.matchAll().forEach {
-                it.method.insertLiteralOverride(
-                    it.instructionMatches.first().index,
-                    "$EXTENSION_CLASS->" +
-                            "allowModernAccessibilityFeatureFlag(Z)Z"
-                )
+        // Override flags that interfere with old player icons override.
+        arrayOf(
+            PlayerControlsModernAccessibilityFeatureFlagFingerprint to is_21_08_or_greater,
+            PlayerCommentTeaserFeatureFlagFingerprint to is_21_15_or_greater,
+            RecycleViewScrollingFlagFingerprint to is_21_15_or_greater
+        ).forEach { (fingerprint, applyChanges) ->
+            if (applyChanges) {
+                fingerprint.matchAll().forEach {
+                    it.method.insertLiteralOverride(
+                        it.instructionMatches.first().index,
+                        "$EXTENSION_CLASS->" +
+                                "allowModernPlayerLayoutFlags(Z)Z"
+                    )
+                }
             }
         }
 
