@@ -1,3 +1,10 @@
+## [1.40.0-dev.15](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.14...v1.40.0-dev.15) (2026-08-21)
+
+### ✨ New Features
+
+* **Spoof video streams:** Makes `TV Simply` available in signed-out or incognito mode by generating a PoToken ([#2533](https://github.com/MorpheApp/morphe-patches/issues/2533)) ([c9a1622](https://github.com/MorpheApp/morphe-patches/commit/c9a1622f047ea33b7cf18544bb88975d4bf0a796))
+* **Theme:** Change the app background color from the app settings ([#2524](https://github.com/MorpheApp/morphe-patches/issues/2524)) ([4d89ab2](https://github.com/MorpheApp/morphe-patches/commit/4d89ab2f7b456f05b79ec79c006da51535a35168))
+
 ## [1.40.0-dev.14](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.13...v1.40.0-dev.14) (2026-08-21)
 
 ### 🚀 Updated App Support
