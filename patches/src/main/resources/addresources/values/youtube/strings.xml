@@ -1112,7 +1112,7 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <string name="morphe_header_logo_entry_2">Regular</string>
     <string name="morphe_header_logo_entry_3" translatable="false">Premium</string>
     <string name="morphe_header_logo_entry_4" translatable="false">Morphe</string>
-    <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+    <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
     <string name="morphe_header_logo_entry_5">Custom</string>
 
     <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
