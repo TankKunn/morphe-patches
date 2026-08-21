@@ -1,3 +1,12 @@
+## [1.40.0-dev.16](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.15...v1.40.0-dev.16) (2026-08-21)
+
+### 🐛 Bug Fixes
+
+* **Theme:** Use only the color resources that the app version declares ([d1e1514](https://github.com/MorpheApp/morphe-patches/commit/d1e1514360649cd56776afb2ab7455d69826a9fd))
+* **YouTube - Add to queue:** "Overridde 'Play next in queue' button" not working  ([#2539](https://github.com/MorpheApp/morphe-patches/issues/2539)) ([235d3c6](https://github.com/MorpheApp/morphe-patches/commit/235d3c651fc9b01b80b26269c652b6344b073e8c))
+* **YouTube - Swipe controls:** Do not restore the brightness when the player returns from picture in picture ([2deb2a7](https://github.com/MorpheApp/morphe-patches/commit/2deb2a76fdcaa71da1622b7fa18f1f27d78b9a6b))
+* **YouTube - Wide search bar:** Use the background color selected in the settings ([abb7441](https://github.com/MorpheApp/morphe-patches/commit/abb7441fcabebc607b98a7fe0116abdc6fdce2b0))
+
 ## [1.40.0-dev.15](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.14...v1.40.0-dev.15) (2026-08-21)
 
 ### ✨ New Features
