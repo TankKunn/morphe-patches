@@ -102,11 +102,14 @@ public final class AddToQueuePatch {
 
     public static boolean flyoutButtonClickLogic(String buttonName) {
         if (queueButtonNames.contains(buttonName)) {
-            Logger.printDebug(() -> "Opening custom queue flyout with videoId: " + FlyoutUtils.getFlyoutVideoId());
+            String flyoutVideoId = FlyoutUtils.getFlyoutVideoId();
+            Logger.printDebug(() -> "Opening custom queue flyout with videoId: " + flyoutVideoId);
 
             Activity activity = Utils.getActivity();
             if (activity != null && !activity.isFinishing() && !activity.isDestroyed()) {
-                PlaylistPatch.prepareDialogBuilder(activity, FlyoutUtils.getFlyoutVideoId());
+                PlaylistPatch.prepareDialogBuilder(activity, flyoutVideoId);
+            } else {
+                Logger.printException(() -> "Could not open queue flyout, activity is not available");
             }
 
             FlyoutUtils.dismissBottomSheetFlyout(); // Must dismiss after showing dialog.
