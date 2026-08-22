@@ -1,3 +1,9 @@
+## [1.40.0-dev.17](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.16...v1.40.0-dev.17) (2026-08-22)
+
+### ✨ New Features
+
+* **YouTube - Theme:** Draw the splash screen with the selected background color ([#2543](https://github.com/MorpheApp/morphe-patches/issues/2543)) ([fb3302d](https://github.com/MorpheApp/morphe-patches/commit/fb3302d54724ca97e8e753ffdbae111a0c55beb7))
+
 ## [1.40.0-dev.16](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.15...v1.40.0-dev.16) (2026-08-21)
 
 ### 🐛 Bug Fixes
