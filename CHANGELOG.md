@@ -1,3 +1,10 @@
+## [1.40.0-dev.19](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.18...v1.40.0-dev.19) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* Context is sometimes not set ([e54b364](https://github.com/MorpheApp/morphe-patches/commit/e54b364b8ca1122c77b5d8dc44a04c40d99d1598))
+* **Theme:** Change the color of the new content indicator of the top bar ([#2550](https://github.com/MorpheApp/morphe-patches/issues/2550)) ([4f0210b](https://github.com/MorpheApp/morphe-patches/commit/4f0210b0793e37c546ec5a52b59a52f7e98564a9))
+
 ## [1.40.0-dev.18](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.17...v1.40.0-dev.18) (2026-08-22)
 
 ### 🚀 Updated App Support
