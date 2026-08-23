@@ -1,3 +1,10 @@
+## [1.40.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.19...v1.40.0-dev.20) (2026-08-23)
+
+### 🐛 Bug Fixes
+
+* **YouTube - FlyoutUtils:** Unified extraction videoId logic and added new litho video element ([a103d4a](https://github.com/MorpheApp/morphe-patches/commit/a103d4af319db5d2eb47f3bb1492154d3afeb495))
+* **YouTube - Seekbar thumbnail:** Reduced heatmap peak point font pad… ([#2564](https://github.com/MorpheApp/morphe-patches/issues/2564)) ([1209b95](https://github.com/MorpheApp/morphe-patches/commit/1209b9544914a84ce621e026aa366de2a6d1dd0b))
+
 ## [1.40.0-dev.19](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.18...v1.40.0-dev.19) (2026-08-22)
 
 ### 🐛 Bug Fixes
