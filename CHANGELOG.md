@@ -1,3 +1,9 @@
+## [1.40.0-dev.21](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.20...v1.40.0-dev.21) (2026-08-23)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Add to queue:** Match the flyout menu items to the app's own items ([#2553](https://github.com/MorpheApp/morphe-patches/issues/2553)) ([693a33b](https://github.com/MorpheApp/morphe-patches/commit/693a33b3507d9e0b19c498150884c8cfb0ae524b))
+
 ## [1.40.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.19...v1.40.0-dev.20) (2026-08-23)
 
 ### 🐛 Bug Fixes
