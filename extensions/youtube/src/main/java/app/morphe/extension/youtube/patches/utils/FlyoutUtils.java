@@ -14,6 +14,8 @@ import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Base64;
 import android.util.Pair;
 import android.view.Gravity;
@@ -348,25 +350,33 @@ public final class FlyoutUtils {
             return;
         }
 
-        final boolean isShowing;
-        if (flyoutObject instanceof Dialog flyoutDialogHandler) {
-            isShowing = flyoutDialogHandler.isShowing();
-        } else if (flyoutObject instanceof PopupWindow flyoutPopupWindowHandler) {
-            isShowing = flyoutPopupWindowHandler.isShowing();
-        } else {
-            isShowing = false;
-        }
+        final Handler visibilityHandler = new Handler(Looper.getMainLooper());
+        visibilityHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                final boolean isShowing;
 
-        if (isShowing) {
-            Utils.runOnMainThreadDelayed(() -> runFlyoutPanelVisibilityHandler(flyoutObject), 100);
-        } else {
-            Utils.runOnMainThreadDelayed(() -> {
-                        flyoutVideoId = "";
-                        flyoutPlaylistId = "";
-                        Logger.printDebug(() -> "Cleared flyout video and playlist id");
-                    }, 500
-            );
-        }
+                if (flyoutObject instanceof Dialog flyoutDialogHandler) {
+                    isShowing = flyoutDialogHandler.isShowing();
+                } else if (flyoutObject instanceof PopupWindow flyoutPopupWindowHandler) {
+                    isShowing = flyoutPopupWindowHandler.isShowing();
+                } else {
+                    isShowing = false;
+                }
+
+                if (isShowing) {
+                    visibilityHandler.postDelayed(this, 100);
+                } else {
+                    Utils.runOnMainThreadDelayed(
+                            () -> {
+                                flyoutVideoId = "";
+                                flyoutPlaylistId = "";
+                            },
+                            500
+                    );
+                }
+            }
+        });
     }
 
     @Nullable
