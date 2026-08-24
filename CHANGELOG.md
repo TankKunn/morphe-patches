@@ -1,3 +1,10 @@
+## [1.40.0-dev.23](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.22...v1.40.0-dev.23) (2026-08-24)
+
+### 🐛 Bug Fixes
+
+* **Add to queue:** Error message is shown when adding to queue from certain channels ([e39ff88](https://github.com/MorpheApp/morphe-patches/commit/e39ff884d2f4e81bbda0b99c09b70da2e82de7b3))
+* **YouTube - Theme:** Add new hex integer to dark values ([ccab8bb](https://github.com/MorpheApp/morphe-patches/commit/ccab8bba1678b29bbab8261bba18a99694e5e9fa))
+
 ## [1.40.0-dev.22](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.21...v1.40.0-dev.22) (2026-08-24)
 
 ### 🐛 Bug Fixes
