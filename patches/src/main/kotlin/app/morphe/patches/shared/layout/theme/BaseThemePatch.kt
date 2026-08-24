@@ -28,6 +28,10 @@ import app.morphe.util.returnEarly
 import app.morphe.util.setExtensionIsPatchIncluded
 import com.android.tools.smali.dexlib2.AccessFlags
 import java.util.Locale
+import kotlin.math.PI
+import kotlin.math.cos
+import kotlin.math.pow
+import kotlin.math.sin
 
 internal const val THEME_COLOR_EXTENSION_CLASS = "Lapp/morphe/extension/shared/theme/ThemeColorPatch;"
 
@@ -918,38 +922,44 @@ private fun applyAlpha(color: String, alpha: Int): String {
  * The color of a value of the 8 bit palette, which the extension picks the index of.
  */
 private fun paletteColor(lLevels: FloatArray, index: Int): String {
-    val l = lLevels[(index shr 5) and 0x7]
-    val c = PALETTE_C_LEVELS[(index shr 3) and 0x3]
-    val h = PALETTE_H_LEVELS[index and 0x7]
+    val l = lLevels[(index shr 5) and 0x7].toDouble()
+    val c = PALETTE_C_LEVELS[(index shr 3) and 0x3].toDouble()
+    val h = PALETTE_H_LEVELS[index and 0x7].toDouble()
 
-    val hRad = Math.toRadians(h.toDouble()).toFloat()
-    val a = c * Math.cos(hRad.toDouble()).toFloat()
-    val b = c * Math.sin(hRad.toDouble()).toFloat()
+    val hRad = h * (PI / 180.0)
+    val a = c * cos(hRad)
+    val b = c * sin(hRad)
 
-    val l_ = l + 0.3963377774f * a + 0.2158037573f * b
-    val m_ = l - 0.1055613458f * a - 0.0638541728f * b
-    val s_ = l - 0.0894841775f * a - 1.2914855480f * b
+    val lOklab = l + 0.3963377774 * a + 0.2158037573 * b
+    val mOklab = l - 0.1055613458 * a - 0.0638541728 * b
+    val sOklab = l - 0.0894841775 * a - 1.2914855480 * b
 
-    val l_3 = l_ * l_ * l_
-    val m_3 = m_ * m_ * m_
-    val s_3 = s_ * s_ * s_
+    val lCubed = lOklab * lOklab * lOklab
+    val mCubed = mOklab * mOklab * mOklab
+    val sCubed = sOklab * sOklab * sOklab
 
-    var r_rgb = +4.0767416621f * l_3 - 3.3077115913f * m_3 + 0.2309699292f * s_3
-    var g_rgb = -1.2684380046f * l_3 + 2.6097574011f * m_3 - 0.3413193965f * s_3
-    var b_rgb = -0.0041960863f * l_3 - 0.7034186147f * m_3 + 1.7076127010f * s_3
+    var rRgb = +4.0767416621 * lCubed - 3.3077115913 * mCubed + 0.2309699292 * sCubed
+    var gRgb = -1.2684380046 * lCubed + 2.6097574011 * mCubed - 0.3413193965 * sCubed
+    var bRgb = -0.0041960863 * lCubed - 0.7034186147 * mCubed + 1.7076127010 * sCubed
 
-    // Clamping and sRGB conversion
-    fun delinearizeSrgb(v: Float) =
-        if (v > 0.0031308f) 1.055f * Math.pow(v.toDouble(), 1.0 / 2.4).toFloat() - 0.055f else 12.92f * v
+    // Clamping and sRGB gamma correction
+    fun delinearizeSrgb(v: Double): Double {
+        return if (v > 0.0031308) {
+            1.055 * v.pow(1.0 / 2.4) - 0.055
+        } else {
+            12.92 * v
+        }
+    }
 
-    r_rgb = delinearizeSrgb(r_rgb)
-    g_rgb = delinearizeSrgb(g_rgb)
-    b_rgb = delinearizeSrgb(b_rgb)
+    rRgb = delinearizeSrgb(rRgb)
+    gRgb = delinearizeSrgb(gRgb)
+    bRgb = delinearizeSrgb(bRgb)
 
-    fun toColorInt(v: Float) = (v.coerceIn(0f, 1f) * 255).toInt()
-    val ri = toColorInt(r_rgb)
-    val gi = toColorInt(g_rgb)
-    val bi = toColorInt(b_rgb)
+    fun toColorInt(v: Double) = (v.toFloat().coerceIn(0f, 1f) * 255).toInt()
+
+    val ri = toColorInt(rRgb)
+    val gi = toColorInt(gRgb)
+    val bi = toColorInt(bRgb)
 
     return "#%02X%02X%02X".format(ri, gi, bi)
 }

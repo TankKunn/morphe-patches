@@ -396,8 +396,13 @@ public class ThemeColorPatch {
 
     /**
      * Injection point.
-     *
-     * @see SplashScreenTheme
+     * <p>
+     * Hands the system the theme it draws the splash screen of the app with.
+     * <p>
+     * The system draws the splash screen before the app runs, and it resolves the resources of
+     * the app with the configuration of the device, so the resource variant of the selected
+     * background can never be used for it. This is the way the system takes a theme instead,
+     * and it uses the one it was given for every launch that follows.
      */
     public static void setSplashScreenTheme(Activity activity) {
         try {
@@ -412,7 +417,7 @@ public class ThemeColorPatch {
 
             Logger.printDebug(() -> "Splash screen theme: " + SPLASH_THEME_NAME + index
                     + " id: " + themeId);
-            SplashScreenTheme.apply(activity, themeId);
+            activity.getSplashScreen().setSplashScreenTheme(themeId);
         } catch (Exception ex) {
             Logger.printException(() -> "setSplashScreenTheme failure", ex);
         }
@@ -576,46 +581,37 @@ public class ThemeColorPatch {
     }
 
     private static float[] rgbToOklab(int color) {
-        float r = ((color >> 16) & 0xFF) / 255f;
-        float g = ((color >> 8) & 0xFF) / 255f;
-        float b = (color & 0xFF) / 255f;
+        double r = linearizeSrgb(((color >> 16) & 0xFF) / 255.0);
+        double g = linearizeSrgb(((color >> 8) & 0xFF) / 255.0);
+        double b = linearizeSrgb((color & 0xFF) / 255.0);
 
-        // Linearize sRGB
-        r = linearizeSrgb(r);
-        g = linearizeSrgb(g);
-        b = linearizeSrgb(b);
+        final double l = 0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b;
+        final double m = 0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b;
+        final double s = 0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b;
 
-        final float l = 0.4122214708f * r + 0.5363325363f * g + 0.0514459929f * b;
-        final float m = 0.2119034982f * r + 0.6806995451f * g + 0.1073969566f * b;
-        final float s = 0.0883024619f * r + 0.2817188376f * g + 0.6299787005f * b;
-
-        final float l_ = cubeRoot(l);
-        final float m_ = cubeRoot(m);
-        final float s_ = cubeRoot(s);
+        final double lCubeRoot = Math.cbrt(l);
+        final double mCubeRoot = Math.cbrt(m);
+        final double sCubeRoot = Math.cbrt(s);
 
         return new float[]{
-                0.2104542553f * l_ + 0.7936177850f * m_ - 0.0040720468f * s_,
-                1.9779984951f * l_ - 2.4285922050f * m_ + 0.4505937099f * s_,
-                0.0259040371f * l_ + 0.7827717662f * m_ - 0.8086757660f * s_
+                (float) (0.2104542553 * lCubeRoot + 0.7936177850 * mCubeRoot - 0.0040720468 * sCubeRoot),
+                (float) (1.9779984951 * lCubeRoot - 2.4285922050 * mCubeRoot + 0.4505937099 * sCubeRoot),
+                (float) (0.0259040371 * lCubeRoot + 0.7827717662 * mCubeRoot - 0.8086757660 * sCubeRoot)
         };
     }
 
-    private static float linearizeSrgb(float value) {
-        return (value > 0.04045f)
-                ? (float) Math.pow((value + 0.055f) / 1.055f, 2.4)
-                : value / 12.92f;
-    }
-
-    private static float cubeRoot(float value) {
-        return (float) Math.pow(value, 1.0 / 3.0);
+    private static double linearizeSrgb(double value) {
+        return (value > 0.04045)
+                ? Math.pow((value + 0.055) / 1.055, 2.4)
+                : value / 12.92;
     }
 
     private static float[] oklchToOklab(float l, float c, float h) {
-        final float hRad = (float) Math.toRadians(h);
+        final double hRad = Math.toRadians(h);
         return new float[]{
                 l,
-                c * (float) Math.cos(hRad),
-                c * (float) Math.sin(hRad)
+                (float) (c * Math.cos(hRad)),
+                (float) (c * Math.sin(hRad))
         };
     }
 
