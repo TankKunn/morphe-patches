@@ -312,15 +312,14 @@ private var lightAliasNames = emptyList<String>()
 internal val THEME_DEFAULT_COLOR_NAMES_DARK = setOf(
     "yt_black0", "yt_black1", "yt_black2", "yt_black3", "yt_black4",
     "yt_black1_opacity95", "yt_black1_opacity98",
-    "yt_status_bar_background_dark", "material_grey_850",
-    APP_COLOR_NAME_DARK,
-    "yt_sys_color_baseline_mobile_dark_default_raised_background"
+    "yt_status_bar_background_dark", APP_COLOR_NAME_DARK,
+    "yt_sys_color_baseline_mobile_dark_default_raised_background",
+    "material_grey_850"
 )
 
 internal val THEME_DEFAULT_COLOR_NAMES_LIGHT = setOf(
     "yt_white1", "yt_white2", "yt_white3", "yt_white4",
-    "yt_white1_opacity95", "yt_white1_opacity98",
-    APP_COLOR_NAME_LIGHT,
+    "yt_white1_opacity95", "yt_white1_opacity98", APP_COLOR_NAME_LIGHT,
     "yt_sys_color_baseline_mobile_light_default_raised_background",
 )
 
