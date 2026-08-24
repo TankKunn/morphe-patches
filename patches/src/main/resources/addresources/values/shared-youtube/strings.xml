@@ -34,7 +34,6 @@ Second \"item\" text"</string>
     <string name="morphe_theme_color_dark_entry_13">Dark yellow</string>
     <string name="morphe_theme_color_dark_entry_14">Dark orange</string>
     <string name="morphe_theme_color_dark_entry_15">Dark red</string>
-    <string name="morphe_theme_color_dark_custom_entry">Custom</string>
     <string name="morphe_theme_color_dark_custom_title">Custom dark background</string>
     <string name="morphe_theme_color_dark_custom_summary">Set the background color of the dark theme</string>
 
@@ -43,6 +42,7 @@ Second \"item\" text"</string>
     <string name="morphe_theme_color_entry_5">Material You (Primary)</string>
     <string name="morphe_theme_color_entry_6">Material You (Secondary)</string>
     <string name="morphe_theme_color_entry_7">Material You (Tertiary)</string>
+    <string name="morphe_theme_color_custom_entry">Custom</string>
 
     <!-- interaction.downloads.downloadsPatch -->
     <string name="morphe_external_downloader_screen_title">External downloads</string>

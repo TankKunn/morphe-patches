@@ -255,7 +255,7 @@ val themePatch = baseThemePatch(
                         tag = "app.morphe.extension.shared.settings.preference.ColorPickerPreference",
                         inputType = InputType.TEXT_CAP_CHARACTERS
                     ),
-                    SwitchPreference("morphe_theme_color_change_foreground")
+                    SwitchPreference("morphe_theme_color_change_foreground", summary = true)
                 )
             )
         }
