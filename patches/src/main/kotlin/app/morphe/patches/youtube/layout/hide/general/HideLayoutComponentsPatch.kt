@@ -597,7 +597,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
 
         // region hide comments carousel
 
-        hookElement("$COMMENTS_FILTER->onCommentsLoaded([B)[B")
+        hookElement("$COMMENTS_FILTER->onCommentsLoaded")
 
         // endregion
 
