@@ -830,7 +830,18 @@ private fun ResourcePatchContext.addColorVariants(
 ) {
     // The app default is the only color that keeps the colors the app declares,
     // so it is the only variant that has to undo the alias.
-    writeColorVariant(indexOffset + 1, originalColors, isDark)
+    val appDefaultColors = LinkedHashMap(originalColors)
+
+    // The alias itself is what Morphe draws its own dialogs and settings with, and no name
+    // of the app resolves to it here, so it needs the color of the app of its own.
+    val appColor = if (isDark) appThemeColorDark else appThemeColorLight
+    if (appColor != null) {
+        aliasAlphas.forEach { (name, alpha) ->
+            appDefaultColors[name] = applyAlpha(appColor, alpha)
+        }
+    }
+
+    writeColorVariant(indexOffset + 1, appDefaultColors, isDark)
 
     themeColors(indexOffset, colors, lLevels).forEach { (index, color) ->
         val mappedColors = aliasAlphas.mapValues { (_, alpha) -> applyAlpha(color, alpha) }
