@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Κατάργηση περιορισμών αναπαραγωγής στο παρασκήνιο</string>
   <string name="morphe_shorts_disable_background_playback_title">Απενεργοποίηση αναπαραγωγής παρασκηνίου για τα Shorts</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Απενεργοποίηση ενημερώσεων διάταξης</string>
   <string name="morphe_disable_layout_updates_summary">Αποτρέπει τον διακομιστή από την ενημέρωση της διάταξης της εφαρμογής</string>
@@ -449,8 +450,6 @@ Second \"item\" text"</string>
   <string name="morphe_reload_video_button_title">Η σάρωση της φωτεινότητας στην χαμηλότερη τιμή ενεργοποιεί την αυτόματη φωτεινότητα του συστήματος</string>
   <string name="morphe_dismiss_player_not_available_toast">Το ID του βίντεο δεν είναι διαθέσιμο. Παρακαλώ ανανεώστε το βίντεο χειροκίνητα</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Ρυθμίστε το επίπεδο διαφάνειας (0 είναι διαφανές, 100 είναι αδιαφανές)</string>
-  <string name="morphe_save_to_watch_later_button_summary">Πατήστε για να αποθηκεύσετε για να παρακολουθήσετε αργότερα, πατήστε και κρατήστε πατημένο για επιλογές ουράς</string>
   <string name="morphe_save_to_watch_later_success_toast">Το βίντεο αποθηκεύτηκε επιτυχώς στη λίστα παρακολούθησης αργότερα</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Αυτό το βίντεο είναι ήδη αποθηκευμένο στη λίστα παρακολούθησης αργότερα</string>
   <string name="morphe_save_to_watch_later_error_toast">Δεν είναι δυνατή η αποθήκευση αυτού του βίντεο στη λίστα παρακολούθησης αργότερα</string>
@@ -458,7 +457,6 @@ Second \"item\" text"</string>
   <string name="morphe_queue_restore_title">Διατήρηση ουράς μεταξύ των περιόδων σύνδεσης</string>
   <string name="morphe_queue_restore_summary">Η ουρά διατηρείται μετά την επανεκκίνηση της εφαρμογής</string>
   <string name="morphe_swap_save_and_queue_actions_title">Αντιμετάθεση των ενεργειών Αποθήκευσης και Προσθήκης στην ουρά</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Πατήστε για επιλογές ουράς, πατήστε και κρατήστε για αποθήκευση για να παρακολουθήσετε αργότερα</string>
   <string name="morphe_queue_override_flyout_menu_title">Κουμπί αντικατάστασης σειράς αναδυόμενου μενού ροής</string>
   <string name="morphe_queue_override_flyout_menu_summary">Ανοίγει την ουρά Morphe αντί για την ουρά YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Προσθήκη στοιχείου μενού αναδυόμενου παραθύρου ροής</string>

@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Odstrániť obmedzenia prehrávania na pozadí</string>
   <string name="morphe_shorts_disable_background_playback_title">Zakázať prehrávanie Shorts na pozadí</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Zakázať aktualizácie rozloženia</string>
   <string name="morphe_disable_layout_updates_summary">Zabraňuje serveru aktualizovať rozloženie aplikácie</string>
@@ -449,16 +450,17 @@ Poznámka: Možno nebude fungovať na živých prenosoch"</string>
   <string name="morphe_reload_video_button_title">Zobraziť tlačidlo Obnoviť video</string>
   <string name="morphe_dismiss_player_not_available_toast">ID videa nie je dostupné. Manuálne obnovte video</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Zobraziť tlačidlo Uložiť na neskôr</string>
-  <string name="morphe_save_to_watch_later_button_summary">Ťuknite na tlačidlo a uložte si videá na neskôr, ťuknite a podržte pre možnosti radu</string>
+  <string name="morphe_save_to_watch_later_button_title">Zobraziť tlačidlo Uložiť do Pozrieť neskôr</string>
+  <string name="morphe_save_to_watch_later_button_summary">Klepnite pre uloženie do Pozrieť neskôr, podržte pre možnosti frontu</string>
   <string name="morphe_save_to_watch_later_success_toast">Video bolo úspešne uložené do zoznamu Sledovať neskôr</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Toto video je už uložené v zozname Sledovať neskôr</string>
   <string name="morphe_save_to_watch_later_error_toast">Toto video sa nedá uložiť do zoznamu Sledovať neskôr</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Uložiť do Pozrieť neskôr</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Zobraziť tlačidlo Uložiť do Pozrieť neskôr v detských videách</string>
   <string name="morphe_queue_flyout_title">Pridať do fronty Morphe</string>
   <string name="morphe_queue_restore_title">Uchovajte si rad medzi reláciami</string>
   <string name="morphe_queue_restore_summary">Rad zostane zachovaný aj po reštarte aplikácie</string>
   <string name="morphe_swap_save_and_queue_actions_title">Zameniť akcie Uložiť a Zaradiť do fronty</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Ťuknite pre možnosti fronty, ťuknite a podržte pre uloženie na neskôr</string>
   <string name="morphe_queue_override_flyout_menu_title">Nahradiť tlačidlo frontu rozbaľovacieho okna</string>
   <string name="morphe_queue_override_flyout_menu_summary">Otvára rad Morphe namiesto radu YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Pridať položku ponuky do rozbaľovacej ponuky fronty informačného kanála</string>

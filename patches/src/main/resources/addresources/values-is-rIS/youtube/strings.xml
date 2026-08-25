@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Fjarlægja takmarkanir á spilun í bakgrunni</string>
   <string name="morphe_shorts_disable_background_playback_title">Slökkva á spilun í bakgrunni</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Slökkva á uppfærslum á viðmóti</string>
   <string name="morphe_disable_layout_updates_summary">Kemur í veg fyrir að þjónninn uppfæri uppsetningu forritsins</string>
@@ -447,8 +448,6 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_reload_video_button_title">Sýnir Endurhlaða vídeó hnappinn</string>
   <string name="morphe_dismiss_player_not_available_toast">Vídeó er ekki fundin. Vinsamlega endurhalaðu</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Sýnir Vista til að horfa á seinna hnappinn</string>
-  <string name="morphe_save_to_watch_later_button_summary">Tap til að vista til að horfa á seinna, haltu niðri fyrir biðraðarvalkostir</string>
   <string name="morphe_save_to_watch_later_success_toast">Vídeó var vel dulið á vaktur lista</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Þetta vídeó var dulís á vaktur lista</string>
   <string name="morphe_save_to_watch_later_error_toast">Ekki dulís þitta vídeó á vaktur lista</string>
@@ -456,7 +455,6 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_queue_restore_title">Geymdu biðrað á milli lotna</string>
   <string name="morphe_queue_restore_summary">Biðlisti er vistaður eftir endurræsingar appinu</string>
   <string name="morphe_swap_save_and_queue_actions_title">Skipta um röð á Vista og Biðlista aðgerðum</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Hnútur fyrir biðlista valkosti, haltu inni til að vista til að horfa á seinna</string>
   <string name="morphe_queue_override_flyout_menu_title">Rafmagnúðu biðröð fljótfallsins</string>
   <string name="morphe_queue_override_flyout_menu_summary">Opnar Morphe biðröðina í stað YouTube biðröðarinnar</string>
   <string name="morphe_queue_add_flyout_menu_title">Bæta við flugvalsatriði fyrir fréttastraum</string>

@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Usuń ograniczenia odtwarzania w tle</string>
   <string name="morphe_shorts_disable_background_playback_title">Wyłącz odtwarzanie w tle</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Wyłącz aktualizacje układu</string>
   <string name="morphe_disable_layout_updates_summary">Zapobiega zmianom układu aplikacji narzucanym przez serwer</string>
@@ -449,16 +450,19 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_reload_video_button_title">Pokaż przycisk Odśwież film</string>
   <string name="morphe_dismiss_player_not_available_toast">Film jest niedostępny. Otwórz film ponownie ręcznie</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Pokaż przycisk Do obejrzenia</string>
+  <string name="morphe_save_to_watch_later_button_title">Pokaż przycisk Zapisz do obejrzenia</string>
   <string name="morphe_save_to_watch_later_button_summary">Dotknij, aby zapisać do obejrzenia. Przytrzymaj, aby otworzyć opcje kolejki</string>
   <string name="morphe_save_to_watch_later_success_toast">Zapisano na playliście \"Do obejrzenia\"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Film jest już na playliście \"Do obejrzenia\"</string>
   <string name="morphe_save_to_watch_later_error_toast">Nie udało się zapisać na playliście \"Do obejrzenia\"</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Zapisz do obejrzenia</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Pokaż przycisk Zapisz do obejrzenia w filmach dla dzieci</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Pozwala zapisywać filmy dla dzieci w wysuwanym menu \"Do obejrzenia\"</string>
   <string name="morphe_queue_flyout_title">Dodaj do kolejki Morphe</string>
   <string name="morphe_queue_restore_title">Zachowaj kolejkę po wyjściu</string>
   <string name="morphe_queue_restore_summary">Kolejka nie zniknie po ponownym uruchomieniu aplikacji</string>
   <string name="morphe_swap_save_and_queue_actions_title">Zamień akcje Zapisz i Kolejka</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Dotknij, aby wyświetlić opcje kolejki. Przytrzymaj, aby zapisać do obejrzenia później</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Dotknij, aby wyświetlić opcje kolejki. Przytrzymaj, aby zapisać do obejrzenia</string>
   <string name="morphe_queue_override_flyout_menu_title">Zastąp przycisk kolejki w menu strony głównej</string>
   <string name="morphe_queue_override_flyout_menu_summary">Otwiera kolejkę Morphe zamiast kolejki YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Dodaj opcję dodawania do kolejki w wysuwanym menu</string>

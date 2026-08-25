@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Odstranit omezení přehrávání na pozadí</string>
   <string name="morphe_shorts_disable_background_playback_title">Zakázat automatické přehrávání Shorts v pozadí</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Zakázat aktualizace rozvržení</string>
   <string name="morphe_disable_layout_updates_summary">Zabraňuje serveru aktualizovat rozvržení aplikace</string>
@@ -449,8 +450,6 @@ Upozornění: Možná nebude fungovat u živých přenosů"</string>
   <string name="morphe_reload_video_button_title">Zobrazit tlačítko Obnovit video</string>
   <string name="morphe_dismiss_player_not_available_toast">ID videa není k dispozici. Prosím, video ručně obnovte</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Zobrazit tlačítko Uložit pro pozdější zhlédnutí</string>
-  <string name="morphe_save_to_watch_later_button_summary">Ťuknutím uložíte do Sledovat později, ťuknutím a podržením zobrazíte možnosti fronty</string>
   <string name="morphe_save_to_watch_later_success_toast">Video bylo úspěšně uloženo do seznamu pro pozdější zhlédnutí</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Toto video je již uloženo do seznamu pro pozdější zhlédnutí</string>
   <string name="morphe_save_to_watch_later_error_toast">Nelze uložit toto video do seznamu pro pozdější zhlédnutí</string>
@@ -458,7 +457,6 @@ Upozornění: Možná nebude fungovat u živých přenosů"</string>
   <string name="morphe_queue_restore_title">Udržet frontu mezi relacemi</string>
   <string name="morphe_queue_restore_summary">Fronta je zachována i po restartu aplikace</string>
   <string name="morphe_swap_save_and_queue_actions_title">Prohoďte akce Uložit a Zařadit do fronty</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Klepnutím zobrazíte možnosti fronty, podržením uložíte pro pozdější zhlédnutí</string>
   <string name="morphe_queue_override_flyout_menu_title">Přepsat frontu flyout nabídky</string>
   <string name="morphe_queue_override_flyout_menu_summary">Otevře frontu Morphe místo fronty YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Přidat položku nabídky pro frontu rozbalovací nabídky feedu</string>

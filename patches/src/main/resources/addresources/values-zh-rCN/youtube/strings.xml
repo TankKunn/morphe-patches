@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">移除后台播放限制</string>
   <string name="morphe_shorts_disable_background_playback_title">禁用 Shorts 后台播放</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">禁用布局更新</string>
   <string name="morphe_disable_layout_updates_summary">阻止服务器更新应用布局</string>
@@ -449,16 +450,17 @@ Second \"item\" text"</string>
   <string name="morphe_reload_video_button_title">显示重新加载视频按钮</string>
   <string name="morphe_dismiss_player_not_available_toast">视频 ID 不可用。请手动重新加载视频</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">显示“稍后观看”保存按钮</string>
-  <string name="morphe_save_to_watch_later_button_summary">轻点以保存以供稍后观看，长按以获取队列选项</string>
+  <string name="morphe_save_to_watch_later_button_title">显示“保存到稍后观看”按钮</string>
+  <string name="morphe_save_to_watch_later_button_summary">点按以保存到稍后观看，长按可查看队列选项</string>
   <string name="morphe_save_to_watch_later_success_toast">视频已成功保存到稍后观看播放列表</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">此视频已保存到稍后观看播放列表</string>
   <string name="morphe_save_to_watch_later_error_toast">无法将此视频保存到稍后观看播放列表</string>
+  <string name="morphe_save_to_watch_later_flyout_title">保存到稍后观看</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">在儿童视频中显示“保存到稍后观看”按钮</string>
   <string name="morphe_queue_flyout_title">添加到 Morphe 队列</string>
   <string name="morphe_queue_restore_title">在会话之间保留队列</string>
   <string name="morphe_queue_restore_summary">重启应用后队列仍会保留</string>
   <string name="morphe_swap_save_and_queue_actions_title">交换保存和队列操作</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">点击查看队列选项，长按保存以供稍后观看</string>
   <string name="morphe_queue_override_flyout_menu_title">覆盖信息流浮动队列按钮</string>
   <string name="morphe_queue_override_flyout_menu_summary">打开 Morphe 队列，而不是 YouTube 队列</string>
   <string name="morphe_queue_add_flyout_menu_title">添加信息流弹出菜单项</string>

@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Rimuovi le restrizioni alla riproduzione in secondo piano</string>
   <string name="morphe_shorts_disable_background_playback_title">Disattiva la riproduzione degli Shorts in secondo piano</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Disabilita aggiornamenti del layout</string>
   <string name="morphe_disable_layout_updates_summary">Impedisce al server di aggiornare il layout dell\'app</string>
@@ -449,16 +450,17 @@ Avviso: Potrebbe non funzionare sui video in diretta"</string>
   <string name="morphe_reload_video_button_title">Mostra pulsante Ricarica video</string>
   <string name="morphe_dismiss_player_not_available_toast">ID video non disponibile. Ricarica manualmente il video</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Mostra il pulsante Salva in guarda più tardi</string>
-  <string name="morphe_save_to_watch_later_button_summary">Tocca per salvare per dopo, tieni premuto per le opzioni della coda</string>
+  <string name="morphe_save_to_watch_later_button_title">Mostra il pulsante Salva per guardare più tardi</string>
+  <string name="morphe_save_to_watch_later_button_summary">Tocca per salvare per guardare più tardi, tocca e tieni premuto per le opzioni della coda</string>
   <string name="morphe_save_to_watch_later_success_toast">Video salvato con successo nella playlist \"Guarda più tardi\"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Questo video è già stato salvato nella playlist \"Guarda più tardi\"</string>
   <string name="morphe_save_to_watch_later_error_toast">Impossibile salvare questo video nella playlist \"Guardalo più tardi\"</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Salva per guardare più tardi</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Mostra il pulsante Salva per guardare più tardi nei video per bambini</string>
   <string name="morphe_queue_flyout_title">Aggiungi alla coda di Morphe</string>
   <string name="morphe_queue_restore_title">Mantieni la coda tra le sessioni</string>
   <string name="morphe_queue_restore_summary">La coda viene mantenuta anche riavviando l\'app</string>
   <string name="morphe_swap_save_and_queue_actions_title">Scambia le azioni Salva e Metti in coda</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Tocca per le opzioni di accodamento, tieni premuto per salvare per guardare più tardi</string>
   <string name="morphe_queue_override_flyout_menu_title">Sostituisci pulsante coda riepilogo feed</string>
   <string name="morphe_queue_override_flyout_menu_summary">Apre la coda di Morphe invece della coda di YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Aggiungi voce di menu a comparsa per la coda del feed</string>

@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">পটভূমির প্লেব্যাক সীমাবদ্ধতা সরান</string>
   <string name="morphe_shorts_disable_background_playback_title">ব্যাকগ্রাউন্ড প্লে অক্ষম করুন</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">লেআউট আপডেট বন্ধ করুন</string>
   <string name="morphe_disable_layout_updates_summary">সার্ভারকে অ্যাপ লেআউট আপডেট করা থেকে বিরত করে</string>
@@ -449,16 +450,17 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_reload_video_button_title">রিলোড ভিডিও বোতাম দেখান</string>
   <string name="morphe_dismiss_player_not_available_toast">ভিডিও আইডি পাওয়া যাচ্ছে না। অনুগ্রহ করে ম্যানুয়ালি ভিডিওটি রিলোড করুন</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">পরে দেখার জন্য সেভ বোতাম দেখান</string>
-  <string name="morphe_save_to_watch_later_button_summary">পরবর্তী দর্শনের জন্য সংরক্ষণ করতে ট্যাপ করুন, সারি বিকল্পের জন্য ট্যাপ করে ধরে রাখুন</string>
+  <string name="morphe_save_to_watch_later_button_title">পরে দেখুন-এ সেভ বাটন দেখান</string>
+  <string name="morphe_save_to_watch_later_button_summary">পরে দেখুন-এ সেভ করতে ট্যাপ করুন, কিউ অপশনের জন্য ট্যাপ করে ধরে রাখুন</string>
   <string name="morphe_save_to_watch_later_success_toast">ভিডিওটি সফলভাবে পরে দেখার প্লেলিস্টে সেভ করা হয়েছে</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">এই ভিডিওটি ইতিমধ্যেই পরে দেখার প্লেলিস্টে সেভ করা আছে</string>
   <string name="morphe_save_to_watch_later_error_toast">এই ভিডিওটি পরে দেখার প্লেলিস্টে সেভ করা যায়নি</string>
+  <string name="morphe_save_to_watch_later_flyout_title">পরে দেখুন-এ সেভ</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">কিডস ভিডিওতে পরে দেখুন-এ সেভ বাটন দেখান</string>
   <string name="morphe_queue_flyout_title">Morphe ভিডিও তালিকায় যুক্ত করুন</string>
   <string name="morphe_queue_restore_title">সেশনগুলির মধ্যে সারি রাখুন</string>
   <string name="morphe_queue_restore_summary">অ্যাপ পুনরায় চালু করার পরেও সারিটি রাখা হবে</string>
   <string name="morphe_swap_save_and_queue_actions_title">সেভ এবং কিউ অ্যাকশনগুলির স্থান পরিবর্তন করুন</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">কিউ বিকল্পের জন্য আলতো চাপুন, পরে দেখার জন্য সেভ করতে আলতো চেপে ধরে রাখুন</string>
   <string name="morphe_queue_override_flyout_menu_title">ফিড ফ্লাইআউট সারিবদ্ধকরণ বোতামটি প্রতিস্থাপন করুন</string>
   <string name="morphe_queue_override_flyout_menu_summary">YouTube সারির পরিবর্তে Morphe সারি খোলে</string>
   <string name="morphe_queue_add_flyout_menu_title">ফিড ফ্লাইআউট কিউ মেনু আইটেম যুক্ত করুন</string>

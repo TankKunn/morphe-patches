@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Ukloni ograničenja reprodukcije u pozadini</string>
   <string name="morphe_shorts_disable_background_playback_title">Onemogući reprodukciju u pozadini</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Onemogući ažuriranja izgleda</string>
   <string name="morphe_disable_layout_updates_summary">Sprječava da poslužitelj ažurira izgled aplikacije</string>
@@ -451,8 +452,6 @@ Info: Možda neće raditi na prijenosima uživo"</string>
   <string name="morphe_reload_video_button_title">Prikaži tipku za ponovno pokretanje videa</string>
   <string name="morphe_dismiss_player_not_available_toast">ID videozapisa nije dostupan. Ručno ponovno otvorite videozapis</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Prikaži tipku Spremi za kasnije gledanje</string>
-  <string name="morphe_save_to_watch_later_button_summary">Dodirnite za spremanje za kasniju gledanost, dodirnite i držite za opcije reda</string>
   <string name="morphe_save_to_watch_later_success_toast">Video je uspješno spremljen u popisu za kasnije gledanje</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Ovaj je videozapis već spremljen na popis za kasnije gledanje</string>
   <string name="morphe_save_to_watch_later_error_toast">Nije moguće spremiti ovaj video na popis za kasnije gledanje</string>
@@ -460,7 +459,6 @@ Info: Možda neće raditi na prijenosima uživo"</string>
   <string name="morphe_queue_restore_title">Čuvati red čekanja između sesija</string>
   <string name="morphe_queue_restore_summary">Red čekanja se zadržava nakon ponovnog pokretanja aplikacije</string>
   <string name="morphe_swap_save_and_queue_actions_title">Zamijeni radnje Spremi i dodaj u red</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Dodirnite za opcije reda, dodirnite i zadržite da biste spremili za kasniju gledanju</string>
   <string name="morphe_queue_override_flyout_menu_title">Nadjačaj gumb reda čekanja u feed izletniku</string>
   <string name="morphe_queue_override_flyout_menu_summary">Otvara Morphe red čekanja umjesto YouTube reda čekanja</string>
   <string name="morphe_queue_add_flyout_menu_title">Dodaj stavku izbornika reda čekanja u feed izletnik</string>

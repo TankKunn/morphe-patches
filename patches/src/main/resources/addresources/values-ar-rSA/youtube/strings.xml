@@ -33,6 +33,8 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">إزالة قيود التشغيل في الخلفية</string>
   <string name="morphe_shorts_disable_background_playback_title">تعطيل التشغيل في الخلفية</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">تعطيل تحديد سرعة التمرير</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">تعطيل تحديثات المظهر</string>
   <string name="morphe_disable_layout_updates_summary">يمنع الخادم من تحديث تخطيط التطبيق</string>
@@ -454,10 +456,13 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_dismiss_player_not_available_toast">معرف الفيديو غير متاح. يرجى إعادة تحميل الفيديو يدويًا</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
   <string name="morphe_save_to_watch_later_button_title">عرض زر الحفظ في المشاهدة لاحقًا</string>
-  <string name="morphe_save_to_watch_later_button_summary">اضغط لحفظه لمشاهدته لاحقًا، واضغط مع الاستمرار لخيارات قائمة الانتظار</string>
+  <string name="morphe_save_to_watch_later_button_summary">انقر للحفظ في المشاهدة لاحقًا، واضغط مع الاستمرار لخيارات قائمة الانتظار</string>
   <string name="morphe_save_to_watch_later_success_toast">تم حفظ الفيديو بنجاح في قائمة المشاهدة لاحقًا</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">هذا الفيديو محفوظ بالفعل في قائمة المشاهدة لاحقًا</string>
   <string name="morphe_save_to_watch_later_error_toast">لا يمكن حفظ هذا الفيديو في قائمة المشاهدة لاحقًا</string>
+  <string name="morphe_save_to_watch_later_flyout_title">الحفظ في المشاهدة لاحقًا</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">عرض زر الحفظ في المشاهدة لاحقًا بفيديوهات الأطفال</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">يسمح بحفظ الفيديوهات المتعلقة بالأطفال في قائمة \'المشاهدة لاحقًا\'</string>
   <string name="morphe_queue_flyout_title">إضافة الى قائمة انتظار Morphe</string>
   <string name="morphe_queue_restore_title">احتفظ بقائمة الانتظار بين الجلسات</string>
   <string name="morphe_queue_restore_summary">تبقى قائمة الانتظار محفوظة بعد إعادة تشغيل التطبيق</string>

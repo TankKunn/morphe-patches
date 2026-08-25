@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Зняти обмеження фонового відтворення</string>
   <string name="morphe_shorts_disable_background_playback_title">Вимкнути фонове відтворення</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Вимкнути оновлення макета</string>
   <string name="morphe_disable_layout_updates_summary">Запобігає оновленню макета застосунку сервером</string>
@@ -449,8 +450,6 @@ Second \"item\" text"</string>
   <string name="morphe_reload_video_button_title">Показати кнопку \"Перезавантажити відео\"</string>
   <string name="morphe_dismiss_player_not_available_toast">Ідентифікатор відео недоступний. Будь ласка, вручну повторно відкрийте відео</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Показати кнопку \"Зберегти для перегляду пізніше\"</string>
-  <string name="morphe_save_to_watch_later_button_summary">Натисніть, щоб зберегти для перегляду пізніше, утримуйте для параметрів черги</string>
   <string name="morphe_save_to_watch_later_success_toast">Відео збережено у списку відтворення \"Подивитися пізніше\"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Це відео вже збережено у списку відтворення \"Подивитися пізніше\"</string>
   <string name="morphe_save_to_watch_later_error_toast">Не вдалося зберегти це відео у списку відтворення \"Подивитися пізніше\"</string>
@@ -458,7 +457,6 @@ Second \"item\" text"</string>
   <string name="morphe_queue_restore_title">Зберігати чергу між сесіями</string>
   <string name="morphe_queue_restore_summary">Черга зберігається після перезапуску застосунку</string>
   <string name="morphe_swap_save_and_queue_actions_title">Поміняти місцями кнопки \"Зберегти\" та \"Додати в чергу\"</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Натисніть для опцій черги, натисніть і утримуйте, щоб зберегти для перегляду пізніше</string>
   <string name="morphe_queue_override_flyout_menu_title">Замінити кнопку черги у висувному меню стрічки</string>
   <string name="morphe_queue_override_flyout_menu_summary">Відкриває чергу Morphe замість черги YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Додати пункт меню черги у висувне меню стрічки</string>

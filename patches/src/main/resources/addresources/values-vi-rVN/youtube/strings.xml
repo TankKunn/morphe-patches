@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Bỏ hạn chế phát nền</string>
   <string name="morphe_shorts_disable_background_playback_title">Tắt phát nền</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Tắt cập nhật giao diện</string>
   <string name="morphe_disable_layout_updates_summary">Chặn cập nhật bố cục từ máy chủ</string>
@@ -448,8 +449,6 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_reload_video_button_title">Hiện nút Tải lại video</string>
   <string name="morphe_dismiss_player_not_available_toast">ID video không khả dụng. Vui lòng tự mở lại video</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Hiện nút Lưu vào xem sau</string>
-  <string name="morphe_save_to_watch_later_button_summary">Bấm để lưu vào xem sau, bấm giữ để xem tùy chọn hàng chờ</string>
   <string name="morphe_save_to_watch_later_success_toast">Video đã được lưu thành công vào danh sách xem sau</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Video này đã được lưu trong danh sách xem sau</string>
   <string name="morphe_save_to_watch_later_error_toast">Không thể lưu video này vào danh sách xem sau</string>
@@ -457,7 +456,6 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_queue_restore_title">Lưu hàng chờ giữa các phiên</string>
   <string name="morphe_queue_restore_summary">Hàng chờ vẫn được lưu sau khi tắt đi bật lại ứng dụng</string>
   <string name="morphe_swap_save_and_queue_actions_title">Đổi chỗ Lưu và tùy chọn Hàng chờ</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Bấm để xem các tùy chọn hàng đợi, bấm giữ để lưu vào xem sau</string>
   <string name="morphe_queue_override_flyout_menu_title">Ghi đè nút hàng chờ trong trang video</string>
   <string name="morphe_queue_override_flyout_menu_summary">Mở hàng chờ Morphe thay vì hàng chờ YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Thêm mục menu hàng chờ flyout nguồn cấp dữ liệu</string>
