@@ -728,22 +728,22 @@ private fun ResourcePatchContext.addSplashScreenThemes(
             indexOffset: Int,
             colors: List<ThemeColor>,
             lLevels: FloatArray,
-            aliasName: String
+            appColor: String?
         ) {
             // The system resolves the splash screen with the configuration of the device, where
-            // no variant applies, so the alias of the app default is the unpatched color there.
-            themeColors(indexOffset, colors, lLevels, "@color/$aliasName")
+            // no variant applies, so the app default needs the color of the app itself.
+            themeColors(indexOffset, colors, lLevels, appColor)
                 .forEach { (index, color) -> addTheme(index, color) }
         }
 
         addThemes(
             THEME_INDEX_OFFSET_DARK, THEME_COLORS_DARK, PALETTE_L_LEVELS_DARK,
-            THEME_COLOR_DARK
+            appThemeColorDark
         )
         if (includeLightColor) {
             addThemes(
                 THEME_INDEX_OFFSET_LIGHT, THEME_COLORS_LIGHT, PALETTE_L_LEVELS_LIGHT,
-                THEME_COLOR_LIGHT
+                appThemeColorLight
             )
         }
     }
