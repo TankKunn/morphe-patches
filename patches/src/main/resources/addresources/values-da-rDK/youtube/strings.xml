@@ -168,16 +168,12 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_explore_podcast_section_title">Skjul sektionen \'Udforsk podcasten\'</string>
   <string name="morphe_hide_featured_channels_section_title">Skjul fremhævede kanaler</string>
   <string name="morphe_hide_featured_links_section_title">Skjul Fremhævede links sektionen</string>
-  <string name="morphe_hide_featured_places_section_title">Skjul sektionen \'Fremhævede steder\'</string>
   <string name="morphe_hide_featured_playlists_section_title">Skjul sektionen \'Fremhævede afspilningslister\'</string>
   <string name="morphe_hide_featured_videos_section_title">Skjul Fremhævede videoer sektionen</string>
-  <string name="morphe_hide_gaming_section_title">Skjul Gaming sektionen</string>
   <string name="morphe_hide_hashtag_section_title">Skjul Hashtag sektionen</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Skjul sektionen \'Sådan er dette indhold blevet lavet\'</string>
   <string name="morphe_hide_hype_points_title">Skjul Hype-point</string>
   <string name="morphe_hide_info_cards_section_title">Skjul Info cards sektionen</string>
   <string name="morphe_hide_key_concepts_section_title">Skjul \'Nøglebegreber\' sektionen</string>
-  <string name="morphe_hide_music_section_title">Skjul Musik sektionen</string>
   <string name="morphe_hide_quizzes_section_title">Skjul Quizzes sektionen</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Skjul afsnittet \'Søg i denne video\'</string>
   <string name="morphe_hide_subscribe_button_title">Skjul knappen Abonnér</string>

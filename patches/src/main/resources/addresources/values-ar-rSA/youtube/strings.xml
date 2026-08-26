@@ -169,16 +169,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_explore_podcast_section_title">إخفاء قسم \'استكشاف البودكاست\'</string>
   <string name="morphe_hide_featured_channels_section_title">إخفاء قسم القنوات المميّزة</string>
   <string name="morphe_hide_featured_links_section_title">إخفاء قسم الروابط المميزة</string>
-  <string name="morphe_hide_featured_places_section_title">إخفاء قسم \'الأماكن المميزة\'</string>
   <string name="morphe_hide_featured_playlists_section_title">إخفاء قسم  قوائم التشغيل المميزة</string>
   <string name="morphe_hide_featured_videos_section_title">إخفاء قسم الفيديوهات المميزة</string>
-  <string name="morphe_hide_gaming_section_title">إخفاء قسم الألعاب</string>
   <string name="morphe_hide_hashtag_section_title">إخفاء قسم الهاشتاغ</string>
   <string name="morphe_hide_how_this_was_made_section_title">إخفاء قسم \'طريقة صناعة هذا المحتوى\'</string>
   <string name="morphe_hide_hype_points_title">إخفاء نقاط التشجيع</string>
   <string name="morphe_hide_info_cards_section_title">إخفاء قسم بطاقات المعلومات</string>
   <string name="morphe_hide_key_concepts_section_title">إخفاء قسم \'المفاهيم الرئيسية\'</string>
-  <string name="morphe_hide_music_section_title">إخفاء قسم \'الموسيقى\'</string>
   <string name="morphe_hide_quizzes_section_title">إخفاء قسم الاختبارات</string>
   <string name="morphe_hide_search_inside_this_video_section_title">إخفاء قسم \'البحث داخل هذا الفيديو\'</string>
   <string name="morphe_hide_subscribe_button_title">إخفاء زر اشتراك</string>

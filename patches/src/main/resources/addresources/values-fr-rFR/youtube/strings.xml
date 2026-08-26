@@ -169,16 +169,13 @@ Les changements incluent :
   <string name="morphe_hide_explore_podcast_section_title">Masquer la section \'Découvrir le podcast\'</string>
   <string name="morphe_hide_featured_channels_section_title">Masquer la section \'Chaînes populaires\'</string>
   <string name="morphe_hide_featured_links_section_title">Masquer la section \'Liens populaires\'</string>
-  <string name="morphe_hide_featured_places_section_title">Masquer la section \'Lieux populaires\'</string>
   <string name="morphe_hide_featured_playlists_section_title">Masquer la section \'Playlists populaires\'</string>
   <string name="morphe_hide_featured_videos_section_title">Masquer la section \'Vidéos populaires\'</string>
-  <string name="morphe_hide_gaming_section_title">Masquer la section \'Jeux\'</string>
   <string name="morphe_hide_hashtag_section_title">Masquer la section des hashtags</string>
   <string name="morphe_hide_how_this_was_made_section_title">Masquer la section \'Comment la vidéo a été créée\'</string>
   <string name="morphe_hide_hype_points_title">Masquer les points hype</string>
   <string name="morphe_hide_info_cards_section_title">Masquer la section \'Fiches d\'informations\'</string>
   <string name="morphe_hide_key_concepts_section_title">Masquer la section \'Concepts clés\'</string>
-  <string name="morphe_hide_music_section_title">Masquer la section \'Musique\'</string>
   <string name="morphe_hide_quizzes_section_title">Masquer la section \'Quiz\'</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Masquer la section \'Rechercher dans cette vidéo\'</string>
   <string name="morphe_hide_subscribe_button_title">Masquer le bouton \'S\'abonner\'</string>
