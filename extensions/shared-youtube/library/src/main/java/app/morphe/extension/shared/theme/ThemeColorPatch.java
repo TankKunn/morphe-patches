@@ -324,7 +324,10 @@ public class ThemeColorPatch {
                 // Context is created from a context that is already wrapped.
                 context = base;
             } else {
-                Configuration override = new Configuration(configuration);
+                // Only the codes are overridden. A copy of the configuration pins every other
+                // value to what it is now, so the framework relaunches the activity to correct
+                // a value the app pinned, and the relaunch pins it again.
+                Configuration override = new Configuration();
                 setVariantOf(override, darkIndex, lightIndex);
 
                 context = base.createConfigurationContext(override);
