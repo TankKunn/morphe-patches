@@ -836,11 +836,14 @@ public class FeatureFlagsManagerPreference extends Preference {
      * Explains the binary search, then starts it.
      */
     private void showBisectStartDialog(Context context, Dialog managerDialog) {
-        List<Long> candidates = new ArrayList<>(flagStates.keySet());
-        // A forced flag is set by the user and cannot be the cause of an unexpected behavior.
-        candidates.removeAll(flagsWithState(FlagState.FORCED));
-        // A blocked flag is already off and cannot be the cause of a behavior that is present.
-        candidates.removeAll(flagsWithState(FlagState.BLOCKED));
+        // Only an active flag can cause a behavior that is present, and blocking a flag
+        // the app already has off would only add steps to the search.
+        List<Long> candidates = new ArrayList<>();
+        for (Map.Entry<Long, FlagState> entry : flagStates.entrySet()) {
+            if (FlagFilter.ACTIVE.matches(entry.getValue(), loggedFlagStates.get(entry.getKey()))) {
+                candidates.add(entry.getKey());
+            }
+        }
 
         if (candidates.isEmpty()) {
             CustomDialog.create(

@@ -29,8 +29,6 @@ import app.morphe.extension.shared.settings.BaseSettings;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
 import app.morphe.extension.shared.settings.preference.FeatureFlagsBisect;
 
-import static app.morphe.extension.shared.StringRef.str;
-
 @SuppressWarnings("unused")
 public final class EnableDebuggingPatch {
 
@@ -72,7 +70,7 @@ public final class EnableDebuggingPatch {
         if (flags.isEmpty()) return;
 
         StringBuilder sb = new StringBuilder(header.length() + 12 * flags.size());
-        sb.append('\n');
+        sb.append(header).append('\n');
         for (Long flag : flags) {
             sb.append("  ").append(flag).append('\n');
         }
@@ -182,7 +180,6 @@ public final class EnableDebuggingPatch {
     public static String serializeFlags(Collection<Long> flags, char separator) {
         StringBuilder builder = new StringBuilder(10 * flags.size());
         for (Long flag : flags) {
-            //noinspection SizeReplaceableByIsEmpty
             if (builder.length() != 0) {
                 builder.append(separator);
             }
