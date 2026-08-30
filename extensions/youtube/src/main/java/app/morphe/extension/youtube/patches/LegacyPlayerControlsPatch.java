@@ -69,6 +69,9 @@ public class LegacyPlayerControlsPatch {
         return original;
     }
 
+    /**
+     * Injection point.
+     */
     public static boolean useModernPlayerTopControls(boolean original) {
         if (original) {
             Logger.printDebug(() -> "useModernPlayerTopControls is set on");

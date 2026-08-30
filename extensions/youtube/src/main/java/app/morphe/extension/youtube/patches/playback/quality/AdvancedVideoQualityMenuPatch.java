@@ -96,6 +96,9 @@ public final class AdvancedVideoQualityMenuPatch {
         return Settings.ADVANCED_VIDEO_QUALITY_MENU.get() || original;
     }
 
+    /**
+     * Injection point.
+     */
     public static boolean useFlowVideoQualityMenu(boolean original) {
         if (original) {
             Logger.printDebug(() -> "useFlowVideoQualityMenu is set on");

@@ -346,7 +346,7 @@ val legacyPlayerControlsPatch = bytecodePatch(
         }
 
         if (is_21_05_or_greater) {
-            ModernPlayerTopControlsFeatureFlagFingerprint.let {
+            ModernPlayerTopControlsFeatureFlagFingerprint.matchAll().forEach {
                 it.method.insertLiteralOverride(
                     it.instructionMatches.first().index,
                     "$EXTENSION_CLASS->useModernPlayerTopControls(Z)Z"
