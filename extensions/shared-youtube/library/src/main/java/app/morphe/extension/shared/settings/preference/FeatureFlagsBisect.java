@@ -61,6 +61,12 @@ public final class FeatureFlagsBisect {
 
     private long foundFlag;
 
+    /**
+     * If the behavior was ever reported as gone. A search that ends with no candidates
+     * after this means more than one flag is involved, or an answer was wrong.
+     */
+    private boolean behaviorEverAbsent;
+
     public static void handleAppStartup() {
         // Remind the user they are searching for flags
         if (isActive()) {
@@ -88,13 +94,15 @@ public final class FeatureFlagsBisect {
 
         try {
             String[] fields = state.split(FIELD_SEPARATOR, -1);
-            if (fields.length != 4) throw new IllegalArgumentException("Wrong number of fields");
+            if (fields.length < 4) throw new IllegalArgumentException("Wrong number of fields");
 
             FeatureFlagsBisect bisect = new FeatureFlagsBisect(
                     EnableDebuggingPatch.parseFlagList(fields[1]),
                     EnableDebuggingPatch.parseFlagList(fields[3]),
                     Integer.parseInt(fields[0]));
             bisect.testing.addAll(EnableDebuggingPatch.parseFlagList(fields[2]));
+            // A search started before this field existed simply has no absent answer.
+            bisect.behaviorEverAbsent = fields.length > 4 && "1".equals(fields[4]);
 
             return bisect;
         } catch (Exception ex) {
@@ -131,6 +139,7 @@ public final class FeatureFlagsBisect {
             candidates.removeAll(testing);
         } else {
             // Blocking these flags removed the behavior, so the cause is one of them.
+            behaviorEverAbsent = true;
             candidates.retainAll(testing);
 
             if (candidates.size() == 1) {
@@ -176,6 +185,10 @@ public final class FeatureFlagsBisect {
         return foundFlag;
     }
 
+    boolean behaviorEverAbsent() {
+        return behaviorEverAbsent;
+    }
+
     /**
      * Blocks the first half of the remaining candidates.
      */
@@ -191,7 +204,8 @@ public final class FeatureFlagsBisect {
         SharedYouTubeSettings.FEATURE_FLAGS_BISECT.save(step
                 + FIELD_SEPARATOR + EnableDebuggingPatch.serializeFlags(candidates, FLAG_SEPARATOR)
                 + FIELD_SEPARATOR + EnableDebuggingPatch.serializeFlags(testing, FLAG_SEPARATOR)
-                + FIELD_SEPARATOR + EnableDebuggingPatch.serializeFlags(userBlocked, FLAG_SEPARATOR));
+                + FIELD_SEPARATOR + EnableDebuggingPatch.serializeFlags(userBlocked, FLAG_SEPARATOR)
+                + FIELD_SEPARATOR + (behaviorEverAbsent ? "1" : "0"));
 
         Logger.printDebug(() -> "Binary search step: " + step + " candidates: " + candidates.size()
                 + " blocking: " + testing.size());

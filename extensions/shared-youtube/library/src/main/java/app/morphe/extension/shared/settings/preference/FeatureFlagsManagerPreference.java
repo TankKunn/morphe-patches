@@ -945,9 +945,16 @@ public class FeatureFlagsManagerPreference extends Preference {
             return;
         }
 
-        String message = result == FeatureFlagsBisect.Result.FOUND
-                ? str("morphe_debug_feature_flags_manager_bisect_found", bisect.getFoundFlag())
-                : str("morphe_debug_feature_flags_manager_bisect_exhausted");
+        String message;
+        if (result == FeatureFlagsBisect.Result.FOUND) {
+            message = str("morphe_debug_feature_flags_manager_bisect_found", bisect.getFoundFlag());
+        } else {
+            // If the behavior went away during the search then a flag is involved,
+            // just not a single one that the search can point at.
+            message = str(bisect.behaviorEverAbsent()
+                    ? "morphe_debug_feature_flags_manager_bisect_exhausted_multiple"
+                    : "morphe_debug_feature_flags_manager_bisect_exhausted");
+        }
 
         CustomDialog.create(
                 context,
