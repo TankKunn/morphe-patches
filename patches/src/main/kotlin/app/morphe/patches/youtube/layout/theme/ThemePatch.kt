@@ -16,6 +16,7 @@ import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.resourcePatch
 import app.morphe.patches.all.misc.resources.resourceMappingPatch
+import app.morphe.patches.shared.layout.theme.STYLE_DEFAULT_COLOR_NAMES_DARK
 import app.morphe.patches.shared.layout.theme.STYLE_DEFAULT_COLOR_NAMES_LIGHT
 import app.morphe.patches.shared.layout.theme.THEME_COLOR_EXTENSION_CLASS
 import app.morphe.patches.shared.layout.theme.THEME_DEFAULT_COLOR_NAMES_DARK
@@ -82,7 +83,7 @@ private val youTubeColorNamesLight = {
 //            "yt_ref_color_constants_default_baseline_white_white3",
 //            "yt_ref_color_constants_default_baseline_white_white4",
 
-//            "yt_sys_color_baseline_light_menu_background",
+            "yt_sys_color_baseline_light_menu_background",
 //            "yt_sys_color_baseline_light_static_white",
 //            "yt_sys_color_baseline_light_static_white_background",
 //            "yt_sys_color_baseline_dark_inverted_background",
@@ -104,6 +105,26 @@ private val youTubeColorNamesLight = {
         )
     } else {
         emptySet()
+    }
+}
+
+private val youTubeStyleNamesDark = {
+    STYLE_DEFAULT_COLOR_NAMES_DARK + if (is_21_35_or_greater) {
+        mapOf(
+            // The base and raised backgrounds are already covered by the colors they resolve to,
+            // but the menu background resolves to a color that is used elsewhere as well.
+            "yt.sys.color.baseline.dark" to setOf(
+                "yt_sys_color_baseline_menu_background"
+            ),
+            // The carbon color theme has an overlay of its own with colors of its own.
+            "yt.sys.color.baseline.dark.cooler" to setOf(
+                "yt_sys_color_baseline_base_background",
+                "yt_sys_color_baseline_menu_background",
+                "yt_sys_color_baseline_raised_background"
+            )
+        )
+    } else {
+        emptyMap()
     }
 }
 
@@ -273,6 +294,7 @@ val themePatch = baseThemePatch(
                 includeLightColor = true,
                 colorNamesDark = youTubeColorNamesDark,
                 colorNamesLight = youTubeColorNamesLight,
+                styleColorNamesDark = youTubeStyleNamesDark,
                 styleColorNamesLight = youTubeStyleNamesLight,
                 // The theme of the launcher activity, which the system draws the splash with.
                 splashScreenThemeParent = "@style/Theme.YouTube.Home"
