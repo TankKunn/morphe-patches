@@ -1,3 +1,19 @@
+## [1.41.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.6...v1.41.0-dev.7) (2026-08-30)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Legacy player controls:** Top bar buttons are hidden in some circumstances ([f429938](https://github.com/MorpheApp/morphe-patches/commit/f429938f5ebde77d811aba4faad37ef01566e954))
+
+### ✨ New Features
+
+* **YouTube Music - Hide music action buttons:** Add "Hide 'Live chat replay' button" setting ([#2674](https://github.com/MorpheApp/morphe-patches/issues/2674)) ([d43da80](https://github.com/MorpheApp/morphe-patches/commit/d43da80e8b27a5e767337d3a4c2fec64bb221d59))
+* **YouTube Music:** Add `Play song version in albums` patch ([#2556](https://github.com/MorpheApp/morphe-patches/issues/2556)) ([5093f61](https://github.com/MorpheApp/morphe-patches/commit/5093f6120b39dc87a943b0d90bfc720ddb6b9a53))
+* **YouTube:** Disabled automatic playback pause after opening the player's video settings ([829f4c3](https://github.com/MorpheApp/morphe-patches/commit/829f4c3b64dde3cd0069680f9ecf44cccbcf3038))
+
+### 🔧 Improvements
+
+* **YouTube:** Fix some issues and improve code ([#2688](https://github.com/MorpheApp/morphe-patches/issues/2688)) ([d8fcd8c](https://github.com/MorpheApp/morphe-patches/commit/d8fcd8c04ad72cc2655237e2c3d61d26bd220099))
+
 ## [1.41.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.5...v1.41.0-dev.6) (2026-08-30)
 
 ### 🐛 Bug Fixes
