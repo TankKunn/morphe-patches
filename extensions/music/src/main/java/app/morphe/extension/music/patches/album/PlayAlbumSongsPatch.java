@@ -11,8 +11,10 @@ import androidx.annotation.GuardedBy;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import app.morphe.extension.music.settings.Settings;
 import app.morphe.extension.shared.Logger;
@@ -79,8 +81,8 @@ public class PlayAlbumSongsPatch {
         void videoIdResolved(@NonNull String videoId, @NonNull String resolvedVideoId);
     }
 
-    @Nullable
-    private static volatile SubstitutionListener substitutionListener;
+    private static final Collection<SubstitutionListener> substitutionListeners =
+            new CopyOnWriteArrayList<>();
 
     static {
         StreamingDataRequest.setVideoIdResolver(PlayAlbumSongsPatch::resolveVideoIdToFetch);
@@ -90,8 +92,8 @@ public class PlayAlbumSongsPatch {
      * @param listener Notified for every video the streams are fetched for, including those
      *                 left playing as the music video.
      */
-    public static void setSubstitutionListener(@Nullable SubstitutionListener listener) {
-        substitutionListener = listener;
+    public static void addSubstitutionListener(@NonNull SubstitutionListener listener) {
+        substitutionListeners.add(listener);
     }
 
     private static boolean isEnabled() {
@@ -186,8 +188,7 @@ public class PlayAlbumSongsPatch {
 
             String resolvedVideoId = resolveAlbumSong(videoId);
 
-            SubstitutionListener listener = substitutionListener;
-            if (listener != null) {
+            for (SubstitutionListener listener : substitutionListeners) {
                 listener.videoIdResolved(videoId, resolvedVideoId);
             }
             return resolvedVideoId;

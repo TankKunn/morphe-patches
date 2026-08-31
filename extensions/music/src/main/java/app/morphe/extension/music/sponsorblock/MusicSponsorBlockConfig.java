@@ -56,7 +56,7 @@ public final class MusicSponsorBlockConfig implements Configuration {
         synchronized (MusicSponsorBlockConfig.class) {
             if (installed) return;
             SponsorBlockApi.configure(INSTANCE);
-            PlayAlbumSongsPatch.setSubstitutionListener(MusicSponsorBlockConfig::videoIdResolved);
+            PlayAlbumSongsPatch.addSubstitutionListener(MusicSponsorBlockConfig::videoIdResolved);
             installed = true;
         }
     }
