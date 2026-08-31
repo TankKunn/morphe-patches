@@ -83,7 +83,9 @@ public final class VideoInformation {
 
     /** Injection point. */
     public static void setVideoLength(final long length) {
-        if (videoLength != length) videoLength = length;
+        if (videoLength == length) return;
+        Logger.printDebug(() -> "VideoInformation: new video length: " + length);
+        videoLength = length;
     }
 
     public static long getVideoLength() { return videoLength; }

@@ -18,6 +18,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import app.morphe.extension.music.settings.Settings;
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.spoof.SpoofVideoStreamsPatch;
 import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
 
 /**
@@ -86,6 +87,7 @@ public class PlayAlbumSongsPatch {
 
     static {
         StreamingDataRequest.setVideoIdResolver(PlayAlbumSongsPatch::resolveVideoIdToFetch);
+        SpoofVideoStreamsPatch.setVideoLengthResolver(PlayAlbumSongsPatch::songLengthSeconds);
     }
 
     /**
@@ -177,6 +179,14 @@ public class PlayAlbumSongsPatch {
         synchronized (songs) {
             return songs.get(videoId);
         }
+    }
+
+    /**
+     * @return Length of the song playing under the given video, or zero if it is not substituted.
+     */
+    private static long songLengthSeconds(@NonNull String videoId) {
+        PlaylistRequest.Song song = getSong(videoId);
+        return song == null ? 0 : song.durationSeconds();
     }
 
     /**
