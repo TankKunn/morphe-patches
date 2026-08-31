@@ -1,3 +1,9 @@
+## [1.41.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.9...v1.41.0-dev.10) (2026-08-31)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Save to watch later for kids button:** Button was hidden in flyout for some videos ([109f9dc](https://github.com/MorpheApp/morphe-patches/commit/109f9dc64ffffdbde70c51395cfd9fa8a08b999f))
+
 ## [1.41.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.8...v1.41.0-dev.9) (2026-08-31)
 
 ### 🐛 Bug Fixes
