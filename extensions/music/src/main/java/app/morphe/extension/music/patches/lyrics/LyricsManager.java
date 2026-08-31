@@ -82,7 +82,9 @@ public final class LyricsManager {
     private boolean playing;
 
     private LyricsManager() {
-        PlayAlbumSongsPatch.addSubstitutionListener(this::videoIdResolved);
+        PlayAlbumSongsPatch.addSubstitutionListener(
+                (videoId, resolvedVideoId) -> reloadCurrentTrack());
+        VideoInformation.addVideoIdListener(videoId -> reloadCurrentTrack());
     }
 
     public static LyricsManager getInstance() {
@@ -138,13 +140,13 @@ public final class LyricsManager {
     }
 
     /**
-     * The song of an album is often only known after its metadata is set, so the track is
-     * read again once it is, and the music video lyrics give way to the song ones.
+     * The song of an album, and the video id of the app itself, can both land after the metadata
+     * of a track, so the track is read again whenever either of them arrives.
      */
-    private void videoIdResolved(String videoId, String resolvedVideoId) {
+    private void reloadCurrentTrack() {
         Utils.runOnMainThread(() -> {
             MediaMetadata metadata = currentMetadata;
-            if (metadata != null && videoId.equals(VideoInformation.getVideoId())) {
+            if (metadata != null) {
                 loadTrackOf(metadata);
             }
         });
