@@ -1,3 +1,9 @@
+## [1.41.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.10...v1.41.0-dev.11) (2026-08-31)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide ads:** Prevent button swap when Navigation bar patch is excluded ([#2714](https://github.com/MorpheApp/morphe-patches/issues/2714)) ([032cf5a](https://github.com/MorpheApp/morphe-patches/commit/032cf5a74acde337aa3ddf4f42e90f6ac0c5eba2))
+
 ## [1.41.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.9...v1.41.0-dev.10) (2026-08-31)
 
 ### 🐛 Bug Fixes
