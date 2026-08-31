@@ -71,8 +71,27 @@ public class PlayAlbumSongsPatch {
         }
     };
 
+    /**
+     * Notified when the streams to serve under a video are known, which can be after the app
+     * has already set up playback of the music video.
+     */
+    public interface SubstitutionListener {
+        void videoIdResolved(@NonNull String videoId, @NonNull String resolvedVideoId);
+    }
+
+    @Nullable
+    private static volatile SubstitutionListener substitutionListener;
+
     static {
         StreamingDataRequest.setVideoIdResolver(PlayAlbumSongsPatch::resolveVideoIdToFetch);
+    }
+
+    /**
+     * @param listener Notified for every video the streams are fetched for, including those
+     *                 left playing as the music video.
+     */
+    public static void setSubstitutionListener(@Nullable SubstitutionListener listener) {
+        substitutionListener = listener;
     }
 
     private static boolean isEnabled() {
@@ -87,8 +106,10 @@ public class PlayAlbumSongsPatch {
                                          int playlistIndex) {
         try {
             if (!isEnabled()) return;
-            if (playlistIndex < 0) return;
-            if (!playlistId.startsWith(YOUTUBE_MUSIC_ALBUM_PREFIX)) return;
+            if (playlistIndex < 0 || !playlistId.startsWith(YOUTUBE_MUSIC_ALBUM_PREFIX)) {
+                forgetSubstitution(videoId, playlistId);
+                return;
+            }
 
             synchronized (albumTracks) {
                 AlbumTrack existing = albumTracks.get(videoId);
@@ -128,6 +149,24 @@ public class PlayAlbumSongsPatch {
     }
 
     /**
+     * Stops serving the song of an album to a video that is now played outside of that album,
+     * which otherwise keeps the music video replaced until the app is restarted.
+     */
+    private static void forgetSubstitution(@NonNull String videoId, @NonNull String playlistId) {
+        synchronized (albumTracks) {
+            AlbumTrack track = albumTracks.get(videoId);
+            // The same album can build the player parameter again without a position,
+            // and that is still the album playing rather than the music video itself.
+            if (track == null || track.playlistId().equals(playlistId)) return;
+            albumTracks.remove(videoId);
+        }
+        synchronized (songs) {
+            songs.remove(videoId);
+        }
+        Logger.printDebug(() -> "No longer playing the song version of: " + videoId);
+    }
+
+    /**
      * @return The album track playing under the given video, or null if it is not substituted.
      */
     @Nullable
@@ -145,34 +184,48 @@ public class PlayAlbumSongsPatch {
         try {
             if (!isEnabled()) return videoId;
 
-            AlbumTrack track;
-            synchronized (albumTracks) {
-                track = albumTracks.get(videoId);
-            }
-            if (track == null) return videoId;
+            String resolvedVideoId = resolveAlbumSong(videoId);
 
-            PlaylistRequest request =
-                    PlaylistRequest.getRequestForPlaylistId(track.playlistId());
-            if (request == null) return videoId;
-
-            PlaylistRequest.Song song = request.awaitSong(
-                    track.playlistIndex(), MAX_MILLISECONDS_TO_WAIT_FOR_ALBUM);
-            if (song == null) {
-                Logger.printDebug(() -> "Official song not found, videoId: " + videoId);
-                return videoId;
+            SubstitutionListener listener = substitutionListener;
+            if (listener != null) {
+                listener.videoIdResolved(videoId, resolvedVideoId);
             }
-            if (song.videoId().equals(videoId)) {
-                // The album track has no music video, or is already the song version.
-                return videoId;
-            }
-
-            synchronized (songs) {
-                songs.put(videoId, song);
-            }
-            return song.videoId();
+            return resolvedVideoId;
         } catch (Exception ex) {
             Logger.printException(() -> "resolveVideoIdToFetch failure", ex);
             return videoId;
         }
+    }
+
+    /**
+     * @return The video whose streams to serve for the given video, which is the video itself
+     *         when it is not an album track playing as a music video.
+     */
+    private static String resolveAlbumSong(@NonNull String videoId) {
+        AlbumTrack track;
+        synchronized (albumTracks) {
+            track = albumTracks.get(videoId);
+        }
+        if (track == null) return videoId;
+
+        PlaylistRequest request =
+                PlaylistRequest.getRequestForPlaylistId(track.playlistId());
+        if (request == null) return videoId;
+
+        PlaylistRequest.Song song = request.awaitSong(
+                track.playlistIndex(), MAX_MILLISECONDS_TO_WAIT_FOR_ALBUM);
+        if (song == null) {
+            Logger.printDebug(() -> "Official song not found, videoId: " + videoId);
+            return videoId;
+        }
+        if (song.videoId().equals(videoId)) {
+            // The album track has no music video, or is already the song version.
+            return videoId;
+        }
+
+        synchronized (songs) {
+            songs.put(videoId, song);
+        }
+        return song.videoId();
     }
 }
