@@ -8,8 +8,6 @@
 package app.morphe.patches.shared.misc.refreshrate
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
-import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
-import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.BytecodePatchBuilder
 import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.patch.bytecodePatch
@@ -17,10 +15,7 @@ import app.morphe.patches.shared.misc.settings.preference.BasePreferenceScreen
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.NonInteractivePreference
 import app.morphe.patches.shared.misc.settings.preference.noTitleUnsortedPreferenceCategory
-import app.morphe.util.matchAllMethodIndicesForEach
 import app.morphe.util.setExtensionIsPatchIncluded
-import com.android.tools.smali.dexlib2.Opcode
-import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 private const val EXTENSION_CLASS = "Lapp/morphe/extension/shared/patches/BaseAppRefreshRatePatch;"
 
@@ -59,28 +54,6 @@ fun baseAppRefreshRatePatch(
                 "invoke-static/range { p0 .. p0 }, $EXTENSION_CLASS->" +
                         "setActivityRefreshRate(Landroid/app/Activity;)V"
             )
-        }
-
-        listOf(
-            DisplayGetRefreshRateFingerprint,
-            DisplayModeGetRefreshRateFingerprint
-        ).forEach { fingerprint ->
-            fingerprint.matchAllMethodIndicesForEach(requireMatches = false) { index ->
-                val moveResultIndex = index + 1
-                val instruction = getInstruction(moveResultIndex)
-                if (instruction.opcode != Opcode.MOVE_RESULT) {
-                    return@matchAllMethodIndicesForEach
-                }
-                val register = (instruction as OneRegisterInstruction).registerA
-
-                addInstructions(
-                    moveResultIndex + 1,
-                    """
-                        invoke-static { v$register }, $EXTENSION_CLASS->getRefreshRateOverride(F)F
-                        move-result v$register
-                    """
-                )
-            }
         }
 
         setExtensionIsPatchIncluded(EXTENSION_CLASS)

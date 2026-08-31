@@ -8,36 +8,10 @@
 package app.morphe.patches.shared.misc.refreshrate
 
 import app.morphe.patcher.Fingerprint
-import app.morphe.patcher.methodCall
-import com.android.tools.smali.dexlib2.Opcode
 
 internal object ActivityOnCreateFingerprint : Fingerprint(
     name = "onCreate",
     custom = { _, classDef ->
         classDef.superclass == "Landroid/app/Activity;"
-    }
-)
-
-internal object DisplayGetRefreshRateFingerprint : Fingerprint(
-    filters = listOf(
-        methodCall(
-            opcode = Opcode.INVOKE_VIRTUAL,
-            smali = "Landroid/view/Display;->getRefreshRate()F"
-        )
-    ),
-    custom = { _, classDef ->
-        !classDef.type.startsWith("Lapp/morphe/extension/")
-    }
-)
-
-internal object DisplayModeGetRefreshRateFingerprint : Fingerprint(
-    filters = listOf(
-        methodCall(
-            opcode = Opcode.INVOKE_VIRTUAL,
-            smali = $$"Landroid/view/Display$Mode;->getRefreshRate()F"
-        )
-    ),
-    custom = { _, classDef ->
-        !classDef.type.startsWith("Lapp/morphe/extension/")
     }
 )
