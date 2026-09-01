@@ -1,3 +1,14 @@
+## [1.41.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.11...v1.41.0-dev.12) (2026-09-01)
+
+### 🐛 Bug Fixes
+
+* **Settings:** Keep search results in sync with preferences and highlight every match ([#2712](https://github.com/MorpheApp/morphe-patches/issues/2712)) ([5cae2b5](https://github.com/MorpheApp/morphe-patches/commit/5cae2b57c35afeb2d6d14e4ea52edaf93d138043))
+* **YouTube - Video quality:** SABR playback breaks due to "Prioritize video quality" ([#2720](https://github.com/MorpheApp/morphe-patches/issues/2720)) ([895a8f1](https://github.com/MorpheApp/morphe-patches/commit/895a8f19e897239a7e3e4978c0524822f1863c78))
+
+### ✨ New Features
+
+* **YouTube - Hide player flyout menu components:** Add "Hide 'On-the-go' menu" setting ([#2715](https://github.com/MorpheApp/morphe-patches/issues/2715)) ([8408ec9](https://github.com/MorpheApp/morphe-patches/commit/8408ec93703286988fe1b65024cea272e19aa489))
+
 ## [1.41.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.10...v1.41.0-dev.11) (2026-08-31)
 
 ### 🐛 Bug Fixes
