@@ -167,6 +167,7 @@ Changes include:
     <string name="morphe_hide_ask_section_title">Hide Ask section</string>
     <string name="morphe_hide_attributes_section_title">Hide Attributes section</string>
     <string name="morphe_hide_attributes_section_summary">Hides Featured places, Games, Music, and People mentioned sections</string>
+    <string name="morphe_hide_channel_links_section_title">Hide Channel links section</string>
     <string name="morphe_hide_chapters_section_title">Hide Chapters section</string>
     <string name="morphe_hide_corrections_section_title">Hide Corrections section</string>
     <string name="morphe_hide_course_progress_section_title">Hide \'Course progress\' section</string>
