@@ -1,3 +1,15 @@
+## [1.42.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0...v1.42.0-dev.1) (2026-09-03)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Hide new type of community posts ([17b13ff](https://github.com/MorpheApp/morphe-patches/commit/17b13fff559866ef733e0b738a3ab7f3ba548200))
+* **YouTube - Hide layout components:** Resolve empty channel tabs when using "Hide channel tab filter" ([#2747](https://github.com/MorpheApp/morphe-patches/issues/2747)) ([8232fa7](https://github.com/MorpheApp/morphe-patches/commit/8232fa7eeeb8d7c6e458e3ac16503fadccfceec4))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide channel links section" setting ([ddcdabe](https://github.com/MorpheApp/morphe-patches/commit/ddcdabe19a50aedb0eb80fa62de68e9d534e3167))
+* **YouTube - Remove background playback restrictions:** Add "Auto pause when device is locked" setting ([#2719](https://github.com/MorpheApp/morphe-patches/issues/2719)) ([f8bc479](https://github.com/MorpheApp/morphe-patches/commit/f8bc479af4e8b53cf1eea71cfaab923ddfb00910))
+
 ## [1.41.0](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0...v1.41.0) (2026-09-01)
 
 ### 🐛 Bug Fixes
