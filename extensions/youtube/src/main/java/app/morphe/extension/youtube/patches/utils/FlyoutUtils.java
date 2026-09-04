@@ -57,10 +57,13 @@ import app.morphe.extension.youtube.patches.AddToQueuePatch;
 import app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch;
 import app.morphe.extension.youtube.patches.SaveToWatchLaterPatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
+import app.morphe.extension.youtube.patches.components.PlayerOverflowMenuFilter;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.EngagementPanel;
 import app.morphe.extension.youtube.shared.PlayerType;
 import app.morphe.extension.youtube.shared.ShortsPlayerState;
+import app.morphe.extension.youtube.whitelist.ChannelWhitelist;
+import app.morphe.extension.youtube.whitelist.WhitelistType;
 
 @SuppressWarnings("unused")
 public final class FlyoutUtils {
@@ -81,6 +84,7 @@ public final class FlyoutUtils {
     ) {}
 
     public static final int CHANNEL_ID_LENGTH = 24;
+    private static final byte[] CHANNEL_ID_PREFIX_BYTES = getAsciiBytes("UC");
     private static final byte[] PLAYLIST_ID_PREFIXES_BYTES =
             getAsciiBytes("playlist?list=");
     private static final List<byte[]> VIDEO_ID_PREFIXES_BYTES = List.of(
@@ -135,6 +139,10 @@ public final class FlyoutUtils {
                             : "yt_outline_experimental_flag_vd_theme_24"
             );
     private static final String aiSListSubmitButtonName = str("morphe_aislist_submit_title");
+    private static final Drawable adWhitelistDrawable =
+            getSettingsScreenDrawable("morphe_settings_screen_01_ads");
+    private static final Drawable playbackSpeedWhitelistDrawable =
+            getSettingsScreenDrawable("morphe_settings_screen_12_video");
 
     private static final List<WeakReference<TextView>> customItemTextRefs = new ArrayList<>();
 
@@ -149,12 +157,20 @@ public final class FlyoutUtils {
     private static String flyoutVideoId = "";
     private static String flyoutPlaylistId = "";
     private static String flyoutCommentId = "";
+    private static String flyoutChannelId = "";
+    private static String flyoutChannelName = "";
     private static final List<String> commentsPanelNames = List.of(
             "comment-item-section",
             "shorts-comments-panel"
     );
 
     private static boolean videoMarkedAsForKids;
+
+    private static Drawable getSettingsScreenDrawable(String drawableName) {
+        return ResourceUtils.getDrawable(Utils.appIsUsingBoldIcons()
+                ? drawableName + "_bold"
+                : drawableName);
+    }
 
     public static byte[] getAsciiBytes(String string) {
         return string.getBytes(StandardCharsets.US_ASCII);
@@ -333,6 +349,16 @@ public final class FlyoutUtils {
             }
         }
 
+        if (Settings.ADS_CHANNEL_WHITELIST_FLYOUT_MENU.get()) {
+            nextButtonIndex = addWhitelistButton(
+                    flyoutPanel, WhitelistType.ADS, adWhitelistDrawable, nextButtonIndex);
+        }
+
+        if (Settings.PLAYBACK_SPEED_CHANNEL_WHITELIST_FLYOUT_MENU.get()) {
+            nextButtonIndex = addWhitelistButton(
+                    flyoutPanel, WhitelistType.PLAYBACK_SPEED, playbackSpeedWhitelistDrawable, nextButtonIndex);
+        }
+
         if (nextButtonIndex > 0) {
             addDivider(flyoutPanel, nextButtonIndex);
         }
@@ -350,6 +376,41 @@ public final class FlyoutUtils {
             return VideoInformation.getVideoId();
         }
         return "";
+    }
+
+    private static int addWhitelistButton(Object flyoutPanel, WhitelistType type,
+                                          Drawable icon, int index) {
+        String channelId = flyoutChannelId;
+        String channelName = flyoutChannelName;
+
+        if (channelId.isEmpty()) {
+            // The player menu belongs to the video being played instead of a list item,
+            // so it carries no element the channel could be read from.
+            if (!PlayerOverflowMenuFilter.isMenuRendered()) {
+                return index;
+            }
+            channelId = VideoInformation.getChannelId();
+            channelName = VideoInformation.getChannelName();
+            if (channelId.isEmpty()) {
+                return index;
+            }
+        }
+
+        final String whitelistChannelId = channelId;
+        final String whitelistChannelName = channelName;
+        final boolean isWhitelisted = ChannelWhitelist.isChannelWhitelisted(type, whitelistChannelId);
+
+        return addFlyoutButton(
+                flyoutPanel,
+                icon,
+                type.getFlyoutTitle(isWhitelisted),
+                v -> {
+                    ChannelWhitelist.toggleChannel(type, whitelistChannelId, whitelistChannelName);
+
+                    dismissFlyout();
+                },
+                index
+        );
     }
 
     /**
@@ -480,6 +541,11 @@ public final class FlyoutUtils {
                     ? createFlyoutDivider(context)
                     : addFlyoutButton(context, menuInfo.menuContainer(), icon, text, clickListener);
 
+            // Only the element that ends up under the drag handle has to clear it.
+            if (index == 0 && view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams marginParams) {
+                marginParams.topMargin = getDragHandleHeight(menuInfo.menuContainer());
+            }
+
             int fixedIndex = menuInfo.adjustedIndex();
             menuInfo.menuContainer().addView(view, fixedIndex);
 
@@ -578,6 +644,9 @@ public final class FlyoutUtils {
                             () -> {
                                 flyoutVideoId = "";
                                 flyoutPlaylistId = "";
+                                flyoutChannelId = "";
+                                flyoutChannelName = "";
+                                PlayerOverflowMenuFilter.resetMenuRendered();
                             },
                             500
                     );
@@ -667,10 +736,6 @@ public final class FlyoutUtils {
             iconView.setImageTintList(ColorStateList.valueOf(textView != null
                     ? textView.getCurrentTextColor()
                     : ThemeUtils.getAppForegroundColor()));
-        }
-
-        if (customButton.getLayoutParams() instanceof ViewGroup.MarginLayoutParams marginParams) {
-            marginParams.topMargin = getDragHandleHeight(parent);
         }
 
         // The layout reserves space for a secondary icon this item does not have.
@@ -782,6 +847,8 @@ public final class FlyoutUtils {
                             setFlyoutPlaylistId(flyoutBuffer);
 
                             setFlyoutVideoId(flyoutBuffer, description.toString());
+
+                            setFlyoutChannel(flyoutBuffer, description.toString());
                         }
                     }
                     parent = parent.getParent();
@@ -862,6 +929,69 @@ public final class FlyoutUtils {
                 }
             }
         }
+    }
+
+    private static void setFlyoutChannel(byte[] buffer, String description) {
+        for (int index = byteIndexOf(buffer, CHANNEL_ID_PREFIX_BYTES);
+             index >= 0;
+             index = byteIndexOf(buffer, CHANNEL_ID_PREFIX_BYTES, index + 1)) {
+            if (isValidChannelId(buffer, index)) {
+                flyoutChannelId = new String(buffer, index, CHANNEL_ID_LENGTH, StandardCharsets.US_ASCII);
+                flyoutChannelName = findChannelName(description);
+                return;
+            }
+        }
+    }
+
+    /**
+     * The channel name is the only text the accessibility description repeats in two adjacent
+     * parts, as "Go to channel <name>" is always followed by "<name>". Matching those parts
+     * finds the name without depending on the app language.
+     */
+    private static String findChannelName(String description) {
+        String[] parts = description.split(" - ");
+        String name = "";
+
+        for (int i = 1; i < parts.length; i++) {
+            String previousPart = parts[i - 1];
+            String part = parts[i];
+
+            for (int length = Math.min(previousPart.length(), part.length());
+                 length > name.length(); length--) {
+                String candidate = part.substring(0, length);
+                if (previousPart.endsWith(candidate)) {
+                    name = candidate;
+                    break;
+                }
+            }
+        }
+
+        return name.length() > 1 ? name : "";
+    }
+
+    /**
+     * Channel ids are always 24 characters long and start with "UC", and the remaining
+     * 22 characters are URL safe Base64.
+     *
+     * @param buffer The buffer to check.
+     * @param index  The start index of the "UC" prefix.
+     * @return If the buffer holds a valid channel id at the given index.
+     */
+    public static boolean isValidChannelId(byte[] buffer, int index) {
+        final int lastIndex = index + CHANNEL_ID_LENGTH;
+        if (index < 0 || lastIndex > buffer.length) {
+            return false;
+        }
+
+        for (int i = index + 2; i < lastIndex; i++) {
+            final byte b = buffer[i];
+            final boolean isValid = (b >= 'A' && b <= 'Z') || (b >= 'a' && b <= 'z') ||
+                    (b >= '0' && b <= '9') || b == '-' || b == '_';
+            if (!isValid) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private static void setFlyoutPlaylistId(byte[] flyoutBuffer) {
