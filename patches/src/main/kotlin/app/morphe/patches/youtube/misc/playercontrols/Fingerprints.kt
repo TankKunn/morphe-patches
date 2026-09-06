@@ -118,3 +118,9 @@ internal object RecycleViewScrollingFlagFingerprint : Fingerprint(
         literal(45763727)
     )
 )
+
+internal object NewPlayerOverlaysFeatureFlagFingerprint : Fingerprint(
+    filters = listOf(
+        literal(45752335L)
+    )
+)

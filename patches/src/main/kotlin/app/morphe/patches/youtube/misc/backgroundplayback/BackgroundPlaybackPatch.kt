@@ -21,10 +21,10 @@ import app.morphe.patches.shared.misc.fix.bitmap.fixRecycledBitmapPatch
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
+import app.morphe.patches.youtube.misc.playercontrols.disableNewPlayerControlsFeatureFlag
 import app.morphe.patches.youtube.misc.playertype.playerTypeHookPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_29_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_49_or_greater
-import app.morphe.patches.youtube.misc.playservice.is_21_04_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_15_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_21_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_36_or_greater
@@ -184,12 +184,9 @@ val backgroundPlaybackPatch = bytecodePatch(
             }
         }
 
-        if (is_21_04_or_greater && !is_21_36_or_greater) {
-            // If NewPlayerTypeEnumFeatureFlagFingerprint is present and forced off then this flag
-            // must also be disabled, otherwise the player is a black screen with no buttons and no playback.
-            NewPlayerOverlaysFeatureFlagFingerprint.matchAll().forEach {
-                it.method.addBackgroundPlaybackFeatureFlagHook(it.instructionMatches.first().index, false)
-            }
-        }
+
+        // If NewPlayerTypeEnumFeatureFlagFingerprint is overridden then must also
+        // force off new player control flags otherwise player has no buttons visible.
+        disableNewPlayerControlsFeatureFlag()
     }
 }

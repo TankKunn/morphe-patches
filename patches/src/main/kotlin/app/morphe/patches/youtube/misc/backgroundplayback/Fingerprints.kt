@@ -111,8 +111,3 @@ internal object NewPlayerTypeEnumFeatureFlagFingerprint : Fingerprint(
     )
 )
 
-internal object NewPlayerOverlaysFeatureFlagFingerprint : Fingerprint(
-    filters = listOf(
-        literal(45752335L)
-    )
-)

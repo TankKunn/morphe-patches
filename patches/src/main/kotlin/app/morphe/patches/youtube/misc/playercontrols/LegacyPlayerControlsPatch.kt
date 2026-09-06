@@ -14,6 +14,7 @@ import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
+import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.patch.resourcePatch
@@ -28,6 +29,7 @@ import app.morphe.patches.youtube.misc.playservice.is_20_28_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_30_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_40_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_04_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_05_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_08_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_15_or_greater
@@ -188,6 +190,21 @@ internal val legacyPlayerControlsResourcePatch = resourcePatch {
     }
 }
 
+private var newPlayerControlsOverride = false
+
+context(patchContext: BytecodePatchContext)
+internal fun disableNewPlayerControlsFeatureFlag() {
+    if (!is_21_04_or_greater || newPlayerControlsOverride) return
+    newPlayerControlsOverride = true
+
+    NewPlayerOverlaysFeatureFlagFingerprint.matchAll().forEach {
+        it.method.insertLiteralOverride(
+            it.instructionMatches.first().index,
+            false
+        )
+    }
+}
+
 /**
  * Injects the code to initialize the controls.
  * @param descriptor The descriptor of the method which should be called.
@@ -239,6 +256,10 @@ val legacyPlayerControlsPatch = bytecodePatch(
             PreferenceScreen.PLAYER.addPreferences(
                 SwitchPreference("morphe_restore_old_player_buttons", summary = true)
             )
+        }
+
+        if (is_21_36_or_greater) {
+            disableNewPlayerControlsFeatureFlag()
         }
 
         // Override flags that interfere with old player icons override.
