@@ -13,7 +13,7 @@
 
 ### 🚀 Updated App Support
 
-* **YouTube:** Add support for `21.36.45` ([#2814](https://github.com/MorpheApp/morphe-patches/issues/2814)) ([07d36c3](https://github.com/MorpheApp/morphe-patches/commit/07d36c334ec9834e671bf1bb97b14f6a20dcdbbe))
+* **YouTube:** Add experimental support for `21.36.45` ([#2814](https://github.com/MorpheApp/morphe-patches/issues/2814)) ([07d36c3](https://github.com/MorpheApp/morphe-patches/commit/07d36c334ec9834e671bf1bb97b14f6a20dcdbbe))
 
 ## [1.42.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.2...v1.42.0-dev.3) (2026-09-05)
 
