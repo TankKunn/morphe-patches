@@ -2,7 +2,7 @@
 
 ### 🐛 Bug Fixes
 
-* **YouTube - SponsorBlock:** Skip buttons are not show with `21.26.45` ([f667d85](https://github.com/MorpheApp/morphe-patches/commit/f667d85352b8165b1680c54bd22e211e81e7f1ce))
+* **YouTube - SponsorBlock:** Skip buttons not working on `21.36.45` ([f667d85](https://github.com/MorpheApp/morphe-patches/commit/f667d85352b8165b1680c54bd22e211e81e7f1ce))
 
 ## [1.42.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.3...v1.42.0-dev.4) (2026-09-06)
 
