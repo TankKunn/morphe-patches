@@ -1,3 +1,9 @@
+## [1.42.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.5...v1.42.0-dev.6) (2026-09-06)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Channel whitelists:** Hide injected flyout menu buttons from other unrelated menu's  ([#2808](https://github.com/MorpheApp/morphe-patches/issues/2808)) ([5ba4ab4](https://github.com/MorpheApp/morphe-patches/commit/5ba4ab46f1a1ff62a8a733adc1b52a5614208036))
+
 ## [1.42.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.4...v1.42.0-dev.5) (2026-09-06)
 
 ### 🐛 Bug Fixes
