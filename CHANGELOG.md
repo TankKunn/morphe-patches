@@ -1,3 +1,9 @@
+## [1.42.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.6...v1.42.0-dev.7) (2026-09-07)
+
+### 🐛 Bug Fixes
+
+* **GmsCore support:** Prompt to update outdated MicroG ([#2787](https://github.com/MorpheApp/morphe-patches/issues/2787)) ([c30850d](https://github.com/MorpheApp/morphe-patches/commit/c30850dea5d27aae956d0c6e10e6d32fc98c3e5f))
+
 ## [1.42.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.5...v1.42.0-dev.6) (2026-09-06)
 
 ### 🐛 Bug Fixes
