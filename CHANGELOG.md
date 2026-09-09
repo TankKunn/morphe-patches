@@ -1,3 +1,9 @@
+## [1.42.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.9...v1.42.0-dev.10) (2026-09-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Hide guidelines in live chat ([b7528e0](https://github.com/MorpheApp/morphe-patches/commit/b7528e0e3c63f8d50caa3ebefa6dfd4c6a1859b1))
+
 ## [1.42.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.8...v1.42.0-dev.9) (2026-09-09)
 
 ### 🐛 Bug Fixes
