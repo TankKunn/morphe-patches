@@ -96,6 +96,7 @@ private val swipeControlsResourcePatch = resourcePatch {
                 "morphe_swipe_volume_steps",
                 tag = "app.morphe.extension.youtube.settings.preference.SwipeVolumeStepsPreference"
             ),
+            SwitchPreference("morphe_volume_boost", summary = true),
             NonInteractivePreference(
                 key = "morphe_swipe_speed_sensitivity",
                 tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference"

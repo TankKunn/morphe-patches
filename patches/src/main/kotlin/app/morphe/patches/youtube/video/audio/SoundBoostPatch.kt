@@ -10,11 +10,7 @@ package app.morphe.patches.youtube.video.audio
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
-import app.morphe.patches.youtube.misc.settings.PreferenceScreen
-import app.morphe.patches.youtube.misc.settings.settingsPatch
-import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 private const val EXTENSION_CLASS_DESCRIPTOR = "Lapp/morphe/extension/youtube/patches/SoundBoostPatch;"
@@ -24,17 +20,10 @@ val soundBoostPatch = bytecodePatch(
     description = "Adds an option to swipe the volume above the maximum level."
 ) {
     dependsOn(
-        sharedExtensionPatch,
-        settingsPatch,
+        sharedExtensionPatch
     )
 
-    compatibleWith(COMPATIBILITY_YOUTUBE)
-
     execute {
-        PreferenceScreen.SWIPE_CONTROLS.addPreferences(
-            SwitchPreference("morphe_volume_boost", summary = true)
-        )
-
         AudioTrackSessionIdFingerprint.let {
             it.method.apply {
                 val resultIndex = it.instructionMatches.last().index

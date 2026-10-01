@@ -692,6 +692,8 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_swipe_volume_distance_title">Volume swipe sensitivity</string>
     <string name="morphe_swipe_volume_distance_summary">Higher values require more swiping per volume step</string>
     <string name="morphe_swipe_volume_steps_title">Volume steps</string>
+    <string name="morphe_volume_boost_title">Volume boost</string>
+    <string name="morphe_volume_boost_summary">Swiping up past maximum volume boosts it, which can distort loud audio</string>
     <string name="morphe_swipe_volume_steps_entry_default">Device default</string>
     <string name="morphe_swipe_brightness_sensitivity_title">Brightness swipe sensitivity</string>
     <string name="morphe_swipe_brightness_sensitivity_summary">Higher values require more swiping per brightness step</string>
@@ -1322,10 +1324,6 @@ Tap here to open DeArrow.ajay.app"</string>
     <!-- misc.links.openLinksExternallyPatch -->
     <string name="morphe_external_browser_title">Open links in browser</string>
     <string name="morphe_external_browser_summary">Opens links in an external browser instead of the in-app browser</string>
-
-    <!-- video.audio.soundBoostPatch -->
-    <string name="morphe_volume_boost_title">Volume boost</string>
-    <string name="morphe_volume_boost_summary">Swiping up past maximum volume boosts it, which can distort loud audio</string>
 
     <!-- video.buffer.playbackBufferPatch -->
     <string name="morphe_playback_buffer_size_title">Playback buffer size</string>
