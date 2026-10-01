@@ -18,6 +18,9 @@ import app.morphe.util.getMutableMethod
 import app.morphe.util.matchSingle
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.immutable.ImmutableField
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.runBlocking
+import org.junit.jupiter.api.Assumptions.assumeTrue
 import kotlin.io.path.createTempDirectory
 import kotlin.io.path.readText
 import kotlin.io.path.walk
@@ -26,9 +29,6 @@ import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.runBlocking
-import org.junit.jupiter.api.Assumptions.assumeTrue
 
 class JamPatchRegressionTest {
     @Test
@@ -230,7 +230,7 @@ class JamPatchRegressionTest {
         val workspace = createTempDirectory("jam-patch-resolution")
         Patcher(PatcherConfig(kotlin.io.path.Path(apkPath).toFile(), workspace.toFile())).use {
             patcher ->
-            patcher += setOf(jamQueueProbePatch)
+            patcher += setOf(jamQueueSharingPatch)
             runBlocking {
                 patcher().collect { result ->
                     assertTrue(
