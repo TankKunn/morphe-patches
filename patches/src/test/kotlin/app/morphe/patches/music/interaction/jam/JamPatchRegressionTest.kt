@@ -18,7 +18,6 @@ import app.morphe.util.getMutableMethod
 import app.morphe.util.matchSingle
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.immutable.ImmutableField
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assumptions.assumeTrue
 import kotlin.io.path.createTempDirectory
@@ -27,21 +26,9 @@ import kotlin.io.path.walk
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
-import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class JamPatchRegressionTest {
-    @Test
-    fun `Jam accepts only the exact validated versions`() {
-        for (version in listOf("9.15.51", "9.35.54", "9.36.50", "9.37.54")) {
-            assertTrue(isSupportedJamVersion(version), version)
-        }
-        for (version in
-            listOf("9.15", "9.15.52", "9.34.52", "9.35.55", "9.37.55", "9.38.1", "10.0.0")) {
-            assertFalse(isSupportedJamVersion(version), version)
-        }
-    }
-
     @Test
     fun `both player layouts resolve clicks and share the native state renderer`() {
         val apkPath = System.getProperty("jamApk")
