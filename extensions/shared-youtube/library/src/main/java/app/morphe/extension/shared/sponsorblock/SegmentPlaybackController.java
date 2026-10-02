@@ -161,6 +161,10 @@ public class SegmentPlaybackController {
     private static long skipSegmentButtonEndTime;
     @Nullable
     private static String timeWithoutSegments;
+    /**
+     * Video length {@link #timeWithoutSegments} was calculated with, or -1 if it must be calculated again.
+     */
+    private static long timeWithoutSegmentsVideoLength = -1;
     private static int seekbarAbsoluteLeft;
     private static int seekbarAbsoluteRight;
     private static int seekbarAbsoluteTop;
@@ -245,7 +249,7 @@ public class SegmentPlaybackController {
     private static void setSegments(SponsorSegment[] videoSegments) {
         Arrays.sort(videoSegments);
         segments = videoSegments;
-        calculateTimeWithoutSegments();
+        timeWithoutSegmentsVideoLength = -1;
 
         if (config().includesHighlight()
                 && (SegmentCategory.HIGHLIGHT.behaviour == CategoryBehaviour.SKIP_AUTOMATICALLY
@@ -300,6 +304,7 @@ public class SegmentPlaybackController {
         highlightSegment = null;
         highlightSegmentInitialShowEndTime = 0;
         timeWithoutSegments = null;
+        timeWithoutSegmentsVideoLength = -1;
         segmentCurrentlyPlaying = null;
         scheduledUpcomingSegment = null;
         scheduledHideSegment = null;
@@ -1072,9 +1077,19 @@ public class SegmentPlaybackController {
         try {
             if (isOn(settings().videoLengthWithoutSegments())
                     && settings().sbEnabled().get()
-                    && !TextUtils.isEmpty(totalTime) && !TextUtils.isEmpty(timeWithoutSegments)) {
-                // Force LTR layout, to match the same LTR video time/length layout YouTube uses for all languages
-                return "\u202D" + totalTime + timeWithoutSegments; // u202D = left to right override
+                    && !TextUtils.isEmpty(totalTime)) {
+                // Segments can load before the player reports the length of the new video,
+                // so the time is calculated again once the length changes.
+                final long videoLength = video().getVideoLength();
+                if (timeWithoutSegmentsVideoLength != videoLength) {
+                    timeWithoutSegmentsVideoLength = videoLength;
+                    calculateTimeWithoutSegments(videoLength);
+                }
+
+                if (!TextUtils.isEmpty(timeWithoutSegments)) {
+                    // Force LTR layout, to match the same LTR video time/length layout YouTube uses for all languages
+                    return "\u202D" + totalTime + timeWithoutSegments; // u202D = left to right override
+                }
             }
         } catch (Exception ex) {
             Logger.printException(() -> "appendTimeWithoutSegments failure", ex);
@@ -1083,10 +1098,8 @@ public class SegmentPlaybackController {
         return totalTime;
     }
 
-    private static void calculateTimeWithoutSegments() {
-        final long currentVideoLength = video().getVideoLength();
-        if (!isOn(settings().videoLengthWithoutSegments()) || currentVideoLength <= 0
-                || segments == null || segments.length == 0) {
+    private static void calculateTimeWithoutSegments(long currentVideoLength) {
+        if (currentVideoLength <= 0 || segments == null || segments.length == 0) {
             timeWithoutSegments = null;
             return;
         }
