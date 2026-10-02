@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 
 import java.util.Objects;
 
+import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.BooleanSetting;
 import app.morphe.extension.shared.settings.FloatSetting;
 import app.morphe.extension.shared.settings.IntegerSetting;
@@ -206,7 +207,6 @@ public final class SponsorBlockApi {
         void showSkipHighlightButton(@NonNull SponsorSegment highlight);
         void hideSkipHighlightButton();
         void hideAll();
-        @Nullable android.content.Context overlayContext();
 
         /**
          * Shown on submit/vote API errors that may carry long, server-supplied text.
@@ -232,9 +232,8 @@ public final class SponsorBlockApi {
             @Override public void showSkipHighlightButton(@NonNull SponsorSegment highlight) {}
             @Override public void hideSkipHighlightButton() {}
             @Override public void hideAll() {}
-            @Override public @Nullable android.content.Context overlayContext() { return null; }
             @Override public void showErrorDialog(@NonNull String message) {
-                app.morphe.extension.shared.Utils.showToastLong(message);
+                Utils.showToastLong(message);
             }
             @Override public void notifyNewSegmentPreviewed() {}
             @Override public void clearUnsubmittedSegmentTimes() {}
