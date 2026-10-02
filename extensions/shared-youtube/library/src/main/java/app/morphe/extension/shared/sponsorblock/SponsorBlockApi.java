@@ -39,6 +39,15 @@ import app.morphe.extension.shared.sponsorblock.objects.SponsorSegment;
  */
 public final class SponsorBlockApi {
 
+    private static final CategoryBehaviour[] ALL_BEHAVIORS = CategoryBehaviour.values();
+
+    private static final CategoryBehaviour[] HIGHLIGHT_BEHAVIORS = {
+            CategoryBehaviour.SKIP_AUTOMATICALLY,
+            CategoryBehaviour.MANUAL_SKIP,
+            CategoryBehaviour.SHOW_IN_SEEKBAR,
+            CategoryBehaviour.IGNORE
+    };
+
     @Nullable
     private static volatile Configuration configuration;
 
@@ -104,16 +113,7 @@ public final class SponsorBlockApi {
          * repeatedly. Hosts without a skip-button overlay should restrict the returned set.
          */
         default @NonNull CategoryBehaviour[] availableBehaviors(@NonNull SegmentCategory category) {
-            if (category == SegmentCategory.HIGHLIGHT) {
-                CategoryBehaviour[] all = CategoryBehaviour.values();
-                CategoryBehaviour[] filtered = new CategoryBehaviour[all.length - 1];
-                int j = 0;
-                for (CategoryBehaviour b : all) {
-                    if (b != CategoryBehaviour.SKIP_AUTOMATICALLY_ONCE) filtered[j++] = b;
-                }
-                return filtered;
-            }
-            return CategoryBehaviour.values();
+            return category == SegmentCategory.HIGHLIGHT ? HIGHLIGHT_BEHAVIORS : ALL_BEHAVIORS;
         }
     }
 

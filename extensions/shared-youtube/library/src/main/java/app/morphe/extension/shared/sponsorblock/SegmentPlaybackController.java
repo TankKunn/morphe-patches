@@ -192,6 +192,13 @@ public class SegmentPlaybackController {
     private static UiBridge ui() { return config().ui(); }
 
     /**
+     * @return If the host app has the setting and it is on.
+     */
+    private static boolean isOn(@Nullable BooleanSetting setting) {
+        return setting != null && setting.get();
+    }
+
+    /**
      * Notification from a host-app player-type observer. Dismisses the undo toast when entering PiP.
      */
     public static void onPlayerTypeChanged() {
@@ -228,20 +235,6 @@ public class SegmentPlaybackController {
         }
 
         return false;
-    }
-
-    /**
-     * @return The adjusted duration to show the skip button, in milliseconds.
-     */
-    private static long getSkipButtonDuration() {
-        return settings().autoHideSkipButtonDurationMs();
-    }
-
-    /**
-     * @return The adjusted duration to show the skipped toast, in milliseconds.
-     */
-    private static long getToastDuration() {
-        return settings().toastOnSkipDurationMs();
     }
 
     @Nullable
@@ -319,10 +312,22 @@ public class SegmentPlaybackController {
     }
 
     private static void maybeShowWhitelistToast() {
-        BooleanSetting toast = settings().toastOnWhitelistedChannel();
-        if (toast != null && toast.get()) {
+        if (isOn(settings().toastOnWhitelistedChannel())) {
             Utils.showToastShort(str("morphe_sb_channel_whitelisted_toast"));
         }
+    }
+
+    /**
+     * @return If the current channel is whitelisted. Shows the whitelist toast if it is.
+     */
+    private static boolean isCurrentChannelWhitelisted() {
+        ChannelWhitelistAdapter whitelist = config().channelWhitelist();
+        if (whitelist == null || !whitelist.isCurrentChannelWhitelisted()) {
+            return false;
+        }
+        Logger.printDebug(() -> "Skipping SponsorBlock for whitelisted channel");
+        maybeShowWhitelistToast();
+        return true;
     }
 
     /**
@@ -388,10 +393,7 @@ public class SegmentPlaybackController {
             currentVideoId = videoId;
             Logger.printDebug(() -> "New video ID: " + videoId);
 
-            ChannelWhitelistAdapter whitelist = config().channelWhitelist();
-            if (whitelist != null && whitelist.isCurrentChannelWhitelisted()) {
-                Logger.printDebug(() -> "Skipping SponsorBlock request for whitelisted channel");
-                maybeShowWhitelistToast();
+            if (isCurrentChannelWhitelisted()) {
                 return;
             }
 
@@ -422,10 +424,7 @@ public class SegmentPlaybackController {
                 Logger.printDebug(() -> "Ignoring segments for prior video: " + videoId);
                 return;
             }
-            ChannelWhitelistAdapter whitelist = config().channelWhitelist();
-            if (whitelist != null && whitelist.isCurrentChannelWhitelisted()) {
-                Logger.printDebug(() -> "Skipping SponsorBlock for whitelisted channel");
-                maybeShowWhitelistToast();
+            if (isCurrentChannelWhitelisted()) {
                 return;
             }
             setSegments(segments);
@@ -441,7 +440,7 @@ public class SegmentPlaybackController {
                     }
                     highlightSegmentInitialShowEndTime = System.currentTimeMillis() + Math.min(
                             (long) (timeUntilHighlight / video().getPlaybackSpeed()),
-                            getSkipButtonDuration());
+                            settings().autoHideSkipButtonDurationMs());
                 }
             }
 
@@ -481,9 +480,7 @@ public class SegmentPlaybackController {
 
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private static boolean autoHideIsEnabledAndPlayerOverlayIsActive() {
-        BooleanSetting autoHide = settings().autoHideSkipButton();
-        return autoHide != null && autoHide.get()
-                && playerState().playerControlsVisible();
+        return isOn(settings().autoHideSkipButton()) && playerState().playerControlsVisible();
     }
 
     /**
@@ -587,7 +584,7 @@ public class SegmentPlaybackController {
             }
 
             if (highlightSegment != null) {
-                if (millis < getSkipButtonDuration() || (highlightSegmentInitialShowEndTime != 0
+                if (millis < settings().autoHideSkipButtonDurationMs() || (highlightSegmentInitialShowEndTime != 0
                         && System.currentTimeMillis() < highlightSegmentInitialShowEndTime)) {
                     ui().showSkipHighlightButton(highlightSegment);
                 } else {
@@ -730,8 +727,7 @@ public class SegmentPlaybackController {
         segmentCurrentlyPlaying = segment;
         skipSegmentButtonEndTime = 0;
 
-        BooleanSetting autoHide = settings().autoHideSkipButton();
-        if (autoHide != null && autoHide.get()) {
+        if (isOn(settings().autoHideSkipButton())) {
             if (hiddenSkipSegmentsForCurrentVideoTime.contains(segment)) {
                 // Playback exited a nested segment and the outer segment skip button was previously hidden.
                 Logger.printDebug(() -> "Ignoring previously auto-hidden segment: " + segment);
@@ -743,7 +739,7 @@ public class SegmentPlaybackController {
                 }
                 return;
             }
-            skipSegmentButtonEndTime = System.currentTimeMillis() + getSkipButtonDuration();
+            skipSegmentButtonEndTime = System.currentTimeMillis() + settings().autoHideSkipButtonDurationMs();
         }
         Logger.printDebug(() -> "Showing segment: " + segment);
         ui().showSkipSegmentButton(segment);
@@ -866,8 +862,7 @@ public class SegmentPlaybackController {
     }
 
     public static boolean forceShowSkipButton() {
-        BooleanSetting autoHide = settings().autoHideSkipButton();
-        if (autoHide == null || !autoHide.get()) {
+        if (!isOn(settings().autoHideSkipButton())) {
             // Auto hide is off. Force show only if inside a segment.
             return segmentCurrentlyPlaying != null;
         }
@@ -1022,7 +1017,7 @@ public class SegmentPlaybackController {
             if (dialog.isShowing()) {
                 mainLayout.startAnimation(fadeOut);
             }
-        }, getToastDuration());
+        }, settings().toastOnSkipDurationMs());
     }
 
     /**
@@ -1075,8 +1070,7 @@ public class SegmentPlaybackController {
     @SuppressWarnings("unused")
     public static String appendTimeWithoutSegments(String totalTime) {
         try {
-            BooleanSetting setting = settings().videoLengthWithoutSegments();
-            if (setting != null && setting.get()
+            if (isOn(settings().videoLengthWithoutSegments())
                     && settings().sbEnabled().get()
                     && !TextUtils.isEmpty(totalTime) && !TextUtils.isEmpty(timeWithoutSegments)) {
                 // Force LTR layout, to match the same LTR video time/length layout YouTube uses for all languages
@@ -1091,8 +1085,7 @@ public class SegmentPlaybackController {
 
     private static void calculateTimeWithoutSegments() {
         final long currentVideoLength = video().getVideoLength();
-        BooleanSetting setting = settings().videoLengthWithoutSegments();
-        if (setting == null || !setting.get() || currentVideoLength <= 0
+        if (!isOn(settings().videoLengthWithoutSegments()) || currentVideoLength <= 0
                 || segments == null || segments.length == 0) {
             timeWithoutSegments = null;
             return;
@@ -1100,24 +1093,20 @@ public class SegmentPlaybackController {
 
         boolean foundNonhighlightSegments = false;
         long timeWithoutSegmentsValue = currentVideoLength;
+        // Furthest end of all earlier segments.
+        long earlierSegmentsEnd = 0;
 
-        for (int i = 0, length = segments.length; i < length; i++) {
-            SponsorSegment segment = segments[i];
-            if (segment.category == SegmentCategory.HIGHLIGHT) {
-                continue;
+        for (SponsorSegment segment : segments) {
+            if (segment.category != SegmentCategory.HIGHLIGHT) {
+                foundNonhighlightSegments = true;
+                // To prevent nested segments from incorrectly counting additional time,
+                // only count the part after any earlier segments.
+                final long start = Math.max(segment.start, earlierSegmentsEnd);
+                if (start < segment.end) {
+                    timeWithoutSegmentsValue -= (segment.end - start);
+                }
             }
-            foundNonhighlightSegments = true;
-
-            long start = segment.start;
-            final long end = segment.end;
-            // To prevent nested segments from incorrectly counting additional time,
-            // check if the segment overlaps any earlier segments.
-            for (int j = 0; j < i; j++) {
-                start = Math.max(start, segments[j].end);
-            }
-            if (start < end) {
-                timeWithoutSegmentsValue -= (end - start);
-            }
+            earlierSegmentsEnd = Math.max(earlierSegmentsEnd, segment.end);
         }
 
         if (!foundNonhighlightSegments) {
