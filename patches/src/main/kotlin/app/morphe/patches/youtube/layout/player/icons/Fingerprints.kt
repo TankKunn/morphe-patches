@@ -30,7 +30,7 @@ internal object PlayPauseButtonStateFingerprint : Fingerprint(
 )
 
 /**
- * In the class that sets the player overlay icons from code, the settings button among them.
+ * In the class that sets the player overlay icons from code.
  */
 internal object PlayerOverlayControlsFingerprint : Fingerprint(
     filters = listOf(
@@ -40,7 +40,7 @@ internal object PlayerOverlayControlsFingerprint : Fingerprint(
 )
 
 /**
- * Loads and tints an icon of the player controls, the skip buttons among them.
+ * Loads and tints an icon of the player controls.
  */
 internal object PlayerControlIconLoaderFingerprint : Fingerprint(
     returnType = "Landroid/graphics/drawable/Drawable;",

@@ -329,19 +329,28 @@ private fun ResourcePatchContext.wrapAppSelectorIcons(selectorName: String, wrap
 private const val EXTENSION_PLAY_PAUSE_ICONS =
     "Lapp/morphe/extension/youtube/videoplayer/PlayPauseIcons;"
 
+// The cast button, which loads the icon of each cast state itself.
+private const val MDX_ENTRY_POINT_BUTTON_CLASS =
+    "Lcom/google/android/libraries/youtube/mdx/mediaroute/entrypoint/MdxEntryPointButton;"
+
 private const val EXTENSION_PLAYER_BUTTON_ICONS =
     "Lapp/morphe/extension/youtube/videoplayer/PlayerButtonIcons;"
 
-/**
- * Routes the icons a class sets by resource id through the extension, which swaps in the style icon.
- * Calls with other icons keep their original behavior.
- */
 // The extension takes an ImageView, so only calls on these classes can be redirected to it.
 private val imageViewClasses = listOf(
     "Landroid/widget/ImageView;",
     "Lcom/google/android/libraries/youtube/common/ui/TouchImageView;",
 )
 
+private val drawableLoaderClasses = listOf(
+    "Landroid/content/res/Resources;",
+    "Landroid/content/Context;",
+)
+
+/**
+ * Routes the icons a class sets by resource id through the extension, which swaps in the style icon.
+ * Calls with other icons keep their original behavior.
+ */
 private fun MutableClass.hookIconsSetFromCode() {
     methods.filter { it.implementation != null }.forEach { method ->
         method.apply {
@@ -364,20 +373,22 @@ private fun MutableClass.hookIconsSetFromCode() {
             }
 
             // Loads the icon by id to tint it before setting it. Same registers, same result type.
-            findInstructionIndicesReversed(
-                methodCall(
-                    opcode = Opcode.INVOKE_VIRTUAL,
-                    definingClass = "Landroid/content/res/Resources;",
-                    name = "getDrawable",
-                    parameters = listOf("I")
-                )
-            ).forEach { index ->
-                val call = getInstruction<FiveRegisterInstruction>(index)
-                replaceInstruction(
-                    index,
-                    "invoke-static { v${call.registerC}, v${call.registerD} }, $EXTENSION_PLAYER_BUTTON_ICONS->" +
-                            "getDrawable(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;"
-                )
+            drawableLoaderClasses.forEach { loaderClass ->
+                findInstructionIndicesReversed(
+                    methodCall(
+                        opcode = Opcode.INVOKE_VIRTUAL,
+                        definingClass = loaderClass,
+                        name = "getDrawable",
+                        parameters = listOf("I")
+                    )
+                ).forEach { index ->
+                    val call = getInstruction<FiveRegisterInstruction>(index)
+                    replaceInstruction(
+                        index,
+                        "invoke-static { v${call.registerC}, v${call.registerD} }, $EXTENSION_PLAYER_BUTTON_ICONS->" +
+                                "getDrawable(${loaderClass}I)Landroid/graphics/drawable/Drawable;"
+                    )
+                }
             }
 
             // A helper that loads the icon by id and adds its own effects, the style replaces its result.
@@ -401,18 +412,18 @@ private fun MutableClass.hookIconsSetFromCode() {
 }
 
 /**
- * Applies the style to the player buttons that get their icons from code:
- * play, pause and replay, skip, settings and captions.
+ * Applies the style to the app's player buttons that get their icons from code.
  */
 private val playerButtonIconStylePatch = bytecodePatch {
     dependsOn(sharedExtensionPatch)
 
     execute {
         // The same icons are on screens outside the player, so only these classes are changed.
-        // Either can be missing on a target, which then keeps the app icons of that button.
+        // Any can be missing on a target, which then keeps the app icons of that button.
         PlayerOverlayControlsFingerprint.classDefOrNull?.hookIconsSetFromCode()
         PlayerControlIconLoaderFingerprint.classDefOrNull?.hookIconsSetFromCode()
         PlayerCaptionsButtonFingerprint.classDefOrNull?.hookIconsSetFromCode()
+        mutableClassDefByOrNull(MDX_ENTRY_POINT_BUTTON_CLASS)?.hookIconsSetFromCode()
 
         PlayPauseButtonStateFingerprint.methodOrNull?.apply {
             val play = resourceId(ResourceType.STRING, "accessibility_play")
@@ -464,7 +475,7 @@ private val playerButtonIconStylePatch = bytecodePatch {
 
 /**
  * Adds the player icon style picker, shared by the player buttons and the swipe controls,
- * and applies the style to the app's own fullscreen, play, skip, settings and captions buttons.
+ * and applies the style to the app's own player buttons.
  */
 val playerIconStylePatch = resourcePatch(
     name = "Player icon style",
@@ -533,12 +544,12 @@ val playerIconStylePatch = resourcePatch(
             "morphe_player_settings",
             "morphe_player_captions_on",
             "morphe_player_captions_off",
+            "morphe_player_cast",
             // The minimal miniplayer's close button.
             "morphe_player_close",
         )
 
-        // The bold player sets the skip icons from code, see playerButtonIconStylePatch.
-        // Older players show the selectors from the layout.
+        // Older players show these selectors from the layout, the bold player sets its icons from code.
         appSkipSelectors.forEach { (selectorName, wrapperClass) ->
             wrapAppSelectorIcons(selectorName, wrapperClass)
         }

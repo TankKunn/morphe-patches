@@ -8,6 +8,7 @@
 
 package app.morphe.extension.youtube.videoplayer;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
@@ -21,7 +22,7 @@ import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 
 /**
- * Applies the player icon style to player buttons the app sets by resource id, such as skip, settings and captions.
+ * Applies the player icon style to the app's player buttons whose icon it sets by resource id.
  * <p>
  * Screens outside the player use the same icons, so the resources themselves are left alone.
  */
@@ -37,9 +38,13 @@ public final class PlayerButtonIcons {
         add("yt_outline_experimental_gear_black_24", "morphe_player_settings");
         add("yt_fill_experimental_closed_captions_black_24", "morphe_player_captions_on");
         add("yt_outline_experimental_closed_captions_black_24", "morphe_player_captions_off");
+        // Only the idle cast icon, the connecting one must stay an AnimationDrawable.
+        // The cast button outside the player loads the vd_theme variant, which is left out.
+        add("yt_outline_experimental_chromecast_black_24", "morphe_player_cast");
         // Without the bold player.
         add("quantum_ic_closed_caption_white_24", "morphe_player_captions_on");
         add("quantum_ic_closed_caption_off_white_24", "morphe_player_captions_off");
+        add("yt_outline_chromecast_white_24", "morphe_player_cast");
     }
 
     private PlayerButtonIcons() {
@@ -83,6 +88,15 @@ public final class PlayerButtonIcons {
     public static Drawable getDrawable(Resources resources, int resId) {
         Drawable icon = styledIcon(resId);
         return icon != null ? icon : resources.getDrawable(resId);
+    }
+
+    /**
+     * Injection point.
+     * Replaces {@link Context#getDrawable(int)}, used the same way.
+     */
+    public static Drawable getDrawable(Context context, int resId) {
+        Drawable icon = styledIcon(resId);
+        return icon != null ? icon : context.getDrawable(resId);
     }
 
     @Nullable
