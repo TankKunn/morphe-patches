@@ -128,18 +128,18 @@ val cloneAppPatch = resourcePatch(
 
     val updatePermissionsOption = booleanOption(
         key = "updatePermissions",
-        default = false,
+        default = true,
         title = "Update permissions",
         description = "Update custom permissions declared by the app. " +
-            "Enabling this can fix installation conflicts, but this can also break features in certain apps.",
+            "Fixes installation conflicts, but can break features in certain apps.",
     )
 
     val updateProvidersOption = booleanOption(
         key = "updateProviders",
-        default = false,
+        default = true,
         title = "Update providers",
         description = "Update provider names declared by the app. " +
-            "Enabling this can fix installation conflicts, but this can also break features in certain apps.",
+            "Fixes installation conflicts, but can break features in certain apps.",
     )
 
     fun getReplacementPackageName(originalPackageName: String) : String {
