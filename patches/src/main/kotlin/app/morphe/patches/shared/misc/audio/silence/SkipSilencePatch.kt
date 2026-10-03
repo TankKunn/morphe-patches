@@ -16,13 +16,15 @@ import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.noTitleUnsortedPreferenceCategory
 import app.morphe.util.matchSingle
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
+import java.util.logging.Logger
 
 private const val EXTENSION_CLASS = "Lapp/morphe/extension/shared/patches/SkipSilencePatch;"
 
 @Suppress("unused")
 internal fun skipSilencePatch(
     block: BytecodePatchBuilder.() -> Unit,
-    preferenceScreen: BasePreferenceScreen.Screen,
+    targetCompatible: BytecodePatchBuilder.() -> Boolean = { true },
+    preferenceScreen: BasePreferenceScreen.Screen
 ) = bytecodePatch(
     name = "Skip silence",
     description = "Adds an option to automatically skip silent pauses in audio playback."
@@ -30,6 +32,13 @@ internal fun skipSilencePatch(
     block()
 
     execute {
+        // Older app versions use an older Media3 with a different silence skipping processor.
+        if (!targetCompatible()) {
+            return@execute Logger.getLogger(this::class.java.name).warning(
+                "'Skip silence' does not support older legacy app targets."
+            )
+        }
+
         preferenceScreen.addPreferences(
             noTitleUnsortedPreferenceCategory(
                 SwitchPreference("morphe_skip_silence", summary = true),
