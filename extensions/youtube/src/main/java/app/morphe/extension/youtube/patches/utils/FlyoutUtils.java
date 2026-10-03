@@ -52,11 +52,12 @@ import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.patches.components.BufferAsciiStrings;
+import app.morphe.extension.shared.spoof.SpoofAppVersionPatch;
 import app.morphe.extension.shared.theme.ThemeUtils;
 import app.morphe.extension.shared.ui.Dim;
-import app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch;
 import app.morphe.extension.youtube.patches.PipButtonPatch;
 import app.morphe.extension.youtube.patches.SaveToWatchLaterPatch;
+import app.morphe.extension.youtube.patches.VersionCheckPatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.patches.components.PlayerFlyoutMenuComponentsFilter;
 import app.morphe.extension.youtube.patches.utils.requests.ChannelIdRequest;
@@ -199,15 +200,18 @@ public final class FlyoutUtils {
     );
     private static final int ITEM_TEXT_ID = ResourceUtils.getIdentifier(
             ResourceType.ID, "list_item_text");
+    // Flyout menus keep the experimental icons even with old player buttons restored.
+    private static final boolean USE_EXPERIMENTAL_ICONS = VersionCheckPatch.IS_20_31_OR_GREATER
+            && !SpoofAppVersionPatch.isSpoofingToLessThan("20.31.00");
     private static final Drawable saveToWatchLaterDrawable = ResourceUtils.getDrawable(
-            LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS
-                    ? "yt_outline_clock_black_24"
-                    : "yt_outline_experimental_clock_vd_theme_24"
+            USE_EXPERIMENTAL_ICONS
+                    ? "yt_outline_experimental_clock_vd_theme_24"
+                    : "yt_outline_clock_black_24"
     );
     private static final Drawable aiSListSubmitDrawable = ResourceUtils.getDrawable(
-            LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS
-                    ? "yt_outline_flag_black_24"
-                    : "yt_outline_experimental_flag_vd_theme_24"
+            USE_EXPERIMENTAL_ICONS
+                    ? "yt_outline_experimental_flag_vd_theme_24"
+                    : "yt_outline_flag_black_24"
     );
     private static final Drawable adWhitelistButtonDrawable = getSettingsScreenDrawable(
             "morphe_settings_screen_01_ads");
