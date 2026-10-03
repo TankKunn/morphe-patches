@@ -48,6 +48,9 @@ import app.morphe.extension.youtube.shared.NavigationBar.NavigationButton;
 
 @SuppressWarnings("unused")
 public final class LayoutComponentsFilter extends Filter {
+    public static final int CONTAINER_ID = ResourceUtils.getIdentifier(
+            ResourceType.ID, "time_bar_chapter_title_container");
+
     private static final ByteArrayFilterGroup mixPlaylistUrlBuffer = new ByteArrayFilterGroup(
             null,
             "?list=RD",
@@ -1312,33 +1315,37 @@ public final class LayoutComponentsFilter extends Filter {
     }
 
     private static void hideAccountItem(View textView, CharSequence menuTitleCharSequence, int[] depths) {
-        if (!Settings.HIDE_ACCOUNT_MENU.get() || menuTitleCharSequence == null) return;
-        if (accountMenuFilterStrings.isEmpty()) return;
+        try {
+            if (!Settings.HIDE_ACCOUNT_MENU.get() || menuTitleCharSequence == null) return;
+            if (accountMenuFilterStrings.isEmpty()) return;
 
-        String menuTitleString = menuTitleCharSequence.toString();
+            String menuTitleString = menuTitleCharSequence.toString();
 
-        boolean matches = false;
-        String menuTitleLower = menuTitleString.toLowerCase();
-        for (String filter : accountMenuFilterStrings) {
-            if (menuTitleLower.contains(filter.toLowerCase())) {
-                matches = true;
-                break;
-            }
-        }
-        if (!matches) return;
-
-        // Not all versions have the same depth. So perform a scan
-        // along all available depths, to find the right one.
-        for (int depth : depths) {
-            ViewParent parent = Utils.getParentView(textView, depth);
-            if (parent instanceof View current) {
-                Utils.hideViewByLayoutParams(current);
-                current.setVisibility(View.GONE);
-                if (current.getLayoutParams() instanceof ViewGroup.MarginLayoutParams marginParams) {
-                    marginParams.setMargins(0, 0, 0, 0);
-                    current.setLayoutParams(marginParams);
+            boolean matches = false;
+            String menuTitleLower = menuTitleString.toLowerCase();
+            for (String filter : accountMenuFilterStrings) {
+                if (menuTitleLower.contains(filter.toLowerCase())) {
+                    matches = true;
+                    break;
                 }
             }
+            if (!matches) return;
+
+            // Not all versions have the same depth. So perform a scan
+            // along all available depths, to find the right one.
+            for (int depth : depths) {
+                ViewParent parent = Utils.getParentView(textView, depth);
+                if (parent instanceof View current) {
+                    Utils.hideViewByLayoutParams(current);
+                    current.setVisibility(View.GONE);
+                    if (current.getLayoutParams() instanceof ViewGroup.MarginLayoutParams marginParams) {
+                        marginParams.setMargins(0, 0, 0, 0);
+                        current.setLayoutParams(marginParams);
+                    }
+                }
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "hideAccountItem failure", ex);
         }
     }
 
@@ -1349,6 +1356,31 @@ public final class LayoutComponentsFilter extends Filter {
         if (view != null && Settings.HIDE_CHAPTERS_TIMELINE_BUTTON.get()) {
             Utils.hideViewByLayoutParams(view);
             view.setVisibility(View.GONE);
+        }
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Some app targets show the chapter title next to the timestamp as its own view, instead
+     * of inside the entry point button hidden by {@link #hideChaptersTimelineButton(View)}.
+     */
+    public static void hideChapterTitle(View view) {
+        if (view == null || !Settings.HIDE_CHAPTERS_TIMELINE_BUTTON.get()) {
+            return;
+        }
+
+        try {
+            Utils.hideViewByLayoutParams(view);
+            view.setVisibility(View.GONE);
+
+            // The chip around the title is a separate parent view.
+            if (CONTAINER_ID != 0 && view.getParent() instanceof View parent && parent.getId() == CONTAINER_ID) {
+                Utils.hideViewByLayoutParams(parent);
+                parent.setVisibility(View.GONE);
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "hideChapterTitle failure", ex);
         }
     }
 
