@@ -171,7 +171,7 @@ Changes include:
     <string name="morphe_hide_help_feedback_menu_title">Hide \'Help &amp; feedback\' in menus</string>
     <string name="morphe_hide_help_feedback_menu_summary">Hides \'Help &amp; feedback\' in the three-dot menus of the app bar, such as the search results menu</string>
     <string name="morphe_hide_handle_title">Hide handle</string>
-    <string name="morphe_hide_handle_summary">Hides your channel handle in the 'You' tab</string>
+    <string name="morphe_hide_handle_summary">Hides your channel handle in the \'You\' tab</string>
     <string name="morphe_hide_video_title_title">Hide video title</string>
     <string name="morphe_hide_video_title_summary">Hides the video title in the fullscreen mode</string>
     <string name="morphe_sanitize_video_subtitle_title">Sanitize video subtitle</string>

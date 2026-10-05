@@ -50,6 +50,8 @@ val addToQueuePatch = bytecodePatch(
             )
         )
 
+        // Flyout patch adds instructions to this method, so the prior match indexes are stale.
+        FeedFlyoutButtonsInitializerFingerprint.clearMatch()
         FeedFlyoutButtonsInitializerFingerprint.let { mainFingerprint ->
             val mainFingerprintMatches = mainFingerprint.instructionMatches
             val getCharSequenceReference = mainFingerprintMatches.first().getInstruction<ReferenceInstruction>().reference

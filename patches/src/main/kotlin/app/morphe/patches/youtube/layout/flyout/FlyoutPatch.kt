@@ -213,6 +213,7 @@ val flyoutPatch = bytecodePatch(
         )
 
         // Track and initialize flyout menu buttons generically.
+        FeedFlyoutButtonsInitializerFingerprint.clearMatch() // Shared fingerprint.
         FeedFlyoutButtonsInitializerFingerprint.let { mainFingerprint ->
             val mainFingerprintMatches = mainFingerprint.instructionMatches
             val getCharSequenceReference = mainFingerprintMatches.first().getInstruction<ReferenceInstruction>().reference
