@@ -11,7 +11,6 @@ import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
 import app.morphe.patcher.InstructionLocation.MatchAfterWithin
 import app.morphe.patcher.fieldAccess
-import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
@@ -65,7 +64,6 @@ internal object LithoViewUnmountAllItemsFingerprint : Fingerprint(
             opcode = Opcode.INVOKE_VIRTUAL,
             smali = "Landroid/graphics/Rect;->setEmpty()V"
         ),
-        literal(1),
         methodCall(
             opcode = Opcode.INVOKE_VIRTUAL,
             smali = "Landroid/graphics/Rect;->setEmpty()V"
