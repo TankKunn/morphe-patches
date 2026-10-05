@@ -1,3 +1,13 @@
+## [1.46.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.3...v1.46.0-dev.4) (2026-10-05)
+
+### 🐛 Bug Fixes
+
+* **DeArrow:** Always use high quality still images without checking if still exists ([632f5a6](https://github.com/MorpheApp/morphe-patches/commit/632f5a64ba493fd2883729c8bce15dc1773ac91e))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.40.51` ([60f840d](https://github.com/MorpheApp/morphe-patches/commit/60f840d6b003ba0f5febc037143fe28748e6e899))
+
 ## [1.46.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.2...v1.46.0-dev.3) (2026-10-04)
 
 ### 🐛 Bug Fixes
