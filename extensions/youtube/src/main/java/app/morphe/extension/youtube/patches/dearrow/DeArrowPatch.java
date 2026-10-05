@@ -39,14 +39,22 @@ import app.morphe.extension.youtube.shared.PlayerType;
  * DeArrow titles and alternative YouTube thumbnails.
  * <p>
  * Titles are replaced by {@link app.morphe.extension.youtube.patches.originaltitles.RestoreOriginalTitlesPatch},
- * which fetches them with {@link DeArrowTitleRequest}.
+ * which fetches them with {@link DeArrowBrandingRequest}.
  * <p>
  * Can show YouTube provided screen captures of beginning/middle/end of the video.
  * (ie: sd1.jpg, sd2.jpg, sd3.jpg).
  * <p>
  * Or can show crowdsourced thumbnails provided by DeArrow (<a href="http://dearrow.ajay.app">...</a>).
+ * The DeArrow thumbnail is fetched with {@link DeArrowBrandingRequest}, and the original thumbnail is
+ * used if the video has no crowdsourced thumbnail. The thumbnail cache API is not used without
+ * a crowdsourced thumbnail, as it can return a random video frame that was cached for other clients.
  * <p>
  * Or can use DeArrow and fall back to screen captures if DeArrow is not available.
+ * Any thumbnail the DeArrow thumbnail cache API provides is used, without waiting for the branding.
+ * <p>
+ * The thumbnail cache redirects to the fallback thumbnail if it has no thumbnail. If it cannot redirect,
+ * then DeArrow is not used for the video for a while, and the Litho views are mounted again
+ * to load the fallback thumbnail.
  * <p>
  * Still captures are used without first verifying if the image exists, so the UI loading time
  * is the same as using original thumbnails. Still captures are not available for live streams,
@@ -178,6 +186,23 @@ public final class DeArrowPatch {
     private static final long DEARROW_FAILURE_API_BACKOFF_MILLISECONDS = 5 * 60 * 1000; // 5 Minutes.
 
     /**
+     * How long to wait for the DeArrow branding before using the original thumbnail.
+     */
+    private static final long DEARROW_BRANDING_TIMEOUT_MILLISECONDS = 2 * 1000;
+
+    /**
+     * How long until a crowdsourced thumbnail the thumbnail cache did not provide is tried again.
+     */
+    private static final long DEARROW_THUMBNAIL_RETRY_MILLISECONDS = 5 * 60 * 1000; // 5 Minutes.
+
+    /**
+     * Video id -> system time when the crowdsourced thumbnail the thumbnail cache did not provide
+     * can be tried again.
+     */
+    private static final Map<String, Long> unavailableThumbnailRetryTimes =
+            Collections.synchronizedMap(Utils.createSizeRestrictedMap(1000));
+
+    /**
      * If non-zero, then the system time of when DeArrow API calls can resume.
      */
     private static volatile long timeToResumeDeArrowAPICalls;
@@ -252,25 +277,67 @@ public final class DeArrowPatch {
             return null;
         }
 
-        return decodedURL.createStillsURL(quality, false);
+        return decodedURL.createStillsURL(quality);
     }
 
     /**
      * Build the alternative thumbnail URL using DeArrow thumbnail cache.
      *
      * @param videoId ID of the video to get a thumbnail of.  Can be any video (regular or Short).
-     * @param fallbackURL URL to fall back to in case.
+     * @param thumbnailTime Time in seconds of the video frame of the crowdsourced thumbnail,
+     *                      or null to use any thumbnail the thumbnail cache has for the video.
+     * @param fallbackURL URL the thumbnail cache redirects to if it has no thumbnail.
+     *                    The thumbnail cache only redirects to URLs of the primary thumbnail domain.
      * @return The alternative thumbnail URL, without tracking parameters.
      */
-    private static String buildDeArrowThumbnailURL(String videoId, String fallbackURL) {
+    private static String buildDeArrowThumbnailURL(String videoId, @Nullable Double thumbnailTime,
+                                                   String fallbackURL) {
         // Build thumbnail request URL.
-        // See https://github.com/ajayyy/DeArrowThumbnailCache/blob/a947f33787b8fe2568abc53c86894368e3b61b24/app.py#L38
-        return dearrowAPIURI
+        // See https://github.com/ajayyy/DeArrowThumbnailCache/blob/d5e9ae6844e214aeedfbb2ae8d563942f72dc0a1/app.py#L38
+        Uri.Builder builder = dearrowAPIURI
                 .buildUpon()
-                .appendQueryParameter("videoID", videoId)
+                .appendQueryParameter("videoID", videoId);
+        if (thumbnailTime != null) {
+            // The time of the crowdsourced thumbnail, which the thumbnail cache also uses
+            // for requests without a time.
+            builder.appendQueryParameter("time", String.valueOf(thumbnailTime))
+                    .appendQueryParameter("officialTime", "true");
+        }
+        return builder
                 .appendQueryParameter("redirectUrl", fallbackURL)
                 .build()
                 .toString();
+    }
+
+    /**
+     * @return If the thumbnail cache recently did not provide the crowdsourced thumbnail of the video.
+     */
+    private static boolean isThumbnailUnavailable(String videoId) {
+        Long retryTime = unavailableThumbnailRetryTimes.get(videoId);
+        if (retryTime == null) {
+            return false;
+        }
+        if (retryTime < System.currentTimeMillis()) {
+            unavailableThumbnailRetryTimes.remove(videoId);
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * The thumbnail cache did not provide the crowdsourced thumbnail, such as a thumbnail
+     * that failed to generate or is not generated yet.
+     *
+     * @param url DeArrow thumbnail URL.
+     */
+    private static void setThumbnailUnavailable(String url) {
+        String videoId = Uri.parse(url).getQueryParameter("videoID");
+        if (videoId == null) {
+            return;
+        }
+        Logger.printDebug(() -> "DeArrow thumbnail not available for video: " + videoId);
+        unavailableThumbnailRetryTimes.put(videoId,
+                System.currentTimeMillis() + DEARROW_THUMBNAIL_RETRY_MILLISECONDS);
     }
 
     private static boolean urlIsDeArrow(String imageURL) {
@@ -339,17 +406,23 @@ public final class DeArrowPatch {
 
             String sanitizedReplacementURL;
             final boolean includeTracking;
-            if (option.useDeArrow && canUseDeArrowAPI()) {
+            if (option.useDeArrow && canUseDeArrowAPI() && !isThumbnailUnavailable(decodedURL.videoId)) {
                 includeTracking = false; // Do not include view tracking parameters with API call.
-                String fallbackURL = null;
                 if (option.useStillImages) {
-                    fallbackURL = buildYouTubeVideoStillURL(decodedURL, qualityToUse);
+                    // Any thumbnail of the thumbnail cache is used, and the still capture otherwise.
+                    String stillURL = buildYouTubeVideoStillURL(decodedURL, qualityToUse);
+                    sanitizedReplacementURL = buildDeArrowThumbnailURL(decodedURL.videoId, null,
+                            stillURL != null ? stillURL : decodedURL.sanitizedURL);
+                } else {
+                    // Without a time, the thumbnail cache can return a random video frame.
+                    Double thumbnailTime = DeArrowBrandingRequest.fetchThumbnailTime(
+                            decodedURL.videoId, DEARROW_BRANDING_TIMEOUT_MILLISECONDS);
+                    if (thumbnailTime == null) {
+                        return originalURL; // No crowdsourced thumbnail.
+                    }
+                    sanitizedReplacementURL = buildDeArrowThumbnailURL(decodedURL.videoId, thumbnailTime,
+                            decodedURL.sanitizedURL);
                 }
-                if (fallbackURL == null) {
-                    fallbackURL = decodedURL.sanitizedURL;
-                }
-
-                sanitizedReplacementURL = buildDeArrowThumbnailURL(decodedURL.videoId, fallbackURL);
             } else if (option.useStillImages) {
                 includeTracking = true; // Include view tracking parameters if present.
                 sanitizedReplacementURL = buildYouTubeVideoStillURL(decodedURL, qualityToUse);
@@ -357,7 +430,7 @@ public final class DeArrowPatch {
                     return originalURL; // Still capture is not available.  Return the untouched original url.
                 }
             } else {
-                return originalURL; // Recently experienced DeArrow failure and video stills are not enabled.
+                return originalURL; // DeArrow is not available and video stills are not enabled.
             }
 
             // Do not log any tracking parameters.
@@ -391,6 +464,13 @@ public final class DeArrowPatch {
                 if (statusCode == 304) {
                     // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304
                     return; // Normal response.
+                }
+                if (statusCode == 204) {
+                    // The thumbnail cache has no thumbnail, and does not redirect to fallback urls
+                    // that are not of the primary thumbnail domain. Load the original thumbnail instead.
+                    setThumbnailUnavailable(url);
+                    LithoRelayoutPatch.remountListViews();
+                    return;
                 }
                 handleDeArrowError(url, statusCode);
                 return;
@@ -433,9 +513,10 @@ public final class DeArrowPatch {
      * - A non-existent domain.
      * - A url path of something incorrect (ie: /v1/nonExistentEndPoint).
      * <p>
-     * Cronet uses a very timeout (several minutes), so if the API never responds this hook can take a while to be called.
-     * But this does not appear to be a problem, as the DeArrow API has not been observed to 'go silent'
-     * Instead if there's a problem it returns an error code status response, which is handled in this patch.
+     * Cronet uses a very long timeout (several minutes), so if the API never responds
+     * this hook can take a while to be called. But this does not appear to be a problem,
+     * as the DeArrow API has not been observed to 'go silent' Instead if there's a problem
+     * it returns an error code status response, which is handled in this patch.
      */
     public static void handleCronetFailure(UrlRequest request,
                                            @Nullable UrlResponseInfo responseInfo,
@@ -613,7 +694,7 @@ public final class DeArrowPatch {
     }
 
     /**
-     * YouTube video thumbnail url, decoded into it's relevant parts.
+     * YouTube video thumbnail url, decoded into its relevant parts.
      */
     private static class DecodedThumbnailURL {
         private static final String YOUTUBE_THUMBNAIL_DOMAIN = "https://i.ytimg.com/";
@@ -643,7 +724,6 @@ public final class DeArrowPatch {
                     imageSizeStartIndex, imageSizeEndIndex, imageExtensionEndIndex);
         }
 
-        final String originalFullURL;
         /** Full usable url, but stripped of any tracking information. */
         final String sanitizedURL;
         /** URL path, such as 'vi' or 'vi_webp' */
@@ -658,7 +738,6 @@ public final class DeArrowPatch {
 
         DecodedThumbnailURL(String fullURL, int urlPathStartIndex, int urlPathEndIndex, int videoIdStartIndex, int videoIdEndIndex,
                             int imageSizeStartIndex, int imageSizeEndIndex, int imageExtensionEndIndex) {
-            originalFullURL = fullURL;
             sanitizedURL = fullURL.substring(0, imageExtensionEndIndex);
             urlPath = fullURL.substring(urlPathStartIndex, urlPathEndIndex);
             videoId = fullURL.substring(videoIdStartIndex, videoIdEndIndex);
@@ -668,24 +747,19 @@ public final class DeArrowPatch {
                     ? "" : fullURL.substring(imageExtensionEndIndex);
         }
 
-        @SuppressWarnings("SameParameterValue")
-        String createStillsURL(ThumbnailQuality qualityToUse, boolean includeViewTracking) {
+        /**
+         * @return The still capture URL, without view tracking parameters.
+         */
+        String createStillsURL(ThumbnailQuality qualityToUse) {
             // Images could be upgraded to webp if they are not already, but this fails quite often,
             // especially for new videos uploaded in the last hour.
             // And even if alt webp images do exist, sometimes they can load much slower than the original jpg alt images.
             // (as much as 4x slower network response has been observed, despite the alt webp image being a smaller file).
-            StringBuilder builder = new StringBuilder(originalFullURL.length() + 2);
             // Many different "i.ytimage.com" domains exist such as "i9.ytimg.com",
             // but still captures are frequently not available on the other domains (especially newly uploaded videos).
             // So always use the primary domain for a higher success rate.
-            builder.append(YOUTUBE_THUMBNAIL_DOMAIN).append(urlPath).append('/');
-            builder.append(videoId).append('/');
-            builder.append(qualityToUse.getAltImageNameToUse());
-            builder.append('.').append(imageExtension);
-            if (includeViewTracking) {
-                builder.append(viewTrackingParameters);
-            }
-            return builder.toString();
+            return YOUTUBE_THUMBNAIL_DOMAIN + urlPath + '/'
+                    + videoId + '/' + qualityToUse.getAltImageNameToUse() + '.' + imageExtension;
         }
     }
 }
