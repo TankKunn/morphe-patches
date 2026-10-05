@@ -1,3 +1,10 @@
+## [1.46.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.6...v1.46.0-dev.7) (2026-10-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - DeArrow:** "DeArrow & original thumbnails" sometimes shows still images when no crowdsourced thumbnails exist ([#3531](https://github.com/MorpheApp/morphe-patches/issues/3531)) ([fdfc35d](https://github.com/MorpheApp/morphe-patches/commit/fdfc35d6e2e3c41454421ac7a2c7f7d767a1765f))
+* **YouTube - System share sheet:** In-playlist id searching interfering with videoId sharing ([85207ea](https://github.com/MorpheApp/morphe-patches/commit/85207eab86b6ec1511ef13b6471367a5fa176d9b))
+
 ## [1.46.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.5...v1.46.0-dev.6) (2026-10-05)
 
 ### 🐛 Bug Fixes

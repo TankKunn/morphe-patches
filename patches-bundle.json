@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-05T11:40:33",
-  "description": "## [1.46.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.5...v1.46.0-dev.6) (2026-10-05)\n\n### 🐛 Bug Fixes\n\n* **YouTube - Navigation bar:** Experimental targets shows startup error ([3465138](https://github.com/MorpheApp/morphe-patches/commit/3465138af7b0032dac11f9b97a1e6eba2083fb9f))",
-  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.46.0-dev.6/patches-1.46.0-dev.6.mpp",
+  "created_at": "2026-10-05T14:49:12",
+  "description": "## [1.46.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.6...v1.46.0-dev.7) (2026-10-05)\n\n### 🐛 Bug Fixes\n\n* **YouTube - DeArrow:** \"DeArrow & original thumbnails\" sometimes shows still images when no crowdsourced thumbnails exist ([#3531](https://github.com/MorpheApp/morphe-patches/issues/3531)) ([fdfc35d](https://github.com/MorpheApp/morphe-patches/commit/fdfc35d6e2e3c41454421ac7a2c7f7d767a1765f))\n* **YouTube - System share sheet:** In-playlist id searching interfering with videoId sharing ([85207ea](https://github.com/MorpheApp/morphe-patches/commit/85207eab86b6ec1511ef13b6471367a5fa176d9b))",
+  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.46.0-dev.7/patches-1.46.0-dev.7.mpp",
   "signature_download_url": "",
-  "version": "1.46.0-dev.6"
+  "version": "1.46.0-dev.7"
 }
