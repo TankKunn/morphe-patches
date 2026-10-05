@@ -1,3 +1,9 @@
+## [1.46.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.5...v1.46.0-dev.6) (2026-10-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Navigation bar:** Experimental targets shows startup error ([3465138](https://github.com/MorpheApp/morphe-patches/commit/3465138af7b0032dac11f9b97a1e6eba2083fb9f))
+
 ## [1.46.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.4...v1.46.0-dev.5) (2026-10-05)
 
 ### 🐛 Bug Fixes
