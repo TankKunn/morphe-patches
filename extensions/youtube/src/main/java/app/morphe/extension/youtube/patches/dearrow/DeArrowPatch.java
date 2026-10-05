@@ -14,7 +14,6 @@ import static app.morphe.extension.shared.StringRef.str;
 
 import android.net.Uri;
 
-import androidx.annotation.GuardedBy;
 import androidx.annotation.Nullable;
 
 import org.chromium.net.UrlRequest;
@@ -22,14 +21,14 @@ import org.chromium.net.UrlResponseInfo;
 import org.chromium.net.impl.CronetUrlRequest;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ExecutionException;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.shared.patches.LithoRelayoutPatch;
 import app.morphe.extension.shared.requests.Requester;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.youtube.settings.Settings;
@@ -49,13 +48,12 @@ import app.morphe.extension.youtube.shared.PlayerType;
  * <p>
  * Or can use DeArrow and fall back to screen captures if DeArrow is not available.
  * <p>
- * Has an additional option to use 'fast' video still thumbnails,
- * where it forces sd thumbnail quality and skips verifying if the alt thumbnail image exists.
- * The UI loading time will be the same or better than using original thumbnails,
- * but thumbnails will initially fail to load for all live streams, unreleased, and occasionally very old videos.
- * If a failed thumbnail load is reloaded (ie: scroll off, then on screen), then the original thumbnail
- * is reloaded instead.  Fast thumbnails requires using SD or lower thumbnail resolution,
- * because a noticeable number of videos do not have hq720 and too much fail to load.
+ * Still captures are used without first verifying if the image exists, so the UI loading time
+ * is the same as using original thumbnails. Still captures are not available for live streams,
+ * unreleased, and occasionally very old videos. If a still capture fails to load, then the quality
+ * is remembered as not available and the Litho views are mounted again, which loads the thumbnail
+ * again with a lower quality still capture or the original thumbnail.
+ * DeArrow thumbnails that fail to load are also loaded again with the original thumbnail.
  */
 @SuppressWarnings("unused")
 public final class DeArrowPatch {
@@ -249,12 +247,12 @@ public final class DeArrowPatch {
     @Nullable
     private static String buildYouTubeVideoStillURL(DecodedThumbnailURL decodedURL,
                                                     ThumbnailQuality qualityToUse) {
-        String sanitizedReplacement = decodedURL.createStillsURL(qualityToUse, false);
-        if (VerifiedQualities.verifyAltThumbnailExist(decodedURL.videoId, qualityToUse, sanitizedReplacement)) {
-            return sanitizedReplacement;
+        ThumbnailQuality quality = UnavailableQualities.getQualityToTry(decodedURL.videoId, qualityToUse);
+        if (quality == null) {
+            return null;
         }
 
-        return null;
+        return decodedURL.createStillsURL(quality, false);
     }
 
     /**
@@ -308,6 +306,8 @@ public final class DeArrowPatch {
                         : str("morphe_dearrow_error_generic");
                 Utils.showToastLong(toastMessage);
             }
+            // Load the DeArrow thumbnails again, which now use the fallback thumbnails.
+            LithoRelayoutPatch.remountListViews();
         }
     }
 
@@ -397,13 +397,13 @@ public final class DeArrowPatch {
             }
 
             if (statusCode == 404) {
-                // Fast alt thumbnails is enabled and the thumbnail is not available.
-                // The video is:
+                // The still capture is not available. The video is:
                 // - live stream
                 // - upcoming unreleased video
                 // - very old
                 // - very low view count
-                // Take note of this, so if the image reloads the original thumbnail will be used.
+                // - does not have the higher quality still capture
+                // Take note of this, and load the image again with a lower quality or the original thumbnail.
                 DecodedThumbnailURL decodedURL = DecodedThumbnailURL.decodeImageURL(url);
                 if (decodedURL == null) {
                     return; // Not a thumbnail.
@@ -418,7 +418,8 @@ public final class DeArrowPatch {
                     return;
                 }
 
-                VerifiedQualities.setAltThumbnailDoesNotExist(decodedURL.videoId, quality);
+                UnavailableQualities.setQualityNotAvailable(decodedURL.videoId, quality);
+                LithoRelayoutPatch.remountListViews();
             }
         } catch (Exception ex) {
             Logger.printException(() -> "Callback success error", ex);
@@ -498,7 +499,7 @@ public final class DeArrowPatch {
 
         /**
          * Original quality to effective alt quality to use.
-         * ie: If fast alt image is enabled, then "hq720" returns {@link #SDDEFAULT}.
+         * ie: "sddefault" returns {@link #HQ720}.
          */
         @Nullable
         static ThumbnailQuality getQualityToUse(String originalSize) {
@@ -507,7 +508,6 @@ public final class DeArrowPatch {
                 return null; // Not a thumbnail for a regular video.
             }
 
-            final boolean useFastQuality = Settings.DEARROW_THUMBNAIL_STILLS_FAST.get();
             return switch (quality) {
                 // SD alt images have somewhat worse quality with washed out color and poor contrast.
                 // But the 720 images look much better and don't suffer from these issues.
@@ -517,18 +517,7 @@ public final class DeArrowPatch {
                 // Of note, this image quality issue only appears with the alt thumbnail images,
                 // and the regular thumbnails have identical color/contrast quality for all sizes.
                 // Fix this by falling through and upgrading SD to 720.
-                case SDDEFAULT, HQ720 -> {  // SD is max resolution for fast alt images.
-                    if (useFastQuality) {
-                        yield SDDEFAULT;
-                    }
-                    yield HQ720;
-                }
-                case MAXRESDEFAULT -> {
-                    if (useFastQuality) {
-                        yield SDDEFAULT;
-                    }
-                    yield MAXRESDEFAULT;
-                }
+                case SDDEFAULT, HQ720 -> HQ720;
                 default -> quality;
             };
         }
@@ -547,137 +536,79 @@ public final class DeArrowPatch {
     }
 
     /**
-     * Uses HTTP HEAD requests to verify and keep track of which thumbnail sizes
-     * are available and not available.
+     * Keeps track of which still capture qualities failed to load.
      */
-    private static class VerifiedQualities {
+    private static class UnavailableQualities {
         /**
-         * After a quality is verified as not available, how long until the quality is re-verified again.
-         * Used only if fast mode is not enabled. Intended for live streams and unreleased videos
-         * that are now finished and available (and thus, the alt thumbnails are also now available).
+         * After a quality fails to load, how long until the quality is tried again.
+         * Intended for live streams and unreleased videos that are now finished and available
+         * (and thus, the alt thumbnails are also now available).
          */
         private static final long NOT_AVAILABLE_TIMEOUT_MILLISECONDS = 10 * 60 * 1000; // 10 minutes.
 
         /**
-         * Cache used to verify if an alternative thumbnails exists for a given video ID.
+         * Video id -> qualities that failed to load.
          */
-        @GuardedBy("itself")
-        private static final Map<String, VerifiedQualities> altVideoIdLookup =
-                Utils.createSizeRestrictedMap(1000);
-
-        private static VerifiedQualities getVerifiedQualities(String videoId, boolean returnNullIfDoesNotExist) {
-            synchronized (altVideoIdLookup) {
-                VerifiedQualities verified = altVideoIdLookup.get(videoId);
-                if (verified == null) {
-                    if (returnNullIfDoesNotExist) {
-                        return null;
-                    }
-                    verified = new VerifiedQualities();
-                    altVideoIdLookup.put(videoId, verified);
-                }
-                return verified;
-            }
-        }
-
-        static boolean verifyAltThumbnailExist(String videoId, ThumbnailQuality quality,
-                                               String imageURL) {
-            VerifiedQualities verified = getVerifiedQualities(videoId, Settings.DEARROW_THUMBNAIL_STILLS_FAST.get());
-            if (verified == null) return true; // Fast alt thumbnails is enabled.
-            return verified.verifyYouTubeThumbnailExists(videoId, quality, imageURL);
-        }
-
-        static void setAltThumbnailDoesNotExist(String videoId, ThumbnailQuality quality) {
-            VerifiedQualities verified = getVerifiedQualities(videoId, false);
-            //noinspection ConstantConditions
-            verified.setQualityVerified(videoId, quality, false);
-        }
+        private static final Map<String, UnavailableQualities> unavailableVideoIdLookup =
+                Collections.synchronizedMap(Utils.createSizeRestrictedMap(1000));
 
         /**
-         * Highest quality verified as existing.
+         * @return The quality to try for the video, which is the quality if it has not failed to load,
+         *         a lower quality, or null if the original thumbnail must be used.
          */
         @Nullable
-        private ThumbnailQuality highestQualityVerified;
+        static ThumbnailQuality getQualityToTry(String videoId, ThumbnailQuality quality) {
+            UnavailableQualities unavailable = unavailableVideoIdLookup.get(videoId);
+            if (unavailable == null) {
+                return quality; // Unknown if it exists. Use the URL anyway and update afterward if loading fails.
+            }
+            return unavailable.getAvailableQuality(videoId, quality);
+        }
+
+        static void setQualityNotAvailable(String videoId, ThumbnailQuality quality) {
+            UnavailableQualities unavailable = unavailableVideoIdLookup.computeIfAbsent(
+                    videoId, key -> new UnavailableQualities());
+            unavailable.setNotAvailable(videoId, quality);
+        }
+
         /**
-         * Lowest quality verified as not existing.
+         * Lowest quality that failed to load. Higher qualities are assumed to also not be available.
          */
         @Nullable
         private ThumbnailQuality lowestQualityNotAvailable;
 
         /**
          * System time, of when to invalidate {@link #lowestQualityNotAvailable}.
-         * Used only if fast mode is not enabled.
          */
-        private long timeToReVerifyLowestQuality;
+        private long timeToRetryLowestQuality;
 
-        private synchronized void setQualityVerified(String videoId, ThumbnailQuality quality, boolean isVerified) {
-            if (isVerified) {
-                if (highestQualityVerified == null || highestQualityVerified.ordinal() < quality.ordinal()) {
-                    highestQualityVerified = quality;
-                }
-            } else {
-                if (lowestQualityNotAvailable == null || lowestQualityNotAvailable.ordinal() > quality.ordinal()) {
-                    lowestQualityNotAvailable = quality;
-                    timeToReVerifyLowestQuality = System.currentTimeMillis() + NOT_AVAILABLE_TIMEOUT_MILLISECONDS;
-                }
-                Logger.printDebug(() -> quality + " not available for video: " + videoId);
+        private synchronized void setNotAvailable(String videoId, ThumbnailQuality quality) {
+            if (lowestQualityNotAvailable == null || lowestQualityNotAvailable.ordinal() > quality.ordinal()) {
+                lowestQualityNotAvailable = quality;
+                timeToRetryLowestQuality = System.currentTimeMillis() + NOT_AVAILABLE_TIMEOUT_MILLISECONDS;
             }
+            Logger.printDebug(() -> quality + " not available for video: " + videoId);
         }
 
-        /**
-         * Verify if a video alt thumbnail exists.  Does so by making a minimal HEAD HTTP request.
-         */
-        synchronized boolean verifyYouTubeThumbnailExists(String videoId, ThumbnailQuality quality,
-                                                          String imageURL) {
-            if (highestQualityVerified != null && highestQualityVerified.ordinal() >= quality.ordinal()) {
-                return true; // Previously verified as existing.
+        @Nullable
+        private synchronized ThumbnailQuality getAvailableQuality(String videoId, ThumbnailQuality quality) {
+            if (lowestQualityNotAvailable == null || quality.ordinal() < lowestQualityNotAvailable.ordinal()) {
+                return quality;
             }
 
-            final boolean fastQuality = Settings.DEARROW_THUMBNAIL_STILLS_FAST.get();
-            if (lowestQualityNotAvailable != null && lowestQualityNotAvailable.ordinal() <= quality.ordinal()) {
-                if (fastQuality || System.currentTimeMillis() < timeToReVerifyLowestQuality) {
-                    return false; // Previously verified as not existing.
-                }
-                // Enough time has passed, and should re-verify again.
-                Logger.printDebug(() -> "Resetting lowest verified quality for: " + videoId);
+            if (timeToRetryLowestQuality < System.currentTimeMillis()) {
+                // Enough time has passed, and should try again.
+                Logger.printDebug(() -> "Resetting lowest unavailable quality for: " + videoId);
                 lowestQualityNotAvailable = null;
+                return quality;
             }
 
-            if (fastQuality) {
-                return true; // Unknown if it exists or not. Use the URL anyway and update afterward if loading fails.
+            // A higher quality is not available, but SD is available for almost all videos with still captures.
+            if (lowestQualityNotAvailable.ordinal() > ThumbnailQuality.SDDEFAULT.ordinal()) {
+                return ThumbnailQuality.SDDEFAULT;
             }
 
-            boolean imageFileFound;
-            try {
-                // This hooked code is running on a low priority thread, and it's slightly faster
-                // to run the url connection through the extension thread pool which runs at the highest priority.
-                final long start = System.currentTimeMillis();
-                imageFileFound = Utils.submitOnBackgroundThread(() -> {
-                    final int connectionTimeoutMillis = 10000; // 10 seconds.
-                    HttpURLConnection connection = Requester.openConnection(imageURL);
-                    connection.setConnectTimeout(connectionTimeoutMillis);
-                    connection.setReadTimeout(connectionTimeoutMillis);
-                    connection.setRequestMethod("HEAD");
-                    // Even with a HEAD request, the response is the same size as a full GET request.
-                    // Using an empty range fixes this.
-                    connection.setRequestProperty("Range", "bytes=0-0");
-                    final int responseCode = connection.getResponseCode();
-                    if (responseCode == HttpURLConnection.HTTP_PARTIAL) {
-                        String contentType = connection.getContentType();
-                        return (contentType != null && contentType.startsWith("image"));
-                    }
-                    if (responseCode != HttpURLConnection.HTTP_NOT_FOUND) {
-                        Logger.printDebug(() -> "Unexpected response code: " + responseCode + " for URL: " + imageURL);
-                    }
-                    return false;
-                }).get();
-                Logger.printDebug(() -> "Verification took: " + (System.currentTimeMillis() - start) + "ms for image: " + imageURL);
-            } catch (ExecutionException | InterruptedException ex) {
-                Logger.printDebug(() -> "Could not verify alt URL: " + imageURL, ex);
-                imageFileFound = false;
-            }
-
-            setQualityVerified(videoId, quality, imageFileFound);
-            return imageFileFound;
+            return null; // Use the original thumbnail.
         }
     }
 

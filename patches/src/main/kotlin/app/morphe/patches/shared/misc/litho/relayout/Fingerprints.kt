@@ -11,6 +11,7 @@ import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
 import app.morphe.patcher.InstructionLocation.MatchAfterWithin
 import app.morphe.patcher.fieldAccess
+import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
@@ -49,6 +50,31 @@ internal object LithoViewOnMeasureFingerprint : Fingerprint(
     custom = { _, classDef ->
         classDef.superclass == COMPONENT_HOST_CLASS
     }
+)
+
+/**
+ * Unmounts all mounted content of the Litho view. The content is mounted again by the next layout.
+ */
+internal object LithoViewUnmountAllItemsFingerprint : Fingerprint(
+    classFingerprint = LithoViewOnMeasureFingerprint,
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf(),
+    filters = listOf(
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            smali = "Landroid/graphics/Rect;->setEmpty()V"
+        ),
+        literal(1),
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            smali = "Landroid/graphics/Rect;->setEmpty()V"
+        ),
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            smali = "Landroid/graphics/Rect;->setEmpty()V"
+        )
+    )
 )
 
 /**
