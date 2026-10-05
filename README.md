@@ -35,9 +35,9 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.46.0-dev.7](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.46.0-dev.7)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;165 patches total
+> **[v1.46.0-dev.8](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.46.0-dev.8)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;166 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;92 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;93 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -57,6 +57,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Change header](#change-header) | Adds an option to change the header logo in the top left corner of the app. | • Custom header logo |
 | [Change start page](#change-start-page) | Adds an option to set which page the app opens in instead of the homepage. |  |
 | [Channel search](#channel-search) | Adds an option to search inside the channel that is currently open instead of searching all of YouTube. |  |
+| [Channel whitelist](#channel-whitelist) | Adds options to allow whitelisting specific channels to show ads or override playback speeds. |  |
 | [Check watch history domain name resolution](#check-watch-history-domain-name-resolution) | Checks if the device DNS server is preventing user watch history from being saved. |  |
 | [Copy video link](#copy-video-link) | Adds options to display buttons in the video player to copy video links. |  |
 | [Custom branding](#custom-branding) | Adds options to change the app icon and app name. For mounted (root) installations the branding is applied while patching, because it cannot be changed from the app settings. | • App name<br>• Custom icon<br>• App icon |
