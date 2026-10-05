@@ -35,7 +35,12 @@ public final class ClassicSubscriptionsLayoutPatch {
      * Interface to use obfuscated methods.
      */
     public interface PivotBarItemInterface {
-        // Method is added during patching.
+        /**
+         * Method is added during patching.
+         *
+         * @return The PivotBarItemRenderer proto, or null if the item is a different renderer.
+         */
+        @Nullable
         MessageLite patch_getPivotBarItemRenderer();
     }
 
@@ -101,7 +106,9 @@ public final class ClassicSubscriptionsLayoutPatch {
                 }
             } else {
                 MessageLite messageLite = renderInterface.patch_getPivotBarItemRenderer();
-                return PivotBarItemRenderer.parseFrom(messageLite.toByteArray());
+                if (messageLite != null) {
+                    return PivotBarItemRenderer.parseFrom(messageLite.toByteArray());
+                }
             }
         } catch (Exception ex) {
             Logger.printException(() -> "Failed to parse PivotBarItemRenderer", ex);

@@ -431,6 +431,9 @@ val navigationBarPatch = bytecodePatch(
                 val messageLiteField = fields.first { field ->
                     field.type == "Lcom/google/protobuf/MessageLite;"
                 }
+                // The field can also be PivotBarIconOnlyItemRenderer or other renderers.
+                val pivotBarItemRendererType = PivotBarRendererFingerprint.instructionMatches[2]
+                    .instruction.getReference<TypeReference>()!!.type
 
                 interfaces.add(EXTENSION_PIVOT_BAR_ITEM_INTERFACE)
                 methods.add(
@@ -442,12 +445,16 @@ val navigationBarPatch = bytecodePatch(
                         AccessFlags.PUBLIC.value or AccessFlags.FINAL.value,
                         null,
                         null,
-                        MutableMethodImplementation(2),
+                        MutableMethodImplementation(3),
                     ).toMutable().apply {
-                        addInstructions(
+                        addInstructionsWithLabels(
                             0,
                             """
                                 iget-object v0, p0, $messageLiteField
+                                instance-of v1, v0, $pivotBarItemRendererType
+                                if-nez v1, :return
+                                const/4 v0, 0x0
+                                :return
                                 return-object v0
                             """
                         )
