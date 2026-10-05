@@ -1,3 +1,10 @@
+## [1.46.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.4...v1.46.0-dev.5) (2026-10-05)
+
+### 🐛 Bug Fixes
+
+* **DeArrow:** Fix patching `21.16.256` ([035ebd2](https://github.com/MorpheApp/morphe-patches/commit/035ebd217c515685714ee805b2d78967ac37874c))
+* **YouTube - Navigation bar:** Disable new toolbar navigation tabs layout ([#3433](https://github.com/MorpheApp/morphe-patches/issues/3433)) ([165dbea](https://github.com/MorpheApp/morphe-patches/commit/165dbea673aae9bc6e11a1fa0e11230bcacd5988))
+
 ## [1.46.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.3...v1.46.0-dev.4) (2026-10-05)
 
 ### 🐛 Bug Fixes
