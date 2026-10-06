@@ -1,3 +1,10 @@
+## [1.46.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.9...v1.46.0-dev.10) (2026-10-06)
+
+### 🐛 Bug Fixes
+
+* **YouTube - FlyoutUtils:** Sets the height of the injected buttons container based on the available display free space ([3da0837](https://github.com/MorpheApp/morphe-patches/commit/3da0837b0360011f5f18c810c91653082dedbc6d))
+* **YouTube:** Change `20.31.42` support to `20.51.39` ([1438ba6](https://github.com/MorpheApp/morphe-patches/commit/1438ba62892fa042d8a01745b2b5f252a276dc66))
+
 ## [1.46.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.8...v1.46.0-dev.9) (2026-10-06)
 
 ### 🐛 Bug Fixes
