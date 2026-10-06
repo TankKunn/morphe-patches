@@ -1,3 +1,12 @@
+## [1.46.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.8...v1.46.0-dev.9) (2026-10-06)
+
+### 🐛 Bug Fixes
+
+* **YouTube - FlyoutUtils:** Separated the fetching of the playlist ID in the header from that of the feed page ([a18724b](https://github.com/MorpheApp/morphe-patches/commit/a18724b2625d28f786dcc4ce07a93f08378723fc))
+* **YouTube - Hide Layout components:** Add more navigation tabs to back button or gesture filtering rule ([#3546](https://github.com/MorpheApp/morphe-patches/issues/3546)) ([4420d96](https://github.com/MorpheApp/morphe-patches/commit/4420d96a28e7b258e62e882b474bd77ca0e5f4a4))
+* **YouTube - Hide layout components:** Allow filtering in miniplayer mode ([13df501](https://github.com/MorpheApp/morphe-patches/commit/13df5012977a0436fc86f15de9b478c05a25935c))
+* **YouTube Music - Third-party lyrics:** Validate lyric candidates and display results promptly ([#3518](https://github.com/MorpheApp/morphe-patches/issues/3518)) ([9fca678](https://github.com/MorpheApp/morphe-patches/commit/9fca678be31f7577990bf667784d7db60269787e))
+
 ## [1.46.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.7...v1.46.0-dev.8) (2026-10-05)
 
 ### 🐛 Bug Fixes
