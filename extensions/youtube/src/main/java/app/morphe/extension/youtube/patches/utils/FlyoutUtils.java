@@ -243,8 +243,6 @@ public final class FlyoutUtils {
             "morphe_settings_screen_01_ads");
     private static final Drawable playbackSpeedWhitelistButtonDrawable = getSettingsScreenDrawable(
             "morphe_settings_screen_12_video");
-    private static final Drawable pipButtonDrawable = getSettingsScreenDrawable(
-            "morphe_pip_button");
 
     private static final String saveToWatchLaterButtonName = str("morphe_save_to_watch_later_flyout_title");
     private static final String aiSListSubmitButtonName = str("morphe_aislist_submit_title");
@@ -536,7 +534,7 @@ public final class FlyoutUtils {
                 (PlayerFlyoutMenuComponentsFilter.getTopFlyoutMenuVisible() || isShortFlyout)) {
             nextButtonIndex = addFlyoutButton(
                     flyoutPanel,
-                    pipButtonDrawable,
+                    getSettingsScreenDrawable("morphe_pip_button"),
                     pipButtonName,
                     v -> PipButtonPatch.enterPictureInPicture(),
                     nextButtonIndex
