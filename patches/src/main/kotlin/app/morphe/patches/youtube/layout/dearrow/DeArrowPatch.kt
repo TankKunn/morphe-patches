@@ -83,7 +83,6 @@ val deArrowPatch = bytecodePatch(
                     thumbnailPreference("morphe_dearrow_thumbnail_library"),
                     thumbnailPreference("morphe_dearrow_thumbnail_player"),
                     thumbnailPreference("morphe_dearrow_thumbnail_search"),
-                    TextPreference("morphe_dearrow_api_url"),
                     NonInteractivePreference("morphe_dearrow_thumbnail_stills_about"),
                     ListPreference("morphe_dearrow_thumbnail_stills_time"),
                 )
@@ -99,6 +98,7 @@ val deArrowPatch = bytecodePatch(
                         tag = "app.morphe.extension.youtube.settings.preference.DeArrowAboutPreference",
                         selectable = true,
                     ),
+                    TextPreference("morphe_dearrow_api_url"),
                     SwitchPreference("morphe_dearrow_connection_toast", summary = true),
                 )
             )
