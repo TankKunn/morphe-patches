@@ -33,6 +33,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.WeakHashMap;
 import java.util.concurrent.CompletableFuture;
@@ -344,6 +345,7 @@ public final class RestoreOriginalTitlesPatch {
      *
      * @return If titles are replaced for the current navigation.
      */
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private static boolean replacesTitlesForCurrentNavigation() {
         return RESTORE_ORIGINAL || DeArrowPatch.useDeArrowTitlesForCurrentNavigation();
     }
@@ -416,7 +418,7 @@ public final class RestoreOriginalTitlesPatch {
             findVideoIds(root, thumbnailVideoIds, messageVideoIds);
             String component = identifier == null ? "" : identifier.substring(0, identifier.indexOf('|'));
             boolean modified = restoreVideoTitles(root, messageVideoIds, component);
-            if (messageVideoIds.get(root).isEmpty()) {
+            if (Objects.requireNonNull(messageVideoIds.get(root)).isEmpty()) {
                 // Elements of the opened video that do not include the video id, such as the watch page title.
                 String videoId = openedVideoId;
                 if (videoId != null) {
@@ -588,6 +590,7 @@ public final class RestoreOriginalTitlesPatch {
      * Same as {@link #spannedText(CharSequence, CharSequence, LithoRelayoutPatch.RelayoutSpan)},
      * and shows the DeArrow icon before the title if the title is a DeArrow title.
      */
+    @SuppressWarnings("SameParameterValue")
     private static SpannableString titleText(CharSequence text, String title,
                                              @Nullable LithoRelayoutPatch.RelayoutSpan relayoutSpan) {
         if (!DeArrowTitleIcon.isShown(title)) {
@@ -1972,7 +1975,7 @@ public final class RestoreOriginalTitlesPatch {
      * @return If the text is the start of the title followed by an ellipsis.
      */
     private static boolean isTruncatedTitle(String text, String title) {
-        final int ellipsisLength = text.endsWith("\u2026") ? 1 : text.endsWith("...") ? 3 : 0;
+        final int ellipsisLength = text.endsWith("…") ? 1 : text.endsWith("...") ? 3 : 0;
         if (ellipsisLength == 0) {
             return false;
         }
