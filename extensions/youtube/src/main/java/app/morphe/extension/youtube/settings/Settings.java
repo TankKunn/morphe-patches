@@ -550,6 +550,8 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_SHORTS_CHANNEL_BAR = new BooleanSetting("morphe_hide_shorts_channel_bar", FALSE);
     public static final BooleanSetting HIDE_SHORTS_COMMENTS_BUTTON = new BooleanSetting("morphe_hide_shorts_comments_button", FALSE);
     public static final BooleanSetting HIDE_SHORTS_EFFECT_BUTTON = new BooleanSetting("morphe_hide_shorts_effect_button", TRUE);
+    public static final BooleanSetting HIDE_SHORTS_FLYOUT_AUDIO_TRACK = new BooleanSetting("morphe_hide_shorts_flyout_audio_track", FALSE, new HideAudioFlyoutMenuAvailability());
+    public static final BooleanSetting HIDE_SHORTS_FLYOUT_CAPTIONS = new BooleanSetting("morphe_hide_shorts_flyout_captions", FALSE);
     public static final BooleanSetting HIDE_SHORTS_FULL_VIDEO_LINK_LABEL = new BooleanSetting("morphe_hide_shorts_full_video_link_label", FALSE);
     public static final BooleanSetting HIDE_SHORTS_GESTURE_HINTS = new BooleanSetting("morphe_hide_shorts_gesture_hints", FALSE, true);
     public static final BooleanSetting HIDE_SHORTS_GREEN_SCREEN_BUTTON = new BooleanSetting("morphe_hide_shorts_green_screen_button", TRUE);
@@ -716,6 +718,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final StringSetting SB_CATEGORY_UNSUBMITTED_COLOR = new StringSetting("morphe_sb_unsubmitted_color", "#FFFFFFFF", false, false);
 
     // Migration
+    private static final BooleanSetting SHORTS_FLYOUT_SETTINGS_MIGRATED = new BooleanSetting("morphe_shorts_flyout_settings_migrated", FALSE, false, false);
     private static final EnumSetting<ThumbnailOption> DEPRECATED_ALT_THUMBNAIL_HOME = new EnumSetting<>("morphe_alt_thumbnail_home", ThumbnailOption.ORIGINAL);
     private static final EnumSetting<ThumbnailOption> DEPRECATED_ALT_THUMBNAIL_SUBSCRIPTIONS = new EnumSetting<>("morphe_alt_thumbnail_subscription", ThumbnailOption.ORIGINAL);
     private static final EnumSetting<ThumbnailOption> DEPRECATED_ALT_THUMBNAIL_LIBRARY = new EnumSetting<>("morphe_alt_thumbnail_library", ThumbnailOption.ORIGINAL);
@@ -846,6 +849,7 @@ public class Settings extends SharedYouTubeSettings {
         migrateSwipeGestureToZone(DEPRECATED_SWIPE_SPEED, SWIPE_TOP_ZONE, SwipeZoneAction.SPEED);
 
         migrateWideSearchbarToType();
+        migrateShortsFlyoutSettings();
 
         // SponsorBlock key namespace unification (sb_* -> morphe_sb_*).
         migrateOldSettingToNew(DEPRECATED_SB_ENABLED, SB_ENABLED);
@@ -966,6 +970,19 @@ public class Settings extends SharedYouTubeSettings {
                     : SearchbarType.EXTRA_WIDE);
         }
         DEPRECATED_WIDE_SEARCHBAR.resetToDefault();
+    }
+
+    /**
+     * Shorts used the player flyout settings before they got their own, so copy them once.
+     * The player settings stay in use, so a marker is the only way to tell this already ran.
+     */
+    private static void migrateShortsFlyoutSettings() {
+        if (SHORTS_FLYOUT_SETTINGS_MIGRATED.get()) {
+            return;
+        }
+        HIDE_SHORTS_FLYOUT_AUDIO_TRACK.save(HIDE_PLAYER_FLYOUT_AUDIO_TRACK.get());
+        HIDE_SHORTS_FLYOUT_CAPTIONS.save(HIDE_PLAYER_FLYOUT_CAPTIONS.get());
+        SHORTS_FLYOUT_SETTINGS_MIGRATED.save(true);
     }
 
     /**
