@@ -514,13 +514,13 @@ val navigationBarPatch = bytecodePatch(
         val toolbarPreferences = mutableSetOf(
             SwitchPreference("morphe_hide_toolbar_cast_button"),
             SwitchPreference("morphe_hide_toolbar_chat_button"),
-            SwitchPreference("morphe_hide_toolbar_create_button"),
+            SwitchPreference("morphe_hide_toolbar_create_button", titleKey = "morphe_hide_create_button_title"),
             SwitchPreference("morphe_hide_toolbar_microphone_button"),
-            SwitchPreference("morphe_hide_toolbar_notification_button"),
+            SwitchPreference("morphe_hide_toolbar_notification_button", titleKey = "morphe_hide_notifications_button_title"),
             SwitchPreference("morphe_hide_toolbar_search_button"),
-            SwitchPreference("morphe_show_toolbar_settings_button"),
-            ListPreference("morphe_show_toolbar_settings_button_index"),
-            SwitchPreference("morphe_show_toolbar_settings_button_type", summary = true)
+            SwitchPreference("morphe_show_toolbar_settings_button", titleKey = "morphe_show_settings_button_title"),
+            ListPreference("morphe_show_toolbar_settings_button_index", titleKey = "morphe_show_settings_button_index_title"),
+            SwitchPreference("morphe_show_toolbar_settings_button_type", titleKey = "morphe_show_settings_button_type_title", summary = true)
         )
 
         PreferenceScreen.GENERAL.addPreferences(

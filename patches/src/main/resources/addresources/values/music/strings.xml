@@ -435,8 +435,6 @@ YouTube Music 8.x — crossfade only runs on 9.x and newer"</string>
     <string name="morphe_music_hide_navigation_bar_labels_title">Hide navigation button labels</string>
 
     <!-- interaction.scrobbling.scrobblingPatch -->
-    <string name="morphe_music_scrobbling_title" translatable="false">Scrobbling</string>
-    <string name="morphe_music_scrobbling_summary">Configure Last.fm and ListenBrainz integration</string>
     <string name="morphe_music_scrobbling_summary_logged_out">Not logged in. Tap to configure</string>
     <string name="morphe_music_scrobbling_log_out">Log out</string>
     <string name="morphe_music_scrobbling_logged_out_toast">Logged out</string>
@@ -461,7 +459,6 @@ YouTube Music 8.x — crossfade only runs on 9.x and newer"</string>
     <!-- 'scrobbling' must be kept untranslated -->
     <string name="morphe_music_listenbrainz_token_dialog_instruction">Enter your ListenBrainz User Token to enable scrobbling</string>
     <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-    <string name="morphe_music_listenbrainz_token_dialog_get_token">Get token</string>
     <string name="morphe_music_listenbrainz_token_dialog_verify">Verify</string>
     <string name="morphe_music_listenbrainz_token_status_empty">Please enter a token</string>
     <string name="morphe_music_listenbrainz_token_status_validating">Validating…</string>

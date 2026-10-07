@@ -471,7 +471,6 @@ Reports are public and are reviewed before a channel is added to a list. Removal
     <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
     <string name="morphe_vot_screen_title">Voice over translation</string>
     <string name="morphe_vot_screen_summary">Read video captions aloud using on-device text-to-speech, synchronized with playback</string>
-    <string name="morphe_vot_enabled_title">Voice over translation</string>
     <string name="morphe_vot_enabled_summary">Shows an overlay button in video player. Tap to toggle translation, tap and hold for quick settings</string>
     <string name="morphe_vot_caption_language_title">Language</string>
     <string name="morphe_vot_translation_service_title">Translation provider</string>
@@ -773,18 +772,12 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_hide_more_button_title">Hide More button</string>
 
     <string name="morphe_fullscreen_buttons">Fullscreen buttons</string>
-    <string name="morphe_hide_quick_actions_title">Hide action bar</string>
-    <string name="morphe_hide_quick_actions_ask_button_title">Hide Ask button</string>
-    <string name="morphe_hide_quick_actions_comments_button_title">Hide Comments button</string>
     <string name="morphe_hide_quick_actions_dislike_button_title">Hide Dislike button</string>
     <string name="morphe_hide_quick_actions_like_button_title">Hide Like button</string>
     <string name="morphe_hide_quick_actions_live_chat_button_title">Hide \'Live chat\' button</string>
     <string name="morphe_hide_quick_actions_mix_button_title">Hide Mix button</string>
-    <string name="morphe_hide_quick_actions_more_button_title">Hide More button</string>
     <string name="morphe_hide_quick_actions_more_videos_button_title">Hide \'More videos\' button</string>
     <string name="morphe_hide_quick_actions_playlist_button_title">Hide Playlist button</string>
-    <string name="morphe_hide_quick_actions_save_button_title">Hide Save button</string>
-    <string name="morphe_hide_quick_actions_share_button_title">Hide Share button</string>
     <string name="morphe_quick_actions_top_margin_title">Quick actions top margin</string>
     <string name="morphe_quick_actions_top_margin_summary">Set the top margin of the quick actions bar (0-32 dp)</string>
 
@@ -858,13 +851,8 @@ To access Settings, enable the Settings button via General → Toolbar → Show 
     <string name="morphe_toolbar_screen_summary">Choose which components appear in the toolbar</string>
     <string name="morphe_hide_toolbar_cast_button_title">Hide Cast button</string>
     <string name="morphe_hide_toolbar_chat_button_title">Hide Chat button</string>
-    <string name="morphe_hide_toolbar_create_button_title">Hide Create button</string>
     <string name="morphe_hide_toolbar_microphone_button_title">Hide Microphone button</string>
-    <string name="morphe_hide_toolbar_notification_button_title">Hide Notifications button</string>
     <string name="morphe_hide_toolbar_search_button_title">Hide Search button</string>
-    <string name="morphe_show_toolbar_settings_button_title">Show Settings button</string>
-    <string name="morphe_show_toolbar_settings_button_index_title">Settings button position</string>
-    <string name="morphe_show_toolbar_settings_button_type_title">Settings button action</string>
     <string name="morphe_show_toolbar_settings_button_type_summary">When enabled, tap opens Morphe settings and long press opens YouTube settings, disable to swap</string>
 
     <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
@@ -1281,14 +1269,6 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <string name="morphe_dearrow_titles_icon_title">Show DeArrow icon</string>
     <string name="morphe_dearrow_titles_icon_summary">Shows the DeArrow icon on crowdsourced video titles</string>
     <string name="morphe_dearrow_thumbnails_title">DeArrow thumbnails</string>
-    <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-    <string name="morphe_dearrow_thumbnail_home_title">Home tab</string>
-    <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-    <string name="morphe_dearrow_thumbnail_subscription_title">Subscriptions tab</string>
-    <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-    <string name="morphe_dearrow_thumbnail_library_title">You tab</string>
-    <string name="morphe_dearrow_thumbnail_player_title">Player playlists &amp; recommendations</string>
-    <string name="morphe_dearrow_thumbnail_search_title">Search results</string>
     <string name="morphe_dearrow_thumbnail_options_entry_1">Original thumbnails</string>
     <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Original thumbnails</string>
     <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Still captures</string>

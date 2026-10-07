@@ -116,7 +116,7 @@ public final class VotBottomSheet {
         translationRow.setOnClickListener(v -> showTranslationServicePicker(context, mainRef[0]));
         refreshTranslation.run();
 
-        TextView title = makeTitle(context, str("morphe_vot_enabled_title"), fg);
+        TextView title = makeTitle(context, str("morphe_vot_screen_title"), fg);
         ((LinearLayout.LayoutParams) title.getLayoutParams()).setMargins(Dim.dp16, Dim.dp8, Dim.dp16, Dim.dp16);
         root.addView(title);
 

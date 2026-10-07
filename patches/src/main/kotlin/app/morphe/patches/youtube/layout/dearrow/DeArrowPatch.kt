@@ -53,8 +53,9 @@ val deArrowPatch = bytecodePatch(
     compatibleWith(COMPATIBILITY_YOUTUBE)
 
     execute {
-        fun thumbnailPreference(key: String) = ListPreference(
+        fun thumbnailPreference(key: String, titleKey: String) = ListPreference(
             key = key,
+            titleKey = titleKey,
             entriesKey = "morphe_dearrow_thumbnail_options_entries",
             entryValuesKey = "morphe_dearrow_thumbnail_options_entry_values"
         )
@@ -78,11 +79,11 @@ val deArrowPatch = bytecodePatch(
                 titleKey = "morphe_dearrow_thumbnails_title",
                 sorting = Sorting.UNSORTED,
                 preferences = setOf(
-                    thumbnailPreference("morphe_dearrow_thumbnail_home"),
-                    thumbnailPreference("morphe_dearrow_thumbnail_subscription"),
-                    thumbnailPreference("morphe_dearrow_thumbnail_library"),
-                    thumbnailPreference("morphe_dearrow_thumbnail_player"),
-                    thumbnailPreference("morphe_dearrow_thumbnail_search"),
+                    thumbnailPreference("morphe_dearrow_thumbnail_home", "morphe_dearrow_titles_home_title"),
+                    thumbnailPreference("morphe_dearrow_thumbnail_subscription", "morphe_dearrow_titles_subscription_title"),
+                    thumbnailPreference("morphe_dearrow_thumbnail_library", "morphe_dearrow_titles_library_title"),
+                    thumbnailPreference("morphe_dearrow_thumbnail_player", "morphe_dearrow_titles_player_title"),
+                    thumbnailPreference("morphe_dearrow_thumbnail_search", "morphe_dearrow_titles_search_title"),
                     NonInteractivePreference("morphe_dearrow_thumbnail_stills_about"),
                     ListPreference("morphe_dearrow_thumbnail_stills_time"),
                 )
