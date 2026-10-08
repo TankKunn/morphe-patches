@@ -202,6 +202,7 @@ final class LocalizedTitleRequest {
     /**
      * @param searchQuery Search of the title shown in the lists, or null for the title of the video.
      */
+    @SuppressWarnings("deprecation")
     @Nullable
     private static String fetchTitle(String key, String videoId, Locale locale, @Nullable String searchQuery) {
         final boolean listTitle = searchQuery != null;
