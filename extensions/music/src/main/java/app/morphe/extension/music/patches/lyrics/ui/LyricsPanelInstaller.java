@@ -6,9 +6,10 @@
  * See the included NOTICE file for GPLv3 Section 7 terms that apply to this code.
  */
 
-package app.morphe.extension.music.patches.lyrics;
+package app.morphe.extension.music.patches.lyrics.ui;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.graphics.Rect;
 import android.os.SystemClock;
 import android.view.View;
@@ -21,12 +22,14 @@ import androidx.annotation.Nullable;
 import java.lang.ref.WeakReference;
 import java.util.Locale;
 
-import app.morphe.extension.music.patches.lyrics.ui.LyricsPanelView;
+import app.morphe.extension.music.patches.lyrics.LyricsManager;
+import app.morphe.extension.music.patches.lyrics.session.MiniPlayerLyrics;
 import app.morphe.extension.music.settings.Settings;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.shared.settings.Setting;
 
 /**
  * Puts the third party lyrics panel into the lyrics engagement panel.
@@ -71,6 +74,89 @@ public final class LyricsPanelInstaller {
     private LyricsPanelInstaller() {
     }
 
+    private static boolean settingsListenerRegistered;
+
+    private static final SharedPreferences.OnSharedPreferenceChangeListener SETTINGS_LISTENER =
+            (prefs, key) -> {
+                if (key == null || !key.startsWith("morphe_music_lyrics")) {
+                    return;
+                }
+                Utils.runOnMainThreadNowOrLater(() -> onLyricsSettingChanged(key));
+            };
+
+    public static void registerSettingsListener() {
+        if (settingsListenerRegistered) {
+            return;
+        }
+        Setting.preferences.preferences.registerOnSharedPreferenceChangeListener(
+                SETTINGS_LISTENER);
+        settingsListenerRegistered = true;
+    }
+
+    private static void onLyricsSettingChanged(String key) {
+        try {
+            if (Settings.LYRICS_ENABLED.key.equals(key)) {
+                if (Settings.LYRICS_ENABLED.get()) {
+                    if (isLyricsPanelOpen()) {
+                        onLyricsPanelDetected();
+                    }
+                    LyricsManager.getInstance().reloadAfterSettingsChange();
+                } else {
+                    uninstallLyricsPanel();
+                }
+                MiniPlayerLyrics.onSettingsChanged();
+                return;
+            }
+            if (Settings.LYRICS_SOURCE.key.equals(key)
+                    || Settings.LYRICS_CUSTOM_REGEX.key.equals(key)
+                    || Settings.LYRICS_TEXT_FILTER.key.equals(key)
+                    || Settings.LYRICS_CREDIT_LINE_REGEX.key.equals(key)) {
+                LyricsManager.getInstance().reloadAfterSettingsChange();
+                return;
+            }
+            if (Settings.LYRICS_KEEP_SCREEN_ON.key.equals(key)) {
+                updateKeepScreenOn(isLyricsPanelOpen());
+                return;
+            }
+            if (Settings.LYRICS_MINIPLAYER.key.equals(key)
+                    || Settings.LYRICS_DISPLAY_ARTIST_FIRST.key.equals(key)) {
+                MiniPlayerLyrics.onSettingsChanged();
+                return;
+            }
+            final LyricsPanelView panelView = panelReference.get();
+            if (panelView == null) {
+                return;
+            }
+            if (Settings.LYRICS_SHOW_COPY_BUTTON.key.equals(key)
+                    || Settings.LYRICS_SHOW_TRANSLATE_BUTTON.key.equals(key)
+                    || Settings.LYRICS_SHOW_ROMANIZE_BUTTON.key.equals(key)
+                    || Settings.LYRICS_SHOW_REFRESH_BUTTON.key.equals(key)) {
+                panelView.applyToolbarButtonSettings();
+            } else if (Settings.LYRICS_TEXT_SIZE.key.equals(key)) {
+                panelView.applyTextSize();
+            } else if (Settings.LYRICS_HIDE_INFO.key.equals(key)) {
+                panelView.applyHideInfo();
+            } else if (Settings.LYRICS_HIDE_PLAYED.key.equals(key)
+                    || Settings.LYRICS_HIDE_UNPLAYED.key.equals(key)) {
+                panelView.applyLineOverlaySettings();
+            }
+        } catch (Throwable ex) {
+            Logger.printException(() -> "Could not apply lyrics setting change", ex);
+        }
+    }
+
+    private static void uninstallLyricsPanel() {
+        installPending = false;
+        final LyricsPanelView panelView = panelReference.get();
+        if (panelView == null) {
+            return;
+        }
+        if (panelView.getParent() instanceof ViewGroup parent) {
+            parent.removeView(panelView);
+        }
+        panelReference.clear();
+    }
+
     private static void updateKeepScreenOn(boolean lyricsPanelOpen) {
         Utils.runOnMainThreadNowOrLater(() -> {
             try {
@@ -81,7 +167,8 @@ public final class LyricsPanelInstaller {
 
                 panelView.setKeepScreenOn(
                         Settings.LYRICS_KEEP_SCREEN_ON.get() && lyricsPanelOpen);
-            } catch (Throwable ignored) {
+            } catch (Exception ex) {
+                Logger.printException(() -> "updateKeepScreenOn failure", ex);
             }
         });
     }
@@ -128,7 +215,8 @@ public final class LyricsPanelInstaller {
     public static void onLyricsPanelDetected() {
         try {
             detectLyricsPanel();
-        } catch (Throwable ignored) {
+        } catch (Exception ex) {
+            Logger.printException(() -> "onLyricsPanelDetected failure", ex);
             installPending = false;
         }
     }
@@ -198,6 +286,9 @@ public final class LyricsPanelInstaller {
      * @return Whether the panel is in place, so that no further attempt is needed.
      */
     private static boolean install() {
+        if (!Settings.LYRICS_ENABLED.get()) {
+            return true;
+        }
         Activity activity = Utils.getActivity();
         if (activity == null) {
             return false;
@@ -429,7 +520,8 @@ public final class LyricsPanelInstaller {
     public static void enableLyricsButton() {
         try {
             walkForLyricsButton();
-        } catch (Throwable ignored) {
+        } catch (Exception ex) {
+            Logger.printException(() -> "enableLyricsButton failure", ex);
             enableButtonWalkPending = false;
         }
     }

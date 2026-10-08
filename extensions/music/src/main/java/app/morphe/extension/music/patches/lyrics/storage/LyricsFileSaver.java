@@ -5,13 +5,12 @@
  * See the included NOTICE file for GPLv3 Section 7 terms that apply to this code.
  */
 
-package app.morphe.extension.music.patches.lyrics;
+package app.morphe.extension.music.patches.lyrics.storage;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
 
@@ -24,7 +23,11 @@ import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-import app.morphe.extension.music.patches.lyrics.requests.LrcParser;
+import app.morphe.extension.music.patches.lyrics.model.Lyrics;
+import app.morphe.extension.music.patches.lyrics.model.LyricsLine;
+import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
+import app.morphe.extension.music.patches.lyrics.model.Word;
+import app.morphe.extension.music.patches.lyrics.parsers.LrcParser;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceUtils;
 
@@ -41,7 +44,8 @@ public final class LyricsFileSaver {
     public static String save(Context context, TrackInfo track, Lyrics lyrics) {
         try {
             return saveUnchecked(context, track, lyrics);
-        } catch (Throwable ignored) {
+        } catch (Exception ex) {
+            Logger.printException(() -> "save failure", ex);
             return null;
         }
     }
@@ -66,8 +70,6 @@ public final class LyricsFileSaver {
                 content = rebuildLyricifySyllable(lyrics.lines());
             } else if ("dzr.json".equals(formatType)) {
                 content = rebuildDzrJson(lyrics.lines());
-            } else if ("wsy".equals(formatType)) {
-                return null;
             } else {
                 content = rebuildPlainText(lyrics.lines());
                 formatType = "txt";
@@ -81,12 +83,6 @@ public final class LyricsFileSaver {
         String fileName = sanitizeFileName(track.artist() + " - " + track.title())
                 + "." + formatType;
 
-        // MediaStore.Downloads arrived in Android 10 and there is no legacy path here,
-        // so saving is unavailable on older releases rather than failing at the field.
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
-            return null;
-        }
-
         ContentResolver resolver = context.getContentResolver();
         ContentValues values = new ContentValues();
         values.put(MediaStore.Downloads.DISPLAY_NAME, fileName);
@@ -97,12 +93,7 @@ public final class LyricsFileSaver {
 
         values.put(MediaStore.Downloads.IS_PENDING, 1);
 
-        Uri insertUri;
-        try {
-            insertUri = resolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values);
-        } catch (Throwable ignored) {
-            return null;
-        }
+        Uri insertUri = resolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values);
         if (insertUri == null) {
             return null;
         }
@@ -118,10 +109,11 @@ public final class LyricsFileSaver {
             written = true;
             return Environment.DIRECTORY_DOWNLOADS + "/" + directoryName + "/" + fileName;
         } catch (Exception ex) {
-            Logger.printDebug(() -> "Could not save lyrics file", ex);
+            Logger.printException(() -> "Could not save lyrics file", ex);
             try {
                 resolver.delete(insertUri, null, null);
-            } catch (Throwable ignored) {
+            } catch (Exception deleteEx) {
+                Logger.printException(() -> "Could not delete partial lyrics file", deleteEx);
             }
             return null;
         } finally {
@@ -130,7 +122,8 @@ public final class LyricsFileSaver {
                     values.clear();
                     values.put(MediaStore.Downloads.IS_PENDING, 0);
                     resolver.update(insertUri, values, null, null);
-                } catch (Throwable ignored) {
+                } catch (Exception ex) {
+                    Logger.printException(() -> "Could not publish saved lyrics file", ex);
                 }
             }
         }
