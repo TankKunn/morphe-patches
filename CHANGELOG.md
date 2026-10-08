@@ -1,3 +1,9 @@
+## [1.47.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.2...v1.47.0-dev.3) (2026-10-08)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Spoof video streams:** Legacy app targets may not work correctly ([ddfd5e0](https://github.com/MorpheApp/morphe-patches/commit/ddfd5e0921faae04161cfbe8833f60be74f3ac11))
+
 ## [1.47.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.1...v1.47.0-dev.2) (2026-10-08)
 
 ### 🐛 Bug Fixes
