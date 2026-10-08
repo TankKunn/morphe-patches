@@ -27,7 +27,6 @@ import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +40,6 @@ import androidx.annotation.Nullable;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
-import java.util.Map;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceType;
@@ -202,12 +200,39 @@ public final class MinimalMiniplayerPatch {
     private static final float maxDragProgress = 0.95f;
 
     /**
-     * In the event that a short would be opened and overwrites the video and channel
-     * names, these fields will save the name of the currently open video.
+     * The title and channel of the last regular video. {@link VideoInformation} holds whatever
+     * player loaded last, and a Short opened while the bar is up replaces them with its own.
      */
-    private static String previousVideoTitle = "";
-    private static String previousChannelTitle = "";
-    private static Boolean videoDetailsFetched;
+    private static String videoTitle = "";
+    private static String channelName = "";
+
+    /**
+     * Set once the Shorts player opens, and cleared by the next video loaded with it closed.
+     * Closing it hands the video ID back to the regular player, but the title and channel stay
+     * those of the last Short until a new video is loaded.
+     * A Short opened in the regular player does not open the Shorts player, and it is what
+     * the bar is playing, so it is shown like any other video.
+     */
+    private static boolean waitingForRegularVideo;
+
+    static {
+        if (ENABLED) {
+            ShortsPlayerState.getOnChange().addObserver((Boolean isOpen) -> {
+                if (isOpen) {
+                    waitingForRegularVideo = true;
+                }
+                return Unit.INSTANCE;
+            });
+
+            // Fired right before the title and channel name of the new video are set.
+            VideoInformation.onChannelIdChange.addObserver((String channelId) -> {
+                if (!ShortsPlayerState.isOpen()) {
+                    waitingForRegularVideo = false;
+                }
+                return Unit.INSTANCE;
+            });
+        }
+    }
 
     /**
      * Injection point.
@@ -1031,41 +1056,23 @@ public final class MinimalMiniplayerPatch {
         updatePlayPauseIcon(false);
     }
 
-    /**
-     * Injection point.
-     * Executed once, when a video is opened.
-     */
-    public static boolean onVideoIntentLoaded(Map<Object, Object> playbackStartDescriptorMap, String videoId) {
-        videoDetailsFetched = false;
-
-        return false;
-    }
-
-    /**
-     * Injection point.
-     * Executed twice, when a video is loaded and player minimization is finished.
-     */
-    public static void updateVideoDetails() {
-        if (!videoDetailsFetched) {
-            // Introduce a slight delay in order to allow the
-            // video title and channel name to be set.
-            Utils.runOnMainThreadDelayed(
-                    () -> {
-                        previousVideoTitle = VideoInformation.getVideoTitle();
-                        previousChannelTitle = VideoInformation.getChannelName();
-                        Log.d("LOLOLOLOLO", VideoInformation.getVideoTitle());
-                    }, 30
-            );
-
-            videoDetailsFetched = true;
-        }
-    }
-
     private static void updateText() {
-        setText(titleRef.get(), previousVideoTitle);
+        if (!waitingForRegularVideo) {
+            String title = VideoInformation.getVideoTitle();
+            if (!title.isEmpty()) {
+                videoTitle = title;
+            }
+
+            String channel = VideoInformation.getChannelName();
+            if (!channel.isEmpty()) {
+                channelName = channel;
+            }
+        }
+
+        setText(titleRef.get(), videoTitle);
 
         TextView subtitle = subtitleRef.get();
-        if (setText(subtitle, previousChannelTitle)) {
+        if (setText(subtitle, channelName)) {
             subtitle.setVisibility(View.VISIBLE);
         }
     }
