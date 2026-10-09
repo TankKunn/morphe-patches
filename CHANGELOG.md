@@ -1,3 +1,9 @@
+## [1.47.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.7...v1.47.0-dev.8) (2026-10-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Playback speed:** Fix patching old experimental targets ([99a9851](https://github.com/MorpheApp/morphe-patches/commit/99a9851bf853f4d350e5411381c49a7340b42022))
+
 ## [1.47.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.6...v1.47.0-dev.7) (2026-10-09)
 
 ### 🐛 Bug Fixes
