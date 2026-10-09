@@ -1,3 +1,9 @@
+## [1.47.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.6...v1.47.0-dev.7) (2026-10-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube:** Fix crash when exiting fullscreen with the new player UI ([5651020](https://github.com/MorpheApp/morphe-patches/commit/56510203e25b8dc4619670a756e65c9439fdf66b))
+
 ## [1.47.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.5...v1.47.0-dev.6) (2026-10-09)
 
 ### 🐛 Bug Fixes
