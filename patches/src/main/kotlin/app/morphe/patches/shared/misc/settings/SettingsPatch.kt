@@ -68,9 +68,6 @@ fun settingsPatch (
                 "morphe_prefs_icons.xml",
                 "morphe_prefs_icons_bold.xml"
             ),
-            ResourceGroup("menu",
-                "morphe_search_menu.xml"
-            ),
             ResourceGroup("drawable",
                 // CustomListPreference resources.
                 "morphe_ic_dialog_alert.xml",
