@@ -1,3 +1,9 @@
+## [1.47.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.11...v1.47.0-dev.12) (2026-10-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Channel search:** Searching again from same channel page may not show channel results ([14ec664](https://github.com/MorpheApp/morphe-patches/commit/14ec664125b49e139d553ec1b55384ecc722a468))
+
 ## [1.47.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.10...v1.47.0-dev.11) (2026-10-09)
 
 ### ✨ New Features
