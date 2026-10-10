@@ -1,3 +1,13 @@
+## [1.47.0-dev.21](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.20...v1.47.0-dev.21) (2026-10-10)
+
+### 🐛 Bug Fixes
+
+* **Spoof video streams:** PoToken generation can stall and show "Failed to generate PoToken" ([#3663](https://github.com/MorpheApp/morphe-patches/issues/3663)) ([32fec71](https://github.com/MorpheApp/morphe-patches/commit/32fec713a9e7e555150b75078d476ddb6a6ba238))
+
+### ✨ New Features
+
+* **YouTube - DeArrow:** Add "Casual mode" setting ([#3668](https://github.com/MorpheApp/morphe-patches/issues/3668)) ([a13c11b](https://github.com/MorpheApp/morphe-patches/commit/a13c11b26b5a2b264d3fe4d0937e5814f18d2488))
+
 ## [1.47.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.19...v1.47.0-dev.20) (2026-10-10)
 
 ### 🐛 Bug Fixes
