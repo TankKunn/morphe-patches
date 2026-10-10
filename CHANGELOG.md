@@ -1,3 +1,9 @@
+## [1.47.0-dev.16](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.15...v1.47.0-dev.16) (2026-10-10)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Legacy player controls:** Autoplay end screen is broken in the miniplayer on 21.36+ ([#3649](https://github.com/MorpheApp/morphe-patches/issues/3649)) ([c3431a3](https://github.com/MorpheApp/morphe-patches/commit/c3431a3476c7d2508308c18d4f7ee8cfdde687ca))
+
 ## [1.47.0-dev.15](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.14...v1.47.0-dev.15) (2026-10-10)
 
 ### 🐛 Bug Fixes
