@@ -1,3 +1,13 @@
+## [1.47.0-dev.18](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.17...v1.47.0-dev.18) (2026-10-10)
+
+### 🐛 Bug Fixes
+
+* **Spoof video streams:** Widgets may not play correctly ([#3656](https://github.com/MorpheApp/morphe-patches/issues/3656)) ([a60a3b6](https://github.com/MorpheApp/morphe-patches/commit/a60a3b6725ac8c984e2aa68bd50b3c9358df299f))
+
+### ✨ New Features
+
+* **Spoof video streams:** Add Wii U TV client as a fallback for TV ([#3655](https://github.com/MorpheApp/morphe-patches/issues/3655)) ([28ea7f9](https://github.com/MorpheApp/morphe-patches/commit/28ea7f9fe44d45a1869603086ce6e6adb89e4f48))
+
 ## [1.47.0-dev.17](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.16...v1.47.0-dev.17) (2026-10-10)
 
 ### 🚀 Updated App Support
