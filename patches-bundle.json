@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-10T14:52:39",
-  "description": "## [1.47.0-dev.19](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.18...v1.47.0-dev.19) (2026-10-10)\n\n### 🐛 Bug Fixes\n\n* **YouTube:** Live chat input field is obscured by Android navigation bar on live streams ([f9f5d58](https://github.com/MorpheApp/morphe-patches/commit/f9f5d587eb796f3abc0686c753f8f0ef605633ba))",
-  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.47.0-dev.19/patches-1.47.0-dev.19.mpp",
+  "created_at": "2026-10-10T19:27:41",
+  "description": "## [1.47.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.19...v1.47.0-dev.20) (2026-10-10)\n\n### 🐛 Bug Fixes\n\n* **YouTube - Skip silence:** Adapt the silence threshold to the audio level ([672830e](https://github.com/MorpheApp/morphe-patches/commit/672830e18c8fe47aedd6079bd8eb7b3441e0939d))",
+  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.47.0-dev.20/patches-1.47.0-dev.20.mpp",
   "signature_download_url": "",
-  "version": "1.47.0-dev.19"
+  "version": "1.47.0-dev.20"
 }

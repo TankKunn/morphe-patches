@@ -1,3 +1,9 @@
+## [1.47.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.19...v1.47.0-dev.20) (2026-10-10)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Skip silence:** Adapt the silence threshold to the audio level ([672830e](https://github.com/MorpheApp/morphe-patches/commit/672830e18c8fe47aedd6079bd8eb7b3441e0939d))
+
 ## [1.47.0-dev.19](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.18...v1.47.0-dev.19) (2026-10-10)
 
 ### 🐛 Bug Fixes
