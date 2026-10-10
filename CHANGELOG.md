@@ -1,3 +1,9 @@
+## [1.47.0-dev.17](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.16...v1.47.0-dev.17) (2026-10-10)
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.41.0` ([4e56069](https://github.com/MorpheApp/morphe-patches/commit/4e56069f64125347959f7a8b1efeffa3e8fac1d6))
+
 ## [1.47.0-dev.16](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.15...v1.47.0-dev.16) (2026-10-10)
 
 ### 🐛 Bug Fixes
