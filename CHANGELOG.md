@@ -1,3 +1,9 @@
+## [1.47.0-dev.22](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.21...v1.47.0-dev.22) (2026-10-10)
+
+### ✨ New Features
+
+* **YouTube:** Add `Force system font` patch ([#3579](https://github.com/MorpheApp/morphe-patches/issues/3579)) ([3968284](https://github.com/MorpheApp/morphe-patches/commit/3968284900ab15a9d04575b359272759891d19c8))
+
 ## [1.47.0-dev.21](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.20...v1.47.0-dev.21) (2026-10-10)
 
 ### 🐛 Bug Fixes

@@ -35,9 +35,9 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.47.0-dev.21](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.21)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;169 patches total
+> **[v1.47.0-dev.22](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.22)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;170 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;96 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;97 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -86,6 +86,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Exit fullscreen mode](#exit-fullscreen-mode) | Adds options to automatically exit fullscreen mode when a video reaches the end. |  |
 | [Force fullscreen landscape](#force-fullscreen-landscape) | Adds an option to rotate the player to landscape when entering fullscreen mode on tablets and other large screen devices. |  |
 | [Force original audio](#force-original-audio) | Adds an option to always use the original audio track. |  |
+| [Force system font](#force-system-font) | Adds an option to show the app with the device system font instead of YouTube Sans. |  |
 | [Fullscreen video scale](#fullscreen-video-scale) | Adds options to stretch or zoom videos to fill the screen in fullscreen mode. |  |
 | [GmsCore support](#gmscore-support) | Allows the app to work without root by using a different package name when patched using a GmsCore instead of Google Play Services. |  |
 | [Hide Shorts components](#hide-shorts-components) | Adds options to hide components related to Shorts. | • Hide Shorts app shortcut<br>• Hide Shorts widget |
