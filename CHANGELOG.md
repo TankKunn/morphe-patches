@@ -1,3 +1,13 @@
+## [1.47.0-dev.24](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.23...v1.47.0-dev.24) (2026-10-11)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** History shelf hidden after fullscreen on You tab ([91d9b2d](https://github.com/MorpheApp/morphe-patches/commit/91d9b2daccb9242a02f4fbaa7dcd408a09c5a28a))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide 'Ask Gemini' button" setting  ([#3662](https://github.com/MorpheApp/morphe-patches/issues/3662)) ([3da93d5](https://github.com/MorpheApp/morphe-patches/commit/3da93d5ac7d4abb22712f4725fe12cb8be5f1454))
+
 ## [1.47.0-dev.23](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.22...v1.47.0-dev.23) (2026-10-11)
 
 ### 🐛 Bug Fixes

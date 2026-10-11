@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-11T07:38:04",
-  "description": "## [1.47.0-dev.23](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.22...v1.47.0-dev.23) (2026-10-11)\n\n### 🐛 Bug Fixes\n\n* **YouTube - Navigation bar:** Added a setting to disable A/B navigation buttons layout ([2c3f5c8](https://github.com/MorpheApp/morphe-patches/commit/2c3f5c83131eb479c66a28d1a1c0ffbc810f19ac))\n* **YouTube:** Audio pitch resets after playback speed ([696c2e4](https://github.com/MorpheApp/morphe-patches/commit/696c2e40bce52706cb5e99c9caa2a96f67a60c37))\n* **YouTube:** Hide microphone at lower right corner of search not working ([d18708b](https://github.com/MorpheApp/morphe-patches/commit/d18708b39d693abd765e98c735296fe2404308e1))",
-  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.47.0-dev.23/patches-1.47.0-dev.23.mpp",
+  "created_at": "2026-10-11T13:30:47",
+  "description": "## [1.47.0-dev.24](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.23...v1.47.0-dev.24) (2026-10-11)\n\n### 🐛 Bug Fixes\n\n* **YouTube - Hide layout components:** History shelf hidden after fullscreen on You tab ([91d9b2d](https://github.com/MorpheApp/morphe-patches/commit/91d9b2daccb9242a02f4fbaa7dcd408a09c5a28a))\n\n### ✨ New Features\n\n* **YouTube - Hide layout components:** Add \"Hide 'Ask Gemini' button\" setting  ([#3662](https://github.com/MorpheApp/morphe-patches/issues/3662)) ([3da93d5](https://github.com/MorpheApp/morphe-patches/commit/3da93d5ac7d4abb22712f4725fe12cb8be5f1454))",
+  "download_url": "https://github.com/MorpheApp/morphe-patches/releases/download/v1.47.0-dev.24/patches-1.47.0-dev.24.mpp",
   "signature_download_url": "",
-  "version": "1.47.0-dev.23"
+  "version": "1.47.0-dev.24"
 }
