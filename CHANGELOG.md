@@ -1,3 +1,9 @@
+## [1.47.0-dev.25](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.24...v1.47.0-dev.25) (2026-10-11)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Playback speed:** Audio pitch controls not working on some devices ([44cf78b](https://github.com/MorpheApp/morphe-patches/commit/44cf78bcb556c2567511524e05e88308dc268486))
+
 ## [1.47.0-dev.24](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.23...v1.47.0-dev.24) (2026-10-11)
 
 ### 🐛 Bug Fixes
