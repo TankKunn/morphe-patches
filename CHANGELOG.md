@@ -1,3 +1,11 @@
+## [1.47.0-dev.23](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.22...v1.47.0-dev.23) (2026-10-11)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Navigation bar:** Added a setting to disable A/B navigation buttons layout ([2c3f5c8](https://github.com/MorpheApp/morphe-patches/commit/2c3f5c83131eb479c66a28d1a1c0ffbc810f19ac))
+* **YouTube:** Audio pitch resets after playback speed ([696c2e4](https://github.com/MorpheApp/morphe-patches/commit/696c2e40bce52706cb5e99c9caa2a96f67a60c37))
+* **YouTube:** Hide microphone at lower right corner of search not working ([d18708b](https://github.com/MorpheApp/morphe-patches/commit/d18708b39d693abd765e98c735296fe2404308e1))
+
 ## [1.47.0-dev.22](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.21...v1.47.0-dev.22) (2026-10-10)
 
 ### ✨ New Features
