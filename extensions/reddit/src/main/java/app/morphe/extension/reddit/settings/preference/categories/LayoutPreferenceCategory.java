@@ -16,6 +16,7 @@ import app.morphe.extension.reddit.patches.CustomFontPatch;
 import app.morphe.extension.reddit.patches.DisableModernHomePatch;
 import app.morphe.extension.reddit.patches.DisableScreenshotPopupPatch;
 import app.morphe.extension.reddit.patches.FeedMediaMaxHeightPatch;
+import app.morphe.extension.reddit.patches.FlipPostActionBarPatch;
 import app.morphe.extension.reddit.patches.ForceSystemFontPatch;
 import app.morphe.extension.reddit.patches.FullWidthFeedMediaPatch;
 import app.morphe.extension.reddit.patches.HideAskButtonPatch;
@@ -33,6 +34,7 @@ import app.morphe.extension.reddit.settings.preference.CustomFontFilePreference;
 import app.morphe.extension.reddit.settings.preference.CustomFontTogglePreference;
 import app.morphe.extension.reddit.settings.preference.ForceSystemFontPreference;
 import app.morphe.extension.reddit.settings.preference.NumberSettingPreference;
+import app.morphe.extension.shared.Utils;
 
 @SuppressWarnings("deprecation")
 public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
@@ -56,7 +58,8 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
                 FeedMediaMaxHeightPatch.isPatchIncluded() ||
                 HideMediaViewerComponentsPatch.isPatchIncluded() ||
                 MediaViewerBlackBackgroundPatch.isPatchIncluded() ||
-                RemoveSubRedditDialogPatch.isPatchIncluded();
+                RemoveSubRedditDialogPatch.isPatchIncluded() ||
+                ShowViewCountPatch.isPatchIncluded();
     }
 
     @Override
@@ -174,5 +177,18 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
                     Settings.MEDIA_VIEWER_BLACK_BACKGROUND
             ));
         }
+
+        if (FlipPostActionBarPatch.isPatchIncluded()) {
+            addPreference(new BooleanSettingPreference(
+                    context,
+                    Settings.FLIP_POST_ACTION_BAR
+            ));
+            addPreference(new BooleanSettingPreference(
+                    context,
+                    Settings.SWAP_POST_VOTE_COMMENT_BUTTONS
+            ));
+        }
+
+        Utils.setPreferenceTitlesToMultiLine(this);
     }
 }
