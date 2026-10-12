@@ -1263,7 +1263,6 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <string name="morphe_custom_font_file_title">Custom font file</string>
     <string name="morphe_custom_font_file_summary">Pick a TTF or OTF font file</string>
     <string name="morphe_custom_font_file_invalid">The picked file is not a TTF or OTF font</string>
-    <string name="morphe_custom_font_pick_file_first">Pick a font file first</string>
     <string name="morphe_custom_font_failed_to_load">Custom font could not be loaded and is turned off</string>
 
     <!-- layout.branding.customBrandingPatch -->

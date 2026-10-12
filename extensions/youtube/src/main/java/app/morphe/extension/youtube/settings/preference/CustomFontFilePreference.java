@@ -78,7 +78,7 @@ public class CustomFontFilePreference extends Preference {
                 : fileName);
     }
 
-    private static void openPicker() {
+    static void openPicker() {
         AbstractPreferenceFragment fragment = AbstractPreferenceFragment.instance.get();
         if (fragment == null) {
             Logger.printException(() -> "No settings fragment to open the file picker");
@@ -114,10 +114,11 @@ public class CustomFontFilePreference extends Preference {
                 return;
             }
 
-            // The restart dialog is only needed if the font is in use.
+            // The font file can also be picked when the custom font is selected without a file.
             AbstractPreferenceFragment.settingImportInProgress = true;
             try {
                 Settings.CUSTOM_FONT_FILE.save(fileName);
+                Settings.CUSTOM_FONT_TYPE.save(FontType.CUSTOM);
             } finally {
                 AbstractPreferenceFragment.settingImportInProgress = false;
             }
@@ -127,9 +128,7 @@ public class CustomFontFilePreference extends Preference {
                 preference.updateSummary();
             }
 
-            if (Settings.CUSTOM_FONT_TYPE.get() == FontType.CUSTOM) {
-                AbstractPreferenceFragment.showRestartDialog(context);
-            }
+            AbstractPreferenceFragment.showRestartDialog(context);
         } catch (Exception ex) {
             Logger.printException(() -> "handleActivityResult failure", ex);
         }

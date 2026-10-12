@@ -7,18 +7,15 @@
 
 package app.morphe.extension.youtube.settings.preference;
 
-import static app.morphe.extension.shared.StringRef.str;
-
 import android.content.Context;
 import android.util.AttributeSet;
 
-import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.preference.CustomDialogListPreference;
 import app.morphe.extension.youtube.patches.CustomFontPatch;
 import app.morphe.extension.youtube.patches.CustomFontPatch.FontType;
 
 /**
- * Font type list where the custom font can only be selected after a font file is picked.
+ * Font type list that opens the font file picker if the custom font is selected without a file.
  */
 @SuppressWarnings({"unused", "deprecation"})
 public class CustomFontTypePreference extends CustomDialogListPreference {
@@ -47,7 +44,8 @@ public class CustomFontTypePreference extends CustomDialogListPreference {
         setOnPreferenceChangeListener((preference, newValue) -> {
             if (FontType.CUSTOM.name().equals(newValue)
                     && !CustomFontPatch.isFontFileSet(preference.getContext())) {
-                Utils.showToastLong(str("morphe_custom_font_pick_file_first"));
+                // The custom font is selected after a font file is picked.
+                CustomFontFilePreference.openPicker();
                 return false;
             }
             return true;
