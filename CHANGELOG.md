@@ -1,3 +1,9 @@
+## [1.48.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.2...v1.48.0-dev.3) (2026-10-12)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Custom font:** Show custom font picker if no font is selected yet ([8347b98](https://github.com/MorpheApp/morphe-patches/commit/8347b98e007c98065bbe2d546a89bf4f1daa1dce))
+
 ## [1.48.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.1...v1.48.0-dev.2) (2026-10-12)
 
 ### 🐛 Bug Fixes
