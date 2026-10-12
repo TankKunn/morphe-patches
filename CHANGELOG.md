@@ -1,3 +1,22 @@
+## [1.48.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0...v1.48.0-dev.1) (2026-10-12)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Disable translucent bar:** Replace flag override with a proper patch ([88f77a8](https://github.com/MorpheApp/morphe-patches/commit/88f77a86ae737bc5da476011918d480baeff90b3))
+* **YouTube - VideoInformation:** Separated Video and Shorts informations ([e913727](https://github.com/MorpheApp/morphe-patches/commit/e913727f3a115f7be807bc32efbf6c054b8fa35d))
+* **YouTube:** Channel search not working properly ([ab2ecc7](https://github.com/MorpheApp/morphe-patches/commit/ab2ecc7a31f6678a698893663ee707d49fc51648))
+
+### ✨ New Features
+
+* **Reddit:** Add `Customize post layout` patch ([#3541](https://github.com/MorpheApp/morphe-patches/issues/3541)) ([a301bc1](https://github.com/MorpheApp/morphe-patches/commit/a301bc1d07ebd96390566cc2d4503ca48a013775))
+* **Reddit:** Add `Remember collapsed comments` patch ([#3517](https://github.com/MorpheApp/morphe-patches/issues/3517)) ([fbd5a82](https://github.com/MorpheApp/morphe-patches/commit/fbd5a82666abeeabd6c7aeb19b7ca993b1ba85c6))
+* **Reddit:** Add media viewer and feed media patches ([#3516](https://github.com/MorpheApp/morphe-patches/issues/3516)) ([1e905b5](https://github.com/MorpheApp/morphe-patches/commit/1e905b5449e6a5468a02f017ce4afb336e8f668e))
+* **YouTube:** Add `Custom font` patch ([#3673](https://github.com/MorpheApp/morphe-patches/issues/3673)) ([fc8c837](https://github.com/MorpheApp/morphe-patches/commit/fc8c837390b05edbc5262ea786d1308729e80c24))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for `21.41.525` ([#3658](https://github.com/MorpheApp/morphe-patches/issues/3658)) ([95eb1fb](https://github.com/MorpheApp/morphe-patches/commit/95eb1fbabe8bdb6251c20b962142cd4daefc1e47))
+
 ## [1.47.0](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0...v1.47.0) (2026-10-11)
 
 ### 🐛 Bug Fixes
