@@ -1,3 +1,9 @@
+## [1.48.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.1...v1.48.0-dev.2) (2026-10-12)
+
+### 🐛 Bug Fixes
+
+* **YouTube:** Add missing experimental compatibility declaration ([a81a933](https://github.com/MorpheApp/morphe-patches/commit/a81a933274cde895d3b4e026c2d084f35b9b20c5))
+
 ## [1.48.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0...v1.48.0-dev.1) (2026-10-12)
 
 ### 🐛 Bug Fixes
