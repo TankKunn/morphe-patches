@@ -35,7 +35,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.48.0-dev.4](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;177 patches total
+> **[v1.48.0-dev.5](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.5)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;179 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;97 patches</summary>
 <br>
@@ -148,7 +148,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 </details>
 
 <details>
-<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;48 patches</summary>
+<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;49 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -166,6 +166,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Check watch history domain name resolution](#check-watch-history-domain-name-resolution) | Checks if the device DNS server is preventing user watch history from being saved. |  |
 | [Crossfade](#crossfade) | Adds a true dual-player crossfade between consecutive tracks. |  |
 | [Custom branding](#custom-branding) | Adds options to change the app icon and app name. For mounted (root) installations the branding is applied while patching, because it cannot be changed from the app settings. | • App name<br>• Custom icon<br>• App icon |
+| [Custom font](#custom-font) | Adds an option to show the app with the device system font or a custom TTF or OTF font file instead of YouTube Sans. |  |
 | [Disable DRC audio](#disable-drc-audio) | Adds an option to disable DRC (Dynamic Range Compression) audio. |  |
 | [Disable QUIC protocol](#disable-quic-protocol) | Adds an option to disable QUIC (Quick UDP Internet Connections) network protocol. |  |
 | [Disable dislike redirection](#disable-dislike-redirection) | Adds an option to prevent skipping to the next track when the dislike button is pressed. |  |
@@ -210,7 +211,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 </details>
 
 <details>
-<summary>📦 Reddit&nbsp;&nbsp;•&nbsp;&nbsp;27 patches</summary>
+<summary>📦 Reddit&nbsp;&nbsp;•&nbsp;&nbsp;28 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -221,6 +222,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
 | [App icon](#app-icon) | Adds an option to select from the Reddit app icons available in the manifest. |  |
+| [Copy text](#copy-text) | Adds an option to make post and comment text selectable and copyable. Disables collapsing comments. This patch works with Reddit 2026.24.0 and newer. |  |
 | [Custom branding name for Reddit](#custom-branding-name-for-reddit) | Changes the Reddit app name to the name specified in patch options. | • App name |
 | [Custom font](#custom-font) | Adds an option to replace Reddit Sans / Roboto with a custom TTF or OTF font file at runtime. |  |
 | [Customize post layout](#customize-post-layout) | Adds options to show the view count of posts, to move the vote and comment buttons of posts to the right side, and to swap the vote and comment buttons. Moving and swapping the buttons works with Reddit 2026.39.0 and newer. |  |

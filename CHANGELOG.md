@@ -1,3 +1,11 @@
+## [1.48.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.4...v1.48.0-dev.5) (2026-10-13)
+
+### ✨ New Features
+
+* **Reddit - Full width feed media:** Make embedded video players full width ([#3696](https://github.com/MorpheApp/morphe-patches/issues/3696)) ([53b6448](https://github.com/MorpheApp/morphe-patches/commit/53b64487109e05f13d8e0bc581f86e581cd4662b))
+* **Reddit:** Add `Copy text` patch ([#3665](https://github.com/MorpheApp/morphe-patches/issues/3665)) ([3068f23](https://github.com/MorpheApp/morphe-patches/commit/3068f23e357825a77f6d67760f427634e3baee0c))
+* **YouTube Music:** Add `Custom font` patch ([#3718](https://github.com/MorpheApp/morphe-patches/issues/3718)) ([30a4b85](https://github.com/MorpheApp/morphe-patches/commit/30a4b85885e96aa8216f2b9fb26ed0ba4951e8fe))
+
 ## [1.48.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.3...v1.48.0-dev.4) (2026-10-12)
 
 ### ✨ New Features
