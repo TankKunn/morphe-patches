@@ -35,7 +35,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.48.0-dev.5](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.5)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;179 patches total
+> **[v1.48.0-dev.6](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.6)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;179 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;97 patches</summary>
 <br>
@@ -80,7 +80,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Disable rolling number animations](#disable-rolling-number-animations) | Adds an option to disable rolling number animations of video view count, user likes, and upload time. |  |
 | [Disable scrolling speed limit](#disable-scrolling-speed-limit) | Adds an option to remove limits of how fast the home and subscription feed can be scrolled. |  |
 | [Disable sign in to TV popup](#disable-sign-in-to-tv-popup) | Adds options to disable the popups asking to sign into or connect to a TV on the same local network. |  |
-| [Disable video codecs](#disable-video-codecs) | Adds options to disable or force HDR, and to disable VP9 codecs. |  |
+| [Disable video codecs](#disable-video-codecs) | Adds options to disable or force HDR, and to disable VP9 or AV1 codecs. |  |
 | [Double tap to seek](#double-tap-to-seek) | Adds additional double-tap to seek values to the YouTube settings menu. |  |
 | [Downloads](#downloads) | Adds support to download videos with an external downloader app using the in-app download button or a video player action button. |  |
 | [Enable debugging](#enable-debugging) | Adds options for debugging and exporting Morphe logs to the clipboard. |  |

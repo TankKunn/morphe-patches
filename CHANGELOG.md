@@ -1,3 +1,9 @@
+## [1.48.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.5...v1.48.0-dev.6) (2026-10-13)
+
+### ✨ New Features
+
+* **YouTube - Disable video codecs:** Add "Force VP9 codec" setting ([#3578](https://github.com/MorpheApp/morphe-patches/issues/3578)) ([e1398ca](https://github.com/MorpheApp/morphe-patches/commit/e1398ca7da9dc7829aa8e9d2f798206fff26c1f6))
+
 ## [1.48.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.4...v1.48.0-dev.5) (2026-10-13)
 
 ### ✨ New Features
