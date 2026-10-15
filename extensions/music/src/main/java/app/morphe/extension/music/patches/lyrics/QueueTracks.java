@@ -27,15 +27,13 @@ final class QueueTracks {
      * strings do not describe one.
      */
     @Nullable
-    static TrackInfo trackOf(@Nullable String rawTitle, @Nullable String rawArtist,
-                             int durationSeconds, @Nullable String album) {
+    static TrackInfo trackOf(@Nullable String rawTitle, @Nullable String rawArtist) {
         if (rawTitle == null || rawTitle.trim().isEmpty()
                 || rawArtist == null || rawArtist.trim().isEmpty()) {
             return null;
         }
         String[] parsed = MetadataCleaner.parseCleanTitleAndArtist(rawTitle, rawArtist);
-        TrackInfo track = new TrackInfo(parsed[1], parsed[0],
-                album != null ? album : "", durationSeconds);
+        TrackInfo track = new TrackInfo(parsed[1], parsed[0], "", 0);
         return (track.title().isEmpty() || track.artist().isEmpty()) ? null : track;
     }
 }

@@ -1134,8 +1134,10 @@ public final class TTMLParser {
                 bgInlineRoma.isEmpty() ? null : bgInlineRoma);
     }
 
+    @SuppressWarnings("SizeReplaceableByIsEmpty")
     private static void flushBgLine(List<LyricsLine> bgLines, List<Word> bgWords,
-            StringBuilder bgFullText, long bgBeginMs, long bgEndMs, long pBegin, long pEnd) {
+                                    StringBuilder bgFullText, long bgBeginMs,
+                                    long bgEndMs, long pBegin, long pEnd) {
         if (bgWords.isEmpty() && bgFullText.length() == 0) {
             return;
         }

@@ -21,11 +21,11 @@ import java.util.List;
  * The breathing-dots motion that plays over a silence between two lyric lines, taking the place of
  * the section label of the line that is about to start.
  *
- * <p>Any silence long enough to read as an instrumental break gets the treatment, whether or not the
- * lines around it carry labels; shorter ones are left alone. A line that does have a label swaps it
- * for the dots, and a line that has none opens up to the height a label would have taken so the
- * dots have somewhere to sit. Background vocal lines are skipped — they belong under their lead
- * line, so a lead line's own timing is what measures the gap.
+ * <p>Any silence long enough to read as an instrumental break gets the treatment, whether the lines
+ * around it carry labels; shorter ones are left alone. A line that does have a label swaps it for
+ * the dots, and a line that has none opens up to the height a label would have taken so the dots
+ * have somewhere to sit. Background vocal lines are skipped — they belong under their lead line,
+ * so a lead line's own timing is what measures the gap.
  *
  * <p>The shape follows the Apple Music interlude dots as reimplemented in
  * {@code LyricsTimelineBuilder} / {@code AppleMusicMotion.Dots} of the Spicy Lyrics Android player:
@@ -35,7 +35,7 @@ import java.util.List;
  * slot a label-less line opens up to match the fade it plays against.
  *
  * <p>Every phase is derived from the playback position rather than accumulated over frames, so a
- * seek into the middle of a gap lands on the right frame and a stall cannot desynchronise the motion.
+ * seek into the middle of a gap lands on the right frame and a stall cannot desynchronize the motion.
  * That makes {@link #stateAt} a pure function and keeps the ticking view side effect free apart from
  * applying the returned {@link State}.
  */
@@ -188,7 +188,7 @@ public final class SectionDotsMotion {
 
         // Every phase is a fraction of the head of the reference cycle, so a short silence plays the
         // whole motion rather than just its opening. They are laid out backwards from the vanish, so
-        // they tile the silence instead of overlapping when there is not room for all of them.
+        // they tile the silence instead of overlapping when there is no room for all of them.
         final float factor = Math.min(vanishStart / (ENTER_MS + DIP_MS + STILL_MS), 1f);
         final float enterEnd = ENTER_MS * factor;
 
@@ -256,7 +256,7 @@ public final class SectionDotsMotion {
      */
     private static long inferredEndMs(LyricsLine line) {
         final int chars = Math.min(line.text().length(), INFERRED_MAX_CHARS);
-        if (chars <= 0) {
+        if (chars == 0) {
             return LyricsLine.NO_TIME;
         }
         return line.startTimeMs() + Math.min(
@@ -265,7 +265,7 @@ public final class SectionDotsMotion {
     }
 
     private static float clamp(float v) {
-        return v < 0f ? 0f : (v > 1f ? 1f : v);
+        return v < 0f ? 0f : (Math.min(v, 1f));
     }
 
     /** Smoothstep, the curve the reference easing uses. */

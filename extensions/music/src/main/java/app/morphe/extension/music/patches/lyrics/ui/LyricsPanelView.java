@@ -916,6 +916,7 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
      * Gives a slot to every line a gap points at that has no label to stand in for it, so a silence
      * that starts showing up after the rows were built still has somewhere to play.
      */
+    @SuppressWarnings("ConstantValue")
     private void ensureDotsSlotsExist(Context context, List<SectionDotsMotion.Gap> gaps) {
         for (SectionDotsMotion.Gap gap : gaps) {
             final int index = gap.tagLineIndex();
@@ -1035,7 +1036,7 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
         }
     }
 
-    @SuppressWarnings("deprecation")
+    @SuppressWarnings({"deprecation", "SizeReplaceableByIsEmpty"})
     private void buildLyrics(Lyrics newLyrics) {
         if (onlyMode != displayedOnlyMode && !contentOutPending && !lineViews.isEmpty()) {
             contentOutPending = true;
@@ -2232,9 +2233,9 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
             return;
         }
 
-        AutoCompleteTextView titleInput = LyricsSearchUi.createSearchInput(context,
+        AutoCompleteTextView titleInput = LyricsSearchUI.createSearchInput(context,
                 str("morphe_music_lyrics_search_title_hint"));
-        AutoCompleteTextView artistInput = LyricsSearchUi.createSearchInput(context,
+        AutoCompleteTextView artistInput = LyricsSearchUI.createSearchInput(context,
                 str("morphe_music_lyrics_search_artist_hint"));
 
         final String rawTitle = manager.getCurrentRawTitle();
@@ -2316,10 +2317,10 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
                     return;
                 }
                 if (!titles.isEmpty()) {
-                    LyricsSearchUi.setSuggestionAdapter(context, titleInput, titles);
+                    LyricsSearchUI.setSuggestionAdapter(context, titleInput, titles);
                 }
                 if (!artists.isEmpty()) {
-                    LyricsSearchUi.setSuggestionAdapter(context, artistInput, artists);
+                    LyricsSearchUI.setSuggestionAdapter(context, artistInput, artists);
                 }
             });
         });
@@ -2898,7 +2899,7 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
      *
      * @return The row, hidden until a gap drives it.
      */
-    @Nullable
+    @NonNull
     private static LinearLayout createSectionDots(Context context) {
         LinearLayout row = new LinearLayout(context);
         row.setOrientation(LinearLayout.HORIZONTAL);

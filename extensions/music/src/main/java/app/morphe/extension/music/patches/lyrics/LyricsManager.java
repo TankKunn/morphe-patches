@@ -41,7 +41,6 @@ import app.morphe.extension.music.patches.lyrics.model.LyricsLine;
 import app.morphe.extension.music.patches.lyrics.model.LyricsPreference;
 import app.morphe.extension.music.patches.lyrics.model.MetadataCleaner;
 import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
-import app.morphe.extension.music.patches.lyrics.model.Word;
 import app.morphe.extension.music.patches.lyrics.parsers.CharactersConverter;
 import app.morphe.extension.music.patches.lyrics.requests.AMLLProvider;
 import app.morphe.extension.music.patches.lyrics.requests.AppleMusicProvider;
@@ -62,7 +61,7 @@ import app.morphe.extension.music.patches.lyrics.requests.MusixmatchProvider;
 import app.morphe.extension.music.patches.lyrics.requests.NetEaseProvider;
 import app.morphe.extension.music.patches.lyrics.requests.PetitLyricsProvider;
 import app.morphe.extension.music.patches.lyrics.requests.QQProvider;
-import app.morphe.extension.music.patches.lyrics.requests.RmmProvider;
+import app.morphe.extension.music.patches.lyrics.requests.RMMProvider;
 import app.morphe.extension.music.patches.lyrics.requests.SimpMusicProvider;
 import app.morphe.extension.music.patches.lyrics.requests.SpotifyProvider;
 import app.morphe.extension.music.patches.lyrics.requests.UnisonProvider;
@@ -559,6 +558,7 @@ public final class LyricsManager {
      * Binds the current track to the video playback reached, keeping its lyric. Runs
      * once the metadata events have had their chance to name the new video.
      */
+    @SuppressWarnings("unused")
     private void confirmTrackRebinding(String videoId, int generation, String rawTitle,
                                        String rawArtist, @Nullable Uri mediaUri) {
         if (generation != rebindingGeneration || unconfirmedVideoId == null) {
@@ -1179,7 +1179,7 @@ public final class LyricsManager {
 
     /**
      * The providers that can answer a custom title and artist: the ones keyed by the video id
-     * of the playing track only know that track. Also what a prefetch of another track may
+     * of the playing track only know that track. Also, what a prefetch of another track may
      * ask, which has no video id of its own to answer with.
      */
     static List<LyricsProvider> searchableProviders(List<LyricsProvider> providers) {
@@ -2110,11 +2110,11 @@ public final class LyricsManager {
     }
 
     /**
-     * The track the provider search asks with: the released audio's duration, the video
-     * minus the sponsorblock segments, so candidates written against it pass the duration
-     * filter. The user's choice ({@link Settings#LYRICS_SB_MATCHING}) gates this and the
-     * rest of the segment pipeline alike: with it off, nothing is requested, the search
-     * keeps the video duration, and playback time is never corrected.
+     * The track the provider search asks with: the duration of the released audio, the video minus
+     * the SponsorBlock segments, so candidates written against it pass the duration filter. The
+     * user's choice ({@link Settings#LYRICS_SB_MATCHING}) gates this and the rest of the segment
+     * pipeline alike: with it off, nothing is requested, the search keeps the video duration, and
+     * playback time is never corrected.
      */
     @NonNull
     private static TrackInfo withEffectiveDuration(@NonNull TrackInfo track,
@@ -2244,6 +2244,7 @@ public final class LyricsManager {
      * answers. A track change while the request is out would leave them on the wrong song, so the
      * callback checks the lyrics and the track it was asked about are still the current ones.
      */
+    @SuppressWarnings({"UnnecessaryLocalVariable", "ConstantValue"})
     private void detectSections(@Nullable Lyrics lyrics) {
         if (!Settings.LYRICS_USE_AI_SECTION.get()) {
             return;
@@ -2264,7 +2265,7 @@ public final class LyricsManager {
         SectionDetector.detect(track, target,
                 () -> fingerprint.equals(sectionsPendingFingerprint), sections -> {
             if (sectionsPendingFingerprint != null
-                    && sectionsPendingFingerprint.equals(fingerprint)) {
+                    && Objects.equals(sectionsPendingFingerprint, fingerprint)) {
                 sectionsPendingFingerprint = null;
             }
             Lyrics shown = currentLyrics;
@@ -2372,7 +2373,7 @@ public final class LyricsManager {
             case "AMLL" -> new AMLLProvider();
             case "LunaBeat" -> new LunaBeatProvider();
             case "Apple" -> new AppleMusicProvider();
-            case "RMM" -> new RmmProvider();
+            case "RMM" -> new RMMProvider();
             case "Spotify" -> new SpotifyProvider();
             case "Lyricify" -> new LyricifyProvider();
             case "Musixmatch" -> new MusixmatchProvider();

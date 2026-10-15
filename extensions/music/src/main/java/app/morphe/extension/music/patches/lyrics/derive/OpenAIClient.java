@@ -168,6 +168,7 @@ public final class OpenAIClient {
     }
 
     /** The stored effort, sent as typed, or empty when nothing is stored. */
+    @SuppressWarnings("ConstantValue")
     public static String reasoningEffort() {
         final String configured = Settings.LYRICS_AI_REASONING_EFFORT.get();
         if (configured != null && !configured.trim().isEmpty()) {

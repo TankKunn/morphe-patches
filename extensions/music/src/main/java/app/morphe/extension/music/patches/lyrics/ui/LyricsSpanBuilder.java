@@ -366,10 +366,9 @@ static List<WordTiming> computeWordTimings(List<LyricsLine> lines, int index) {
             }
         }
 
-        List<String> translated = translatedLines;
         String translation = null;
-        if (translated != null && index < translated.size()) {
-            String raw = translated.get(index);
+        if (translatedLines != null && index < translatedLines.size()) {
+            String raw = translatedLines.get(index);
             String t = raw == null ? "" : raw.trim();
             if (!t.isEmpty() && !t.equalsIgnoreCase(originalTrimmed)) {
                 translation = t;
@@ -465,6 +464,7 @@ static List<WordTiming> computeWordTimings(List<LyricsLine> lines, int index) {
                 Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
     }
 
+    @SuppressWarnings("SizeReplaceableByIsEmpty")
     @Nullable
     private static String joinWordRomaji(LyricsLine line) {
         if (!line.hasWords()) {

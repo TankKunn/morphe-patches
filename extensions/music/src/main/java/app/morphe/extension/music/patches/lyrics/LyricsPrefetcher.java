@@ -7,14 +7,12 @@
 
 package app.morphe.extension.music.patches.lyrics;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.ThreadFactory;
 
 import app.morphe.extension.music.patches.lyrics.model.Lyrics;
 import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
@@ -42,20 +40,17 @@ import app.morphe.extension.shared.Utils;
 final class LyricsPrefetcher {
 
     private static final ExecutorService executor = Executors.newSingleThreadExecutor(
-            new ThreadFactory() {
-                @Override
-                public Thread newThread(@NonNull Runnable runnable) {
-                    Thread thread = new Thread(runnable, "LyricsPrefetch");
-                    thread.setDaemon(true);
-                    thread.setPriority(Thread.MIN_PRIORITY);
-                    return thread;
-                }
+            runnable -> {
+                Thread thread = new Thread(runnable, "LyricsPrefetch");
+                thread.setDaemon(true);
+                thread.setPriority(Thread.MIN_PRIORITY);
+                return thread;
             });
 
     /**
      * The video whose successor is being fetched, which is also the generation of the
      * running task: a newer track replaces it, and the older task stops at its next
-     * checkpoint instead of fetching lyrics nobody asked for any more.
+     * checkpoint instead of fetching lyrics nobody asked for anymore.
      */
     private static volatile String prefetchingFor;
 
