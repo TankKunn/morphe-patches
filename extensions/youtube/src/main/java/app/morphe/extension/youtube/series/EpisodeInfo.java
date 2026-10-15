@@ -135,9 +135,7 @@ final class EpisodeInfo {
                 formatter.setMaximumSignificantDigits(3);
                 views = UiText.format(count == 1
                                 ? "morphe_series_tracker_view_count_one"
-                                : count >= 1000000
-                                  ? "morphe_series_tracker_view_count_large"
-                                  : "morphe_series_tracker_view_count",
+                                : "morphe_series_tracker_view_count",
                         formatter.format(count));
             }
             String relative = age(part, locale, fetchedAt, System.currentTimeMillis());

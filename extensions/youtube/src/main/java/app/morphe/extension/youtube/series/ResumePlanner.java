@@ -68,7 +68,7 @@ public final class ResumePlanner {
                         p.watched() ? 0 : p.positionMs,
                         "morphe_series_tracker_saved_position");
             }
-            return state(Kind.OPEN_PLAYLIST, "morphe_series_tracker_plan_open");
+            return state(Kind.OPEN_PLAYLIST, "morphe_series_tracker_ui_playlist_bookmark");
         }
         if (!s.cursorId.isEmpty()) {
             Episode cursor = null;

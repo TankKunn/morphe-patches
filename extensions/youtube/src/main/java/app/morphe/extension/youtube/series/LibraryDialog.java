@@ -232,7 +232,7 @@ final class LibraryDialog {
         heading.setTypeface(Typeface.create("sans-serif-medium", Typeface.NORMAL));
         toolbar.addView(heading, new LinearLayout.LayoutParams(0, HistoryUi.dp(48), 1));
         heading.setGravity(Gravity.CENTER_VERTICAL);
-        addAction = action("morphe_series_tracker_add_icon", this::follow, false);
+        addAction = action("morphe_series_tracker_follow", this::follow, false);
         toolbar.addView(addAction);
         moreAction = action("morphe_series_tracker_ui_more_options", this::menu, false);
         toolbar.addView(moreAction);
@@ -1066,19 +1066,17 @@ final class LibraryDialog {
         TextView v = NativeSheet.button(activity, title, work, pill);
         v.setMinWidth(HistoryUi.dp(48));
         if (title.equals("morphe_series_tracker_ui_more_options")
-                || title.equals("morphe_series_tracker_add_icon")) {
+                || title.equals("morphe_series_tracker_follow")) {
             v.setText("");
             v.setPadding(HistoryUi.dp(12), 0, HistoryUi.dp(12), 0);
             v.setCompoundDrawables(new UiIcon(
-                            title.equals("morphe_series_tracker_add_icon") ? UiIcon.ADD : UiIcon.MORE,
+                            title.equals("morphe_series_tracker_follow") ? UiIcon.ADD : UiIcon.MORE,
                             HistoryUi.foreground(),
                             HistoryUi.dp(24)),
                     null,
                     null,
                     null);
-            v.setContentDescription(UiText.get(title.equals("morphe_series_tracker_add_icon")
-                    ? "morphe_series_tracker_follow"
-                    : title));
+            v.setContentDescription(UiText.get(title));
         }
         return v;
     }
