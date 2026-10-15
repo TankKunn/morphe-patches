@@ -55,6 +55,7 @@ import app.morphe.patches.youtube.misc.playservice.is_21_20_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_25_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_26_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_36_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_42_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.proto.elementProtoParserHookPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
@@ -678,7 +679,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
         // region hide view count
 
         HideViewCountFingerprint.method.apply {
-            val startIndex = HideViewCountFingerprint.instructionMatches.first().index
+            val startIndex = HideViewCountFingerprint.instructionMatches.last().index
             var returnStringRegister = getInstruction<OneRegisterInstruction>(startIndex).registerA
 
             // Find the instruction where the text dimension is retrieved.
@@ -976,7 +977,11 @@ val hideLayoutComponentsPatch = bytecodePatch(
                     protoObjectIndex
                 ).reference as FieldReference
 
-                val insertIndex = if (is_21_36_or_greater) {
+                // 21.36 - 21.41 reads the tab proto from a typed field.
+                // Other versions read an Object field and cast it.
+                val isTypedProtoField = is_21_36_or_greater && !is_21_42_or_greater
+
+                val insertIndex = if (isTypedProtoField) {
                     protoObjectIndex + 1
                 } else {
                     indexOfFirstInstructionOrThrow(protoObjectIndex) {
@@ -984,7 +989,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
                     } + 1
                 }
 
-                val checkCastInstruction = if (is_21_36_or_greater) {
+                val checkCastInstruction = if (isTypedProtoField) {
                     ""
                 } else {
                     val checkCastIndex = insertIndex - 1
