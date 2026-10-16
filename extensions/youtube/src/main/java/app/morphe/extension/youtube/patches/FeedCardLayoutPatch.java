@@ -32,8 +32,10 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.WeakHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -75,6 +77,7 @@ import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.LockupIma
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.LockupMetadata;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.LockupMetadataViewModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.LockupModel;
+import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.LockupPadding;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.LockupViewModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.LockupViewModelHolder;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.MetadataPart;
@@ -114,6 +117,24 @@ public class FeedCardLayoutPatch {
         CARDS_WITH_ACTION_BUTTONS
     }
 
+    /**
+     * Interfaces to use obfuscated methods of the lists.
+     */
+    public interface ElementItemInterface {
+        // Method is added during patching.
+        byte[] patch_getElementBytes();
+    }
+
+    public interface RecyclerViewInterface {
+        // Method is added during patching.
+        Object patch_getLayoutManager();
+    }
+
+    public interface FlowLayoutManagerInterface {
+        // Method is added during patching.
+        void patch_removeVerticalSpacing();
+    }
+
     private static final boolean CARD_LAYOUT = Settings.FEED_CARD_LAYOUT.get() != FeedCardLayout.CLASSIC;
     private static final boolean ACTION_BUTTONS = Settings.FEED_CARD_LAYOUT.get() == FeedCardLayout.CARDS_WITH_ACTION_BUTTONS;
 
@@ -148,6 +169,19 @@ public class FeedCardLayoutPatch {
      * Corner radius of the cards.
      */
     private static final int CARD_CORNER_RADIUS = Dim.dp(12);
+    /**
+     * Padding of the cards, in dp, which is the spacing between the cards in every list.
+     * The spacing that the lists add between the cards is removed.
+     */
+    private static final int CARD_HORIZONTAL_PADDING_DP = 12;
+    private static final int CARD_VERTICAL_PADDING_DP = 6;
+
+    private static final CardOutlineProvider CARD_OUTLINE = new CardOutlineProvider(
+            Dim.dp(CARD_HORIZONTAL_PADDING_DP), Dim.dp(CARD_VERTICAL_PADDING_DP));
+    /**
+     * Outline of the items of the feed that are not converted, such as the cards that YouTube sends.
+     */
+    private static final CardOutlineProvider FEED_ITEM_OUTLINE = new CardOutlineProvider(0, 0);
 
     private static final int BUTTON_STYLE_MONO = 9;
     private static final int BUTTON_TYPE_TEXT = 3;
@@ -198,6 +232,9 @@ public class FeedCardLayoutPatch {
     private static final ByteTrieSearch elementSearch = new ByteTrieSearch(
             ByteTrieSearch.convertStringsToBytes(CARD_LAYOUT ? CLASSIC_TEMPLATE : CARD_TEMPLATE)
     );
+    private static final ByteTrieSearch cardElementSearch = new ByteTrieSearch(
+            ByteTrieSearch.convertStringsToBytes(CARD_TEMPLATE)
+    );
 
     /**
      * Minimum time between the lookups of a template that is not cached yet.
@@ -212,6 +249,26 @@ public class FeedCardLayoutPatch {
     private static long cardTemplateLookupTime;
     @Nullable
     private static Icons icons;
+    /**
+     * Whether the elements are converted cards, by the bytes of the converted element, which the list items keep.
+     * The arrays are compared by identity.
+     */
+    private static final Map<byte[], Boolean> cardElements = Collections.synchronizedMap(new WeakHashMap<>());
+    /**
+     * List item without the spacing of the list.
+     */
+    private static final Object ITEM_WITHOUT_DIVIDER = new Object();
+    /**
+     * Updates the outline of the list items when they are laid out, after the label of a recycled view is set.
+     */
+    private static final View.OnLayoutChangeListener CARD_LAYOUT_LISTENER =
+            (view, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
+                try {
+                    updateCardOutline(view);
+                } catch (Exception ex) {
+                    Logger.printException(() -> "onLayoutChange failure", ex);
+                }
+            };
     private static int feedId;
     @Nullable
     private static volatile String commentsVideoId;
@@ -303,18 +360,22 @@ public class FeedCardLayoutPatch {
      */
     public static void onChildAdded(RecyclerView recyclerView, View child) {
         try {
+            // The items of the feed have their own spacing, with the cards and with the classic layout.
+            if (recyclerView.getId() == getFeedId()
+                    && recyclerView instanceof RecyclerViewInterface feed
+                    && feed.patch_getLayoutManager() instanceof FlowLayoutManagerInterface layoutManager) {
+                layoutManager.patch_removeVerticalSpacing();
+            }
+
             if (!CARD_LAYOUT || child == null) {
                 return;
             }
 
-            // The watch page list has other items too, and its cards are found when they are drawn.
-            if (recyclerView.getId() != getFeedId()) {
-                // The views of the feed can be recycled in other lists.
-                setCardOutline(child, false);
-                return;
-            }
-
-            setCardOutline(child, true);
+            // The cards are found by their label. The views are recycled while scrolling, also between lists,
+            // and the label of the new item can be set after the view is added.
+            updateCardOutline(child);
+            child.removeOnLayoutChangeListener(CARD_LAYOUT_LISTENER);
+            child.addOnLayoutChangeListener(CARD_LAYOUT_LISTENER);
         } catch (Exception ex) {
             Logger.printException(() -> "onChildAdded failure", ex);
         }
@@ -337,6 +398,38 @@ public class FeedCardLayoutPatch {
         return color;
     }
 
+    /**
+     * Injection point.
+     * Called when the spacing of a list item is looked up.
+     *
+     * @return The item, or an item without spacing if the item is a card, which has its own spacing.
+     */
+    public static Object getDividerItem(@Nullable Object item) {
+        try {
+            if (CARD_LAYOUT && item instanceof ElementItemInterface element
+                    && isCardElement(element.patch_getElementBytes())) {
+                return ITEM_WITHOUT_DIVIDER;
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "getDividerItem failure", ex);
+        }
+        return item;
+    }
+
+    private static boolean isCardElement(@Nullable byte[] bytes) throws IOException {
+        if (bytes == null) {
+            return false;
+        }
+        Boolean card = cardElements.get(bytes);
+        if (card == null) {
+            card = cardElementSearch.matches(bytes) && isCardLabel(Element.parseFrom(bytes).getType()
+                    .getComponentType().getModel().getLockupModel().getViewModel().getLockupViewModel()
+                    .getRendererContext().getAccessibilityContext().getLabel());
+            cardElements.put(bytes, card);
+        }
+        return card;
+    }
+
     private static boolean isInCard(Drawable drawable) {
         Drawable.Callback callback = drawable.getCallback();
         while (callback instanceof Drawable parent) {
@@ -348,8 +441,9 @@ public class FeedCardLayoutPatch {
 
         while (true) {
             // The card can be drawn before it's added to the list.
-            if (isCardLabel(view.getContentDescription())) {
-                setCardOutline(view, true);
+            CardOutlineProvider outline = getCardOutline(view.getContentDescription());
+            if (outline != null) {
+                setCardOutline(view, outline);
                 return true;
             }
             ViewParent parent = view.getParent();
@@ -363,12 +457,25 @@ public class FeedCardLayoutPatch {
         }
     }
 
-    private static void setCardOutline(View view, boolean card) {
-        final boolean isCard = view.getOutlineProvider() instanceof CardOutlineProvider;
-        if (card && !isCard) {
-            view.setOutlineProvider(new CardOutlineProvider());
+    private static void updateCardOutline(View child) {
+        CardOutlineProvider outline = getCardOutline(child.getContentDescription());
+        // The items of the feed are cards, also the ones that YouTube sends as cards and are not converted.
+        if (outline == null && child.getParent() instanceof RecyclerView recyclerView
+                && recyclerView.getId() == getFeedId()) {
+            outline = FEED_ITEM_OUTLINE;
+        }
+        setCardOutline(child, outline);
+    }
+
+    private static void setCardOutline(View view, @Nullable CardOutlineProvider outline) {
+        ViewOutlineProvider current = view.getOutlineProvider();
+        if (outline == current) {
+            return;
+        }
+        if (outline != null) {
+            view.setOutlineProvider(outline);
             view.setClipToOutline(true);
-        } else if (!card && isCard) {
+        } else if (current instanceof CardOutlineProvider) {
             view.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
             view.setClipToOutline(false);
         }
@@ -377,7 +484,14 @@ public class FeedCardLayoutPatch {
     /**
      * The accessibility label of the converted videos ends with an invisible character,
      * to find the cards in lists that have other items.
+     *
+     * @return The outline of the card, or null if the label is not the label of a card.
      */
+    @Nullable
+    private static CardOutlineProvider getCardOutline(@Nullable CharSequence label) {
+        return isCardLabel(label) ? CARD_OUTLINE : null;
+    }
+
     private static boolean isCardLabel(@Nullable CharSequence label) {
         return endsWith(label, CARD_LABEL_MARKER);
     }
@@ -474,11 +588,22 @@ public class FeedCardLayoutPatch {
         return command.toByteArray();
     }
 
+    /**
+     * Outline of the card, inside the padding of the card.
+     */
     private static final class CardOutlineProvider extends ViewOutlineProvider {
+        private final int horizontalPadding;
+        private final int verticalPadding;
+
+        CardOutlineProvider(int horizontalPadding, int verticalPadding) {
+            this.horizontalPadding = horizontalPadding;
+            this.verticalPadding = verticalPadding;
+        }
+
         @Override
         public void getOutline(View view, Outline outline) {
-            outline.setRoundRect(0, 0, view.getWidth(), view.getHeight(),
-                    CARD_CORNER_RADIUS);
+            outline.setRoundRect(horizontalPadding, verticalPadding, view.getWidth() - horizontalPadding,
+                    view.getHeight() - verticalPadding, CARD_CORNER_RADIUS);
         }
     }
 
@@ -584,6 +709,11 @@ public class FeedCardLayoutPatch {
                 .setViewModel(LockupViewModelHolder.newBuilder().setLockupViewModel(lockupViewModel))
                 .setContext(setCardExperiments(classic.getContext(), true))
                 .setEnvironment(classic.getEnvironment())
+                .setPadding(LockupPadding.newBuilder()
+                        .setStart(CARD_HORIZONTAL_PADDING_DP)
+                        .setEnd(CARD_HORIZONTAL_PADDING_DP)
+                        .setTop(CARD_VERTICAL_PADDING_DP)
+                        .setBottom(CARD_VERTICAL_PADDING_DP))
                 .build();
 
         return componentType.toBuilder()
