@@ -66,6 +66,52 @@ public final class HideStatusBarPatch {
     private static boolean activityLifecycleCallbacksRegistered;
 
     /**
+     * Value of the edge to edge top bar feature flag used by the whole app, or null if not read yet.
+     */
+    @Nullable
+    private static volatile Boolean edgeToEdgeTopBar;
+
+    /**
+     * Injection point.
+     * <p>
+     * The flag draws the window behind the status bar and gives the top bars the status bar inset.
+     * It is read by many classes, and on some devices they do not get the same value. The window
+     * is then laid out below the status bar while the top bars still make room for it, or the
+     * other way around (https://github.com/MorpheApp/morphe-patches/issues/2969).
+     * The first value read is used everywhere, so the app keeps its own value but uses it consistently.
+     * <p>
+     * With the status bar hidden, the edge to edge layout leaves an empty bar of the height of
+     * the status bar above the player, so the flag is turned off and the top bars are laid out
+     * with {@link #setSystemWindowInsetTop(Rect, View)}.
+     */
+    public static boolean useEdgeToEdgeTopBar(boolean original) {
+        Boolean value = edgeToEdgeTopBar;
+        if (value == null) {
+            synchronized (HideStatusBarPatch.class) {
+                value = edgeToEdgeTopBar;
+                if (value == null) {
+                    value = original && !Settings.HIDE_STATUS_BAR.get();
+                    edgeToEdgeTopBar = value;
+                    Logger.printDebug(() -> "Edge to edge top bar: " + original);
+                }
+            }
+        }
+        return value;
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * The status bar color that follows the scrolling top bar only exists with the edge to edge
+     * top bar. Without it the status bar view is never set up, and the first scroll of the
+     * top bar crashes the app (https://github.com/MorpheApp/morphe-patches/issues/3805).
+     */
+    public static boolean useStatusBarScrollColor(boolean original) {
+        Boolean edgeToEdge = edgeToEdgeTopBar;
+        return original && (edgeToEdge == null || edgeToEdge);
+    }
+
+    /**
      * Injection point.
      * <p>
      * Called when the main activity is created.
@@ -148,8 +194,9 @@ public final class HideStatusBarPatch {
     /**
      * Injection point.
      * <p>
-     * The app lays out the top bars with the system window insets of a stable layout, which keep the
-     * height of the status bar when it is hidden and leave an empty bar above the top bars.
+     * Without the edge to edge top bar, the app lays out the top bars with the system window insets
+     * of a stable layout, which keep the height of the status bar when it is hidden and leave
+     * an empty bar above the top bars.
      * The top inset is replaced by the inset of a display cutout at the top, so the top bars
      * are still laid out below a front camera hole, the same as with the status bar inset.
      */
