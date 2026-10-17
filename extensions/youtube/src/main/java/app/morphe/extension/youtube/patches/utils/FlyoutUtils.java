@@ -38,6 +38,7 @@ import java.lang.ref.WeakReference;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -289,6 +290,10 @@ public final class FlyoutUtils {
     private static String currentButtonName = "";
     private static int currentButtonIndex;
     private static final List<Pair<String, Integer>> visibleFlyoutButtons = new ArrayList<>();
+    /**
+     * Text of the visible flyout buttons, by their name, to find the views of the buttons in the menu.
+     */
+    private static final Map<String, String> visibleFlyoutButtonTexts = new HashMap<>();
 
     private static WeakReference<View> senderViewRef = new WeakReference<>(null);
 
@@ -464,6 +469,7 @@ public final class FlyoutUtils {
 
     private static void resetFlyoutIds() {
         visibleFlyoutButtons.clear();
+        visibleFlyoutButtonTexts.clear();
         currentButtonIndex = 0;
         flyoutVideoId = "";
         flyoutPlaylistId = "";
@@ -704,6 +710,18 @@ public final class FlyoutUtils {
      * Injection point.
      */
     public static void setCurrentButtonInfo(@Nullable Enum<?> buttonEnum, @Nullable Object buttonInfo) {
+        // The popup menus give the text view of the button.
+        setCurrentButtonInfo(buttonEnum, buttonInfo,
+                buttonInfo instanceof TextView textView ? textView.getText() : null);
+    }
+
+    /**
+     * Injection point.
+     *
+     * @param buttonText The text of the button, if it's known.
+     */
+    public static void setCurrentButtonInfo(@Nullable Enum<?> buttonEnum, @Nullable Object buttonInfo,
+                                            @Nullable CharSequence buttonText) {
         if (buttonEnum == null) {
             return;
         }
@@ -726,6 +744,17 @@ public final class FlyoutUtils {
         currentButtonIndex++;
 
         visibleFlyoutButtons.add(new Pair<>(currentButtonName, currentButtonIndex));
+        if (buttonText != null && buttonText.length() > 0) {
+            visibleFlyoutButtonTexts.putIfAbsent(currentButtonName, buttonText.toString());
+        }
+    }
+
+    /**
+     * @return The text of the visible flyout button, or null if it's not known.
+     */
+    @Nullable
+    public static String getVisibleFlyoutButtonText(String buttonName) {
+        return visibleFlyoutButtonTexts.get(buttonName);
     }
 
     public static List<Pair<String, Integer>> getVisibleFlyoutButtons() {
