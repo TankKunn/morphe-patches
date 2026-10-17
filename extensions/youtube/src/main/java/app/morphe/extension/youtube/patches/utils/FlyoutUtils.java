@@ -102,11 +102,16 @@ public final class FlyoutUtils {
          */
         @Nullable
         private final PopupWindow popupWindow;
+        /**
+         * Width that the app gave to the menu before the items were injected, or 0 if it's not known.
+         */
+        private final int appMenuWidth;
 
         InjectedItemsScrollView(Context context, ViewGroup menuContainer, @Nullable PopupWindow popupWindow) {
             super(context);
             this.menuContainer = menuContainer;
             this.popupWindow = popupWindow;
+            appMenuWidth = menuContainer.getWidth();
 
             setVerticalScrollBarEnabled(false);
 
@@ -215,13 +220,16 @@ public final class FlyoutUtils {
 
             if (popupWindow != null) {
                 // A popup window is as wide as the widest item of the menu, up to most of the window width,
-                // so the injected items are not made wider than the minimum width that the app gives to the menu,
+                // so the injected items are not made wider than the width that the app gave to the menu,
                 // and their long texts wrap as in the items of the app.
-                final int menuWidth = menuContainer.getMinimumWidth()
-                        - menuContainer.getPaddingLeft() - menuContainer.getPaddingRight();
+                // The injected items take all of that width, otherwise the menu is made narrower
+                // than the app chose for its items, and their texts are cut.
+                final int paddings = menuContainer.getPaddingLeft() + menuContainer.getPaddingRight();
+                final int menuWidth = Math.max(menuContainer.getMinimumWidth(), appMenuWidth) - paddings;
                 if (MeasureSpec.getMode(widthMeasureSpec) == MeasureSpec.AT_MOST
                         && menuWidth > 0 && menuWidth < MeasureSpec.getSize(widthMeasureSpec)) {
-                    widthMeasureSpec = MeasureSpec.makeMeasureSpec(menuWidth, MeasureSpec.AT_MOST);
+                    widthMeasureSpec = MeasureSpec.makeMeasureSpec(menuWidth,
+                            appMenuWidth > 0 ? MeasureSpec.EXACTLY : MeasureSpec.AT_MOST);
                 }
 
                 // A popup window keeps the space that the app chose for the menu when it was shown,
