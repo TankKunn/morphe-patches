@@ -446,7 +446,21 @@ public final class MinimalMiniplayerPatch {
 
         // Docked against it even when YouTube rests lower. After a recreated activity its
         // resting bounds are still the ones from before the system insets moved everything up.
-        return top;
+        return top - boundsOriginInWindow();
+    }
+
+    /**
+     * The bounds are relative to the layout that holds the player, not to the window. That
+     * layout can start below the status bar, which would otherwise move the bar down by its
+     * height and put it under the navigation bar.
+     */
+    private static int boundsOriginInWindow() {
+        View watchPlayer = watchPlayer();
+        if (watchPlayer == null || !(watchPlayer.getParent() instanceof View parent)) return 0;
+
+        parent.getLocationInWindow(windowLocation);
+
+        return windowLocation[1];
     }
 
     /**
