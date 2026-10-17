@@ -117,6 +117,7 @@ message VideoWithContextData {
     bytes inlinePlayback = 6; // Commands that start and stop the inline playback (feed autoplay).
     bool compact = 22; // Thumbnail beside the title, such as the videos of the playlists and the rows of the library.
     bytes attachment = 43; // Content below the video, such as the description and the 'Buy or rent' button of the movies.
+    bool horizontal = 57; // Thumbnail beside the title and the metadata, such as the search results on tablets.
 }
 
 message VideoData {

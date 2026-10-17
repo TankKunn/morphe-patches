@@ -1101,7 +1101,8 @@ public class FeedCardLayoutPatch {
 
         // The compact items are rows of lists, such as the videos of a playlist or the 'Downloads' row of the library.
         // The cards have no attachment, such as the description and the 'Buy or rent' button of the movies.
-        if (data.getCompact() || !data.getAttachment().isEmpty()) {
+        // The horizontal items, such as the search results on tablets, keep their layout.
+        if (data.getCompact() || data.getHorizontal() || !data.getAttachment().isEmpty()) {
             return null;
         }
 
