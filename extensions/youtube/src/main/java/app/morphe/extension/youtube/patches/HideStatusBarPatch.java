@@ -72,6 +72,23 @@ public final class HideStatusBarPatch {
     private static volatile Boolean edgeToEdgeTopBar;
 
     /**
+     * Value of the edge to edge top bar feature flag first handed to the app, with or without
+     * the status bar layout fix, or null if not read yet. Kept for the whole session, so what
+     * depends on it never changes while the app runs.
+     */
+    @Nullable
+    private static volatile Boolean edgeToEdgeTopBarUsed;
+
+    /**
+     * @return If the window is drawn behind the system bars, or null if the app did not read
+     *         the edge to edge top bar feature flag yet.
+     */
+    @Nullable
+    static Boolean isEdgeToEdgeTopBar() {
+        return edgeToEdgeTopBarUsed;
+    }
+
+    /**
      * Injection point.
      * <p>
      * The flag draws the window behind the status bar and gives the top bars the status bar inset.
@@ -86,6 +103,9 @@ public final class HideStatusBarPatch {
      */
     public static boolean useEdgeToEdgeTopBar(boolean original) {
         if (!Settings.FIX_STATUS_BAR_LAYOUT.get()) {
+            if (edgeToEdgeTopBarUsed == null) {
+                edgeToEdgeTopBarUsed = original;
+            }
             return original;
         }
 
@@ -100,6 +120,9 @@ public final class HideStatusBarPatch {
                     Logger.printDebug(() -> "Edge to edge top bar: " + used + " (original: " + original + ")");
                 }
             }
+        }
+        if (edgeToEdgeTopBarUsed == null) {
+            edgeToEdgeTopBarUsed = value;
         }
         return value;
     }
