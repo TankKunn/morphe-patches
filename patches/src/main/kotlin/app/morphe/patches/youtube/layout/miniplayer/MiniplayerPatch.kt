@@ -191,17 +191,26 @@ val miniplayerPatch = bytecodePatch(
 
         // region Disable resuming miniplayer (Continue watching)
 
-        (if (is_21_42_or_greater) ShowMiniplayerCommandFingerprint
-        else ShowMiniplayerCommandLegacyFingerprint).let {
-            it.method.apply {
-                val index = it.instructionMatches[1].index
-                val register = getInstruction<OneRegisterInstruction>(index).registerA
+        // Only skip the resume branch of the command. Other show miniplayer commands,
+        // such as "Play next in queue" from the feed when no video is open, still work.
+        if (is_21_42_or_greater) {
+            ShowMiniplayerCommandFingerprint to 1
+        } else {
+            ShowMiniplayerCommandLegacyFingerprint to 3
+        }.let { (fingerprint, matchIndex) ->
+            fingerprint.method.apply {
+                val index = fingerprint.instructionMatches[matchIndex].index + 1
+                val free = findFreeRegister(index)
 
-                addInstructions(
+                addInstructionsWithLabels(
                     index,
                     """
-                        invoke-static { v$register }, $EXTENSION_CLASS->disableResumingStartupMiniPlayer(Z)Z
-                        move-result v$register
+                        invoke-static {}, $EXTENSION_CLASS->disableResumingStartupMiniPlayer()Z
+                        move-result v$free
+                        if-eqz v$free, :show_resuming_miniplayer
+                        return-void
+                        :show_resuming_miniplayer
+                        nop
                     """
                 )
             }
