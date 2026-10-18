@@ -86,6 +86,36 @@ internal object MiniplayerDragAndDropFingerprint : Fingerprint(
     )
 )
 
+/**
+ * YouTube's adaptive animation helper, which looks up whether an animation category
+ * is on, throttled or off in a map the server sends.
+ */
+internal object AnimationDecisionForCategoryFingerprint : Fingerprint(
+    returnType = "L",
+    parameters = listOf("L"),
+    filters = listOf(
+        // Has-bits of the category hint.
+        fieldAccess(opcode = Opcode.IGET, type = "I"),
+        // The animation category.
+        fieldAccess(opcode = Opcode.IGET, type = "I", location = MatchAfterWithin(5)),
+        string("#getAnimationDecisionForCategory: no category provided")
+    )
+)
+
+/**
+ * Runs the animation only if the decision of its category allows it.
+ */
+internal object AnimationMaybeAnimateFingerprint : Fingerprint(
+    returnType = "I",
+    parameters = listOf("L", "L"),
+    filters = listOf(
+        // Ordinal of the animation decision.
+        methodCall(name = "ordinal", returnType = "I"),
+        opcode(Opcode.MOVE_RESULT, location = MatchAfterImmediately()),
+        string("#maybeAnimate: no animation run")
+    )
+)
+
 internal object MiniplayerAnimatedExpandFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
@@ -223,6 +253,39 @@ internal object NextGenWatchLayoutOnInterceptTouchEventFingerprint : Fingerprint
     name = "onInterceptTouchEvent",
     parameters = listOf("Landroid/view/MotionEvent;")
 )
+
+private object TopBarControllerFingerprint : Fingerprint(
+    returnType = "Landroid/os/Parcelable;",
+    parameters = listOf(),
+    filters = listOf(
+        string("instance-offset")
+    )
+)
+
+/**
+ * If the top bars of the home and other pages can be laid out behind the status bar.
+ * Returns false while the player is maximized, in fullscreen or sliding between them.
+ */
+internal fun getTopBarBehindStatusBarFingerprint(
+    playerTypeEnumType: String
+) = object : Fingerprint(
+    classFingerprint = TopBarControllerFingerprint,
+    returnType = "Z",
+    parameters = listOf(),
+    filters = listOf(
+        methodCall( // Player is sliding.
+            definingClass = playerTypeEnumType,
+            returnType = "Z"
+        ),
+        opcode(Opcode.MOVE_RESULT, location = MatchAfterImmediately()),
+        methodCall( // Player is maximized or in fullscreen.
+            definingClass = playerTypeEnumType,
+            returnType = "Z",
+            location = MatchAfterWithin(5)
+        ),
+        opcode(Opcode.MOVE_RESULT, location = MatchAfterImmediately())
+    )
+) {}
 
 private object MiniplayerDimensionsCalculatorParentFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),

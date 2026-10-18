@@ -41,6 +41,7 @@ import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
+import app.morphe.patches.youtube.shared.PlayerTypeEnumFingerprint
 import app.morphe.patches.youtube.shared.openVideoIntentPatch
 import app.morphe.patches.youtube.shared.startVideoInformerPatch
 import app.morphe.patches.youtube.video.format.hookAdaptiveFormat
@@ -434,6 +435,45 @@ val miniplayerPatch = bytecodePatch(
                         nop
                     """
                 )
+            }
+        }
+
+        // endregion
+
+        // region Watch transition animation.
+
+        // The server can tell the app to skip the animation between the miniplayer and the
+        // maximized player, and then the player jumps between them.
+        AnimationMaybeAnimateFingerprint.let {
+            it.method.apply {
+                val index = it.instructionMatches[1].index
+                val decisionRegister = getInstruction<OneRegisterInstruction>(index).registerA
+                val categoryField = AnimationDecisionForCategoryFingerprint.instructionMatches[1]
+                    .getInstruction<ReferenceInstruction>().reference
+                val free = findFreeRegister(index + 1, decisionRegister)
+
+                addInstructions(
+                    index + 1,
+                    """
+                        iget v$free, p1, $categoryField
+                        invoke-static { v$free, v$decisionRegister }, $EXTENSION_CLASS->getAnimationDecision(II)I
+                        move-result v$decisionRegister
+                    """
+                )
+            }
+        }
+
+        // While the player is maximized, the home is laid out below the status bar instead of
+        // behind it. The home is then laid out again when the minimize animation ends, and the
+        // feed is black until it is drawn again. Without the animation the layout is never
+        // changed, so the home keeps the layout of the minimized player.
+        getTopBarBehindStatusBarFingerprint(PlayerTypeEnumFingerprint.originalClassDef.type).let {
+            it.method.apply {
+                listOf(it.instructionMatches[1].index, it.instructionMatches[3].index)
+                    .sortedDescending().forEach { index ->
+                        val register = getInstruction<OneRegisterInstruction>(index).registerA
+                        addInstruction(index + 1, "const/16 v$register, 0x0")
+                    }
             }
         }
 
