@@ -287,6 +287,7 @@ Changes include:
     <string name="morphe_hide_comments_gift_button_title">Hide Gift button</string>
     <string name="morphe_hide_comments_info_button_title">Hide Info button</string>
     <string name="morphe_hide_comments_live_chat_donators_bar_title">Hide live chat donators bar</string>
+    <string name="morphe_hide_comments_live_chat_scroll_to_bottom_button_title">Hide live chat scroll to bottom button</string>
     <string name="morphe_hide_comments_live_chat_tooltips_title">Hide live chat tooltips</string>
     <string name="morphe_hide_comments_live_chat_tooltips_summary">Hides tooltip popups shown near the chat input bar, such as the subscriber-only chat notice</string>
     <string name="morphe_hide_comments_menu_button_title">Hide Menu button</string>
