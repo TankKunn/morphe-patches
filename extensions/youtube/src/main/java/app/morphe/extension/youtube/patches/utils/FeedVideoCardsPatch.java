@@ -30,6 +30,7 @@ import java.util.regex.Pattern;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.youtube.patches.FeedEngagementCountsPatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.PlayerType;
@@ -49,9 +50,10 @@ import kotlin.Unit;
  * a channel, do not belong to any video.
  */
 @SuppressWarnings("unused")
-public final class FeedVideoCards {
+public final class FeedVideoCardsPatch {
 
-    private static final boolean ENABLED = Settings.FEED_WATCH_LATER_BUTTON.get();
+    private static final boolean ENABLED = FeedEngagementCountsPatch.ENABLED
+            || Settings.FEED_WATCH_LATER_BUTTON.get();
 
     /** A card must be almost as wide as the screen. Shelves and grids are not used. */
     private static final float MIN_WIDTH_OF_SCREEN = 0.7f;
@@ -177,7 +179,7 @@ public final class FeedVideoCards {
         }
     }
 
-    private FeedVideoCards() {
+    private FeedVideoCardsPatch() {
     }
 
     private static boolean contains(byte[] bytes, byte[] search) {
@@ -291,6 +293,50 @@ public final class FeedVideoCards {
 
     /** Height of the texts of a video below its thumbnail, at most. */
     private static final int MAX_BELOW_THUMBNAIL_DP = 300;
+
+    /** Depth of the views of a card that are searched for the thumbnail. */
+    private static final int MAX_THUMBNAIL_SEARCH_DEPTH = 4;
+
+    /**
+     * @return The bottom of the thumbnail of a card, relative to the root host.
+     *         Vertical videos show a taller thumbnail, so the height is not always 16:9.
+     *         The thumbnail is the smallest view at the top of the card that is as wide as
+     *         the card and at least as tall as a 16:9 thumbnail.
+     */
+    public static int getThumbnailBottom(ComponentHost root) {
+        final int width = root.getWidth();
+        final int minHeight = Math.round(width * THUMBNAIL_RATIO);
+        final int bottom = findThumbnailBottom(root, 0, 0, width, minHeight, MAX_THUMBNAIL_SEARCH_DEPTH);
+        return bottom == Integer.MAX_VALUE ? minHeight : bottom;
+    }
+
+    /**
+     * @return The smallest bottom of a thumbnail shaped child, or {@link Integer#MAX_VALUE}
+     *         if there is none.
+     */
+    private static int findThumbnailBottom(ViewGroup group, int left, int top,
+                                           int width, int minHeight, int depth) {
+        int best = Integer.MAX_VALUE;
+        for (int i = 0, count = group.getChildCount(); i < count; i++) {
+            View child = group.getChildAt(i);
+            if (child.getVisibility() != View.VISIBLE) {
+                continue;
+            }
+            final int childLeft = left + child.getLeft();
+            final int childTop = top + child.getTop();
+            if (childLeft != 0 || childTop != 0 || child.getWidth() != width) {
+                continue;
+            }
+            if (child.getHeight() >= minHeight) {
+                best = Math.min(best, child.getHeight());
+            }
+            if (depth > 1 && child instanceof ViewGroup childGroup) {
+                best = Math.min(best, findThumbnailBottom(childGroup, childLeft, childTop,
+                        width, minHeight, depth - 1));
+            }
+        }
+        return best;
+    }
 
     /**
      * Duration of a video, such as 4:05 or 1:02:33. Music videos show an icon before it,
@@ -493,6 +539,8 @@ public final class FeedVideoCards {
                 } else {
                     cardVideoIds.put(root, videoId);
                 }
+                FeedEngagementCountsPatch.onCardLaidOut(root,
+                        PLAYLIST.equals(videoId) ? null : videoId);
             }
         } catch (Exception ex) {
             Logger.printException(() -> "updateRoots failure", ex);
@@ -512,11 +560,19 @@ public final class FeedVideoCards {
             if (root == null) {
                 return;
             }
-            // A new layout can show another video, which is checked again as many times.
-            retries.remove(root);
-            scheduleUpdate(root);
+            requestUpdate(root);
         } catch (Exception ex) {
             Logger.printException(() -> "onComponentHostLayout failure", ex);
         }
+    }
+
+    /**
+     * Checks the root host once the layout pass is done, such as after it was attached again.
+     * Must be called on the main thread.
+     */
+    public static void requestUpdate(ComponentHost root) {
+        // A new layout can show another video, which is checked again as many times.
+        retries.remove(root);
+        scheduleUpdate(root);
     }
 }
