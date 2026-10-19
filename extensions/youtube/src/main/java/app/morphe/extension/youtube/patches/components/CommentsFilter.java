@@ -130,6 +130,11 @@ public class CommentsFilter extends Filter {
                 CHIP_BAR_PATH_PREFIX
         );
 
+        var commentsZeroState = new StringFilterGroup(
+                Settings.HIDE_COMMENTS_ZERO_STATE,
+                "comment_zero_state"
+        );
+
         var communityGuidelines = new StringFilterGroup(
                 Settings.HIDE_COMMENTS_COMMUNITY_GUIDELINES,
                 "community_guidelines",
@@ -203,6 +208,7 @@ public class CommentsFilter extends Filter {
                 commentsByMembers,
                 commentsContexts,
                 commentsFilterBar,
+                commentsZeroState,
                 communityGuidelines,
                 createAShortButton,
                 dislikeButton,
