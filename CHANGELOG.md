@@ -1,3 +1,9 @@
+## [1.48.0-dev.15](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.14...v1.48.0-dev.15) (2026-10-20)
+
+### 🐛 Bug Fixes
+
+* Temporarily revert patches-library update to fix app startup crash ([fd8cc0f](https://github.com/MorpheApp/morphe-patches/commit/fd8cc0fb14540b1e0d6adec903a7c2720a80b2f7))
+
 ## [1.48.0-dev.14](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.13...v1.48.0-dev.14) (2026-10-20)
 
 ### 🐛 Bug Fixes
