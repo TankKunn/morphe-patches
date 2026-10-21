@@ -1,3 +1,11 @@
+## [1.48.0-dev.18](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.17...v1.48.0-dev.18) (2026-10-21)
+
+### 🐛 Bug Fixes
+
+* **Downloads:** Allow using in-app downloads with player overlay external download button ([3df6c0a](https://github.com/MorpheApp/morphe-patches/commit/3df6c0a3d9ad097db63709cf5b559223d4575dd6))
+* **YouTube - Downloads:** Music videos may not download ([0bac4fa](https://github.com/MorpheApp/morphe-patches/commit/0bac4fa12101e5729e5b4c060d9bac10250281aa))
+* **YouTube Music - Crossfade:** Preserve repeat state on 9.40+ ([#3916](https://github.com/MorpheApp/morphe-patches/issues/3916)) ([ce688de](https://github.com/MorpheApp/morphe-patches/commit/ce688de5f6a0693a0df01e37cf25478eaac2524b))
+
 ## [1.48.0-dev.17](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.16...v1.48.0-dev.17) (2026-10-21)
 
 ### 🐛 Bug Fixes
