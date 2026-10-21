@@ -31,6 +31,7 @@ import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
+import app.morphe.patches.youtube.layout.hide.shorts.ShortsBottomBarContainerFingerprint
 import app.morphe.patches.youtube.misc.contexthook.Endpoint
 import app.morphe.patches.youtube.misc.contexthook.addOSNameHook
 import app.morphe.patches.youtube.misc.contexthook.clientContextHookPatch
@@ -216,6 +217,15 @@ val navigationBarPatch = bytecodePatch(
                 }
             }
         }
+
+        // With the translucent navigation bar, the navigation bar makes room for the system
+        // navigation buttons. If the navigation bar is hidden in the Shorts player, nothing makes
+        // that room, so the Shorts player makes it itself. The first parameter is the layout
+        // of the Shorts player fragment.
+        ShortsBottomBarContainerFingerprint.method.addInstruction(
+            0,
+            "invoke-static { p1 }, $EXTENSION_CLASS->setShortsPlayerBottomInset(Landroid/view/View;)V"
+        )
 
         // Paint over the translucent status bar and navigation bar, instead of turning off the
         // feature flags that drive them. Those flags also switch the app out of edge to edge, which
