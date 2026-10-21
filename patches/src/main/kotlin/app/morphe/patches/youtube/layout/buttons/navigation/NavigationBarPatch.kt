@@ -39,6 +39,7 @@ import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.navigation.addBottomBarContainerHook
 import app.morphe.patches.youtube.misc.navigation.hookNavigationButtonCreated
 import app.morphe.patches.youtube.misc.navigation.navigationBarHookPatch
+import app.morphe.patches.youtube.misc.playservice.is_20_26_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_35_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
@@ -54,12 +55,14 @@ import app.morphe.util.findElementByAttributeValueOrThrow
 import app.morphe.util.fiveRegisters
 import app.morphe.util.getFreeRegisterProvider
 import app.morphe.util.getReference
+import app.morphe.util.indexOfFirstInstructionReversedOrThrow
 import app.morphe.util.insertLiteralOverride
 import app.morphe.util.removeFromParent
 import app.morphe.util.setExtensionIsPatchIncluded
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
+import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction21t
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
@@ -245,6 +248,90 @@ val navigationBarPatch = bytecodePatch(
                         move-result v$paddingRegister
                     """
                 )
+            }
+        }
+
+        // With the translucent navigation bar, the keyboard shrinks the layout that holds the page
+        // and the navigation bar to the top of the keyboard, so the navigation bar is moved above
+        // the keyboard. Without it, the keyboard covers the bottom of the page and the navigation bar
+        // stays at the bottom of the screen. The keyboard height is replaced with no margin,
+        // so the keyboard covers them again.
+        PageBottomMarginFingerprint.let {
+            it.method.apply {
+                // The keyboard height and the window inset are put in the same register,
+                // and the window inset is read right after the branch of the keyboard height.
+                val insetIndex = it.instructionMatches.last().index
+                val marginRegister = getInstruction<TwoRegisterInstruction>(insetIndex).registerA
+                val keyboardBranchIndex = indexOfFirstInstructionReversedOrThrow(insetIndex) {
+                    opcode == Opcode.IF_EQZ &&
+                            (this as BuilderInstruction21t).target.location.index == insetIndex
+                }
+                val keyboardRegister = getInstruction<OneRegisterInstruction>(keyboardBranchIndex).registerA
+
+                addInstructionsAtControlFlowLabel(
+                    insetIndex + 1,
+                    """
+                        if-eqz v$keyboardRegister, :keyboard_hidden
+                        const/4 v$marginRegister, 0x0
+                        :keyboard_hidden
+                        nop
+                    """
+                )
+            }
+        }
+
+        // When the feed is laid out behind the navigation bar, the bottom padding of its list also
+        // holds the bottom window inset. With the keyboard open, that inset holds the keyboard too,
+        // so the padding grows, while the keyboard leaves the page as it is.
+        // While the page loads, as after tapping the search field of the watch history, the list
+        // does not scroll and its items only get the height left above the padding. With a tall
+        // keyboard nothing is left, and the items are hidden. The keyboard is removed from
+        // the padding, as for the navigation bar above.
+        if (is_20_26_or_greater) {
+            FeedListPaddingFingerprint.let {
+                it.method.apply {
+                    val index = it.instructionMatches.last().index
+                    val paddingInstruction = getInstruction<FiveRegisterInstruction>(index)
+                    val listRegister = paddingInstruction.registerC
+                    val bottomPaddingRegister = paddingInstruction.registerG
+                    val freeRegisters = getFreeRegisterProvider(index, 3)
+                    val insetsRegister = freeRegisters.getFreeRegister4Bit()
+                    val imeRegister = freeRegisters.getFreeRegister4Bit()
+                    val systemBarsRegister = freeRegisters.getFreeRegister4Bit()
+
+                    addInstructionsWithLabels(
+                        index,
+                        """
+                            sget v$insetsRegister, Landroid/os/Build${'$'}VERSION;->SDK_INT:I
+                            const/16 v$imeRegister, 0x1e
+                            if-lt v$insetsRegister, v$imeRegister, :keep_padding
+                            invoke-virtual { v$listRegister }, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
+                            move-result-object v$insetsRegister
+                            if-eqz v$insetsRegister, :keep_padding
+                            invoke-static { }, Landroid/view/WindowInsets${'$'}Type;->ime()I
+                            move-result v$imeRegister
+                            invoke-virtual { v$insetsRegister, v$imeRegister }, Landroid/view/WindowInsets;->isVisible(I)Z
+                            move-result v$systemBarsRegister
+                            if-eqz v$systemBarsRegister, :keep_padding
+                            invoke-virtual { v$insetsRegister, v$imeRegister }, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
+                            move-result-object v$imeRegister
+                            iget v$imeRegister, v$imeRegister, Landroid/graphics/Insets;->bottom:I
+                            invoke-static { }, Landroid/view/WindowInsets${'$'}Type;->systemBars()I
+                            move-result v$systemBarsRegister
+                            invoke-virtual { v$insetsRegister, v$systemBarsRegister }, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
+                            move-result-object v$systemBarsRegister
+                            iget v$systemBarsRegister, v$systemBarsRegister, Landroid/graphics/Insets;->bottom:I
+                            # Keyboard height above the system bars.
+                            sub-int v$insetsRegister, v$imeRegister, v$systemBarsRegister
+                            if-lez v$insetsRegister, :keep_padding
+                            # The padding does not hold the bottom inset, as when the feed is not behind the navigation bar.
+                            if-lt v$bottomPaddingRegister, v$imeRegister, :keep_padding
+                            sub-int v$bottomPaddingRegister, v$bottomPaddingRegister, v$insetsRegister
+                            :keep_padding
+                            nop
+                        """
+                    )
+                }
             }
         }
 

@@ -166,6 +166,48 @@ internal object NavigationBarBottomPaddingFingerprint : Fingerprint(
 )
 
 /**
+ * Sets the bottom margin of the layout that holds the page and the navigation bar.
+ * With the keyboard open and a text field focused, the margin is the keyboard height,
+ * otherwise the bottom of the window insets.
+ */
+internal object PageBottomMarginFingerprint : Fingerprint(
+    returnType = "V",
+    parameters = listOf("Landroid/graphics/Rect;"),
+    filters = listOf(
+        methodCall(smali = "Landroid/view/View;->findFocus()Landroid/view/View;"),
+        methodCall(
+            smali = "Landroid/view/View;->onCheckIsTextEditor()Z",
+            location = MatchAfterWithin(5)
+        ),
+        fieldAccess(
+            opcode = Opcode.IGET,
+            definingClass = "Landroid/graphics/Rect;",
+            name = "bottom"
+        )
+    )
+)
+
+/**
+ * Sets the padding of a feed list. When the feed is laid out behind the navigation bar,
+ * the bottom padding holds the navigation bar height and the bottom window inset.
+ */
+internal object FeedListPaddingFingerprint : Fingerprint(
+    returnType = "V",
+    parameters = listOf(),
+    filters = listOf(
+        methodCall(
+            definingClass = "Landroid/support/v7/widget/RecyclerView;",
+            name = "setClipToPadding"
+        ),
+        methodCall(
+            definingClass = "Landroid/support/v7/widget/RecyclerView;",
+            name = "setPadding",
+            location = MatchAfterImmediately()
+        )
+    )
+)
+
+/**
  * Applies the system navigation bar color of the app theme to the window.
  */
 internal object SystemNavigationBarColorFingerprint : Fingerprint(
