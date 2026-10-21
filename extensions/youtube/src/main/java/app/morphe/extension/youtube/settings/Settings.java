@@ -89,12 +89,12 @@ import app.morphe.extension.youtube.videoplayer.PlayerIcons;
 
 public class Settings extends SharedYouTubeSettings {
     // Video
-    public static final EnumSetting<PlaybackBufferSize> PLAYBACK_BUFFER_SIZE = new EnumSetting<>(
-            "morphe_playback_buffer_size", PlaybackBufferSize.DEFAULT, true);
+    public static final EnumSetting<PlaybackBufferSize> PLAYBACK_BUFFER_SIZE = new EnumSetting<>("morphe_playback_buffer_size", PlaybackBufferSize.DEFAULT, true);
+    public static final IntegerSetting VIDEO_DELAY = new IntegerSetting("morphe_video_delay", 0);
+    public static final BooleanSetting VIDEO_DELAY_BLUETOOTH_ONLY = new BooleanSetting("morphe_video_delay_bluetooth_only", TRUE);
     public static final BooleanSetting ADVANCED_VIDEO_QUALITY_MENU = new BooleanSetting("morphe_advanced_video_quality_menu", TRUE);
     public static final BooleanSetting DISABLE_HDR_VIDEO = new BooleanSetting("morphe_disable_hdr_video", FALSE);
-    public static final BooleanSetting FORCE_HDR_VIDEO = new BooleanSetting("morphe_force_hdr_video", FALSE, true,
-            "morphe_force_hdr_video_user_dialog_message", parentNot(DISABLE_HDR_VIDEO));
+    public static final BooleanSetting FORCE_HDR_VIDEO = new BooleanSetting("morphe_force_hdr_video", FALSE, true, "morphe_force_hdr_video_user_dialog_message", parentNot(DISABLE_HDR_VIDEO));
     public static final EnumSetting<VideoCodec> VIDEO_CODEC = new EnumSetting<>("morphe_video_codec", VideoCodec.DEFAULT, true, "morphe_video_codec_user_dialog_message");
     public static final BooleanSetting HIDE_PREMIUM_VIDEO_QUALITY = new BooleanSetting("morphe_hide_premium_video_quality", TRUE, true);
     public static final BooleanSetting VIDEO_QUALITY_PRIORITIZE = new BooleanSetting("morphe_video_quality_prioritize", TRUE, true, "morphe_video_quality_prioritize_dialog");
@@ -320,6 +320,8 @@ public class Settings extends SharedYouTubeSettings {
     public static final IntegerSetting PLAYER_OVERLAY_OPACITY = new IntegerSetting("morphe_player_overlay_opacity", 100, true);
     public static final BooleanSetting RELOAD_VIDEO_BUTTON = new BooleanSetting("morphe_reload_video_button", FALSE);
     public static final BooleanSetting RESTORE_OLD_PLAYER_BUTTONS = new BooleanSetting("morphe_restore_old_player_buttons", FALSE, true, new RestoreOldPlayerButtonsAvailability());
+    public static final BooleanSetting VIDEO_DELAY_OVERLAY_BUTTON = new BooleanSetting("morphe_video_delay_button_overlay", FALSE, true);
+    public static final BooleanSetting VIDEO_DELAY_FLYOUT_BUTTON = new BooleanSetting("morphe_video_delay_button_flyout", FALSE);
     public static final BooleanSetting SAVE_TO_WATCH_LATER_OVERLAY_BUTTON = new BooleanSetting("morphe_save_to_watch_later_button", FALSE);
     public static final BooleanSetting SAVE_TO_WATCH_LATER_FLYOUT_BUTTON = new BooleanSetting("morphe_save_to_watch_later_flyout_button", FALSE);
     public static final BooleanSetting KIDS_SAVE_TO_WATCH_LATER_FLYOUT_BUTTON = new BooleanSetting("morphe_save_to_watch_later_kids_flyout_button", TRUE);
@@ -1139,5 +1141,7 @@ public class Settings extends SharedYouTubeSettings {
                 0, 100, 10, "%"));
         SeekBarPreference.register(new SeekBarConfig(VOT_MAX_SPEECH_RATE,
                 10, 25, 1, "x", 10));
+        SeekBarPreference.register(new SeekBarConfig(VIDEO_DELAY,
+                0, 5000, 25, "ms"));
     }
 }
