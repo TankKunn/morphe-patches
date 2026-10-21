@@ -242,6 +242,29 @@ public final class NavigationBarPatch {
     /**
      * Injection point.
      * <p>
+     * When the navigation bar covers the system navigation buttons, the bottom window inset is
+     * added to its height and bottom padding. With the keyboard open, that inset also holds
+     * the keyboard, so the bar grows as tall as the keyboard and covers the page
+     * (https://github.com/MorpheApp/morphe-patches/issues/3909). The page above then ends
+     * the height of the system bars below the top of the keyboard, so only that much room is left.
+     */
+    public static int getNavigationBarBottomPadding(View navigationBar, int original) {
+        try {
+            if (original != 0 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                WindowInsets insets = navigationBar.getRootWindowInsets();
+                if (insets != null && insets.isVisible(WindowInsets.Type.ime())) {
+                    return Math.min(original, insets.getInsets(WindowInsets.Type.systemBars()).bottom);
+                }
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "getNavigationBarBottomPadding failure", ex);
+        }
+        return original;
+    }
+
+    /**
+     * Injection point.
+     * <p>
      * With the translucent navigation bar turned on, the window is drawn behind the system
      * navigation buttons, the navigation bar makes room for them, and the pages end above
      * the navigation bar. With the navigation bar hidden in the Shorts player, nothing makes that
