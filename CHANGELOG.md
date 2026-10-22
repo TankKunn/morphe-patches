@@ -1,3 +1,9 @@
+## [1.48.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.19...v1.48.0-dev.20) (2026-10-22)
+
+### ✨ New Features
+
+* Update to Patcher 2.0 ([#3945](https://github.com/MorpheApp/morphe-patches/issues/3945)) ([d7c25c2](https://github.com/MorpheApp/morphe-patches/commit/d7c25c26031e77c051973fb71b761fa991ee7ddb))
+
 ## [1.48.0-dev.19](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.18...v1.48.0-dev.19) (2026-10-22)
 
 ### 🐛 Bug Fixes
