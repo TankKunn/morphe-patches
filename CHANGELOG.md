@@ -1,3 +1,9 @@
+## [1.48.0-dev.21](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.20...v1.48.0-dev.21) (2026-10-22)
+
+### 🐛 Bug Fixes
+
+* **YouTube Music:** Experimental app version does not patch ([12fad56](https://github.com/MorpheApp/morphe-patches/commit/12fad5684a453f5f8e359e6f66a2ab04e6caede8))
+
 ## [1.48.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.19...v1.48.0-dev.20) (2026-10-22)
 
 ### ✨ New Features
