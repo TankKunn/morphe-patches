@@ -71,7 +71,7 @@ jobs:
           git push --force-with-lease=refs/heads/main:$EXPECTED_HEAD origin refs/heads/main:refs/heads/main
 
   sync-test-release:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && inputs.sanitize_history != true
     runs-on: ubuntu-latest
     steps:
       - name: Create repo-scoped automation token
