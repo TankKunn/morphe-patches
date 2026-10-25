@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   sync-test-release:
@@ -25,76 +24,64 @@ jobs:
           permission-contents: write
           permission-workflows: write
 
-      - name: Checkout dev
+      - name: Checkout fork dev
         uses: actions/checkout@v7
         with:
           ref: dev
           fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
 
-      - name: Merge upstream main into the automation branch
-        id: merge
+      - name: Reapply the magnifier to upstream dev
+        id: prepare
         shell: bash
+        env:
+          BASE_TREE: 373db0df06cfe2e64804c45d4c261891b35bf75f
         run: |
           set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git remote add upstream https://github.com/MorpheApp/morphe-patches.git
-          git fetch upstream main
-          git fetch origin +refs/heads/dev:refs/remotes/origin/dev
-          git fetch origin +refs/heads/automation/upstream-sync:refs/remotes/origin/automation/upstream-sync || true
-
-          if git merge-base --is-ancestor upstream/main origin/dev; then
-            echo "updated=false" >> "$GITHUB_OUTPUT"
+          git fetch upstream dev
+          git fetch origin dev
+          old_dev="$(git rev-parse origin/dev)"
+          upstream_dev="$(git rev-parse upstream/dev)"
+          if git merge-base --is-ancestor "$upstream_dev" "$old_dev"; then
+            echo 'updated=false' >> "$GITHUB_OUTPUT"
+            echo 'Upstream dev is already included in fork dev.'
             exit 0
           fi
 
-          git switch --force-create automation/upstream-sync origin/dev
-          git merge --no-ff --no-edit upstream/main
-          sync_sha="$(git rev-parse HEAD)"
-          git push --force-with-lease origin HEAD:refs/heads/automation/upstream-sync
-          echo "updated=true" >> "$GITHUB_OUTPUT"
-          echo "sync_sha=$sync_sha" >> "$GITHUB_OUTPUT"
-
-      - name: Open or refresh the upstream review pull request
-        id: pull-request
-        if: steps.merge.outputs.updated == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          body="$(cat <<'EOF'
-          This proposes the latest upstream Morphe patches for the fork's `dev` channel.
-
-          The scheduled workflow runs the patch tests and builds the Android bundle. It merges this update into `dev` and publishes a prerelease only when both checks pass. A merge conflict or failed check stops the run; failed checks leave this pull request open for review.
-          EOF
-          )"
-          number="$(gh pr list --base dev --head "$GITHUB_REPOSITORY_OWNER:automation/upstream-sync" --json number --jq '.[0].number // empty')"
-          if [[ -z "$number" ]]; then
-            gh pr create --base dev --head automation/upstream-sync \
-              --title 'chore: sync upstream Morphe patches' --body "$body"
-            number="$(gh pr list --base dev --head "$GITHUB_REPOSITORY_OWNER:automation/upstream-sync" --json number --jq '.[0].number // empty')"
-          else
-            gh pr edit "$number" --title 'chore: sync upstream Morphe patches' --body "$body"
+          git switch --force-create automation/upstream-sync "$upstream_dev"
+          overlay="$RUNNER_TEMP/magnifier-overlay.patch"
+          git diff --binary "$BASE_TREE" "$old_dev" -- \
+            AGENTS.md \
+            settings.gradle.kts \
+            extensions/youtube/src/main/java/app/morphe/extension/youtube/settings/Settings.java \
+            extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/MagnifierRecon.java \
+            patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt \
+            patches/src/main/resources/addresources/values/youtube/strings.xml > "$overlay"
+          test -s "$overlay"
+          if ! git apply --3way "$overlay"; then
+            echo 'Magnifier source conflicts with upstream changes in:' >&2
+            git diff --name-only --diff-filter=U >&2 || true
+            exit 1
           fi
-          test -n "$number"
-          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+          git checkout "$old_dev" -- .github/workflows/release.yml .releaserc README.md
+          git add -A
+          git diff --cached --check
+          git commit -m 'build: stage upstream dev with magnifier'
+          sync_tree="$(git rev-parse 'HEAD^{tree}')"
+          echo "updated=true" >> "$GITHUB_OUTPUT"
+          echo "old_dev=$old_dev" >> "$GITHUB_OUTPUT"
+          echo "upstream_dev=$upstream_dev" >> "$GITHUB_OUTPUT"
+          echo "sync_tree=$sync_tree" >> "$GITHUB_OUTPUT"
 
       - name: Setup Java
         uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: '21'
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 'lts/*'
-          cache: npm
-
-      - name: Install release dependencies
-        run: npm ci
 
       - name: Test Morphe patches
         env:
@@ -110,25 +97,23 @@ jobs:
           MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
         run: ./gradlew :patches:buildAndroid --no-daemon
 
-      - name: Merge the tested upstream update
-        if: steps.merge.outputs.updated == 'true'
+      - name: Push the tested sync commit
+        if: steps.prepare.outputs.updated == 'true'
+        shell: bash
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr merge "${{ steps.pull-request.outputs.number }}" --merge --delete-branch
-
-      - name: Checkout the merged dev branch
-        if: steps.merge.outputs.updated == 'true'
-        env:
-          EXPECTED_SYNC_SHA: ${{ steps.merge.outputs.sync_sha }}
+          OLD_DEV: ${{ steps.prepare.outputs.old_dev }}
+          UPSTREAM_DEV: ${{ steps.prepare.outputs.upstream_dev }}
+          SYNC_TREE: ${{ steps.prepare.outputs.sync_tree }}
+          APP_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           set -euo pipefail
-          git fetch origin dev --tags
-          git merge-base --is-ancestor "$EXPECTED_SYNC_SHA" origin/dev
-          git checkout --force -B dev origin/dev
-
-      - name: Publish the tested dev prerelease
-        env:
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
-          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+          git fetch origin dev
+          test "$(git rev-parse origin/dev)" = "$OLD_DEV"
+          sync_commit="$(printf '%s\n' 'chore: CI-gated upstream sync [skip ci]' | \
+            GIT_AUTHOR_NAME='github-actions[bot]' \
+            GIT_AUTHOR_EMAIL='41898282+github-actions[bot]@users.noreply.github.com' \
+            GIT_COMMITTER_NAME='github-actions[bot]' \
+            GIT_COMMITTER_EMAIL='41898282+github-actions[bot]@users.noreply.github.com' \
+            git commit-tree "$SYNC_TREE" -p "$OLD_DEV" -p "$UPSTREAM_DEV")"
+          git push origin "$sync_commit:refs/heads/dev"
+          git checkout --force -B dev "$sync_commit"
