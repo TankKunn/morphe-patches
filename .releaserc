@@ -19,20 +19,6 @@
         }
     ],
     [
-        "@semantic-release/release-notes-generator", {
-        "preset": "conventionalcommits",
-        "presetConfig": {
-            "types": [
-                { "type": "fix", "section": "🐛 Bug Fixes", "hidden": false },
-                { "type": "feat", "section": "✨ New Features", "hidden": false },
-                { "type": "bump", "section": "🚀 Updated App Support", "hidden": false },
-                { "type": "perf", "section": "🔧 Improvements",  "hidden": false },
-                { "type": "build", "hidden": true }
-            ]
-        }
-        }
-    ],
-    [
       "@MorpheApp/changelog", {
         "releaseJson": {
           "path": "patches-bundle.json",
@@ -45,6 +31,7 @@
     [
       "@semantic-release/exec",
       {
+        "generateNotesCmd": "echo 'Personal development prerelease for this Morphe fork, including the YouTube video magnifier.'",
         "prepareCmd": "./gradlew generatePatchesList \
           && jq '.version=\"${nextRelease.version}\"' patches-list.json > patches-list.json.tmp && mv patches-list.json.tmp patches-list.json \
           && python3 .github/scripts/generate_patches_readme.py $GITHUB_REPOSITORY $GITHUB_REF_NAME patches-list.json README.md"
