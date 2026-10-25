@@ -14,7 +14,7 @@ Enable **Pre-release patches** for this source so Morphe can fetch the fork's pr
 
 ## Updates and releases
 
-The `dev` branch contains the custom YouTube video magnifier and is the prerelease channel. The `main` branch carries the upstream baseline plus fork automation. A weekly workflow proposes upstream changes in a pull request, runs the Morphe patch tests and Android bundle build, and merges the update into `dev` and publishes a prerelease only when both pass. Merge conflicts stop the run before a pull request is updated; failed checks leave the pull request open for review. Morphe can fetch the published prerelease when Pre-release patches is enabled for this source.
+The fork's `dev` prerelease is refreshed weekly from Morphe's upstream `dev` branch. The automation carries forward the magnifier source, runs the patch tests and builds the Android bundle, then updates the fork's `dev` branch and publishes a prerelease only if those checks pass. If the patch no longer applies cleanly or a check fails, it stops before updating the branch or publishing. Enable **Pre-release patches** for this source in Morphe Manager to receive these releases.
 
 GitHub Actions may need the repository secrets `MORPHE_GPR_USER` and `MORPHE_GPR_KEY` to resolve Morphe's GitHub Packages plugin. Use a read-only `read:packages` credential; workflows pass these secrets only to Gradle package resolution. They are never stored in repository files.
 
