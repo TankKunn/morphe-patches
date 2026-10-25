@@ -37,6 +37,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote add upstream https://github.com/MorpheApp/morphe-patches.git
           git fetch upstream main
           git fetch origin +refs/heads/dev:refs/remotes/origin/dev
