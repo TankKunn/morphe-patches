@@ -1,9 +1,6 @@
 name: CI-gated upstream sync and prerelease
 
 on:
-  push:
-    branches:
-      - main
   schedule:
     - cron: '17 8 * * 1'
   workflow_dispatch:
@@ -24,7 +21,7 @@ concurrency:
 
 jobs:
   sanitize-history:
-    if: github.ref == 'refs/heads/main' && (inputs.sanitize_history == true || (github.event_name == 'push' && contains(github.event.head_commit.message, '[sanitize-history]')))
+    if: github.ref == 'refs/heads/main' && inputs.sanitize_history == true
     runs-on: ubuntu-latest
     steps:
       - name: Create repo-scoped rewrite token
@@ -81,7 +78,7 @@ jobs:
           git push --force-with-lease=refs/heads/main:$EXPECTED_HEAD origin refs/heads/main:refs/heads/main
 
   sync-test-release:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'push' && inputs.sanitize_history != true
+    if: github.ref == 'refs/heads/main' && inputs.sanitize_history != true
     runs-on: ubuntu-latest
     steps:
       - name: Create repo-scoped automation token
