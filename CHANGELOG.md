@@ -1,3 +1,9 @@
+## [1.49.0-dev.1](https://github.com/TankKunn/morphe-patches/compare/v1.48.0...v1.49.0-dev.1) (2026-10-25)
+
+### ✨ New Features
+
+* add YouTube video magnifier patch ([76ca378](https://github.com/TankKunn/morphe-patches/commit/76ca37822873f69c68f2a887ea887a089d8c388a))
+
 ## [1.48.0](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0...v1.48.0) (2026-10-22)
 
 ### 🐛 Bug Fixes
