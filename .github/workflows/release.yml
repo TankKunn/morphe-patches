@@ -58,13 +58,16 @@ jobs:
           archive: false
           path: patches/build/libs/*.mpp
 
-      # The fork begins without its own release tags. Seed semantic-release locally at
-      # the pre-magnifier baseline so the first release only includes fork changes.
+      # The fork begins without its own release tags. Seed semantic-release at
+      # the last upstream stable release so its first prerelease contains only
+      # fork changes instead of the full upstream history. A stable tag is
+      # required here because semantic-release does not accept a bare dev tag
+      # until GitHub has recorded that tag on the dev channel.
       - name: Seed fork dev release baseline
         if: inputs.publish_prerelease == true
         run: |
-          if ! git tag --list 'v1.0.0-dev.*' | grep -q .; then
-            git tag v1.0.0-dev.0 9835f3f90a87e3f8d098ba8cfdd182237b748ddd
+          if ! git tag --list 'v1.48.0' | grep -q .; then
+            git tag v1.48.0 f3acc10e2
           fi
 
       - name: Publish dev prerelease
