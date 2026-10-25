@@ -1,4 +1,4 @@
-name: Gated upstream sync
+name: CI-gated upstream sync and prerelease
 
 on:
   schedule:
@@ -10,45 +10,123 @@ permissions:
   pull-requests: write
 
 jobs:
-  propose-upstream-update:
+  sync-test-release:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
+      - name: Create repo-scoped automation token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.MORPHE_RELEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.MORPHE_RELEASE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: morphe-patches
+          permission-contents: write
+          permission-workflows: write
+
       - name: Checkout dev
         uses: actions/checkout@v7
         with:
           ref: dev
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
 
-      - name: Merge upstream main into a review branch
+      - name: Merge upstream main into the automation branch
         id: merge
         shell: bash
         run: |
+          set -euo pipefail
           git remote add upstream https://github.com/MorpheApp/morphe-patches.git
           git fetch upstream main
-          git fetch origin automation/upstream-sync || true
-          if git show-ref --verify --quiet refs/remotes/origin/automation/upstream-sync; then
-            git switch --track -c automation/upstream-sync origin/automation/upstream-sync
-          else
-            git switch -c automation/upstream-sync
-          fi
-          if git merge-base --is-ancestor upstream/main HEAD; then
+          git fetch origin +refs/heads/dev:refs/remotes/origin/dev
+          git fetch origin +refs/heads/automation/upstream-sync:refs/remotes/origin/automation/upstream-sync || true
+
+          if git merge-base --is-ancestor upstream/main origin/dev; then
             echo "updated=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git merge --no-ff --no-edit upstream/main
-          git push --set-upstream origin automation/upstream-sync
-          echo "updated=true" >> "$GITHUB_OUTPUT"
 
-      - name: Open or update review pull request
+          git switch --force-create automation/upstream-sync origin/dev
+          git merge --no-ff --no-edit upstream/main
+          sync_sha="$(git rev-parse HEAD)"
+          git push --force-with-lease origin HEAD:refs/heads/automation/upstream-sync
+          echo "updated=true" >> "$GITHUB_OUTPUT"
+          echo "sync_sha=$sync_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Open or refresh the upstream review pull request
+        id: pull-request
         if: steps.merge.outputs.updated == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
-          existing=$(gh pr list --base dev --head "$GITHUB_REPOSITORY_OWNER:automation/upstream-sync" --json number --jq '.[0].number // empty')
-          if [ -z "$existing" ]; then
+          set -euo pipefail
+          body="$(cat <<'EOF'
+          This proposes the latest upstream Morphe patches for the fork's `dev` channel.
+
+          The scheduled workflow runs the patch tests and builds the Android bundle. It merges this update into `dev` and publishes a prerelease only when both checks pass. A merge conflict or failed check stops the run; failed checks leave this pull request open for review.
+          EOF
+          )"
+          number="$(gh pr list --base dev --head "$GITHUB_REPOSITORY_OWNER:automation/upstream-sync" --json number --jq '.[0].number // empty')"
+          if [[ -z "$number" ]]; then
             gh pr create --base dev --head automation/upstream-sync \
-              --title 'chore: sync upstream Morphe patches' \
-              --body 'This pull request proposes the latest upstream `main` changes for review on `dev`. Review the build and compatibility results before merging. Nothing is published automatically.'
+              --title 'chore: sync upstream Morphe patches' --body "$body"
+            number="$(gh pr list --base dev --head "$GITHUB_REPOSITORY_OWNER:automation/upstream-sync" --json number --jq '.[0].number // empty')"
+          else
+            gh pr edit "$number" --title 'chore: sync upstream Morphe patches' --body "$body"
           fi
+          test -n "$number"
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Java
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 'lts/*'
+          cache: npm
+
+      - name: Install release dependencies
+        run: npm ci
+
+      - name: Test Morphe patches
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+        run: ./gradlew :patches:test :extensions:youtube:testDebugUnitTest --no-daemon
+
+      - name: Build Android patch bundle
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+        run: ./gradlew :patches:buildAndroid --no-daemon
+
+      - name: Merge the tested upstream update
+        if: steps.merge.outputs.updated == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge "${{ steps.pull-request.outputs.number }}" --merge --delete-branch
+
+      - name: Checkout the merged dev branch
+        if: steps.merge.outputs.updated == 'true'
+        env:
+          EXPECTED_SYNC_SHA: ${{ steps.merge.outputs.sync_sha }}
+        run: |
+          set -euo pipefail
+          git fetch origin dev --tags
+          git merge-base --is-ancestor "$EXPECTED_SYNC_SHA" origin/dev
+          git checkout --force -B dev origin/dev
+
+      - name: Publish the tested dev prerelease
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
