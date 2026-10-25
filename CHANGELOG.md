@@ -1,5 +1,7 @@
 Personal development prerelease for this Morphe fork, including the YouTube video magnifier.
 
+Personal development prerelease for this Morphe fork, including the YouTube video magnifier.
+
 ## 1.0.0-dev.1 (2026-10-25)
 
 ### 🐛 Bug Fixes
