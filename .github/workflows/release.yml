@@ -17,10 +17,23 @@ jobs:
     if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     steps:
+      - name: Create repo-scoped release token
+        if: inputs.publish_prerelease == true
+        id: release-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.MORPHE_RELEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.MORPHE_RELEASE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: morphe-patches
+          permission-contents: write
+          permission-workflows: write
+
       - name: Checkout
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          token: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
 
       - name: Setup Java
         uses: actions/setup-java@v6
@@ -74,6 +87,6 @@ jobs:
         if: inputs.publish_prerelease == true
         uses: cycjimmy/semantic-release-action@v6
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
           MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
           MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
