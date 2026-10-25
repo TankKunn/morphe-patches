@@ -34,7 +34,7 @@
         "generateNotesCmd": "echo 'Personal development prerelease for this Morphe fork, including the YouTube video magnifier.'",
         "prepareCmd": "./gradlew generatePatchesList \
           && jq '.version=\"${nextRelease.version}\"' patches-list.json > patches-list.json.tmp && mv patches-list.json.tmp patches-list.json \
-          && python3 .github/scripts/generate_patches_readme.py $GITHUB_REPOSITORY $GITHUB_REF_NAME patches-list.json README.md"
+          && python3 .github/scripts/generate_patches_readme.py $GITHUB_REPOSITORY $GITHUB_REF_NAME patches-list.json README.md && desired_bundle=\"patches-$(jq -r .version patches-bundle.json).mpp\" && find patches/build/libs -maxdepth 1 -type f -name \"patches-*.mpp\" ! -name \"$desired_bundle\" -delete"
       }
     ],
     [
