@@ -58,6 +58,17 @@ jobs:
           archive: false
           path: patches/build/libs/*.mpp
 
+      # The fork begins without its own release tags. Seed semantic-release at
+      # the fork's pre-magnifier baseline once, so the first release only
+      # includes fork changes instead of the full upstream history.
+      - name: Seed fork dev release baseline
+        if: inputs.publish_prerelease == true
+        run: |
+          if ! git tag --list 'v1.0.0-dev.*' | grep -q .; then
+            git tag v1.0.0-dev.0 9835f3f90a87e3f8d098ba8cfdd182237b748ddd
+            git push origin refs/tags/v1.0.0-dev.0
+          fi
+
       - name: Publish dev prerelease
         if: inputs.publish_prerelease == true
         uses: cycjimmy/semantic-release-action@v6
