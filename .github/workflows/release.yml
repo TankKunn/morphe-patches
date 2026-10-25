@@ -20,6 +20,11 @@ on:
 permissions:
   contents: write
 
+# Share a lock with upstream sync so semantic-release never pushes from a stale SHA.
+concurrency:
+  group: morphe-dev-publish
+  cancel-in-progress: false
+
 jobs:
   sanitize-history:
     if: github.ref == 'refs/heads/dev' && inputs.sanitize_history == true
@@ -87,9 +92,10 @@ jobs:
           permission-contents: write
           permission-workflows: write
 
-      - name: Checkout
+      - name: Checkout current dev head
         uses: actions/checkout@v7
         with:
+          ref: dev
           fetch-depth: 0
           token: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
 
