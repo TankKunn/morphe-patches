@@ -29,8 +29,6 @@ jobs:
       - name: Test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
-          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
         run: ./gradlew :patches:test :extensions:youtube:testDebugUnitTest --no-daemon
 
       # buildAndroid adds DEX to the jar in place. A later JVM task can recreate
@@ -38,8 +36,6 @@ jobs:
       - name: Build Android bundle
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
-          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
         run: ./gradlew :patches:buildAndroid --no-daemon
 
       - name: Upload artifacts
