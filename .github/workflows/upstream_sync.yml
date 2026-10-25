@@ -53,8 +53,8 @@ jobs:
           set -euo pipefail
           test "$(git rev-parse HEAD)" = "$EXPECTED_HEAD"
           noreply='337249693+TankKunn@users.noreply.github.com'
-          bad_author="$(git log refs/heads/main --format='%an%x09%ae' | awk -F '\\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
-          bad_committer="$(git log refs/heads/main --format='%cn%x09%ce' | awk -F '\\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
+          bad_author="$(git log refs/heads/main --format='%an%x09%ae' | awk -F '\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
+          bad_committer="$(git log refs/heads/main --format='%cn%x09%ce' | awk -F '\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
           if test "$bad_author" = 0 && test "$bad_committer" = 0; then
             echo "History is already clean; no rewrite needed."
             exit 0
