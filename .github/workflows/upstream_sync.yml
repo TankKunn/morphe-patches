@@ -1,6 +1,9 @@
 name: CI-gated upstream sync and prerelease
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '17 8 * * 1'
   workflow_dispatch:
@@ -21,7 +24,7 @@ concurrency:
 
 jobs:
   sanitize-history:
-    if: github.ref == 'refs/heads/main' && inputs.sanitize_history == true
+    if: github.ref == 'refs/heads/main' && (inputs.sanitize_history == true || (github.event_name == 'push' && contains(github.event.head_commit.message, '[sanitize-history]')))
     runs-on: ubuntu-latest
     steps:
       - name: Create repo-scoped rewrite token
@@ -49,6 +52,13 @@ jobs:
         run: |
           set -euo pipefail
           test "$(git rev-parse HEAD)" = "$EXPECTED_HEAD"
+          noreply='337249693+TankKunn@users.noreply.github.com'
+          bad_author="$(git log refs/heads/main --format='%an%x09%ae' | awk -F '\\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
+          bad_committer="$(git log refs/heads/main --format='%cn%x09%ce' | awk -F '\\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
+          if test "$bad_author" = 0 && test "$bad_committer" = 0; then
+            echo "History is already clean; no rewrite needed."
+            exit 0
+          fi
           git update-ref refs/original/refs/heads/main refs/heads/main
           git filter-branch --force --env-filter '
             noreply="337249693+TankKunn@users.noreply.github.com"
@@ -71,7 +81,7 @@ jobs:
           git push --force-with-lease=refs/heads/main:$EXPECTED_HEAD origin refs/heads/main:refs/heads/main
 
   sync-test-release:
-    if: github.ref == 'refs/heads/main' && inputs.sanitize_history != true
+    if: github.ref == 'refs/heads/main' && github.event_name != 'push' && inputs.sanitize_history != true
     runs-on: ubuntu-latest
     steps:
       - name: Create repo-scoped automation token
