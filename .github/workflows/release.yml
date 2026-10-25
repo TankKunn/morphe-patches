@@ -1,6 +1,5 @@
 name: Gated dev prerelease
 
-
 on:
   workflow_dispatch:
     inputs:
@@ -15,10 +14,8 @@ on:
         required: true
         default: false
 
-
 permissions:
   contents: write
-
 
 jobs:
   sanitize-history:
@@ -64,8 +61,8 @@ jobs:
           git log --reverse --format=%T refs/heads/dev > /tmp/rewritten-trees
           cmp /tmp/original-trees /tmp/rewritten-trees
           noreply='337249693+TankKunn@users.noreply.github.com'
-          bad_author="$(git log refs/heads/dev --format='%an%x09%ae' | awk -F '\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
-          bad_committer="$(git log refs/heads/dev --format='%cn%x09%ce' | awk -F '\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
+          bad_author="$(git log refs/heads/dev --format='%an%x09%ae' | awk -F '	' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
+          bad_committer="$(git log refs/heads/dev --format='%cn%x09%ce' | awk -F '	' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
           test "$bad_author" = 0
           test "$bad_committer" = 0
           echo "History verified: commit trees unchanged; owner author/committer metadata uses noreply."
@@ -87,9 +84,59 @@ jobs:
           permission-contents: write
           permission-workflows: write
 
-
       - name: Checkout
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
           token: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Java
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 'lts/*'
+          cache: npm
+
+      - name: Install release dependencies
+        run: npm ci
+
+      - name: Test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+        run: ./gradlew :patches:test :extensions:youtube:testDebugUnitTest --no-daemon
+
+      - name: Build Android bundle
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+        run: ./gradlew :patches:buildAndroid --no-daemon
+
+      - name: Upload bundle for review
+        if: inputs.publish_prerelease != true
+        uses: actions/upload-artifact@v7
+        with:
+          archive: false
+          path: patches/build/libs/*.mpp
+
+      - name: Seed fork dev release baseline
+        if: inputs.publish_prerelease == true
+        run: |
+          if ! git tag --list 'v1.48.0' | grep -q .; then
+            git tag v1.48.0 f3acc10e2
+          fi
+
+      - name: Publish dev prerelease
+        if: inputs.publish_prerelease == true
+        uses: cycjimmy/semantic-release-action@v6
+        env:
+          GITHUB_TOKEN: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
