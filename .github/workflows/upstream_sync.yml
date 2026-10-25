@@ -138,7 +138,7 @@ jobs:
             exit 1
           fi
 
-          git checkout "$old_dev" -- .github/workflows/release.yml .releaserc README.md
+          git checkout "$old_dev" -- .github/workflows/release.yml .github/workflows/open_pull_request.yml .releaserc README.md
           git add -A
           git diff --cached --check
           git commit -m 'build: stage upstream dev with magnifier'
