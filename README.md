@@ -14,7 +14,7 @@ For newer experimental YouTube versions, enable **Pre-release patches** and **Ex
 
 ## Updates and releases
 
-The `dev` branch is the prerelease channel. Scheduled upstream updates create a reviewable pull request; they do not update the branch or publish a release automatically. A prerelease is published only by manually running the gated release workflow on `dev` and opting in to publication.
+The `dev` branch contains the custom YouTube video magnifier and is the prerelease channel. The `main` branch carries the upstream baseline plus fork automation. Scheduled upstream updates create a reviewable pull request; they do not update `dev` or publish a release automatically. A prerelease is published only by manually running the gated release workflow on `dev` and opting in to publication.
 
 GitHub Actions may need the repository secrets `MORPHE_GPR_USER` and `MORPHE_GPR_KEY` to resolve Morphe's GitHub Packages plugin. Use a read-only `read:packages` credential; workflows pass these secrets only to Gradle package resolution. They are never stored in repository files.
 
