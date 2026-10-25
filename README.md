@@ -21,7 +21,7 @@ GitHub Actions may need the repository secrets `MORPHE_GPR_USER` and `MORPHE_GPR
 ## Patch list
 
 <!-- PATCHES_START -->
-> **[v1.49.0-dev.1](https://github.com/TankKunn/morphe-patches/releases/tag/v1.49.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;191 patches total
+> **[v1.0.0-dev.1](https://github.com/TankKunn/morphe-patches/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;191 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;106 patches</summary>
 <br>
