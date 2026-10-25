@@ -1,6 +1,9 @@
 name: Gated dev prerelease
 
 on:
+  push:
+    branches:
+      - dev
   workflow_dispatch:
     inputs:
       publish_prerelease:
@@ -73,7 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create repo-scoped release token
-        if: inputs.publish_prerelease == true
+        if: github.event_name == 'push' || inputs.publish_prerelease == true
         id: release-token
         uses: actions/create-github-app-token@v3
         with:
@@ -120,21 +123,21 @@ jobs:
         run: ./gradlew :patches:buildAndroid --no-daemon
 
       - name: Upload bundle for review
-        if: inputs.publish_prerelease != true
+        if: inputs.publish_prerelease != true && github.event_name != 'push'
         uses: actions/upload-artifact@v7
         with:
           archive: false
           path: patches/build/libs/*.mpp
 
       - name: Seed fork dev release baseline
-        if: inputs.publish_prerelease == true
+        if: github.event_name == 'push' || inputs.publish_prerelease == true
         run: |
           if ! git tag --list 'v1.48.0' | grep -q .; then
             git tag v1.48.0 f3acc10e2
           fi
 
       - name: Publish dev prerelease
-        if: inputs.publish_prerelease == true
+        if: github.event_name == 'push' || inputs.publish_prerelease == true
         uses: cycjimmy/semantic-release-action@v6
         env:
           GITHUB_TOKEN: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
