@@ -21,14 +21,14 @@ GitHub Actions may need the repository secrets `MORPHE_GPR_USER` and `MORPHE_GPR
 ## Patch list
 
 <!-- PATCHES_START -->
-> **[v1.0.0-dev.1](https://github.com/TankKunn/morphe-patches/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;191 patches total
+> **[v1.49.0-dev.1](https://github.com/TankKunn/morphe-patches/releases/tag/v1.49.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;192 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;106 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;107 patches</summary>
 <br>
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;21.42.241 | 🧪&nbsp;21.41.525 | 🧪&nbsp;21.28.208 | 🧪&nbsp;21.23.492 | 21.20.405 | 21.16.256 | 20.51.39 | 20.21.37 |
+| 🧪&nbsp;21.43.523 | 🧪&nbsp;21.42.241 | 🧪&nbsp;21.28.208 | 21.23.492 | 21.20.405 | 21.16.256 | 20.51.39 | 20.21.37 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
@@ -122,6 +122,7 @@ GitHub Actions may need the repository secrets `MORPHE_GPR_USER` and `MORPHE_GPR
 | [Return YouTube Dislike](#return-youtube-dislike) | Adds an option to show the dislike count of videos with Return YouTube Dislike, and the like count and like ratio on the thumbnails of feed videos. |  |
 | [Sanitize sharing links](#sanitize-sharing-links) | Removes the tracking query parameters from shared links. |  |
 | [Save to Watch later](#save-to-watch-later) | Adds an option to display save to Watch later button in the video player. |  |
+| [Search comments](#search-comments) | Adds a button to the comments to show only the loaded comments that contain the searched words. |  |
 | [Seekbar](#seekbar) | Adds options to show old seekbar thumbnails, disable precise seeking when swiping up on the seekbar, slide to seek instead of playing at 2x speed when pressing and holding, tapping the player seekbar to seek, hiding the video player seekbar, enabling seeking in live streams, and expanding the live stream DVR duration. |  |
 | [Series tracking](#series-tracking) | Adds a series library to History with local progress and episode continuation. This patch works with YouTube 21.02 and newer. |  |
 | [Settings menu filter](#settings-menu-filter) | Adds an option to hide items on the standard YouTube settings screen by their visible name. |  |
