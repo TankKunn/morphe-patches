@@ -10,11 +10,11 @@
 2. Add this fork using the link above.
 3. Repatch YouTube once using this fork. That switches the installed patch set to this source.
 
-For newer experimental YouTube versions, enable **Pre-release patches** and **Experimental app versions** for this source in Morphe Manager.
+Enable **Pre-release patches** for this source so Morphe can fetch the fork's prereleases. For newer experimental YouTube app versions, also enable **Experimental app versions**.
 
 ## Updates and releases
 
-The `dev` branch contains the custom YouTube video magnifier and is the prerelease channel. The `main` branch carries the upstream baseline plus fork automation. Scheduled upstream updates create a reviewable pull request; they do not update `dev` or publish a release automatically. A prerelease is published only by manually running the gated release workflow on `dev` and opting in to publication.
+The `dev` branch contains the custom YouTube video magnifier and is the prerelease channel. The `main` branch carries the upstream baseline plus fork automation. A weekly workflow proposes upstream changes in a pull request, runs the Morphe patch tests and Android bundle build, and merges the update into `dev` and publishes a prerelease only when both pass. Merge conflicts stop the run before a pull request is updated; failed checks leave the pull request open for review. Morphe can fetch the published prerelease when Pre-release patches is enabled for this source.
 
 GitHub Actions may need the repository secrets `MORPHE_GPR_USER` and `MORPHE_GPR_KEY` to resolve Morphe's GitHub Packages plugin. Use a read-only `read:packages` credential; workflows pass these secrets only to Gradle package resolution. They are never stored in repository files.
 
