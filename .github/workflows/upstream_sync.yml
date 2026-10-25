@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: '17 8 * * 1'
   workflow_dispatch:
+    inputs:
+      sanitize_history:
+        description: One-time rewrite of TankKunn author metadata to GitHub noreply
+        type: boolean
+        required: true
+        default: false
 
 permissions:
   contents: write
@@ -14,6 +20,56 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  sanitize-history:
+    if: github.ref == 'refs/heads/main' && inputs.sanitize_history == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create repo-scoped rewrite token
+        id: rewrite-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.MORPHE_RELEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.MORPHE_RELEASE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: morphe-patches
+          permission-contents: write
+          permission-workflows: write
+
+      - name: Checkout full main history
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ steps.rewrite-token.outputs.token }}
+
+      - name: Rewrite owner metadata and verify trees
+        shell: bash
+        env:
+          EXPECTED_HEAD: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$EXPECTED_HEAD"
+          git update-ref refs/original/refs/heads/main refs/heads/main
+          git filter-branch --force --env-filter '
+            noreply="337249693+TankKunn@users.noreply.github.com"
+            if [ "$GIT_AUTHOR_NAME" = "TankKunn" ] && [ "$GIT_AUTHOR_EMAIL" != "$noreply" ]; then
+              export GIT_AUTHOR_EMAIL="$noreply"
+            fi
+            if [ "$GIT_COMMITTER_NAME" = "TankKunn" ] && [ "$GIT_COMMITTER_EMAIL" != "$noreply" ]; then
+              export GIT_COMMITTER_EMAIL="$noreply"
+            fi
+          ' refs/heads/main
+          git log --reverse --format=%T refs/original/refs/heads/main > /tmp/original-trees
+          git log --reverse --format=%T refs/heads/main > /tmp/rewritten-trees
+          cmp /tmp/original-trees /tmp/rewritten-trees
+          noreply='337249693+TankKunn@users.noreply.github.com'
+          bad_author="$(git log refs/heads/main --format='%an%x09%ae' | awk -F '\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
+          bad_committer="$(git log refs/heads/main --format='%cn%x09%ce' | awk -F '\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
+          test "$bad_author" = 0
+          test "$bad_committer" = 0
+          echo "History verified: commit trees unchanged; owner author/committer metadata uses noreply."
+          git push --force-with-lease=refs/heads/main:$EXPECTED_HEAD origin refs/heads/main:refs/heads/main
+
   sync-test-release:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
