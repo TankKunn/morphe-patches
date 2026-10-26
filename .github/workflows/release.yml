@@ -1,6 +1,8 @@
 name: Gated dev prerelease
 
 on:
+  push:
+    branches: [dev]
   workflow_dispatch:
     inputs:
       publish_prerelease:
@@ -10,17 +12,30 @@ on:
         default: false
 
 permissions:
-  contents: write
+  contents: read
+  issues: write
 
 jobs:
   build:
     if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     steps:
+      - name: Create repository automation token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.MORPHE_RELEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.MORPHE_RELEASE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: morphe-patches
+          permission-contents: write
+          permission-workflows: write
+
       - name: Checkout
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Setup Java
         uses: actions/setup-java@v6
@@ -52,16 +67,35 @@ jobs:
         run: ./gradlew :patches:buildAndroid --no-daemon
 
       - name: Upload bundle for review
-        if: inputs.publish_prerelease != true
+        if: github.event_name == 'workflow_dispatch' && inputs.publish_prerelease != true
         uses: actions/upload-artifact@v7
         with:
           archive: false
           path: patches/build/libs/*.mpp
 
       - name: Publish dev prerelease
-        if: inputs.publish_prerelease == true
+        if: github.event_name == 'push' || inputs.publish_prerelease == true
         uses: cycjimmy/semantic-release-action@v6
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
           MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+
+      - name: Report failed dev release
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="$(cat <<EOF
+          The development prerelease failed; the previous published bundle remains available.
+
+          Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+
+          Check the failed step logs for details.
+          EOF
+          )"
+          gh issue create --repo "$GITHUB_REPOSITORY" \
+            --title "Development prerelease failed (run $GITHUB_RUN_NUMBER)" --body "$body" \
+            || echo 'Could not create issue; check the workflow run directly.'

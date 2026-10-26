@@ -223,6 +223,7 @@ jobs:
           CANDIDATE_BRANCH="automation/stable-candidate-$GITHUB_RUN_ID"
           git push origin "$CANDIDATE:refs/heads/$CANDIDATE_BRANCH"
           gh release create "v$VERSION" "$BUNDLE" --target "$CANDIDATE" \
+            --repo "$GITHUB_REPOSITORY" \
             --title "Morphe Patches v$VERSION (stable + magnifier)" \
             --notes "Stable upstream Morphe Patches v$UPSTREAM_VERSION with the reviewed YouTube magnifier. CI tests, bundle lint, manifest URL, and published asset verification passed."
           python3 .github/scripts/verify_magnifier_bundle.py \
