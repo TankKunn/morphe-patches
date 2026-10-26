@@ -50,23 +50,20 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.x'
-
       - name: Prepare upstream dev candidate
         id: prepare
         shell: bash
         run: |
           set -euo pipefail
           exec > >(tee -a "$RUNNER_TEMP/upstream-sync.log") 2>&1
-          trap 'status=$?; git diff --name-only --diff-filter=U > "$RUNNER_TEMP/conflicts.txt" || true; git status --short >> "$RUNNER_TEMP/conflicts.txt" || true; echo "Upstream preparation failed with status $status"; exit $status' ERR
+          trap 'status=$?; failed_command="$BASH_COMMAND"; git diff --name-only --diff-filter=U > "$RUNNER_TEMP/conflicts.txt" || true; git status --short >> "$RUNNER_TEMP/conflicts.txt" || true; echo "Upstream preparation failed with status $status at: $failed_command"; exit $status' ERR
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git remote add upstream https://github.com/MorpheApp/morphe-patches.git
-          git fetch upstream dev
-          git fetch origin dev
+          # Do not auto-follow tags from either remote. The fork and upstream
+          # can publish the same dev tag names for different commits.
+          git fetch --no-tags upstream +refs/heads/dev:refs/remotes/upstream/dev
+          git fetch --no-tags origin +refs/heads/dev:refs/remotes/origin/dev
           OLD_DEV="$(git rev-parse origin/dev)"
           UPSTREAM_DEV="$(git rev-parse upstream/dev)"
           if git merge-base --is-ancestor "$UPSTREAM_DEV" "$OLD_DEV"; then
@@ -129,7 +126,7 @@ jobs:
         run: |
           set -euo pipefail
           exec > >(tee -a "$RUNNER_TEMP/upstream-sync.log") 2>&1
-          git fetch origin dev
+          git fetch --no-tags origin +refs/heads/dev:refs/remotes/origin/dev
           test "$(git rev-parse origin/dev)" = "$OLD_DEV"
           sync_commit="$(printf '%s\n' 'fix: sync upstream dev patches with magnifier' | \
             GIT_AUTHOR_NAME='github-actions[bot]' \
