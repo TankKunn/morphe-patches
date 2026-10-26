@@ -169,7 +169,8 @@ jobs:
           git fetch origin main
           test "$(git rev-parse origin/main)" = "$BASE_MAIN"
           git push origin "$CANDIDATE:refs/heads/main"
-          git push origin --delete automation/stable-candidate
+          git push origin --delete automation/stable-candidate \
+            || echo 'Stable candidate branch cleanup failed; the release and main update are already complete.'
 
       - name: Report failed sync
         if: failure()
