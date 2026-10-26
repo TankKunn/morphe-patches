@@ -2,8 +2,7 @@ name: Gated dev prerelease
 
 on:
   push:
-    branches:
-      - dev
+    branches: [dev]
   workflow_dispatch:
     inputs:
       publish_prerelease:
@@ -11,73 +10,17 @@ on:
         type: boolean
         required: true
         default: false
-      sanitize_history:
-        description: One-time rewrite of TankKunn author metadata to GitHub noreply
-        type: boolean
-        required: true
-        default: false
 
 permissions:
   contents: write
 
-# Share a lock with upstream sync so semantic-release never pushes from a stale SHA.
+# Serialize source updates and releases so manifests cannot race.
 concurrency:
-  group: morphe-dev-publish
+  group: morphe-patch-releases
   cancel-in-progress: false
 
 jobs:
-  sanitize-history:
-    if: github.ref == 'refs/heads/dev' && inputs.sanitize_history == true
-    runs-on: ubuntu-latest
-    steps:
-      - name: Create repo-scoped rewrite token
-        id: rewrite-token
-        uses: actions/create-github-app-token@v3
-        with:
-          client-id: ${{ vars.MORPHE_RELEASE_APP_CLIENT_ID }}
-          private-key: ${{ secrets.MORPHE_RELEASE_APP_PRIVATE_KEY }}
-          owner: ${{ github.repository_owner }}
-          repositories: morphe-patches
-          permission-contents: write
-          permission-workflows: write
-
-      - name: Checkout full dev history
-        uses: actions/checkout@v7
-        with:
-          ref: dev
-          fetch-depth: 0
-          token: ${{ steps.rewrite-token.outputs.token }}
-
-      - name: Rewrite owner metadata and verify trees
-        shell: bash
-        env:
-          EXPECTED_HEAD: ${{ github.sha }}
-        run: |
-          set -euo pipefail
-          test "$(git rev-parse HEAD)" = "$EXPECTED_HEAD"
-          git update-ref refs/original/refs/heads/dev refs/heads/dev
-          git filter-branch --force --env-filter '
-            noreply="337249693+TankKunn@users.noreply.github.com"
-            if [ "$GIT_AUTHOR_NAME" = "TankKunn" ] && [ "$GIT_AUTHOR_EMAIL" != "$noreply" ]; then
-              export GIT_AUTHOR_EMAIL="$noreply"
-            fi
-            if [ "$GIT_COMMITTER_NAME" = "TankKunn" ] && [ "$GIT_COMMITTER_EMAIL" != "$noreply" ]; then
-              export GIT_COMMITTER_EMAIL="$noreply"
-            fi
-          ' refs/heads/dev
-          git log --reverse --format=%T refs/original/refs/heads/dev > /tmp/original-trees
-          git log --reverse --format=%T refs/heads/dev > /tmp/rewritten-trees
-          cmp /tmp/original-trees /tmp/rewritten-trees
-          noreply='337249693+TankKunn@users.noreply.github.com'
-          bad_author="$(git log refs/heads/dev --format='%an%x09%ae' | awk -F '	' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
-          bad_committer="$(git log refs/heads/dev --format='%cn%x09%ce' | awk -F '	' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
-          test "$bad_author" = 0
-          test "$bad_committer" = 0
-          echo "History verified: commit trees unchanged; owner author/committer metadata uses noreply."
-          git push --force-with-lease=refs/heads/dev:$EXPECTED_HEAD origin refs/heads/dev:refs/heads/dev
-
   build:
-    if: github.ref == 'refs/heads/dev' && inputs.sanitize_history != true
     runs-on: ubuntu-latest
     steps:
       - name: Create repo-scoped release token
@@ -111,6 +54,11 @@ jobs:
           node-version: 'lts/*'
           cache: npm
 
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
       - name: Install release dependencies
         run: npm ci
 
@@ -127,6 +75,24 @@ jobs:
           MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
           MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
         run: ./gradlew :patches:buildAndroid --no-daemon
+
+      - name: Lint generated bundle and patch list
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          ./gradlew generatePatchesList --no-daemon
+          version="$(sed -n 's/^version = //p' gradle.properties | tail -n 1)"
+          jq --arg version "$version" '.version = $version' patches-list.json > patches-list.json.tmp
+          mv patches-list.json.tmp patches-list.json
+          bundle="patches/build/libs/patches-${version}.mpp"
+          test -f "$bundle"
+          python3 .github/scripts/verify_magnifier_bundle.py \
+            --bundle "$bundle" --patch-list patches-list.json \
+            --manifest patches-bundle.json --expected-repo "$GITHUB_REPOSITORY"
 
       - name: Upload bundle for review
         if: inputs.publish_prerelease != true && github.event_name != 'push'
@@ -149,3 +115,41 @@ jobs:
           GITHUB_TOKEN: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
           MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
           MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+
+      - name: Enforce fork manifest URL after release preparation
+        if: github.event_name == 'push' || inputs.publish_prerelease == true
+        env:
+          GITHUB_TOKEN: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path("patches-bundle.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          version = data["version"]
+          data["download_url"] = f"https://github.com/{os.environ['REPOSITORY']}/releases/download/v{version}/patches-{version}.mpp"
+          data["signature_download_url"] = ""
+          path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+          PY
+          if ! git diff --quiet -- patches-bundle.json; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add patches-bundle.json
+            git commit -m 'fix: keep dev bundle manifest on fork release [skip ci]'
+            git push origin HEAD:dev
+          fi
+
+      - name: Verify the published fork asset through its manifest
+        if: github.event_name == 'push' || inputs.publish_prerelease == true
+        env:
+          GITHUB_TOKEN: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          python3 .github/scripts/verify_magnifier_bundle.py \
+            --patch-list patches-list.json --manifest patches-bundle.json \
+            --expected-repo "$GITHUB_REPOSITORY" --download-asset
