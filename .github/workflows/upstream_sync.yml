@@ -129,10 +129,13 @@ jobs:
             extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/MagnifierRecon.java \
             patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt
 
-          python3 <<'PY'
+          OLD_DEV="$old_dev" python3 <<'PY'
           from pathlib import Path
+          import os
           import re
           import subprocess
+
+          old_dev = os.environ["OLD_DEV"]
 
           def show(ref, path):
               result = subprocess.run(
@@ -208,11 +211,11 @@ jobs:
           current_gradle = read(gradle_path)
           user_old = 'username = providers.gradleProperty("gpr.user").getOrElse(System.getenv("GITHUB_ACTOR"))'
           user_new = '''username = providers.gradleProperty("gpr.user")
-                              .orElse(providers.environmentVariable("MORPHE_GPR_USER"))
+                    .orElse(providers.environmentVariable("MORPHE_GPR_USER"))
                               .getOrElse(System.getenv("GITHUB_ACTOR"))'''
           key_old = 'password = providers.gradleProperty("gpr.key").getOrElse(System.getenv("GITHUB_TOKEN"))'
           key_new = '''password = providers.gradleProperty("gpr.key")
-                              .orElse(providers.environmentVariable("MORPHE_GPR_KEY"))
+                    .orElse(providers.environmentVariable("MORPHE_GPR_KEY"))
                               .getOrElse(System.getenv("GITHUB_TOKEN"))'''
           if "MORPHE_GPR_USER" not in current_gradle:
               if user_old not in current_gradle:
