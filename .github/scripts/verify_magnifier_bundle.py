@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import io
 import json
 import re
@@ -126,7 +127,10 @@ def main() -> None:
         if args.download_asset:
             try:
                 with urllib.request.urlopen(download_url, timeout=60) as response:
+                    if response.status != 200:
+                        fail(f"release asset returned HTTP {response.status}, expected HTTP 200")
                     payload = response.read()
+                print(f"Asset HTTP: 200; size: {len(payload)} bytes; SHA-256: {hashlib.sha256(payload).hexdigest().upper()}")
                 with tempfile.NamedTemporaryFile(prefix="morphe-bundle-", suffix=".mpp", delete=False) as output:
                     output.write(payload)
                     bundle_path = Path(output.name)

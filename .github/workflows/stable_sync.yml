@@ -31,19 +31,44 @@ jobs:
           permission-workflows: write
 
       - name: Checkout stable source
+        id: checkout-source
         uses: actions/checkout@v7
         with:
-          ref: main
+          # A manual dispatch can exercise a reviewed candidate branch end to
+          # end. Scheduled and push runs always build from main.
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.ref_name || 'main' }}
           fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
 
+      - name: Guard fork write target
+        id: target-guard
+        env:
+          EXPECTED_FORK_REPOSITORY: TankKunn/morphe-patches
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$GITHUB_REPOSITORY" != "$EXPECTED_FORK_REPOSITORY" || "$GITHUB_REPOSITORY" == MorpheApp/* ]]; then
+            echo "Refusing writes: unexpected repository $GITHUB_REPOSITORY" >&2
+            exit 1
+          fi
+          origin_url="$(git remote get-url origin)"
+          normalized_origin="${origin_url%.git}"
+          if [[ "$normalized_origin" != "https://github.com/$GITHUB_REPOSITORY" && \
+                "$normalized_origin" != "git@github.com:$GITHUB_REPOSITORY" ]]; then
+            echo "Refusing writes: origin is not $GITHUB_REPOSITORY" >&2
+            exit 1
+          fi
+          echo "Verified write target: $GITHUB_REPOSITORY"
+
       - name: Set up build tools
+        id: setup-java
         uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: '21'
 
       - name: Set up Python
+        id: setup-python
         uses: actions/setup-python@v6
         with:
           python-version: '3.x'
@@ -68,14 +93,12 @@ jobs:
             +refs/heads/main:refs/remotes/origin/main \
             +refs/heads/dev:refs/remotes/origin/dev
           BASE_MAIN="$(git rev-parse origin/main)"
-          # Query upstream's latest release directly. Local tags include this
-          # fork's own stable tags after the first release, so selecting from
-          # the combined local tag namespace would eventually pick our tag.
-          # The repository's GitHub App token is intentionally scoped to this
-          # fork and cannot read the upstream owner's API. This is a public
-          # endpoint, so query it without attaching the fork-only credential.
-          UPSTREAM_TAG="$(curl --fail --silent --show-error \
-            https://api.github.com/repos/MorpheApp/morphe-patches/releases/latest | jq -er '.tag_name')"
+          # Read stable tags from the upstream Git remote without importing
+          # them into the fork or making an API request to MorpheApp. All API
+          # calls and writes below are scoped to GITHUB_REPOSITORY.
+          UPSTREAM_TAG="$(git ls-remote --tags --refs upstream 'refs/tags/v[0-9]*' | \
+            awk '{ tag=$2; sub("^refs/tags/", "", tag); if (tag ~ /^v[0-9]+\.[0-9]+\.[0-9]+$/) print tag }' | \
+            sort -V | tail -n 1)"
           test -n "$UPSTREAM_TAG"
           [[ "$UPSTREAM_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
           UPSTREAM_VERSION="${UPSTREAM_TAG#v}"
@@ -100,7 +123,6 @@ jobs:
           if ! git merge-base --is-ancestor "$UPSTREAM_COMMIT" HEAD; then
             if ! git merge --no-edit --no-ff "$UPSTREAM_COMMIT"; then
               merge_conflicts="$(git diff --name-only --diff-filter=U)"
-              printf '%s\n' "$merge_conflicts" > "$RUNNER_TEMP/conflicts.txt"
               while IFS= read -r path; do
                 [[ -n "$path" ]] || continue
                 case "$path" in
@@ -161,6 +183,7 @@ jobs:
           echo 'publish=true' >> "$GITHUB_OUTPUT"
 
       - name: Run patch and extension tests
+        id: tests
         if: steps.prepare.outputs.publish == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -172,6 +195,7 @@ jobs:
           ./gradlew :patches:test :extensions:youtube:testDebugUnitTest --no-daemon
 
       - name: Generate patch list
+        id: patch-list
         if: steps.prepare.outputs.publish == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -183,6 +207,7 @@ jobs:
           ./gradlew generatePatchesList --no-daemon
 
       - name: Build and lint stable bundle
+        id: build
         if: steps.prepare.outputs.publish == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -195,19 +220,21 @@ jobs:
           jq --arg v "$VERSION" '.version = $v' patches-list.json > patches-list.json.tmp
           mv patches-list.json.tmp patches-list.json
           python3 .github/scripts/generate_patches_readme.py "$GITHUB_REPOSITORY" main patches-list.json README.md
+          MANIFEST="$RUNNER_TEMP/patches-bundle.json"
           jq --arg v "$VERSION" --arg u "https://github.com/$GITHUB_REPOSITORY/releases/download/v$VERSION/patches-$VERSION.mpp" \
             --arg d "Stable Morphe patches with the YouTube video magnifier, based on upstream v$UPSTREAM_VERSION." \
             '.version=$v | .download_url=$u | .signature_download_url="" | .description=$d' \
-            patches-bundle.json > patches-bundle.json.tmp
-          mv patches-bundle.json.tmp patches-bundle.json
+            patches-bundle.json > "$MANIFEST"
           BUNDLE="patches/build/libs/patches-$VERSION.mpp"
           test -f "$BUNDLE"
           python3 .github/scripts/verify_magnifier_bundle.py --bundle "$BUNDLE" \
-            --patch-list patches-list.json --manifest patches-bundle.json \
+            --patch-list patches-list.json --manifest "$MANIFEST" \
             --expected-repo "$GITHUB_REPOSITORY"
           echo "BUNDLE=$BUNDLE" >> "$GITHUB_ENV"
+          echo "MANIFEST=$MANIFEST" >> "$GITHUB_ENV"
 
       - name: Commit candidate and publish stable release
+        id: publish
         if: steps.prepare.outputs.publish == 'true'
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
@@ -218,19 +245,34 @@ jobs:
           git diff --cached --check
           git commit -m "fix: publish stable Morphe patches v$VERSION with magnifier"
           CANDIDATE="$(git rev-parse HEAD)"
+          echo "CANDIDATE_SHA=$CANDIDATE" >> "$GITHUB_ENV"
           # Remove the legacy fixed-name candidate left by earlier failed runs.
           git push origin --delete automation/stable-candidate >/dev/null 2>&1 || true
           CANDIDATE_BRANCH="automation/stable-candidate-$GITHUB_RUN_ID"
           git push origin "$CANDIDATE:refs/heads/$CANDIDATE_BRANCH"
           gh release create "v$VERSION" "$BUNDLE" --target "$CANDIDATE" \
+            --repo "$GITHUB_REPOSITORY" \
             --title "Morphe Patches v$VERSION (stable + magnifier)" \
-            --notes "Stable upstream Morphe Patches v$UPSTREAM_VERSION with the reviewed YouTube magnifier. CI tests, bundle lint, manifest URL, and published asset verification passed."
+            --notes "Stable upstream Morphe Patches v$UPSTREAM_VERSION with the reviewed YouTube magnifier. CI tests and bundle lint passed before publication."
+          echo 'release_created=true' >> "$GITHUB_OUTPUT"
           python3 .github/scripts/verify_magnifier_bundle.py \
-            --patch-list patches-list.json --manifest patches-bundle.json \
+            --patch-list patches-list.json --manifest "$MANIFEST" \
             --expected-repo "$GITHUB_REPOSITORY" --download-asset
+          # Do not put a manifest on main (or the release candidate) that points
+          # at an asset until the published asset has passed the download and
+          # MPP inspection above.
+          cp "$MANIFEST" patches-bundle.json
+          git add patches-bundle.json
+          git diff --cached --check
+          python3 .github/scripts/verify_magnifier_bundle.py \
+            --bundle "$BUNDLE" --patch-list patches-list.json --manifest patches-bundle.json \
+            --expected-repo "$GITHUB_REPOSITORY"
+          git commit -m "chore: point stable manifest to verified v$VERSION bundle"
+          MANIFEST_COMMIT="$(git rev-parse HEAD)"
           git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
           test "$(git rev-parse origin/main)" = "$BASE_MAIN"
-          git push origin "$CANDIDATE:refs/heads/main"
+          git push origin "$MANIFEST_COMMIT:refs/heads/main"
+          echo 'main_updated=true' >> "$GITHUB_OUTPUT"
           git push origin --delete "$CANDIDATE_BRANCH" \
             || echo 'Stable candidate branch cleanup failed; the release and main update are already complete.'
 
@@ -241,24 +283,75 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          failed_step="unknown step"
+          [[ "${{ steps.app-token.outcome }}" == failure ]] && failed_step="Create repository automation token"
+          [[ "${{ steps.checkout-source.outcome }}" == failure ]] && failed_step="Checkout stable source"
+          [[ "${{ steps.target-guard.outcome }}" == failure ]] && failed_step="Guard fork write target"
+          [[ "${{ steps.setup-java.outcome }}" == failure ]] && failed_step="Set up build tools"
+          [[ "${{ steps.setup-python.outcome }}" == failure ]] && failed_step="Set up Python"
+          [[ "${{ steps.prepare.outcome }}" == failure ]] && failed_step="Prepare upstream stable candidate"
+          [[ "${{ steps.tests.outcome }}" == failure ]] && failed_step="Run patch and extension tests"
+          [[ "${{ steps.patch-list.outcome }}" == failure ]] && failed_step="Generate patch list"
+          [[ "${{ steps.build.outcome }}" == failure ]] && failed_step="Build and lint stable bundle"
+          [[ "${{ steps.publish.outcome }}" == failure ]] && failed_step="Commit candidate and publish stable release"
+          issue_title="Stable sync failed at: $failed_step"
           conflicts="$(cat "$RUNNER_TEMP/conflicts.txt" 2>/dev/null || true)"
-          tail_log="$(tail -n 80 "$RUNNER_TEMP/stable-sync.log" 2>/dev/null | sed -E 's/(github_pat_|gh[pousr]_)[A-Za-z0-9_]{20,}/[REDACTED]/g' || true)"
-          body="Weekly stable sync failed. The previous published stable bundle was left unchanged.
+          tail_log="$(tail -n 40 "$RUNNER_TEMP/stable-sync.log" 2>/dev/null | \
+            sed -E -e 's/(github_pat_|gh[pousr]_)[A-Za-z0-9_]{20,}/[REDACTED]/g' \
+                   -e 's@[A-Za-z]:\\Users\\[^[:space:]]+@<redacted-path>@g' \
+                   -e 's#/home/runner/[^[:space:]]+#<runner-path>#g' || true)"
+          body="$(cat <<EOF
+          **Failing step:** $failed_step
 
           Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
 
-          Conflicting files:
-          \`\`\`
-          ${conflicts:-No merge-conflict paths were recorded.}
-          \`\`\`
+          The previous stable release and main manifest remain unchanged unless this run completed the post-upload verification and main update.
+          EOF
+          )"
+          if [[ -n "$conflicts" ]]; then
+            body+="
 
-          Sanitized log tail:
-          \`\`\`
+          Unresolved conflicting files:
+          ```
+          $conflicts
+          ```"
+          fi
+          body+="
+
+          Redacted log tail:
+          ```
           ${tail_log:-No command log was captured.}
-          \`\`\`"
-          gh issue create --repo "$GITHUB_REPOSITORY" \
-            --title "Stable upstream sync failed (run $GITHUB_RUN_NUMBER)" --body "$body" \
-            || echo 'Could not create issue; confirm repository Issues are enabled.'
+          ```"
+          existing="$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --limit 100 \
+            --json number,title | jq -r --arg title "$issue_title" \
+              '.[] | select(.title == $title) | .number' | head -n 1)"
+          if [[ -n "$existing" ]]; then
+            gh issue comment "$existing" --repo "$GITHUB_REPOSITORY" --body "$body"
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$issue_title" --body "$body"
+          fi
+
+      - name: Roll back unverified stable release
+        if: failure() && steps.publish.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
+          main_version="$(git show origin/main:patches-bundle.json | jq -r '.version')"
+          if [[ "$main_version" == "$VERSION" ]]; then
+            echo "Main already references v$VERSION; keeping its release asset."
+          else
+            target="$(gh release view "v$VERSION" --repo "$GITHUB_REPOSITORY" \
+              --json targetCommitish --jq '.targetCommitish' 2>/dev/null || true)"
+            if [[ -n "$target" && "$target" == "$CANDIDATE_SHA" ]]; then
+              gh release delete "v$VERSION" --repo "$GITHUB_REPOSITORY" --yes --cleanup-tag
+              echo "Removed unverified v$VERSION release and tag; main manifest was not updated."
+            else
+              echo "No release matching this run's candidate needs rollback."
+            fi
+          fi
 
       - name: Clean up failed stable candidate ref
         if: failure()
