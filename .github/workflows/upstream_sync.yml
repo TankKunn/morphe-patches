@@ -1,6 +1,10 @@
 name: CI-gated upstream sync and prerelease
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/upstream_sync.yml
   schedule:
     - cron: '17 8 * * 1'
   workflow_dispatch:
