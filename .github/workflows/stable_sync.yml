@@ -56,7 +56,7 @@ jobs:
         run: |
           set -euo pipefail
           exec > >(tee -a "$RUNNER_TEMP/stable-sync.log") 2>&1
-          trap 'status=$?; failed_command="$BASH_COMMAND"; git diff --name-only --diff-filter=U > "$RUNNER_TEMP/conflicts.txt" || true; echo "Stable preparation failed with status $status at: $failed_command"; exit $status' ERR
+          trap 'status=$?; failed_command="$BASH_COMMAND"; if [[ ! -s "$RUNNER_TEMP/conflicts.txt" ]]; then git diff --name-only --diff-filter=U > "$RUNNER_TEMP/conflicts.txt" || true; fi; echo "Stable preparation failed with status $status at: $failed_command"; exit $status' ERR
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git remote add upstream https://github.com/MorpheApp/morphe-patches.git
@@ -94,7 +94,40 @@ jobs:
             exit 0
           fi
           if ! git merge-base --is-ancestor "$UPSTREAM_COMMIT" HEAD; then
-            git merge --no-edit --no-ff "$UPSTREAM_COMMIT"
+            if ! git merge --no-edit --no-ff "$UPSTREAM_COMMIT"; then
+              merge_conflicts="$(git diff --name-only --diff-filter=U)"
+              printf '%s\n' "$merge_conflicts" > "$RUNNER_TEMP/conflicts.txt"
+              while IFS= read -r path; do
+                [[ -n "$path" ]] || continue
+                case "$path" in
+                  .github/workflows/build_pull_request.yml|.github/workflows/release.yml|README.md|AGENTS.md|.releaserc)
+                    git checkout --ours -- "$path"
+                    git add -- "$path"
+                    ;;
+                  .github/workflows/crowdin_pull.yml|.github/workflows/crowdin_push.yml|.github/workflows/open_pull_request.yml)
+                    # These fork-disabled workflows stay deleted after sync.
+                    git rm -f -- "$path"
+                    ;;
+                  extensions/youtube/src/main/java/app/morphe/extension/youtube/settings/Settings.java|patches/src/main/resources/addresources/values/youtube/strings.xml)
+                    # Start from upstream's current file, then reapply only the
+                    # magnifier settings/resources using the overlay script.
+                    git checkout --theirs -- "$path"
+                    git add -- "$path"
+                    ;;
+                  *)
+                    echo "No safe merge policy for upstream conflict: $path" >&2
+                    exit 1
+                    ;;
+                esac
+              done <<< "$merge_conflicts"
+              unresolved="$(git diff --name-only --diff-filter=U)"
+              if [[ -n "$unresolved" ]]; then
+                echo "Unresolved upstream merge paths: $unresolved" >&2
+                exit 1
+              fi
+              git diff --cached --check
+              git commit --no-edit
+            fi
           fi
           python3 .github/scripts/apply_magnifier_overlay.py --source-ref "$SOURCE_REF"
           printf '{"upstream_version":"%s","magnifier_sha256":"%s"}\n' "$UPSTREAM_VERSION" "$SOURCE_HASH" > .stable-sync-state.json
