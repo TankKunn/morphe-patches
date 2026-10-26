@@ -118,7 +118,6 @@ jobs:
           fi
 
           git switch --force-create automation/upstream-sync "$upstream_dev"
-          git switch --force-create automation/upstream-sync "$upstream_dev"
           git checkout "$old_dev" -- \
             AGENTS.md \
             .github/workflows/release.yml \
@@ -212,11 +211,11 @@ jobs:
           user_old = 'username = providers.gradleProperty("gpr.user").getOrElse(System.getenv("GITHUB_ACTOR"))'
           user_new = '''username = providers.gradleProperty("gpr.user")
                     .orElse(providers.environmentVariable("MORPHE_GPR_USER"))
-                              .getOrElse(System.getenv("GITHUB_ACTOR"))'''
+                    .getOrElse(System.getenv("GITHUB_ACTOR"))'''
           key_old = 'password = providers.gradleProperty("gpr.key").getOrElse(System.getenv("GITHUB_TOKEN"))'
           key_new = '''password = providers.gradleProperty("gpr.key")
                     .orElse(providers.environmentVariable("MORPHE_GPR_KEY"))
-                              .getOrElse(System.getenv("GITHUB_TOKEN"))'''
+                    .getOrElse(System.getenv("GITHUB_TOKEN"))'''
           if "MORPHE_GPR_USER" not in current_gradle:
               if user_old not in current_gradle:
                   raise SystemExit("Upstream username credential expression changed; refusing to overwrite settings.gradle.kts.")
@@ -228,7 +227,6 @@ jobs:
           write(gradle_path, current_gradle)
           PY
 
-          git checkout "$old_dev" -- .github/workflows/release.yml .github/workflows/open_pull_request.yml .releaserc README.md
           git add -A
           git diff --cached --check
           git commit -m 'build: stage upstream dev with magnifier'
