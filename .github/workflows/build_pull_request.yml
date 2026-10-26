@@ -23,20 +23,41 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
       - name: Cache Gradle
         uses: burrunan/gradle-cache-action@v3
 
       - name: Test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew :patches:test :extensions:youtube:testDebugUnitTest :extensions:music:testDebugUnitTest --no-daemon
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+        run: ./gradlew :patches:test :extensions:youtube:testDebugUnitTest generatePatchesList --no-daemon
 
       # buildAndroid adds DEX to the jar in place. A later JVM task can recreate
       # that same archive without DEX, so Android packaging must run last.
       - name: Build Android bundle
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
         run: ./gradlew :patches:buildAndroid --no-daemon
+
+      - name: Verify bundle includes Magnifier
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          version="$(sed -n 's/^version = //p' gradle.properties | tail -n 1)"
+          jq --arg v "$version" '.version = $v' patches-list.json > patches-list.json.tmp
+          mv patches-list.json.tmp patches-list.json
+          python3 .github/scripts/verify_magnifier_bundle.py \
+            --bundle "patches/build/libs/patches-${version}.mpp" \
+            --patch-list patches-list.json --source-root .
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
