@@ -102,8 +102,6 @@ jobs:
       - name: Reapply the magnifier to upstream dev
         id: prepare
         shell: bash
-        env:
-          BASE_TREE: 373db0df06cfe2e64804c45d4c261891b35bf75f
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
@@ -120,20 +118,112 @@ jobs:
           fi
 
           git switch --force-create automation/upstream-sync "$upstream_dev"
-          overlay="$RUNNER_TEMP/magnifier-overlay.patch"
-          git diff --binary "$BASE_TREE" "$old_dev" -- \
+          git switch --force-create automation/upstream-sync "$upstream_dev"
+          git checkout "$old_dev" -- \
             AGENTS.md \
-            settings.gradle.kts \
-            extensions/youtube/src/main/java/app/morphe/extension/youtube/settings/Settings.java \
+            .github/workflows/release.yml \
+            .github/workflows/open_pull_request.yml \
+            .github/workflows/crowdin_pull.yml \
+            .github/workflows/crowdin_push.yml \
+            .releaserc README.md \
             extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/MagnifierRecon.java \
-            patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt \
-            patches/src/main/resources/addresources/values/youtube/strings.xml > "$overlay"
-          test -s "$overlay"
-          if ! git apply --3way "$overlay"; then
-            echo 'Magnifier source conflicts with upstream changes in:' >&2
-            git diff --name-only --diff-filter=U >&2 || true
-            exit 1
-          fi
+            patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt
+
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+          import subprocess
+
+          def show(ref, path):
+              result = subprocess.run(
+                  ["git", "show", f"{ref}:{path}"],
+                  check=True, capture_output=True, text=True
+              )
+              return result.stdout
+
+          def read(path):
+              return Path(path).read_text(encoding="utf-8")
+
+          def write(path, content):
+              Path(path).write_text(content, encoding="utf-8", newline="")
+
+          # Add only the magnifier declarations to the current upstream settings file.
+          settings_path = "extensions/youtube/src/main/java/app/morphe/extension/youtube/settings/Settings.java"
+          fork_settings = show(old_dev, settings_path)
+          current_settings = read(settings_path)
+          marker = "    // Magnifier appearance settings are controlled in the player Style panel."
+          end_marker = "    // Video"
+          if "MAGNIFIER_ENABLED" not in current_settings:
+              start = fork_settings.find(marker)
+              end = fork_settings.find(end_marker, start)
+              class_marker = "public class Settings extends SharedYouTubeSettings {"
+              if start < 0 or end < 0 or class_marker not in current_settings:
+                  raise SystemExit("Magnifier settings block or upstream Settings class marker changed.")
+              block = fork_settings[start:end].rstrip()
+              current_settings = current_settings.replace(
+                  class_marker, class_marker + "\n" + block + "\n\n", 1
+              )
+          elif not all(name in current_settings for name in (
+              "MAGNIFIER_ENABLED", "MAGNIFIER_BORDER_THICKNESS",
+              "MAGNIFIER_BORDER_OPACITY", "MAGNIFIER_BORDER_COLOR"
+          )):
+              raise SystemExit("Upstream has a partial magnifier settings block; refusing an unsafe overlay.")
+          write(settings_path, current_settings)
+
+          # Add only the two magnifier labels, preserving all upstream translations.
+          strings_path = "patches/src/main/resources/addresources/values/youtube/strings.xml"
+          fork_strings = show(old_dev, strings_path)
+          current_strings = read(strings_path)
+          names = ("morphe_magnifier_enabled_title", "morphe_magnifier_enabled_summary")
+          additions = []
+          for name in names:
+              matches = re.findall(
+                  rf'^\s*<string name="{re.escape(name)}">.*?</string>\s*$',
+                  fork_strings, flags=re.MULTILINE
+              )
+              if len(matches) != 1:
+                  raise SystemExit(f"Expected exactly one source string for {name}.")
+              present = len(re.findall(
+                  rf'<string name="{re.escape(name)}">',
+                  current_strings
+              ))
+              if present == 0:
+                  additions.append(matches[0])
+              elif present != 1:
+                  raise SystemExit(f"Duplicate upstream string resource: {name}.")
+          if additions:
+              closing = current_strings.rfind("</resources>")
+              if closing < 0:
+                  raise SystemExit("Could not find resources closing tag.")
+              current_strings = (
+                  current_strings[:closing].rstrip() + "\n"
+                  + "\n".join(additions) + "\n"
+                  + current_strings[closing:]
+              )
+          write(strings_path, current_strings)
+
+          # Keep only the fork's GitHub Packages environment-variable fallback.
+          # Do not replace the whole file: upstream controls the plugin version.
+          gradle_path = "settings.gradle.kts"
+          current_gradle = read(gradle_path)
+          user_old = 'username = providers.gradleProperty("gpr.user").getOrElse(System.getenv("GITHUB_ACTOR"))'
+          user_new = '''username = providers.gradleProperty("gpr.user")
+                              .orElse(providers.environmentVariable("MORPHE_GPR_USER"))
+                              .getOrElse(System.getenv("GITHUB_ACTOR"))'''
+          key_old = 'password = providers.gradleProperty("gpr.key").getOrElse(System.getenv("GITHUB_TOKEN"))'
+          key_new = '''password = providers.gradleProperty("gpr.key")
+                              .orElse(providers.environmentVariable("MORPHE_GPR_KEY"))
+                              .getOrElse(System.getenv("GITHUB_TOKEN"))'''
+          if "MORPHE_GPR_USER" not in current_gradle:
+              if user_old not in current_gradle:
+                  raise SystemExit("Upstream username credential expression changed; refusing to overwrite settings.gradle.kts.")
+              current_gradle = current_gradle.replace(user_old, user_new, 1)
+          if "MORPHE_GPR_KEY" not in current_gradle:
+              if key_old not in current_gradle:
+                  raise SystemExit("Upstream password credential expression changed; refusing to overwrite settings.gradle.kts.")
+              current_gradle = current_gradle.replace(key_old, key_new, 1)
+          write(gradle_path, current_gradle)
+          PY
 
           git checkout "$old_dev" -- .github/workflows/release.yml .github/workflows/open_pull_request.yml .releaserc README.md
           git add -A
