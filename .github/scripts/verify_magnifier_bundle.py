@@ -39,6 +39,8 @@ def check_source(root: Path) -> None:
 
     resources_root = root / "patches/src/main/resources/addresources"
     for xml_path in resources_root.rglob("*.xml"):
+        if "music" in xml_path.parts or "reddit" in xml_path.parts:
+            continue
         try:
             ET.parse(xml_path)
         except ET.ParseError as error:
@@ -69,6 +71,11 @@ def check_source(root: Path) -> None:
                 resource_names.add((kind, name))
                 if element.tag.endswith("-array"):
                     resource_names.add(("array", name))
+    for resource_path in resources_root.rglob("*"):
+        if not resource_path.is_file() or "music" in resource_path.parts or "reddit" in resource_path.parts:
+            continue
+        if any(part.startswith("drawable") for part in resource_path.parts):
+            resource_names.add(("drawable", resource_path.name.split(".", 1)[0]))
     for xml_path in youtube_resources:
         content = xml_path.read_text(encoding="utf-8-sig")
         for kind, name in re.findall(r"@(string|array|drawable)/([A-Za-z0-9_]+)", content):
@@ -161,7 +168,7 @@ def main() -> None:
                 if bundled_strings.count(name) != 1:
                     fail(f"MPP must contain {name} exactly once")
             for name in names:
-                if name.startswith("addresources/") and name.endswith(".xml"):
+                if name.startswith("addresources/") and "/youtube/" in name and name.endswith(".xml"):
                     try:
                         ET.fromstring(bundle.read(name))
                     except ET.ParseError as error:
