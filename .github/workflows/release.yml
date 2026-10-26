@@ -16,7 +16,7 @@ permissions:
 
 # Serialize source updates and releases so manifests cannot race.
 concurrency:
-  group: morphe-patch-releases
+  group: morphe-dev-releases
   cancel-in-progress: false
 
 jobs:
