@@ -56,12 +56,17 @@ jobs:
         run: |
           set -euo pipefail
           exec > >(tee -a "$RUNNER_TEMP/stable-sync.log") 2>&1
-          trap 'status=$?; git diff --name-only --diff-filter=U > "$RUNNER_TEMP/conflicts.txt" || true; echo "Stable preparation failed with status $status"; exit $status' ERR
+          trap 'status=$?; failed_command="$BASH_COMMAND"; git diff --name-only --diff-filter=U > "$RUNNER_TEMP/conflicts.txt" || true; echo "Stable preparation failed with status $status at: $failed_command"; exit $status' ERR
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git remote add upstream https://github.com/MorpheApp/morphe-patches.git
-          git fetch upstream --tags
-          git fetch origin main dev
+          # Never import all upstream tags into the fork namespace: both repos
+          # publish overlapping v1.49.0-dev.* names, which makes git fetch fail.
+          # Resolve the upstream stable release first, then fetch only that tag
+          # into FETCH_HEAD. --no-tags prevents automatic tag following too.
+          git fetch --no-tags origin \
+            +refs/heads/main:refs/remotes/origin/main \
+            +refs/heads/dev:refs/remotes/origin/dev
           BASE_MAIN="$(git rev-parse origin/main)"
           # Query upstream's latest release directly. Local tags include this
           # fork's own stable tags after the first release, so selecting from
@@ -70,6 +75,8 @@ jobs:
           test -n "$UPSTREAM_TAG"
           [[ "$UPSTREAM_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
           UPSTREAM_VERSION="${UPSTREAM_TAG#v}"
+          git fetch --no-tags upstream "refs/tags/$UPSTREAM_TAG"
+          UPSTREAM_COMMIT="$(git rev-parse 'FETCH_HEAD^{commit}')"
           SOURCE_REF=origin/main
           PATCH_PATH=patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt
           if ! git cat-file -e "$SOURCE_REF:$PATCH_PATH" 2>/dev/null; then SOURCE_REF=origin/dev; fi
@@ -80,14 +87,14 @@ jobs:
             patches/src/main/resources/addresources/values/youtube/strings.xml; do git show "$SOURCE_REF:$f"; done | sha256sum | cut -d' ' -f1)"
           OLD_UPSTREAM="$(jq -r '.upstream_version // ""' .stable-sync-state.json 2>/dev/null || true)"
           OLD_SOURCE="$(jq -r '.magnifier_sha256 // ""' .stable-sync-state.json 2>/dev/null || true)"
-          if git merge-base --is-ancestor "$UPSTREAM_TAG" "$BASE_MAIN" && \
+          if git merge-base --is-ancestor "$UPSTREAM_COMMIT" "$BASE_MAIN" && \
              [[ "$OLD_UPSTREAM" == "$UPSTREAM_VERSION" && "$OLD_SOURCE" == "$SOURCE_HASH" ]]; then
             echo 'No upstream stable or approved magnifier changes; nothing to publish.'
             echo 'publish=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if ! git merge-base --is-ancestor "$UPSTREAM_TAG" HEAD; then
-            git merge --no-edit --no-ff "$UPSTREAM_TAG"
+          if ! git merge-base --is-ancestor "$UPSTREAM_COMMIT" HEAD; then
+            git merge --no-edit --no-ff "$UPSTREAM_COMMIT"
           fi
           python3 .github/scripts/apply_magnifier_overlay.py --source-ref "$SOURCE_REF"
           printf '{"upstream_version":"%s","magnifier_sha256":"%s"}\n' "$UPSTREAM_VERSION" "$SOURCE_HASH" > .stable-sync-state.json
@@ -181,7 +188,7 @@ jobs:
           python3 .github/scripts/verify_magnifier_bundle.py \
             --patch-list patches-list.json --manifest patches-bundle.json \
             --expected-repo "$GITHUB_REPOSITORY" --download-asset
-          git fetch origin main
+          git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
           test "$(git rev-parse origin/main)" = "$BASE_MAIN"
           git push origin "$CANDIDATE:refs/heads/main"
           git push origin --delete automation/stable-candidate \
