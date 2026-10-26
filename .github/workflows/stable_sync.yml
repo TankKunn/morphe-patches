@@ -12,7 +12,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: morphe-patch-releases
+  group: morphe-stable-release
   cancel-in-progress: false
 
 jobs:
@@ -63,8 +63,12 @@ jobs:
           git fetch upstream --tags
           git fetch origin main dev
           BASE_MAIN="$(git rev-parse origin/main)"
-          UPSTREAM_TAG="$(git tag --list 'v[0-9]*.[0-9]*.[0-9]*' --sort=-v:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)"
+          # Query upstream's latest release directly. Local tags include this
+          # fork's own stable tags after the first release, so selecting from
+          # the combined local tag namespace would eventually pick our tag.
+          UPSTREAM_TAG="$(gh api repos/MorpheApp/morphe-patches/releases/latest --jq '.tag_name')"
           test -n "$UPSTREAM_TAG"
+          [[ "$UPSTREAM_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
           UPSTREAM_VERSION="${UPSTREAM_TAG#v}"
           SOURCE_REF=origin/main
           PATCH_PATH=patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt
@@ -123,6 +127,17 @@ jobs:
           exec > >(tee -a "$RUNNER_TEMP/stable-sync.log") 2>&1
           ./gradlew :patches:test :extensions:youtube:testDebugUnitTest --no-daemon
 
+      - name: Generate patch list
+        if: steps.prepare.outputs.publish == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
+          MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          exec > >(tee -a "$RUNNER_TEMP/stable-sync.log") 2>&1
+          ./gradlew generatePatchesList --no-daemon
+
       - name: Build and lint stable bundle
         if: steps.prepare.outputs.publish == 'true'
         env:
@@ -132,7 +147,7 @@ jobs:
         run: |
           set -euo pipefail
           exec > >(tee -a "$RUNNER_TEMP/stable-sync.log") 2>&1
-          ./gradlew :patches:buildAndroid generatePatchesList --no-daemon
+          ./gradlew :patches:buildAndroid --no-daemon
           jq --arg v "$VERSION" '.version = $v' patches-list.json > patches-list.json.tmp
           mv patches-list.json.tmp patches-list.json
           python3 .github/scripts/generate_patches_readme.py "$GITHUB_REPOSITORY" main patches-list.json README.md

@@ -4,6 +4,8 @@
 
 [Add this source to Morphe Manager](https://morphe.software/add-source?github=TankKunn/morphe-patches)
 
+For the development channel, add [the `dev` branch](https://github.com/TankKunn/morphe-patches/tree/dev) as a source and enable **Pre-release patches**.
+
 ## Switch from the official source
 
 1. In Morphe Manager, **disable** the official Morphe Patches source; do not delete it.

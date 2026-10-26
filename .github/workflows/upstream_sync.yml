@@ -14,7 +14,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: morphe-patch-releases
+  group: morphe-dev-releases
   cancel-in-progress: false
 
 jobs:
@@ -44,6 +44,11 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -94,7 +99,7 @@ jobs:
         run: |
           set -euo pipefail
           exec > >(tee -a "$RUNNER_TEMP/upstream-sync.log") 2>&1
-          ./gradlew :patches:test :extensions:youtube:testDebugUnitTest --no-daemon
+          ./gradlew :patches:test :extensions:youtube:testDebugUnitTest generatePatchesList --no-daemon
 
       - name: Build and lint candidate bundle
         if: steps.prepare.outputs.updated == 'true'
@@ -105,7 +110,7 @@ jobs:
         run: |
           set -euo pipefail
           exec > >(tee -a "$RUNNER_TEMP/upstream-sync.log") 2>&1
-          ./gradlew :patches:buildAndroid generatePatchesList --no-daemon
+          ./gradlew :patches:buildAndroid --no-daemon
           version="$(sed -n 's/^version = //p' gradle.properties | tail -n 1)"
           jq --arg v "$version" '.version = $v' patches-list.json > patches-list.json.tmp
           mv patches-list.json.tmp patches-list.json
