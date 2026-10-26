@@ -47,8 +47,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.WeakHashMap;
 
-import kotlin.Unit;
-import kotlin.jvm.functions.Function1;
+import java.util.function.Consumer;
 
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.ResourceType;
@@ -384,25 +383,22 @@ public final class MagnifierRecon {
         private final Bitmap[] bitmaps = new Bitmap[2];
         private boolean stopped;
         private final Choreographer.FrameCallback frameCallback = this::onVsync;
-        private final Function1<VideoState, Unit> videoStateObserver = state -> {
+        private final Consumer<VideoState> videoStateObserver = state -> {
             handler.post(() -> onVideoStateChanged(state, "video-state-hook"));
-            return Unit.INSTANCE;
         };
-        private final Function1<PlayerControlsVisibility, Unit> controlsObserver = state -> {
+        private final Consumer<PlayerControlsVisibility> controlsObserver = state -> {
             handler.post(() -> {
                 if (Prototype.this.editMode) hidePlayerControls();
                 else updatePositionAndGeometry();
             });
-            return Unit.INSTANCE;
         };
-        private final Function1<PlayerType, Unit> playerTypeObserver = type -> {
+        private final Consumer<PlayerType> playerTypeObserver = type -> {
             handler.post(() -> {
                 if (isTerminalPlayerType(type)) {
                     onPlayerClosed("player-type:" + type);
                     if (prototype == Prototype.this) prototype = null;
                 } else onVisibilityChanged("player-type:" + type);
             });
-            return Unit.INSTANCE;
         };
         private final android.view.ViewTreeObserver.OnWindowFocusChangeListener focusListener =
                 this::onWindowFocusChanged;
