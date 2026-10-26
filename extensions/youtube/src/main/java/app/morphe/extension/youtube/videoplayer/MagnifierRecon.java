@@ -380,18 +380,45 @@ public final class MagnifierRecon {
         private final FrameLayout stylePanelViewport;
         private final ScrollView stylePanel;
         private final LinearLayout styleRows;
-        private abstract static class CompatiblePlayerObserver<T>
-                implements Consumer<T>, Function1<T, Unit> {
-            @Override public final void accept(T value) {
-                onChanged(value);
-            }
+        private static Object createPlayerObserver(Consumer<Object> callback) {
+            return java.lang.reflect.Proxy.newProxyInstance(
+                    MagnifierRecon.class.getClassLoader(),
+                    new Class<?>[] { Consumer.class, Function1.class },
+                    (proxy, method, args) -> {
+                        switch (method.getName()) {
+                            case "invoke":
+                                callback.accept(args == null || args.length == 0 ? null : args[0]);
+                                return Unit.INSTANCE;
+                            case "accept":
+                                callback.accept(args == null || args.length == 0 ? null : args[0]);
+                                return null;
+                            case "toString":
+                                return "MagnifierPlayerObserver";
+                            case "hashCode":
+                                return System.identityHashCode(proxy);
+                            case "equals":
+                                return args != null && args.length == 1 && proxy == args[0];
+                            default:
+                                return null;
+                        }
+                    });
+        }
 
-            @Override public final Unit invoke(T value) {
-                onChanged(value);
-                return Unit.INSTANCE;
+        private static void updatePlayerObserver(Object event, String methodName, Object observer) {
+            for (Method method : event.getClass().getMethods()) {
+                if (method.getName().equals(methodName) && method.getParameterCount() == 1
+                        && method.getParameterTypes()[0].isInstance(observer)) {
+                    try {
+                        method.invoke(event, observer);
+                        return;
+                    } catch (ReflectiveOperationException exception) {
+                        throw new IllegalStateException("Could not " + methodName
+                                + " Magnifier player observer", exception);
+                    }
+                }
             }
-
-            protected abstract void onChanged(T value);
+            throw new IllegalStateException("No compatible " + methodName
+                    + " method for Magnifier player observer");
         }
 
         private final WeakHashMap<View, Integer> savedControlVisibility = new WeakHashMap<>();
@@ -400,32 +427,20 @@ public final class MagnifierRecon {
         private final Bitmap[] bitmaps = new Bitmap[2];
         private boolean stopped;
         private final Choreographer.FrameCallback frameCallback = this::onVsync;
-        private final CompatiblePlayerObserver<VideoState> videoStateObserver =
-                new CompatiblePlayerObserver<VideoState>() {
-                    @Override protected void onChanged(VideoState state) {
-                        handler.post(() -> onVideoStateChanged(state, "video-state-hook"));
-                    }
-                };
-        private final CompatiblePlayerObserver<PlayerControlsVisibility> controlsObserver =
-                new CompatiblePlayerObserver<PlayerControlsVisibility>() {
-                    @Override protected void onChanged(PlayerControlsVisibility state) {
-                        handler.post(() -> {
-                            if (Prototype.this.editMode) hidePlayerControls();
-                            else updatePositionAndGeometry();
-                        });
-                    }
-                };
-        private final CompatiblePlayerObserver<PlayerType> playerTypeObserver =
-                new CompatiblePlayerObserver<PlayerType>() {
-                    @Override protected void onChanged(PlayerType type) {
-                        handler.post(() -> {
-                            if (isTerminalPlayerType(type)) {
-                                onPlayerClosed("player-type:" + type);
-                                if (prototype == Prototype.this) prototype = null;
-                            } else onVisibilityChanged("player-type:" + type);
-                        });
-                    }
-                };
+        private final Object videoStateObserver = createPlayerObserver(state ->
+                handler.post(() -> onVideoStateChanged((VideoState) state, "video-state-hook")));
+        private final Object controlsObserver = createPlayerObserver(state ->
+                handler.post(() -> {
+                    if (Prototype.this.editMode) hidePlayerControls();
+                    else updatePositionAndGeometry();
+                }));
+        private final Object playerTypeObserver = createPlayerObserver(type ->
+                handler.post(() -> {
+                    if (isTerminalPlayerType((PlayerType) type)) {
+                        onPlayerClosed("player-type:" + type);
+                        if (prototype == Prototype.this) prototype = null;
+                    } else onVisibilityChanged("player-type:" + type);
+                }));
         private final android.view.ViewTreeObserver.OnWindowFocusChangeListener focusListener =
                 this::onWindowFocusChanged;
         private final BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
@@ -710,7 +725,7 @@ public final class MagnifierRecon {
             styleButton.setAlpha(0.42f);
             styleButton.setEnabled(false);
             setStylePanelVisible(false);
-            PlayerControlsVisibility.getOnChange().addObserver(controlsObserver);
+            updatePlayerObserver(PlayerControlsVisibility.getOnChange(), "addObserver", controlsObserver);
             decor.getViewTreeObserver().addOnWindowFocusChangeListener(focusListener);
             IntentFilter screenFilter = new IntentFilter();
             screenFilter.addAction(Intent.ACTION_SCREEN_OFF);
@@ -1207,8 +1222,8 @@ public final class MagnifierRecon {
                 sourceOutline.setOnTouchListener(this::onSourceTouch);
                 sourceOutline.setVisibility(editMode ? View.VISIBLE : View.GONE);
                 sourceOutline.setClickable(editMode);
-                VideoState.getOnChange().addObserver(videoStateObserver);
-                PlayerType.getOnChange().addObserver(playerTypeObserver);
+                updatePlayerObserver(VideoState.getOnChange(), "addObserver", videoStateObserver);
+                updatePlayerObserver(PlayerType.getOnChange(), "addObserver", playerTypeObserver);
                 handler.postDelayed(metricsReporter, 1000L);
                 onVideoStateChanged(VideoState.getCurrent(), "user-toggle-on");
                 if (captureMode == CaptureMode.PLAYING) scheduleVsync();
@@ -1218,8 +1233,8 @@ public final class MagnifierRecon {
                 handler.removeCallbacks(pausedPoll);
                 handler.removeCallbacks(metricsReporter);
                 frameCallbackPending = false;
-                VideoState.getOnChange().removeObserver(videoStateObserver);
-                PlayerType.getOnChange().removeObserver(playerTypeObserver);
+                updatePlayerObserver(VideoState.getOnChange(), "removeObserver", videoStateObserver);
+                updatePlayerObserver(PlayerType.getOnChange(), "removeObserver", playerTypeObserver);
                 zoomWindow.setVisibility(View.GONE);
                 zoomWindow.setOnTouchListener(null);
                 sourceOutline.setVisibility(View.GONE);
@@ -2305,9 +2320,9 @@ public final class MagnifierRecon {
             if (stopped) return;
             rememberUiState();
             stopped = true;
-            VideoState.getOnChange().removeObserver(videoStateObserver);
-            PlayerControlsVisibility.getOnChange().removeObserver(controlsObserver);
-            PlayerType.getOnChange().removeObserver(playerTypeObserver);
+            updatePlayerObserver(VideoState.getOnChange(), "removeObserver", videoStateObserver);
+            updatePlayerObserver(PlayerControlsVisibility.getOnChange(), "removeObserver", controlsObserver);
+            updatePlayerObserver(PlayerType.getOnChange(), "removeObserver", playerTypeObserver);
             if (decor.getViewTreeObserver().isAlive()) {
                 decor.getViewTreeObserver().removeOnWindowFocusChangeListener(focusListener);
             }
