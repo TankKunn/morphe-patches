@@ -88,6 +88,18 @@ import app.morphe.extension.youtube.videoplayer.PlayAllButton.PlaylistIDPrefix;
 import app.morphe.extension.youtube.videoplayer.PlayerIcons;
 
 public class Settings extends SharedYouTubeSettings {
+    // Magnifier appearance settings are controlled in the player Style panel.
+    // Morphe Settings exposes only the master on/off preference.
+    public static final BooleanSetting MAGNIFIER_ENABLED = new BooleanSetting(
+            "morphe_magnifier_enabled", TRUE, true);
+    public static final IntegerSetting MAGNIFIER_BORDER_THICKNESS = new IntegerSetting(
+            "morphe_magnifier_border_thickness", 2, true);
+    public static final IntegerSetting MAGNIFIER_BORDER_OPACITY = new IntegerSetting(
+            "morphe_magnifier_border_opacity", 100, true);
+    public static final IntegerSetting MAGNIFIER_BORDER_COLOR = new IntegerSetting(
+            "morphe_magnifier_border_color", 0, true);
+
+
     // Video
     public static final EnumSetting<PlaybackBufferSize> PLAYBACK_BUFFER_SIZE = new EnumSetting<>("morphe_playback_buffer_size", PlaybackBufferSize.DEFAULT, true);
     public static final IntegerSetting VIDEO_DELAY = new IntegerSetting("morphe_video_delay", 0);

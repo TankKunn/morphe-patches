@@ -1,87 +1,27 @@
 name: CI-gated upstream sync and prerelease
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/upstream_sync.yml
   schedule:
     - cron: '17 8 * * 1'
   workflow_dispatch:
-    inputs:
-      sanitize_history:
-        description: One-time rewrite of TankKunn author metadata to GitHub noreply
-        type: boolean
-        required: true
-        default: false
 
 permissions:
   contents: write
+  issues: write
 
-# Serialize upstream pushes with dev prerelease publication to prevent stale SHA races.
 concurrency:
-  group: morphe-dev-publish
+  group: morphe-dev-releases
   cancel-in-progress: false
 
 jobs:
-  sanitize-history:
-    if: github.ref == 'refs/heads/main' && inputs.sanitize_history == true
-    runs-on: ubuntu-latest
-    steps:
-      - name: Create repo-scoped rewrite token
-        id: rewrite-token
-        uses: actions/create-github-app-token@v3
-        with:
-          client-id: ${{ vars.MORPHE_RELEASE_APP_CLIENT_ID }}
-          private-key: ${{ secrets.MORPHE_RELEASE_APP_PRIVATE_KEY }}
-          owner: ${{ github.repository_owner }}
-          repositories: morphe-patches
-          permission-contents: write
-          permission-workflows: write
-
-      - name: Checkout full main history
-        uses: actions/checkout@v7
-        with:
-          ref: main
-          fetch-depth: 0
-          token: ${{ steps.rewrite-token.outputs.token }}
-
-      - name: Rewrite owner metadata and verify trees
-        shell: bash
-        env:
-          EXPECTED_HEAD: ${{ github.sha }}
-        run: |
-          set -euo pipefail
-          test "$(git rev-parse HEAD)" = "$EXPECTED_HEAD"
-          noreply='337249693+TankKunn@users.noreply.github.com'
-          bad_author="$(git log refs/heads/main --format='%an%x09%ae' | awk -F '\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
-          bad_committer="$(git log refs/heads/main --format='%cn%x09%ce' | awk -F '\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
-          if test "$bad_author" = 0 && test "$bad_committer" = 0; then
-            echo "History is already clean; no rewrite needed."
-            exit 0
-          fi
-          git update-ref refs/original/refs/heads/main refs/heads/main
-          git filter-branch --force --env-filter '
-            noreply="337249693+TankKunn@users.noreply.github.com"
-            if [ "$GIT_AUTHOR_NAME" = "TankKunn" ] && [ "$GIT_AUTHOR_EMAIL" != "$noreply" ]; then
-              export GIT_AUTHOR_EMAIL="$noreply"
-            fi
-            if [ "$GIT_COMMITTER_NAME" = "TankKunn" ] && [ "$GIT_COMMITTER_EMAIL" != "$noreply" ]; then
-              export GIT_COMMITTER_EMAIL="$noreply"
-            fi
-          ' refs/heads/main
-          git log --reverse --format=%T refs/original/refs/heads/main > /tmp/original-trees
-          git log --reverse --format=%T refs/heads/main > /tmp/rewritten-trees
-          cmp /tmp/original-trees /tmp/rewritten-trees
-          noreply='337249693+TankKunn@users.noreply.github.com'
-          bad_author="$(git log refs/heads/main --format='%an%x09%ae' | awk -F '\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
-          bad_committer="$(git log refs/heads/main --format='%cn%x09%ce' | awk -F '\t' -v n="$noreply" '$1 == "TankKunn" && $2 != n { c++ } END { print c+0 }')"
-          test "$bad_author" = 0
-          test "$bad_committer" = 0
-          echo "History verified: commit trees unchanged; owner author/committer metadata uses noreply."
-          git push --force-with-lease=refs/heads/main:$EXPECTED_HEAD origin refs/heads/main:refs/heads/main
-
   sync-test-release:
-    if: github.ref == 'refs/heads/main' && inputs.sanitize_history != true
     runs-on: ubuntu-latest
     steps:
-      - name: Create repo-scoped automation token
+      - name: Create repository automation token
         id: app-token
         uses: actions/create-github-app-token@v3
         with:
@@ -99,180 +39,128 @@ jobs:
           fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
 
-      - name: Reapply the magnifier to upstream dev
-        id: prepare
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git remote add upstream https://github.com/MorpheApp/morphe-patches.git
-          git fetch upstream dev
-          git fetch origin dev
-          old_dev="$(git rev-parse origin/dev)"
-          upstream_dev="$(git rev-parse upstream/dev)"
-          if git merge-base --is-ancestor "$upstream_dev" "$old_dev"; then
-            echo 'updated=false' >> "$GITHUB_OUTPUT"
-            echo 'Upstream dev is already included in fork dev.'
-            exit 0
-          fi
-
-          git switch --force-create automation/upstream-sync "$upstream_dev"
-          git checkout "$old_dev" -- \
-            AGENTS.md \
-            .github/workflows/release.yml \
-            .github/workflows/open_pull_request.yml \
-            .github/workflows/crowdin_pull.yml \
-            .github/workflows/crowdin_push.yml \
-            .releaserc README.md \
-            extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/MagnifierRecon.java \
-            patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt
-
-          OLD_DEV="$old_dev" python3 <<'PY'
-          from pathlib import Path
-          import os
-          import re
-          import subprocess
-
-          old_dev = os.environ["OLD_DEV"]
-
-          def show(ref, path):
-              result = subprocess.run(
-                  ["git", "show", f"{ref}:{path}"],
-                  check=True, capture_output=True, text=True
-              )
-              return result.stdout
-
-          def read(path):
-              return Path(path).read_text(encoding="utf-8")
-
-          def write(path, content):
-              Path(path).write_text(content, encoding="utf-8", newline="")
-
-          # Add only the magnifier declarations to the current upstream settings file.
-          settings_path = "extensions/youtube/src/main/java/app/morphe/extension/youtube/settings/Settings.java"
-          fork_settings = show(old_dev, settings_path)
-          current_settings = read(settings_path)
-          marker = "    // Magnifier appearance settings are controlled in the player Style panel."
-          end_marker = "    // Video"
-          if "MAGNIFIER_ENABLED" not in current_settings:
-              start = fork_settings.find(marker)
-              end = fork_settings.find(end_marker, start)
-              class_marker = "public class Settings extends SharedYouTubeSettings {"
-              if start < 0 or end < 0 or class_marker not in current_settings:
-                  raise SystemExit("Magnifier settings block or upstream Settings class marker changed.")
-              block = fork_settings[start:end].rstrip()
-              current_settings = current_settings.replace(
-                  class_marker, class_marker + "\n" + block + "\n\n", 1
-              )
-          elif not all(name in current_settings for name in (
-              "MAGNIFIER_ENABLED", "MAGNIFIER_BORDER_THICKNESS",
-              "MAGNIFIER_BORDER_OPACITY", "MAGNIFIER_BORDER_COLOR"
-          )):
-              raise SystemExit("Upstream has a partial magnifier settings block; refusing an unsafe overlay.")
-          write(settings_path, current_settings)
-
-          # Add only the two magnifier labels, preserving all upstream translations.
-          strings_path = "patches/src/main/resources/addresources/values/youtube/strings.xml"
-          fork_strings = show(old_dev, strings_path)
-          current_strings = read(strings_path)
-          names = ("morphe_magnifier_enabled_title", "morphe_magnifier_enabled_summary")
-          additions = []
-          for name in names:
-              matches = re.findall(
-                  rf'^\s*<string name="{re.escape(name)}">.*?</string>\s*$',
-                  fork_strings, flags=re.MULTILINE
-              )
-              if len(matches) != 1:
-                  raise SystemExit(f"Expected exactly one source string for {name}.")
-              present = len(re.findall(
-                  rf'<string name="{re.escape(name)}">',
-                  current_strings
-              ))
-              if present == 0:
-                  additions.append(matches[0])
-              elif present != 1:
-                  raise SystemExit(f"Duplicate upstream string resource: {name}.")
-          if additions:
-              closing = current_strings.rfind("</resources>")
-              if closing < 0:
-                  raise SystemExit("Could not find resources closing tag.")
-              current_strings = (
-                  current_strings[:closing].rstrip() + "\n"
-                  + "\n".join(additions) + "\n"
-                  + current_strings[closing:]
-              )
-          write(strings_path, current_strings)
-
-          # Keep only the fork's GitHub Packages environment-variable fallback.
-          # Do not replace the whole file: upstream controls the plugin version.
-          gradle_path = "settings.gradle.kts"
-          current_gradle = read(gradle_path)
-          user_old = 'username = providers.gradleProperty("gpr.user").getOrElse(System.getenv("GITHUB_ACTOR"))'
-          user_new = '''username = providers.gradleProperty("gpr.user")
-                    .orElse(providers.environmentVariable("MORPHE_GPR_USER"))
-                    .getOrElse(System.getenv("GITHUB_ACTOR"))'''
-          key_old = 'password = providers.gradleProperty("gpr.key").getOrElse(System.getenv("GITHUB_TOKEN"))'
-          key_new = '''password = providers.gradleProperty("gpr.key")
-                    .orElse(providers.environmentVariable("MORPHE_GPR_KEY"))
-                    .getOrElse(System.getenv("GITHUB_TOKEN"))'''
-          if "MORPHE_GPR_USER" not in current_gradle:
-              if user_old not in current_gradle:
-                  raise SystemExit("Upstream username credential expression changed; refusing to overwrite settings.gradle.kts.")
-              current_gradle = current_gradle.replace(user_old, user_new, 1)
-          if "MORPHE_GPR_KEY" not in current_gradle:
-              if key_old not in current_gradle:
-                  raise SystemExit("Upstream password credential expression changed; refusing to overwrite settings.gradle.kts.")
-              current_gradle = current_gradle.replace(key_old, key_new, 1)
-          write(gradle_path, current_gradle)
-          PY
-
-          git add -A
-          git diff --cached --check
-          git commit -m 'build: stage upstream dev with magnifier'
-          sync_tree="$(git rev-parse 'HEAD^{tree}')"
-          echo "updated=true" >> "$GITHUB_OUTPUT"
-          echo "old_dev=$old_dev" >> "$GITHUB_OUTPUT"
-          echo "upstream_dev=$upstream_dev" >> "$GITHUB_OUTPUT"
-          echo "sync_tree=$sync_tree" >> "$GITHUB_OUTPUT"
-
-      - name: Setup Java
+      - name: Set up build tools
         uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: '21'
 
-      - name: Test Morphe patches
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: Prepare upstream dev candidate
+        id: prepare
+        shell: bash
+        run: |
+          set -euo pipefail
+          exec > >(tee -a "$RUNNER_TEMP/upstream-sync.log") 2>&1
+          trap 'status=$?; git diff --name-only --diff-filter=U > "$RUNNER_TEMP/conflicts.txt" || true; git status --short >> "$RUNNER_TEMP/conflicts.txt" || true; echo "Upstream preparation failed with status $status"; exit $status' ERR
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git remote add upstream https://github.com/MorpheApp/morphe-patches.git
+          git fetch upstream dev
+          git fetch origin dev
+          OLD_DEV="$(git rev-parse origin/dev)"
+          UPSTREAM_DEV="$(git rev-parse upstream/dev)"
+          if git merge-base --is-ancestor "$UPSTREAM_DEV" "$OLD_DEV"; then
+            echo 'No new upstream dev commits; nothing to sync.'
+            echo 'updated=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git switch --force-create automation/upstream-sync "$UPSTREAM_DEV"
+          git checkout "$OLD_DEV" -- \
+            AGENTS.md .github/workflows/release.yml .github/workflows/open_pull_request.yml \
+            .github/workflows/build_pull_request.yml .github/scripts/apply_magnifier_overlay.py \
+            .github/scripts/verify_magnifier_bundle.py .releaserc README.md \
+            extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/MagnifierRecon.java \
+            patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt
+          python3 .github/scripts/apply_magnifier_overlay.py --source-ref "$OLD_DEV"
+          git add -A
+          git diff --cached --check
+          git commit -m 'fix: sync upstream dev patches with magnifier'
+          echo "old_dev=$OLD_DEV" >> "$GITHUB_OUTPUT"
+          echo "upstream_dev=$UPSTREAM_DEV" >> "$GITHUB_OUTPUT"
+          echo "sync_tree=$(git rev-parse 'HEAD^{tree}')" >> "$GITHUB_OUTPUT"
+          echo 'updated=true' >> "$GITHUB_OUTPUT"
+
+      - name: Run patch and extension tests
+        if: steps.prepare.outputs.updated == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
           MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
-        run: ./gradlew :patches:test :extensions:youtube:testDebugUnitTest --no-daemon
+        run: |
+          set -euo pipefail
+          exec > >(tee -a "$RUNNER_TEMP/upstream-sync.log") 2>&1
+          ./gradlew :patches:test :extensions:youtube:testDebugUnitTest generatePatchesList --no-daemon
 
-      - name: Build Android patch bundle
+      - name: Build and lint candidate bundle
+        if: steps.prepare.outputs.updated == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
           MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
-        run: ./gradlew :patches:buildAndroid --no-daemon
+        run: |
+          set -euo pipefail
+          exec > >(tee -a "$RUNNER_TEMP/upstream-sync.log") 2>&1
+          ./gradlew :patches:buildAndroid --no-daemon
+          version="$(sed -n 's/^version = //p' gradle.properties | tail -n 1)"
+          jq --arg v "$version" '.version = $v' patches-list.json > patches-list.json.tmp
+          mv patches-list.json.tmp patches-list.json
+          bundle="patches/build/libs/patches-${version}.mpp"
+          test -f "$bundle"
+          python3 .github/scripts/verify_magnifier_bundle.py \
+            --bundle "$bundle" --patch-list patches-list.json
 
-      - name: Push the tested sync commit
+      - name: Push tested upstream sync commit
         if: steps.prepare.outputs.updated == 'true'
         shell: bash
         env:
           OLD_DEV: ${{ steps.prepare.outputs.old_dev }}
           UPSTREAM_DEV: ${{ steps.prepare.outputs.upstream_dev }}
           SYNC_TREE: ${{ steps.prepare.outputs.sync_tree }}
-          APP_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           set -euo pipefail
+          exec > >(tee -a "$RUNNER_TEMP/upstream-sync.log") 2>&1
           git fetch origin dev
           test "$(git rev-parse origin/dev)" = "$OLD_DEV"
-          sync_commit="$(printf '%s\n' 'chore: CI-gated upstream sync' | \
+          sync_commit="$(printf '%s\n' 'fix: sync upstream dev patches with magnifier' | \
             GIT_AUTHOR_NAME='github-actions[bot]' \
             GIT_AUTHOR_EMAIL='41898282+github-actions[bot]@users.noreply.github.com' \
             GIT_COMMITTER_NAME='github-actions[bot]' \
             GIT_COMMITTER_EMAIL='41898282+github-actions[bot]@users.noreply.github.com' \
             git commit-tree "$SYNC_TREE" -p "$OLD_DEV" -p "$UPSTREAM_DEV")"
           git push origin "$sync_commit:refs/heads/dev"
-          git checkout --force -B dev "$sync_commit"
+
+      - name: Open failure issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          conflicts="$(cat "$RUNNER_TEMP/conflicts.txt" 2>/dev/null || true)"
+          tail_log="$(tail -n 80 "$RUNNER_TEMP/upstream-sync.log" 2>/dev/null | sed -E 's/(github_pat_|gh[pousr]_)[A-Za-z0-9_]{20,}/[REDACTED]/g' || true)"
+          body="Weekly upstream dev sync failed before the candidate was pushed; the previous dev bundle remains available.
+
+          Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+
+          Conflicting/status files:
+          \`\`\`
+          ${conflicts:-No conflict paths were recorded.}
+          \`\`\`
+
+          Sanitized log tail:
+          \`\`\`
+          ${tail_log:-No command log was captured.}
+          \`\`\`"
+          gh issue create --repo "$GITHUB_REPOSITORY" \
+            --title "Upstream dev sync failed (run $GITHUB_RUN_NUMBER)" --body "$body" \
+            || echo 'Could not create issue; confirm repository Issues are enabled.'
