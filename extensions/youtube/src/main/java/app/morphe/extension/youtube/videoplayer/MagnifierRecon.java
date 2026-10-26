@@ -49,6 +49,9 @@ import java.util.WeakHashMap;
 
 import java.util.function.Consumer;
 
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
@@ -377,29 +380,52 @@ public final class MagnifierRecon {
         private final FrameLayout stylePanelViewport;
         private final ScrollView stylePanel;
         private final LinearLayout styleRows;
+        private abstract static class CompatiblePlayerObserver<T>
+                implements Consumer<T>, Function1<T, Unit> {
+            @Override public final void accept(T value) {
+                onChanged(value);
+            }
+
+            @Override public final Unit invoke(T value) {
+                onChanged(value);
+                return Unit.INSTANCE;
+            }
+
+            protected abstract void onChanged(T value);
+        }
+
         private final WeakHashMap<View, Integer> savedControlVisibility = new WeakHashMap<>();
         private final Handler handler = new Handler(Looper.getMainLooper());
         private final Choreographer choreographer = Choreographer.getInstance();
         private final Bitmap[] bitmaps = new Bitmap[2];
         private boolean stopped;
         private final Choreographer.FrameCallback frameCallback = this::onVsync;
-        private final Consumer<VideoState> videoStateObserver = state -> {
-            handler.post(() -> onVideoStateChanged(state, "video-state-hook"));
-        };
-        private final Consumer<PlayerControlsVisibility> controlsObserver = state -> {
-            handler.post(() -> {
-                if (Prototype.this.editMode) hidePlayerControls();
-                else updatePositionAndGeometry();
-            });
-        };
-        private final Consumer<PlayerType> playerTypeObserver = type -> {
-            handler.post(() -> {
-                if (isTerminalPlayerType(type)) {
-                    onPlayerClosed("player-type:" + type);
-                    if (prototype == Prototype.this) prototype = null;
-                } else onVisibilityChanged("player-type:" + type);
-            });
-        };
+        private final CompatiblePlayerObserver<VideoState> videoStateObserver =
+                new CompatiblePlayerObserver<VideoState>() {
+                    @Override protected void onChanged(VideoState state) {
+                        handler.post(() -> onVideoStateChanged(state, "video-state-hook"));
+                    }
+                };
+        private final CompatiblePlayerObserver<PlayerControlsVisibility> controlsObserver =
+                new CompatiblePlayerObserver<PlayerControlsVisibility>() {
+                    @Override protected void onChanged(PlayerControlsVisibility state) {
+                        handler.post(() -> {
+                            if (Prototype.this.editMode) hidePlayerControls();
+                            else updatePositionAndGeometry();
+                        });
+                    }
+                };
+        private final CompatiblePlayerObserver<PlayerType> playerTypeObserver =
+                new CompatiblePlayerObserver<PlayerType>() {
+                    @Override protected void onChanged(PlayerType type) {
+                        handler.post(() -> {
+                            if (isTerminalPlayerType(type)) {
+                                onPlayerClosed("player-type:" + type);
+                                if (prototype == Prototype.this) prototype = null;
+                            } else onVisibilityChanged("player-type:" + type);
+                        });
+                    }
+                };
         private final android.view.ViewTreeObserver.OnWindowFocusChangeListener focusListener =
                 this::onWindowFocusChanged;
         private final BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
