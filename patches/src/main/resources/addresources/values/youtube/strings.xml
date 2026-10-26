@@ -1727,4 +1727,6 @@ Automatic recording is optional. It stops in incognito or when the account chang
     <string name="morphe_series_tracker_no_search_results">No series found</string>
     <string name="morphe_series_tracker_untitled_episode">Untitled episode</string>
     <string name="morphe_series_tracker_unavailable_episode">Unavailable episode</string>
+<string name="morphe_magnifier_enabled_title">Video magnifier</string>
+<string name="morphe_magnifier_enabled_summary">Show the video magnifier controls in the player.</string>
 </resources>
