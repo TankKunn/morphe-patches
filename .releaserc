@@ -1,65 +1,30 @@
 {
-  "branches": [
-    "main",
-    {
-      "name": "dev",
-      "prerelease": true
-    }
-  ],
+  "branches": ["main", { "name": "dev", "prerelease": true }],
   "plugins": [
-    [
-        "@semantic-release/commit-analyzer", {
-        "releaseRules": [
-            { "type": "fix", "release": "patch" },
-            { "type": "feat", "release": "minor" },
-            { "type": "bump", "release": "patch" },
-            { "type": "perf", "release": "patch" },
-            { "type": "build", "scope": "Needs bump", "release": "patch" }
-        ]
-        }
-    ],
-    [
-      "@MorpheApp/changelog", {
-        "releaseJson": {
-          "path": "patches-bundle.json",
-          "downloadUrlTemplate": "https://github.com/${owner}/${repo}/releases/download/v${version}/patches-${version}.mpp",
-          "signatureUrlTemplate": ""
-        }
-      }
-    ],
+    ["@semantic-release/commit-analyzer", { "releaseRules": [
+      { "type": "fix", "release": "patch" },
+      { "type": "feat", "release": "minor" },
+      { "type": "bump", "release": "patch" },
+      { "type": "perf", "release": "patch" },
+      { "type": "build", "scope": "Needs bump", "release": "patch" }
+    ] }],
+    ["@MorpheApp/changelog", { "releaseJson": {
+      "path": "patches-bundle.json",
+      "downloadUrlTemplate": "https://github.com/${owner}/${repo}/releases/download/v${version}/patches-${version}.mpp",
+      "signatureUrlTemplate": ""
+    } }],
     "gradle-semantic-release-plugin",
-    [
-      "@semantic-release/exec",
-      {
-        "generateNotesCmd": "echo 'Personal development prerelease for this Morphe fork, including the YouTube video magnifier.'",
-        "prepareCmd": "./gradlew generatePatchesList \
-          && jq '.version=\"${nextRelease.version}\"' patches-list.json > patches-list.json.tmp && mv patches-list.json.tmp patches-list.json \
-          && python3 .github/scripts/generate_patches_readme.py $GITHUB_REPOSITORY $GITHUB_REF_NAME patches-list.json README.md && desired_bundle=\"patches-$(jq -r .version patches-bundle.json).mpp\" && find patches/build/libs -maxdepth 1 -type f -name \"patches-*.mpp\" ! -name \"$desired_bundle\" -delete"
-      }
-    ],
-    [
-      "@semantic-release/git",
-      {
-        "assets": [
-          "CHANGELOG.md",
-          "gradle.properties",
-          "patches-bundle.json",
-          "patches-list.json",
-          "README.md"
-        ],
-        "message": "chore: Release v${nextRelease.version} [skip ci]"
-      }
-    ],
-    [
-      "@semantic-release/github",
-      {
-        "assets": [
-          {
-            "path": "patches/build/libs/patches-!(*sources*|*javadoc*).mpp?(.asc)"
-          }
-        ],
-        "successComment": false
-      }
-    ]
+    ["@semantic-release/exec", {
+      "generateNotesCmd": "echo 'Personal development prerelease for this Morphe fork, including the YouTube video magnifier.'",
+      "prepareCmd": "./gradlew generatePatchesList && jq --arg v \"${nextRelease.version}\" '.version=$v' patches-list.json > patches-list.json.tmp && mv patches-list.json.tmp patches-list.json && jq --arg v \"${nextRelease.version}\" --arg r \"$GITHUB_REPOSITORY\" '.version=$v | .download_url=(\"https://github.com/\"+$r+\"/releases/download/v\"+$v+\"/patches-\"+$v+\".mpp\") | .signature_download_url=\"\" | .description=\"Personal development prerelease for this Morphe fork, including the YouTube video magnifier.\"' patches-bundle.json > patches-bundle.json.tmp && mv patches-bundle.json.tmp patches-bundle.json && python3 .github/scripts/generate_patches_readme.py $GITHUB_REPOSITORY $GITHUB_REF_NAME patches-list.json README.md && desired_bundle=\"patches-$(jq -r .version patches-bundle.json).mpp\" && find patches/build/libs -maxdepth 1 -type f -name \"patches-*.mpp\" ! -name \"$desired_bundle\" -delete"
+    }],
+    ["@semantic-release/git", {
+      "assets": ["CHANGELOG.md", "gradle.properties", "patches-bundle.json", "patches-list.json", "README.md"],
+      "message": "chore: Release v${nextRelease.version} [skip ci]"
+    }],
+    ["@semantic-release/github", {
+      "assets": [{ "path": "patches/build/libs/patches-!(*sources*|*javadoc*).mpp?(.asc)" }],
+      "successComment": false
+    }]
   ]
 }
