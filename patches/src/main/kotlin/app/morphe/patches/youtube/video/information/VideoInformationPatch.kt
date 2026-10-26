@@ -19,7 +19,6 @@ import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.getReference
-import app.morphe.patcher.util.matchSingle
 import app.morphe.patcher.util.p0Register
 import app.morphe.patcher.util.proxy.mutableTypes.MutableClass
 import app.morphe.patcher.util.proxy.mutableTypes.MutableField
@@ -77,7 +76,7 @@ internal const val EXTENSION_PLAYBACK_SPEED_MENU_INTERFACE =
     $$"Lapp/morphe/extension/youtube/patches/VideoInformation$PlaybackSpeedMenuInterface;"
 internal const val EXTENSION_EXOPLAYER_INTERFACE =
     "Lapp/morphe/extension/shared/patches/ExoPlayerInterface;"
-private const val EXTENSION_VIDEO_QUALITY_MENU_INTERFACE =
+internal const val EXTENSION_VIDEO_QUALITY_MENU_INTERFACE =
     $$"Lapp/morphe/extension/youtube/patches/VideoInformation$VideoQualityMenuInterface;"
 internal const val EXTENSION_VIDEO_QUALITY_INTERFACE =
     $$"Lapp/morphe/extension/youtube/patches/VideoInformation$VideoQualityInterface;"
@@ -577,7 +576,7 @@ val videoInformationPatch = bytecodePatch(
                 }
 
                 // A preloaded playback, such as the next Short, becomes the current one without loadVideo().
-                currentPlaybackFingerprint(playerResponseType).matchSingle().let { currentPlayback ->
+                currentPlaybackFingerprint(playerResponseType).let { currentPlayback ->
                     currentPlayback.method.apply {
                         val index = currentPlayback.instructionMatches.last().index
                         val playerResponseRegister = getInstruction<FiveRegisterInstruction>(index).registerC

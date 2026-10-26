@@ -19,20 +19,25 @@ import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMuta
 import app.morphe.patcher.util.registersUsed
 import app.morphe.patches.shared.misc.fix.proto.fixProtoLibraryPatch
 import app.morphe.patches.shared.misc.fix.proto.parseByteArrayWithRegistryMethodRef
+import app.morphe.patches.shared.misc.proto.hookElement
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
 import app.morphe.patches.youtube.layout.player.icons.copyPlayerButtonIcons
+import app.morphe.patches.youtube.misc.auth.authHookPatch
 import app.morphe.patches.youtube.misc.playercontrols.addTopControl
 import app.morphe.patches.youtube.misc.playercontrols.initializeTopControl
 import app.morphe.patches.youtube.misc.playercontrols.legacyPlayerControlsPatch
+import app.morphe.patches.youtube.misc.proto.elementProtoParserHookPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.misc.spoof.spoofVideoStreamsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.youtube.video.information.videoInformationPatch
+import app.morphe.util.ResourceGroup
+import app.morphe.util.copyResources
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
@@ -57,12 +62,25 @@ private val downloadsResourcePatch = resourcePatch {
                     TextPreference(
                         "morphe_external_downloader_name",
                         tag = "app.morphe.extension.shared.settings.preference.ExternalDownloaderPreference",
-                    )
+                    ),
+                    SwitchPreference("morphe_external_downloader_quick_menu", summary = true),
+                    SwitchPreference("morphe_external_downloader_mark_watched", summary = true)
                 )
             )
         )
 
         copyPlayerButtonIcons("downloads", "morphe_yt_download_button")
+
+        copyResources(
+            "downloads",
+            ResourceGroup(
+                "drawable",
+                "morphe_external_downloader_quick_video.xml",
+                "morphe_external_downloader_quick_video_bold.xml",
+                "morphe_external_downloader_quick_audio.xml",
+                "morphe_external_downloader_quick_audio_bold.xml"
+            )
+        )
     }
 
     finalize {
@@ -92,10 +110,12 @@ val downloadsPatch = bytecodePatch(
 ) {
     dependsOn(
         downloadsResourcePatch,
+        authHookPatch,
         videoInformationPatch,
         legacyPlayerControlsPatch,
         fixProtoLibraryPatch,
-        spoofVideoStreamsPatch
+        spoofVideoStreamsPatch,
+        elementProtoParserHookPatch
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)
@@ -116,6 +136,25 @@ val downloadsPatch = bytecodePatch(
                 """
             )
         }
+
+        // Open the external downloader with the playlist link, instead of saving the playlist.
+        OfflinePlaylistEndpointFingerprint.method.addInstructionsWithLabels(
+            0,
+            """
+                # The parameter registers can be higher than 15.
+                move-object/from16 v0, p3
+                move-object/from16 v1, p4
+                invoke-static { v0, v1 }, $EXTENSION_CLASS->offlinePlaylistEndpointOnClick(Ljava/lang/String;Ljava/lang/Enum;)Z
+                move-result v0
+                if-eqz v0, :show_native_downloader
+                return-void
+                :show_native_downloader
+                nop
+            """
+        )
+
+        // Add the Download button to the playlist page headers, which only Premium accounts get.
+        hookElement("$EXTENSION_IN_APP_DOWNLOADS_CLASS->addPlaylistDownloadButton")
 
         // region In-app downloads.
 

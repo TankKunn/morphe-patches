@@ -13,6 +13,7 @@ import android.content.ContextWrapper;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.widget.TextView;
 
 import androidx.annotation.GuardedBy;
 import androidx.annotation.Nullable;
@@ -35,10 +36,10 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.FeedEngagementCountsPatch;
 import app.morphe.extension.youtube.patches.FeedViewCountPatch;
+import app.morphe.extension.youtube.patches.PostImageDownloadPatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.PlayerType;
-import kotlin.Unit;
 
 /**
  * Finds the full width video cards of the feeds, and the video id of each card.
@@ -58,7 +59,8 @@ public final class FeedVideoCardsPatch {
 
     private static final boolean ENABLED = FeedEngagementCountsPatch.ENABLED
             || FeedViewCountPatch.ENABLED
-            || Settings.FEED_WATCH_LATER_BUTTON.get();
+            || Settings.FEED_WATCH_LATER_BUTTON.get()
+            || PostImageDownloadPatch.ENABLED;
 
     /**
      * A card must be as wide as a card of a grid of up to three columns, such as the feed in landscape.
@@ -125,7 +127,6 @@ public final class FeedVideoCardsPatch {
             // on the thumbnail is hidden while the video of the card plays in the feed.
             PlayerType.getOnChange().addObserver(type -> {
                 redrawCards();
-                return Unit.INSTANCE;
             });
         }
     }
@@ -185,7 +186,10 @@ public final class FeedVideoCardsPatch {
     private FeedVideoCardsPatch() {
     }
 
-    private static boolean contains(byte[] bytes, byte[] search) {
+    /**
+     * @return If the bytes include the search bytes, such as an ASCII text of an element.
+     */
+    public static boolean contains(byte[] bytes, byte[] search) {
         final int last = bytes.length - search.length;
         outer:
         for (int i = 0; i <= last; i++) {
@@ -364,8 +368,73 @@ public final class FeedVideoCardsPatch {
      * @return If the text is a duration, such as 4:05, or a badge such as the live badge.
      */
     public static boolean isVideoBadgeText(String text) {
-        return (text.length() <= MAX_DURATION_TEXT_LENGTH && DURATION_PATTERN.matcher(text).find())
+        return isDurationText(text)
                 || BADGE_PATTERN.matcher(text).matches();
+    }
+
+    private static boolean isDurationText(String text) {
+        return text.length() <= MAX_DURATION_TEXT_LENGTH && DURATION_PATTERN.matcher(text).find();
+    }
+
+    /**
+     * Classify the actual tapped card without the optional text-to-video cache.
+     * Music-video cards have a duration even when their watch command starts a Mix.
+     * An intentional Mix/playlist card has no duration. Unknown layouts are left alone.
+     * Must be called on the main thread while the tap's source view is still mounted.
+     */
+    public static boolean isIndividualVideoTap(View sender) {
+        ComponentHost root = findTappedRootHost(sender);
+        return root != null && isVideoShaped(root) && !hasHorizontalList(root) && !isInDialog(root)
+                && hasDuration(root);
+    }
+
+    /**
+     * Classify a mounted card whose command already identifies a Mix. Unlike an
+     * individual music video, a Mix card has no duration. Do not impose the full
+     * width feed geometry: Mix cards also appear in smaller library grids/shelves.
+     */
+    public static boolean isPlaylistTap(View sender) {
+        ComponentHost root = findTappedRootHost(sender);
+        return root != null && root.isAttachedToWindow() && !isInDialog(root) && !hasDuration(root);
+    }
+
+    /**
+     * @return The root host of the card that contains the tapped view.
+     */
+    @Nullable
+    public static ComponentHost findTappedRootHost(View sender) {
+        ViewParent parent = sender instanceof ComponentHost host ? host : sender.getParent();
+        while (parent instanceof View view && !(parent instanceof ComponentHost)) {
+            parent = view.getParent();
+        }
+        return parent instanceof ComponentHost host ? findRootHost(host) : null;
+    }
+
+    private static boolean hasDuration(View view) {
+        if (view instanceof ComponentHost host) {
+            TextContent content = host.getTextContent();
+            if (content != null) {
+                for (CharSequence text : content.getTextItems()) {
+                    if (text != null && isDurationText(text.toString().trim())) {
+                        return true;
+                    }
+                }
+            }
+        } else if (view instanceof TextView textView) {
+            CharSequence text = textView.getText();
+            if (text != null && isDurationText(text.toString().trim())) {
+                return true;
+            }
+        }
+        if (view instanceof ViewGroup group) {
+            for (int i = 0, count = group.getChildCount(); i < count; i++) {
+                View child = group.getChildAt(i);
+                if (child.getVisibility() == View.VISIBLE && hasDuration(child)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /**
@@ -510,7 +579,18 @@ public final class FeedVideoCardsPatch {
                 scores.merge(videoId, score, Integer::sum);
             }
         }
+        // The texts of a mix or a playlist, which are never shared with a video.
+        // A single short text can belong to an element of another video that was not seen.
+        return findBestMatch(scores);
+    }
 
+    /**
+     * @param scores Match -> score of the texts that belong to it, where a long text scores 2.
+     * @return The match with the highest score, or null if there is a tie
+     *         or the best match has only a single short text.
+     */
+    @Nullable
+    public static String findBestMatch(Map<String, Integer> scores) {
         String best = null;
         int bestScore = 0;
         boolean tie = false;
@@ -524,8 +604,6 @@ public final class FeedVideoCardsPatch {
                 tie = true;
             }
         }
-        // The texts of a mix or a playlist, which are never shared with a video.
-        // A single short text can belong to an element of another video that was not seen.
         return tie || bestScore < 2 ? null : best;
     }
 
@@ -605,6 +683,7 @@ public final class FeedVideoCardsPatch {
                 final String cardVideoId = PLAYLIST.equals(videoId) ? null : videoId;
                 FeedEngagementCountsPatch.onCardLaidOut(root, cardVideoId);
                 FeedViewCountPatch.onCardLaidOut(root, cardVideoId);
+                PostImageDownloadPatch.onRootLaidOut(root);
             }
         } catch (Exception ex) {
             Logger.printException(() -> "updateRoots failure", ex);

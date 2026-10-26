@@ -15,9 +15,15 @@ import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.patches.DownloadMode;
 import app.morphe.extension.shared.settings.preference.ExternalDownloaderPreference;
 import app.morphe.extension.youtube.settings.Settings;
+import app.morphe.extension.youtube.videoplayer.ExternalDownloadButton;
 
 @SuppressWarnings("unused")
 public final class DownloadsPatch {
+
+    /**
+     * Ordinal of the action of the offline playlist endpoint that saves the playlist.
+     */
+    private static final int OFFLINE_PLAYLIST_ACTION_ADD_ORDINAL = 1;
 
     /**
      * Injection point.
@@ -34,11 +40,40 @@ public final class DownloadsPatch {
                 return false;
             }
 
-            ExternalDownloaderPreference.launchExternalDownloader(
-                    videoId, Utils.getActivity(), "https://youtu.be/" + videoId);
+            if (ExternalDownloadButton.quickMenuOnTap()) {
+                ExternalDownloadButton.showQuickDownloadMenu(Utils.getActivity(), videoId);
+                return true;
+            }
+
+            ExternalDownloadButton.launchDownloader(Utils.getActivity(), videoId, null);
             return true;
         } catch (Exception ex) {
             Logger.printException(() -> "inAppDownloadButtonOnClick failure", ex);
+        }
+        return false;
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called when a playlist is saved or removed,
+     * such as with the Download button of a playlist page header.
+     * Only saving opens the external downloader, so playlists saved in-app can still be removed.
+     *
+     * @param action Action of the offline playlist endpoint.
+     */
+    public static boolean offlinePlaylistEndpointOnClick(String playlistId, Enum<?> action) {
+        try {
+            if (Settings.DOWNLOAD_MODE.get() != DownloadMode.EXTERNAL
+                    || action.ordinal() != OFFLINE_PLAYLIST_ACTION_ADD_ORDINAL) {
+                return false;
+            }
+
+            ExternalDownloaderPreference.launchExternalDownloader(playlistId, Utils.getActivity(),
+                    "https://www.youtube.com/playlist?list=" + playlistId);
+            return true;
+        } catch (Exception ex) {
+            Logger.printException(() -> "offlinePlaylistEndpointOnClick failure", ex);
         }
         return false;
     }

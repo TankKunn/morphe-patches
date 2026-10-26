@@ -10,11 +10,11 @@ pluginManagement {
             url = uri("https://maven.pkg.github.com/MorpheApp/registry")
             credentials {
                 username = providers.gradleProperty("gpr.user")
-                    .orElse(providers.environmentVariable("MORPHE_GPR_USER"))
-                    .getOrElse(System.getenv("GITHUB_ACTOR"))
+          .orElse(providers.environmentVariable("MORPHE_GPR_USER"))
+          .getOrElse(System.getenv("GITHUB_ACTOR"))
                 password = providers.gradleProperty("gpr.key")
-                    .orElse(providers.environmentVariable("MORPHE_GPR_KEY"))
-                    .getOrElse(System.getenv("GITHUB_TOKEN"))
+          .orElse(providers.environmentVariable("MORPHE_GPR_KEY"))
+          .getOrElse(System.getenv("GITHUB_TOKEN"))
             }
         }
         // Obtain baksmali/smali from source builds - https://github.com/iBotPeaches/smali
@@ -24,7 +24,7 @@ pluginManagement {
 }
 
 plugins {
-    id("app.morphe.patches") version "2.0.0"
+    id("app.morphe.patches") version "2.1.0-dev.1"
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 

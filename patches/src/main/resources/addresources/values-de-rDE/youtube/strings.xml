@@ -436,6 +436,17 @@ Meldungen sind öffentlich und werden überprüft, bevor ein Kanal zu einer List
   <string name="morphe_feed_long_press_menu_summary">Das Tippen und Gedrückthalten irgendwo auf einem Feed-Video öffnet dessen Menü</string>
   <string name="morphe_feed_watch_later_button_title">Schaltfläche \"Später ansehen\" auf Vorschaubildern anzeigen</string>
   <string name="morphe_feed_watch_later_button_summary">Auf den Vorschaubildern von Feed-Videos wird eine Schaltfläche \"Später ansehen\" angezeigt. Durch Tippen und Gedrückthalten wird \"In Wiedergachelste speichern\" geöffnet</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Beitragsbilder herunterladen</string>
+  <string name="morphe_post_image_download_summary">Neben der Teilen-Schaltfläche von Beiträgen mit Bildern oder GIFs wird eine Download-Schaltfläche angezeigt und dem Menü wird ein Download-Punkt hinzugefügt</string>
+  <string name="morphe_post_image_download_flyout">Bilder herunterladen</string>
+  <string name="morphe_post_image_download_flyout_single">Bild herunterladen</string>
+  <string name="morphe_post_image_download_started">%s Bilder werden heruntergeladen…</string>
+  <string name="morphe_post_image_download_started_single">Bild wird heruntergeladen…</string>
+  <string name="morphe_post_image_download_saved">%1$s Bilder unter %2$s gespeichert</string>
+  <string name="morphe_post_image_download_saved_single">Bild unter %s gespeichert</string>
+  <string name="morphe_post_image_download_failed">Das Bild konnte nicht heruntergeladen werden</string>
+  <string name="morphe_post_image_download_not_found">In diesem Beitrag wurde kein Bild gefunden</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Ask-Element zum Flyoutmenü hinzufügen</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Fügt einen Artikel zur Zusammenfassung von Videos im Feed-Flyoutmenü hinzu</string>
@@ -474,6 +485,16 @@ Nachdem ein Video mit der Ask-Schaltfläche einmal geöffnet wurde, funktioniert
   <string name="morphe_external_downloader_screen_summary">Videos, Podcasts oder Songs mit externen Download-Apps herunterladen</string>
   <string name="morphe_external_downloader_overlay_button_title">Schaltfläche zum Herunterladen der Player-Overlay anzeigen</string>
   <string name="morphe_external_downloader_overlay_button_summary">Zeigt eine Schaltfläche im Videoplayer, die Ihren externen Downloader öffnet</string>
+  <string name="morphe_external_downloader_quick_menu_title">Schneller Download per Fingertipp</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Aufforderungen zum Download im Hintergrund. Halten Sie zum Öffnen des Downloaders gedrückt. Funktioniert mit YTDLnis und YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Downloads als gesehen markieren</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Mit einem externen Downloader heruntergeladene Videos werden zu Ihrem YouTube-Verlauf hinzugefügt</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full-HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Mittel (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Schnell herunterladen</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Audio</string>
+  <string name="morphe_external_downloader_quick_options">Alle Optionen</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Sprachausgabe-Übersetzung</string>
   <string name="morphe_vot_screen_summary">Lies die Videountertitel laut mithilfe der Text-to-Speech-Funktion des Geräts, synchronisiert mit der Wiedergabe.</string>
@@ -589,14 +610,14 @@ Info: Funktioniert möglicherweise nicht bei Livestreams"</string>
   <string name="morphe_queue_restore_summary">Warteschlange wird nach Neustart der App beibehalten</string>
   <string name="morphe_swap_save_and_queue_actions_title">Tausche Speichern- und Warteschlangenaktionen</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Tippen für Warteschlangenoptionen, tippen und halten, um zu „Später ansehen“ hinzuzufügen.</string>
-  <string name="morphe_queue_override_flyout_menu_title">Überschreiben-Schaltfläche für Feed-Flyout-Warteschlange</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Öffnet die Morphe-Warteschlange anstelle der YouTube-Warteschlange</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Als Nächstes in der Warteschlange spielen</string>
+  <string name="morphe_queue_type_entry_1">Standard</string>
+  <string name="morphe_queue_type_entry_2">Eingebaute Warteschlange</string>
+  <string name="morphe_queue_type_entry_3">Morphe-Warteschlange</string>
+  <string name="morphe_queue_type_entry_4">Clientseitige Morphe-Warteschlange</string>
   <string name="morphe_queue_add_flyout_menu_title">Menüpunkt für Flyout-Warteschlange im Feed hinzufügen</string>
   <string name="morphe_queue_add_flyout_menu_summary">Fügt einen zusätzlichen Flyout-Eintrag hinzu. Aktivieren Sie diese Option, wenn \"Zur Warteschlange hinzufügen\" nicht angezeigt wird</string>
-  <string name="morphe_local_queue_title">Warteschlange im Premium-Stil</string>
-  <string name="morphe_local_queue_summary">"Ersetzt die Morphe-Warteschlange durch eine, die auf dem Gerät gespeichert ist, automatisch weiter abspielt und durch Ziehen neu angeordnet werden kann.
-
-Info: Das nächste Video in der Warteschlange startet nur, solange YouTube auf dem Bildschirm angezeigt wird"</string>
   <string name="morphe_local_queue_sheet_title">Warteschlange</string>
   <string name="morphe_local_queue_open">Warteschlange (%s)</string>
   <string name="morphe_local_queue_clear">Alle löschen</string>
@@ -641,6 +662,20 @@ Info: Das nächste Video in der Warteschlange startet nur, solange YouTube auf d
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Aus der Warteschlange entfernen und Video neu laden</string>
   <string name="morphe_queue_manager_open_queue">Warteschlange öffnen</string>
   <string name="morphe_queue_manager_save_queue">Warteschlange in Wiedergabeliste speichern</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Wiedergabeliste gespeichert</string>
+  <string name="morphe_native_playlist_queue_saved_to">In %s gespeichert</string>
+  <string name="morphe_native_playlist_queue_clear">Warteschlange leeren</string>
+  <string name="morphe_native_playlist_queue_cleared">Warteschlange gelöscht</string>
+  <string name="morphe_native_playlist_queue_title">Warteschlange</string>
+  <string name="morphe_native_playlist_queue_last">Als Letztes in der Warteschlange spielen</string>
+  <string name="morphe_native_playlist_queue_next">Als Nächstes in der Warteschlange spielen</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube kann die Warteschlange nicht anzeigen.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Die Warteschlange ist für dieses Video nicht bereit. Öffnen Sie den Videoplayer und versuchen Sie es erneut.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Mix zur Warteschlange hinzufügen oder Mix ansehen?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Ansehen</string>
+  <string name="morphe_native_playlist_queue_add_mix">Zur Warteschlange hinzufügen</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Mix wird geladen…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Kanal vom Live-Avatar aus öffnen</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Verhindert, dass der Livestream geöffnet wird, wenn Sie auf das Avatar des Kanals tippen</string>
@@ -854,8 +889,12 @@ Um auf Einstellungen zuzugreifen, aktivieren Sie die Schaltfläche „Einstellun
   <string name="morphe_navigation_bar_animations_summary">Audio Track-Menü-Fußzeile ausblenden</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Auto-Ausblenden der Navigationsleiste deaktivieren</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Audio Track-Menü-Header ausblenden</string>
-  <string name="morphe_disable_translucent_navigation_title">Transluzente Navigationsleiste deaktivieren</string>
-  <string name="morphe_disable_translucent_navigation_summary">Macht die Navigations- und Statusleiste vollständig undurchsichtig</string>
+  <string name="morphe_navigation_bar_style_title">Stil der Navigationsleiste</string>
+  <string name="morphe_navigation_bar_style_entry_1">Standard</string>
+  <string name="morphe_navigation_bar_style_entry_2">Transluzent</string>
+  <string name="morphe_navigation_bar_style_entry_3">Transparent</string>
+  <string name="morphe_navigation_bar_style_entry_4">Undurchsichtig</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Dieser Stil wird möglicherweise von Ihrem Gerät oder Ihrer YouTube-Version nicht unterstützt und kann zu Layoutproblemen oder Abstürzen führen</string>
   <string name="morphe_toolbar_screen_title">Leiste</string>
   <string name="morphe_toolbar_screen_summary">Wähle aus, welche Schaltflächen in der Toolbar erscheinen sollen</string>
   <string name="morphe_hide_toolbar_cast_button_title">Schaltfläche „Übertragen“ ausblenden</string>
@@ -1083,7 +1122,9 @@ Automotive-Layout
   <string name="morphe_tablet_layout_in_player_summary">"Stellt das alte Player-Layout wieder her
 
 Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert ist, ist das Overlay \"Mehr Videos\" möglicherweise nicht verfügbar"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Das Aktivieren dieser Option kann einige Player-Layout-Funktionen beeinträchtigen, z. B. den Kommentarbereich oder „Weitere Videos“ unterhalb des Players</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Die Aktivierung dieser Funktion kann einige Layout-Features des Players beeinträchtigen, wie z. B. den Kommentarbereich oder die unter dem Player angezeigten \"Weiteren Videos\".
+
+Das Tablet-Layout wird von YouTube nicht mehr unterstützt und ist in aktuellen YouTube-Versionen teilweise oder vollständig defekt. Für ein funktionierendes Tablet-Layout patchen Sie YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Altes Untertitelverhalten wiederherstellen</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Alte Shorts Spielersymbole wiederherstellen</string>
@@ -1351,6 +1392,11 @@ Videos werden über ein kurzes Präfix der gehashten Video-ID angefordert, sodas
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Zeigt eine Benachrichtigung an, wenn eine neue Standard-Wiedergabegeschwindigkeit gespeichert wurde</string>
   <string name="morphe_playback_speed_default_title">Standard Wiedergabegeschwindigkeit</string>
   <string name="morphe_shorts_playback_speed_default_title">Standard-Wiedergabegeschwindigkeit für Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Wiedergabegeschwindigkeit bei Shorts merken</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Wendet Ihre manuelle Auswahl der Shorts-Geschwindigkeit auf alle zukünftigen Shorts an. Wenn diese Option deaktiviert ist, kehrt die Geschwindigkeit nach dem Schließen des Shorts-Players zum Standardwert zurück</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Wiedergabegeschwindigkeit im Shorts-Menü anzeigen</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Fügt dem Menü des Shorts-Players einen Punkt für die Wiedergabegeschwindigkeit hinzu</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Abspielgeschwindigkeit · %s</string>
   <string name="morphe_remember_playback_speed_toast">Standard-Wiedergabegeschwindigkeit geändert zu: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Verwende normale Geschwindigkeit für Musik</string>
   <string name="morphe_disable_playback_speed_music_summary">Spiele Musikvideos immer mit 1,0-facher Geschwindigkeit ab</string>
