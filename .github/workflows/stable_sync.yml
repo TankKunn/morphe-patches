@@ -71,7 +71,11 @@ jobs:
           # Query upstream's latest release directly. Local tags include this
           # fork's own stable tags after the first release, so selecting from
           # the combined local tag namespace would eventually pick our tag.
-          UPSTREAM_TAG="$(gh api repos/MorpheApp/morphe-patches/releases/latest --jq '.tag_name')"
+          # The repository's GitHub App token is intentionally scoped to this
+          # fork and cannot read the upstream owner's API. This is a public
+          # endpoint, so query it without attaching the fork-only credential.
+          UPSTREAM_TAG="$(curl --fail --silent --show-error \
+            https://api.github.com/repos/MorpheApp/morphe-patches/releases/latest | jq -er '.tag_name')"
           test -n "$UPSTREAM_TAG"
           [[ "$UPSTREAM_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
           UPSTREAM_VERSION="${UPSTREAM_TAG#v}"
@@ -214,7 +218,10 @@ jobs:
           git diff --cached --check
           git commit -m "fix: publish stable Morphe patches v$VERSION with magnifier"
           CANDIDATE="$(git rev-parse HEAD)"
-          git push origin "$CANDIDATE:refs/heads/automation/stable-candidate"
+          # Remove the legacy fixed-name candidate left by earlier failed runs.
+          git push origin --delete automation/stable-candidate >/dev/null 2>&1 || true
+          CANDIDATE_BRANCH="automation/stable-candidate-$GITHUB_RUN_ID"
+          git push origin "$CANDIDATE:refs/heads/$CANDIDATE_BRANCH"
           gh release create "v$VERSION" "$BUNDLE" --target "$CANDIDATE" \
             --title "Morphe Patches v$VERSION (stable + magnifier)" \
             --notes "Stable upstream Morphe Patches v$UPSTREAM_VERSION with the reviewed YouTube magnifier. CI tests, bundle lint, manifest URL, and published asset verification passed."
@@ -224,7 +231,7 @@ jobs:
           git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
           test "$(git rev-parse origin/main)" = "$BASE_MAIN"
           git push origin "$CANDIDATE:refs/heads/main"
-          git push origin --delete automation/stable-candidate \
+          git push origin --delete "$CANDIDATE_BRANCH" \
             || echo 'Stable candidate branch cleanup failed; the release and main update are already complete.'
 
       - name: Report failed sync
@@ -252,3 +259,12 @@ jobs:
           gh issue create --repo "$GITHUB_REPOSITORY" \
             --title "Stable upstream sync failed (run $GITHUB_RUN_NUMBER)" --body "$body" \
             || echo 'Could not create issue; confirm repository Issues are enabled.'
+
+      - name: Clean up failed stable candidate ref
+        if: failure()
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          set +e
+          gh api --silent --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/automation/stable-candidate-$GITHUB_RUN_ID"
