@@ -1,9 +1,10 @@
 # Fork maintenance
 
-- `main` is the upstream baseline plus fork-specific automation. The custom YouTube magnifier is carried on `dev`.
-- Upstream updates are proposed to `dev` as pull requests. Review the build and compatibility results before merging; never fast-forward `dev` directly from an automatic job.
-- The `dev` prerelease workflow runs only by manual dispatch. Its `publish_prerelease` input defaults to `false`; leave it off for build-only validation.
-- Morphe Settings exposes one magnifier preference: `morphe_magnifier_enabled`. Border appearance stays in the player Style panel.
-- Package credentials must be read-only (`read:packages`) and supplied through user-level Gradle properties for local builds or the repository Actions secrets `MORPHE_GPR_USER` / `MORPHE_GPR_KEY` for CI. Never add credential values to source, workflow files, logs, or commits.
+- `main` holds the upstream baseline and fork automation; `dev` carries the YouTube magnifier and prerelease metadata.
+- The weekly upstream sync reapplies only the magnifier-specific source additions and credential fallback, then runs patch tests and builds the Android bundle before updating `dev`. Conflicts or failed checks stop the update and publication.
+- Dev prereleases are published by CI after a `dev` push passes tests and the bundle build. The sync and prerelease workflows share a concurrency lock. Manual dispatch defaults to build-only.
+- Crowdin workflows are intentionally disabled in this fork. Upstream `dev` sync brings upstream translation updates.
+- Morphe Settings exposes one magnifier preference: `morphe_magnifier_enabled`. Border appearance remains in the player Style panel.
+- Package credentials must be read-only (`read:packages`) and supplied through user-level Gradle properties for local builds or repository Actions secrets `MORPHE_GPR_USER` and `MORPHE_GPR_KEY` for CI. Never add credential values to source, workflow files, logs, or commits.
 - Keep APKs, bundles, signing files, local tools, device captures, and test logs out of Git.
-- The Windows build reached protobuf generation but Windows failed to start `protoc` with CreateProcess error 623. The patch Kotlin compilation passed; full extension/bundle validation remains for Linux CI or a Windows protobuf-runtime fix.
+- The local Windows build reached protobuf generation but Windows failed to start `protoc` with CreateProcess error 623. Kotlin patch compilation passed; full extension and bundle validation is performed by Linux CI.
