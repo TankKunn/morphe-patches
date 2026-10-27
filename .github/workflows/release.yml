@@ -67,7 +67,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
           MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
-        run: ./gradlew :patches:test :extensions:youtube:testDebugUnitTest --no-daemon
+        run: ./gradlew :patches:test :extensions:youtube:testDebugUnitTest generatePatchesList --no-daemon
 
       - name: Build Android bundle
         env:
@@ -84,7 +84,6 @@ jobs:
           MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          ./gradlew generatePatchesList --no-daemon
           version="$(sed -n 's/^version = //p' gradle.properties | tail -n 1)"
           jq --arg version "$version" '.version = $version' patches-list.json > patches-list.json.tmp
           mv patches-list.json.tmp patches-list.json
