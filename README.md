@@ -8,7 +8,7 @@ For the development channel, add [the `dev` branch](https://github.com/TankKunn/
 
 ## Switch from the official source
 
-1. In Morphe Manager, **disable** the official Morphe Patches source; do not delete it.
+1. In Morphe Manager, **disable** the official Morphe Patches source.
 2. Add this fork using the link above.
 3. Repatch YouTube once using this fork. That switches the installed patch set to this source.
 
@@ -17,7 +17,7 @@ For the development channel, add [the `dev` branch](https://github.com/TankKunn/
 - **Stable:** use the `main` source with **Pre-release patches off**. It follows upstream stable releases weekly, carries the magnifier version approved on `main`, and publishes a separate stable fork release only after tests, bundle lint, and the release-asset check pass.
 - **Development:** use the `dev` source with **Pre-release patches on**. It follows upstream `dev` weekly and publishes a prerelease after the same build and bundle checks pass.
 
-For newer experimental YouTube app versions, enable **Experimental app versions** for this source. Keep the official source disabled (not deleted) while using this fork.
+For newer experimental YouTube app versions, enable **Experimental app versions** for this source. Keep the official source disabled while using this fork.
 
 ## Updates and releases
 
