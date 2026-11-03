@@ -59,9 +59,13 @@ jobs:
           version="$(sed -n 's/^version = //p' gradle.properties | tail -n 1)"
           jq --arg v "$version" '.version = $v' patches-list.json > patches-list.json.tmp
           mv patches-list.json.tmp patches-list.json
+          jq --arg v "$version" --arg repo "$GITHUB_REPOSITORY" \
+            '.version = $v | .download_url = ("https://github.com/" + $repo + "/releases/download/v" + $v + "/patches-" + $v + ".mpp") | .signature_download_url = ""' \
+            patches-bundle.json > "$RUNNER_TEMP/patches-bundle.json"
           python3 .github/scripts/verify_magnifier_bundle.py \
             --bundle "patches/build/libs/patches-${version}.mpp" \
-            --patch-list patches-list.json --source-root .
+            --patch-list patches-list.json --manifest "$RUNNER_TEMP/patches-bundle.json" \
+            --expected-repo "$GITHUB_REPOSITORY" --source-root .
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
