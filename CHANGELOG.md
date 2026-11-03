@@ -1,3 +1,5 @@
+Personal development prerelease for this Morphe fork, including the YouTube video magnifier.
+
 ## [2.1.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v2.1.0-dev.6...v2.1.0-dev.7) (2026-11-03)
 
 ### ✨ New Features
