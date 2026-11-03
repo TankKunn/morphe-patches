@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 TEXT_SUFFIXES = {".yml", ".yaml", ".py", ".md", ".kts", ".kt", ".java", ".xml", ".sh", ".bat"}
-MARKERS = (b"<<<<<<< ", b"=======", b">>>>>>> ")
+MARKERS = (b"+<<<<<<< ", b"+=======", b"+>>>>>>> ")
 
 def git(*args: str) -> bytes:
     return subprocess.check_output(["git", *args])
@@ -24,7 +24,7 @@ def main() -> int:
         return 1
     diff = git("diff", "--cached", "--unified=0")
     for line in diff.splitlines():
-        if line.startswith(b"+") and not line.startswith(b"+++") and any(m in line for m in MARKERS):
+        if any(line.startswith(marker) for marker in MARKERS):
             print("Conflict marker found in staged changes", file=sys.stderr)
             return 1
     if not args.conflicts_only:
