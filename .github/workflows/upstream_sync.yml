@@ -81,7 +81,8 @@ jobs:
           git checkout "$OLD_DEV" -- \
             AGENTS.md .github/workflows/release.yml .github/workflows/open_pull_request.yml \
             .github/workflows/build_pull_request.yml .github/scripts/apply_magnifier_overlay.py \
-            .github/scripts/verify_magnifier_bundle.py .releaserc README.md \
+            .github/scripts/verify_magnifier_bundle.py .github/scripts/validate_sync_tree.py \
+            .gitattributes .releaserc README.md \
             extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/MagnifierRecon.java \
             patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt
           python3 .github/scripts/apply_magnifier_overlay.py --source-ref "$OLD_DEV"
