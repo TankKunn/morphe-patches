@@ -6,6 +6,12 @@ on:
   schedule:
     - cron: '37 8 * * 1'
   workflow_dispatch:
+    inputs:
+      candidate_only:
+        description: Validate candidate without publishing or updating main
+        type: boolean
+        required: true
+        default: false
 
 permissions:
   contents: write
@@ -235,7 +241,7 @@ jobs:
 
       - name: Commit candidate and publish stable release
         id: publish
-        if: steps.prepare.outputs.publish == 'true'
+        if: steps.prepare.outputs.publish == 'true' && inputs.candidate_only != true
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
