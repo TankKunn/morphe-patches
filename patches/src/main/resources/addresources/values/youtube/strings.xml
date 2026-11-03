@@ -1835,4 +1835,6 @@ Automatic recording is optional. It stops in incognito or when the account chang
     <string name="morphe_niconico_comments_max_length_title">Max comment length</string>
     <string name="morphe_niconico_comments_max_length_summary">Hides comments with more characters than this. Each emoji counts as one character</string>
     <string name="morphe_niconico_comments_max_length_no_limit">No limit</string>
+    <string name="morphe_magnifier_enabled_title">Video magnifier</string>
+    <string name="morphe_magnifier_enabled_summary">Show the video magnifier controls in the player.</string>
 </resources>
