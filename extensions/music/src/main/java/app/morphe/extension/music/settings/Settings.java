@@ -16,6 +16,7 @@ import app.morphe.extension.music.patches.CrossfadePatch.CrossFadeDuration;
 import app.morphe.extension.music.patches.CrossfadePatch.FadeCurve;
 import app.morphe.extension.music.patches.PlaylistTrackTapPatch.TapAction;
 import app.morphe.extension.music.patches.lyrics.derive.AiProviders;
+import app.morphe.extension.music.patches.lyrics.derive.LyricsRubyGenerator.RubyStyle;
 import app.morphe.extension.music.patches.lyrics.derive.OpenAIClient;
 import app.morphe.extension.music.patches.lyrics.model.LyricsFilterDefaults;
 import app.morphe.extension.music.patches.lyrics.model.MiniLyricsFormatter;
@@ -31,7 +32,6 @@ import app.morphe.extension.shared.settings.StringSetting;
 import app.morphe.extension.shared.settings.preference.SeekBarPreference;
 import app.morphe.extension.shared.settings.preference.SeekBarPreference.SeekBarConfig;
 import app.morphe.extension.shared.spoof.ClientType;
-
 
 @SuppressWarnings({"deprecation", "RedundantSuppression"})
 public class Settings extends SharedYouTubeSettings {
@@ -57,7 +57,7 @@ public class Settings extends SharedYouTubeSettings {
     // General (Layout)
     public static final EnumSetting<StartPage> CHANGE_START_PAGE = new EnumSetting<>("morphe_change_start_page", StartPage.DEFAULT, true);
     public static final BooleanSetting FORCE_PORTRAIT_ORIENTATION = new BooleanSetting("morphe_music_force_portrait_orientation", FALSE, true);
-    public static final BooleanSetting HIDE_CAST_BUTTON = new BooleanSetting("morphe_music_hide_cast_button", TRUE, true);
+    public static final BooleanSetting HIDE_CAST_BUTTON = new BooleanSetting("morphe_music_hide_cast_button", FALSE, true);
     public static final BooleanSetting HIDE_FILTER_BAR = new BooleanSetting("morphe_music_hide_filter_bar", FALSE, true);
     public static final BooleanSetting HIDE_HISTORY_BUTTON = new BooleanSetting("morphe_music_hide_history_button", FALSE, true);
     public static final BooleanSetting HIDE_SEARCH_BUTTON = new BooleanSetting("morphe_music_hide_search_button", FALSE, true);
@@ -121,6 +121,8 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_COMMENTS_COMMUNITY_GUIDELINES = new BooleanSetting("morphe_music_hide_comments_community_guidelines", FALSE);
     public static final BooleanSetting HIDE_COMMENTS_CONTEXT = new BooleanSetting("morphe_music_hide_comments_context", FALSE);
     public static final BooleanSetting HIDE_COMMENTS_EMOJI_BUTTON = new BooleanSetting("morphe_music_hide_comments_emoji_button", FALSE);
+    public static final BooleanSetting HIDE_COMMENTS_GIF_BUTTON = new BooleanSetting("morphe_music_hide_comments_gif_button", FALSE);
+    public static final BooleanSetting HIDE_COMMENTS_GIFS_AND_IMAGES = new BooleanSetting("morphe_music_hide_comments_gifs_and_images", FALSE);
     public static final BooleanSetting HIDE_COMMENTS_INFO_BUTTON = new BooleanSetting("morphe_music_hide_comments_info_button", FALSE, true);
     public static final BooleanSetting HIDE_COMMENTS_TIMESTAMP_BUTTON = new BooleanSetting("morphe_music_hide_comments_timestamp_button", FALSE);
 
@@ -209,22 +211,46 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting LYRICS_SHOW_COPY_BUTTON = new BooleanSetting("morphe_music_lyrics_show_copy_button", TRUE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_SHOW_SECTION = new BooleanSetting("morphe_music_lyrics_show_section", FALSE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_SHOW_TRANSLATE_BUTTON = new BooleanSetting("morphe_music_lyrics_show_translate_button", TRUE, false, parent(LYRICS_ENABLED));
-    public static final StringSetting LYRICS_TRANSLATION_PROVIDER = new StringSetting("morphe_music_lyrics_translation_provider", AiProviders.GOOGLE, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_TRANSLATE_BUTTON)));
+    /** A comma separated priority list; a leading '-' disables a provider. */
+    public static final StringSetting LYRICS_TRANSLATION_PROVIDERS = new StringSetting("morphe_music_lyrics_translation_provider", AiProviders.DEFAULT_TRANSLATION_ORDER, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_TRANSLATE_BUTTON)));
     public static final StringSetting LYRICS_TRANSLATION_LANGUAGE = new StringSetting("morphe_music_lyrics_translation_language", "DEFAULT", false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_TRANSLATE_BUTTON)));
 
     public static final BooleanSetting LYRICS_SHOW_ROMANIZE_BUTTON = new BooleanSetting("morphe_music_lyrics_show_romanize_button", TRUE, false, parent(LYRICS_ENABLED));
-    public static final StringSetting LYRICS_ROMANIZATION_PROVIDER = new StringSetting("morphe_music_lyrics_romanization_provider", AiProviders.GOOGLE, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_ROMANIZE_BUTTON)));
+    /** A comma separated priority list; a leading '-' disables a provider. */
+    public static final StringSetting LYRICS_ROMANIZATION_PROVIDERS = new StringSetting("morphe_music_lyrics_romanization_provider", AiProviders.DEFAULT_ROMANIZATION_ORDER, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_ROMANIZE_BUTTON)));
     public static final StringSetting LYRICS_ROMANIZE_LANGUAGE = new StringSetting("morphe_music_lyrics_romanize_language", "DEFAULT", false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_ROMANIZE_BUTTON)));
 
-    public static final StringSetting LYRICS_GEMINI_API_KEY = new StringSetting("morphe_music_lyrics_gemini_api_key", "", false, parent(LYRICS_ENABLED));
-    public static final StringSetting LYRICS_GEMINI_MODEL = new StringSetting("morphe_music_lyrics_gemini_model", "gemini-2.0-flash", false, parent(LYRICS_ENABLED));
-    public static final StringSetting LYRICS_DEEPL_API_KEY = new StringSetting("morphe_music_lyrics_deepl_api_key", "", false, parent(LYRICS_ENABLED));
     /**
-     * Romanizes on the device when the provider, an OpenAI-compatible endpoint and Google
-     * Translate have all failed. Off by default: it needs the reading dictionaries, and a user
-     * who never hits an online failure should not pay for them.
+     * Comma separated provider names ({@code sudachi}, {@code unidict}, {@code pinyin},
+     * {@code cldr}), or {@code none} for a saved choice of none. Blank means the user never chose.
      */
-    public static final BooleanSetting LYRICS_LOCAL_ROMANIZATION = new BooleanSetting("morphe_music_lyrics_local_romanization", FALSE, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_ROMANIZE_BUTTON)));
+    public static final StringSetting LYRICS_LOCAL_DICTIONARIES = new StringSetting("morphe_music_lyrics_local_dictionaries", "", false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_ROMANIZE_BUTTON)));
+
+    /**
+     * The Rime word tables the user added, one per line, as
+     * {@code subtag|label|url|charSource}. They are stored rather than shipped because a word
+     * list's licence and freshness are the user's to judge; the built-in Cantonese table is not
+     * listed here.
+     */
+    public static final StringSetting LYRICS_RIME_CUSTOM_DICTS = new StringSetting("morphe_music_lyrics_rime_custom_dicts", "", false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_ROMANIZE_BUTTON)));
+
+    /**
+     * The built-in word tables whose switch is on, as comma separated subtags. Empty means none,
+     * so a fresh install downloads nothing until a table is ticked.
+     */
+    public static final StringSetting LYRICS_RIME_BUILTIN_SELECTED = new StringSetting("morphe_music_lyrics_rime_builtin_selected", "", false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_ROMANIZE_BUTTON)));
+
+    /**
+     * Keep non-Latin readings supplied by the source, such as a Chinese transliteration of a
+     * Japanese song. Off accepts only Latin letters, accented letters and tone digits.
+     */
+    public static final BooleanSetting LYRICS_ALLOW_TRANSLITERATION = new BooleanSetting("morphe_music_lyrics_allow_transliteration", FALSE, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_ROMANIZE_BUTTON)));
+    public static final BooleanSetting LYRICS_SHOW_RUBY_BUTTON = new BooleanSetting("morphe_music_lyrics_show_ruby_button", TRUE, false, parent(LYRICS_ENABLED));
+    public static final StringSetting LYRICS_RUBY_PROVIDERS = new StringSetting("morphe_music_lyrics_ruby_provider", AiProviders.DEFAULT_RUBY_ORDER, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_RUBY_BUTTON)));
+    public static final EnumSetting<RubyStyle> LYRICS_RUBY_STYLE = new EnumSetting<>("morphe_music_lyrics_ruby_style", RubyStyle.HIRAGANA, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_RUBY_BUTTON)));
+    public static final StringSetting LYRICS_AI_RUBY_PROMPT = new StringSetting("morphe_music_lyrics_ai_ruby_prompt", OpenAIClient.RUBY_PROMPT, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_RUBY_BUTTON)));
+
+    public static final StringSetting LYRICS_DEEPL_API_KEY = new StringSetting("morphe_music_lyrics_deepl_api_key", "", false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_SHOW_REFRESH_BUTTON = new BooleanSetting("morphe_music_lyrics_show_refresh_button", TRUE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_USE_AI_SECTION = new BooleanSetting("morphe_music_lyrics_use_ai_section", FALSE, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_SECTION)));
     public static final StringSetting LYRICS_AI_BASE_URL = new StringSetting("morphe_music_lyrics_ai_base_url", "https://api.openai.com/v1/chat/completions", false, parent(LYRICS_ENABLED));
@@ -232,19 +258,31 @@ public class Settings extends SharedYouTubeSettings {
     public static final StringSetting LYRICS_AI_MODEL = new StringSetting("morphe_music_lyrics_ai_model", "gpt-4o-mini", false, parent(LYRICS_ENABLED));
     public static final StringSetting LYRICS_AI_REASONING_EFFORT = new StringSetting("morphe_music_lyrics_ai_reasoning_effort", "", false, parent(LYRICS_ENABLED));
     public static final StringSetting LYRICS_AI_EXTRA_BODY = new StringSetting("morphe_music_lyrics_ai_extra_body", "", false, parent(LYRICS_ENABLED));
+    /** A JSON object laid over the headers of every AI request; an empty value removes one. */
+    public static final StringSetting LYRICS_AI_EXTRA_HEADERS = new StringSetting("morphe_music_lyrics_ai_extra_headers", "", false, parent(LYRICS_ENABLED));
     public static final StringSetting LYRICS_AI_TRANSLATION_PROMPT = new StringSetting("morphe_music_lyrics_ai_prompt", OpenAIClient.DEFAULT_PROMPT, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_TRANSLATE_BUTTON)));
     public static final StringSetting LYRICS_AI_ROMANIZATION_PROMPT = new StringSetting("morphe_music_lyrics_ai_romanization_prompt", OpenAIClient.DEFAULT_PROMPT, false, parentsAll(parent(LYRICS_ENABLED), parent(LYRICS_SHOW_ROMANIZE_BUTTON)));
     public static final StringSetting LYRICS_AI_SECTION_PROMPT = new StringSetting("morphe_music_lyrics_ai_section_prompt", OpenAIClient.SECTION_PROMPT, false, parent(LYRICS_ENABLED));
     public static final StringSetting LYRICS_TRANSCRIBE_KEY = new StringSetting("morphe_music_lyrics_transcribe_key", "", false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_QUICKLRC_ENABLED = new BooleanSetting("morphe_music_lyrics_quicklrc_enabled", FALSE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_HIDE_INFO = new BooleanSetting("morphe_music_lyrics_hide_info", FALSE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_SWAP_TRANS_ROMA = new BooleanSetting("morphe_music_lyrics_swap_trans_roma", FALSE, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_SHOW_TRANSLATE_BUTTON, LYRICS_SHOW_ROMANIZE_BUTTON)));
+    /** Puts every line in the middle, whatever the format and its duet sides ask for. */
+    public static final BooleanSetting LYRICS_FORCE_CENTER = new BooleanSetting("morphe_music_lyrics_force_center", FALSE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_ROMANIZE = new BooleanSetting("morphe_music_lyrics_romanize", FALSE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_ROMANIZE_ONLY = new BooleanSetting("morphe_music_lyrics_romanize_only", FALSE, false, parent(LYRICS_ENABLED));
+    /** Shows the ruby reading above each word. */
+    public static final BooleanSetting LYRICS_RUBY = new BooleanSetting("morphe_music_lyrics_ruby", FALSE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_WORD_SYNC = new BooleanSetting("morphe_music_lyrics_word_sync", TRUE, false, parent(LYRICS_ENABLED));
+    /** Shrinks every line that is not the one being sung. */
+    public static final BooleanSetting LYRICS_LINE_SCALE = new BooleanSetting("morphe_music_lyrics_line_scale", TRUE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_HIDE_PLAYED = new BooleanSetting("morphe_music_lyrics_hide_played", FALSE, false, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_SPLIT_BACKGROUND = new BooleanSetting("morphe_music_lyrics_split_background", FALSE, false, parent(LYRICS_ENABLED));
+    /** Master switch for separating background vocals and harmony from the lead line. */
+    public static final BooleanSetting LYRICS_SPLIT_BACKGROUND = new BooleanSetting("morphe_music_lyrics_split_background", TRUE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_HIDE_UNPLAYED = new BooleanSetting("morphe_music_lyrics_hide_unplayed", FALSE, false, parent(LYRICS_ENABLED));
-    public static final IntegerSetting LYRICS_TEXT_SIZE = new IntegerSetting("morphe_music_lyrics_text_size", 26, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_DYNAMIC_BACKGROUND = new BooleanSetting("morphe_music_lyrics_dynamic_background", TRUE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_DYNAMIC_BACKGROUND_ANIMATED = new BooleanSetting("morphe_music_lyrics_dynamic_background_animated", TRUE, false, parent(LYRICS_DYNAMIC_BACKGROUND));
+    public static final IntegerSetting LYRICS_TEXT_SIZE = new IntegerSetting("morphe_music_lyrics_text_size", 28, false, parent(LYRICS_ENABLED));
     public static final IntegerSetting LYRICS_OFFSET_MS = new IntegerSetting("morphe_music_lyrics_offset_ms", 0, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_SB_MATCHING = new BooleanSetting("morphe_music_lyrics_sb_matching", TRUE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_MEDIASESSION = new BooleanSetting("morphe_music_lyrics_mediasession", FALSE, false, parent(LYRICS_ENABLED));
@@ -303,9 +341,10 @@ public class Settings extends SharedYouTubeSettings {
     private static final BooleanSetting DEPRECATED_HIDE_CATEGORY_BAR = new BooleanSetting("morphe_music_hide_category_bar", FALSE, true);
     private static final BooleanSetting DEPRECATED_MUSIC_IN_APP_DOWNLOADS = new BooleanSetting("morphe_music_in_app_downloads", FALSE);
     private static final BooleanSetting DEPRECATED_PERMANENT_REPEAT = new BooleanSetting("morphe_music_permanent_repeat", FALSE, true);
+    private static final BooleanSetting DEPRECATED_LYRICS_DISPLAY_ARTIST_FIRST = new BooleanSetting("morphe_music_lyrics_display_artist_first", FALSE, false);
     private static final BooleanSetting DEPRECATED_LYRICS_USE_AI_TRANSLATION = new BooleanSetting("morphe_music_lyrics_use_ai_translation", FALSE, false);
     private static final BooleanSetting DEPRECATED_LYRICS_USE_AI_ROMANIZATION = new BooleanSetting("morphe_music_lyrics_use_ai_romanization", FALSE, false);
-    private static final BooleanSetting DEPRECATED_LYRICS_DISPLAY_ARTIST_FIRST = new BooleanSetting("morphe_music_lyrics_display_artist_first", FALSE, false);
+    private static final BooleanSetting DEPRECATED_LYRICS_LOCAL_ROMANIZATION = new BooleanSetting("morphe_music_lyrics_local_romanization", FALSE, false);
 
     static {
         migrateOldSettingToNew(DEPRECATED_EXTERNAL_DOWNLOADER_FLYOUT_BUTTON, DEPRECATED_EXTERNAL_DOWNLOADER_FLYOUT_MENU);
@@ -313,15 +352,9 @@ public class Settings extends SharedYouTubeSettings {
         migrateOldSettingToNew(DEPRECATED_PERMANENT_REPEAT, REMEMBER_REPEAT_STATE);
         migrateInAppDownloadsToDownloadMode();
         migrateDownloadButtonOverride();
-        migrateLyricsAiSwitchToProvider(DEPRECATED_LYRICS_USE_AI_TRANSLATION, LYRICS_TRANSLATION_PROVIDER);
-        migrateLyricsAiSwitchToProvider(DEPRECATED_LYRICS_USE_AI_ROMANIZATION, LYRICS_ROMANIZATION_PROVIDER);
         migrateLyricsArtistFirstToTrackFormat();
-        if ("openrouter".equals(LYRICS_TRANSLATION_PROVIDER.get()) || "openai".equals(LYRICS_TRANSLATION_PROVIDER.get())) {
-            LYRICS_TRANSLATION_PROVIDER.save(AiProviders.OPENAI_COMPATIBLE);
-        }
-        if ("openrouter".equals(LYRICS_ROMANIZATION_PROVIDER.get()) || "openai".equals(LYRICS_ROMANIZATION_PROVIDER.get())) {
-            LYRICS_ROMANIZATION_PROVIDER.save(AiProviders.OPENAI_COMPATIBLE);
-        }
+        migrateQuickLrcEnabled();
+        migrateLyricsProviderSwitches();
     }
 
     static {
@@ -370,20 +403,6 @@ public class Settings extends SharedYouTubeSettings {
         DEPRECATED_MUSIC_IN_APP_DOWNLOADS.resetToDefault();
     }
 
-    /**
-     * The External downloader mode now always replaces the Download button and menu, and the overrides
-     * were removed. Before, the Download button and menu were only replaced if their override was on.
-     * The menu overrides are not migrated to the new menu switch, which also applies to in-app downloads.
-     * The External downloader mode is still in use, so a marker is the only way to tell this already ran.
-     */
-    /** The AI switch used the OpenAI-compatible endpoint, which is now one of the providers to pick. */
-    private static void migrateLyricsAiSwitchToProvider(BooleanSetting oldSwitch, StringSetting provider) {
-        if (oldSwitch.get() && provider.isSetToDefault()) {
-            provider.save(AiProviders.OPENAI_COMPATIBLE);
-        }
-        oldSwitch.resetToDefault();
-    }
-
     /** The artist first switch was replaced with the track label format. */
     private static void migrateLyricsArtistFirstToTrackFormat() {
         if (DEPRECATED_LYRICS_DISPLAY_ARTIST_FIRST.get() && LYRICS_MINI_TRACK_FORMAT.isSetToDefault()) {
@@ -392,6 +411,56 @@ public class Settings extends SharedYouTubeSettings {
         DEPRECATED_LYRICS_DISPLAY_ARTIST_FIRST.resetToDefault();
     }
 
+    /**
+     * Before the switch existed a stored key alone turned QuickLRC on, so leaving the new switch
+     * off would take the feature away from everyone who had configured it.
+     */
+    private static void migrateQuickLrcEnabled() {
+        if (LYRICS_QUICKLRC_ENABLED.isSetToDefault()) {
+            return;
+        }
+        final String key = LYRICS_TRANSCRIBE_KEY.get();
+        if (key != null && !key.trim().isEmpty()) {
+            LYRICS_QUICKLRC_ENABLED.save(true);
+        }
+    }
+
+    /** The three switches of v2.0.0 became entries of the provider lists. */
+    private static void migrateLyricsProviderSwitches() {
+        // Writing the defaults back would pin them, so a future default change would never apply.
+        if (DEPRECATED_LYRICS_USE_AI_TRANSLATION.isSetToDefault()
+                && DEPRECATED_LYRICS_USE_AI_ROMANIZATION.isSetToDefault()
+                && DEPRECATED_LYRICS_LOCAL_ROMANIZATION.isSetToDefault()) {
+            return;
+        }
+
+        if (DEPRECATED_LYRICS_USE_AI_TRANSLATION.get()) {
+            LYRICS_TRANSLATION_PROVIDERS.save(AiProviders.withProviderEnabled(
+                    LYRICS_TRANSLATION_PROVIDERS.get(), AiProviders.TRANSLATION_ORDER,
+                    AiProviders.OPENAI_COMPATIBLE, true));
+        }
+        if (DEPRECATED_LYRICS_USE_AI_ROMANIZATION.get()) {
+            LYRICS_ROMANIZATION_PROVIDERS.save(AiProviders.withProviderEnabled(
+                    LYRICS_ROMANIZATION_PROVIDERS.get(), AiProviders.ROMANIZATION_ORDER,
+                    AiProviders.OPENAI_COMPATIBLE, true));
+        }
+        if (DEPRECATED_LYRICS_LOCAL_ROMANIZATION.get()) {
+            LYRICS_ROMANIZATION_PROVIDERS.save(AiProviders.withProviderEnabled(
+                    LYRICS_ROMANIZATION_PROVIDERS.get(), AiProviders.ROMANIZATION_ORDER,
+                    AiProviders.LOCAL, true));
+        }
+
+        DEPRECATED_LYRICS_USE_AI_TRANSLATION.resetToDefault();
+        DEPRECATED_LYRICS_USE_AI_ROMANIZATION.resetToDefault();
+        DEPRECATED_LYRICS_LOCAL_ROMANIZATION.resetToDefault();
+    }
+
+    /**
+     * The External downloader mode now always replaces the Download button and menu, and the overrides
+     * were removed. Before, the Download button and menu were only replaced if their override was on.
+     * The menu overrides are not migrated to the new menu switch, which also applies to in-app downloads.
+     * The External downloader mode is still in use, so a marker is the only way to tell this already ran.
+     */
     private static void migrateDownloadButtonOverride() {
         if (DOWNLOAD_BUTTON_OVERRIDE_MIGRATED.get()) {
             return;

@@ -9,14 +9,13 @@ package app.morphe.patches.youtube.interaction.nativeplaylistqueue
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.patch.BytecodePatchContext
-import app.morphe.patcher.util.getReference
 import app.morphe.patcher.util.proxy.mutableTypes.MutableClass
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patches.shared.misc.fix.proto.ProtobufClassParseByteArrayWithRegistryFingerprint
+import app.morphe.patches.shared.misc.fix.proto.protoDefaultInstanceFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
-import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 
@@ -50,7 +49,7 @@ internal fun BytecodePatchContext.parseProtoInstructions(
     registry: String
 ): String {
     val defaultInstance = protoDefaultInstanceFingerprint(messageType)
-        .instructionMatches.single().instruction.getReference<FieldReference>()!!
+        .instructionMatches.single().fieldReference
 
     // Generated messages share the static parseFrom of the protobuf runtime's message class.
     val parser = ProtobufClassParseByteArrayWithRegistryFingerprint.originalMethod

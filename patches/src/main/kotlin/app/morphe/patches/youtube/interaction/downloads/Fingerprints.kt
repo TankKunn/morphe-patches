@@ -11,6 +11,7 @@
 package app.morphe.patches.youtube.interaction.downloads
 
 import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
 import app.morphe.patcher.anyInstruction
 import app.morphe.patcher.checkCast
 import app.morphe.patcher.fieldAccess
@@ -134,6 +135,26 @@ internal object OfflinePlayerResponseFingerprint : Fingerprint(
 )
 
 /**
+ * Updates the offline state of a saved video with the state of the 'player/refresh' response.
+ * Matches two methods, one for each of the two ways the app refreshes saved videos.
+ */
+internal object UpdateOfflineVideoPolicyFingerprint : Fingerprint(
+    returnType = "V",
+    parameters = listOf(
+        "L",
+        "J", // Time of the refresh.
+        "L", // Offline state.
+        "L" // Video policy.
+    ),
+    filters = listOf(
+        anyInstruction(
+            string("[Offline] UpdateVideoPolicy failed for video "), // 20.x
+            string("[Offline] UpdateVideoPolicy failed for video %s") // 21.x
+        )
+    )
+)
+
+/**
  * Creates a player response model from the bytes of a player response.
  */
 internal fun playerResponseModelFromBytesFingerprint(playerResponseModel: String) = Fingerprint(
@@ -153,5 +174,25 @@ internal fun playerResponseGetterFingerprint(playerResponseModelClass: String, p
     definingClass = playerResponseModelClass,
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = playerResponse,
+    parameters = listOf()
+)
+
+/**
+ * Reads the interaction logger from the context of a command, as the interaction logger interface.
+ */
+internal object InteractionLoggerContextFingerprint : Fingerprint(
+    filters = listOf(
+        string("com.google.android.libraries.youtube.logging.interaction_logger"),
+        opcode(Opcode.CONST_CLASS, location = MatchAfterImmediately())
+    )
+)
+
+/**
+ * Extension method, that returns the interaction logger that logs nothing.
+ */
+internal object NoOpInteractionLoggerFingerprint : Fingerprint(
+    definingClass = EXTENSION_IN_APP_DOWNLOADS_CLASS,
+    name = "getNoOpInteractionLogger",
+    returnType = "Ljava/lang/Object;",
     parameters = listOf()
 )

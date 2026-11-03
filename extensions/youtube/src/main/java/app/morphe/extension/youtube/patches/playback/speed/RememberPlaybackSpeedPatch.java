@@ -52,6 +52,12 @@ public final class RememberPlaybackSpeedPatch {
     private static volatile float shortsPlaybackSpeed = -2.0f;
 
     /**
+     * If the app plays faster while the screen is held, until it sets another speed
+     * when the screen is released.
+     */
+    private static volatile boolean speedmasterActive;
+
+    /**
      * The speed the user selected in the Shorts player, or a negative value if none.
      * Used for every following Short until the Shorts player closes.
      */
@@ -61,6 +67,7 @@ public final class RememberPlaybackSpeedPatch {
         // The Shorts player does not set a playback speed when a Short starts,
         // so the Shorts speed is set once when the Shorts player opens.
         ShortsPlayerState.getOnChange().addObserver((Boolean isOpen) -> {
+            speedmasterActive = false;
             if (isOpen) {
                 applyShortsPlaybackSpeed(true);
             } else {
@@ -217,8 +224,8 @@ public final class RememberPlaybackSpeedPatch {
                     ? Settings.SHORTS_PLAYBACK_SPEED_DEFAULT
                     : Settings.PLAYBACK_SPEED_DEFAULT;
 
-            // Prevent toast spamming if using the 0.05x adjustments.
-            // Show exactly one toast after the user stops interacting with the speed menu.
+            // Prevent message spamming if using the 0.05x adjustments.
+            // Show exactly one message after the user stops interacting with the speed menu.
             final long now = System.currentTimeMillis();
             lastTimeSpeedChanged = now;
 
@@ -237,7 +244,7 @@ public final class RememberPlaybackSpeedPatch {
                 defaultSpeedSetting.save(finalPlaybackSpeed);
 
                 if (Settings.REMEMBER_PLAYBACK_SPEED_LAST_SELECTED_TOAST.get())
-                    Utils.showToastShort(str("morphe_remember_playback_speed_toast",
+                    Utils.showSnackbarShort(str("morphe_remember_playback_speed_toast",
                             (String.format(java.util.Locale.US, "%.2fx", finalPlaybackSpeed))));
             }, TOAST_DELAY_MILLISECONDS);
         } catch (Exception ex) {
@@ -258,8 +265,8 @@ public final class RememberPlaybackSpeedPatch {
             // Will already be in range, below line is just a fail-safe.
             playbackAudioPitch = Math.min(playbackAudioPitch, VideoInformation.PLAYBACK_AUDIO_PITCH_MAXIMUM);
 
-            // Prevent toast spamming if using the 0.05x adjustments.
-            // Show exactly one toast after the user stops interacting with the pitch menu.
+            // Prevent message spamming if using the 0.05x adjustments.
+            // Show exactly one message after the user stops interacting with the pitch menu.
             final long now = System.currentTimeMillis();
             lastTimePitchChanged = now;
 
@@ -277,15 +284,25 @@ public final class RememberPlaybackSpeedPatch {
                 }
                 Settings.PLAYBACK_AUDIO_PITCH_DEFAULT.save(finalPlaybackAudioPitch);
 
-                // Sharing toast with video speed
+                // Sharing message with video speed
                 if (Settings.REMEMBER_PLAYBACK_SPEED_LAST_SELECTED_TOAST.get()) {
-                    Utils.showToastShort(str("morphe_remember_playback_audio_pitch_toast",
+                    Utils.showSnackbarShort(str("morphe_remember_playback_audio_pitch_toast",
                             (String.format(java.util.Locale.US, "%.2fx", finalPlaybackAudioPitch))));
                 }
             }, TOAST_DELAY_MILLISECONDS);
         } catch (Exception ex) {
             Logger.printException(() -> "userSelectedPlaybackAudioPitch failure", ex);
         }
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called right before the app plays faster while the screen is held, so the Shorts speed
+     * does not replace that speed (<a href="https://github.com/MorpheApp/morphe-patches/issues/3482">...</a>).
+     */
+    public static void onSpeedmasterStarted() {
+        speedmasterActive = true;
     }
 
     /**
@@ -299,6 +316,14 @@ public final class RememberPlaybackSpeedPatch {
         try {
             if (!ShortsPlayerState.isOpen() || VideoInformation.isLiveStream()) {
                 return playbackSpeed;
+            }
+            if (speedmasterActive) {
+                // 2.0x, or the custom tap and hold speed.
+                if (playbackSpeed == CustomPlaybackSpeedPatch.getTapAndHoldSpeed()) {
+                    return playbackSpeed;
+                }
+                // The screen was released, and the app restores the speed it played at before.
+                speedmasterActive = false;
             }
             final float sessionSpeed = getShortsSessionSpeed();
             if (sessionSpeed <= 0) {

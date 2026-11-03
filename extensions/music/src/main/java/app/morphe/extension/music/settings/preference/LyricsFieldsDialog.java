@@ -43,6 +43,20 @@ final class LyricsFieldsDialog {
         content.addView(label);
     }
 
+    /** A field label, such as the format hint, in the dimmed note style the dictionaries use. */
+    void addNoteLabel(String key) {
+        TextView label = new TextView(context);
+        label.setText(str(key));
+        label.setTextColor(withAlpha(ThemeUtils.getAppForegroundColor(), 0x99));
+        label.setTextSize(14);
+        label.setPadding(0, Dim.dp12, 0, Dim.dp8);
+        content.addView(label);
+    }
+
+    private static int withAlpha(int color, int alpha) {
+        return (alpha << 24) | (color & 0x00FFFFFF);
+    }
+
     EditText addInput(String labelKey, String value, int inputType) {
         addLabel(labelKey);
         EditText input = ThemedInput.create(context);
@@ -66,9 +80,11 @@ final class LyricsFieldsDialog {
                 true);
         ScrollView scroll = new ScrollView(context);
         scroll.addView(content);
-        pair.second.addView(scroll, pair.second.getChildCount() - 1,
-                new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT));
+        // Sizing to content would push the buttons off a short screen.
+        LinearLayout.LayoutParams scrollParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, 0, 1.0f);
+        scrollParams.bottomMargin = Dim.dp12;
+        pair.second.addView(scroll, Math.max(0, pair.second.getChildCount() - 1), scrollParams);
         pair.first.show();
     }
 

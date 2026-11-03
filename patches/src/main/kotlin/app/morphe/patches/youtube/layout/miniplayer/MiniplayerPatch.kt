@@ -15,11 +15,11 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
+import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.cloneParameters
 import app.morphe.patcher.util.findFreeRegister
-import app.morphe.patcher.util.getReference
 import app.morphe.patcher.util.numberOfParameterRegisters
 import app.morphe.patcher.util.proxy.mutableTypes.MutableField.Companion.toMutable
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
@@ -40,9 +40,11 @@ import app.morphe.patches.youtube.misc.playservice.is_20_37_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_17_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_29_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_30_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_32_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_42_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_43_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_44_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
@@ -66,7 +68,6 @@ import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
-import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.immutable.ImmutableField
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
@@ -80,7 +81,7 @@ internal const val MINIMAL_BOUNDS_INTERFACE =
 val miniplayerPatch = bytecodePatch(
     name = "Miniplayer",
     description = "Adds options to change the in-app minimized player. " +
-            "Patching 21.28.206 and lower has more miniplayer types to choose from."
+            "Patching 21.28.208 and lower has more miniplayer types to choose from."
 ) {
     dependsOn(
         sharedExtensionPatch,
@@ -100,15 +101,23 @@ val miniplayerPatch = bytecodePatch(
 
         if (is_20_37_or_greater) {
             // 21.29 removed all modern miniplayers except modern 4
-            preferences += if (!is_21_29_or_greater) {
-                ListPreference("morphe_miniplayer_type")
+            if (!is_21_29_or_greater) {
+                preferences += ListPreference("morphe_miniplayer_type")
             } else {
                 // Only modern 4 is left, plus the minimal bar rebuilt on top of it.
-                ListPreference(
+                preferences += ListPreference(
                     key = "morphe_miniplayer_type",
                     entriesKey = "morphe_miniplayer_type_21_29_entries",
                     entryValuesKey = "morphe_miniplayer_type_21_29_entry_values"
                 )
+                // TODO: Eventually remove this.
+                //       Tell stable users upgrading from 21.23 where the other miniplayers went.
+                if (!is_21_31_or_greater) {
+                    preferences += NonInteractivePreference(
+                        key = "morphe_miniplayer_not_available",
+                        selectable = false
+                    )
+                }
             }
         } else {
             preferences += ListPreference(
@@ -120,6 +129,8 @@ val miniplayerPatch = bytecodePatch(
 
         preferences += SwitchPreference("morphe_miniplayer_disable_resuming", summary = true)
         preferences += SwitchPreference("morphe_miniplayer_hide_title")
+        preferences += SwitchPreference("morphe_miniplayer_swipe_up_expand", summary = true)
+        preferences += SwitchPreference("morphe_miniplayer_docked", summary = true)
         preferences += SwitchPreference("morphe_miniplayer_disable_rounded_corners")
         preferences += SwitchPreference("morphe_miniplayer_disable_drag_and_drop", summary = true)
         preferences += SwitchPreference("morphe_miniplayer_disable_horizontal_drag", summary = true)
@@ -268,9 +279,12 @@ val miniplayerPatch = bytecodePatch(
             MiniplayerModernConstructorFingerprint.classDef.methods.forEach {
                 it.apply {
                     if (AccessFlags.CONSTRUCTOR.isSet(accessFlags)) {
-                        val iPutIndex = indexOfFirstInstructionOrThrow {
-                            opcode == Opcode.IPUT && getReference<FieldReference>()?.type == "I"
-                        }
+                        val iPutIndex = indexOfFirstInstructionOrThrow(
+                            fieldAccess(
+                                opcode = Opcode.IPUT,
+                                type = "I"
+                            )
+                        )
 
                         val register = getInstruction<TwoRegisterInstruction>(iPutIndex).registerA
                         addInstructionsAtControlFlowLabel(
@@ -374,7 +388,11 @@ val miniplayerPatch = bytecodePatch(
                 "getRoundedCorners",
             )
         } else {
-            MiniplayerRoundedCornersFingerprint.let {
+            (if (is_21_44_or_greater) {
+                MiniplayerRoundedCornersFingerprint
+            } else {
+                MiniplayerRoundedCornersLegacyFingerprint
+            }).let {
                 it.method.apply {
                     val index = it.instructionMatches.last().index
                     val free = findFreeRegister(index)
@@ -427,7 +445,7 @@ val miniplayerPatch = bytecodePatch(
         MiniplayerOffscreenHandlerFingerprint.let {
             it.method.apply {
                 val index = it.instructionMatches.last().index
-                val free = findFreeRegister(index)
+                val free = findFreeRegister(index + 1)
 
                 addInstructionsWithLabels(
                     index + 1,
@@ -452,7 +470,7 @@ val miniplayerPatch = bytecodePatch(
         // unchanged, and the rebuild otherwise happens later, such as when scrolling the watch
         // page or when the home is laid out again after minimizing the player.
         ListLayoutChangeFingerprint.let {
-            val pendingField = it.instructionMatches[8].getFieldAccessed()
+            val pendingField = it.instructionMatches[8].fieldReference
 
             // Orientation the last size of the list was laid out in.
             val sizeOrientationField = ImmutableField(
@@ -661,6 +679,14 @@ val miniplayerPatch = bytecodePatch(
                     """
                 )
             }
+        }
+
+        // The bar is moved up by the same height as YouTube's own miniplayer.
+        BottomUiContainerReportHeightFingerprint.let {
+            it.method.addInstruction(
+                it.instructionMatches.first().index,
+                "invoke-static { p1 }, $MINIMAL_EXTENSION_CLASS->setBottomUiHeight(I)V"
+            )
         }
 
         // Exposed so the bar shape can be applied on demand. Only this setter runs the

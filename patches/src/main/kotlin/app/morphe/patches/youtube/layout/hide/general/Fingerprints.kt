@@ -525,11 +525,6 @@ internal object ChannelTabBuilderLegacyFingerprint : Fingerprint(
 internal object ChannelTabRendererFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
-    parameters = listOf(
-        "L",
-        "Ljava/util/List;",
-        "I"
-    ),
     filters = listOf(
         opcode(Opcode.IF_EQ),
         anyInstruction(
@@ -591,6 +586,14 @@ internal object InformationButtonFingerprint : Fingerprint(
         resourceLiteral(ResourceType.ID, "information_button"),
         opcode(Opcode.CHECK_CAST)
     )
+)
+
+/**
+ * Reads the payload of an entity sent by the server. Its field number is the type of the entity.
+ */
+internal object EntityMutationPayloadFingerprint : Fingerprint(
+    returnType = "[B",
+    strings = listOf("There can be only one field in EntityMutationPayload")
 )
 
 internal object CreateSearchSuggestionsFingerprint : Fingerprint(

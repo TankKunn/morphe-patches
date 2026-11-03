@@ -16,6 +16,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
@@ -51,6 +52,7 @@ import app.morphe.extension.shared.settings.IntegerSetting;
 import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.Accessibility;
 import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.AccessibilityData;
+import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.BrowseEndpoint;
 import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.ButtonRenderer;
 import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.ButtonRendererAccessibilityData;
 import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.ButtonSheetRenderer;
@@ -63,14 +65,18 @@ import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.CreationMo
 import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.CreationModesSwitcherRenderer;
 import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.CreationModesSwitcherRendererHolder;
 import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.NavigationEndpoint;
+import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.NavigationType;
+import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.PivotBarItemBytes;
 import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.PivotBarItemRenderer;
+import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.PivotBarItemRendererBytes;
 import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.RendererAccessibilityData;
+import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.Runs;
+import app.morphe.extension.youtube.innertube.GuideResponseOuterClass.Title;
 import app.morphe.extension.youtube.innertube.IconOuterClass.Icon;
 import app.morphe.extension.youtube.innertube.IconOuterClass.YTIconType;
 import app.morphe.extension.youtube.patches.spoof.SpoofOSNamePatch;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.NavigationBar;
-import app.morphe.extension.youtube.shared.PlayerType;
 
 @SuppressWarnings("unused")
 public final class NavigationBarPatch {
@@ -105,7 +111,13 @@ public final class NavigationBarPatch {
         OPAQUE
     }
 
-    private static final NavigationBarStyle NAVIGATION_BAR_STYLE = Settings.NAVIGATION_BAR_STYLE.get();
+    /**
+     * The flags of the translucent navigation bar are also overridden without this patch,
+     * see {@link #isNavigationBarBehindSystemButtons(boolean)}. They are then left to the account.
+     */
+    private static final NavigationBarStyle NAVIGATION_BAR_STYLE = isPatchIncluded()
+            ? Settings.NAVIGATION_BAR_STYLE.get()
+            : NavigationBarStyle.DEFAULT;
 
     private static final boolean NARROW_NAVIGATION_BUTTONS = Settings.NARROW_NAVIGATION_BUTTONS.get();
 
@@ -151,6 +163,12 @@ public final class NavigationBarPatch {
      * Injection point.
      */
     public static void navigationTabCreated(NavigationBar.NavigationButton button, View tabView) {
+        GlassNavigationBar.navigationTabCreated(button, tabView);
+
+        if (button == NavigationBar.NavigationButton.NOTIFICATIONS) {
+            notificationsTabCreated = true;
+        }
+
         if (SHOW_SEARCH_BUTTON && button == NavigationBar.NavigationButton.SEARCH) {
             Utils.runOnMainThread(() -> tabView.setOnClickListener(openSearchBarOnClickListener));
             return;
@@ -225,43 +243,122 @@ public final class NavigationBarPatch {
     }
 
     /**
-     * Injection point.
-     * <p>
+     * Value of the navigation bar covering the system navigation buttons flag first read by the app,
+     * or null if not read yet.
+     */
+    @Nullable
+    private static volatile Boolean accountCoversSystemButtons;
+
+    /**
+     * Value of the feed behind the navigation bar flag first read by the app, or null if not read yet.
+     */
+    @Nullable
+    private static volatile Boolean accountFeedBehindNavigationBar;
+
+    /**
      * The translucent navigation bar comes from feature flags that not every account gets, so they
-     * are turned on to make the bar look the same on every account. With them, the navigation bar
-     * and the pages make room for the system navigation buttons, which is only right when
-     * the window is drawn behind them. That comes from the edge to edge top bar feature flag,
-     * so without it the room is added twice: the navigation bar is raised and an empty bar is left
-     * at the bottom (https://github.com/MorpheApp/morphe-patches/issues/3825).
+     * are turned on to make the bar look the same on every account. With the navigation bar covering
+     * the system navigation buttons and the feed laid out behind it, the navigation bar and the pages
+     * make room for the system navigation buttons, which is only right when the window is drawn behind
+     * them. That comes from the edge to edge top bar feature flag, so without it the room is added twice:
+     * the navigation bar is raised and an empty bar is left at the bottom
+     * (<a href="https://github.com/MorpheApp/morphe-patches/issues/3825">...</a>), or the pages and
+     * the Shorts player end the height of the navigation bar above it
+     * (<a href="https://github.com/MorpheApp/morphe-patches/issues/4159">...</a>,
+     * <a href="https://github.com/MorpheApp/morphe-patches/issues/4173">...</a>).
      * <p>
      * The app draws the window behind the system navigation buttons only on Android 12 and later,
      * so on older versions the flags are always turned off, or the room is added twice
-     * (https://github.com/MorpheApp/morphe-patches/issues/3864).
+     * (<a href="https://github.com/MorpheApp/morphe-patches/issues/3864">...</a>).
      * <p>
-     * With {@link NavigationBarStyle#DEFAULT} the flags are left to the account.
+     * With {@link NavigationBarStyle#DEFAULT} the flags are left to the account, but they are still
+     * turned off without the edge to edge layout, which the Hide status bar patch can turn off
+     * for an account that has both.
+     *
+     * @param original The value the account first got, so all the classes that read the flag
+     *                 use the same value even if the account value changes while the app starts,
+     *                 the same as the edge to edge top bar flag.
      */
-    public static boolean useTranslucentNavigationBar(boolean original) {
-        if (NAVIGATION_BAR_STYLE == NavigationBarStyle.DEFAULT) {
+    private static boolean isNavigationBarBehindSystemButtons(boolean original) {
+        try {
+            // Some devices keep the window above the system navigation buttons also with the edge
+            // to edge layout, as found at a previous app start by the Hide status bar patch.
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S || HideStatusBarPatch.isWindowAboveNavigationBar()) {
+                return false;
+            }
+
+            Boolean edgeToEdge = HideStatusBarPatch.isEdgeToEdgeTopBar();
+            // Null if not known yet, or the Hide status bar patch is not included.
+            // The edge to edge layout is then the one of the account, which the flags of the account follow.
+            if (edgeToEdge == null) {
+                return original;
+            }
+
+            return edgeToEdge && (original || NAVIGATION_BAR_STYLE != NavigationBarStyle.DEFAULT);
+        } catch (Exception ex) {
+            Logger.printException(() -> "isNavigationBarBehindSystemButtons failure", ex);
             return original;
         }
+    }
 
-        boolean translucent = original;
-        try {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) {
-                translucent = false;
-            } else {
-                Boolean edgeToEdge = HideStatusBarPatch.isEdgeToEdgeTopBar();
-                // Null if not known yet, or the Hide status bar patch is not included.
-                if (edgeToEdge != null) {
-                    translucent = edgeToEdge;
-                }
-            }
-        } catch (Exception ex) {
-            Logger.printException(() -> "useTranslucentNavigationBar failure", ex);
+    /**
+     * Injection point.
+     * <p>
+     * The navigation bar covers the system navigation buttons, see
+     * {@link #isNavigationBarBehindSystemButtons(boolean)}.
+     */
+    public static boolean useTranslucentNavigationBar(boolean original) {
+        Boolean accountValue = accountCoversSystemButtons;
+        final boolean firstRead = accountValue == null;
+        if (firstRead) {
+            accountValue = original;
+            accountCoversSystemButtons = accountValue;
         }
 
-        translucentNavigationBarForced = translucent;
+        final boolean translucent = isNavigationBarBehindSystemButtons(accountValue);
+        if (firstRead) {
+            Logger.printDebug(() -> "Navigation bar covers system buttons: " + translucent + " (account: " + original
+                    + ", edge to edge: " + HideStatusBarPatch.isEdgeToEdgeTopBar()
+                    + ", window above navigation bar: " + HideStatusBarPatch.isWindowAboveNavigationBar()
+                    + ", style: " + NAVIGATION_BAR_STYLE + ")");
+        }
+        translucentNavigationBarForced = NAVIGATION_BAR_STYLE != NavigationBarStyle.DEFAULT && translucent;
+        navigationBarCoversSystemButtons = translucent;
         return translucent;
+    }
+
+    /**
+     * If the app was last told the navigation bar covers the system navigation buttons,
+     * with any navigation bar style.
+     */
+    private static volatile boolean navigationBarCoversSystemButtons;
+
+    static boolean isNavigationBarCoveringSystemButtons() {
+        return navigationBarCoversSystemButtons;
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * The feed is laid out behind the navigation bar. It follows the navigation bar covering
+     * the system navigation buttons: some pages add the navigation bar height below their content
+     * when the navigation bar covers the system navigation buttons, as they are expected to be
+     * laid out behind it, and the list padding for the navigation bar is only set with the edge
+     * to edge layout. See {@link #isNavigationBarBehindSystemButtons(boolean)}.
+     */
+    public static boolean useFeedBehindNavigationBar(boolean original) {
+        Boolean accountValue = accountFeedBehindNavigationBar;
+        final boolean firstRead = accountValue == null;
+        if (firstRead) {
+            accountValue = original;
+            accountFeedBehindNavigationBar = accountValue;
+        }
+
+        final boolean feedBehind = isNavigationBarBehindSystemButtons(accountValue);
+        if (firstRead) {
+            Logger.printDebug(() -> "Feed behind navigation bar: " + feedBehind + " (account: " + original + ")");
+        }
+        return feedBehind;
     }
 
     /**
@@ -284,7 +381,7 @@ public final class NavigationBarPatch {
      * With the navigation bar covering the system navigation buttons, the room below the bar fixed
      * at the bottom of some pages, such as the reply bar of the comment replies, already holds
      * the system navigation buttons. The flag adds the navigation bar height to it as well, so an
-     * empty band is left between the two bars (https://github.com/MorpheApp/morphe-patches/issues/2300).
+     * empty band is left between the two bars (<a href="https://github.com/MorpheApp/morphe-patches/issues/2300">...</a>).
      */
     public static boolean useFixedBottomBarRoom(boolean original) {
         return original && !translucentNavigationBarForced;
@@ -293,11 +390,11 @@ public final class NavigationBarPatch {
     /**
      * Injection point.
      * <p>
-     * The blurred, translucent background of the navigation bar and the feed laid out behind it
-     * only change how the bar looks, not the room left for the system navigation buttons, so they
-     * are turned on from Android 12 also when the window is not drawn edge to edge. With
-     * {@link NavigationBarStyle#OPAQUE}, they follow {@link #useTranslucentNavigationBar(boolean)}
-     * instead. With {@link NavigationBarStyle#DEFAULT} they are left to the account.
+     * The blurred, translucent background of the navigation bar only changes how the bar looks,
+     * not the room left for the system navigation buttons, so it is turned on from Android 12 also
+     * when the window is not drawn edge to edge. With {@link NavigationBarStyle#OPAQUE}, it follows
+     * {@link #isNavigationBarBehindSystemButtons(boolean)} instead. With {@link NavigationBarStyle#DEFAULT}
+     * it is left to the account.
      */
     public static boolean useTranslucentNavigationBarBackground(boolean original) {
         if (NAVIGATION_BAR_STYLE == NavigationBarStyle.DEFAULT) {
@@ -308,7 +405,7 @@ public final class NavigationBarPatch {
         if (NAVIGATION_BAR_STYLE != NavigationBarStyle.OPAQUE && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             translucent = true;
         } else {
-            translucent = useTranslucentNavigationBar(original);
+            translucent = isNavigationBarBehindSystemButtons(original);
         }
 
         translucentNavigationBarBackgroundForced = translucent;
@@ -336,7 +433,7 @@ public final class NavigationBarPatch {
      * surface is drawn twice in every frame, at two positions. Android 12 and 13 send the two
      * positions to the surface from two threads at the same time, and the app crashes while
      * the player moves, such as when it is slowly dragged down to the miniplayer
-     * (https://github.com/MorpheApp/morphe-patches/pull/3684#issuecomment-6322984709).
+     * (<a href="https://github.com/MorpheApp/morphe-patches/pull/3684#issuecomment-6322984709">...</a>).
      * With {@link NavigationBarStyle#TRANSPARENT} and {@link NavigationBarStyle#OPAQUE} the copy
      * is not drawn, so the bar keeps its translucent color, without the blur.
      *
@@ -348,65 +445,20 @@ public final class NavigationBarPatch {
                 || NAVIGATION_BAR_STYLE == NavigationBarStyle.OPAQUE));
     }
 
-    /**
-     * If the keyboard height was ever removed from the bottom margin of the layout that holds
-     * the page, the player and the navigation bar, so the keyboard covers them.
-     */
-    private static volatile boolean keyboardMarginRemoved;
-
-    /**
-     * Injection point.
-     * <p>
-     * The bottom margin of the layout that holds the page, the player and the navigation bar while
-     * the keyboard is open. With the feature flags turned on by
-     * {@link #useTranslucentNavigationBar(boolean)}, the keyboard height is removed from it, so
-     * the keyboard covers them again.
-     * <p>
-     * The legacy miniplayer, such as the minimal type before 21.29, rests at the bottom of that
-     * layout, so while it is shown the layout ends at the top of the keyboard instead
-     * (https://github.com/MorpheApp/morphe-patches/issues/4003). The margin of the app leaves
-     * the height of the system navigation buttons for the navigation bar, which is hidden while
-     * the keyboard is open, so the full keyboard height is used. The other miniplayers are moved
-     * above the keyboard by {@link MinimalMiniplayerPatch}.
-     *
-     * @param original The keyboard height the app uses as the margin.
-     */
     public static int getKeyboardMargin(int original) {
-        if (!translucentNavigationBarForced) {
-            return original;
-        }
-
-        try {
-            if (PlayerType.getCurrent() == PlayerType.WATCH_WHILE_MINIMIZED
-                    && !MiniplayerPatch.getCurrentMiniplayerType().isModern()
-                    && Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                Activity activity = Utils.getActivity();
-                WindowInsets insets = activity == null
-                        ? null
-                        : activity.getWindow().getDecorView().getRootWindowInsets();
-                if (insets != null) {
-                    return Math.max(original, insets.getInsets(WindowInsets.Type.ime()).bottom);
-                }
-            }
-        } catch (Exception ex) {
-            Logger.printException(() -> "getKeyboardMargin failure", ex);
-        }
-
-        keyboardMarginRemoved = true;
-        return 0;
+        return FixPagePaddingPatch.getKeyboardMargin(original);
     }
 
     static boolean isKeyboardMarginRemoved() {
-        return keyboardMarginRemoved;
+        return FixPagePaddingPatch.isKeyboardMarginRemoved();
     }
-
     /**
      * Injection point.
      * <p>
      * When the navigation bar covers the system navigation buttons, the bottom window inset is
      * added to its height and bottom padding. With the keyboard open, that inset also holds
      * the keyboard, so the bar grows as tall as the keyboard and covers the page
-     * (https://github.com/MorpheApp/morphe-patches/issues/3909). The page above then ends
+     * (<a href="https://github.com/MorpheApp/morphe-patches/issues/3909">...</a>). The page above then ends
      * the height of the system bars below the top of the keyboard, so only that much room is left.
      * Only with the feature flags turned on by {@link #useTranslucentNavigationBar(boolean)}.
      */
@@ -422,6 +474,9 @@ public final class NavigationBarPatch {
             }
 
             padding = setSlimStatusBarRoom(navigationBar, padding);
+            padding = GlassNavigationBar.getFloatingRoom(navigationBar, padding);
+            // The value is also stored as the room the bar adds to its height.
+            GlassNavigationBar.setAppRoom(padding);
         } catch (Exception ex) {
             Logger.printException(() -> "getNavigationBarBottomPadding failure", ex);
         }
@@ -435,7 +490,7 @@ public final class NavigationBarPatch {
     private static final int SLIM_STATUS_BAR = ResourceUtils.getIdentifier(
             ResourceType.ID, "slim_status_bar");
 
-    private static final int PIVOT_BAR = ResourceUtils.getIdentifier(
+    static final int PIVOT_BAR = ResourceUtils.getIdentifier(
             ResourceType.ID, "pivot_bar");
 
     /**
@@ -513,8 +568,10 @@ public final class NavigationBarPatch {
                         View navigationBar = (View) access;
                         final int room = systemButtonsRoom;
                         view.post(() -> {
-                            final int navigationBarRoom = setSlimStatusBarRoom(navigationBar, room);
+                            final int navigationBarRoom = GlassNavigationBar.getFloatingRoom(
+                                    navigationBar, setSlimStatusBarRoom(navigationBar, room));
                             access.patch_setSystemButtonsRoom(navigationBarRoom);
+                            GlassNavigationBar.setAppRoom(navigationBarRoom);
                             navigationBar.setPadding(navigationBar.getPaddingLeft(), navigationBar.getPaddingTop(),
                                     navigationBar.getPaddingRight(), navigationBarRoom);
                         });
@@ -535,7 +592,7 @@ public final class NavigationBarPatch {
      * navigation buttons, the navigation bar makes room for them, and the pages end above
      * the navigation bar. With the navigation bar hidden in the Shorts player, nothing makes that
      * room, so the Shorts player is drawn behind the system navigation buttons
-     * (https://github.com/MorpheApp/morphe-patches/issues/3908). The Shorts player then makes
+     * (<a href="https://github.com/MorpheApp/morphe-patches/issues/3908">...</a>). The Shorts player then makes
      * the room itself.
      * <p>
      * The room the Shorts player reserves for the navigation bar depends on how it's opened,
@@ -617,6 +674,59 @@ public final class NavigationBarPatch {
 
     /**
      * Injection point.
+     * <p>
+     * Called whenever the navigation bar is measured.
+     */
+    public static int getNavigationBarHeightMeasureSpec(View navigationBar, int heightMeasureSpec) {
+        return GlassNavigationBar.getHeightMeasureSpec(navigationBar, heightMeasureSpec);
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called whenever the vertical translation of the navigation bar is set.
+     */
+    public static float getNavigationBarTranslationY(View navigationBar, float translationY) {
+        return GlassNavigationBar.getTranslationY(navigationBar, translationY);
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called whenever the padding of the navigation bar is set.
+     *
+     * @param bottom The bottom padding, the room below the buttons.
+     */
+    public static int getNavigationBarPadding(View navigationBar, int bottom) {
+        return GlassNavigationBar.getFloatingRoom(navigationBar, bottom);
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called when the app makes the tint paint drawn over the blurred background of the navigation bar.
+     */
+    public static void setNavigationBarBlurTint(Paint tint) {
+        GlassNavigationBar.lightenBlurTint(tint);
+    }
+
+    /**
+     * Injection point.
+     *
+     * @param bottomBarContainer The container of the navigation bar.
+     */
+    public static void setNavigationBarGlass(View bottomBarContainer) {
+        if (!GlassNavigationBar.isEnabled()) return;
+
+        try {
+            GlassNavigationBar.apply(bottomBarContainer);
+        } catch (Exception ex) {
+            Logger.printException(() -> "setNavigationBarGlass failure", ex);
+        }
+    }
+
+    /**
+     * Injection point.
      *
      * @param original The color the app theme gives the system navigation buttons.
      */
@@ -645,6 +755,14 @@ public final class NavigationBarPatch {
     private static final boolean SHOW_SETTINGS_BUTTON_TYPE = Settings.SHOW_SETTINGS_BUTTON_TYPE.get();
 
     private static Object pivotBarSettingsRenderer = null;
+
+    private static final boolean SHOW_WATCH_LATER_BUTTON = Settings.SHOW_WATCH_LATER_BUTTON.get();
+    private static final IntegerSetting SHOW_WATCH_LATER_BUTTON_INDEX = Settings.SHOW_WATCH_LATER_BUTTON_INDEX;
+    private static final String WATCH_LATER_PIVOT_IDENTIFIER = "morphe_watch_later";
+    private static final String WATCH_LATER_BROWSE_ID = "VLWL";
+
+    @Nullable
+    private static Object pivotBarWatchLaterRenderer = null;
 
     private static final View.OnClickListener openSearchBarOnClickListener = v -> {
         if (NavigationBar.isSearchBarActive() && searchQueryRef.get() != null) {
@@ -757,8 +875,9 @@ public final class NavigationBarPatch {
 
         boolean addSearch = SHOW_SEARCH_BUTTON && pivotBarRenderer != null;
         boolean addSettings = SHOW_SETTINGS_BUTTON && pivotBarSettingsRenderer != null;
+        boolean addWatchLater = SHOW_WATCH_LATER_BUTTON && pivotBarWatchLaterRenderer != null;
 
-        if (!addSearch && !addSettings) return list;
+        if (!addSearch && !addSettings && !addWatchLater) return list;
 
         List<Object> newList = new ArrayList<>(list);
 
@@ -774,6 +893,13 @@ public final class NavigationBarPatch {
             preferredIndex = Math.max(0, Math.min(preferredIndex, newList.size()));
 
             newList.add(preferredIndex, pivotBarSettingsRenderer);
+        }
+
+        if (addWatchLater) {
+            int preferredIndex = SHOW_WATCH_LATER_BUTTON_INDEX.get();
+            preferredIndex = Math.max(0, Math.min(preferredIndex, newList.size()));
+
+            newList.add(preferredIndex, pivotBarWatchLaterRenderer);
         }
 
         return newList;
@@ -812,6 +938,71 @@ public final class NavigationBarPatch {
         }
     }
 
+    /**
+     * Injection point.
+     * Creates the Watch later button from the home button.
+     *
+     * @param messageLite MessageLite class of PivotBarItemRenderer.
+     */
+    public static void setPivotBarWatchLaterRenderer(MessageLite messageLite) {
+        if (!SHOW_WATCH_LATER_BUTTON) return;
+
+        try {
+            var renderer = PivotBarItemRenderer.parseFrom(messageLite.toByteArray());
+            var iconName = renderer.getIcon().getYtIconType().name();
+            if (!NavigationBar.NavigationButton.HOME.ytEnumNames.contains(iconName)) return;
+
+            String label = str("morphe_watch_later_navigation_label");
+            byte[] watchLaterRenderer = renderer.toBuilder()
+                    .setPivotIdentifier(WATCH_LATER_PIVOT_IDENTIFIER)
+                    .setNavigationEndpoint(NavigationEndpoint.newBuilder()
+                            .setBrowseEndpoint(BrowseEndpoint.newBuilder().setBrowseId(WATCH_LATER_BROWSE_ID)))
+                    .setAccessibility(Accessibility.newBuilder()
+                            .setAccessibilityData(AccessibilityData.newBuilder().setLabel(label)))
+                    .setTitle(Title.newBuilder().setRuns(Runs.newBuilder().setText(label)))
+                    // The Cairo icon has no drawable in some app versions.
+                    .setIcon(Icon.newBuilder().setYtIconType(YTIconType.WATCH_LATER))
+                    .clearTargetId()
+                    .build().toByteArray();
+
+            // The tracking params and thumbnail belong to the home button.
+            var watchLaterRendererBytes = PivotBarItemRendererBytes.parseFrom(watchLaterRenderer).toBuilder()
+                    .clearTrackingParams()
+                    .clearThumbnail()
+                    .setNavigationType(NavigationType.PIVOT_BAR_NAVIGATION_TYPE_SELECT_TAB_VALUE)
+                    .build().toByteString();
+
+            pivotBarWatchLaterRenderer = buildWatchLaterPivotBarItem(PivotBarItemBytes.newBuilder()
+                    .setPivotBarItemRenderer(watchLaterRendererBytes)
+                    .build().toByteArray());
+        } catch (Exception ex) {
+            Logger.printException(() -> "setPivotBarWatchLaterRenderer failure", ex);
+        }
+    }
+
+    /**
+     * Method is modified during patching to create the navigation bar item with the factory of the app.
+     *
+     * @param pivotBarItem Navigation bar item proto.
+     */
+    @Nullable
+    private static Object buildWatchLaterPivotBarItem(byte[] pivotBarItem) {
+        return null;
+    }
+
+    /**
+     * Injection point.
+     * The app has no selected icon for the Watch later icon, so the outline icon is shown
+     * when the Watch later button is selected.
+     */
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    public static void setWatchLaterSelectedIcon(EnumMap icons, Enum watchLaterIcon) {
+        if (SHOW_WATCH_LATER_BUTTON) {
+            icons.put(watchLaterIcon, ResourceUtils.getIdentifier(
+                    ResourceType.DRAWABLE, "morphe_watch_later_selected"));
+        }
+    }
+
     // Toolbar
     private static final String CHAT_BUTTON_ENUMS = "MESSAGE_BUBBLE_OVERLAP";
 
@@ -827,7 +1018,18 @@ public final class NavigationBarPatch {
 
     private static final String SETTING_BUTTON_ENUM_NAME = "SETTINGS_CAIRO";
 
-    private static final boolean HIDE_TOOLBAR_CAST_BUTTON = Settings.HIDE_TOOLBAR_CAST_BUTTON.get();
+    /**
+     * The toolbar of some pages, such as the You tab, comes from their own response, which still has
+     * the notifications button, so it is replaced with the create button of the toolbar of another page.
+     */
+    @Nullable
+    private static volatile MessageLite toolbarCreateButton;
+
+    /**
+     * The swap has effect only if the server added the notifications tab to the navigation bar.
+     * Otherwise the toolbar button is the only way to open the notifications.
+     */
+    private static volatile boolean notificationsTabCreated;
 
     private static final boolean HIDE_TOOLBAR_CHAT_BUTTON = Settings.HIDE_TOOLBAR_CHAT_BUTTON.get();
 
@@ -852,23 +1054,6 @@ public final class NavigationBarPatch {
     }
 
     private static WeakReference<SettingsController> settingsControllerRef = new WeakReference<>(null);
-
-    /**
-     * Injection point.
-     */
-    public static boolean hideCastButton(boolean original) {
-        return !HIDE_TOOLBAR_CAST_BUTTON && original;
-    }
-
-    /**
-     * Injection point.
-     */
-    public static void hideCastButton(MenuItem menuItem) {
-        if (HIDE_TOOLBAR_CAST_BUTTON) {
-            menuItem.setVisible(false);
-            menuItem.setEnabled(false);
-        }
-    }
 
     /**
      * Injection point.
@@ -1036,6 +1221,44 @@ public final class NavigationBarPatch {
      */
     private static ExtensionRegistryLite getGeneratedRegistry() {
         return null; // Modified during patching.
+    }
+
+    /**
+     * Injection point.
+     * Called when a toolbar button is created, on any page.
+     *
+     * @param buttonRenderer The renderer of the button.
+     * @return The renderer the button is created with.
+     */
+    public static MessageLite swapToolbarNotificationButton(MessageLite buttonRenderer) {
+        if (!SWAP_CREATE_WITH_NOTIFICATIONS_BUTTON || buttonRenderer == null) {
+            return buttonRenderer;
+        }
+        try {
+            String iconName = ButtonRenderer.parseFrom(buttonRenderer.toByteArray()).getIcon().getYtIconType().name();
+            if (Utils.equalsAny(iconName, CREATE_BUTTON_ENUMS)) {
+                toolbarCreateButton = buttonRenderer;
+            } else if (Utils.equalsAny(iconName, NOTIFICATION_BUTTON_ENUMS) && notificationsTabCreated
+                    && !HIDE_NAVIGATION_BAR && !Settings.HIDE_NOTIFICATIONS_BUTTON.get()) {
+                MessageLite createButton = toolbarCreateButton;
+                if (createButton != null) {
+                    return createButton;
+                }
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "swapToolbarNotificationButton failure", ex);
+        }
+        return buttonRenderer;
+    }
+
+    /**
+     * Injection point.
+     * The create button does not show the new content count of the notifications button it replaced.
+     *
+     * @param countIds The ids of the pages whose new content count the button shows.
+     */
+    public static List<String> getToolbarButtonCountIds(MessageLite buttonRenderer, List<String> countIds) {
+        return buttonRenderer == toolbarCreateButton ? new ArrayList<>() : countIds;
     }
 
     /**

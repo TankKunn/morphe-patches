@@ -55,6 +55,7 @@ import app.morphe.extension.shared.ByteTrieSearch;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
+import app.morphe.extension.shared.StringRef;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.AccessibilityContext;
@@ -69,6 +70,9 @@ import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ButtonVie
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CapabilitiesSubscriptionConfig;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ChannelAvatar;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ClientResource;
+import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CollectionPrimaryThumbnail;
+import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CollectionStackColors;
+import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CollectionThumbnailViewModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CommandContext;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ComponentType;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ContentImage;
@@ -99,6 +103,7 @@ import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.LockupVie
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.LockupViewModelHolder;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.MetadataPart;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.MetadataRow;
+import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.OpenPopupAction;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.RendererContext;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ShelfHeaderData;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ShelfHeaderModel;
@@ -117,6 +122,7 @@ import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.Thumbnail
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ThumbnailBottomOverlayViewModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ThumbnailElementOverlay;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ThumbnailOverlay;
+import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ThumbnailOverlayBadgeViewModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ThumbnailOverlayProgressBar;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ThumbnailOverlayProgressBarViewModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ThumbnailViewModel;
@@ -127,8 +133,13 @@ import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.VideoData
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.VideoThumbnail;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.VideoWithContextData;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.VideoWithContextModel;
+import app.morphe.extension.youtube.innertube.IconOuterClass.Icon;
+import app.morphe.extension.youtube.innertube.IconOuterClass.YTIconType;
+import app.morphe.extension.youtube.innertube.PlaylistEdit;
+import app.morphe.extension.youtube.innertube.queue.PlaylistQueueRenderer;
 import app.morphe.extension.youtube.patches.components.LayoutComponentsFilter;
 import app.morphe.extension.youtube.patches.theme.SeekbarColorPatch;
+import app.morphe.extension.youtube.patches.utils.FeedVideoCardsPatch;
 import app.morphe.extension.youtube.patches.utils.FlyoutUtils;
 import app.morphe.extension.youtube.patches.utils.ProtoNode;
 import app.morphe.extension.youtube.settings.Settings;
@@ -144,6 +155,10 @@ import app.morphe.extension.youtube.shared.PlayerType;
 public class FeedCardLayoutPatch {
 
     public enum FeedCardLayout {
+        /**
+         * The layout that the server sends to the account.
+         */
+        DEFAULT,
         CLASSIC,
         CARDS,
         CARDS_WITH_ACTION_BUTTONS
@@ -157,8 +172,10 @@ public class FeedCardLayoutPatch {
         byte[] patch_getElementBytes();
     }
 
-    private static final boolean CARD_LAYOUT = Settings.FEED_CARD_LAYOUT.get() != FeedCardLayout.CLASSIC;
-    private static final boolean ACTION_BUTTONS = Settings.FEED_CARD_LAYOUT.get() == FeedCardLayout.CARDS_WITH_ACTION_BUTTONS;
+    private static final FeedCardLayout LAYOUT = Settings.FEED_CARD_LAYOUT.get();
+    private static final boolean CARD_LAYOUT = LAYOUT == FeedCardLayout.CARDS
+            || LAYOUT == FeedCardLayout.CARDS_WITH_ACTION_BUTTONS;
+    private static final boolean ACTION_BUTTONS = LAYOUT == FeedCardLayout.CARDS_WITH_ACTION_BUTTONS;
 
     /**
      * Template names, followed by "|hash" or by a suffix and "|hash" (newer app versions), such as "-fe|hash".
@@ -178,6 +195,16 @@ public class FeedCardLayoutPatch {
      * Browse id of the playlist pages, followed by the playlist id.
      */
     private static final String PLAYLIST_BROWSE_ID_PREFIX = "VL";
+    private static final String MIX_PLAYLIST_ID_PREFIX = "RD";
+    /**
+     * Values of the playlists and the mixes of the classic layout.
+     */
+    private static final int PLAYLIST_BADGE_ICON_TYPE = 4;
+    private static final int MIX_BADGE_ICON_TYPE = 8;
+    private static final int COLLECTION_BADGE_COLOR = 0xCC595959;
+    private static final int COLLECTION_BADGE_DARK_COLOR = 0xCC232323;
+    private static final int COLLECTION_STACK_FRONT_COLOR = 0xCC999999;
+    private static final int COLLECTION_STACK_BACK_COLOR = 0xCC8C8C8C;
 
     /**
      * Templates of the feed videos, with the field of their model and the known fields of the model
@@ -249,19 +276,22 @@ public class FeedCardLayoutPatch {
     private static final int LIKE_STATUS_LIKE = 0;
     private static final int LIKE_STATUS_INDIFFERENT = 2;
     private static final int LIKE_STATUS_ENTITY_TYPE = 62;
+    private static final int ACTION_ADD_VIDEO = PlaylistEdit.PlaylistEditActionType.ACTION_ADD_VIDEO_VALUE;
 
     /**
      * Fields of the innertube commands.
      */
-    private static final int INNERTUBE_COMMAND_FIELD = 169495254;
     private static final int WATCH_ENDPOINT_FIELD = 48687757;
     private static final int WATCH_ENDPOINT_VIDEO_ID_FIELD = 1;
-    private static final int PLAYLIST_EDIT_ENDPOINT_FIELD = 60666189;
-    private static final int PLAYLIST_EDIT_ENDPOINT_PLAYLIST_ID_FIELD = 1;
     private static final int SHOW_ENGAGEMENT_PANEL_ENDPOINT_FIELD = 138681778;
     private static final int SHOW_ENGAGEMENT_PANEL_ENDPOINT_PANEL_ID_FIELD = 1;
 
     private static final String WATCH_LATER_PLAYLIST_ID = "WL";
+    /**
+     * Menu items that the menu of the cards with a save button doesn't have.
+     */
+    private static final StringRef SAVE_TO_WATCH_LATER = StringRef.sfc("morphe_save_to_watch_later_flyout_title");
+    private static final StringRef SAVE_TO_PLAYLIST = StringRef.sfc("accessibility_save_to_playlists");
     private static final String SENDER_VIEW_KEY = "com.google.android.libraries.youtube.rendering.elements.sender_view";
     /**
      * Comments panel of the watch page. Newer app versions use the first id.
@@ -311,18 +341,25 @@ public class FeedCardLayoutPatch {
      */
     private static final Pattern METADATA_SEPARATOR_PATTERN = Pattern.compile(" {2,}| · ");
 
-    private static final ByteTrieSearch elementSearch = new ByteTrieSearch(
-            CARD_LAYOUT
-                    ? ByteTrieSearch.convertStringsToBytes(CLASSIC_TEMPLATE, SHELF_HEADER_TEMPLATE,
-                    HORIZONTAL_SHELF_TEMPLATE, SHORTS_VIDEO_CELL_TEMPLATE, SHORTS_SHELF_TEMPLATE,
-                    GRID_VIDEO_TEMPLATE)
-                    : ByteTrieSearch.convertStringsToBytes(CARD_TEMPLATE)
-    );
+    /**
+     * Templates of the elements that are converted. Every element is searched on the main thread,
+     * so the element is searched as a string in native code, see {@link FeedVideoCardsPatch#getElementText(byte[])}.
+     */
+    private static final String[] elementTemplates = CARD_LAYOUT
+            ? new String[]{CLASSIC_TEMPLATE, SHELF_HEADER_TEMPLATE, HORIZONTAL_SHELF_TEMPLATE,
+            SHORTS_VIDEO_CELL_TEMPLATE, SHORTS_SHELF_TEMPLATE, GRID_VIDEO_TEMPLATE}
+            : new String[]{CARD_TEMPLATE};
     /**
      * Label of the shelf headers, in the bytes of the converted elements.
      */
     private static final ByteTrieSearch shelfHeaderLabelSearch = new ByteTrieSearch(
             ByteTrieSearch.convertStringsToBytes(String.valueOf(SHELF_HEADER_LABEL_MARKER))
+    );
+    /**
+     * Link to the movies page, in the bytes of the movies.
+     */
+    private static final ByteTrieSearch moviesPageSearch = new ByteTrieSearch(
+            ByteTrieSearch.convertStringsToBytes("FEstorefront")
     );
     /**
      * Thumbnails of the Shorts, the same that the Shorts filter looks for.
@@ -443,13 +480,13 @@ public class FeedCardLayoutPatch {
     private static volatile long commentsRequestTime;
 
     /**
-     * Template of the feed videos that the elements are converted to.
+     * Template that the elements are converted to, such as the feed videos.
      * The uri includes the hash of the template version, and the subscriptions of the element write
      * the theme and the capabilities to fields of the model. Both are taken from the elements of the template
      * that the server sends, so they follow the new versions of the template. Until such an element is seen,
      * the uri is taken from the template cache of the app, and the fields are the known ones.
      */
-    private static final class VideoTemplate {
+    static final class VideoTemplate {
         final String name;
         final int modelField;
         final ByteTrieSearch search;
@@ -550,15 +587,20 @@ public class FeedCardLayoutPatch {
      * Injection point.
      */
     public static byte[] setFeedCardLayout(byte[] bytes) {
+        if (LAYOUT == FeedCardLayout.DEFAULT) {
+            return bytes;
+        }
+
         try {
-            if (!elementSearch.matches(bytes)) {
+            final String elementText = FeedVideoCardsPatch.getElementText(bytes);
+            if (!Utils.containsAny(elementText, elementTemplates)) {
                 // The elements of the layout of the setting give the current version of its template:
                 // the uri and the fields are taken from the element, if it's an element of the template.
                 // After the first element, the elements are checked once in a while, to follow a new version.
                 VideoTemplate template = CARD_LAYOUT ? CARD : CLASSIC;
                 final long now = System.currentTimeMillis();
                 if ((!template.fromElement || now - template.checkTime >= TEMPLATE_CHECK_INTERVAL_MILLIS)
-                        && template.search.matches(bytes)) {
+                        && elementText.contains(template.name)) {
                     ComponentType componentType = Element.parseFrom(bytes).getType().getComponentType();
                     String elementUri = componentType.getTemplateConfig().getUriTemplateConfig().getUri();
                     if (isTemplate(elementUri, template.name)) {
@@ -613,13 +655,17 @@ public class FeedCardLayoutPatch {
                             break toCard;
                         }
 
-                        // The filters find the hidden Shorts, live streams and mix playlists by the classic layout.
+                        // The filters find the hidden Shorts, live streams, mix playlists and movies by the classic layout.
                         if (thumbnail.getBadgeStyle() == THUMBNAIL_BADGE_STYLE_LIVE
                                 && Settings.HIDE_LIVE_STREAMS.get()) {
                             break toCard;
                         }
                         // The mix playlists are found by the url of the mix, which the cards don't have.
                         if (LayoutComponentsFilter.filterMixPlaylists(bytes)) {
+                            break toCard;
+                        }
+                        // The movies are found by the link to the movies page, as in the ads filter.
+                        if (Settings.HIDE_MOVIES_SECTION.get() && moviesPageSearch.matches(bytes)) {
                             break toCard;
                         }
                         if ((Settings.HIDE_SHORTS_HOME.get() || Settings.HIDE_SHORTS_SUBSCRIPTIONS.get()
@@ -863,29 +909,15 @@ public class FeedCardLayoutPatch {
                             }
 
                             // The command of the 'Save to Watch later' item of the menu.
-                            InnertubeCommandHolder saveOnTap = null;
-                            List<ProtoNode> message = ProtoNode.parse(data.getMenuOnTap().toByteArray());
-                            if (message != null) {
-                                for (ProtoNode endpoint
-                                        : ProtoNode.findMessages(message, PLAYLIST_EDIT_ENDPOINT_FIELD)) {
-                                    ProtoNode playlistId = ProtoNode.field(
-                                            endpoint.children, PLAYLIST_EDIT_ENDPOINT_PLAYLIST_ID_FIELD);
-                                    ProtoNode command = endpoint.getParent();
-                                    if (playlistId != null && WATCH_LATER_PLAYLIST_ID.equals(playlistId.getText())
-                                            && command != null && command.children != null) {
-                                        ByteArrayOutputStream commandBytes = new ByteArrayOutputStream();
-                                        CodedOutputStream output = CodedOutputStream.newInstance(commandBytes);
-                                        output.writeByteArray(INNERTUBE_COMMAND_FIELD,
-                                                ProtoNode.write(command.children));
-                                        output.flush();
-                                        saveOnTap = InnertubeCommandHolder.parseFrom(commandBytes.toByteArray());
-                                        break;
-                                    }
-                                }
-                            }
-                            if (saveOnTap == null) {
-                                // Without the item, such as in some menus, the button opens the menu.
-                                saveOnTap = InnertubeCommandHolder.parseFrom(data.getMenuOnTap());
+                            // Without the item, such as in some menus, the button opens the menu.
+                            PlaylistQueueRenderer.NavigationEndpoint watchLaterCommand = findWatchLaterCommand(
+                                    PlaylistQueueRenderer.Menu.parseFrom(menuOnTap.getInnertubeCommand()
+                                            .getOpenPopupAction().getPopup()).getMenuRenderer());
+                            InnertubeCommandHolder saveOnTap = menuOnTap;
+                            if (watchLaterCommand != null) {
+                                saveOnTap = InnertubeCommandHolder.newBuilder()
+                                        .setInnertubeCommand(InnertubeCommand.parseFrom(watchLaterCommand.toByteString()))
+                                        .build();
                             }
 
                             String entityKey = Base64.encodeToString(LikeStatusEntityKey.newBuilder()
@@ -1019,8 +1051,14 @@ public class FeedCardLayoutPatch {
                 LockupModel card = model.getLockupModel();
                 toClassic: {
                     LockupViewModel lockupViewModel = card.getViewModel().getLockupViewModel();
-                    if (lockupViewModel.getContentType() != LOCKUP_CONTENT_TYPE_VIDEO
-                            || !lockupViewModel.getContentImage().hasThumbnailViewModel()) {
+                    final boolean isPlaylist = lockupViewModel.getContentType() == LOCKUP_CONTENT_TYPE_PLAYLIST;
+                    ContentImage contentImage = lockupViewModel.getContentImage();
+                    // The playlists and the mixes show a stack of thumbnails.
+                    ThumbnailViewModel thumbnailViewModel = contentImage.hasCollectionThumbnailViewModel()
+                            ? contentImage.getCollectionThumbnailViewModel().getPrimaryThumbnail().getThumbnailViewModel()
+                            : contentImage.getThumbnailViewModel();
+                    if ((!isPlaylist && lockupViewModel.getContentType() != LOCKUP_CONTENT_TYPE_VIDEO)
+                            || thumbnailViewModel.getImage().isEmpty()) {
                         break toClassic;
                     }
 
@@ -1029,18 +1067,43 @@ public class FeedCardLayoutPatch {
                         break toClassic;
                     }
 
-                    ThumbnailViewModel thumbnailViewModel = lockupViewModel.getContentImage().getThumbnailViewModel();
                     VideoThumbnail.Builder thumbnail = VideoThumbnail.newBuilder()
                             .setImage(thumbnailViewModel.getImage());
                     for (ThumbnailOverlay overlay : thumbnailViewModel.getOverlaysList()) {
-                        for (ThumbnailBadge badge : overlay.getThumbnailBottomOverlayViewModel().getBadgesList()) {
+                        List<ThumbnailBadge> badges = overlay.hasThumbnailOverlayBadgeViewModel()
+                                ? overlay.getThumbnailOverlayBadgeViewModel().getThumbnailBadgesList()
+                                : overlay.getThumbnailBottomOverlayViewModel().getBadgesList();
+                        for (ThumbnailBadge badge : badges) {
                             ThumbnailBadgeViewModel badgeViewModel = badge.getThumbnailBadgeViewModel();
                             if (!badgeViewModel.getText().isEmpty()) {
-                                thumbnail.setTimestampText(badgeViewModel.getText())
-                                        .setTimestampAccessibilityText(badgeViewModel.getRendererContext()
-                                                .getAccessibilityContext().getLabel());
+                                if (isPlaylist) {
+                                    thumbnail.setVideoCountText(badgeViewModel.getText());
+                                } else {
+                                    thumbnail.setTimestampText(badgeViewModel.getText())
+                                            .setTimestampAccessibilityText(badgeViewModel.getRendererContext()
+                                                    .getAccessibilityContext().getLabel());
+                                }
                             }
                         }
+                    }
+
+                    final String playlistId = lockupViewModel.getContentId();
+                    Matcher mixVideoId = VIDEO_ID_PATTERN.matcher(
+                            thumbnailViewModel.getImage().toString(StandardCharsets.ISO_8859_1));
+                    final boolean isMix = isPlaylist && playlistId.startsWith(MIX_PLAYLIST_ID_PREFIX) && mixVideoId.find();
+                    if (isPlaylist) {
+                        // The server samples these colors from the thumbnail, so the gray values are used.
+                        thumbnail.setIsPlaylist(!isMix)
+                                .setIsMix(isMix)
+                                .setCollectionStyle1(1)
+                                .setCollectionStyle2(1)
+                                .setCollectionStyle3(3)
+                                .setBadgeIconType(isMix ? MIX_BADGE_ICON_TYPE : PLAYLIST_BADGE_ICON_TYPE)
+                                .setBadgeColor(COLLECTION_BADGE_COLOR)
+                                .setBadgeDarkColor(COLLECTION_BADGE_DARK_COLOR)
+                                .setStackColors(CollectionStackColors.newBuilder()
+                                        .setFrontColor(COLLECTION_STACK_FRONT_COLOR)
+                                        .setBackColor(COLLECTION_STACK_BACK_COLOR));
                     }
 
                     LockupMetadataViewModel metadata = lockupViewModel.getMetadata().getLockupMetadataViewModel();
@@ -1096,6 +1159,12 @@ public class FeedCardLayoutPatch {
                                             .clearMenuButton()
                                             .clearTitleStyle()
                                             .clearActionButtons()));
+                    if (isPlaylist) {
+                        // The mix playlists are found by the url of the mix, which the cards don't have.
+                        videoData.setUrl(isMix
+                                ? "https://www.youtube.com/watch?v=" + mixVideoId.group(1) + "&list=" + playlistId
+                                : "https://www.youtube.com/playlist?list=" + playlistId);
+                    }
                     if (metadata.getImage().hasDecoratedAvatarViewModel()) {
                         DecoratedAvatarViewModel avatar = metadata.getImage().getDecoratedAvatarViewModel();
                         AvatarViewModel avatarViewModel = avatar.getAvatar().getAvatarViewModel();
@@ -1107,14 +1176,68 @@ public class FeedCardLayoutPatch {
                     }
 
                     ButtonViewModel menuButton = metadata.getMenuButton().getButtonViewModel();
+                    InnertubeCommandHolder menuOnTap = menuButton.getOnTap();
+                    // The cards with a save button have no save items in the menu,
+                    // so the items are added to the menu of the classic layout, which has no save button.
+                    boolean hasSaveButton = false;
+                    for (ActionButton button : metadata.getActionButtonsList()) {
+                        hasSaveButton |= button.hasAddToPlaylistButtonViewModel();
+                    }
+                    OpenPopupAction openPopupAction = menuOnTap.getInnertubeCommand().getOpenPopupAction();
+                    PlaylistQueueRenderer.Menu popup = hasSaveButton && !isPlaylist
+                            ? PlaylistQueueRenderer.Menu.parseFrom(openPopupAction.getPopup())
+                            : PlaylistQueueRenderer.Menu.getDefaultInstance();
+                    PlaylistQueueRenderer.MenuRenderer menu = popup.getMenuRenderer();
+                    if (menu.getItemsCount() > 0 && findWatchLaterCommand(menu) == null) {
+                        // The save items follow the items shown by a condition, such as the queue items.
+                        int saveItemsIndex = 0;
+                        while (saveItemsIndex < menu.getItemsCount()
+                                && (menu.getItems(saveItemsIndex).hasMenuConditionalServiceItemRenderer()
+                                || menu.getItems(saveItemsIndex).hasMenuConditionalNavigationItemRenderer())) {
+                            saveItemsIndex++;
+                        }
+
+                        // The commands of the save items of the classic layout.
+                        final String videoId = lockupViewModel.getContentId();
+                        var saveToWatchLater = PlaylistQueueRenderer.MenuServiceItem.newBuilder()
+                                .setText(PlaylistQueueRenderer.Text.newBuilder()
+                                        .setSimpleText(SAVE_TO_WATCH_LATER.toString()))
+                                .setIcon(Icon.newBuilder().setYtIconType(YTIconType.ADD_TO_WATCH_LATER))
+                                .setServiceEndpoint(PlaylistQueueRenderer.NavigationEndpoint.newBuilder()
+                                        .setPlaylistEditEndpoint(PlaylistQueueRenderer.PlaylistEditEndpoint.newBuilder()
+                                                .setPlaylistId(WATCH_LATER_PLAYLIST_ID)
+                                                .addActions(PlaylistQueueRenderer.PlaylistEditAction.newBuilder()
+                                                        .setAction(ACTION_ADD_VIDEO)
+                                                        .setAddedVideoId(videoId))));
+                        var saveToPlaylist = PlaylistQueueRenderer.MenuNavigationItem.newBuilder()
+                                .setText(PlaylistQueueRenderer.Text.newBuilder()
+                                        .setSimpleText(SAVE_TO_PLAYLIST.toString()))
+                                .setIcon(Icon.newBuilder().setYtIconType(YTIconType.BOOKMARK_BORDER))
+                                .setNavigationEndpoint(PlaylistQueueRenderer.NavigationEndpoint.newBuilder()
+                                        .setAddToPlaylistEndpoint(PlaylistQueueRenderer.AddToPlaylistEndpoint.newBuilder()
+                                                .setVideoId(videoId)));
+                        menu = menu.toBuilder()
+                                .addItems(saveItemsIndex, PlaylistQueueRenderer.MenuItem.newBuilder()
+                                        .setMenuServiceItemRenderer(saveToWatchLater))
+                                .addItems(saveItemsIndex + 1, PlaylistQueueRenderer.MenuItem.newBuilder()
+                                        .setMenuNavigationItemRenderer(saveToPlaylist))
+                                .build();
+
+                        menuOnTap = menuOnTap.toBuilder()
+                                .setInnertubeCommand(menuOnTap.getInnertubeCommand().toBuilder()
+                                        .setOpenPopupAction(openPopupAction.toBuilder()
+                                                .setPopup(popup.toBuilder().setMenuRenderer(menu).build().toByteString())))
+                                .build();
+                    }
                     RendererContext rendererContext = lockupViewModel.getRendererContext();
                     VideoWithContextModel classic = VideoWithContextModel.newBuilder()
                             .setData(VideoWithContextData.newBuilder()
+                                    .setCollectionStack(isPlaylist ? 1 : 0)
                                     .setVideoData(videoData)
                                     .setAccessibilityText(rendererContext.getAccessibilityContext().getLabel())
                                     .setMenuAccessibilityText(menuButton.getAccessibilityText())
                                     .setOnTap(rendererContext.getCommandContext().getOnTap())
-                                    .setMenuOnTap(menuButton.getOnTap().toByteString())
+                                    .setMenuOnTap(menuOnTap.toByteString())
                                     .setInlinePlayback(lockupViewModel.getInlinePlayback().getInlinePlayback()))
                             .setContext(setCardExperiments(card.getContext(), false))
                             .setEnvironment(card.getEnvironment())
@@ -1124,6 +1247,17 @@ public class FeedCardLayoutPatch {
                             .setTemplateConfig(templateConfig(templateUri))
                             .setModel(ElementModel.newBuilder().setVideoWithContextModel(classic))
                             .setSubscriptionConfig(subscriptionConfig(componentType.getSubscriptionConfig(), CLASSIC))
+                            .build();
+                }
+
+                // The other cards, such as the posts, have no classic layout. The experiments of the card layout are
+                // sent only to the accounts of the A/B test, so without them the card style is not drawn.
+                ElementsExperiments experiments = card.getContext().getElementsExperiments();
+                if (converted == null && experiments.hasCardLayoutExperiments()) {
+                    converted = componentType.toBuilder()
+                            .setModel(model.toBuilder().setLockupModel(card.toBuilder()
+                                    .setContext(card.getContext().toBuilder()
+                                            .setElementsExperiments(experiments.toBuilder().clearCardLayoutExperiments()))))
                             .build();
                 }
             }
@@ -2179,6 +2313,21 @@ public class FeedCardLayoutPatch {
                 .build();
     }
 
+    /**
+     * @return The command of the 'Save to Watch later' item of the menu, or null if the menu has no such item.
+     */
+    @Nullable
+    private static PlaylistQueueRenderer.NavigationEndpoint findWatchLaterCommand(
+            PlaylistQueueRenderer.MenuRenderer menu) {
+        for (PlaylistQueueRenderer.MenuItem item : menu.getItemsList()) {
+            PlaylistQueueRenderer.NavigationEndpoint command = item.getMenuServiceItemRenderer().getServiceEndpoint();
+            if (WATCH_LATER_PLAYLIST_ID.equals(command.getPlaylistEditEndpoint().getPlaylistId())) {
+                return command;
+            }
+        }
+        return null;
+    }
+
     private static InnertubeCommandHolder likeCommand(String videoId, int status) {
         return InnertubeCommandHolder.newBuilder()
                 .setInnertubeCommand(InnertubeCommand.newBuilder()
@@ -2213,7 +2362,7 @@ public class FeedCardLayoutPatch {
                 .build();
     }
 
-    private static TemplateConfig templateConfig(String uri) {
+    static TemplateConfig templateConfig(String uri) {
         return TemplateConfig.newBuilder()
                 .setUriTemplateConfig(UriTemplateConfig.newBuilder().setUri(uri))
                 .build();
@@ -2222,7 +2371,7 @@ public class FeedCardLayoutPatch {
     /**
      * Keeps only the theme and capabilities subscriptions, written to the fields of the new model.
      */
-    private static SubscriptionConfig subscriptionConfig(SubscriptionConfig config, VideoTemplate template) {
+    static SubscriptionConfig subscriptionConfig(SubscriptionConfig config, VideoTemplate template) {
         SubscriptionConfig.Builder builder = SubscriptionConfig.newBuilder();
         if (config.hasThemeSubscriptionConfig()) {
             ThemeSubscriptionConfig theme = config.getThemeSubscriptionConfig();

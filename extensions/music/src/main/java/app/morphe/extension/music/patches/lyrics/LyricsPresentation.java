@@ -20,6 +20,7 @@ import app.morphe.extension.music.patches.lyrics.model.LyricsTextFormatter;
 import app.morphe.extension.music.patches.lyrics.model.MiniLyricsFormatter;
 import app.morphe.extension.music.patches.lyrics.model.MiniLyricsTimeline;
 import app.morphe.extension.music.patches.lyrics.model.TrackVersion;
+import app.morphe.extension.music.patches.lyrics.ui.LyricsSpanBuilder;
 import app.morphe.extension.music.settings.Settings;
 
 /**
@@ -28,12 +29,12 @@ import app.morphe.extension.music.settings.Settings;
  */
 public final class LyricsPresentation {
 
+    private static final ArtistLineCycle artistCycle = new ArtistLineCycle();
     @Nullable
     private static Lyrics timelineLyrics;
     private static long timelineDurationMs;
     @Nullable
     private static MiniLyricsTimeline timeline;
-
     @Nullable
     private static LyricsLine chunksLine;
     private static long chunksEndMs;
@@ -43,11 +44,13 @@ public final class LyricsPresentation {
     private static float chunksMultiplier = 1;
     private static List<MiniLyricsFormatter.Chunk> chunks = List.of();
 
-    private static final ArtistLineCycle artistCycle = new ArtistLineCycle();
-
-    /** The lyric shown with a track format frame. The line tells apart repeats of the same text. */
-    private record FrameKey(@Nullable LyricsLine line, @Nullable String text) {
-    }
+    // The panel's only/dual mode, shared so the miniplayer and the media session mirror its main line.
+    @Nullable
+    private static List<String> sharedTranslatedLines;
+    @Nullable
+    private static List<LyricsLine> sharedRomanizedLines;
+    private static boolean sharedShowTranslation;
+    private static boolean sharedShowRomanization;
 
     private LyricsPresentation() {
     }
@@ -89,6 +92,44 @@ public final class LyricsPresentation {
         artistCycle.reset();
     }
 
+    /**
+     * Records the panel's current only/dual mode for the shared devices.
+     */
+    public static void setMainLineOnlyState(boolean translationOnly, boolean romanizeOnly,
+                                            @Nullable List<String> translatedLines,
+                                            @Nullable List<LyricsLine> romanizedLines) {
+        sharedShowTranslation = translationOnly;
+        sharedShowRomanization = romanizeOnly;
+        sharedTranslatedLines = translatedLines;
+        sharedRomanizedLines = romanizedLines;
+    }
+
+    /**
+     * The main line under the current only/dual mode; null falls back to the original.
+     */
+    @Nullable
+    private static String onlyModeOverride(LyricsLine line, int index) {
+        if (!sharedShowTranslation && !sharedShowRomanization) {
+            return null;
+        }
+        final boolean swap = Settings.LYRICS_SWAP_TRANS_ROMA.get();
+        String translation = sharedShowTranslation
+                ? LyricsSpanBuilder.translationAt(line, index, sharedTranslatedLines) : null;
+        String romanization = sharedShowRomanization
+                ? LyricsSpanBuilder.romanizationForOnlyMode(line, index, sharedRomanizedLines) : null;
+        if (romanization != null && romanization.isEmpty()) {
+            romanization = null;
+        }
+        if (sharedShowTranslation && sharedShowRomanization) {
+            // Swap puts the translation or the reading first; only that main slot is mirrored.
+            boolean mainIsRoma = !swap;
+            return mainIsRoma
+                    ? (romanization != null ? romanization : translation)
+                    : (translation != null ? translation : romanization);
+        }
+        return translation != null ? translation : romanization;
+    }
+
     /** Advances the track format frames along with the lyric, and returns the lyric. */
     @Nullable
     private static String present(@Nullable String text, @Nullable LyricsLine line,
@@ -103,7 +144,7 @@ public final class LyricsPresentation {
      * The text the miniplayer and the media session show at a playback position.
      *
      * @return Null if no lyric applies and the track title should be shown instead.
-     *         An empty string is a blank instrumental frame the user configured.
+     * An empty string is a blank instrumental frame the user configured.
      */
     @Nullable
     public static String miniLine(Lyrics lyrics, long durationMs, long positionMs,
@@ -140,6 +181,16 @@ public final class LyricsPresentation {
 
     private static String vocalText(List<LyricsLine> lines, MiniLyricsTimeline.Vocal vocal, long positionMs) {
         LyricsLine line = vocal.line();
+        final int index = vocal.index();
+        String onlyModeText = onlyModeOverride(line, index);
+        if (onlyModeText != null) {
+            final boolean cap = Settings.LYRICS_FORCE_CAPITALIZE.get();
+            final boolean strip = Settings.LYRICS_STRIP_TRAILING_PUNCTUATION.get();
+            String text = LyricsTextFormatter.format(onlyModeText, cap, strip).text();
+            return text.isEmpty() ? "" : MiniLyricsFormatter.encapsulate(
+                    Settings.LYRICS_MINI_ENCAPSULATION.get(), text,
+                    MiniLyricsFormatter.repeatCount(lines, index));
+        }
         final int limit = Settings.LYRICS_MINI_CHAR_LIMIT.get();
         final boolean capitalize = Settings.LYRICS_FORCE_CAPITALIZE.get();
         final boolean strip = Settings.LYRICS_STRIP_TRAILING_PUNCTUATION.get();
@@ -158,5 +209,9 @@ public final class LyricsPresentation {
 
         return MiniLyricsFormatter.current(chunks, positionMs, Settings.LYRICS_MINI_ENCAPSULATION.get(),
                 MiniLyricsFormatter.repeatCount(lines, vocal.index()));
+    }
+
+    /** The lyric shown with a track format frame. The line tells apart repeats of the same text. */
+    private record FrameKey(@Nullable LyricsLine line, @Nullable String text) {
     }
 }

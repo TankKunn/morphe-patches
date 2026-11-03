@@ -16,11 +16,15 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
+import app.morphe.patcher.extensions.InstructionExtensions.instructions
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
+import app.morphe.patcher.methodCall
+import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.booleanOption
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patcher.util.findFreeRegister
 import app.morphe.patcher.util.getFreeRegisterProvider
 import app.morphe.patcher.util.getReference
 import app.morphe.patcher.util.matchAllMethodIndicesForEach
@@ -32,6 +36,7 @@ import app.morphe.patches.shared.misc.fix.proto.mutableCopyMethodRef
 import app.morphe.patches.shared.misc.fix.proto.parseByteArrayMethodRef
 import app.morphe.patches.shared.misc.fix.proto.parseByteArrayWithRegistryMethodRef
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
+import app.morphe.patches.shared.misc.settings.preference.NonInteractivePreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
@@ -40,12 +45,13 @@ import app.morphe.patches.youtube.misc.contexthook.Endpoint
 import app.morphe.patches.youtube.misc.contexthook.addOSNameHook
 import app.morphe.patches.youtube.misc.contexthook.clientContextHookPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
+import app.morphe.patches.youtube.misc.fix.padding.BrowseListBottomPaddingFingerprint
+import app.morphe.patches.youtube.misc.navigation.SetEnumMapFingerprint
 import app.morphe.patches.youtube.misc.navigation.addBottomBarContainerHook
 import app.morphe.patches.youtube.misc.navigation.hookNavigationButtonCreated
 import app.morphe.patches.youtube.misc.navigation.navigationBarHookPatch
-import app.morphe.patches.youtube.misc.playservice.is_20_26_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
-import app.morphe.patches.youtube.misc.playservice.is_21_07_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_23_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_35_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
@@ -54,19 +60,20 @@ import app.morphe.patches.youtube.misc.toolbar.hookToolBar
 import app.morphe.patches.youtube.misc.toolbar.toolBarHookPatch
 import app.morphe.patches.youtube.shared.ActionBarSearchResultsFingerprint
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
+import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
+import app.morphe.util.ResourceGroup
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.containsLiteralInstruction
+import app.morphe.util.copyResources
 import app.morphe.util.findElementByAttributeValueOrThrow
 import app.morphe.util.fiveRegisters
 import app.morphe.util.indexOfFirstInstructionOrThrow
-import app.morphe.util.indexOfFirstInstructionReversedOrThrow
 import app.morphe.util.insertLiteralOverride
 import app.morphe.util.removeFromParent
 import app.morphe.util.setExtensionIsPatchIncluded
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
-import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction21t
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
@@ -109,6 +116,8 @@ private val hideSubscriptionsAppShortcutOption = booleanOption(
 
 private val navigationBarResourcePatch = resourcePatch {
     execute {
+        copyResources("navigationbar", ResourceGroup("drawable", "morphe_watch_later_selected.xml"))
+
         val hideSearchAppShortcut by hideSearchAppShortcutOption
         val hideSubscriptionsAppShortcut by hideSubscriptionsAppShortcutOption
 
@@ -131,6 +140,72 @@ private val navigationBarResourcePatch = resourcePatch {
     }
 }
 
+/**
+ * Replaces an extension placeholder method, that takes the bytes of a navigation bar item proto,
+ * with code that creates the navigation bar item with the factory of the app.
+ * The constructor of the item also uses the decoded endpoint and tab identity of the proto,
+ * so the whole factory is used instead of copying the constructor arguments of another item.
+ */
+internal fun BytecodePatchContext.implementPivotBarItemBuilder(placeholder: Fingerprint) {
+    val factory = PivotBarRendererFingerprint.method
+    val pivotBarItemType = factory.parameterTypes.single().toString()
+    val placeholderMethod = placeholder.method
+
+    placeholder.classDef.apply {
+        methods.remove(placeholderMethod)
+        addBridge(
+            placeholderMethod.name,
+            listOf("[B"),
+            "Ljava/lang/Object;",
+            3,
+            """
+                # The endpoints are extensions, which are lost if parsed without the registry.
+                sget-object v0, $pivotBarItemType->a:$pivotBarItemType
+                invoke-static { }, Lcom/google/protobuf/ExtensionRegistryLite;->getGeneratedRegistry()Lcom/google/protobuf/ExtensionRegistryLite;
+                move-result-object v1
+                invoke-static { v0, p0, v1 }, ${parseByteArrayWithRegistryMethodRef.get()!!}
+                move-result-object v0
+                check-cast v0, $pivotBarItemType
+                invoke-static { v0 }, $factory
+                move-result-object v0
+                const/4 v1, 0x0
+                invoke-virtual { v0, v1 }, ${factory.returnType}->orElse(Ljava/lang/Object;)Ljava/lang/Object;
+                move-result-object v0
+                return-object v0
+            """,
+            placeholderMethod.accessFlags
+        )
+    }
+}
+
+/**
+ * The feature flags of the translucent navigation bar. The navigation bar covering the system navigation
+ * buttons and the feed laid out behind it are only right with the window drawn behind the system
+ * navigation buttons, which comes from the edge to edge feature flag. The Hide status bar patch can turn
+ * that flag off, so the flags are overridden also without the Navigation bar patch, to keep them off then.
+ */
+internal val translucentNavigationBarFeatureFlagsPatch = bytecodePatch {
+    dependsOn(sharedExtensionPatch)
+
+    execute {
+        TranslucentNavigationBarFeatureFlagsFingerprint.matchAll().forEach { match ->
+            match.method.apply {
+                TRANSLUCENT_NAVIGATION_BAR_FEATURE_FLAGS.forEach { flag ->
+                    if (containsLiteralInstruction(flag)) {
+                        val override = when (flag) {
+                            NAVIGATION_BAR_COVERS_SYSTEM_BUTTONS_FLAG -> "useTranslucentNavigationBar"
+                            FEED_BEHIND_NAVIGATION_BAR_FLAG -> "useFeedBehindNavigationBar"
+                            else -> "useTranslucentNavigationBarBackground"
+                        }
+                        // Overrides every read of the flag in the method.
+                        insertLiteralOverride(flag, "$EXTENSION_CLASS->$override(Z)Z")
+                    }
+                }
+            }
+        }
+    }
+}
+
 val navigationBarPatch = bytecodePatch(
     name = "Navigation bar",
     description = "Adds options to hide and change the bottom navigation bar (such as the Shorts button) "
@@ -145,6 +220,7 @@ val navigationBarPatch = bytecodePatch(
         toolBarHookPatch,
         fixProtoLibraryPatch,
         navigationBarResourcePatch,
+        translucentNavigationBarFeatureFlagsPatch,
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)
@@ -161,6 +237,12 @@ val navigationBarPatch = bytecodePatch(
             SwitchPreference("morphe_hide_notifications_button"),
             SwitchPreference("morphe_show_search_button"),
             ListPreference("morphe_show_search_button_index"),
+            SwitchPreference("morphe_show_watch_later_button"),
+            ListPreference(
+                "morphe_show_watch_later_button_index",
+                entriesKey = "morphe_show_search_button_index_entries",
+                entryValuesKey = "morphe_show_search_button_index_entry_values"
+            ),
             SwitchPreference("morphe_show_settings_button"),
             ListPreference("morphe_show_settings_button_index"),
             SwitchPreference("morphe_show_settings_button_type", summary = true),
@@ -178,7 +260,12 @@ val navigationBarPatch = bytecodePatch(
         navPreferences += listOf(
             SwitchPreference("morphe_hide_navigation_new_content_dot"),
             SwitchPreference("morphe_navigation_bar_animations", summary = true),
-            ListPreference("morphe_navigation_bar_style")
+            ListPreference("morphe_navigation_bar_style"),
+            SwitchPreference("morphe_navigation_bar_glass", summary = true),
+            NonInteractivePreference(
+                key = "morphe_navigation_bar_glass_opacity",
+                tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference"
+            )
         )
 
         if (is_20_31_or_greater) {
@@ -217,36 +304,36 @@ val navigationBarPatch = bytecodePatch(
         // Hook navigation button created, in order to hide them.
         hookNavigationButtonCreated(EXTENSION_CLASS)
 
+        // The app has no selected icon for the Watch later icon, which the Watch later button uses.
+        val watchLaterIcon = WatchLaterIconEnumFingerprint.instructionMatches.last().getFieldAccessed()
+        SetEnumMapFingerprint.let {
+            // The navigation bar hook patch adds the notification icon fix to the same method.
+            it.clearMatch()
+
+            it.method.apply {
+                val putIndex = it.instructionMatches.last().index
+                val mapRegister = getInstruction<FiveRegisterInstruction>(putIndex).registerC
+                val insertIndex = putIndex + 1
+                val iconRegister = findFreeRegister(insertIndex, mapRegister)
+
+                addInstructions(
+                    insertIndex,
+                    """
+                        sget-object v$iconRegister, $watchLaterIcon
+                        invoke-static { v$mapRegister, v$iconRegister }, $EXTENSION_CLASS->setWatchLaterSelectedIcon(Ljava/util/EnumMap;Ljava/lang/Enum;)V
+                    """
+                )
+            }
+        }
+
         // Hide navigation bar
         addBottomBarContainerHook("$EXTENSION_CLASS->hideNavigationBar(Landroid/view/View;)V")
 
         // region Translucent navigation bar
 
-        // Turning on the feature flags of the translucent navigation bar, and the fixes for what
-        // they break. Every fix checks that the flags are turned on by this patch, so the fixes do
-        // nothing if the flags are left to the account, as with the default navigation bar style.
-
-        // The translucent navigation bar comes from three feature flags that not every account
-        // gets, so they are turned on to make the bar look the same on every account, and the opaque
-        // style below paints over the same translucent bar everywhere. The flag that makes the bar
-        // cover the system navigation buttons is turned on only when the window is drawn edge to
-        // edge. The blur and the feed behind the bar do not change the room left for the system
-        // navigation buttons, so they are also turned on without it.
-        TranslucentNavigationBarFeatureFlagsFingerprint.matchAll().forEach { match ->
-            match.method.apply {
-                TRANSLUCENT_NAVIGATION_BAR_FEATURE_FLAGS.forEach { flag ->
-                    if (containsLiteralInstruction(flag)) {
-                        val override = if (flag == NAVIGATION_BAR_COVERS_SYSTEM_BUTTONS_FLAG) {
-                            "useTranslucentNavigationBar"
-                        } else {
-                            "useTranslucentNavigationBarBackground"
-                        }
-                        // Overrides every read of the flag in the method.
-                        insertLiteralOverride(flag, "$EXTENSION_CLASS->$override(Z)Z")
-                    }
-                }
-            }
-        }
+        // Turning on the feature flags of the translucent navigation bar (translucentNavigationBarFeatureFlagsPatch),
+        // and the fixes for what they break. Every fix checks that the flags are turned on by this patch,
+        // so the fixes do nothing if the flags are left to the account, as with the default navigation bar style.
 
         // The blurred background of the translucent navigation bar is drawn only if the canvas is
         // hardware accelerated. The transparent and opaque styles leave it out, as it can crash
@@ -272,7 +359,7 @@ val navigationBarPatch = bytecodePatch(
         // method called right after adds to its height. The extension moves that room below
         // the slim status bar while it is shown, so the bar is given a method that sets it.
         navigationBarBottomPaddingMatches.first().instructionMatches.let { matches ->
-            val roomField = matches[0].getFieldAccessed()
+            val roomField = matches[0].fieldReference
             val updateHeightMethod = matches[1].getMethodCalled()
 
             mutableClassDefBy(PIVOT_BAR_CLASS).apply {
@@ -284,6 +371,65 @@ val navigationBarPatch = bytecodePatch(
                         invoke-virtual { p0 }, $updateHeightMethod
                         return-void
                     """
+                )
+
+                // The glass style keeps some room below the buttons, so the capsule floats above
+                // the bottom of the screen. The padding of the bar is reset from several places,
+                // so the room is kept wherever the padding is set.
+                // The room is added to the height when the bar is measured, also while the app
+                // animates the height of the bar to hide it.
+                addBridge(
+                    "onMeasure", listOf("I", "I"), "V", 3,
+                    """
+                        invoke-static { p0, p2 }, $EXTENSION_CLASS->getNavigationBarHeightMeasureSpec(Landroid/view/View;I)I
+                        move-result p2
+                        invoke-super { p0, p1, p2 }, $superclass->onMeasure(II)V
+                        return-void
+                    """,
+                    AccessFlags.PROTECTED.value
+                )
+
+                // The app moves the bar out of the screen by the height it gives the bar, while the
+                // player is dragged and when the bar is hidden on scroll, so the room added to the
+                // height would stay on screen. The bar is moved down by that room as well.
+                addBridge(
+                    "setTranslationY", listOf("F"), "V", 2,
+                    """
+                        invoke-static { p0, p1 }, $EXTENSION_CLASS->getNavigationBarTranslationY(Landroid/view/View;F)F
+                        move-result p1
+                        invoke-super { p0, p1 }, $superclass->setTranslationY(F)V
+                        return-void
+                    """,
+                    AccessFlags.PUBLIC.value
+                )
+
+                listOf("setPadding", "setPaddingRelative").forEach { name ->
+                    addBridge(
+                        name, listOf("I", "I", "I", "I"), "V", 5,
+                        """
+                            invoke-static { p0, p4 }, $EXTENSION_CLASS->getNavigationBarPadding(Landroid/view/View;I)I
+                            move-result p4
+                            invoke-super { p0, p1, p2, p3, p4 }, $superclass->$name(IIII)V
+                            return-void
+                        """,
+                        AccessFlags.PUBLIC.value
+                    )
+                }
+            }
+        }
+
+        // The glass style draws the blurred background of the app inside the capsule. The tint
+        // the app draws over the blur makes the capsule dark, so its alpha is lowered.
+        NavigationBarBlurTintFingerprint.match(
+            NavigationBarBlurTintCallFingerprint.instructionMatches[2].getMethodCalled()
+        ).let {
+            it.method.apply {
+                val index = it.instructionMatches.last().index
+                val paintRegister = getInstruction<FiveRegisterInstruction>(index).registerC
+
+                addInstruction(
+                    index + 1,
+                    "invoke-static { v$paintRegister }, $EXTENSION_CLASS->setNavigationBarBlurTint(Landroid/graphics/Paint;)V"
                 )
             }
         }
@@ -326,117 +472,20 @@ val navigationBarPatch = bytecodePatch(
             )
         }
 
-        // A flag gives the pages the height of the navigation bar and the miniplayer in another way,
-        // which leaves wrong padding in some pages, such as the incognito search. It is turned off.
-        if (is_21_07_or_greater) {
-            IncognitoSearchPaddingFeatureFlagFingerprint.matchAllMethodIndicesForEach { index ->
-                val moveResultIndex = indexOfFirstInstructionOrThrow(index, Opcode.MOVE_RESULT)
-                val register = getInstruction<OneRegisterInstruction>(moveResultIndex).registerA
-
-                addInstruction(moveResultIndex + 1, "const/4 v$register, 0x0")
-            }
-        }
-
         // The slim status bar ("No connection", "Back online") is laid out below the bar covering
         // the system navigation buttons, so the buttons cover it. The room for the buttons is moved
         // below it while it is shown.
         addBottomBarContainerHook("$EXTENSION_CLASS->watchSlimStatusBar(Landroid/view/View;)V")
-
-        // With the translucent navigation bar, the keyboard shrinks the layout that holds the page
-        // and the navigation bar to the top of the keyboard, so the navigation bar is moved above
-        // the keyboard. Without it, the keyboard covers the bottom of the page and the navigation bar
-        // stays at the bottom of the screen. The keyboard height is replaced with no margin,
-        // so the keyboard covers them again, except while the legacy miniplayer is shown.
-        PageBottomMarginFingerprint.let {
-            it.method.apply {
-                // The keyboard height and the window inset are put in the same register,
-                // and the window inset is read right after the branch of the keyboard height.
-                val insetIndex = it.instructionMatches.last().index
-                val marginRegister = getInstruction<TwoRegisterInstruction>(insetIndex).registerA
-                val keyboardBranchIndex = indexOfFirstInstructionReversedOrThrow(insetIndex) {
-                    opcode == Opcode.IF_EQZ &&
-                            (this as BuilderInstruction21t).target.location.index == insetIndex
-                }
-                val keyboardRegister = getInstruction<OneRegisterInstruction>(keyboardBranchIndex).registerA
-
-                addInstructionsAtControlFlowLabel(
-                    insetIndex + 1,
-                    """
-                        if-eqz v$keyboardRegister, :keyboard_hidden
-                        invoke-static/range { v$marginRegister .. v$marginRegister }, $EXTENSION_CLASS->getKeyboardMargin(I)I
-                        move-result v$marginRegister
-                        :keyboard_hidden
-                        nop
-                    """
-                )
-            }
-        }
-
-        // When the feed is laid out behind the navigation bar, the bottom padding of its list also
-        // holds the bottom window inset. With the keyboard open, that inset holds the keyboard too,
-        // so the padding grows, while the keyboard leaves the page as it is.
-        // While the page loads, as after tapping the search field of the watch history, the list
-        // does not scroll and its items only get the height left above the padding. With a tall
-        // keyboard nothing is left, and the items are hidden. The keyboard is removed from
-        // the padding, as for the navigation bar above.
-        if (is_20_26_or_greater) {
-            FeedListPaddingFingerprint.let {
-                it.method.apply {
-                    val index = it.instructionMatches.last().index
-                    val paddingInstruction = getInstruction<FiveRegisterInstruction>(index)
-                    val listRegister = paddingInstruction.registerC
-                    val bottomPaddingRegister = paddingInstruction.registerG
-                    val freeRegisters = getFreeRegisterProvider(index, 3)
-                    val insetsRegister = freeRegisters.getFreeRegister4Bit()
-                    val imeRegister = freeRegisters.getFreeRegister4Bit()
-                    val systemBarsRegister = freeRegisters.getFreeRegister4Bit()
-
-                    addInstructionsWithLabels(
-                        index,
-                        $$"""
-                            invoke-static { }, $$EXTENSION_CLASS->isTranslucentNavigationBarBackgroundForced()Z
-                            move-result v$$imeRegister
-                            if-eqz v$$imeRegister, :keep_padding
-                            # The inset types are only on Android 11 and later.
-                            sget v$$imeRegister, Landroid/os/Build$VERSION;->SDK_INT:I
-                            const/16 v$$systemBarsRegister, 0x1e
-                            if-lt v$$imeRegister, v$$systemBarsRegister, :keep_padding
-                            invoke-virtual { v$$listRegister }, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
-                            move-result-object v$$insetsRegister
-                            if-eqz v$$insetsRegister, :keep_padding
-                            # The keyboard inset is empty when the keyboard is hidden.
-                            invoke-static { }, Landroid/view/WindowInsets$Type;->ime()I
-                            move-result v$$imeRegister
-                            invoke-virtual { v$$insetsRegister, v$$imeRegister }, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
-                            move-result-object v$$imeRegister
-                            iget v$$imeRegister, v$$imeRegister, Landroid/graphics/Insets;->bottom:I
-                            # The padding does not hold the bottom inset, as when the feed is not behind the navigation bar.
-                            if-lt v$$bottomPaddingRegister, v$$imeRegister, :keep_padding
-                            invoke-static { }, Landroid/view/WindowInsets$Type;->systemBars()I
-                            move-result v$$systemBarsRegister
-                            invoke-virtual { v$$insetsRegister, v$$systemBarsRegister }, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
-                            move-result-object v$$systemBarsRegister
-                            iget v$$systemBarsRegister, v$$systemBarsRegister, Landroid/graphics/Insets;->bottom:I
-                            # Keyboard height above the system bars.
-                            sub-int/2addr v$$imeRegister, v$$systemBarsRegister
-                            if-lez v$$imeRegister, :keep_padding
-                            sub-int/2addr v$$bottomPaddingRegister, v$$imeRegister
-                            :keep_padding
-                            nop
-                        """
-                    )
-                }
-            }
-        }
 
         // When a browse page is laid out behind the navigation bar, its list is set to draw into
         // its padding, and the padding is set later, once the window insets are known. If the list
         // is refreshed in between, as when coming back from the Shorts player, it's set to clip to
         // its padding again, so the bottom padding is left as an empty band between the feed and
         // the navigation bar. The list is set to draw into its padding again with the padding.
-        BrowseListBottomPaddingFingerprint.let {
-            it.method.apply {
-                val index = it.instructionMatches.last().index
+        BrowseListBottomPaddingFingerprint.apply {
+            clearMatch()
+            method.apply {
+                val index = instructionMatches.last().index
                 val listRegister = getInstruction<FiveRegisterInstruction>(index).registerC
                 val freeRegister = getFreeRegisterProvider(index + 1, 1).getFreeRegister4Bit()
 
@@ -470,9 +519,7 @@ val navigationBarPatch = bytecodePatch(
             // The height of the navigation bar is passed to the object that reserves that room below
             // the Shorts player, right after the view. Other patches can change the height after
             // it's read, so the room is replaced where it's passed.
-            val getHeightIndex = indexOfFirstInstructionOrThrow {
-                getReference<MethodReference>()?.name == "getHeight"
-            }
+            val getHeightIndex = indexOfFirstInstructionOrThrow(methodCall(name = "getHeight"))
             val reserveRoomIndex = indexOfFirstInstructionOrThrow(getHeightIndex, Opcode.INVOKE_DIRECT_RANGE)
             val reserveRoomInstruction = getInstruction<RegisterRangeInstruction>(reserveRoomIndex)
             val parameterTypes = reserveRoomInstruction.getReference<MethodReference>()!!
@@ -496,6 +543,10 @@ val navigationBarPatch = bytecodePatch(
         // of turning off the feature flags that drive them. Those flags also switch the app out of
         // edge to edge, which moves the whole window layout and breaks everything measuring against it.
         addBottomBarContainerHook("$EXTENSION_CLASS->setNavigationBarOpaque(Landroid/view/View;)V")
+
+        // The glass style draws the navigation bar as a floating translucent capsule,
+        // as the background of the navigation bar, without changing its height or layout.
+        addBottomBarContainerHook("$EXTENSION_CLASS->setNavigationBarGlass(Landroid/view/View;)V")
 
         // The translucent theme hands the window a transparent color for the system navigation
         // buttons, so an opaque one is swapped in there instead of turning off the feature flag.
@@ -542,10 +593,10 @@ val navigationBarPatch = bytecodePatch(
         }
 
         if (is_20_31_or_greater) {
-            listOf(
-                AutoHideNavigationBarOnFeedScrollingFingerprint,
-                AutoHideNavigationBarOnDismissMiniplayerFingerprint,
-            ).forEach {
+            buildList {
+                add(AutoHideNavigationBarOnFeedScrollingFingerprint)
+                if (is_21_23_or_greater) add(AutoHideNavigationBarOnDismissMiniplayerFingerprint)
+            }.forEach {
                 it.method.addInstructionsWithLabels(
                     0,
                     """
@@ -632,15 +683,23 @@ val navigationBarPatch = bytecodePatch(
                         invoke-static { v$pivotBarRendererConstructorStartRegister }, $EXTENSION_CLASS->setPivotBarSettingsRenderer(Ljava/lang/Object;)V
                         :ignore_settings
         
-                        # Restore MessageLite register one last time for safety
+                        # Restore MessageLite register one last time
                         move-object/16 v$messageLiteRegister, v$backupRegister
+
+                        # --- 3. WATCH LATER BUTTON ---
+                        invoke-static { v$messageLiteRegister }, $EXTENSION_CLASS->setPivotBarWatchLaterRenderer(Lcom/google/protobuf/MessageLite;)V
                         nop
                     """
                 )
             }
         }
 
+        implementPivotBarItemBuilder(WatchLaterPivotBarItemBuilderFingerprint)
+
         PivotBarRendererListFingerprint.let {
+            // The Series tracker patch hooks the same index, which shifts it.
+            it.clearMatch()
+
             it.method.apply {
                 val insertMatch = it.instructionMatches[2]
                 val insertIndex = insertMatch.index
@@ -649,7 +708,7 @@ val navigationBarPatch = bytecodePatch(
 
                 val protoListBuilderMethod = Fingerprint(
                     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
-                    returnType = insertMatch.instruction.getReference<FieldReference>()!!.type,
+                    returnType = insertMatch.fieldReference.type,
                     parameters = listOf("Ljava/util/Collection;")
                 ).method
 
@@ -844,7 +903,6 @@ val navigationBarPatch = bytecodePatch(
         //
 
         val toolbarPreferences = mutableSetOf(
-            SwitchPreference("morphe_hide_toolbar_cast_button"),
             SwitchPreference("morphe_hide_toolbar_chat_button"),
             SwitchPreference("morphe_hide_toolbar_create_button", titleKey = "morphe_hide_create_button_title"),
             SwitchPreference("morphe_hide_toolbar_microphone_button"),
@@ -863,40 +921,41 @@ val navigationBarPatch = bytecodePatch(
             )
         )
 
+        // Some pages have their own toolbar, such as the You tab, which the swap of the create button
+        // does not change. The toolbar buttons of all pages are created with their renderer.
+        ToolBarButtonFingerprint.let {
+            val instructions = it.method.instructions.toList()
+            val setShowAsActionIndex = instructions.indexOfFirst { instruction ->
+                instruction.getReference<MethodReference>()?.name == "setShowAsAction"
+            }
+            val rendererType = instructions.drop(setShowAsActionIndex).first { instruction ->
+                instruction.opcode == Opcode.IGET_OBJECT
+            }.getReference<FieldReference>()!!.type
+
+            it.classDef.methods.first { method -> MethodUtil.isConstructor(method) }.apply {
+                val rendererRegister = parameterTypes.indexOfFirst { type -> type.toString() == rendererType } + 1
+                // The ids of the pages whose new content count the button shows, such as of the notifications.
+                val countIdsRegister = rendererRegister + 1
+                check(parameterTypes[countIdsRegister - 1].toString() == "Ljava/util/List;") {
+                    "Unknown parameters of the toolbar button"
+                }
+                addInstructions(
+                    0,
+                    """
+                        invoke-static/range { p$rendererRegister .. p$rendererRegister }, $EXTENSION_CLASS->swapToolbarNotificationButton(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/MessageLite;
+                        move-result-object p$rendererRegister
+                        check-cast p$rendererRegister, $rendererType
+                        invoke-static/range { p$rendererRegister .. p$countIdsRegister }, $EXTENSION_CLASS->getToolbarButtonCountIds(Lcom/google/protobuf/MessageLite;Ljava/util/List;)Ljava/util/List;
+                        move-result-object p$countIdsRegister
+                    """
+                )
+            }
+        }
+
         hookToolBar("$EXTENSION_CLASS->hideCreateButton")
         hookToolBar("$EXTENSION_CLASS->hideNotificationButton")
         hookToolBar("$EXTENSION_CLASS->hideSearchButton")
         hookToolBar("$EXTENSION_CLASS->hideChatButton")
-
-        //
-        // Hide cast button
-        //
-        CastMenuItemInitializeFingerprint.let {
-            it.method.apply {
-                val index = it.instructionMatches.last().index
-                val menuItemRegister = getInstruction<FiveRegisterInstruction>(index).registerC
-
-                addInstruction(
-                    index,
-                    "invoke-static { v$menuItemRegister }, $EXTENSION_CLASS->hideCastButton(Landroid/view/MenuItem;)V"
-                )
-            }
-        }
-
-        CastMenuItemVisibilityFingerprint.let {
-            it.method.apply {
-                val index = it.instructionMatches.last().index
-                val visibilityRegister = getInstruction<FiveRegisterInstruction>(index).registerD
-
-                addInstructions(
-                    index,
-                    """
-                        invoke-static { v$visibilityRegister }, $EXTENSION_CLASS->hideCastButton(Z)Z
-                        move-result v$visibilityRegister
-                    """
-                )
-            }
-        }
 
         //
         // Hide old search button

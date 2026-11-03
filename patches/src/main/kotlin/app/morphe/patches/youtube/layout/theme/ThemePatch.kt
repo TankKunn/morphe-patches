@@ -2,6 +2,7 @@
  * Copyright 2026 Morphe.
  * https://github.com/MorpheApp/morphe-patches/pull/2524
  * https://github.com/MorpheApp/morphe-patches/pull/3684
+ * https://github.com/MorpheApp/morphe-patches/pull/4109
  *
  * Original hard forked code:
  * https://github.com/ReVanced/revanced-patches/commit/724e6d61b2ecd868c1a9a37d465a688e83a74799
@@ -58,7 +59,6 @@ import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.util.forEachChildElement
 import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
-import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 
 private const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/theme/ThemePatch;"
 
@@ -237,6 +237,22 @@ private const val LAUNCHER_THEME_NAME = "Theme.YouTube.Home"
 private const val LAUNCHER_THEME_PARENT = "@style/Base.V27.Theme.YouTube.Home"
 private const val LIGHT_STATUS_BAR_ITEM_NAME = "android:windowLightStatusBar"
 
+/** A values directory of the default configuration or of an Android version. */
+private val VALUES_DIRECTORY_REGEX = Regex("""values(-v\d+)?""")
+private val STYLE_PARENT_REGEX = Regex(""" parent="([^"]*)"""")
+
+/**
+ * Parent of the launcher theme declared in a styles file, or null if the file does not declare it.
+ */
+private fun String.findLauncherThemeParent(): String? {
+    forEachRawResourceElement(this) {
+        if (it.tag == "style" && it.name == LAUNCHER_THEME_NAME) {
+            return STYLE_PARENT_REGEX.find(it.openTag)?.groupValues?.get(1)
+        }
+    }
+    return null
+}
+
 /**
  * Sets a light status bar in the launcher theme, and declares the theme if missing.
  */
@@ -357,10 +373,7 @@ val themePatch = baseThemePatch(
                 // Fix status and navigation bar showing white on some Android devices,
                 // such as SDK 28 Android 10 medium tablet.
                 val colorSplashBackgroundColor = "@color/$splashBackgroundColorKey"
-                val nightStyle = StringBuilder()
-                nightStyle.appendLine(
-                    "    <style name=\"$LAUNCHER_THEME_NAME\" parent=\"$LAUNCHER_THEME_PARENT\">"
-                )
+                val nightItems = StringBuilder()
                 arrayOf(
                     "android:navigationBarColor" to colorSplashBackgroundColor,
                     "android:windowBackground" to colorSplashBackgroundColor,
@@ -368,12 +381,39 @@ val themePatch = baseThemePatch(
                     "colorPrimaryDark" to colorSplashBackgroundColor,
                     "android:windowLightStatusBar" to "false",
                 ).forEach { (name, value) ->
-                    nightStyle.appendLine("        <item name=\"$name\">$value</item>")
+                    nightItems.appendLine("        <item name=\"$name\">$value</item>")
                 }
-                nightStyle.appendLine("    </style>")
 
-                this["res/values-night/styles.xml"].editText {
-                    it.appendResourceElements(nightStyle.toString())
+                // The night theme of each Android version has the parent the app declares for it.
+                // Older app versions declare the parent for Android 8.1 and newer in values-v27
+                // only, so with that parent the night theme has no parent on Android 8.0, and
+                // the app crashes as the activity then has no AppCompat theme.
+                val resourceDirectory = this["res"]
+                resourceDirectory.listFiles { file ->
+                    file.name.matches(VALUES_DIRECTORY_REGEX)
+                }!!.forEach { valuesDirectory ->
+                    val stylesFile = valuesDirectory.resolve("styles.xml")
+                    if (!stylesFile.exists()) return@forEach
+
+                    val parent = stylesFile.readText().findLauncherThemeParent() ?: return@forEach
+
+                    val nightStylesFile = resourceDirectory
+                        .resolve(valuesDirectory.name.replace("values", "values-night"))
+                        .resolve("styles.xml")
+                    if (!nightStylesFile.exists()) {
+                        nightStylesFile.parentFile.mkdirs()
+                        nightStylesFile.writeText(
+                            "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n</resources>\n"
+                        )
+                    }
+
+                    nightStylesFile.editText {
+                        it.appendResourceElements(
+                            "    <style name=\"$LAUNCHER_THEME_NAME\" parent=\"$parent\">\n" +
+                                    nightItems +
+                                    "    </style>\n"
+                        )
+                    }
                 }
 
                 arrayOf(
@@ -461,10 +501,6 @@ val themePatch = baseThemePatch(
             noTitleUnsortedPreferenceCategory(preferences)
         )
 
-        PreferenceScreen.GENERAL.addPreferences(
-            ListPreference("morphe_splash_screen_animation_style")
-        )
-
         // Splash screen is drawn by the system with the theme of the launcher activity, so
         // the activity is handed over as soon as it exists. A patched theme color is
         // already a part of that theme, and no theme is generated to hand over.
@@ -519,6 +555,17 @@ val themePatch = baseThemePatch(
                                 "->onNewContentIndicator(Landroid/view/ViewStub;)V"
                     )
                 }
+            }
+        }
+
+        // The light theme colors other than white are below that luminance, so the status bar showed
+        // white icons on them (https://github.com/MorpheApp/morphe-patches/issues/1023).
+        // The newer app code that colors the status bar like the top bar uses 0.5, as is done here.
+        StatusBarDarkIconsFingerprint.let {
+            it.method.apply {
+                val index = it.instructionMatches[2].index
+                val register = getInstruction<OneRegisterInstruction>(index).registerA
+                replaceInstruction(index, "const-wide v$register, 0x3fe0000000000000L")
             }
         }
 
@@ -610,44 +657,6 @@ val themePatch = baseThemePatch(
                 it.method.insertLiteralOverride(
                     it.instructionMatches.first().index,
                     false
-                )
-            }
-        }
-
-        // Lottie splash screen exists in earlier versions, but it may not be always on.
-        SplashScreenStyleFingerprint.let {
-            it.method.insertLiteralOverride(
-                it.instructionMatches.first().index,
-                "$EXTENSION_CLASS->getLoadingScreenType(I)I"
-            )
-        }
-
-        ShowSplashScreenFingerprint.let {
-            it.method.apply {
-                val lastIndex = it.instructionMatches.last().index
-                val lastInstruction = getInstruction<TwoRegisterInstruction>(lastIndex)
-                val lastRegisterA = lastInstruction.registerA
-                val lastRegisterB = lastInstruction.registerB
-
-                addInstructions(
-                    lastIndex,
-                    """
-                        invoke-static { v$lastRegisterA, v$lastRegisterB }, $EXTENSION_CLASS->showSplashScreen(II)I
-                        move-result v$lastRegisterA
-                    """
-                )
-
-                val firstIndex = it.instructionMatches[1].index
-                val firstRegister = getInstruction<OneRegisterInstruction>(
-                    firstIndex
-                ).registerA
-
-                addInstructions(
-                    firstIndex + 1,
-                    """
-                        invoke-static { v$firstRegister }, $EXTENSION_CLASS->showSplashScreen(Z)Z
-                        move-result v$firstRegister
-                    """
                 )
             }
         }

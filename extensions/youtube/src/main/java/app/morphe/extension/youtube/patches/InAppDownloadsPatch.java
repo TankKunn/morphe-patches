@@ -11,6 +11,7 @@ package app.morphe.extension.youtube.patches;
 import android.net.Uri;
 import android.util.Base64;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.protobuf.ByteString;
@@ -18,12 +19,15 @@ import com.google.protobuf.MessageLite;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.patches.DownloadMode;
+import app.morphe.extension.shared.sponsorblock.SponsorBlockOfflineStorage;
 import app.morphe.extension.shared.spoof.ClientType;
 import app.morphe.extension.shared.spoof.SpoofVideoStreamsPatch;
 import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
@@ -103,6 +107,11 @@ public final class InAppDownloadsPatch {
      * Opus audio is not saved, the other audio and all video formats are.
      */
     private static final String UNSAVABLE_AUDIO_MIME_TYPE_PREFIX = "audio/webm";
+
+    /**
+     * Key of the interaction logger, in the context a command is run with.
+     */
+    private static final String INTERACTION_LOGGER_KEY = "com.google.android.libraries.youtube.logging.interaction_logger";
 
     /**
      * Name of the template of the page headers, such as the header of a playlist page.
@@ -243,6 +252,34 @@ public final class InAppDownloadsPatch {
     }
 
     /**
+     * Determines whether the given player response proto represents a playable offline video.
+     */
+    public static boolean isOfflinePlayerResponse(@NonNull String videoId, @Nullable Object playerProto) {
+        try {
+            if (!(playerProto instanceof MessageLite message)) {
+                Logger.printDebug(() -> "isOfflinePlayerResponse: playerProto is not MessageLite: "
+                        + (playerProto != null ? playerProto.getClass().getName() : "null"));
+                return false;
+            }
+            OfflinePlayerResponse response = OfflinePlayerResponse.parseFrom(message.toByteArray());
+            if (response.hasOfflineState()) {
+                int action = response.getOfflineState().getActionValue();
+                if (action == OfflineStateAction.OFFLINE_STATE_ACTION_OK_VALUE) {
+                    Logger.printDebug(() -> "Detected playable offline video: " + videoId);
+                    return true;
+                } else {
+                    Logger.printDebug(() -> "Offline video state action not OK: " + action + " for: " + videoId);
+                }
+            } else {
+                Logger.printDebug(() -> "OfflinePlayerResponse has no offline state for: " + videoId);
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "isOfflinePlayerResponse failure", ex);
+        }
+        return false;
+    }
+
+    /**
      * Injection point.
      * <p>
      * Called off the main thread with the player response the app saves a video with.
@@ -263,13 +300,20 @@ public final class InAppDownloadsPatch {
             if (!original.hasOfflineState()) {
                 return null;
             }
+
+            String videoId = original.hasVideoDetails()
+                    ? original.getVideoDetails().getVideoId()
+                    : "";
+
             final boolean allowed = original.getOfflineState().getActionValue()
                     == OfflineStateAction.OFFLINE_STATE_ACTION_OK_VALUE;
             if (allowed && original.getStreamingData().getAdaptiveFormatsCount() > 0) {
+                if (!videoId.isEmpty()) {
+                    SponsorBlockOfflineStorage.fetchAndSaveSegments(videoId);
+                }
                 return null;
             }
 
-            String videoId = original.getVideoDetails().getVideoId();
             if (videoId.isEmpty()) {
                 Logger.printDebug(() -> "Declined offline player response has no video id");
                 return null;
@@ -287,10 +331,7 @@ public final class InAppDownloadsPatch {
             // and only the offline state token and player config are kept from the declined response.
             OfflinePlayerResponse.Builder builder = OfflinePlayerResponse.parseFrom(streams.streamingData()).toBuilder();
             builder.setStreamingData(savableStreamingData(builder.getStreamingData()))
-                    .setOfflineState(OfflineState.newBuilder()
-                            .setToken(original.getOfflineState().getToken())
-                            .setPolicyLifetimeSeconds(OFFLINE_POLICY_LIFETIME_SECONDS)
-                            .setAction(OfflineStateAction.OFFLINE_STATE_ACTION_OK));
+                    .setOfflineState(playableOfflineState(original.getOfflineState().getToken()));
 
             // Without the ExoPlayer config the app only looks at the progressive formats, which are not savable.
             // The player config of the app's own response fits the device, so it's kept if there is one.
@@ -300,6 +341,8 @@ public final class InAppDownloadsPatch {
             builder.setPlayerConfig(playerConfig.toBuilder().setExoPlayerConfig(
                     playerConfig.getExoPlayerConfig().toBuilder().setUseExoPlayer(true)));
 
+            SponsorBlockOfflineStorage.fetchAndSaveSegments(videoId);
+
             Logger.printDebug(() -> "Replaced declined offline player response of: " + videoId
                     + " savable formats: " + countSavableFormats(builder.getStreamingData())
                     + " of: " + builder.getStreamingData().getAdaptiveFormatsCount());
@@ -308,6 +351,48 @@ public final class InAppDownloadsPatch {
             Logger.printException(() -> "replaceDeclinedOfflinePlayerResponse failure", ex);
             return null;
         }
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called off the main thread with the offline state the server gives a saved video when the app
+     * refreshes its saved videos, which the server schedules about every 12 hours.
+     * The server disables saved videos that need Premium to be saved, such as music videos,
+     * and the app then shows an error instead of playing them.
+     *
+     * @param offlineState New offline state of a saved video.
+     * @return An offline state that keeps the video playable, or null to keep the original.
+     */
+    @Nullable
+    public static byte[] replaceDisabledOfflineState(@Nullable MessageLite offlineState) {
+        try {
+            if (Settings.DOWNLOAD_MODE.get() != DownloadMode.IN_APP || offlineState == null) {
+                return null;
+            }
+
+            OfflineState state = OfflineState.parseFrom(offlineState.toByteArray());
+            if (state.getAction() != OfflineStateAction.OFFLINE_STATE_ACTION_DISABLE) {
+                return null;
+            }
+
+            Logger.printDebug(() -> "Replacing disabled offline state with reason: " + state.getDisabledReason());
+            return playableOfflineState(state.getToken()).toByteArray();
+        } catch (Exception ex) {
+            Logger.printException(() -> "replaceDisabledOfflineState failure", ex);
+            return null;
+        }
+    }
+
+    /**
+     * @return Offline state that keeps a saved video playable, without asking the server again for a long time.
+     */
+    private static OfflineState playableOfflineState(String token) {
+        return OfflineState.newBuilder()
+                .setToken(token)
+                .setPolicyLifetimeSeconds(OFFLINE_POLICY_LIFETIME_SECONDS)
+                .setAction(OfflineStateAction.OFFLINE_STATE_ACTION_OK)
+                .build();
     }
 
     /**
@@ -436,6 +521,29 @@ public final class InAppDownloadsPatch {
                 .setPersistence(ENTITY_PERSISTENCE)
                 .build();
         return Uri.encode(Base64.encodeToString(key.toByteArray(), Base64.URL_SAFE | Base64.NO_WRAP));
+    }
+
+    /**
+     * Saves a video the same as the Download button of the app, for videos that have no such button.
+     * Must be called from the main thread.
+     */
+    public static void saveVideo(String videoId) {
+        Logger.printDebug(() -> "Saving video: " + videoId);
+        // If the formats of the video are loaded first, the command logs to the interaction logger
+        // without checking it is set.
+        Map<String, Object> context = new HashMap<>();
+        context.put(INTERACTION_LOGGER_KEY, getNoOpInteractionLogger());
+        if (!CommandRouterPatch.executeCommand(saveVideoCommand(videoId, List.of()).toByteArray(), context)) {
+            Logger.printException(() -> "Could not save the video, no activity is shown: " + videoId);
+        }
+    }
+
+    /**
+     * @return The interaction logger of the app that logs nothing.
+     */
+    @Nullable
+    private static Object getNoOpInteractionLogger() {
+        return null; // Modified during patching.
     }
 
     /**

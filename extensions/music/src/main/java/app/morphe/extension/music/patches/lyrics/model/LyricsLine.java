@@ -66,7 +66,7 @@ public record LyricsLine(long startTimeMs, long endTimeMs, String text, List<Wor
                         if (i > 0) sb.append(' ');
                         sb.append(w.text());
                         boolean sp = (i < words.size() - 1);
-                        updated.add(new Word(w.startMs(), w.endMs(), w.text(), w.romaji(), sp));
+                        updated.add(new Word(w.startMs(), w.endMs(), w.text(), w.romaji(), sp, w.ruby()));
                     }
                     words = updated;
                     text = sb.toString();
@@ -85,7 +85,7 @@ public record LyricsLine(long startTimeMs, long endTimeMs, String text, List<Wor
                     } else {
                         sp = (i < words.size() - 1);
                     }
-                    updated.add(new Word(w.startMs(), w.endMs(), w.text(), w.romaji(), sp));
+                    updated.add(new Word(w.startMs(), w.endMs(), w.text(), w.romaji(), sp, w.ruby()));
                 }
                 words = updated;
             }
@@ -110,8 +110,49 @@ public record LyricsLine(long startTimeMs, long endTimeMs, String text, List<Wor
         this(startTimeMs, NO_TIME, text, List.of(), null, false, false, null);
     }
 
+    public static boolean isCenteredAgentId(@Nullable String agentId) {
+        if (agentId == null) {
+            return false;
+        }
+        final String id = agentId.trim();
+        return "v1000".equalsIgnoreCase(id) || "v2000".equalsIgnoreCase(id);
+    }
+
+    private static String compactText(String value) {
+        final StringBuilder builder = new StringBuilder(value.length());
+        for (int i = 0; i < value.length(); i++) {
+            final char c = value.charAt(i);
+            if (!Character.isWhitespace(c)) {
+                builder.append(c);
+            }
+        }
+        return builder.toString();
+    }
+
+    private static boolean hasMultipleWords(String value) {
+        boolean inWord = false;
+        int wordCount = 0;
+        for (int i = 0; i < value.length(); i++) {
+            if (Character.isWhitespace(value.charAt(i))) {
+                inWord = false;
+            } else if (!inWord) {
+                inWord = true;
+                wordCount++;
+                if (wordCount > 1) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public boolean hasWords() {
         return !words.isEmpty();
+    }
+
+    /** Whether Apple's group/other vocal agent is centered instead of placed on a duet side. */
+    public boolean isCentered() {
+        return isCenteredAgentId(agentId);
     }
 
     /**
@@ -128,25 +169,14 @@ public record LyricsLine(long startTimeMs, long endTimeMs, String text, List<Wor
         }
         if (words.size() == 1) {
             Word single = words.get(0);
-            if (compactText(single.text()).equalsIgnoreCase(compactText(text))) {
-                return false;
-            }
             if (single.endMs() <= single.startMs()) {
                 return false;
             }
+            // A span repeating the whole line is line timing; one over some words is still word timing.
+            return !hasMultipleWords(text)
+                    || !compactText(single.text()).equalsIgnoreCase(compactText(text));
         }
         return true;
-    }
-
-    private static String compactText(String value) {
-        final StringBuilder builder = new StringBuilder(value.length());
-        for (int i = 0; i < value.length(); i++) {
-            final char c = value.charAt(i);
-            if (!Character.isWhitespace(c)) {
-                builder.append(c);
-            }
-        }
-        return builder.toString();
     }
 
     @NonNull

@@ -41,7 +41,7 @@ public abstract class BaseActivityHook extends Activity {
 
     public static final String MORPHE_SETTINGS_INTENT = "morphe_settings_intent";
     public static final String MORPHE_DOWNLOADS_INTENT = "morphe_downloads_intent";
-    private static final int ID_MORPHE_SETTINGS_FRAGMENTS =
+    protected static final int ID_MORPHE_SETTINGS_FRAGMENTS =
             ResourceUtils.getIdentifierOrThrow(ResourceType.ID, "morphe_settings_fragments");
     private static final int ID_MORPHE_TOOLBAR_PARENT =
             ResourceUtils.getIdentifierOrThrow(ResourceType.ID, "morphe_toolbar_parent");
@@ -108,7 +108,7 @@ public abstract class BaseActivityHook extends Activity {
      * Closes the settings, after first showing the restart dialog if a changed setting requires it.
      */
     public static void closeSettings(Activity activity) {
-        if (!AbstractPreferenceFragment.showRestartDialogIfNeeded(activity, activity::finish)) {
+        if (!AbstractPreferenceFragment.showRestartDialogIfNeeded(activity)) {
             activity.finish();
         }
     }

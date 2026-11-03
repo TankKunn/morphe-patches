@@ -18,6 +18,7 @@ import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -26,6 +27,7 @@ import java.util.Objects;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.patches.DownloadMode;
+import app.morphe.extension.shared.patches.MediaHttpRequest;
 import app.morphe.extension.shared.settings.AppLanguage;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
@@ -237,6 +239,29 @@ public class SpoofVideoStreamsPatch {
         }
     }
 
+    public interface OfflineResponseResolver {
+        boolean isOffline(@NonNull String videoId, @Nullable Object playerProto);
+    }
+
+    @Nullable
+    private static volatile OfflineResponseResolver offlineResponseResolver;
+
+    public static void setOfflineResponseResolver(@Nullable OfflineResponseResolver resolver) {
+        offlineResponseResolver = resolver;
+    }
+
+    private static boolean isOfflinePlayerResponse(@NonNull String videoId, @Nullable Object playerProto) {
+        try {
+            OfflineResponseResolver resolver = offlineResponseResolver;
+            if (resolver != null) {
+                return resolver.isOffline(videoId, playerProto);
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "isOfflinePlayerResponse failure", ex);
+        }
+        return false;
+    }
+
     /**
      * Injection point.
      */
@@ -257,7 +282,20 @@ public class SpoofVideoStreamsPatch {
 
     /**
      * Injection point.
+     * Called when the player is set up for a video, after its streams were given by {@link #getStreamingData}.
      * Fix audio stuttering in YouTube Music.
+     */
+    public static boolean disableSABR(@Nullable String videoId) {
+        if (!SPOOF_VIDEO_STREAMS) {
+            return false;
+        }
+        final boolean useSABR = StreamingDataRequest.playerClientUsesSABR(videoId);
+        Logger.printDebug(() -> "Player uses SABR: " + useSABR + " for: " + videoId);
+        return !useSABR;
+    }
+
+    /**
+     * @return If SABR is turned off for the streams last given to the player.
      */
     public static boolean disableSABR() {
         return SPOOF_VIDEO_STREAMS && !StreamingDataRequest.getLastSpoofedClientUseSABR();
@@ -329,6 +367,10 @@ public class SpoofVideoStreamsPatch {
     public static void fetchStreams(String url, Map<String, String> requestHeaders) {
         if (SPOOF_VIDEO_STREAMS) {
             try {
+                if (!Utils.isNetworkConnected()) {
+                    return;
+                }
+
                 Uri uri = Uri.parse(url);
                 String path = uri.getPath();
                 if (path == null || !path.contains("player")) {
@@ -368,9 +410,20 @@ public class SpoofVideoStreamsPatch {
      */
     @Nullable
     public static byte[] getStreamingData(String videoId) {
+        return getStreamingData(videoId, null);
+    }
+
+    @Nullable
+    public static byte[] getStreamingData(String videoId, @Nullable Object playerProto) {
         if (SPOOF_VIDEO_STREAMS) {
             if (Boolean.TRUE.equals(keepStreamsOnThread.get())) {
                 Logger.printDebug(() -> "Keeping the streams of the player response: " + videoId);
+                return null;
+            }
+
+            if (isOfflinePlayerResponse(videoId, playerProto)) {
+                Logger.printDebug(() -> "Not overriding streaming data (saved offline video): " + videoId);
+                StreamingDataRequest.setPlayerClient(videoId, null);
                 return null;
             }
 
@@ -378,18 +431,20 @@ public class SpoofVideoStreamsPatch {
             // and a video that is saved plays with the streams of its own player response.
             if (!Utils.isNetworkConnected()) {
                 Logger.printDebug(() -> "Not overriding streaming data (network is not connected): " + videoId);
+                StreamingDataRequest.setPlayerClient(videoId, null);
                 return null;
             }
 
             try {
                 StreamingDataRequest request = StreamingDataRequest.getRequestForVideoId(videoId);
-                if (request != null) {
-                    var buffers = request.getStream();
-                    if (buffers != null) {
-                        byte[] stream = buffers.streamingData();
-                        Logger.printDebug(() -> "Overriding video stream: " + videoId);
-                        return stream;
-                    }
+                var buffers = request == null ? null : request.getStream();
+                // The player chooses SABR from the client of the streams it is given for this video.
+                StreamingDataRequest.setPlayerClient(videoId, buffers == null ? null : buffers.client());
+                if (buffers != null) {
+                    byte[] stream = buffers.streamingData();
+                    Logger.printDebug(() -> "Overriding video stream: " + videoId
+                            + " with client: " + buffers.client());
+                    return stream;
                 }
 
                 Logger.printDebug(() -> "Not overriding streaming data (video stream is null): " + videoId);
@@ -474,6 +529,64 @@ public class SpoofVideoStreamsPatch {
         }
 
         return postData;
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called off the main thread when native code starts a media request.
+     * The app makes the requests of SABR streams itself, and names itself and the device it runs on,
+     * even when the streams are from a TV client. These requests name the TV client instead.
+     *
+     * @param callbacks Native callbacks of the request, which are also given the response.
+     * @return The request to start.
+     */
+    public static MediaHttpRequest onMediaRequest(MediaHttpRequest request, Object callbacks) {
+        if (!SPOOF_VIDEO_STREAMS) {
+            return request;
+        }
+        try {
+            String url = request.patch_getUrl();
+            if (url == null || !url.contains(STREAM_URL_PATH)) {
+                return request;
+            }
+            Uri uri = Uri.parse(url);
+            if (!STREAM_URL_PATH.equals(uri.getPath()) || uri.getQueryParameter("sabr") == null) {
+                return request;
+            }
+
+            String urlClient = uri.getQueryParameter("c");
+            MediaHttpRequest requestToStart = request;
+            byte[] body = request.patch_getBody();
+            // The other TV clients that use SABR are the same client on another device.
+            if (body != null && ClientType.TV_SABR.clientName.equals(urlClient)) {
+                byte[] clientInfo = SabrRequestBody.buildClientInfo(ClientType.TV_SABR, getLocaleOverride());
+                requestToStart = request.patch_withBody(SabrRequestBody.replaceClientInfo(body, clientInfo));
+            }
+
+            if (SabrMediaLogger.isEnabled()) {
+                SabrMediaLogger.onRequest(urlClient, requestToStart.patch_getBody(), callbacks);
+            }
+            return requestToStart;
+        } catch (Exception ex) {
+            Logger.printException(() -> "onMediaRequest failure", ex);
+            return request;
+        }
+    }
+
+    /**
+     * Injection point.
+     * Called with each chunk of a media response, before native code reads it.
+     */
+    public static void onMediaResponseChunk(Object callbacks, @Nullable ByteBuffer chunk) {
+        if (!SPOOF_VIDEO_STREAMS || chunk == null) {
+            return;
+        }
+        try {
+            SabrMediaLogger.onResponseChunk(callbacks, chunk);
+        } catch (Exception ex) {
+            Logger.printException(() -> "onMediaResponseChunk failure", ex);
+        }
     }
 
     /**

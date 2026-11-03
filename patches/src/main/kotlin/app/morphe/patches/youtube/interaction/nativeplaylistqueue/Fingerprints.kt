@@ -28,15 +28,6 @@ import com.android.tools.smali.dexlib2.iface.Method
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
-/** A generated protobuf message creates its default instance in its static initializer. */
-internal fun protoDefaultInstanceFingerprint(messageType: String) = Fingerprint(
-    definingClass = messageType,
-    name = "<clinit>",
-    filters = listOf(
-        fieldAccess(definingClass = messageType, type = messageType, opcode = Opcode.SPUT_OBJECT)
-    )
-)
-
 /** The native batch request, not the modern panel's single-video parameter. */
 internal object QueueSaveRequestFingerprint : Fingerprint(
     name = "<init>",
@@ -1340,6 +1331,21 @@ internal fun queuePlayerCloseFlingLegacyFingerprint(dismiss: MethodReference) = 
 internal fun queuePlayerCloseTouchFingerprint(dismiss: MethodReference) = Fingerprint(
     parameters = listOf("Landroid/view/View;", "Landroid/view/MotionEvent;"),
     returnType = "Z",
+    filters = listOf(methodCall(reference = dismiss))
+)
+
+/** 21.44+ onFling forwards an accepted fling to the mini player controller, which dismisses. */
+internal fun queuePlayerControllerFlingFingerprint(dismiss: MethodReference) = Fingerprint(
+    parameters = listOf("Landroid/view/MotionEvent;", "F", "F"),
+    returnType = "V",
+    filters = listOf(methodCall(reference = dismiss))
+)
+
+/** 21.44+ touch release is also forwarded to the mini player controller. */
+internal fun queuePlayerControllerReleaseFingerprint(dismiss: MethodReference) = Fingerprint(
+    classFingerprint = queuePlayerControllerFlingFingerprint(dismiss),
+    parameters = emptyList(),
+    returnType = "V",
     filters = listOf(methodCall(reference = dismiss))
 )
 
