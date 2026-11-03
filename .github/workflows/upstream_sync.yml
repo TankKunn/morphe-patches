@@ -85,6 +85,9 @@ jobs:
             .gitattributes .releaserc README.md \
             extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/MagnifierRecon.java \
             patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt
+          # Keep the validator and attributes from the workflow's own ref; the
+          # upstream dev branch may predate these fork-only files.
+          git checkout "$GITHUB_SHA" -- .gitattributes .github/scripts/validate_sync_tree.py
           python3 .github/scripts/apply_magnifier_overlay.py --source-ref "$OLD_DEV"
           git add -A
           python3 .github/scripts/validate_sync_tree.py --conflicts-only
