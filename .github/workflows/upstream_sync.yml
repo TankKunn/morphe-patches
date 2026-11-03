@@ -87,6 +87,7 @@ jobs:
           # Keep the validator and attributes from the workflow's own ref; the
           # upstream dev branch may predate these fork-only files.
           git checkout "$GITHUB_SHA" -- .gitattributes .github/scripts/validate_sync_tree.py
+          git rm -f --ignore-unmatch .github/workflows/crowdin_pull.yml .github/workflows/crowdin_push.yml
           python3 .github/scripts/apply_magnifier_overlay.py --source-ref "$OLD_DEV"
           git add -A
           python3 .github/scripts/validate_sync_tree.py --conflicts-only
