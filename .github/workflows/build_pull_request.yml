@@ -18,6 +18,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      - name: Check tracked text uses LF and conflict markers are absent
+        run: python3 .github/scripts/validate_sync_tree.py
+
       - name: Setup Java
         uses: actions/setup-java@v6
         with:

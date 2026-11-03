@@ -6,6 +6,12 @@ on:
   schedule:
     - cron: '37 8 * * 1'
   workflow_dispatch:
+    inputs:
+      candidate_only:
+        description: Validate candidate without publishing or updating main
+        type: boolean
+        required: true
+        default: false
 
 permissions:
   contents: write
@@ -130,6 +136,18 @@ jobs:
                     git checkout --ours -- "$path"
                     git add -- "$path"
                     ;;
+                  gradle.properties|patches-list.json)
+                    # Preserve upstream's version/catalog state; the magnifier
+                    # is reapplied by the overlay and patch-list generation.
+                    git checkout --theirs -- "$path"
+                    git add -- "$path"
+                    ;;
+                  patches-bundle.json)
+                    # Keep the fork manifest until the release asset has been
+                    # created and verified, then replace it from the generated manifest.
+                    git checkout --ours -- "$path"
+                    git add -- "$path"
+                    ;;
                   .github/workflows/crowdin_pull.yml|.github/workflows/crowdin_push.yml|.github/workflows/open_pull_request.yml)
                     # These fork-disabled workflows stay deleted after sync.
                     git rm -f -- "$path"
@@ -151,7 +169,7 @@ jobs:
                 echo "Unresolved upstream merge paths: $unresolved" >&2
                 exit 1
               fi
-              git diff --cached --check
+              python3 .github/scripts/validate_sync_tree.py --conflicts-only
               git commit --no-edit
             fi
           fi
@@ -235,14 +253,14 @@ jobs:
 
       - name: Commit candidate and publish stable release
         id: publish
-        if: steps.prepare.outputs.publish == 'true'
+        if: steps.prepare.outputs.publish == 'true' && inputs.candidate_only != true
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           set -euo pipefail
           exec > >(tee -a "$RUNNER_TEMP/stable-sync.log") 2>&1
           git add -A
-          git diff --cached --check
+          python3 .github/scripts/validate_sync_tree.py --conflicts-only
           git commit -m "fix: publish stable Morphe patches v$VERSION with magnifier"
           CANDIDATE="$(git rev-parse HEAD)"
           echo "CANDIDATE_SHA=$CANDIDATE" >> "$GITHUB_ENV"
@@ -263,7 +281,7 @@ jobs:
           # MPP inspection above.
           cp "$MANIFEST" patches-bundle.json
           git add patches-bundle.json
-          git diff --cached --check
+          python3 .github/scripts/validate_sync_tree.py --conflicts-only
           python3 .github/scripts/verify_magnifier_bundle.py \
             --bundle "$BUNDLE" --patch-list patches-list.json --manifest patches-bundle.json \
             --expected-repo "$GITHUB_REPOSITORY"
@@ -300,35 +318,21 @@ jobs:
             sed -E -e 's/(github_pat_|gh[pousr]_)[A-Za-z0-9_]{20,}/[REDACTED]/g' \
                    -e 's@[A-Za-z]:\\Users\\[^[:space:]]+@<redacted-path>@g' \
                    -e 's#/home/runner/[^[:space:]]+#<runner-path>#g' || true)"
-          body="$(cat <<EOF
-          **Failing step:** $failed_step
-
-          Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
-
-          The previous stable release and main manifest remain unchanged unless this run completed the post-upload verification and main update.
-          EOF
-          )"
-          if [[ -n "$conflicts" ]]; then
-            body+="
-
-          Unresolved conflicting files:
-          ```
-          $conflicts
-          ```"
-          fi
-          body+="
-
-          Redacted log tail:
-          ```
-          ${tail_log:-No command log was captured.}
-          ```"
+          body_file="$RUNNER_TEMP/failure-issue.md"
+          {
+            printf '**Failing step:** %s\n\n' "$failed_step"
+            printf 'Run: %s/%s/actions/runs/%s\n\n' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID"
+            printf 'The previous stable release and manifest remain unchanged unless post-upload verification and manifest update completed.\n'
+            if [[ -n "$conflicts" ]]; then printf '\nUnmerged paths:\n```\n%s\n```\n' "$conflicts"; fi
+            printf '\nRedacted log tail:\n```\n%s\n```\n' "${tail_log:-No command log was captured.}"
+          } > "$body_file"
           existing="$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --limit 100 \
             --json number,title | jq -r --arg title "$issue_title" \
               '.[] | select(.title == $title) | .number' | head -n 1)"
           if [[ -n "$existing" ]]; then
-            gh issue comment "$existing" --repo "$GITHUB_REPOSITORY" --body "$body"
+            gh issue comment "$existing" --repo "$GITHUB_REPOSITORY" --body-file "$body_file"
           else
-            gh issue create --repo "$GITHUB_REPOSITORY" --title "$issue_title" --body "$body"
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$issue_title" --body-file "$body_file"
           fi
 
       - name: Roll back unverified stable release
@@ -358,6 +362,12 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          set +e
-          gh api --silent --method DELETE \
-            "repos/$GITHUB_REPOSITORY/git/refs/heads/automation/stable-candidate-$GITHUB_RUN_ID"
+          ref="automation/stable-candidate-$GITHUB_RUN_ID"
+          if ! response="$(gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$ref" 2>&1)"; then
+            if [[ "$response" == *'Reference does not exist (HTTP 422)'* ]]; then
+              echo "Candidate ref $ref was already absent; cleanup is complete."
+            else
+              echo "$response" >&2
+              exit 1
+            fi
+          fi

@@ -8,6 +8,12 @@ on:
   schedule:
     - cron: '17 8 * * 1'
   workflow_dispatch:
+    inputs:
+      candidate_only:
+        description: Validate upstream candidate without pushing dev
+        type: boolean
+        required: true
+        default: false
 
 permissions:
   contents: write
@@ -35,7 +41,7 @@ jobs:
       - name: Checkout fork dev
         uses: actions/checkout@v7
         with:
-          ref: dev
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.candidate_only == true && github.ref_name || 'dev' }}
           fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
 
@@ -78,9 +84,12 @@ jobs:
             .github/scripts/verify_magnifier_bundle.py .releaserc README.md \
             extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/MagnifierRecon.java \
             patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt
+          # Keep the validator and attributes from the workflow's own ref; the
+          # upstream dev branch may predate these fork-only files.
+          git checkout "$GITHUB_SHA" -- .gitattributes .github/scripts/validate_sync_tree.py
           python3 .github/scripts/apply_magnifier_overlay.py --source-ref "$OLD_DEV"
           git add -A
-          git diff --cached --check
+          python3 .github/scripts/validate_sync_tree.py --conflicts-only
           git commit -m 'fix: sync upstream dev patches with magnifier'
           echo "old_dev=$OLD_DEV" >> "$GITHUB_OUTPUT"
           echo "upstream_dev=$UPSTREAM_DEV" >> "$GITHUB_OUTPUT"
@@ -88,6 +97,7 @@ jobs:
           echo 'updated=true' >> "$GITHUB_OUTPUT"
 
       - name: Run patch and extension tests
+        id: tests
         if: steps.prepare.outputs.updated == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -99,6 +109,7 @@ jobs:
           ./gradlew :patches:test :extensions:youtube:testDebugUnitTest generatePatchesList --no-daemon
 
       - name: Build and lint candidate bundle
+        id: bundle
         if: steps.prepare.outputs.updated == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -117,7 +128,8 @@ jobs:
             --bundle "$bundle" --patch-list patches-list.json
 
       - name: Push tested upstream sync commit
-        if: steps.prepare.outputs.updated == 'true'
+        id: push
+        if: steps.prepare.outputs.updated == 'true' && inputs.candidate_only != true
         shell: bash
         env:
           OLD_DEV: ${{ steps.prepare.outputs.old_dev }}
@@ -145,19 +157,12 @@ jobs:
           set -euo pipefail
           conflicts="$(cat "$RUNNER_TEMP/conflicts.txt" 2>/dev/null || true)"
           tail_log="$(tail -n 80 "$RUNNER_TEMP/upstream-sync.log" 2>/dev/null | sed -E 's/(github_pat_|gh[pousr]_)[A-Za-z0-9_]{20,}/[REDACTED]/g' || true)"
-          body="Weekly upstream dev sync failed before the candidate was pushed; the previous dev bundle remains available.
-
-          Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
-
-          Conflicting/status files:
-          \`\`\`
-          ${conflicts:-No conflict paths were recorded.}
-          \`\`\`
-
-          Sanitized log tail:
-          \`\`\`
-          ${tail_log:-No command log was captured.}
-          \`\`\`"
-          gh issue create --repo "$GITHUB_REPOSITORY" \
-            --title "Upstream dev sync failed (run $GITHUB_RUN_NUMBER)" --body "$body" \
-            || echo 'Could not create issue; confirm repository Issues are enabled.'
+          failed_step="Prepare upstream dev candidate"
+          [[ "${{ steps.tests.outcome }}" == failure ]] && failed_step="Run patch and extension tests"
+          [[ "${{ steps.bundle.outcome }}" == failure ]] && failed_step="Build and lint candidate bundle"
+          [[ "${{ steps.push.outcome }}" == failure ]] && failed_step="Push tested upstream sync commit"
+          title="Upstream dev sync failed at: $failed_step"
+          existing="$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --limit 100 --json number,title | jq -r --arg title "$title" '.[] | select(.title == $title) | .number' | head -n 1)"
+          body_file="$RUNNER_TEMP/failure-issue.md"
+          { printf '**Failing step:** %s\n\nRun: %s/%s/actions/runs/%s\n' "$failed_step" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID"; printf '\nStatus/conflict paths:\n```\n%s\n```\n\nSanitized log tail:\n```\n%s\n```\n' "${conflicts:-No unmerged paths.}" "${tail_log:-No command log was captured.}"; } > "$body_file"
+          if [[ -n "$existing" ]]; then gh issue comment "$existing" --repo "$GITHUB_REPOSITORY" --body-file "$body_file"; else gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file "$body_file"; fi
