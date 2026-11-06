@@ -49,9 +49,6 @@ import java.util.WeakHashMap;
 
 import java.util.function.Consumer;
 
-import kotlin.Unit;
-import kotlin.jvm.functions.Function1;
-
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
@@ -380,17 +377,32 @@ public final class MagnifierRecon {
         private final FrameLayout stylePanelViewport;
         private final ScrollView stylePanel;
         private final LinearLayout styleRows;
-        private static Object createPlayerObserver(Consumer<Object> callback) {
+        private static Object createPlayerObserver(Object event, Consumer<Object> callback) {
+            Class<?> observerType = null;
+            for (Method method : event.getClass().getMethods()) {
+                if (method.getName().equals("addObserver") && method.getParameterCount() == 1
+                        && method.getParameterTypes()[0].isInterface()) {
+                    observerType = method.getParameterTypes()[0];
+                    break;
+                }
+            }
+            if (observerType == null) {
+                throw new IllegalStateException("No observer interface for Magnifier player event");
+            }
+
+            final Class<?> observerInterface = observerType;
             return java.lang.reflect.Proxy.newProxyInstance(
-                    MagnifierRecon.class.getClassLoader(),
-                    new Class<?>[] { Consumer.class, Function1.class },
+                    observerInterface.getClassLoader(),
+                    new Class<?>[] { observerInterface },
                     (proxy, method, args) -> {
                         switch (method.getName()) {
                             case "invoke":
-                                callback.accept(args == null || args.length == 0 ? null : args[0]);
-                                return Unit.INSTANCE;
                             case "accept":
                                 callback.accept(args == null || args.length == 0 ? null : args[0]);
+                                Class<?> returnType = method.getReturnType();
+                                if ("kotlin.Unit".equals(returnType.getName())) {
+                                    return returnType.getField("INSTANCE").get(null);
+                                }
                                 return null;
                             case "toString":
                                 return "MagnifierPlayerObserver";
@@ -427,14 +439,14 @@ public final class MagnifierRecon {
         private final Bitmap[] bitmaps = new Bitmap[2];
         private boolean stopped;
         private final Choreographer.FrameCallback frameCallback = this::onVsync;
-        private final Object videoStateObserver = createPlayerObserver(state ->
+        private final Object videoStateObserver = createPlayerObserver(VideoState.getOnChange(), state ->
                 handler.post(() -> onVideoStateChanged((VideoState) state, "video-state-hook")));
-        private final Object controlsObserver = createPlayerObserver(state ->
-                handler.post(() -> {
+        private final Object controlsObserver = createPlayerObserver(
+                PlayerControlsVisibility.getOnChange(), state -> handler.post(() -> {
                     if (Prototype.this.editMode) hidePlayerControls();
                     else updatePositionAndGeometry();
                 }));
-        private final Object playerTypeObserver = createPlayerObserver(type ->
+        private final Object playerTypeObserver = createPlayerObserver(PlayerType.getOnChange(), type ->
                 handler.post(() -> {
                     if (isTerminalPlayerType((PlayerType) type)) {
                         onPlayerClosed("player-type:" + type);
