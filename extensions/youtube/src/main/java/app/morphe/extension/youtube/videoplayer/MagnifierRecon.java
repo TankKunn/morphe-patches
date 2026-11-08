@@ -63,6 +63,7 @@ import app.morphe.extension.youtube.settings.Settings;
 public final class MagnifierRecon {
     private static final String TAG = "MagnifierRecon";
     private static final String PERF_TAG = "MagnifierPerf";
+    private static final String TOUCH_TAG = "MagnifierTouch";
     private static final String PLAYER_VIEW_CLASS =
             "com.google.android.libraries.youtube.player.ui.PlayerView";
     private static final double DEFAULT_SOURCE_WIDTH = 0.25d;
@@ -133,6 +134,23 @@ public final class MagnifierRecon {
 
     private static void logPerf(String message) {
         if (Settings.DEBUG.get()) Log.i(PERF_TAG, message);
+    }
+
+    private static void logTouch(String message) {
+        if (Settings.DEBUG.get()) Log.i(TOUCH_TAG, message);
+    }
+
+    /** Short action name for the touch trail, so one line stays readable per gesture transition. */
+    private static String actionName(int action) {
+        switch (action) {
+            case MotionEvent.ACTION_DOWN: return "DOWN";
+            case MotionEvent.ACTION_MOVE: return "MOVE";
+            case MotionEvent.ACTION_UP: return "UP";
+            case MotionEvent.ACTION_CANCEL: return "CANCEL";
+            case MotionEvent.ACTION_POINTER_DOWN: return "POINTER_DOWN";
+            case MotionEvent.ACTION_POINTER_UP: return "POINTER_UP";
+            default: return "other(" + action + ")";
+        }
     }
 
     private static boolean isValidSourceGeometry(float left, float top, float width, float height) {
@@ -567,6 +585,9 @@ public final class MagnifierRecon {
         private boolean claimSwallowing;
         private final int claimTouchSlop;
         private final Rect claimWindowRect = new Rect();
+        // Whether the zoom window currently has an OnTouchListener installed. Set only where the
+        // listener is actually set, so the diagnostic line can report it without any framework call.
+        private boolean windowTouchListenerInstalled;
         /** Child of the chosen player layer that leads down to the stock controls anchor. */
         private View zoomLayerBranch;
         private Rect lastCrop = new Rect();
@@ -686,6 +707,7 @@ public final class MagnifierRecon {
             zoomWindow.setBackgroundColor(Color.TRANSPARENT);
             zoomWindow.setContentDescription("Magnifier zoom window; drag body or resize sides in edit mode");
             zoomWindow.setOnTouchListener(this::onZoomTouch);
+            windowTouchListenerInstalled = true;
 
             zoomImage = new ImageView(decor.getContext());
             zoomImage.setScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -694,6 +716,12 @@ public final class MagnifierRecon {
             zoomImage.setTag("morphe.magnifier.2b.zoom-content");
             zoomWindow.addView(zoomImage, new FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            // Explicitly inert: the window and its content must never look touchable, so no future
+            // change can make them eat a normal-mode tap instead of the player receiving it.
+            zoomWindow.setClickable(false);
+            zoomWindow.setFocusable(false);
+            zoomImage.setClickable(false);
+            zoomImage.setFocusable(false);
 
             stateLabel = new TextView(decor.getContext());
             stateLabel.setTextColor(0xffffffff);
@@ -1305,6 +1333,7 @@ public final class MagnifierRecon {
                 updatePlayerObserver(PlayerType.getOnChange(), "removeObserver", playerTypeObserver);
                 zoomWindow.setVisibility(View.GONE);
                 zoomWindow.setOnTouchListener(null);
+                windowTouchListenerInstalled = false;
                 sourceOutline.setVisibility(View.GONE);
                 sourceOutline.setClickable(false);
                 sourceOutline.setOnTouchListener(null);
@@ -1620,7 +1649,13 @@ public final class MagnifierRecon {
         private boolean onZoomTouch(View view, MotionEvent event) {
             if (!enabled || stopped) return false;
             if (forwardingNormalTap) return false;
-            if (!editMode && zoomInPlayerLayer) return onNormalZoomTouch(event);
+            // PLAN A: outside edit mode the window never consumes a touch. Normal-mode drags are
+            // arbitrated above the children by onStockTouchIntercept; taps, double-taps and
+            // long-press/2x must reach the player exactly as if the window were not there.
+            if (!editMode) {
+                logTouch("window-touch normal-mode action=" + actionName(event.getActionMasked()));
+                return false;
+            }
             // Brief item 4 asks edit-mode touches to disallow ancestor interception. The window is
             // parented by the magnifier overlay in edit mode, which is a sibling of YouTube's stock
             // player branch; this flag only propagates through overlay -> decor and does not alter
@@ -1712,6 +1747,7 @@ public final class MagnifierRecon {
             return true;
         }
 
+        // Unreachable since PLAN A CR6b (normal mode never owns touch); delete in the post-gate cleanup commit.
         private boolean onNormalZoomTouch(MotionEvent event) {
             int action = event.getActionMasked();
             if (action == MotionEvent.ACTION_DOWN) {
@@ -1799,6 +1835,26 @@ public final class MagnifierRecon {
          */
         boolean onStockTouchIntercept(MotionEvent event) {
             final int action = event.getActionMasked();
+            // Touch trail, DOWN only and before any state mutation: what the stock stream sees, what
+            // the window looks like at that moment, and which view would receive the DOWN.
+            if (action == MotionEvent.ACTION_DOWN && Settings.DEBUG.get()) {
+                final int downRawX = Math.round(event.getRawX());
+                final int downRawY = Math.round(event.getRawY());
+                // Diagnostic-only: this extra claimDenyReason() writes the claimWindowRect field, but
+                // the real call in the DOWN branch recomputes the same rect from the same rounded raw point.
+                final String downDenyReason = claimDenyReason(event, downRawX, downRawY);
+                logTouch("down raw=" + downRawX + "," + downRawY
+                        + " window=" + windowScreenRect()
+                        + " inPlayerLayer=" + zoomInPlayerLayer
+                        + " editMode=" + editMode
+                        + " windowListener=" + (windowTouchListenerInstalled ? "installed" : "none")
+                        + " windowClickable=" + zoomWindow.isClickable()
+                        + " windowFocusable=" + zoomWindow.isFocusable()
+                        + " controlsShown=" + playerControlsAnchor.isShown()
+                        + " claim=" + (downDenyReason == null
+                                ? "candidate-pending" : "deny:" + downDenyReason)
+                        + " hit=" + touchHitChain(downRawX, downRawY));
+            }
             // A new DOWN always ends any previous claim, so nothing can survive into the next gesture
             // and a DOWN is never silently consumed as an unexpected action.
             if (action == MotionEvent.ACTION_DOWN && (claimState != CLAIM_IDLE || claimSwallowing)) {
@@ -1817,10 +1873,11 @@ public final class MagnifierRecon {
                 }
                 if (action == MotionEvent.ACTION_UP) {
                     endClaim("up-after-claim");
-                    return true;
+                    logControlsAfterGesture();
+                    return swallow(action);
                 }
                 endClaim(action == MotionEvent.ACTION_CANCEL ? "action-cancel" : "unexpected-action");
-                return false;
+                return passThrough(action);
             }
             if (action == MotionEvent.ACTION_DOWN) {
                 claimState = CLAIM_IDLE;
@@ -1828,7 +1885,7 @@ public final class MagnifierRecon {
                         Math.round(event.getRawX()), Math.round(event.getRawY()));
                 if (denyReason != null) {
                     logClaim("deny=down reason=" + denyReason);
-                    return false;
+                    return passThrough(action);
                 }
                 claimState = CLAIM_PENDING;
                 claimDownRawX = event.getRawX();
@@ -1838,11 +1895,11 @@ public final class MagnifierRecon {
                 claimZoomTop = zoomTopFraction;
                 logClaim("pending=down inside-window raw=" + Math.round(claimDownRawX) + ","
                         + Math.round(claimDownRawY) + " window=" + claimWindowRect.toShortString());
-                return false;
+                return passThrough(action);
             }
             if (action == MotionEvent.ACTION_POINTER_DOWN) {
                 endClaim("second-pointer");
-                return false;
+                return passThrough(action);
             }
             if (action == MotionEvent.ACTION_MOVE && claimState == CLAIM_PENDING) {
                 if (event.getPointerCount() > 1) {
@@ -1879,8 +1936,9 @@ public final class MagnifierRecon {
             }
             if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
                 claimState = CLAIM_IDLE;
+                logControlsAfterGesture();
             }
-            return false;
+            return passThrough(action);
         }
 
         /**
@@ -1890,7 +1948,14 @@ public final class MagnifierRecon {
          * onTouchEvent is left completely untouched.
          */
         boolean onStockTouchEvent(MotionEvent event) {
-            if (!claimSwallowing) return false;
+            if (!claimSwallowing) {
+                final int passthroughAction = event.getActionMasked();
+                if (passthroughAction == MotionEvent.ACTION_UP
+                        || passthroughAction == MotionEvent.ACTION_CANCEL) {
+                    logTouch("up-not-swallowed action=" + actionName(passthroughAction));
+                }
+                return false;
+            }
             final int action = event.getActionMasked();
             if (action == MotionEvent.ACTION_MOVE) {
                 if (event.getPointerCount() > 1) {
@@ -1939,17 +2004,19 @@ public final class MagnifierRecon {
         }
 
         /**
-         * PLAN A touch ownership for the zoom window. In normal mode the window must NOT consume
-         * touches at all: if it did, a long-press/2x or double-tap over it would never reach the
-         * player, and the brief requires those to behave exactly as if the window were not there.
-         * The stock touch stream observed above the children arbitrates normal-mode drags instead.
-         * Edit mode keeps the window's own handler for move/resize/handles.
+         * PLAN A touch ownership for the zoom window. Outside edit mode the window must never own
+         * touch, on either attach path: if it did, a long-press/2x or double-tap over it would never
+         * reach the player, and even a plain tap would be taken by the window. The stock touch stream
+         * observed above the children arbitrates normal-mode drags instead. Edit mode keeps the
+         * window's own handler for move/resize/handles.
          */
         private void applyZoomWindowTouchMode() {
-            final boolean passthrough = zoomInPlayerLayer && !editMode;
+            final boolean passthrough = !editMode;
             zoomWindow.setOnTouchListener(passthrough ? null : this::onZoomTouch);
+            windowTouchListenerInstalled = !passthrough;
             logClaim("touch-mode=" + (passthrough ? "normal-passthrough" : "window-owns")
-                    + " editMode=" + editMode + " inPlayerLayer=" + zoomInPlayerLayer);
+                    + " editMode=" + editMode + " inPlayerLayer=" + zoomInPlayerLayer
+                    + " listenerInstalled=" + windowTouchListenerInstalled);
         }
 
         private void attachZoomWindowToPlayerLayer() {
@@ -2043,6 +2110,86 @@ public final class MagnifierRecon {
 
         private String classNameOf(Object view) {
             return view == null ? "null" : view.getClass().getName();
+        }
+
+        /**
+         * Read-only hit test for the touch trail: the chain of views the framework would route a
+         * DOWN to, walking down from the decor (last child first, visible and shown children only)
+         * until a leaf, a View that is not a ViewGroup, or the depth cap. Called at most once per
+         * ACTION_DOWN, and only while Settings.DEBUG is on.
+         */
+        private String touchHitChain(int screenX, int screenY) {
+            final StringBuilder chain = new StringBuilder();
+            final int[] location = new int[2];
+            final int maxDepth = 24;
+            View current = decor;
+            for (int depth = 0; current != null && depth < maxDepth; depth++) {
+                if (chain.length() > 0) chain.append(" > ");
+                chain.append(hitSegment(current));
+                if (!(current instanceof ViewGroup)) break;
+                final ViewGroup group = (ViewGroup) current;
+                View next = null;
+                for (int index = group.getChildCount() - 1; index >= 0; index--) {
+                    final View child = group.getChildAt(index);
+                    if (child == null || child.getVisibility() != View.VISIBLE) continue;
+                    if (!child.isShown()) continue;
+                    child.getLocationOnScreen(location);
+                    if (screenX < location[0] || screenY < location[1]
+                            || screenX >= location[0] + child.getWidth()
+                            || screenY >= location[1] + child.getHeight()) continue;
+                    next = child;
+                    break;
+                }
+                current = next;
+            }
+            return chain.toString();
+        }
+
+        /**
+         * One hit-chain segment: class, touch flags and view tag. The zoom window's listener state
+         * is reported once on the DOWN line from self-tracked state instead.
+         */
+        private String hitSegment(View view) {
+            return view.getClass().getSimpleName()
+                    + "[clickable=" + view.isClickable()
+                    + " focusable=" + view.isFocusable()
+                    + " tag=" + view.getTag() + "]";
+        }
+
+        /** Window rect in screen coordinates for the DOWN line; read-only. */
+        private String windowScreenRect() {
+            final int[] windowAt = new int[2];
+            zoomWindow.getLocationOnScreen(windowAt);
+            return windowAt[0] + "," + windowAt[1] + ","
+                    + (windowAt[0] + zoomWindow.getWidth()) + ","
+                    + (windowAt[1] + zoomWindow.getHeight());
+        }
+
+        /**
+         * Did the tap actually toggle the stock controls? Measured 400 ms after the gesture ended so
+         * the stock show/hide has started, without touching any stock code.
+         */
+        private void logControlsAfterGesture() {
+            if (!Settings.DEBUG.get()) return;
+            handler.postDelayed(() -> logTouch("post-up controlsShown="
+                    + playerControlsAnchor.isShown()
+                    + " alpha=" + playerControlsAnchor.getAlpha()), 400L);
+        }
+
+        /** Pass-through decision for non-MOVE actions, so a passed DOWN/UP is never silent. */
+        private boolean passThrough(int action) {
+            if (action != MotionEvent.ACTION_MOVE) {
+                logTouch("pass action=" + actionName(action) + " state=" + claimState);
+            }
+            return false;
+        }
+
+        /** Swallow decision for non-MOVE actions, so a swallowed UP is never silent. */
+        private boolean swallow(int action) {
+            if (action != MotionEvent.ACTION_MOVE) {
+                logTouch("swallow action=" + actionName(action));
+            }
+            return true;
         }
 
         private void attachZoomWindowToOverlay() {
