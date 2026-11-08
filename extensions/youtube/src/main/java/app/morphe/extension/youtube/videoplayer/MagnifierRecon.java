@@ -93,6 +93,32 @@ public final class MagnifierRecon {
         if (prototype != null) prototype.onNewVideo(videoId);
     }
 
+    /**
+     * PLAN A touch-arbitration entry point, called from the stock watch-layout touch interception
+     * that sits above every player child. It therefore observes the stream even when the magnifier
+     * window is parented below the stock controls, where a lower child never sees ACTION_DOWN.
+     * Returning true means the magnifier claimed the gesture: the injected stock hook then returns
+     * true as well, which cancels the stock handlers and swallows the rest of the gesture.
+     */
+    public static boolean onPlayerTouchIntercept(MotionEvent event) {
+        final Prototype current = prototype;
+        if (current == null || event == null) return false;
+        return current.onStockTouchIntercept(event);
+    }
+
+    /**
+     * PLAN A second half of the same hook pair: once the stock interception returned true for a
+     * claimed drag, the framework stops calling onInterceptTouchEvent for that gesture and delivers
+     * the remainder to the layout's own onTouchEvent (verified: the stock class declares
+     * onTouchEvent in the target APK). This entry point keeps the claimed drag following the finger
+     * and swallows the rest of the gesture, ACTION_UP included.
+     */
+    public static boolean onPlayerTouchEvent(MotionEvent event) {
+        final Prototype current = prototype;
+        if (current == null || event == null) return false;
+        return current.onStockTouchEvent(event);
+    }
+
     public static void resetStoredDefaults() {
         savedUiState = null;
         Settings.MAGNIFIER_BORDER_THICKNESS.save(2);
@@ -520,6 +546,28 @@ public final class MagnifierRecon {
         private float normalDownRawY;
         private float normalZoomLeft;
         private float normalZoomTop;
+        // PLAN A claim-rule state. It is owned by the stock touch stream observed above the
+        // children, never by a child onTouchListener.
+        private static final int CLAIM_IDLE = 0;
+        private static final int CLAIM_PENDING = 1;
+        private static final int CLAIM_ACTIVE = 2;
+        private int claimState = CLAIM_IDLE;
+        private float claimDownRawX;
+        private float claimDownRawY;
+        private float claimZoomLeft;
+        private float claimZoomTop;
+        private long claimMoveLogMs;
+        // Rule (4): a claim is refused once the long-press/2x window has already opened, so a
+        // long-press-then-drag can never be turned into a magnifier drag.
+        private long claimDownAtMs;
+        private final int claimLongPressTimeout;
+        // Set once a gesture is claimed: the remainder of that gesture is swallowed even if the
+        // drag itself ends early (second pointer), so no half gesture leaks into stock handlers.
+        private boolean claimSwallowing;
+        private final int claimTouchSlop;
+        private final Rect claimWindowRect = new Rect();
+        /** Child of the chosen player layer that leads down to the stock controls anchor. */
+        private View zoomLayerBranch;
         private Rect lastCrop = new Rect();
         private float sourceLeftFraction = 0.375f;
         private float sourceTopFraction = 0.5f;
@@ -557,6 +605,8 @@ public final class MagnifierRecon {
         Prototype(ViewGroup decor, SurfaceView surface, View playerControlsAnchor) {
             this.decor = decor;
             chromeTouchSlop = ViewConfiguration.get(decor.getContext()).getScaledTouchSlop();
+            claimTouchSlop = ViewConfiguration.get(decor.getContext()).getScaledTouchSlop();
+            claimLongPressTimeout = ViewConfiguration.getLongPressTimeout();
             this.surface = surface;
             this.playerArea = findPlayerArea(surface);
             this.playerControlsAnchor = playerControlsAnchor;
@@ -1167,6 +1217,8 @@ public final class MagnifierRecon {
         private void enterEditMode() {
             if (stopped || editMode) return;
             editMode = true;
+            // Edit mode reparents the window; a claim in flight must not keep moving it.
+            endClaim("edit-mode-entry");
             if (enabled) attachZoomWindowToOverlay();
             editModeButton.setVisibility(View.GONE);
             stylePanelOpen = false;
@@ -1188,6 +1240,8 @@ public final class MagnifierRecon {
         private void exitEditMode() {
             if (!editMode) return;
             editMode = false;
+            // Edit mode reparents the window; a claim in flight must not keep moving it.
+            endClaim("edit-mode-exit");
             if (enabled) attachZoomWindowToPlayerLayer();
             stylePanelOpen = false;
             setStylePanelVisible(false);
@@ -1230,7 +1284,8 @@ public final class MagnifierRecon {
                             new FrameLayout.LayoutParams(1, 1));
                 }
                 zoomWindow.setVisibility(View.VISIBLE);
-                zoomWindow.setOnTouchListener(this::onZoomTouch);
+                // Touch ownership is mode-dependent (normal mode must pass stock gestures through).
+                applyZoomWindowTouchMode();
                 sourceOutline.setOnTouchListener(this::onSourceTouch);
                 sourceOutline.setVisibility(editMode ? View.VISIBLE : View.GONE);
                 sourceOutline.setClickable(editMode);
@@ -1350,6 +1405,8 @@ public final class MagnifierRecon {
         }
 
         private void onWindowFocusChanged(boolean hasFocus) {
+            // Rule: focus loss resets the claim state, so no gesture can stay stuck across windows.
+            if (!hasFocus) endClaim("window-blur");
             onVisibilityChanged(hasFocus ? "window-focus" : "window-blur");
         }
 
@@ -1563,6 +1620,12 @@ public final class MagnifierRecon {
             if (!enabled || stopped) return false;
             if (forwardingNormalTap) return false;
             if (!editMode && zoomInPlayerLayer) return onNormalZoomTouch(event);
+            // Brief item 4: while editing, the window owns touches in its area and must stop the
+            // stock player from intercepting them. In normal mode this listener is not installed at
+            // all (applyZoomWindowTouchMode), so the stock touch stream stays with the player.
+            if (editMode && view != null && view.getParent() instanceof View) {
+                ((View) view.getParent()).requestDisallowInterceptTouchEvent(true);
+            }
             if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
                 gestureDownX = event.getRawX(); gestureDownY = event.getRawY();
                 int[] zoomAt = new int[2];
@@ -1720,36 +1783,268 @@ public final class MagnifierRecon {
             }
         }
 
-        private void attachZoomWindowToPlayerLayer() {
-            Object controlsParent = playerControlsAnchor.getParent();
-            if (!(controlsParent instanceof FrameLayout)) {
-                attachZoomWindowToOverlay();
-                return;
+        /**
+         * PLAN A claim rule. Claims a gesture only when ALL of these hold:
+         * (1) ACTION_DOWN inside the window rect, (2) single pointer, (3) no visible stock control
+         * above the window at that point, (4) movement past touch slop before the stock gesture
+         * takes over, (5) window visible (not hidden/fading) and edit mode off.
+         * Taps, double-taps and long-press/2x hold carry no movement over slop, so they are never
+         * claimed and reach the player exactly as they do without the window. Returns true only
+         * while the magnifier owns the stream, which cancels the stock handlers and swallows the
+         * rest of the gesture, ACTION_UP included.
+         */
+        boolean onStockTouchIntercept(MotionEvent event) {
+            final int action = event.getActionMasked();
+            // A new DOWN always ends any previous claim, so nothing can survive into the next gesture
+            // and a DOWN is never silently consumed as an unexpected action.
+            if (action == MotionEvent.ACTION_DOWN && (claimState != CLAIM_IDLE || claimSwallowing)) {
+                endClaim("new-down");
             }
-            ViewGroup parent = (ViewGroup) controlsParent;
-            if (parent.getWidth() < playerArea.getWidth() * 3 / 4
-                    || parent.getHeight() < playerArea.getHeight() * 3 / 4) {
+            if (claimState == CLAIM_ACTIVE) {
+                if (action == MotionEvent.ACTION_MOVE) {
+                    if (event.getPointerCount() > 1) {
+                        endClaim("second-pointer");
+                        return false;
+                    }
+                    moveClaimedWindow(event.getRawX() - claimDownRawX,
+                            event.getRawY() - claimDownRawY);
+                    logClaimMove("claim=drag left=" + zoomLeftFraction + " top=" + zoomTopFraction);
+                    return true;
+                }
+                if (action == MotionEvent.ACTION_UP) {
+                    endClaim("up-after-claim");
+                    return true;
+                }
+                endClaim(action == MotionEvent.ACTION_CANCEL ? "action-cancel" : "unexpected-action");
+                return false;
+            }
+            if (action == MotionEvent.ACTION_DOWN) {
+                claimState = CLAIM_IDLE;
+                final String denyReason = claimDenyReason(event,
+                        Math.round(event.getRawX()), Math.round(event.getRawY()));
+                if (denyReason != null) {
+                    logClaim("deny=down reason=" + denyReason);
+                    return false;
+                }
+                claimState = CLAIM_PENDING;
+                claimDownRawX = event.getRawX();
+                claimDownRawY = event.getRawY();
+                claimDownAtMs = event.getDownTime();
+                claimZoomLeft = zoomLeftFraction;
+                claimZoomTop = zoomTopFraction;
+                logClaim("pending=down inside-window raw=" + Math.round(claimDownRawX) + ","
+                        + Math.round(claimDownRawY) + " window=" + claimWindowRect.toShortString());
+                return false;
+            }
+            if (action == MotionEvent.ACTION_POINTER_DOWN) {
+                endClaim("second-pointer");
+                return false;
+            }
+            if (action == MotionEvent.ACTION_MOVE && claimState == CLAIM_PENDING) {
+                if (event.getPointerCount() > 1) {
+                    endClaim("second-pointer");
+                    return false;
+                }
+                final float dxPx = event.getRawX() - claimDownRawX;
+                final float dyPx = event.getRawY() - claimDownRawY;
+                if (Math.hypot(dxPx, dyPx) <= claimTouchSlop) return false;
+                // Rule (4) is decided here, when movement passes slop, not at the DOWN: the stock
+                // long-press/2x window must never be converted into a magnifier drag.
+                final long heldMs = event.getEventTime() - claimDownAtMs;
+                if (heldMs >= claimLongPressTimeout) {
+                    claimState = CLAIM_IDLE;
+                    logClaim("deny=slop-after-long-press heldMs=" + heldMs
+                            + " longPressTimeout=" + claimLongPressTimeout);
+                    return false;
+                }
+                // Every other precondition is re-checked too: visibility, alpha and the view under
+                // the point can all change during the hold.
+                final String slopDenyReason = claimDenyReason(event,
+                        Math.round(claimDownRawX), Math.round(claimDownRawY));
+                if (slopDenyReason != null) {
+                    claimState = CLAIM_IDLE;
+                    logClaim("deny=slop reason=" + slopDenyReason);
+                    return false;
+                }
+                claimState = CLAIM_ACTIVE;
+                claimSwallowing = true;
+                logClaim("claim=active slop-exceeded dx=" + Math.round(dxPx)
+                        + " dy=" + Math.round(dyPx) + " slop=" + claimTouchSlop);
+                moveClaimedWindow(dxPx, dyPx);
+                return true;
+            }
+            if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
+                claimState = CLAIM_IDLE;
+            }
+            return false;
+        }
+
+        /**
+         * Continuation of a claimed drag, delivered by the stock layout's own onTouchEvent: once the
+         * layout intercepted, the framework stops calling onInterceptTouchEvent for that gesture.
+         * Only runs while this gesture is claimed, otherwise it returns false and the stock body of
+         * onTouchEvent is left completely untouched.
+         */
+        boolean onStockTouchEvent(MotionEvent event) {
+            if (!claimSwallowing) return false;
+            final int action = event.getActionMasked();
+            if (action == MotionEvent.ACTION_MOVE) {
+                if (event.getPointerCount() > 1) {
+                    endClaimMove("second-pointer");
+                    return true;
+                }
+                if (claimState == CLAIM_ACTIVE) {
+                    moveClaimedWindow(event.getRawX() - claimDownRawX,
+                            event.getRawY() - claimDownRawY);
+                    logClaimMove("claim=drag left=" + zoomLeftFraction + " top=" + zoomTopFraction);
+                }
+                return true;
+            }
+            if (action == MotionEvent.ACTION_POINTER_DOWN) {
+                endClaimMove("second-pointer");
+                return true;
+            }
+            if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
+                endClaim(action == MotionEvent.ACTION_CANCEL ? "action-cancel" : "up-after-claim");
+                return true;
+            }
+            // Pointer bookkeeping events of a claimed gesture stay swallowed as well.
+            if (action == MotionEvent.ACTION_POINTER_UP) return true;
+            return false;
+        }
+
+        /** Stops the movement half of a claim; the swallow still runs to ACTION_UP. */
+        private void endClaimMove(String reason) {
+            if (claimState != CLAIM_ACTIVE) return;
+            claimState = CLAIM_IDLE;
+            rememberUiState();
+            logClaim("claim=drag-end reason=" + reason + " left=" + zoomLeftFraction
+                    + " top=" + zoomTopFraction);
+        }
+
+        /** Moves the window by the claimed drag delta, reusing the existing clamp/layout path. */
+        private void moveClaimedWindow(float dxPx, float dyPx) {
+            zoomLeftFraction = clampFraction(claimZoomLeft + dxPx
+                            / Math.max(1f, playerArea.getWidth()), 0f,
+                    1f - zoomWidthFraction);
+            zoomTopFraction = clampFraction(claimZoomTop + dyPx
+                            / Math.max(1f, playerArea.getHeight()), 0f,
+                    1f - zoomWindow.getHeight() / (float) Math.max(1, playerArea.getHeight()));
+            lastGeometry = "";
+            updatePositionAndGeometry();
+        }
+
+        /**
+         * PLAN A touch ownership for the zoom window. In normal mode the window must NOT consume
+         * touches at all: if it did, a long-press/2x or double-tap over it would never reach the
+         * player, and the brief requires those to behave exactly as if the window were not there.
+         * The stock touch stream observed above the children arbitrates normal-mode drags instead.
+         * Edit mode keeps the window's own handler for move/resize/handles.
+         */
+        private void applyZoomWindowTouchMode() {
+            final boolean passthrough = zoomInPlayerLayer && !editMode;
+            zoomWindow.setOnTouchListener(passthrough ? null : this::onZoomTouch);
+            logClaim("touch-mode=" + (passthrough ? "normal-passthrough" : "window-owns")
+                    + " editMode=" + editMode + " inPlayerLayer=" + zoomInPlayerLayer);
+        }
+
+        private void attachZoomWindowToPlayerLayer() {
+            final ViewGroup parent = findZoomWindowPlayerLayer();
+            if (parent == null) {
+                logClaim("attach=overlay reason=no-player-frame-layer controls-parent="
+                        + classNameOf(playerControlsAnchor.getParent()));
                 attachZoomWindowToOverlay();
                 return;
             }
             if (zoomWindow.getParent() == parent) {
                 zoomInPlayerLayer = true;
                 normalZoomLayer = parent;
+                applyZoomWindowTouchMode();
                 return;
             }
             if (zoomWindow.getParent() instanceof ViewGroup) {
                 ((ViewGroup) zoomWindow.getParent()).removeView(zoomWindow);
             }
-            int index = parent.indexOfChild(playerControlsAnchor);
+            int index = zoomLayerBranch == null ? -1 : parent.indexOfChild(zoomLayerBranch);
             if (index < 0) index = parent.getChildCount();
             parent.addView(zoomWindow, index, new FrameLayout.LayoutParams(1, 1));
             zoomInPlayerLayer = true;
             normalZoomLayer = parent;
+            logClaim("attach=player-layer-below-controls layer=" + classNameOf(parent)
+                    + " index=" + index + " controls=" + classNameOf(playerControlsAnchor));
+            applyZoomWindowTouchMode();
+        }
+
+        /**
+         * All five claim-rule preconditions; returns the first failing reason, or null to allow.
+         * The point tested against the window rect and against the stock controls is the ACTION_DOWN
+         * point, so a re-check during the movement tests the same place the rule specifies.
+         */
+        private String claimDenyReason(MotionEvent event, int rawX, int rawY) {
+            if (stopped) return "stopped";
+            if (!enabled) return "disabled";
+            if (editMode) return "edit-mode";
+            // The window itself is already dragging: the long-press path owns this gesture.
+            if (normalLongPressDragging) return "window-owns-drag";
+            if (!zoomInPlayerLayer || normalZoomLayer == null) return "window-above-controls";
+            if (zoomWindow.getParent() == null) return "detached";
+            if (zoomWindow.getVisibility() != View.VISIBLE) return "window-hidden";
+            if (!zoomWindow.isShown()) return "window-not-shown";
+            if (zoomWindow.getAlpha() < 0.99f) return "window-fading";
+            if (event.getPointerCount() != 1) return "multi-pointer";
+            final int[] windowAt = new int[2];
+            zoomWindow.getLocationOnScreen(windowAt);
+            claimWindowRect.set(windowAt[0], windowAt[1],
+                    windowAt[0] + zoomWindow.getWidth(), windowAt[1] + zoomWindow.getHeight());
+            if (claimWindowRect.width() <= 0 || claimWindowRect.height() <= 0) {
+                return "window-unmeasured";
+            }
+            if (!claimWindowRect.contains(rawX, rawY)) return "down-outside-window";
+            final View control = visibleStockControlAt(rawX, rawY);
+            if (control != null) return "stock-control-" + classNameOf(control);
+            return null;
+        }
+
+        /** Cleanly drops a claim; saves geometry through the single existing path when it moved. */
+        private void endClaim(String reason) {
+            if (claimState == CLAIM_IDLE && !claimSwallowing) return;
+            final boolean wasActive = claimState == CLAIM_ACTIVE;
+            claimState = CLAIM_IDLE;
+            claimSwallowing = false;
+            // The window's own long-press latch can never stay armed across an ended claim.
+            handler.removeCallbacks(beginNormalZoomDrag);
+            normalLongPressDragging = false;
+            normalTapEligible = false;
+            if (wasActive) {
+                rememberUiState();
+                logClaim("claim=end reason=" + reason
+                        + " left=" + zoomLeftFraction + " top=" + zoomTopFraction);
+            } else {
+                logClaim("deny=end reason=" + reason);
+            }
+        }
+
+        /** Decision logging only: one line per gesture transition, never per frame. */
+        private void logClaim(String message) {
+            Log.i(TAG, "gesture " + message);
+        }
+
+        /** Drag logging is capped at two lines per second. */
+        private void logClaimMove(String message) {
+            final long now = SystemClock.elapsedRealtime();
+            if (now - claimMoveLogMs < 500L) return;
+            claimMoveLogMs = now;
+            logClaim(message);
+        }
+
+        private String classNameOf(Object view) {
+            return view == null ? "null" : view.getClass().getName();
         }
 
         private void attachZoomWindowToOverlay() {
             if (zoomWindow.getParent() == overlay) {
                 zoomInPlayerLayer = false;
+                applyZoomWindowTouchMode();
                 return;
             }
             if (zoomWindow.getParent() instanceof ViewGroup) {
@@ -1758,6 +2053,82 @@ public final class MagnifierRecon {
             overlay.addView(zoomWindow, 1, new FrameLayout.LayoutParams(1, 1));
             zoomInPlayerLayer = false;
             normalZoomLayer = null;
+            applyZoomWindowTouchMode();
+        }
+
+        /**
+         * Rule (3): a visible stock control at the DOWN point keeps the gesture. Siblings on both
+         * sides of the window in the same parent are inspected, because the rule is about a control
+         * under the finger, not about draw order. "Control" is limited to touchable stock views
+         * (clickable, long-clickable, a SeekBar, or a clickable child at that exact point), so a
+         * full-area scrim or pass-through interaction layer cannot block dragging everywhere.
+         */
+        private View visibleStockControlAt(int screenX, int screenY) {
+            final Object parentObject = zoomWindow.getParent();
+            if (!(parentObject instanceof ViewGroup)) return null;
+            final ViewGroup parent = (ViewGroup) parentObject;
+            final Rect siblingRect = new Rect();
+            for (int index = 0; index < parent.getChildCount(); index++) {
+                final View sibling = parent.getChildAt(index);
+                if (sibling == null || sibling == zoomWindow) continue;
+                if (sibling.getVisibility() != View.VISIBLE || !sibling.isShown()) continue;
+                if (sibling.getAlpha() <= 0.05f) continue;
+                if (String.valueOf(sibling.getTag()).startsWith("morphe.magnifier")) continue;
+                siblingRect.setEmpty();
+                if (!sibling.getGlobalVisibleRect(siblingRect)) continue;
+                if (!siblingRect.contains(screenX, screenY)) continue;
+                if (isStockControlLike(sibling, screenX, screenY, 0)) return sibling;
+            }
+            return null;
+        }
+
+        /** Bounded depth and breadth: cheap enough to run once per ACTION_DOWN. */
+        private boolean isStockControlLike(View view, int screenX, int screenY, int depth) {
+            if (view.isClickable() || view.isLongClickable()) return true;
+            if (view instanceof SeekBar) return true;
+            if (depth >= 2 || !(view instanceof ViewGroup)) return false;
+            final ViewGroup group = (ViewGroup) view;
+            final Rect childRect = new Rect();
+            final int children = Math.min(group.getChildCount(), 24);
+            for (int index = 0; index < children; index++) {
+                final View child = group.getChildAt(index);
+                if (child == null || child.getVisibility() != View.VISIBLE) continue;
+                if (!child.isShown()) continue;
+                childRect.setEmpty();
+                if (!child.getGlobalVisibleRect(childRect)) continue;
+                if (!childRect.contains(screenX, screenY)) continue;
+                if (isStockControlLike(child, screenX, screenY, depth + 1)) return true;
+            }
+            return false;
+        }
+
+        /**
+         * PLAN A: normal-mode parent for the window. The window must sit below the stock controls,
+         * so climb from the controls anchor to the deepest player FrameLayout that covers at least
+         * 3/4 of the player area. The stock controls are a ConstraintLayout on newer versions, so
+         * the immediate parent is often not a FrameLayout and the old code fell back to the overlay
+         * (above the controls) instead of staying below them.
+         */
+        private ViewGroup findZoomWindowPlayerLayer() {
+            Object parent = playerControlsAnchor.getParent();
+            Object branch = playerControlsAnchor;
+            ViewGroup found = null;
+            // Bounded: the player hierarchy is shallow, this never walks past the player area.
+            for (int depth = 0; depth < 8 && parent instanceof ViewGroup; depth++) {
+                final ViewGroup group = (ViewGroup) parent;
+                if (group == playerArea) break;
+                if (group instanceof FrameLayout
+                        && group.getWidth() >= playerArea.getWidth() * 3 / 4
+                        && group.getHeight() >= playerArea.getHeight() * 3 / 4) {
+                    found = group;
+                    zoomLayerBranch = branch instanceof View ? (View) branch : null;
+                    break;
+                }
+                branch = group;
+                parent = group.getParent();
+            }
+            if (found == null) zoomLayerBranch = null;
+            return found;
         }
 
         void updatePositionAndGeometry() {
@@ -2332,6 +2703,11 @@ public final class MagnifierRecon {
             if (stopped) return;
             rememberUiState();
             stopped = true;
+            claimState = CLAIM_IDLE;
+            claimSwallowing = false;
+            handler.removeCallbacks(beginNormalZoomDrag);
+            normalLongPressDragging = false;
+            normalTapEligible = false;
             updatePlayerObserver(VideoState.getOnChange(), "removeObserver", videoStateObserver);
             updatePlayerObserver(PlayerControlsVisibility.getOnChange(), "removeObserver", controlsObserver);
             updatePlayerObserver(PlayerType.getOnChange(), "removeObserver", playerTypeObserver);
