@@ -34,6 +34,7 @@ import android.view.ViewConfiguration;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.view.ViewTreeObserver;
 import android.content.res.ColorStateList;
 import android.widget.FrameLayout;
@@ -1620,11 +1621,14 @@ public final class MagnifierRecon {
             if (!enabled || stopped) return false;
             if (forwardingNormalTap) return false;
             if (!editMode && zoomInPlayerLayer) return onNormalZoomTouch(event);
-            // Brief item 4: while editing, the window owns touches in its area and must stop the
-            // stock player from intercepting them. In normal mode this listener is not installed at
-            // all (applyZoomWindowTouchMode), so the stock touch stream stays with the player.
-            if (editMode && view != null && view.getParent() instanceof View) {
-                ((View) view.getParent()).requestDisallowInterceptTouchEvent(true);
+            // Brief item 4 asks edit-mode touches to disallow ancestor interception. The window is
+            // parented by the magnifier overlay in edit mode, which is a sibling of YouTube's stock
+            // player branch; this flag only propagates through overlay -> decor and does not alter
+            // interception by stock-player siblings. Edit-mode shielding is provided by touchShield
+            // and the overlay's Z order. In normal mode this listener is not installed.
+            if (editMode && view != null) {
+                final ViewParent parent = view.getParent();
+                if (parent != null) parent.requestDisallowInterceptTouchEvent(true);
             }
             if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
                 gestureDownX = event.getRawX(); gestureDownY = event.getRawY();
