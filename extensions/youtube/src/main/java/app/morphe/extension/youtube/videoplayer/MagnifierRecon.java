@@ -1526,9 +1526,12 @@ public final class MagnifierRecon {
             final ColorStateList backgroundTint = playerGearButton.getBackgroundTintList();
             final ColorStateList foregroundTint = playerGearButton.getForegroundTintList();
             final Rect bounds = new Rect();
-            if (background != null) background.getBounds(bounds);
-            final Rect padding = new Rect();
-            final boolean hasPadding = playerGearButton.getPadding(padding);
+            if (background != null) background.copyBounds(bounds);
+            final Rect padding = new Rect(playerGearButton.getPaddingLeft(),
+                    playerGearButton.getPaddingTop(), playerGearButton.getPaddingRight(),
+                    playerGearButton.getPaddingBottom());
+            final boolean hasPadding = padding.left > 0 || padding.top > 0
+                    || padding.right > 0 || padding.bottom > 0;
             int[] drawableState = playerGearButton.getDrawableState();
             StringBuilder stateValues = new StringBuilder("[");
             boolean firstState = true;
