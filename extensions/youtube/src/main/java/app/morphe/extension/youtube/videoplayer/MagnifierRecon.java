@@ -19,6 +19,7 @@ import android.graphics.RectF;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.InsetDrawable;
+import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
@@ -44,7 +45,6 @@ import android.widget.SeekBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.WeakHashMap;
@@ -80,22 +80,11 @@ public final class MagnifierRecon {
     private static final int MAX_BITMAP_EDGE = 4096;
     private static final int SIGNATURE_GRID_SIZE = 16;
     /**
-     * The app's own box-pencil, the preferred name of the affordance's OFF look. The factory
-     * resolves the name it is handed, and the OFF icon is then taken from that same resolved
-     * name, so only a name that exists reaches the factory.
+     * The app's own box-pencil, the icon of the edit affordance. The name is style-resolved through
+     * {@link PlayerIcons}, so a themed player icon style still applies. The published baseline
+     * resolution order is kept: this name, otherwise the outline glyph drawn by the code below.
      */
     private static final String EDIT_ICON_BASE_NAME = "yt_outline_box_pencil";
-    /** The same glyph under the density-suffixed name some targets use instead of the plain one. */
-    private static final String EDIT_ICON_ALTERNATE_NAME = "yt_outline_box_pencil_black_24";
-    /**
-     * Magnifier-owned edit affordance the patch copies into the app's resource table, so the
-     * factory button and its OFF look resolve even on a supported target whose stock APK ships no
-     * box-pencil drawable. See morphe_video_magnifier.xml in the patch resources.
-     */
-    private static final String FALLBACK_ICON_NAME = "morphe_video_magnifier";
-    /** 42%, the alpha the edit chrome's own disabled buttons use. */
-    private static final int AFFORDANCE_DISABLED_IMAGE_ALPHA = 0x6B;
-    private static final int AFFORDANCE_ENABLED_IMAGE_ALPHA = 0xFF;
     private static final WeakHashMap<View, String> LAST_LAYOUTS = new WeakHashMap<>();
     private static final WeakHashMap<View, Boolean> WATCHED_DECORS = new WeakHashMap<>();
     private static final WeakHashMap<View, Boolean> KNOWN_DECORS = new WeakHashMap<>();
@@ -106,14 +95,6 @@ public final class MagnifierRecon {
     private static final WeakHashMap<View, View.OnAttachStateChangeListener> DECOR_ATTACH_LISTENERS =
             new WeakHashMap<>();
     private static Prototype prototype;
-    /** The factory affordance; replaced whenever YouTube hands over new player controls. */
-    private static WeakReference<ImageView> affordanceRef = new WeakReference<>(null);
-    /** Controls view that owns the currently tracked factory affordance. */
-    private static WeakReference<View> affordanceControlsRef = new WeakReference<>(null);
-    /** Drawable id of the app's own pencil, or 0 when this target has no box-pencil drawable. */
-    private static int affordanceStockIconId;
-    /** Whether the affordance currently shows the custom glyph instead of the app's pencil. */
-    private static boolean affordanceShowsGlyph;
     private static UiState savedUiState;
     private static String lastVideoId;
     private static boolean settingsObserverRegistered;
@@ -254,9 +235,6 @@ public final class MagnifierRecon {
         if (controlsView != null) CONTROL_ANCHORS.put(decorView, controlsView);
         KNOWN_DECORS.put(decorView, Boolean.TRUE);
         registerSettingsObserver();
-        // Kept outside the setting check: the factory button hides itself while the feature is off
-        // and comes back on the next session, so disabling the feature needs no new button.
-        if (controlsView != null) initializeAffordance(controlsView);
         if (!Settings.MAGNIFIER_ENABLED.get()) {
             unwatchDecor(decorView);
             if (prototype != null && prototype.decor == decorView) {
@@ -266,130 +244,6 @@ public final class MagnifierRecon {
             return;
         }
         watchDecor(decorView);
-    }
-
-    /**
-     * Adds the magnifier's entry point to the stock player overlay through the repo's button
-     * factory, so the affordance gets the same ripple, 48dp touch target and fade with the controls
-     * as every other overlay button instead of a hand-rolled decor overlay of its own. The factory
-     * resolves the drawable name it is handed, so only a name that exists reaches it.
-     */
-    private static void initializeAffordance(View controlsView) {
-        try {
-            // The hook can fire again for the same controls view; the factory does not de-duplicate
-            // its children, so another button would stack a second entry point on the bar.
-            final ImageView existing = affordanceRef.get();
-            if (existing != null && existing.isAttachedToWindow() && existing.getParent() != null
-                    && affordanceControlsRef.get() == controlsView
-                    && existing.getParent() == controlsView.getParent()) {
-                refreshAffordanceState();
-                return;
-            }
-
-            final String iconName = PlayerIcons.name(EDIT_ICON_BASE_NAME);
-            final boolean hasStockIcon = PlayerIcons.exists(iconName);
-            final String factoryIconName;
-            final boolean patchOwnedIcon;
-            if (hasStockIcon) {
-                factoryIconName = iconName;
-                patchOwnedIcon = false;
-            } else if (PlayerIcons.exists(EDIT_ICON_ALTERNATE_NAME)) {
-                factoryIconName = EDIT_ICON_ALTERNATE_NAME;
-                patchOwnedIcon = false;
-            } else if (PlayerIcons.exists(FALLBACK_ICON_NAME)) {
-                // The patch copies this drawable into the app, so a supported target whose stock APK
-                // ships no box-pencil still gets a factory button whose OFF look resolves.
-                factoryIconName = FALLBACK_ICON_NAME;
-                patchOwnedIcon = true;
-            } else {
-                Log.w(TAG, "This YouTube target has no magnifier affordance drawable");
-                return;
-            }
-
-            final ImageView button = PlayerOverlayButton.addButton(
-                    controlsView,
-                    new ImageView(controlsView.getContext()),
-                    factoryIconName,
-                    MagnifierRecon::isAffordanceEnabled,
-                    MagnifierRecon::onAffordanceClick,
-                    null
-            );
-            if (button == null) {
-                Log.w(TAG, "Magnifier affordance not added; no known controls container");
-                return;
-            }
-
-            // Use the factory-resolved drawable as the OFF icon; the fallback is the patch's pencil-in-frame.
-            // Resolve the copied resource through PlayerIcons only when the stock APK lacks its pencil.
-            affordanceStockIconId = patchOwnedIcon
-                    ? PlayerIcons.id(FALLBACK_ICON_NAME)
-                    : ResourceUtils.getIdentifier(ResourceType.DRAWABLE, factoryIconName);
-            affordanceShowsGlyph = false;
-            button.setTag("morphe.magnifier.2b.edit-icon");
-            button.setImageTintList(ColorStateList.valueOf(Color.WHITE));
-            applyAffordanceState(button);
-            PlayerOverlayButton.setToggleAccessibilityDelegate(button, MagnifierRecon::isMagnifierEnabled);
-            affordanceRef = new WeakReference<>(button);
-            affordanceControlsRef = new WeakReference<>(controlsView);
-        } catch (Exception ex) {
-            Log.w(TAG, "Magnifier affordance failed to initialize: " + ex.getClass().getSimpleName());
-        }
-    }
-
-    /** Affordance tap: opens the editor of the live session, if there is one. */
-    private static void onAffordanceClick(View view) {
-        final Prototype current = prototype;
-        if (current != null) current.enterEditMode();
-    }
-
-    /** True while the magnifier window is on; drives the icon and the TalkBack checked state. */
-    private static boolean isMagnifierEnabled() {
-        final Prototype current = prototype;
-        return current != null && !current.stopped && current.enabled;
-    }
-
-    /** False hides the factory button: no session, setting off, or the editor is already open. */
-    private static boolean isAffordanceEnabled() {
-        final Prototype current = prototype;
-        return Settings.MAGNIFIER_ENABLED.get() && current != null && !current.stopped
-                && !current.editMode;
-    }
-
-    /** False when the magnifier cannot act: the player is no visible watch surface any more. */
-    private static boolean canMagnifierAct() {
-        final Prototype current = prototype;
-        return current != null && current.isPlayerHostVisible();
-    }
-
-    /** Re-applies the affordance state after a session, setting or visibility change. */
-    private static void refreshAffordanceState() {
-        final ImageView button = affordanceRef.get();
-        if (button != null) applyAffordanceState(button);
-    }
-
-    /**
-     * Applies what the factory does not own: the ON/OFF icon, the state in the description and the
-     * disabled look. Size, ripple, background and the fade with the controls come from the factory.
-     */
-    private static void applyAffordanceState(ImageView button) {
-        final boolean magnifierOn = isMagnifierEnabled();
-        // ON is always the glyph. OFF is the app's pencil, except in the safety case where no stock
-        // id was recorded, which leaves the glyph as the only icon there is.
-        final boolean showGlyph = magnifierOn || affordanceStockIconId == 0;
-        if (showGlyph != affordanceShowsGlyph) {
-            affordanceShowsGlyph = showGlyph;
-            if (showGlyph) {
-                button.setImageDrawable(new EditModeIconDrawable());
-            } else {
-                button.setImageResource(affordanceStockIconId);
-            }
-        }
-        button.setContentDescription(magnifierOn ? "Edit magnifier (on)" : "Edit magnifier (off)");
-        final boolean canAct = canMagnifierAct();
-        button.setEnabled(canAct);
-        // The factory's controller overwrites View alpha every pre-draw, so the dimming has to live
-        // on the icon drawable to survive it.
-        button.setImageAlpha(canAct ? AFFORDANCE_ENABLED_IMAGE_ALPHA : AFFORDANCE_DISABLED_IMAGE_ALPHA);
     }
 
     private static void registerSettingsObserver() {
@@ -647,6 +501,8 @@ public final class MagnifierRecon {
         private final ImageView doneButton;
         private final ImageView offButton;
         private final ImageView styleButton;
+        /** Baseline edit affordance: a decor-overlay icon under the gear, never a player-bar button. */
+        private final ImageView editModeButton;
         private final FrameLayout stylePanelViewport;
         private final ScrollView stylePanel;
         private final LinearLayout styleRows;
@@ -716,8 +572,11 @@ public final class MagnifierRecon {
                 handler.post(() -> onVideoStateChanged((VideoState) state, "video-state-hook")));
         private final Object controlsObserver = createPlayerObserver(
                 PlayerControlsVisibility.getOnChange(), state -> handler.post(() -> {
-                    if (Prototype.this.editMode) hidePlayerControls();
-                    else updatePositionAndGeometry();
+                    if (Prototype.this.editMode) {
+                        hidePlayerControls();
+                        return;
+                    }
+                    updatePositionAndGeometry();
                 }));
         private final Object playerTypeObserver = createPlayerObserver(PlayerType.getOnChange(), type ->
                 handler.post(() -> {
@@ -735,7 +594,7 @@ public final class MagnifierRecon {
             }
         };
         private final ViewTreeObserver.OnPreDrawListener gearButtonLayoutListener = () -> {
-            if (!stopped) updateOverlayElevation();
+            if (!stopped) updateEditModeButtonPosition();
             return true;
         };
         private final android.view.SurfaceHolder.Callback surfaceCallback =
@@ -776,6 +635,10 @@ public final class MagnifierRecon {
         private boolean zoomHiddenForUnsafeBounds;
         private boolean geometryInitialized;
         private boolean stylePanelOpen;
+        /** Last visibility mirrored onto the affordance, so the decision log fires only on change. */
+        private int affordanceMirroredVisibility = View.GONE;
+        /** True once the affordance has taken the gear's own press feedback background. */
+        private boolean affordancePressFeedbackApplied;
         private boolean zoomInPlayerLayer;
         private boolean forwardingNormalTap;
         private boolean normalLongPressDragging;
@@ -945,9 +808,10 @@ public final class MagnifierRecon {
                     0, borderColors.length - 1)];
             overlay = new FrameLayout(decor.getContext());
             overlay.setTag("morphe.magnifier.2a.overlay");
-            // This decor-sized overlay carries the edit-mode chrome, the source outline and the
-            // zoom window. Keep it above YouTube's player/control layers so the editor's own
-            // controls receive touch dispatch; the transparent rest of the overlay is pass-through.
+            // This decor-sized overlay carries the edit affordance in normal mode plus the edit-mode
+            // chrome, the source outline and the zoom window. Keep it above YouTube's player/control
+            // layers so the visible icon and the editor's own controls receive touch dispatch; the
+            // transparent rest of the overlay remains pass-through.
             overlay.setElevation(playerControlStackZ() + dp(16));
             overlay.setClipChildren(false);
             overlay.setClipToPadding(false);
@@ -1019,6 +883,34 @@ public final class MagnifierRecon {
             chrome.setVisibility(View.GONE);
             styleButton.setVisibility(View.GONE);
 
+            editModeButton = new ImageView(decor.getContext());
+            editModeButton.setTag("morphe.magnifier.2b.edit-icon");
+            editModeButton.setContentDescription("Edit magnifier");
+            // Baseline geometry: the gear's own box for the touch/ripple disc, with a 24 dp icon
+            // content box inset by 12 dp, which is the published 96 px disc with a ~38 px icon at
+            // 720 px width (density 2.0). Nothing here changes the published position or size.
+            editModeButton.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+            editModeButton.setPadding(dp(12), dp(12), dp(12), dp(12));
+            // Published baseline resolution: the app's own box-pencil, otherwise the outline glyph.
+            // The id comes from the exact style-resolved name, so no second pass re-styles it.
+            final String editIconName = PlayerIcons.name(EDIT_ICON_BASE_NAME);
+            final int editIconId = PlayerIcons.exists(editIconName)
+                    ? ResourceUtils.getIdentifier(ResourceType.DRAWABLE, editIconName) : 0;
+            if (editIconId != 0) {
+                editModeButton.setImageResource(editIconId);
+            } else {
+                // No box-pencil drawable resolved on this target: draw the outline glyph instead.
+                editModeButton.setImageDrawable(new EditModeIconDrawable());
+            }
+            editModeButton.setImageTintList(ColorStateList.valueOf(Color.WHITE));
+            editModeButton.setClickable(true);
+            editModeButton.setFocusable(true);
+            // A plain click keeps the stock pressed state, so a gear-derived ripple background runs
+            // with the gear's own timing. A hand-rolled touch listener that consumes the events
+            // would suppress the pressed state and with it the whole highlight.
+            editModeButton.setOnClickListener(view -> enterEditMode());
+            editModeButton.setVisibility(View.GONE);
+
             styleRows = new LinearLayout(decor.getContext());
             styleRows.setOrientation(LinearLayout.VERTICAL);
             styleRows.setPadding(dp(8), dp(6), dp(8), dp(6));
@@ -1043,6 +935,8 @@ public final class MagnifierRecon {
 
             overlay.addView(touchShield, new FrameLayout.LayoutParams(1, 1));
             overlay.addView(stylePanelViewport, new FrameLayout.LayoutParams(1, 1));
+            // Magnifier windows are attached only while enabled; the entry icon remains active.
+            overlay.addView(editModeButton, new FrameLayout.LayoutParams(1, 1));
             overlay.addView(chrome, new FrameLayout.LayoutParams(1, 1));
             decor.addView(overlay, new ViewGroup.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
@@ -1404,6 +1298,170 @@ public final class MagnifierRecon {
             if (overlay.getElevation() != requiredElevation) overlay.setElevation(requiredElevation);
         }
 
+        /**
+         * Places the edit-only affordance directly below YouTube's gear button, exactly as the
+         * published baseline did: the gear's own box for width and height, its bottom edge for the
+         * top and its left edge for the left. On the b4 inventory target that is the gear's box
+         * shifted 96 px down, so the entry keeps the baseline position and size to the pixel.
+         */
+        private Rect updateEditModeButtonPosition() {
+            if (editMode || stopped) {
+                mirrorGearOntoAffordance(0f, false);
+                return null;
+            }
+            updateOverlayElevation();
+            applyGearPressFeedback();
+            if (playerGearButton == null) {
+                Log.w(TAG, "YouTube player gear view not found; using top-right edit-icon fallback");
+                final int[] playerAt = new int[2], decorAt = new int[2];
+                playerArea.getLocationOnScreen(playerAt);
+                decor.getLocationOnScreen(decorAt);
+                final Rect safe = safePlayerRect(new Rect(playerAt[0], playerAt[1],
+                        playerAt[0] + playerArea.getWidth(), playerAt[1] + playerArea.getHeight()));
+                final int size = dp(48);
+                final int left = safe.right - size - dp(8);
+                final int top = safe.top + dp(52);
+                place(editModeButton, left - decorAt[0], top - decorAt[1], size, size);
+                // No gear to mirror: the baseline top-right entry stays visible with the player.
+                mirrorGearOntoAffordance(1f, playerArea.isShown());
+                return new Rect(left, top, left + size, top + size);
+            }
+            if (!playerGearButton.isShown()) {
+                mirrorGearOntoAffordance(0f, false);
+                return null;
+            }
+            final Rect visibleGear = new Rect();
+            if (!playerGearButton.getGlobalVisibleRect(visibleGear)
+                    || playerGearButton.getWidth() <= 0 || playerGearButton.getHeight() <= 0) {
+                mirrorGearOntoAffordance(0f, false);
+                return null;
+            }
+            final float gearAlpha = gearEffectiveAlpha();
+            if (gearAlpha <= 0f) {
+                // Transparent-overlay case: the gear is laid out and "shown" but renders nothing,
+                // so the affordance goes with it instead of leaving a tap-swallowing icon behind.
+                mirrorGearOntoAffordance(0f, false);
+                return null;
+            }
+            int[] decorAt = new int[2];
+            decor.getLocationOnScreen(decorAt);
+            final int width = playerGearButton.getWidth();
+            final int height = playerGearButton.getHeight();
+            final int[] gearAt = new int[2];
+            playerGearButton.getLocationOnScreen(gearAt);
+            int left = gearAt[0] + (width - width) / 2;
+            int top = gearAt[1] + height;
+            final int[] playerAt = new int[2];
+            playerArea.getLocationOnScreen(playerAt);
+            final Rect playerScreen = new Rect(playerAt[0], playerAt[1],
+                    playerAt[0] + playerArea.getWidth(), playerAt[1] + playerArea.getHeight());
+            final Rect safePlayer = safePlayerRect(playerScreen);
+            if (top + height > safePlayer.bottom) top = gearAt[1] - height;
+            left = clamp(left, safePlayer.left, safePlayer.right - width);
+            top = clamp(top, safePlayer.top, safePlayer.bottom - height);
+            if (editModeButton.getParent() != overlay) {
+                if (editModeButton.getParent() instanceof ViewGroup) {
+                    ((ViewGroup) editModeButton.getParent()).removeView(editModeButton);
+                }
+                // Keep this control above YouTube's full-player touch target. Its screen
+                // position still follows the gear, but the top-level overlay owns its taps.
+                overlay.addView(editModeButton, overlay.getChildCount(),
+                        new FrameLayout.LayoutParams(1, 1));
+            }
+            place(editModeButton, left - decorAt[0], top - decorAt[1], width, height);
+            mirrorGearOntoAffordance(gearAlpha, true);
+            return new Rect(left, top, left + width, top + height);
+        }
+
+        /**
+         * The gear's rendered alpha: its own alpha times every ancestor overlay's. YouTube fades the
+         * whole controls container rather than the gear alone, so the container's alpha is part of
+         * the mirror; without it a transparent-overlay frame would leave a solid affordance behind.
+         * This is the same ancestor walk the baseline did for its hard cut, so it costs one getAlpha
+         * per ancestor and allocates nothing.
+         */
+        private float gearEffectiveAlpha() {
+            float alpha = 1f;
+            View current = playerGearButton;
+            while (current != null) {
+                alpha *= current.getAlpha();
+                final Object parent = current.getParent();
+                current = parent instanceof View ? (View) parent : null;
+            }
+            return alpha;
+        }
+
+        /**
+         * Mirrors the gear onto the affordance and is the only place that commits the entry's alpha
+         * and visibility. The alpha copies the gear's own rendered alpha, so the entry dims exactly
+         * with the gear; the visibility follows the gear's shown state, so the entry is untappable
+         * exactly when the gear is. Called from the pre-draw pass that already repositions the entry,
+         * so no second per-frame listener and no per-frame allocation are added: re-setting an
+         * unchanged alpha or visibility is a no-op inside View. One decision-log line is written per
+         * visibility change, never per frame.
+         */
+        private void mirrorGearOntoAffordance(float gearAlpha, boolean gearShown) {
+            final int visibility = gearShown ? View.VISIBLE : View.GONE;
+            editModeButton.setAlpha(gearShown ? gearAlpha : 0f);
+            if (visibility != affordanceMirroredVisibility) {
+                affordanceMirroredVisibility = visibility;
+                logPerf("affordance-mirror visibility="
+                        + (visibility == View.VISIBLE ? "VISIBLE" : "GONE")
+                        + " gearAlpha=" + gearAlpha);
+            }
+            editModeButton.setVisibility(visibility);
+        }
+
+        /**
+         * Gives the affordance the gear's own press feedback, so colour, alpha, radius and timing
+         * come from the stock control instead of a lookalike. The gear's background is cloned
+         * through its constant state; when the gear exposes none, the equivalent ripple is rebuilt
+         * from the gear's background tint, and when neither is usable the affordance keeps the
+         * baseline no-background look. One decision-log line records which path was taken.
+         */
+        private void applyGearPressFeedback() {
+            if (affordancePressFeedbackApplied || playerGearButton == null) return;
+            try {
+                final Drawable gearBackground = playerGearButton.getBackground();
+                if (gearBackground != null && gearBackground.getConstantState() != null) {
+                    editModeButton.setBackground(gearBackground.getConstantState().newDrawable()
+                            .mutate());
+                    affordancePressFeedbackApplied = true;
+                    logPerf("affordance-press-feedback source=gear-background drawable="
+                            + gearBackground.getClass().getName());
+                    return;
+                }
+                final ColorStateList tint = playerGearButton.getBackgroundTintList();
+                final int rippleColor = tint == null ? 0 : tint.getColorForState(
+                        playerGearButton.getDrawableState(), tint.getDefaultColor());
+                if (rippleColor != 0) {
+                    editModeButton.setBackground(new RippleDrawable(
+                            ColorStateList.valueOf(rippleColor), null, gearSizedRippleMask()));
+                    affordancePressFeedbackApplied = true;
+                    logPerf("affordance-press-feedback source=gear-background-tint color="
+                            + Integer.toHexString(rippleColor));
+                    return;
+                }
+                logPerf("affordance-press-feedback source=none"
+                        + " reason=gear-background-and-tint-unusable");
+            } catch (Throwable t) {
+                // A press highlight must never take the affordance or the player down with it.
+                logPerf("affordance-press-feedback source=gear-background failed="
+                        + t.getClass().getSimpleName());
+            }
+        }
+
+        /** Ripple mask in the gear's own box; only used when the gear ships no mask to copy. */
+        private Drawable gearSizedRippleMask() {
+            final int width = playerGearButton.getWidth() > 0 ? playerGearButton.getWidth() : dp(48);
+            final int height = playerGearButton.getHeight() > 0 ? playerGearButton.getHeight()
+                    : dp(48);
+            final GradientDrawable mask = new GradientDrawable();
+            mask.setShape(GradientDrawable.OVAL);
+            mask.setSize(width, height);
+            return mask;
+        }
+
         private void placeStylePanel(Rect safePlayer, int[] decorAt) {
             if (!editMode || !stylePanelOpen) {
                 setStylePanelVisible(false);
@@ -1427,7 +1485,7 @@ public final class MagnifierRecon {
             // Edit mode reparents the window; a claim in flight must not keep moving it.
             endClaim("edit-mode-entry");
             if (enabled) attachZoomWindowToOverlay();
-            refreshAffordanceState();
+            mirrorGearOntoAffordance(0f, false);
             stylePanelOpen = false;
             sourceOutline.setVisibility(enabled ? View.VISIBLE : View.GONE);
             sourceOutline.setClickable(enabled);
@@ -1526,7 +1584,6 @@ public final class MagnifierRecon {
                 }
             }
             updatePositionAndGeometry();
-            refreshAffordanceState();
             logPerf("mode=" + (enabled ? "ON" : "OFF")
                     + " reason=user-toggle viewsRemoved=" + !enabled
                     + " loopsCancelled=" + !enabled + " editMode=" + editMode);
@@ -1535,7 +1592,6 @@ public final class MagnifierRecon {
         private void onNewVideo(String videoId) {
             if (editMode) exitEditMode();
             if (enabled) disableMagnifier();
-            refreshAffordanceState();
             Log.i(TAG, "new video id observed; magnifier reset to OFF");
         }
 
@@ -1633,7 +1689,8 @@ public final class MagnifierRecon {
                 touchShield.setVisibility(View.GONE);
                 setStylePanelVisible(false);
                 chrome.setVisibility(View.GONE);
-                refreshAffordanceState();
+                if (isPlayerHostVisible()) updateEditModeButtonPosition();
+                else mirrorGearOntoAffordance(0f, false);
                 logPerf("capture-visible=false reason=" + reason
                         + " playerType=" + PlayerType.getCurrent());
             } else {
@@ -1641,7 +1698,7 @@ public final class MagnifierRecon {
                 zoomWindow.setVisibility(enabled ? View.VISIBLE : View.GONE);
                 sourceOutline.setVisibility(enabled && editMode ? View.VISIBLE : View.GONE);
                 touchShield.setVisibility(editMode ? View.VISIBLE : View.GONE);
-                refreshAffordanceState();
+                updateEditModeButtonPosition();
                 handler.removeCallbacks(metricsReporter);
                 handler.postDelayed(metricsReporter, 1000L);
                 logPerf("capture-visible=true reason=" + reason);
@@ -1676,7 +1733,6 @@ public final class MagnifierRecon {
             if (enabled) disableMagnifier();
             if (editMode) exitEditMode();
             stop();
-            refreshAffordanceState();
             Log.i(TAG, "magnifier session torn down reason=" + reason);
             logPerf("session=OFF reason=" + reason + " viewsRemoved=true loopsCancelled=true");
         }
@@ -2690,7 +2746,7 @@ public final class MagnifierRecon {
             final Rect safePlayer = safePlayerRect(playerScreen);
             placeChrome(safePlayer, decorAt);
             updateOverlayElevation();
-            refreshAffordanceState();
+            updateEditModeButtonPosition();
             final int margin = dp(8);
             final double sourceBufferAspect = sourceWidthFraction * bufferWidth
                     / (sourceHeightFraction * bufferHeight);
@@ -3254,6 +3310,9 @@ public final class MagnifierRecon {
             restorePlayerControls();
             if (zoomWindow.getParent() instanceof ViewGroup) {
                 ((ViewGroup) zoomWindow.getParent()).removeView(zoomWindow);
+            }
+            if (editModeButton.getParent() instanceof ViewGroup) {
+                ((ViewGroup) editModeButton.getParent()).removeView(editModeButton);
             }
             if (overlay.getParent() instanceof ViewGroup) {
                 ((ViewGroup) overlay.getParent()).removeView(overlay);
