@@ -1,3 +1,22 @@
+## [2.0.4-dev.1](https://github.com/TankKunn/morphe-patches/compare/v2.0.3...v2.0.4-dev.1) (2026-11-09)
+
+> DRAFT — unpublished; verification and testing are still incomplete.
+
+### ✨ New Features
+
+* **YouTube - Video magnifier:** Adds an adjustable player magnifier with an on-player editor for its size, position and appearance. Includes a patch-owned pencil-in-frame fallback affordance drawable.
+
+### 🔧 Improvements
+
+* **YouTube - Video magnifier:** Uses the player controls button factory for native press feedback and controls visibility; improves overlay placement, touch handling, player lifecycle handling and safe crop geometry.
+
+### 🐛 Bug Fixes
+
+* **YouTube - Video magnifier:** Prevents duplicate affordance buttons for the same controls view and adds controls-view-aware handling when player controls are replaced.
+
+* Verification remains incomplete; no build, automated tests, or device testing has been run for this draft.
+
+
 ## [2.0.0](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0...v2.0.0) (2026-10-30)
 
 ### ⚠ BREAKING CHANGES
