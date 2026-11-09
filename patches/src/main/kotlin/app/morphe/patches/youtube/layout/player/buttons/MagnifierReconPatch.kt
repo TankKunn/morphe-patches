@@ -8,7 +8,9 @@ package app.morphe.patches.youtube.layout.player.buttons
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.resourcePatch
 import app.morphe.patcher.util.findFreeRegister
+import app.morphe.patches.all.misc.resources.addResourcesPatch
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.layout.miniplayer.NextGenWatchLayoutOnInterceptTouchEventFingerprint
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
@@ -19,6 +21,8 @@ import app.morphe.patches.youtube.misc.playertype.playerTypeHookPatch
 import app.morphe.patches.youtube.video.videoid.videoIdPatch
 import app.morphe.patches.youtube.video.videoid.hookVideoId
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
+import app.morphe.util.ResourceGroup
+import app.morphe.util.copyResources
 
 private const val MAGNIFIER_RECON_CLASS =
     "Lapp/morphe/extension/youtube/videoplayer/MagnifierRecon;"
@@ -37,8 +41,8 @@ private object NextGenWatchLayoutOnTouchEventFingerprint : Fingerprint(
 
 @Suppress("unused")
 val magnifierReconPatch = bytecodePatch(
-    name = "Magnifier surface recon",
-    description = "Adds an editable YouTube video magnifier. Uses the supported YouTube version set.",
+    name = "Video magnifier",
+    description = "Adds an adjustable magnifier to the YouTube player, with an on-player editor for its size, position and appearance.",
 ) {
     dependsOn(
         sharedExtensionPatch,
@@ -47,6 +51,15 @@ val magnifierReconPatch = bytecodePatch(
         videoIdPatch,
         playerControlsOverlayVisibilityPatch,
         settingsPatch,
+        addResourcesPatch,
+        resourcePatch {
+            execute {
+                copyResources(
+                    "videomagnifier",
+                    ResourceGroup("drawable", "morphe_video_magnifier.xml")
+                )
+            }
+        }
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)

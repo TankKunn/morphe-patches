@@ -87,6 +87,12 @@ public final class MagnifierRecon {
     private static final String EDIT_ICON_BASE_NAME = "yt_outline_box_pencil";
     /** The same glyph under the density-suffixed name some targets use instead of the plain one. */
     private static final String EDIT_ICON_ALTERNATE_NAME = "yt_outline_box_pencil_black_24";
+    /**
+     * Magnifier-owned edit affordance the patch copies into the app's resource table, so the
+     * factory button and its OFF look resolve even on a supported target whose stock APK ships no
+     * box-pencil drawable. See morphe_video_magnifier.xml in the patch resources.
+     */
+    private static final String FALLBACK_ICON_NAME = "morphe_video_magnifier";
     /** 42%, the alpha the edit chrome's own disabled buttons use. */
     private static final int AFFORDANCE_DISABLED_IMAGE_ALPHA = 0x6B;
     private static final int AFFORDANCE_ENABLED_IMAGE_ALPHA = 0xFF;
@@ -149,17 +155,6 @@ public final class MagnifierRecon {
         final Prototype current = prototype;
         if (current == null || event == null) return false;
         return current.onStockTouchEvent(event);
-    }
-
-    public static void resetStoredDefaults() {
-        savedUiState = null;
-        Settings.MAGNIFIER_BORDER_THICKNESS.save(2);
-        Settings.MAGNIFIER_BORDER_OPACITY.save(100);
-        Settings.MAGNIFIER_BORDER_COLOR.save(0);
-        Activity activity = Utils.getActivity();
-        if (activity != null) activity.getSharedPreferences("morphe_magnifier_geometry",
-                android.content.Context.MODE_PRIVATE).edit().clear().apply();
-        if (prototype != null && !prototype.stopped) prototype.resetDefaults();
     }
 
     private static void logPerf(String message) {
@@ -294,15 +289,19 @@ public final class MagnifierRecon {
             final String iconName = PlayerIcons.name(EDIT_ICON_BASE_NAME);
             final boolean hasStockIcon = PlayerIcons.exists(iconName);
             final String factoryIconName;
+            final boolean patchOwnedIcon;
             if (hasStockIcon) {
                 factoryIconName = iconName;
+                patchOwnedIcon = false;
             } else if (PlayerIcons.exists(EDIT_ICON_ALTERNATE_NAME)) {
                 factoryIconName = EDIT_ICON_ALTERNATE_NAME;
+                patchOwnedIcon = false;
+            } else if (PlayerIcons.exists(FALLBACK_ICON_NAME)) {
+                // The patch copies this drawable into the app, so a supported target whose stock APK
+                // ships no box-pencil still gets a factory button whose OFF look resolves.
+                factoryIconName = FALLBACK_ICON_NAME;
+                patchOwnedIcon = true;
             } else {
-                // OPEN RISK, to close at the cleanup step: this patch ships no drawable of its own,
-                // so on a target where neither stock name resolves no affordance is created and the
-                // feature has no other entry point. Close it with a magnifier-owned drawable
-                // shipped through copyResources, not by handling the case here.
                 Log.w(TAG, "This YouTube target has no magnifier affordance drawable");
                 return;
             }
@@ -320,10 +319,11 @@ public final class MagnifierRecon {
                 return;
             }
 
-            // The OFF look is the drawable the factory just resolved for the name it was handed, so
-            // the id comes from that same resolved name, and the tracked state starts on the stock
-            // icon the factory has put on the button.
-            affordanceStockIconId = ResourceUtils.getIdentifier(ResourceType.DRAWABLE, factoryIconName);
+            // Use the factory-resolved drawable as the OFF icon; the fallback is the patch's pencil-in-frame.
+            // Resolve the copied resource through PlayerIcons only when the stock APK lacks its pencil.
+            affordanceStockIconId = patchOwnedIcon
+                    ? PlayerIcons.id(FALLBACK_ICON_NAME)
+                    : ResourceUtils.getIdentifier(ResourceType.DRAWABLE, factoryIconName);
             affordanceShowsGlyph = false;
             button.setTag("morphe.magnifier.2b.edit-icon");
             button.setImageTintList(ColorStateList.valueOf(Color.WHITE));
