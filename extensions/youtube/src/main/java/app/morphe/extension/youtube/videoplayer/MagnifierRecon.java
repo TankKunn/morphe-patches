@@ -99,6 +99,8 @@ public final class MagnifierRecon {
     private static Prototype prototype;
     /** The factory affordance; replaced whenever YouTube hands over new player controls. */
     private static WeakReference<ImageView> affordanceRef = new WeakReference<>(null);
+    /** Controls view that owns the currently tracked factory affordance. */
+    private static WeakReference<View> affordanceControlsRef = new WeakReference<>(null);
     /** Drawable id of the app's own pencil, or 0 when this target has no box-pencil drawable. */
     private static int affordanceStockIconId;
     /** Whether the affordance currently shows the custom glyph instead of the app's pencil. */
@@ -279,7 +281,9 @@ public final class MagnifierRecon {
             // The hook can fire again for the same controls view; the factory does not de-duplicate
             // its children, so another button would stack a second entry point on the bar.
             final ImageView existing = affordanceRef.get();
-            if (existing != null && existing.isAttachedToWindow() && existing.getParent() != null) {
+            if (existing != null && existing.isAttachedToWindow() && existing.getParent() != null
+                    && affordanceControlsRef.get() == controlsView
+                    && existing.getParent() == controlsView.getParent()) {
                 refreshAffordanceState();
                 return;
             }
@@ -316,13 +320,14 @@ public final class MagnifierRecon {
             // The OFF look is the drawable the factory just resolved for the name it was handed, so
             // the id comes from that same resolved name, and the tracked state starts on the stock
             // icon the factory has put on the button.
-            affordanceStockIconId = PlayerIcons.id(factoryIconName);
+            affordanceStockIconId = ResourceUtils.getIdentifier(ResourceType.DRAWABLE, factoryIconName);
             affordanceShowsGlyph = false;
             button.setTag("morphe.magnifier.2b.edit-icon");
             button.setImageTintList(ColorStateList.valueOf(Color.WHITE));
             applyAffordanceState(button);
             PlayerOverlayButton.setToggleAccessibilityDelegate(button, MagnifierRecon::isMagnifierEnabled);
             affordanceRef = new WeakReference<>(button);
+            affordanceControlsRef = new WeakReference<>(controlsView);
         } catch (Exception ex) {
             Log.w(TAG, "Magnifier affordance failed to initialize: " + ex.getClass().getSimpleName());
         }
