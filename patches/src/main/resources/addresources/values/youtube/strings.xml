@@ -1984,4 +1984,6 @@ Automatic recording is optional. It stops in incognito or when the account chang
     <string name="morphe_live_chat_translate_max_length_title">Maximum message length</string>
     <string name="morphe_live_chat_translate_max_length_summary">Longer messages are shown untranslated</string>
     <string name="morphe_live_chat_translate_max_length_no_limit">No limit</string>
+    <string name="morphe_magnifier_enabled_title">Video magnifier</string>
+    <string name="morphe_magnifier_enabled_summary">Show the video magnifier controls in the player.</string>
 </resources>
