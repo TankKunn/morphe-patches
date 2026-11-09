@@ -441,6 +441,12 @@ public final class MagnifierRecon {
         private final ViewGroup decor;
         private final SurfaceView surface;
         private final View playerArea;
+        /**
+         * The fullscreen button view. VERIFIED: the hook supplies the view that receives
+         * findViewById(@id/fullscreen_button), so this is not the settings gear and is not asserted
+         * to live inside a controls_layout ConstraintLayout (UNVERIFIED). It is used only as the
+         * entry point for climbing to the controls branch.
+         */
         private final View playerControlsAnchor;
         private ViewGroup normalZoomLayer;
         private final View playerGearButton;
@@ -624,8 +630,25 @@ public final class MagnifierRecon {
         // Whether the zoom window currently has an OnTouchListener installed. Set only where the
         // listener is actually set, so the diagnostic line can report it without any framework call.
         private boolean windowTouchListenerInstalled;
-        /** Child of the chosen player layer that leads down to the stock controls anchor. */
+        /**
+         * Child of the chosen player layer that leads down to the stock controls anchor (the
+         * fullscreen button, VERIFIED). That this branch is an ancestor of the whole stock controls
+         * container, not only of the fullscreen sub-branch, is UNVERIFIED; the TEST-ONLY z-order
+         * identity line reports it at runtime.
+         */
         private View zoomLayerBranch;
+        // PLAN A z-order state: re-entrancy guard for the index re-assert, and the last line printed
+        // by the TEST-ONLY z-order probe (one log per change, never per frame). The lastZoom* fields
+        // are that probe's change detector: they hold every value it reports which can change, so the
+        // identity string (and its resource-name lookup) is only built when one of them has.
+        private boolean zoomIndexReasserting;
+        private String lastZoomLayerIdentity = "";
+        private ViewGroup lastZoomIdentityLayer;
+        private int lastZoomIdentityWindowIndex = -1;
+        private int lastZoomIdentityBranchIndex = -1;
+        private float lastZoomIdentityWindowElevation = -1f;
+        private float lastZoomIdentityBranchElevation = -1f;
+        private boolean lastZoomIdentityInPlayerLayer;
         private Rect lastCrop = new Rect();
         private float sourceLeftFraction = 0.375f;
         private float sourceTopFraction = 0.5f;
@@ -2065,6 +2088,7 @@ public final class MagnifierRecon {
                 attachZoomWindowToOverlay();
                 return;
             }
+            applyZoomWindowElevation();
             if (zoomWindow.getParent() == parent) {
                 zoomInPlayerLayer = true;
                 normalZoomLayer = parent;
@@ -2082,6 +2106,123 @@ public final class MagnifierRecon {
             logClaim("attach=player-layer-below-controls layer=" + classNameOf(parent)
                     + " index=" + index + " controls=" + classNameOf(playerControlsAnchor));
             applyZoomWindowTouchMode();
+        }
+
+        /**
+         * Z-ORDER: on both attach paths the window is ordered by child index, never by elevation.
+         * Elevation is sibling-scoped: it only orders a view against its siblings inside its own
+         * parent. Inside one parent the children are drawn in child order and touch dispatch walks
+         * that same order in reverse, until any child has non-zero Z, at which point the group sorts
+         * its children by getZ() ascending (ties keep child order). A parent's Z never enters that
+         * comparison, it only places the whole subtree inside its own parent's children. So an
+         * elevation here could not lift the window above the stock controls (those are not its
+         * siblings on either path); it could only reorder the window against its real siblings, and
+         * any positive value flips ViewGroup.hasChildWithZ() and would place the window above them:
+         * above the controls branch in the player layer, and above touchShield / stylePanelViewport /
+         * editModeButton / chrome / sourceOutline in the decor overlay, where it would swallow the
+         * taps that Done/Off/Style, the style panel and the source-outline drag need. Edit mode still
+         * draws above the stock controls because the OVERLAY itself carries playerControlStackZ() +
+         * dp(16) (re-asserted per frame) and an elevated parent lifts its whole subtree. The player
+         * layer needs no lift either: the window is inserted immediately before the controls branch,
+         * so the 0f tie is broken by index in the right direction. Elevation is 0f by design on both
+         * paths; that also means no positive value can survive a reparent from the player layer into
+         * the overlay. Logged once per attach.
+         */
+        private void applyZoomWindowElevation() {
+            zoomWindow.setElevation(0f);
+            logClaim("z-order=index-order elevation=0.0 overlayElevation="
+                    + overlay.getElevation());
+        }
+
+        /**
+         * Z-ORDER: re-asserts that the window is the child immediately before the controls branch.
+         * The index is chosen once at attach time and YouTube can re-add or re-order this layer's
+         * children afterwards, which would silently put the window back above the controls. The
+         * invariant is window index == branch index - 1, because attaching inserts the window at the
+         * branch's own index and thereby shifts the branch up by one child. Common case is one
+         * indexOfChild plus one comparison; the re-add only happens when the order actually drifted.
+         * Never runs in edit mode (the window then lives in the decor overlay) and never re-enters.
+         */
+        private void refreshZoomWindowIndex() {
+            if (zoomIndexReasserting || editMode || !zoomInPlayerLayer) return;
+            if (normalZoomLayer == null || zoomLayerBranch == null) return;
+            if (zoomWindow.getParent() != normalZoomLayer) return;
+            if (!zoomWindow.isAttachedToWindow()) return;
+            final int branchIndex = normalZoomLayer.indexOfChild(zoomLayerBranch);
+            if (branchIndex < 0) return;
+            if (branchIndex > 0 && normalZoomLayer.getChildAt(branchIndex - 1) == zoomWindow) return;
+            zoomIndexReasserting = true;
+            try {
+                normalZoomLayer.removeView(zoomWindow);
+                // Recompute after the removal: the branch itself moved down by one child.
+                int insertIndex = normalZoomLayer.indexOfChild(zoomLayerBranch);
+                if (insertIndex < 0) insertIndex = normalZoomLayer.getChildCount();
+                normalZoomLayer.addView(zoomWindow, insertIndex, new FrameLayout.LayoutParams(1, 1));
+            } finally {
+                zoomIndexReasserting = false;
+            }
+            logClaimMove("z-order=index-reassert layer=" + classNameOf(normalZoomLayer)
+                    + " index=" + branchIndex);
+        }
+
+        /**
+         * TEST-ONLY runtime proof for the z-order work: which view really is the controls branch,
+         * and whether the parent/index/elevation order is what Z-ORDER intends. Same gate as
+         * GATE_TOUCH_PROP. Called from every geometry pass, including per MOVE during a drag, so the
+         * reported values are compared first and the identity string is only built when one of them
+         * changed; the line is still printed once per real change and can never log per frame.
+         * TODO(TEST-ONLY-GATE-LOGGING): remove before merge.
+         */
+        private void logZoomLayerIdentity() {
+            if (!gateTouchLogging() && !Settings.DEBUG.get()) return;
+            final ViewGroup layer = normalZoomLayer;
+            // Change detector: the parent, the two child indices, the two elevations and the layer
+            // flag are every input of the line that can change while the reported parent stays put
+            // (the controls anchor view itself is final), so passing this point can only produce a
+            // different line. Four cheap reads and comparisons replace the build on the MOVE path.
+            final int windowIndex = layer == null ? -1 : layer.indexOfChild(zoomWindow);
+            final int branchIndex = layer == null || zoomLayerBranch == null ? -1
+                    : layer.indexOfChild(zoomLayerBranch);
+            final float windowElevation = zoomWindow.getElevation();
+            final float branchElevation = zoomLayerBranch == null ? -1f
+                    : zoomLayerBranch.getElevation();
+            if (layer == lastZoomIdentityLayer && windowIndex == lastZoomIdentityWindowIndex
+                    && branchIndex == lastZoomIdentityBranchIndex
+                    && windowElevation == lastZoomIdentityWindowElevation
+                    && branchElevation == lastZoomIdentityBranchElevation
+                    && zoomInPlayerLayer == lastZoomIdentityInPlayerLayer) {
+                return;
+            }
+            lastZoomIdentityLayer = layer;
+            lastZoomIdentityWindowIndex = windowIndex;
+            lastZoomIdentityBranchIndex = branchIndex;
+            lastZoomIdentityWindowElevation = windowElevation;
+            lastZoomIdentityBranchElevation = branchElevation;
+            lastZoomIdentityInPlayerLayer = zoomInPlayerLayer;
+            final String identity = "z-order parent=" + classNameOf(layer)
+                    + " windowIndex=" + windowIndex
+                    + " branchIndex=" + branchIndex
+                    + " windowElevation=" + windowElevation
+                    + " controlsElevation=" + branchElevation
+                    + " inPlayerLayer=" + zoomInPlayerLayer
+                    + " anchor=" + classNameOf(playerControlsAnchor)
+                    + " anchorId=" + resourceNameOf(playerControlsAnchor)
+                    + " anchorChain=" + parentChain(playerControlsAnchor);
+            if (identity.equals(lastZoomLayerIdentity)) return;
+            lastZoomLayerIdentity = identity;
+            Log.i(TOUCH_TAG, identity);
+        }
+
+        /** Resource entry name for the TEST-ONLY z-order line; never throws into the layout path. */
+        private String resourceNameOf(View view) {
+            if (view == null) return "null";
+            final int id = view.getId();
+            if (id == View.NO_ID) return "no-id";
+            try {
+                return decor.getResources().getResourceEntryName(id);
+            } catch (RuntimeException exception) {
+                return "unresolved:" + exception.getClass().getSimpleName();
+            }
         }
 
         /**
@@ -2233,8 +2374,13 @@ public final class MagnifierRecon {
         }
 
         private void attachZoomWindowToOverlay() {
+            applyZoomWindowElevation();
             if (zoomWindow.getParent() == overlay) {
                 zoomInPlayerLayer = false;
+                // The window no longer lives in the player layer, so neither its parent nor its
+                // branch may stay stale for the TEST-ONLY identity line.
+                normalZoomLayer = null;
+                zoomLayerBranch = null;
                 applyZoomWindowTouchMode();
                 return;
             }
@@ -2242,8 +2388,12 @@ public final class MagnifierRecon {
                 ((ViewGroup) zoomWindow.getParent()).removeView(zoomWindow);
             }
             overlay.addView(zoomWindow, 1, new FrameLayout.LayoutParams(1, 1));
+            // Same player-layer teardown on the reparent path: from here the window is an overlay
+            // child, and index 1 keeps it below stylePanelViewport / editModeButton / chrome in the
+            // child order that decides draw and touch order while every child's elevation is 0.
             zoomInPlayerLayer = false;
             normalZoomLayer = null;
+            zoomLayerBranch = null;
             applyZoomWindowTouchMode();
         }
 
@@ -2296,9 +2446,13 @@ public final class MagnifierRecon {
         /**
          * PLAN A: normal-mode parent for the window. The window must sit below the stock controls,
          * so climb from the controls anchor to the deepest player FrameLayout that covers at least
-         * 3/4 of the player area. The stock controls are a ConstraintLayout on newer versions, so
-         * the immediate parent is often not a FrameLayout and the old code fell back to the overlay
-         * (above the controls) instead of staying below them.
+         * 3/4 of the player area; the child on that chain becomes zoomLayerBranch, and the window is
+         * inserted at the branch's index, i.e. immediately before the branch in child order. The
+         * anchor is the fullscreen button view (VERIFIED), so this code does not assume a
+         * controls_layout ConstraintLayout anywhere; whether the branch is an ancestor of the whole
+         * stock controls container rather than only of the fullscreen sub-branch is UNVERIFIED and is
+         * what the TEST-ONLY z-order identity line reports at runtime. When no such FrameLayout
+         * exists the window falls back to the decor overlay, which draws above the controls.
          */
         private ViewGroup findZoomWindowPlayerLayer() {
             Object parent = playerControlsAnchor.getParent();
@@ -2414,6 +2568,11 @@ public final class MagnifierRecon {
             int zoomY = playerAt[1] + Math.round(zoomTopFraction * playerHeight);
             zoomX = clamp(zoomX, playerAt[0], playerAt[0] + playerWidth - zoomWidth);
             zoomY = clamp(zoomY, playerAt[1], playerAt[1] + playerHeight - zoomHeight);
+            // Z-ORDER: re-assert the draw order before this pass positions the window (the re-add
+            // resets its layout params, which the placement below then restores), and report the
+            // resulting identity through the TEST-ONLY gate.
+            refreshZoomWindowIndex();
+            logZoomLayerIdentity();
             if (zoomInPlayerLayer) {
                 int[] zoomLayerAt = new int[2];
                 normalZoomLayer.getLocationOnScreen(zoomLayerAt);
