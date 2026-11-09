@@ -64,6 +64,13 @@ public final class MagnifierRecon {
     private static final String TAG = "MagnifierRecon";
     private static final String PERF_TAG = "MagnifierPerf";
     private static final String TOUCH_TAG = "MagnifierTouch";
+    // TEST-ONLY (gate builds): enables the magnifier touch-arbitration trail without the in-app
+    // debug preference, which is unreachable on the CI/test Android image. Read from the
+    // debug.morphe.magnifier.touch system property; "0" or "false" disables it. This whole block
+    // must be removed or defaulted OFF before merge/release.
+    // TODO(TEST-ONLY-GATE-LOGGING): remove before merge.
+    private static final String GATE_TOUCH_PROP = "debug.morphe.magnifier.touch";
+    private static Boolean gateTouchLoggingResolved;
     private static final String PLAYER_VIEW_CLASS =
             "com.google.android.libraries.youtube.player.ui.PlayerView";
     private static final double DEFAULT_SOURCE_WIDTH = 0.25d;
@@ -136,8 +143,37 @@ public final class MagnifierRecon {
         if (Settings.DEBUG.get()) Log.i(PERF_TAG, message);
     }
 
+    // TEST-ONLY gate logging, see GATE_TOUCH_PROP above.
+    private static boolean resolveGateTouchLogging() {
+        boolean enabled = true;
+        String source = "default";
+        try {
+            Method get = Class.forName("android.os.SystemProperties")
+                    .getMethod("get", String.class);
+            Object raw = get.invoke(null, GATE_TOUCH_PROP);
+            String value = raw == null ? "" : raw.toString().trim();
+            if (!value.isEmpty()) {
+                enabled = !"0".equals(value) && !"false".equalsIgnoreCase(value);
+                source = "property";
+            }
+        } catch (Throwable t) {
+            // Fail open and never rethrow: a blocked hidden member surfaces as an Error
+            // (NoSuchMethodError, IllegalAccessError, ExceptionInInitializerError,
+            // NoClassDefFoundError), which must not escape into the touch path below.
+            enabled = true;
+            source = "reflection-failed:" + t.getClass().getSimpleName();
+        }
+        Log.i(TOUCH_TAG, "gate-logging=" + enabled + " source=" + source + " prop=" + GATE_TOUCH_PROP);
+        return enabled;
+    }
+
+    private static boolean gateTouchLogging() {
+        if (gateTouchLoggingResolved == null) gateTouchLoggingResolved = resolveGateTouchLogging();
+        return gateTouchLoggingResolved;
+    }
+
     private static void logTouch(String message) {
-        if (Settings.DEBUG.get()) Log.i(TOUCH_TAG, message);
+        if (gateTouchLogging() || Settings.DEBUG.get()) Log.i(TOUCH_TAG, message);
     }
 
     /** Short action name for the touch trail, so one line stays readable per gesture transition. */
@@ -1837,7 +1873,9 @@ public final class MagnifierRecon {
             final int action = event.getActionMasked();
             // Touch trail, DOWN only and before any state mutation: what the stock stream sees, what
             // the window looks like at that moment, and which view would receive the DOWN.
-            if (action == MotionEvent.ACTION_DOWN && Settings.DEBUG.get()) {
+            // TODO(TEST-ONLY-GATE-LOGGING): revert this guard to `&& Settings.DEBUG.get()`
+            // before merge/release; see GATE_TOUCH_PROP above.
+            if (action == MotionEvent.ACTION_DOWN && (gateTouchLogging() || Settings.DEBUG.get())) {
                 final int downRawX = Math.round(event.getRawX());
                 final int downRawY = Math.round(event.getRawY());
                 // Diagnostic-only: this extra claimDenyReason() writes the claimWindowRect field, but
@@ -2170,7 +2208,9 @@ public final class MagnifierRecon {
          * the stock show/hide has started, without touching any stock code.
          */
         private void logControlsAfterGesture() {
-            if (!Settings.DEBUG.get()) return;
+            // TODO(TEST-ONLY-GATE-LOGGING): revert before merge/release to
+            // `if (!Settings.DEBUG.get()) return;`; see GATE_TOUCH_PROP above.
+            if (!(gateTouchLogging() || Settings.DEBUG.get())) return;
             handler.postDelayed(() -> logTouch("post-up controlsShown="
                     + playerControlsAnchor.isShown()
                     + " alpha=" + playerControlsAnchor.getAlpha()), 400L);
