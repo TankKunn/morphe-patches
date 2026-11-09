@@ -491,6 +491,11 @@ public final class MagnifierRecon {
         private final View playerControlsAnchor;
         private ViewGroup normalZoomLayer;
         private final View playerGearButton;
+        private View lastGearDiagnosticView;
+        private boolean gearDiagnosticsLogged;
+        private boolean buttonPressStatesInitialized;
+        private boolean lastGearPressed;
+        private boolean lastPencilPressed;
         private final FrameLayout overlay;
         private final SourceOutline sourceOutline;
         private final FrameLayout zoomWindow;
@@ -1305,6 +1310,7 @@ public final class MagnifierRecon {
          * shifted 96 px down, so the entry keeps the baseline position and size to the pixel.
          */
         private Rect updateEditModeButtonPosition() {
+            logButtonPressStateTransitions();
             if (editMode || stopped) {
                 mirrorGearOntoAffordance(0f, false);
                 return null;
@@ -1412,6 +1418,44 @@ public final class MagnifierRecon {
             editModeButton.setVisibility(visibility);
         }
 
+        private void logButtonPressStateTransitions() {
+            if (!gateTouchLogging() && !Settings.DEBUG.get()) return;
+            // Pre-draw sampling can miss a press/release shorter than a frame; this is best-effort
+            // diagnostic evidence only, never definitive. Screenshots/frame strips remain acceptance
+            // evidence for press feedback.
+            final boolean gearPressed = playerGearButton != null && playerGearButton.isPressed();
+            final boolean pencilPressed = editModeButton.isPressed();
+            if (!buttonPressStatesInitialized) {
+                // One-shot baseline, so the first observed state is on record. Never per frame.
+                buttonPressStatesInitialized = true;
+                lastGearPressed = gearPressed;
+                lastPencilPressed = pencilPressed;
+                logTouch("button-press-state-baseline gearPressed=" + gearPressed
+                        + " gearStatePressed=" + hasPressedDrawableState(playerGearButton)
+                        + " pencilPressed=" + pencilPressed
+                        + " pencilStatePressed=" + hasPressedDrawableState(editModeButton));
+                return;
+            }
+            if (gearPressed != lastGearPressed) {
+                logTouch("button-press-state button=gear pressed=" + gearPressed
+                        + " state_pressed=" + hasPressedDrawableState(playerGearButton));
+                lastGearPressed = gearPressed;
+            }
+            if (pencilPressed != lastPencilPressed) {
+                logTouch("button-press-state button=pencil pressed=" + pencilPressed
+                        + " state_pressed=" + hasPressedDrawableState(editModeButton));
+                lastPencilPressed = pencilPressed;
+            }
+        }
+
+        private boolean hasPressedDrawableState(View view) {
+            if (view == null) return false;
+            for (int state : view.getDrawableState()) {
+                if (state == android.R.attr.state_pressed) return true;
+            }
+            return false;
+        }
+
         /**
          * Gives the affordance the gear's own press feedback, so colour, alpha, radius and timing
          * come from the stock control instead of a lookalike. The gear's background is cloned
@@ -1420,35 +1464,130 @@ public final class MagnifierRecon {
          * baseline no-background look. One decision-log line records which path was taken.
          */
         private void applyGearPressFeedback() {
-            if (affordancePressFeedbackApplied || playerGearButton == null) return;
+            if (playerGearButton == null) {
+                lastGearDiagnosticView = null;
+                gearDiagnosticsLogged = false;
+                return;
+            }
+            if (lastGearDiagnosticView != playerGearButton) {
+                lastGearDiagnosticView = playerGearButton;
+                gearDiagnosticsLogged = false;
+            }
+            if (!gearDiagnosticsLogged && (gateTouchLogging() || Settings.DEBUG.get())) {
+                try {
+                    logGearPressFeedbackDiagnostics(affordancePressFeedbackApplied
+                            ? "already-applied-or-unknown" : "pending");
+                    gearDiagnosticsLogged = true;
+                } catch (Throwable diagnosticFailure) {
+                    logTouch("gear-view-diagnostics failed="
+                            + diagnosticFailure.getClass().getSimpleName());
+                }
+            }
+            if (affordancePressFeedbackApplied) return;
             try {
                 final Drawable gearBackground = playerGearButton.getBackground();
                 if (gearBackground != null && gearBackground.getConstantState() != null) {
+                    final Drawable baselineBackground = editModeButton.getBackground();
                     editModeButton.setBackground(gearBackground.getConstantState().newDrawable()
                             .mutate());
                     affordancePressFeedbackApplied = true;
                     logPerf("affordance-press-feedback source=gear-background drawable="
                             + gearBackground.getClass().getName());
+                    logGearFeedbackApplied("gear-background-clone", baselineBackground);
                     return;
                 }
                 final ColorStateList tint = playerGearButton.getBackgroundTintList();
                 final int rippleColor = tint == null ? 0 : tint.getColorForState(
                         playerGearButton.getDrawableState(), tint.getDefaultColor());
                 if (rippleColor != 0) {
+                    final Drawable baselineBackground = editModeButton.getBackground();
                     editModeButton.setBackground(new RippleDrawable(
                             ColorStateList.valueOf(rippleColor), null, gearSizedRippleMask()));
                     affordancePressFeedbackApplied = true;
                     logPerf("affordance-press-feedback source=gear-background-tint color="
                             + Integer.toHexString(rippleColor));
+                    logGearFeedbackApplied("gear-background-tint", baselineBackground);
                     return;
                 }
                 logPerf("affordance-press-feedback source=none"
                         + " reason=gear-background-and-tint-unusable");
+                logGearFeedbackApplied("none", editModeButton.getBackground());
             } catch (Throwable t) {
                 // A press highlight must never take the affordance or the player down with it.
                 logPerf("affordance-press-feedback source=gear-background failed="
                         + t.getClass().getSimpleName());
+                logTouch("gear-feedback-applied failed=" + t.getClass().getSimpleName());
             }
+        }
+
+        private void logGearPressFeedbackDiagnostics(String appliedPath) {
+            final Drawable background = playerGearButton.getBackground();
+            final Drawable foreground = playerGearButton.getForeground();
+            final ColorStateList backgroundTint = playerGearButton.getBackgroundTintList();
+            final ColorStateList foregroundTint = playerGearButton.getForegroundTintList();
+            final Rect bounds = new Rect();
+            if (background != null) background.getBounds(bounds);
+            final Rect padding = new Rect();
+            final boolean hasPadding = playerGearButton.getPadding(padding);
+            int[] drawableState = playerGearButton.getDrawableState();
+            StringBuilder stateValues = new StringBuilder("[");
+            boolean firstState = true;
+            boolean statePressed = false;
+            for (int state : drawableState) {
+                if (!firstState) stateValues.append(',');
+                stateValues.append(state);
+                firstState = false;
+                if (state == android.R.attr.state_pressed) statePressed = true;
+            }
+            stateValues.append(']');
+            int resourceId = playerGearButton.getId();
+            String resourceIdName = resourceId == View.NO_ID ? "NO_ID"
+                    : playerGearButton.getResources().getResourceName(resourceId);
+            logTouch("gear-view class=" + playerGearButton.getClass().getName()
+                    + " resourceIdName=" + resourceIdName
+                    + " backgroundClass=" + drawableClass(background)
+                    + " foregroundClass=" + drawableClass(foreground)
+                    + " backgroundTintClass=" + objectClass(backgroundTint)
+                    + " backgroundTint=" + backgroundTint
+                    + " foregroundTintClass=" + objectClass(foregroundTint)
+                    + " foregroundTint=" + foregroundTint
+                    + " clickable=" + playerGearButton.isClickable()
+                    + " focusable=" + playerGearButton.isFocusable()
+                    + " isPressed=" + playerGearButton.isPressed()
+                    + " drawableState=" + stateValues + " state_pressed=" + statePressed
+                    + " elevation=" + playerGearButton.getElevation()
+                    + " alpha=" + playerGearButton.getAlpha()
+                    + " backgroundBounds=" + bounds
+                    + " padding=" + padding + " hasPadding=" + hasPadding);
+            logTouch("gear-feedback-objects affordanceViewClass="
+                    + editModeButton.getClass().getName()
+                    + " affordanceIconClass=" + drawableClass(editModeButton.getDrawable())
+                    + " baselineButtonBackgroundClass="
+                    + drawableClass(editModeButton.getBackground())
+                    + " predictedRipplePath=" + (background != null
+                    && background.getConstantState() != null ? "gear-background-clone"
+                    : backgroundTint != null ? "gear-background-tint-or-none" : "none")
+                    + " appliedPath=" + appliedPath);
+        }
+
+        /** Post-application form: the applied background class is the one in place now. */
+        private void logGearFeedbackApplied(String ripplePath, Drawable baselineBackground) {
+            logTouch("gear-feedback-applied affordanceViewClass="
+                    + editModeButton.getClass().getName()
+                    + " affordanceIconClass=" + drawableClass(editModeButton.getDrawable())
+                    + " originalBaselineButtonDrawableClass="
+                    + drawableClass(baselineBackground)
+                    + " afterApplyBackgroundClass="
+                    + drawableClass(editModeButton.getBackground())
+                    + " ripplePathChosen=" + ripplePath);
+        }
+
+        private String drawableClass(Drawable drawable) {
+            return drawable == null ? "null" : drawable.getClass().getName();
+        }
+
+        private String objectClass(Object object) {
+            return object == null ? "null" : object.getClass().getName();
         }
 
         /** Ripple mask in the gear's own box; only used when the gear ships no mask to copy. */
