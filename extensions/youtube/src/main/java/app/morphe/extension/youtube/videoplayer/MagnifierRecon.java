@@ -1210,7 +1210,8 @@ public final class MagnifierRecon {
         }
 
         private Rect safePlayerRect(Rect playerScreen) {
-            Rect safe = affordanceSafeRect.set(playerScreen);
+            final Rect safe = affordanceSafeRect;
+            safe.set(playerScreen);
             int[] decorLocation = affordanceSafeDecorAt;
             decor.getLocationOnScreen(decorLocation);
             int left = 0, top = 0, right = 0, bottom = 0;
@@ -1238,10 +1239,10 @@ public final class MagnifierRecon {
             }
             // Insets are read on geometry passes; inset-only changes without a layout event remain
             // unhandled/unverified because no exclusive-slot Insets listener is installed.
-            Rect safeDecor = affordanceSafeDecorRect.set(decorLocation[0] + left, decorLocation[1] + top,
+            affordanceSafeDecorRect.set(decorLocation[0] + left, decorLocation[1] + top,
                     decorLocation[0] + decor.getWidth() - right,
                     decorLocation[1] + decor.getHeight() - bottom);
-            if (!safe.intersect(safeDecor)) safe.setEmpty();
+            if (!safe.intersect(affordanceSafeDecorRect)) safe.setEmpty();
             return safe;
         }
 
@@ -1369,7 +1370,8 @@ public final class MagnifierRecon {
                 final int top = clamp(safe.top + dp(52), safe.top, safe.bottom - size);
                 place(editModeButton, left - decorAt[0], top - decorAt[1], size, size);
                 mirrorAnchorOntoAffordance(1f, playerArea.isShown());
-                return affordanceGeometryRect.set(left, top, left + size, top + size);
+                affordanceGeometryRect.set(left, top, left + size, top + size);
+                return affordanceGeometryRect;
             }
             if (!affordanceAnchor.isShown()) {
                 mirrorAnchorOntoAffordance(0f, false);
@@ -1428,7 +1430,8 @@ public final class MagnifierRecon {
             }
             place(editModeButton, placedLeft - decorAt[0], top - decorAt[1], width, height);
             mirrorAnchorOntoAffordance(anchorAlpha, true);
-            return affordanceGeometryRect.set(placedLeft, top, placedLeft + width, top + height);
+            affordanceGeometryRect.set(placedLeft, top, placedLeft + width, top + height);
+            return affordanceGeometryRect;
         }
 
         /** Rendered alpha of the stock anchor: its own alpha multiplied by ancestor alphas. */
