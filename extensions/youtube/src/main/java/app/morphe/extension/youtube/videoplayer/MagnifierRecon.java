@@ -96,6 +96,9 @@ public final class MagnifierRecon {
     private static final WeakHashMap<View, View> CONTROL_ANCHORS = new WeakHashMap<>();
     private static final WeakHashMap<View, ViewTreeObserver.OnGlobalLayoutListener> INSPECTORS =
             new WeakHashMap<>();
+    private static final WeakHashMap<View, Runnable> PENDING_INSPECTS = new WeakHashMap<>();
+    private static final WeakHashMap<View, View.OnAttachStateChangeListener> DECOR_ATTACH_LISTENERS =
+            new WeakHashMap<>();
     private static Prototype prototype;
     /** The factory affordance; replaced whenever YouTube hands over new player controls. */
     private static WeakReference<ImageView> affordanceRef = new WeakReference<>(null);
@@ -411,26 +414,68 @@ public final class MagnifierRecon {
         }
     }
 
+    private static void scheduleInspect(View decorView) {
+        final Runnable prior = PENDING_INSPECTS.remove(decorView);
+        if (prior != null) decorView.removeCallbacks(prior);
+        final Runnable inspectRunnable = () -> {
+            PENDING_INSPECTS.remove(decorView);
+            inspect(decorView);
+        };
+        PENDING_INSPECTS.put(decorView, inspectRunnable);
+        decorView.postOnAnimation(inspectRunnable);
+    }
+
     private static void watchDecor(View decorView) {
-        if (!Settings.MAGNIFIER_ENABLED.get() || decorView == null) return;
+        if (!Settings.MAGNIFIER_ENABLED.get() || decorView == null
+                || !decorView.isAttachedToWindow()) return;
         if (WATCHED_DECORS.put(decorView, Boolean.TRUE) == null) {
             final ViewTreeObserver.OnGlobalLayoutListener listener =
-                    () -> decorView.postOnAnimation(() -> inspect(decorView));
+                    () -> scheduleInspect(decorView);
+            final View.OnAttachStateChangeListener attachListener = new View.OnAttachStateChangeListener() {
+                @Override public void onViewAttachedToWindow(View view) {
+                    if (Settings.MAGNIFIER_ENABLED.get()) scheduleInspect(decorView);
+                }
+                @Override public void onViewDetachedFromWindow(View view) {
+                    cleanupDecor(decorView);
+                }
+            };
             INSPECTORS.put(decorView, listener);
+            DECOR_ATTACH_LISTENERS.put(decorView, attachListener);
             decorView.getViewTreeObserver().addOnGlobalLayoutListener(listener);
+            decorView.addOnAttachStateChangeListener(attachListener);
         }
-        decorView.postOnAnimation(() -> inspect(decorView));
+        scheduleInspect(decorView);
+    }
+
+    private static void cleanupDecor(View decorView) {
+        unwatchDecor(decorView);
+        if (prototype != null && prototype.decor == decorView) {
+            prototype.stop();
+            prototype = null;
+        }
+        CONTROL_ANCHORS.remove(decorView);
+        KNOWN_DECORS.remove(decorView);
+        LAST_LAYOUTS.remove(decorView);
     }
 
     private static void unwatchDecor(View decorView) {
-        if (decorView == null || WATCHED_DECORS.remove(decorView) == null) return;
+        if (decorView == null) return;
+        final Runnable pending = PENDING_INSPECTS.remove(decorView);
+        if (pending != null) decorView.removeCallbacks(pending);
+        WATCHED_DECORS.remove(decorView);
         final ViewTreeObserver.OnGlobalLayoutListener listener = INSPECTORS.remove(decorView);
         if (listener != null && decorView.getViewTreeObserver().isAlive()) {
             decorView.getViewTreeObserver().removeOnGlobalLayoutListener(listener);
         }
+        final View.OnAttachStateChangeListener attachListener = DECOR_ATTACH_LISTENERS.remove(decorView);
+        if (attachListener != null) decorView.removeOnAttachStateChangeListener(attachListener);
     }
 
     private static void inspect(View decorView) {
+        if (decorView == null || !decorView.isAttachedToWindow()) {
+            cleanupDecor(decorView);
+            return;
+        }
         if (!Settings.MAGNIFIER_ENABLED.get()) {
             unwatchDecor(decorView);
             if (prototype != null && prototype.decor == decorView) {
@@ -693,6 +738,22 @@ public final class MagnifierRecon {
             if (!stopped) updateOverlayElevation();
             return true;
         };
+        private final android.view.SurfaceHolder.Callback surfaceCallback =
+                new android.view.SurfaceHolder.Callback() {
+                    @Override public void surfaceCreated(android.view.SurfaceHolder holder) {
+                        rearmForSurfaceChange("surface-created");
+                    }
+                    @Override public void surfaceChanged(android.view.SurfaceHolder holder,
+                            int format, int width, int height) {
+                        rearmForSurfaceChange("surface-changed");
+                    }
+                    @Override public void surfaceDestroyed(android.view.SurfaceHolder holder) {
+                        cancelVsync();
+                        generation++;
+                        lastSurfaceValid = false;
+                    }
+                };
+        private boolean lastSurfaceValid;
         private final Runnable metricsReporter = new Runnable() {
             @Override public void run() {
                 if (stopped) return;
@@ -712,6 +773,7 @@ public final class MagnifierRecon {
         private boolean editMode;
         // Enabled is deliberately not restored: every new app/player session starts OFF.
         private boolean enabled;
+        private boolean zoomHiddenForUnsafeBounds;
         private boolean geometryInitialized;
         private boolean stylePanelOpen;
         private boolean zoomInPlayerLayer;
@@ -830,6 +892,8 @@ public final class MagnifierRecon {
             claimTouchSlop = ViewConfiguration.get(decor.getContext()).getScaledTouchSlop();
             claimLongPressTimeout = ViewConfiguration.getLongPressTimeout();
             this.surface = surface;
+            this.lastSurfaceValid = surface.getHolder().getSurface().isValid();
+            surface.getHolder().addCallback(surfaceCallback);
             this.playerArea = findPlayerArea(surface);
             this.playerControlsAnchor = playerControlsAnchor;
             final int playerGearId = ResourceUtils.getIdentifier(ResourceType.ID,
@@ -1239,15 +1303,22 @@ public final class MagnifierRecon {
                     }
                 }
             }
+            // Insets are read on geometry passes; inset-only changes without a layout event remain
+            // unhandled/unverified because no exclusive-slot Insets listener is installed.
             Rect safeDecor = new Rect(decorLocation[0] + left, decorLocation[1] + top,
                     decorLocation[0] + decor.getWidth() - right,
                     decorLocation[1] + decor.getHeight() - bottom);
-            if (!safe.intersect(safeDecor)) return playerScreen;
+            if (!safe.intersect(safeDecor)) return new Rect();
             return safe;
         }
 
         private void placeChrome(Rect safePlayer, int[] decorAt) {
             final boolean editing = editMode;
+            if (safePlayer.isEmpty()) {
+                if (chrome.getVisibility() != View.GONE) chrome.setVisibility(View.GONE);
+                setStylePanelVisible(false);
+                return;
+            }
             doneButton.setVisibility(editing ? View.VISIBLE : View.GONE);
             offButton.setVisibility(editing ? View.VISIBLE : View.GONE);
             styleButton.setVisibility(editing ? View.VISIBLE : View.GONE);
@@ -1296,6 +1367,7 @@ public final class MagnifierRecon {
                     Rect safe = safePlayerRect(new Rect(playerAt[0], playerAt[1],
                             playerAt[0] + playerArea.getWidth(),
                             playerAt[1] + playerArea.getHeight()));
+                    if (safe.isEmpty()) return true;
                     int width = chrome.getWidth(), height = chrome.getHeight();
                     float left = Math.max(safe.left + dp(2), Math.min(safe.right - width - dp(2),
                             chromeStartLeft + dx));
@@ -2533,7 +2605,23 @@ public final class MagnifierRecon {
             return found;
         }
 
+        private void rearmForSurfaceChange(String reason) {
+            if (stopped) return;
+            final boolean valid = surface.getHolder().getSurface().isValid();
+            if (reason.equals("surface-changed") && !valid) return;
+            cancelVsync();
+            generation++;
+            lastSurfaceValid = valid;
+            lastGeometry = "";
+            updatePositionAndGeometry();
+            if (enabled && captureMode == CaptureMode.PLAYING) scheduleVsync();
+            else if (enabled && valid) requestCopy("surface-recreated:" + reason);
+        }
+
         void updatePositionAndGeometry() {
+            final boolean surfaceValid = surface.getHolder().getSurface().isValid();
+            if (surfaceValid && !lastSurfaceValid) rearmForSurfaceChange("validity-restored");
+            else lastSurfaceValid = surfaceValid;
             if (stopped || !surface.isAttachedToWindow() || surface.getWidth() <= 0
                     || surface.getHeight() <= 0 || decor.getWidth() <= 0 || decor.getHeight() <= 0) {
                 return;
@@ -2608,24 +2696,50 @@ public final class MagnifierRecon {
                     / (sourceHeightFraction * bufferHeight);
             final int borderPx = dp(borderThicknessDp);
             zoomWindow.setPadding(borderPx, borderPx, borderPx, borderPx);
-            int zoomContentWidth = Math.max(dp(96),
-                    (int) Math.round(playerWidth * zoomWidthFraction));
-            zoomContentWidth = Math.min(zoomContentWidth, Math.max(1, playerWidth - 2 * margin
-                    - borderPx * 2));
+            final Rect safeZoomBounds = safePlayerRect(playerScreen);
+            if (safeZoomBounds.isEmpty()) {
+                zoomHiddenForUnsafeBounds = true;
+                if (zoomWindow.getVisibility() != View.GONE) zoomWindow.setVisibility(View.GONE);
+                return;
+            }
+            final int maxSafeContentWidth = safeZoomBounds.width() - 2 * margin - 2 * borderPx;
+            final int maxSafeContentHeight = safeZoomBounds.height() - 2 * margin - 2 * borderPx;
+            if (maxSafeContentWidth <= 0 || maxSafeContentHeight <= 0) {
+                zoomHiddenForUnsafeBounds = true;
+                if (zoomWindow.getVisibility() != View.GONE) zoomWindow.setVisibility(View.GONE);
+                return;
+            }
+            int zoomContentWidth = Math.min(Math.max(dp(96),
+                    (int) Math.round(playerWidth * zoomWidthFraction)), maxSafeContentWidth);
             int zoomContentHeight = Math.max(1,
-                    (int) Math.round(zoomContentWidth / sourceBufferAspect));
-            final int maxContentHeight = Math.max(1, playerHeight - margin * 2 - borderPx * 2);
-            if (zoomContentHeight > maxContentHeight) {
-                zoomContentHeight = maxContentHeight;
-                zoomContentWidth = Math.max(1,
-                        (int) Math.round(zoomContentHeight * sourceBufferAspect));
+                    (int) Math.floor(zoomContentWidth / sourceBufferAspect));
+            if (zoomContentHeight > maxSafeContentHeight) {
+                zoomContentHeight = maxSafeContentHeight;
+                zoomContentWidth = (int) Math.floor(zoomContentHeight * sourceBufferAspect);
+                if (zoomContentWidth > maxSafeContentWidth) {
+                    zoomContentWidth = maxSafeContentWidth;
+                    zoomContentHeight = (int) Math.floor(zoomContentWidth / sourceBufferAspect);
+                }
+            }
+            if (zoomContentWidth <= 0 || zoomContentHeight <= 0) {
+                zoomHiddenForUnsafeBounds = true;
+                if (zoomWindow.getVisibility() != View.GONE) zoomWindow.setVisibility(View.GONE);
+                return;
             }
             final int zoomWidth = zoomContentWidth + borderPx * 2;
             final int zoomHeight = zoomContentHeight + borderPx * 2;
+            if (zoomHiddenForUnsafeBounds) {
+                zoomHiddenForUnsafeBounds = false;
+                if (enabled && zoomWindow.getVisibility() != View.VISIBLE) {
+                    zoomWindow.setVisibility(View.VISIBLE);
+                }
+            }
             int zoomX = playerAt[0] + Math.round(zoomLeftFraction * playerWidth);
             int zoomY = playerAt[1] + Math.round(zoomTopFraction * playerHeight);
-            zoomX = clamp(zoomX, playerAt[0], playerAt[0] + playerWidth - zoomWidth);
-            zoomY = clamp(zoomY, playerAt[1], playerAt[1] + playerHeight - zoomHeight);
+            zoomX = clamp(zoomX, safeZoomBounds.left,
+                    Math.max(safeZoomBounds.left, safeZoomBounds.right - zoomWidth));
+            zoomY = clamp(zoomY, safeZoomBounds.top,
+                    Math.max(safeZoomBounds.top, safeZoomBounds.bottom - zoomHeight));
             // Z-ORDER: re-assert the draw order before this pass positions the window (the re-add
             // resets its layout params, which the placement below then restores), and report the
             // resulting identity through the TEST-ONLY gate.
@@ -3131,6 +3245,7 @@ public final class MagnifierRecon {
                 playerGearButton.getViewTreeObserver().removeOnPreDrawListener(
                         gearButtonLayoutListener);
             }
+            surface.getHolder().removeCallback(surfaceCallback);
             cancelVsync();
             handler.removeCallbacks(pausedPoll);
             handler.removeCallbacks(metricsReporter);
