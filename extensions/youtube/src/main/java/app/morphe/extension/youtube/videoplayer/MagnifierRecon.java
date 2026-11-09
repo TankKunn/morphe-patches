@@ -1934,7 +1934,8 @@ public final class MagnifierRecon {
          * Taps, double-taps and long-press/2x hold carry no movement over slop, so they are never
          * claimed and reach the player exactly as they do without the window. Returns true only
          * while the magnifier owns the stream, which cancels the stock handlers and swallows the
-         * rest of the gesture, ACTION_UP included.
+         * rest of the gesture, ACTION_UP included. Normal-mode drag is supported only in the
+         * player-layer path; overlay fallback preserves stock gestures and does not claim.
          */
         boolean onStockTouchIntercept(MotionEvent event) {
             final int action = event.getActionMasked();
@@ -2280,7 +2281,9 @@ public final class MagnifierRecon {
             if (editMode) return "edit-mode";
             // The window itself is already dragging: the long-press path owns this gesture.
             if (normalLongPressDragging) return "window-owns-drag";
-            if (!zoomInPlayerLayer || normalZoomLayer == null) return "window-above-controls";
+            if (!zoomInPlayerLayer || normalZoomLayer == null) {
+                return "drag-unavailable-overlay-fallback";
+            }
             if (zoomWindow.getParent() == null) return "detached";
             if (zoomWindow.getVisibility() != View.VISIBLE) return "window-hidden";
             if (!zoomWindow.isShown()) return "window-not-shown";
@@ -2419,6 +2422,8 @@ public final class MagnifierRecon {
 
         private void attachZoomWindowToOverlay() {
             applyZoomWindowElevation();
+            final boolean attachmentChanged = zoomWindow.getParent() != overlay
+                    || zoomInPlayerLayer || normalZoomLayer != null;
             if (zoomWindow.getParent() == overlay) {
                 zoomInPlayerLayer = false;
                 // The window no longer lives in the player layer, so neither its parent nor its
@@ -2426,6 +2431,10 @@ public final class MagnifierRecon {
                 normalZoomLayer = null;
                 zoomLayerBranch = null;
                 applyZoomWindowTouchMode();
+                if (attachmentChanged) {
+                    logClaim("drag-unavailable-overlay-fallback actual stock target cannot be safely "
+                            + "arbitrated from decor overlay; stock gestures pass through");
+                }
                 return;
             }
             if (zoomWindow.getParent() instanceof ViewGroup) {
@@ -2439,18 +2448,16 @@ public final class MagnifierRecon {
             normalZoomLayer = null;
             zoomLayerBranch = null;
             applyZoomWindowTouchMode();
+            if (attachmentChanged) {
+                logClaim("drag-unavailable-overlay-fallback actual stock target cannot be safely "
+                        + "arbitrated from decor overlay; stock gestures pass through");
+            }
         }
 
-        /**
-         * Rule (3): a visible stock control at the DOWN point keeps the gesture. Siblings on both
-         * sides of the window in the same parent are inspected, because the rule is about a control
-         * under the finger, not about draw order. "Control" is limited to touchable stock views
-         * (clickable, long-clickable, a SeekBar, or a clickable child at that exact point), so a
-         * full-area scrim or pass-through interaction layer cannot block dragging everywhere.
-         */
+        /** Rule (3): inspect stock siblings only when the window is in the proven player layer. */
         private View visibleStockControlAt(int screenX, int screenY) {
             final Object parentObject = zoomWindow.getParent();
-            if (!(parentObject instanceof ViewGroup)) return null;
+            if (!(parentObject instanceof ViewGroup) || parentObject == overlay) return null;
             final ViewGroup parent = (ViewGroup) parentObject;
             final Rect siblingRect = new Rect();
             for (int index = 0; index < parent.getChildCount(); index++) {
@@ -2495,8 +2502,9 @@ public final class MagnifierRecon {
          * anchor is the fullscreen button view (VERIFIED), so this code does not assume a
          * controls_layout ConstraintLayout anywhere; whether the branch is an ancestor of the whole
          * stock controls container rather than only of the fullscreen sub-branch is UNVERIFIED and is
-         * what the TEST-ONLY z-order identity line reports at runtime. When no such FrameLayout
-         * exists the window falls back to the decor overlay, which draws above the controls.
+         * what the TEST-ONLY z-order identity line reports at runtime. If no such FrameLayout exists,
+         * overlay fallback preserves stock gestures and disables normal-mode drag because the actual
+         * stock target cannot be safely arbitrated from decor.
          */
         private ViewGroup findZoomWindowPlayerLayer() {
             Object parent = playerControlsAnchor.getParent();
