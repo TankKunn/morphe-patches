@@ -78,12 +78,6 @@ public final class MagnifierRecon {
     private static final double DEFAULT_ZOOM_WIDTH = 0.40d;
     private static final int MAX_BITMAP_EDGE = 4096;
     private static final int SIGNATURE_GRID_SIZE = 16;
-    /**
-     * The app's own box-pencil, the icon of the edit affordance. The name is style-resolved through
-     * {@link PlayerIcons}, so a themed player icon style still applies. The published baseline
-     * resolution order is kept: this name, otherwise the outline glyph drawn by the code below.
-     */
-    private static final String EDIT_ICON_BASE_NAME = "yt_outline_box_pencil";
     private static final WeakHashMap<View, String> LAST_LAYOUTS = new WeakHashMap<>();
     private static final WeakHashMap<View, Boolean> WATCHED_DECORS = new WeakHashMap<>();
     private static final WeakHashMap<View, Boolean> KNOWN_DECORS = new WeakHashMap<>();
@@ -510,7 +504,7 @@ public final class MagnifierRecon {
          * Baseline edit affordance: a decor-overlay icon beside the fullscreen button, never a
          * player-bar button.
          */
-        private final ImageView editModeButton;
+        private final View editModeButton;
         private final FrameLayout stylePanelViewport;
         private final ScrollView stylePanel;
         private final LinearLayout styleRows;
@@ -584,6 +578,9 @@ public final class MagnifierRecon {
                         hidePlayerControls();
                         return;
                     }
+                    // The event is only an extra trigger here: the render decision is derived live
+                    // from the anchor on every pre-draw, so a missed or out-of-order event cannot
+                    // latch the entry off.
                     updatePositionAndGeometry();
                 }));
         private final Object playerTypeObserver = createPlayerObserver(PlayerType.getOnChange(), type ->
@@ -601,10 +598,27 @@ public final class MagnifierRecon {
                 handler.post(() -> onVisibilityChanged("broadcast:" + action));
             }
         };
+        /**
+         * Stateless per-frame trigger for the entry pass. It is registered against the window's
+         * observer, which outlives any re-inflated anchor view, and the anchor's attach-state listener
+         * re-registers it after a re-inflation so the pass can never stay bound to a dead observer.
+         */
+        private boolean affordancePreDrawRegistered;
         private final ViewTreeObserver.OnPreDrawListener affordanceAnchorLayoutListener = () -> {
             if (!stopped) updateEditModeButtonPosition();
             return true;
         };
+        private final View.OnAttachStateChangeListener affordanceAnchorAttachListener =
+                new View.OnAttachStateChangeListener() {
+                    @Override public void onViewAttachedToWindow(View view) {
+                        affordancePreDrawRegistered = false;
+                        registerAffordancePreDraw();
+                        if (!stopped) updateEditModeButtonPosition();
+                    }
+                    @Override public void onViewDetachedFromWindow(View view) {
+                        affordancePreDrawRegistered = false;
+                    }
+                };
         private final android.view.SurfaceHolder.Callback surfaceCallback =
                 new android.view.SurfaceHolder.Callback() {
                     @Override public void surfaceCreated(android.view.SurfaceHolder holder) {
@@ -645,8 +659,35 @@ public final class MagnifierRecon {
         private boolean stylePanelOpen;
         /** Last visibility mirrored onto the affordance, so the decision log fires only on change. */
         private int affordanceMirroredVisibility = View.GONE;
+        /** Last alpha applied to the affordance, so a drifted alpha is corrected and logged once. */
+        private float affordanceMirroredAlpha;
         /** Last side the affordance was placed on, so the side decision is logged once per change. */
         private String affordancePlacedSide = "";
+        /**
+         * The entry follows the chrome's own fade: the live alpha YouTube is animating is sampled
+         * from the anchor and the containers above it on every pre-draw, so the pencil dims in
+         * lockstep with the stock icons and is gone exactly when they are. Nothing latches, and
+         * nothing depends on the patched visibility events (they do not fire reliably in every
+         * build).
+         */
+        /**
+         * How many links of the anchor's own parent chain are sampled for the fade. The stock chrome
+         * is a handful of wrappers deep, so this covers it without ever walking into the watch page.
+         */
+        private static final int CHROME_CHAIN_DEPTH = 8;
+        /**
+         * Per-link maximum alpha ever seen on the anchor's chain. Normalising each link by its own
+         * maximum makes a link that is persistently dimmed while the chrome is fully shown read as
+         * 1.0 (so it cannot pin the entry below full alpha), while a real fade, which drops below the
+         * remembered maximum, still reads as a partial alpha. Zero means "never sampled yet", and is
+         * treated as 1.0 so the first sample is used as-is.
+         */
+        private final float[] affordanceChromePeak = new float[CHROME_CHAIN_DEPTH + 1];
+        /**
+         * Last alpha written to the decision log: the line fires on a state change and on every
+         * further 5% of a fade, so a fade is traceable without one line per frame.
+         */
+        private float affordanceLoggedAlpha = 1f;
         /**
          * ConstantState of the stock anchor background last installed on the affordance. Null while
          * nothing has been applied yet, so the first eligible pre-draw pass installs the clone.
@@ -920,49 +961,23 @@ public final class MagnifierRecon {
             chrome.setVisibility(View.GONE);
             styleButton.setVisibility(View.GONE);
 
-            ImageView affordanceView;
-            String affordanceViewPath;
-            try {
-                affordanceView = (ImageView) Class.forName(
-                        "com.google.android.libraries.youtube.common.ui.TouchImageView")
-                        .getConstructor(android.content.Context.class)
-                        .newInstance(decor.getContext());
-                affordanceViewPath = "TouchImageView";
-            } catch (Throwable constructionFailure) {
-                affordanceView = new ImageView(decor.getContext());
-                affordanceViewPath = "plain-ImageView:" + constructionFailure.getClass().getSimpleName();
-            }
-            editModeButton = affordanceView;
-            logTouch("affordance-view path=" + affordanceViewPath);
+            // The entry paints its own glyph and backdrop. The stock TouchImageView was tried here first
+            // and silently dropped both (measured: correct bounds, VISIBLE, alpha 1, touchable, but zero
+            // pixels drawn in either magnifier state, while the overlay's other children render), so the
+            // entry no longer depends on any ImageView drawable pipeline.
+            editModeButton = new AffordanceView(decor.getContext());
+            logTouch("affordance-view path=AffordanceView");
             editModeButton.setTag("morphe.magnifier.2b.edit-icon");
             editModeButton.setContentDescription("Edit magnifier");
-            // Geometry mirrors the settings gear button: a square 48 dp touch box with a 24 dp
-            // icon inset by 12 dp, so the mirrored disc is the round 96 px circle the gear shows
-            // and the glyph matches the gear icon (720 px width, density 2.0).
-            editModeButton.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-            editModeButton.setPadding(dp(12), dp(12), dp(12), dp(12));
-            // Published baseline resolution: the app's own box-pencil, otherwise the outline glyph.
-            // The id comes from the exact style-resolved name, so no second pass re-styles it;
-            // the stock icon only ships as the *_black_24 variant in published APKs.
-            final String editIconName = PlayerIcons.name(EDIT_ICON_BASE_NAME);
-            int editIconId = PlayerIcons.exists(editIconName)
-                    ? ResourceUtils.getIdentifier(ResourceType.DRAWABLE, editIconName) : 0;
-            if (editIconId == 0) {
-                editIconId = ResourceUtils.getIdentifier(ResourceType.DRAWABLE,
-                        EDIT_ICON_BASE_NAME + "_black_24");
-            }
-            if (editIconId != 0) {
-                editModeButton.setImageResource(editIconId);
-            } else {
-                // No box-pencil drawable resolved on this target: draw the outline glyph instead.
-                editModeButton.setImageDrawable(new EditModeIconDrawable());
-            }
-            editModeButton.setImageTintList(ColorStateList.valueOf(Color.WHITE));
+            // Geometry mirrors the settings gear button: a square 48 dp touch box with a 24 dp glyph
+            // inset by 12 dp, so the painted disc is the round 96 px circle the gear shows and the
+            // glyph matches the gear icon (720 px width, density 2.0).
+            updateEditModeButtonIcon();
             editModeButton.setClickable(true);
             editModeButton.setFocusable(true);
-            // A plain click keeps the stock view's own pressed state, so the TouchImageView press
-            // highlight runs with stock timing. A hand-rolled touch listener that consumes the events
-            // would suppress the pressed state and with it the whole highlight.
+            // A plain click keeps the view's own pressed state, so the mirrored stock background still
+            // runs its ripple with stock timing. A hand-rolled touch listener that consumes the events
+            // would suppress that pressed state and with it the whole highlight.
             editModeButton.setOnClickListener(view -> enterEditMode());
             editModeButton.setVisibility(View.GONE);
 
@@ -1014,9 +1029,9 @@ public final class MagnifierRecon {
             } else {
                 decor.getContext().registerReceiver(screenStateReceiver, screenFilter);
             }
+            registerAffordancePreDraw();
             if (affordanceAnchor != null) {
-                affordanceAnchor.getViewTreeObserver().addOnPreDrawListener(
-                        affordanceAnchorLayoutListener);
+                affordanceAnchor.addOnAttachStateChangeListener(affordanceAnchorAttachListener);
             }
             applyBorderStyle();
             secondStartMs = SystemClock.elapsedRealtime();
@@ -1360,6 +1375,28 @@ public final class MagnifierRecon {
          * button when safe space permits, otherwise to its right. When only the gear is available it
          * remains the placement anchor as a logged fallback. The touch box matches that anchor.
          */
+        /**
+         * Registers the entry pass on the window's observer. Idempotent: the anchor's attach-state
+         * listener clears the flag and re-registers, so exactly one listener is ever installed.
+         */
+        private void registerAffordancePreDraw() {
+            if (affordancePreDrawRegistered || stopped || decor == null) return;
+            final ViewTreeObserver observer = decor.getViewTreeObserver();
+            if (!observer.isAlive()) return;
+            observer.addOnPreDrawListener(affordanceAnchorLayoutListener);
+            affordancePreDrawRegistered = true;
+        }
+
+        /**
+         * The anchor's own current state, read live: every ancestor visible and the anchor itself at a
+         * non-zero alpha. This is only the binary shown/hidden decision; the fade itself is read by
+         * {@link #chromeAlpha()}, which samples the alpha YouTube is animating on the same chain.
+         */
+        private boolean anchorEffectivelyShown() {
+            return affordanceAnchor != null && affordanceAnchor.isShown()
+                    && affordanceAnchor.getAlpha() > 0f;
+        }
+
         private Rect updateEditModeButtonPosition() {
             if (editMode || stopped) {
                 mirrorAnchorOntoAffordance(0f, false);
@@ -1390,7 +1427,7 @@ public final class MagnifierRecon {
                 affordanceGeometryRect.set(left, top, left + size, top + size);
                 return affordanceGeometryRect;
             }
-            if (!affordanceAnchor.isShown()) {
+            if (!anchorEffectivelyShown()) {
                 mirrorAnchorOntoAffordance(0f, false);
                 return null;
             }
@@ -1404,12 +1441,9 @@ public final class MagnifierRecon {
                 mirrorAnchorOntoAffordance(0f, false);
                 return null;
             }
-            final float anchorAlpha = anchorEffectiveAlpha();
-            if (anchorAlpha <= 0f) {
-                mirrorAnchorOntoAffordance(0f, false);
-                return null;
-            }
-            // The anchor is shown, so this is the only path that owns the pressed-state background.
+            // Full white while shown: the chrome's rendered brightness is not readable through view
+            // alpha (a biased ancestor reports ~0.77 while the icons draw 255), so the entry mirrors
+            // the anchor's own shown state 1:1 instead of stepping toward an event stream.
             mirrorAnchorBackground();
             int[] decorAt = affordanceDecorAt;
             int[] anchorAt = affordanceAnchorAt;
@@ -1434,7 +1468,12 @@ public final class MagnifierRecon {
                 mirrorAnchorOntoAffordance(0f, false);
                 return null;
             }
-            final int top = clamp(anchorAt[1], safePlayer.top, safePlayer.bottom - height);
+            // Bottom-up: share the anchor's bottom edge and grow upward, so the pencil's touch box is
+            // the anchor's own box. The disc it paints then lands on the stock icons' line, because
+            // AffordanceView#onDraw hangs the disc from the box's top edge exactly as the stock
+            // fullscreen and gear buttons do.
+            final int top = clamp(anchorAt[1] + anchorHeight - height,
+                    safePlayer.top, safePlayer.bottom - height);
             final int leftCandidate = anchorAt[0] - width;
             final int left = clamp(leftCandidate, safePlayer.left, safePlayer.right - width);
             final boolean leftFits = left == leftCandidate;
@@ -1456,34 +1495,65 @@ public final class MagnifierRecon {
                         new FrameLayout.LayoutParams(1, 1));
             }
             place(editModeButton, placedLeft - decorAt[0], top - decorAt[1], width, height);
-            mirrorAnchorOntoAffordance(anchorAlpha, true);
+            // Ride the chrome's own fade: the alpha sampled live from the anchor's chain is the value
+            // YouTube is rendering the stock icons at, so the pencil dims and disappears with them
+            // instead of holding full alpha through the fade and then popping off.
+            mirrorAnchorOntoAffordance(chromeAlpha(), true);
             affordanceGeometryRect.set(placedLeft, top, placedLeft + width, top + height);
             return affordanceGeometryRect;
         }
 
-        /** Rendered alpha of the stock anchor: its own alpha multiplied by ancestor alphas. */
-        private float anchorEffectiveAlpha() {
-            float alpha = 1f;
-            View current = affordanceAnchor;
-            while (current != null) {
-                alpha *= current.getAlpha();
-                final Object parent = current.getParent();
-                current = parent instanceof View ? (View) parent : null;
-            }
-            return alpha;
-        }
-
-        /** Mirrors only observed alpha and shown state; this is the sole affordance mirror path. */
+        /**
+         * Sole affordance mirror path. Applies the derived state and self-heals any drift on the same
+         * pass: if the anchor is shown while the entry is not VISIBLE at the same alpha, the entry is
+         * corrected here instead of waiting for another event. The decision log fires on a state
+         * change and on every further 5% of a fade, so a fade is traceable in a handful of lines
+         * instead of one line per frame.
+         */
         private void mirrorAnchorOntoAffordance(float anchorAlpha, boolean anchorShown) {
             final int visibility = anchorShown ? View.VISIBLE : View.GONE;
-            editModeButton.setAlpha(anchorShown ? anchorAlpha : 0f);
-            if (visibility != affordanceMirroredVisibility) {
-                affordanceMirroredVisibility = visibility;
-                logPerf("affordance-mirror visibility="
-                        + (visibility == View.VISIBLE ? "VISIBLE" : "GONE")
-                        + " anchorAlpha=" + anchorAlpha);
+            final float alpha = anchorShown ? Math.max(0f, Math.min(1f, anchorAlpha)) : 0f;
+            final boolean drifted = editModeButton.getVisibility() != visibility
+                    || editModeButton.getAlpha() != alpha;
+            if (drifted || visibility != affordanceMirroredVisibility
+                    || alpha != affordanceMirroredAlpha) {
+                editModeButton.setAlpha(alpha);
+                editModeButton.setVisibility(visibility);
+                final boolean stepped = Math.abs(alpha - affordanceLoggedAlpha) >= 0.05f;
+                if (visibility != affordanceMirroredVisibility || stepped) {
+                    affordanceLoggedAlpha = alpha;
+                    logPerf("affordance-mirror visibility="
+                            + (visibility == View.VISIBLE ? "VISIBLE" : "GONE")
+                            + " anchorAlpha=" + anchorAlpha);
+                }
             }
-            editModeButton.setVisibility(visibility);
+            affordanceMirroredVisibility = visibility;
+            affordanceMirroredAlpha = alpha;
+        }
+
+        /**
+         * The fraction of the chrome's fully shown alpha that YouTube is rendering right now: the
+         * darkest alpha on the fullscreen button's own parent chain, each link normalised by the
+         * largest value ever seen on that link. The stock fade is applied to the button itself or to
+         * one of the wrappers above it, so the minimum over the chain is the animated value, and the
+         * per-link normalisation keeps a wrapper that is persistently dimmed while the chrome is
+         * shown from pinning the entry below full alpha. The walk stops at the player area, above
+         * which nothing fades, and the depth is bounded so it can never reach the watch page.
+         */
+        private float chromeAlpha() {
+            if (affordanceAnchor == null) return 0f;
+            float alpha = 1f;
+            View view = affordanceAnchor;
+            for (int link = 0; link < affordanceChromePeak.length; link++) {
+                if (view == null || view == playerArea) break;
+                final float raw = view.getAlpha();
+                if (raw > affordanceChromePeak[link]) affordanceChromePeak[link] = raw;
+                final float peak = affordanceChromePeak[link] > 0f ? affordanceChromePeak[link] : 1f;
+                alpha = Math.min(alpha, Math.min(1f, raw / peak));
+                final Object parent = view.getParent();
+                view = parent instanceof View ? (View) parent : null;
+            }
+            return alpha;
         }
 
         /**
@@ -1606,6 +1676,7 @@ public final class MagnifierRecon {
 
         private void disableMagnifier() {
             enabled = !enabled;
+            updateEditModeButtonIcon();
             styleButton.setEnabled(enabled);
             styleButton.setAlpha(enabled ? 1f : 0.42f);
             offButton.setAlpha(enabled ? 1f : 0.58f);
@@ -1660,6 +1731,11 @@ public final class MagnifierRecon {
             logPerf("mode=" + (enabled ? "ON" : "OFF")
                     + " reason=user-toggle viewsRemoved=" + !enabled
                     + " loopsCancelled=" + !enabled + " editMode=" + editMode);
+        }
+
+        /** The entry glyph carries the magnifier's own state; the affordance view is hidden while editing. */
+        private void updateEditModeButtonIcon() {
+            ((AffordanceView) editModeButton).setMagnifierOn(enabled);
         }
 
         private void onNewVideo(String videoId) {
@@ -3370,9 +3446,12 @@ public final class MagnifierRecon {
             } catch (IllegalArgumentException ignored) {
                 // The receiver may already be unregistered if the Activity is being torn down.
             }
-            if (affordanceAnchor != null && affordanceAnchor.getViewTreeObserver().isAlive()) {
-                affordanceAnchor.getViewTreeObserver().removeOnPreDrawListener(
-                        affordanceAnchorLayoutListener);
+            if (affordancePreDrawRegistered && decor.getViewTreeObserver().isAlive()) {
+                decor.getViewTreeObserver().removeOnPreDrawListener(affordanceAnchorLayoutListener);
+                affordancePreDrawRegistered = false;
+            }
+            if (affordanceAnchor != null) {
+                affordanceAnchor.removeOnAttachStateChangeListener(affordanceAnchorAttachListener);
             }
             surface.getHolder().removeCallback(surfaceCallback);
             cancelVsync();
@@ -3406,15 +3485,98 @@ public final class MagnifierRecon {
         }
     }
 
-    /** Small YouTube-style outline fallback for older APKs without the box-pencil drawable. */
+    /**
+     * Entry affordance that paints its own disc and glyph from its own size, so no drawable-bounds or
+     * ImageView pipeline can silently drop it. The mirrored stock background still draws underneath as
+     * the pressed-state disc; the painting here is the idle affordance the user must see.
+     */
+    private static final class AffordanceView extends View {
+        /**
+         * The stock player buttons paint a 36 dp scrim disc behind their glyphs: the fullscreen
+         * button's disc measures 72 px at 2x inside its 96 px box. The entry used to fill its whole
+         * box (96 px), which is what made it read as a bigger control than the stock icons, so it now
+         * paints the stock 72 px disc inside the same 96 px box. The disc hangs from the box's top
+         * edge in {@link #onDraw}, matching where the stock buttons draw theirs.
+         */
+        private static final float DISC_DIAMETER_DP = 36f;
+        /**
+         * Scrim colour of that disc. The stock scrim measures about a quarter black; 0x42 is that
+         * value, well below the 0x66 (40%) the entry used to carry, which made it visibly darker than
+         * the stock icons it sits beside.
+         */
+        private static final int DISC_COLOR = 0x42000000;
+        /**
+         * Glyph inset as a fraction of the disc box. 0.2625 leaves the pencil 5% smaller than the
+         * 24 dp stock grid the box is sized after, which matches how the stock glyph sits inside its
+         * own disc.
+         */
+        private static final float GLYPH_INSET_FRACTION = 0.2625f;
+        private final Paint discPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private EditModeIconDrawable glyph = new EditModeIconDrawable(false);
+
+        AffordanceView(android.content.Context context) {
+            super(context);
+            // Same translucent scrim the stock player buttons paint behind their glyphs.
+            discPaint.setColor(DISC_COLOR);
+        }
+
+        void setMagnifierOn(boolean magnifierOn) {
+            glyph = new EditModeIconDrawable(magnifierOn);
+            invalidate();
+        }
+
+        @Override protected void onDraw(Canvas canvas) {
+            final int width = getWidth();
+            final int height = getHeight();
+            if (width <= 0 || height <= 0) return;
+            final float box = Math.min(width, height);
+            final float stockDiameter = DISC_DIAMETER_DP
+                    * getResources().getDisplayMetrics().density;
+            final float diameter = Math.min(stockDiameter, box);
+            // The stock buttons hang their disc from the top of their touch box: the fullscreen
+            // button's 72 px disc sits flush with the top of its 96 px box and the strip left over is
+            // the touch slop below the icon. The entry's box is that same box, so a disc centred in it
+            // lands one slop (12 px) lower than the stock disc and reads as sagging under the
+            // fullscreen icon it sits beside. Top-aligning it puts the pencil back on the stock line.
+            final float centreY = diameter / 2f + (height - box) / 2f;
+            canvas.drawCircle(width / 2f, centreY, diameter / 2f, discPaint);
+            // The glyph keeps its own bounds, concentric with the disc, so the smaller disc never
+            // moves it off the disc's centre.
+            final int inset = Math.round(box * GLYPH_INSET_FRACTION);
+            final int glyphSide = height - 2 * inset;
+            final int glyphTop = Math.round(centreY) - glyphSide / 2;
+            glyph.setBounds(inset, glyphTop, inset + glyphSide, glyphTop + glyphSide);
+            glyph.draw(canvas);
+        }
+    }
+
+    /**
+     * The box-pencil entry glyph, drawn here so it is white on every target (the stock drawable
+     * only ships as an effectively invisible black variant) and can carry the magnifier's own
+     * state. With the magnifier off it is the plain white outline; with the magnifier on, the
+     * pencil and its eraser cap are filled white and the outline gains the heavier weight and the
+     * soft drop shadow of the stock player icons.
+     */
     private static final class EditModeIconDrawable extends Drawable {
         private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final Paint shadowPaint = new Paint();
         private final android.graphics.Path path = new android.graphics.Path();
+        private final boolean magnifierOn;
+        private final boolean withShadow;
+        private Bitmap shadow;
 
-        EditModeIconDrawable() {
+        EditModeIconDrawable(boolean magnifierOn) {
+            this(magnifierOn, magnifierOn && IconShadow.isAvailable());
+        }
+
+        private EditModeIconDrawable(boolean magnifierOn, boolean withShadow) {
+            this.magnifierOn = magnifierOn;
+            this.withShadow = withShadow;
             paint.setColor(Color.WHITE);
             paint.setStyle(Paint.Style.STROKE);
-            paint.setStrokeWidth(2f);
+            // While the magnifier is on the outline matches the chrome glyphs' weight, so it reads
+            // as bright as the stock player icons around it.
+            paint.setStrokeWidth(magnifierOn ? 2.1f : 2f);
             paint.setStrokeCap(Paint.Cap.ROUND);
             paint.setStrokeJoin(Paint.Join.ROUND);
         }
@@ -3422,10 +3584,16 @@ public final class MagnifierRecon {
         @Override public void draw(Canvas canvas) {
             final Rect bounds = getBounds();
             if (bounds.isEmpty()) return;
-            final int save = canvas.save();
             final float side = Math.min(bounds.width(), bounds.height());
-            canvas.translate(bounds.left + (bounds.width() - side) / 2f,
-                    bounds.top + (bounds.height() - side) / 2f);
+            final float left = bounds.left + (bounds.width() - side) / 2f;
+            final float top = bounds.top + (bounds.height() - side) / 2f;
+            if (withShadow) {
+                // The shadow bitmap is in view pixels, so it is drawn before the glyph matrix.
+                if (shadow == null) shadow = buildShadow((int) side);
+                if (shadow != null) canvas.drawBitmap(shadow, left, top, shadowPaint);
+            }
+            final int save = canvas.save();
+            canvas.translate(left, top);
             canvas.scale(side / 24f, side / 24f);
             path.reset();
             path.moveTo(14f, 4f);
@@ -3446,8 +3614,22 @@ public final class MagnifierRecon {
             path.quadTo(22f, 8f, 21f, 9f);
             path.lineTo(15f, 15f);
             path.close();
+            if (magnifierOn) {
+                // Fill the pencil and its eraser cap in first, then stroke back over the edges so
+                // the outline stays crisp.
+                paint.setStyle(Paint.Style.FILL);
+                canvas.drawPath(path, paint);
+                paint.setStyle(Paint.Style.STROKE);
+            }
             canvas.drawPath(path, paint);
             canvas.restoreToCount(save);
+        }
+
+        private Bitmap buildShadow(int side) {
+            if (side <= 0 || !IconShadow.isAvailable()) return null;
+            // The shadow source draws the glyph only, so building one cannot recurse.
+            final EditModeIconDrawable source = new EditModeIconDrawable(true, false);
+            return IconShadow.build(source, side, side);
         }
 
         @Override public void setAlpha(int alpha) { paint.setAlpha(alpha); invalidateSelf(); }
