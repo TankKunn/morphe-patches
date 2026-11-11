@@ -107,8 +107,34 @@ public final class MagnifierRecon {
         if (prototype != null && !prototype.stopped) prototype.resetDefaults();
     }
 
+    /**
+     * Fork-owned debug gate for the magnifier diagnostics. The weekly upstream sync overlays this
+     * file onto upstream's extension tree, where the shared settings API has migrated the boolean
+     * DEBUG to the enum DEBUG_LEVEL (see issue #22), while the fork branch(es) still expose
+     * Settings.DEBUG. Neither symbol exists in both trees, so the toggle is resolved at runtime and
+     * read live: prefer Settings.DEBUG, fall back to Settings.DEBUG_LEVEL != DISABLED, and fail
+     * closed (no logging) if neither exists.
+     */
+    private static boolean isDebugLoggingEnabled() {
+        try {
+            final Class<?> settings = Class.forName("app.morphe.extension.youtube.settings.Settings");
+            Object setting;
+            try {
+                setting = settings.getField("DEBUG").get(null);
+            } catch (NoSuchFieldException debugLevelOnly) {
+                // Upstream replaced the boolean DEBUG setting with the DEBUG_LEVEL enum.
+                setting = settings.getField("DEBUG_LEVEL").get(null);
+            }
+            final Object value = setting.getClass().getMethod("get").invoke(setting);
+            if (value instanceof Boolean) return (Boolean) value;
+            return value != null && !"DISABLED".equals(value.toString());
+        } catch (Throwable ignored) {
+            return false;
+        }
+    }
+
     private static void logPerf(String message) {
-        if (Settings.DEBUG.get()) Log.i(PERF_TAG, message);
+        if (isDebugLoggingEnabled()) Log.i(PERF_TAG, message);
     }
 
     private static boolean isValidSourceGeometry(float left, float top, float width, float height) {
@@ -2041,7 +2067,7 @@ public final class MagnifierRecon {
 
         private void warnIfSlowWhilePlaying(String source) {
             if (captureMode == CaptureMode.IDLE && VideoState.getCurrent() == VideoState.PLAYING) {
-                if (Settings.DEBUG.get()) Log.w(PERF_TAG,
+                if (isDebugLoggingEnabled()) Log.w(PERF_TAG,
                         "slow-mode-while-playing source=" + source + " modeReason=" + modeReason);
                 onVideoStateChanged(VideoState.PLAYING, "slow-mode-state-guard:" + source);
             }
@@ -2238,7 +2264,7 @@ public final class MagnifierRecon {
                     : secondLatencyTotalMs / (double) secondCopies;
             final Rect frame = surface.getHolder().getSurfaceFrame();
 
-            if (Settings.DEBUG.get()) Log.i(PERF_TAG, "second spanMs=" + elapsed
+            if (isDebugLoggingEnabled()) Log.i(PERF_TAG, "second spanMs=" + elapsed
                     + " mode=" + (!enabled ? "OFF" : captureMode)
                     + " captureVisible=" + isCaptureTargetVisible() + " editMode=" + editMode
                     + " reason=" + modeReason
