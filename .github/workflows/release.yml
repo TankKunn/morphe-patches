@@ -105,9 +105,38 @@ jobs:
 
       - name: Seed fork dev release baseline
         if: github.event_name == 'push' || inputs.publish_prerelease == true
+        shell: bash
         run: |
+          set -euo pipefail
+          # Original fork baseline: a tag-only anchor with no release behind it.
           if ! git tag --list 'v1.48.0' | grep -q .; then
             git tag v1.48.0 f3acc10e2
+          fi
+
+          # Re-anchor the dev channel above the fork's stable line.
+          #
+          # semantic-release derives a prerelease branch's base from the newest
+          # tag reachable on that branch, and patch-class commits only tick the
+          # counter. The dev base therefore drifted down to 2.0.0-dev.N while the
+          # stable channel advanced to 2.2.1, so dev prereleases now sort below
+          # the published stable release. Seeding upstream's next stable plus one
+          # patch (2.3.0 + patch -> 2.3.1) makes the next dev release 2.3.1-dev.1,
+          # which sorts above both 2.2.1 and upstream's own dev line.
+          #
+          # A hand-made prerelease tag is ignored unless it carries a released
+          # channel note: semantic-release resolves channels from
+          # refs/notes/semantic-release-* and defaults to [null] otherwise. The
+          # note below uses the same ref name shape semantic-release writes for
+          # its own releases. The tag targets a note-free ancestor of the dev
+          # head, which keeps the analyzed range to the triggering commit so the
+          # release stays patch-class. The tag and note are per-run and local,
+          # exactly like the v1.48.0 seed above, and never reach main.
+          DEV_BASE_TAG='v2.3.1-dev.0'
+          DEV_BASE_COMMIT='307cc4039'
+          if ! git tag --list "$DEV_BASE_TAG" | grep -q .; then
+            git tag "$DEV_BASE_TAG" "$DEV_BASE_COMMIT"
+            git notes --ref "refs/notes/semantic-release-$DEV_BASE_TAG" \
+              add -f -m '{"channels":["dev"]}' "$DEV_BASE_TAG"
           fi
 
       - name: Publish dev prerelease
