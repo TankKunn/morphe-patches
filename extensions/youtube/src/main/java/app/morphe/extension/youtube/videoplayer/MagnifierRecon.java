@@ -936,16 +936,21 @@ public final class MagnifierRecon {
             logTouch("affordance-view path=" + affordanceViewPath);
             editModeButton.setTag("morphe.magnifier.2b.edit-icon");
             editModeButton.setContentDescription("Edit magnifier");
-            // Baseline geometry: the stock button's own box for the disc, with a 24 dp icon content
-            // box inset by 12 dp, which is the published 96 px disc with a ~38 px icon at 720 px
-            // width (density 2.0). The icon drawable, scale type and padding are unchanged.
+            // Geometry mirrors the settings gear button: a square 48 dp touch box with a 24 dp
+            // icon inset by 12 dp, so the mirrored disc is the round 96 px circle the gear shows
+            // and the glyph matches the gear icon (720 px width, density 2.0).
             editModeButton.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
             editModeButton.setPadding(dp(12), dp(12), dp(12), dp(12));
             // Published baseline resolution: the app's own box-pencil, otherwise the outline glyph.
-            // The id comes from the exact style-resolved name, so no second pass re-styles it.
+            // The id comes from the exact style-resolved name, so no second pass re-styles it;
+            // the stock icon only ships as the *_black_24 variant in published APKs.
             final String editIconName = PlayerIcons.name(EDIT_ICON_BASE_NAME);
-            final int editIconId = PlayerIcons.exists(editIconName)
+            int editIconId = PlayerIcons.exists(editIconName)
                     ? ResourceUtils.getIdentifier(ResourceType.DRAWABLE, editIconName) : 0;
+            if (editIconId == 0) {
+                editIconId = ResourceUtils.getIdentifier(ResourceType.DRAWABLE,
+                        EDIT_ICON_BASE_NAME + "_black_24");
+            }
             if (editIconId != 0) {
                 editModeButton.setImageResource(editIconId);
             } else {
@@ -1412,8 +1417,16 @@ public final class MagnifierRecon {
             decor.getLocationOnScreen(decorAt);
             affordanceAnchor.getLocationOnScreen(anchorAt);
             playerArea.getLocationOnScreen(playerAt);
-            final int width = affordanceAnchor.getWidth();
-            final int height = affordanceAnchor.getHeight();
+            // Square 48 dp box sized to the settings gear button so the affordance reads the same
+            // as the gear: the mirrored disc fills the box, so a square keeps it a round circle
+            // instead of the ellipse the anchor's 60x48 dp fullscreen box would draw.
+            final int anchorHeight = affordanceAnchor.getHeight();
+            final int gearSide = playerGearButton != null && playerGearButton.getWidth() > 0
+                    && playerGearButton.getHeight() > 0
+                    ? Math.min(playerGearButton.getWidth(), playerGearButton.getHeight())
+                    : anchorHeight;
+            final int width = gearSide;
+            final int height = Math.min(gearSide, anchorHeight);
             affordanceGeometryRect.set(playerAt[0], playerAt[1],
                     playerAt[0] + playerArea.getWidth(), playerAt[1] + playerArea.getHeight());
             final Rect safePlayer = safePlayerRect(affordanceGeometryRect);
