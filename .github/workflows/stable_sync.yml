@@ -189,6 +189,8 @@ jobs:
           fi
           git rm -f --ignore-unmatch .github/workflows/crowdin_pull.yml .github/workflows/crowdin_push.yml
           python3 .github/scripts/apply_magnifier_overlay.py --source-ref "$SOURCE_REF"
+          # Provisional record: $SOURCE_HASH is hashed from $SOURCE_REF before the merge,
+          # so the publish step rewrites magnifier_sha256 from the tree it commits.
           printf '{"upstream_version":"%s","magnifier_sha256":"%s"}\n' "$UPSTREAM_VERSION" "$SOURCE_HASH" > .stable-sync-state.json
           RELEASES="$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases?per_page=100" --jq '.[] | select(.prerelease == false) | .tag_name | select(test("^v[0-9]+\\.[0-9]+\\.[0-9]+$")) | ltrimstr("v")')"
           FORK_VERSION="$(printf '%s\n' "$RELEASES" | sort -V | tail -n 1)"
@@ -275,6 +277,20 @@ jobs:
           set -euo pipefail
           exec > >(tee -a "$RUNNER_TEMP/stable-sync.log") 2>&1
           git add -A
+          # Record the magnifier sources as they exist in the tree being published, read
+          # from the index so the bytes match CI's LF canonical form. $SOURCE_HASH was
+          # hashed from $SOURCE_REF before the merge, and the merge rewrites the
+          # upstream-owned files that also carry the fork's magnifier block
+          # (Settings.java, strings.xml), so publishing it would leave the state file
+          # describing the pre-merge tree: the next push to main would look like a
+          # magnifier change and publish an identical release.
+          CANDIDATE_SOURCE_HASH="$(for f in \
+            extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/MagnifierRecon.java \
+            patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt \
+            extensions/youtube/src/main/java/app/morphe/extension/youtube/settings/Settings.java \
+            patches/src/main/resources/addresources/values/youtube/strings.xml; do git show ":$f"; done | sha256sum | cut -d' ' -f1)"
+          printf '{"upstream_version":"%s","magnifier_sha256":"%s"}\n' "$UPSTREAM_VERSION" "$CANDIDATE_SOURCE_HASH" > .stable-sync-state.json
+          git add .stable-sync-state.json
           python3 .github/scripts/validate_sync_tree.py --conflicts-only
           git commit -m "fix: publish stable Morphe patches v$VERSION with magnifier"
           CANDIDATE="$(git rev-parse HEAD)"
