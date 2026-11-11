@@ -133,10 +133,27 @@ jobs:
           # exactly like the v1.48.0 seed above, and never reach main.
           DEV_BASE_TAG='v2.3.1-dev.0'
           DEV_BASE_COMMIT='307cc4039'
+          DEV_BASE_CHANNELS='{"channels":["dev"]}'
           if ! git tag --list "$DEV_BASE_TAG" | grep -q .; then
+            # A note is stored as a commit of its own, so it needs a committer
+            # identity even though creating the tag itself does not.
             git tag "$DEV_BASE_TAG" "$DEV_BASE_COMMIT"
-            git notes --ref "refs/notes/semantic-release-$DEV_BASE_TAG" \
-              add -f -m '{"channels":["dev"]}' "$DEV_BASE_TAG"
+            git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              notes --ref "refs/notes/semantic-release-$DEV_BASE_TAG" \
+              add -f -m "$DEV_BASE_CHANNELS" "$DEV_BASE_TAG"
+          fi
+
+          # Fail loudly if the anchor is unreachable or its note is not readable
+          # through the same query semantic-release uses, rather than silently
+          # publishing a version below the fork's stable line.
+          git cat-file -e "${DEV_BASE_COMMIT}^{commit}"
+          seed_line="$(git log --tags='*' --decorate-refs='refs/tags/*' --no-walk \
+            --format='%d%x09%N' --notes='refs/notes/semantic-release*' \
+            | grep -F "(tag: $DEV_BASE_TAG)" || true)"
+          if [[ "$seed_line" != *"$DEV_BASE_CHANNELS"* ]]; then
+            echo "::error::$DEV_BASE_TAG is not readable as a dev-channel baseline release." >&2
+            exit 1
           fi
 
       - name: Publish dev prerelease
