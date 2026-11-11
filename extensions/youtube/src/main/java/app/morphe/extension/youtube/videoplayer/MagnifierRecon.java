@@ -34,6 +34,7 @@ import android.view.ViewConfiguration;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.view.ViewTreeObserver;
 import android.content.res.ColorStateList;
 import android.widget.FrameLayout;
@@ -49,9 +50,6 @@ import java.util.WeakHashMap;
 
 import java.util.function.Consumer;
 
-import kotlin.Unit;
-import kotlin.jvm.functions.Function1;
-
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
@@ -65,6 +63,14 @@ import app.morphe.extension.youtube.settings.Settings;
 public final class MagnifierRecon {
     private static final String TAG = "MagnifierRecon";
     private static final String PERF_TAG = "MagnifierPerf";
+    private static final String TOUCH_TAG = "MagnifierTouch";
+    // TEST-ONLY (gate builds): enables the magnifier touch-arbitration trail without the in-app
+    // debug preference, which is unreachable on the CI/test Android image. Read from the
+    // debug.morphe.magnifier.touch system property; "0" or "false" disables it. This whole block
+    // must be removed or defaulted OFF before merge/release.
+    // TODO(TEST-ONLY-GATE-LOGGING): remove before merge.
+    private static final String GATE_TOUCH_PROP = "debug.morphe.magnifier.touch";
+    private static Boolean gateTouchLoggingResolved;
     private static final String PLAYER_VIEW_CLASS =
             "com.google.android.libraries.youtube.player.ui.PlayerView";
     private static final double DEFAULT_SOURCE_WIDTH = 0.25d;
@@ -77,6 +83,9 @@ public final class MagnifierRecon {
     private static final WeakHashMap<View, Boolean> KNOWN_DECORS = new WeakHashMap<>();
     private static final WeakHashMap<View, View> CONTROL_ANCHORS = new WeakHashMap<>();
     private static final WeakHashMap<View, ViewTreeObserver.OnGlobalLayoutListener> INSPECTORS =
+            new WeakHashMap<>();
+    private static final WeakHashMap<View, Runnable> PENDING_INSPECTS = new WeakHashMap<>();
+    private static final WeakHashMap<View, View.OnAttachStateChangeListener> DECOR_ATTACH_LISTENERS =
             new WeakHashMap<>();
     private static Prototype prototype;
     private static UiState savedUiState;
@@ -96,21 +105,36 @@ public final class MagnifierRecon {
         if (prototype != null) prototype.onNewVideo(videoId);
     }
 
-    public static void resetStoredDefaults() {
-        savedUiState = null;
-        Settings.MAGNIFIER_BORDER_THICKNESS.save(2);
-        Settings.MAGNIFIER_BORDER_OPACITY.save(100);
-        Settings.MAGNIFIER_BORDER_COLOR.save(0);
-        Activity activity = Utils.getActivity();
-        if (activity != null) activity.getSharedPreferences("morphe_magnifier_geometry",
-                android.content.Context.MODE_PRIVATE).edit().clear().apply();
-        if (prototype != null && !prototype.stopped) prototype.resetDefaults();
+    /**
+     * PLAN A touch-arbitration entry point, called from the stock watch-layout touch interception
+     * that sits above every player child. It therefore observes the stream even when the magnifier
+     * window is parented below the stock controls, where a lower child never sees ACTION_DOWN.
+     * Returning true means the magnifier claimed the gesture: the injected stock hook then returns
+     * true as well, which cancels the stock handlers and swallows the rest of the gesture.
+     */
+    public static boolean onPlayerTouchIntercept(MotionEvent event) {
+        final Prototype current = prototype;
+        if (current == null || event == null) return false;
+        return current.onStockTouchIntercept(event);
+    }
+
+    /**
+     * PLAN A second half of the same hook pair: once the stock interception returned true for a
+     * claimed drag, the framework stops calling onInterceptTouchEvent for that gesture and delivers
+     * the remainder to the layout's own onTouchEvent (verified: the stock class declares
+     * onTouchEvent in the target APK). This entry point keeps the claimed drag following the finger
+     * and swallows the rest of the gesture, ACTION_UP included.
+     */
+    public static boolean onPlayerTouchEvent(MotionEvent event) {
+        final Prototype current = prototype;
+        if (current == null || event == null) return false;
+        return current.onStockTouchEvent(event);
     }
 
     /**
      * Fork-owned debug gate for the magnifier diagnostics. The weekly upstream sync overlays this
      * file onto upstream's extension tree, where the shared settings API has migrated the boolean
-     * DEBUG to the enum DEBUG_LEVEL (see issue #22), while the fork branch(es) still expose
+     * DEBUG to the enum DEBUG_LEVEL (see issue #22), while the branch base still exposes
      * Settings.DEBUG. Neither symbol exists in both trees, so the toggle is resolved at runtime and
      * read live: prefer Settings.DEBUG, fall back to Settings.DEBUG_LEVEL != DISABLED, and fail
      * closed (no logging) if neither exists.
@@ -135,6 +159,52 @@ public final class MagnifierRecon {
 
     private static void logPerf(String message) {
         if (isDebugLoggingEnabled()) Log.i(PERF_TAG, message);
+    }
+
+    // TEST-ONLY gate logging, see GATE_TOUCH_PROP above.
+    private static boolean resolveGateTouchLogging() {
+        boolean enabled = true;
+        String source = "default";
+        try {
+            Method get = Class.forName("android.os.SystemProperties")
+                    .getMethod("get", String.class);
+            Object raw = get.invoke(null, GATE_TOUCH_PROP);
+            String value = raw == null ? "" : raw.toString().trim();
+            if (!value.isEmpty()) {
+                enabled = !"0".equals(value) && !"false".equalsIgnoreCase(value);
+                source = "property";
+            }
+        } catch (Throwable t) {
+            // Fail open and never rethrow: a blocked hidden member surfaces as an Error
+            // (NoSuchMethodError, IllegalAccessError, ExceptionInInitializerError,
+            // NoClassDefFoundError), which must not escape into the touch path below.
+            enabled = true;
+            source = "reflection-failed:" + t.getClass().getSimpleName();
+        }
+        Log.i(TOUCH_TAG, "gate-logging=" + enabled + " source=" + source + " prop=" + GATE_TOUCH_PROP);
+        return enabled;
+    }
+
+    private static boolean gateTouchLogging() {
+        if (gateTouchLoggingResolved == null) gateTouchLoggingResolved = resolveGateTouchLogging();
+        return gateTouchLoggingResolved;
+    }
+
+    private static void logTouch(String message) {
+        if (gateTouchLogging() || isDebugLoggingEnabled()) Log.i(TOUCH_TAG, message);
+    }
+
+    /** Short action name for the touch trail, so one line stays readable per gesture transition. */
+    private static String actionName(int action) {
+        switch (action) {
+            case MotionEvent.ACTION_DOWN: return "DOWN";
+            case MotionEvent.ACTION_MOVE: return "MOVE";
+            case MotionEvent.ACTION_UP: return "UP";
+            case MotionEvent.ACTION_CANCEL: return "CANCEL";
+            case MotionEvent.ACTION_POINTER_DOWN: return "POINTER_DOWN";
+            case MotionEvent.ACTION_POINTER_UP: return "POINTER_UP";
+            default: return "other(" + action + ")";
+        }
     }
 
     private static boolean isValidSourceGeometry(float left, float top, float width, float height) {
@@ -217,26 +287,68 @@ public final class MagnifierRecon {
         }
     }
 
+    private static void scheduleInspect(View decorView) {
+        final Runnable prior = PENDING_INSPECTS.remove(decorView);
+        if (prior != null) decorView.removeCallbacks(prior);
+        final Runnable inspectRunnable = () -> {
+            PENDING_INSPECTS.remove(decorView);
+            inspect(decorView);
+        };
+        PENDING_INSPECTS.put(decorView, inspectRunnable);
+        decorView.postOnAnimation(inspectRunnable);
+    }
+
     private static void watchDecor(View decorView) {
-        if (!Settings.MAGNIFIER_ENABLED.get() || decorView == null) return;
+        if (!Settings.MAGNIFIER_ENABLED.get() || decorView == null
+                || !decorView.isAttachedToWindow()) return;
         if (WATCHED_DECORS.put(decorView, Boolean.TRUE) == null) {
             final ViewTreeObserver.OnGlobalLayoutListener listener =
-                    () -> decorView.postOnAnimation(() -> inspect(decorView));
+                    () -> scheduleInspect(decorView);
+            final View.OnAttachStateChangeListener attachListener = new View.OnAttachStateChangeListener() {
+                @Override public void onViewAttachedToWindow(View view) {
+                    if (Settings.MAGNIFIER_ENABLED.get()) scheduleInspect(decorView);
+                }
+                @Override public void onViewDetachedFromWindow(View view) {
+                    cleanupDecor(decorView);
+                }
+            };
             INSPECTORS.put(decorView, listener);
+            DECOR_ATTACH_LISTENERS.put(decorView, attachListener);
             decorView.getViewTreeObserver().addOnGlobalLayoutListener(listener);
+            decorView.addOnAttachStateChangeListener(attachListener);
         }
-        decorView.postOnAnimation(() -> inspect(decorView));
+        scheduleInspect(decorView);
+    }
+
+    private static void cleanupDecor(View decorView) {
+        unwatchDecor(decorView);
+        if (prototype != null && prototype.decor == decorView) {
+            prototype.stop();
+            prototype = null;
+        }
+        CONTROL_ANCHORS.remove(decorView);
+        KNOWN_DECORS.remove(decorView);
+        LAST_LAYOUTS.remove(decorView);
     }
 
     private static void unwatchDecor(View decorView) {
-        if (decorView == null || WATCHED_DECORS.remove(decorView) == null) return;
+        if (decorView == null) return;
+        final Runnable pending = PENDING_INSPECTS.remove(decorView);
+        if (pending != null) decorView.removeCallbacks(pending);
+        WATCHED_DECORS.remove(decorView);
         final ViewTreeObserver.OnGlobalLayoutListener listener = INSPECTORS.remove(decorView);
         if (listener != null && decorView.getViewTreeObserver().isAlive()) {
             decorView.getViewTreeObserver().removeOnGlobalLayoutListener(listener);
         }
+        final View.OnAttachStateChangeListener attachListener = DECOR_ATTACH_LISTENERS.remove(decorView);
+        if (attachListener != null) decorView.removeOnAttachStateChangeListener(attachListener);
     }
 
     private static void inspect(View decorView) {
+        if (decorView == null || !decorView.isAttachedToWindow()) {
+            cleanupDecor(decorView);
+            return;
+        }
         if (!Settings.MAGNIFIER_ENABLED.get()) {
             unwatchDecor(decorView);
             if (prototype != null && prototype.decor == decorView) {
@@ -389,9 +501,21 @@ public final class MagnifierRecon {
         private final ViewGroup decor;
         private final SurfaceView surface;
         private final View playerArea;
+        /**
+         * The fullscreen button view. VERIFIED: the hook supplies the view that receives
+         * findViewById(@id/fullscreen_button), so this is not the settings gear and is not asserted
+         * to live inside a controls_layout ConstraintLayout (UNVERIFIED). It is the entry point for
+         * climbing to the controls branch and the stock button the edit affordance sits beside.
+         */
         private final View playerControlsAnchor;
         private ViewGroup normalZoomLayer;
         private final View playerGearButton;
+        /**
+         * The stock control the edit affordance is placed beside and mirrored from: the fullscreen
+         * button, or the gear when the hook supplied no fullscreen anchor. Null means neither was
+         * found and the static top-right fallback is used.
+         */
+        private final View affordanceAnchor;
         private final FrameLayout overlay;
         private final SourceOutline sourceOutline;
         private final FrameLayout zoomWindow;
@@ -402,21 +526,40 @@ public final class MagnifierRecon {
         private final ImageView doneButton;
         private final ImageView offButton;
         private final ImageView styleButton;
-        private final ImageView editModeButton;
+        /**
+         * Baseline edit affordance: a decor-overlay icon beside the fullscreen button, never a
+         * player-bar button.
+         */
+        private final View editModeButton;
         private final FrameLayout stylePanelViewport;
         private final ScrollView stylePanel;
         private final LinearLayout styleRows;
-        private static Object createPlayerObserver(Consumer<Object> callback) {
+        private static Object createPlayerObserver(Object event, Consumer<Object> callback) {
+            Class<?> observerType = null;
+            for (Method method : event.getClass().getMethods()) {
+                if (method.getName().equals("addObserver") && method.getParameterCount() == 1
+                        && method.getParameterTypes()[0].isInterface()) {
+                    observerType = method.getParameterTypes()[0];
+                    break;
+                }
+            }
+            if (observerType == null) {
+                throw new IllegalStateException("No observer interface for Magnifier player event");
+            }
+
+            final Class<?> observerInterface = observerType;
             return java.lang.reflect.Proxy.newProxyInstance(
-                    MagnifierRecon.class.getClassLoader(),
-                    new Class<?>[] { Consumer.class, Function1.class },
+                    observerInterface.getClassLoader(),
+                    new Class<?>[] { observerInterface },
                     (proxy, method, args) -> {
                         switch (method.getName()) {
                             case "invoke":
-                                callback.accept(args == null || args.length == 0 ? null : args[0]);
-                                return Unit.INSTANCE;
                             case "accept":
                                 callback.accept(args == null || args.length == 0 ? null : args[0]);
+                                Class<?> returnType = method.getReturnType();
+                                if ("kotlin.Unit".equals(returnType.getName())) {
+                                    return returnType.getField("INSTANCE").get(null);
+                                }
                                 return null;
                             case "toString":
                                 return "MagnifierPlayerObserver";
@@ -453,14 +596,20 @@ public final class MagnifierRecon {
         private final Bitmap[] bitmaps = new Bitmap[2];
         private boolean stopped;
         private final Choreographer.FrameCallback frameCallback = this::onVsync;
-        private final Object videoStateObserver = createPlayerObserver(state ->
+        private final Object videoStateObserver = createPlayerObserver(VideoState.getOnChange(), state ->
                 handler.post(() -> onVideoStateChanged((VideoState) state, "video-state-hook")));
-        private final Object controlsObserver = createPlayerObserver(state ->
-                handler.post(() -> {
-                    if (Prototype.this.editMode) hidePlayerControls();
-                    else updatePositionAndGeometry();
+        private final Object controlsObserver = createPlayerObserver(
+                PlayerControlsVisibility.getOnChange(), state -> handler.post(() -> {
+                    if (Prototype.this.editMode) {
+                        hidePlayerControls();
+                        return;
+                    }
+                    // The event is only an extra trigger here: the render decision is derived live
+                    // from the anchor on every pre-draw, so a missed or out-of-order event cannot
+                    // latch the entry off.
+                    updatePositionAndGeometry();
                 }));
-        private final Object playerTypeObserver = createPlayerObserver(type ->
+        private final Object playerTypeObserver = createPlayerObserver(PlayerType.getOnChange(), type ->
                 handler.post(() -> {
                     if (isTerminalPlayerType((PlayerType) type)) {
                         onPlayerClosed("player-type:" + type);
@@ -475,10 +624,43 @@ public final class MagnifierRecon {
                 handler.post(() -> onVisibilityChanged("broadcast:" + action));
             }
         };
-        private final ViewTreeObserver.OnPreDrawListener gearButtonLayoutListener = () -> {
+        /**
+         * Stateless per-frame trigger for the entry pass. It is registered against the window's
+         * observer, which outlives any re-inflated anchor view, and the anchor's attach-state listener
+         * re-registers it after a re-inflation so the pass can never stay bound to a dead observer.
+         */
+        private boolean affordancePreDrawRegistered;
+        private final ViewTreeObserver.OnPreDrawListener affordanceAnchorLayoutListener = () -> {
             if (!stopped) updateEditModeButtonPosition();
             return true;
         };
+        private final View.OnAttachStateChangeListener affordanceAnchorAttachListener =
+                new View.OnAttachStateChangeListener() {
+                    @Override public void onViewAttachedToWindow(View view) {
+                        affordancePreDrawRegistered = false;
+                        registerAffordancePreDraw();
+                        if (!stopped) updateEditModeButtonPosition();
+                    }
+                    @Override public void onViewDetachedFromWindow(View view) {
+                        affordancePreDrawRegistered = false;
+                    }
+                };
+        private final android.view.SurfaceHolder.Callback surfaceCallback =
+                new android.view.SurfaceHolder.Callback() {
+                    @Override public void surfaceCreated(android.view.SurfaceHolder holder) {
+                        rearmForSurfaceChange("surface-created");
+                    }
+                    @Override public void surfaceChanged(android.view.SurfaceHolder holder,
+                            int format, int width, int height) {
+                        rearmForSurfaceChange("surface-changed");
+                    }
+                    @Override public void surfaceDestroyed(android.view.SurfaceHolder holder) {
+                        cancelVsync();
+                        generation++;
+                        lastSurfaceValid = false;
+                    }
+                };
+        private boolean lastSurfaceValid;
         private final Runnable metricsReporter = new Runnable() {
             @Override public void run() {
                 if (stopped) return;
@@ -498,8 +680,52 @@ public final class MagnifierRecon {
         private boolean editMode;
         // Enabled is deliberately not restored: every new app/player session starts OFF.
         private boolean enabled;
+        private boolean zoomHiddenForUnsafeBounds;
         private boolean geometryInitialized;
         private boolean stylePanelOpen;
+        /** Last visibility mirrored onto the affordance, so the decision log fires only on change. */
+        private int affordanceMirroredVisibility = View.GONE;
+        /** Last alpha applied to the affordance, so a drifted alpha is corrected and logged once. */
+        private float affordanceMirroredAlpha;
+        /** Last side the affordance was placed on, so the side decision is logged once per change. */
+        private String affordancePlacedSide = "";
+        /**
+         * The entry follows the chrome's own fade: the live alpha YouTube is animating is sampled
+         * from the anchor and the containers above it on every pre-draw, so the pencil dims in
+         * lockstep with the stock icons and is gone exactly when they are. Nothing latches, and
+         * nothing depends on the patched visibility events (they do not fire reliably in every
+         * build).
+         */
+        /**
+         * How many links of the anchor's own parent chain are sampled for the fade. The stock chrome
+         * is a handful of wrappers deep, so this covers it without ever walking into the watch page.
+         */
+        private static final int CHROME_CHAIN_DEPTH = 8;
+        /**
+         * Per-link maximum alpha ever seen on the anchor's chain. Normalising each link by its own
+         * maximum makes a link that is persistently dimmed while the chrome is fully shown read as
+         * 1.0 (so it cannot pin the entry below full alpha), while a real fade, which drops below the
+         * remembered maximum, still reads as a partial alpha. Zero means "never sampled yet", and is
+         * treated as 1.0 so the first sample is used as-is.
+         */
+        private final float[] affordanceChromePeak = new float[CHROME_CHAIN_DEPTH + 1];
+        /**
+         * Last alpha written to the decision log: the line fires on a state change and on every
+         * further 5% of a fade, so a fade is traceable without one line per frame.
+         */
+        private float affordanceLoggedAlpha = 1f;
+        /**
+         * ConstantState of the stock anchor background last installed on the affordance. Null while
+         * nothing has been applied yet, so the first eligible pre-draw pass installs the clone.
+         */
+        private Drawable.ConstantState affordanceBackgroundState;
+        /**
+         * True once the outcome for the current anchor background state has been logged, so the
+         * decision line fires once per state. Set when the no-background skip line is emitted and
+         * reset whenever the mirrored background is cleared; the applied and clone-failure paths
+         * are gated by the {@link #affordanceBackgroundState} compare instead.
+         */
+        private boolean affordanceBackgroundLoggedForState;
         private boolean zoomInPlayerLayer;
         private boolean forwardingNormalTap;
         private boolean normalLongPressDragging;
@@ -534,6 +760,56 @@ public final class MagnifierRecon {
         private float normalDownRawY;
         private float normalZoomLeft;
         private float normalZoomTop;
+        // PLAN A claim-rule state. It is owned by the stock touch stream observed above the
+        // children, never by a child onTouchListener.
+        private static final int CLAIM_IDLE = 0;
+        private static final int CLAIM_PENDING = 1;
+        private static final int CLAIM_ACTIVE = 2;
+        private int claimState = CLAIM_IDLE;
+        private float claimDownRawX;
+        private float claimDownRawY;
+        private float claimZoomLeft;
+        private float claimZoomTop;
+        private long claimMoveLogMs;
+        // Rule (4): a claim is refused once the long-press/2x window has already opened, so a
+        // long-press-then-drag can never be turned into a magnifier drag.
+        private long claimDownAtMs;
+        private final int claimLongPressTimeout;
+        // Set once a gesture is claimed: the remainder of that gesture is swallowed even if the
+        // drag itself ends early (second pointer), so no half gesture leaks into stock handlers.
+        private boolean claimSwallowing;
+        private final int claimTouchSlop;
+        private final Rect claimWindowRect = new Rect();
+        private Rect affordanceGeometryRect;
+        private final Rect affordanceSafeRect = new Rect();
+        private final Rect affordanceSafeDecorRect = new Rect();
+        private final Rect affordanceVisibleRect = new Rect();
+        private final int[] affordanceSafeDecorAt = new int[2];
+        private int[] affordanceAnchorAt;
+        private int[] affordancePlayerAt;
+        private int[] affordanceDecorAt;
+        // Whether the zoom window currently has an OnTouchListener installed. Set only where the
+        // listener is actually set, so the diagnostic line can report it without any framework call.
+        private boolean windowTouchListenerInstalled;
+        /**
+         * Child of the chosen player layer that leads down to the stock controls anchor (the
+         * fullscreen button, VERIFIED). That this branch is an ancestor of the whole stock controls
+         * container, not only of the fullscreen sub-branch, is UNVERIFIED; the TEST-ONLY z-order
+         * identity line reports it at runtime.
+         */
+        private View zoomLayerBranch;
+        // PLAN A z-order state: re-entrancy guard for the index re-assert, and the last line printed
+        // by the TEST-ONLY z-order probe (one log per change, never per frame). The lastZoom* fields
+        // are that probe's change detector: they hold every value it reports which can change, so the
+        // identity string (and its resource-name lookup) is only built when one of them has.
+        private boolean zoomIndexReasserting;
+        private String lastZoomLayerIdentity = "";
+        private ViewGroup lastZoomIdentityLayer;
+        private int lastZoomIdentityWindowIndex = -1;
+        private int lastZoomIdentityBranchIndex = -1;
+        private float lastZoomIdentityWindowElevation = -1f;
+        private float lastZoomIdentityBranchElevation = -1f;
+        private boolean lastZoomIdentityInPlayerLayer;
         private Rect lastCrop = new Rect();
         private float sourceLeftFraction = 0.375f;
         private float sourceTopFraction = 0.5f;
@@ -571,12 +847,25 @@ public final class MagnifierRecon {
         Prototype(ViewGroup decor, SurfaceView surface, View playerControlsAnchor) {
             this.decor = decor;
             chromeTouchSlop = ViewConfiguration.get(decor.getContext()).getScaledTouchSlop();
+            claimTouchSlop = ViewConfiguration.get(decor.getContext()).getScaledTouchSlop();
+            claimLongPressTimeout = ViewConfiguration.getLongPressTimeout();
             this.surface = surface;
+            this.lastSurfaceValid = surface.getHolder().getSurface().isValid();
+            surface.getHolder().addCallback(surfaceCallback);
             this.playerArea = findPlayerArea(surface);
             this.playerControlsAnchor = playerControlsAnchor;
             final int playerGearId = ResourceUtils.getIdentifier(ResourceType.ID,
                     "player_overflow_button");
             this.playerGearButton = playerGearId == 0 ? null : decor.findViewById(playerGearId);
+            this.affordanceAnchor = playerControlsAnchor != null ? playerControlsAnchor
+                    : playerGearButton;
+            if (affordanceAnchor == playerControlsAnchor && playerControlsAnchor != null) {
+                logTouch("affordance-anchor source=fullscreen");
+            } else if (affordanceAnchor == playerGearButton && playerGearButton != null) {
+                logTouch("affordance-anchor source=gear-fallback");
+            } else {
+                logTouch("affordance-anchor source=none static-fallback");
+            }
             final UiState restored = savedUiState;
             if (restored != null && isValidSourceGeometry(restored.sourceLeft, restored.sourceTop,
                     restored.sourceWidth, restored.sourceHeight)) {
@@ -623,9 +912,10 @@ public final class MagnifierRecon {
                     0, borderColors.length - 1)];
             overlay = new FrameLayout(decor.getContext());
             overlay.setTag("morphe.magnifier.2a.overlay");
-            // This decor-sized overlay contains only the edit affordance in normal mode. Keep
-            // it above YouTube's player/control layers so that the visible icon also receives
-            // touch dispatch; the transparent rest of the overlay remains pass-through.
+            // This decor-sized overlay carries the edit affordance in normal mode plus the edit-mode
+            // chrome, the source outline and the zoom window. Keep it above YouTube's player/control
+            // layers so the visible icon and the editor's own controls receive touch dispatch; the
+            // transparent rest of the overlay remains pass-through.
             overlay.setElevation(playerControlStackZ() + dp(16));
             overlay.setClipChildren(false);
             overlay.setClipToPadding(false);
@@ -649,6 +939,7 @@ public final class MagnifierRecon {
             zoomWindow.setBackgroundColor(Color.TRANSPARENT);
             zoomWindow.setContentDescription("Magnifier zoom window; drag body or resize sides in edit mode");
             zoomWindow.setOnTouchListener(this::onZoomTouch);
+            windowTouchListenerInstalled = true;
 
             zoomImage = new ImageView(decor.getContext());
             zoomImage.setScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -657,6 +948,12 @@ public final class MagnifierRecon {
             zoomImage.setTag("morphe.magnifier.2b.zoom-content");
             zoomWindow.addView(zoomImage, new FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            // Explicitly inert: the window and its content must never look touchable, so no future
+            // change can make them eat a normal-mode tap instead of the player receiving it.
+            zoomWindow.setClickable(false);
+            zoomWindow.setFocusable(false);
+            zoomImage.setClickable(false);
+            zoomImage.setFocusable(false);
 
             stateLabel = new TextView(decor.getContext());
             stateLabel.setTextColor(0xffffffff);
@@ -690,29 +987,24 @@ public final class MagnifierRecon {
             chrome.setVisibility(View.GONE);
             styleButton.setVisibility(View.GONE);
 
-            editModeButton = new ImageView(decor.getContext());
+            // The entry paints its own glyph and backdrop. The stock TouchImageView was tried here first
+            // and silently dropped both (measured: correct bounds, VISIBLE, alpha 1, touchable, but zero
+            // pixels drawn in either magnifier state, while the overlay's other children render), so the
+            // entry no longer depends on any ImageView drawable pipeline.
+            editModeButton = new AffordanceView(decor.getContext());
+            logTouch("affordance-view path=AffordanceView");
             editModeButton.setTag("morphe.magnifier.2b.edit-icon");
             editModeButton.setContentDescription("Edit magnifier");
-            editModeButton.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-            editModeButton.setPadding(dp(12), dp(12), dp(12), dp(12));
-            final String editIconName = PlayerIcons.name("yt_outline_box_pencil");
-            if (PlayerIcons.exists(editIconName)) {
-                editModeButton.setImageResource(PlayerIcons.id(editIconName));
-            } else {
-                // The icon was added to newer YouTube builds; 21.16.256 has no matching drawable.
-                editModeButton.setImageDrawable(new EditModeIconDrawable());
-            }
-            editModeButton.setImageTintList(ColorStateList.valueOf(Color.WHITE));
+            // Geometry mirrors the settings gear button: a square 48 dp touch box with a 24 dp glyph
+            // inset by 12 dp, so the painted disc is the round 96 px circle the gear shows and the
+            // glyph matches the gear icon (720 px width, density 2.0).
+            updateEditModeButtonIcon();
             editModeButton.setClickable(true);
             editModeButton.setFocusable(true);
-            editModeButton.setOnTouchListener((view, event) -> {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    enterEditMode();
-                    view.performClick();
-                }
-                return true;
-            });
-            editModeButton.setOnClickListener(view -> { });
+            // A plain click keeps the view's own pressed state, so the mirrored stock background still
+            // runs its ripple with stock timing. A hand-rolled touch listener that consumes the events
+            // would suppress that pressed state and with it the whole highlight.
+            editModeButton.setOnClickListener(view -> enterEditMode());
             editModeButton.setVisibility(View.GONE);
 
             styleRows = new LinearLayout(decor.getContext());
@@ -738,8 +1030,8 @@ public final class MagnifierRecon {
             buildStylePanel();
 
             overlay.addView(touchShield, new FrameLayout.LayoutParams(1, 1));
-            // Magnifier windows are attached only while enabled; the entry icon remains active.
             overlay.addView(stylePanelViewport, new FrameLayout.LayoutParams(1, 1));
+            // Magnifier windows are attached only while enabled; the entry icon remains active.
             overlay.addView(editModeButton, new FrameLayout.LayoutParams(1, 1));
             overlay.addView(chrome, new FrameLayout.LayoutParams(1, 1));
             decor.addView(overlay, new ViewGroup.LayoutParams(
@@ -763,9 +1055,10 @@ public final class MagnifierRecon {
             } else {
                 decor.getContext().registerReceiver(screenStateReceiver, screenFilter);
             }
-            if (playerGearButton != null) {
-                playerGearButton.getViewTreeObserver().addOnPreDrawListener(gearButtonLayoutListener);
-            } else Log.w(TAG, "YouTube player gear view not found; using a top-right edit-icon fallback");
+            registerAffordancePreDraw();
+            if (affordanceAnchor != null) {
+                affordanceAnchor.addOnAttachStateChangeListener(affordanceAnchorAttachListener);
+            }
             applyBorderStyle();
             secondStartMs = SystemClock.elapsedRealtime();
             captureMode = CaptureMode.IDLE;
@@ -975,8 +1268,9 @@ public final class MagnifierRecon {
         }
 
         private Rect safePlayerRect(Rect playerScreen) {
-            Rect safe = new Rect(playerScreen);
-            int[] decorLocation = new int[2];
+            final Rect safe = affordanceSafeRect;
+            safe.set(playerScreen);
+            int[] decorLocation = affordanceSafeDecorAt;
             decor.getLocationOnScreen(decorLocation);
             int left = 0, top = 0, right = 0, bottom = 0;
             if (Build.VERSION.SDK_INT >= 23) {
@@ -1001,15 +1295,22 @@ public final class MagnifierRecon {
                     }
                 }
             }
-            Rect safeDecor = new Rect(decorLocation[0] + left, decorLocation[1] + top,
+            // Insets are read on geometry passes; inset-only changes without a layout event remain
+            // unhandled/unverified because no exclusive-slot Insets listener is installed.
+            affordanceSafeDecorRect.set(decorLocation[0] + left, decorLocation[1] + top,
                     decorLocation[0] + decor.getWidth() - right,
                     decorLocation[1] + decor.getHeight() - bottom);
-            if (!safe.intersect(safeDecor)) return playerScreen;
+            if (!safe.intersect(affordanceSafeDecorRect)) safe.setEmpty();
             return safe;
         }
 
         private void placeChrome(Rect safePlayer, int[] decorAt) {
             final boolean editing = editMode;
+            if (safePlayer.isEmpty()) {
+                if (chrome.getVisibility() != View.GONE) chrome.setVisibility(View.GONE);
+                setStylePanelVisible(false);
+                return;
+            }
             doneButton.setVisibility(editing ? View.VISIBLE : View.GONE);
             offButton.setVisibility(editing ? View.VISIBLE : View.GONE);
             styleButton.setVisibility(editing ? View.VISIBLE : View.GONE);
@@ -1058,6 +1359,7 @@ public final class MagnifierRecon {
                     Rect safe = safePlayerRect(new Rect(playerAt[0], playerAt[1],
                             playerAt[0] + playerArea.getWidth(),
                             playerAt[1] + playerArea.getHeight()));
+                    if (safe.isEmpty()) return true;
                     int width = chrome.getWidth(), height = chrome.getHeight();
                     float left = Math.max(safe.left + dp(2), Math.min(safe.right - width - dp(2),
                             chromeStartLeft + dx));
@@ -1088,77 +1390,245 @@ public final class MagnifierRecon {
             return true;
         }
 
-        /** Place the edit-only affordance directly below YouTube's gear button. */
-        private Rect updateEditModeButtonPosition() {
-            if (editMode || stopped) {
-                editModeButton.setVisibility(View.GONE);
-                return null;
-            }
+        /** Keeps the decor overlay above YouTube's control stack, where the editor draws. */
+        private void updateOverlayElevation() {
             final float requiredElevation = playerControlStackZ() + dp(16);
             if (overlay.getElevation() != requiredElevation) overlay.setElevation(requiredElevation);
-            if (playerGearButton == null) {
-                Log.w(TAG, "YouTube player gear view not found; using top-right edit-icon fallback");
-                final int[] playerAt = new int[2], decorAt = new int[2];
+        }
+
+        /**
+         * Places the edit affordance immediately beside its stock anchor: left of the fullscreen
+         * button when safe space permits, otherwise to its right. When only the gear is available it
+         * remains the placement anchor as a logged fallback. The touch box matches that anchor.
+         */
+        /**
+         * Registers the entry pass on the window's observer. Idempotent: the anchor's attach-state
+         * listener clears the flag and re-registers, so exactly one listener is ever installed.
+         */
+        private void registerAffordancePreDraw() {
+            if (affordancePreDrawRegistered || stopped || decor == null) return;
+            final ViewTreeObserver observer = decor.getViewTreeObserver();
+            if (!observer.isAlive()) return;
+            observer.addOnPreDrawListener(affordanceAnchorLayoutListener);
+            affordancePreDrawRegistered = true;
+        }
+
+        /**
+         * The anchor's own current state, read live: every ancestor visible and the anchor itself at a
+         * non-zero alpha. This is only the binary shown/hidden decision; the fade itself is read by
+         * {@link #chromeAlpha()}, which samples the alpha YouTube is animating on the same chain.
+         */
+        private boolean anchorEffectivelyShown() {
+            return affordanceAnchor != null && affordanceAnchor.isShown()
+                    && affordanceAnchor.getAlpha() > 0f;
+        }
+
+        private Rect updateEditModeButtonPosition() {
+            if (editMode || stopped) {
+                mirrorAnchorOntoAffordance(0f, false);
+                return null;
+            }
+            updateOverlayElevation();
+            if (affordanceAnchor == null) {
+                Log.w(TAG, "YouTube fullscreen and gear views not found; using top-right"
+                        + " edit-icon fallback");
+                if (affordancePlayerAt == null) affordancePlayerAt = new int[2];
+                if (affordanceDecorAt == null) affordanceDecorAt = new int[2];
+                if (affordanceGeometryRect == null) affordanceGeometryRect = new Rect();
+                int[] playerAt = affordancePlayerAt, decorAt = affordanceDecorAt;
                 playerArea.getLocationOnScreen(playerAt);
                 decor.getLocationOnScreen(decorAt);
-                final Rect safe = safePlayerRect(new Rect(playerAt[0], playerAt[1],
-                        playerAt[0] + playerArea.getWidth(), playerAt[1] + playerArea.getHeight()));
+                affordanceGeometryRect.set(playerAt[0], playerAt[1],
+                        playerAt[0] + playerArea.getWidth(), playerAt[1] + playerArea.getHeight());
+                final Rect safe = safePlayerRect(affordanceGeometryRect);
+                if (safe.isEmpty()) {
+                    mirrorAnchorOntoAffordance(0f, false);
+                    return null;
+                }
                 final int size = dp(48);
-                final int left = safe.right - size - dp(8);
-                final int top = safe.top + dp(52);
+                final int left = clamp(safe.right - size - dp(8), safe.left, safe.right - size);
+                final int top = clamp(safe.top + dp(52), safe.top, safe.bottom - size);
                 place(editModeButton, left - decorAt[0], top - decorAt[1], size, size);
-                editModeButton.setVisibility(playerArea.isShown() ? View.VISIBLE : View.GONE);
-                return new Rect(left, top, left + size, top + size);
+                mirrorAnchorOntoAffordance(1f, playerArea.isShown());
+                affordanceGeometryRect.set(left, top, left + size, top + size);
+                return affordanceGeometryRect;
             }
-            if (!playerGearButton.isShown()) {
-                editModeButton.setVisibility(View.GONE);
+            if (!anchorEffectivelyShown()) {
+                mirrorAnchorOntoAffordance(0f, false);
                 return null;
             }
-            final Rect visibleGear = new Rect();
-            if (!playerGearButton.getGlobalVisibleRect(visibleGear)
-                    || playerGearButton.getWidth() <= 0 || playerGearButton.getHeight() <= 0) {
-                editModeButton.setVisibility(View.GONE);
+            if (affordanceGeometryRect == null) affordanceGeometryRect = new Rect();
+            if (affordanceAnchorAt == null) affordanceAnchorAt = new int[2];
+            if (affordancePlayerAt == null) affordancePlayerAt = new int[2];
+            if (affordanceDecorAt == null) affordanceDecorAt = new int[2];
+            Rect visibleAnchor = affordanceVisibleRect;
+            if (!affordanceAnchor.getGlobalVisibleRect(visibleAnchor)
+                    || affordanceAnchor.getWidth() <= 0 || affordanceAnchor.getHeight() <= 0) {
+                mirrorAnchorOntoAffordance(0f, false);
                 return null;
             }
-            float combinedAlpha = 1f;
-            View current = playerGearButton;
-            while (current != null) {
-                combinedAlpha *= current.getAlpha();
-                final Object parent = current.getParent();
-                current = parent instanceof View ? (View) parent : null;
-            }
-            if (combinedAlpha < 0.05f) {
-                editModeButton.setVisibility(View.GONE);
-                return null;
-            }
-            int[] decorAt = new int[2];
+            // Full white while shown: the chrome's rendered brightness is not readable through view
+            // alpha (a biased ancestor reports ~0.77 while the icons draw 255), so the entry mirrors
+            // the anchor's own shown state 1:1 instead of stepping toward an event stream.
+            mirrorAnchorBackground();
+            int[] decorAt = affordanceDecorAt;
+            int[] anchorAt = affordanceAnchorAt;
+            int[] playerAt = affordancePlayerAt;
             decor.getLocationOnScreen(decorAt);
-            final int width = playerGearButton.getWidth();
-            final int height = playerGearButton.getHeight();
-            final int[] gearAt = new int[2];
-            playerGearButton.getLocationOnScreen(gearAt);
-            int left = gearAt[0] + (width - width) / 2;
-            int top = gearAt[1] + height;
-            final int[] playerAt = new int[2];
+            affordanceAnchor.getLocationOnScreen(anchorAt);
             playerArea.getLocationOnScreen(playerAt);
-            final Rect playerScreen = new Rect(playerAt[0], playerAt[1],
+            // Square 48 dp box sized to the settings gear button so the affordance reads the same
+            // as the gear: the mirrored disc fills the box, so a square keeps it a round circle
+            // instead of the ellipse the anchor's 60x48 dp fullscreen box would draw.
+            final int anchorHeight = affordanceAnchor.getHeight();
+            final int gearSide = playerGearButton != null && playerGearButton.getWidth() > 0
+                    && playerGearButton.getHeight() > 0
+                    ? Math.min(playerGearButton.getWidth(), playerGearButton.getHeight())
+                    : anchorHeight;
+            final int width = gearSide;
+            final int height = Math.min(gearSide, anchorHeight);
+            affordanceGeometryRect.set(playerAt[0], playerAt[1],
                     playerAt[0] + playerArea.getWidth(), playerAt[1] + playerArea.getHeight());
-            final Rect safePlayer = safePlayerRect(playerScreen);
-            if (top + height > safePlayer.bottom) top = gearAt[1] - height;
-            left = clamp(left, safePlayer.left, safePlayer.right - width);
-            top = clamp(top, safePlayer.top, safePlayer.bottom - height);
+            final Rect safePlayer = safePlayerRect(affordanceGeometryRect);
+            if (safePlayer.isEmpty()) {
+                mirrorAnchorOntoAffordance(0f, false);
+                return null;
+            }
+            // Bottom-up: share the anchor's bottom edge and grow upward, so the pencil's touch box is
+            // the anchor's own box. The disc it paints then lands on the stock icons' line, because
+            // AffordanceView#onDraw hangs the disc from the box's top edge exactly as the stock
+            // fullscreen and gear buttons do.
+            final int top = clamp(anchorAt[1] + anchorHeight - height,
+                    safePlayer.top, safePlayer.bottom - height);
+            final int leftCandidate = anchorAt[0] - width;
+            final int left = clamp(leftCandidate, safePlayer.left, safePlayer.right - width);
+            final boolean leftFits = left == leftCandidate;
+            final int right = clamp(anchorAt[0] + width, safePlayer.left, safePlayer.right - width);
+            final int placedLeft = leftFits ? left : right;
+            final String side = leftFits ? "left" : "right";
+            if (!side.equals(affordancePlacedSide)) {
+                affordancePlacedSide = side;
+                logTouch("affordance-placement side=" + side + " anchor="
+                        + (affordanceAnchor == playerControlsAnchor ? "fullscreen" : "gear-fallback"));
+            }
             if (editModeButton.getParent() != overlay) {
                 if (editModeButton.getParent() instanceof ViewGroup) {
                     ((ViewGroup) editModeButton.getParent()).removeView(editModeButton);
                 }
-                // Keep this control above YouTube's full-player touch target. Its screen
-                // position still follows the gear, but the top-level overlay owns its taps.
+                // Keep this control above YouTube's full-player touch target. Its screen position
+                // still follows the stock anchor, but the top-level overlay owns its taps.
                 overlay.addView(editModeButton, overlay.getChildCount(),
                         new FrameLayout.LayoutParams(1, 1));
             }
-            place(editModeButton, left - decorAt[0], top - decorAt[1], width, height);
-            editModeButton.setVisibility(View.VISIBLE);
-            return new Rect(left, top, left + width, top + height);
+            place(editModeButton, placedLeft - decorAt[0], top - decorAt[1], width, height);
+            // Ride the chrome's own fade: the alpha sampled live from the anchor's chain is the value
+            // YouTube is rendering the stock icons at, so the pencil dims and disappears with them
+            // instead of holding full alpha through the fade and then popping off.
+            mirrorAnchorOntoAffordance(chromeAlpha(), true);
+            affordanceGeometryRect.set(placedLeft, top, placedLeft + width, top + height);
+            return affordanceGeometryRect;
+        }
+
+        /**
+         * Sole affordance mirror path. Applies the derived state and self-heals any drift on the same
+         * pass: if the anchor is shown while the entry is not VISIBLE at the same alpha, the entry is
+         * corrected here instead of waiting for another event. The decision log fires on a state
+         * change and on every further 5% of a fade, so a fade is traceable in a handful of lines
+         * instead of one line per frame.
+         */
+        private void mirrorAnchorOntoAffordance(float anchorAlpha, boolean anchorShown) {
+            final int visibility = anchorShown ? View.VISIBLE : View.GONE;
+            final float alpha = anchorShown ? Math.max(0f, Math.min(1f, anchorAlpha)) : 0f;
+            final boolean drifted = editModeButton.getVisibility() != visibility
+                    || editModeButton.getAlpha() != alpha;
+            if (drifted || visibility != affordanceMirroredVisibility
+                    || alpha != affordanceMirroredAlpha) {
+                editModeButton.setAlpha(alpha);
+                editModeButton.setVisibility(visibility);
+                final boolean stepped = Math.abs(alpha - affordanceLoggedAlpha) >= 0.05f;
+                if (visibility != affordanceMirroredVisibility || stepped) {
+                    affordanceLoggedAlpha = alpha;
+                    logPerf("affordance-mirror visibility="
+                            + (visibility == View.VISIBLE ? "VISIBLE" : "GONE")
+                            + " anchorAlpha=" + anchorAlpha);
+                }
+            }
+            affordanceMirroredVisibility = visibility;
+            affordanceMirroredAlpha = alpha;
+        }
+
+        /**
+         * The fraction of the chrome's fully shown alpha that YouTube is rendering right now: the
+         * darkest alpha on the fullscreen button's own parent chain, each link normalised by the
+         * largest value ever seen on that link. The stock fade is applied to the button itself or to
+         * one of the wrappers above it, so the minimum over the chain is the animated value, and the
+         * per-link normalisation keeps a wrapper that is persistently dimmed while the chrome is
+         * shown from pinning the entry below full alpha. The walk stops at the player area, above
+         * which nothing fades, and the depth is bounded so it can never reach the watch page.
+         */
+        private float chromeAlpha() {
+            if (affordanceAnchor == null) return 0f;
+            float alpha = 1f;
+            View view = affordanceAnchor;
+            for (int link = 0; link < affordanceChromePeak.length; link++) {
+                if (view == null || view == playerArea) break;
+                final float raw = view.getAlpha();
+                if (raw > affordanceChromePeak[link]) affordanceChromePeak[link] = raw;
+                final float peak = affordanceChromePeak[link] > 0f ? affordanceChromePeak[link] : 1f;
+                alpha = Math.min(alpha, Math.min(1f, raw / peak));
+                final Object parent = view.getParent();
+                view = parent instanceof View ? (View) parent : null;
+            }
+            return alpha;
+        }
+
+        /**
+         * Copies the stock anchor's pressed-state background onto the affordance, so holding the
+         * pencil shows the same touch-feedback disc the fullscreen button shows. The app assigns
+         * that background after the views exist, so this re-checks on every pre-draw pass and does
+         * work only when the anchor's drawable is actually replaced; the steady state is two
+         * reference compares. Nothing here draws, tints, sizes or positions anything.
+         */
+        private void mirrorAnchorBackground() {
+            if (affordanceAnchor == null) return;
+            final Drawable source = affordanceAnchor.getBackground();
+            final Drawable.ConstantState state = source == null ? null : source.getConstantState();
+            if (state == null) {
+                // The anchor exposes no snapshottable background: mirror the absence so the
+                // affordance never keeps a stale copy, and report the reason once per state.
+                if (affordanceBackgroundState != null) {
+                    editModeButton.setBackground(null);
+                    affordanceBackgroundState = null;
+                    affordanceBackgroundLoggedForState = false;
+                }
+                if (!affordanceBackgroundLoggedForState) {
+                    affordanceBackgroundLoggedForState = true;
+                    logPerf("affordance-background skipped reason=anchor-has-no-background");
+                }
+                return;
+            }
+            if (state == affordanceBackgroundState) return;
+            // Record the candidate before cloning, so a throwing or null-returning clone is
+            // attempted at most once per state; only the app replacing the drawable re-triggers it.
+            affordanceBackgroundState = state;
+            Drawable clone = null;
+            boolean logged = false;
+            try {
+                // newDrawable() hands the affordance its own instance and mutate() isolates the
+                // copied state, so the anchor's own hotspot/pressed state is never shared.
+                final Drawable created = state.newDrawable(decor.getResources());
+                if (created != null) clone = created.mutate();
+            } catch (Throwable t) {
+                // Never rethrow into the pre-draw pass: a failed clone only costs the highlight.
+                logPerf("affordance-background skipped reason=" + t.getClass().getSimpleName());
+                logged = true;
+            }
+            if (clone != null) {
+                editModeButton.setBackground(clone);
+                logPerf("affordance-background applied source=" + source.getClass().getSimpleName());
+            } else if (!logged) {
+                logPerf("affordance-background skipped reason=clone-returned-null");
+            }
         }
 
         private void placeStylePanel(Rect safePlayer, int[] decorAt) {
@@ -1181,8 +1651,10 @@ public final class MagnifierRecon {
         private void enterEditMode() {
             if (stopped || editMode) return;
             editMode = true;
+            // Edit mode reparents the window; a claim in flight must not keep moving it.
+            endClaim("edit-mode-entry");
             if (enabled) attachZoomWindowToOverlay();
-            editModeButton.setVisibility(View.GONE);
+            mirrorAnchorOntoAffordance(0f, false);
             stylePanelOpen = false;
             sourceOutline.setVisibility(enabled ? View.VISIBLE : View.GONE);
             sourceOutline.setClickable(enabled);
@@ -1202,6 +1674,8 @@ public final class MagnifierRecon {
         private void exitEditMode() {
             if (!editMode) return;
             editMode = false;
+            // Edit mode reparents the window; a claim in flight must not keep moving it.
+            endClaim("edit-mode-exit");
             if (enabled) attachZoomWindowToPlayerLayer();
             stylePanelOpen = false;
             setStylePanelVisible(false);
@@ -1228,6 +1702,7 @@ public final class MagnifierRecon {
 
         private void disableMagnifier() {
             enabled = !enabled;
+            updateEditModeButtonIcon();
             styleButton.setEnabled(enabled);
             styleButton.setAlpha(enabled ? 1f : 0.42f);
             offButton.setAlpha(enabled ? 1f : 0.58f);
@@ -1244,7 +1719,8 @@ public final class MagnifierRecon {
                             new FrameLayout.LayoutParams(1, 1));
                 }
                 zoomWindow.setVisibility(View.VISIBLE);
-                zoomWindow.setOnTouchListener(this::onZoomTouch);
+                // Touch ownership is mode-dependent (normal mode must pass stock gestures through).
+                applyZoomWindowTouchMode();
                 sourceOutline.setOnTouchListener(this::onSourceTouch);
                 sourceOutline.setVisibility(editMode ? View.VISIBLE : View.GONE);
                 sourceOutline.setClickable(editMode);
@@ -1263,6 +1739,7 @@ public final class MagnifierRecon {
                 updatePlayerObserver(PlayerType.getOnChange(), "removeObserver", playerTypeObserver);
                 zoomWindow.setVisibility(View.GONE);
                 zoomWindow.setOnTouchListener(null);
+                windowTouchListenerInstalled = false;
                 sourceOutline.setVisibility(View.GONE);
                 sourceOutline.setClickable(false);
                 sourceOutline.setOnTouchListener(null);
@@ -1280,6 +1757,11 @@ public final class MagnifierRecon {
             logPerf("mode=" + (enabled ? "ON" : "OFF")
                     + " reason=user-toggle viewsRemoved=" + !enabled
                     + " loopsCancelled=" + !enabled + " editMode=" + editMode);
+        }
+
+        /** The entry glyph carries the magnifier's own state; the affordance view is hidden while editing. */
+        private void updateEditModeButtonIcon() {
+            ((AffordanceView) editModeButton).setMagnifierOn(enabled);
         }
 
         private void onNewVideo(String videoId) {
@@ -1364,6 +1846,8 @@ public final class MagnifierRecon {
         }
 
         private void onWindowFocusChanged(boolean hasFocus) {
+            // Rule: focus loss resets the claim state, so no gesture can stay stuck across windows.
+            if (!hasFocus) endClaim("window-blur");
             onVisibilityChanged(hasFocus ? "window-focus" : "window-blur");
         }
 
@@ -1381,7 +1865,7 @@ public final class MagnifierRecon {
                 setStylePanelVisible(false);
                 chrome.setVisibility(View.GONE);
                 if (isPlayerHostVisible()) updateEditModeButtonPosition();
-                else editModeButton.setVisibility(View.GONE);
+                else mirrorAnchorOntoAffordance(0f, false);
                 logPerf("capture-visible=false reason=" + reason
                         + " playerType=" + PlayerType.getCurrent());
             } else {
@@ -1576,7 +2060,22 @@ public final class MagnifierRecon {
         private boolean onZoomTouch(View view, MotionEvent event) {
             if (!enabled || stopped) return false;
             if (forwardingNormalTap) return false;
-            if (!editMode && zoomInPlayerLayer) return onNormalZoomTouch(event);
+            // PLAN A: outside edit mode the window never consumes a touch. Normal-mode drags are
+            // arbitrated above the children by onStockTouchIntercept; taps, double-taps and
+            // long-press/2x must reach the player exactly as if the window were not there.
+            if (!editMode) {
+                logTouch("window-touch normal-mode action=" + actionName(event.getActionMasked()));
+                return false;
+            }
+            // Brief item 4 asks edit-mode touches to disallow ancestor interception. The window is
+            // parented by the magnifier overlay in edit mode, which is a sibling of YouTube's stock
+            // player branch; this flag only propagates through overlay -> decor and does not alter
+            // interception by stock-player siblings. Edit-mode shielding is provided by touchShield
+            // and the overlay's Z order. In normal mode this listener is not installed.
+            if (editMode && view != null) {
+                final ViewParent parent = view.getParent();
+                if (parent != null) parent.requestDisallowInterceptTouchEvent(true);
+            }
             if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
                 gestureDownX = event.getRawX(); gestureDownY = event.getRawY();
                 int[] zoomAt = new int[2];
@@ -1659,6 +2158,7 @@ public final class MagnifierRecon {
             return true;
         }
 
+        // Unreachable since PLAN A CR6b (normal mode never owns touch); delete in the post-gate cleanup commit.
         private boolean onNormalZoomTouch(MotionEvent event) {
             int action = event.getActionMasked();
             if (action == MotionEvent.ACTION_DOWN) {
@@ -1734,47 +2234,625 @@ public final class MagnifierRecon {
             }
         }
 
+        /**
+         * PLAN A claim rule. Claims a gesture only when ALL of these hold:
+         * (1) ACTION_DOWN inside the window rect, (2) single pointer, (3) no visible stock control
+         * above the window at that point, (4) movement past touch slop before the stock gesture
+         * takes over, (5) window visible (not hidden/fading) and edit mode off.
+         * Taps, double-taps and long-press/2x hold carry no movement over slop, so they are never
+         * claimed and reach the player exactly as they do without the window. Returns true only
+         * while the magnifier owns the stream, which cancels the stock handlers and swallows the
+         * rest of the gesture, ACTION_UP included. Normal-mode drag is supported only in the
+         * player-layer path; overlay fallback preserves stock gestures and does not claim.
+         */
+        boolean onStockTouchIntercept(MotionEvent event) {
+            final int action = event.getActionMasked();
+            // Touch trail, DOWN only and before any state mutation: what the stock stream sees, what
+            // the window looks like at that moment, and which view would receive the DOWN.
+            // TODO(TEST-ONLY-GATE-LOGGING): revert this guard to `&& isDebugLoggingEnabled()`
+            // before merge/release; see GATE_TOUCH_PROP above.
+            if (action == MotionEvent.ACTION_DOWN && (gateTouchLogging() || isDebugLoggingEnabled())) {
+                final int downRawX = Math.round(event.getRawX());
+                final int downRawY = Math.round(event.getRawY());
+                // Diagnostic-only: this extra claimDenyReason() writes the claimWindowRect field, but
+                // the real call in the DOWN branch recomputes the same rect from the same rounded raw point.
+                final String downDenyReason = claimDenyReason(event, downRawX, downRawY);
+                logTouch("down raw=" + downRawX + "," + downRawY
+                        + " window=" + windowScreenRect()
+                        + " inPlayerLayer=" + zoomInPlayerLayer
+                        + " editMode=" + editMode
+                        + " windowListener=" + (windowTouchListenerInstalled ? "installed" : "none")
+                        + " windowClickable=" + zoomWindow.isClickable()
+                        + " windowFocusable=" + zoomWindow.isFocusable()
+                        + " controlsShown=" + playerControlsAnchor.isShown()
+                        + " claim=" + (downDenyReason == null
+                                ? "candidate-pending" : "deny:" + downDenyReason)
+                        + " hit=" + touchHitChain(downRawX, downRawY));
+            }
+            // A new DOWN always ends any previous claim, so nothing can survive into the next gesture
+            // and a DOWN is never silently consumed as an unexpected action.
+            if (action == MotionEvent.ACTION_DOWN && (claimState != CLAIM_IDLE || claimSwallowing)) {
+                endClaim("new-down");
+            }
+            if (claimState == CLAIM_ACTIVE) {
+                if (action == MotionEvent.ACTION_MOVE) {
+                    if (event.getPointerCount() > 1) {
+                        endClaim("second-pointer");
+                        return false;
+                    }
+                    moveClaimedWindow(event.getRawX() - claimDownRawX,
+                            event.getRawY() - claimDownRawY);
+                    logClaimMove("claim=drag left=" + zoomLeftFraction + " top=" + zoomTopFraction);
+                    return true;
+                }
+                if (action == MotionEvent.ACTION_UP) {
+                    endClaim("up-after-claim");
+                    logControlsAfterGesture();
+                    return swallow(action);
+                }
+                endClaim(action == MotionEvent.ACTION_CANCEL ? "action-cancel" : "unexpected-action");
+                return passThrough(action);
+            }
+            if (action == MotionEvent.ACTION_DOWN) {
+                claimState = CLAIM_IDLE;
+                final String denyReason = claimDenyReason(event,
+                        Math.round(event.getRawX()), Math.round(event.getRawY()));
+                if (denyReason != null) {
+                    logClaim("deny=down reason=" + denyReason);
+                    return passThrough(action);
+                }
+                claimState = CLAIM_PENDING;
+                claimDownRawX = event.getRawX();
+                claimDownRawY = event.getRawY();
+                claimDownAtMs = event.getDownTime();
+                claimZoomLeft = zoomLeftFraction;
+                claimZoomTop = zoomTopFraction;
+                logClaim("pending=down inside-window raw=" + Math.round(claimDownRawX) + ","
+                        + Math.round(claimDownRawY) + " window=" + claimWindowRect.toShortString());
+                return passThrough(action);
+            }
+            if (action == MotionEvent.ACTION_POINTER_DOWN) {
+                endClaim("second-pointer");
+                return passThrough(action);
+            }
+            if (action == MotionEvent.ACTION_MOVE && claimState == CLAIM_PENDING) {
+                if (event.getPointerCount() > 1) {
+                    endClaim("second-pointer");
+                    return false;
+                }
+                final float dxPx = event.getRawX() - claimDownRawX;
+                final float dyPx = event.getRawY() - claimDownRawY;
+                if (Math.hypot(dxPx, dyPx) <= claimTouchSlop) return false;
+                // Rule (4) is decided here, when movement passes slop, not at the DOWN: the stock
+                // long-press/2x window must never be converted into a magnifier drag.
+                final long heldMs = event.getEventTime() - claimDownAtMs;
+                if (heldMs >= claimLongPressTimeout) {
+                    claimState = CLAIM_IDLE;
+                    logClaim("deny=slop-after-long-press heldMs=" + heldMs
+                            + " longPressTimeout=" + claimLongPressTimeout);
+                    return false;
+                }
+                // Every other precondition is re-checked too: visibility, alpha and the view under
+                // the point can all change during the hold.
+                final String slopDenyReason = claimDenyReason(event,
+                        Math.round(claimDownRawX), Math.round(claimDownRawY));
+                if (slopDenyReason != null) {
+                    claimState = CLAIM_IDLE;
+                    logClaim("deny=slop reason=" + slopDenyReason);
+                    return false;
+                }
+                claimState = CLAIM_ACTIVE;
+                claimSwallowing = true;
+                logClaim("claim=active slop-exceeded dx=" + Math.round(dxPx)
+                        + " dy=" + Math.round(dyPx) + " slop=" + claimTouchSlop);
+                moveClaimedWindow(dxPx, dyPx);
+                return true;
+            }
+            if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
+                claimState = CLAIM_IDLE;
+                logControlsAfterGesture();
+            }
+            return passThrough(action);
+        }
+
+        /**
+         * Continuation of a claimed drag, delivered by the stock layout's own onTouchEvent: once the
+         * layout intercepted, the framework stops calling onInterceptTouchEvent for that gesture.
+         * Only runs while this gesture is claimed, otherwise it returns false and the stock body of
+         * onTouchEvent is left completely untouched.
+         */
+        boolean onStockTouchEvent(MotionEvent event) {
+            if (!claimSwallowing) {
+                final int passthroughAction = event.getActionMasked();
+                if (passthroughAction == MotionEvent.ACTION_UP
+                        || passthroughAction == MotionEvent.ACTION_CANCEL) {
+                    logTouch("up-not-swallowed action=" + actionName(passthroughAction));
+                }
+                return false;
+            }
+            final int action = event.getActionMasked();
+            if (action == MotionEvent.ACTION_MOVE) {
+                if (event.getPointerCount() > 1) {
+                    endClaimMove("second-pointer");
+                    return true;
+                }
+                if (claimState == CLAIM_ACTIVE) {
+                    moveClaimedWindow(event.getRawX() - claimDownRawX,
+                            event.getRawY() - claimDownRawY);
+                    logClaimMove("claim=drag left=" + zoomLeftFraction + " top=" + zoomTopFraction);
+                }
+                return true;
+            }
+            if (action == MotionEvent.ACTION_POINTER_DOWN) {
+                endClaimMove("second-pointer");
+                return true;
+            }
+            if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
+                endClaim(action == MotionEvent.ACTION_CANCEL ? "action-cancel" : "up-after-claim");
+                return true;
+            }
+            // Pointer bookkeeping events of a claimed gesture stay swallowed as well.
+            if (action == MotionEvent.ACTION_POINTER_UP) return true;
+            return false;
+        }
+
+        /** Stops the movement half of a claim; the swallow still runs to ACTION_UP. */
+        private void endClaimMove(String reason) {
+            if (claimState != CLAIM_ACTIVE) return;
+            claimState = CLAIM_IDLE;
+            rememberUiState();
+            logClaim("claim=drag-end reason=" + reason + " left=" + zoomLeftFraction
+                    + " top=" + zoomTopFraction);
+        }
+
+        /** Moves the window by the claimed drag delta, reusing the existing clamp/layout path. */
+        private void moveClaimedWindow(float dxPx, float dyPx) {
+            zoomLeftFraction = clampFraction(claimZoomLeft + dxPx
+                            / Math.max(1f, playerArea.getWidth()), 0f,
+                    1f - zoomWidthFraction);
+            zoomTopFraction = clampFraction(claimZoomTop + dyPx
+                            / Math.max(1f, playerArea.getHeight()), 0f,
+                    1f - zoomWindow.getHeight() / (float) Math.max(1, playerArea.getHeight()));
+            lastGeometry = "";
+            updatePositionAndGeometry();
+        }
+
+        /**
+         * PLAN A touch ownership for the zoom window. Outside edit mode the window must never own
+         * touch, on either attach path: if it did, a long-press/2x or double-tap over it would never
+         * reach the player, and even a plain tap would be taken by the window. The stock touch stream
+         * observed above the children arbitrates normal-mode drags instead. Edit mode keeps the
+         * window's own handler for move/resize/handles.
+         */
+        private void applyZoomWindowTouchMode() {
+            final boolean passthrough = !editMode;
+            zoomWindow.setOnTouchListener(passthrough ? null : this::onZoomTouch);
+            windowTouchListenerInstalled = !passthrough;
+            logClaim("touch-mode=" + (passthrough ? "normal-passthrough" : "window-owns")
+                    + " editMode=" + editMode + " inPlayerLayer=" + zoomInPlayerLayer
+                    + " listenerInstalled=" + windowTouchListenerInstalled);
+        }
+
         private void attachZoomWindowToPlayerLayer() {
-            Object controlsParent = playerControlsAnchor.getParent();
-            if (!(controlsParent instanceof FrameLayout)) {
+            final ViewGroup parent = findZoomWindowPlayerLayer();
+            if (parent == null) {
+                logClaim("attach=overlay reason=no-player-frame-layer controls-parent="
+                        + classNameOf(playerControlsAnchor.getParent()));
                 attachZoomWindowToOverlay();
                 return;
             }
-            ViewGroup parent = (ViewGroup) controlsParent;
-            if (parent.getWidth() < playerArea.getWidth() * 3 / 4
-                    || parent.getHeight() < playerArea.getHeight() * 3 / 4) {
-                attachZoomWindowToOverlay();
-                return;
-            }
+            applyZoomWindowElevation();
             if (zoomWindow.getParent() == parent) {
                 zoomInPlayerLayer = true;
                 normalZoomLayer = parent;
+                applyZoomWindowTouchMode();
                 return;
             }
             if (zoomWindow.getParent() instanceof ViewGroup) {
                 ((ViewGroup) zoomWindow.getParent()).removeView(zoomWindow);
             }
-            int index = parent.indexOfChild(playerControlsAnchor);
+            int index = zoomLayerBranch == null ? -1 : parent.indexOfChild(zoomLayerBranch);
             if (index < 0) index = parent.getChildCount();
             parent.addView(zoomWindow, index, new FrameLayout.LayoutParams(1, 1));
             zoomInPlayerLayer = true;
             normalZoomLayer = parent;
+            logClaim("attach=player-layer-below-controls layer=" + classNameOf(parent)
+                    + " index=" + index + " controls=" + classNameOf(playerControlsAnchor));
+            applyZoomWindowTouchMode();
+        }
+
+        /**
+         * Z-ORDER: on both attach paths the window is ordered by child index, never by elevation.
+         * Elevation is sibling-scoped: it only orders a view against its siblings inside its own
+         * parent. Inside one parent the children are drawn in child order and touch dispatch walks
+         * that same order in reverse, until any child has non-zero Z, at which point the group sorts
+         * its children by getZ() ascending (ties keep child order). A parent's Z never enters that
+         * comparison, it only places the whole subtree inside its own parent's children. So an
+         * elevation here could not lift the window above the stock controls (those are not its
+         * siblings on either path); it could only reorder the window against its real siblings, and
+         * any positive value flips ViewGroup.hasChildWithZ() and would place the window above them:
+         * above the controls branch in the player layer, and above touchShield / stylePanelViewport /
+         * chrome / sourceOutline in the decor overlay, where it would swallow the
+         * taps that Done/Off/Style, the style panel and the source-outline drag need. Edit mode still
+         * draws above the stock controls because the OVERLAY itself carries playerControlStackZ() +
+         * dp(16) (re-asserted per frame) and an elevated parent lifts its whole subtree. The player
+         * layer needs no lift either: the window is inserted immediately before the controls branch,
+         * so the 0f tie is broken by index in the right direction. Elevation is 0f by design on both
+         * paths; that also means no positive value can survive a reparent from the player layer into
+         * the overlay. Logged once per attach.
+         */
+        private void applyZoomWindowElevation() {
+            zoomWindow.setElevation(0f);
+            logClaim("z-order=index-order elevation=0.0 overlayElevation="
+                    + overlay.getElevation());
+        }
+
+        /**
+         * Z-ORDER: re-asserts that the window is the child immediately before the controls branch.
+         * The index is chosen once at attach time and YouTube can re-add or re-order this layer's
+         * children afterwards, which would silently put the window back above the controls. The
+         * invariant is window index == branch index - 1, because attaching inserts the window at the
+         * branch's own index and thereby shifts the branch up by one child. Common case is one
+         * indexOfChild plus one comparison; the re-add only happens when the order actually drifted.
+         * Never runs in edit mode (the window then lives in the decor overlay) and never re-enters.
+         */
+        private void refreshZoomWindowIndex() {
+            if (zoomIndexReasserting || editMode || !zoomInPlayerLayer) return;
+            if (normalZoomLayer == null || zoomLayerBranch == null) return;
+            if (zoomWindow.getParent() != normalZoomLayer) return;
+            if (!zoomWindow.isAttachedToWindow()) return;
+            final int branchIndex = normalZoomLayer.indexOfChild(zoomLayerBranch);
+            if (branchIndex < 0) return;
+            if (branchIndex > 0 && normalZoomLayer.getChildAt(branchIndex - 1) == zoomWindow) return;
+            zoomIndexReasserting = true;
+            try {
+                normalZoomLayer.removeView(zoomWindow);
+                // Recompute after the removal: the branch itself moved down by one child.
+                int insertIndex = normalZoomLayer.indexOfChild(zoomLayerBranch);
+                if (insertIndex < 0) insertIndex = normalZoomLayer.getChildCount();
+                normalZoomLayer.addView(zoomWindow, insertIndex, new FrameLayout.LayoutParams(1, 1));
+            } finally {
+                zoomIndexReasserting = false;
+            }
+            logClaimMove("z-order=index-reassert layer=" + classNameOf(normalZoomLayer)
+                    + " index=" + branchIndex);
+        }
+
+        /**
+         * TEST-ONLY runtime proof for the z-order work: which view really is the controls branch,
+         * and whether the parent/index/elevation order is what Z-ORDER intends. Same gate as
+         * GATE_TOUCH_PROP. Called from every geometry pass, including per MOVE during a drag, so the
+         * reported values are compared first and the identity string is only built when one of them
+         * changed; the line is still printed once per real change and can never log per frame.
+         * TODO(TEST-ONLY-GATE-LOGGING): remove before merge.
+         */
+        private void logZoomLayerIdentity() {
+            if (!gateTouchLogging() && !isDebugLoggingEnabled()) return;
+            final ViewGroup layer = normalZoomLayer;
+            // Change detector: the parent, the two child indices, the two elevations and the layer
+            // flag are every input of the line that can change while the reported parent stays put
+            // (the controls anchor view itself is final), so passing this point can only produce a
+            // different line. Four cheap reads and comparisons replace the build on the MOVE path.
+            final int windowIndex = layer == null ? -1 : layer.indexOfChild(zoomWindow);
+            final int branchIndex = layer == null || zoomLayerBranch == null ? -1
+                    : layer.indexOfChild(zoomLayerBranch);
+            final float windowElevation = zoomWindow.getElevation();
+            final float branchElevation = zoomLayerBranch == null ? -1f
+                    : zoomLayerBranch.getElevation();
+            if (layer == lastZoomIdentityLayer && windowIndex == lastZoomIdentityWindowIndex
+                    && branchIndex == lastZoomIdentityBranchIndex
+                    && windowElevation == lastZoomIdentityWindowElevation
+                    && branchElevation == lastZoomIdentityBranchElevation
+                    && zoomInPlayerLayer == lastZoomIdentityInPlayerLayer) {
+                return;
+            }
+            lastZoomIdentityLayer = layer;
+            lastZoomIdentityWindowIndex = windowIndex;
+            lastZoomIdentityBranchIndex = branchIndex;
+            lastZoomIdentityWindowElevation = windowElevation;
+            lastZoomIdentityBranchElevation = branchElevation;
+            lastZoomIdentityInPlayerLayer = zoomInPlayerLayer;
+            final String identity = "z-order parent=" + classNameOf(layer)
+                    + " windowIndex=" + windowIndex
+                    + " branchIndex=" + branchIndex
+                    + " windowElevation=" + windowElevation
+                    + " controlsElevation=" + branchElevation
+                    + " inPlayerLayer=" + zoomInPlayerLayer
+                    + " anchor=" + classNameOf(playerControlsAnchor)
+                    + " anchorId=" + resourceNameOf(playerControlsAnchor)
+                    + " anchorChain=" + parentChain(playerControlsAnchor);
+            if (identity.equals(lastZoomLayerIdentity)) return;
+            lastZoomLayerIdentity = identity;
+            Log.i(TOUCH_TAG, identity);
+        }
+
+        /** Resource entry name for the TEST-ONLY z-order line; never throws into the layout path. */
+        private String resourceNameOf(View view) {
+            if (view == null) return "null";
+            final int id = view.getId();
+            if (id == View.NO_ID) return "no-id";
+            try {
+                return decor.getResources().getResourceEntryName(id);
+            } catch (RuntimeException exception) {
+                return "unresolved:" + exception.getClass().getSimpleName();
+            }
+        }
+
+        /**
+         * All five claim-rule preconditions; returns the first failing reason, or null to allow.
+         * The point tested against the window rect and against the stock controls is the ACTION_DOWN
+         * point, so a re-check during the movement tests the same place the rule specifies.
+         */
+        private String claimDenyReason(MotionEvent event, int rawX, int rawY) {
+            if (stopped) return "stopped";
+            if (!enabled) return "disabled";
+            if (editMode) return "edit-mode";
+            // The window itself is already dragging: the long-press path owns this gesture.
+            if (normalLongPressDragging) return "window-owns-drag";
+            if (!zoomInPlayerLayer || normalZoomLayer == null) {
+                return "drag-unavailable-overlay-fallback";
+            }
+            if (zoomWindow.getParent() == null) return "detached";
+            if (zoomWindow.getVisibility() != View.VISIBLE) return "window-hidden";
+            if (!zoomWindow.isShown()) return "window-not-shown";
+            if (zoomWindow.getAlpha() < 0.99f) return "window-fading";
+            if (event.getPointerCount() != 1) return "multi-pointer";
+            final int[] windowAt = new int[2];
+            zoomWindow.getLocationOnScreen(windowAt);
+            claimWindowRect.set(windowAt[0], windowAt[1],
+                    windowAt[0] + zoomWindow.getWidth(), windowAt[1] + zoomWindow.getHeight());
+            if (claimWindowRect.width() <= 0 || claimWindowRect.height() <= 0) {
+                return "window-unmeasured";
+            }
+            if (!claimWindowRect.contains(rawX, rawY)) return "down-outside-window";
+            final View control = visibleStockControlAt(rawX, rawY);
+            if (control != null) return "stock-control-" + classNameOf(control);
+            return null;
+        }
+
+        /** Cleanly drops a claim; saves geometry through the single existing path when it moved. */
+        private void endClaim(String reason) {
+            if (claimState == CLAIM_IDLE && !claimSwallowing) return;
+            final boolean wasActive = claimState == CLAIM_ACTIVE;
+            claimState = CLAIM_IDLE;
+            claimSwallowing = false;
+            // The window's own long-press latch can never stay armed across an ended claim.
+            handler.removeCallbacks(beginNormalZoomDrag);
+            normalLongPressDragging = false;
+            normalTapEligible = false;
+            if (wasActive) {
+                rememberUiState();
+                logClaim("claim=end reason=" + reason
+                        + " left=" + zoomLeftFraction + " top=" + zoomTopFraction);
+            } else {
+                logClaim("deny=end reason=" + reason);
+            }
+        }
+
+        /** Decision logging only: one line per gesture transition, never per frame. */
+        private void logClaim(String message) {
+            Log.i(TAG, "gesture " + message);
+        }
+
+        /** Drag logging is capped at two lines per second. */
+        private void logClaimMove(String message) {
+            final long now = SystemClock.elapsedRealtime();
+            if (now - claimMoveLogMs < 500L) return;
+            claimMoveLogMs = now;
+            logClaim(message);
+        }
+
+        private String classNameOf(Object view) {
+            return view == null ? "null" : view.getClass().getName();
+        }
+
+        /**
+         * Read-only hit test for the touch trail: the chain of views the framework would route a
+         * DOWN to, walking down from the decor (last child first, visible and shown children only)
+         * until a leaf, a View that is not a ViewGroup, or the depth cap. Called at most once per
+         * ACTION_DOWN, and only while the fork-owned debug gate is on.
+         */
+        private String touchHitChain(int screenX, int screenY) {
+            final StringBuilder chain = new StringBuilder();
+            final int[] location = new int[2];
+            final int maxDepth = 24;
+            View current = decor;
+            for (int depth = 0; current != null && depth < maxDepth; depth++) {
+                if (chain.length() > 0) chain.append(" > ");
+                chain.append(hitSegment(current));
+                if (!(current instanceof ViewGroup)) break;
+                final ViewGroup group = (ViewGroup) current;
+                View next = null;
+                for (int index = group.getChildCount() - 1; index >= 0; index--) {
+                    final View child = group.getChildAt(index);
+                    if (child == null || child.getVisibility() != View.VISIBLE) continue;
+                    if (!child.isShown()) continue;
+                    child.getLocationOnScreen(location);
+                    if (screenX < location[0] || screenY < location[1]
+                            || screenX >= location[0] + child.getWidth()
+                            || screenY >= location[1] + child.getHeight()) continue;
+                    next = child;
+                    break;
+                }
+                current = next;
+            }
+            return chain.toString();
+        }
+
+        /**
+         * One hit-chain segment: class, touch flags and view tag. The zoom window's listener state
+         * is reported once on the DOWN line from self-tracked state instead.
+         */
+        private String hitSegment(View view) {
+            return view.getClass().getSimpleName()
+                    + "[clickable=" + view.isClickable()
+                    + " focusable=" + view.isFocusable()
+                    + " tag=" + view.getTag() + "]";
+        }
+
+        /** Window rect in screen coordinates for the DOWN line; read-only. */
+        private String windowScreenRect() {
+            final int[] windowAt = new int[2];
+            zoomWindow.getLocationOnScreen(windowAt);
+            return windowAt[0] + "," + windowAt[1] + ","
+                    + (windowAt[0] + zoomWindow.getWidth()) + ","
+                    + (windowAt[1] + zoomWindow.getHeight());
+        }
+
+        /**
+         * Did the tap actually toggle the stock controls? Measured 400 ms after the gesture ended so
+         * the stock show/hide has started, without touching any stock code.
+         */
+        private void logControlsAfterGesture() {
+            // TODO(TEST-ONLY-GATE-LOGGING): revert before merge/release to
+            // `if (!isDebugLoggingEnabled()) return;`; see GATE_TOUCH_PROP above.
+            if (!(gateTouchLogging() || isDebugLoggingEnabled())) return;
+            handler.postDelayed(() -> logTouch("post-up controlsShown="
+                    + playerControlsAnchor.isShown()
+                    + " alpha=" + playerControlsAnchor.getAlpha()), 400L);
+        }
+
+        /** Pass-through decision for non-MOVE actions, so a passed DOWN/UP is never silent. */
+        private boolean passThrough(int action) {
+            if (action != MotionEvent.ACTION_MOVE) {
+                logTouch("pass action=" + actionName(action) + " state=" + claimState);
+            }
+            return false;
+        }
+
+        /** Swallow decision for non-MOVE actions, so a swallowed UP is never silent. */
+        private boolean swallow(int action) {
+            if (action != MotionEvent.ACTION_MOVE) {
+                logTouch("swallow action=" + actionName(action));
+            }
+            return true;
         }
 
         private void attachZoomWindowToOverlay() {
+            applyZoomWindowElevation();
+            final boolean attachmentChanged = zoomWindow.getParent() != overlay
+                    || zoomInPlayerLayer || normalZoomLayer != null;
             if (zoomWindow.getParent() == overlay) {
                 zoomInPlayerLayer = false;
+                // The window no longer lives in the player layer, so neither its parent nor its
+                // branch may stay stale for the TEST-ONLY identity line.
+                normalZoomLayer = null;
+                zoomLayerBranch = null;
+                applyZoomWindowTouchMode();
+                if (attachmentChanged) {
+                    logClaim("drag-unavailable-overlay-fallback actual stock target cannot be safely "
+                            + "arbitrated from decor overlay; stock gestures pass through");
+                }
                 return;
             }
             if (zoomWindow.getParent() instanceof ViewGroup) {
                 ((ViewGroup) zoomWindow.getParent()).removeView(zoomWindow);
             }
             overlay.addView(zoomWindow, 1, new FrameLayout.LayoutParams(1, 1));
+            // Same player-layer teardown on the reparent path: from here the window is an overlay
+            // child, and index 1 keeps it below stylePanelViewport / chrome in the
+            // child order that decides draw and touch order while every child's elevation is 0.
             zoomInPlayerLayer = false;
             normalZoomLayer = null;
+            zoomLayerBranch = null;
+            applyZoomWindowTouchMode();
+            if (attachmentChanged) {
+                logClaim("drag-unavailable-overlay-fallback actual stock target cannot be safely "
+                        + "arbitrated from decor overlay; stock gestures pass through");
+            }
+        }
+
+        /** Rule (3): inspect stock siblings only when the window is in the proven player layer. */
+        private View visibleStockControlAt(int screenX, int screenY) {
+            final Object parentObject = zoomWindow.getParent();
+            if (!(parentObject instanceof ViewGroup) || parentObject == overlay) return null;
+            final ViewGroup parent = (ViewGroup) parentObject;
+            final Rect siblingRect = new Rect();
+            for (int index = 0; index < parent.getChildCount(); index++) {
+                final View sibling = parent.getChildAt(index);
+                if (sibling == null || sibling == zoomWindow) continue;
+                if (sibling.getVisibility() != View.VISIBLE || !sibling.isShown()) continue;
+                if (sibling.getAlpha() <= 0.05f) continue;
+                if (String.valueOf(sibling.getTag()).startsWith("morphe.magnifier")) continue;
+                siblingRect.setEmpty();
+                if (!sibling.getGlobalVisibleRect(siblingRect)) continue;
+                if (!siblingRect.contains(screenX, screenY)) continue;
+                if (isStockControlLike(sibling, screenX, screenY, 0)) return sibling;
+            }
+            return null;
+        }
+
+        /** Bounded depth and breadth: cheap enough to run once per ACTION_DOWN. */
+        private boolean isStockControlLike(View view, int screenX, int screenY, int depth) {
+            if (view.isClickable() || view.isLongClickable()) return true;
+            if (view instanceof SeekBar) return true;
+            if (depth >= 2 || !(view instanceof ViewGroup)) return false;
+            final ViewGroup group = (ViewGroup) view;
+            final Rect childRect = new Rect();
+            final int children = Math.min(group.getChildCount(), 24);
+            for (int index = 0; index < children; index++) {
+                final View child = group.getChildAt(index);
+                if (child == null || child.getVisibility() != View.VISIBLE) continue;
+                if (!child.isShown()) continue;
+                childRect.setEmpty();
+                if (!child.getGlobalVisibleRect(childRect)) continue;
+                if (!childRect.contains(screenX, screenY)) continue;
+                if (isStockControlLike(child, screenX, screenY, depth + 1)) return true;
+            }
+            return false;
+        }
+
+        /**
+         * PLAN A: normal-mode parent for the window. The window must sit below the stock controls,
+         * so climb from the controls anchor to the deepest player FrameLayout that covers at least
+         * 3/4 of the player area; the child on that chain becomes zoomLayerBranch, and the window is
+         * inserted at the branch's index, i.e. immediately before the branch in child order. The
+         * anchor is the fullscreen button view (VERIFIED), so this code does not assume a
+         * controls_layout ConstraintLayout anywhere; whether the branch is an ancestor of the whole
+         * stock controls container rather than only of the fullscreen sub-branch is UNVERIFIED and is
+         * what the TEST-ONLY z-order identity line reports at runtime. If no such FrameLayout exists,
+         * overlay fallback preserves stock gestures and disables normal-mode drag because the actual
+         * stock target cannot be safely arbitrated from decor.
+         */
+        private ViewGroup findZoomWindowPlayerLayer() {
+            Object parent = playerControlsAnchor.getParent();
+            Object branch = playerControlsAnchor;
+            ViewGroup found = null;
+            // Bounded: the player hierarchy is shallow, this never walks past the player area.
+            for (int depth = 0; depth < 8 && parent instanceof ViewGroup; depth++) {
+                final ViewGroup group = (ViewGroup) parent;
+                if (group == playerArea) break;
+                if (group instanceof FrameLayout
+                        && group.getWidth() >= playerArea.getWidth() * 3 / 4
+                        && group.getHeight() >= playerArea.getHeight() * 3 / 4) {
+                    found = group;
+                    zoomLayerBranch = branch instanceof View ? (View) branch : null;
+                    break;
+                }
+                branch = group;
+                parent = group.getParent();
+            }
+            if (found == null) zoomLayerBranch = null;
+            return found;
+        }
+
+        private void rearmForSurfaceChange(String reason) {
+            if (stopped) return;
+            final boolean valid = surface.getHolder().getSurface().isValid();
+            if (reason.equals("surface-changed") && !valid) return;
+            cancelVsync();
+            generation++;
+            lastSurfaceValid = valid;
+            lastGeometry = "";
+            updatePositionAndGeometry();
+            if (enabled && captureMode == CaptureMode.PLAYING) scheduleVsync();
+            else if (enabled && valid) requestCopy("surface-recreated:" + reason);
         }
 
         void updatePositionAndGeometry() {
+            final boolean surfaceValid = surface.getHolder().getSurface().isValid();
+            if (surfaceValid && !lastSurfaceValid) rearmForSurfaceChange("validity-restored");
+            else lastSurfaceValid = surfaceValid;
             if (stopped || !surface.isAttachedToWindow() || surface.getWidth() <= 0
                     || surface.getHeight() <= 0 || decor.getWidth() <= 0 || decor.getHeight() <= 0) {
                 return;
@@ -1842,30 +2920,62 @@ public final class MagnifierRecon {
                     playerAt[0] + playerWidth, playerAt[1] + playerHeight);
             final Rect safePlayer = safePlayerRect(playerScreen);
             placeChrome(safePlayer, decorAt);
+            updateOverlayElevation();
             updateEditModeButtonPosition();
             final int margin = dp(8);
             final double sourceBufferAspect = sourceWidthFraction * bufferWidth
                     / (sourceHeightFraction * bufferHeight);
             final int borderPx = dp(borderThicknessDp);
             zoomWindow.setPadding(borderPx, borderPx, borderPx, borderPx);
-            int zoomContentWidth = Math.max(dp(96),
-                    (int) Math.round(playerWidth * zoomWidthFraction));
-            zoomContentWidth = Math.min(zoomContentWidth, Math.max(1, playerWidth - 2 * margin
-                    - borderPx * 2));
+            final Rect safeZoomBounds = safePlayerRect(playerScreen);
+            if (safeZoomBounds.isEmpty()) {
+                zoomHiddenForUnsafeBounds = true;
+                if (zoomWindow.getVisibility() != View.GONE) zoomWindow.setVisibility(View.GONE);
+                return;
+            }
+            final int maxSafeContentWidth = safeZoomBounds.width() - 2 * margin - 2 * borderPx;
+            final int maxSafeContentHeight = safeZoomBounds.height() - 2 * margin - 2 * borderPx;
+            if (maxSafeContentWidth <= 0 || maxSafeContentHeight <= 0) {
+                zoomHiddenForUnsafeBounds = true;
+                if (zoomWindow.getVisibility() != View.GONE) zoomWindow.setVisibility(View.GONE);
+                return;
+            }
+            int zoomContentWidth = Math.min(Math.max(dp(96),
+                    (int) Math.round(playerWidth * zoomWidthFraction)), maxSafeContentWidth);
             int zoomContentHeight = Math.max(1,
-                    (int) Math.round(zoomContentWidth / sourceBufferAspect));
-            final int maxContentHeight = Math.max(1, playerHeight - margin * 2 - borderPx * 2);
-            if (zoomContentHeight > maxContentHeight) {
-                zoomContentHeight = maxContentHeight;
-                zoomContentWidth = Math.max(1,
-                        (int) Math.round(zoomContentHeight * sourceBufferAspect));
+                    (int) Math.floor(zoomContentWidth / sourceBufferAspect));
+            if (zoomContentHeight > maxSafeContentHeight) {
+                zoomContentHeight = maxSafeContentHeight;
+                zoomContentWidth = (int) Math.floor(zoomContentHeight * sourceBufferAspect);
+                if (zoomContentWidth > maxSafeContentWidth) {
+                    zoomContentWidth = maxSafeContentWidth;
+                    zoomContentHeight = (int) Math.floor(zoomContentWidth / sourceBufferAspect);
+                }
+            }
+            if (zoomContentWidth <= 0 || zoomContentHeight <= 0) {
+                zoomHiddenForUnsafeBounds = true;
+                if (zoomWindow.getVisibility() != View.GONE) zoomWindow.setVisibility(View.GONE);
+                return;
             }
             final int zoomWidth = zoomContentWidth + borderPx * 2;
             final int zoomHeight = zoomContentHeight + borderPx * 2;
+            if (zoomHiddenForUnsafeBounds) {
+                zoomHiddenForUnsafeBounds = false;
+                if (enabled && zoomWindow.getVisibility() != View.VISIBLE) {
+                    zoomWindow.setVisibility(View.VISIBLE);
+                }
+            }
             int zoomX = playerAt[0] + Math.round(zoomLeftFraction * playerWidth);
             int zoomY = playerAt[1] + Math.round(zoomTopFraction * playerHeight);
-            zoomX = clamp(zoomX, playerAt[0], playerAt[0] + playerWidth - zoomWidth);
-            zoomY = clamp(zoomY, playerAt[1], playerAt[1] + playerHeight - zoomHeight);
+            zoomX = clamp(zoomX, safeZoomBounds.left,
+                    Math.max(safeZoomBounds.left, safeZoomBounds.right - zoomWidth));
+            zoomY = clamp(zoomY, safeZoomBounds.top,
+                    Math.max(safeZoomBounds.top, safeZoomBounds.bottom - zoomHeight));
+            // Z-ORDER: re-assert the draw order before this pass positions the window (the re-add
+            // resets its layout params, which the placement below then restores), and report the
+            // resulting identity through the TEST-ONLY gate.
+            refreshZoomWindowIndex();
+            logZoomLayerIdentity();
             if (zoomInPlayerLayer) {
                 int[] zoomLayerAt = new int[2];
                 normalZoomLayer.getLocationOnScreen(zoomLayerAt);
@@ -2346,6 +3456,11 @@ public final class MagnifierRecon {
             if (stopped) return;
             rememberUiState();
             stopped = true;
+            claimState = CLAIM_IDLE;
+            claimSwallowing = false;
+            handler.removeCallbacks(beginNormalZoomDrag);
+            normalLongPressDragging = false;
+            normalTapEligible = false;
             updatePlayerObserver(VideoState.getOnChange(), "removeObserver", videoStateObserver);
             updatePlayerObserver(PlayerControlsVisibility.getOnChange(), "removeObserver", controlsObserver);
             updatePlayerObserver(PlayerType.getOnChange(), "removeObserver", playerTypeObserver);
@@ -2357,10 +3472,14 @@ public final class MagnifierRecon {
             } catch (IllegalArgumentException ignored) {
                 // The receiver may already be unregistered if the Activity is being torn down.
             }
-            if (playerGearButton != null && playerGearButton.getViewTreeObserver().isAlive()) {
-                playerGearButton.getViewTreeObserver().removeOnPreDrawListener(
-                        gearButtonLayoutListener);
+            if (affordancePreDrawRegistered && decor.getViewTreeObserver().isAlive()) {
+                decor.getViewTreeObserver().removeOnPreDrawListener(affordanceAnchorLayoutListener);
+                affordancePreDrawRegistered = false;
             }
+            if (affordanceAnchor != null) {
+                affordanceAnchor.removeOnAttachStateChangeListener(affordanceAnchorAttachListener);
+            }
+            surface.getHolder().removeCallback(surfaceCallback);
             cancelVsync();
             handler.removeCallbacks(pausedPoll);
             handler.removeCallbacks(metricsReporter);
@@ -2392,15 +3511,98 @@ public final class MagnifierRecon {
         }
     }
 
-    /** Small YouTube-style outline fallback for older APKs without the box-pencil drawable. */
+    /**
+     * Entry affordance that paints its own disc and glyph from its own size, so no drawable-bounds or
+     * ImageView pipeline can silently drop it. The mirrored stock background still draws underneath as
+     * the pressed-state disc; the painting here is the idle affordance the user must see.
+     */
+    private static final class AffordanceView extends View {
+        /**
+         * The stock player buttons paint a 36 dp scrim disc behind their glyphs: the fullscreen
+         * button's disc measures 72 px at 2x inside its 96 px box. The entry used to fill its whole
+         * box (96 px), which is what made it read as a bigger control than the stock icons, so it now
+         * paints the stock 72 px disc inside the same 96 px box. The disc hangs from the box's top
+         * edge in {@link #onDraw}, matching where the stock buttons draw theirs.
+         */
+        private static final float DISC_DIAMETER_DP = 36f;
+        /**
+         * Scrim colour of that disc. The stock scrim measures about a quarter black; 0x42 is that
+         * value, well below the 0x66 (40%) the entry used to carry, which made it visibly darker than
+         * the stock icons it sits beside.
+         */
+        private static final int DISC_COLOR = 0x42000000;
+        /**
+         * Glyph inset as a fraction of the disc box. 0.2625 leaves the pencil 5% smaller than the
+         * 24 dp stock grid the box is sized after, which matches how the stock glyph sits inside its
+         * own disc.
+         */
+        private static final float GLYPH_INSET_FRACTION = 0.2625f;
+        private final Paint discPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private EditModeIconDrawable glyph = new EditModeIconDrawable(false);
+
+        AffordanceView(android.content.Context context) {
+            super(context);
+            // Same translucent scrim the stock player buttons paint behind their glyphs.
+            discPaint.setColor(DISC_COLOR);
+        }
+
+        void setMagnifierOn(boolean magnifierOn) {
+            glyph = new EditModeIconDrawable(magnifierOn);
+            invalidate();
+        }
+
+        @Override protected void onDraw(Canvas canvas) {
+            final int width = getWidth();
+            final int height = getHeight();
+            if (width <= 0 || height <= 0) return;
+            final float box = Math.min(width, height);
+            final float stockDiameter = DISC_DIAMETER_DP
+                    * getResources().getDisplayMetrics().density;
+            final float diameter = Math.min(stockDiameter, box);
+            // The stock buttons hang their disc from the top of their touch box: the fullscreen
+            // button's 72 px disc sits flush with the top of its 96 px box and the strip left over is
+            // the touch slop below the icon. The entry's box is that same box, so a disc centred in it
+            // lands one slop (12 px) lower than the stock disc and reads as sagging under the
+            // fullscreen icon it sits beside. Top-aligning it puts the pencil back on the stock line.
+            final float centreY = diameter / 2f + (height - box) / 2f;
+            canvas.drawCircle(width / 2f, centreY, diameter / 2f, discPaint);
+            // The glyph keeps its own bounds, concentric with the disc, so the smaller disc never
+            // moves it off the disc's centre.
+            final int inset = Math.round(box * GLYPH_INSET_FRACTION);
+            final int glyphSide = height - 2 * inset;
+            final int glyphTop = Math.round(centreY) - glyphSide / 2;
+            glyph.setBounds(inset, glyphTop, inset + glyphSide, glyphTop + glyphSide);
+            glyph.draw(canvas);
+        }
+    }
+
+    /**
+     * The box-pencil entry glyph, drawn here so it is white on every target (the stock drawable
+     * only ships as an effectively invisible black variant) and can carry the magnifier's own
+     * state. With the magnifier off it is the plain white outline; with the magnifier on, the
+     * pencil and its eraser cap are filled white and the outline gains the heavier weight and the
+     * soft drop shadow of the stock player icons.
+     */
     private static final class EditModeIconDrawable extends Drawable {
         private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final Paint shadowPaint = new Paint();
         private final android.graphics.Path path = new android.graphics.Path();
+        private final boolean magnifierOn;
+        private final boolean withShadow;
+        private Bitmap shadow;
 
-        EditModeIconDrawable() {
+        EditModeIconDrawable(boolean magnifierOn) {
+            this(magnifierOn, magnifierOn && IconShadow.isAvailable());
+        }
+
+        private EditModeIconDrawable(boolean magnifierOn, boolean withShadow) {
+            this.magnifierOn = magnifierOn;
+            this.withShadow = withShadow;
             paint.setColor(Color.WHITE);
             paint.setStyle(Paint.Style.STROKE);
-            paint.setStrokeWidth(2f);
+            // While the magnifier is on the outline matches the chrome glyphs' weight, so it reads
+            // as bright as the stock player icons around it.
+            paint.setStrokeWidth(magnifierOn ? 2.1f : 2f);
             paint.setStrokeCap(Paint.Cap.ROUND);
             paint.setStrokeJoin(Paint.Join.ROUND);
         }
@@ -2408,10 +3610,16 @@ public final class MagnifierRecon {
         @Override public void draw(Canvas canvas) {
             final Rect bounds = getBounds();
             if (bounds.isEmpty()) return;
-            final int save = canvas.save();
             final float side = Math.min(bounds.width(), bounds.height());
-            canvas.translate(bounds.left + (bounds.width() - side) / 2f,
-                    bounds.top + (bounds.height() - side) / 2f);
+            final float left = bounds.left + (bounds.width() - side) / 2f;
+            final float top = bounds.top + (bounds.height() - side) / 2f;
+            if (withShadow) {
+                // The shadow bitmap is in view pixels, so it is drawn before the glyph matrix.
+                if (shadow == null) shadow = buildShadow((int) side);
+                if (shadow != null) canvas.drawBitmap(shadow, left, top, shadowPaint);
+            }
+            final int save = canvas.save();
+            canvas.translate(left, top);
             canvas.scale(side / 24f, side / 24f);
             path.reset();
             path.moveTo(14f, 4f);
@@ -2432,8 +3640,22 @@ public final class MagnifierRecon {
             path.quadTo(22f, 8f, 21f, 9f);
             path.lineTo(15f, 15f);
             path.close();
+            if (magnifierOn) {
+                // Fill the pencil and its eraser cap in first, then stroke back over the edges so
+                // the outline stays crisp.
+                paint.setStyle(Paint.Style.FILL);
+                canvas.drawPath(path, paint);
+                paint.setStyle(Paint.Style.STROKE);
+            }
             canvas.drawPath(path, paint);
             canvas.restoreToCount(save);
+        }
+
+        private Bitmap buildShadow(int side) {
+            if (side <= 0 || !IconShadow.isAvailable()) return null;
+            // The shadow source draws the glyph only, so building one cannot recurse.
+            final EditModeIconDrawable source = new EditModeIconDrawable(true, false);
+            return IconShadow.build(source, side, side);
         }
 
         @Override public void setAlpha(int alpha) { paint.setAlpha(alpha); invalidateSelf(); }
