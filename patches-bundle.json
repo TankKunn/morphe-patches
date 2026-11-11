@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-11-03T16:51:49",
+  "created_at": "2026-11-11T14:27:58",
   "description": "Personal development prerelease for this Morphe fork, including the YouTube video magnifier.",
-  "download_url": "https://github.com/TankKunn/morphe-patches/releases/download/v2.0.0-dev.1/patches-2.0.0-dev.1.mpp",
+  "download_url": "https://github.com/TankKunn/morphe-patches/releases/download/v2.0.0-dev.2/patches-2.0.0-dev.2.mpp",
   "signature_download_url": "",
-  "version": "2.0.0-dev.1"
+  "version": "2.0.0-dev.2"
 }
