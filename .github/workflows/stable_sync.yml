@@ -136,9 +136,13 @@ jobs:
                     git checkout --ours -- "$path"
                     git add -- "$path"
                     ;;
-                  gradle.properties|patches-list.json)
+                  gradle.properties|patches-list.json|CHANGELOG.md)
                     # Preserve upstream's version/catalog state; the magnifier
                     # is reapplied by the overlay and patch-list generation.
+                    # CHANGELOG.md stays upstream-owned history too - the fork's
+                    # stable releases are announced in the release notes rather
+                    # than in the changelog.
+
                     git checkout --theirs -- "$path"
                     git add -- "$path"
                     ;;
