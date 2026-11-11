@@ -129,18 +129,29 @@ jobs:
           # note below uses the same ref name shape semantic-release writes for
           # its own releases. The tag targets a note-free ancestor of the dev
           # head, which keeps the analyzed range to the triggering commit so the
-          # release stays patch-class. The tag and note are per-run and local,
-          # exactly like the v1.48.0 seed above, and never reach main.
+          # release stays patch-class.
+          #
+          # The tag alone is not enough to re-create: semantic-release pushes it
+          # to origin together with the release that follows it, while
+          # refs/notes/* is neither pushed by it nor fetched by the checkout, so
+          # a run that finds the tag there has no note to read. Every later run
+          # starts from that state, and creating the note only alongside a tag
+          # that is missing would leave the anchor unreadable to the guard below
+          # and fail the release. Ensure both, every run.
           DEV_BASE_TAG='v2.3.1-dev.0'
           DEV_BASE_COMMIT='307cc4039'
           DEV_BASE_CHANNELS='{"channels":["dev"]}'
+          DEV_BASE_NOTES_REF="refs/notes/semantic-release-$DEV_BASE_TAG"
           if ! git tag --list "$DEV_BASE_TAG" | grep -q .; then
-            # A note is stored as a commit of its own, so it needs a committer
-            # identity even though creating the tag itself does not.
             git tag "$DEV_BASE_TAG" "$DEV_BASE_COMMIT"
+          fi
+          # A note is stored as a commit of its own, so it needs a committer
+          # identity even though creating the tag itself does not.
+          seed_note="$(git notes --ref "$DEV_BASE_NOTES_REF" show "$DEV_BASE_TAG" 2>/dev/null || true)"
+          if [[ "$seed_note" != "$DEV_BASE_CHANNELS" ]]; then
             git -c user.name='github-actions[bot]' \
               -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
-              notes --ref "refs/notes/semantic-release-$DEV_BASE_TAG" \
+              notes --ref "$DEV_BASE_NOTES_REF" \
               add -f -m "$DEV_BASE_CHANNELS" "$DEV_BASE_TAG"
           fi
 
