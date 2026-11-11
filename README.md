@@ -28,7 +28,7 @@ GitHub Actions may need the repository secrets `MORPHE_GPR_USER` and `MORPHE_GPR
 ## Patch list
 
 <!-- PATCHES_START -->
-> **[v2.0.0-dev.2](https://github.com/TankKunn/morphe-patches/releases/tag/v2.0.0-dev.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;198 patches total
+> **[v2.0.0-dev.3](https://github.com/TankKunn/morphe-patches/releases/tag/v2.0.0-dev.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;198 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;113 patches</summary>
 <br>
@@ -104,7 +104,6 @@ GitHub Actions may need the repository secrets `MORPHE_GPR_USER` and `MORPHE_GPR
 | [Hide timestamp](#hide-timestamp) | Adds an option to hide the timestamp in the bottom left of the video player. |  |
 | [Hide video action buttons](#hide-video-action-buttons) | Adds options to hide video action buttons in fullscreen and portrait modes. |  |
 | [Loop video](#loop-video) | Adds an option to loop videos and display loop video button in the video player. |  |
-| [Video magnifier](#video-magnifier) | Adds an adjustable magnifier to the YouTube player, with an on-player editor for its size, position and appearance. |  |
 | [Media notification controls](#media-notification-controls) | Adds options to disable the seekbar and previous/next buttons in the media notification and headphone controls. |  |
 | [Miniplayer](#miniplayer) | Adds options to change the in-app minimized player. Patching 21.28.208 and lower has more miniplayer types to choose from. |  |
 | [Mute button](#mute-button) | Adds an option to show a player button that mutes the video audio. |  |
@@ -149,6 +148,7 @@ GitHub Actions may need the repository secrets `MORPHE_GPR_USER` and `MORPHE_GPR
 | [Translate live chat](#translate-live-chat) | Adds an option to translate live chat and live chat replay messages. |  |
 | [Translate posts](#translate-posts) | Adds a menu item to translate the text of posts. |  |
 | [Video delay](#video-delay) | Adds an option to delay the video, to keep it in sync with laggy Bluetooth audio. |  |
+| [Video magnifier](#video-magnifier) | Adds an adjustable magnifier to the YouTube player, with an on-player editor for its size, position and appearance. |  |
 | [Video quality](#video-quality) | Adds options to set default video qualities and always use the advanced video quality menu. |  |
 | [Voice over translation](#voice-over-translation) | Adds additional voice over languages using text-to-speech synchronized to the video playback. |  |
 | [Watch later improvements](#watch-later-improvements) | Adds options to widen the drag handles of the Watch later videos and to hide the snackbar shown after removing a video. |  |
