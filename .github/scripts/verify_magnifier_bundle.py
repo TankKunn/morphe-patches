@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 PATCH_CLASS = "app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatchKt.class"
-PATCH_NAME = "Magnifier surface recon"
+PATCH_NAME = "Video magnifier"
 SETTING_KEY = "morphe_magnifier_enabled"
 EXPECTED_STRINGS = ("morphe_magnifier_enabled_title", "morphe_magnifier_enabled_summary")
 
