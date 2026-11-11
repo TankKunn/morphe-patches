@@ -9,16 +9,39 @@ import tempfile
 import urllib.request
 import zipfile
 import xml.etree.ElementTree as ET
+from datetime import datetime
 from pathlib import Path
 
 PATCH_CLASS = "app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatchKt.class"
 PATCH_NAME = "Video magnifier"
 SETTING_KEY = "morphe_magnifier_enabled"
 EXPECTED_STRINGS = ("morphe_magnifier_enabled_title", "morphe_magnifier_enabled_summary")
+# The manifest's release date as bundle builds write it and clients parse it:
+# ISO-8601 without an offset, since java.time.LocalDateTime.parse rejects both an
+# offset and a trailing Z on the value clients read from here.
+MANIFEST_DATE_FORMATS = ("%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f")
 
 
 def fail(message: str) -> None:
     raise SystemExit(f"Bundle verification failed: {message}")
+
+
+def is_naive_iso_datetime(value: object) -> bool:
+    if not isinstance(value, str):
+        return False
+    return any(
+        # ValueError covers both a mismatch and an impossible date such as
+        # 2026-02-30, which no client could read back either.
+        _parses(value, form) for form in MANIFEST_DATE_FORMATS
+    )
+
+
+def _parses(value: str, form: str) -> bool:
+    try:
+        datetime.strptime(value, form)
+    except ValueError:
+        return False
+    return True
 
 
 def check_source(root: Path) -> None:
@@ -111,6 +134,7 @@ def main() -> None:
     parser.add_argument("--manifest", type=Path)
     parser.add_argument("--expected-repo", help="Require this fork's exact release asset URL")
     parser.add_argument("--download-asset", action="store_true", help="Download the manifest asset before validating it")
+    parser.add_argument("--expect-created-at", help="Require the manifest's created_at to be exactly this release date")
     args = parser.parse_args()
     bundle_path = args.bundle
     if args.manifest:
@@ -120,6 +144,11 @@ def main() -> None:
             download_url = manifest["download_url"]
         except (OSError, json.JSONDecodeError, KeyError, TypeError) as error:
             fail(f"invalid patches-bundle.json: {error}")
+        created_at = manifest.get("created_at")
+        if not is_naive_iso_datetime(created_at):
+            fail(f"manifest created_at is not an offset-free ISO-8601 date-time: {created_at!r}")
+        if args.expect_created_at and created_at != args.expect_created_at:
+            fail(f"manifest created_at is {created_at!r}, expected {args.expect_created_at!r}")
         if args.expected_repo:
             expected = f"https://github.com/{args.expected_repo}/releases/download/v{version}/patches-{version}.mpp"
             if download_url != expected:

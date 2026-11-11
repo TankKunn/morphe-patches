@@ -256,17 +256,27 @@ jobs:
           mv patches-list.json.tmp patches-list.json
           python3 .github/scripts/generate_patches_readme.py "$GITHUB_REPOSITORY" main patches-list.json README.md
           MANIFEST="$RUNNER_TEMP/patches-bundle.json"
+          # created_at is the release date clients show for this source and use
+          # to tell one release from the next, and only a real bundle build
+          # rewrites it. On the stable line this jq pass is the manifest's only
+          # writer, so it has to stamp the date itself: carrying the inherited
+          # value forward froze it at the last full build, and every release
+          # after that shipped the same date no matter when it came out.
+          MANIFEST_CREATED_AT="$(date -u +%Y-%m-%dT%H:%M:%S)"
           jq --arg v "$VERSION" --arg u "https://github.com/$GITHUB_REPOSITORY/releases/download/v$VERSION/patches-$VERSION.mpp" \
             --arg d "Stable Morphe patches with the YouTube video magnifier, based on upstream v$UPSTREAM_VERSION." \
-            '.version=$v | .download_url=$u | .signature_download_url="" | .description=$d' \
+            --arg ts "$MANIFEST_CREATED_AT" \
+            '.version=$v | .download_url=$u | .signature_download_url="" | .description=$d | .created_at=$ts' \
             patches-bundle.json > "$MANIFEST"
           BUNDLE="patches/build/libs/patches-$VERSION.mpp"
           test -f "$BUNDLE"
           python3 .github/scripts/verify_magnifier_bundle.py --bundle "$BUNDLE" \
             --patch-list patches-list.json --manifest "$MANIFEST" \
-            --expected-repo "$GITHUB_REPOSITORY"
+            --expected-repo "$GITHUB_REPOSITORY" \
+            --expect-created-at "$MANIFEST_CREATED_AT"
           echo "BUNDLE=$BUNDLE" >> "$GITHUB_ENV"
           echo "MANIFEST=$MANIFEST" >> "$GITHUB_ENV"
+          echo "MANIFEST_CREATED_AT=$MANIFEST_CREATED_AT" >> "$GITHUB_ENV"
 
       - name: Commit candidate and publish stable release
         id: publish
@@ -306,7 +316,8 @@ jobs:
           echo 'release_created=true' >> "$GITHUB_OUTPUT"
           python3 .github/scripts/verify_magnifier_bundle.py \
             --patch-list patches-list.json --manifest "$MANIFEST" \
-            --expected-repo "$GITHUB_REPOSITORY" --download-asset
+            --expected-repo "$GITHUB_REPOSITORY" --download-asset \
+            --expect-created-at "$MANIFEST_CREATED_AT"
           # Do not put a manifest on main (or the release candidate) that points
           # at an asset until the published asset has passed the download and
           # MPP inspection above.
@@ -315,7 +326,8 @@ jobs:
           python3 .github/scripts/validate_sync_tree.py --conflicts-only
           python3 .github/scripts/verify_magnifier_bundle.py \
             --bundle "$BUNDLE" --patch-list patches-list.json --manifest patches-bundle.json \
-            --expected-repo "$GITHUB_REPOSITORY"
+            --expected-repo "$GITHUB_REPOSITORY" \
+            --expect-created-at "$MANIFEST_CREATED_AT"
           git commit -m "chore: point stable manifest to verified v$VERSION bundle"
           MANIFEST_COMMIT="$(git rev-parse HEAD)"
           git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
