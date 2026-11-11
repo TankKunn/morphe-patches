@@ -100,9 +100,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Reapply only the fork's YouTube magnifier overlay to an upstream checkout.")
     parser.add_argument("--source-ref", required=True, help="Fork ref containing the reviewed magnifier source, e.g. origin/dev")
     args = parser.parse_args()
+    # The patch copies this patch-owned drawable with
+    # copyResources("videomagnifier", ResourceGroup("drawable", "morphe_video_magnifier.xml")).
+    # Upstream never has it, so the sync must reapply it as part of the magnifier overlay.
     files = (
         "extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/MagnifierRecon.java",
         "patches/src/main/kotlin/app/morphe/patches/youtube/layout/player/buttons/MagnifierReconPatch.kt",
+        "patches/src/main/resources/videomagnifier/drawable/morphe_video_magnifier.xml",
     )
     for relative in files:
         write_text(Path(relative), git_show(args.source_ref, relative))
