@@ -111,6 +111,7 @@ jobs:
           fi
 
       - name: Publish dev prerelease
+        id: semantic-release
         if: github.event_name == 'push' || inputs.publish_prerelease == true
         uses: cycjimmy/semantic-release-action@v6
         env:
@@ -119,7 +120,7 @@ jobs:
           MORPHE_GPR_KEY: ${{ secrets.MORPHE_GPR_KEY || secrets.GITHUB_TOKEN }}
 
       - name: Enforce fork manifest URL after release preparation
-        if: github.event_name == 'push' || inputs.publish_prerelease == true
+        if: (github.event_name == 'push' || inputs.publish_prerelease == true) && steps.semantic-release.outputs.new_release_published == 'true'
         env:
           GITHUB_TOKEN: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
           REPOSITORY: ${{ github.repository }}
@@ -145,7 +146,7 @@ jobs:
           fi
 
       - name: Verify the published fork asset through its manifest
-        if: github.event_name == 'push' || inputs.publish_prerelease == true
+        if: (github.event_name == 'push' || inputs.publish_prerelease == true) && steps.semantic-release.outputs.new_release_published == 'true'
         env:
           GITHUB_TOKEN: ${{ steps.release-token.outputs.token || secrets.GITHUB_TOKEN }}
           MORPHE_GPR_USER: ${{ secrets.MORPHE_GPR_USER || github.actor }}
