@@ -90,6 +90,12 @@ jobs:
           trap 'status=$?; failed_command="$BASH_COMMAND"; if [[ ! -s "$RUNNER_TEMP/conflicts.txt" ]]; then git diff --name-only --diff-filter=U > "$RUNNER_TEMP/conflicts.txt" || true; fi; echo "Stable preparation failed with status $status at: $failed_command"; exit $status' ERR
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Upstream stores a handful of tracked text files with CRLF while the
+          # fork's .gitattributes canonicalises them to LF. Renormalising during
+          # the merge stops upstream edits to those files from surfacing as
+          # content conflicts that have no safe merge policy, which would abort
+          # the sync before publication.
+          git config merge.renormalize true
           git remote add upstream https://github.com/MorpheApp/morphe-patches.git
           # Never import all upstream tags into the fork namespace: both repos
           # publish overlapping v1.49.0-dev.* names, which makes git fetch fail.
@@ -174,6 +180,10 @@ jobs:
                 exit 1
               fi
               python3 .github/scripts/validate_sync_tree.py --conflicts-only
+              # Store the merged tree in the fork's LF canonical form: upstream
+              # ships CRLF blobs for a few files and the full-tree validator in
+              # build_pull_request.yml rejects CR bytes in tracked text files.
+              git add --renormalize .
               git commit --no-edit
             fi
           fi
