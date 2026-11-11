@@ -131,8 +131,34 @@ public final class MagnifierRecon {
         return current.onStockTouchEvent(event);
     }
 
+    /**
+     * Fork-owned debug gate for the magnifier diagnostics. The weekly upstream sync overlays this
+     * file onto upstream's extension tree, where the shared settings API has migrated the boolean
+     * DEBUG to the enum DEBUG_LEVEL (see issue #22), while the branch base still exposes
+     * Settings.DEBUG. Neither symbol exists in both trees, so the toggle is resolved at runtime and
+     * read live: prefer Settings.DEBUG, fall back to Settings.DEBUG_LEVEL != DISABLED, and fail
+     * closed (no logging) if neither exists.
+     */
+    private static boolean isDebugLoggingEnabled() {
+        try {
+            final Class<?> settings = Class.forName("app.morphe.extension.youtube.settings.Settings");
+            Object setting;
+            try {
+                setting = settings.getField("DEBUG").get(null);
+            } catch (NoSuchFieldException debugLevelOnly) {
+                // Upstream replaced the boolean DEBUG setting with the DEBUG_LEVEL enum.
+                setting = settings.getField("DEBUG_LEVEL").get(null);
+            }
+            final Object value = setting.getClass().getMethod("get").invoke(setting);
+            if (value instanceof Boolean) return (Boolean) value;
+            return value != null && !"DISABLED".equals(value.toString());
+        } catch (Throwable ignored) {
+            return false;
+        }
+    }
+
     private static void logPerf(String message) {
-        if (Settings.DEBUG.get()) Log.i(PERF_TAG, message);
+        if (isDebugLoggingEnabled()) Log.i(PERF_TAG, message);
     }
 
     // TEST-ONLY gate logging, see GATE_TOUCH_PROP above.
@@ -165,7 +191,7 @@ public final class MagnifierRecon {
     }
 
     private static void logTouch(String message) {
-        if (gateTouchLogging() || Settings.DEBUG.get()) Log.i(TOUCH_TAG, message);
+        if (gateTouchLogging() || isDebugLoggingEnabled()) Log.i(TOUCH_TAG, message);
     }
 
     /** Short action name for the touch trail, so one line stays readable per gesture transition. */
@@ -2223,9 +2249,9 @@ public final class MagnifierRecon {
             final int action = event.getActionMasked();
             // Touch trail, DOWN only and before any state mutation: what the stock stream sees, what
             // the window looks like at that moment, and which view would receive the DOWN.
-            // TODO(TEST-ONLY-GATE-LOGGING): revert this guard to `&& Settings.DEBUG.get()`
+            // TODO(TEST-ONLY-GATE-LOGGING): revert this guard to `&& isDebugLoggingEnabled()`
             // before merge/release; see GATE_TOUCH_PROP above.
-            if (action == MotionEvent.ACTION_DOWN && (gateTouchLogging() || Settings.DEBUG.get())) {
+            if (action == MotionEvent.ACTION_DOWN && (gateTouchLogging() || isDebugLoggingEnabled())) {
                 final int downRawX = Math.round(event.getRawX());
                 final int downRawY = Math.round(event.getRawY());
                 // Diagnostic-only: this extra claimDenyReason() writes the claimWindowRect field, but
@@ -2501,7 +2527,7 @@ public final class MagnifierRecon {
          * TODO(TEST-ONLY-GATE-LOGGING): remove before merge.
          */
         private void logZoomLayerIdentity() {
-            if (!gateTouchLogging() && !Settings.DEBUG.get()) return;
+            if (!gateTouchLogging() && !isDebugLoggingEnabled()) return;
             final ViewGroup layer = normalZoomLayer;
             // Change detector: the parent, the two child indices, the two elevations and the layer
             // flag are every input of the line that can change while the reported parent stays put
@@ -2624,7 +2650,7 @@ public final class MagnifierRecon {
          * Read-only hit test for the touch trail: the chain of views the framework would route a
          * DOWN to, walking down from the decor (last child first, visible and shown children only)
          * until a leaf, a View that is not a ViewGroup, or the depth cap. Called at most once per
-         * ACTION_DOWN, and only while Settings.DEBUG is on.
+         * ACTION_DOWN, and only while the fork-owned debug gate is on.
          */
         private String touchHitChain(int screenX, int screenY) {
             final StringBuilder chain = new StringBuilder();
@@ -2679,8 +2705,8 @@ public final class MagnifierRecon {
          */
         private void logControlsAfterGesture() {
             // TODO(TEST-ONLY-GATE-LOGGING): revert before merge/release to
-            // `if (!Settings.DEBUG.get()) return;`; see GATE_TOUCH_PROP above.
-            if (!(gateTouchLogging() || Settings.DEBUG.get())) return;
+            // `if (!isDebugLoggingEnabled()) return;`; see GATE_TOUCH_PROP above.
+            if (!(gateTouchLogging() || isDebugLoggingEnabled())) return;
             handler.postDelayed(() -> logTouch("post-up controlsShown="
                     + playerControlsAnchor.isShown()
                     + " alpha=" + playerControlsAnchor.getAlpha()), 400L);
@@ -3151,7 +3177,7 @@ public final class MagnifierRecon {
 
         private void warnIfSlowWhilePlaying(String source) {
             if (captureMode == CaptureMode.IDLE && VideoState.getCurrent() == VideoState.PLAYING) {
-                if (Settings.DEBUG.get()) Log.w(PERF_TAG,
+                if (isDebugLoggingEnabled()) Log.w(PERF_TAG,
                         "slow-mode-while-playing source=" + source + " modeReason=" + modeReason);
                 onVideoStateChanged(VideoState.PLAYING, "slow-mode-state-guard:" + source);
             }
@@ -3348,7 +3374,7 @@ public final class MagnifierRecon {
                     : secondLatencyTotalMs / (double) secondCopies;
             final Rect frame = surface.getHolder().getSurfaceFrame();
 
-            if (Settings.DEBUG.get()) Log.i(PERF_TAG, "second spanMs=" + elapsed
+            if (isDebugLoggingEnabled()) Log.i(PERF_TAG, "second spanMs=" + elapsed
                     + " mode=" + (!enabled ? "OFF" : captureMode)
                     + " captureVisible=" + isCaptureTargetVisible() + " editMode=" + editMode
                     + " reason=" + modeReason
