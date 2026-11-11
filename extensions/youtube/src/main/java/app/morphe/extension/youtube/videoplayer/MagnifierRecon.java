@@ -647,6 +647,18 @@ public final class MagnifierRecon {
         private int affordanceMirroredVisibility = View.GONE;
         /** Last side the affordance was placed on, so the side decision is logged once per change. */
         private String affordancePlacedSide = "";
+        /**
+         * ConstantState of the stock anchor background last installed on the affordance. Null while
+         * nothing has been applied yet, so the first eligible pre-draw pass installs the clone.
+         */
+        private Drawable.ConstantState affordanceBackgroundState;
+        /**
+         * True once the outcome for the current anchor background state has been logged, so the
+         * decision line fires once per state. Set when the no-background skip line is emitted and
+         * reset whenever the mirrored background is cleared; the applied and clone-failure paths
+         * are gated by the {@link #affordanceBackgroundState} compare instead.
+         */
+        private boolean affordanceBackgroundLoggedForState;
         private boolean zoomInPlayerLayer;
         private boolean forwardingNormalTap;
         private boolean normalLongPressDragging;
@@ -1392,6 +1404,8 @@ public final class MagnifierRecon {
                 mirrorAnchorOntoAffordance(0f, false);
                 return null;
             }
+            // The anchor is shown, so this is the only path that owns the pressed-state background.
+            mirrorAnchorBackground();
             int[] decorAt = affordanceDecorAt;
             int[] anchorAt = affordanceAnchorAt;
             int[] playerAt = affordancePlayerAt;
@@ -1457,6 +1471,55 @@ public final class MagnifierRecon {
                         + " anchorAlpha=" + anchorAlpha);
             }
             editModeButton.setVisibility(visibility);
+        }
+
+        /**
+         * Copies the stock anchor's pressed-state background onto the affordance, so holding the
+         * pencil shows the same touch-feedback disc the fullscreen button shows. The app assigns
+         * that background after the views exist, so this re-checks on every pre-draw pass and does
+         * work only when the anchor's drawable is actually replaced; the steady state is two
+         * reference compares. Nothing here draws, tints, sizes or positions anything.
+         */
+        private void mirrorAnchorBackground() {
+            if (affordanceAnchor == null) return;
+            final Drawable source = affordanceAnchor.getBackground();
+            final Drawable.ConstantState state = source == null ? null : source.getConstantState();
+            if (state == null) {
+                // The anchor exposes no snapshottable background: mirror the absence so the
+                // affordance never keeps a stale copy, and report the reason once per state.
+                if (affordanceBackgroundState != null) {
+                    editModeButton.setBackground(null);
+                    affordanceBackgroundState = null;
+                    affordanceBackgroundLoggedForState = false;
+                }
+                if (!affordanceBackgroundLoggedForState) {
+                    affordanceBackgroundLoggedForState = true;
+                    logPerf("affordance-background skipped reason=anchor-has-no-background");
+                }
+                return;
+            }
+            if (state == affordanceBackgroundState) return;
+            // Record the candidate before cloning, so a throwing or null-returning clone is
+            // attempted at most once per state; only the app replacing the drawable re-triggers it.
+            affordanceBackgroundState = state;
+            Drawable clone = null;
+            boolean logged = false;
+            try {
+                // newDrawable() hands the affordance its own instance and mutate() isolates the
+                // copied state, so the anchor's own hotspot/pressed state is never shared.
+                final Drawable created = state.newDrawable(decor.getResources());
+                if (created != null) clone = created.mutate();
+            } catch (Throwable t) {
+                // Never rethrow into the pre-draw pass: a failed clone only costs the highlight.
+                logPerf("affordance-background skipped reason=" + t.getClass().getSimpleName());
+                logged = true;
+            }
+            if (clone != null) {
+                editModeButton.setBackground(clone);
+                logPerf("affordance-background applied source=" + source.getClass().getSimpleName());
+            } else if (!logged) {
+                logPerf("affordance-background skipped reason=clone-returned-null");
+            }
         }
 
         private void placeStylePanel(Rect safePlayer, int[] decorAt) {
