@@ -1,7 +1,6 @@
 package app.morphe.patches.util.resource
 
-import org.w3c.dom.Document
-import org.w3c.dom.Element
+import app.morphe.patcher.xml.XmlElement
 
 /**
  * Base resource class for all resources.
@@ -9,7 +8,6 @@ import org.w3c.dom.Element
  * @param name The name of the resource.
  * @param tag The tag of the resource.
  */
-@Suppress("MemberVisibilityCanBePrivate")
 abstract class BaseResource(
     val name: String,
     val tag: String
@@ -17,14 +15,13 @@ abstract class BaseResource(
     /**
      * Serialize resource element to XML.
      * Overriding methods should invoke super and operate on its return value.
-     * @param ownerDocument Target document to create elements from.
+     * @param parent The element to add the resource to, the root of a values file.
      * @param resourceCallback Called when a resource has been processed.
      */
-    open fun serialize(ownerDocument: Document, resourceCallback: (BaseResource) -> Unit = { }): Element {
-        return ownerDocument.createElement(tag).apply {
+    open fun serialize(parent: XmlElement, resourceCallback: (BaseResource) -> Unit = { }): XmlElement =
+        parent.appendChild(tag) {
             setAttribute("name", name)
         }
-    }
 
     override fun hashCode(): Int {
         var result = name.hashCode()

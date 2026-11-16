@@ -1,41 +1,86 @@
 /*
  * Copyright 2026 Morphe.
- * https://github.com/MorpheApp/morphe-patches/pull/1881
+ *
+ * https://github.com/MorpheApp/morphe-patches/pull/3905
+ * https://github.com/MorpheApp/morphe-patches/pull/4890
+ * https://github.com/MorpheApp/morphe-patches/pull/4909
  *
  * See the included NOTICE file for GPLv3 Section 7 terms that apply to Morphe contributions.
  */
 
 package app.morphe.patches.music.interaction.downloads
 
+import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
-import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
+import app.morphe.patcher.patch.PatchException
+import app.morphe.patcher.patch.patch
 import app.morphe.patcher.util.cloneParameters
+import app.morphe.patcher.util.findFreeRegister
+import app.morphe.patcher.util.getReference
+import app.morphe.patcher.util.numberOfParameterRegistersLogical
+import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
+import app.morphe.patcher.util.registersUsed
+import app.morphe.patches.music.misc.extension.sharedExtensionPatch
+import app.morphe.patches.music.misc.litho.filter.lithoFilterPatch
 import app.morphe.patches.music.misc.settings.PreferenceScreen
 import app.morphe.patches.music.misc.settings.settingsPatch
+import app.morphe.patches.music.misc.spoof.spoofVideoStreamsPatch
 import app.morphe.patches.music.shared.Constants.COMPATIBILITY_YOUTUBE_MUSIC
 import app.morphe.patches.music.video.information.musicVideoInformationPatch
+import app.morphe.patches.shared.misc.downloads.EXTENSION_FORMAT_STREAM_INTERFACE
+import app.morphe.patches.shared.misc.downloads.EXTENSION_STREAMING_DATA_INTERFACE
+import app.morphe.patches.shared.misc.downloads.exportDownloadFolderPreference
+import app.morphe.patches.shared.misc.downloads.hookDownloadQualities
+import app.morphe.patches.shared.misc.fix.proto.fixProtoLibraryPatch
+import app.morphe.patches.shared.misc.fix.proto.parseByteArrayMethodRef
+import app.morphe.patches.shared.misc.fix.proto.parseByteArrayWithRegistryMethodRef
+import app.morphe.patches.shared.misc.fix.proto.protoDefaultInstanceFingerprint
+import app.morphe.patches.shared.misc.litho.filter.addLithoFilter
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
-import app.morphe.patches.shared.misc.textcomponent.hookSpannableString
+import app.morphe.patches.shared.misc.textcomponent.hookSpannableStringResult
 import app.morphe.patches.shared.misc.textcomponent.textComponentPatch
+import app.morphe.patches.youtube.interaction.downloads.ResolveCommandFingerprint
+import app.morphe.patches.youtube.interaction.downloads.UpdateOfflineVideoPolicyFingerprint
+import app.morphe.patches.youtube.interaction.downloads.playerResponseGetterFingerprint
+import app.morphe.patches.youtube.interaction.downloads.playerResponseModelFromBytesFingerprint
 import app.morphe.util.addInstructionsAtControlFlowLabel
+import app.morphe.util.findInstructionIndicesReversedOrThrow
+import com.android.tools.smali.dexlib2.AccessFlags
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.RegisterRangeInstruction
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
+import com.android.tools.smali.dexlib2.iface.reference.TypeReference
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 
-private val OFFLINE_PLAYBACK_PERMISSIONS = listOf(
-    "android.permission.WAKE_LOCK",
-    "android.permission.FOREGROUND_SERVICE",
-    "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
-    "android.permission.POST_NOTIFICATIONS",
-)
+private const val EXTENSION_CLASS =
+    "Lapp/morphe/extension/music/patches/DownloadsPatch;"
+private const val EXTENSION_SPOOF_CLASS =
+    "Lapp/morphe/extension/shared/spoof/SpoofVideoStreamsPatch;"
+private const val SONG_MENU_FILTER =
+    "Lapp/morphe/extension/music/patches/components/SongMenuFilter;"
+private const val PLAYLIST_PAGE_FILTER =
+    "Lapp/morphe/extension/music/patches/components/PlaylistPageFilter;"
+private const val EXPORT_MENU_ITEM =
+    "Lapp/morphe/extension/music/patches/downloads/ExportMenuItem;"
+private const val GET_GENERATED_REGISTRY =
+    "Lcom/google/protobuf/ExtensionRegistryLite;->getGeneratedRegistry()Lcom/google/protobuf/ExtensionRegistryLite;"
 
-private const val OFFLINE_PLAYBACK_SERVICE =
-    "app.morphe.extension.music.patches.downloads.OfflinePlaybackService"
+/**
+ * @return The default instance field of a proto message, which the message is parsed with.
+ */
+private fun protoDefaultInstance(messageType: String) =
+    protoDefaultInstanceFingerprint(messageType).instructionMatches.first().fieldReference
 
-private val downloadsResourcePatch = resourcePatch {
+private val downloadsResourcePatch = patch {
     dependsOn(settingsPatch)
 
     execute {
@@ -45,6 +90,8 @@ private val downloadsResourcePatch = resourcePatch {
                 sorting = Sorting.UNSORTED,
                 preferences = setOf(
                     ListPreference("morphe_download_mode"),
+                    SwitchPreference("morphe_download_force_4k", summary = true),
+                    exportDownloadFolderPreference(),
                     SwitchPreference("morphe_external_downloader_menu", summary = true),
                     TextPreference(
                         "morphe_external_downloader_name",
@@ -53,108 +100,378 @@ private val downloadsResourcePatch = resourcePatch {
                 )
             )
         )
-
-        val manifest = get("AndroidManifest.xml")
-        var xml = manifest.readText()
-
-        // YouTube Music already declares most of these, so each one is added only when missing.
-        // The whole attribute is matched, since FOREGROUND_SERVICE is a prefix of
-        // FOREGROUND_SERVICE_MEDIA_PLAYBACK and would otherwise look like it is already there.
-        for (permission in OFFLINE_PLAYBACK_PERMISSIONS) {
-            val declaration = "android:name=\"$permission\""
-            if (!xml.contains(declaration)) {
-                xml = xml.replace(
-                    "<application",
-                    "<uses-permission $declaration />\n    <application"
-                )
-            }
-        }
-
-        if (!xml.contains(OFFLINE_PLAYBACK_SERVICE)) {
-            xml = xml.replace(
-                "</application>",
-                "<service android:name=\"$OFFLINE_PLAYBACK_SERVICE\" " +
-                    "android:exported=\"false\" android:foregroundServiceType=\"mediaPlayback\" />\n</application>"
-            )
-        }
-
-        manifest.writeText(xml)
     }
 }
 
-private const val EXTENSION_CLASS = "Lapp/morphe/extension/music/patches/DownloadsPatch;"
-private const val EXTENSION_PROTOCOL_BUFFER_INTERFACE =
-    $$"Lapp/morphe/extension/music/patches/DownloadsPatch$ProtocolBufferFieldInterface;"
-
-
-@Suppress("unused")
-val downloadsPatch = bytecodePatch(
+val downloadsPatch = patch(
     name = "Downloads",
-    description = "Adds support to download songs using the in-app download button, " +
-        "either with an external downloader app or inside YouTube Music.",
+    description = "Adds support to download songs, albums, and playlists using the in-app " +
+        "download button, either inside YouTube Music or with an external downloader app, " +
+        "and exports songs and videos saved by the app to the device.",
 ) {
     dependsOn(
         downloadsResourcePatch,
+        sharedExtensionPatch,
         settingsPatch,
         textComponentPatch,
-        musicVideoInformationPatch
+        lithoFilterPatch,
+        spoofVideoStreamsPatch,
+        musicVideoInformationPatch,
+        fixProtoLibraryPatch,
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE_MUSIC)
 
     execute {
-        hookSpannableString(EXTENSION_CLASS)
+        // Captures the localized download button label from Litho text creation.
+        hookSpannableStringResult(EXTENSION_CLASS)
 
-        val (_, downloadCall) = OfflineVideoEndpointFingerprint.instructionMatches
+        // Finds the song of a menu, for the menu Download of accounts offered Premium.
+        addLithoFilter(SONG_MENU_FILTER)
 
-        CommandResolverFingerprint.method.cloneParameters().apply {
-            // Add interface to get buffer.
-            mutableClassDefBy(parameterTypes[1].toString())
-                .interfaces.add(EXTENSION_PROTOCOL_BUFFER_INTERFACE)
+        // Finds the playlist or album of a page, for the page and menu Download.
+        addLithoFilter(PLAYLIST_PAGE_FILTER)
+
+        // Replace premium upsell and offline commands in CommandResolver with native OfflineCommand
+        // so songs, albums, and playlists are saved directly by YouTube Music's offline engine.
+        ResolveCommandFingerprint.method.apply {
+            val commandType = parameterTypes.first().toString()
 
             addInstructionsWithLabels(
                 0,
                 """
-                    invoke-static { p1, p2 }, $EXTENSION_CLASS->commandResolverOnClick(${EXTENSION_PROTOCOL_BUFFER_INTERFACE}Ljava/util/Map;)Z
-                    move-result v0
-                    if-eqz v0, :continue_resolution
-                    return v0
-                    :continue_resolution
-                    nop
-                """
-            )
-        }
-
-        OfflineVideoEndpointFingerprint.method.apply {
-            val videoIdRegister = (downloadCall.instruction as FiveRegisterInstruction).registerD
-            // Reuse the ID YTM resolved for its single-video download action.
-            // v1 is unused by the download call, which is followed by return-void.
-            addInstructionsAtControlFlowLabel(
-                downloadCall.index,
-                """
-                    invoke-static/range { v$videoIdRegister .. v$videoIdRegister }, $EXTENSION_CLASS->offlineVideoEndpointOnClick(Ljava/lang/String;)Z
-                    move-result v1
-                    if-eqz v1, :show_native_downloader
+                    invoke-static/range { p1 .. p2 }, $EXTENSION_CLASS->replaceDownloadCommand(Lcom/google/protobuf/MessageLite;Ljava/util/Map;)[B
+                    move-result-object v0
+                    if-eqz v0, :keep_command
+                    array-length v1, v0
+                    if-nez v1, :parse_command
                     return-void
-                    :show_native_downloader
+                    :parse_command
+                    sget-object v1, ${protoDefaultInstance(commandType)}
+                    invoke-static { }, $GET_GENERATED_REGISTRY
+                    move-result-object v2
+                    invoke-static { v1, v0, v2 }, ${parseByteArrayWithRegistryMethodRef.get()!!}
+                    move-result-object v0
+                    check-cast v0, $commandType
+                    move-object/from16 p1, v0
+                    :keep_command
                     nop
                 """
             )
         }
 
-        // Accounts offered Premium get an upsell command from the Download option instead.
-        offlineUpsellCommandFingerprint(
-            OfflineUpsellRequestFingerprint.classDef.type
-        ).method.addInstructionsWithLabels(
-            0,
-            """
-                invoke-static/range { p1 .. p1 }, $EXTENSION_CLASS->offlineUpsellOnClick(Ljava/lang/Object;)Z
-                move-result v0
-                if-eqz v0, :show_upsell
-                return-void
-                :show_upsell
-                nop
-            """
-        )
+        // Unlock the offlineability of the songs, albums and playlists the endpoints save.
+        // The save method is an interface method in some app versions, so its call is changed.
+        listOf(
+            MusicOfflineVideoEndpointFingerprint,
+            SaveOfflinePlaylistCallFingerprint,
+        ).forEach { fingerprint ->
+            val saveCall = fingerprint.instructionMatches.first()
+            val offlineabilityType = saveCall.methodReference.parameterTypes[1].toString()
+
+            val unlockMethod = ImmutableMethod(
+                fingerprint.classDef.type,
+                "patch_unlockOfflineability",
+                listOf(ImmutableMethodParameter(offlineabilityType, null, null)),
+                offlineabilityType,
+                AccessFlags.PRIVATE.value or AccessFlags.STATIC.value,
+                null,
+                null,
+                MutableMethodImplementation(4),
+            ).toMutable().apply {
+                addInstructionsWithLabels(
+                    0,
+                    """
+                        invoke-static { p0 }, $EXTENSION_CLASS->unlockOfflineability(Ljava/lang/Object;)[B
+                        move-result-object v0
+                        if-eqz v0, :keep_offlineability
+                        sget-object v1, ${protoDefaultInstance(offlineabilityType)}
+                        invoke-static { }, $GET_GENERATED_REGISTRY
+                        move-result-object v2
+                        invoke-static { v1, v0, v2 }, ${parseByteArrayWithRegistryMethodRef.get()!!}
+                        move-result-object v0
+                        check-cast v0, $offlineabilityType
+                        return-object v0
+                        :keep_offlineability
+                        return-object p0
+                    """
+                )
+            }
+            fingerprint.classDef.methods.add(unlockMethod)
+
+            // The registers of the call are the instance, the id, then the offlineability.
+            val offlineabilityRegister = when (val call = saveCall.instruction) {
+                is RegisterRangeInstruction -> call.startRegister + 2
+                is FiveRegisterInstruction -> call.registerE
+                else -> throw PatchException("Unexpected save call: $call")
+            }
+
+            fingerprint.method.addInstructionsAtControlFlowLabel(
+                saveCall.index,
+                """
+                    invoke-static/range { v$offlineabilityRegister .. v$offlineabilityRegister }, $unlockMethod
+                    move-result-object v$offlineabilityRegister
+                """
+            )
+        }
+
+        // Save the track instead of showing the Premium upsell of the offline upsell endpoint.
+        MusicOfflineUpsellResponseFingerprint.let {
+            val responseType = it.instructionMatches.first().instruction.getReference<TypeReference>()!!.type
+            val commandField = it.instructionMatches[2].fieldReference
+
+            it.method.addInstructionsWithLabels(
+                0,
+                """
+                    move-object/from16 v0, p0
+                    iget-object v0, v0, $commandField
+                    move-object/from16 v1, p1
+                    invoke-static { v0, v1 }, $EXTENSION_CLASS->replaceOfflineUpsell(Lcom/google/protobuf/MessageLite;Ljava/lang/Object;)[B
+                    move-result-object v0
+                    if-eqz v0, :keep_upsell_response
+
+                    sget-object v1, ${protoDefaultInstance(responseType)}
+                    invoke-static { }, $GET_GENERATED_REGISTRY
+                    move-result-object v2
+                    invoke-static { v1, v0, v2 }, ${parseByteArrayWithRegistryMethodRef.get()!!}
+                    move-result-object v0
+                    move-object/from16 p1, v0
+                    :keep_upsell_response
+                    nop
+                """
+            )
+        }
+
+        // Save the track with streams of another client, if the server declines to save the track.
+        MusicOfflinePlayerResponseFingerprint.let {
+            val playerResponseModelType = it.method.returnType
+
+            val fromBytesFingerprint = playerResponseModelFromBytesFingerprint(playerResponseModelType)
+            val fromBytesMethod = fromBytesFingerprint.method
+            val playerResponseType = fromBytesFingerprint.instructionMatches.last()
+                .instruction.getReference<TypeReference>()!!.type
+            val playerResponseGetter = playerResponseGetterFingerprint(
+                fromBytesMethod.definingClass,
+                playerResponseType
+            ).method
+
+            val helperMethod = ImmutableMethod(
+                it.classDef.type,
+                "patch_replaceDeclinedOfflinePlayerResponse",
+                listOf(ImmutableMethodParameter(playerResponseModelType, null, null)),
+                playerResponseModelType,
+                AccessFlags.PUBLIC.value or AccessFlags.STATIC.value,
+                null,
+                null,
+                MutableMethodImplementation(4),
+            ).toMutable().apply {
+                addInstructionsWithLabels(
+                    0,
+                    """
+                        if-eqz p0, :keep_player_response
+                        invoke-interface { p0 }, $playerResponseModelType->${playerResponseGetter.name}()$playerResponseType
+                        move-result-object v0
+                        invoke-static { v0 }, $EXTENSION_CLASS->replaceDeclinedOfflinePlayerResponse(Ljava/lang/Object;)[B
+                        move-result-object v0
+                        if-eqz v0, :keep_player_response
+
+                        const/4 v1, 0x1
+                        invoke-static { v1 }, $EXTENSION_SPOOF_CLASS->setKeepStreamsOnThread(Z)V
+
+                        invoke-static { }, Ljava/lang/System;->currentTimeMillis()J
+                        move-result-wide v1
+                        invoke-static { v0, v1, v2 }, $fromBytesMethod
+                        move-result-object v0
+
+                        invoke-static { v0 }, $EXTENSION_CLASS->onOfflinePlayerResponseReplaced(Ljava/lang/Object;)V
+                        if-eqz v0, :keep_player_response
+                        return-object v0
+
+                        :keep_player_response
+                        return-object p0
+                    """
+                )
+            }
+            it.classDef.methods.add(helperMethod)
+
+            val moveResult = it.instructionMatches.last()
+            val playerResponseModelRegister = moveResult.instruction.registersUsed.first()
+
+            it.method.addInstructions(
+                moveResult.index + 1,
+                """
+                    invoke-static/range { v$playerResponseModelRegister .. v$playerResponseModelRegister }, $helperMethod
+                    move-result-object v$playerResponseModelRegister
+                """
+            )
+        }
+
+        // Keep saved tracks playable if the server disables them during background policy refreshes.
+        UpdateOfflineVideoPolicyFingerprint.matchAll().forEach { match ->
+            match.method.cloneParameters().apply {
+                val offlineStateType = parameterTypes[2].toString()
+
+                addInstructionsWithLabels(
+                    0,
+                    """
+                        invoke-static/range { p4 .. p4 }, $EXTENSION_CLASS->replaceDisabledOfflineState(Lcom/google/protobuf/MessageLite;)[B
+                        move-result-object v0
+                        if-eqz v0, :keep_offline_state
+
+                        sget-object v1, ${protoDefaultInstance(offlineStateType)}
+                        invoke-static { }, $GET_GENERATED_REGISTRY
+                        move-result-object v2
+                        invoke-static { v1, v0, v2 }, ${parseByteArrayWithRegistryMethodRef.get()!!}
+                        move-result-object v0
+                        check-cast v0, $offlineStateType
+                        move-object/from16 p4, v0
+                        :keep_offline_state
+                        nop
+                    """
+                )
+            }
+        }
+
+        // region Download qualities.
+
+        // Offer up to 2160p on every screen, and label the qualities above 1080p.
+        hookDownloadQualities()
+
+        // The media quality setting offers only 360p and 720p.
+        MusicDownloadQualitySettingFingerprint.let {
+            val sizeMatch = it.instructionMatches.last()
+            val listRegister = sizeMatch.instruction.registersUsed.first()
+
+            // The setting offers 720p only if a flag is on, and both lists continue at the label.
+            it.method.addInstructionsAtControlFlowLabel(
+                sizeMatch.index,
+                """
+                    invoke-static/range { v$listRegister .. v$listRegister }, $EXTENSION_CLASS->getDownloadQualityFormatTypes(Ljava/util/List;)Ljava/util/List;
+                    move-result-object v$listRegister
+                """
+            )
+        }
+
+        // Log the download qualities that are not available, and optionally save 1440p and 2160p
+        // even if the device or server checks of the app rule out their streams.
+        // The audio stream of a download is matched to the container of the video stream,
+        // so the download can be exported as one file.
+        MusicDownloadStreamPairFingerprint.let {
+            // The method has no free registers that its exception handler does not read.
+            // Its parameters stay in the p registers.
+            it.method.cloneParameters().apply {
+                val pairIndex = it.instructionMatches.last().index + numberOfParameterRegistersLogical
+                val pairInstruction = getInstruction(pairIndex)
+                val videoStreamRegister = pairInstruction.registersUsed[1]
+                val audioStreamRegister = pairInstruction.registersUsed[2]
+                val streamType = pairInstruction.getReference<MethodReference>()!!.parameterTypes.first()
+
+                // p1 is the streaming data, p3 the height of the quality and p6 if the download
+                // is audio only. p4, p5 and p7 are the max height, the audio quality and
+                // the audio track, which are not needed.
+                addInstructions(
+                    pairIndex,
+                    """
+                        move/from16 p7, p6
+                        move-object/from16 p6, p1
+                        move/from16 p5, p3
+                        move-object/from16 p4, v$videoStreamRegister
+                        invoke-static/range { p4 .. p7 }, $EXTENSION_CLASS->selectDownloadVideoStream(${EXTENSION_FORMAT_STREAM_INTERFACE}I${EXTENSION_STREAMING_DATA_INTERFACE}Z)${EXTENSION_FORMAT_STREAM_INTERFACE}
+                        move-result-object v$videoStreamRegister
+                        check-cast v$videoStreamRegister, $streamType
+
+                        move-object/from16 p4, v$audioStreamRegister
+                        move-object/from16 p5, v$videoStreamRegister
+                        invoke-static/range { p4 .. p6 }, $EXTENSION_CLASS->selectDownloadAudioStream(${EXTENSION_FORMAT_STREAM_INTERFACE}${EXTENSION_FORMAT_STREAM_INTERFACE}${EXTENSION_STREAMING_DATA_INTERFACE})${EXTENSION_FORMAT_STREAM_INTERFACE}
+                        move-result-object v$audioStreamRegister
+                        check-cast v$audioStreamRegister, $streamType
+                    """
+                )
+            }
+        }
+
+        // endregion
+
+        // region Export to device.
+
+        // Add the export items to the menus of the songs and videos the app saved.
+        MusicMenuBottomSheetItemsFingerprint.let {
+            val menuField = it.instructionMatches.first().fieldReference
+            val menuItemType = it.instructionMatches[3].instruction.getReference<TypeReference>()!!.type
+            val addItemMethod = it.instructionMatches.last().methodReference
+            val itemsType = addItemMethod.definingClass
+
+            val addExportMenuItemMethod = ImmutableMethod(
+                it.classDef.type,
+                "patch_addExportMenuItems",
+                listOf(
+                    ImmutableMethodParameter(itemsType, null, null),
+                    ImmutableMethodParameter("Ljava/lang/Object;", null, null)
+                ),
+                "V",
+                AccessFlags.PRIVATE.value or AccessFlags.STATIC.value,
+                null,
+                null,
+                MutableMethodImplementation(7),
+            ).toMutable().apply {
+                addInstructionsWithLabels(
+                    0,
+                    """
+                        invoke-static { p1 }, $EXPORT_MENU_ITEM->getExportMenuItems(Ljava/lang/Object;)[[B
+                        move-result-object v0
+                        array-length v1, v0
+                        const/4 v2, 0x0
+                        sget-object v3, ${protoDefaultInstance(menuItemType)}
+                        :next_item
+                        if-ge v2, v1, :no_more_items
+                        aget-object v4, v0, v2
+                        invoke-static { v3, v4 }, ${parseByteArrayMethodRef.get()!!}
+                        move-result-object v4
+                        invoke-virtual { p0, v4 }, $addItemMethod
+                        add-int/lit8 v2, v2, 0x1
+                        goto :next_item
+                        :no_more_items
+                        return-void
+                    """
+                )
+            }
+            it.classDef.methods.add(addExportMenuItemMethod)
+
+            // The method overwrites the register of the fragment, which is needed for the menu renderer.
+            it.method.cloneParameters().apply {
+                findInstructionIndicesReversedOrThrow(Opcode.RETURN_OBJECT).forEach { index ->
+                    val itemsRegister = getInstruction<OneRegisterInstruction>(index).registerA
+                    val menuRegister = findFreeRegister(index, itemsRegister)
+
+                    // The loop jumps to the return when it ends, so the code goes at its label.
+                    addInstructionsAtControlFlowLabel(
+                        index,
+                        """
+                            iget-object v$menuRegister, p0, $menuField
+                            invoke-static { v$itemsRegister, v$menuRegister }, $addExportMenuItemMethod
+                        """
+                    )
+                }
+            }
+        }
+
+        // The export items have no command, so the app only closes the menu when one is clicked.
+        MenuItemClickFingerprint.let {
+            val menuItemField = it.instructionMatches.first().fieldReference
+
+            it.method.apply {
+                val register = findFreeRegister(0)
+
+                addInstructions(
+                    0,
+                    """
+                        iget-object v$register, p0, $menuItemField
+                        invoke-static { v$register }, $EXPORT_MENU_ITEM->onMenuItemClick(Ljava/lang/Object;)V
+                    """
+                )
+            }
+        }
+
+        // endregion
     }
 }

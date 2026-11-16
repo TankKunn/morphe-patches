@@ -9,7 +9,9 @@ package app.morphe.patches.music.misc.androidauto
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.instructions
-import app.morphe.patcher.patch.BytecodePatchContext
+import app.morphe.patcher.patch.classDefBy
+import app.morphe.patcher.patch.mutableClassDefBy
+import app.morphe.patcher.util.addPatchInterface
 import app.morphe.patcher.util.findFreeRegister
 import app.morphe.patcher.util.getReference
 import app.morphe.patches.music.interaction.jam.addReferenceGetter
@@ -35,7 +37,7 @@ private const val EXECUTOR = "Ljava/util/concurrent/Executor;"
 // region Phone search client and responses
 
 /** Uses YTM's phone search client for Android Auto's online searches. */
-internal fun BytecodePatchContext.patchSearch() {
+internal fun patchSearch() {
     val requestType = PhoneSearchRequestFingerprint.originalClassDef.type
     val phoneSearchSubmissionMethod = PhoneSearchSubmissionFingerprint.originalMethod
     val submissionCalls = phoneSearchSubmissionMethod.instructions.mapNotNull { it.getReference<MethodReference>() }.distinct()
@@ -78,10 +80,9 @@ internal fun BytecodePatchContext.patchSearch() {
         it.instruction.getReference<FieldReference>()
     }
 
-    clientClass.interfaces.add(PHONE_SEARCH_CLIENT)
-    clientClass.addInterfaceMethod(
-        findInterfaceMethod(PHONE_SEARCH_CLIENT, "patch_search"),
-        10,
+    clientClass.addPatchInterface(
+        PHONE_SEARCH_CLIENT,
+        "patch_search",
         """
             invoke-virtual { p0 }, $createSearchRequestMethod
             move-result-object v1
@@ -102,7 +103,7 @@ internal fun BytecodePatchContext.patchSearch() {
             invoke-virtual/range { v0 .. v4 }, $submitSearchFutureMethod
             move-result-object v0
             return-object v0
-        """,
+        """
     )
 
     val decodeSearchResponseMethod = classDefBy(requestSenderField.type).methods.single { method ->
@@ -116,16 +117,15 @@ internal fun BytecodePatchContext.patchSearch() {
     val responseMessageType = responseConstructor.parameterTypes.single().toString()
     val responseClass = mutableClassDefBy(responseType)
     val responseMessageField = responseClass.instanceFields.single { it.type == responseMessageType }
-    responseClass.interfaces.add(PHONE_SEARCH_RESPONSE)
-    responseClass.addInterfaceMethod(
-        findInterfaceMethod(PHONE_SEARCH_RESPONSE, "patch_responseBytes"),
-        1,
+    responseClass.addPatchInterface(
+        PHONE_SEARCH_RESPONSE,
+        "patch_responseBytes",
         """
             iget-object p0, p0, $responseMessageField
             invoke-virtual { p0 }, $responseMessageType->toByteArray()[B
             move-result-object p0
             return-object p0
-        """,
+        """
     )
     hookPhoneClientOnServiceCreate(
         clientClass.type, PHONE_SEARCH_CLIENT,
@@ -139,16 +139,19 @@ internal fun BytecodePatchContext.patchSearch() {
 // region Android Auto search requests
 
 /** Replaces Android Auto's online search while preserving YTM's caller checks and local Library search. */
-private fun BytecodePatchContext.hookSearchRequests() {
+private fun hookSearchRequests() {
     val deliverSearchResultsMethod = SearchResultDeliveryFingerprint.method
     val searchRequestClass = mutableClassDefBy(deliverSearchResultsMethod.definingClass)
     val queryField = searchRequestClass.instanceFields.single { it.type == "Ljava/lang/String;" }
-    searchRequestClass.interfaces.add(SEARCH_REQUEST)
     searchRequestClass.addReferenceGetter("patch_query", queryField)
-    searchRequestClass.addInterfaceMethod(findInterfaceMethod(SEARCH_REQUEST, "patch_deliverSearchResults"), 2, """
-        invoke-virtual { p0, p1 }, $deliverSearchResultsMethod
-        return-void
-    """)
+    searchRequestClass.addPatchInterface(
+        SEARCH_REQUEST,
+        "patch_deliverSearchResults",
+        """
+            invoke-virtual { p0, p1 }, $deliverSearchResultsMethod
+            return-void
+        """
+    )
     val contentSupplierClass = mutableClassDefBy(ContentSupplierFingerprint.originalMethod.definingClass)
     val handleSearchRequestMethod = contentSupplierClass.methods.single {
         it.returnType == "V" && it.parameterTypes == listOf(searchRequestClass.type)

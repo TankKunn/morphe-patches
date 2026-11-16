@@ -1,11 +1,11 @@
 package app.morphe.patches.shared.misc.videoinformation
 
 import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.patch.classDefBy
 import app.morphe.patcher.StringComparisonType
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.methodCall
-import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.string
 import app.morphe.patcher.util.getReference
 import app.morphe.util.indexOfFirstInstructionOrThrow
@@ -25,20 +25,31 @@ internal object PlayerControllerSetTimeReferenceFingerprint : Fingerprint(
     )
 )
 
+// Class name is un-obfuscated in targets before 21.01
+internal object VideoQualityFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
+    parameters = listOf(
+        "I", // Resolution.
+        "L",
+        "Ljava/lang/String;", // Human-readable resolution: "480p", "1080p Premium", etc
+        "Z",
+        "L"
+    )
+)
+
 /**
- * Matches method {androidx.media3.exoplayer.ExoPlayerImpl.setPlaybackParameters(PlaybackParameters p1)}
- *
- * @param playbackParametersType The PlaybackParameters type, obtained from [PlaybackParametersToStringFingerprint].
+ * Matches method {androidx.media3.exoplayer.ExoPlayerImpl.setPlaybackParameters(PlaybackParameters p1)}.
+ * The PlaybackParameters type is obtained from [PlaybackParametersToStringFingerprint].
  */
-internal fun getPlaybackParametersSetterFingerprint(playbackParametersType: String) = object : Fingerprint(
+internal object PlaybackParametersSetterFingerprint : Fingerprint(
     interfaces = listOf("Landroidx/media3/exoplayer/ExoPlayer;"),
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
-    parameters = listOf(playbackParametersType)
-) {}
+    parameters = { listOf(PlaybackParametersToStringFingerprint.originalClassDef.type) }
+)
 
-internal fun getExoPlayerImplFingerprint(playbackParametersType: String) = object : Fingerprint(
-    classFingerprint = getPlaybackParametersSetterFingerprint(playbackParametersType),
+internal object ExoPlayerImplConstructorFingerprint : Fingerprint(
+    classFingerprint = PlaybackParametersSetterFingerprint,
     name = "<init>",
     filters = listOf(
         methodCall(
@@ -46,7 +57,7 @@ internal fun getExoPlayerImplFingerprint(playbackParametersType: String) = objec
             name = "<init>"
         )
     )
-) {}
+)
 
 /**
  * Matches method {androidx.media3.common.PlaybackParameters}.toString()
@@ -69,9 +80,8 @@ internal object PlaybackParametersToStringFingerprint : Fingerprint(
  * @return The SEEK_SOURCE_UNKNOWN constant of the seek source enum.
  * The enum fields are obfuscated, but its static initializer keeps the constant names as strings.
  */
-context(patchContext: BytecodePatchContext)
 internal fun seekSourceUnknownField(seekSourceEnumType: String): FieldReference {
-    val staticInitializer = patchContext.classDefBy(seekSourceEnumType).methods.first { it.name == "<clinit>" }
+    val staticInitializer = classDefBy(seekSourceEnumType).methods.first { it.name == "<clinit>" }
     val nameIndex = staticInitializer.indexOfFirstStringInstructionOrThrow("SEEK_SOURCE_UNKNOWN")
     val fieldIndex = staticInitializer.indexOfFirstInstructionOrThrow(nameIndex, Opcode.SPUT_OBJECT)
 

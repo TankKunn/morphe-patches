@@ -8,11 +8,11 @@
 package app.morphe.patches.youtube.interaction.searchcomments
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
-import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patcher.patch.mutableClassDefBy
+import app.morphe.patcher.patch.patch
+import app.morphe.patcher.util.addPatchInterface
 import app.morphe.patcher.util.cloneParameters
 import app.morphe.patches.all.misc.resources.addResourcesPatch
-import app.morphe.patches.shared.misc.bridge.addBridge
 import app.morphe.patches.shared.misc.litho.filter.addLithoFilter
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.engagement.engagementPanelHookPatch
@@ -34,8 +34,7 @@ private const val EXTENSION_FILTER =
 private const val SECTION_LIST_ACCESS_INTERFACE =
     $$"Lapp/morphe/extension/youtube/patches/components/CommentsSearchFilter$SectionListAccess;"
 
-@Suppress("unused")
-val searchCommentsPatch = bytecodePatch(
+val searchCommentsPatch = patch(
     name = "Search comments",
     description = "Adds a button to the comments to show only the loaded comments that contain the searched words."
 ) {
@@ -46,11 +45,16 @@ val searchCommentsPatch = bytecodePatch(
         lithoFilterPatch,
         engagementPanelHookPatch,
         videoInformationPatch,
-        resourcePatch {
+        patch {
             execute {
                 copyResources(
                     "searchcomments",
-                    ResourceGroup("drawable", "morphe_search_comments_button.xml")
+                    ResourceGroup(
+                        "drawable",
+                        "morphe_search_comments_button.xml",
+                        "morphe_search_comments_button_active.xml",
+                        "morphe_search_comments_button_idle.xml"
+                    )
                 )
             }
         }
@@ -87,16 +91,17 @@ val searchCommentsPatch = bytecodePatch(
         val listViewField = SectionListControllerConstructorFingerprint.instructionMatches.first().fieldReference
 
         mutableClassDefBy(listViewField.definingClass).apply {
-            interfaces.add(SECTION_LIST_ACCESS_INTERFACE)
-            addBridge(
-                "patch_getListView", listOf(), "Landroid/view/View;", 2,
+            addPatchInterface(
+                SECTION_LIST_ACCESS_INTERFACE,
+                "patch_getListView",
                 """
                     iget-object v0, p0, $listViewField
                     return-object v0
                 """
             )
-            addBridge(
-                "patch_reload", listOf(), "Z", 2,
+            addPatchInterface(
+                SECTION_LIST_ACCESS_INTERFACE,
+                "patch_reload",
                 """
                     sget-object v0, $reloadContinuationType
                     invoke-virtual { p0, v0 }, $hasContinuationMethod

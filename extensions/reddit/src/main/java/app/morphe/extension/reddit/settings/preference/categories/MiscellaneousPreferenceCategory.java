@@ -19,13 +19,15 @@ import app.morphe.extension.reddit.patches.OpenLinksDirectlyPatch;
 import app.morphe.extension.reddit.patches.OpenLinksExternallyPatch;
 import app.morphe.extension.reddit.patches.RedgifsAudioPatch;
 import app.morphe.extension.reddit.patches.SanitizeSharingLinksPatch;
-import app.morphe.extension.reddit.patches.VersionCheckPatch;
+import app.morphe.extension.reddit.settings.RedditActivityHook;
 import app.morphe.extension.reddit.settings.Settings;
 import app.morphe.extension.reddit.settings.preference.BooleanSettingPreference;
 import app.morphe.extension.reddit.settings.preference.DownloadLocationPreference;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.BaseSettings;
+import app.morphe.extension.shared.settings.SharedSettings;
+import app.morphe.extension.shared.settings.preference.CustomDialogListPreference;
 import app.morphe.extension.shared.settings.preference.ImportExportPreference;
 import app.morphe.extension.shared.settings.preference.SortedListPreference;
 import app.morphe.extension.shared.settings.preference.URLLinkPreference;
@@ -62,6 +64,7 @@ public class MiscellaneousPreferenceCategory extends ConditionalPreferenceCatego
         addPreference(importPref);
 
         addPreference(new SortedListPreference(context, BaseSettings.MORPHE_LANGUAGE));
+        addPreference(new CustomDialogListPreference(context, SharedSettings.PATCHES_UPDATE_NOTICE));
 
         if (AppIconPatch.isPatchIncluded()) {
             addPreference(AppIconPatch.getIconPreference(context));
@@ -98,13 +101,10 @@ public class MiscellaneousPreferenceCategory extends ConditionalPreferenceCatego
             ));
         }
 
-        addPreference(new BooleanSettingPreference(
-                context,
-                BaseSettings.DEBUG
-        ));
+        addPreference(new CustomDialogListPreference(context, BaseSettings.DEBUG_LEVEL));
 
         // Include original privacy policy link that was changed to open Morphe settings.
-        if (VersionCheckPatch.is_2026_25_or_greater) {
+        if (RedditActivityHook.isPrivacyPolicyReplaced()) {
             URLLinkPreference preference = new URLLinkPreference(context);
             preference.setTitle(str("reddit_privacy_policy"));
             preference.externalURL = ResourceUtils.getString("privacy_policy_uri");

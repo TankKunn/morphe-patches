@@ -11,17 +11,24 @@
 
 package app.morphe.extension.youtube.niconicocomments;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.ContextWrapper;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.graphics.RectF;
 import android.graphics.Typeface;
-import android.os.Build;
+import android.view.Display;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.io.InputStream;
@@ -30,6 +37,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.requests.Requester;
@@ -41,6 +49,10 @@ import app.morphe.extension.youtube.settings.Settings;
  */
 final class NiconicoCommentsOverlayView extends View {
     private static final long IDLE_FRAME_DELAY_MS = 250;
+    /**
+     * Comments in picture-in-picture are not scaled down below this font size.
+     */
+    private static final int PIP_MIN_FONT_SIZE_SP = 10;
     private static final int MEMBERSHIP_COLOR = Color.rgb(43, 166, 64);
     private static final long EMOJI_PREFETCH_MS = 1_000;
     private static final int EMOJI_CONNECT_TIMEOUT_MS = 5_000;
@@ -62,13 +74,31 @@ final class NiconicoCommentsOverlayView extends View {
     private final float backgroundPadding;
     private final float backgroundRadius;
 
-    private volatile int emojiGeneration;
+    private final AtomicInteger emojiGeneration = new AtomicInteger();
     private String videoId = "";
     private boolean overlayActive;
     private boolean videoPlaying;
-    private boolean highFrameRateRequested;
+    private boolean pictureInPicture;
+    /**
+     * Size of a layout pixel in view pixels. Comments are measured and placed in layout pixels.
+     */
+    private float layoutScale = 1;
+    /**
+     * Layout width and lane count the comments were last placed with.
+     */
+    private float placedWidth;
+    private int placedLaneCount;
+    @Nullable
+    private Window activityWindow;
+    /**
+     * The refresh rate the overlay last set on the window, or 0.
+     */
+    private static float windowRefreshRate;
+    private int maxRefreshRate = SeekBarPreference.clampToRange(Settings.NICONICO_COMMENTS_MAX_REFRESH_RATE);
+    private float requestedRefreshRate;
     private int fontSizeSp = SeekBarPreference.clampToRange(Settings.NICONICO_COMMENTS_FONT_SIZE);
     private int opacityPercent = SeekBarPreference.clampToRange(Settings.NICONICO_COMMENTS_OPACITY);
+    private int displayAreaPercent = SeekBarPreference.clampToRange(Settings.NICONICO_COMMENTS_DISPLAY_AREA);
     private float laneHeight;
     private float firstBaseline;
 
@@ -76,7 +106,8 @@ final class NiconicoCommentsOverlayView extends View {
         super(context);
 
         density = context.getResources().getDisplayMetrics().density;
-        scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
+        final float fontScale = context.getResources().getConfiguration().fontScale;
+        scaledDensity = density * (fontScale != 0 ? fontScale : 1.0f);
         backgroundPadding = 4 * density;
         backgroundRadius = 3 * density;
 
@@ -100,7 +131,7 @@ final class NiconicoCommentsOverlayView extends View {
             return;
         }
         videoId = nextVideoId;
-        emojiGeneration++;
+        emojiGeneration.incrementAndGet();
         emojiImageCache.clear();
         clearComments();
     }
@@ -111,6 +142,9 @@ final class NiconicoCommentsOverlayView extends View {
         }
         overlayActive = active;
         setVisibility(active ? VISIBLE : GONE);
+        if (!active) {
+            setHighFrameRate(false);
+        }
         requestNextFrame();
     }
 
@@ -122,6 +156,17 @@ final class NiconicoCommentsOverlayView extends View {
         requestNextFrame();
     }
 
+    void setPictureInPicture(boolean nextPictureInPicture) {
+        if (pictureInPicture == nextPictureInPicture) {
+            return;
+        }
+        pictureInPicture = nextPictureInPicture;
+        if (getHeight() > 0) {
+            updateLayout();
+        }
+        invalidate();
+    }
+
     void setCommentFontSizeSp(int nextFontSizeSp) {
         if (fontSizeSp == nextFontSizeSp) {
             return;
@@ -129,7 +174,7 @@ final class NiconicoCommentsOverlayView extends View {
         fontSizeSp = nextFontSizeSp;
         applyFontSize();
         if (getHeight() > 0) {
-            schedule.redistributeLanes(getLaneCount());
+            redistributeLanes();
         }
         invalidate();
     }
@@ -142,13 +187,39 @@ final class NiconicoCommentsOverlayView extends View {
         invalidate();
     }
 
+    void setDisplayAreaPercent(int nextDisplayAreaPercent) {
+        if (displayAreaPercent == nextDisplayAreaPercent) {
+            return;
+        }
+        displayAreaPercent = nextDisplayAreaPercent;
+        if (getHeight() > 0) {
+            redistributeLanes();
+        }
+        invalidate();
+    }
+
     void setTravelDurationSeconds(int seconds) {
         final long durationMs = seconds * 1000L;
         if (schedule.getCommentDurationMs() == durationMs) {
             return;
         }
         schedule.setCommentDurationMs(durationMs);
+        if (getHeight() > 0) {
+            redistributeLanes();
+        }
         invalidate();
+    }
+
+    void setHideCrowdedComments(boolean hide) {
+        schedule.setHideCrowdedComments(hide);
+    }
+
+    void setMaxRefreshRate(int nextMaxRefreshRate) {
+        if (maxRefreshRate == nextMaxRefreshRate) {
+            return;
+        }
+        maxRefreshRate = nextMaxRefreshRate;
+        requestedRefreshRate = 0;
     }
 
     void addComments(List<NiconicoComment> incoming, long liveSpreadWindowMs) {
@@ -177,16 +248,77 @@ final class NiconicoCommentsOverlayView extends View {
     }
 
     @Override
+    protected void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        NiconicoCommentsController.onConfigurationChanged(newConfig);
+    }
+
+    @Override
     protected void onSizeChanged(int width, int height, int oldWidth, int oldHeight) {
         super.onSizeChanged(width, height, oldWidth, oldHeight);
-        if (height > 0 && height != oldHeight) {
-            schedule.redistributeLanes(getLaneCount());
+        if (height > 0 && (height != oldHeight || width != oldWidth)) {
+            updateLayout();
             requestNextFrame();
         }
     }
 
+    /**
+     * Sets the scale for the current size, and places the comments again if the size they are laid out in
+     * changed by more than rounding. A resized picture-in-picture window mostly changes only the scale,
+     * and the comments keep their lanes then.
+     */
+    private void updateLayout() {
+        layoutScale = getLayoutScale();
+        if (getLaneCount() != placedLaneCount || Math.abs(getLayoutWidth() - placedWidth) > placedWidth / 100) {
+            redistributeLanes();
+        }
+    }
+
+    /**
+     * Places the comments again with the current sizes.
+     */
+    private void redistributeLanes() {
+        layoutScale = getLayoutScale();
+        // Half the font size between comments, and at least room for the backgrounds of paid messages.
+        float minGap = Math.max(fillPaint.getTextSize() / 2, 2 * backgroundPadding + strokePaint.getStrokeWidth());
+        placedWidth = getLayoutWidth();
+        placedLaneCount = getLaneCount();
+        schedule.setLayout(placedWidth, minGap, this::measureCommentWidth);
+        schedule.redistributeLanes(placedLaneCount);
+    }
+
+    @SuppressWarnings("deprecation")
+    private float getLayoutScale() {
+        Display display = getDisplay();
+        if (!pictureInPicture || display == null) {
+            return 1;
+        }
+        // The size of the display and not of the window. The maximum window metrics need Android 11.
+        Point displaySize = new Point();
+        display.getRealSize(displaySize);
+        return getPictureInPictureScale(Math.max(getWidth(), getHeight()),
+                Math.min(displaySize.x, displaySize.y), fontSizeSp);
+    }
+
+    /**
+     * Comments in picture-in-picture are laid out for a player as wide as the shorter side of the display,
+     * which the player in portrait is, and are scaled down to the window. So the window shows as many
+     * comments as that player, and the comments grow and shrink with the window.
+     *
+     * @param windowSize  Length of the longer side of the window.
+     * @param displaySize Length of the shorter side of the display.
+     * @return The scale, which keeps the comments at {@link #PIP_MIN_FONT_SIZE_SP} or larger.
+     */
+    static float getPictureInPictureScale(int windowSize, int displaySize, int fontSizeSp) {
+        if (displaySize <= 0) {
+            return 1;
+        }
+        final float minScale = (float) PIP_MIN_FONT_SIZE_SP / fontSizeSp;
+        return Math.min(1, Math.max(minScale, (float) windowSize / displaySize));
+    }
+
     @Override
-    protected void onDraw(Canvas canvas) {
+    protected void onDraw(@NonNull Canvas canvas) {
         super.onDraw(canvas);
         if (!overlayActive || videoId.isEmpty()) {
             setHighFrameRate(false);
@@ -204,11 +336,13 @@ final class NiconicoCommentsOverlayView extends View {
 
         schedule.removeExpired(videoTimeMs);
         updateEmojiDemand(videoTimeMs);
+        canvas.scale(layoutScale, layoutScale);
+        final float width = getLayoutWidth();
         int laneCount = getLaneCount();
         boolean hasActiveOrUpcomingComment = false;
         boolean hasVisibleComment = false;
         for (CommentSchedule.ScheduledComment scheduled : schedule.comments()) {
-            long elapsedMs = videoTimeMs - scheduled.startTimeMs;
+            long elapsedMs = videoTimeMs - scheduled.startTimeMs();
             if (elapsedMs < 0) {
                 hasActiveOrUpcomingComment = true;
                 continue;
@@ -216,14 +350,14 @@ final class NiconicoCommentsOverlayView extends View {
 
             hasActiveOrUpcomingComment = true;
             hasVisibleComment = true;
-            NiconicoComment comment = scheduled.comment;
+            NiconicoComment comment = scheduled.comment();
             float commentWidth = measureCommentWidth(comment);
             float progress = (float) elapsedMs / schedule.getCommentDurationMs();
-            float x = getWidth() - (progress * (getWidth() + commentWidth));
-            float y = firstBaseline + (Math.floorMod(scheduled.lane, laneCount) * laneHeight);
+            float x = width - (progress * (width + commentWidth));
+            float y = firstBaseline + (Math.floorMod(scheduled.lane(), laneCount) * laneHeight);
 
-            if (comment.backgroundColor != Color.TRANSPARENT) {
-                backgroundPaint.setColor(applyOpacity(comment.backgroundColor));
+            if (comment.backgroundColor() != Color.TRANSPARENT) {
+                backgroundPaint.setColor(applyOpacity(comment.backgroundColor()));
                 canvas.drawRoundRect(
                         x - backgroundPadding,
                         y + fontMetrics.ascent - backgroundPadding,
@@ -236,7 +370,7 @@ final class NiconicoCommentsOverlayView extends View {
             }
 
             fillPaint.setColor(applyOpacity(
-                    comment.membership ? MEMBERSHIP_COLOR : Color.WHITE
+                    comment.membership() ? MEMBERSHIP_COLOR : Color.WHITE
             ));
             strokePaint.setColor(applyOpacity(Color.BLACK));
             drawCommentSegments(canvas, comment, x, y);
@@ -249,18 +383,83 @@ final class NiconicoCommentsOverlayView extends View {
     }
 
     /**
-     * The display can lower its refresh rate to match the video frame rate (often 30 Hz),
-     * which makes the scrolling comments choppy. Request a high refresh rate only while
-     * comments are moving across the screen.
+     * The display can lower its refresh rate to match the video frame rate (often 24 or 30 Hz),
+     * which makes the scrolling comments choppy. Request the highest refresh rate for the window,
+     * up to the max refresh rate setting, only while comments are moving across the screen.
+     * <p>
+     * A view frame rate category is not used, because some devices ignore it.
      */
     private void setHighFrameRate(boolean high) {
-        if (highFrameRateRequested == high || Build.VERSION.SDK_INT < Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+        Window window = activityWindow;
+        if (window == null) {
             return;
         }
-        highFrameRateRequested = high;
-        setRequestedFrameRate(high
-                ? REQUESTED_FRAME_RATE_CATEGORY_HIGH
-                : REQUESTED_FRAME_RATE_CATEGORY_DEFAULT);
+        WindowManager.LayoutParams params = window.getAttributes();
+        // The App refresh rate setting uses a display mode, which takes priority.
+        if (params.preferredDisplayModeId != 0) {
+            return;
+        }
+        float rate = 0;
+        if (high) {
+            if (requestedRefreshRate == 0) {
+                requestedRefreshRate = findRefreshRate();
+            }
+            rate = requestedRefreshRate;
+        }
+        // Leave a refresh rate that was set by something else.
+        if (params.preferredRefreshRate == rate || params.preferredRefreshRate != windowRefreshRate) {
+            return;
+        }
+        params.preferredRefreshRate = rate;
+        windowRefreshRate = rate;
+        window.setAttributes(params);
+    }
+
+    /**
+     * @return The highest refresh rate of the current display resolution that is not above
+     *         the max refresh rate setting, or the lowest one if all are above it.
+     */
+    private float findRefreshRate() {
+        Display display = getDisplay();
+        if (display == null) {
+            return 0;
+        }
+        final float limit = maxRefreshRate >= Settings.NICONICO_COMMENTS_MAX_REFRESH_RATE_NO_LIMIT
+                ? Float.MAX_VALUE
+                : maxRefreshRate + 0.5f;
+        Display.Mode current = display.getMode();
+        float highest = 0;
+        float lowest = Float.MAX_VALUE;
+        for (Display.Mode mode : display.getSupportedModes()) {
+            if (mode.getPhysicalWidth() == current.getPhysicalWidth()
+                    && mode.getPhysicalHeight() == current.getPhysicalHeight()) {
+                float rate = mode.getRefreshRate();
+                lowest = Math.min(lowest, rate);
+                if (rate <= limit) {
+                    highest = Math.max(highest, rate);
+                }
+            }
+        }
+        return highest > 0 ? highest : lowest;
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        Context context = getContext();
+        while (context instanceof ContextWrapper && !(context instanceof Activity)) {
+            context = ((ContextWrapper) context).getBaseContext();
+        }
+        activityWindow = context instanceof Activity activity ? activity.getWindow() : null;
+        // Configuration changes are not reported while detached.
+        NiconicoCommentsController.onConfigurationChanged(getResources().getConfiguration());
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        setHighFrameRate(false);
+        activityWindow = null;
     }
 
     private void applyFontSize() {
@@ -272,8 +471,16 @@ final class NiconicoCommentsOverlayView extends View {
         firstBaseline = -fontMetrics.ascent + (12 * density);
     }
 
+    private float getLayoutWidth() {
+        return getWidth() / layoutScale;
+    }
+
+    /**
+     * @return The number of lanes that fit in the display area, which starts at the top of the player.
+     */
     private int getLaneCount() {
-        return Math.max(1, (int) ((getHeight() - firstBaseline) / laneHeight) + 1);
+        float height = getHeight() / layoutScale * displayAreaPercent / 100f;
+        return Math.max(1, (int) ((height - firstBaseline) / laneHeight) + 1);
     }
 
     private int applyOpacity(int color) {
@@ -288,7 +495,7 @@ final class NiconicoCommentsOverlayView extends View {
 
     private float measureCommentWidth(NiconicoComment comment) {
         float width = 0;
-        for (NiconicoComment.Segment segment : comment.segments) {
+        for (NiconicoComment.Segment segment : comment.segments()) {
             width += segment.isEmoji() ? fillPaint.getTextSize() : fillPaint.measureText(segment.text);
         }
         return width;
@@ -301,7 +508,7 @@ final class NiconicoCommentsOverlayView extends View {
             float baseline
     ) {
         float x = startX;
-        for (NiconicoComment.Segment segment : comment.segments) {
+        for (NiconicoComment.Segment segment : comment.segments()) {
             if (!segment.isEmoji()) {
                 canvas.drawText(segment.text, x, baseline, strokePaint);
                 canvas.drawText(segment.text, x, baseline, fillPaint);
@@ -331,8 +538,8 @@ final class NiconicoCommentsOverlayView extends View {
     private void updateEmojiDemand(long videoTimeMs) {
         neededEmojiUrls.clear();
         for (CommentSchedule.ScheduledComment scheduled : schedule.comments()) {
-            if (scheduled.startTimeMs > videoTimeMs + EMOJI_PREFETCH_MS) continue;
-            for (NiconicoComment.Segment segment : scheduled.comment.segments) {
+            if (scheduled.startTimeMs() > videoTimeMs + EMOJI_PREFETCH_MS) continue;
+            for (NiconicoComment.Segment segment : scheduled.comment().segments()) {
                 if (segment.isEmoji()) neededEmojiUrls.add(segment.imageUrl);
             }
         }
@@ -348,13 +555,13 @@ final class NiconicoCommentsOverlayView extends View {
 
         EmojiImageCache.Entry<Bitmap> state = emojiImageCache.beginLoad(imageUrl, neededEmojiUrls);
         if (state == null) return null;
-        final int generation = emojiGeneration;
+        final int generation = emojiGeneration.get();
         EMOJI_EXECUTOR.execute(() -> loadEmojiImage(imageUrl, state, generation));
         return state;
     }
 
     private void loadEmojiImage(String imageUrl, EmojiImageCache.Entry<Bitmap> state, int generation) {
-        if (generation != emojiGeneration) return;
+        if (generation != emojiGeneration.get()) return;
         HttpURLConnection connection = null;
         Bitmap bitmap = null;
         try {
@@ -378,7 +585,7 @@ final class NiconicoCommentsOverlayView extends View {
 
         Bitmap loadedBitmap = bitmap;
         post(() -> {
-            if (generation == emojiGeneration && emojiImageCache.complete(imageUrl, state, loadedBitmap)) {
+            if (generation == emojiGeneration.get() && emojiImageCache.complete(imageUrl, state, loadedBitmap)) {
                 requestNextFrame();
             }
         });

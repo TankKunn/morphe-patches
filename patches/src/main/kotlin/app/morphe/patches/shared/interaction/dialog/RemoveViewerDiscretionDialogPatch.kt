@@ -15,8 +15,8 @@ import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.opcode
-import app.morphe.patcher.patch.BytecodePatchBuilder
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.PatchDefinition
+import app.morphe.patcher.patch.patch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patches.shared.misc.settings.preference.BasePreferenceScreen
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
@@ -29,11 +29,10 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 private const val EXTENSION_CLASS =
     "Lapp/morphe/extension/shared/patches/RemoveViewerDiscretionDialogPatch;"
 
-@Suppress("unused")
 internal fun removeViewerDiscretionDialogPatch(
-    block: BytecodePatchBuilder.() -> Unit,
+    block: PatchDefinition.() -> Unit,
     preferenceScreen: BasePreferenceScreen.Screen
-) = bytecodePatch(
+) = patch(
     name = "Remove viewer discretion dialog",
     description = "Adds an option to remove the dialog that appears when opening a video that has been age-restricted " +
             "by accepting it automatically. This does not bypass the age restriction.",

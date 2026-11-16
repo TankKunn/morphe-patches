@@ -11,7 +11,6 @@ import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.InstructionLocation.MatchAfterWithin
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.methodCall
-import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.util.cloneParameters
 import app.morphe.patcher.util.numberOfParameterRegisters
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
@@ -24,7 +23,6 @@ import com.android.tools.smali.dexlib2.AccessFlags
  * @param includePlayerButtons Also hook the player Next and Previous button handler, which can load a video
  *                             from a server supplied command without reaching the navigation method.
  */
-context(patchContext: BytecodePatchContext)
 internal fun navigationIntentHook(
     extensionClass: String,
     extensionMethod: String,
@@ -32,10 +30,7 @@ internal fun navigationIntentHook(
 ) {
     val enumType = NavigationIntentEnumFingerprint.originalClassDef.type
 
-    val wrapperClassDef = Fingerprint(
-        accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
-        parameters = listOf(enumType, "L", "L")
-    ).originalClassDef
+    val wrapperClassDef = NavigationRequestFingerprint.originalClassDef
     val wrapperType = wrapperClassDef.type
     val enumField = wrapperClassDef.fields.first { it.type == enumType }
 
@@ -60,13 +55,7 @@ internal fun navigationIntentHook(
         )
     }
 
-    // Matches each implementation of the navigation method. These share no common instructions
-    // (some are empty or only delegate), so the wrapper parameter is what identifies them.
-    Fingerprint(
-        accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
-        returnType = "V",
-        parameters = listOf(wrapperType)
-    ).matchAll().forEach { hook(it.method) }
+    navigationMethodFingerprint(wrapperType).matchAll().forEach { hook(it.method) }
 
     if (includePlayerButtons) {
         hook(

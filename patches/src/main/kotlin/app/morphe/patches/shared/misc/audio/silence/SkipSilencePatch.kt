@@ -9,8 +9,8 @@ package app.morphe.patches.shared.misc.audio.silence
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
-import app.morphe.patcher.patch.BytecodePatchBuilder
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.PatchDefinition
+import app.morphe.patcher.patch.patch
 import app.morphe.patches.shared.misc.settings.preference.BasePreferenceScreen
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
@@ -20,12 +20,11 @@ import java.util.logging.Logger
 
 private const val EXTENSION_CLASS = "Lapp/morphe/extension/shared/patches/SkipSilencePatch;"
 
-@Suppress("unused")
 internal fun skipSilencePatch(
-    block: BytecodePatchBuilder.() -> Unit,
-    targetCompatible: BytecodePatchBuilder.() -> Boolean = { true },
+    block: PatchDefinition.() -> Unit,
+    targetCompatible: PatchDefinition.() -> Boolean = { true },
     preferenceScreen: BasePreferenceScreen.Screen
-) = bytecodePatch(
+) = patch(
     name = "Skip silence",
     description = "Adds an option to automatically skip silent pauses in audio playback."
 ) {
@@ -46,9 +45,6 @@ internal fun skipSilencePatch(
             )
         )
 
-        val skipSilenceField = ApplySkipSilenceFingerprint.instructionMatches[1]
-            .fieldReference
-
         ApplySkipSilenceFingerprint.apply {
             val match = instructionMatches[1]
             val booleanRegister = match.getInstruction<TwoRegisterInstruction>().registerA
@@ -62,7 +58,7 @@ internal fun skipSilencePatch(
             )
         }
 
-        setSkipSilenceEnabledFingerprint(skipSilenceField).method.addInstructions(
+        SetSkipSilenceEnabledFingerprint.method.addInstructions(
             0,
             """
                 invoke-static { p1 }, $EXTENSION_CLASS->isSkipSilenceEnabled(Z)Z

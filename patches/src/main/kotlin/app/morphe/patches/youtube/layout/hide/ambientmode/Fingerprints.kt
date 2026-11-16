@@ -3,6 +3,7 @@ package app.morphe.patches.youtube.layout.hide.ambientmode
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
 import app.morphe.patcher.InstructionLocation.MatchAfterLast
+import app.morphe.patcher.InstructionLocation.MatchAfterWithin
 import app.morphe.patcher.anyInstruction
 import app.morphe.patcher.checkCast
 import app.morphe.patcher.fieldAccess
@@ -12,7 +13,6 @@ import app.morphe.patcher.opcode
 import app.morphe.patcher.string
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
-import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 private const val GET_ACTION_METHOD_CALL = "Landroid/content/Intent;->getAction()Ljava/lang/String;"
 internal const val IS_POWER_SAVE_MODE_METHOD_CALL = "Landroid/os/PowerManager;->isPowerSaveMode()Z"
@@ -77,27 +77,33 @@ internal fun cinematicContainerPresentationStyleFingerprint(rendererType: String
 /**
  * Reads the config (field 4) of a CinematicContainerRenderer.
  */
-internal fun cinematicContainerConfigFingerprint(rendererType: String) = Fingerprint(
+internal object CinematicContainerConfigFingerprint : Fingerprint(
     filters = listOf(
         methodCall(name = "get", parameters = listOf(), returnType = "Ljava/lang/Object;"),
         opcode(Opcode.MOVE_RESULT_OBJECT, location = MatchAfterImmediately()),
-        checkCast(rendererType, location = MatchAfterImmediately()),
+        checkCast(type = { CinematicContainerRendererFingerprint.classDef }, location = MatchAfterImmediately()),
         fieldAccess(
             opcode = Opcode.IGET_OBJECT,
-            definingClass = rendererType,
+            definingClass = { CinematicContainerRendererFingerprint.classDef },
             location = MatchAfterImmediately()
         ),
     )
 )
 
 /**
+ * The type of the config of a CinematicContainerRenderer.
+ */
+private fun cinematicContainerConfigType() =
+    CinematicContainerConfigFingerprint.instructionMatches.last().fieldReference.type
+
+/**
  * Reads the 'ambient mode on by default' value (field 11) of the CinematicContainerRenderer config,
  * used if the flyout menu toggle was never changed.
  */
-internal fun cinematicContainerEnabledByDefaultFingerprint(configType: String) = Fingerprint(
+internal object CinematicContainerEnabledByDefaultFingerprint : Fingerprint(
     filters = listOf(
         // Has-bits field.
-        fieldAccess(opcode = Opcode.IGET, definingClass = configType, type = "I"),
+        fieldAccess(opcode = Opcode.IGET, definingClass = { cinematicContainerConfigType() }, type = "I"),
         anyInstruction(
             opcode(Opcode.AND_INT_LIT16), // 20.51 - 21.20
             opcode(Opcode.AND_INT_2ADDR), // 20.21, 21.21+
@@ -106,7 +112,7 @@ internal fun cinematicContainerEnabledByDefaultFingerprint(configType: String) =
         opcode(Opcode.IF_EQZ, location = MatchAfterImmediately()),
         fieldAccess(
             opcode = Opcode.IGET_BOOLEAN,
-            definingClass = configType,
+            definingClass = { cinematicContainerConfigType() },
             type = "Z",
             location = MatchAfterImmediately()
         ),
@@ -141,6 +147,22 @@ internal fun cinematicContainerRendererLoadedStateFingerprint(stateType: String)
         fieldAccess(definingClass = stateType, type = stateType, opcode = Opcode.SPUT_OBJECT),
         string("LOADED"),
         fieldAccess(definingClass = stateType, type = stateType, opcode = Opcode.SPUT_OBJECT),
+    )
+)
+
+/**
+ * Receives the Ambient mode toggle of the player flyout menu when the app resumes and whenever
+ * it changes, and saves it as the state of the menu item.
+ */
+internal object AmbientModeToggleFingerprint : Fingerprint(
+    filters = listOf(
+        checkCast("Ljava/lang/Boolean;"),
+        string("menu_item_cinematic_lighting", location = MatchAfterWithin(8)),
+        methodCall(
+            parameters = listOf("Ljava/lang/String;", "Ljava/lang/Boolean;"),
+            returnType = "V",
+            location = MatchAfterImmediately()
+        ),
     )
 )
 
@@ -249,14 +271,14 @@ internal object PowerSaveModeReceiverRegisterFingerprint : Fingerprint(
 /**
  * 21.43+ Reads the first power save mode value, then calls [PowerSaveModeReceiverRegisterFingerprint].
  */
-internal fun powerSaveModeInitialValueFingerprint(registerMethod: MethodReference) = Fingerprint(
+internal object PowerSaveModeInitialValueFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",
     parameters = listOf("Ljava/lang/Object;"),
     filters = listOf(
         checkCast("Landroid/os/PowerManager;"),
         methodCall(smali = IS_POWER_SAVE_MODE_METHOD_CALL),
-        methodCall(reference = registerMethod),
+        methodCall(reference = { PowerSaveModeReceiverRegisterFingerprint.method }),
     )
 )
 
@@ -279,6 +301,19 @@ internal object PowerSaveModeSyntheticFingerprint : Fingerprint(
     returnType = "V",
     filters = listOf(
         methodCall(smali = IS_POWER_SAVE_MODE_METHOD_CALL)
+    )
+)
+
+/**
+ * Draws the background of a view, such as a row of the playlist, and the touch feedback over it.
+ */
+internal object TouchFeedbackDrawableDrawFingerprint : Fingerprint(
+    definingClass = "Lcom/google/android/libraries/youtube/rendering/ui/spec/motion/TouchFeedbackDrawable;",
+    name = "draw",
+    returnType = "V",
+    parameters = listOf("Landroid/graphics/Canvas;"),
+    filters = listOf(
+        methodCall(smali = "Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V")
     )
 )
 

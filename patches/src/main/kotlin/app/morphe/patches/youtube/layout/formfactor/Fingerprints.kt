@@ -16,7 +16,6 @@ import app.morphe.patcher.InstructionLocation.MatchAfterWithin
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.opcode
-import app.morphe.patcher.patch.BytecodePatchContext
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
@@ -30,19 +29,33 @@ private object FormFactorEnumConstructorFingerprint : Fingerprint(
     )
 )
 
-internal fun BytecodePatchContext.getInnerTubeClientConfigFingerprint() = object : Fingerprint(
+internal object InnerTubeClientConfigFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "L",
     parameters = listOf(),
     filters = listOf(
         fieldAccess(smali = "Landroid/os/Build;->MODEL:Ljava/lang/String;"),
         fieldAccess(
-            definingClass = FormFactorEnumConstructorFingerprint.originalClassDef.type,
+            definingClass = { FormFactorEnumConstructorFingerprint.originalClassDef.type },
             type = "I",
             location = MatchAfterWithin(50)
         )
     )
-) {}
+)
+
+private object ResponsiveContainerPropertiesToStringFingerprint : Fingerprint(
+    name = "toString",
+    strings = listOf("ResponsiveContainerProperties{usingResponsiveContainerConfiguration=")
+)
+
+/**
+ * Picks the responsive container properties by the width and height of a container.
+ * Since 21.30 the home feed lays out its items by the size class of the picked properties.
+ */
+internal object ResponsiveContainerPropertiesFingerprint : Fingerprint(
+    returnType = { ResponsiveContainerPropertiesToStringFingerprint.originalClassDef.type },
+    parameters = listOf("I", "I")
+)
 
 internal object RepeatedItemSectionRendererFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),

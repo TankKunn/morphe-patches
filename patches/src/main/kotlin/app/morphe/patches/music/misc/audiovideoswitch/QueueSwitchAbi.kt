@@ -7,7 +7,6 @@
 
 package app.morphe.patches.music.misc.audiovideoswitch
 
-import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patches.music.interaction.jam.ProtoAbi
 import app.morphe.patches.music.interaction.jam.QueueEnqueueFingerprint
 import app.morphe.patches.music.interaction.jam.QueueStorageAbi
@@ -40,7 +39,7 @@ internal data class AudioVideoQueueAbi(
     val videoId: MethodReference,
 )
 
-internal fun BytecodePatchContext.resolveAudioVideoQueue(): AudioVideoQueueAbi {
+internal fun resolveAudioVideoQueue(): AudioVideoQueueAbi {
     val queueMatch = QueueEnqueueFingerprint.match()
     val manager = queueMatch.originalClassDef
     val enqueue = queueMatch.originalMethod
@@ -51,7 +50,7 @@ internal fun BytecodePatchContext.resolveAudioVideoQueue(): AudioVideoQueueAbi {
     val constructor = queueManagerConstructorFingerprint(manager.type).originalMethod
     val executor = manager.fields.singleOrNull { it.type == EXECUTOR }
         ?: error("Missing or ambiguous audio/video switch queue executor")
-    val storage = resolveStorage(manager, enqueue)
+    val storage = resolveStorage(manager)
     val displays = resolveDisplays(manager, constructor, storage)
     val remove = queueRemovalFingerprint(manager.type, displays).originalMethod
     val itemType = remove.parameterTypes.singleOrNull()?.toString()
@@ -63,8 +62,7 @@ internal fun BytecodePatchContext.resolveAudioVideoQueue(): AudioVideoQueueAbi {
             .matchAll()
             .groupBy { it.originalClassDef.type }
             .values
-            .filter { it.size == 1 }
-            .singleOrNull()
+            .singleOrNull { it.size == 1 }
             ?.single()
             ?.originalMethod
             ?: error("Missing or ambiguous audio/video switch queue video ID")

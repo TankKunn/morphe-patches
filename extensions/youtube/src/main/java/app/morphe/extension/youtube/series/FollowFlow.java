@@ -11,12 +11,18 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.text.InputType;
+import android.text.TextUtils;
+import android.view.Gravity;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import java.util.concurrent.Future;
 import java.util.function.Consumer;
+
+import app.morphe.extension.shared.misc.MediaTime;
 
 /** One follow action resolves the catalog and its title. No rename or manual loading step. */
 final class FollowFlow {
@@ -29,11 +35,11 @@ final class FollowFlow {
     private final CheckBox record;
     private boolean busy, finished;
     private final long consentGeneration;
-    private java.util.concurrent.Future<?> preview;
+    private Future<?> preview;
     private final String startVideo;
     private String id = "";
     private CatalogClient.Catalog catalog;
-    private CheckBox watchedBefore;
+    private CheckBox watchedBefore, watchedOnAdvance;
     private TextView order, resume;
     private boolean reverse, orderChosen;
 
@@ -78,9 +84,11 @@ final class FollowFlow {
             record.setEnabled(RecordingPrivacy.canEnable());
             sheet.body.addView(record);
         } else record = null;
+        // Following from a playlist saves right after loading, unless the sheet waits for a tap.
+        if (startVideo.isEmpty() && (link != null || explain)) watchedOnAdvanceOption();
         consentGeneration = RecordingPrivacy.generation();
         status = sheet.message("");
-        status.setVisibility(android.view.View.GONE);
+        status.setVisibility(View.GONE);
         sheet.action("morphe_series_tracker_ui_cancel", sheet.dialog::dismiss, false);
         follow = sheet.action("morphe_series_tracker_follow", this::follow, true);
         sheet.show();
@@ -113,7 +121,7 @@ final class FollowFlow {
         busy = true;
         follow.setEnabled(false);
         if (link != null) link.setEnabled(false);
-        status.setVisibility(android.view.View.VISIBLE);
+        status.setVisibility(View.VISIBLE);
         status.setText(UiText.get("morphe_series_tracker_ui_loading_episodes"));
         service.library(
                 rows -> {
@@ -210,7 +218,7 @@ final class FollowFlow {
                     id,
                     name,
                     catalog,
-                    new FollowStart("", -1, reverse, false),
+                    new FollowStart("", -1, reverse, false, watchedOnAdvance()),
                     -1,
                     saved,
                     this::failure);
@@ -227,7 +235,8 @@ final class FollowFlow {
                             startVideo,
                             position,
                             reverse,
-                            watchedBefore != null && watchedBefore.isChecked()),
+                            watchedBefore != null && watchedBefore.isChecked(),
+                            watchedOnAdvance()),
                     generation,
                     saved,
                     this::failure);
@@ -239,7 +248,7 @@ final class FollowFlow {
             resume = sheet.message("");
             order = NativeSheet.button(
                     activity, "morphe_series_tracker_playlist_order", this::chooseOrder, false);
-            order.setGravity(android.view.Gravity.START | android.view.Gravity.CENTER_VERTICAL);
+            order.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
             order.setPadding(0, HistoryUi.dp(6), 0, HistoryUi.dp(6));
             order.setCompoundDrawablesRelative(
                     null,
@@ -251,7 +260,7 @@ final class FollowFlow {
                     null);
             order.setCompoundDrawablePadding(HistoryUi.dp(8));
             order.setMaxLines(2);
-            order.setEllipsize(android.text.TextUtils.TruncateAt.END);
+            order.setEllipsize(TextUtils.TruncateAt.END);
             sheet.body.addView(order);
             watchedBefore = new CheckBox(activity);
             watchedBefore.setText(UiText.get("morphe_series_tracker_watch_previous"));
@@ -260,18 +269,33 @@ final class FollowFlow {
             watchedBefore.setMinHeight(HistoryUi.dp(48));
             watchedBefore.setChecked(false);
             sheet.body.addView(watchedBefore);
+            watchedOnAdvanceOption();
         }
-        order.setVisibility(android.view.View.VISIBLE);
+        order.setVisibility(View.VISIBLE);
+        watchedOnAdvance.setVisibility(View.VISIBLE);
         long position =
                 RecordingPrivacy.canEnable()
                         ? FollowStart.position(PlaybackBridge.source(), startVideo)
                         : -1;
-        resume.setVisibility(position >= 0 ? android.view.View.VISIBLE : android.view.View.GONE);
+        resume.setVisibility(position >= 0 ? View.VISIBLE : View.GONE);
         if (position >= 0) {
             resume.setText(UiText.format(
-                    "morphe_series_tracker_resume_at", ResumePlanner.time(position)));
+                    "morphe_series_tracker_resume_at", MediaTime.format(position)));
         }
         updateOrder();
+    }
+
+    private void watchedOnAdvanceOption() {
+        watchedOnAdvance = new CheckBox(activity);
+        watchedOnAdvance.setText(UiText.get("morphe_series_tracker_watched_on_advance"));
+        watchedOnAdvance.setTextColor(HistoryUi.foreground());
+        watchedOnAdvance.setTextSize(14);
+        watchedOnAdvance.setMinHeight(HistoryUi.dp(48));
+        sheet.body.addView(watchedOnAdvance);
+    }
+
+    private boolean watchedOnAdvance() {
+        return watchedOnAdvance != null && watchedOnAdvance.isChecked();
     }
 
     private void updateOrder() {
@@ -279,7 +303,7 @@ final class FollowFlow {
         order.setText(UiText.format("morphe_series_tracker_order_starts_with",
                 first == null ? "" : UiText.episodeTitle(first)));
         final boolean previous = !FollowStart.previous(catalog.episodes(), startVideo, reverse).isEmpty();
-        watchedBefore.setVisibility(previous ? android.view.View.VISIBLE : android.view.View.GONE);
+        watchedBefore.setVisibility(previous ? View.VISIBLE : View.GONE);
         if (!previous) watchedBefore.setChecked(false);
     }
 
@@ -296,7 +320,7 @@ final class FollowFlow {
             option.setText(UiText.get(labels[i])
                     + (first == null ? "" : "\n" + UiText.episodeTitle(first)));
             option.setMaxLines(3);
-            option.setEllipsize(android.text.TextUtils.TruncateAt.END);
+            option.setEllipsize(TextUtils.TruncateAt.END);
             option.setPadding(0, HistoryUi.dp(8), 0, HistoryUi.dp(8));
             option.setTextColor(HistoryUi.foreground());
             option.setTextSize(16);
@@ -325,15 +349,16 @@ final class FollowFlow {
         catalog = null;
         if (watchedBefore != null) {
             watchedBefore.setChecked(false);
-            watchedBefore.setVisibility(android.view.View.GONE);
-            order.setVisibility(android.view.View.GONE);
-            resume.setVisibility(android.view.View.GONE);
+            watchedBefore.setVisibility(View.GONE);
+            order.setVisibility(View.GONE);
+            resume.setVisibility(View.GONE);
+            watchedOnAdvance.setVisibility(View.GONE);
         }
         follow.setText(UiText.get("morphe_series_tracker_follow"));
         follow.setOnClickListener(v -> follow());
         follow.setEnabled(true);
         if (link != null) link.setEnabled(true);
-        status.setVisibility(android.view.View.VISIBLE);
+        status.setVisibility(View.VISIBLE);
         status.setText(UiText.get(message));
     }
 }

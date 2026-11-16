@@ -46,6 +46,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         this(context, DATABASE);
     }
 
+    @SuppressWarnings("SameParameterValue")
     TrackerRepository(Context context, String name) {
         super(context, name, null, VERSION);
         setWriteAheadLoggingEnabled(true);
@@ -58,7 +59,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
 
     @java.lang.Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)");
+        db.execSQL("CREATE TABLE meta (\"key\" TEXT PRIMARY KEY, value TEXT NOT NULL)");
         db.execSQL(
                 "INSERT INTO meta VALUES ('history_epoch',?),('manual_revision','0')",
                 new Object[] {UUID.randomUUID().toString()});
@@ -99,7 +100,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
     }
 
     public String historyEpoch() {
-        return scalar("SELECT value FROM meta WHERE key='history_epoch'");
+        return scalar("SELECT value FROM meta WHERE \"key\"='history_epoch'");
     }
 
     public void recoverInterruptedFetches() {
@@ -115,16 +116,16 @@ public final class TrackerRepository extends SQLiteOpenHelper {
     }
 
     private String meta(String key, String id) {
-        return scalar("SELECT value FROM meta WHERE key=?", key + ":" + id);
+        return scalar("SELECT value FROM meta WHERE \"key\"=?", key + ":" + id);
     }
 
     private void meta(String key, String id, String value) {
         if (value.isEmpty())
-            getWritableDatabase().delete("meta", "key=?", new String[] {key + ":" + id});
+            getWritableDatabase().delete("meta", "\"key\"=?", new String[] {key + ":" + id});
         else
             getWritableDatabase()
                     .execSQL(
-                            "INSERT OR REPLACE INTO meta(key,value) VALUES (?,?)",
+                            "INSERT OR REPLACE INTO meta(\"key\",value) VALUES (?,?)",
                             new Object[] {key + ":" + id, value});
     }
 
@@ -159,8 +160,8 @@ public final class TrackerRepository extends SQLiteOpenHelper {
 
     private long nextEditRevision() {
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("UPDATE meta SET value=CAST(value AS INTEGER)+1 WHERE key='manual_revision'");
-        return Long.parseLong(scalar("SELECT value FROM meta WHERE key='manual_revision'"));
+        db.execSQL("UPDATE meta SET value=CAST(value AS INTEGER)+1 WHERE \"key\"='manual_revision'");
+        return Long.parseLong(scalar("SELECT value FROM meta WHERE \"key\"='manual_revision'"));
     }
 
     public Progress progress(String id) {
@@ -268,7 +269,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
     }
 
     long manualRevision() {
-        return Long.parseLong(scalar("SELECT value FROM meta WHERE key='manual_revision'"));
+        return Long.parseLong(scalar("SELECT value FROM meta WHERE \"key\"='manual_revision'"));
     }
 
     void mergeRemote(
@@ -463,6 +464,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                             .count(),
                     "true".equals(meta("reverse_order", id)),
                     "true".equals(meta("hide_watched", id)),
+                    "true".equals(meta("watched_on_advance", id)),
                     meta("recovery_next", id));
         }
     }
@@ -474,7 +476,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             CatalogClient.Catalog catalog,
             String startVideo,
             long now) {
-        saveSeries(id, name, bookmark, catalog, new FollowStart(startVideo, -1, false, false), now);
+        saveSeries(id, name, bookmark, catalog, new FollowStart(startVideo, -1, false, false, false), now);
     }
 
     void saveSeries(
@@ -509,6 +511,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             db.insertOrThrow("series", null, row);
             if (catalog != null) replaceCatalog(id, catalog, now);
             meta("reverse_order", id, selection.reverse() ? "true" : "");
+            meta("watched_on_advance", id, selection.watchedOnAdvance() ? "true" : "");
             if (start != null) {
                 if (selection.watchedBefore()) {
                     Set<String> previous =
@@ -567,6 +570,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                         ticket.epoch));
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public boolean publish(FetchTicket ticket, CatalogClient.Catalog catalog, long now) {
         SQLiteDatabase db = getWritableDatabase();
         db.beginTransaction();
@@ -755,7 +759,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             try (Cursor starts =
                     db.rawQuery(
                             "SELECT playlist_id FROM series WHERE cursor_id IN"
-                                    + " (SELECT value FROM meta WHERE key LIKE 'start_here:%')",
+                                    + " (SELECT value FROM meta WHERE \"key\" LIKE 'start_here:%')",
                             null)) {
                 while (starts.moveToNext()) {
                     Series candidate = series(starts.getString(0));
@@ -770,7 +774,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                 before.put(id, progress(id).override());
                 ensureProgress(id);
                 if (override == TrackerModels.Override.WATCHED)
-                    db.delete("meta", "key LIKE 'start_here:%' AND value=?", new String[] {id});
+                    db.delete("meta", "\"key\" LIKE 'start_here:%' AND value=?", new String[] {id});
                 db.execSQL(
                         "UPDATE video_progress SET"
                             + " completion_override=?,edit_revision=?,edited_at=? WHERE video_id=?",
@@ -866,7 +870,8 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         return !meta("episode_info", id).isEmpty();
     }
 
-    public void seriesOptions(String id, long revision, boolean reverse, boolean hideWatched) {
+    public void seriesOptions(String id, long revision, boolean reverse, boolean hideWatched,
+                              boolean watchedOnAdvance) {
         SQLiteDatabase db = getWritableDatabase();
         db.beginTransaction();
         try {
@@ -875,12 +880,45 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                 throw new IllegalStateException("morphe_series_tracker_error_playlist_changed");
             meta("reverse_order", id, reverse ? "true" : "");
             meta("hide_watched", id, hideWatched ? "true" : "");
+            meta("watched_on_advance", id, watchedOnAdvance ? "true" : "");
             if (old.reverseOrder() != reverse && old.complete())
                 db.execSQL(
                         "UPDATE series SET catalog_revision=catalog_revision+1,cursor_revision=CASE"
                             + " WHEN cursor_revision=catalog_revision THEN catalog_revision+1 ELSE"
                             + " cursor_revision END WHERE playlist_id=?",
                         new Object[] {id});
+            db.setTransactionSuccessful();
+        } finally {
+            db.endTransaction();
+        }
+    }
+
+    /**
+     * Marks the previous video watched, if the video is the next episode after it in a series
+     * with the option on. The saved position is kept.
+     */
+    void markWatchedOnAdvance(String previous, String video, String historyEpoch) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.beginTransaction();
+        try {
+            if (!historyEpoch().equals(historyEpoch)) return;
+            List<String> ids = new ArrayList<>();
+            try (Cursor c = db.rawQuery(
+                    "SELECT DISTINCT a.playlist_id FROM catalog_entry a JOIN catalog_entry b ON"
+                            + " a.playlist_id=b.playlist_id WHERE a.video_id=? AND a.available=1"
+                            + " AND b.video_id=? AND b.available=1 AND EXISTS (SELECT 1 FROM meta"
+                            + " WHERE \"key\"='watched_on_advance:' || a.playlist_id)",
+                    new String[]{previous, video})) {
+                while (c.moveToNext()) ids.add(c.getString(0));
+            }
+            for (String id : ids) {
+                if (ResumePlanner.isNext(series(id), previous, video)) {
+                    db.execSQL(
+                            "UPDATE video_progress SET auto_completed=1 WHERE video_id=?",
+                            new Object[] {previous});
+                    break;
+                }
+            }
             db.setTransactionSuccessful();
         } finally {
             db.endTransaction();
@@ -949,6 +987,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                         });
                 meta("reverse_order", s.id(), s.reverseOrder() ? "true" : "");
                 meta("hide_watched", s.id(), s.hideWatched() ? "true" : "");
+                meta("watched_on_advance", s.id(), s.watchedOnAdvance() ? "true" : "");
                 meta("start_here", s.id(), s.startHere() ? s.cursorId() : "");
                 meta("recovery_next", s.id(), s.recoveryId());
                 for (Progress p : s.progress().values()) {
@@ -983,6 +1022,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             meta("start_here", id, "");
             meta("reverse_order", id, "");
             meta("hide_watched", id, "");
+            meta("watched_on_advance", id, "");
             meta("episode_info", id, "");
             meta("new_episodes", id, "");
             meta("recovery_next", id, "");
@@ -1001,19 +1041,19 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         db.beginTransaction();
         try {
             db.execSQL(
-                    "INSERT OR REPLACE INTO meta(key,value) SELECT 'native_clear:' || video_id, '1'"
+                    "INSERT OR REPLACE INTO meta(\"key\",value) SELECT 'native_clear:' || video_id, '1'"
                         + " FROM catalog_entry WHERE video_id<>''");
             db.execSQL(
-                    "INSERT OR REPLACE INTO meta(key,value) SELECT 'native_clear:' || bookmark_id,"
+                    "INSERT OR REPLACE INTO meta(\"key\",value) SELECT 'native_clear:' || bookmark_id,"
                         + " '1' FROM series WHERE bookmark_id<>''");
             db.delete("video_progress", null, null);
             db.execSQL(
-                    "DELETE FROM meta WHERE key LIKE 'start_here:%' OR key LIKE 'recovery_next:%'");
+                    "DELETE FROM meta WHERE \"key\" LIKE 'start_here:%' OR \"key\" LIKE 'recovery_next:%'");
             db.execSQL(
                     "UPDATE series SET"
                             + " cursor_id='',cursor_ordinal=-1,cursor_revision=0,bookmark_id=''");
             db.execSQL(
-                    "UPDATE meta SET value=? WHERE key='history_epoch'", new Object[] {newEpoch});
+                    "UPDATE meta SET value=? WHERE \"key\"='history_epoch'", new Object[] {newEpoch});
             db.setTransactionSuccessful();
         } finally {
             db.endTransaction();
@@ -1023,10 +1063,10 @@ public final class TrackerRepository extends SQLiteOpenHelper {
     private void pruneNativeBaselines() {
         for (String prefix : new String[]{"native_seen:", "native_clear:"})
             getWritableDatabase().execSQL(
-                    "DELETE FROM meta WHERE key LIKE ? AND NOT EXISTS (SELECT 1 FROM"
-                            + " catalog_entry WHERE video_id=substr(meta.key,?)) AND NOT EXISTS"
-                            + " (SELECT 1 FROM series WHERE cursor_id=substr(meta.key,?) OR"
-                            + " bookmark_id=substr(meta.key,?))",
+                    "DELETE FROM meta WHERE \"key\" LIKE ? AND NOT EXISTS (SELECT 1 FROM"
+                            + " catalog_entry WHERE video_id=substr(meta.\"key\",?)) AND NOT EXISTS"
+                            + " (SELECT 1 FROM series WHERE cursor_id=substr(meta.\"key\",?) OR"
+                            + " bookmark_id=substr(meta.\"key\",?))",
                     new Object[]{
                             prefix + "%",
                             prefix.length() + 1,

@@ -51,11 +51,11 @@ internal object FullBleedChromeStateToStringFingerprint : Fingerprint(
 /**
  * Creates the media viewer chrome state of a post, when it is shown in the media viewer.
  */
-internal fun createFullBleedChromeStateFingerprint(chromeStateType: String) = Fingerprint(
-    returnType = chromeStateType,
+internal object CreateFullBleedChromeStateFingerprint : Fingerprint(
+    returnType = { FullBleedChromeStateToStringFingerprint.originalClassDef.type },
     parameters = listOf("Lcom/reddit/domain/model/Link;", "L", "Ljava/lang/String;", "Ljava/lang/String;"),
     filters = listOf(
-        newInstance(chromeStateType)
+        newInstance(type = { FullBleedChromeStateToStringFingerprint.originalClassDef.type })
     )
 )
 
@@ -233,6 +233,13 @@ internal object MediaViewerChromeLegacyFingerprint : Fingerprint(
 
 // Color.copy(alpha) calls that construct the fade's color stops.
 internal val mediaViewerFadeAlphaFilter = methodCall(
+    parameters = listOf("F", "J"),
+    returnType = "J",
+    opcodes = listOf(Opcode.INVOKE_STATIC, Opcode.INVOKE_STATIC_RANGE)
+)
+
+// Color.copy(alpha) calls before 2026.45.0, with the alpha as the last parameter.
+internal val mediaViewerFadeAlphaLegacyFilter = methodCall(
     parameters = listOf("J", "F"),
     returnType = "J",
     opcodes = listOf(Opcode.INVOKE_STATIC, Opcode.INVOKE_STATIC_RANGE)

@@ -20,10 +20,7 @@ import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_35_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_39_or_greater
-import app.morphe.patches.youtube.misc.playservice.is_21_02_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_11_or_greater
-import app.morphe.patches.youtube.misc.playservice.is_21_20_or_greater
-import app.morphe.patches.youtube.misc.playservice.is_21_41_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
@@ -32,19 +29,11 @@ import app.morphe.patches.youtube.shared.YouTubeActivityOnCreateFingerprint
 
 val spoofVideoStreamsPatch = spoofVideoStreamsPatch(
     extensionClass = "Lapp/morphe/extension/youtube/patches/spoof/SpoofVideoStreamsPatch;",
+    mainActivityFingerprint = YouTubeActivityOnCreateFingerprint,
     mainActivityOnCreateFingerprints = listOf(
         YouTubeActivityOnCreateFingerprint,
         YouTubeApplicationInitFingerprint
     ),
-    fixCronetOnesie = {
-        // 21.41 removed the stream config replacement flag,
-        // and the native player always sends the Onesie request.
-        is_21_41_or_greater
-    },
-    fixMediaFetchHotConfigAlternative = {
-        // In 20.14 the flag was merged with 20.03 start playback flag.
-        false
-    },
     fixParsePlaybackResponseFeatureFlag = {
         true
     },
@@ -58,8 +47,6 @@ val spoofVideoStreamsPatch = spoofVideoStreamsPatch(
     },
     // 21.11 and 21.12 do not have the cuepoint list class, and pass the cuepoint list as bytes.
     restoreMissingCuepointMethod = { is_20_35_or_greater && !is_21_11_or_greater },
-    patchProtoRequest = { is_21_02_or_greater },
-    patchProtoRequestLegacy = { !is_21_20_or_greater },
 
     block = {
         compatibleWith(COMPATIBILITY_YOUTUBE)
@@ -94,6 +81,11 @@ val spoofVideoStreamsPatch = spoofVideoStreamsPatch(
                     NonInteractivePreference(
                         key = "morphe_spoof_video_streams_sign_in_android_vr_about",
                         tag = "app.morphe.extension.youtube.settings.preference.SpoofVideoStreamsSignInPreference",
+                        selectable = true,
+                    ),
+                    NonInteractivePreference(
+                        key = "morphe_spoof_video_streams_sign_in_mweb_about",
+                        tag = "app.morphe.extension.youtube.settings.preference.SpoofVideoStreamsMwebSignInPreference",
                         selectable = true,
                     ),
                     SwitchPreference("morphe_spoof_video_streams_av1", summary = true),

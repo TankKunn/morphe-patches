@@ -38,6 +38,7 @@ import app.morphe.extension.music.patches.lyrics.model.Word;
 import app.morphe.extension.music.patches.lyrics.parsers.KRCParser;
 import app.morphe.extension.music.patches.lyrics.parsers.LRCParser;
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.requests.Requester;
 
 /**
@@ -295,8 +296,7 @@ public final class KuGouProvider implements LyricsProvider {
         for (int i = 0, length = entry.length(); i < length; i++) {
             String part = entry.optString(i, "").trim();
             if (!part.isEmpty()) {
-                //noinspection SizeReplaceableByIsEmpty
-                if (builder.length() > 0) {
+                if (Utils.isNotEmpty(builder)) {
                     builder.append(' ');
                 }
                 builder.append(part);
@@ -441,8 +441,8 @@ public final class KuGouProvider implements LyricsProvider {
         }
 
         return new Lyrics(decoded.lines(), name(), true, decoded.attachedRomanization(),
-                decoded.translations(), null, decoded.creditLines(), decoded.rawFormat(),
-                decoded.formatType(), sourceUrl);
+                decoded.translations(), null, null, decoded.creditLines(), decoded.rawFormat(),
+                decoded.formatType(), sourceUrl, null, null);
     }
 
     @Nullable

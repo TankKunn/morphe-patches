@@ -13,7 +13,7 @@ package app.morphe.patches.youtube.layout.formfactor
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.patch
 import app.morphe.patcher.util.findFreeRegister
 import app.morphe.patcher.util.registersUsed
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
@@ -31,8 +31,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 private const val EXTENSION_CLASS =
     "Lapp/morphe/extension/youtube/patches/ChangeFormFactorPatch;"
 
-@Suppress("unused")
-val changeFormFactorPatch = bytecodePatch(
+val changeFormFactorPatch = patch(
     name = "Change form factor",
     description = "Adds an option to change the UI appearance to a phone, tablet, or automotive device.",
 ) {
@@ -51,7 +50,7 @@ val changeFormFactorPatch = bytecodePatch(
             ListPreference("morphe_change_form_factor")
         )
 
-        getInnerTubeClientConfigFingerprint().let {
+        InnerTubeClientConfigFingerprint.let {
             it.method.apply {
                 val index = it.instructionMatches.last().index
                 val register = getInstruction<TwoRegisterInstruction>(index).registerA
@@ -77,6 +76,14 @@ val changeFormFactorPatch = bytecodePatch(
                 "$EXTENSION_CLASS->replaceBrokenFormFactor(I)I",
             )
         }
+
+        ResponsiveContainerPropertiesFingerprint.method.addInstructions(
+            0,
+            """
+                invoke-static/range { p1 .. p1 }, $EXTENSION_CLASS->getResponsiveContainerWidth(I)I
+                move-result p1
+            """
+        )
 
         RepeatedItemSectionRendererFingerprint.let {
             it.method.apply {

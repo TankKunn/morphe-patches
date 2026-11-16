@@ -20,6 +20,9 @@ import org.w3c.dom.NodeList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
+import java.util.LinkedHashSet;
+import java.util.function.BooleanSupplier;
 import java.util.Locale;
 import java.text.BreakIterator;
 
@@ -28,6 +31,8 @@ import app.morphe.extension.shared.Logger;
 /** Source-timed complete blocks; the renderer supplies the actual two-line capacity. */
 final class StableCaptionBlockPolicy {
     static final int MAX_ATOMS = 20000, MAX_BLOCK_CHARS = 512;
+    private static final int MAX_NATIVE_EVENTS = 80000;
+    private static final long MAX_NATIVE_CUE_SAMPLES = 1000000;
     static final long MAX_PREVIEW_MS = 8000, MIN_DURATION_MS = 1500, MAX_GAP_MS = 2000;
 
     /**
@@ -42,6 +47,7 @@ final class StableCaptionBlockPolicy {
         boolean fits(String text);
     }
 
+    @SuppressWarnings("ClassCanBeRecord")
     static final class Block {
         final long start, end;
         final String text;
@@ -55,6 +61,7 @@ final class StableCaptionBlockPolicy {
         }
     }
 
+    @SuppressWarnings("ClassCanBeRecord")
     private static final class Atom {
         final long start, end;
         final String text;
@@ -124,6 +131,49 @@ final class StableCaptionBlockPolicy {
         return parse(document, false, true);
     }
 
+    /** Uses native complete cue text for translation; word-reveal events do not become fragments. */
+    @Nullable
+    static StableCaptionBlockPolicy fromNative(StableCaptionBlocks.Timeline timeline,
+                                               BooleanSupplier current) {
+        List<Long> times = timeline.patch_getCaptionEventTimes();
+        if (times.size() < 2 || times.size() > MAX_NATIVE_EVENTS) return null;
+        List<Atom> atoms = new ArrayList<>();
+        for (int i = 0; i < times.size() - 1; i++) {
+            if ((i & 63) == 0 && !current.getAsBoolean()) return null;
+            long start = times.get(i), end = times.get(i + 1);
+            if (start < 0 || end <= start) return null;
+            List<?> cues = timeline.patch_getOriginalCaptions(start);
+            if (cues == null || (long) cues.size() * times.size() > MAX_NATIVE_CUE_SAMPLES) return null;
+            Set<String> texts = new LinkedHashSet<>();
+            int characters = 0;
+            for (Object item : cues) {
+                if (!(item instanceof StableCaptionBlocks.Cue cue) || !cue.patch_isCaptionVisible()) continue;
+                CharSequence full = cue.patch_getOriginalCaptionFull();
+                if (full == null) continue;
+                if (full.length() > 4096) return null;
+                String text = full.toString().replace("\u200b", "").replace("\ufeff", "")
+                        .replaceAll("\\s+", " ").strip();
+                if (!text.isEmpty() && texts.add(text)) {
+                    characters += text.length() + (texts.size() == 1 ? 0 : 1);
+                    if (characters > 4096) return null;
+                }
+            }
+            String text = String.join(" ", texts);
+            if (text.isEmpty()) continue;
+            if (!atoms.isEmpty()) {
+                Atom last = atoms.get(atoms.size() - 1);
+                if (last.end == start && last.text.equals(text)) {
+                    atoms.set(atoms.size() - 1, new Atom(last.start, end, text, true));
+                    continue;
+                }
+            }
+            if (atoms.size() >= MAX_ATOMS) return null;
+            atoms.add(new Atom(start, end, text, true));
+        }
+        return atoms.isEmpty() ? null : new StableCaptionBlockPolicy(atoms);
+    }
+
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private static boolean defaultValue(Element element, String name, String value) {
         return !element.hasAttribute(name) || element.getAttribute(name).equals(value);
     }
@@ -252,6 +302,7 @@ final class StableCaptionBlockPolicy {
     /**
      * @return False if the source is too complex for stable blocks.
      */
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private static boolean add(
             List<Atom> atoms,
             long time,
@@ -310,6 +361,7 @@ final class StableCaptionBlockPolicy {
         return new Block(atoms.get(from).start, end, text(from, to), fits);
     }
 
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private boolean boundary(int at) {
         if (at >= atoms.size() || atoms.get(at).barrierBefore) return true;
         if (!boundaries[at]) return false;
@@ -368,11 +420,10 @@ final class StableCaptionBlockPolicy {
                 if (!boundary(to)) continue;
                 Block candidate = block(from, to, true);
                 long duration = candidate.end - candidate.start;
-                if (duration <= 0 || source && (duration > MAX_PREVIEW_MS
-                        || to > from + 1
-                        && candidate.text.codePointCount(0, candidate.text.length()) > MAX_MULTI_ATOM_SOURCE_CHARS)) continue;
-                long missing = shortfall(candidate) + shortfall[to];
                 int chars = candidate.text.codePointCount(0, candidate.text.length());
+                if (duration <= 0 || source && (duration > MAX_PREVIEW_MS
+                        || to > from + 1 && chars > MAX_MULTI_ATOM_SOURCE_CHARS)) continue;
+                long missing = shortfall(candidate) + shortfall[to];
                 // Relative reading load, not a language-specific characters-per-second limit.
                 char last = candidate.text.charAt(candidate.text.length() - 1);
                 double value =
@@ -453,6 +504,7 @@ final class StableCaptionBlockPolicy {
         return s.matches("[0-9]{1,10}") ? Long.parseLong(s) : -1;
     }
 
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private static boolean attributes(Element e, String... allowed) {
         List<String> keys = Arrays.asList(allowed);
         NamedNodeMap a = e.getAttributes();

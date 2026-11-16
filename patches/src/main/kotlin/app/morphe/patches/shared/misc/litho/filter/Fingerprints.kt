@@ -13,6 +13,7 @@ package app.morphe.patches.shared.misc.litho.filter
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
 import app.morphe.patcher.InstructionLocation.MatchAfterWithin
+import app.morphe.patcher.anyInstruction
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
@@ -214,5 +215,211 @@ internal object ListSectionUpdateRowsFingerprint : Fingerprint(
             returnType = "V",
             parameters = listOf()
         )
+    )
+)
+
+/**
+ * Constructor of the item of an element in a list, such as a card of the feed or a cell of a grid,
+ * which keeps the bytes of the element.
+ */
+internal object ElementItemConstructorFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.CONSTRUCTOR),
+    returnType = "V",
+    parameters = listOf("L"),
+    filters = listOf(
+        methodCall(
+            opcode = Opcode.INVOKE_STATIC,
+            returnType = "[B"
+        ),
+        fieldAccess(
+            opcode = Opcode.IPUT_OBJECT,
+            type = "[B",
+            location = MatchAfterWithin(1)
+        ),
+        opcode(Opcode.CONST_4, MatchAfterImmediately()),
+        opcode(Opcode.IPUT_OBJECT, MatchAfterImmediately()),
+        opcode(Opcode.RETURN_VOID, MatchAfterImmediately())
+    )
+)
+
+// region Sticky headers
+
+/**
+ * Updates the sticky headers of a list, such as the related video chips of the watch page.
+ */
+internal object StickyHeadersFingerprint : Fingerprint(
+    returnType = "V",
+    parameters = listOf(),
+    filters = listOf(
+        anyInstruction(
+            string("A LinearLayoutManager or FlowLayoutManager is required for sticky headers to work"),
+            // 21.23 and lower.
+            string("A LinearLayoutManager is required for sticky headers to work")
+        )
+    )
+)
+
+/**
+ * Restores the alpha and the visibility of the list item hidden while its sticky copy is shown.
+ */
+internal object StickyHeaderRestoreItemFingerprint : Fingerprint(
+    classFingerprint = StickyHeadersFingerprint,
+    returnType = "V",
+    parameters = listOf(),
+    filters = listOf(
+        fieldAccess(opcode = Opcode.IGET_OBJECT, definingClass = "this", type = "Landroid/view/View;"),
+        // Alpha of the item before it was hidden.
+        fieldAccess(opcode = Opcode.IGET, definingClass = "this", type = "F", location = MatchAfterWithin(3)),
+        methodCall(definingClass = "Landroid/view/View;", name = "setAlpha", location = MatchAfterImmediately()),
+        methodCall(definingClass = "Landroid/view/View;", name = "setVisibility")
+    )
+)
+
+/**
+ * Creates the sticky copy of the header, at the position saved when the copy was posted.
+ */
+internal fun stickyHeaderCreateFingerprint(stickyHeadersType: String) = Fingerprint(
+    name = "run",
+    returnType = "V",
+    parameters = listOf(),
+    filters = listOf(
+        methodCall(definingClass = "Landroid/view/ViewGroup;", name = "removeView"),
+        fieldAccess(
+            opcode = Opcode.IGET_OBJECT,
+            definingClass = stickyHeadersType,
+            type = "Landroid/view/ViewGroup;",
+            location = MatchAfterWithin(4)
+        ),
+        // View type of the position.
+        methodCall(returnType = "I", parameters = listOf("I"), location = MatchAfterImmediately()),
+        // Creates the view holder.
+        methodCall(parameters = listOf("Landroid/view/ViewGroup;", "I"), location = MatchAfterWithin(2)),
+        fieldAccess(
+            opcode = Opcode.IPUT_OBJECT,
+            definingClass = stickyHeadersType,
+            type = "Landroid/view/View;",
+            location = MatchAfterWithin(3)
+        ),
+        // Binds the position to the view holder.
+        methodCall(returnType = "V", parameters = listOf("L", "I"), location = MatchAfterImmediately()),
+        // ID of the current header.
+        methodCall(returnType = "J", parameters = listOf(), location = MatchAfterImmediately())
+    )
+)
+
+/**
+ * ID of the current sticky header, read from its entry in the list of headers.
+ */
+internal fun stickyHeaderCurrentIdFingerprint(headerListType: String, methodName: String) = Fingerprint(
+    definingClass = headerListType,
+    name = methodName,
+    returnType = "J",
+    parameters = listOf(),
+    filters = listOf(
+        // Index of the current header.
+        fieldAccess(opcode = Opcode.IGET, definingClass = "this", type = "I"),
+        // Entries of the headers.
+        fieldAccess(opcode = Opcode.IGET_OBJECT, definingClass = "this", type = "Ljava/util/List;"),
+        methodCall(definingClass = "Ljava/util/List;", name = "get", location = MatchAfterImmediately()),
+        opcode(Opcode.CHECK_CAST, location = MatchAfterWithin(2)),
+        fieldAccess(opcode = Opcode.IGET_WIDE, type = "J", location = MatchAfterImmediately())
+    )
+)
+
+/**
+ * Sorts the entries of the sticky headers by their position.
+ */
+internal fun stickyHeaderEntryCompareFingerprint(entryType: String) = Fingerprint(
+    definingClass = entryType,
+    name = "compareTo",
+    returnType = "I",
+    parameters = listOf("Ljava/lang/Object;"),
+    filters = listOf(
+        fieldAccess(opcode = Opcode.IGET, definingClass = "this", type = "I"),
+        fieldAccess(opcode = Opcode.IGET, definingClass = "this", type = "I", location = MatchAfterImmediately())
+    )
+)
+
+// endregion
+
+/**
+ * Saves the scroll position of a list, such as the feed or the search results, when the list is left.
+ * The position is -1 if an item before it was removed or changed since the list was loaded,
+ * and the list is then shown again from the top.
+ */
+internal object ListSaveScrollPositionFingerprint : Fingerprint(
+    returnType = "Landroid/os/Bundle;",
+    parameters = listOf(),
+    filters = listOf(
+        // The observer of the changes of the list, and the first position that changed.
+        fieldAccess(opcode = Opcode.IGET_OBJECT),
+        fieldAccess(opcode = Opcode.IGET, type = "I", location = MatchAfterImmediately()),
+        opcode(Opcode.IF_GE, location = MatchAfterImmediately()),
+        literal(-1L, location = MatchAfterImmediately()),
+        string("scroll_position", location = MatchAfterImmediately())
+    )
+)
+
+/**
+ * Removes an item from an observable list, and notifies the observers of the list.
+ */
+internal object ObservableListRemoveFingerprint : Fingerprint(
+    definingClass = { ObservableListConstructorFingerprint.originalClassDef.type },
+    name = "remove",
+    returnType = "Ljava/lang/Object;",
+    parameters = listOf("I"),
+    filters = listOf(
+        // The notification of the removed range, or before YouTube 21.30 of the removed position,
+        // which notifies the removed range.
+        methodCall(opcode = Opcode.INVOKE_VIRTUAL, returnType = "V")
+    )
+)
+
+/**
+ * Notifies the observers of a list that the item at a position was removed. Inlined since YouTube 21.30.
+ */
+internal fun listNotifyItemRemovedFingerprint(notifierType: String, methodName: String) = Fingerprint(
+    definingClass = notifierType,
+    name = methodName,
+    parameters = listOf("I"),
+    filters = listOf(
+        methodCall(opcode = Opcode.INVOKE_VIRTUAL, returnType = "V", parameters = listOf("I", "I"))
+    )
+)
+
+/**
+ * Notifies the observers of a list that items were removed.
+ */
+internal fun listNotifyItemsRemovedFingerprint(notifierType: String, methodName: String) = Fingerprint(
+    definingClass = notifierType,
+    name = methodName,
+    filters = listOf(
+        methodCall(opcode = Opcode.INVOKE_INTERFACE, returnType = "V", parameters = listOf("I", "I"))
+    )
+)
+
+/**
+ * Called on the observer of the changes of a list when items are removed from the list.
+ */
+internal fun listObserverItemsRemovedFingerprint(observerType: String, methodName: String) = Fingerprint(
+    definingClass = observerType,
+    name = methodName,
+    returnType = "V",
+    parameters = listOf("I", "I")
+)
+
+/**
+ * Called on the observer of the changes of a list when all the items of the list are loaded again.
+ * No position of the list changed since then.
+ */
+internal fun listObserverReloadFingerprint(observerType: String) = Fingerprint(
+    definingClass = observerType,
+    returnType = "V",
+    parameters = listOf(),
+    filters = listOf(
+        // The item count of the list.
+        methodCall(opcode = Opcode.INVOKE_INTERFACE, returnType = "I", parameters = listOf()),
+        opcode(Opcode.MOVE_RESULT, location = MatchAfterImmediately()),
+        fieldAccess(opcode = Opcode.IPUT, type = "I", location = MatchAfterImmediately())
     )
 )

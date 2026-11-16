@@ -1,6 +1,15 @@
 /*
  * Copyright 2026 Morphe.
- * https://github.com/MorpheApp/morphe-patches
+ *
+ * https://github.com/MorpheApp/morphe-patches/pull/4538
+ * https://github.com/MorpheApp/morphe-patches/pull/4373
+ * https://github.com/MorpheApp/morphe-patches/pull/2688
+ * https://github.com/MorpheApp/morphe-patches/pull/2533
+ * https://github.com/MorpheApp/morphe-patches/pull/2479
+ * https://github.com/MorpheApp/morphe-patches/pull/2479
+ * https://github.com/MorpheApp/morphe-patches/pull/891
+ * https://github.com/MorpheApp/morphe-patches/pull/871
+ * https://github.com/MorpheApp/morphe-patches/pull/249
  *
  * Original hard forked code:
  * https://github.com/ReVanced/revanced-patches/commit/724e6d61b2ecd868c1a9a37d465a688e83a74799
@@ -17,15 +26,13 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.fieldAccess
-import app.morphe.patcher.patch.BytecodePatchBuilder
-import app.morphe.patcher.patch.BytecodePatchContext
-import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patcher.patch.PatchDefinition
+import app.morphe.patcher.patch.classDefBy
+import app.morphe.patcher.patch.patch
+import app.morphe.patcher.patch.resourceXml
 import app.morphe.patcher.util.getReference
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patcher.util.registersUsed
-import app.morphe.patches.shared.BuildInnerTubeProtoRequestUriFingerprint
-import app.morphe.patches.shared.BuildInnerTubeProtoRequestUriLegacyFingerprint
 import app.morphe.patches.shared.VideoStreamingDataConstructorFingerprint
 import app.morphe.patches.shared.VideoStreamingDataToStringFingerprint
 import app.morphe.patches.shared.misc.fix.proto.fixProtoLibraryPatch
@@ -36,7 +43,6 @@ import app.morphe.patches.shared.misc.request.hookMediaRequest
 import app.morphe.patches.shared.misc.request.hookMediaResponseChunk
 import app.morphe.patches.shared.misc.request.mediaRequestPatch
 import app.morphe.util.ResourceGroup
-import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.copyResources
 import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.util.indexOfFirstInstructionOrThrow
@@ -56,7 +62,14 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 private const val EXTENSION_CLASS =
     "Lapp/morphe/extension/shared/spoof/SpoofVideoStreamsPatch;"
 
-context(patchContext: BytecodePatchContext)
+private const val EXTENSION_WEBVIEW_CHECK_CLASS =
+    "Lapp/morphe/extension/shared/spoof/WebViewCheck;"
+
+/**
+ * Status of the server error a stream response fails with, when it is a SABR error.
+ */
+private const val HTTP_STATUS_SERVICE_UNAVAILABLE = 503
+
 internal fun addMediaSessionOverride(extension: String) {
     MediaSessionFeatureFlagFingerprint.matchAll().forEach {
         it.method.insertLiteralOverride(
@@ -66,8 +79,16 @@ internal fun addMediaSessionOverride(extension: String) {
     }
 }
 
-private val spoofVideoStreamsResourcePatch = resourcePatch {
+private val spoofVideoStreamsResourcePatch = patch {
     execute {
+        // Allows checking if the WebView and the Play Store are installed on Android 11+.
+        resourceXml("AndroidManifest.xml").use { manifest ->
+            val queries = manifest.elements("queries").firstOrNull() ?: manifest.root.appendChild("queries")
+            setOf("com.google.android.webview", "com.android.vending").forEach { packageName ->
+                queries.appendChild("package") { setAttribute("android:name", packageName) }
+            }
+        }
+
         // region copy the ejs wrapper.
 
         copyResources(
@@ -89,18 +110,15 @@ private val spoofVideoStreamsResourcePatch = resourcePatch {
 
 internal fun spoofVideoStreamsPatch(
     extensionClass: String,
+    mainActivityFingerprint: Fingerprint,
     mainActivityOnCreateFingerprints: List<Fingerprint>,
-    fixCronetOnesie: BytecodePatchBuilder.() -> Boolean,
-    fixMediaFetchHotConfigAlternative: BytecodePatchBuilder.() -> Boolean,
-    fixParsePlaybackResponseFeatureFlag: BytecodePatchBuilder.() -> Boolean,
-    fixMediaSessionFeatureFlag: BytecodePatchBuilder.() -> Boolean,
-    fixReelItemWatchResponseFeatureFlag: BytecodePatchBuilder.() -> Boolean,
-    restoreMissingCuepointMethod: BytecodePatchBuilder.() -> Boolean,
-    patchProtoRequest: BytecodePatchBuilder.() -> Boolean,
-    patchProtoRequestLegacy: BytecodePatchBuilder.() -> Boolean,
-    block: BytecodePatchBuilder.() -> Unit,
-    executeBlock: BytecodePatchContext.() -> Unit = {},
-) = bytecodePatch(
+    fixParsePlaybackResponseFeatureFlag: PatchDefinition.() -> Boolean,
+    fixMediaSessionFeatureFlag: PatchDefinition.() -> Boolean,
+    fixReelItemWatchResponseFeatureFlag: PatchDefinition.() -> Boolean,
+    restoreMissingCuepointMethod: PatchDefinition.() -> Boolean,
+    block: PatchDefinition.() -> Unit,
+    executeBlock: () -> Unit = {},
+) = patch(
     name = "Spoof video streams",
     description = "Adds options to spoof the client video streams to fix playback."
 ) {
@@ -114,6 +132,11 @@ internal fun spoofVideoStreamsPatch(
     )
 
     execute {
+        mainActivityFingerprint.method.addInstruction(
+            0,
+            "invoke-static/range { p0 .. p0 }, $EXTENSION_WEBVIEW_CHECK_CLASS->showDialogIfNeeded(Landroid/app/Activity;)V"
+        )
+
         mainActivityOnCreateFingerprints.forEach { fingerprint ->
             fingerprint.method.addInstruction(
                 0,
@@ -127,57 +150,18 @@ internal fun spoofVideoStreamsPatch(
 
         // endregion
 
-        // region Block /initplayback requests to fall back to /get_watch requests.
-
-        BuildInitPlaybackRequestFingerprint.let {
-            it.method.apply {
-                val moveUriStringIndex = it.instructionMatches.first().index
-                val targetRegister = getInstruction<OneRegisterInstruction>(moveUriStringIndex).registerA
-
-                addInstructions(
-                    moveUriStringIndex + 1,
-                    """
-                        invoke-static { v$targetRegister }, $EXTENSION_CLASS->blockInitPlaybackRequest(Ljava/lang/String;)Ljava/lang/String;
-                        move-result-object v$targetRegister
-                    """
-                )
-            }
-        }
-
-        // endregion
-
-        // region Block /get_watch requests to fall back to /player requests.
-        val uriFingerprints = mutableListOf<Fingerprint>()
-        if (patchProtoRequest()) {
-            uriFingerprints += BuildInnerTubeProtoRequestUriFingerprint
-        }
-        if (patchProtoRequestLegacy()) {
-            uriFingerprints += BuildInnerTubeProtoRequestUriLegacyFingerprint
-        }
-
-        uriFingerprints.forEach { fingerprint ->
-            fingerprint.let {
-                it.method.apply {
-                    val match = it.instructionMatches.last()
-                    val index = match.index
-                    val register = match.instruction.registersUsed[0]
-
-                    addInstructionsAtControlFlowLabel(
-                        index,
-                        $$"""
-                            invoke-static { v$$register }, $$EXTENSION_CLASS->blockGetWatchRequest(Landroid/net/Uri$Builder;)Landroid/net/Uri$Builder;
-                            move-result-object v$$register
-                        """
-                    )
-                }
-            }
-        }
-
-        // endregion
-
         // region Fetch streaming data.
+        // The requests of the app are not changed. The streams are fetched when the app requests a video,
+        // and also when the app builds the streams of a video it loaded with a request that was not seen.
 
-        hookBuildRequest("$EXTENSION_CLASS->fetchStreams")
+        hookBuildRequest("$EXTENSION_CLASS->fetchStreams", includeBody = true)
+
+        // When a media response asks for the player response again, the app loads the video again,
+        // which can be with requests that are not seen. The streams fetched before are not given again.
+        ReloadPlayerResponseFingerprint.method.addInstruction(
+            0,
+            "invoke-static { }, $EXTENSION_CLASS->onReloadPlayerResponse()V"
+        )
 
         // endregion
 
@@ -203,7 +187,7 @@ internal fun spoofVideoStreamsPatch(
                 val setPlayerConfigField = it.instructionMatches.last().fieldReference
                 val playerConfigClass = setPlayerConfigField.type
                 val (mediaCommonConfigField, mediaUstreamerRequestConfig) =
-                    with(abrStateDataFingerprint(playerConfigClass)) {
+                    with(AbrStateDataFingerprint) {
                         Pair(
                             instructionMatches[1].fieldReference,
                             instructionMatches[2].fieldReference,
@@ -306,8 +290,14 @@ internal fun spoofVideoStreamsPatch(
                             # Set video length.
                             $overrideVideoLength
 
-                            # Get player config.
-                            invoke-static { v2 }, $EXTENSION_CLASS->getPlayerConfig(Ljava/lang/String;)[B
+                            # Get player config. The app player config tells how the video is played inline.
+                            iget-object v4, p2, $setPlayerConfigField
+                            const/4 v1, 0x0
+                            if-eqz v4, :get_player_config
+                            invoke-virtual { v4 }, $playerConfigClass->toByteArray()[B
+                            move-result-object v1
+                            :get_player_config
+                            invoke-static { v2, v1 }, $EXTENSION_CLASS->getPlayerConfig(Ljava/lang/String;[B)[B
                             move-result-object v3
                             if-eqz v3, :disabled
                             $parsePlayerConfig
@@ -325,9 +315,8 @@ internal fun spoofVideoStreamsPatch(
                             # Set media uStreamer request config in a copy of the app player config.
                             # The app config may already be serialized, which caches its size,
                             # and changing it then breaks serializing it again.
-                            iget-object v5, p2, $setPlayerConfigField
-                            invoke-virtual { v5 }, $playerConfigClass->toByteArray()[B
-                            move-result-object v3
+                            if-eqz v1, :disabled
+                            move-object v3, v1
                             $parsePlayerConfig
                             iget-object v6, v5, $mediaCommonConfigField
                             iput-object v7, v6, $mediaUstreamerRequestConfig
@@ -425,34 +414,64 @@ internal fun spoofVideoStreamsPatch(
             )
         }
 
+        // Only the ranges of saved videos are shortened. A saved video is transferred through a priority
+        // data source, which continues from the last byte it got after the transfer is paused. Playback
+        // takes the pause as an error of the stream.
+        PriorityDataSourceOpenFingerprint.let {
+            it.method.addInstruction(
+                it.instructionMatches.last().index,
+                "invoke-static { }, $EXTENSION_CLASS->onPriorityDataSourceOpen()V"
+            )
+        }
+
         // A response with a shortened range ends before the requested range does. The app takes that
         // as the end of the stream, and a saved video would end there. Instead, the transfer is paused
         // like for a task of a higher priority, and the saved video continues from the last byte it got.
         // The response ends when its remaining byte count is zero, or when it is finished.
+        //
+        // The server can also answer a range with only a SABR error and no media. The app finds no media
+        // and requests the same range again right away, over and over, until the server sends it, which
+        // freezes playback for seconds or minutes. Instead, the response fails like a response with a
+        // server error status, and the app requests the range from a fallback host.
         CronetDataSourceReadFingerprint.let {
             val remainingBytesField = it.instructionMatches.last().fieldReference
-            val exceptionType = PriorityTooLowExceptionFingerprint.method.definingClass
+            val pauseExceptionType = PriorityTooLowExceptionFingerprint.method.definingClass
+            val serverErrorExceptionConstructor = InvalidResponseCodeExceptionFingerprint.method
+            val dataSpecType = it.instructionMatches[1].methodReference.parameterTypes[1]
+            val dataSpecField = it.classDef.fields.first { field -> field.type == dataSpecType }
 
             val helperMethod = ImmutableMethod(
                 it.classDef.type,
-                "patch_pauseIfStreamRangeLimited",
+                "patch_checkStreamResponse",
                 listOf(ImmutableMethodParameter(it.classDef.type, null, null)),
                 "V",
                 AccessFlags.PRIVATE.value or AccessFlags.STATIC.value,
                 null,
                 null,
-                MutableMethodImplementation(4),
+                MutableMethodImplementation(6),
             ).toMutable().apply {
                 addInstructionsWithLabels(
                     0,
                     """
+                        invoke-static { }, $EXTENSION_CLASS->isStreamSabrErrorResponse()Z
+                        move-result v0
+                        if-eqz v0, :check_range
+                        new-instance v0, ${serverErrorExceptionConstructor.definingClass}
+                        const/16 v1, $HTTP_STATUS_SERVICE_UNAVAILABLE
+                        const/4 v2, 0x0
+                        invoke-static { }, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
+                        move-result-object v3
+                        iget-object v4, p0, $dataSpecField
+                        invoke-direct { v0, v1, v2, v3, v4 }, $serverErrorExceptionConstructor
+                        throw v0
+                        :check_range
                         iget-wide v0, p0, $remainingBytesField
                         invoke-static { v0, v1 }, $EXTENSION_CLASS->isLimitedStreamRangeFinished(J)Z
                         move-result v0
                         if-eqz v0, :keep_reading
-                        new-instance v0, $exceptionType
+                        new-instance v0, $pauseExceptionType
                         const/4 v1, 0x0
-                        invoke-direct { v0, v1, v1 }, $exceptionType-><init>(II)V
+                        invoke-direct { v0, v1, v1 }, $pauseExceptionType-><init>(II)V
                         throw v0
                         :keep_reading
                         return-void
@@ -461,13 +480,30 @@ internal fun spoofVideoStreamsPatch(
             }
             it.classDef.methods.add(helperMethod)
 
-            // The response is read into a byte array or a buffer.
-            listOf(it, CronetDataSourceReadBufferFingerprint).forEach { read ->
-                // Insert after the remaining byte count is cleared, before the hook at the start of the method.
+            // The response is read into a byte array or a buffer, with the index of the match that reads
+            // the next part of the response. The buffer read is found with the byte array read, so it is
+            // matched first, before the byte array read is changed.
+            listOf(CronetDataSourceReadBufferFingerprint to 0, it to 1).forEach { (read, readMatchIndex) ->
+                // Insert after the remaining byte count is cleared, before the hooks of the read
+                // and the hook at the start of the method.
                 read.method.addInstruction(
                     read.instructionMatches.last().index + 1,
                     "invoke-static/range { p0 .. p0 }, $helperMethod"
                 )
+
+                val readMatch = read.instructionMatches[readMatchIndex]
+                val bufferRegister = readMatch.instruction.registersUsed[1]
+                read.method.addInstructions(
+                    readMatch.index + 1,
+                    "invoke-static/range { v$bufferRegister .. v$bufferRegister }, " +
+                            "$EXTENSION_CLASS->onStreamResponseRead(Ljava/nio/ByteBuffer;)V"
+                )
+                read.method.addInstructions(
+                    readMatch.index,
+                    "invoke-static/range { v$bufferRegister .. v$bufferRegister }, " +
+                            "$EXTENSION_CLASS->onStreamResponseReadStart(Ljava/nio/ByteBuffer;)V"
+                )
+
                 read.method.addInstruction(
                     0,
                     "invoke-static/range { p0 .. p0 }, $helperMethod"
@@ -512,7 +548,6 @@ internal fun spoofVideoStreamsPatch(
         // endregion
 
         // region Disable SABR playback.
-        // If SABR is disabled, it seems 'MediaFetchHotConfig' may no longer need an override (not confirmed).
 
         with(MediaFetchEnumConstructorFingerprint.method) {
             val sabrFieldIndex = indexOfFirstInstructionOrThrow(
@@ -555,42 +590,7 @@ internal fun spoofVideoStreamsPatch(
 
         //endregion
 
-        // region Turn off stream config replacement feature flag.
-
-        if (fixCronetOnesie()) {
-            // The flag was removed and the native player sends the Onesie /initplayback
-            // request itself, which never reaches the Java /initplayback hook.
-            NativeNetFetchFingerprint.let {
-                it.method.apply {
-                    val index = it.instructionMatches.first().index
-                    val urlRegister = getInstruction(index).registersUsed[1]
-
-                    addInstructions(
-                        index,
-                        """
-                            invoke-static/range { v$urlRegister .. v$urlRegister }, $EXTENSION_CLASS->blockInitPlaybackRequest(Ljava/lang/String;)Ljava/lang/String;
-                            move-result-object v$urlRegister
-                        """
-                    )
-                }
-            }
-        } else {
-            MediaFetchHotConfigFingerprint.let {
-                it.method.insertLiteralOverride(
-                    it.instructionMatches.first().index,
-                    "$EXTENSION_CLASS->useMediaFetchHotConfigReplacement(Z)Z"
-                )
-            }
-        }
-
-        if (fixMediaFetchHotConfigAlternative()) {
-            MediaFetchHotConfigAlternativeFingerprint.let {
-                it.method.insertLiteralOverride(
-                    it.instructionMatches.first().index,
-                    "$EXTENSION_CLASS->useMediaFetchHotConfigReplacement(Z)Z"
-                )
-            }
-        }
+        // region Turn off feature flags that interfere with spoofing.
 
         if (fixParsePlaybackResponseFeatureFlag()) {
             PlaybackStartDescriptorFeatureFlagFingerprint.let {

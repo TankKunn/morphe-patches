@@ -9,20 +9,19 @@ package app.morphe.patches.music.interaction.scrobbling
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.patch
 import app.morphe.patcher.util.getFreeRegisterProvider
 import app.morphe.patches.music.misc.extension.sharedExtensionPatch
+import app.morphe.patches.music.misc.mediasession.addSetMetadataHook
+import app.morphe.patches.music.misc.mediasession.addSetPlaybackStateHook
+import app.morphe.patches.music.misc.mediasession.mediaSessionHookPatch
 import app.morphe.patches.music.misc.settings.PreferenceScreen
 import app.morphe.patches.music.misc.settings.settingsPatch
 import app.morphe.patches.music.shared.Constants.COMPATIBILITY_YOUTUBE_MUSIC
-import app.morphe.patches.music.shared.hookMediaSessionArgument
 import app.morphe.patches.music.video.information.musicVideoInformationPatch
-import app.morphe.patches.shared.MediaSessionSetMetadataFingerprint
-import app.morphe.patches.shared.MediaSessionSetPlaybackStateFingerprint
-import app.morphe.patches.shared.layout.returnyoutubedislike.DislikeFingerprint
 import app.morphe.patches.shared.layout.returnyoutubedislike.EndpointServiceNameFingerprint
-import app.morphe.patches.shared.layout.returnyoutubedislike.likeEndpointParserFingerprint
-import app.morphe.patches.shared.layout.returnyoutubedislike.requestParameterCheckFingerprint
+import app.morphe.patches.shared.layout.returnyoutubedislike.LikeEndpointParserFingerprint
+import app.morphe.patches.shared.layout.returnyoutubedislike.RequestParameterCheckFingerprint
 import app.morphe.patches.shared.misc.settings.preference.NonInteractivePreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceCategory
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
@@ -33,14 +32,14 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 
 private const val EXTENSION_CLASS = "Lapp/morphe/extension/music/patches/scrobbling/ScrobblePatch;"
 
-@Suppress("unused")
-val scrobblingPatch = bytecodePatch(
+val scrobblingPatch = patch(
     name = "Scrobbling",
     description = "Adds options to add played tracks to Last.fm and ListenBrainz."
 ) {
     dependsOn(
         sharedExtensionPatch,
         settingsPatch,
+        mediaSessionHookPatch,
         // The video id tells whether the album patch is playing the song of the track instead.
         musicVideoInformationPatch
     )
@@ -155,22 +154,16 @@ val scrobblingPatch = bytecodePatch(
             )
         )
 
-        MediaSessionSetPlaybackStateFingerprint.hookMediaSessionArgument(
-            "$EXTENSION_CLASS->onSetPlaybackState(Landroid/media/session/PlaybackState;)V"
-        )
-
-        MediaSessionSetMetadataFingerprint.hookMediaSessionArgument(
-            "$EXTENSION_CLASS->onSetMetadata(Landroid/media/MediaMetadata;)V"
-        )
+        addSetPlaybackStateHook("$EXTENSION_CLASS->onSetPlaybackState(Landroid/media/session/PlaybackState;)V")
+        addSetMetadataHook("$EXTENSION_CLASS->onSetMetadata(Landroid/media/MediaMetadata;)V")
 
         // Hook like/dislike/remove like button clicks.
         val endPointServiceNameField = EndpointServiceNameFingerprint
             .instructionMatches.last().fieldReference
-        val likeEndpointParserClass = DislikeFingerprint.classDef.superclass!!
-        val videoIdField = requestParameterCheckFingerprint(likeEndpointParserClass)
+        val videoIdField = RequestParameterCheckFingerprint
             .instructionMatches.last().fieldReference
 
-        likeEndpointParserFingerprint(likeEndpointParserClass).let {
+        LikeEndpointParserFingerprint.let {
             it.method.apply {
                 val matchIndex = it.instructionMatches[1].index
                 val insertIndex = matchIndex + 1

@@ -2,7 +2,7 @@ package app.morphe.patches.shared.misc.settings.preference
 
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.util.resource.BaseResource
-import org.w3c.dom.Document
+import app.morphe.patcher.xml.XmlElement
 
 /**
  * A preference category.
@@ -14,7 +14,6 @@ import org.w3c.dom.Document
  * @param tag The tag or full class name of the preference.
  * @param preferences The preferences in this category.
  */
-@Suppress("MemberVisibilityCanBePrivate")
 open class PreferenceCategory(
     key: String? = null,
     titleKey: String? = if (key == null) null else "${key}_title",
@@ -26,10 +25,10 @@ open class PreferenceCategory(
     val preferences: Set<BasePreference>
 ) : BasePreference(sorting.appendSortType(key), titleKey, null, icon, iconBold, layout, tag) {
 
-    override fun serialize(ownerDocument: Document, resourceCallback: (BaseResource) -> Unit) =
-        super.serialize(ownerDocument, resourceCallback).apply {
+    override fun serialize(parent: XmlElement, index: Int, resourceCallback: (BaseResource) -> Unit) =
+        super.serialize(parent, index, resourceCallback).apply {
             preferences.forEach {
-                appendChild(it.serialize(ownerDocument, resourceCallback))
+                it.serialize(this, children.size, resourceCallback)
             }
         }
 }

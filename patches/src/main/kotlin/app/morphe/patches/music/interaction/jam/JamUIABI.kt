@@ -5,14 +5,13 @@
  * See the included NOTICE file for GPLv3 Section 7 terms that apply to this code.
  */
 
-@file:Suppress("unused")
-
 package app.morphe.patches.music.interaction.jam
 
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.methodCall
-import app.morphe.patcher.patch.BytecodePatchContext
+import app.morphe.patcher.patch.classDefBy
+import app.morphe.patcher.patch.classDefByOrNull
 import app.morphe.patcher.util.getReference
 import app.morphe.patcher.util.p0Register
 import app.morphe.patches.music.misc.playservice.is_9_43_or_greater
@@ -22,15 +21,9 @@ import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.ClassDef
 import com.android.tools.smali.dexlib2.iface.Method
-import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
-
-private const val OBJECT = "Ljava/lang/Object;"
-private const val OPTIONAL = "Lj$/util/Optional;"
-private const val MAP = "Ljava/util/Map;"
-private const val VIEW = "Landroid/view/View;"
 
 internal data class JamUiAbi(
     val clock: ClockAbi,
@@ -51,8 +44,8 @@ internal data class AutoplayUiAbi(
     val setLimit: MethodReference,
     val header: FieldReference,
     val clearHeader: MethodReference,
-    val headerStart: Int,
-    val headerIndexRegister: Int,
+    val visibilityCheck: Int,
+    val setLimitIndex: Int,
 )
 
 internal data class ClockAbi(
@@ -135,7 +128,7 @@ internal data class PlaybackIconAbi(
 /**
  * Resolves presentation hooks from queue and platform relationships, never host obfuscation names.
  */
-internal fun BytecodePatchContext.resolveJamUiAbi(queue: JamQueueAbi): JamUiAbi {
+internal fun resolveJamUiAbi(queue: JamQueueAbi): JamUiAbi {
     val clock = resolveClock()
     val palette = resolvePalette()
     val playback = resolvePlayback()
@@ -158,7 +151,7 @@ internal fun BytecodePatchContext.resolveJamUiAbi(queue: JamQueueAbi): JamUiAbi 
     )
 }
 
-private fun BytecodePatchContext.resolveClock(): ClockAbi {
+private fun resolveClock(): ClockAbi {
     val mediaState = MediaSessionStateFingerprint.originalMethod
     val timeBar = PlaybackTimeBarFingerprint.originalClassDef
     val setModel = clockModelSetterFingerprint(timeBar.type)
@@ -227,7 +220,7 @@ private fun BytecodePatchContext.resolveClock(): ClockAbi {
     )
 }
 
-private fun BytecodePatchContext.resolveSeek(timeBar: ClassDef): MethodReference {
+private fun resolveSeek(timeBar: ClassDef): MethodReference {
     val controls =
         timeBarOwnerFingerprint(timeBar.type)
             .matchAll()
@@ -237,7 +230,7 @@ private fun BytecodePatchContext.resolveSeek(timeBar: ClassDef): MethodReference
     require(controlInterfaces.isNotEmpty()) {
         "Unable to resolve Jam playback-control listener interfaces"
     }
-    return seekForwarderFingerprint()
+    return SeekForwarderFingerprint
         .matchAll().singleOrNull { match ->
             val owner = match.originalClassDef
             owner.fields.any { it.type in controlInterfaces } ||
@@ -247,7 +240,7 @@ private fun BytecodePatchContext.resolveSeek(timeBar: ClassDef): MethodReference
         ?.originalMethod ?: error("Missing or ambiguous Jam seek forwarder")
 }
 
-private fun BytecodePatchContext.resolvePalette(): PaletteAbi {
+private fun resolvePalette(): PaletteAbi {
     val match = PalettePublicationFingerprint.match()
     val source = match.originalClassDef
     val publish = match.instructionMatches[0].methodReference
@@ -274,7 +267,7 @@ private fun BytecodePatchContext.resolvePalette(): PaletteAbi {
     )
 }
 
-private fun BytecodePatchContext.resolvePlayback(): PlaybackAbi {
+private fun resolvePlayback(): PlaybackAbi {
     val anchor = AccountScopedCommandRouterFingerprint.match()
     val outer = anchor.originalClassDef
     val peer = classDefBy(anchor.originalMethod.returnType)
@@ -294,7 +287,7 @@ private fun BytecodePatchContext.resolvePlayback(): PlaybackAbi {
     return PlaybackAbi(command, listOf(router(outer, outerDispatch), router(peer, peerDispatch)))
 }
 
-private fun BytecodePatchContext.resolveCurrentItem(): CurrentItemAbi {
+private fun resolveCurrentItem(): CurrentItemAbi {
     val source = CurrentPlaybackItemSourceFingerprint.match()
     val accessor = source.instructionMatches[0].methodReference
     require(source.originalClassDef.fields.any { it.type == accessor.definingClass }) {
@@ -303,7 +296,7 @@ private fun BytecodePatchContext.resolveCurrentItem(): CurrentItemAbi {
     return CurrentItemAbi(accessor.definingClass, accessor)
 }
 
-private fun BytecodePatchContext.resolveNowPlaying(
+private fun resolveNowPlaying(
     current: CurrentItemAbi,
     item: QueueItemAbi,
 ): NowPlayingAbi {
@@ -335,14 +328,13 @@ private fun BytecodePatchContext.resolveNowPlaying(
     return NowPlayingAbi(presenter, menuEntry, bindings)
 }
 
-private fun BytecodePatchContext.resolveArtwork(): ArtworkAbi {
-    val imageType = ArtworkCropFingerprint.originalClassDef.type
-    val match = nowPlayingArtworkFingerprint(imageType).match()
+private fun resolveArtwork(): ArtworkAbi {
+    val match = NowPlayingArtworkFingerprint.match()
     val image = match.instructionMatches[0].fieldReference
     return ArtworkAbi(match.originalClassDef.type, match.originalMethod, image)
 }
 
-private fun BytecodePatchContext.resolveQueueRow(
+private fun resolveQueueRow(
     item: QueueItemAbi,
     nowPlayingEntry: MethodReference,
 ): QueueRowAbi {
@@ -426,7 +418,7 @@ private fun BytecodePatchContext.resolveQueueRow(
         ?: error("Missing or ambiguous â€“ Jam queue row and menu presenter")
 }
 
-private fun BytecodePatchContext.resolveButtons(): List<ButtonAbi> {
+private fun resolveButtons(): List<ButtonAbi> {
     val controls = PlaybackControlViewsFingerprint.originalClassDef
     val presenter = PlayerMetadataViewsFingerprint.originalClassDef
     return (playbackControlsClickFingerprint(controls.type).matchAll() +
@@ -436,7 +428,7 @@ private fun BytecodePatchContext.resolveButtons(): List<ButtonAbi> {
         .distinctBy { it.type }
 }
 
-private fun BytecodePatchContext.resolvePlaybackIcon(): PlaybackIconAbi {
+private fun resolvePlaybackIcon(): PlaybackIconAbi {
     val controls = PlaybackControlViewsFingerprint.originalClassDef
     val render = playbackIconFingerprint(controls.fields.map { it.type }.toSet()).match()
     val constructor = playbackIconModelConstructorFingerprint(
@@ -462,7 +454,7 @@ private fun BytecodePatchContext.resolvePlaybackIcon(): PlaybackIconAbi {
     )
 }
 
-private fun BytecodePatchContext.implementedInterfaces(type: String): Set<String> {
+private fun implementedInterfaces(type: String): Set<String> {
     val interfaces = mutableSetOf<String>()
     fun visit(candidate: String) {
         classDefByOrNull(candidate)?.interfaces?.forEach { parent ->
@@ -477,12 +469,14 @@ private fun Method.parameters(): List<String> = parameterTypes.map { it.toString
 
 private fun MethodReference.parameters(): List<String> = parameterTypes.map { it.toString() }
 
-private fun BytecodePatchContext.resolveAutoplayUi(queue: JamQueueAbi): AutoplayUiAbi {
+private fun resolveAutoplayUi(queue: JamQueueAbi): AutoplayUiAbi {
     val owner = autoplaySectionOwnerFingerprint(
         queue.managerType, queue.displays.autoplay.type
     ).originalClassDef
     val refresh = autoplaySectionRefreshFingerprint(owner.type).match()
-    val setLimit = refresh.instructionMatches[1].methodReference
+    val visibilityCheck = refresh.instructionMatches[1].index
+    val setLimitMatch = refresh.instructionMatches[2]
+    val setLimit = setLimitMatch.methodReference
     val method = refresh.originalMethod
     val limiter = method.findInstructionIndicesReversedOrThrow(
         fieldAccess(
@@ -493,7 +487,7 @@ private fun BytecodePatchContext.resolveAutoplayUi(queue: JamQueueAbi): Autoplay
     ).map { method.getInstruction(it).getReference<FieldReference>()!! }
         .distinct()
         .singleOrNull() ?: error("Missing or ambiguous Jam autoplay display limiter")
-    val clear = refresh.instructionMatches[2]
+    val clear = refresh.instructionMatches[3]
     val headerInstruction = method.getInstruction(clear.index - 1)
     val header =
         headerInstruction.getReference<FieldReference>()
@@ -501,22 +495,13 @@ private fun BytecodePatchContext.resolveAutoplayUi(queue: JamQueueAbi): Autoplay
     check(headerInstruction.opcode == Opcode.IGET_OBJECT && header.definingClass == owner.type) {
         "Unexpected Jam autoplay header access"
     }
-    val headerCreation = autoplayHeaderCreationFingerprint(header).match(method, owner)
-    val headerStart = headerCreation.instructionMatches[0].index
-    val addHeader = method.findInstructionIndicesReversedOrThrow(
-        methodCall(name = "add", parameters = listOf("I", OBJECT), returnType = "V")
-    ).single()
-    val headerIndexRegister = method.getInstruction<FiveRegisterInstruction>(addHeader).registerD
-    check(headerIndexRegister < method.p0Register && method.p0Register > 0) {
-        "Unexpected Jam autoplay header index register"
-    }
     return AutoplayUiAbi(
         method,
         limiter,
         setLimit,
         header,
         clear.methodReference,
-        headerStart,
-        headerIndexRegister,
+        visibilityCheck,
+        setLimitMatch.index,
     )
 }

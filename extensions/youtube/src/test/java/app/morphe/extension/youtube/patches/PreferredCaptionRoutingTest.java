@@ -18,6 +18,7 @@ import java.util.Locale;
 
 /** Selection of an auto-translated track that is already in the menu. */
 public class PreferredCaptionRoutingTest {
+    @SuppressWarnings("ClassCanBeRecord")
     private static final class Track implements PreferredCaptionLanguagePatch.CaptionTrackInterface {
         final String language;
         final String vss;
@@ -92,6 +93,7 @@ public class PreferredCaptionRoutingTest {
         assertSame(norwegian, find(List.of(norwegian), "no"));
     }
 
+    @SuppressWarnings("ClassCanBeRecord")
     private static final class Source implements AutoTranslateCaptionsPatch.CaptionTrackInterface {
         final String language, url, vss;
         Source(String language, String url, String vss) { this.language=language; this.url=url; this.vss=vss; }
@@ -106,6 +108,7 @@ public class PreferredCaptionRoutingTest {
             PreferredCaptionLanguagePatch.CaptionTrackInterface currentAudio) {
         return PreferredCaptionLanguagePatch.blockTranslationSource(new PreferredCaptionLanguagePatch.SubtitleManagerInterface() {
             public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getDirectCaptionTracks() { return tracks; }
+            public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getAllCaptionTracks() { return patch_getDirectCaptionTracks(); }
             public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getAutoTranslateCaptionTracks() { return List.of(); }
             public PreferredCaptionLanguagePatch.CaptionTrackInterface patch_getCaptionTranslationSource() { return null; }
             public PreferredCaptionLanguagePatch.CaptionTrackInterface patch_getCurrentAudioCaptionSource() { return currentAudio; }
@@ -130,6 +133,7 @@ public class PreferredCaptionRoutingTest {
         Source authored = new Source("en", "https://www.youtube.com/api/timedtext?v=P6pcTK0wTYA&lang=en", ".en");
         var manager = new PreferredCaptionLanguagePatch.SubtitleManagerInterface() {
             public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getDirectCaptionTracks() { return List.of(asr, authored); }
+            public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getAllCaptionTracks() { return patch_getDirectCaptionTracks(); }
             public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getAutoTranslateCaptionTracks() { return List.of(); }
             public PreferredCaptionLanguagePatch.CaptionTrackInterface patch_getCaptionTranslationSource() { return asr; }
             public PreferredCaptionLanguagePatch.CaptionTrackInterface patch_getCurrentAudioCaptionSource() { return null; }
@@ -149,6 +153,7 @@ public class PreferredCaptionRoutingTest {
         Source translated = new Source("fr", english.url + "&tlang=fr", "ta.en.fr");
         var manager = new PreferredCaptionLanguagePatch.SubtitleManagerInterface() {
             public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getDirectCaptionTracks() { return List.of(english, german); }
+            public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getAllCaptionTracks() { return patch_getDirectCaptionTracks(); }
             public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getAutoTranslateCaptionTracks() { return List.of(translated); }
             public PreferredCaptionLanguagePatch.CaptionTrackInterface patch_getCaptionTranslationSource() { return german; }
             public PreferredCaptionLanguagePatch.CaptionTrackInterface patch_getCurrentAudioCaptionSource() { return null; }
@@ -164,6 +169,7 @@ public class PreferredCaptionRoutingTest {
         Source turkish = new Source("tr", "https://www.youtube.com/api/timedtext?v=sleuwTieVeE&lang=tr&kind=asr", "a.tr");
         var manager = new PreferredCaptionLanguagePatch.SubtitleManagerInterface() {
             public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getDirectCaptionTracks() { return List.of(english, turkish); }
+            public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getAllCaptionTracks() { return patch_getDirectCaptionTracks(); }
             public List<PreferredCaptionLanguagePatch.CaptionTrackInterface> patch_getAutoTranslateCaptionTracks() { return List.of(); }
             public PreferredCaptionLanguagePatch.CaptionTrackInterface patch_getCaptionTranslationSource() { return english; }
             public PreferredCaptionLanguagePatch.CaptionTrackInterface patch_getCurrentAudioCaptionSource() { return turkish; }

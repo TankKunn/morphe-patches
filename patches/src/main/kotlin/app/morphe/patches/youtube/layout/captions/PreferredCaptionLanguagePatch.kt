@@ -9,7 +9,8 @@ package app.morphe.patches.youtube.layout.captions
 
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.patch
+import app.morphe.patcher.util.addPatchInterface
 import app.morphe.patcher.util.getReference
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
@@ -32,7 +33,7 @@ private const val EXTENSION_SUBTITLE_MANAGER_INTERFACE =
 private const val EXTENSION_CAPTION_TRACK_INTERFACE =
     $$"Lapp/morphe/extension/youtube/patches/PreferredCaptionLanguagePatch$CaptionTrackInterface;"
 
-internal val preferredCaptionLanguagePatch = bytecodePatch(
+internal val preferredCaptionLanguagePatch = patch(
     description = "Adds an option to automatically select captions in your preferred language " +
             "(provider subtitles first, then auto-translated).",
 ) {
@@ -82,21 +83,19 @@ internal val preferredCaptionLanguagePatch = bytecodePatch(
                 }
             }
 
-            interfaces.add(EXTENSION_CAPTION_TRACK_INTERFACE)
-
-            addHelperMethod(
+            addPatchInterface(
+                EXTENSION_CAPTION_TRACK_INTERFACE,
                 "patch_getLanguageCode",
-                "Ljava/lang/String;",
-                smali = """
+                """
                     ${getterSmali(isDisableOptionFingerprint, 1)}
                     return-object v0
                 """
             )
 
-            addHelperMethod(
+            addPatchInterface(
+                EXTENSION_CAPTION_TRACK_INTERFACE,
                 "patch_getVssId",
-                "Ljava/lang/String;",
-                smali = """
+                """
                     ${getterSmali(isAutoTranslatedFingerprint, 0)}
                     return-object v0
                 """
@@ -115,6 +114,36 @@ internal val preferredCaptionLanguagePatch = bytecodePatch(
             val captionTracksField = it.instructionMatches[10].fieldReference
             val getMethod = it.instructionMatches[11].methodReference
             val convertMethod = it.instructionMatches[12].methodReference
+
+            // All caption tracks of the video, including the tracks of other audio tracks.
+            // An uploaded track of an output language can belong to another audio track.
+            it.classDef.addHelperMethod(
+                "patch_getAllCaptionTracks",
+                "Ljava/util/List;",
+                freeRegisters = 4,
+                smali = """
+                    new-instance v0, Ljava/util/ArrayList;
+                    invoke-direct { v0 }, Ljava/util/ArrayList;-><init>()V
+                    iget-object v1, p0, $metadataField
+                    if-eqz v1, :done
+                    iget-object v1, v1, $captionTracksField
+                    invoke-interface { v1 }, Ljava/util/List;->iterator()Ljava/util/Iterator;
+                    move-result-object v1
+                    :next
+                    invoke-interface { v1 }, Ljava/util/Iterator;->hasNext()Z
+                    move-result v2
+                    if-eqz v2, :done
+                    invoke-interface { v1 }, Ljava/util/Iterator;->next()Ljava/lang/Object;
+                    move-result-object v2
+                    check-cast v2, ${convertMethod.parameterTypes.single()}
+                    invoke-direct { p0, v2 }, $convertMethod
+                    move-result-object v2
+                    invoke-virtual { v0, v2 }, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+                    goto :next
+                    :done
+                    return-object v0
+                """
+            )
 
             it.classDef.addHelperMethod(
                 "patch_getTranslationSource",
@@ -158,20 +187,16 @@ internal val preferredCaptionLanguagePatch = bytecodePatch(
         }
 
         DefaultCaptionTrackFingerprint.classDef.apply {
-            val tracksManagerField = SubtitleManagerDirectTracksFingerprint(
-                CaptionTracksManagerDirectTracksFingerprint.method
-            ).instructionMatches[0].fieldReference
+            val tracksManagerField = SubtitleManagerDirectTracksFingerprint.instructionMatches[0].fieldReference
 
-            interfaces.add(EXTENSION_SUBTITLE_MANAGER_INTERFACE)
-
-            fun addTracksGetter(name: String, tracksFingerprint: Fingerprint) {
-                addHelperMethod(
+            fun addTracksGetter(name: String, tracksMethod: String) {
+                addPatchInterface(
+                    EXTENSION_SUBTITLE_MANAGER_INTERFACE,
                     name,
-                    "Ljava/util/List;",
-                    smali = """
+                    """
                         iget-object v0, p0, $tracksManagerField
                         if-eqz v0, :null
-                        invoke-virtual { v0 }, ${tracksFingerprint.method}
+                        invoke-virtual { v0 }, $tracksMethod
                         move-result-object v0
                         :null
                         return-object v0
@@ -179,14 +204,25 @@ internal val preferredCaptionLanguagePatch = bytecodePatch(
                 )
             }
 
-            addTracksGetter("patch_getDirectCaptionTracks", CaptionTracksManagerDirectTracksFingerprint)
-            addTracksGetter("patch_getAutoTranslateCaptionTracks", CaptionTracksManagerAutoTranslateTracksFingerprint)
+            val tracksManagerType = CaptionTracksManagerDirectTracksFingerprint.classDef.type
+            addTracksGetter(
+                "patch_getDirectCaptionTracks",
+                CaptionTracksManagerDirectTracksFingerprint.method.toString()
+            )
+            addTracksGetter(
+                "patch_getAllCaptionTracks",
+                "$tracksManagerType->patch_getAllCaptionTracks()Ljava/util/List;"
+            )
+            addTracksGetter(
+                "patch_getAutoTranslateCaptionTracks",
+                CaptionTracksManagerAutoTranslateTracksFingerprint.method.toString()
+            )
 
             fun addSourceGetter(name: String, method: String) {
-                addHelperMethod(
+                addPatchInterface(
+                    EXTENSION_SUBTITLE_MANAGER_INTERFACE,
                     name,
-                    EXTENSION_CAPTION_TRACK_INTERFACE,
-                    smali = """
+                    """
                         iget-object v0, p0, $tracksManagerField
                         if-eqz v0, :null
                         invoke-virtual { v0 }, $method
@@ -207,7 +243,7 @@ internal val preferredCaptionLanguagePatch = bytecodePatch(
         // so the subtitle manager instance is available.
         val trackType = DefaultCaptionTrackFingerprint.method.returnType
 
-        preferredCaptionsTrackFingerprint().let {
+        PreferredCaptionsTrackFingerprint.let {
             val subtitleManagerRegister = it.instructionMatches[0]
                 .getInstruction<FiveRegisterInstruction>().registerC
             val moveResultIndex = it.instructionMatches[1].index
@@ -229,11 +265,10 @@ internal val preferredCaptionLanguagePatch = bytecodePatch(
             val defaultReason = captionDefaultSelectionFingerprint(selector.parameterTypes[1].toString())
                 .instructionMatches.last().fieldReference
 
-            SetSubtitleTrackFingerprint.classDef.addHelperMethod(
+            SetSubtitleTrackFingerprint.classDef.addPatchInterface(
+                EXTENSION_SUBTITLE_MANAGER_INTERFACE,
                 "patch_selectCaptionTrack",
-                "V",
-                parameters = listOf(EXTENSION_CAPTION_TRACK_INTERFACE),
-                smali = """
+                """
                     sget-object v0, $defaultReason
                     check-cast p1, $trackType
                     invoke-virtual { p0, p1, v0 }, $selector

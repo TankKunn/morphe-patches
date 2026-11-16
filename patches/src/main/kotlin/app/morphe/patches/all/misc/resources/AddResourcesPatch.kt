@@ -23,14 +23,22 @@
 
 package app.morphe.patches.all.misc.resources
 
-import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patcher.patch.listDecodableFiles
+import app.morphe.patcher.patch.patch
+import app.morphe.patcher.patch.readXml
+import app.morphe.patcher.patch.resourceFile
+import app.morphe.patcher.patch.resourceXml
+import app.morphe.patcher.xml.ResourceXml
 import app.morphe.patches.util.resource.StringResourceSanitizer.sanitizeAndroidResourceString
-import app.morphe.patches.util.resource.forEachRawResourceElement
 import app.morphe.util.inputStreamFromBundledResource
+import org.xml.sax.Attributes
+import org.xml.sax.helpers.DefaultHandler
+import java.io.ByteArrayOutputStream
 import java.io.File
+import java.io.InputStream
 import java.util.Locale
-import java.util.concurrent.Executors
 import java.util.logging.Logger
+import javax.xml.parsers.SAXParserFactory
 
 internal val localesYouTube = listOf(
     AppLocale("", ""), // Default English locale. Must be first.
@@ -276,90 +284,44 @@ internal fun addAppResources(appId: String) {
 }
 
 /**
- * A destination resource file that is edited as raw text. Multiple apps add resources to the
- * same file, and appending the text of all of them writes each file only once.
- *
- * A file no other patch decoded is not decoded here either. It is written with only the added
- * resources, which the patcher adds to the resources of the app, replacing the ones of the same
- * name. Decoding every strings file of the app only to append to it is most of the time of this patch.
+ * The translated strings the build converted to JSON with [TranslationsJson], a file for each locale and app.
  */
-private class DestinationFile(
-    val file: File,
-    val text: String
-) {
-    val added = mutableListOf<Pair<Pair<String, String>, String>>()
-}
+private const val TRANSLATIONS_BUNDLED_DIR = "addresources-json"
 
-private const val ADD_RESOURCES_THREAD_COUNT = 4
+/**
+ * Where the translated strings of each locale go in the patched app, read by the extension.
+ */
+private const val TRANSLATIONS_ASSETS_DIR = "assets/morphe/strings"
 
-private const val RESOURCES_CLOSING_TAG = "</resources>"
+/**
+ * String resource with the name of the translations file of each locale, read by the extension.
+ */
+private const val TRANSLATIONS_FILE_STRING = "morphe_translations_file"
 
-private const val EMPTY_RESOURCES_FILE = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n</resources>"
-
-internal val addResourcesPatch = resourcePatch(
+internal val addResourcesPatch = patch(
     description = "Add resources such as strings or arrays to the app."
 ) {
-
-    val defaultResourcesAdded = mutableSetOf<String>()
 
     finalize {
         val logger = Logger.getLogger(AppLocale.Companion::class.java.name)
 
-        // Default resources added by each app and by the apps before it.
-        val appDefaultResources = mutableMapOf<String, Set<String>>()
-
         // Strings files of the app, listed without decoding them.
         val appStringsFiles = listDecodableFiles("res/values*/strings.xml").toHashSet()
 
-        fun openDestinationFile(
-            destinationFiles: MutableMap<String, DestinationFile>,
-            destSubPath: String
-        ): DestinationFile {
-            destinationFiles[destSubPath]?.let { return it }
-
-            // Not decoded, unless another patch already did.
-            val destFile = this@finalize.get(destSubPath, copy = false)
-            val text = if (destFile.exists()) {
-                destFile.readText()
-            } else {
-                destFile.parentFile?.mkdirs()
-                EMPTY_RESOURCES_FILE
-            }
-
-            return DestinationFile(destFile, text).also {
-                destinationFiles[destSubPath] = it
-            }
-        }
-
-        fun writeDestinationFile(destSubPath: String, destination: DestinationFile) {
-            if (destination.added.isEmpty()) return
-
-            val text = destination.text
-            val closingIndex = text.lastIndexOf(RESOURCES_CLOSING_TAG)
-            if (closingIndex < 0) throw IllegalStateException("$destSubPath has no closing resources tag")
-
-            // Keep only the last added resource of each name, as resources of the next apps
-            // replace earlier ones.
-            val latest = LinkedHashMap<Pair<String, String>, String>()
-            destination.added.forEach { (key, element) ->
-                latest.remove(key)
-                latest[key] = element
-            }
-
-            val builder = StringBuilder(text.substring(0, closingIndex).trimEnd()).append('\n')
-            latest.values.forEach { builder.append("    ").append(it).append('\n') }
-            builder.append(text.substring(closingIndex))
-
-            destination.file.writeText(builder.toString())
-        }
-
+        /**
+         * Adds the resources of a bundled resource file of the default locale to the app.
+         *
+         * A destination file no other patch decoded is not decoded here either. It is opened only to add
+         * resources, which the patcher adds to the resources of the app, replacing the ones of the same
+         * name. The last resource added of each name is kept, as resources of the next apps replace
+         * earlier ones.
+         */
         fun addResourcesFromFile(
-            destinationFiles: MutableMap<String, DestinationFile>,
+            destinationFiles: MutableMap<String, ResourceXml>,
             appId: String,
             locale: AppLocale,
             resourceType: BundledResourceType
         ) {
-            val isDefaultLocale = locale.isDefaultLocale()
             val srcFolderName = locale.getSrcLocaleFolderName()
             val srcSubPath = "$srcFolderName/$appId/$resourceType.xml"
             val destSubPath = "res/${locale.getDestLocaleFolderName()}/$resourceType.xml"
@@ -376,53 +338,87 @@ internal val addResourcesPatch = resourcePatch(
                 return
             }
 
-            val srcText = srcStream.use { it.readBytes().toString(Charsets.UTF_8) }
-            val destination = openDestinationFile(destinationFiles, destSubPath)
-            val defaultResources = appDefaultResources[appId]
-            val localeStringsAdded = mutableSetOf<String>()
+            val resourcesAdded = mutableSetOf<String>()
 
-            forEachRawResourceElement(srcText) { rawElement ->
-                val tagName = rawElement.tag
-                val resourceName = rawElement.name
-                val openTag = rawElement.openTag
-                val inner = rawElement.inner
-                var element = inner?.let { "$openTag$it</$tagName>" } ?: openTag
+            srcStream.use { readXml(it) }.use { source ->
+                val destination = destinationFiles.getOrPut(destSubPath) {
+                    resourceXml(destSubPath, copy = false)
+                }
 
-                if (resourceType == BundledResourceType.STRINGS && inner != null) {
+                source.root.children.forEach { element ->
+                    val resourceName = element.attribute("name") ?: return@forEach
+
                     // Check for bad text strings that will fail resource compilation.
-                    val sanitized = sanitizeAndroidResourceString(
-                        resourceName, inner, destSubPath
-                    )
-                    if (inner != sanitized) {
-                        element = "$openTag$sanitized</$tagName>"
+                    // A string with markup is left as it is.
+                    val sanitized = if (resourceType == BundledResourceType.STRINGS && element.children.isEmpty()) {
+                        sanitizeAndroidResourceString(resourceName, element.text, destSubPath)
+                    } else {
+                        null
                     }
-                }
 
-                if (!localeStringsAdded.add(resourceName)) {
-                    logger.warning(
-                        "Duplicate string resource is declared: $srcFolderName " +
-                                "resource: $resourceName"
-                    )
-                    return@forEachRawResourceElement
-                }
-
-                if (isDefaultLocale) {
-                    // Duplicate check already handled above.
-                    defaultResourcesAdded.add(resourceName)
-                } else if (defaultResources?.contains(resourceName) != true) {
-                    logger.fine {
-                        "Ignoring removed default resource for locale " +
-                                "(Issue will be fixed after next Crowdin sync): " +
-                                "$srcFolderName resource: $resourceName"
+                    if (!resourcesAdded.add(resourceName)) {
+                        logger.warning(
+                            "Duplicate string resource is declared: $srcFolderName " +
+                                    "resource: $resourceName"
+                        )
+                        return@forEach
                     }
-                    return@forEachRawResourceElement
-                }
 
-                destination.added += (tagName to resourceName) to element
+                    val copy = destination.root.appendCopy(element)
+                    if (sanitized != null && sanitized != element.text) copy.text = sanitized
+                }
             }
         }
 
-        fun addLocaleResources(locale: AppLocale) {
+        /**
+         * Names the translations file of the locale in a string resource of its values folder.
+         * The extension reads it to find the file, so Android matches the language of the app to a file
+         * as it would to translated string resources, including the old language codes of the folders
+         * and its fallbacks between regions and scripts.
+         */
+        fun addTranslationsFileName(locale: AppLocale, fileName: String) {
+            resourceXml("res/${locale.getDestLocaleFolderName()}/strings.xml", copy = false).use { strings ->
+                strings.root.appendChild("string") {
+                    setAttribute("name", TRANSLATIONS_FILE_STRING)
+                    text = fileName
+                }
+            }
+        }
+
+        fun addDefaultResources(locale: AppLocale) {
+            // Multiple apps add resources to the same files.
+            val destinationFiles = mutableMapOf<String, ResourceXml>()
+
+            try {
+                appsToInclude.forEach { app ->
+                    BundledResourceType.entries.forEach { type ->
+                        addResourcesFromFile(destinationFiles, app, locale, type)
+                    }
+                }
+            } finally {
+                destinationFiles.values.forEach { it.close() }
+            }
+
+            // The default strings are resources and have no file.
+            addTranslationsFileName(locale, "")
+        }
+
+        // Only needed to convert strings files at patch time.
+        val defaultStringNames by lazy {
+            appsToInclude.flatMapTo(HashSet()) { app ->
+                inputStreamFromBundledResource("addresources", "values/$app/strings.xml")
+                    ?.use { TranslationsJson.readStrings(it) }.orEmpty().map { it.first }
+            }
+        }
+
+        /**
+         * Writes the translated strings of all apps for the locale as one JSON object, which the extension
+         * reads in place of string resources. The build converted the strings of each app to a JSON object
+         * of its own, and they are joined here without parsing them. Patches built without that conversion
+         * are converted here instead, which is slower. Of two strings of the same name, the
+         * extension keeps the one of the later app.
+         */
+        fun addTranslations(locale: AppLocale) {
             val stringsSubPath = "res/${locale.getDestLocaleFolderName()}/strings.xml"
             if (locale.isBuiltInLanguage && stringsSubPath !in appStringsFiles) {
                 // Either the user provided a bad APKM that doesn't have all languages,
@@ -433,36 +429,174 @@ internal val addResourcesPatch = resourcePatch(
                 }
             }
 
-            // Destination files of the locale. Multiple apps add resources to the same files.
-            val destinationFiles = mutableMapOf<String, DestinationFile>()
-
+            val joined = ByteArrayOutputStream()
+            joined.write('{'.code)
             appsToInclude.forEach { app ->
-                BundledResourceType.entries.forEach { type ->
-                    addResourcesFromFile(destinationFiles, app, locale, type)
-                }
+                val srcFolderName = locale.getSrcLocaleFolderName()
+                val json = inputStreamFromBundledResource(
+                    TRANSLATIONS_BUNDLED_DIR, "$srcFolderName/$app.json"
+                )?.use { it.readBytes() }
+                    // Patches built without the conversion bundle the strings files instead.
+                    ?: inputStreamFromBundledResource("addresources", "$srcFolderName/$app/strings.xml")?.use {
+                        TranslationsJson.convert(it, defaultStringNames)
+                    }
+                    ?: return@forEach
 
-                if (locale.isDefaultLocale()) {
-                    appDefaultResources[app] = defaultResourcesAdded.toSet()
+                // Each file is a JSON object with nothing around its braces.
+                if (json.size <= 2) return@forEach
+                if (joined.size() > 1) joined.write(','.code)
+                joined.write(json, 1, json.size - 2)
+            }
+            joined.write('}'.code)
+
+            val name = locale.getDestLocaleFolderName().removePrefix("values-")
+            resourceFile("$TRANSLATIONS_ASSETS_DIR/$name.json", copy = false).apply {
+                parentFile.mkdirs()
+                writeBytes(joined.toByteArray())
+            }
+            addTranslationsFileName(locale, name)
+        }
+
+        locales.forEach { locale ->
+            if (locale.isDefaultLocale()) addDefaultResources(locale) else addTranslations(locale)
+        }
+    }
+}
+
+/**
+ * Converts translated strings files to the JSON objects that [addResourcesPatch] adds to the app.
+ *
+ * The build runs [main] to convert the strings files of addresources, so patching only copies them.
+ * Patches built without it are converted while patching.
+ */
+internal object TranslationsJson {
+
+    /**
+     * Converts the strings files of addresources to a JSON file for each translated locale and app.
+     *
+     * @param args The addresources folder, and the folder to write [TRANSLATIONS_BUNDLED_DIR] to.
+     */
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val source = File(args[0])
+        val output = File(args[1]).resolve(TRANSLATIONS_BUNDLED_DIR)
+
+        val defaultNames = source.resolve("values").listFiles()!!.flatMapTo(HashSet()) { app ->
+            app.resolve("strings.xml").takeIf { it.isFile }
+                ?.inputStream()?.use { readStrings(it) }.orEmpty().map { it.first }
+        }
+
+        output.deleteRecursively()
+        source.listFiles()!!.filter { it.name.startsWith("values-") }.forEach { locale ->
+            locale.listFiles()!!.forEach { app ->
+                val file = app.resolve("strings.xml")
+                if (!file.isFile) return@forEach
+
+                val target = output.resolve("${locale.name}/${app.name}.json")
+                target.parentFile.mkdirs()
+                target.writeBytes(file.inputStream().use { convert(it, defaultNames) })
+            }
+        }
+    }
+
+    /**
+     * @param defaultNames Names of the strings of the default locale. Other strings are left out, as a string
+     *                     removed from the default locale stays translated until the next Crowdin sync.
+     * @return The strings of the strings file as a JSON object, with nothing around its braces.
+     */
+    fun convert(strings: InputStream, defaultNames: Set<String>): ByteArray {
+        val seen = HashSet<String>()
+        return readStrings(strings)
+            .filter { (name, _) -> name in defaultNames && seen.add(name) }
+            .joinToString(",", "{", "}") { (name, text) -> json(name) + ":" + json(resolve(text)) }
+            .toByteArray()
+    }
+
+    /**
+     * @return The names and texts of the strings of a strings file. The text of a string with markup
+     *         is its text without the markup.
+     */
+    fun readStrings(strings: InputStream): List<Pair<String, String>> {
+        val result = ArrayList<Pair<String, String>>()
+        val handler = object : DefaultHandler() {
+            private var depth = 0
+            private var name: String? = null
+            private val text = StringBuilder()
+
+            override fun startElement(uri: String, localName: String, qName: String, attributes: Attributes) {
+                depth++
+                if (depth == 2 && qName.ifEmpty { localName } == "string") {
+                    name = attributes.getValue("name")
+                    text.setLength(0)
                 }
             }
 
-            destinationFiles.forEach { (destSubPath, destination) ->
-                writeDestinationFile(destSubPath, destination)
+            override fun characters(chars: CharArray, start: Int, length: Int) {
+                if (name != null) text.append(chars, start, length)
+            }
+
+            override fun endElement(uri: String, localName: String, qName: String) {
+                if (depth == 2) {
+                    name?.let { result += it to text.toString() }
+                    name = null
+                }
+                depth--
             }
         }
+        SAXParserFactory.newInstance().newSAXParser().parse(strings, handler)
+        return result
+    }
 
-        // The default locale must be added first since other locales are filtered by it.
-        // Each locale only touches its own destination files, so the rest can run in parallel.
-        val (defaultLocales, otherLocales) = locales.partition { it.isDefaultLocale() }
-        defaultLocales.forEach { addLocaleResources(it) }
-
-        val executor = Executors.newFixedThreadPool(ADD_RESOURCES_THREAD_COUNT)
-        try {
-            otherLocales.map { locale ->
-                executor.submit { addLocaleResources(locale) }
-            }.forEach { it.get() }
-        } finally {
-            executor.shutdown()
+    /**
+     * What aapt2 makes of the text of a string: quotes keep whitespace and are dropped,
+     * escapes are resolved, and whitespace outside quotes is collapsed and trimmed.
+     */
+    private fun resolve(text: String): String {
+        val result = StringBuilder()
+        var quoted = false
+        var pendingSpace = false
+        var index = 0
+        while (index < text.length) {
+            val char = text[index++]
+            if (!quoted && (char == ' ' || char == '\n' || char == '\t' || char == '\r')) {
+                pendingSpace = result.isNotEmpty()
+                continue
+            }
+            if (pendingSpace) {
+                result.append(' ')
+                pendingSpace = false
+            }
+            when (char) {
+                '"' -> quoted = !quoted
+                '\\' -> if (index < text.length) {
+                    when (val escaped = text[index++]) {
+                        'n' -> result.append('\n')
+                        't' -> result.append('\t')
+                        'u' -> {
+                            result.append(text.substring(index, index + 4).toInt(16).toChar())
+                            index += 4
+                        }
+                        else -> result.append(escaped)
+                    }
+                }
+                else -> result.append(char)
+            }
         }
+        return result.toString()
+    }
+
+    private fun json(value: String) = buildString {
+        append('"')
+        value.forEach { char ->
+            when {
+                char == '"' -> append("\\\"")
+                char == '\\' -> append("\\\\")
+                char == '\n' -> append("\\n")
+                char == '\t' -> append("\\t")
+                char < ' ' -> append("\\u%04x".format(char.code))
+                else -> append(char)
+            }
+        }
+        append('"')
     }
 }

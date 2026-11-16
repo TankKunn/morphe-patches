@@ -8,7 +8,8 @@
 package app.morphe.patches.youtube.interaction.nativeplaylistqueue
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
-import app.morphe.patcher.patch.BytecodePatchContext
+import app.morphe.patcher.patch.mutableClassDefBy
+import app.morphe.patcher.util.addPatchInterface
 import app.morphe.patcher.util.proxy.mutableTypes.MutableField.Companion.toMutable
 import app.morphe.patches.youtube.layout.originaltitles.PlaylistPanelVideoBindFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
@@ -19,10 +20,9 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableField
 
 /** Observe native row commands without replacing their listener or routing. */
 internal fun installPlaylistRowPlayback(
-    context: BytecodePatchContext,
     modelField: FieldReference,
     panelField: FieldReference
-) = with(context) {
+) {
     // Original titles also modifies these binders. Inspect fresh matches,
     // including all native layouts, and require their shared video model.
     PlaylistPanelVideoBindFingerprint.clearMatch()
@@ -38,7 +38,7 @@ internal fun installPlaylistRowPlayback(
 
     val rowMenu = playlistRowMenuOpenFingerprint(videoType).match()
 
-    installPlaylistMenuDispatch(context, rowMenu.originalMethod.parameterTypes[1].toString())
+    installPlaylistMenuDispatch(rowMenu.originalMethod.parameterTypes[1].toString())
 
     val contextCreation = rowMenu.instructionMatches.last()
     val contextRegister = contextCreation.getInstruction<OneRegisterInstruction>().registerA
@@ -47,7 +47,7 @@ internal fun installPlaylistRowPlayback(
         "invoke-static {v$contextRegister}, $EXTENSION_CLASS->onRowMenuOpened(Ljava/util/Map;)V"
     )
 
-    installPlaylistReordering(context, videoType)
+    installPlaylistReordering(videoType)
 
     // The native veto predicate runs before logging decorates the bound endpoint.
     // Observe its original identity after the veto, never the decorated copy.
@@ -66,11 +66,9 @@ internal fun installPlaylistRowPlayback(
         .instructionMatches.first().fieldReference
 
     val controller = mutableClassDefBy(modelField.definingClass)
-    controller.addBridgeMethod(
+    controller.addPatchInterface(
+        CONTROLLER_INTERFACE,
         "patch_findQueueRow",
-        listOf("Ljava/lang/Object;"),
-        "I",
-        6,
         """
             iget-object v0, p0, $modelField
             if-eqz v0, :missing
@@ -107,18 +105,15 @@ internal fun installPlaylistRowPlayback(
         """
     )
 
-    installPlaylistNavigation(context, controller.type)
+    installPlaylistNavigation(controller.type)
 
     // A nonserialized bit belongs to the exact native object, survives a stale
     // view callback, and disappears with that object. No native model is retained
     // in an extension cache, and protobuf equality/serialization stay unchanged.
     val video = mutableClassDefBy(videoType)
-    video.interfaces.add("Lapp/morphe/extension/youtube/patches/utils/FlyoutUtils\$FlyoutMenuVideoIdInterface;")
-    video.addBridgeMethod(
+    video.addPatchInterface(
+        $$"Lapp/morphe/extension/youtube/patches/utils/FlyoutUtils$FlyoutMenuVideoIdInterface;",
         "patch_getVideoId",
-        emptyList(),
-        "Ljava/lang/String;",
-        1,
         """
             iget-object v0, p0, $videoIdField
             return-object v0
@@ -129,17 +124,7 @@ internal fun installPlaylistRowPlayback(
         videoType, "patch_queueOwned", "Z", AccessFlags.PUBLIC.value, null, null, null
     ).toMutable()
     video.fields.add(ownedField)
-    video.interfaces.add(QUEUE_ROW_INTERFACE)
-    video.addBridgeMethod(
-        "patch_isQueueOwned",
-        emptyList(),
-        "Z",
-        1,
-        """
-            iget-boolean v0, p0, $ownedField
-            return v0
-        """
-    )
+    video.addPatchInterface(QUEUE_ROW_INTERFACE, "patch_isQueueOwned", ownedField)
 
     // Retain ownership on old header models too, so a stale Clear action is consumed
     // instead of falling through to YouTube's ordinary Hide command.
@@ -148,23 +133,11 @@ internal fun installPlaylistRowPlayback(
         panel.type, "patch_queueOwned", "Z", AccessFlags.PUBLIC.value, null, null, null
     ).toMutable()
     panel.fields.add(panelOwned)
-    panel.interfaces.add(QUEUE_PANEL_INTERFACE)
-    panel.addBridgeMethod(
-        "patch_isQueueOwned",
-        emptyList(),
-        "Z",
-        1,
-        """
-            iget-boolean v0, p0, $panelOwned
-            return v0
-        """
-    )
+    panel.addPatchInterface(QUEUE_PANEL_INTERFACE, "patch_isQueueOwned", panelOwned)
 
-    controller.addBridgeMethod(
+    controller.addPatchInterface(
+        CONTROLLER_INTERFACE,
         "patch_markQueueRows",
-        emptyList(),
-        "V",
-        4,
         """
             iget-object v0, p0, $modelField
             if-eqz v0, :done
@@ -200,12 +173,9 @@ internal fun installPlaylistRowPlayback(
         listenerType, "patch_queueEndpoint", "Ljava/lang/Object;", AccessFlags.PRIVATE.value, null, null, null
     ).toMutable()
     listener.fields.add(boundEndpoint)
-    listener.interfaces.add(ROW_CLICK_INTERFACE)
-    listener.addBridgeMethod(
+    listener.addPatchInterface(
+        ROW_CLICK_INTERFACE,
         "patch_getQueueEndpoint",
-        emptyList(),
-        "Ljava/lang/Object;",
-        1,
         """
             iget-object v0, p0, $boundEndpoint
             return-object v0
@@ -232,5 +202,5 @@ internal fun installPlaylistRowPlayback(
                 "$EXTENSION_CLASS->onRowClicked($ROW_CLICK_INTERFACE)V"
     )
 
-    installPlaylistSwipeBackground(context, rowListener)
+    installPlaylistSwipeBackground(rowListener)
 }

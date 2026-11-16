@@ -9,10 +9,11 @@ package app.morphe.patches.youtube.misc.fix.padding
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.patch
 import app.morphe.patcher.util.matchAllMethodIndicesForEach
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playservice.is_21_07_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_46_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.util.addInstructionsAtControlFlowLabel
@@ -27,7 +28,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 private const val EXTENSION_CLASS =
     "Lapp/morphe/extension/youtube/patches/FixPagePaddingPatch;"
 
-internal val fixPagePaddingPatch = bytecodePatch(
+internal val fixPagePaddingPatch = patch(
     description = "Fixes layout padding glitches in incognito search and watch history."
 ) {
     dependsOn(
@@ -38,8 +39,13 @@ internal val fixPagePaddingPatch = bytecodePatch(
 
     execute {
         if (is_21_07_or_greater) {
-            IncognitoSearchPaddingFeatureFlagFingerprint.matchAllMethodIndicesForEach(requireMatches = false) { index ->
-                insertLiteralOverride(index, false)
+            listOf(
+                IncognitoSearchPaddingFeatureFlagFingerprint,
+                KeyboardHidesNavigationBarFeatureFlagFingerprint
+            ).forEach { fingerprint ->
+                fingerprint.matchAllMethodIndicesForEach(requireMatches = false) { index ->
+                    insertLiteralOverride(index, false)
+                }
             }
         }
 
@@ -47,47 +53,47 @@ internal val fixPagePaddingPatch = bytecodePatch(
         // the page and the navigation bar to the top of the keyboard, so the navigation bar is moved above
         // the keyboard. The keyboard height is replaced with no margin (0), so the navigation bar stays
         // at the bottom behind the keyboard, except while the legacy miniplayer is shown.
-        PageBottomMarginFingerprint.let {
-            it.method.apply {
-                val insetIndex = it.instructionMatches.last().index
-                val marginRegister = getInstruction<TwoRegisterInstruction>(insetIndex).registerA
-                val keyboardBranchIndex = indexOfFirstInstructionReversedOrThrow(insetIndex) {
-                    opcode == Opcode.IF_EQZ &&
-                            (this as BuilderInstruction21t).target.location.index == insetIndex
+        if (is_21_46_or_greater) {
+            PageBottomMarginFingerprint.let {
+                it.method.apply {
+                    val heightIndex = it.instructionMatches.last().index
+                    val heightRegister = getInstruction<OneRegisterInstruction>(heightIndex).registerA
+
+                    addInstructions(
+                        heightIndex + 1,
+                        """
+                            invoke-static/range { v$heightRegister .. v$heightRegister }, $EXTENSION_CLASS->getKeyboardMargin(I)I
+                            move-result v$heightRegister
+                        """
+                    )
                 }
-                val keyboardRegister = getInstruction<OneRegisterInstruction>(keyboardBranchIndex).registerA
+            }
+        } else {
+            PageBottomMarginLegacyFingerprint.let {
+                it.method.apply {
+                    val insetIndex = it.instructionMatches.last().index
+                    val marginRegister = getInstruction<TwoRegisterInstruction>(insetIndex).registerA
+                    val keyboardBranchIndex = indexOfFirstInstructionReversedOrThrow(insetIndex) {
+                        opcode == Opcode.IF_EQZ &&
+                                (this as BuilderInstruction21t).target.location.index == insetIndex
+                    }
+                    val keyboardRegister = getInstruction<OneRegisterInstruction>(keyboardBranchIndex).registerA
 
-                addInstructionsAtControlFlowLabel(
-                    insetIndex + 1,
-                    """
-                        if-eqz v$keyboardRegister, :keyboard_hidden
-                        invoke-static/range { v$marginRegister .. v$marginRegister }, $EXTENSION_CLASS->getKeyboardMargin(I)I
-                        move-result v$marginRegister
-                        :keyboard_hidden
-                        nop
-                    """
-                )
+                    addInstructionsAtControlFlowLabel(
+                        insetIndex + 1,
+                        """
+                            if-eqz v$keyboardRegister, :keyboard_hidden
+                            invoke-static/range { v$marginRegister .. v$marginRegister }, $EXTENSION_CLASS->getKeyboardMargin(I)I
+                            move-result v$marginRegister
+                            :keyboard_hidden
+                            nop
+                        """
+                    )
+                }
             }
         }
 
-        FeedListPaddingFingerprint.let {
-            it.method.apply {
-                val index = it.instructionMatches.last().index
-                val paddingInstruction = getInstruction<FiveRegisterInstruction>(index)
-                val listRegister = paddingInstruction.registerC
-                val bottomPaddingRegister = paddingInstruction.registerG
-
-                addInstructions(
-                    index,
-                    """
-                        invoke-static { v$listRegister, v$bottomPaddingRegister }, $EXTENSION_CLASS->getAdjustedFeedListBottomPadding(Landroid/view/View;I)I
-                        move-result v$bottomPaddingRegister
-                    """
-                )
-            }
-        }
-
-        BrowseListBottomPaddingFingerprint.let {
+        listOf(FeedListPaddingFingerprint, BrowseListBottomPaddingFingerprint).forEach {
             it.method.apply {
                 val index = it.instructionMatches.last().index
                 val paddingInstruction = getInstruction<FiveRegisterInstruction>(index)

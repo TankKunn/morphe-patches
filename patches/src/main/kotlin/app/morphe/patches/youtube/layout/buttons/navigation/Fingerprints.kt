@@ -25,6 +25,7 @@ import app.morphe.patcher.resource.ResourceType
 import app.morphe.patcher.resourceLiteral
 import app.morphe.patcher.string
 import app.morphe.patches.youtube.misc.navigation.ImageEnumConstructorFingerprint
+import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
@@ -38,9 +39,9 @@ internal object WatchLaterIconEnumFingerprint : Fingerprint(
     )
 )
 
-internal object WatchLaterPivotBarItemBuilderFingerprint : Fingerprint(
+internal object PivotBarItemBuilderFingerprint : Fingerprint(
     definingClass = EXTENSION_CLASS,
-    name = "buildWatchLaterPivotBarItem",
+    name = "buildPivotBarItem",
     returnType = "Ljava/lang/Object;",
     parameters = listOf("[B")
 )
@@ -143,7 +144,8 @@ internal object CommentReplyPaddingFeatureFlagFingerprint : Fingerprint(
 internal val TRANSLUCENT_NAVIGATION_BAR_FEATURE_FLAGS = listOf(
     45630927L, // Blurred, translucent background of the navigation bar.
     NAVIGATION_BAR_COVERS_SYSTEM_BUTTONS_FLAG,
-    FEED_BEHIND_NAVIGATION_BAR_FLAG
+    FEED_BEHIND_NAVIGATION_BAR_FLAG,
+    TRANSLUCENT_NAVIGATION_BAR_STYLE_FLAG
 )
 
 /**
@@ -157,6 +159,12 @@ internal const val NAVIGATION_BAR_COVERS_SYSTEM_BUTTONS_FLAG = 45632194L
  * of the screen, and its list gets the navigation bar height as bottom padding.
  */
 internal const val FEED_BEHIND_NAVIGATION_BAR_FLAG = 45631257L
+
+/**
+ * Translucent style of the navigation bar before Android 12, which tells the pages that they can be seen
+ * through the bar, so they are laid out behind it. From Android 12 the blurred background tells it instead.
+ */
+internal const val TRANSLUCENT_NAVIGATION_BAR_STYLE_FLAG = 45633329L
 
 internal object TranslucentNavigationBarFeatureFlagsFingerprint : Fingerprint(
     filters = listOf(
@@ -338,6 +346,34 @@ internal object PivotBarRendererFingerprint : Fingerprint(
             returnType = "V"
         ),
         opcode(Opcode.RETURN_OBJECT)
+    )
+)
+
+/**
+ * Same method as [PivotBarRendererFingerprint].
+ * Matches the renderer of the navigation buttons without labels.
+ */
+internal object PivotBarIconOnlyRendererFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
+    parameters = listOf("L"),
+    returnType = "Lj$/util/Optional;",
+    filters = listOf(
+        literal(117501096L),
+        literal(318370163L),
+        opcode(Opcode.IF_NE, location = MatchAfterWithin(3)),
+        opcode(Opcode.CHECK_CAST, location = MatchAfterWithin(6))
+    )
+)
+
+/**
+ * Order of a toolbar button in the menu of the toolbar.
+ */
+internal object ToolBarButtonOrderFingerprint : Fingerprint(
+    classFingerprint = ToolBarButtonFingerprint,
+    returnType = "I",
+    parameters = listOf(),
+    filters = listOf(
+        literal(1000L)
     )
 )
 

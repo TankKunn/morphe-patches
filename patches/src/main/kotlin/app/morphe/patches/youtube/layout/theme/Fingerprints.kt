@@ -60,6 +60,12 @@ internal object RiveSplashScreenFeatureFlagFingerprint : Fingerprint(
     )
 )
 
+/**
+ * 21.44+ bootstrap flag to use the 'rive-android-v1' library instead of the Rive library
+ * of the startup animation. If it is on, the app does not play the Rive startup animation.
+ */
+internal const val RIVE_V1_LIBRARY_BOOTSTRAP_FLAG = 1073831080
+
 internal const val RIVE_THEMED_SPLASH_SCREEN_FEATURE_FLAG = 1073830411L
 
 /**
@@ -135,7 +141,7 @@ internal object RiveSplashScreenAnimationViewFingerprint : Fingerprint(
 )
 
 /**
- * 21.32 - 21.34 sets the view that the Rive animation is drawn in,
+ * 21.31 - 21.34 sets the view that the Rive animation is drawn in,
  * with a resource id that was loaded earlier for another view.
  */
 internal object RiveSplashScreenAnimationViewLegacyFingerprint : Fingerprint(
@@ -188,13 +194,15 @@ internal object SplashScreenOnStopFingerprint : Fingerprint(
  * Schedules the splash screen to close after a timeout of 2.5 seconds.
  * Must be matched against the method of [SplashScreenStyleFingerprint] or [SplashScreenStyleDelegateFingerprint].
  */
+internal val SPLASH_SCREEN_TIMEOUT_CALL = methodCall(
+    parameters = listOf("Ljava/lang/Runnable;", "J", "Ljava/util/concurrent/TimeUnit;")
+)
+
 internal object SplashScreenTimeoutFingerprint : Fingerprint(
     returnType = "V",
     filters = listOf(
         literal(2500L),
-        methodCall(
-            parameters = listOf("Ljava/lang/Runnable;", "J", "Ljava/util/concurrent/TimeUnit;")
-        )
+        SPLASH_SCREEN_TIMEOUT_CALL
     )
 )
 
@@ -244,11 +252,28 @@ internal object RiveReadRawResourceFingerprint : Fingerprint(
 )
 
 /**
- * Stores each frame the Rive renderer draws.
+ * Publishes each frame the Rive renderer draws, as a bitmap or as a signal that the frame can be drawn.
+ * 21.46+ obfuscates the Rive library, except the v1 library that calls an accessor to store the bitmap.
  */
-internal object RiveCanvasSessionSetLatestBitmapFingerprint : Fingerprint(
+internal object RiveCanvasSessionFrameAvailableFingerprint : Fingerprint(
+    filters = listOf(
+        string("Rive/CanvasSession/FrameAvailable"),
+        string("Rive/CanvasSession/PublishLatestBitmap"),
+        fieldAccess(
+            opcode = Opcode.IPUT_OBJECT,
+            type = "Landroid/graphics/Bitmap;",
+            location = MatchAfterWithin(20)
+        )
+    )
+)
+
+/**
+ * Stores each frame the Rive renderer draws.
+ * 21.45 and older.
+ */
+internal object RiveCanvasSessionSetLatestBitmapLegacyFingerprint : Fingerprint(
     definingClass = "Lapp/rive/RiveCanvasSession;",
-    name = "access\$setLatestBitmap\$p",
+    name = $$"access$setLatestBitmap$p",
     returnType = "V",
     parameters = listOf("Lapp/rive/RiveCanvasSession;", "Landroid/graphics/Bitmap;")
 )

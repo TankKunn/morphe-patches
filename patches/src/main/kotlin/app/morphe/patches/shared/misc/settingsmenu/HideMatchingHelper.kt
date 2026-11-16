@@ -8,7 +8,7 @@
 package app.morphe.patches.shared.misc.settingsmenu
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
-import app.morphe.patcher.patch.BytecodePatchContext
+import app.morphe.patcher.patch.mutableClassDefByOrNull
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.util.toPublicAccessFlags
@@ -28,11 +28,9 @@ internal const val HIDE_MATCHING_METHOD =
 /**
  * Catches async title assignments that skip the tree walk.
  */
-internal fun BytecodePatchContext.injectSettingsMenuFilterHook(extensionClass: String) {
+internal fun injectSettingsMenuFilterHook(extensionClass: String) {
     val setVisible = PreferenceSetVisibleFingerprint.method
-    val visibleField = PreferenceSetVisibleFingerprint.let {
-        it.instructionMatches.first().fieldReference
-    }
+    val visibleField = PreferenceSetVisibleFingerprint.instructionMatches.first().fieldReference
 
     PreferenceSetTitleFingerprint.method.apply {
         addInstructionsWithLabels(
@@ -68,15 +66,11 @@ internal fun BytecodePatchContext.injectSettingsMenuFilterHook(extensionClass: S
  * for XML-inflated titles, and private CharSequence fields are widened first because a
  * subclass method on PreferenceGroup cannot access them otherwise.
  */
-internal fun BytecodePatchContext.injectHideMatchingHelper() {
-    val listField = PreferenceGroupGetPreferenceFingerprint.let {
-        it.instructionMatches.last().fieldReference
-    }
+internal fun injectHideMatchingHelper() {
+    val listField = PreferenceGroupGetPreferenceFingerprint.instructionMatches.last().fieldReference
     val setVisible = PreferenceSetVisibleFingerprint.method
     // mVisible: guards against duplicate work + drives the self-hide-when-all-children-invisible rule.
-    val visibleField = PreferenceSetVisibleFingerprint.let {
-        it.instructionMatches.first().fieldReference
-    }
+    val visibleField = PreferenceSetVisibleFingerprint.instructionMatches.first().fieldReference
 
     val preferenceClass = mutableClassDefByOrNull(PREFERENCE_CLASS)
         ?: throw PatchException("Class not found in target: $PREFERENCE_CLASS")

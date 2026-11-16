@@ -10,13 +10,18 @@
 
 package app.morphe.patches.youtube.layout.hide.shorts
 
+import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
+import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
+import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.methodCall
+import app.morphe.patcher.opcode
 import app.morphe.patcher.patch.booleanOption
-import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patcher.patch.resourceXml
+import app.morphe.patcher.patch.patch
 import app.morphe.patcher.resource.ResourceType
 import app.morphe.patcher.resourceLiteral
 import app.morphe.patcher.util.matchAllMethodIndicesForEach
@@ -30,6 +35,7 @@ import app.morphe.patches.youtube.misc.litho.filter.lithoFilterPatch
 import app.morphe.patches.youtube.misc.litho.observer.layoutReloadObserverPatch
 import app.morphe.patches.youtube.misc.navigation.addBottomBarContainerHook
 import app.morphe.patches.youtube.misc.navigation.navigationBarHookPatch
+import app.morphe.patches.youtube.misc.playservice.is_20_51_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_02_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_05_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_17_or_greater
@@ -37,12 +43,14 @@ import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
+import app.morphe.patches.youtube.shared.PushNotificationReceivedFingerprint
 import app.morphe.util.addInstructionsAtControlFlowLabel
-import app.morphe.util.findElementByAttributeValueOrThrow
+import app.morphe.util.indexOfFirstInstruction
 import app.morphe.util.indexOfFirstInstructionOrThrow
-import app.morphe.util.removeFromParent
+import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 
 internal val hideShortsAppShortcutOption = booleanOption(
     key = "hideShortsAppShortcut",
@@ -58,7 +66,7 @@ internal val hideShortsWidgetOption = booleanOption(
     description = "Permanently hides the launcher widget Shorts button."
 )
 
-private val hideShortsComponentsResourcePatch = resourcePatch {
+private val hideShortsComponentsResourcePatch = patch {
     dependsOn(
         settingsPatch,
         versionCheckPatch
@@ -125,6 +133,7 @@ private val hideShortsComponentsResourcePatch = resourcePatch {
                 preferences = setOf(
                     SwitchPreference("morphe_hide_shorts_channel"),
                     SwitchPreference("morphe_hide_shorts_home"),
+                    SwitchPreference("morphe_hide_shorts_notifications"),
                     SwitchPreference("morphe_hide_shorts_search"),
                     SwitchPreference("morphe_hide_shorts_subscriptions"),
                     SwitchPreference("morphe_hide_shorts_video_description"),
@@ -135,25 +144,19 @@ private val hideShortsComponentsResourcePatch = resourcePatch {
         )
 
         // Verify the file has the expected node, even if the patch option is off.
-        document("res/xml/main_shortcuts.xml").use { document ->
-            val shortsItem = document.childNodes.findElementByAttributeValueOrThrow(
-                "android:shortcutId",
-                "shorts-shortcut"
-            )
+        resourceXml("res/xml/main_shortcuts.xml").use { shortcuts ->
+            val shortsItem = shortcuts.elementByAttribute("android:shortcutId", "shorts-shortcut")
 
             if (hideShortsAppShortcut == true) {
-                shortsItem.removeFromParent()
+                shortsItem.remove()
             }
         }
 
-        document("res/layout/appwidget_two_rows.xml").use { document ->
-            val shortsItem = document.childNodes.findElementByAttributeValueOrThrow(
-                "android:id",
-                "@id/button_shorts_container"
-            )
+        resourceXml("res/layout/appwidget_two_rows.xml").use { widget ->
+            val shortsItem = widget.elementByAttribute("android:id", "@id/button_shorts_container")
 
             if (hideShortsWidget == true) {
-                shortsItem.removeFromParent()
+                shortsItem.remove()
             }
         }
     }
@@ -161,8 +164,7 @@ private val hideShortsComponentsResourcePatch = resourcePatch {
 
 private const val EXTENSION_FILTER = "Lapp/morphe/extension/youtube/patches/components/ShortsFilter;"
 
-@Suppress("unused")
-val hideShortsComponentsPatch = bytecodePatch(
+val hideShortsComponentsPatch = patch(
     name = "Hide Shorts components",
     description = "Adds options to hide components related to Shorts."
 ) {
@@ -183,6 +185,79 @@ val hideShortsComponentsPatch = bytecodePatch(
 
     execute {
         addLithoFilter(EXTENSION_FILTER)
+
+        // region Hide the empty bar below a Short.
+
+        // The container of the bar below a Short keeps its height when the filter hides the bar,
+        // such as the comment bar, so the Short is shown above an empty black bar.
+        if (is_20_51_or_greater) {
+            resourceLiteral(
+                ResourceType.ID, "reel_bottom_action_bar_container"
+            ).matchAllMethodIndicesForEach { literalInstructionIndex ->
+                val viewIndex = indexOfFirstInstruction(
+                    literalInstructionIndex,
+                    methodCall(name = "findViewById")
+                ) + 1
+                if (viewIndex <= 0 || getInstruction(viewIndex).opcode != Opcode.MOVE_RESULT_OBJECT) {
+                    return@matchAllMethodIndicesForEach
+                }
+                val viewRegister = getInstruction<OneRegisterInstruction>(viewIndex).registerA
+
+                addInstruction(
+                    viewIndex + 1,
+                    "invoke-static { v$viewRegister }, $EXTENSION_FILTER->hideEmptyBottomActionBar(Landroid/view/View;)V"
+                )
+            }
+        }
+
+        // endregion
+
+        // region Show the navigation bar below the Shorts that show the comment bar instead of it.
+
+        // The Shorts opened from a channel show the comment bar below them instead of the
+        // navigation bar. When "Hide preview comment" hides the comment bar, nothing is shown
+        // in place of the navigation bar. The navigation bar is kept for these Shorts.
+        ShortsNavigationBarModeFingerprint.let {
+            val navigationBarField = it.instructionMatches.first().fieldReference
+            val navigationBarModeField = it.instructionMatches[3].fieldReference
+
+            // Every read of the mode, such as by the Shorts pager and by the page of the Short.
+            Fingerprint(
+                filters = listOf(
+                    fieldAccess(opcode = Opcode.IGET_OBJECT, reference = navigationBarField),
+                    opcode(Opcode.IF_NEZ, location = MatchAfterImmediately()),
+                    opcode(Opcode.SGET_OBJECT, location = MatchAfterImmediately()),
+                    fieldAccess(
+                        opcode = Opcode.IGET,
+                        reference = navigationBarModeField,
+                        location = MatchAfterImmediately()
+                    )
+                )
+            ).matchAll().forEach { match ->
+                match.method.apply {
+                    val modeIndex = match.instructionMatches.last().index
+                    val modeRegister = getInstruction<TwoRegisterInstruction>(modeIndex).registerA
+
+                    addInstructions(
+                        modeIndex + 1,
+                        """
+                            invoke-static { v$modeRegister }, $EXTENSION_FILTER->getNavigationBarMode(I)I
+                            move-result v$modeRegister
+                        """
+                    )
+
+                    val configIndex = match.instructionMatches.first().index
+                    val configRegister = getInstruction<TwoRegisterInstruction>(configIndex).registerB
+
+                    addInstructionsAtControlFlowLabel(
+                        configIndex,
+                        "invoke-static { v$configRegister }, $EXTENSION_FILTER->setReelWatchConfig(Lcom/google/protobuf/MessageLite;)V"
+                    )
+                }
+            }
+        }
+
+        // endregion
 
         // region Hide sound button.
 
@@ -321,6 +396,22 @@ val hideShortsComponentsPatch = bytecodePatch(
                 }
             }
         }
+
+        // endregion
+
+        // region Hide Shorts push notifications.
+
+        PushNotificationReceivedFingerprint.method.addInstructionsWithLabels(
+            0,
+            """
+                invoke-static { p2 }, $EXTENSION_FILTER->hideShortsNotification(Lcom/google/protobuf/MessageLite;)Z
+                move-result v0
+                if-eqz v0, :show
+                return-void
+                :show
+                nop
+            """
+        )
 
         // endregion
     }

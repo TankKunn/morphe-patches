@@ -19,6 +19,7 @@ import android.os.Looper;
 import android.os.SystemClock;
 import android.view.accessibility.AccessibilityManager;
 
+import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,6 +45,7 @@ import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.settings.Settings;
 
 /** One ordered mutation stream, two bounded network workers, callbacks on the UI thread. */
+@SuppressWarnings("unused")
 public final class TrackerService {
     private static volatile TrackerService instance;
 
@@ -409,6 +411,18 @@ public final class TrackerService {
                 });
     }
 
+    void markWatchedOnAdvance(String previous, String video, long privacyGeneration) {
+        String capturedEpoch = epoch;
+        mutation(() -> {
+                    if (RecordingPrivacy.accepts(privacyGeneration)) {
+                        repository.markWatchedOnAdvance(previous, video,
+                                capturedEpoch == null ? epoch : capturedEpoch);
+                    }
+                },
+                () -> {},
+                error -> {});
+    }
+
     Future<?> discover(
             String video, Consumer<List<PlaylistDiscovery.Match>> done, Consumer<String> error) {
         try {
@@ -673,11 +687,11 @@ public final class TrackerService {
                 error);
     }
 
-    public void seriesOptions(
-            Series s, boolean reverse, boolean hideWatched, Runnable done, Consumer<String> error) {
+    public void seriesOptions(Series s, boolean reverse, boolean hideWatched, boolean watchedOnAdvance,
+                              Runnable done, Consumer<String> error) {
         mutation(() -> {
                     requireCurrent(s);
-                    repository.seriesOptions(s.id(), s.revision(), reverse, hideWatched);
+                    repository.seriesOptions(s.id(), s.revision(), reverse, hideWatched, watchedOnAdvance);
                 },
                 done,
                 error);
@@ -742,7 +756,7 @@ public final class TrackerService {
         Logger.printInfo(() -> "Series tracker operation failed", failure);
         String text = failure.getMessage();
         if (text != null && text.startsWith("morphe_series_tracker_error_")) return text;
-        if (failure instanceof java.io.IOException) {
+        if (failure instanceof IOException) {
             return "morphe_series_tracker_error_catalog_unavailable";
         }
         return "morphe_series_tracker_error_operation";

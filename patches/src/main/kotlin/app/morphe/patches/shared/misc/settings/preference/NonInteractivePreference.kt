@@ -1,7 +1,7 @@
 package app.morphe.patches.shared.misc.settings.preference
 
 import app.morphe.patches.util.resource.BaseResource
-import org.w3c.dom.Document
+import app.morphe.patcher.xml.XmlElement
 
 /**
  * A non-interactive preference.
@@ -15,7 +15,6 @@ import org.w3c.dom.Document
  * @param tag The tag or full class name of the preference.
  * @param selectable If the preference is selectable and responds to tap events.
  */
-@Suppress("MemberVisibilityCanBePrivate")
 class NonInteractivePreference(
     key: String,
     titleKey: String? = "${key}_title",
@@ -27,8 +26,8 @@ class NonInteractivePreference(
     val selectable: Boolean = false,
     val dependency: String? = null,
 ) : BasePreference(key, titleKey, summaryKey, icon, iconBold, layout, tag) {
-    override fun serialize(ownerDocument: Document, resourceCallback: (BaseResource) -> Unit) =
-        super.serialize(ownerDocument, resourceCallback).apply {
+    override fun serialize(parent: XmlElement, index: Int, resourceCallback: (BaseResource) -> Unit) =
+        super.serialize(parent, index, resourceCallback).apply {
             setAttribute("android:selectable", selectable.toString())
             dependency?.let { setAttribute("android:dependency", it) }
         }

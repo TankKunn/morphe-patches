@@ -9,17 +9,17 @@ package app.morphe.patches.shared.misc.proto
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
-import app.morphe.patcher.patch.BytecodePatch
-import app.morphe.patcher.patch.BytecodePatchBuilder
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.Patch
+import app.morphe.patcher.patch.PatchDefinition
+import app.morphe.patcher.patch.patch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patches.shared.misc.fix.proto.fixProtoLibraryPatch
 import app.morphe.util.cloneMutable
 import app.morphe.util.fiveRegisters
 import java.lang.ref.WeakReference
 
-private var elementprotoParserInsertIndexStep = 2
-private var elementprotoParserInsertIndex = elementprotoParserInsertIndexStep
+private const val ELEMENT_PROTO_PARSER_INSERT_INDEX_STEP = 2
+private var elementprotoParserInsertIndex = ELEMENT_PROTO_PARSER_INSERT_INDEX_STEP
 private lateinit var elementProtoParserMethodRef: WeakReference<MutableMethod>
 
 /**
@@ -35,10 +35,10 @@ private lateinit var elementProtoParserMethodRef: WeakReference<MutableMethod>
  * @param block Callback to add app-specific dependencies, such as versionCheckPatch.
  */
 internal fun createElementProtoParserHookPatch(
-    sharedExtensionPatchDep: BytecodePatch,
+    sharedExtensionPatchDep: Patch,
     readsResourcesWithParser: () -> Boolean = { false },
-    block: BytecodePatchBuilder.() -> Unit = {},
-): BytecodePatch = bytecodePatch(
+    block: PatchDefinition.() -> Unit = {},
+): Patch = patch(
     description = "Hook to modify the proto message class, which can only be accessed through reflection.",
 ) {
     dependsOn(
@@ -102,5 +102,5 @@ fun hookElement(
         """
     )
 
-    elementprotoParserInsertIndex += elementprotoParserInsertIndexStep
+    elementprotoParserInsertIndex += ELEMENT_PROTO_PARSER_INSERT_INDEX_STEP
 }

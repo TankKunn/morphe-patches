@@ -14,7 +14,9 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.fieldAccess
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.classDefBy
+import app.morphe.patcher.patch.mutableClassDefBy
+import app.morphe.patcher.patch.patch
 import app.morphe.patcher.util.findFreeRegister
 import app.morphe.patcher.util.getFreeRegisterProvider
 import app.morphe.patcher.util.matchSingle
@@ -25,10 +27,12 @@ import app.morphe.patches.shared.misc.fix.proto.fixProtoLibraryPatch
 import app.morphe.patches.shared.misc.fix.proto.parseByteArrayMethodRef
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
+import app.morphe.patches.shared.misc.videoinformation.VideoQualityFingerprint
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playertype.playerTypeHookPatch
 import app.morphe.patches.youtube.misc.playservice.is_21_17_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_43_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_46_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.VideoQualityChangedFingerprint
@@ -39,12 +43,9 @@ import app.morphe.patches.youtube.video.format.videoFormatPatch
 import app.morphe.patches.youtube.video.information.EXTENSION_VIDEO_QUALITY_INTERFACE
 import app.morphe.patches.youtube.video.information.EXTENSION_VIDEO_QUALITY_MENU_INTERFACE
 import app.morphe.patches.youtube.video.information.PlaybackStartDescriptorToStringFingerprint
-import app.morphe.patches.youtube.video.information.SetVideoQualityFingerprint
-import app.morphe.patches.youtube.video.information.VideoQualityFingerprint
 import app.morphe.patches.youtube.video.information.videoInformationPatch
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.cloneMutable
-import app.morphe.util.findFieldFromToString
 import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.util.findMethodFromToString
 import app.morphe.util.indexOfFirstInstructionOrThrow
@@ -63,7 +64,7 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 private const val EXTENSION_CLASS =
     "Lapp/morphe/extension/youtube/patches/playback/quality/RememberVideoQualityPatch;"
 
-val rememberVideoQualityPatch = bytecodePatch {
+val rememberVideoQualityPatch = patch {
     dependsOn(
         sharedExtensionPatch,
         videoInformationPatch,
@@ -103,11 +104,8 @@ val rememberVideoQualityPatch = bytecodePatch {
             SwitchPreference("morphe_remember_video_quality_last_selected_toast", summary = true)
         ))
 
-        val initialResolutionField = PlaybackStartParametersToStringFingerprint.method
-                .findFieldFromToString(FIXED_RESOLUTION_STRING)
-
         // Inject a call to override initial video quality.
-        getPlaybackStartParametersConstructorFingerprint(initialResolutionField).let {
+        PlaybackStartParametersConstructorFingerprint.let {
             it.method.apply {
                 val index = it.instructionMatches.last().index
                 val register = getInstruction<TwoRegisterInstruction>(index).registerA
@@ -127,7 +125,7 @@ val rememberVideoQualityPatch = bytecodePatch {
         // so the quality selected by the user for the video is used instead of the initial quality.
         // The Shorts player also loads the next Shorts before they play, so the video ID of the player
         // that loads the video is passed, from the playback start descriptor of its player.
-        getPlaybackStartParametersInitialResolutionFingerprint(initialResolutionField).matchSingle().method.apply {
+        PlaybackStartParametersInitialResolutionFingerprint.matchSingle().method.apply {
             val descriptorMatch = getPlayerPlaybackStartDescriptorFingerprint(
                 definingClass,
                 PlaybackStartDescriptorToStringFingerprint.classDef.type
@@ -407,9 +405,7 @@ val rememberVideoQualityPatch = bytecodePatch {
         // The Shorts quality menu sets the selected quality by its resolution, which YouTube can get
         // wrong, such as 720 for the 480p quality of some Shorts, so another quality is played.
         // The quality selected is set instead, as the quality menu of regular videos does.
-        val setResolutionMethod = getSetVideoQualityResolutionFingerprint(
-            SetVideoQualityFingerprint.instructionMatches[1].fieldReference.type
-        ).matchSingle().method
+        val setResolutionMethod = SetVideoQualityResolutionFingerprint.matchSingle().method
 
         getVideoQualityItemSetResolutionFingerprint(setResolutionMethod).matchAll().forEach {
             it.method.apply {
@@ -536,16 +532,26 @@ val rememberVideoQualityPatch = bytecodePatch {
             // The buffered video is cleared after and before the segment that is playing.
             val videoTrackTypeField = PlaybackControllerSetVideoFormatsFingerprint.instructionMatches
                 .last().getFieldAccessed()
-            val discardBufferAfterSegmentMethod = MediaSegmentHolderDiscardBufferAfterSegmentFingerprint
-                .instructionMatches.last().getMethodCalled()
-            val getMediaSegmentHolderMethod = BufferManagerGetMediaSegmentHolderFingerprint.method
+            // The methods that return the buffered media of a track, and clear it after a segment.
+            val (getMediaSegmentHolderMethod, discardBufferAfterSegmentMethod) = if (is_21_46_or_greater) {
+                MediaSegmentHolderDiscardBufferAfterSegmentFingerprint.instructionMatches.let {
+                    it[1].methodReference to it.last().methodReference
+                }
+            } else {
+                BufferManagerGetMediaSegmentHolderLegacyFingerprint.method to
+                        MediaSegmentHolderDiscardBufferAfterSegmentLegacyFingerprint
+                            .instructionMatches.last().methodReference
+            }
+            val bufferManagerClass = getMediaSegmentHolderMethod.definingClass
+            val mediaSegmentHolderClass = getMediaSegmentHolderMethod.returnType
 
             // The video buffered before the segment that is playing is cleared too,
             // otherwise a Short plays the previous quality from its start when it loops.
             // The method of the player is not public before 21.26, so a public method calls it.
             // It returns if media was cleared: the player changes the end time of the first segment.
-            val firstSegmentEndTimeField = MediaSegmentHolderSetFirstSegmentEndTimeFingerprint
-                .instructionMatches.last().getFieldAccessed()
+            val firstSegmentEndTimeField = mediaSegmentHolderSetFirstSegmentEndTimeFingerprint(
+                mediaSegmentHolderClass
+            ).instructionMatches.last().getFieldAccessed()
             val sampleHolderDiscardBufferMethod = if (is_21_43_or_greater) {
                 SampleHolderDiscardBufferBeforeSegmentFingerprint
             } else {
@@ -595,7 +601,7 @@ val rememberVideoQualityPatch = bytecodePatch {
                 discardBufferBeforeSegmentMethod
             }
 
-            PlaybackControllerClearBufferFingerprint.let {
+            playbackControllerClearBufferFingerprint(bufferManagerClass).let {
                 val stopRequestsMatch = it.instructionMatches[0]
                 // The method is private in some versions, so the call uses the original opcode.
                 val stopRequestsOpcode = stopRequestsMatch.instruction.opcode.name
@@ -617,7 +623,7 @@ val rememberVideoQualityPatch = bytecodePatch {
                         invoke-virtual { v2, p1 }, $getMediaSegmentHolderMethod
                         move-result-object v2
                         invoke-virtual { v2, v0, v1 }, $discardBufferAfterSegmentMethod
-                        check-cast v2, $SAMPLE_HOLDER_CLASS
+                        check-cast v2, ${sampleHolderDiscardBufferMethod.definingClass}
                         invoke-virtual { v2, v0, v1 }, $sampleHolderDiscardBufferMethod
                         return-void
                         :clear_buffer
@@ -632,7 +638,7 @@ val rememberVideoQualityPatch = bytecodePatch {
             // before the playback time, as when the quality was selected.
             // The code is added after the checks of live streams, so the buffered video is not
             // cleared with the playback times the player does not clear the buffered media with.
-            MediaPushMediaSourceDiscardBufferFingerprint.let {
+            mediaPushMediaSourceDiscardBufferFingerprint(bufferManagerClass).let {
                 val bufferManagerMatch = it.instructionMatches[1]
                 val bufferManagerField = bufferManagerMatch.getFieldAccessed()
                 val insertIndex = bufferManagerMatch.index
@@ -652,7 +658,7 @@ val rememberVideoQualityPatch = bytecodePatch {
                             sget-object v$trackTypeRegister, $videoTrackTypeField
                             invoke-virtual { v$sampleHolderRegister, v$trackTypeRegister }, $getMediaSegmentHolderMethod
                             move-result-object v$sampleHolderRegister
-                            check-cast v$sampleHolderRegister, $SAMPLE_HOLDER_CLASS
+                            check-cast v$sampleHolderRegister, ${sampleHolderDiscardBufferMethod.definingClass}
                             invoke-virtual { v$sampleHolderRegister, p1, p2 }, $sampleHolderDiscardBufferMethod
                             move-result v$sampleHolderRegister
                             if-eqz v$sampleHolderRegister, :keep_buffer

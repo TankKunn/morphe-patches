@@ -9,13 +9,14 @@ package app.morphe.patches.music.interaction.jam
 
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
+import app.morphe.patcher.InstructionLocation.MatchAfterWithin
 import app.morphe.patcher.checkCast
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.opcode
-import app.morphe.patcher.patch.BytecodePatchContext
+import app.morphe.patcher.patch.classDefByOrNull
 import app.morphe.patcher.resource.ResourceType
 import app.morphe.patcher.resourceLiteral
 import app.morphe.patcher.string
@@ -67,14 +68,14 @@ internal object MediaSessionStateFingerprint : Fingerprint(
  * The now-playing presenter writes a bitmap into YouTube Music's stable artwork view. The field
  * access ties the call to the presenter itself rather than a reusable image helper.
  */
-internal fun nowPlayingArtworkFingerprint(imageType: String) = Fingerprint(
+internal object NowPlayingArtworkFingerprint : Fingerprint(
     returnType = "V",
     parameters = listOf("Landroid/graphics/Bitmap;"),
     filters = listOf(
-        fieldAccess(definingClass = "this", type = imageType, opcode = Opcode.IGET_OBJECT),
+        fieldAccess(definingClass = "this", type = { ArtworkCropFingerprint.originalClassDef.type }, opcode = Opcode.IGET_OBJECT),
         methodCall(
             opcodes = listOf(Opcode.INVOKE_VIRTUAL, Opcode.INVOKE_VIRTUAL_RANGE),
-            definingClass = imageType,
+            definingClass = { ArtworkCropFingerprint.originalClassDef.type },
             name = "setImageBitmap",
             parameters = listOf("Landroid/graphics/Bitmap;"),
             returnType = "V"
@@ -176,7 +177,7 @@ internal fun seekForwarderConstructorFingerprint(ownerType: String, controlTypes
     )
 
 /** Finds the seek callback that forwards a position and native seek context. */
-internal fun seekForwarderFingerprint() = Fingerprint(
+internal object SeekForwarderFingerprint : Fingerprint(
     returnType = "V",
     parameters = listOf("J", "L"),
     filters = listOf(methodCall(parameters = listOf("J", "L"), returnType = "V")),
@@ -478,7 +479,7 @@ internal fun queueStorageFingerprint(manager: ClassDef) = Fingerprint(
     custom = { _, owner -> manager.fields.any { it.type == owner.type } },
 )
 
-internal fun BytecodePatchContext.queueLaneAccessorFingerprint(storageType: String) = Fingerprint(
+internal fun queueLaneAccessorFingerprint(storageType: String) = Fingerprint(
     definingClass = storageType,
     parameters = listOf("I"),
     returnType = "L",
@@ -494,7 +495,7 @@ internal fun queueLaneSliceFingerprint(laneType: String) = Fingerprint(
 )
 
 /** State accessors forward to an interface held by the resolved native store. */
-internal fun BytecodePatchContext.queueStateAccessorFingerprint(
+internal fun queueStateAccessorFingerprint(
     storageType: String,
     mode: Boolean,
 ) = Fingerprint(
@@ -533,7 +534,7 @@ internal fun clockModelTimestampFingerprint(modelType: String) = Fingerprint(
     returnType = "J"
 )
 
-internal fun BytecodePatchContext.clockModelSetterFingerprint(timeBarType: String) = Fingerprint(
+internal fun clockModelSetterFingerprint(timeBarType: String) = Fingerprint(
     parameters = listOf("L"),
     returnType = "V",
     custom = { method, owner ->
@@ -548,7 +549,7 @@ internal fun clockDraggingFingerprint(timeBaseType: String) = Fingerprint(
     returnType = "Z"
 )
 
-internal fun BytecodePatchContext.clockMutableModelFingerprint(modelType: String) = Fingerprint(
+internal fun clockMutableModelFingerprint(modelType: String) = Fingerprint(
     parameters = listOf("J", "J", "J", "J"),
     returnType = "V",
     custom = { _, owner ->
@@ -691,7 +692,7 @@ internal fun queueCallbackCaptureFingerprint(enqueue: Method, managerType: Strin
     }
 )
 
-internal fun BytecodePatchContext.queueSuccessCallbackFingerprint(callbackType: String) = Fingerprint(
+internal fun queueSuccessCallbackFingerprint(callbackType: String) = Fingerprint(
     definingClass = callbackType,
     parameters = listOf("L"),
     returnType = "V",
@@ -758,7 +759,7 @@ internal fun queuePresenterRefreshFingerprint(ownerTypes: Set<String>, callers: 
 )
 
 /** Artwork container holds one repeated thumbnail list; rich text has several repeated fields. */
-internal fun BytecodePatchContext.queueArtworkAccessorFingerprint(metadataType: String) = Fingerprint(
+internal fun queueArtworkAccessorFingerprint(metadataType: String) = Fingerprint(
     definingClass = metadataType,
     parameters = emptyList(),
     returnType = "L",
@@ -769,7 +770,7 @@ internal fun BytecodePatchContext.queueArtworkAccessorFingerprint(metadataType: 
     }
 )
 
-internal fun BytecodePatchContext.queueArtworkContractFingerprint(sharedTypes: Set<String>) = Fingerprint(
+internal fun queueArtworkContractFingerprint(sharedTypes: Set<String>) = Fingerprint(
     parameters = emptyList(),
     returnType = "L",
     custom = { method, owner ->
@@ -780,7 +781,7 @@ internal fun BytecodePatchContext.queueArtworkContractFingerprint(sharedTypes: S
     }
 )
 
-internal fun BytecodePatchContext.queueMenuResponseConstructorFingerprint(
+internal fun queueMenuResponseConstructorFingerprint(
     responseTypes: Set<String>
 ) = Fingerprint(
     name = "<init>",
@@ -794,7 +795,7 @@ internal fun BytecodePatchContext.queueMenuResponseConstructorFingerprint(
     }
 )
 
-internal fun BytecodePatchContext.nativeImplementationFingerprint(contractType: String) = Fingerprint(
+internal fun nativeImplementationFingerprint(contractType: String) = Fingerprint(
     name = "<init>",
     custom = { _, owner ->
         !AccessFlags.ABSTRACT.isSet(owner.accessFlags) &&
@@ -823,6 +824,8 @@ internal fun autoplaySectionRefreshFingerprint(ownerType: String) = Fingerprint(
     returnType = "V",
     filters = listOf(
         methodCall(name = "isEmpty", parameters = emptyList(), returnType = "Z"),
+        // First visibility check, after the constants the rest of the method reads.
+        opcode(Opcode.IF_NEZ, location = MatchAfterWithin(5)),
         methodCall(parameters = listOf("I"), returnType = "V"),
         methodCall(name = "clear", parameters = emptyList(), returnType = "V"),
     )
@@ -860,19 +863,5 @@ internal fun playbackIconStateFingerprint(stateType: String, stateName: String) 
             type = stateType,
             opcode = Opcode.SPUT_OBJECT,
         )
-    )
-)
-
-/** Locate header creation itself; feature-flag branches may precede this block. */
-internal fun autoplayHeaderCreationFingerprint(header: FieldReference) = Fingerprint(
-    filters = listOf(
-        fieldAccess(reference = header, opcode = Opcode.IGET_OBJECT),
-        methodCall(
-            name = "isEmpty",
-            parameters = emptyList(),
-            returnType = "Z",
-            location = MatchAfterImmediately(),
-        ),
-        methodCall(name = "add", parameters = listOf("I", OBJECT), returnType = "V")
     )
 )

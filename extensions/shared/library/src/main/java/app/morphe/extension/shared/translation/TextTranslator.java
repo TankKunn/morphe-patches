@@ -150,6 +150,7 @@ public final class TextTranslator {
             case "in" -> "id";
             case "iw" -> "he";
             case "ji" -> "yi";
+            case "kmr" -> "ku";
             default -> language;
         };
     }
@@ -316,8 +317,7 @@ public final class TextTranslator {
                                              @NonNull String lineSeparator) throws Exception {
         StringBuilder joined = new StringBuilder(100 * lines.size());
         for (String line : lines) {
-            //noinspection SizeReplaceableByIsEmpty
-            if (joined.length() > 0) {
+            if (Utils.isNotEmpty(joined)) {
                 joined.append(lineSeparator);
             }
             joined.append(line);
@@ -351,7 +351,9 @@ public final class TextTranslator {
                 return send(text, url, romanize, parser);
             } catch (TranslationHttpException ex) {
                 lastFailure = ex;
-                if (!isRetryable(ex.statusCode)) break;
+                // Only these errors can go away when the request is sent again.
+                final int code = ex.statusCode;
+                if (code != 403 && code != 404 && code != 429 && (code < 500 || code > 599)) break;
             } catch (IOException ex) {
                 lastFailure = ex;
             }
@@ -363,12 +365,12 @@ public final class TextTranslator {
             Logger.printDebug(() -> "The fallback client failed as well", fallbackFailure);
         }
 
-        throw lastFailure != null ? lastFailure : new IOException(
-                (romanize ? "Romanization" : "Translation") + " failed after " + MAX_ATTEMPTS + " attempts");
+        throw lastFailure;
     }
 
     private static <T> T send(String text, String url, boolean romanize,
                               ResponseParser<T> parser) throws Exception {
+        //noinspection CharsetObjectCanBeUsed
         String body = "q=" + URLEncoder.encode(text, "UTF-8");
         String response = post(url, "application/x-www-form-urlencoded", body, null, null,
                 romanize ? "Romanization" : "Translation");
@@ -466,9 +468,5 @@ public final class TextTranslator {
             return lines;
         }
         return Arrays.asList(romanized.split("\n", -1));
-    }
-
-    private static boolean isRetryable(int code) {
-        return code == 403 || code == 404 || code == 429 || (code >= 500 && code <= 599);
     }
 }

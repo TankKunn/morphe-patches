@@ -14,10 +14,8 @@ import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
-import app.morphe.patcher.patch.BytecodePatchContext
-import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.patch.resourcePatch
-import app.morphe.patcher.util.getFreeRegisterProvider
+import app.morphe.patcher.patch.patch
+import app.morphe.patcher.patch.resourceXml
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patches.all.misc.clone.setOrGetFallbackPackageName
 import app.morphe.patches.all.misc.crashlog.crashLogPatch
@@ -29,6 +27,7 @@ import app.morphe.patches.all.misc.resources.setAddResourceLocale
 import app.morphe.patches.shared.BoldIconsFeatureFlagFingerprint
 import app.morphe.patches.shared.GoogleApiActivityOnCreateFingerprint
 import app.morphe.patches.shared.layout.branding.addLicensePatch
+import app.morphe.patches.shared.misc.announcements.patchesUpdateNoticePatch
 import app.morphe.patches.shared.misc.checks.experimentalAppNoticePatch
 import app.morphe.patches.shared.misc.initialization.initializationPatch
 import app.morphe.patches.shared.misc.settings.MORPHE_SETTINGS_INTENT
@@ -47,6 +46,7 @@ import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPrefer
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
+import app.morphe.patches.shared.misc.settings.preference.noTitleUnsortedPreferenceCategory
 import app.morphe.patches.shared.misc.settings.settingsPatch
 import app.morphe.patches.youtube.misc.commandrouter.commandRouterHookPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
@@ -56,10 +56,13 @@ import app.morphe.patches.youtube.misc.fix.accessibility.fixTouchExplorationPatc
 import app.morphe.patches.youtube.misc.fix.contentprovider.fixContentProviderPatch
 import app.morphe.patches.youtube.misc.fix.guidecache.fixGuideCachePatch
 import app.morphe.patches.youtube.misc.fix.likebutton.fixLikeButtonPatch
+import app.morphe.patches.youtube.misc.fix.mediasession.fixMediaSessionStopPatch
 import app.morphe.patches.youtube.misc.fix.padding.fixPagePaddingPatch
 import app.morphe.patches.youtube.misc.fix.pipchatbar.fixPipChatBarPatch
 import app.morphe.patches.youtube.misc.fix.playbackspeed.fixPlaybackSpeedWhilePlayingPatch
+import app.morphe.patches.youtube.misc.fix.preference.addPreferenceScreenHook
 import app.morphe.patches.youtube.misc.fix.preference.fixPreferenceIconPatch
+import app.morphe.patches.youtube.misc.fix.preference.preferenceScreenHookPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_30_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
@@ -68,15 +71,12 @@ import app.morphe.patches.youtube.shared.YouTubeActivityOnCreateFingerprint
 import app.morphe.util.ResourceGroup
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.copyResources
-import app.morphe.util.findElementByAttributeValueOrThrow
 import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
-import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
-import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 import com.android.tools.smali.dexlib2.util.MethodUtil
@@ -87,7 +87,7 @@ private const val NATIVE_SNACKBAR_CLASS = "Lapp/morphe/extension/youtube/patches
 
 private val preferences = mutableSetOf<BasePreference>()
 
-private val settingsResourcePatch = resourcePatch {
+private val settingsResourcePatch = patch {
     dependsOn(
         settingsPatch(
             rootPreferences = listOf(
@@ -162,62 +162,46 @@ private val settingsResourcePatch = resourcePatch {
 
         // Remove horizontal divider from the settings Preferences
         // To better match the appearance of the stock YouTube settings.
-        document("res/values/styles.xml").use { document ->
-            val childNodes = document.childNodes
-
+        resourceXml("res/values/styles.xml").use { styles ->
             arrayOf(
                 "Theme.YouTube.Settings",
                 "Theme.YouTube.Settings.Dark",
             ).forEach { value ->
-                val listDividerNode = document.createElement("item")
-                listDividerNode.setAttribute("name", "android:listDivider")
-                listDividerNode.appendChild(document.createTextNode("@null"))
-
-                childNodes.findElementByAttributeValueOrThrow(
-                    "name",
-                    value,
-                ).appendChild(listDividerNode)
+                styles.resource(value).appendChild("item") {
+                    setAttribute("name", "android:listDivider")
+                    text = "@null"
+                }
             }
         }
 
         // Modify the manifest to enhance LicenseActivity behavior
-        document("AndroidManifest.xml").use { document ->
-            val apiActivity = document.childNodes.findElementByAttributeValueOrThrow(
+        resourceXml("AndroidManifest.xml").use { manifest ->
+            val apiActivity = manifest.elementByAttribute(
                 "android:name",
                 "com.google.android.gms.common.api.GoogleApiActivity",
             )
 
             // Prevents the activity from being recreated on configuration changes
             // (e.g., screen rotation), preserving its current state and fragment.
-            apiActivity.setAttribute(
-                "android:configChanges",
-                "orientation|screenSize|keyboardHidden"
-            )
+            apiActivity.setAttribute("android:configChanges", "orientation|screenSize|keyboardHidden")
 
             // Use same theme as other activities. The exiting theme causes the Morphe
             // settings to fade in and not use a transition animation. A custom theme
             // could be used to not show any transition to match the original YT settings
             // submenu behavior.
-            apiActivity.setAttribute(
-                "android:theme",
-                "@style/Theme.AppCompat.DayNight.NoActionBar"
-            )
-
-            val mimeType = document.createElement("data")
-            mimeType.setAttribute("android:mimeType", "text/plain")
+            apiActivity.setAttribute("android:theme", "@style/Theme.AppCompat.DayNight.NoActionBar")
 
             // Add a data intent filter with MIME type "text/plain".
             // Some devices crash if undeclared data is passed to an intent,
             // and this change appears to fix the issue.
-            val intentFilter = document.createElement("intent-filter")
-            intentFilter.appendChild(mimeType)
-
-            apiActivity.appendChild(intentFilter)
+            apiActivity.appendChild("intent-filter") {
+                appendChild("data") { setAttribute("android:mimeType", "text/plain") }
+            }
         }
     }
 }
 
-val settingsPatch = bytecodePatch(
+val settingsPatch = patch(
     description = "Adds settings for Morphe to YouTube."
 ) {
     dependsOn(
@@ -233,11 +217,13 @@ val settingsPatch = bytecodePatch(
         fixTouchExplorationPatch,
         fixPlaybackSpeedWhilePlayingPatch,
         fixPreferenceIconPatch,
+        preferenceScreenHookPatch,
         fixLikeButtonPatch,
         fixContentProviderPatch,
         fixGuideCachePatch,
         fixPipChatBarPatch,
         fixPagePaddingPatch,
+        fixMediaSessionStopPatch,
         addLicensePatch,
         removeLinkVerification,
         crashLogPatch(
@@ -246,6 +232,10 @@ val settingsPatch = bytecodePatch(
         experimentalAppNoticePatch(
             mainActivityFingerprint = YouTubeActivityOnCreateFingerprint,
             recommendedAppVersion = COMPATIBILITY_YOUTUBE.targets.first { !it.isExperimental }.version!!
+        ),
+        patchesUpdateNoticePatch(
+            mainActivityFingerprint = YouTubeActivityOnCreateFingerprint,
+            changelogScope = "YouTube"
         ),
         initializationPatch(
             extensionPatch = sharedExtensionPatch
@@ -282,10 +272,17 @@ val settingsPatch = bytecodePatch(
         )
 
         PreferenceScreen.MISC.addPreferences(
-            NonInteractivePreference(
-                key = "morphe_settings_new_indicator_days",
-                tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
-                selectable = true
+            noTitleUnsortedPreferenceCategory(
+                NonInteractivePreference(
+                    key = "morphe_settings_new_indicator_days",
+                    tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
+                    selectable = true
+                ),
+                NonInteractivePreference(
+                    key = "morphe_settings_new_indicator_clear",
+                    tag = "app.morphe.extension.shared.settings.preference.ClearNewSettingsIndicatorPreference",
+                    selectable = true
+                )
             ),
             TextPreference(
                 key = null,
@@ -297,7 +294,8 @@ val settingsPatch = bytecodePatch(
             ListPreference(
                 key = "morphe_language",
                 tag = "app.morphe.extension.shared.settings.preference.SortedListPreference"
-            )
+            ),
+            ListPreference("morphe_patches_update_notice")
         )
 
         // Update shared dark mode status based on YT theme.
@@ -333,36 +331,13 @@ val settingsPatch = bytecodePatch(
             }
         }
 
-        SettingsPreferenceScreenSyntheticFingerprint.let {
-            it.method.apply {
-                // Reuse the method's own getPreferenceScreen call.
-                val getPreferenceScreenIndex = it.instructionMatches[1].index
-                val fragmentRegister =
-                    getInstruction<FiveRegisterInstruction>(getPreferenceScreenIndex).registerC
-                val getPreferenceScreenReference =
-                    getInstruction<ReferenceInstruction>(getPreferenceScreenIndex).reference
-
-                // fragmentRegister must survive, because the settings menu filter patch
-                // adds its own call on it after these instructions.
-                val insertIndex = it.instructionMatches.last().index
-                val registerProvider = getFreeRegisterProvider(insertIndex, 3, fragmentRegister)
-                val screenRegister = registerProvider.getFreeRegister()
-                val preferenceRegister = registerProvider.getFreeRegister()
-                val nameRegister = registerProvider.getFreeRegister()
-
-                addInstructionsAtControlFlowLabel(
-                    insertIndex,
-                    customSettingsNameInstructions(
-                        getPreferenceScreen = """
-                            invoke-virtual { v$fragmentRegister }, $getPreferenceScreenReference
-                            move-result-object v$screenRegister
-                        """,
-                        screenRegister = screenRegister,
-                        preferenceRegister = preferenceRegister,
-                        nameRegister = nameRegister
-                    )
-                )
-            }
+        addPreferenceScreenHook(2) { screenRegister, (preferenceRegister, nameRegister) ->
+            customSettingsNameInstructions(
+                getPreferenceScreen = "",
+                screenRegister = screenRegister,
+                preferenceRegister = preferenceRegister,
+                nameRegister = nameRegister
+            )
         }
 
         // Show the extension messages in the YouTube snackbar instead of a toast,
@@ -395,7 +370,6 @@ val settingsPatch = bytecodePatch(
 /**
  * Modifies the activity to show Morphe settings instead of its original purpose.
  */
-context(patchContext: BytecodePatchContext)
 internal fun modifyActivityForSettingsInjection(
     activityOnCreateFingerprint: Fingerprint,
     extensionClassType: String,
@@ -534,42 +508,46 @@ object PreferenceScreen : BasePreferenceScreen() {
         iconBold = "@drawable/morphe_settings_screen_04_general_bold",
         layout = "@layout/preference_with_icon"
     )
+    val MISC = Screen(
+        key = "morphe_settings_screen_05_misc",
+        titleKey = "morphe_settings_screen_11_misc_title",
+        summaryKey = null,
+        icon = "@drawable/morphe_settings_screen_11_misc",
+        iconBold = "@drawable/morphe_settings_screen_11_misc_bold",
+        layout = "@layout/preference_with_icon"
+    )
     val PLAYER = Screen(
-        key = "morphe_settings_screen_05_player",
+        key = "morphe_settings_screen_06_player",
+        titleKey = "morphe_settings_screen_05_player_title",
         summaryKey = null,
         icon = "@drawable/morphe_settings_screen_05_player",
         iconBold = "@drawable/morphe_settings_screen_05_player_bold",
         layout = "@layout/preference_with_icon"
     )
-    val SHORTS = Screen(
-        key = "morphe_settings_screen_06_shorts",
-        summaryKey = null,
-        icon = "@drawable/morphe_settings_screen_06_shorts",
-        iconBold = "@drawable/morphe_settings_screen_06_shorts_bold",
-        layout = "@layout/preference_with_icon"
-    )
-    val SEEKBAR = Screen(
-        key = "morphe_settings_screen_07_seekbar",
-        summaryKey = null,
-        icon = "@drawable/morphe_settings_screen_07_seekbar",
-        iconBold = "@drawable/morphe_settings_screen_07_seekbar_bold",
-        layout = "@layout/preference_with_icon"
-    )
-    val SWIPE_CONTROLS = Screen(
-        key = "morphe_settings_screen_08_swipe_controls",
-        summaryKey = null,
-        icon = "@drawable/morphe_settings_screen_08_swipe_controls",
-        iconBold = "@drawable/morphe_settings_screen_08_swipe_controls_bold",
-        layout = "@layout/preference_with_icon",
-        sorting = Sorting.UNSORTED
-    )
     val RETURN_YOUTUBE_DISLIKE = Screen(
-        key = "morphe_settings_screen_09_return_youtube_dislike",
+        key = "morphe_settings_screen_07_return_youtube_dislike",
+        titleKey = "morphe_settings_screen_09_return_youtube_dislike_title",
         summaryKey = null,
         icon = "@drawable/morphe_settings_screen_09_return_youtube_dislike",
         iconBold = "@drawable/morphe_settings_screen_09_return_youtube_dislike_bold",
         layout = "@layout/preference_with_icon",
         sorting = Sorting.UNSORTED
+    )
+    val SEEKBAR = Screen(
+        key = "morphe_settings_screen_08_seekbar",
+        titleKey = "morphe_settings_screen_07_seekbar_title",
+        summaryKey = null,
+        icon = "@drawable/morphe_settings_screen_07_seekbar",
+        iconBold = "@drawable/morphe_settings_screen_07_seekbar_bold",
+        layout = "@layout/preference_with_icon"
+    )
+    val SHORTS = Screen(
+        key = "morphe_settings_screen_09_shorts",
+        titleKey = "morphe_settings_screen_06_shorts_title",
+        summaryKey = null,
+        icon = "@drawable/morphe_settings_screen_06_shorts",
+        iconBold = "@drawable/morphe_settings_screen_06_shorts_bold",
+        layout = "@layout/preference_with_icon"
     )
     val SPONSORBLOCK = Screen(
         key = "morphe_settings_screen_10_sponsorblock",
@@ -579,12 +557,14 @@ object PreferenceScreen : BasePreferenceScreen() {
         layout = "@layout/preference_with_icon",
         sorting = Sorting.UNSORTED
     )
-    val MISC = Screen(
-        key = "morphe_settings_screen_11_misc",
+    val SWIPE_CONTROLS = Screen(
+        key = "morphe_settings_screen_11_swipe_controls",
+        titleKey = "morphe_settings_screen_08_swipe_controls_title",
         summaryKey = null,
-        icon = "@drawable/morphe_settings_screen_11_misc",
-        iconBold = "@drawable/morphe_settings_screen_11_misc_bold",
-        layout = "@layout/preference_with_icon"
+        icon = "@drawable/morphe_settings_screen_08_swipe_controls",
+        iconBold = "@drawable/morphe_settings_screen_08_swipe_controls_bold",
+        layout = "@layout/preference_with_icon",
+        sorting = Sorting.UNSORTED
     )
     val VIDEO = Screen(
         key = "morphe_settings_screen_12_video",

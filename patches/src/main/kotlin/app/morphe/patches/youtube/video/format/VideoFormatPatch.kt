@@ -9,22 +9,19 @@ package app.morphe.patches.youtube.video.format
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.patch
+import app.morphe.patcher.util.addPatchInterface
 import app.morphe.patcher.util.cloneParameters
 import app.morphe.patcher.util.findFreeRegister
 import app.morphe.patcher.util.numberOfParameterRegistersLogical
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
-import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patches.shared.FormatStreamModelToStringFingerprint
 import app.morphe.patches.shared.VideoStreamingDataConstructorFingerprint
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.util.findMethodFromToString
-import com.android.tools.smali.dexlib2.AccessFlags
-import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction22c
-import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import java.lang.ref.WeakReference
 
 internal const val EXTENSION_CLASS =
@@ -34,7 +31,7 @@ private const val EXTENSION_FORMAT_INTERFACE =
 
 private lateinit var adaptiveFormatMethod : WeakReference<MutableMethod>
 
-val videoFormatPatch = bytecodePatch(
+val videoFormatPatch = patch(
     description = "Hooks YouTube to get format about the current playing video.",
 ) {
     dependsOn(sharedExtensionPatch)
@@ -45,8 +42,6 @@ val videoFormatPatch = bytecodePatch(
             .fieldReference
 
         getFormatFingerprint(formatStreamModelFormatField.type).classDef.apply {
-            interfaces.add(EXTENSION_FORMAT_INTERFACE)
-
             mapOf(
                 "width" to "patch_getWidth",
                 "height" to "patch_getHeight",
@@ -63,25 +58,13 @@ val videoFormatPatch = bytecodePatch(
                 val fieldInstruction = instructionMatches[1].instruction as Instruction22c
                 val returnOpcode = instructionMatches[2].instruction.opcode.name
 
-                methods.add(
-                    ImmutableMethod(
-                        type,
-                        patchInterfaceMethodName,
-                        listOf(),
-                        targetMethod.returnType,
-                        AccessFlags.PUBLIC.value or AccessFlags.FINAL.value,
-                        null,
-                        null,
-                        MutableMethodImplementation(3),
-                    ).toMutable().apply {
-                        addInstructions(
-                            0,
-                            """
-                                ${fieldInstruction.opcode.name} v0, p0, ${fieldInstruction.reference}
-                                $returnOpcode v0
-                            """
-                        )
-                    }
+                addPatchInterface(
+                    EXTENSION_FORMAT_INTERFACE,
+                    patchInterfaceMethodName,
+                    """
+                        ${fieldInstruction.opcode.name} v0, p0, ${fieldInstruction.reference}
+                        $returnOpcode v0
+                    """
                 )
             }
         }

@@ -12,6 +12,7 @@ package app.morphe.extension.youtube.patches.components;
 
 import androidx.annotation.NonNull;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -137,6 +138,11 @@ public final class VideoActionButtonsFilter extends Filter {
     private static final String COMPACTIFY_VIDEO_ACTION_BAR_PREFIX = "compactify_video_action_bar.e";
     private static final String VIDEO_ACTION_BAR_PREFIX = "video_action_bar.e";
 
+    /**
+     * Panel that the Ask button opens, which is in the button whatever its type is.
+     */
+    private static final String ASK_PANEL_ID = "PAyouchat";
+
     private static final String ELEMENT_BUTTON_ID = "id.elements.button";
     private static final String MORE_BUTTON_PATH = "overflow_menu_button.e";
 
@@ -153,7 +159,12 @@ public final class VideoActionButtonsFilter extends Filter {
                 null,
                 VIDEO_ACTION_BAR_PREFIX
         );
-        addIdentifierCallbacks(actionBarGroup);
+        // Some layouts show the channel in its own bar above the action bar.
+        StringFilterGroup channelBarGroup = new StringFilterGroup(
+                Settings.HIDE_CHANNEL_PROFILE_BUTTON,
+                COMPACT_CHANNEL_BAR_PREFIX
+        );
+        addIdentifierCallbacks(actionBarGroup, channelBarGroup);
 
 
         likeSubscribeGlow = new StringFilterGroup(
@@ -199,7 +210,7 @@ public final class VideoActionButtonsFilter extends Filter {
         bufferGroupList.addAll(
                 new ByteArrayFilterGroup(
                         Settings.HIDE_ASK_BUTTON,
-                        "PAyouchat"
+                        ASK_PANEL_ID
                 ),
                 new ByteArrayFilterGroup(
                         Settings.HIDE_HYPE_BUTTON,
@@ -224,8 +235,9 @@ public final class VideoActionButtonsFilter extends Filter {
         } else if (matchedGroup == moreButton) {
             return true;
         } else if (matchedGroup == channelProfile || matchedGroup == subscribeButton) {
-            // Only the Subscribe and Join buttons next to the channel avatar in the action bar.
-            return Utils.startsWithAny(path, COMPACTIFY_VIDEO_ACTION_BAR_PREFIX, VIDEO_ACTION_BAR_PREFIX);
+            // Only the Subscribe and Join buttons next to the channel avatar in the action bar,
+            // or in the channel bar above it.
+            return Utils.startsWithAny(path, COMPACT_CHANNEL_BAR_PREFIX, COMPACTIFY_VIDEO_ACTION_BAR_PREFIX, VIDEO_ACTION_BAR_PREFIX);
         } else if (matchedGroup == actionBarGroup) {
             if (Settings.HIDE_ACTION_BAR.get() || accessibilityGroupList.check(accessibility).isFiltered()) {
                 return true;
@@ -327,7 +339,14 @@ public final class VideoActionButtonsFilter extends Filter {
         return shownActions;
     }
 
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private static boolean isHidden(VideoActionBarItemContent content) {
+        // Some layouts have an Ask button that is not a plain button, so it is found by the panel it opens.
+        if (ActionButton.ASK.shouldHide && new String(content.toByteArray(), StandardCharsets.ISO_8859_1)
+                .contains(ASK_PANEL_ID)) {
+            return true;
+        }
+
         if (content.hasButton()) {
             String iconName = content.getButton().getIconName();
             for (ActionButton button : ActionButton.values()) {

@@ -17,12 +17,14 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLa
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.methodCall
-import app.morphe.patcher.patch.BytecodePatchContext
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.classDefBy
+import app.morphe.patcher.patch.classDefByOrNull
+import app.morphe.patcher.patch.mutableClassDefBy
+import app.morphe.patcher.patch.patch
+import app.morphe.patcher.util.addPatchInterface
 import app.morphe.patcher.util.getReference
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patcher.util.registersUsed
-import app.morphe.patches.shared.misc.bridge.addBridge
 import app.morphe.patches.shared.misc.litho.filter.addLithoFilter
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.layout.flyout.FeedFlyoutBufferObjectFingerprint
@@ -74,8 +76,7 @@ private const val ELEMENTS_RESOURCE_PROCESSOR_ACCESS_INTERFACE =
 
 private const val EXTENSION_REGISTRY_CLASS = "Lcom/google/protobuf/ExtensionRegistryLite;"
 
-@Suppress("unused")
-val askFlyoutMenuPatch = bytecodePatch(
+val askFlyoutMenuPatch = patch(
     name = "Ask flyout menu",
     description = "Adds a video menu entry that opens Ask for the video and summarizes the video. " +
             "This patch works with YouTube 21.16.256 and newer.",
@@ -124,12 +125,12 @@ val askFlyoutMenuPatch = bytecodePatch(
                             listOf(type, "[B", EXTENSION_REGISTRY_CLASS)
                 }
             }
-        val protos = Protos(this, messageClass)
+        val protos = Protos(messageClass)
 
         mutableClassDefBy(messageClass).apply {
-            interfaces.add(MESSAGE_ACCESS_INTERFACE)
-            addBridge(
-                "patch_toByteArray", listOf(), "[B", 2,
+            addPatchInterface(
+                MESSAGE_ACCESS_INTERFACE,
+                "patch_toByteArray",
                 """
                     invoke-virtual { p0 }, $messageClass->toByteArray()[B
                     move-result-object v0
@@ -137,8 +138,9 @@ val askFlyoutMenuPatch = bytecodePatch(
                 """
             )
             // Any message of a type can be the default instance to parse a message of that type.
-            addBridge(
-                "patch_parseSameType", listOf("[B"), MESSAGE_ACCESS_INTERFACE, 3,
+            addPatchInterface(
+                MESSAGE_ACCESS_INTERFACE,
+                "patch_parseSameType",
                 """
                     invoke-static { }, $EXTENSION_REGISTRY_CLASS->getGeneratedRegistry()$EXTENSION_REGISTRY_CLASS
                     move-result-object v0
@@ -203,9 +205,9 @@ val askFlyoutMenuPatch = bytecodePatch(
         mutableClassDefBy(tapHandlerMethod.definingClass).apply {
             val commandHolderField = fields.single { it.type == tapCommandMethod.definingClass }
 
-            interfaces.add(TAP_HANDLER_ACCESS_INTERFACE)
-            addBridge(
-                "patch_getCommand", listOf(), MESSAGE_ACCESS_INTERFACE, 2,
+            addPatchInterface(
+                TAP_HANDLER_ACCESS_INTERFACE,
+                "patch_getCommand",
                 """
                     iget-object v0, p0, $commandHolderField
                     invoke-virtual { v0 }, $tapCommandMethod
@@ -213,8 +215,9 @@ val askFlyoutMenuPatch = bytecodePatch(
                     return-object v0
                 """
             )
-            addBridge(
-                "patch_tap", listOf(), "V", 2,
+            addPatchInterface(
+                TAP_HANDLER_ACCESS_INTERFACE,
+                "patch_tap",
                 """
                     const/4 v0, 0x0
                     invoke-virtual { p0, v0, v0, v0 }, ${tapHandlerMethod.toReference()}
@@ -223,15 +226,15 @@ val askFlyoutMenuPatch = bytecodePatch(
             )
         }
 
-        addSummarizeItemToMenu(protos)
+        addSummarizeItemToMenu()
 
         addElementsResourceLoading(protos)
 
         // The command executor is an app interface, so its default method is inherited by every executor.
         mutableClassDefBy(commandExecutorClass).apply {
-            interfaces.add(COMMAND_EXECUTOR_ACCESS_INTERFACE)
-            addBridge(
-                "patch_executeCommand", listOf("[B"), "V", 4,
+            addPatchInterface(
+                COMMAND_EXECUTOR_ACCESS_INTERFACE,
+                "patch_executeCommand",
                 """
                     ${protos.parse(commandClass, bytes = "p1", result = "v0", registry = "v1")}
                     check-cast v0, $commandClass
@@ -239,8 +242,7 @@ val askFlyoutMenuPatch = bytecodePatch(
                     invoke-direct { v1 }, Ljava/util/HashMap;-><init>()V
                     invoke-interface { p0, v0, v1 }, $executeCommandMethod
                     return-void
-                """,
-                accessFlags = AccessFlags.PUBLIC.value
+                """
             )
         }
     }
@@ -251,13 +253,13 @@ val askFlyoutMenuPatch = bytecodePatch(
  *
  * @param messageClass GeneratedMessageLite.
  */
-private class Protos(private val context: BytecodePatchContext, private val messageClass: String) {
+private class Protos(private val messageClass: String) {
     /**
      * @return Smali that parses the bytes of a register as a message of the type into the result register.
      *         The registry register is overwritten.
      */
     fun parse(type: String, bytes: String, result: String, registry: String) = """
-        sget-object $result, ${context.defaultInstanceField(type)}
+        sget-object $result, ${defaultInstanceField(type)}
         invoke-static { }, $EXTENSION_REGISTRY_CLASS->getGeneratedRegistry()$EXTENSION_REGISTRY_CLASS
         move-result-object $registry
         invoke-static { $result, $bytes, $registry }, $messageClass->parseFrom($messageClass[B$EXTENSION_REGISTRY_CLASS)$messageClass
@@ -268,7 +270,7 @@ private class Protos(private val context: BytecodePatchContext, private val mess
 /**
  * @return The static field that holds the default instance of a message type.
  */
-private fun BytecodePatchContext.defaultInstanceField(type: String) = classDefBy(type).fields.first { field ->
+private fun defaultInstanceField(type: String) = classDefBy(type).fields.first { field ->
     AccessFlags.STATIC.isSet(field.accessFlags) && field.type == type
 }
 
@@ -276,7 +278,7 @@ private fun BytecodePatchContext.defaultInstanceField(type: String) = classDefBy
  * Adds the summarize item to the menu of a video as one of the app's own items, so the menu bottom sheet
  * and the menu popup show it in their own list. The extension updates the row of the item and handles its tap.
  */
-private fun BytecodePatchContext.addSummarizeItemToMenu(protos: Protos) {
+private fun addSummarizeItemToMenu() {
     val menuFragmentClass = MenuBottomSheetFragmentFactoryFingerprint.classDef
     // The factory takes the menu after the theme.
     val menuClass = MenuBottomSheetFragmentFactoryFingerprint.method.parameterTypes[1].toString()
@@ -340,9 +342,9 @@ private fun BytecodePatchContext.addSummarizeItemToMenu(protos: Protos) {
     mutableClassDefBy(menuItemClass).interfaces.add(MENU_ITEM_ACCESS_INTERFACE)
 
     mutableClassDefBy(rowClass).apply {
-        interfaces.add(MENU_ROW_ACCESS_INTERFACE)
-        addBridge(
-            "patch_getMenuItem", listOf(), MENU_ITEM_ACCESS_INTERFACE, 2,
+        addPatchInterface(
+            MENU_ROW_ACCESS_INTERFACE,
+            "patch_getMenuItem",
             """
                 iget-object v0, p0, $rowMenuItemField
                 return-object v0
@@ -356,16 +358,17 @@ private fun BytecodePatchContext.addSummarizeItemToMenu(protos: Protos) {
     )
     for (menu in menus) {
         mutableClassDefBy(menu.type).apply {
-            interfaces.add(MENU_ACCESS_INTERFACE)
-            addBridge(
-                "patch_getRows", listOf(), "Ljava/util/List;", 2,
+            addPatchInterface(
+                MENU_ACCESS_INTERFACE,
+                "patch_getRows",
                 """
                     iget-object v0, p0, ${menu.rowsField}
                     return-object v0
                 """
             )
-            addBridge(
-                "patch_createRow", listOf(MENU_ITEM_ACCESS_INTERFACE), "Ljava/lang/Object;", 4,
+            addPatchInterface(
+                MENU_ACCESS_INTERFACE,
+                "patch_createRow",
                 """
                     check-cast p1, $menuItemClass
                     invoke-virtual { p0, p1 }, ${menu.createRowMethod.toReference()}
@@ -376,8 +379,9 @@ private fun BytecodePatchContext.addSummarizeItemToMenu(protos: Protos) {
                     return-object v0
                 """
             )
-            addBridge(
-                "patch_dismissPopup", listOf(), "Z", 2,
+            addPatchInterface(
+                MENU_ACCESS_INTERFACE,
+                "patch_dismissPopup",
                 if (menu.dismissMethod == null) {
                     """
                         const/4 v0, 0x0
@@ -420,7 +424,8 @@ private fun BytecodePatchContext.addSummarizeItemToMenu(protos: Protos) {
 
     // A popup that shows the menu items as they are, such as on tablets, shows them with a presenter
     // that handles their taps. The presenter dismisses the popup and reads the menu item it shows.
-    val itemTapMatch = Fingerprint(
+    // 21.45+ has two of them.
+    Fingerprint(
         name = "onClick",
         returnType = "V",
         parameters = listOf("Landroid/view/View;"),
@@ -429,21 +434,22 @@ private fun BytecodePatchContext.addSummarizeItemToMenu(protos: Protos) {
             fieldAccess(opcode = Opcode.IGET_OBJECT, location = MatchAfterImmediately()),
             checkCast(menuItemClass, location = MatchAfterImmediately())
         )
-    ).match()
-    val itemField = itemTapMatch.instructionMatches[1].getFieldReference()
-    itemTapMatch.method.addInstructionsWithLabels(
-        0,
-        """
-            move-object/from16 v0, p0
-            iget-object v0, v0, $itemField
-            invoke-static/range { v0 .. v0 }, $EXTENSION_CLASS->onMenuItemTapped(Ljava/lang/Object;)Z
-            move-result v0
-            if-eqz v0, :not_summarize_item
-            return-void
-            :not_summarize_item
-            nop
-        """
-    )
+    ).matchAll(1..2).forEach { itemTapMatch ->
+        val itemField = itemTapMatch.instructionMatches[1].getFieldReference()
+        itemTapMatch.method.addInstructionsWithLabels(
+            0,
+            """
+                move-object/from16 v0, p0
+                iget-object v0, v0, $itemField
+                invoke-static/range { v0 .. v0 }, $EXTENSION_CLASS->onMenuItemTapped(Ljava/lang/Object;)Z
+                move-result v0
+                if-eqz v0, :not_summarize_item
+                return-void
+                :not_summarize_item
+                nop
+            """
+        )
+    }
 
     restoreMenuRowTextConstraints()
 }
@@ -472,7 +478,7 @@ private class PopupMenu(
     val rowTapMethod: Method,
 )
 
-private fun BytecodePatchContext.findPopupMenu(
+private fun findPopupMenu(
     popupClass: ClassDef,
     menuItemClass: String,
     rowClass: String,
@@ -501,7 +507,7 @@ private fun BytecodePatchContext.findPopupMenu(
 /**
  * @return The field of a menu with the list of its rows.
  */
-private fun BytecodePatchContext.findRowsField(menuClass: ClassDef) = menuClass.fields.single { field ->
+private fun findRowsField(menuClass: ClassDef) = menuClass.fields.single { field ->
     !AccessFlags.STATIC.isSet(field.accessFlags) &&
             generateSequence(field.type) { type -> classDefByOrNull(type)?.superclass }
                 .any { type -> type == "Ljava/util/AbstractList;" }
@@ -512,7 +518,7 @@ private fun BytecodePatchContext.findRowsField(menuClass: ClassDef) = menuClass.
  * Lets the extension load the Elements resources of a watch page it fetches,
  * with the processor that loads them from the app's own responses.
  */
-private fun BytecodePatchContext.addElementsResourceLoading(protos: Protos) {
+private fun addElementsResourceLoading(protos: Protos) {
     val processorClass = ElementsFrameworkUpdatesFingerprint.classDef
     val frameworkUpdatesClass = ElementsFrameworkUpdatesReaderFingerprint.method.parameterTypes.first().toString()
     // Takes the account of the response, which the processor does not use for Elements resources.
@@ -536,9 +542,9 @@ private fun BytecodePatchContext.addElementsResourceLoading(protos: Protos) {
     }
 
     mutableClassDefBy(processorClass.type).apply {
-        interfaces.add(ELEMENTS_RESOURCE_PROCESSOR_ACCESS_INTERFACE)
-        addBridge(
-            "patch_processFrameworkUpdates", listOf("[B"), "V", 4,
+        addPatchInterface(
+            ELEMENTS_RESOURCE_PROCESSOR_ACCESS_INTERFACE,
+            "patch_processFrameworkUpdates",
             """
                 ${protos.parse(frameworkUpdatesClass, bytes = "p1", result = "v0", registry = "v1")}
                 check-cast v0, $frameworkUpdatesClass
@@ -547,8 +553,9 @@ private fun BytecodePatchContext.addElementsResourceLoading(protos: Protos) {
                 return-void
             """
         )
-        addBridge(
-            "patch_getUsedResources", listOf(), "Ljava/util/Set;", 2,
+        addPatchInterface(
+            ELEMENTS_RESOURCE_PROCESSOR_ACCESS_INTERFACE,
+            "patch_getUsedResources",
             """
                 iget-object v0, p0, $usedResourcesField
                 return-object v0
@@ -564,7 +571,7 @@ private fun BytecodePatchContext.addElementsResourceLoading(protos: Protos) {
  * Restores the start constraints of an inflated row before each bind.
  * Newer app versions restore them for rows with icons themselves, some only behind a flag.
  */
-private fun BytecodePatchContext.restoreMenuRowTextConstraints() {
+private fun restoreMenuRowTextConstraints() {
     MenuRowBindFingerprint.let {
         val textContainerField = it.instructionMatches[1].getFieldReference()
         val constraintsClass = it.instructionMatches[5].instruction.getReference<TypeReference>()!!.type
@@ -573,17 +580,17 @@ private fun BytecodePatchContext.restoreMenuRowTextConstraints() {
         // -1 is unset, as the layout of the row does not set them.
         it.method.addInstructionsWithLabels(
             0,
-            """
+            $$"""
                 move-object/from16 v0, p0
-                iget-object v0, v0, $textContainerField
+                iget-object v0, v0, $$textContainerField
                 if-eqz v0, :no_text_container
-                invoke-virtual { v0 }, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup${'$'}LayoutParams;
+                invoke-virtual { v0 }, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
                 move-result-object v1
-                check-cast v1, $constraintsClass
+                check-cast v1, $$constraintsClass
                 const/4 v2, -0x1
-                iput v2, v1, ${startConstraintFields[0]}
-                iput v2, v1, ${startConstraintFields[1]}
-                invoke-virtual { v0, v1 }, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup${'$'}LayoutParams;)V
+                iput v2, v1, $${startConstraintFields[0]}
+                iput v2, v1, $${startConstraintFields[1]}
+                invoke-virtual { v0, v1 }, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
                 :no_text_container
                 nop
             """

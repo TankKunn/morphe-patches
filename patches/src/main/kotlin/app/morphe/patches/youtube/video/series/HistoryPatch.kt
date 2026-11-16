@@ -12,8 +12,8 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.methodCall
-import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.patch.PatchException
+import app.morphe.patcher.util.addPatchInterface
 import app.morphe.patcher.util.getReference
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patcher.util.registersUsed
@@ -34,7 +34,7 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 
 private const val OUR_NAV = "${SERIES_TRACKER_EXTENSION_PREFIX}HistoryNavigation;"
 
-internal fun BytecodePatchContext.wireHistory() {
+internal fun wireHistory() {
     // Build the Series navigation button from the same renderer factory YouTube uses.
     implementPivotBarItemBuilder(HistoryNavigationBuilderFingerprint)
 
@@ -44,10 +44,7 @@ internal fun BytecodePatchContext.wireHistory() {
     factory.findInstructionIndicesReversedOrThrow(
         methodCall(
             definingClass = factory.definingClass,
-            name = "<init>",
-            parameters = listOf(
-                "Lcom/google/protobuf/MessageLite;", "L", "L", "L", "L", "Z", "L", "L", "L"
-            )
+            name = "<init>"
         )
     ).forEach { index ->
         val instance = factory.getInstruction<RegisterRangeInstruction>(index).startRegister
@@ -163,27 +160,14 @@ internal fun BytecodePatchContext.wireHistory() {
 
     // The playlist toolbar populates its own Menu, independently of the activity menu.
     ToolbarMenuFingerprint.let {
-        it.classDef.interfaces.add($$"$${SERIES_TRACKER_EXTENSION_PREFIX}PlaylistMenu$ToolbarSource;")
-        it.classDef.methods.add(
-            ImmutableMethod(
-                it.classDef.type,
-                "patch_seriesTrackerMenu",
-                null,
-                "Landroid/view/Menu;",
-                AccessFlags.PUBLIC.value,
-                null,
-                null,
-                MutableMethodImplementation(2),
-            ).toMutable().apply {
-                addInstructions(
-                    0,
-                    """
-                        invoke-virtual { p0 }, ${it.method}
-                        move-result-object v0
-                        return-object v0
-                    """
-                )
-            }
+        it.classDef.addPatchInterface(
+            $$"$${SERIES_TRACKER_EXTENSION_PREFIX}PlaylistMenu$ToolbarSource;",
+            "patch_seriesTrackerMenu",
+            """
+                invoke-virtual { p0 }, ${it.method}
+                move-result-object v0
+                return-object v0
+            """
         )
     }
 }

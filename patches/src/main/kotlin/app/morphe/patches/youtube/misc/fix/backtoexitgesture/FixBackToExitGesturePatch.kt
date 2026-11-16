@@ -11,18 +11,22 @@
 package app.morphe.patches.youtube.misc.fix.backtoexitgesture
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
+import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
+import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.methodCall
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.patch
+import app.morphe.patcher.util.findFreeRegister
+import app.morphe.patcher.util.smali.ExternalLabel
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.backgesture.addBackPressedHook
 import app.morphe.patches.youtube.misc.backgesture.addPredictiveBackGestureHook
 import app.morphe.patches.youtube.misc.backgesture.backGesturePatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playertype.playerTypeHookPatch
+import app.morphe.patches.youtube.misc.playservice.is_21_45_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
-import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.indexOfFirstInstructionOrThrow
 import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.Opcode
@@ -30,7 +34,7 @@ import com.android.tools.smali.dexlib2.Opcode
 private const val EXTENSION_CLASS =
     "Lapp/morphe/extension/youtube/patches/FixBackToExitGesturePatch;"
 
-internal val fixBackToExitGesturePatch = bytecodePatch(
+internal val fixBackToExitGesturePatch = patch(
     description = "Fixes the swipe back to exit gesture."
 ) {
     dependsOn(
@@ -46,20 +50,42 @@ internal val fixBackToExitGesturePatch = bytecodePatch(
             SwitchPreference("morphe_back_button_always_exits_feed", summary = true)
         )
 
-        // FIXME? Originally this only changed the first match, but for a while this has matched
-        //        2 or more nearly identical methods in different classes.
-        recyclerViewTopScrollingFingerprint().matchAll(1..2).forEach {
-            it.method.addInstructionsAtControlFlowLabel(
-                it.instructionMatches.last().index + 1,
+        // Hooked after the call that scrolls the feed to the top, not in the called method,
+        // because the call goes through an interface with several identical implementations.
+        // Must be done before the code added at the start of the same method below.
+        RecyclerViewTopScrollingCallingMethodFingerprint.let {
+            it.method.addInstruction(
+                it.instructionMatches.first().index + 1,
                 "invoke-static { }, $EXTENSION_CLASS->onTopView()V"
             )
         }
 
-        BackToRefreshFeatureFlagFingerprint.matchAll().forEach {
-            it.method.insertLiteralOverride(
-                it.instructionMatches.first().index,
-                "$EXTENSION_CLASS->allowBackButtonToScrollToTopOfFeed(Z)Z"
-            )
+        if (is_21_45_or_greater) {
+            // The feature flag is gone and the feed always scrolls to the top. Back is handled by
+            // one of two navigation controllers, and both ask the feed through this method, which
+            // does the scrolling. Returning false skips it, and back then exits as usual.
+            RecyclerViewTopScrollingCallingMethodFingerprint.method.apply {
+                val free = findFreeRegister(0)
+
+                addInstructionsWithLabels(
+                    0,
+                    """
+                        const/4 v$free, 0x1
+                        invoke-static { v$free }, $EXTENSION_CLASS->allowBackButtonToScrollToTopOfFeed(Z)Z
+                        move-result v$free
+                        if-nez v$free, :scroll_to_top
+                        return v$free
+                    """,
+                    ExternalLabel("scroll_to_top", getInstruction(0))
+                )
+            }
+        } else {
+            BackToRefreshFeatureFlagFingerprint.matchAll().forEach {
+                it.method.insertLiteralOverride(
+                    it.instructionMatches.first().index,
+                    "$EXTENSION_CLASS->allowBackButtonToScrollToTopOfFeed(Z)Z"
+                )
+            }
         }
 
         ScrollPositionFingerprint.instructionMatches[1].getMethodCalled().apply {

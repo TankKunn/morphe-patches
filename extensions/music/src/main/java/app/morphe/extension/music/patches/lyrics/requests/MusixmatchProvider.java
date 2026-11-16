@@ -7,6 +7,7 @@
 
 package app.morphe.extension.music.patches.lyrics.requests;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import org.json.JSONArray;
@@ -27,10 +28,12 @@ import java.util.regex.Pattern;
 
 import app.morphe.extension.music.patches.lyrics.model.Lyrics;
 import app.morphe.extension.music.patches.lyrics.model.LyricsLine;
+import app.morphe.extension.music.patches.lyrics.model.LyricsMerge;
 import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
 import app.morphe.extension.music.patches.lyrics.model.Word;
 import app.morphe.extension.music.settings.Settings;
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.requests.Requester;
 
 public final class MusixmatchProvider extends ScoredSongProvider {
@@ -106,14 +109,7 @@ public final class MusixmatchProvider extends ScoredSongProvider {
         if (lyrics == null || copyright == null || copyright.isEmpty()) {
             return lyrics;
         }
-        final List<String> songwriters = new ArrayList<>();
-        if (lyrics.songwriters() != null) {
-            songwriters.addAll(lyrics.songwriters());
-        }
-        songwriters.add(copyright);
-        return new Lyrics(lyrics.lines(), lyrics.providerName(), lyrics.synced(), null,
-                lyrics.translations(), null, songwriters, lyrics.rawFormat(),
-                lyrics.formatType(), lyrics.sourceUrl());
+        return LyricsMerge.addCredit(lyrics, "Copyright: " + copyright);
     }
 
     private static String stripTrackingParams(String url) {
@@ -124,13 +120,11 @@ public final class MusixmatchProvider extends ScoredSongProvider {
         final StringBuilder filtered = new StringBuilder();
         for (String param : query.split("&")) {
             if (!param.toLowerCase(Locale.ROOT).startsWith("utm")) {
-                //noinspection SizeReplaceableByIsEmpty
-                if (filtered.length() > 0) filtered.append('&');
+                if (Utils.isNotEmpty(filtered)) filtered.append('&');
                 filtered.append(param);
             }
         }
-        //noinspection SizeReplaceableByIsEmpty
-        return filtered.length() > 0 ? base + "?" + filtered : base;
+        return Utils.isNotEmpty(filtered) ? base + "?" + filtered : base;
     }
 
     private static String requestId() {
@@ -228,6 +222,7 @@ public final class MusixmatchProvider extends ScoredSongProvider {
     }
 
     @Override
+    @NonNull
     protected List<ScoredSong> fetchScoredSongs(TrackInfo track) throws Exception {
         final String token = ensureToken();
         if (token == null) {
