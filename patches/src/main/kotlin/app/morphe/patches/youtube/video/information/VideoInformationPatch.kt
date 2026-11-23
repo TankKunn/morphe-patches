@@ -172,7 +172,12 @@ val videoInformationPatch = patch(
             mdxInitInsertIndex = initThisIndex + 1
 
             // Hook the MDX director for use through the extension.
-            onCreateHookMDX(EXTENSION_CLASS, "initializeMDX")
+            // Called when playing videos while casting to a big screen device.
+            mdxInitMethodRef.get()!!.insert(
+                mdxInitInsertIndex++,
+                "v$mdxInitInsertRegister",
+                "$EXTENSION_CLASS->initializeMDX($EXTENSION_PLAYER_INTERFACE)V",
+            )
 
             val mdxSeekFingerprintResultMethod = MdxSeekFingerprint.match(classDef).method
             val mdxSeekRelativeFingerprintResultMethod = MdxSeekRelativeFingerprint.match(classDef).method
@@ -187,11 +192,13 @@ val videoInformationPatch = patch(
 
         VideoLengthFingerprint.let {
             it.method.apply {
-                val index = it.instructionMatches.last().index
-                val register = getInstruction<ThreeRegisterInstruction>(index).registerB
+                val register = getInstruction<ThreeRegisterInstruction>(
+                    it.instructionMatches.last().index
+                ).registerB
 
+                // Hooked before the boolean call, where the length is set in all branches.
                 addInstructionsAtControlFlowLabel(
-                    index,
+                    it.instructionMatches[5].index,
                     "invoke-static { v$register, v${register + 1} }, $EXTENSION_CLASS->setVideoLength(J)V",
                 )
             }
@@ -671,9 +678,6 @@ private fun addPlayerInterfaceMethods(
 private fun MutableMethod.insert(insertIndex: Int, register: String, descriptor: String) =
     addInstruction(insertIndex, "invoke-static { $register }, $descriptor")
 
-private fun MutableMethod.insertTimeHook(insertIndex: Int, descriptor: String) =
-    insert(insertIndex, "p1, p2", descriptor)
-
 /**
  * Hook the player controller. Called when a video is opened or the current video is changed.
  *
@@ -691,19 +695,6 @@ internal fun onCreateHook(targetMethodClass: String, targetMethodName: String) =
     )
 
 /**
- * Hook the MDX player director. Called when playing videos while casting to a big screen device.
- *
- * @param targetMethodClass The descriptor for the class to invoke when the player controller is created.
- * @param targetMethodName The name of the static method to invoke when the player controller is created.
- */
-internal fun onCreateHookMDX(targetMethodClass: String, targetMethodName: String) =
-    mdxInitMethodRef.get()!!.insert(
-        mdxInitInsertIndex++,
-        "v$mdxInitInsertRegister",
-        "$targetMethodClass->$targetMethodName($EXTENSION_PLAYER_INTERFACE)V",
-    )
-
-/**
  * Hook the video time.
  * The hook is usually called once per second.
  *
@@ -711,8 +702,9 @@ internal fun onCreateHookMDX(targetMethodClass: String, targetMethodName: String
  * @param targetMethodName The name of the static method to invoke when the player controller is created.
  */
 fun videoTimeHook(targetMethodClass: String, targetMethodName: String) =
-    timeMethodRef.get()!!.insertTimeHook(
+    timeMethodRef.get()!!.insert(
         timeInitInsertIndex++,
+        "p1, p2",
         "$targetMethodClass->$targetMethodName(J)V",
     )
 

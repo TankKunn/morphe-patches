@@ -43,10 +43,10 @@ import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.innertube.utils.AuthUtils;
 import app.morphe.extension.shared.requests.Requester;
 import app.morphe.extension.shared.settings.Setting;
-import app.morphe.extension.youtube.innertube.IconOuterClass.Icon;
-import app.morphe.extension.youtube.innertube.IconOuterClass.YTIconType;
+import app.morphe.extension.shared.innertube.IconOuterClass.Icon;
+import app.morphe.extension.shared.innertube.IconOuterClass.YTIconType;
 import app.morphe.extension.youtube.innertube.NextResponseOuterClass.SingleColumnWatchNextResults;
-import app.morphe.extension.youtube.innertube.queue.PlaylistQueueRenderer;
+import app.morphe.extension.shared.innertube.queue.PlaylistQueueRenderer;
 import app.morphe.extension.youtube.patches.AddToQueuePatch;
 import app.morphe.extension.youtube.patches.LoadVideoPatch;
 import app.morphe.extension.youtube.patches.OpenVideosFullscreenHookPatch;
@@ -1207,6 +1207,17 @@ public final class NativePlaylistQueuePatch {
     @SuppressWarnings("SameReturnValue")
     public static boolean isPatchIncluded() {
         return false; // Modified during patching.
+    }
+
+    /**
+     * @return If the playback queue plays this queue, which keeps the playlist ID of a converted playlist.
+     */
+    public static boolean isQueuePlaying() {
+        if (!AddToQueuePatch.isNativeQueueEnabled() || queue == null) {
+            return false;
+        }
+        NativePlayback playback = nativePlaybackRef.get();
+        return playback != null && playback.patch_isLocalQueue();
     }
 
     /**
@@ -2820,17 +2831,12 @@ public final class NativePlaylistQueuePatch {
         return AddToQueuePatch.isNativeQueueEnabled() && VideoInformation.isVideoId(videoId);
     }
 
-    /** A thumbnail can start a queue even when Play last is not available in a menu. */
+    /** Adds a video from its thumbnail, starting a queue when needed. */
     public static void addThumbnailVideo(String videoId, boolean playLast) {
         if (!canQueueFlyoutVideo(videoId)) {
             return;
         }
-        addToQueue(videoId, playLast && canShowFlyoutLast(), "");
-    }
-
-    /** A playing playlist can become a queue without replacing its current video. */
-    public static boolean canShowFlyoutLast() {
-        return queue != null || playingPlaylistController() != null;
+        addToQueue(videoId, playLast, "");
     }
 
     /** Release only our session; never modify the Morphe queue or its settings. */
@@ -2974,12 +2980,6 @@ public final class NativePlaylistQueuePatch {
         }
 
         PlaylistController playlist = playingPlaylistController();
-        if (playLast && queue == null && playlist == null) {
-            // A menu callback can outlive the queue that made Play last available.
-            Utils.showSnackbarShort(str("morphe_native_playlist_queue_not_ready"));
-            return;
-        }
-
         try {
             if (playlist != null) {
                 convertPlayingPlaylist(() -> {
@@ -2994,7 +2994,7 @@ public final class NativePlaylistQueuePatch {
                 return;
             }
 
-            if (!playLast && canStartQueue()) {
+            if (canStartQueue()) {
                 String title = ChannelIdRequest.getVideoTitleIfAvailable(videoId);
                 rememberChannel(videoId, title.isEmpty() ? videoId : title, channelName);
                 QueueStart start = new QueueStart(new PlaylistQueue(videoId, title), VideoInformation.getVideoId());

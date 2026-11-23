@@ -36,6 +36,7 @@ import app.morphe.patches.shared.misc.fix.proto.parseByteArrayWithRegistryMethod
 import app.morphe.patches.shared.misc.fix.proto.protoDefaultInstanceFingerprint
 import app.morphe.patches.shared.misc.proto.hookElement
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
+import app.morphe.patches.shared.misc.settings.preference.NonInteractivePreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
@@ -51,14 +52,17 @@ import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.proto.elementProtoParserHookPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
+import app.morphe.patches.youtube.misc.spoof.dimensions.spoofDeviceDimensionsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.youtube.video.information.videoInformationPatch
 import app.morphe.util.ResourceGroup
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.copyResources
+import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.util.setExtensionIsPatchIncluded
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 import com.android.tools.smali.dexlib2.iface.reference.TypeReference
@@ -68,7 +72,9 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 private val downloadsResourcePatch = patch {
     dependsOn(
         legacyPlayerControlsPatch,
-        settingsPatch
+        settingsPatch,
+        // The download settings note points to its setting.
+        spoofDeviceDimensionsPatch
     )
 
     execute {
@@ -81,6 +87,10 @@ private val downloadsResourcePatch = patch {
                     SwitchPreference("morphe_shorts_download_flyout_button", summary = true),
                     SwitchPreference("morphe_feed_download_flyout_button", summary = true),
                     SwitchPreference("morphe_download_force_4k", summary = true),
+                    NonInteractivePreference(
+                        "morphe_download_quality_about",
+                        tag = "app.morphe.extension.youtube.settings.preference.DownloadQualityAboutPreference"
+                    ),
                     exportDownloadFolderPreference(),
                     SwitchPreference("morphe_external_downloader_overlay_button", summary = true),
                     TextPreference(
@@ -334,17 +344,24 @@ val downloadsPatch = patch(
             }
             it.classDef.methods.add(helperMethod)
 
-            // Replace the player response before it is cached and returned.
-            val cachePut = it.instructionMatches.last()
-            val playerResponseModelRegister = cachePut.instruction.registersUsed[2]
+            // Replace the player response after it is fetched, before it is cached and returned.
+            it.method.apply {
+                findInstructionIndicesReversedOrThrow(
+                    offlinePlayerResponseFetchCall(playerResponseModelType)
+                ).forEach { index ->
+                    val moveResultIndex = index + 1
+                    val playerResponseModelRegister =
+                        getInstruction<OneRegisterInstruction>(moveResultIndex).registerA
 
-            it.method.addInstructions(
-                cachePut.index,
-                """
-                    invoke-static/range { v$playerResponseModelRegister .. v$playerResponseModelRegister }, $helperMethod
-                    move-result-object v$playerResponseModelRegister
-                """
-            )
+                    addInstructions(
+                        moveResultIndex + 1,
+                        """
+                            invoke-static/range { v$playerResponseModelRegister .. v$playerResponseModelRegister }, $helperMethod
+                            move-result-object v$playerResponseModelRegister
+                        """
+                    )
+                }
+            }
         }
 
         // Start saved videos played from Downloads at the position saved in Downloads.

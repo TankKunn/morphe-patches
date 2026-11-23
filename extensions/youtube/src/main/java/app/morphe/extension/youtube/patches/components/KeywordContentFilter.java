@@ -40,6 +40,7 @@ import app.morphe.extension.shared.patches.components.BufferHideStatsTracker;
 import app.morphe.extension.shared.patches.components.BufferPhraseFilter;
 import app.morphe.extension.shared.patches.components.ContextInterface;
 import app.morphe.extension.shared.patches.components.StringFilterGroup;
+import app.morphe.extension.shared.settings.BooleanSetting;
 import app.morphe.extension.shared.settings.LongSetting;
 import app.morphe.extension.youtube.innertube.ElementTexts.CommentData;
 import app.morphe.extension.youtube.innertube.ElementTexts.Element;
@@ -51,6 +52,7 @@ import app.morphe.extension.youtube.innertube.ElementTexts.ShortsLockupMetadata;
 import app.morphe.extension.youtube.innertube.ElementTexts.ShortsLockupViewModel;
 import app.morphe.extension.youtube.innertube.ElementTexts.VideoData;
 import app.morphe.extension.youtube.patches.VideoInformation;
+import app.morphe.extension.youtube.patches.dearrow.TitleCleanup;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.NavigationBar;
 import app.morphe.extension.youtube.shared.PlayerType;
@@ -66,7 +68,8 @@ import app.morphe.extension.youtube.shared.PlayerType;
  * Other texts of the buffer are not searched, such as the menu items, the accessibility labels,
  * the search text of the search results and the texts of the comment buttons.
  *
- * Keywords match any casing. Keywords that start with @ also match the channel handle of the videos.
+ * Keywords match any casing, and fancy text such as math bold letters matches the plain letters.
+ * Keywords that start with @ also match the channel handle of the videos.
  *
  * Limitations:
  * - Shorts in the Home and Subscriptions feeds do not show the channel name,
@@ -139,10 +142,11 @@ public final class KeywordContentFilter extends BufferPhraseFilter {
     }
 
     /**
-     * Keywords and texts are compared in lower case, so keywords match any casing.
+     * Keywords and texts are compared as plain letters in lower case, so keywords match any casing
+     * and titles written in fancy text, such as math bold letters.
      */
     private static String foldCase(String text) {
-        return text.toLowerCase(Locale.ROOT);
+        return TitleCleanup.replaceFancyText(text).toLowerCase(Locale.ROOT);
     }
 
     /**
@@ -247,20 +251,30 @@ public final class KeywordContentFilter extends BufferPhraseFilter {
 
     @Override
     protected boolean isActiveForFeedContext(ContextInterface contextInterface) {
+        return isActiveForFeedContext(contextInterface, Settings.HIDE_KEYWORD_CONTENT_HOME,
+                Settings.HIDE_KEYWORD_CONTENT_SEARCH, Settings.HIDE_KEYWORD_CONTENT_SUBSCRIPTIONS);
+    }
+
+    /**
+     * @return If the setting of the feed that is shown is on: the home feed, the search results or
+     *         the Subscriptions feed. The videos below the player are treated as the home feed.
+     */
+    static boolean isActiveForFeedContext(ContextInterface contextInterface, BooleanSetting home,
+                                          BooleanSetting search, BooleanSetting subscriptions) {
         // Must check player type first, as search bar can be active behind the player.
         if (PlayerType.getCurrent().isMaximizedOrFullscreen()) {
             // For now, consider the under video results the same as the home feed.
-            return Settings.HIDE_KEYWORD_CONTENT_HOME.get();
+            return home.get();
         }
 
         // Must check second, as search can be from any tab.
         if (NavigationBar.isSearchBarActive()) {
-            return Settings.HIDE_KEYWORD_CONTENT_SEARCH.get();
+            return search.get();
         }
 
         // Avoid checking navigation button status if all other settings are off.
-        final boolean hideHome = Settings.HIDE_KEYWORD_CONTENT_HOME.get();
-        final boolean hideSubscriptions = Settings.HIDE_KEYWORD_CONTENT_SUBSCRIPTIONS.get();
+        final boolean hideHome = home.get();
+        final boolean hideSubscriptions = subscriptions.get();
         if (!hideHome && !hideSubscriptions) {
             return false;
         }
