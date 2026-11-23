@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "2.4.0-dev.9",
+  "version": "2.4.0-dev.2",
   "patches": [
     {
       "name": "A-B loop",
@@ -2140,8 +2140,87 @@
       "options": []
     },
     {
+      "name": "Comment search",
+      "description": "Adds a button to the comments to show only the loaded comments that contain the searched words.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.google.android.youtube",
+          "name": "YouTube",
+          "description": null,
+          "apkFileType": "APK_REQUIRED",
+          "appIconColor": "#FF0033",
+          "signatures": [
+            "5aad2bee6db95d17e05a08d7d1e64c10a1511879154483916b6ae6c7fd9cb0c6",
+            "3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a"
+          ],
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "21.46.522",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": 29,
+              "description": null
+            },
+            {
+              "version": "21.45.82",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": 29,
+              "description": null
+            },
+            {
+              "version": "21.44.528",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": 29,
+              "description": null
+            },
+            {
+              "version": "21.30.216",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 29,
+              "description": null
+            },
+            {
+              "version": "21.28.208",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 29,
+              "description": null
+            },
+            {
+              "version": "21.23.492",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 28,
+              "description": null
+            },
+            {
+              "version": "20.51.39",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 28,
+              "description": null
+            },
+            {
+              "version": "20.26.46",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 26,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Copy text",
-      "description": "Adds an option to make post and comment text selectable and copyable. Disables collapsing comments. This patch works with Reddit 2026.24.0 and newer.",
+      "description": "Adds an option to make post and comment text selectable and copyable. This patch works with Reddit 2026.24.0 and newer.",
       "default": true,
       "category": null,
       "compatiblePackages": [
@@ -10672,7 +10751,7 @@
     },
     {
       "name": "Navigation bar",
-      "description": "Adds options to hide and change the bottom navigation bar (such as the Samples button) and the upper navigation toolbar.",
+      "description": "Adds options to hide and change the bottom navigation bar (such as the Upgrade button) and the upper navigation toolbar.",
       "default": true,
       "category": null,
       "compatiblePackages": [
@@ -14982,87 +15061,8 @@
       "options": []
     },
     {
-      "name": "Search comments",
-      "description": "Adds a button to the comments to show only the loaded comments that contain the searched words.",
-      "default": true,
-      "category": null,
-      "compatiblePackages": [
-        {
-          "packageName": "com.google.android.youtube",
-          "name": "YouTube",
-          "description": null,
-          "apkFileType": "APK_REQUIRED",
-          "appIconColor": "#FF0033",
-          "signatures": [
-            "5aad2bee6db95d17e05a08d7d1e64c10a1511879154483916b6ae6c7fd9cb0c6",
-            "3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a"
-          ],
-          "formFactor": "MOBILE",
-          "targets": [
-            {
-              "version": "21.46.522",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": 29,
-              "description": null
-            },
-            {
-              "version": "21.45.82",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": 29,
-              "description": null
-            },
-            {
-              "version": "21.44.528",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": 29,
-              "description": null
-            },
-            {
-              "version": "21.30.216",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": 29,
-              "description": null
-            },
-            {
-              "version": "21.28.208",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": 29,
-              "description": null
-            },
-            {
-              "version": "21.23.492",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": 28,
-              "description": null
-            },
-            {
-              "version": "20.51.39",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": 28,
-              "description": null
-            },
-            {
-              "version": "20.26.46",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": 26,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
       "name": "Search hidden profiles",
-      "description": "Adds an option to show a search button on profiles that hide their posts or comments.",
+      "description": "Adds an option to make the profile search find the posts of profiles that hide their posts or comments.",
       "default": true,
       "category": null,
       "compatiblePackages": [
@@ -17760,6 +17760,85 @@
       "options": []
     },
     {
+      "name": "Video magnifier",
+      "description": "Adds an adjustable magnifier to the YouTube player, with an on-player editor for its size, position and appearance.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.google.android.youtube",
+          "name": "YouTube",
+          "description": null,
+          "apkFileType": "APK_REQUIRED",
+          "appIconColor": "#FF0033",
+          "signatures": [
+            "5aad2bee6db95d17e05a08d7d1e64c10a1511879154483916b6ae6c7fd9cb0c6",
+            "3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a"
+          ],
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "21.46.522",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": 29,
+              "description": null
+            },
+            {
+              "version": "21.45.82",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": 29,
+              "description": null
+            },
+            {
+              "version": "21.44.528",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": 29,
+              "description": null
+            },
+            {
+              "version": "21.30.216",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 29,
+              "description": null
+            },
+            {
+              "version": "21.28.208",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 29,
+              "description": null
+            },
+            {
+              "version": "21.23.492",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 28,
+              "description": null
+            },
+            {
+              "version": "20.51.39",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 28,
+              "description": null
+            },
+            {
+              "version": "20.26.46",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 26,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Video quality",
       "description": "Adds options to set default video qualities and always use the advanced video quality menu.",
       "default": true,
@@ -17919,7 +17998,7 @@
     },
     {
       "name": "Wide search bar",
-      "description": "Adds a wide search bar to the top of the home and subscription feed.",
+      "description": "Adds a wide search bar to the top of the home, subscription, notifications and You tabs.",
       "default": true,
       "category": null,
       "compatiblePackages": [
